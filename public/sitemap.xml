@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- الصفحة الرئيسية -->
+  <url>
+    <loc>https://uneom.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- صفحة المتجر -->
+  <url>
+    <loc>https://uneom.com/shop</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- فئات المنتجات في المتجر -->
+  <url>
+    <loc>https://uneom.com/shop/medical-scrubs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/medical-scrubs</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://uneom.com/shop/aviation-uniforms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/aviation-uniforms"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/aviation-uniforms</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/aviation-uniforms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://uneom.com/shop/culinary-uniforms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/culinary-uniforms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/culinary-uniforms"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/culinary-uniforms</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/culinary-uniforms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/culinary-uniforms"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://uneom.com/shop/corporate-workwear</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/corporate-workwear"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/corporate-workwear"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/corporate-workwear</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/corporate-workwear"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/corporate-workwear"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://uneom.com/shop/hospitality-attire</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/hospitality-attire"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/hospitality-attire</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/hospitality-attire"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://uneom.com/shop/industrial-uniforms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/industrial-uniforms</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://uneom.com/shop/security-uniforms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/security-uniforms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/security-uniforms"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/security-uniforms</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/security-uniforms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/security-uniforms"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- تفاصيل المنتج -->
+  <url>
+    <loc>https://uneom.com/shop/medical-scrubs/antimicrobial-scrubs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/antimicrobial-scrubs"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/antimicrobial-scrubs"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/medical-scrubs/antimicrobial-scrubs</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/antimicrobial-scrubs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/antimicrobial-scrubs"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://uneom.com/shop/aviation-uniforms/airline-crew-uniform</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms/airline-crew-uniform"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/aviation-uniforms/airline-crew-uniform"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/aviation-uniforms/airline-crew-uniform</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/aviation-uniforms/airline-crew-uniform"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms/airline-crew-uniform"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- صفحة طلب عرض السعر -->
+  <url>
+    <loc>https://uneom.com/quote</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/quote"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/quote"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/quote</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/quote"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/quote"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- صفحات أخرى هامة -->
+  <url>
+    <loc>https://uneom.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/about"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/about</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/about"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://uneom.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/contact"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/contact"/>
+    <lastmod>2023-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset> 

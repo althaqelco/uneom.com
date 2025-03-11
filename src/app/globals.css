@@ -1,0 +1,332 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--background);
+}
+
+/* RTL Support */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Enhanced RTL Support */
+html[dir="rtl"] body,
+.rtl {
+  font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1, "ss03" 1;
+}
+
+/* Mirror some specific elements in RTL mode */
+html[dir="rtl"] .mirror-rtl {
+  transform: scaleX(-1);
+}
+
+/* RTL Spacing Adjustments */
+html[dir="rtl"] .mr-auto {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .space-x-1 > :not([hidden]) ~ :not([hidden]),
+html[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]),
+html[dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]),
+html[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* Flip icons and arrows in RTL mode */
+html[dir="rtl"] .rtl-flip {
+  transform: rotate(180deg);
+}
+
+/* Font Families */
+.font-sans {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.font-heading {
+  font-family: var(--font-poppins), var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* RTL-specific utilities */
+  .rtl-space-x-reverse {
+    --tw-space-x-reverse: 1;
+  }
+}
+
+/* Arabic Typography Improvements */
+html[lang="ar"] {
+  letter-spacing: 0;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6 {
+  line-height: 1.6;
+}
+
+html[lang="ar"] p,
+html[lang="ar"] li {
+  line-height: 1.8;
+}
+
+/* Add RTL-specific styles at the end of the file */
+
+/* RTL specific rules */
+.rtl-flip {
+  transform: scaleX(-1);
+}
+
+.rtl-text {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+.rtl-justify-end {
+  justify-content: flex-end !important;
+}
+
+.rtl-justify-start {
+  justify-content: flex-start !important;
+}
+
+[dir="rtl"] .space-x-4 > * + * {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+[dir="rtl"] .space-x-6 > * + * {
+  margin-left: 0;
+  margin-right: 1.5rem;
+}
+
+[dir="rtl"] .space-x-8 > * + * {
+  margin-left: 0;
+  margin-right: 2rem;
+}
+
+/* RTL breadcrumbs optimization */
+[dir="rtl"] .breadcrumbs .breadcrumb-separator {
+  transform: rotate(180deg);
+}
+
+/* RTL form controls */
+[dir="rtl"] input[type="text"],
+[dir="rtl"] input[type="email"],
+[dir="rtl"] input[type="password"],
+[dir="rtl"] input[type="number"],
+[dir="rtl"] input[type="search"],
+[dir="rtl"] input[type="tel"],
+[dir="rtl"] input[type="url"],
+[dir="rtl"] textarea {
+  text-align: right;
+}
+
+[dir="rtl"] select {
+  background-position: left 0.5rem center;
+  padding-right: 0.75rem;
+  padding-left: 2.5rem;
+}
+
+/* Fix dropdown menus in RTL mode */
+[dir="rtl"] .dropdown-menu {
+  right: 0;
+  left: auto;
+  text-align: right;
+}
+
+/* Utility classes for RTL layouts */
+.rtl-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.rtl-ml-auto {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
+
+.rtl-mr-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+/* RTL-specific shadows adjustment */
+[dir="rtl"] .shadow-left {
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
+}
+
+[dir="rtl"] .shadow-right {
+  box-shadow: -1px 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* RTL optimized animations */
+@keyframes slide-in-rtl {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.rtl-animation-slide-in {
+  animation: slide-in-rtl 0.3s forwards;
+}
+
+/* Arabic font definitions */
+@font-face {
+  font-family: 'Cairo';
+  src: url('/fonts/ar/Cairo-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('/fonts/ar/Cairo-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('/fonts/ar/Cairo-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('/fonts/ar/Cairo-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('/fonts/ar/Tajawal-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('/fonts/ar/Tajawal-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('/fonts/ar/Tajawal-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* RTL Font Settings */
+html[dir="rtl"] {
+  --font-family-arabic: 'Cairo', 'Tajawal', sans-serif;
+}
+
+html[dir="rtl"] body {
+  font-family: var(--font-family-arabic), var(--font-inter);
+}
+
+/* إضافة هذه الأنماط في نهاية الملف */
+
+/* أنماط خاصة بتبديل اللغة - مبسطة ومتوافقة مع hydration */
+
+/* عند القيام بتبديل اللغة، إيقاف كل التحولات لضمان استجابة أفضل */
+html.language-transition * {
+  transition: none !important;
+}
+
+/* جعل المحتوى باهتًا أثناء التحميل */
+html.language-transition body {
+  opacity: 0.7;
+  pointer-events: none; /* منع التفاعل مع الصفحة أثناء التحميل */
+}
+
+/* إضافة طبقة شفافة فوق المحتوى */
+html.language-transition body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 9999;
+}
+
+/* مؤشر تحميل دوار */
+html.language-transition body::after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(200, 200, 200, 0.5);
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  z-index: 10000;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* إخفاء مؤشر التحميل في الحالة العادية */
+html:not(.language-transition) body::before,
+html:not(.language-transition) body::after {
+  display: none !important;
+}
+
+/* منع التفاعل أثناء التحميل */
+html.language-transition {
+  pointer-events: none;
+}
