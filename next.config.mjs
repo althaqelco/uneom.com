@@ -45,7 +45,6 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'i.imgur.com',
       },
-      // Add fonts.gstatic.com to allow font loading during build
       {
         protocol: 'https',
         hostname: 'fonts.gstatic.com',
@@ -54,8 +53,6 @@ const nextConfig = {
     // Enable responsive image optimization
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Disable font optimization since we're using Google Fonts
-    disableDependentFeature: true
   },
   
   // Configure server components
