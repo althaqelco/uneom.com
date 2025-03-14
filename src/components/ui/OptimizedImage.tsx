@@ -42,24 +42,33 @@ export default function OptimizedImage({
   const [imgAlt, setImgAlt] = useState(alt || defaultAlt);
   const [hasError, setHasError] = useState(false);
   const [errorRetryCount, setErrorRetryCount] = useState(0);
+  const [useRegularImgTag, setUseRegularImgTag] = useState(false);
 
   // Update imgSrc if src prop changes
   useEffect(() => {
     setImgSrc(src);
     setHasError(false);
     setErrorRetryCount(0);
+    setUseRegularImgTag(false);
   }, [src]);
+
+  // Check if we're on Vercel
+  const isVercel = typeof window !== 'undefined' && 
+    (window.location.hostname.includes('vercel.app') || 
+     window.location.hostname === 'uneom.com' ||
+     window.location.hostname.endsWith('.uneom.com'));
 
   // Handle image loading errors
   const handleError = () => {
-    if (errorRetryCount >= 2) {
-      // After 2 retries, use fallback image
-      console.warn(`Image failed to load after retries: ${imgSrc}`);
+    if (errorRetryCount >= 3) {
+      // After 3 retries, use fallback image with a regular <img> tag
+      console.warn(`Image failed to load after maximum retries: ${imgSrc}`);
       setImgSrc(fallbackSrc);
       if (!alt) {
         setImgAlt('Image not available');
       }
       setHasError(true);
+      setUseRegularImgTag(true);
       return;
     }
     
@@ -75,22 +84,35 @@ export default function OptimizedImage({
       } else {
         // If not a path starting with slash, try with unoptimized
         console.log(`Trying with unoptimized image loading`);
-        setImgSrc(`${imgSrc}?unoptimized=true`);
+        const unoptimizedSrc = typeof imgSrc === 'string' && !imgSrc.includes('?') 
+          ? `${imgSrc}?unoptimized=true` 
+          : imgSrc;
+        setImgSrc(unoptimizedSrc);
       }
     } else if (errorRetryCount === 1) {
-      // Second retry: Try with direct URL path for Vercel deployment
-      const basePath = 'https://uneom-com.vercel.app';
-      if (typeof imgSrc === 'string' && !imgSrc.startsWith('http')) {
-        const fullPath = imgSrc.startsWith('/') 
-          ? `${basePath}${imgSrc}` 
-          : `${basePath}/${imgSrc}`;
-        console.log(`Trying with full path: ${fullPath}`);
-        setImgSrc(fullPath);
+      // Second retry: Try with public URL
+      if (isVercel) {
+        const basePath = 'https://uneom-com.vercel.app';
+        if (typeof imgSrc === 'string' && !imgSrc.startsWith('http')) {
+          const fullPath = imgSrc.startsWith('/') 
+            ? `${basePath}${imgSrc}` 
+            : `${basePath}/${imgSrc}`;
+          console.log(`Trying with full Vercel path: ${fullPath}`);
+          setImgSrc(fullPath);
+        } else {
+          // Try with original path again but with different query param
+          setImgSrc(`${src}?v=${new Date().getTime()}`);
+        }
       } else {
-        // If already a full URL or other cases, go to fallback
-        setImgSrc(fallbackSrc);
-        setHasError(true);
+        // If not on Vercel, try with cache busting
+        if (typeof imgSrc === 'string') {
+          setImgSrc(`${imgSrc}?nocache=${new Date().getTime()}`);
+        }
       }
+    } else if (errorRetryCount === 2) {
+      // Third retry: Fallback to direct image tag
+      console.log(`Final retry: switching to regular img tag`);
+      setUseRegularImgTag(true);
     }
     
     setErrorRetryCount(prev => prev + 1);
@@ -103,6 +125,31 @@ export default function OptimizedImage({
   const generatedBlurDataURL = blurDataURL || 
     (placeholder === 'blur' ? generateBlurPlaceholder(blurColor) : undefined);
 
+  // Use regular img tag as last resort
+  if (useRegularImgTag) {
+    const { width, height, layout, objectFit, ...restProps } = rest as any;
+    
+    const styleProps: React.CSSProperties = {
+      maxWidth: '100%',
+      height: height ? `${height}px` : 'auto',
+      width: width ? `${width}px` : '100%',
+      objectFit: objectFit || 'cover',
+    };
+    
+    return (
+      <img
+        src={imgSrc}
+        alt={imgAlt}
+        className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
+        style={styleProps}
+        loading={loadingStrategy === 'eager' ? 'eager' : 'lazy'}
+        onError={handleError}
+        {...restProps}
+      />
+    );
+  }
+
+  // Use Next.js Image component
   return (
     <Image
       {...rest}
@@ -115,7 +162,7 @@ export default function OptimizedImage({
       className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
       loader={(params) => {
         // @ts-ignore - locale is added in our custom loader but not in the original type
-        return customImageLoader({ ...params, locale });
+        return customImageLoader({ ...params, locale, isVercel });
       }}
       unoptimized={true}
     />

@@ -11,15 +11,55 @@ import { Locale } from '@/lib/i18n/config';
  */
 interface ExtendedImageLoaderProps extends ImageLoaderProps {
   locale?: Locale;
+  isVercel?: boolean;
 }
 
 /**
  * Custom image loader that can be used with next/image
  * This can be extended to use a CDN or image optimization service
  */
-export const customImageLoader = ({ src, width, quality, locale }: ExtendedImageLoaderProps): string => {
+export const customImageLoader = ({ src, width, quality, locale, isVercel }: ExtendedImageLoaderProps): string => {
   // If using a CDN, you can modify this to use the CDN URL
   // For example: return `https://cdn.uneom.com/images${src}?w=${width}&q=${quality || 75}`;
+  
+  // On Vercel, handle specifically for production
+  if (isVercel) {
+    // If src is already a full URL, use it directly
+    if (src.startsWith('http://') || src.startsWith('https://')) {
+      return src;
+    }
+    
+    // Ensure src starts with a slash for relative URLs
+    const formattedSrc = src.startsWith('/') ? src : `/${src}`;
+    
+    // Use direct URL to resources on Vercel
+    const baseUrl = 'https://uneom-com.vercel.app';
+    
+    // Handle localized paths
+    if (locale && locale !== 'en') {
+      // Check if path already has locale suffix
+      if (formattedSrc.includes(`-${locale}.`)) {
+        // Already has locale suffix
+        return `${baseUrl}${formattedSrc}`;
+      }
+      
+      // Add locale suffix
+      const hasExtension = formattedSrc.includes('.');
+      if (hasExtension) {
+        const lastDotIndex = formattedSrc.lastIndexOf('.');
+        const fileName = formattedSrc.substring(0, lastDotIndex);
+        const extension = formattedSrc.substring(lastDotIndex);
+        return `${baseUrl}${fileName}-${locale}${extension}`;
+      } else {
+        return `${baseUrl}${formattedSrc}-${locale}`;
+      }
+    }
+    
+    // Return direct URL to the resource
+    return `${baseUrl}${formattedSrc}`;
+  }
+  
+  // Regular development environment
   
   // If src is a full URL, return it without modifications to avoid issues
   if (src.startsWith('http://') || src.startsWith('https://')) {
@@ -29,7 +69,7 @@ export const customImageLoader = ({ src, width, quality, locale }: ExtendedImage
   // Handle localized image paths if locale is provided
   if (locale && locale !== 'en') {
     // Check if path already has locale suffix
-    if (src.includes('-ar.')) {
+    if (src.includes(`-${locale}.`)) {
       // Already has Arabic suffix
       return `${src}?w=${width}&q=${quality || 75}`;
     }

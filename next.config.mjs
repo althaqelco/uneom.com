@@ -46,6 +46,34 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'fonts.gstatic.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'uneom-com.vercel.app',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.vercel.app',
+      },
+      {
+        protocol: 'https',
+        hostname: 'vercel.app',
+      },
+      {
+        protocol: 'https',
+        hostname: 'vercel.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.vercel.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'assets.vercel.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
       // Add more flexible pattern for images from any domain
       {
         protocol: 'https',
@@ -59,8 +87,14 @@ const nextConfig = {
     // Enable responsive image optimization
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Set to false to fix Next.js image optimization issues
-    unoptimized: false
+    // Set to TRUE to disable optimization - critical for Vercel deployment
+    unoptimized: true,
+    // Enable minimumCacheTTL for better caching
+    minimumCacheTTL: 600,
+    // Make dangerouslyAllowSVG true to allow SVG images
+    dangerouslyAllowSVG: true,
+    // Disable contentSecurityPolicy for images temporarily
+    contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src * 'self' data: https: http: blob:; font-src 'self' data: https:;"
   },
   
   // Configure server components
@@ -87,6 +121,21 @@ const nextConfig = {
       net: false,
       tls: false
     };
+    
+    // Add support for image file types
+    config.module.rules.push({
+      test: /\.(png|jpe?g|gif|svg|webp|avif)$/i,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[hash].[ext]',
+            outputPath: 'static/images/',
+            publicPath: '/_next/static/images/'
+          }
+        }
+      ]
+    });
     
     return config;
   },
@@ -115,7 +164,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; img-src 'self' data: https: http: *; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com; frame-src 'self'; object-src 'none';"
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; img-src 'self' data: https: http: blob: *; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com; frame-src 'self'; object-src 'none';"
           },
         ],
       },
@@ -126,6 +175,34 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+          }
+        ],
+      },
+      // Add image optimization headers
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          }
+        ],
+      },
+      // Add headers for Vercel deployment
+      {
+        source: '/_next/image/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
           }
         ],
       },
