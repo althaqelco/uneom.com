@@ -174,6 +174,8 @@ export default function MedicalLabCoatPage() {
   // Shared product data
   const product = {
     id: 'medical-lab-coat',
+    name: 'Medical Lab Coat',
+    price: "195",
     basePrice: "195",
     rating: 4.7,
     reviews: 87,
@@ -251,7 +253,10 @@ export default function MedicalLabCoatPage() {
           </button>
         </div>
         
-        <Breadcrumbs items={content[locale].breadcrumbs} />
+        <Breadcrumbs items={content[locale].breadcrumbs.map(item => ({
+          label: item.name,
+          href: item.url
+        }))} />
         
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
           {/* Product Images */}

@@ -555,6 +555,6 @@ export const services = [
 ];
 
 // Helper function to get service by ID
-export const getServiceById = (id) => {
+export const getServiceById = (id: string) => {
   return services.find(service => service.id === id) || null;
 }; 

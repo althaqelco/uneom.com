@@ -1,14 +1,15 @@
-import { SupportedLocale } from '@/lib/i18n';
-import type { ImageLoaderProps } from 'next/image';
+import { Locale } from '@/lib/i18n/config';
+import type { ImageLoaderProps as NextImageLoaderProps } from 'next/image';
 
 /**
- * Interface for image loader props
+ * Interface for our custom image loader props
+ * Extends Next.js ImageLoaderProps
  */
-export interface ImageLoaderProps {
+export interface CustomImageLoaderProps {
   src: string;
-  width?: number;
+  width: number;
   quality?: number;
-  locale?: SupportedLocale;
+  locale?: Locale;
 }
 
 /**
@@ -21,7 +22,7 @@ export interface ImageLoaderProps {
  * @param quality The quality of the image (1-100)
  * @returns The URL for the optimized image
  */
-export default function imageLoader({ src, width, quality = 75, locale }: ImageLoaderProps): string {
+export default function imageLoader({ src, width, quality = 75, locale }: CustomImageLoaderProps): string {
   // Check if the image is an external URL
   if (src.startsWith('http') || src.startsWith('https')) {
     return src;
@@ -72,7 +73,7 @@ export function getFallbackImage(category: 'product' | 'blog' | 'team' | 'indust
  * Format: image.jpg -> image-ar.jpg for Arabic
  * Alternative format: /path/to/image.jpg -> /path/to/image-ar.jpg
  */
-export function getLocalizedImagePath(src: string, locale: SupportedLocale = 'en'): string {
+export function getLocalizedImagePath(src: string, locale: Locale = 'en'): string {
   if (locale === 'en') {
     return src;
   }
@@ -152,7 +153,7 @@ export function getResponsiveImageSizes(): string {
  * Custom image loader that can be used with next/image
  * This can be extended to use a CDN or image optimization service
  */
-export const customImageLoader = ({ src, width, quality }: ImageLoaderProps): string => {
+export const customImageLoader = ({ src, width, quality, locale }: CustomImageLoaderProps): string => {
   // If using a CDN, you can modify this to use the CDN URL
   // For example: return `https://cdn.uneom.com/images${src}?w=${width}&q=${quality || 75}`;
   return `${src}?w=${width}&q=${quality || 75}`;

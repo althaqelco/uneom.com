@@ -177,6 +177,8 @@ export default function GroundCrewUniformPage() {
   // Shared product data
   const product = {
     id: 'ground-crew-uniform',
+    name: 'Ground Crew Uniform',
+    price: "520",
     basePrice: "520",
     rating: 4.9,
     reviews: 45,

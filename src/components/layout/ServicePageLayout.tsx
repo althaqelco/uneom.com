@@ -323,7 +323,7 @@ export default function ServicePageLayout({ locale, serviceData, skipMainLayout 
             <SectionHeading
               centered={true}
               subtitle={isRtl ? "ماذا يقول عملاؤنا" : "What our clients say"}
-              light={true}
+              className="text-white"
             >
               {isRtl ? "شهادات العملاء" : "Client Testimonials"}
             </SectionHeading>

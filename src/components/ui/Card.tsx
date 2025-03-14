@@ -1,6 +1,5 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { isRTL } from '@/lib/i18n';
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
@@ -25,7 +24,7 @@ const Card = ({
   rounded = 'md',
   ...props
 }: CardProps) => {
-  const rtl = isRTL(locale);
+  const rtl = locale === 'ar';
   
   // Create classes based on props
   const variantClasses = {

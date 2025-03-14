@@ -195,12 +195,14 @@ export default function ExecutiveMedicalUniformPage() {
   // Shared product data
   const product = {
     id: 'executive-medical-uniform',
-    basePrice: "595",
+    name: 'Executive Medical Uniform',
+    price: "450",
+    basePrice: "450",
     rating: 4.9,
-    reviews: 63,
+    reviews: 42,
     inStock: true,
-    minOrder: 15,
-    leadTime: '15-18 days',
+    minOrder: 10,
+    leadTime: '14-18 days',
     customization: true,
     images: [
       { src: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg', alt: 'Executive medical professionals in premium healthcare uniforms' },
@@ -263,7 +265,10 @@ export default function ExecutiveMedicalUniformPage() {
           </button>
         </div>
         
-        <Breadcrumbs items={content[locale].breadcrumbs} />
+        <Breadcrumbs items={content[locale].breadcrumbs.map(item => ({
+          label: item.name,
+          href: item.url
+        }))} />
         
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
           {/* Product Images */}

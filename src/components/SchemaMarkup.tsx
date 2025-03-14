@@ -1,202 +1,135 @@
 "use client";
 
-import React from 'react';
+import { useEffect, useState } from 'react';
+import Script from 'next/script';
+import { useParams } from 'next/navigation';
+import { useLocale } from '@/lib/i18n/client';
+import getOrganizationSchema from '@/lib/schema/organization';
+import productSchema from '@/lib/schema/product';
+import faqSchema from '@/lib/schema/faq';
+import reviewSchema from '@/lib/schema/review';
 
-export interface SchemaMarkupProps {
-  type: 'Organization' | 'Product' | 'Article' | 'BreadcrumbList' | 'FAQPage' | 'Service' | 'LocalBusiness';
-  data: any;
+/**
+ * SchemaMarkup component renders structured data for SEO based on page type
+ * This helps search engines understand the content and display rich results
+ */
+export default function SchemaMarkup({
+  type,
+  data,
+  pageUrl
+}: {
+  type: 'organization' | 'product' | 'productList' | 'faq' | 'review' | 'aggregateRating' | 'localBusiness';
+  data?: any;
+  pageUrl?: string;
+}) {
+  const locale = useLocale();
+  const params = useParams();
+  const [schemaData, setSchemaData] = useState<any>(null);
+
+  useEffect(() => {
+    let schema = null;
+
+    // Create schema based on type
+    switch (type) {
+      case 'organization':
+        schema = getOrganizationSchema(locale);
+        break;
+        
+      case 'product':
+        if (data) {
+          schema = productSchema.getProductSchema({
+            ...data,
+            locale,
+            url: pageUrl
+          });
+        }
+        break;
+        
+      case 'productList':
+        if (data && Array.isArray(data)) {
+          schema = productSchema.getProductListSchema(
+            data.map(item => ({
+              ...item,
+              locale,
+              url: item.url || `${pageUrl}/${item.id}`
+            }))
+          );
+        }
+        break;
+        
+      case 'faq':
+        if (data && Array.isArray(data)) {
+          schema = faqSchema.getFAQSchema(data.map(faq => ({ ...faq, locale })));
+        } else if (data && data.industry) {
+          schema = faqSchema.getIndustryFAQSchema(data.industry, locale);
+        }
+        break;
+        
+      case 'review':
+        if (data) {
+          schema = reviewSchema.getReviewSchema({
+            ...data,
+            locale
+          });
+        }
+        break;
+        
+      case 'aggregateRating':
+        if (data) {
+          schema = reviewSchema.getAggregateRatingSchema({
+            ...data,
+            locale
+          });
+        }
+        break;
+        
+      case 'localBusiness':
+        if (data) {
+          schema = reviewSchema.getLocalBusinessReviewSchema({
+            ...data,
+            locale
+          });
+        }
+        break;
+    }
+
+    setSchemaData(schema);
+  }, [type, data, locale, pageUrl, params]);
+
+  if (!schemaData) return null;
+
+  return (
+    <Script
+      id={`schema-${type}`}
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      strategy="afterInteractive"
+    />
+  );
 }
 
 /**
- * Schema.org structured data component for SEO
- * Adds JSON-LD markup to pages for better search engine understanding
+ * MultiSchemaMarkup component allows rendering multiple schemas on a single page
  */
-const SchemaMarkup: React.FC<SchemaMarkupProps> = ({ type, data }) => {
-  // Base organization data that's reused in many schemas
-  const organizationData = {
-    '@type': 'Organization',
-    name: data.locale === 'ar' ? 'يونيوم' : 'UNEOM',
-    url: 'https://uneom.com',
-    logo: 'https://uneom.com/images/uneom-logo.png',
-    sameAs: [
-      'https://twitter.com/uneom',
-      'https://www.linkedin.com/company/uneom',
-      'https://www.instagram.com/uneom_sa',
-      'https://www.facebook.com/uneom'
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+971558164922',
-      contactType: 'customer service',
-      areaServed: 'SA',
-      availableLanguage: ['Arabic', 'English']
-    }
-  };
-  
-  // Generate schema based on type
-  const generateSchema = () => {
-    const schema: any = {
-      '@context': 'https://schema.org',
-      '@type': type
-    };
-    
-    switch (type) {
-      case 'Organization':
-        return {
-          ...schema,
-          ...organizationData,
-          description: data.description,
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: 'King Fahd Road, Al Faisaliyah Tower, 25th Floor',
-            addressLocality: 'Riyadh',
-            addressRegion: 'Riyadh',
-            postalCode: '12212',
-            addressCountry: 'SA'
-          },
-          geo: {
-            '@type': 'GeoCoordinates',
-            latitude: 24.6909617,
-            longitude: 46.6851237
-          }
-        };
-        
-      case 'Product':
-        return {
-          ...schema,
-          name: data.name,
-          image: data.image,
-          description: data.description,
-          brand: {
-            '@type': 'Brand',
-            name: data.locale === 'ar' ? 'يونيوم' : 'UNEOM'
-          },
-          offers: {
-            '@type': 'Offer',
-            url: data.url,
-            priceCurrency: 'SAR',
-            price: data.price,
-            availability: 'https://schema.org/InStock',
-            seller: organizationData
-          },
-          ...(data.reviews && {
-            review: data.reviews.map((review: any) => ({
-              '@type': 'Review',
-              reviewRating: {
-                '@type': 'Rating',
-                ratingValue: review.rating,
-                bestRating: '5'
-              },
-              author: {
-                '@type': 'Person',
-                name: review.author
-              }
-            }))
-          })
-        };
-        
-      case 'Article':
-        return {
-          ...schema,
-          headline: data.title,
-          image: data.image,
-          author: {
-            '@type': 'Person',
-            name: data.author.name
-          },
-          publisher: organizationData,
-          datePublished: data.datePublished,
-          dateModified: data.dateModified || data.datePublished,
-          description: data.description,
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': data.url
-          }
-        };
-        
-      case 'BreadcrumbList':
-        return {
-          ...schema,
-          itemListElement: data.breadcrumbs.map((item: any, index: number) => ({
-            '@type': 'ListItem',
-            position: index + 1,
-            name: item.name,
-            item: item.url
-          }))
-        };
-        
-      case 'FAQPage':
-        return {
-          ...schema,
-          mainEntity: data.questions.map((item: any) => ({
-            '@type': 'Question',
-            name: item.question,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: item.answer
-            }
-          }))
-        };
-        
-      case 'Service':
-        return {
-          ...schema,
-          name: data.name,
-          serviceType: data.serviceType,
-          provider: organizationData,
-          description: data.description,
-          areaServed: {
-            '@type': 'Country',
-            name: 'Saudi Arabia'
-          },
-          ...(data.offers && {
-            offers: {
-              '@type': 'Offer',
-              priceCurrency: 'SAR',
-              availability: 'https://schema.org/InStock'
-            }
-          })
-        };
-        
-      case 'LocalBusiness':
-        return {
-          ...schema,
-          ...organizationData,
-          description: data.description,
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: 'King Fahd Road, Al Faisaliyah Tower, 25th Floor',
-            addressLocality: 'Riyadh',
-            addressRegion: 'Riyadh',
-            postalCode: '12212',
-            addressCountry: 'SA'
-          },
-          geo: {
-            '@type': 'GeoCoordinates',
-            latitude: 24.6909617,
-            longitude: 46.6851237
-          },
-          openingHours: [
-            'Su-Th 09:00-17:00',
-            'Sa 10:00-14:00'
-          ],
-          telephone: '+971558164922',
-          priceRange: '$$'
-        };
-        
-      default:
-        return schema;
-    }
-  };
-  
-  const jsonLd = generateSchema();
-  
+export function MultiSchemaMarkup({
+  schemas
+}: {
+  schemas: Array<{
+    type: 'organization' | 'product' | 'productList' | 'faq' | 'review' | 'aggregateRating' | 'localBusiness';
+    data?: any;
+    pageUrl?: string;
+  }>;
+}) {
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
+    <>
+      {schemas.map((schema, index) => (
+        <SchemaMarkup
+          key={`schema-${schema.type}-${index}`}
+          type={schema.type}
+          data={schema.data}
+          pageUrl={schema.pageUrl}
+        />
+      ))}
+    </>
   );
-};
-
-export default SchemaMarkup; 
+} 

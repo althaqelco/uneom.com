@@ -177,6 +177,8 @@ export default function FlightAttendantDressPage() {
   // Shared product data
   const product = {
     id: 'flight-attendant-dress',
+    name: 'Flight Attendant Dress', // Added missing name property required by Product interface
+    price: "680", // Added missing price property required by Product interface
     basePrice: "680",
     rating: 4.9,
     reviews: 57,
@@ -446,4 +448,4 @@ export default function FlightAttendantDressPage() {
       </Container>
     </MainLayout>
   );
-} 
+}

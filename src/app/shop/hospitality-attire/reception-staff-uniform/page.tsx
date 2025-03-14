@@ -196,12 +196,14 @@ export default function ReceptionStaffUniformPage() {
   // Shared product data
   const product = {
     id: 'reception-staff-uniform',
+    name: 'Reception Staff Uniform',
+    price: "450",
     basePrice: "450",
     rating: 4.8,
-    reviews: 42,
+    reviews: 38,
     inStock: true,
-    minOrder: 10,
-    leadTime: '14-16 days',
+    minOrder: 8,
+    leadTime: '14-18 days',
     customization: true,
     images: [
       { src: '/images/hotel-uniform.jpg', alt: 'Professional reception staff uniform for hospitality' },
@@ -265,7 +267,10 @@ export default function ReceptionStaffUniformPage() {
           </button>
         </div>
         
-        <Breadcrumbs items={content[locale].breadcrumbs} />
+        <Breadcrumbs items={content[locale].breadcrumbs.map(item => ({
+          label: item.name,
+          href: item.url
+        }))} />
         
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
           {/* Product Images */}

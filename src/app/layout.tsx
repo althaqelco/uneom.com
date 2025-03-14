@@ -2,14 +2,17 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { QuoteProvider } from '@/contexts/QuoteContext';
-import { defaultMetadata } from '@/components/SEO';
 import LinkPreloader from '@/components/LinkPreloader';
 import LocaleProvider from '@/components/providers/LocaleProvider';
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
 
-export const metadata: Metadata = defaultMetadata;
+export const metadata: Metadata = {
+  title: 'UNEOM | Uniform Manufacturing in Saudi Arabia',
+  description: 'UNEOM is a leading uniform manufacturer in Saudi Arabia, offering high-quality corporate, healthcare, hospitality, and industrial uniforms.',
+  keywords: 'uniform, saudi arabia, riyadh, jeddah, dammam, uniform manufacturing, corporate uniforms, healthcare uniforms'
+};
 
 export default function RootLayout({
   children,

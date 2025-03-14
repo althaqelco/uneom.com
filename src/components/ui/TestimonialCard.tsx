@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { isRTL } from '@/lib/i18n/config';
 import { getLocalizedImagePath } from '@/lib/utils/imageLoader';
 
 export interface TestimonialProps {
@@ -28,7 +27,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
   logo,
   locale = 'en',
 }) => {
-  const rtl = isRTL(locale);
+  const rtl = locale === 'ar';
   const localizedImage = getLocalizedImagePath(image, locale as 'en' | 'ar');
   const localizedLogo = logo ? getLocalizedImagePath(logo, locale as 'en' | 'ar') : null;
   

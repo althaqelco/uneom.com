@@ -1114,45 +1114,48 @@ const blogPosts = {
  * @returns {Array} - Array of blog posts in the specified language
  */
 export const getAllBlogPosts = (locale = 'en') => {
-  return blogPosts[locale] || [];
+  // Ensure locale is either 'en' or 'ar'
+  const validLocale = locale === 'ar' ? 'ar' : 'en';
+  return blogPosts[validLocale] || [];
 };
 
 /**
- * Get a specific blog post by its slug and language
+ * Get a specific blog post by its slug
  * @param {string} slug - Blog post slug
  * @param {string} locale - Language code ('en' or 'ar')
  * @returns {Object|null} - Blog post object or null if not found
  */
-export const getBlogPostBySlug = (slug: string, locale: 'en' | 'ar' = 'en') => {
-  const posts = blogPosts[locale] || [];
+export const getBlogPostBySlug = (slug: string, locale = 'en') => {
+  // Ensure locale is either 'en' or 'ar'
+  const validLocale = locale === 'ar' ? 'ar' : 'en';
+  const posts = blogPosts[validLocale] || [];
   return posts.find(post => post.slug === slug) || null;
 };
 
 /**
- * Get a limited number of latest blog posts for a specific language
+ * Get latest blog posts for a specific language
  * @param {string} locale - Language code ('en' or 'ar')
  * @param {number} limit - Maximum number of posts to return
- * @returns {Array} - Array of the latest blog posts
+ * @returns {Array} - Array of latest blog posts
  */
-export const getLatestBlogPosts = (locale: 'en' | 'ar' = 'en', limit = 3) => {
-  const posts = blogPosts[locale] || [];
-  
-  // Sort posts by date (newest first)
-  const sortedPosts = [...posts].sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
-  });
-  
-  return sortedPosts.slice(0, limit);
+export const getLatestBlogPosts = (locale = 'en', limit = 3) => {
+  // Ensure locale is either 'en' or 'ar'
+  const validLocale = locale === 'ar' ? 'ar' : 'en';
+  const posts = blogPosts[validLocale] || [];
+  // Sort by date (assuming newer posts are at the beginning of the array)
+  return posts.slice(0, limit);
 };
 
 /**
- * Get blog posts by tag for a specific language
+ * Get blog posts filtered by tag
  * @param {string} tag - Tag to filter by
  * @param {string} locale - Language code ('en' or 'ar')
  * @returns {Array} - Array of blog posts with the specified tag
  */
-export const getBlogPostsByTag = (tag: string, locale: 'en' | 'ar' = 'en') => {
-  const posts = blogPosts[locale] || [];
+export const getBlogPostsByTag = (tag: string, locale = 'en') => {
+  // Ensure locale is either 'en' or 'ar'
+  const validLocale = locale === 'ar' ? 'ar' : 'en';
+  const posts = blogPosts[validLocale] || [];
   return posts.filter(post => post.tags.includes(tag));
 };
 
@@ -1167,8 +1170,8 @@ export const getAllTags = (locale: 'en' | 'ar' = 'en') => {
     return [...allTags, ...post.tags];
   }, []);
   
-  // Return unique tags
-  return [...new Set(tags)];
+  // Return unique tags using filter instead of Set
+  return tags.filter((tag, index) => tags.indexOf(tag) === index);
 };
 
 // Function to get blog posts by language
@@ -1176,17 +1179,32 @@ export const getBlogPosts = (lang: 'en' | 'ar') => {
   return blogPosts[lang];
 };
 
-// Function to get related posts based on tags
+/**
+ * Get related blog posts based on the current post
+ */
 export const getRelatedPosts = (currentSlug: string, lang: 'en' | 'ar', limit = 3) => {
-  const currentPost = getBlogPostBySlug(currentSlug, lang);
+  const posts = blogPosts[lang] || [];
+  const currentPost = posts.find(post => post.slug === currentSlug);
+  
   if (!currentPost) return [];
-
-  return blogPosts[lang]
-    .filter((post) => post.slug !== currentSlug && post.tags.some(tag => currentPost.tags.includes(tag)))
+  
+  // Find posts with similar tags
+  const relatedPosts = posts
+    .filter(post => post.slug !== currentSlug)
+    .sort((a, b) => {
+      const aCommonTags = a.tags.filter(tag => currentPost.tags.includes(tag)).length;
+      const bCommonTags = b.tags.filter(tag => currentPost.tags.includes(tag)).length;
+      return bCommonTags - aCommonTags;
+    })
     .slice(0, limit);
+  
+  return relatedPosts;
 };
 
-// Function to get posts by tag
+/**
+ * Get posts filtered by tag (legacy function, use getBlogPostsByTag instead)
+ */
 export const getPostsByTag = (tag: string, lang: 'en' | 'ar') => {
-  return blogPosts[lang].filter((post) => post.tags.includes(tag));
+  const posts = blogPosts[lang] || [];
+  return posts.filter(post => post.tags.includes(tag));
 };

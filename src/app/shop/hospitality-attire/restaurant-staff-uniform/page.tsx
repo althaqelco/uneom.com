@@ -177,12 +177,14 @@ export default function RestaurantStaffUniformPage() {
   // Shared product data
   const product = {
     id: 'restaurant-staff-uniform',
-    basePrice: "275",
-    rating: 4.8,
-    reviews: 52,
+    name: 'Restaurant Staff Uniform',
+    price: "410",
+    basePrice: "410",
+    rating: 4.7,
+    reviews: 34,
     inStock: true,
     minOrder: 10,
-    leadTime: '12-15 days',
+    leadTime: '14-16 days',
     customization: true,
     images: [
       { src: '/images/hotel-uniform.jpg', alt: 'Restaurant staff uniform for hospitality' },
@@ -246,7 +248,10 @@ export default function RestaurantStaffUniformPage() {
           </button>
         </div>
         
-        <Breadcrumbs items={content[locale].breadcrumbs} />
+        <Breadcrumbs items={content[locale].breadcrumbs.map(item => ({
+          label: item.name,
+          href: item.url
+        }))} />
         
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
           {/* Product Images */}

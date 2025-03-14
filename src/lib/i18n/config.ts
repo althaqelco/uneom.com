@@ -1,71 +1,90 @@
-'use client';
-
 /**
- * Internationalization configuration for the UNEOM website
- * Handles language detection, switching, and provides translation functions.
+ * Configuration for internationalization
+ * Contains locale settings and language options
  */
 
-// Supported languages
+// Supported locales
+export const locales = ['en', 'ar'] as const;
+export type Locale = typeof locales[number];
+
+// Default locale used as fallback
+export const defaultLocale: Locale = 'en';
+
+// Language constants for backward compatibility
 export const LANGUAGES = {
-  EN: 'en',
-  AR: 'ar'
+  EN: 'en' as Locale,
+  AR: 'ar' as Locale
 };
 
 // Default language
 export const DEFAULT_LANGUAGE = LANGUAGES.EN;
 
-// Language direction mapping
-export const LANGUAGE_DIRECTION = {
-  [LANGUAGES.EN]: 'ltr',
-  [LANGUAGES.AR]: 'rtl'
+// Locale display names
+export const localeLabels: Record<Locale, string> = {
+  en: 'English',
+  ar: 'العربية'
 };
+
+// RTL locales
+export const rtlLocales: Locale[] = ['ar'];
+
+// Language direction mapping
+export const LANGUAGE_DIRECTION: Record<Locale, 'ltr' | 'rtl'> = {
+  en: 'ltr',
+  ar: 'rtl'
+};
+
+// Locale metadata
+export const localeMetadata: Record<Locale, { direction: 'ltr' | 'rtl'; dateFormat: string }> = {
+  en: {
+    direction: 'ltr',
+    dateFormat: 'MM/DD/YYYY'
+  },
+  ar: {
+    direction: 'rtl',
+    dateFormat: 'DD/MM/YYYY'
+  }
+};
+
+// Default page title format
+export const defaultTitleTemplate = '%s | UNEOM';
 
 /**
  * Check if a language is RTL
- * @param {string} lang - Language code to check
- * @returns {boolean} True if the language is RTL
  */
-export const isRTL = (lang) => LANGUAGE_DIRECTION[lang] === 'rtl';
+export const isRTL = (lang: Locale): boolean => LANGUAGE_DIRECTION[lang] === 'rtl';
 
 /**
- * Get language direction
- * @param {string} lang - Language code
- * @returns {string} 'rtl' or 'ltr'
+ * Get language code from path
  */
-export const getDirection = (lang) => LANGUAGE_DIRECTION[lang] || 'ltr';
-
-/**
- * Get the current language from the pathname or default to 'en'
- * @param {string} pathname - Current pathname
- * @returns {string} Language code
- */
-export const getLanguageFromPath = (pathname) => {
-  if (!pathname) return DEFAULT_LANGUAGE;
-  const segments = pathname.split('/').filter(Boolean);
-  if (segments[0] === LANGUAGES.AR) return LANGUAGES.AR;
-  return DEFAULT_LANGUAGE;
+export const getLanguageFromPath = (pathname: string): Locale => {
+  const pathSegments = pathname.split('/').filter(Boolean);
+  const firstSegment = pathSegments[0];
+  
+  if (locales.includes(firstSegment as Locale)) {
+    return firstSegment as Locale;
+  }
+  
+  return defaultLocale;
 };
 
 /**
- * Switch the language in a URL
- * @param {string} currentPath - Current path
- * @param {string} newLang - New language code
- * @returns {string} New path with updated language
+ * Change language in path
  */
-export const switchLanguageInPath = (currentPath, newLang) => {
-  const segments = currentPath.split('/').filter(Boolean);
+export const changeLanguageInPath = (currentPath: string, newLang: Locale): string => {
   const currentLang = getLanguageFromPath(currentPath);
   
-  // If current path has a language prefix and we're switching languages
-  if (currentLang !== DEFAULT_LANGUAGE && currentLang !== newLang) {
-    segments.shift(); // Remove the current language prefix
+  if (currentLang === defaultLocale) {
+    // Path doesn't have language prefix
+    return `/${newLang}${currentPath}`;
+  } else {
+    // Replace language in path
+    return currentPath.replace(`/${currentLang}`, newLang === defaultLocale ? '' : `/${newLang}`);
   }
-  
-  // If new language is not the default, add it as prefix
-  if (newLang !== DEFAULT_LANGUAGE) {
-    return `/${newLang}/${segments.join('/')}`;
-  }
-  
-  // If new language is the default, just use the path without language prefix
-  return `/${segments.join('/')}`;
+};
+
+// Language URLs mapping for hreflang tags
+export const languageURLs: Record<Locale, string> = {
+  en: 'https://uneom.com',
+  ar: 'https://uneom.com/ar'
 }; 

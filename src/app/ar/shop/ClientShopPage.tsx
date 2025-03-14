@@ -182,7 +182,7 @@ export default function ClientShopPage() {
   return (
     <>
       {/* Schema.org structured data */}
-      <SchemaMarkup type="Product" data={schemaData} />
+      <SchemaMarkup type="product" data={schemaData} />
       
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-16 md:py-24">

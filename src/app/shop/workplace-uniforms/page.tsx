@@ -99,7 +99,10 @@ export default function WorkplaceUniformsPage() {
   return (
     <MainLayout locale={locale}>
       <Container className="py-8">
-        <Breadcrumbs items={breadcrumbs} />
+        <Breadcrumbs items={breadcrumbs.map(item => ({
+          label: item.name,
+          href: item.url
+        }))} />
         
         <div className="mt-6">
           <h1 className="text-3xl md:text-4xl font-bold text-neutral-900">Workplace Uniforms</h1>
@@ -169,12 +172,13 @@ export default function WorkplaceUniformsPage() {
               {products.map((product) => (
                 <ProductCard 
                   key={product.id}
-                  name={product.name}
-                  image={product.image}
-                  price={product.price}
-                  rating={product.rating}
-                  reviews={product.reviews}
-                  href={product.href}
+                  product={{
+                    id: product.id,
+                    name: product.name,
+                    image: product.image,
+                    price: product.price,
+                    href: product.href
+                  }}
                 />
               ))}
             </div>

@@ -144,7 +144,10 @@ export default function SurgicalScrubsPage() {
   return (
     <MainLayout locale={locale}>
       <Container className="py-8">
-        <Breadcrumbs items={breadcrumbs} />
+        <Breadcrumbs items={breadcrumbs.map(item => ({
+          label: item.name,
+          href: item.url
+        }))} />
         
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
@@ -389,10 +392,11 @@ export default function SurgicalScrubsPage() {
             {product.testimonials.map((testimonial, index) => (
               <TestimonialCard 
                 key={index}
-                quote={testimonial.quote}
-                author={testimonial.author}
-                position={testimonial.position}
+                id={index}
+                name={testimonial.author}
+                role={testimonial.position}
                 company={testimonial.company}
+                quote={testimonial.quote}
                 image={testimonial.image}
               />
             ))}

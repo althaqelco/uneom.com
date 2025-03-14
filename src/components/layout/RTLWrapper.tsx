@@ -1,7 +1,6 @@
 "use client";
 
 import React, { ReactNode } from 'react';
-import { isRTL } from '@/lib/i18n/config';
 
 interface RTLWrapperProps {
   children: ReactNode;
@@ -18,8 +17,9 @@ const RTLWrapper: React.FC<RTLWrapperProps> = ({
   locale,
   className = '',
 }) => {
-  const dir = isRTL(locale) ? 'rtl' : 'ltr';
-  const textAlignment = isRTL(locale) ? 'text-right' : 'text-left';
+  const isRtl = locale === 'ar';
+  const dir = isRtl ? 'rtl' : 'ltr';
+  const textAlignment = isRtl ? 'text-right' : 'text-left';
   
   return (
     <div dir={dir} className={`${textAlignment} ${className}`}>

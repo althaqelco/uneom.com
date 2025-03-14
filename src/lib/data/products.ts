@@ -223,14 +223,14 @@ export const products = [
 ];
 
 // Helper functions
-export const getProductById = (id) => {
+export const getProductById = (id: string) => {
   return products.find(product => product.id === id) || null;
 };
 
-export const getProductsByCategory = (category) => {
+export const getProductsByCategory = (category: string) => {
   return products.filter(product => product.category === category);
 };
 
-export const getProductsByIndustry = (industry) => {
+export const getProductsByIndustry = (industry: string) => {
   return products.filter(product => product.industry === industry);
 }; 

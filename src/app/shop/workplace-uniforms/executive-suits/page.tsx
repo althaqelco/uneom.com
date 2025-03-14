@@ -27,7 +27,7 @@ export default function ExecutiveSuitsPage() {
     id: 'executive-suits',
     name: 'Executive Tailored Suits',
     price: 'From SAR 1,299',
-    basePrice: 1299,
+    basePrice: "1299",
     rating: 4.9,
     reviews: 87,
     description: 'Premium tailored suits designed for corporate executives who require sophistication, comfort, and a distinguished professional appearance.',
@@ -140,7 +140,10 @@ export default function ExecutiveSuitsPage() {
   return (
     <MainLayout locale={locale}>
       <Container className="py-8">
-        <Breadcrumbs breadcrumbs={breadcrumbs} />
+        <Breadcrumbs items={breadcrumbs.map(item => ({
+          label: item.name,
+          href: item.href
+        }))} />
         
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
@@ -268,9 +271,10 @@ export default function ExecutiveSuitsPage() {
             <div className="mt-6">
               <p className="text-sm text-neutral-500 mb-2">Lead time: {product.leadTime}</p>
               <AddToQuoteButton 
-                onClick={handleAddToQuote}
-                disabled={!selectedColor || !selectedSize}
-                fullWidth
+                product={product}
+                quantity={quantity}
+                color={selectedColor || undefined}
+                size={selectedSize || undefined}
               />
             </div>
           </div>
@@ -278,7 +282,7 @@ export default function ExecutiveSuitsPage() {
         
         {/* Product Description */}
         <div className="mt-16">
-          <SectionHeading align="left">Product Details</SectionHeading>
+          <SectionHeading centered={false}>Product Details</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <p className="text-neutral-700">{product.longDescription}</p>
@@ -310,7 +314,7 @@ export default function ExecutiveSuitsPage() {
         
         {/* Customization Section */}
         <div className="mt-16 bg-neutral-50 p-6 rounded-lg">
-          <SectionHeading align="left">Customization Options</SectionHeading>
+          <SectionHeading centered={false}>Executive Styling</SectionHeading>
           <div className="mt-4">
             <p className="text-neutral-700 mb-4">
               Our Executive Tailored Suits can be customized to match your corporate identity and specific requirements. 
@@ -341,28 +345,40 @@ export default function ExecutiveSuitsPage() {
         
         {/* Testimonials */}
         <div className="mt-16">
-          <SectionHeading align="left">Client Testimonials</SectionHeading>
+          <SectionHeading centered={false}>Client Testimonials</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {product.testimonials.map((testimonial, index) => (
-              <TestimonialCard 
-                key={index}
-                quote={testimonial.quote}
-                author={testimonial.author}
-                position={testimonial.position}
-                image={testimonial.image}
-              />
-            ))}
+            {product.testimonials.map((testimonial, index) => {
+              // Extract company from position if available
+              const positionParts = testimonial.position.split(', ');
+              const company = positionParts.length > 1 ? positionParts[1] : '';
+              
+              return (
+                <TestimonialCard 
+                  key={index}
+                  id={index}
+                  name={testimonial.author}
+                  role={positionParts[0]}
+                  company={company}
+                  quote={testimonial.quote}
+                  image={testimonial.image}
+                />
+              );
+            })}
           </div>
         </div>
         
         {/* Size Chart Modal */}
-        {showSizeChart && (
-          <SizeChartModal
-            onClose={() => setShowSizeChart(false)}
-            sizeEquivalents={product.sizeEquivalents}
-            title="Executive Suits Size Chart"
-          />
-        )}
+        <SizeChartModal
+          isOpen={showSizeChart}
+          onClose={() => setShowSizeChart(false)}
+          title="Executive Suits Size Chart"
+          sizes={Object.entries(product.sizeEquivalents).map(([size, description]) => ({
+            size,
+            chest: description,
+            waist: '-',
+            hips: '-'
+          }))}
+        />
       </Container>
     </MainLayout>
   );

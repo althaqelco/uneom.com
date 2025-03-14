@@ -22,6 +22,9 @@ interface Product {
 }
 
 const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ locale }) => {
+  // Ensure locale is valid
+  const validLocale = locale === 'ar' ? 'ar' : 'en';
+  
   // Content based on locale
   const content = {
     en: {
@@ -120,13 +123,14 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ locale }) => {
     <section className="py-16 bg-white">
       <Container>
         <SectionHeading
-          title={content[locale].title}
-          subtitle={content[locale].subtitle}
-          alignment={locale === 'ar' ? 'right' : 'left'}
-        />
+          subtitle={content[validLocale].subtitle}
+          centered={validLocale !== 'ar'}
+        >
+          {content[validLocale].title}
+        </SectionHeading>
         
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products[locale].map((product) => (
+          {products[validLocale].map((product) => (
             <div 
               key={product.id}
               className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
@@ -165,10 +169,10 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ locale }) => {
                   href={product.href}
                   className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors duration-200"
                 >
-                  {locale === 'en' ? 'View Details' : 'عرض التفاصيل'}
+                  {validLocale === 'en' ? 'View Details' : 'عرض التفاصيل'}
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
-                    className={`h-4 w-4 ml-1 ${locale === 'ar' ? 'transform rotate-180' : ''}`} 
+                    className={`h-4 w-4 ml-1 ${validLocale === 'ar' ? 'transform rotate-180' : ''}`} 
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor"
@@ -193,7 +197,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ locale }) => {
             variant="primary"
             size="lg"
           >
-            {content[locale].buttonText}
+            {content[validLocale].buttonText}
           </Button>
         </div>
       </Container>

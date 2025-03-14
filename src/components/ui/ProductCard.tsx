@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { isRTL } from '@/lib/i18n';
 import { getLocalizedImagePath } from '@/lib/utils/imageLoader';
 
 export interface ProductProps {
@@ -43,7 +42,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     isFeatured,
   } = product;
   
-  const rtl = isRTL(locale);
+  const rtl = locale === 'ar';
   const localizedImage = getLocalizedImagePath(image, locale as 'en' | 'ar');
   
   return (

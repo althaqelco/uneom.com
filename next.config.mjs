@@ -54,6 +54,223 @@ const nextConfig = {
       },
     ];
   },
+  
+  // 301 Redirects for SEO optimization
+  async redirects() {
+    return [
+      // English - Main Pages
+      {
+        source: '/sectors/:path*',
+        destination: '/products/:path*',
+        permanent: true,
+      },
+      {
+        source: '/location/:path*',
+        destination: '/locations/:path*',
+        permanent: true,
+      },
+      
+      // English - Specific Sectors
+      {
+        source: '/sectors/healthcare-uniforms',
+        destination: '/products/healthcare-uniforms',
+        permanent: true,
+      },
+      {
+        source: '/sectors/corporate-uniforms',
+        destination: '/products/corporate-uniforms',
+        permanent: true,
+      },
+      {
+        source: '/sectors/restaurant-uniforms',
+        destination: '/products/hospitality-uniforms/restaurants',
+        permanent: true,
+      },
+      {
+        source: '/sectors/uniform-in-riyadh',
+        destination: '/locations/riyadh',
+        permanent: true,
+      },
+      {
+        source: '/sectors/uniform-in-dammam',
+        destination: '/locations/dammam',
+        permanent: true,
+      },
+      {
+        source: '/sectors/uniform-in-jeddah',
+        destination: '/locations/jeddah',
+        permanent: true,
+      },
+      {
+        source: '/sectors/uniform-in-mecca',
+        destination: '/locations/mecca',
+        permanent: true,
+      },
+      {
+        source: '/sectors/uniform-in-medina',
+        destination: '/locations/medina',
+        permanent: true,
+      },
+      {
+        source: '/sectors/education-uniforms',
+        destination: '/products/education-uniforms',
+        permanent: true,
+      },
+      {
+        source: '/sectors/industrial-uniforms',
+        destination: '/products/industrial-uniforms',
+        permanent: true,
+      },
+      {
+        source: '/sectors/uniform-factory',
+        destination: '/products/uniform-factory',
+        permanent: true,
+      },
+      {
+        source: '/sectors/workers-uniform',
+        destination: '/products/workers-uniform',
+        permanent: true,
+      },
+      {
+        source: '/sectors/uniform-factory-2',
+        destination: '/products/manufacturing',
+        permanent: true,
+      },
+      {
+        source: '/sectors/hospitality-uniforms',
+        destination: '/products/hospitality-uniforms',
+        permanent: true,
+      },
+      
+      // English - Locations
+      {
+        source: '/location/medina',
+        destination: '/locations/medina',
+        permanent: true,
+      },
+      {
+        source: '/location/dammam',
+        destination: '/locations/dammam',
+        permanent: true,
+      },
+      {
+        source: '/location/riyadh',
+        destination: '/locations/riyadh',
+        permanent: true,
+      },
+      {
+        source: '/location/jeddah',
+        destination: '/locations/jeddah',
+        permanent: true,
+      },
+      
+      // Arabic - Main Sections
+      {
+        source: '/ar/sectors/:path*',
+        destination: '/ar/products/:path*',
+        permanent: true,
+      },
+      {
+        source: '/ar/location/:path*',
+        destination: '/ar/locations/:path*',
+        permanent: true,
+      },
+      
+      // Arabic - Specific Sectors
+      {
+        source: '/ar/sectors/healthcare-uniforms',
+        destination: '/ar/products/healthcare-uniforms',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/corporate-uniforms',
+        destination: '/ar/products/corporate-uniforms',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/restaurant-uniforms',
+        destination: '/ar/products/hospitality-uniforms/restaurants',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/uniform-in-riyadh',
+        destination: '/ar/locations/riyadh',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/uniform-in-dammam',
+        destination: '/ar/locations/dammam',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/uniform-in-jeddah',
+        destination: '/ar/locations/jeddah',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/uniform-in-mecca',
+        destination: '/ar/locations/mecca',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/uniform-in-medina',
+        destination: '/ar/locations/medina',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/education-uniforms',
+        destination: '/ar/products/education-uniforms',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/industrial-uniforms',
+        destination: '/ar/products/industrial-uniforms',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/uniform-factory',
+        destination: '/ar/products/uniform-factory',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/workers-uniform',
+        destination: '/ar/products/workers-uniform',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/uniform-factory-2',
+        destination: '/ar/products/manufacturing',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/hospitality-uniforms',
+        destination: '/ar/products/hospitality-uniforms',
+        permanent: true,
+      },
+      
+      // Arabic - Locations with encoded URLs
+      {
+        source: '/ar/location/%d8%a7%d9%84%d9%85%d8%af%d9%8a%d9%86%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d9%88%d8%b1%d8%a9',
+        destination: '/ar/locations/medina',
+        permanent: true,
+      },
+      {
+        source: '/ar/location/%d8%a7%d9%84%d8%af%d9%85%d8%a7%d9%85',
+        destination: '/ar/locations/dammam',
+        permanent: true,
+      },
+      {
+        source: '/ar/location/%d8%a7%d9%84%d8%b1%d9%8a%d8%a7%d8%b6',
+        destination: '/ar/locations/riyadh',
+        permanent: true,
+      },
+      {
+        source: '/ar/location/%d8%ac%d8%af%d8%a9',
+        destination: '/ar/locations/jeddah',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

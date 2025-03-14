@@ -3,8 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { isRTL } from '@/lib/i18n';
-import SchemaMarkup from '@/components/SchemaMarkup';
+import Script from 'next/script';
 
 export interface BreadcrumbsProps {
   locale?: string;
@@ -29,7 +28,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   separator = '/'
 }) => {
   const pathname = usePathname();
-  const rtl = isRTL(locale);
+  const rtl = locale === 'ar';
   
   // Generate breadcrumbs based on pathname if not provided
   const getBreadcrumbsFromPath = () => {
@@ -85,11 +84,14 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   
   // Prepare schema data for structured data
   const schemaData = {
-    breadcrumbs: allItems.map(item => ({
-      name: item.label,
-      url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://uneom.com'}${item.href}`
-    })),
-    locale
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": allItems.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.label,
+      "item": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://uneom.com'}${item.href}`
+    }))
   };
   
   return (
@@ -134,9 +136,10 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
       </nav>
       
       {/* Add structured data for SEO */}
-      <SchemaMarkup 
-        type="BreadcrumbList" 
-        data={schemaData}
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
     </>
   );

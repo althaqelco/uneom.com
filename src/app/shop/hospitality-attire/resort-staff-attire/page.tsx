@@ -177,12 +177,14 @@ export default function ResortStaffAttirePage() {
   // Shared product data
   const product = {
     id: 'resort-staff-attire',
-    basePrice: "375",
-    rating: 4.8,
-    reviews: 42,
+    name: 'Resort Staff Attire',
+    price: "480",
+    basePrice: "480",
+    rating: 4.7,
+    reviews: 32,
     inStock: true,
-    minOrder: 10,
-    leadTime: '14-16 days',
+    minOrder: 12,
+    leadTime: '14-20 days',
     customization: true,
     images: [
       { src: '/images/cheerful-flight-attendant-standing-in-airport-term-2024-10-18-08-12-48-utc.jpg', alt: 'Resort staff in professional attire greeting guests' },
@@ -247,7 +249,10 @@ export default function ResortStaffAttirePage() {
           </button>
         </div>
         
-        <Breadcrumbs items={content[locale].breadcrumbs} />
+        <Breadcrumbs items={content[locale].breadcrumbs.map(item => ({
+          label: item.name,
+          href: item.url
+        }))} />
         
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
           {/* Product Images */}

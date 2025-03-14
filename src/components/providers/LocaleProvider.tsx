@@ -2,7 +2,21 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
-import { DEFAULT_LANGUAGE, getLanguageFromPath, isRTL, LANGUAGES } from '@/lib/i18n/config';
+
+// Default language
+const DEFAULT_LANGUAGE = 'en';
+
+// Define function to get language from path
+const getLanguageFromPath = (pathname: string): string => {
+  const pathSegments = pathname.split('/').filter(Boolean);
+  const firstSegment = pathSegments[0];
+  
+  if (firstSegment === 'en' || firstSegment === 'ar') {
+    return firstSegment;
+  }
+  
+  return DEFAULT_LANGUAGE;
+};
 
 // Define the types for our context
 interface LocaleContextType {
@@ -50,7 +64,7 @@ export default function LocaleProvider({
   }, [pathname]);
   
   // احسب RTL بناءً على اللغة
-  const rtl = isRTL(locale);
+  const rtl = locale === 'ar';
   
   // إنشاء قيمة Context
   const contextValue: LocaleContextType = {
