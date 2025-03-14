@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+// Get current directory
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 const nextConfig = {
   // i18n configuration is not needed with App Router
   // The i18n routing is now handled by the app directory structure
@@ -31,14 +37,13 @@ const nextConfig = {
   
   // Explicitly configure path aliases
   experimental: {
-    appDir: true,
     serverComponentsExternalPackages: [],
   },
   
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, './src'),
+      '@': resolve(__dirname, './src'),
     };
     return config;
   },
