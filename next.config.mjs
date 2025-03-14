@@ -6,9 +6,6 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig = {
-  // i18n configuration is not needed with App Router
-  // The i18n routing is now handled by the app directory structure
-  
   // Skip type checking in production to make builds faster and more reliable on Vercel
   typescript: {
     // !! WARN !!
@@ -110,7 +107,7 @@ const nextConfig = {
     ];
   },
   
-  // 301 Redirects for SEO optimization
+  // Redirects for SEO optimization
   async redirects() {
     return [
       // English - Main Pages
