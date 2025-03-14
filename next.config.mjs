@@ -87,8 +87,8 @@ const nextConfig = {
     // Habilitar optimización de imágenes responsive
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // CRÍTICO: Cambiar a false para permitir optimización en Vercel
-    unoptimized: false,
+    // CRÍTICO: Cambiar a true para deshabilitar optimización en Vercel
+    unoptimized: true,
     // Aumentar el cacheo para mejor rendimiento
     minimumCacheTTL: 3600,
     // Permitir SVG para mayor flexibilidad

@@ -17,6 +17,11 @@ const ImageDebugger = dynamic(() => import('@/components/ui/ImageDebugger'), {
   ssr: false
 });
 
+// Importar el corrector de imágenes para Vercel
+const VercelImageFixer = dynamic(() => import('@/components/VercelImageFixer'), {
+  ssr: false
+});
+
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
@@ -50,6 +55,8 @@ export default function RootLayout({
             <ImageResolver />
             {/* Añadimos el depurador de imágenes en producción - Solo visible en Vercel */}
             <ImageDebugger />
+            {/* Añadimos el corrector automático de imágenes para Vercel */}
+            <VercelImageFixer />
           </QuoteProvider>
           <LinkPreloader />
         </LocaleProvider>
