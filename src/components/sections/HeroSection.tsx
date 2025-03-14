@@ -528,7 +528,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="relative" style={{padding: '56.25% 0 0 0'}}>
                 <iframe 
                   src={isRTL 
-                    ? "https://player.vimeo.com/video/1063939680?h=d186c87f02&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1"
+                    ? "https://player.vimeo.com/video/1065895823?h=4c0ee40f09&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1"
                     : "https://player.vimeo.com/video/1064010724?h=285e655a92&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1"
                   } 
                   frameBorder="0" 
