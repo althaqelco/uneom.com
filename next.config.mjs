@@ -54,12 +54,12 @@ const nextConfig = {
     // Enable responsive image optimization
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Disable font optimization since we're using Google Fonts
+    disableDependentFeature: true
   },
   
-  // Add experimental option to skip font optimization
+  // Configure server components
   experimental: {
-    // Skip font optimization which causes problems during build
-    skipFontOptimization: true,
     serverComponentsExternalPackages: [],
   },
   
@@ -68,6 +68,15 @@ const nextConfig = {
       ...config.resolve.alias,
       '@': resolve(__dirname, './src'),
     };
+    
+    // Add a fallback for node built-ins
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false
+    };
+    
     return config;
   },
   
