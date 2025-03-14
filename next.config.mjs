@@ -60,6 +60,12 @@ const nextConfig = {
     serverComponentsExternalPackages: [],
   },
   
+  // Explicitly set the output directory for the build
+  distDir: '.next',
+  
+  // Ensure output is compatible with Vercel
+  output: 'standalone',
+  
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
