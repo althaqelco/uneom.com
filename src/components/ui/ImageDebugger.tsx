@@ -2,263 +2,233 @@
 
 import React, { useEffect, useState } from 'react';
 
-interface ImageStatus {
+interface ImageInfo {
   src: string;
   status: 'loading' | 'success' | 'error';
-  absoluteSrc?: string;
-  error?: string;
-  attempts?: number;
+  element: HTMLImageElement;
+  originalSrc?: string;
+  attempts: number;
 }
 
 /**
  * Componente para depurar y corregir problemas de carga de imágenes en Vercel
  */
 const ImageDebugger: React.FC = () => {
-  const [imageStatuses, setImageStatuses] = useState<ImageStatus[]>([]);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [images, setImages] = useState<ImageInfo[]>([]);
   const [isVercel, setIsVercel] = useState<boolean>(false);
-  const [hostname, setHostname] = useState<string>('');
-  const [origin, setOrigin] = useState<string>('');
-  const [isFixing, setIsFixing] = useState<boolean>(false);
-  const [fixedCount, setFixedCount] = useState<number>(0);
 
   useEffect(() => {
-    // Solo ejecutar en el cliente
+    // Only run in browser
     if (typeof window === 'undefined') return;
 
-    // Obtener información del entorno
-    const currentHostname = window.location.hostname;
-    const currentOrigin = window.location.origin;
+    // Check if we're on Vercel
+    const hostname = window.location.hostname;
+    const isVercelEnv = hostname.includes('vercel.app') || 
+                        process.env.NEXT_PUBLIC_VERCEL_ENV !== undefined;
     
-    setHostname(currentHostname);
-    setOrigin(currentOrigin);
-    setIsVercel(
-      currentHostname.includes('vercel.app') || 
-      currentHostname === 'uneom.com' || 
-      currentHostname.endsWith('.uneom.com')
-    );
+    setIsVercel(isVercelEnv);
 
-    // Recopilar todas las imágenes en la página
-    collectImageStatuses();
+    // Only show debugger in Vercel environment with debug parameter
+    const params = new URLSearchParams(window.location.search);
+    const shouldDebug = params.get('debug') === 'images' || 
+                        params.get('debug') === 'true' ||
+                        localStorage.getItem('debugImages') === 'true';
     
-    // Probar cargar la imagen de marcador de posición para diagnóstico
-    testPlaceholderImage(currentOrigin);
-    
-    // Configurar un intervalo para verificar periódicamente las imágenes
-    const intervalId = setInterval(() => {
-      collectImageStatuses();
-    }, 5000);
-    
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
+    if (!shouldDebug && !isVercelEnv) return;
 
-  // Función para recopilar el estado de todas las imágenes
-  const collectImageStatuses = () => {
-    const images = document.querySelectorAll('img');
-    const initialStatuses: ImageStatus[] = [];
-    
-    images.forEach((img) => {
-      const src = img.getAttribute('src') || '';
-      const currentOrigin = window.location.origin;
+    // Function to scan all images on the page
+    const scanImages = () => {
+      const imgElements = document.querySelectorAll('img');
+      const newImages: ImageInfo[] = [];
       
-      if (src) {
-        initialStatuses.push({
+      imgElements.forEach((img) => {
+        const src = img.getAttribute('src') || '';
+        const originalSrc = img.getAttribute('data-original-src') || undefined;
+        
+        // Skip data URLs and already tracked images
+        if (src.startsWith('data:') || 
+            images.some(i => i.element === img)) {
+          return;
+        }
+        
+        // Add image to tracking
+        newImages.push({
           src,
-          status: img.complete && !img.naturalWidth ? 'error' : img.complete ? 'success' : 'loading',
-          absoluteSrc: src.startsWith('http') ? src : `${currentOrigin}${src.startsWith('/') ? '' : '/'}${src}`,
+          originalSrc,
+          status: img.complete ? (img.naturalWidth > 0 ? 'success' : 'error') : 'loading',
+          element: img,
           attempts: 0
         });
         
-        // Configurar listeners para todas las imágenes
-        img.addEventListener('load', () => {
-          updateImageStatus(src, 'success');
-        });
-        
-        img.addEventListener('error', (e) => {
-          updateImageStatus(src, 'error', (e as ErrorEvent).message);
-        });
-      }
-    });
-    
-    setImageStatuses(prevStatuses => {
-      // Mantener los intentos anteriores para imágenes existentes
-      const updatedStatuses = initialStatuses.map(newStatus => {
-        const existingStatus = prevStatuses.find(s => s.src === newStatus.src);
-        return existingStatus ? { ...newStatus, attempts: existingStatus.attempts } : newStatus;
+        // Add event listeners
+        img.addEventListener('load', () => handleImageLoad(img));
+        img.addEventListener('error', () => handleImageError(img));
       });
-      return updatedStatuses;
-    });
-  };
-
-  // Función para actualizar el estado de una imagen
-  const updateImageStatus = (src: string, status: 'loading' | 'success' | 'error', error?: string) => {
-    setImageStatuses(prevStatuses => 
-      prevStatuses.map(img => 
-        img.src === src ? { ...img, status, error } : img
-      )
-    );
-  };
-
-  // Función para probar la imagen de marcador de posición
-  const testPlaceholderImage = (currentOrigin: string) => {
-    const testPlaceholderImage = new Image();
-    testPlaceholderImage.src = '/images/default-placeholder.jpg';
-    testPlaceholderImage.onload = () => {
-      console.log('✅ Imagen de marcador de posición cargada correctamente');
-    };
-    testPlaceholderImage.onerror = () => {
-      console.error('❌ Error al cargar la imagen de marcador de posición');
       
-      // Probar con URL absoluta
-      const absoluteTestImage = new Image();
-      absoluteTestImage.src = `${currentOrigin}/images/default-placeholder.jpg`;
-      absoluteTestImage.onload = () => {
-        console.log('✅ Imagen de marcador de posición cargada correctamente con URL absoluta');
-      };
-      absoluteTestImage.onerror = () => {
-        console.error('❌ Error al cargar la imagen de marcador de posición incluso con URL absoluta');
-      };
-    };
-  };
-
-  // Función para intentar corregir todas las imágenes con error
-  const fixAllImages = async () => {
-    setIsFixing(true);
-    let fixed = 0;
-    
-    // Obtener todas las imágenes con error
-    const errorImages = document.querySelectorAll('img');
-    
-    // Convertir NodeList a Array para poder iterar
-    const imageArray = Array.from(errorImages);
-    
-    for (const img of imageArray) {
-      const src = img.getAttribute('src') || '';
-      const originalSrc = img.getAttribute('data-original-src') || '';
-      const dataSrc = img.getAttribute('data-src') || '';
-      
-      // Si la imagen está rota, intentar corregirla
-      if (!img.complete || (img.complete && !img.naturalWidth)) {
-        // Incrementar el contador de intentos
-        setImageStatuses(prevStatuses => 
-          prevStatuses.map(status => 
-            status.src === src ? { ...status, attempts: (status.attempts || 0) + 1 } : status
-          )
-        );
-        
-        // Estrategia 1: Intentar con URL absoluta
-        const absoluteSrc = src.startsWith('http') ? src : `${origin}${src.startsWith('/') ? '' : '/'}${src}`;
-        await tryImageFix(img, absoluteSrc);
-        
-        // Estrategia 2: Intentar con la URL original si existe
-        if (originalSrc && img.getAttribute('src') !== originalSrc) {
-          await tryImageFix(img, originalSrc);
-        }
-        
-        // Estrategia 3: Intentar con data-src si existe
-        if (dataSrc && img.getAttribute('src') !== dataSrc) {
-          await tryImageFix(img, dataSrc);
-        }
-        
-        // Estrategia 4: Intentar con URL sin _next/image
-        if (src.includes('/_next/image')) {
-          const urlParams = new URLSearchParams(src.split('?')[1]);
-          const imgUrl = urlParams.get('url');
-          if (imgUrl) {
-            await tryImageFix(img, imgUrl);
-          }
-        }
-        
-        // Estrategia 5: Usar la imagen de respaldo
-        if (!img.complete || (img.complete && !img.naturalWidth)) {
-          img.setAttribute('src', '/images/default-placeholder.jpg');
-          fixed++;
-        }
+      if (newImages.length > 0) {
+        setImages(prev => [...prev, ...newImages]);
       }
-    }
+    };
     
-    setFixedCount(fixed);
-    setIsFixing(false);
+    // Handle image load success
+    const handleImageLoad = (img: HTMLImageElement) => {
+      setImages(prev => 
+        prev.map(info => 
+          info.element === img 
+            ? { ...info, status: 'success' } 
+            : info
+        )
+      );
+    };
     
-    // Actualizar el estado de las imágenes después de los intentos de corrección
-    collectImageStatuses();
-  };
-
-  // Función para intentar una estrategia de corrección de imagen
-  const tryImageFix = (img: HTMLImageElement, newSrc: string): Promise<boolean> => {
-    return new Promise((resolve) => {
-      const tempImg = new Image();
+    // Handle image load error
+    const handleImageError = (img: HTMLImageElement) => {
+      setImages(prev => {
+        const updatedImages = prev.map(info => {
+          if (info.element === img) {
+            const attempts = info.attempts + 1;
+            
+            // Try to fix the image if it's the first error
+            if (attempts === 1 && isVercelEnv) {
+              tryFixImage(img);
+            }
+            
+            return { 
+              ...info, 
+              status: 'error' as const,
+              attempts
+            };
+          }
+          return info;
+        });
+        
+        return updatedImages;
+      });
+    };
+    
+    // Try to fix a broken image
+    const tryFixImage = (img: HTMLImageElement) => {
+      const src = img.getAttribute('src') || '';
+      const originalSrc = img.getAttribute('data-original-src') || src;
       
-      // Configurar un timeout para no esperar demasiado
-      const timeout = setTimeout(() => {
-        resolve(false);
-      }, 2000);
+      // Try different variations
+      const variations = [
+        // Original source
+        originalSrc,
+        // With and without leading slash
+        originalSrc.startsWith('/') ? originalSrc.substring(1) : `/${originalSrc}`,
+        // With _next prefix
+        `/_next/static/images/${originalSrc.split('/').pop()}`,
+        // With absolute URL
+        `${window.location.origin}${originalSrc.startsWith('/') ? '' : '/'}${originalSrc}`,
+        // Fallback
+        '/images/default-placeholder.jpg'
+      ];
       
-      tempImg.onload = () => {
-        clearTimeout(timeout);
-        img.setAttribute('src', newSrc);
-        resolve(true);
+      // Try each variation
+      let index = 0;
+      const tryNextVariation = () => {
+        if (index >= variations.length) return;
+        
+        const variation = variations[index++];
+        img.src = variation;
       };
       
-      tempImg.onerror = () => {
-        clearTimeout(timeout);
-        resolve(false);
-      };
-      
-      tempImg.src = newSrc;
-    });
-  };
+      img.addEventListener('error', tryNextVariation, { once: true });
+      tryNextVariation();
+    };
+    
+    // Initial scan
+    scanImages();
+    
+    // Scan for new images periodically
+    const intervalId = setInterval(scanImages, 2000);
+    
+    // Toggle visibility with keyboard shortcut (Ctrl+Shift+I)
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        setIsVisible(prev => !prev);
+        e.preventDefault();
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    
+    // Clean up
+    return () => {
+      clearInterval(intervalId);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [images]);
 
-  // Si no hay imágenes o estamos en el servidor, no mostrar nada
-  if (imageStatuses.length === 0) {
-    return null;
-  }
-
-  // Contar imágenes con error
-  const errorCount = imageStatuses.filter(img => img.status === 'error').length;
+  // Don't render anything if not on Vercel or debugger is hidden
+  if (!isVercel || !isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 right-0 z-50 p-4 bg-black bg-opacity-80 text-white rounded-tl-lg max-w-md max-h-96 overflow-auto">
-      <h3 className="text-lg font-bold mb-2">Depurador de Imágenes</h3>
-      <p className="text-xs mb-2">Entorno: {isVercel ? 'Vercel' : 'Desarrollo'}</p>
-      <p className="text-xs mb-2">Hostname: {hostname}</p>
-      <p className="text-xs mb-2">Origin: {origin}</p>
+    <div 
+      style={{
+        position: 'fixed',
+        bottom: '20px',
+        right: '20px',
+        zIndex: 9999,
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        color: 'white',
+        padding: '10px',
+        borderRadius: '5px',
+        maxWidth: '400px',
+        maxHeight: '80vh',
+        overflow: 'auto',
+        fontSize: '12px',
+        fontFamily: 'monospace'
+      }}
+    >
+      <div style={{ marginBottom: '10px', fontWeight: 'bold' }}>
+        Image Debugger (Press Ctrl+Shift+I to hide)
+      </div>
       
-      {errorCount > 0 && (
-        <button 
-          onClick={fixAllImages}
-          disabled={isFixing}
-          className="mb-2 px-3 py-1 bg-blue-600 text-white rounded text-xs hover:bg-blue-700 disabled:bg-gray-500"
-        >
-          {isFixing ? 'Corrigiendo...' : `Corregir ${errorCount} imágenes con error`}
-        </button>
-      )}
-      
-      {fixedCount > 0 && (
-        <p className="text-xs mb-2 text-green-400">Se corrigieron {fixedCount} imágenes</p>
-      )}
-      
-      <div className="text-xs">
-        <div className="grid grid-cols-4 gap-1 font-bold mb-1">
-          <span>Imagen</span>
-          <span>Estado</span>
-          <span>Intentos</span>
-          <span>URL</span>
+      <div>
+        <div style={{ marginBottom: '5px' }}>
+          Total Images: {images.length} | 
+          Success: {images.filter(i => i.status === 'success').length} | 
+          Error: {images.filter(i => i.status === 'error').length} | 
+          Loading: {images.filter(i => i.status === 'loading').length}
         </div>
-        {imageStatuses.map((img, index) => (
-          <div key={index} className="grid grid-cols-4 gap-1 mb-1 border-t border-gray-600 pt-1">
-            <span className="truncate">{img.src.split('/').pop()}</span>
-            <span className={
-              img.status === 'success' ? 'text-green-400' : 
-              img.status === 'error' ? 'text-red-400' : 'text-yellow-400'
-            }>
-              {img.status}
-            </span>
-            <span>{img.attempts || 0}</span>
-            <span className="truncate">{img.absoluteSrc}</span>
-          </div>
-        ))}
+        
+        <div style={{ borderTop: '1px solid rgba(255,255,255,0.3)', paddingTop: '5px' }}>
+          {images.filter(i => i.status === 'error').map((img, index) => (
+            <div 
+              key={index} 
+              style={{ 
+                marginBottom: '5px', 
+                padding: '5px', 
+                backgroundColor: 'rgba(255, 0, 0, 0.2)',
+                borderRadius: '3px'
+              }}
+            >
+              <div>Error: {img.src}</div>
+              {img.originalSrc && <div>Original: {img.originalSrc}</div>}
+              <div>Attempts: {img.attempts}</div>
+              <button 
+                onClick={() => {
+                  // Try to fix the image
+                  img.element.src = '/images/default-placeholder.jpg';
+                }}
+                style={{
+                  backgroundColor: '#555',
+                  border: 'none',
+                  color: 'white',
+                  padding: '2px 5px',
+                  borderRadius: '3px',
+                  marginTop: '3px',
+                  cursor: 'pointer'
+                }}
+              >
+                Fix
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

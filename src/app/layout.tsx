@@ -22,6 +22,15 @@ const VercelImageFixer = dynamic(() => import('@/components/VercelImageFixer'), 
   ssr: false
 });
 
+// Import new image components
+const ImagePreloader = dynamic(() => import('@/components/ui/ImagePreloader'), {
+  ssr: false
+});
+
+const EmergencyImageLoader = dynamic(() => import('@/components/ui/EmergencyImageLoader'), {
+  ssr: false
+});
+
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
@@ -29,6 +38,14 @@ export const metadata: Metadata = {
   description: 'UNEOM is a leading uniform manufacturer in Saudi Arabia, offering high-quality corporate, healthcare, hospitality, and industrial uniforms.',
   keywords: 'uniform, saudi arabia, riyadh, jeddah, dammam, uniform manufacturing, corporate uniforms, healthcare uniforms'
 };
+
+// Critical images to preload
+const CRITICAL_IMAGES = [
+  '/images/logo.png',
+  '/images/hero-banner.jpg',
+  '/images/default-placeholder.jpg',
+  '/images/favicon.ico'
+];
 
 export default function RootLayout({
   children,
@@ -46,17 +63,44 @@ export default function RootLayout({
         
         {/* Precarga de la imagen de respaldo */}
         <link rel="preload" href="/images/default-placeholder.jpg" as="image" />
+        <link rel="preload" href="/images/default-placeholder.svg" as="image" />
+        
+        {/* Precarga de fuentes importantes */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Estilos para corregir problemas de imágenes */}
+        <link rel="stylesheet" href="/css/image-fixes.css" />
+        
+        {/* Content Security Policy for images */}
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="img-src 'self' data: https: http: blob: *.vercel.app *.uneom.com *.githubusercontent.com;"
+        />
       </head>
       <body className={`${inter.variable} font-sans`}>
         <LocaleProvider>
           <QuoteProvider>
-            {children}
+            {/* Preload critical images */}
+            <ImagePreloader imagePaths={CRITICAL_IMAGES}>
+              {children}
+            </ImagePreloader>
+            
             {/* Agregamos nuestro componente de resolución de imágenes */}
             <ImageResolver />
             {/* Añadimos el depurador de imágenes en producción - Solo visible en Vercel */}
             <ImageDebugger />
             {/* Añadimos el corrector automático de imágenes para Vercel */}
             <VercelImageFixer />
+            
+            {/* Add emergency image loader for debugging */}
+            <div style={{ display: 'none' }}>
+              <EmergencyImageLoader 
+                src="/images/logo.png" 
+                alt="Preloaded Logo"
+                showDebugInfo={true}
+              />
+            </div>
           </QuoteProvider>
           <LinkPreloader />
         </LocaleProvider>
@@ -71,6 +115,7 @@ export default function RootLayout({
                 window.fixImagePaths = function() {
                   const images = document.querySelectorAll('img:not([data-fixed="true"])');
                   const baseUrl = window.location.origin;
+                  const isVercel = window.location.hostname.includes('vercel.app');
                   
                   images.forEach(img => {
                     const src = img.getAttribute('src') || '';
@@ -83,8 +128,44 @@ export default function RootLayout({
                       
                       // Establecer una propiedad de respaldo
                       img.setAttribute('data-original-src', src);
-                      img.setAttribute('src', fixedSrc);
-                      img.setAttribute('data-fixed', 'true');
+                      
+                      // En Vercel, intentar diferentes variaciones
+                      if (isVercel) {
+                        // Intentar con y sin slash inicial
+                        const variations = [
+                          fixedSrc,
+                          src.startsWith('/') ? baseUrl + src.substring(1) : fixedSrc,
+                          src.startsWith('/') ? src : '/' + src,
+                          '/_next/static/images/' + src.split('/').pop()
+                        ];
+                        
+                        // Probar cada variación
+                        let imgLoaded = false;
+                        variations.forEach((variation, index) => {
+                          if (!imgLoaded) {
+                            const testImg = new Image();
+                            testImg.onload = function() {
+                              if (!imgLoaded) {
+                                img.setAttribute('src', variation);
+                                img.setAttribute('data-fixed', 'true');
+                                imgLoaded = true;
+                              }
+                            };
+                            testImg.src = variation;
+                            
+                            // Si la imagen ya está en caché, el evento onload podría no dispararse
+                            if (testImg.complete) {
+                              img.setAttribute('src', variation);
+                              img.setAttribute('data-fixed', 'true');
+                              imgLoaded = true;
+                            }
+                          }
+                        });
+                      } else {
+                        // En desarrollo local, simplemente usar la URL fija
+                        img.setAttribute('src', fixedSrc);
+                        img.setAttribute('data-fixed', 'true');
+                      }
                       
                       // Configurar manejo de errores
                       img.onerror = function() {
@@ -103,6 +184,13 @@ export default function RootLayout({
                 // Ejecutar inicialmente y después de cada carga de página
                 window.fixImagePaths();
                 window.addEventListener('load', window.fixImagePaths);
+                
+                // Crear una imagen de respaldo SVG en caso de que todo falle
+                window.fallbackImageDataUrl = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjMyMCIgeT0iMjQwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM4ODgiPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+';
+                
+                // Precargar la imagen de respaldo
+                const preloadFallback = new Image();
+                preloadFallback.src = '/images/default-placeholder.jpg';
               }
             })();
           `}

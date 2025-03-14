@@ -22,13 +22,19 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   
-  // Set up image optimization for all image domains
+  // Configure image optimization
   images: {
-    // Reemplazando domains con remotePatterns como se recomienda
+    domains: [
+      'uneom.com',
+      'uneom-com.vercel.app',
+      'vercel.app',
+      'localhost',
+      '127.0.0.1'
+    ],
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'localhost',
+        protocol: 'https',
+        hostname: '**.vercel.app',
       },
       {
         protocol: 'https',
@@ -36,69 +42,20 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '*.uneom.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'i.imgur.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'fonts.gstatic.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'uneom-com.vercel.app',
-      },
-      {
-        protocol: 'https',
-        hostname: '*.vercel.app',
-      },
-      {
-        protocol: 'https',
-        hostname: 'vercel.app',
-      },
-      {
-        protocol: 'https',
-        hostname: 'vercel.com',
-      },
-      {
-        protocol: 'https',
-        hostname: '*.vercel.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'assets.vercel.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'lh3.googleusercontent.com',
-      },
-      // Nuevo patrón que permite cualquier dominio
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-      {
-        protocol: 'http',
-        hostname: '**',
+        hostname: '**.uneom.com',
       }
     ],
-    // Habilitar optimización de imágenes responsive
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // CRÍTICO: Cambiar a true para deshabilitar optimización en Vercel
-    unoptimized: true,
-    // Aumentar el cacheo para mejor rendimiento
-    minimumCacheTTL: 3600,
-    // Permitir SVG para mayor flexibilidad
+    unoptimized: true, // Disable image optimization for Vercel
+    minimumCacheTTL: 60 * 60 * 24 * 7, // 7 days
     dangerouslyAllowSVG: true,
-    // Política de seguridad para permitir todas las imágenes
-    contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src * 'self' data: https: http: blob:; font-src 'self' data: https:;"
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   
   // Configure server components
   experimental: {
+    optimizeCss: false,
+    scrollRestoration: true,
     serverComponentsExternalPackages: [],
   },
   
@@ -108,6 +65,7 @@ const nextConfig = {
   // Enable memory optimizations for builds
   swcMinify: true,
   
+  // Configure webpack
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
@@ -133,6 +91,30 @@ const nextConfig = {
             outputPath: 'static/images/',
             publicPath: '/_next/static/images/'
           }
+        },
+        // Añadir optimización de imágenes
+        {
+          loader: 'image-webpack-loader',
+          options: {
+            disable: process.env.NODE_ENV === 'development',
+            mozjpeg: {
+              progressive: true,
+              quality: 65
+            },
+            optipng: {
+              enabled: false,
+            },
+            pngquant: {
+              quality: [0.65, 0.90],
+              speed: 4
+            },
+            gifsicle: {
+              interlaced: false,
+            },
+            webp: {
+              quality: 75
+            }
+          }
         }
       ]
     });
@@ -144,54 +126,31 @@ const nextConfig = {
   reactStrictMode: true,
   // Configure trailing slashes
   trailingSlash: false,
-  // Enhance security with headers
+  
+  // Configure headers for better image loading
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/:path*',
         headers: [
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
           },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; img-src 'self' data: https: http: blob: *; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com; frame-src 'self'; object-src 'none';"
-          },
-          // Nuevos headers para CORS
           {
             key: 'Access-Control-Allow-Origin',
             value: '*',
           },
           {
-            key: 'Access-Control-Allow-Methods',
-            value: 'GET, POST, PUT, DELETE, OPTIONS',
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
           },
           {
-            key: 'Access-Control-Allow-Headers',
-            value: 'X-Requested-With, Content-Type, Accept',
-          }
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
+          },
         ],
       },
-      // Add font preload configuration
-      {
-        source: '/ar/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          }
-        ],
-      },
-      // Mejorar headers para imágenes
       {
         source: '/images/:path*',
         headers: [
@@ -202,21 +161,7 @@ const nextConfig = {
           {
             key: 'Access-Control-Allow-Origin',
             value: '*',
-          }
-        ],
-      },
-      // Mejorar headers para imágenes Next.js
-      {
-        source: '/_next/image/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
           },
-          {
-            key: 'Access-Control-Allow-Origin',
-            value: '*',
-          }
         ],
       },
     ];

@@ -5,255 +5,157 @@
  * مثل عدم ظهور الصور أو بطء التحميل
  */
 
+import { ImageLoaderProps } from 'next/image';
+
 // واجهة لتكوين محمل الصور
 export interface VercelImageLoaderConfig {
-  domains?: string[];
-  basePath?: string;
-  forceAbsolutePaths?: boolean;
-  defaultQuality?: number;
+  quality?: number;
+  width?: number;
   fallbackImage?: string;
-  debug?: boolean;
+  timeout?: number;
 }
 
-// واجهة لمعلمات تحميل الصور
-export interface VercelImageLoaderParams {
-  src: string;
-  width?: number;
+// الصورة الافتراضية في حالة الفشل
+const DEFAULT_FALLBACK_IMAGE = '/images/default-placeholder.jpg';
+
+interface VercelImageLoaderOptions {
   quality?: number;
+  width?: number;
   isVercel?: boolean;
 }
 
-// النطاقات الافتراضية المسموح بها
-const DEFAULT_DOMAINS = [
-  'uneom-com.vercel.app',
-  'uneom.com',
-  'vercel.app',
-  'vercel.com',
-  'githubusercontent.com',
-  'github.com',
-  'googleusercontent.com'
-];
-
-// الصورة الاحتياطية الافتراضية
-const DEFAULT_FALLBACK_IMAGE = '/images/default-placeholder.jpg';
-
 /**
- * التحقق مما إذا كان التطبيق يعمل على Vercel
+ * Custom image loader optimized for Vercel deployment
+ * Handles different image paths and formats for Vercel environment
  */
-export const isVercelEnvironment = (): boolean => {
-  if (typeof window === 'undefined') {
-    // في وضع التقديم من جانب الخادم، تحقق من متغيرات البيئة
-    return process.env.VERCEL === '1' || process.env.VERCEL_ENV !== undefined;
-  }
-  
-  // في وضع العميل، تحقق من نطاق URL
-  return window.location.hostname.includes('vercel.app') ||
-    window.location.hostname === 'uneom.com' ||
-    window.location.hostname.endsWith('.uneom.com');
-};
+export const vercelImageLoader = ({
+  src,
+  width,
+  quality = 75,
+  isVercel = false,
+}: ImageLoaderProps & VercelImageLoaderOptions): string => {
+  // Check if we're on Vercel
+  const isVercelEnv = isVercel || 
+    (typeof window !== 'undefined' && window.location.hostname.includes('vercel.app')) ||
+    process.env.NEXT_PUBLIC_VERCEL_ENV;
 
-/**
- * إصلاح مسار الصورة للاستخدام في بيئة Vercel
- * @param src - مسار الصورة الأصلي
- * @param config - تكوين محمل الصور
- * @returns مسار الصورة المصحح
- */
-export const fixImagePath = (src: string, config?: VercelImageLoaderConfig): string => {
-  // إذا كان المسار هو URL كامل، فارجع كما هو
-  if (src.startsWith('http://') || src.startsWith('https://')) {
+  // If it's an external URL, return it as is
+  if (src.startsWith('http') || src.startsWith('//')) {
     return src;
   }
-  
-  // إذا كان المسار يبدأ بسلاش أمامي، فهو مسار نسبي
-  const isRelativePath = src.startsWith('/');
-  
-  // استخراج المسار الأساسي من التكوين أو البيئة
-  const basePath = config?.basePath || '';
-  
-  // استخراج اسم النطاق للتطبيق على Vercel
-  const vercelDomain = typeof window !== 'undefined' 
-    ? window.location.hostname 
-    : (process.env.VERCEL_URL || 'uneom-com.vercel.app');
-  
-  // إذا كنا في بيئة Vercel وتم تمكين المسارات المطلقة
-  if (isVercelEnvironment() && (config?.forceAbsolutePaths ?? true)) {
-    // بناء المسار المطلق
-    return `https://${vercelDomain}${isRelativePath ? '' : '/'}${basePath}${isRelativePath ? src : `/${src}`}`;
+
+  // For Vercel environment
+  if (isVercelEnv) {
+    // Ensure the path starts with a slash
+    const normalizedSrc = src.startsWith('/') ? src : `/${src}`;
+    
+    // Return the path as is for Vercel (no optimization)
+    return normalizedSrc;
   }
-  
-  // إرجاع المسار النسبي مع إضافة المسار الأساسي إذا لزم الأمر
-  return `${basePath}${isRelativePath ? src : `/${src}`}`;
+
+  // For local development or other environments
+  // You can implement custom image optimization logic here if needed
+  return src;
 };
 
 /**
- * محمل الصور المخصص لبيئة Vercel
- * @param params - معلمات تحميل الصور
- * @param config - تكوين محمل الصور
- * @returns عنوان URL لتحميل الصورة
+ * Attempts to fix broken image paths by trying different variations
  */
-export const vercelImageLoader = (
-  params: VercelImageLoaderParams,
-  config: VercelImageLoaderConfig = {}
-): string => {
-  try {
-    const { 
-      src, 
-      width = 0, 
-      quality = config.defaultQuality || 80, 
-      isVercel = isVercelEnvironment() 
-    } = params;
-    
-    // إذا كان المصدر فارغًا، ارجع الصورة الاحتياطية
-    if (!src || src.trim() === '') {
-      return config.fallbackImage || DEFAULT_FALLBACK_IMAGE;
+export const fixImagePath = (src: string): string[] => {
+  const variations: string[] = [src];
+  
+  // If it's an absolute URL
+  if (src.startsWith('http')) {
+    // Try both http and https
+    if (src.startsWith('https://')) {
+      variations.push(src.replace('https://', 'http://'));
+    } else if (src.startsWith('http://')) {
+      variations.push(src.replace('http://', 'https://'));
     }
-    
-    // بالنسبة للصور ذات المصادر الخارجية، تحقق من أنها من نطاق مسموح به
-    if (src.startsWith('http')) {
-      try {
-        const url = new URL(src);
-        const allowedDomains = [...(config.domains || []), ...DEFAULT_DOMAINS];
-        
-        // تحقق من أن النطاق مسموح به
-        const isDomainAllowed = allowedDomains.some(domain => {
-          if (domain.startsWith('*.')) {
-            const baseDomain = domain.substring(2);
-            return url.hostname.endsWith(baseDomain);
-          }
-          return url.hostname === domain;
-        });
-        
-        // إذا كان النطاق مسموح به، ارجع المصدر كما هو
-        if (isDomainAllowed) {
-          return src;
-        }
-        
-        // إذا كان النطاق غير مسموح به وتم تمكين تصحيح الأخطاء، اطبع تحذيرًا
-        if (config.debug) {
-          console.warn(`Domain not allowed: ${url.hostname}. Using fallback image.`);
-        }
-        
-        // ارجع الصورة الاحتياطية
-        return config.fallbackImage || DEFAULT_FALLBACK_IMAGE;
-      } catch (e) {
-        // في حالة حدوث خطأ في تحليل URL، ارجع المصدر كما هو
-        if (config.debug) {
-          console.error(`Error parsing URL: ${src}`, e);
-        }
-        return src;
-      }
-    }
-    
-    // هنا نتعامل مع الصور المحلية
-    // تصحيح مسار الصورة للاستخدام في بيئة Vercel
-    const fixedPath = fixImagePath(src, config);
-    
-    // إذا كانت البيئة هي Vercel وتم تحديد عرض، أضف معلمات تحسين الصورة
-    if (isVercel && width > 0) {
-      const params = new URLSearchParams();
-      params.append('url', fixedPath);
-      params.append('w', width.toString());
-      params.append('q', quality.toString());
-      
-      // إذا كانت Vercel تقوم بتحسين الصور، فاستخدم محسن الصور
-      // return `/_next/image?${params.toString()}`;
-      
-      // لكن بما أننا عطلنا تحسين الصور في next.config.mjs، نرجع المسار مباشرة
-      return fixedPath;
-    }
-    
-    // إرجاع المسار المصحح
-    return fixedPath;
-  } catch (error) {
-    // في حالة حدوث خطأ، ارجع الصورة الاحتياطية
-    if (config.debug) {
-      console.error(`Error in vercelImageLoader:`, error);
-    }
-    return config.fallbackImage || DEFAULT_FALLBACK_IMAGE;
+  } 
+  // If it's a protocol-relative URL
+  else if (src.startsWith('//')) {
+    variations.push(`https:${src}`);
+    variations.push(`http:${src}`);
   }
+  // If it's a relative path
+  else {
+    // With and without leading slash
+    if (src.startsWith('/')) {
+      variations.push(src.substring(1));
+    } else {
+      variations.push(`/${src}`);
+    }
+    
+    // Try with _next/static prefix for Vercel
+    if (!src.includes('_next/static')) {
+      variations.push(`/_next/static/${src}`);
+    }
+  }
+  
+  return variations;
 };
 
 /**
- * التحقق من صحة مسار الصورة والتأكد من أنه يعمل
- * @param src - مسار الصورة الأصلي
- * @param config - تكوين محمل الصور
- * @returns وعد بالمسار الصحيح أو الصورة الاحتياطية
+ * Validates if an image exists by attempting to load it
  */
-export const validateImagePath = async (
-  src: string, 
+export const validateImagePath = async (src: string): Promise<boolean> => {
+  return new Promise((resolve) => {
+    const img = new Image();
+    
+    img.onload = () => resolve(true);
+    img.onerror = () => resolve(false);
+    
+    img.src = src;
+    
+    // If the image is already cached, the onload event might not fire
+    if (img.complete) {
+      resolve(true);
+    }
+  });
+};
+
+/**
+ * Finds the first working image path from a list of variations
+ */
+export const findWorkingImagePath = async (src: string): Promise<string> => {
+  const variations = fixImagePath(src);
+  
+  for (const path of variations) {
+    const isValid = await validateImagePath(path);
+    if (isValid) {
+      return path;
+    }
+  }
+  
+  // If no variations work, return the original
+  return src;
+};
+
+/**
+ * Loads an image with a timeout and fallback
+ */
+export const loadImageWithFallback = async (
+  src: string,
   config: VercelImageLoaderConfig = {}
 ): Promise<string> => {
   return new Promise((resolve) => {
-    // إذا كنا على الخادم، ارجع المسار كما هو (لا يمكن التحقق)
-    if (typeof window === 'undefined') {
-      resolve(fixImagePath(src, config));
-      return;
-    }
+    const timeout = config.timeout || 5000;
+    let timeoutId: NodeJS.Timeout;
     
-    // إنشاء كائن Image جديد للتحقق من صحة المسار
-    const img = new Image();
-    let hasResolved = false;
-    
-    // عند التحميل بنجاح، ارجع المسار
-    img.onload = () => {
-      if (!hasResolved) {
-        hasResolved = true;
-        resolve(fixImagePath(src, config));
-      }
-    };
-    
-    // عند فشل التحميل، جرب خيارات أخرى
-    img.onerror = () => {
-      // قائمة المسارات البديلة المحتملة
-      const alternativePaths = [
-        // الخيار 1: إضافة أو إزالة السلاش الأمامي
-        src.startsWith('/') ? src.substring(1) : `/${src}`,
-        // الخيار 2: استخدام مسار تجريبي آخر
-        isVercelEnvironment() ? `https://uneom-com.vercel.app${src.startsWith('/') ? '' : '/'}${src}` : src,
-        // الخيار 3: استخدام اسم الملف فقط
-        `/images/${src.split('/').pop()}`,
-        // الخيار 4: استخدام الصورة الاحتياطية
-        config.fallbackImage || DEFAULT_FALLBACK_IMAGE
-      ];
-      
-      // تجربة كل مسار بديل
-      let alternativeIndex = 0;
-      
-      const tryAlternative = () => {
-        if (alternativeIndex >= alternativePaths.length) {
-          // إذا فشلت جميع المحاولات، ارجع الصورة الاحتياطية
-          if (!hasResolved) {
-            hasResolved = true;
-            resolve(config.fallbackImage || DEFAULT_FALLBACK_IMAGE);
-          }
-          return;
-        }
-        
-        const alternative = alternativePaths[alternativeIndex++];
-        const altImg = new Image();
-        
-        altImg.onload = () => {
-          if (!hasResolved) {
-            hasResolved = true;
-            resolve(fixImagePath(alternative, config));
-          }
-        };
-        
-        altImg.onerror = tryAlternative;
-        altImg.src = alternative;
-      };
-      
-      // ابدأ بتجربة المسارات البديلة
-      tryAlternative();
-    };
-    
-    // تحديد المصدر للتحقق منه
-    img.src = fixImagePath(src, config);
-    
-    // للتأكد من عدم الانتظار إلى ما لا نهاية، نضع مهلة
-    setTimeout(() => {
-      if (!hasResolved) {
-        hasResolved = true;
+    // Try to find a working path
+    findWorkingImagePath(src)
+      .then((workingPath) => {
+        clearTimeout(timeoutId);
+        resolve(workingPath);
+      })
+      .catch(() => {
         resolve(config.fallbackImage || DEFAULT_FALLBACK_IMAGE);
-      }
- 
+      });
+    
+    // Set a timeout to resolve with fallback if it takes too long
+    timeoutId = setTimeout(() => {
+      resolve(config.fallbackImage || DEFAULT_FALLBACK_IMAGE);
+    }, timeout);
+  });
+}; 

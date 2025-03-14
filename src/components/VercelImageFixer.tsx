@@ -1,138 +1,166 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
+// إضافة تعريف للخصائص الإضافية على كائن window
+declare global {
+  interface Window {
+    fallbackImageDataUrl?: string;
+    fixImagePaths?: () => void;
+  }
+}
 
 /**
- * Componente que corrige automáticamente problemas de carga de imágenes en Vercel
- * Se ejecuta solo en el cliente y aplica múltiples estrategias para asegurar que las imágenes se carguen correctamente
+ * مكون يقوم بإصلاح مشاكل تحميل الصور في Vercel بشكل تلقائي
+ * يعمل فقط في المتصفح ويطبق استراتيجيات متعددة لضمان تحميل الصور بشكل صحيح
  */
 const VercelImageFixer: React.FC = () => {
+  const [isVercel, setIsVercel] = useState<boolean>(false);
+  const [fixedImages, setFixedImages] = useState<number>(0);
+  const [totalImages, setTotalImages] = useState<number>(0);
+
   useEffect(() => {
-    // Solo ejecutar en el cliente y en entorno Vercel
+    // Only run in browser
     if (typeof window === 'undefined') return;
+
+    // Check if we're on Vercel
+    const hostname = window.location.hostname;
+    const isVercelEnv = hostname.includes('vercel.app') || 
+                        process.env.NEXT_PUBLIC_VERCEL_ENV !== undefined;
     
-    const isVercel = 
-      window.location.hostname.includes('vercel.app') || 
-      window.location.hostname === 'uneom.com' || 
-      window.location.hostname.endsWith('.uneom.com');
-    
-    if (!isVercel) return;
-    
-    // Función para corregir rutas de imágenes
-    const fixImagePaths = () => {
-      const images = document.querySelectorAll('img:not([data-fixed="true"])') as NodeListOf<HTMLImageElement>;
-      const baseUrl = window.location.origin;
+    setIsVercel(isVercelEnv);
+
+    // Only run on Vercel
+    if (!isVercelEnv) return;
+
+    // Add class to body for CSS targeting
+    document.body.classList.add('vercel-deployment');
+
+    // Fix all images on the page
+    const fixImages = () => {
+      const images = document.querySelectorAll('img:not([data-vercel-fixed="true"])');
+      let fixed = 0;
       
-      images.forEach(img => {
-        // Marcar la imagen como procesada
-        img.setAttribute('data-fixed', 'true');
+      setTotalImages(images.length);
+      
+      images.forEach((img) => {
+        // Cast to HTMLImageElement to access image-specific properties
+        const imgElement = img as HTMLImageElement;
+        const src = imgElement.getAttribute('src') || '';
         
-        const src = img.getAttribute('src') || '';
-        
-        // Estrategia 1: Convertir rutas relativas a absolutas
-        if (src && !src.startsWith('http') && !src.startsWith('data:')) {
-          const fixedSrc = src.startsWith('/') 
-            ? baseUrl + src 
-            : baseUrl + '/' + src;
-          
-          // Guardar la URL original
-          img.setAttribute('data-original-src', src);
-          img.setAttribute('src', fixedSrc);
-          
-          // Configurar manejo de errores
-          setupErrorHandling(img);
-        } 
-        // Estrategia 2: Para imágenes Next.js optimizadas
-        else if (src && src.includes('/_next/image')) {
-          setupErrorHandling(img);
+        // Skip data URLs and already fixed images
+        if (src.startsWith('data:') || imgElement.hasAttribute('data-vercel-fixed')) {
+          return;
         }
-        // Estrategia 3: Para cualquier otra imagen
-        else if (src) {
-          setupErrorHandling(img);
+        
+        // Mark as being processed
+        imgElement.setAttribute('data-vercel-fixed', 'processing');
+        
+        // Store original source
+        if (!imgElement.hasAttribute('data-original-src')) {
+          imgElement.setAttribute('data-original-src', src);
+        }
+        
+        // Add error handler to try alternative paths
+        imgElement.onerror = () => {
+          const originalSrc = imgElement.getAttribute('data-original-src') || src;
+          const currentSrc = imgElement.getAttribute('src') || '';
+          const attempts = parseInt(imgElement.getAttribute('data-fix-attempts') || '0', 10);
+          
+          // Don't try more than 3 times
+          if (attempts >= 3) {
+            imgElement.setAttribute('src', '/images/default-placeholder.jpg');
+            imgElement.setAttribute('data-vercel-fixed', 'fallback');
+            return;
+          }
+          
+          // Increment attempts
+          imgElement.setAttribute('data-fix-attempts', (attempts + 1).toString());
+          
+          // Try different variations
+          const variations = [
+            // Original with and without leading slash
+            originalSrc.startsWith('/') ? originalSrc.substring(1) : `/${originalSrc}`,
+            // With _next prefix
+            `/_next/static/images/${originalSrc.split('/').pop()}`,
+            // With absolute URL
+            `${window.location.origin}${originalSrc.startsWith('/') ? '' : '/'}${originalSrc}`,
+            // Fallback
+            '/images/default-placeholder.jpg'
+          ];
+          
+          // Find a variation that hasn't been tried yet
+          const nextVariation = variations.find(v => v !== currentSrc);
+          
+          if (nextVariation) {
+            imgElement.setAttribute('src', nextVariation);
+          } else {
+            imgElement.setAttribute('src', '/images/default-placeholder.jpg');
+            imgElement.setAttribute('data-vercel-fixed', 'fallback');
+          }
+        };
+        
+        // Add load handler to mark as fixed
+        imgElement.onload = () => {
+          imgElement.setAttribute('data-vercel-fixed', 'true');
+          fixed++;
+          setFixedImages(prev => prev + 1);
+        };
+        
+        // Force reload to trigger handlers
+        if (imgElement.complete) {
+          // If already loaded successfully, mark as fixed
+          if (imgElement.naturalWidth > 0) {
+            imgElement.setAttribute('data-vercel-fixed', 'true');
+            fixed++;
+            setFixedImages(prev => prev + 1);
+          } else {
+            // If failed to load, trigger error handler
+            if (imgElement.onerror) {
+              imgElement.onerror(new Event('error'));
+            }
+          }
         }
       });
     };
     
-    // Configurar manejo de errores para una imagen
-    const setupErrorHandling = (img: HTMLImageElement) => {
-      // Evitar configurar múltiples manejadores de errores
-      if (img.hasAttribute('data-error-handler')) return;
-      img.setAttribute('data-error-handler', 'true');
-      
-      img.onerror = function() {
-        const src = img.getAttribute('src') || '';
-        const originalSrc = img.getAttribute('data-original-src') || '';
-        
-        // Estrategia 1: Si la URL corregida falla, intentar con la original
-        if (originalSrc && src !== originalSrc) {
-          console.log(`Intentando cargar imagen con URL original: ${originalSrc}`);
-          img.setAttribute('src', originalSrc);
-          return;
-        }
-        
-        // Estrategia 2: Para imágenes Next.js optimizadas, intentar con la URL directa
-        if (src.includes('/_next/image')) {
-          try {
-            const urlParams = new URLSearchParams(src.split('?')[1]);
-            const imgUrl = urlParams.get('url');
-            if (imgUrl) {
-              console.log(`Intentando cargar imagen directamente: ${imgUrl}`);
-              img.setAttribute('src', imgUrl);
-              return;
-            }
-          } catch (e) {
-            console.error('Error al extraer URL de imagen Next.js:', e);
-          }
-        }
-        
-        // Estrategia 3: Usar la imagen de respaldo
-        console.log(`Usando imagen de respaldo para: ${src}`);
-        img.setAttribute('src', '/images/default-placeholder.jpg');
-      };
-    };
+    // Run initially and after DOM changes
+    fixImages();
     
-    // Ejecutar inicialmente
-    fixImagePaths();
-    
-    // Configurar un observador de mutaciones para detectar nuevas imágenes
+    // Set up mutation observer to watch for new images
     const observer = new MutationObserver((mutations) => {
-      let shouldFix = false;
+      let hasNewImages = false;
       
       mutations.forEach(mutation => {
         if (mutation.type === 'childList') {
           mutation.addedNodes.forEach(node => {
-            if (node.nodeType === 1) { // ELEMENT_NODE
+            if (node.nodeType === 1) { // Element node
               const element = node as Element;
               if (element.tagName === 'IMG' || element.querySelectorAll('img').length > 0) {
-                shouldFix = true;
+                hasNewImages = true;
               }
             }
           });
         }
       });
       
-      if (shouldFix) {
-        fixImagePaths();
+      if (hasNewImages) {
+        fixImages();
       }
     });
     
-    // Observar cambios en todo el documento
     observer.observe(document.body, {
       childList: true,
       subtree: true
     });
     
-    // También ejecutar después de que la página se cargue completamente
-    window.addEventListener('load', fixImagePaths);
-    
-    // Limpiar
+    // Clean up
     return () => {
       observer.disconnect();
-      window.removeEventListener('load', fixImagePaths);
     };
   }, []);
-  
-  // Este componente no renderiza nada visible
+
+  // Don't render anything visible
   return null;
 };
 

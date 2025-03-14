@@ -7,6 +7,7 @@ import {
   getLoadingStrategy,
   customImageLoader
 } from '@/lib/utils/imageOptimization';
+import DirectImage from '@/components/DirectImage';
 
 interface OptimizedImageProps extends Omit<ImageProps, 'onError'> {
   fallbackSrc?: string;
@@ -43,6 +44,9 @@ export default function OptimizedImage({
   const [hasError, setHasError] = useState(false);
   const [errorRetryCount, setErrorRetryCount] = useState(0);
   const [useRegularImgTag, setUseRegularImgTag] = useState(false);
+  const [isVercel, setIsVercel] = useState<boolean>(false);
+  const [isClient, setIsClient] = useState<boolean>(false);
+  const [errorLoading, setErrorLoading] = useState<boolean>(false);
 
   // Update imgSrc if src prop changes
   useEffect(() => {
@@ -52,11 +56,17 @@ export default function OptimizedImage({
     setUseRegularImgTag(false);
   }, [src]);
 
-  // Check if we're on Vercel
-  const isVercel = typeof window !== 'undefined' && 
-    (window.location.hostname.includes('vercel.app') || 
-     window.location.hostname === 'uneom.com' ||
-     window.location.hostname.endsWith('.uneom.com'));
+  useEffect(() => {
+    setIsClient(true);
+    
+    // تحديد ما إذا كنا في بيئة Vercel
+    const hostname = window.location.hostname;
+    setIsVercel(
+      hostname.includes('vercel.app') || 
+      hostname === 'uneom.com' || 
+      hostname.endsWith('.uneom.com')
+    );
+  }, []);
 
   // Handle image loading errors
   const handleError = () => {
@@ -145,6 +155,23 @@ export default function OptimizedImage({
         loading={loadingStrategy === 'eager' ? 'eager' : 'lazy'}
         onError={handleError}
         {...restProps}
+      />
+    );
+  }
+
+  // إذا كنا في بيئة Vercel أو حدث خطأ في تحميل الصورة، استخدم DirectImage
+  if ((isClient && isVercel) || errorLoading) {
+    console.log(`[OptimizedImage] استخدام DirectImage لـ: ${typeof imgSrc === 'string' ? imgSrc : 'غير معروف'}`);
+    return (
+      <DirectImage
+        src={typeof imgSrc === 'string' ? imgSrc : ''}
+        alt={imgAlt}
+        width={typeof rest.width === 'number' ? rest.width : undefined}
+        height={typeof rest.height === 'number' ? rest.height : undefined}
+        className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
+        priority={priority}
+        style={rest.style}
+        onError={() => console.log(`DirectImage فشل في تحميل الصورة: ${imgSrc}`)}
       />
     );
   }

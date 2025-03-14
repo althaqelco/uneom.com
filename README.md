@@ -1,69 +1,141 @@
-# UNEOM - Clothing Manufacturing Company
+# UNEOM - Uniform Manufacturing in Saudi Arabia
 
-This is a Next.js project for UNEOM, a premium clothing manufacturing company specializing in uniforms and workwear. The website is deployed at [uneom.com](https://uneom.com).
+## Image Loading Improvements for Vercel Deployment
 
-## Getting Started
+This project includes several enhancements to improve image loading, especially when deployed on Vercel. The following components and utilities have been added:
 
-First, run the development server:
+### New Components
 
-```bash
-# Install dependencies
-npm install
+1. **EnhancedImage**: A robust image component with retry logic, fallback images, and error handling.
+   - Located at: `src/components/ui/EnhancedImage.tsx`
+   - Features: Multiple retry attempts, alternative path testing, fallback images, and regular img tag fallback.
 
-# Run development server
-npm run dev
+2. **VercelCompatibleImage**: An image component specifically optimized for Vercel deployment.
+   - Located at: `src/components/ui/VercelCompatibleImage.tsx`
+   - Features: Path normalization for Vercel, automatic unoptimized mode on Vercel, and fallback mechanisms.
+
+3. **ImagePreloader**: Preloads critical images to improve perceived performance.
+   - Located at: `src/components/ui/ImagePreloader.tsx`
+   - Features: Parallel image loading, progress tracking, and graceful error handling.
+
+4. **EmergencyImageLoader**: A last-resort image loader for troubleshooting.
+   - Located at: `src/components/ui/EmergencyImageLoader.tsx`
+   - Features: Multiple path variations, detailed debug info, and visual loading states.
+
+5. **ImageDebugger**: A debugging tool for identifying image loading issues.
+   - Located at: `src/components/ui/ImageDebugger.tsx`
+   - Features: Real-time image tracking, error identification, and manual fix options.
+
+6. **VercelImageFixer**: Automatically fixes image paths in Vercel environment.
+   - Located at: `src/components/VercelImageFixer.tsx`
+   - Features: DOM mutation observation, multiple path variations, and automatic fallback.
+
+7. **ImageResolver**: Resolves image paths to ensure they load correctly.
+   - Located at: `src/components/ImageResolver.tsx`
+   - Features: Path normalization, error handling, and alternative path testing.
+
+### Utilities
+
+1. **vercelImageLoader**: Custom image loader optimized for Vercel.
+   - Located at: `src/lib/utils/vercelImageLoader.ts`
+   - Features: Path normalization, environment detection, and multiple loading strategies.
+
+2. **CSS Fixes**: CSS rules to improve image display and provide fallbacks.
+   - Located at: `public/css/image-fixes.css`
+   - Features: Fallback styles, loading animations, and Vercel-specific fixes.
+
+3. **Fallback Images**: Default placeholder images for failed loads.
+   - Located at: `public/images/default-placeholder.jpg` and `public/images/default-placeholder.svg`
+
+### Configuration Updates
+
+1. **next.config.mjs**: Updated configuration for better image handling.
+   - Features: 
+     - Disabled image optimization for Vercel
+     - Added domains and remote patterns
+     - Configured caching headers
+     - Added webpack loaders for image optimization
+
+2. **Layout Updates**: Enhanced the root layout to use the new components.
+   - Located at: `src/app/layout.tsx`
+   - Features: Image preloading, CSP headers, and client-side image fixing.
+
+## Usage
+
+To use these enhanced image components in your project:
+
+### Basic Usage
+
+```tsx
+import EnhancedImage from '@/components/ui/EnhancedImage';
+
+// In your component
+<EnhancedImage 
+  src="/path/to/image.jpg"
+  alt="Description"
+  width={500}
+  height={300}
+/>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Vercel-Specific Usage
 
-## Project Structure
+```tsx
+import VercelCompatibleImage from '@/components/ui/VercelCompatibleImage';
 
-- `/src/app` - Application routes and pages using Next.js App Router
-- `/src/components` - Reusable UI components
-- `/src/contexts` - React contexts for state management
-- `/src/app/api` - API routes and serverless functions
-
-## Environment Variables
-
-Copy `.env.local.example` to `.env.local` and fill in the required values:
-
-```bash
-cp .env.local.example .env.local
+// In your component
+<VercelCompatibleImage 
+  src="/path/to/image.jpg"
+  alt="Description"
+  width={500}
+  height={300}
+/>
 ```
 
-## Deployment on Vercel
+### Preloading Critical Images
 
-This project is optimized for deployment on Vercel. The repository includes:
+```tsx
+import ImagePreloader from '@/components/ui/ImagePreloader';
 
-- `vercel.json` configuration file with optimized settings
-- Headers configuration for security and caching
-- Domain configuration for uneom.com
-- Cron job setup for scheduled tasks
+// In your component
+<ImagePreloader 
+  imagePaths={['/path/to/image1.jpg', '/path/to/image2.jpg']}
+  onComplete={() => console.log('All images preloaded')}
+>
+  <YourComponent />
+</ImagePreloader>
+```
 
-### Deployment Steps
+## Troubleshooting
 
-1. Connect your GitHub repository to Vercel
-2. Set up required environment variables in the Vercel dashboard
-3. Configure the custom domain uneom.com in Vercel project settings
-4. Deploy automatically on push to the main branch
+If you encounter image loading issues:
 
-### Vercel Cron Jobs
+1. Press `Ctrl+Shift+I` to toggle the image debugger (only works on Vercel environments)
+2. Check the browser console for image loading errors
+3. Try using the `EmergencyImageLoader` component with `showDebugInfo={true}` to diagnose specific images
 
-The project includes a daily cleanup cron job that runs at midnight. To set up:
+## Build and Deployment
 
-1. Add the `CRON_SECRET_TOKEN` environment variable in your Vercel project settings
-2. Vercel will automatically schedule and run the cron job based on the configuration in `vercel.json`
+To build the project:
 
-## Performance Optimizations
+```bash
+npm run build
+```
 
-- Properly configured cache headers for static assets
-- Region-specific deployments for faster response times
-- Image optimization with Next.js Image component
-- Domain-specific redirects and route handling
+To start the production server:
 
-## Additional Resources
+```bash
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Vercel Documentation](https://vercel.com/docs)
-- [Vercel Cron Jobs](https://vercel.com/docs/cron-jobs)
-- [Vercel Custom Domains](https://vercel.com/docs/concepts/projects/domains)
+## Dependencies
+
+The project uses the following dependencies for image optimization:
+
+- `file-loader`: For handling image files in webpack
+- `image-webpack-loader`: For optimizing images during build
+- `critters`: For CSS optimization
+
+## License
+
+This project is proprietary and confidential. Unauthorized copying, distribution, or use is strictly prohibited.
