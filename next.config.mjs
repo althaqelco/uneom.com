@@ -24,7 +24,7 @@ const nextConfig = {
   
   // Set up image optimization for all image domains
   images: {
-    // Replacing domains with remotePatterns as recommended
+    // Reemplazando domains con remotePatterns como se recomienda
     remotePatterns: [
       {
         protocol: 'http',
@@ -74,7 +74,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'lh3.googleusercontent.com',
       },
-      // Add more flexible pattern for images from any domain
+      // Nuevo patrón que permite cualquier dominio
       {
         protocol: 'https',
         hostname: '**',
@@ -84,16 +84,16 @@ const nextConfig = {
         hostname: '**',
       }
     ],
-    // Enable responsive image optimization
+    // Habilitar optimización de imágenes responsive
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Set to TRUE to disable optimization - critical for Vercel deployment
-    unoptimized: true,
-    // Enable minimumCacheTTL for better caching
-    minimumCacheTTL: 600,
-    // Make dangerouslyAllowSVG true to allow SVG images
+    // CRÍTICO: Cambiar a false para permitir optimización en Vercel
+    unoptimized: false,
+    // Aumentar el cacheo para mejor rendimiento
+    minimumCacheTTL: 3600,
+    // Permitir SVG para mayor flexibilidad
     dangerouslyAllowSVG: true,
-    // Disable contentSecurityPolicy for images temporarily
+    // Política de seguridad para permitir todas las imágenes
     contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src * 'self' data: https: http: blob:; font-src 'self' data: https:;"
   },
   
@@ -166,6 +166,19 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; img-src 'self' data: https: http: blob: *; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com; frame-src 'self'; object-src 'none';"
           },
+          // Nuevos headers para CORS
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET, POST, PUT, DELETE, OPTIONS',
+          },
+          {
+            key: 'Access-Control-Allow-Headers',
+            value: 'X-Requested-With, Content-Type, Accept',
+          }
         ],
       },
       // Add font preload configuration
@@ -178,7 +191,7 @@ const nextConfig = {
           }
         ],
       },
-      // Add image optimization headers
+      // Mejorar headers para imágenes
       {
         source: '/images/:path*',
         headers: [
@@ -192,7 +205,7 @@ const nextConfig = {
           }
         ],
       },
-      // Add headers for Vercel deployment
+      // Mejorar headers para imágenes Next.js
       {
         source: '/_next/image/:path*',
         headers: [

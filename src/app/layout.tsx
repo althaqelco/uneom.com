@@ -12,6 +12,11 @@ const ImageResolver = dynamic(() => import('@/components/ImageResolver'), {
   ssr: false 
 });
 
+// Importar el depurador de imágenes dinámicamente
+const ImageDebugger = dynamic(() => import('@/components/ui/ImageDebugger'), {
+  ssr: false
+});
+
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
@@ -43,6 +48,8 @@ export default function RootLayout({
             {children}
             {/* Agregamos nuestro componente de resolución de imágenes */}
             <ImageResolver />
+            {/* Añadimos el depurador de imágenes en producción - Solo visible en Vercel */}
+            <ImageDebugger />
           </QuoteProvider>
           <LinkPreloader />
         </LocaleProvider>
