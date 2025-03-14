@@ -4,21 +4,49 @@
  */
 
 import type { ImageLoaderProps } from 'next/image';
+import { Locale } from '@/lib/i18n/config';
+
+/**
+ * Extended interface for our custom image loader props
+ */
+interface ExtendedImageLoaderProps extends ImageLoaderProps {
+  locale?: Locale;
+}
 
 /**
  * Custom image loader that can be used with next/image
  * This can be extended to use a CDN or image optimization service
  */
-export const customImageLoader = ({ src, width, quality }: ImageLoaderProps): string => {
+export const customImageLoader = ({ src, width, quality, locale }: ExtendedImageLoaderProps): string => {
   // If using a CDN, you can modify this to use the CDN URL
   // For example: return `https://cdn.uneom.com/images${src}?w=${width}&q=${quality || 75}`;
   
-  // Check if src is already a full URL, return it as is to prevent double processing
+  // If src is a full URL, return it without modifications to avoid issues
   if (src.startsWith('http://') || src.startsWith('https://')) {
     return src;
   }
   
-  // Handle relative URLs
+  // Handle localized image paths if locale is provided
+  if (locale && locale !== 'en') {
+    // Check if path already has locale suffix
+    if (src.includes('-ar.')) {
+      // Already has Arabic suffix
+      return `${src}?w=${width}&q=${quality || 75}`;
+    }
+    
+    // Add locale suffix to the image path
+    const hasExtension = src.includes('.');
+    if (hasExtension) {
+      const lastDotIndex = src.lastIndexOf('.');
+      const fileName = src.substring(0, lastDotIndex);
+      const extension = src.substring(lastDotIndex);
+      return `${fileName}-${locale}${extension}?w=${width}&q=${quality || 75}`;
+    } else {
+      return `${src}-${locale}?w=${width}&q=${quality || 75}`;
+    }
+  }
+  
+  // Regular image path
   return `${src}?w=${width}&q=${quality || 75}`;
 };
 

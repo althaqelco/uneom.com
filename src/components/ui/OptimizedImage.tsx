@@ -13,6 +13,7 @@ interface OptimizedImageProps extends Omit<ImageProps, 'onError'> {
   defaultAlt?: string;
   isCritical?: boolean;
   blurColor?: string;
+  locale?: string;
 }
 
 const defaultFallbackImage = '/images/default-placeholder.jpg';
@@ -34,38 +35,65 @@ export default function OptimizedImage({
   loading,
   placeholder,
   blurDataURL,
+  locale,
   ...rest
 }: OptimizedImageProps) {
   const [imgSrc, setImgSrc] = useState(src);
   const [imgAlt, setImgAlt] = useState(alt || defaultAlt);
   const [hasError, setHasError] = useState(false);
+  const [errorRetryCount, setErrorRetryCount] = useState(0);
 
   // Update imgSrc if src prop changes
   useEffect(() => {
     setImgSrc(src);
     setHasError(false);
+    setErrorRetryCount(0);
   }, [src]);
 
   // Handle image loading errors
   const handleError = () => {
-    if (!hasError) {
-      console.warn(`Image failed to load: ${imgSrc}`);
-      
-      // If the source starts with a slash (local image), try without the leading slash
-      // This can help in some Next.js deployments where image paths get misinterpreted
+    if (errorRetryCount >= 2) {
+      // After 2 retries, use fallback image
+      console.warn(`Image failed to load after retries: ${imgSrc}`);
+      setImgSrc(fallbackSrc);
+      if (!alt) {
+        setImgAlt('Image not available');
+      }
+      setHasError(true);
+      return;
+    }
+    
+    console.warn(`Image failed to load: ${imgSrc}, retry #${errorRetryCount + 1}`);
+    
+    // Try different approaches depending on retry count
+    if (errorRetryCount === 0) {
+      // First retry: Try without initial slash
       if (typeof imgSrc === 'string' && imgSrc.startsWith('/') && imgSrc !== fallbackSrc) {
         const newSrc = imgSrc.substring(1);
-        console.log(`Trying alternative image path: ${newSrc}`);
+        console.log(`Trying alternative image path without leading slash: ${newSrc}`);
         setImgSrc(newSrc);
       } else {
-        // Fall back to the fallback image
+        // If not a path starting with slash, try with unoptimized
+        console.log(`Trying with unoptimized image loading`);
+        setImgSrc(`${imgSrc}?unoptimized=true`);
+      }
+    } else if (errorRetryCount === 1) {
+      // Second retry: Try with direct URL path for Vercel deployment
+      const basePath = 'https://uneom-com.vercel.app';
+      if (typeof imgSrc === 'string' && !imgSrc.startsWith('http')) {
+        const fullPath = imgSrc.startsWith('/') 
+          ? `${basePath}${imgSrc}` 
+          : `${basePath}/${imgSrc}`;
+        console.log(`Trying with full path: ${fullPath}`);
+        setImgSrc(fullPath);
+      } else {
+        // If already a full URL or other cases, go to fallback
         setImgSrc(fallbackSrc);
-        if (!alt) {
-          setImgAlt('Image not available');
-        }
         setHasError(true);
       }
     }
+    
+    setErrorRetryCount(prev => prev + 1);
   };
 
   // Determine loading strategy based on whether the image is critical
@@ -85,7 +113,10 @@ export default function OptimizedImage({
       placeholder={placeholder || (generatedBlurDataURL ? 'blur' : undefined)}
       blurDataURL={generatedBlurDataURL}
       className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
-      loader={customImageLoader}
+      loader={(params) => {
+        // @ts-ignore - locale is added in our custom loader but not in the original type
+        return customImageLoader({ ...params, locale });
+      }}
       unoptimized={true}
     />
   );

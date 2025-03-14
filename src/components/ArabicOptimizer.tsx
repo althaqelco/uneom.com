@@ -1,107 +1,90 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { initArabicOptimizations, applyRTLTransformations } from '@/lib/utils/arabicOptimization';
+import React, { useEffect } from 'react';
+import { initArabicOptimizations } from '@/lib/utils/arabicOptimization';
 
 /**
- * ArabicOptimizer component that initializes various optimizations
- * for Arabic pages including RTL layout, font preloading, and image
- * optimization. This component doesn't render anything visible.
- * 
- * This enhanced version includes better handling of dynamically loaded
- * elements and improved RTL direction support.
+ * ArabicOptimizer component for enhancing Arabic version performance
+ * This handles proper font loading and RTL optimizations
  */
-export default function ArabicOptimizer() {
-  // Use a ref to track initialization
-  const initializedRef = useRef(false);
-  
+const ArabicOptimizer: React.FC = () => {
   useEffect(() => {
-    // Prevent duplicate initialization
-    if (initializedRef.current) return;
-    initializedRef.current = true;
-    
-    // Initialize all Arabic optimizations
+    // Initialize Arabic optimizations on mount
     initArabicOptimizations();
     
-    // Add MutationObserver to watch for dynamically added elements
-    const observer = new MutationObserver((mutations) => {
-      // Apply RTL transformations on DOM changes
-      applyRTLTransformations();
+    // Manually preload Arabic fonts with proper attributes
+    const fontUrls = [
+      '/fonts/ar/Cairo-Regular.woff2',
+      '/fonts/ar/Cairo-Medium.woff2',
+      '/fonts/ar/Cairo-Bold.woff2',
+      '/fonts/ar/Cairo-SemiBold.woff2',
+      '/fonts/ar/Tajawal-Regular.woff2',
+      '/fonts/ar/Tajawal-Medium.woff2',
+      '/fonts/ar/Tajawal-Bold.woff2'
+    ];
+    
+    // Remove any existing preload links for fonts (to avoid duplicates)
+    document.querySelectorAll('link[rel="preload"][as="font"]').forEach(el => {
+      el.remove();
+    });
+    
+    // Create new preload links with correct attributes
+    fontUrls.forEach(url => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = url;
+      link.as = 'font';
+      link.type = 'font/woff2';
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    });
+    
+    // Add CSS to prioritize font loading
+    const style = document.createElement('style');
+    style.textContent = `
+      /* Prioritize font loading */
+      @font-face {
+        font-family: 'Cairo';
+        src: url('/fonts/ar/Cairo-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
       
-      // Check for newly added images
-      mutations.forEach(mutation => {
-        if (mutation.type === 'childList') {
-          mutation.addedNodes.forEach(node => {
-            if (node.nodeType === Node.ELEMENT_NODE) {
-              // Check if this is an image element
-              if (node.nodeName === 'IMG') {
-                const img = node as HTMLImageElement;
-                const src = img.getAttribute('src') || '';
-                if (src.includes('arrow') || 
-                    src.includes('direction') || 
-                    src.includes('chevron') ||
-                    src.includes('navigation')) {
-                  img.classList.add('rtl-flip');
-                }
-              }
-              
-              // Check for SVG elements
-              if (node.nodeName === 'svg') {
-                const svg = node as SVGElement;
-                const classList = svg.getAttribute('class') || '';
-                if (classList.includes('arrow') || 
-                    classList.includes('direction') || 
-                    classList.includes('chevron') ||
-                    classList.includes('navigation')) {
-                  svg.classList.add('rtl-flip');
-                }
-              }
-              
-              // Handle flex container direction
-              if (node instanceof HTMLElement) {
-                const style = window.getComputedStyle(node);
-                if (style.display === 'flex' || style.display === 'inline-flex') {
-                  if (style.justifyContent === 'flex-start') {
-                    node.classList.add('rtl-justify-end');
-                  } else if (style.justifyContent === 'flex-end') {
-                    node.classList.add('rtl-justify-start');
-                  }
-                }
-              }
-            }
-          });
+      @font-face {
+        font-family: 'Tajawal';
+        src: url('/fonts/ar/Tajawal-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      
+      /* Apply Arabic fonts to critical elements immediately */
+      html[lang="ar"] body {
+        font-family: 'Cairo', 'Tajawal', sans-serif !important;
+      }
+    `;
+    document.head.appendChild(style);
+    
+    // Force browser to recognize direction
+    document.documentElement.dir = 'rtl';
+    document.documentElement.lang = 'ar';
+    
+    // Fix any RTL layout issues
+    document.body.classList.add('rtl');
+    
+    return () => {
+      // Cleanup if needed
+      document.querySelectorAll('link[rel="preload"][as="font"]').forEach(el => {
+        if (fontUrls.some(url => el.href.includes(url))) {
+          el.remove();
         }
       });
-    });
-    
-    // Start observing the document with the configured parameters
-    observer.observe(document.body, {
-      childList: true, 
-      subtree: true,
-      attributes: true,
-      attributeFilter: ['class', 'style']
-    });
-    
-    // Apply transformations when page content is fully loaded
-    window.addEventListener('load', () => {
-      applyRTLTransformations();
-    });
-    
-    // Apply transformations on each navigation change in case of client routing
-    window.addEventListener('popstate', () => {
-      setTimeout(() => {
-        applyRTLTransformations();
-      }, 100);
-    });
-    
-    // Cleanup function
-    return () => {
-      observer.disconnect();
-      window.removeEventListener('load', () => {});
-      window.removeEventListener('popstate', () => {});
     };
   }, []);
 
-  // This component doesn't render anything visible
+  // This is a client-side only component
   return null;
-} 
+};
+
+export default ArabicOptimizer; 
