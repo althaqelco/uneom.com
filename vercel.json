@@ -132,7 +132,7 @@
         "hostname": "**"
       }
     ],
-    "formats": ["image/webp", "image/avif", "image/png", "image/jpeg", "image/gif", "image/svg+xml"],
+    "formats": ["image/webp", "image/avif", "image/png", "image/jpeg"],
     "minimumCacheTTL": 31536000,
     "dangerouslyAllowSVG": true
   },
