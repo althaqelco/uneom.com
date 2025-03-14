@@ -44,6 +44,11 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'i.imgur.com',
+      },
+      // Add fonts.gstatic.com to allow font loading during build
+      {
+        protocol: 'https',
+        hostname: 'fonts.gstatic.com',
       }
     ],
     // Enable responsive image optimization
@@ -51,8 +56,10 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   
-  // Explicitly configure path aliases
+  // Add experimental option to skip font optimization
   experimental: {
+    // Skip font optimization which causes problems during build
+    skipFontOptimization: true,
     serverComponentsExternalPackages: [],
   },
   

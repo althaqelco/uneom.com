@@ -14,7 +14,8 @@
     "NEXT_PUBLIC_SITE_URL": "https://uneom.com",
     "CRON_SECRET_TOKEN": "temptoken123456",
     "NODE_ENV": "production",
-    "SKIP_TYPE_CHECK": "true"
+    "SKIP_TYPE_CHECK": "true",
+    "NEXT_TELEMETRY_DISABLED": "1"
   },
   "headers": [
     {
@@ -56,7 +57,8 @@
   "build": {
     "env": {
       "NEXT_PUBLIC_SITE_URL": "https://uneom.com",
-      "SKIP_TYPE_CHECK": "true"
+      "SKIP_TYPE_CHECK": "true",
+      "NEXT_TELEMETRY_DISABLED": "1"
     }
   }
 } 
