@@ -63,8 +63,8 @@ const nextConfig = {
   // Explicitly set the output directory for the build
   distDir: '.next',
   
-  // Ensure output is compatible with Vercel
-  output: 'standalone',
+  // Enable memory optimizations for builds
+  swcMinify: true,
   
   webpack: (config) => {
     config.resolve.alias = {
