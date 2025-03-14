@@ -12,6 +12,13 @@ import type { ImageLoaderProps } from 'next/image';
 export const customImageLoader = ({ src, width, quality }: ImageLoaderProps): string => {
   // If using a CDN, you can modify this to use the CDN URL
   // For example: return `https://cdn.uneom.com/images${src}?w=${width}&q=${quality || 75}`;
+  
+  // Check if src is already a full URL, return it as is to prevent double processing
+  if (src.startsWith('http://') || src.startsWith('https://')) {
+    return src;
+  }
+  
+  // Handle relative URLs
   return `${src}?w=${width}&q=${quality || 75}`;
 };
 

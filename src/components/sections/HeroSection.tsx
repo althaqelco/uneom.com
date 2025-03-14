@@ -249,50 +249,29 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
       </motion.div>
       
-      {/* Slider */}
-      <div ref={sliderRef} className="relative h-full w-full z-10 overflow-hidden">
-        <AnimatePresence initial={false} custom={currentSlide}>
+      {/* Main Hero Section with Slider */}
+      <div ref={sliderRef} className="relative w-full h-full overflow-hidden">
+        {/* Hero Slider */}
+        <AnimatePresence initial={false} custom={0}>
           <motion.div 
             key={currentSlide}
-            className="absolute inset-0"
-            custom={currentSlide}
+            custom={0}
             variants={slideVariants}
             initial="enter"
             animate="center"
             exit="exit"
+            className="absolute inset-0 w-full h-full"
+            transition={{ type: 'spring', duration: 0.5 }}
           >
-            {/* Background Image with advanced effects */}
+            {/* Background Image - Use regular img tag for more reliable loading */}
             <div className="absolute inset-0 z-0">
-              <motion.div 
-                className="absolute inset-0 w-full h-full"
-                initial={{ scale: 1.1 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 7, ease: "easeOut" }}
-              >
-                <Image
-                  src={slides[currentSlide].image}
-                  alt={slides[currentSlide].title}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </motion.div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/40"></div>
-              
-              {/* Subtle moving gradient overlay */}
-              <motion.div 
-                className="absolute inset-0 opacity-20"
-                style={{
-                  background: 'radial-gradient(circle at center, rgba(125, 80, 255, 0.2) 0%, transparent 70%)'
-                }}
-                animate={{
-                  x: [0, 50, 0, -50, 0],
-                  y: [0, 30, 0, -30, 0],
-                }}
-                transition={{
-                  duration: 20,
-                  repeat: Infinity,
-                  repeatType: "loop"
+              <img
+                src={slides[currentSlide].image}
+                alt={slides[currentSlide].title}
+                className="object-cover w-full h-full"
+                style={{ 
+                  opacity: 0.6,
+                  filter: 'brightness(0.65) saturate(1.2)'
                 }}
               />
             </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image, { ImageProps } from 'next/image';
 import { 
   generateBlurPlaceholder, 
@@ -40,15 +40,31 @@ export default function OptimizedImage({
   const [imgAlt, setImgAlt] = useState(alt || defaultAlt);
   const [hasError, setHasError] = useState(false);
 
+  // Update imgSrc if src prop changes
+  useEffect(() => {
+    setImgSrc(src);
+    setHasError(false);
+  }, [src]);
+
   // Handle image loading errors
   const handleError = () => {
     if (!hasError) {
-      console.warn(`Image failed to load: ${src}`);
-      setImgSrc(fallbackSrc);
-      if (!alt) {
-        setImgAlt('Image not available');
+      console.warn(`Image failed to load: ${imgSrc}`);
+      
+      // If the source starts with a slash (local image), try without the leading slash
+      // This can help in some Next.js deployments where image paths get misinterpreted
+      if (typeof imgSrc === 'string' && imgSrc.startsWith('/') && imgSrc !== fallbackSrc) {
+        const newSrc = imgSrc.substring(1);
+        console.log(`Trying alternative image path: ${newSrc}`);
+        setImgSrc(newSrc);
+      } else {
+        // Fall back to the fallback image
+        setImgSrc(fallbackSrc);
+        if (!alt) {
+          setImgAlt('Image not available');
+        }
+        setHasError(true);
       }
-      setHasError(true);
     }
   };
 
@@ -70,6 +86,7 @@ export default function OptimizedImage({
       blurDataURL={generatedBlurDataURL}
       className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
       loader={customImageLoader}
+      unoptimized={true}
     />
   );
 } 

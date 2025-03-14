@@ -74,7 +74,8 @@ export function getFallbackImage(category: 'product' | 'blog' | 'team' | 'indust
  * Alternative format: /path/to/image.jpg -> /path/to/image-ar.jpg
  */
 export function getLocalizedImagePath(src: string, locale: Locale = 'en'): string {
-  if (locale === 'en') {
+  // Always return original path for English or if source is a full URL
+  if (locale === 'en' || src.startsWith('http') || src.startsWith('https')) {
     return src;
   }
   
@@ -91,6 +92,9 @@ export function getLocalizedImagePath(src: string, locale: Locale = 'en'): strin
       return src;
     }
     
+    // Try localized version first, but fall back to original if not available
+    // Note: In real world usage, we would do a file check here, but for the web,
+    // we'll simply return the localized path and let the Image component handle fallbacks
     return `${fileName}-${locale}${extension}`;
   }
   
@@ -154,9 +158,19 @@ export function getResponsiveImageSizes(): string {
  * This can be extended to use a CDN or image optimization service
  */
 export const customImageLoader = ({ src, width, quality, locale }: CustomImageLoaderProps): string => {
-  // If using a CDN, you can modify this to use the CDN URL
-  // For example: return `https://cdn.uneom.com/images${src}?w=${width}&q=${quality || 75}`;
-  return `${src}?w=${width}&q=${quality || 75}`;
+  // If it's an external URL, return as is
+  if (src.startsWith('http') || src.startsWith('https')) {
+    return src;
+  }
+  
+  // Apply localization if needed
+  let localizedSrc = src;
+  if (locale && locale !== 'en') {
+    localizedSrc = getLocalizedImagePath(src, locale);
+  }
+  
+  // Add query parameters for Next.js image optimization
+  return `${localizedSrc}?w=${width}&q=${quality || 75}`;
 };
 
 /**
