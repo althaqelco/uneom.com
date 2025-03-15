@@ -11,7 +11,7 @@ export default function FactoryIndustryPageArabic() {
   const factoryIndustryData = {
     title: "حلول زي العمال وملابس المصانع في المملكة العربية السعودية",
     subtitle: "ملابس عمل عالية الجودة مصممة للسلامة والمتانة والراحة في البيئات الصناعية السعودية",
-    heroImage: "/images/industries/factory-industry-hero.jpg",
+    heroImage: "/images/banner-placeholder.jpg",
     
     introduction: [
       "في قطاع الصناعة السعودي المتنامي بسرعة، تعد ملابس العمل المناسبة ضرورية للحفاظ على معايير السلامة، وتعزيز الإنتاجية، وضمان راحة العمال. تتخصص يونيوم في توفير زي المصانع والصناعة الذي يلبي التحديات الفريدة للبيئات الصناعية السعودية، من درجات الحرارة المرتفعة إلى متطلبات السلامة المتخصصة.",
@@ -54,42 +54,42 @@ export default function FactoryIndustryPageArabic() {
         id: "factory-uniforms",
         name: "زي عمال المصانع",
         description: "ملابس متينة ومريحة مصممة للبيئات العامة للمصانع مع خياطة مقواة وأقمشة ماصة للرطوبة.",
-        image: "/images/products/factory-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/industrial-uniforms/factory-workers"
       },
       {
         id: "engineering-workwear",
         name: "ملابس عمل هندسية",
         description: "أزياء تقنية مع جيوب متخصصة للأدوات، وتقوية عند الركبتين والمرفقين، وخصائص مقاومة للكهرباء الساكنة.",
-        image: "/images/products/engineering-workwear.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/industrial-uniforms/engineering-workwear"
       },
       {
         id: "heat-resistant-uniforms",
         name: "الزي المقاوم للحرارة",
         description: "ملابس عمل متخصصة للبيئات ذات درجات الحرارة العالية مع خصائص مقاومة للهب وحماية حرارية.",
-        image: "/images/products/heat-resistant-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/industrial-uniforms/heat-resistant"
       },
       {
         id: "oil-field-suits",
         name: "بدلات عمال حقول النفط",
         description: "حماية شاملة لعمال صناعة النفط والغاز مع مقاومة للمواد الكيميائية، وخصائص مقاومة للهب، ومتانة معززة.",
-        image: "/images/products/oil-field-suits.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/industrial-uniforms/oil-field-workers"
       },
       {
         id: "technician-uniforms",
         name: "زي الفنيين",
         description: "ملابس عمل ذكية وعملية للمهنيين التقنيين مع جيوب متعددة، وأقمشة مقاومة للتمزق، ومظهر احترافي.",
-        image: "/images/products/technician-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/industrial-uniforms/technicians"
       },
       {
         id: "protective-workwear",
         name: "ملابس عمل واقية",
         description: "ملابس واقية متخصصة تشمل سترات عالية الرؤية، وتصميمات متوافقة مع أحزمة السلامة، وعناصر مقاومة للصدمات.",
-        image: "/images/products/protective-workwear.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/industrial-uniforms/protective-workwear"
       }
     ],

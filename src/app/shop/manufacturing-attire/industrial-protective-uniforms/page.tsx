@@ -50,10 +50,10 @@ export default function IndustrialProtectiveUniformsPage() {
       { name: 'Customization', value: 'Company logos, name patches, specialty pockets' }
     ],
     images: [
-      { src: '/images/industry-uniform-equipment-workshop-SBI-305183588.jpg', alt: 'Workers in industrial protective uniforms in factory setting' },
-      { src: '/images/manufacturing-sector-worker-blue-uniform-SBI-304473585.jpg', alt: 'Manufacturing worker in blue protective uniform' },
-      { src: '/images/arab-engineer-worker-hard-hat-refinery-SBI-305825322.jpg', alt: 'Saudi engineer in protective gear at industrial site' },
-      { src: '/images/woman-worker-engineering-uniform-manufacturing-SBI-301754255.jpg', alt: 'Female industrial worker in protective uniform' }
+      { src: '/images/product-placeholder.jpg', alt: 'Workers in industrial protective uniforms in factory setting' },
+      { src: '/images/product-placeholder.jpg', alt: 'Manufacturing worker in blue protective uniform' },
+      { src: '/images/default-placeholder.jpg', alt: 'Saudi engineer in protective gear at industrial site' },
+      { src: '/images/product-placeholder.jpg', alt: 'Female industrial worker in protective uniform' }
     ],
     category: 'Manufacturing Attire',
     categorySlug: 'manufacturing-attire',
@@ -69,11 +69,11 @@ export default function IndustrialProtectiveUniformsPage() {
       { name: 'High-Heat Environment Suit', price: 'SAR 595' }
     ],
     colors: [
-      { name: 'Navy Blue', value: '#1a2942', image: '/images/fabrics/navy-fr-fabric.jpg' },
-      { name: 'Safety Orange', value: '#ff6600', image: '/images/fabrics/orange-fr-fabric.jpg' },
-      { name: 'Khaki', value: '#c3b091', image: '/images/fabrics/khaki-fr-fabric.jpg' },
-      { name: 'Grey', value: '#808080', image: '/images/fabrics/grey-fr-fabric.jpg' },
-      { name: 'Royal Blue', value: '#4169e1', image: '/images/fabrics/royal-blue-fr-fabric.jpg' }
+      { name: 'Navy Blue', value: '#1a2942', image: '/images/default-placeholder.jpg' },
+      { name: 'Safety Orange', value: '#ff6600', image: '/images/default-placeholder.jpg' },
+      { name: 'Khaki', value: '#c3b091', image: '/images/default-placeholder.jpg' },
+      { name: 'Grey', value: '#808080', image: '/images/default-placeholder.jpg' },
+      { name: 'Royal Blue', value: '#4169e1', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -91,14 +91,14 @@ export default function IndustrialProtectiveUniformsPage() {
         author: "Eng. Mohammed Al-Harbi",
         position: "Safety Director",
         company: "Saudi Petrochemical Industries",
-        image: "/images/testimonials/mohammed-h.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "After switching to UNEOM's protective uniforms, we've seen significantly improved compliance with PPE requirements. Workers find them comfortable enough for 12-hour shifts, and the customized features for our specific tasks have enhanced both safety and efficiency.",
         author: "Sarah Al-Otaibi",
         position: "Operations Manager",
         company: "Gulf Manufacturing Solutions",
-        image: "/images/testimonials/sarah-o.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -372,7 +372,7 @@ export default function IndustrialProtectiveUniformsPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/factory-workers-safety-orange-uniforms-SBI-301172484.jpg" 
+                src="/images/product-placeholder.jpg" 
                 alt="Industrial workers in customized protective uniforms" 
                 fill
                 className="object-cover"

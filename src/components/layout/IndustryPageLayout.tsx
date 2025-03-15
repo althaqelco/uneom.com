@@ -163,7 +163,7 @@ export default function IndustryPageLayout({
       <section className="relative bg-gradient-to-r from-neutral-900 to-neutral-800 text-white py-24">
         <div className="absolute inset-0 overflow-hidden opacity-40">
           <Image
-            src={industryData.heroImage || '/images/industries/default-hero.jpg'}
+            src={industryData.heroImage || '/images/banner-placeholder.jpg'}
             alt={industryData.title || 'Industry Overview'}
             fill
             className="object-cover"
@@ -257,7 +257,7 @@ export default function IndustryPageLayout({
             >
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src={`/images/industries/${locale === 'ar' ? 'ar-' : ''}${
+                  src={`/images/default-placeholder.jpg === 'ar' ? 'ar-' : ''}${
                     Array.isArray(industryData.products) && industryData.products.length > 0 && industryData.products[0]?.image
                       ? industryData.products[0].image
                       : industryData.heroImage || 'industry-default.jpg'
@@ -297,7 +297,7 @@ export default function IndustryPageLayout({
                     <div className="rounded-full bg-primary-100 p-3 w-16 h-16 flex items-center justify-center mb-4">
                       <Image 
                         src={typeof benefit.icon === 'string' && !benefit.icon.startsWith('/') && !benefit.icon.startsWith('http') 
-                          ? `/images/icons/${benefit.icon}.svg` 
+                          ? `/images/default-placeholder.jpg 
                           : benefit.icon} 
                         alt={benefit.title}
                         width={32}
@@ -436,7 +436,7 @@ export default function IndustryPageLayout({
                         <div className="rounded-full bg-primary-100 p-2 flex-shrink-0 mr-4">
                           <Image 
                             src={typeof tech.icon === 'string' && !tech.icon.startsWith('/') && !tech.icon.startsWith('http') 
-                              ? `/images/icons/${tech.icon}.svg` 
+                              ? `/images/default-placeholder.jpg 
                               : tech.icon} 
                             alt={tech.name}
                             width={24}
@@ -505,7 +505,7 @@ export default function IndustryPageLayout({
                         <div className="rounded-full bg-primary-100 p-2 flex-shrink-0 mr-4">
                           <Image 
                             src={typeof option.icon === 'string' && !option.icon.startsWith('/') && !option.icon.startsWith('http') 
-                              ? `/images/icons/${option.icon}.svg` 
+                              ? `/images/default-placeholder.jpg 
                               : option.icon} 
                             alt={option.name}
                             width={24}

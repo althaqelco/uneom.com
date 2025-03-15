@@ -39,10 +39,10 @@ export default function AirlineCrewUniformPageAr() {
       { name: 'خيارات التخصيص', value: 'تطريز شعار شركة الطيران، شارات الأسماء، مطابقة الألوان المخصصة' }
     ],
     images: [
-      { src: '/images/smiling-airplane-crew-members-walking-together-on-2023-11-27-05-07-27-utc.jpg', alt: 'زي طاقم الطائرة - إطلالة أمامية' },
-      { src: '/images/cheerful-women-stewardesses-standing-on-airplane-s-2023-11-27-05-08-55-utc.jpg', alt: 'زي مضيفة الطيران' },
-      { src: '/images/cheerful-flight-attendant-standing-outdoors-at-air-2023-11-27-05-13-43-utc.jpg', alt: 'زي الطيران مع القبعة' },
-      { src: '/images/two-beautiful-stewardesses-and-an-airman-staring-a-2024-10-21-02-06-10-utc.jpg', alt: 'مجموعة كاملة من زي طاقم الطائرة' }
+      { src: '/images/default-placeholder.jpg', alt: 'زي طاقم الطائرة - إطلالة أمامية' },
+      { src: '/images/default-placeholder.jpg', alt: 'زي مضيفة الطيران' },
+      { src: '/images/default-placeholder.jpg', alt: 'زي الطيران مع القبعة' },
+      { src: '/images/default-placeholder.jpg', alt: 'مجموعة كاملة من زي طاقم الطائرة' }
     ],
     category: 'أزياء الطيران',
     categorySlug: 'aviation-uniforms',
@@ -65,21 +65,21 @@ export default function AirlineCrewUniformPageAr() {
       {
         id: 'pilot-uniform',
         name: 'زي الطيار المهني',
-        image: '/images/the-aviators-stance-2024-11-16-08-18-21-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ١٥٩٩ ريال',
         href: '/ar/shop/aviation-uniforms/pilot-uniform'
       },
       {
         id: 'ground-crew-uniform',
         name: 'زي طاقم الأرض',
-        image: '/images/cheerful-airline-workers-standing-in-airfield-unde-2024-10-20-08-49-20-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ٨٩٩ ريال',
         href: '/ar/shop/aviation-uniforms/ground-crew-uniform'
       },
       {
         id: 'aviation-blazer',
         name: 'سترة طيران فاخرة',
-        image: '/images/cheerful-flight-attendant-standing-in-airport-term-2024-10-18-08-12-48-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ٩٩٩ ريال',
         href: '/ar/shop/aviation-uniforms/aviation-blazer'
       }
@@ -116,10 +116,10 @@ export default function AirlineCrewUniformPageAr() {
   
   // Gallery images
   const galleryImages = [
-    "/images/joyful-stewardesses-standing-near-aircraft-at-airp-2023-11-27-04-49-34-utc.jpg",
-    "/images/cheerful-flight-attendant-standing-outdoors-at-air-2023-11-27-05-13-43-utc.jpg",
-    "/images/cheerful-women-stewardesses-standing-on-airplane-s-2023-11-27-05-08-55-utc.jpg",
-    "/images/female-flight-attendant-or-air-hostess-standing-in-2024-10-18-08-14-24-utc.jpg"
+    "/images/default-placeholder.jpg",
+    "/images/default-placeholder.jpg",
+    "/images/default-placeholder.jpg",
+    "/images/default-placeholder.jpg"
   ];
   
   // UI text translations
@@ -441,7 +441,7 @@ export default function AirlineCrewUniformPageAr() {
               </div>
               <div className="relative h-64 lg:h-auto bg-gray-100 order-1 lg:order-2">
                 <Image
-                  src="/images/cheerful-flight-attendant-standing-outdoors-at-air-2023-11-27-05-13-43-utc.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="تصميم زي طيران مخصص"
                   fill
                   className="object-cover"

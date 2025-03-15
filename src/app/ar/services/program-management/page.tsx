@@ -8,7 +8,7 @@ export default function ProgramManagementServicePageArabic() {
     locale: 'ar',
     title: 'إدارة برامج الزي الموحد',
     subtitle: 'حلول شاملة لبرامج الزي الموحد على مستوى المؤسسات',
-    heroImage: '/images/services/program-management-hero.jpg',
+    heroImage: '/images/banner-placeholder.jpg',
     
     overview: [
       "توفر خدمة إدارة برامج الزي الموحد من يونيوم حلاً شاملاً للمؤسسات التي تتطلع إلى تبسيط وتحسين برامج الزي الموحد الخاصة بها. من إدارة المخزون إلى تأهيل الموظفين، يتولى فريقنا من الخبراء كل جانب من جوانب برنامج الزي الموحد الخاص بك، مما يتيح لك التركيز على عمليات أعمالك الأساسية.",
@@ -17,22 +17,22 @@ export default function ProgramManagementServicePageArabic() {
     
     steps: [
       {
-        icon: '/images/icons/chart.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'التقييم والتخطيط',
         description: 'نبدأ بتقييم شامل لبرنامج الزي الموحد الحالي الخاص بك، وتحديد نقاط الألم وأوجه القصور وفرص التحسين. ثم يقوم فريقنا بتطوير خطة إدارة برنامج مخصصة تتماشى مع أهداف مؤسستك وميزانيتها.'
       },
       {
-        icon: '/images/icons/design.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'التصميم والتطوير',
         description: 'يعمل فريق التصميم لدينا بشكل وثيق معك لتطوير حلول زي موحد تلبي متطلباتك الوظيفية مع تعزيز هوية علامتك التجارية. نحن نأخذ في الاعتبار عوامل مثل لوائح الصناعة وبيئة العمل وتفضيلات الموظفين.'
       },
       {
-        icon: '/images/icons/implementation.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'التنفيذ والطرح',
         description: 'نتعامل مع جميع جوانب تنفيذ البرنامج، من الشراء وإعداد المخزون إلى جلسات قياس الموظفين والتوزيع. يضمن نهج الطرح المرحلي لدينا انتقالًا سلسًا مع الحد الأدنى من الاضطراب في عملياتك.'
       },
       {
-        icon: '/images/icons/monitor.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'الإدارة المستمرة',
         description: 'بمجرد تشغيل برنامجك، نقدم خدمات إدارة مستمرة بما في ذلك تتبع المخزون، وتخصيص الموظفين، ومعالجة الاستبدال، ومراجعات البرنامج المنتظمة لتحديد فرص التحسين.'
       }
@@ -40,32 +40,32 @@ export default function ProgramManagementServicePageArabic() {
     
     benefits: [
       {
-        icon: '/images/icons/efficiency.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'كفاءة تشغيلية محسنة',
         description: 'استعن بخبراء إدارة الزي الموحد لديك مما يسمح لفريقك بالتركيز على أعمالهم الأساسية.'
       },
       {
-        icon: '/images/icons/cost.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'تخفيض التكاليف',
         description: 'وفر ما يصل إلى 20٪ من النفقات من خلال مشتريات الجملة المحسنة والحد من المخزون غير الضروري.'
       },
       {
-        icon: '/images/icons/consistency.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'اتساق العلامة التجارية',
         description: 'حافظ على معايير مظهر موحدة عبر جميع المواقع من خلال برنامج زي موحد منظم مركزيًا.'
       },
       {
-        icon: '/images/icons/satisfaction.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'رضا الموظفين المحسن',
         description: 'عزز معنويات الموظفين من خلال أزياء موحدة عالية الجودة تناسب جميع أنواع الجسم وتحسن راحة العمل.'
       },
       {
-        icon: '/images/icons/compliance.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'الالتزام بالمعايير',
         description: 'تأكد من تلبية الزي الموحد لجميع متطلبات الصناعة ومعايير السلامة المطبقة.'
       },
       {
-        icon: '/images/icons/data.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'رؤى قائمة على البيانات',
         description: 'استفد من التقارير والتحليلات المفصلة لاتخاذ قرارات مستنيرة حول البرنامج المستقبلي للزي الموحد.'
       }
@@ -77,14 +77,14 @@ export default function ProgramManagementServicePageArabic() {
         title: 'تحول شبكة الرعاية الصحية',
         description: 'إدارة الأزياء الموحدة لأكثر من 3000 متخصص في الرعاية الصحية عبر 12 منشأة. تم تنفيذ إدارة برنامج شاملة مع نظام مخزون مركزي وعمليات طلب موحدة وخدمات قياس في الموقع.',
         result: 'خفض التكاليف المتعلقة بالزي الموحد بنسبة 22٪، وتقليل الوقت الإداري بنسبة 75٪، وزيادة معدل رضا الموظفين من 62٪ إلى 89٪.',
-        image: '/images/case-studies/healthcare-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: "hospitality-reorganization",
         title: 'إعادة تنظيم برنامج سلسلة الضيافة',
         description: 'تنسيق الأزياء الموحدة لأكثر من 1500 موظف عبر 5 منشآت فاخرة. تطوير برنامج موحد مع تصاميم مخصصة وإدارة مركزية وتدريب الموظفين على العناية بالزي الموحد.',
         result: 'تخفيض بنسبة 30٪ في تكاليف الاستبدال السنوية، وتحسن درجة ثبات العلامة التجارية من 68٪ إلى 95٪، وصورة موحدة عبر جميع المنشآت.',
-        image: '/images/case-studies/hospitality-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       }
     ],
     
@@ -95,7 +95,7 @@ export default function ProgramManagementServicePageArabic() {
         author: 'د. أحمد السيد',
         position: 'مدير العمليات',
         company: 'شبكة الرياض الطبية',
-        image: '/images/testimonials/dr-ahmed-al-sayed.jpg'
+        image: '/images/avatar-placeholder.jpg'
       },
       {
         id: "2",
@@ -103,7 +103,7 @@ export default function ProgramManagementServicePageArabic() {
         author: 'ليلى محمود',
         position: 'مديرة الموارد البشرية',
         company: 'فنادق نجد الفاخرة',
-        image: '/images/testimonials/layla-mahmoud.jpg'
+        image: '/images/avatar-placeholder.jpg'
       }
     ],
     

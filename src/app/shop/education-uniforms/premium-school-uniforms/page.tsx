@@ -50,10 +50,10 @@ export default function PremiumSchoolUniformsPage() {
       { name: 'Customization', value: 'School logos, name embroidery, custom colors' }
     ],
     images: [
-      { src: '/images/back-to-school-arabian-students-in-classroom-SBI-348572355.jpg', alt: 'Saudi students wearing premium school uniforms in classroom' },
-      { src: '/images/arabian-teacher-helping-students-at-school-SBI-300912533.jpg', alt: 'Teacher and students in school uniforms' },
-      { src: '/images/group-of-saudi-children-students-hands-up-SBI-306753477.jpg', alt: 'Group of Saudi students in coordinated uniforms' },
-      { src: '/images/muslim-school-girl-standing-by-school-entrance-SBI-301984723.jpg', alt: 'Saudi schoolgirl in premium uniform' }
+      { src: '/images/default-placeholder.jpg', alt: 'Saudi students wearing premium school uniforms in classroom' },
+      { src: '/images/default-placeholder.jpg', alt: 'Teacher and students in school uniforms' },
+      { src: '/images/default-placeholder.jpg', alt: 'Group of Saudi students in coordinated uniforms' },
+      { src: '/images/default-placeholder.jpg', alt: 'Saudi schoolgirl in premium uniform' }
     ],
     category: 'Education Uniforms',
     categorySlug: 'education-uniforms',
@@ -70,11 +70,11 @@ export default function PremiumSchoolUniformsPage() {
       { name: 'High School Set (Girls)', price: 'SAR 299' }
     ],
     colors: [
-      { name: 'Navy Blue', value: '#1a2942', image: '/images/fabrics/navy-cotton.jpg' },
-      { name: 'White', value: '#ffffff', image: '/images/fabrics/white-cotton.jpg' },
-      { name: 'Light Blue', value: '#add8e6', image: '/images/fabrics/light-blue-cotton.jpg' },
-      { name: 'Black', value: '#222222', image: '/images/fabrics/black-cotton.jpg' },
-      { name: 'Beige', value: '#f5f5dc', image: '/images/fabrics/beige-cotton.jpg' }
+      { name: 'Navy Blue', value: '#1a2942', image: '/images/default-placeholder.jpg' },
+      { name: 'White', value: '#ffffff', image: '/images/default-placeholder.jpg' },
+      { name: 'Light Blue', value: '#add8e6', image: '/images/default-placeholder.jpg' },
+      { name: 'Black', value: '#222222', image: '/images/default-placeholder.jpg' },
+      { name: 'Beige', value: '#f5f5dc', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['4-5', '6-7', '8-9', '10-11', '12-13', '14-15', '16-18'],
     sizeEquivalents: {
@@ -92,14 +92,14 @@ export default function PremiumSchoolUniformsPage() {
         author: "Dr. Abdullah Al-Sayed",
         position: "Principal",
         company: "Al Manar International School",
-        image: "/images/testimonials/dr-abdullah.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "Working with UNEOM has simplified our uniform program management tremendously. Their fabrics stand up to the active lifestyles of our students, and their design team successfully incorporated our traditional values with contemporary educational needs.",
         author: "Fatima Al-Otaibi",
         position: "Administrative Director",
         company: "Riyadh Modern Academy",
-        image: "/images/testimonials/fatima-o.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -377,7 +377,7 @@ export default function PremiumSchoolUniformsPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/saudi-kids-learning-in-classroom-SBI-310845622.jpg" 
+                src="/images/default-placeholder.jpg" 
                 alt="Saudi students in customized school uniforms" 
                 fill
                 className="object-cover"

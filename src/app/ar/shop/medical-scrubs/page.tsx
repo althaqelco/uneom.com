@@ -30,7 +30,7 @@ export default function MedicalScrubsPageArabic() {
       name: 'طقم ملابس طبية فاخرة',
       description: 'مجموعة ملابس طبية احترافية مصنوعة من نسيج مضاد للميكروبات، مصممة للراحة أثناء المناوبات الطويلة.',
       price: 'من 399 ريال',
-      image: '/images/shop/products/medical-scrubs-1.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/medical-scrubs/premium-scrubs-set',
       features: ['نسيج مضاد للميكروبات', 'طارد للرطوبة', 'مقاوم للتجعد', 'جيوب متعددة'],
       colors: ['أزرق فيروزي', 'كحلي', 'نبيذي', 'رمادي', 'أسود'],
@@ -41,7 +41,7 @@ export default function MedicalScrubsPageArabic() {
       name: 'معطف مختبر عالي الأداء',
       description: 'معطف مختبر احترافي بتصميم عصري ووظيفي للمتخصصين في الرعاية الصحية.',
       price: 'من 349 ريال',
-      image: '/images/shop/products/medical-scrubs-2.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/medical-scrubs/performance-lab-coat',
       features: ['تقنية ستين شيلد™', 'مرونة مريحة', 'تصميم احترافي', 'جيوب مقواة'],
       colors: ['أبيض', 'أزرق فاتح']
@@ -51,7 +51,7 @@ export default function MedicalScrubsPageArabic() {
       name: 'ملابس طبية مريحة',
       description: 'ملابس طبية خفيفة وتسمح بالتنفس مصممة لمناخ المملكة العربية السعودية مع خصائص طاردة للرطوبة.',
       price: 'من 299 ريال',
-      image: '/images/shop/products/medical-scrubs-3.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/medical-scrubs/comfort-fit-scrubs',
       features: ['قماش كلايمت كنترول™', 'ملائمة مريحة', 'مقاومة للبهتان', 'سهلة العناية'],
       colors: ['أزرق فاتح', 'أزرق سماوي', 'أخضر زيتوني', 'أزرق ملكي', 'عنابي'],
@@ -62,7 +62,7 @@ export default function MedicalScrubsPageArabic() {
       name: 'عباءات جراحية فاخرة',
       description: 'عباءات جراحية عالية الأداء مع حماية مقاومة للسوائل وملائمة مريحة.',
       price: 'من 279 ريال',
-      image: '/images/shop/products/medical-scrubs-4.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/medical-scrubs/premium-surgical-gowns',
       features: ['مقاومة للسوائل', 'مادة خفيفة الوزن', 'إغلاق قابل للتعديل', 'خيارات معقمة متاحة'],
       colors: ['أزرق', 'أخضر']
@@ -72,7 +72,7 @@ export default function MedicalScrubsPageArabic() {
       name: 'أزياء تمريض عصرية',
       description: 'أزياء تمريض معاصرة تجمع بين المظهر الاحترافي والتصميم الوظيفي.',
       price: 'من 329 ريال',
-      image: '/images/shop/products/medical-scrubs-5.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/medical-scrubs/modern-nursing-uniforms',
       features: ['مظهر احترافي', 'ألواح مرنة', 'تكوين جيوب متعدد', 'سهلة التنظيف'],
       colors: ['أبيض', 'كحلي', 'أسود', 'نبيذي'],
@@ -83,7 +83,7 @@ export default function MedicalScrubsPageArabic() {
       name: 'طقم أزياء عيادات طبية',
       description: 'طقم أزياء كامل مصمم للعيادات والمرافق العلاجية مع خيارات تخصيص العلامة التجارية.',
       price: 'من 459 ريال',
-      image: '/images/shop/products/medical-scrubs-6.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/medical-scrubs/clinical-uniform-set',
       features: ['طقم كامل', 'تخصيص العلامة التجارية', 'بنية متينة', 'مظهر احترافي'],
       colors: ['خيارات متعددة متاحة'],
@@ -137,7 +137,7 @@ export default function MedicalScrubsPageArabic() {
       <div className="relative py-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/shop/categories/medical-scrubs-hero.jpg"
+            src="/images/banner-placeholder.jpg"
             alt="الأزياء والملابس الطبية"
             fill
             className="object-cover"
@@ -199,7 +199,7 @@ export default function MedicalScrubsPageArabic() {
             </div>
             <div className="relative h-96 order-1 md:order-2">
               <Image
-                src="/images/shop/categories/medical-scrubs-intro.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="أزياء طبية احترافية"
                 fill
                 className="object-cover rounded-lg"
@@ -387,7 +387,7 @@ export default function MedicalScrubsPageArabic() {
             </div>
             <div className="relative h-96 order-1 md:order-2">
               <Image
-                src="/images/shop/categories/hospital-team.jpg"
+                src="/images/avatar-placeholder.jpg"
                 alt="فريق المستشفى في أزياء يونيوم"
                 fill
                 className="object-cover rounded-lg"

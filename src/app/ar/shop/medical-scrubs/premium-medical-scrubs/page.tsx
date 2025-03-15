@@ -27,11 +27,11 @@ export default function PremiumMedicalScrubsArabicPage() {
     longDescription: "توفر ملابس السكروب الطبية الممتازة للمتخصصين في الرعاية الصحية راحة استثنائية ومتانة ومظهرًا احترافيًا. تم تصميمها خصيصًا لبيئة الرعاية الصحية في المملكة العربية السعودية، تتميز هذه الملابس بخصائص مضادة للميكروبات، ونسيج يمتص الرطوبة، وتكوينات عملية للجيوب لتلبية جميع احتياجات الطاقم الطبي.",
     price: "ريال 179",
     minOrder: 20,
-    mainImage: "/images/PremiumـMedicalـScrubs.png",
+    mainImage: "/images/default-placeholder.jpg",
     additionalImages: [
-      "/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg",
-      "/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg",
-      "/images/scrubs-set.jpg"
+      "/images/avatar-placeholder.jpg",
+      "/images/default-placeholder.jpg",
+      "/images/default-placeholder.jpg"
     ],
     colors: [
       { name: "أزرق سماوي", value: "#87CEEB" },
@@ -84,43 +84,43 @@ export default function PremiumMedicalScrubsArabicPage() {
       { 
         name: "شعار المستشفى/العيادة", 
         description: "إضافة شعار مؤسستك مطرزًا على الصدر أو الكم",
-        image: "/images/customization/hospital-logo.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "تطريز الاسم", 
         description: "اسم الموظف ومؤهلاته مطرزة للتعريف",
-        image: "/images/customization/name-badge.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "ترميز الألوان للأقسام", 
         description: "خيارات الألوان لتمييز الأقسام المختلفة أو الأدوار",
-        image: "/images/customization/color-coding.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "تكوين جيوب مخصص", 
         description: "تعديل موضع الجيوب بناءً على احتياجات قسم معين",
-        image: "/images/customization/pocket-config.jpg"
+        image: "/images/default-placeholder.jpg"
       }
     ],
     relatedProducts: [
       {
         id: "surgical-scrubs",
         name: "طقم سكروب جراحي",
-        image: "/images/products/surgical-scrubs.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "ريال 199",
         href: "/ar/shop/medical-scrubs/surgical-scrubs"
       },
       {
         id: "lab-coats",
         name: "معطف مختبر احترافي",
-        image: "/images/products/lab-coat.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "ريال 229",
         href: "/ar/shop/medical-scrubs/lab-coats"
       },
       {
         id: "nurse-uniform",
         name: "زي تمريض ممتاز",
-        image: "/images/products/nurse-uniform.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "ريال 189",
         href: "/ar/shop/medical-scrubs/nurse-uniform"
       }
@@ -215,7 +215,7 @@ export default function PremiumMedicalScrubsArabicPage() {
         <meta name="keywords" content="سكروب طبي, ملابس طبية, ملابس مستشفيات, زي طبي ممتاز, يونيوم, السعودية" />
         <meta property="og:title" content="ملابس طبية متميزة - يونيوم للأزياء المهنية" />
         <meta property="og:description" content="ملابس طبية متميزة عالية الجودة مصنوعة من أقمشة متطورة للاستخدام في المستشفيات والمراكز الطبية بالمملكة العربية السعودية" />
-        <meta property="og:image" content="/images/PremiumـMedicalـScrubs.png" />
+        <meta property="og:image" content="/images/default-placeholder.jpg" />
         <meta property="og:type" content="product" />
         <link rel="canonical" href="https://uneom.com/ar/shop/medical-scrubs/premium-medical-scrubs" />
         <link rel="alternate" hrefLang="en" href="https://uneom.com/shop/medical-scrubs/premium-medical-scrubs" />

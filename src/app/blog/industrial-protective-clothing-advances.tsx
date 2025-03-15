@@ -21,7 +21,7 @@ export default function IndustrialProtectiveClothingPost() {
             </h1>
             <div className="flex items-center mb-4">
               <Image
-                src="/images/young-muslim-arab-woman-wearing-hijab-veiling-face-looking-at-camera-outdoors-during-s-SBI-351149151.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="Layla Mohammed"
                 width={48}
                 height={48}
@@ -37,7 +37,7 @@ export default function IndustrialProtectiveClothingPost() {
 
           <div className="mb-8">
             <Image
-              src="/images/a-brunette-man-with-a-beard-in-a-white-protective-uniform-and-an-orange-vest-presses-c-SBI-351495165.jpg"
+              src="/images/product-placeholder.jpg"
               alt="Industrial worker in protective clothing"
               width={1200}
               height={630}
@@ -79,7 +79,7 @@ export default function IndustrialProtectiveClothingPost() {
 
             <div className="mt-8 mb-8">
               <Image
-                src="/images/industrial-warehouse-worker-using-tablet-computer-SBI-300908237.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="Modern industrial worker in Saudi Arabia wearing advanced protective clothing while operating equipment"
                 width={800}
                 height={450}
@@ -127,7 +127,7 @@ export default function IndustrialProtectiveClothingPost() {
 
             <div className="mt-8 mb-8">
               <Image
-                src="/images/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="Advanced fabric samples used in Saudi industrial protective clothing with heat-adaptive and moisture-wicking properties"
                 width={800}
                 height={450}
@@ -159,7 +159,7 @@ export default function IndustrialProtectiveClothingPost() {
 
             <div className="mt-8 mb-8">
               <Image
-                src="/images/refinery-workers-SBI-301078626.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="Saudi industrial workers wearing smart protective clothing with integrated digital monitoring systems"
                 width={800}
                 height={450}
@@ -207,7 +207,7 @@ export default function IndustrialProtectiveClothingPost() {
 
             <div className="mt-8 mb-8">
               <Image
-                src="/images/industrial-contractor-working-in-a-factory-SBI-351466339.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="Ergonomically designed industrial uniforms allowing Saudi workers to maintain mobility while ensuring protection"
                 width={800}
                 height={450}
@@ -290,7 +290,7 @@ export default function IndustrialProtectiveClothingPost() {
 
             <div className="mt-8 mb-8">
               <Image
-                src="/images/refinery-and-worker-SBI-301078627.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="Vision of future industrial protective clothing combining advanced materials with digital integration in Saudi industrial settings"
                 width={800}
                 height={450}

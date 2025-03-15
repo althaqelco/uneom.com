@@ -8,7 +8,7 @@ export default function SizeGuidePageArabic() {
     locale: 'ar',
     title: 'دليل المقاسات للزي الموحد',
     subtitle: 'قياسات شاملة للحصول على تناسب مثالي لجميع أنواع الزي الموحد',
-    heroImage: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg',
+    heroImage: '/images/default-placeholder.jpg',
     overview: {
       title: 'العثور على المقاس المناسب',
       content: `
@@ -60,7 +60,7 @@ export default function SizeGuidePageArabic() {
             <p>قم بالقياس حول قاعدة الرقبة، حيث سيستقر الياقة.</p>
           </div>
         `,
-        image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+        image: '/images/default-placeholder.jpg',
       },
       {
         title: 'مخططات المقاسات القياسية',
@@ -174,7 +174,7 @@ export default function SizeGuidePageArabic() {
             </table>
           </div>
         `,
-        image: '/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg',
+        image: '/images/product-placeholder.jpg',
       },
       {
         title: 'المقاسات الخاصة بالصناعات',
@@ -214,7 +214,7 @@ export default function SizeGuidePageArabic() {
             </ul>
           </div>
         `,
-        image: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
+        image: '/images/default-placeholder.jpg',
       }
     ],
     items: [
@@ -222,25 +222,25 @@ export default function SizeGuidePageArabic() {
         id: 'mens-sizing',
         title: 'دليل مقاسات الرجال',
         description: 'جداول مقاسات مفصلة للزي الموحد للرجال مع إرشادات القياس.',
-        image: '/images/resources/mens-sizing.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'womens-sizing',
         title: 'دليل مقاسات النساء',
         description: 'جداول مقاسات مفصلة للزي الموحد للنساء مع إرشادات القياس.',
-        image: '/images/resources/womens-sizing.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'measurement-guide',
         title: 'دليل القياس',
         description: 'تعليمات خطوة بخطوة لأخذ قياسات دقيقة للحصول على أفضل تناسب.',
-        image: '/images/resources/measurement-guide.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'size-conversion',
         title: 'جدول تحويل المقاسات',
         description: 'جداول تحويل المقاسات بين المعايير الدولية المختلفة.',
-        image: '/images/resources/size-conversion.jpg'
+        image: '/images/default-placeholder.jpg'
       }
     ],
     relatedResources: [

@@ -36,7 +36,7 @@ export default function ContactPage() {
       phone: '+971 55 816 4922',
       email: 'info@uneom.com',
       googleMapsUrl: 'https://goo.gl/maps/YourActualGoogleMapsLink',
-      image: '/images/joyful-stewardesses-standing-near-aircraft-at-airp-2023-11-27-04-49-34-utc.jpg'
+      image: '/images/default-placeholder.jpg'
     },
     {
       id: 'jeddah',
@@ -45,7 +45,7 @@ export default function ContactPage() {
       phone: '+971 55 816 4922',
       email: 'info@uneom.com',
       googleMapsUrl: 'https://goo.gl/maps/YourActualGoogleMapsLink',
-      image: '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg'
+      image: '/images/default-placeholder.jpg'
     },
     {
       id: 'dammam',
@@ -54,7 +54,7 @@ export default function ContactPage() {
       phone: '+971558164922',
       email: 'dammam@uneom.com',
       googleMapsUrl: 'https://maps.app.goo.gl/987654',
-      image: '/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg'
+      image: '/images/default-placeholder.jpg'
     }
   ];
 

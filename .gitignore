@@ -38,4 +38,10 @@ next-env.d.ts
 .idea/
 
 # Backup files
-*.bak 
+*.bak
+
+# Git LFS
+.gitattributes
+
+# Optimized images list
+optimized-images.txt 

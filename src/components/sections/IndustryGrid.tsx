@@ -29,35 +29,35 @@ const IndustryGrid: React.FC<IndustryGridProps> = ({ locale = 'en', items }) => 
           id: "healthcare",
           title: "Healthcare Uniforms",
           description: "Medical scrubs and healthcare attire with antimicrobial fabrics",
-          image: "/images/Healthcare_Uniforms.png",
+          image: "/images/product-placeholder.jpg",
           link: "/industries/healthcare"
         },
         {
           id: "aviation",
           title: "Aviation Uniforms",
           description: "Professional pilot and flight attendant uniforms for airlines",
-          image: "/images/cheerful-flight-attendant-standing-outdoors-at-air-2023-11-27-05-13-43-utc.jpg",
+          image: "/images/default-placeholder.jpg",
           link: "/industries/aviation"
         },
         {
           id: "hospitality",
           title: "Hospitality Uniforms",
           description: "Elegant hotel staff and restaurant uniforms for all positions",
-          image: "/images/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg",
+          image: "/images/default-placeholder.jpg",
           link: "/industries/hospitality"
         },
         {
           id: "corporate",
           title: "Corporate Uniforms",
           description: "Professional corporate workwear for office environments",
-          image: "/images/Corporate_Uniforms_Business.png",
+          image: "/images/product-placeholder.jpg",
           link: "/industries/corporate"
         },
         {
           id: "education",
           title: "Education Uniforms",
           description: "School uniforms and staff attire for educational institutions",
-          image: "/images/group-of-elementary-school-pupils-wearing-uniform-2024-10-19-12-09-06-utc.jpg",
+          image: "/images/product-placeholder.jpg",
           link: "/industries/education"
         },
         {
@@ -77,35 +77,35 @@ const IndustryGrid: React.FC<IndustryGridProps> = ({ locale = 'en', items }) => 
           id: "healthcare",
           title: "أزياء الرعاية الصحية",
           description: "ملابس طبية وأزياء رعاية صحية بأقمشة مضادة للميكروبات",
-          image: "/images/Healthcare_Uniforms.png",
+          image: "/images/product-placeholder.jpg",
           link: "/ar/industries/healthcare"
         },
         {
           id: "aviation",
           title: "أزياء الطيران",
           description: "أزياء مهنية للطيارين ومضيفي الطيران للخطوط الجوية",
-          image: "/images/cheerful-flight-attendant-standing-outdoors-at-air-2023-11-27-05-13-43-utc.jpg",
+          image: "/images/default-placeholder.jpg",
           link: "/ar/industries/aviation"
         },
         {
           id: "hospitality",
           title: "أزياء الضيافة",
           description: "أزياء أنيقة لموظفي الفنادق والمطاعم لجميع المناصب",
-          image: "/images/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg",
+          image: "/images/default-placeholder.jpg",
           link: "/ar/industries/hospitality"
         },
         {
           id: "corporate",
           title: "أزياء الشركات",
           description: "ملابس عمل احترافية للشركات في بيئات المكاتب",
-          image: "/images/Corporate_Uniforms_Business.png",
+          image: "/images/product-placeholder.jpg",
           link: "/ar/industries/corporate"
         },
         {
           id: "education",
           title: "أزياء التعليم",
           description: "زي مدرسي وملابس للموظفين للمؤسسات التعليمية",
-          image: "/images/group-of-elementary-school-pupils-wearing-uniform-2024-10-19-12-09-06-utc.jpg",
+          image: "/images/product-placeholder.jpg",
           link: "/ar/industries/education"
         },
         {

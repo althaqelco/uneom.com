@@ -25,7 +25,7 @@ export default function WorkplaceUniformsPageArabic() {
       id: 'executive-suits',
       name: 'بدلات تنفيذية مصممة',
       price: 'من ١,٢٩٩ ريال',
-      image: '/images/corporate-man-in-suit.jpg',
+      image: '/images/default-placeholder.jpg',
       rating: 4.9,
       reviews: 87,
       description: 'بدلات مصممة فاخرة للمدراء التنفيذيين الذين يتطلبون الأناقة والراحة والمظهر المهني المتميز.',
@@ -35,7 +35,7 @@ export default function WorkplaceUniformsPageArabic() {
       id: 'corporate-shirts',
       name: 'قمصان مؤسسية فاخرة',
       price: 'من ٢٤٩ ريال',
-      image: '/images/corporate-shirts.jpg',
+      image: '/images/default-placeholder.jpg',
       rating: 4.7,
       reviews: 124,
       description: 'قمصان مؤسسية عالية الجودة بمجموعة متنوعة من الألوان، تتميز بقماش يمتص الرطوبة وخصائص سهلة العناية للارتداء المهني اليومي.',
@@ -45,7 +45,7 @@ export default function WorkplaceUniformsPageArabic() {
       id: 'office-blazers',
       name: 'سترات مكتبية احترافية',
       price: 'من ٨٩٩ ريال',
-      image: '/images/office-blazers.jpg',
+      image: '/images/default-placeholder.jpg',
       rating: 4.6,
       reviews: 58,
       description: 'سترات أنيقة ومريحة للمهنيين في مجال الأعمال، متوفرة بأنماط متنوعة مناسبة للبيئات المؤسسية السعودية.',
@@ -55,7 +55,7 @@ export default function WorkplaceUniformsPageArabic() {
       id: 'executive-abayas',
       name: 'عباءات تنفيذية محتشمة',
       price: 'من ٧٩٩ ريال',
-      image: '/images/executive-abayas.jpg',
+      image: '/images/default-placeholder.jpg',
       rating: 4.8,
       reviews: 92,
       description: 'عباءات مهنية مصممة خصيصًا للبيئات المؤسسية، تجمع بين الحشمة التقليدية وجماليات الأعمال المعاصرة.',
@@ -65,7 +65,7 @@ export default function WorkplaceUniformsPageArabic() {
       id: 'formal-trousers',
       name: 'بناطيل رسمية للشركات',
       price: 'من ٣٩٩ ريال',
-      image: '/images/formal-trousers.jpg',
+      image: '/images/avatar-placeholder.jpg',
       rating: 4.5,
       reviews: 77,
       description: 'بناطيل رسمية متينة مع قماش مرن مريح، مصممة لأيام طويلة في بيئة المكتب.',
@@ -75,7 +75,7 @@ export default function WorkplaceUniformsPageArabic() {
       id: 'corporate-skirts',
       name: 'تنانير مهنية محتشمة',
       price: 'من ٣٤٩ ريال',
-      image: '/images/corporate-skirts.jpg',
+      image: '/images/default-placeholder.jpg',
       rating: 4.6,
       reviews: 64,
       description: 'تنانير بطول مهني مصممة للبيئات المؤسسية، تحافظ على الحشمة مع توفير مظهر أنيق للأعمال.',
@@ -143,7 +143,7 @@ export default function WorkplaceUniformsPageArabic() {
         <div className="mt-8 relative rounded-xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-l from-primary-900/80 to-primary-800/40 z-10"></div>
           <Image 
-            src="/images/corporate-team.jpg"
+            src="/images/avatar-placeholder.jpg"
             alt="فريق مؤسسي يرتدي ملابس مهنية"
             width={1200}
             height={400}
@@ -267,7 +267,7 @@ export default function WorkplaceUniformsPageArabic() {
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="order-2 md:order-1 relative h-64 md:h-auto rounded-lg overflow-hidden">
               <Image 
-                src="/images/corporate-program.jpg" 
+                src="/images/default-placeholder.jpg" 
                 alt="برنامج ملابس مؤسسية" 
                 fill
                 className="object-cover"

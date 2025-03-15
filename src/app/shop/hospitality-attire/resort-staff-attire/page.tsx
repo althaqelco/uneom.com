@@ -187,10 +187,10 @@ export default function ResortStaffAttirePage() {
     leadTime: '14-20 days',
     customization: true,
     images: [
-      { src: '/images/cheerful-flight-attendant-standing-in-airport-term-2024-10-18-08-12-48-utc.jpg', alt: 'Resort staff in professional attire greeting guests' },
-      { src: '/images/smiling-airplane-crew-members-walking-together-on-2023-11-27-05-07-27-utc.jpg', alt: 'Resort team members in coordinated uniforms' },
-      { src: '/images/cheerful-flight-attendant-standing-outdoors-at-air-2023-11-27-05-13-43-utc.jpg', alt: 'Resort staff in lightweight professional clothing' },
-      { src: '/images/smiling-attractive-stewardess-getting-ready-to-fli-2024-10-18-12-57-27-utc.jpg', alt: 'Guest services staff in resort uniform' }
+      { src: '/images/default-placeholder.jpg', alt: 'Resort staff in professional attire greeting guests' },
+      { src: '/images/default-placeholder.jpg', alt: 'Resort team members in coordinated uniforms' },
+      { src: '/images/default-placeholder.jpg', alt: 'Resort staff in lightweight professional clothing' },
+      { src: '/images/default-placeholder.jpg', alt: 'Guest services staff in resort uniform' }
     ],
     colors: [
       { name: 'Beige', value: '#F5F5DC' },

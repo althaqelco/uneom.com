@@ -49,10 +49,10 @@ export default function PremiumSurgicalGownsPageArabic() {
       { name: 'التعبئة', value: 'عبوات فردية أو خيارات بالجملة متوفرة' }
     ],
     images: [
-      { src: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg', alt: 'فريق جراحي يرتدي عباءات فاخرة' },
-      { src: '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg', alt: 'جراحون في عباءات فاخرة أثناء العملية' },
-      { src: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg', alt: 'لقطة مقربة لقماش العباءة الجراحية الفاخرة وتفاصيلها' },
-      { src: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg', alt: 'أخصائي رعاية صحية في ملابس جراحية فاخرة' }
+      { src: '/images/avatar-placeholder.jpg', alt: 'فريق جراحي يرتدي عباءات فاخرة' },
+      { src: '/images/default-placeholder.jpg', alt: 'جراحون في عباءات فاخرة أثناء العملية' },
+      { src: '/images/default-placeholder.jpg', alt: 'لقطة مقربة لقماش العباءة الجراحية الفاخرة وتفاصيلها' },
+      { src: '/images/default-placeholder.jpg', alt: 'أخصائي رعاية صحية في ملابس جراحية فاخرة' }
     ],
     category: 'ملابس الرعاية الصحية',
     categorySlug: 'medical-scrubs',
@@ -67,9 +67,9 @@ export default function PremiumSurgicalGownsPageArabic() {
       { name: 'عباءة بشعار المستشفى المخصص', price: '٤٦٩ ريال' }
     ],
     colors: [
-      { name: 'أخضر جراحي', value: '#2d8659', image: '/images/fabrics/surgical-green.jpg' },
-      { name: 'أزرق ملكي', value: '#1e4d8c', image: '/images/fabrics/royal-blue.jpg' },
-      { name: 'كحلي', value: '#0a1e3c', image: '/images/fabrics/navy.jpg' }
+      { name: 'أخضر جراحي', value: '#2d8659', image: '/images/default-placeholder.jpg' },
+      { name: 'أزرق ملكي', value: '#1e4d8c', image: '/images/default-placeholder.jpg' },
+      { name: 'كحلي', value: '#0a1e3c', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     sizeEquivalents: {
@@ -85,14 +85,14 @@ export default function PremiumSurgicalGownsPageArabic() {
         author: "د. محمد الحربي",
         position: "رئيس قسم الجراحة",
         company: "مستشفى الملك فيصل التخصصي",
-        image: "/images/testimonials/dr-mohammed.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "مستوى الحماية الذي توفره هذه العباءات استثنائي. توفر المناطق المقواة راحة بال إضافية، ويظل القماش قابلاً للتنفس حتى أثناء الإجراءات الأكثر كثافة.",
         author: "د. سارة القحطاني",
         position: "رئيسة التمريض الجراحي",
         company: "المستشفى السعودي الألماني",
-        image: "/images/testimonials/dr-sarah.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -342,7 +342,7 @@ export default function PremiumSurgicalGownsPageArabic() {
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-1 relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/operating-room-team-during-surgical-procedure-in-hospital-surgery-theater-SBI-303656444.jpg" 
+                src="/images/avatar-placeholder.jpg" 
                 alt="عباءات جراحية مخصصة لفرق المستشفيات" 
                 fill
                 className="object-cover"

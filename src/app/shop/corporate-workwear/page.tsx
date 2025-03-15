@@ -31,7 +31,7 @@ export default function CorporateWorkwearPage() {
       name: 'Executive Blazer',
       description: 'Premium tailored blazer for corporate executives and management personnel, featuring sophisticated design and premium fabric.',
       price: 'From SAR 359',
-      image: '/images/schoolchildren-pretending-to-be-businesspeople-wit-2024-11-08-16-13-21-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/corporate-workwear/executive-blazer',
       features: ['Premium fabric', 'Tailored fit', 'Professional look', 'Wrinkle-resistant'],
       colors: ['Navy', 'Charcoal', 'Black'],
@@ -42,7 +42,7 @@ export default function CorporateWorkwearPage() {
       name: 'Corporate Shirt',
       description: 'High-quality business shirt designed for professional office environments, featuring easy-care fabric and modern fit.',
       price: 'From SAR 149',
-      image: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/corporate-workwear/corporate-shirt',
       features: ['Easy care', 'Moisture-wicking', 'Comfort stretch', 'Professional look'],
       colors: ['White', 'Light Blue', 'Pink', 'Light Grey'],
@@ -53,7 +53,7 @@ export default function CorporateWorkwearPage() {
       name: 'Office Trousers',
       description: 'Professional trousers designed for daily office wear with comfortable fit and durable fabric for extended use.',
       price: 'From SAR 179',
-      image: '/images/schoolchildren-pretending-to-be-businesspeople-wit-2024-11-08-16-13-21-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/corporate-workwear/office-trouser',
       features: ['Stain-resistant', 'Comfort waistband', 'Multiple pockets', 'Classic fit'],
       colors: ['Navy', 'Charcoal', 'Black', 'Khaki']
@@ -63,7 +63,7 @@ export default function CorporateWorkwearPage() {
       name: 'Reception Uniform Set',
       description: 'Complete front desk uniform set designed for receptionist and customer-facing staff in corporate environments.',
       price: 'From SAR 299',
-      image: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg',
+      image: '/images/avatar-placeholder.jpg',
       href: '/shop/corporate-workwear/reception-uniform',
       features: ['Complete set', 'Professional appearance', 'Comfort design', 'Brand customization'],
       colors: ['Multiple options available']
@@ -73,7 +73,7 @@ export default function CorporateWorkwearPage() {
       name: 'Corporate Skirt',
       description: 'Professional skirt designed for women in corporate environments, featuring comfortable fit and elegant appearance.',
       price: 'From SAR 159',
-      image: '/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/shop/corporate-workwear/corporate-skirt',
       features: ['Tailored fit', 'High-quality fabric', 'Easy care', 'Professional look'],
       colors: ['Navy', 'Black', 'Charcoal', 'Light Grey']
@@ -83,7 +83,7 @@ export default function CorporateWorkwearPage() {
       name: 'Business Formal Set',
       description: 'Complete business formal attire set for professional environments that demand a higher level of presentation.',
       price: 'From SAR 499',
-      image: '/images/schoolchildren-pretending-to-be-businesspeople-wit-2024-11-08-16-13-21-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/corporate-workwear/business-formal-set',
       features: ['Premium materials', 'Coordinated set', 'Professional design', 'Custom sizing'],
       colors: ['Navy', 'Black', 'Charcoal']
@@ -143,7 +143,7 @@ export default function CorporateWorkwearPage() {
       <section className="relative pt-16 pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/schoolchildren-pretending-to-be-businesspeople-wit-2024-11-08-16-13-21-utc.jpg"
+            src="/images/default-placeholder.jpg"
             alt="Corporate Workwear"
             fill
             className="object-cover object-center"
@@ -393,7 +393,7 @@ export default function CorporateWorkwearPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg"
+                    src="/images/default-placeholder.jpg"
                     alt="Medical Scrubs"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -410,7 +410,7 @@ export default function CorporateWorkwearPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg"
+                    src="/images/product-placeholder.jpg"
                     alt="Security Uniforms"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -447,7 +447,7 @@ export default function CorporateWorkwearPage() {
             <div className="hidden lg:block">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/schoolchildren-pretending-to-be-businesspeople-wit-2024-11-08-16-13-21-utc.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="Corporate Workwear Design Service"
                   fill
                   className="object-cover"

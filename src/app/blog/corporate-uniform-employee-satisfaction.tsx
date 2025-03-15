@@ -104,7 +104,7 @@ export default function CorporateUniformEmployeeSatisfactionPost() {
 
             <div className="mt-8 mb-8">
               <Image
-                src="/images/blog/team-cohesion.jpg"
+                src="/images/avatar-placeholder.jpg"
                 alt="Saudi professional team in matching corporate attire collaborating in a modern office"
                 width={800}
                 height={450}
@@ -232,7 +232,7 @@ export default function CorporateUniformEmployeeSatisfactionPost() {
 
             <div className="mt-8 mb-8">
               <Image
-                src="/images/blog/uniform-comfort.jpg"
+                src="/images/product-placeholder.jpg"
                 alt="Comparison of traditional vs. performance fabrics in Saudi corporate uniforms"
                 width={800}
                 height={450}

@@ -40,10 +40,10 @@ export default function PremiumScrubsSetPage() {
       { name: 'Custom Options', value: 'Embroidery, custom sizing, color matching' }
     ],
     images: [
-      { src: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg', alt: 'Premium Scrubs Set Front View' },
-      { src: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg', alt: 'Premium Scrubs Set Worn by Medical Professionals' },
-      { src: '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg', alt: 'Premium Scrubs Set in Use' },
-      { src: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg', alt: 'Medical Team Wearing Scrubs' }
+      { src: '/images/default-placeholder.jpg', alt: 'Premium Scrubs Set Front View' },
+      { src: '/images/default-placeholder.jpg', alt: 'Premium Scrubs Set Worn by Medical Professionals' },
+      { src: '/images/default-placeholder.jpg', alt: 'Premium Scrubs Set in Use' },
+      { src: '/images/avatar-placeholder.jpg', alt: 'Medical Team Wearing Scrubs' }
     ],
     category: 'Healthcare Apparel',
     categorySlug: 'medical-scrubs',
@@ -66,21 +66,21 @@ export default function PremiumScrubsSetPage() {
       {
         id: 'antimicrobial-scrubs',
         name: 'Antimicrobial Scrubs',
-        image: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'From SAR 279',
         href: '/shop/medical-scrubs/antimicrobial-scrubs'
       },
       {
         id: 'nursing-scrubs',
         name: 'Nursing Scrubs Set',
-        image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'From SAR 229',
         href: '/shop/medical-scrubs/nursing-scrubs'
       },
       {
         id: 'surgical-scrubs',
         name: 'Surgical Scrubs',
-        image: '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'From SAR 269',
         href: '/shop/medical-scrubs/surgical-scrubs'
       }
@@ -392,7 +392,7 @@ export default function PremiumScrubsSetPage() {
               </div>
               <div className="relative h-64 lg:h-auto bg-gray-100">
                 <Image
-                  src="/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg"
+                  src="/images/avatar-placeholder.jpg"
                   alt="Custom Medical Uniform Design"
                   fill
                   className="object-cover"

@@ -56,7 +56,7 @@ export default function AuthorPage({ params }: PageProps) {
     'fahad-al-shamri': {
       id: 'fahad-al-shamri',
       name: 'Eng. Fahad Al-Shamri',
-      image: '/images/team/man-in-gray-shirt-and-black-blazer-SBI-300015242.jpg',
+      image: '/images/avatar-placeholder.jpg',
       title: 'Strategic Consultant - Textile Industry',
       bio: 'Textile engineer and expert in developing the Kingdom\'s textile and fashion industry, previously worked in the National Industrial Development and Logistics Program.',
       fullBio: 'Eng. Fahad Al-Shamri is a specialized consultant in developing the textile and fashion industry in Saudi Arabia, with extensive experience in strategic planning for the industrial sector and developing local value chains. He previously worked as a consultant in the National Industrial Development and Logistics Program, one of the executive programs for Saudi Vision 2030, where he contributed to developing strategies for localizing the textile and uniform industry. He has also participated in many consulting projects for major local and international companies operating in the Kingdom and has contributed to developing the technical training system for national cadres in this field.',
@@ -171,7 +171,7 @@ export default function AuthorPage({ params }: PageProps) {
     'amina-al-zahrani': {
       id: 'amina-al-zahrani',
       name: 'أمينة الزهراني',
-      image: '/images/adult-beautiful-muslim-woman-with-hijab-on-head-smiling-for-camera-in-room-SBI-351089408.jpg',
+      image: '/images/default-placeholder.jpg',
       title: 'مديرة قسم الاستدامة',
       bio: 'خبيرة في مجال التصميم المستدام والأزياء الصديقة للبيئة، مع تركيز خاص على تقنيات إعادة التدوير وتقليل النفايات في صناعة المنسوجات والأزياء الموحدة.',
       expertise: ['الاستدامة', 'المواد المعاد تدويرها', 'الأزياء الخضراء', 'الاقتصاد الدائري'],
@@ -210,7 +210,7 @@ export default function AuthorPage({ params }: PageProps) {
     'dr-khalid-bakr': {
       id: 'dr-khalid-bakr',
       name: 'Dr. Khalid Bakr',
-      image: '/images/doctor-SBI-300813580.jpg',
+      image: '/images/default-placeholder.jpg',
       title: 'Healthcare Uniform Specialist',
       bio: 'Dr. Khalid specializes in healthcare uniforms with a focus on safety standards and infection control. He has consulted for major hospitals across the Kingdom.',
       expertise: ['Healthcare', 'Safety Standards', 'Medical Textiles'],
@@ -287,7 +287,7 @@ export default function AuthorPage({ params }: PageProps) {
     'sultan-al-ghamdi': {
       id: 'sultan-al-ghamdi',
       name: 'سلطان الغامدي',
-      image: '/images/portrait-of-an-arab-man-sheikh-SBI-300981247.jpg',
+      image: '/images/default-placeholder.jpg',
       title: 'خبير التراث والأزياء التقليدية',
       bio: 'مستشار في مجال دمج العناصر التراثية في الأزياء الموحدة العصرية، مع خبرة أكثر من 15 عاماً في الحفاظ على الهوية الثقافية السعودية في التصاميم المعاصرة.',
       expertise: ['التراث السعودي', 'الأزياء التقليدية', 'الهوية الثقافية', 'الحرف اليدوية'],
@@ -325,7 +325,7 @@ export default function AuthorPage({ params }: PageProps) {
     'layla-mohammed': {
       id: 'layla-mohammed',
       name: 'Layla Mohammed',
-      image: '/images/young-muslim-arab-woman-wearing-hijab-veiling-face-looking-at-camera-outdoors-during-s-SBI-351149151.jpg',
+      image: '/images/default-placeholder.jpg',
       title: 'Industrial Uniform Researcher',
       bio: 'Specializing in advanced protective fabrics and ergonomic design for industrial environments, Layla combines her background in materials science with practical field experience.',
       expertise: ['Industrial Safety', 'Protective Fabrics', 'Ergonomic Design', 'Hazard Protection'],
@@ -363,7 +363,7 @@ export default function AuthorPage({ params }: PageProps) {
     'omar-al-saeed': {
       id: 'omar-al-saeed',
       name: 'عمر السعيد',
-      image: '/images/modern-arabic-businessman-SBI-300984397.jpg',
+      image: '/images/default-placeholder.jpg',
       title: 'خبير سلاسل التوريد والإمداد',
       bio: 'متخصص في إدارة سلاسل التوريد واللوجستيات لصناعة الأزياء الموحدة، مع خبرة تمتد لأكثر من 10 سنوات في تحسين كفاءة العمليات وتقليل التكاليف وتحقيق الاستدامة.',
       expertise: ['سلاسل التوريد', 'اللوجستيات', 'التصنيع الرشيق', 'إدارة المخزون'],
@@ -424,7 +424,7 @@ export default function AuthorPage({ params }: PageProps) {
     'tariq-al-mahmoud': {
       id: 'tariq-al-mahmoud',
       name: 'طارق المحمود',
-      image: '/images/arabian-businessman-wearing-traditional-clothes-while-using-smartphone-at-home-SBI-350765162.jpg',
+      image: '/images/default-placeholder.jpg',
       title: 'رئيس قسم الابتكار الرقمي',
       bio: 'يقود فريق الابتكار الرقمي في تطوير تقنيات التصنيع المتقدمة وأنظمة إدارة الزي الموحد الذكية، مع خبرة في دمج إنترنت الأشياء والذكاء الاصطناعي في صناعة الأزياء.',
       expertise: ['التصنيع الرقمي', 'إنترنت الأشياء', 'الأقمشة الذكية', 'التحول الرقمي'],
@@ -463,7 +463,7 @@ export default function AuthorPage({ params }: PageProps) {
     'dr-nora-al-atiebi': {
       id: 'dr-nora-al-atiebi',
       name: 'Dr. Nora Al-Atiebi',
-      image: '/images/team/nora.jpg',
+      image: '/images/avatar-placeholder.jpg',
       title: 'Consultant in Surgical and Preventive Aesthetics',
       bio: 'Dr. Nora Al-Atiebi is an expert in surgical and preventive aesthetics with over 12 years of experience in developing and improving uniforms for healthcare workers.',
       expertise: ['Healthcare', 'Surgical Uniform', 'Smart Fabrics'],
@@ -530,7 +530,7 @@ export default function AuthorPage({ params }: PageProps) {
       excerpt: 'كيف تساهم الابتكارات في صناعة الزي الموحد في دعم أهداف رؤية السعودية 2030 من توطين الصناعة وتنويع الاقتصاد وتعزيز الهوية الوطنية.',
       date: 'يونيو 10, 2025',
       category: 'رؤية السعودية 2030',
-      coverImage: '/images/blog/saudi-flag-SBI-300908222.jpg',
+      coverImage: '/images/default-placeholder.jpg',
       readTime: 8
     },
     {
@@ -539,7 +539,7 @@ export default function AuthorPage({ params }: PageProps) {
       excerpt: 'تحليل شامل للتحديات التي تواجه توطين صناعة المنسوجات في المملكة والفرص الواعدة لتطويرها في ظل مبادرات رؤية 2030.',
       date: 'أبريل 22, 2024',
       category: 'صناعة المنسوجات',
-      coverImage: '/images/blog/textile-industry.jpg',
+      coverImage: '/images/default-placeholder.jpg',
       readTime: 7
     },
     {
@@ -548,7 +548,7 @@ export default function AuthorPage({ params }: PageProps) {
       excerpt: 'نظرة مستقبلية حول كيفية مساهمة التقنيات الحديثة في تطوير صناعة المنسوجات المتقدمة في المملكة وتأثيرها على القطاعات المختلفة.',
       date: 'فبراير 15, 2024',
       category: 'الابتكار',
-      coverImage: '/images/blog/innovative-textiles.jpg',
+      coverImage: '/images/default-placeholder.jpg',
       readTime: 6
     }
   ];

@@ -46,7 +46,7 @@ export default function FabricGuidePageArabic() {
             <li><strong>قطن-إيلاستين:</strong> يضيف تمددًا ومرونة إلى الملابس القطنية</li>
           </ul>
         `,
-        image: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         title: 'البوليستر والأقمشة الاصطناعية',
@@ -76,7 +76,7 @@ export default function FabricGuidePageArabic() {
             <li><strong>مزيج البولي-سباندكس:</strong> يضيف تمددًا مع الحفاظ على فوائد البوليستر</li>
           </ul>
         `,
-        image: '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         title: 'أقمشة الأداء والأقمشة التقنية',
@@ -113,7 +113,7 @@ export default function FabricGuidePageArabic() {
             <li>أزياء الطيران التي تتطلب أقصى قدر من الراحة خلال المناوبات الطويلة</li>
           </ul>
         `,
-        image: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg'
+        image: '/images/avatar-placeholder.jpg'
       },
       {
         title: 'خيارات مستدامة وصديقة للبيئة',
@@ -166,7 +166,7 @@ export default function FabricGuidePageArabic() {
         id: 'poly-cotton',
         title: 'مزيج البولي-قطن',
         description: 'التوازن المثالي بين الراحة والمتانة، مع مقاومة محسنة للتجعد.',
-        image: '/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg',
+        image: '/images/product-placeholder.jpg',
         properties: {
           'التركيب': '65٪ بوليستر، 35٪ قطن',
           'الوزن': '190-240 جم/م²',
@@ -179,7 +179,7 @@ export default function FabricGuidePageArabic() {
         id: 'performance',
         title: 'نسيج الأداء',
         description: 'قماش تقني متطور بخصائص امتصاص الرطوبة ومضادة للميكروبات.',
-        image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+        image: '/images/default-placeholder.jpg',
         properties: {
           'التركيب': 'مزيج البولي-سباندكس',
           'الوزن': '160-200 جم/م²',

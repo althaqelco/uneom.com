@@ -11,7 +11,7 @@ export default function RetailShopsPage() {
   const retailShopsData = {
     title: "Retail & Shopping Center Uniforms in Saudi Arabia",
     subtitle: "Professional, on-brand uniforms for Saudi Arabia's retail sector that enhance customer experience and brand image",
-    heroImage: "/images/industries/retail-shops-hero.jpg",
+    heroImage: "/images/banner-placeholder.jpg",
     
     introduction: [
       "In Saudi Arabia's competitive retail landscape, staff uniforms play a crucial role in building brand identity, enhancing customer experience, and maintaining a professional environment. UNEOM provides high-quality retail uniforms that combine stylish designs with practical functionality for various retail environments.",
@@ -54,42 +54,42 @@ export default function RetailShopsPage() {
         id: "mall-staff-uniforms",
         name: "Mall Staff Uniforms",
         description: "Professional, comfortable uniforms for reception, customer service, and information desk staff at shopping malls and centers.",
-        image: "/images/products/mall-staff-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/retail-uniforms/mall-staff"
       },
       {
         id: "retail-store-uniforms",
         name: "Retail Store Uniforms",
         description: "Customizable attire for retail stores that combines brand identity with practical comfort for sales associates and floor staff.",
-        image: "/images/products/retail-store-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/retail-uniforms/store-staff"
       },
       {
         id: "beauty-salon-uniforms",
         name: "Beauty Salon Uniforms",
         description: "Stylish, stain-resistant uniforms for beauty professionals that project sophistication while providing practical functionality.",
-        image: "/images/products/beauty-salon-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/retail-uniforms/beauty-salon"
       },
       {
         id: "cashier-uniforms",
         name: "Cashier Uniforms",
         description: "Practical, professional attire for cashiers and point-of-sale staff with comfortable designs for long periods at checkout stations.",
-        image: "/images/products/cashier-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/retail-uniforms/cashiers"
       },
       {
         id: "sales-representative-uniforms",
         name: "Sales Representative Uniforms",
         description: "Professional uniforms that combine style with functionality for sales teams, featuring brand integration and comfortable designs.",
-        image: "/images/products/sales-representative-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/retail-uniforms/sales-representatives"
       },
       {
         id: "shopping-center-uniforms",
         name: "Shopping Center Employee Uniforms",
         description: "Coordinated uniform collections for entire shopping center staff, with variations for different roles while maintaining brand consistency.",
-        image: "/images/products/shopping-center-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/retail-uniforms/shopping-centers"
       }
     ],

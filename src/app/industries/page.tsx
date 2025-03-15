@@ -28,21 +28,21 @@ export default function IndustriesPage() {
       id: 'healthcare',
       name: 'Healthcare',
       description: 'High-quality medical scrubs and healthcare uniforms designed for Saudi hospitals, clinics, and medical facilities.',
-      image: '/images/industries/healthcare-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/industries/healthcare'
     },
     {
       id: 'aviation',
       name: 'Aviation',
       description: 'Premium pilot and cabin crew uniforms that represent your airline with distinction and comfort.',
-      image: '/images/industries/aviation-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/industries/aviation'
     },
     {
       id: 'hospitality',
       name: 'Hospitality',
       description: 'Elegant and practical uniforms for hotels, restaurants, and hospitality services throughout Saudi Arabia.',
-      image: '/images/industries/hospitality-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/industries/hospitality'
     }
   ];
@@ -52,28 +52,28 @@ export default function IndustriesPage() {
       id: 'corporate',
       name: 'Corporate',
       description: 'Professional corporate attire and workwear solutions tailored for Saudi business environments.',
-      image: '/images/industries/corporate-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/industries/corporate'
     },
     {
       id: 'education',
       name: 'Education',
       description: 'Durable and comfortable uniforms for schools, universities, and educational institutions.',
-      image: '/images/industries/education-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/industries/education'
     },
     {
       id: 'manufacturing',
       name: 'Manufacturing',
       description: "Safety-compliant workwear designed for industrial environments with Saudi Arabia's climate in mind.",
-      image: '/images/industries/manufacturing-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/industries/manufacturing'
     },
     {
       id: 'security',
       name: 'Security',
       description: 'Professional security uniforms that convey authority while providing comfort and functionality.',
-      image: '/images/industries/security-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/industries/security'
     }
   ];
@@ -84,7 +84,7 @@ export default function IndustriesPage() {
       <section className="relative bg-gradient-to-r from-neutral-900 to-neutral-800 text-white py-20">
         <div className="absolute inset-0 overflow-hidden opacity-25">
           <Image
-            src="/images/industries/industries-hero.jpg"
+            src="/images/banner-placeholder.jpg"
             alt="UNEOM Industries"
             fill
             className="object-cover"
@@ -131,7 +131,7 @@ export default function IndustriesPage() {
             <div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/industries/industry-expertise.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="UNEOM Industry Expertise"
                   width={600}
                   height={400}

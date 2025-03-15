@@ -8,7 +8,7 @@ export default function CustomDesignServicePage() {
   const serviceData = {
     title: 'Custom Design & Branding',
     subtitle: 'Distinctive uniform solutions that elevate your brand identity',
-    heroImage: '/images/services/custom-design-hero.jpg',
+    heroImage: '/images/banner-placeholder.jpg',
     
     overview: [
       "UNEOM's Custom Design & Branding service delivers unique uniform solutions that reflect your organization's distinct identity and values. Our expert design team works closely with you to create uniforms that not only meet functional requirements but also serve as powerful brand ambassadors for your organization.",
@@ -17,22 +17,22 @@ export default function CustomDesignServicePage() {
     
     steps: [
       {
-        icon: '/images/icons/discovery.svg',
+        icon: '/images/banner-placeholder.jpg',
         title: 'Brand Discovery',
         description: 'We begin with a comprehensive discovery phase to understand your brand values, identity elements, and design preferences. Our team analyzes your existing visual identity, target audience, and industry positioning to establish clear design objectives.'
       },
       {
-        icon: '/images/icons/concept.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Concept Development',
         description: 'Our design team creates initial concepts that blend aesthetic appeal with functional requirements. We present multiple design directions with mood boards, color palettes, and preliminary sketches to visualize different approaches.'
       },
       {
-        icon: '/images/icons/refinement.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Refinement & Prototyping',
         description: 'Based on your feedback, we refine selected concepts and develop detailed designs. Prototypes are created for key uniform pieces, allowing for fit testing, material evaluation, and further design adjustments.'
       },
       {
-        icon: '/images/icons/production.svg',
+        icon: '/images/product-placeholder.jpg',
         title: 'Production & Implementation',
         description: 'Once designs are approved, we manage the production process with rigorous quality control standards. Our team coordinates sizing, manufacturing, and delivery to ensure a smooth rollout of your custom uniform program.'
       }
@@ -40,32 +40,32 @@ export default function CustomDesignServicePage() {
     
     benefits: [
       {
-        icon: '/images/icons/identity.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Strengthened Brand Identity',
         description: 'Custom uniforms reinforce your visual identity and create immediate brand recognition both internally and with customers or clients.'
       },
       {
-        icon: '/images/icons/differentiation.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Competitive Differentiation',
         description: 'Stand out from competitors with distinctive uniforms that communicate your unique positioning and values in the marketplace.'
       },
       {
-        icon: '/images/icons/culture.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Enhanced Company Culture',
         description: 'Well-designed uniforms foster a sense of belonging and pride among employees, strengthening your organizational culture.'
       },
       {
-        icon: '/images/icons/consistency.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Visual Consistency',
         description: 'Ensure consistent brand presentation across all locations, departments, and customer touchpoints.'
       },
       {
-        icon: '/images/icons/functionality.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Optimized Functionality',
         description: 'Custom designs allow for industry-specific features and adaptations that improve comfort and performance for your specific work environment.'
       },
       {
-        icon: '/images/icons/perception.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Elevated Customer Perception',
         description: 'Professional, branded uniforms elevate customer perception of your service quality and organizational professionalism.'
       }
@@ -77,14 +77,14 @@ export default function CustomDesignServicePage() {
         title: 'Luxury Hotel Brand Transformation',
         description: 'Creating a distinctive uniform collection for a new luxury hotel brand launching in Saudi Arabia that needed to blend contemporary elegance with subtle cultural elements.',
         result: '92% of guests surveyed mentioned the distinctive staff appearance as a memorable element of their stay, and the designs were featured in Hospitality Design magazine.',
-        image: '/images/case-studies/hotel-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: "banking-refresh",
         title: 'Corporate Banking Identity Refresh',
         description: 'Modernizing an outdated corporate uniform program for a leading financial institution with 1,200+ customer-facing employees while maintaining professionalism and brand heritage.',
         result: '86% increase in employee satisfaction with uniform program and customer perception metrics for "professionalism" increased by 18%.',
-        image: '/images/case-studies/banking-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       }
     ],
     
@@ -95,7 +95,7 @@ export default function CustomDesignServicePage() {
         author: 'Nora Al-Faisal',
         position: 'Brand Director',
         company: 'Al Mamlaka Hotels & Resorts',
-        image: '/images/testimonials/nora-al-faisal.jpg'
+        image: '/images/avatar-placeholder.jpg'
       },
       {
         id: "financial-cmo",
@@ -103,7 +103,7 @@ export default function CustomDesignServicePage() {
         author: 'Fahad Al-Otaibi',
         position: 'Chief Marketing Officer',
         company: 'Riyadh Financial Group',
-        image: '/images/testimonials/fahad-al-otaibi.jpg'
+        image: '/images/avatar-placeholder.jpg'
       }
     ],
     

@@ -36,11 +36,11 @@ export default function IndustrialCoverallProPage() {
     longDescription: "Our Heavy Duty Industrial Coverall is designed for professionals working in factory environments, manufacturing facilities, and industrial settings. This premium coverall offers exceptional durability, comfort, and protection for workers in demanding conditions. The two-tone design combines style with functionality, while the reinforced seams and strategic pocket placement ensure practicality in everyday use.",
     price: "SAR 289",
     minOrder: 15,
-    mainImage: "/images/Heavy_Duty_Industrial_Coverall.png",
+    mainImage: "/images/banner-placeholder.jpg",
     additionalImages: [
-      "/images/products/industrial-coverall-back.jpg",
-      "/images/products/industrial-coverall-detail.jpg",
-      "/images/products/industrial-coverall-group.jpg"
+      "/images/product-placeholder.jpg",
+      "/images/product-placeholder.jpg",
+      "/images/product-placeholder.jpg"
     ],
     colors: [
       { name: "Black/Gray", value: "#333333" },
@@ -93,43 +93,43 @@ export default function IndustrialCoverallProPage() {
       { 
         name: "Company Logo Embroidery", 
         description: "Add your company logo embroidered on chest and/or back",
-        image: "/images/customization/logo-embroidery.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "Name/Department Tags", 
         description: "Add employee name or department identification",
-        image: "/images/customization/name-tag.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "Reflective Striping", 
         description: "Additional reflective strips for enhanced visibility",
-        image: "/images/customization/reflective-strips.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "Pocket Customization", 
         description: "Modify pocket configuration based on specific needs",
-        image: "/images/customization/pocket-custom.jpg"
+        image: "/images/default-placeholder.jpg"
       }
     ],
     relatedProducts: [
       {
         id: "industrial-safety-vest",
         name: "High-Visibility Safety Vest",
-        image: "/images/products/safety-vest.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "SAR 89",
         href: "/shop/industrial-uniforms/industrial-safety-vest"
       },
       {
         id: "welding-apron",
         name: "Heat-Resistant Welding Apron",
-        image: "/images/products/welding-apron.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "SAR 159",
         href: "/shop/industrial-uniforms/welding-apron"
       },
       {
         id: "mechanics-overalls",
         name: "Mechanic's Premium Overalls",
-        image: "/images/products/mechanic-overalls.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "SAR 269",
         href: "/shop/industrial-uniforms/mechanics-overalls"
       }

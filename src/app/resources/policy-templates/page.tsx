@@ -8,7 +8,7 @@ export default function PolicyTemplatesPage() {
     locale: 'en',
     title: 'Uniform Policy Templates',
     subtitle: 'Customizable frameworks for developing clear and comprehensive uniform guidelines',
-    heroImage: '/images/smiling-airplane-crew-members-walking-together-on-2023-11-27-05-07-27-utc.jpg',
+    heroImage: '/images/default-placeholder.jpg',
     overview: {
       title: 'Creating Effective Uniform Policies',
       content: `
@@ -76,7 +76,7 @@ export default function PolicyTemplatesPage() {
             compliance with local labor laws and regulations.
           </p>
         `,
-        image: '/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg',
+        image: '/images/product-placeholder.jpg',
       },
       {
         title: 'Industry-Specific Policy Templates',
@@ -161,7 +161,7 @@ export default function PolicyTemplatesPage() {
             </div>
           </div>
         `,
-        image: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg',
+        image: '/images/avatar-placeholder.jpg',
       },
       {
         title: 'Policy Implementation Guide',
@@ -216,7 +216,7 @@ export default function PolicyTemplatesPage() {
             </a>
           </div>
         `,
-        image: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
+        image: '/images/default-placeholder.jpg',
       }
     ],
     items: [
@@ -225,42 +225,42 @@ export default function PolicyTemplatesPage() {
         title: 'General Uniform Policy Template',
         description: 'A comprehensive framework for establishing basic uniform standards across all departments.',
         content: 'This template provides a structured approach to creating a uniform policy that establishes clear guidelines for professional appearance, proper uniform wear, and maintenance responsibilities. It includes sections on compliance requirements, enforcement procedures, and accommodation policies.',
-        image: '/images/resources/general-policy.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'healthcare-uniform-policy',
         title: 'Healthcare Uniform Policy Template',
         description: 'Specialized guidelines addressing infection control and professional standards in healthcare settings.',
         content: 'Designed specifically for healthcare environments, this template addresses critical aspects such as infection control, identification requirements, and appropriate attire for different clinical settings. It includes guidance on laundering procedures, PPE integration, and patient safety considerations.',
-        image: '/images/resources/healthcare-policy.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'hospitality-uniform-policy',
         title: 'Hospitality Uniform Policy Template',
         description: 'Customer-focused uniform standards for hotels, restaurants, and hospitality businesses.',
         content: 'This template focuses on creating a cohesive brand image through uniform standards in customer-facing hospitality roles. It covers grooming standards, uniform rotation systems, and guidelines for different positions from front desk to food service.',
-        image: '/images/resources/hospitality-policy.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'corporate-uniform-policy',
         title: 'Corporate Uniform Policy Template',
         description: 'Professional dress code guidelines for office and corporate environments.',
         content: 'Establish a professional corporate image with this template that balances formality with employee comfort. It includes sections on business casual guidelines, branded apparel standards, and special event dress codes.',
-        image: '/images/resources/corporate-policy.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'industrial-uniform-policy',
         title: 'Industrial Uniform Policy Template',
         description: 'Safety-focused uniform requirements for manufacturing and industrial settings.',
         content: 'Safety is the priority in this template designed for industrial environments. It includes detailed sections on PPE integration, hazard-specific clothing requirements, and compliance with industry safety standards.',
-        image: '/images/resources/industrial-policy.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'security-uniform-policy',
         title: 'Security Uniform Policy Template',
         description: 'Guidelines for security personnel uniforms emphasizing authority and professionalism.',
         content: 'This template helps establish a uniform policy that balances authority, recognition, and functionality for security personnel. It includes sections on insignia standards, equipment integration, and appearance requirements.',
-        image: '/images/resources/security-policy.jpg'
+        image: '/images/default-placeholder.jpg'
       }
     ],
     relatedResources: [

@@ -93,7 +93,7 @@ export default function ServicePageLayout({ locale, serviceData, skipMainLayout 
       <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-24">
         <div className="absolute inset-0 overflow-hidden opacity-30">
           <Image
-            src={serviceData.heroImage || '/images/default-hero.jpg'}
+            src={serviceData.heroImage || '/images/banner-placeholder.jpg'}
             alt={serviceData.title}
             fill
             className="object-cover"
@@ -154,7 +154,7 @@ export default function ServicePageLayout({ locale, serviceData, skipMainLayout 
             >
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src={`/images/services/${locale === 'ar' ? 'ar-' : ''}service-overview.jpg`}
+                  src={`/images/default-placeholder.jpg === 'ar' ? 'ar-' : ''}service-overview.jpg`}
                   alt={serviceData.title}
                   width={600}
                   height={450}
@@ -291,7 +291,7 @@ export default function ServicePageLayout({ locale, serviceData, skipMainLayout 
               >
                 <div className="relative h-64 w-full overflow-hidden">
                   <Image 
-                    src={caseStudy.image || '/images/default-case-study.jpg'}
+                    src={caseStudy.image || '/images/default-placeholder.jpg'}
                     alt={caseStudy.title}
                     fill
                     className="object-cover"
@@ -347,7 +347,7 @@ export default function ServicePageLayout({ locale, serviceData, skipMainLayout 
                       <div className="flex-shrink-0 mr-4 mb-4 md:mb-0">
                         <div className="w-16 h-16 rounded-full overflow-hidden">
                           <Image
-                            src={testimonial.image || '/images/default-avatar.jpg'}
+                            src={testimonial.image || '/images/avatar-placeholder.jpg'}
                             alt={testimonial.author}
                             width={64}
                             height={64}

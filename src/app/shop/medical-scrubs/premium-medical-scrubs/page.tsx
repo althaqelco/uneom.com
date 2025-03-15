@@ -28,11 +28,11 @@ export default function PremiumMedicalScrubsPage() {
     longDescription: "Our Premium Medical Scrubs provide healthcare professionals with exceptional comfort, durability, and professional appearance. Designed specifically for the Saudi Arabian healthcare environment, these scrubs feature antimicrobial properties, moisture-wicking fabric, and practical pocket configurations for all medical staff needs.",
     price: "SAR 179",
     minOrder: 20,
-    mainImage: "/images/PremiumـMedicalـScrubs.png",
+    mainImage: "/images/default-placeholder.jpg",
     additionalImages: [
-      "/images/products/medical-scrubs-back.jpg",
-      "/images/products/medical-scrubs-detail.jpg",
-      "/images/products/medical-scrubs-group.jpg"
+      "/images/product-placeholder.jpg",
+      "/images/product-placeholder.jpg",
+      "/images/product-placeholder.jpg"
     ],
     colors: [
       { name: "Sky Blue", value: "#87CEEB" },
@@ -85,43 +85,43 @@ export default function PremiumMedicalScrubsPage() {
       { 
         name: "Hospital/Clinic Logo", 
         description: "Add your institution's logo embroidered on chest or sleeve",
-        image: "/images/customization/hospital-logo.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "Name Embroidery", 
         description: "Personnel name and credentials embroidered for identification",
-        image: "/images/customization/name-badge.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "Department Color Coding", 
         description: "Color options to designate different departments or roles",
-        image: "/images/customization/color-coding.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "Custom Pocket Configuration", 
         description: "Modify pocket placement based on specific department needs",
-        image: "/images/customization/pocket-config.jpg"
+        image: "/images/default-placeholder.jpg"
       }
     ],
     relatedProducts: [
       {
         id: "surgical-scrubs",
         name: "Surgical Scrubs Set",
-        image: "/images/products/surgical-scrubs.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "SAR 199",
         href: "/shop/medical-scrubs/surgical-scrubs"
       },
       {
         id: "lab-coats",
         name: "Professional Lab Coat",
-        image: "/images/products/lab-coat.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "SAR 229",
         href: "/shop/medical-scrubs/lab-coats"
       },
       {
         id: "nurse-uniform",
         name: "Premium Nurse Uniform",
-        image: "/images/products/nurse-uniform.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "SAR 189",
         href: "/shop/medical-scrubs/nurse-uniform"
       }

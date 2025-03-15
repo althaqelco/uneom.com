@@ -49,10 +49,10 @@ export default function NursingScrubsPageArabic() {
       { name: 'إمكانيات التخصيص', value: 'إضافة شعارات المستشفيات، تطريز الأسماء، ترميز الأقسام بالألوان' }
     ],
     images: [
-      { src: '/images/nurses-at-hospital-wearing-scrubs-SBI-301282375.jpg', alt: 'كوادر التمريض ترتدي أزياء فاخرة في محطة المستشفى' },
-      { src: '/images/doctor-and-nurse-consultation-SBI-300912540.jpg', alt: 'ممرضة وطبيب في أزياء طبية فاخرة أثناء الاستشارة' },
-      { src: '/images/nurse-checking-patient-chart-hospital-SBI-300157328.jpg', alt: 'ممرضة ترتدي أزياء مريحة تتحقق من سجل المريض' },
-      { src: '/images/hijab-nurse-stethoscope-hospital-SBI-301756297.jpg', alt: 'ممرضة محجبة ترتدي أزياء تمريض متوافقة مع الثقافة المحلية' }
+      { src: '/images/default-placeholder.jpg', alt: 'كوادر التمريض ترتدي أزياء فاخرة في محطة المستشفى' },
+      { src: '/images/default-placeholder.jpg', alt: 'ممرضة وطبيب في أزياء طبية فاخرة أثناء الاستشارة' },
+      { src: '/images/default-placeholder.jpg', alt: 'ممرضة ترتدي أزياء مريحة تتحقق من سجل المريض' },
+      { src: '/images/default-placeholder.jpg', alt: 'ممرضة محجبة ترتدي أزياء تمريض متوافقة مع الثقافة المحلية' }
     ],
     category: 'الأزياء الطبية',
     categorySlug: 'medical-scrubs',
@@ -68,16 +68,16 @@ export default function NursingScrubsPageArabic() {
       { name: 'أزياء تمريض للحوامل', price: '305 ريال سعودي' }
     ],
     colors: [
-      { name: 'أزرق سماوي', value: '#92a1cf', image: '/images/fabrics/ceil-blue-scrubs.jpg' },
-      { name: 'كحلي', value: '#000080', image: '/images/fabrics/navy-scrubs.jpg' },
-      { name: 'أزرق كاريبي', value: '#0086cb', image: '/images/fabrics/caribbean-blue-scrubs.jpg' },
-      { name: 'عنابي', value: '#722f37', image: '/images/fabrics/wine-scrubs.jpg' },
-      { name: 'رمادي فضي', value: '#8e8e8e', image: '/images/fabrics/pewter-scrubs.jpg' },
-      { name: 'أخضر غامق', value: '#355e3b', image: '/images/fabrics/hunter-green-scrubs.jpg' },
-      { name: 'أزرق ملكي', value: '#4169e1', image: '/images/fabrics/royal-blue-scrubs.jpg' },
-      { name: 'أسود', value: '#000000', image: '/images/fabrics/black-scrubs.jpg' },
-      { name: 'باذنجاني', value: '#614051', image: '/images/fabrics/eggplant-scrubs.jpg' },
-      { name: 'وردي', value: '#e8909c', image: '/images/fabrics/rose-pink-scrubs.jpg' }
+      { name: 'أزرق سماوي', value: '#92a1cf', image: '/images/default-placeholder.jpg' },
+      { name: 'كحلي', value: '#000080', image: '/images/default-placeholder.jpg' },
+      { name: 'أزرق كاريبي', value: '#0086cb', image: '/images/default-placeholder.jpg' },
+      { name: 'عنابي', value: '#722f37', image: '/images/default-placeholder.jpg' },
+      { name: 'رمادي فضي', value: '#8e8e8e', image: '/images/default-placeholder.jpg' },
+      { name: 'أخضر غامق', value: '#355e3b', image: '/images/default-placeholder.jpg' },
+      { name: 'أزرق ملكي', value: '#4169e1', image: '/images/default-placeholder.jpg' },
+      { name: 'أسود', value: '#000000', image: '/images/default-placeholder.jpg' },
+      { name: 'باذنجاني', value: '#614051', image: '/images/default-placeholder.jpg' },
+      { name: 'وردي', value: '#e8909c', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -96,14 +96,14 @@ export default function NursingScrubsPageArabic() {
         author: "نورة المنصور",
         position: "رئيسة التمريض",
         company: "مدينة الملك سلمان الطبية",
-        image: "/images/testimonials/nora-m.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "بعد توحيد أزياء التمريض من يونيوم عبر شبكة مستشفياتنا، شهدنا تحسينات كبيرة في رضا الكوادر والمظهر الاحترافي. نظام ترميز الأقسام بالألوان سهّل التفاعل مع المرضى، والمتانة رغم الغسيل المستمر أمر استثنائي.",
         author: "د. فيصل الجهني",
         position: "المدير التنفيذي للتمريض",
         company: "المجموعة الوطنية للرعاية الصحية",
-        image: "/images/testimonials/faisal-j.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -347,7 +347,7 @@ export default function NursingScrubsPageArabic() {
             <div className="order-2 md:order-1">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/nurses-station-hospital-healthcare-SBI-300174244.jpg" 
+                  src="/images/default-placeholder.jpg" 
                   alt="كوادر التمريض في أزياء مخصصة" 
                   fill
                   className="object-cover"

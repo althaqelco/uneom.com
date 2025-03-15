@@ -39,32 +39,32 @@ export default function ClientHealthcarePage() {
   // Key benefits of UNEOM healthcare uniforms
   const benefits = [
     {
-      icon: '/images/icons/quality.svg',
+      icon: '/images/default-placeholder.jpg',
       title: 'جودة فائقة',
       description: 'أقمشة ممتازة تتحمل الاستخدام المتكرر والغسيل الصناعي، مما يضمن مظهرًا مهنيًا دائمًا.'
     },
     {
-      icon: '/images/icons/compliance.svg',
+      icon: '/images/default-placeholder.jpg',
       title: 'متوافق مع المعايير السعودية',
       description: 'جميع منتجاتنا تتوافق مع معايير السلامة والجودة السعودية وتلبي متطلبات وزارة الصحة.'
     },
     {
-      icon: '/images/icons/islamic.svg',
+      icon: '/images/default-placeholder.jpg',
       title: 'خيارات الزي الإسلامي',
       description: 'تصميمات محتشمة تحترم القيم الإسلامية والمتطلبات الثقافية المحلية.'
     },
     {
-      icon: '/images/icons/comfort.svg',
+      icon: '/images/default-placeholder.jpg',
       title: 'راحة فائقة',
       description: 'أقمشة قابلة للتنفس ومريحة مصممة خصيصًا للمناخ السعودي ولساعات العمل الطويلة.'
     },
     {
-      icon: '/images/icons/custom.svg',
+      icon: '/images/default-placeholder.jpg',
       title: 'تصميم مخصص',
       description: 'خيارات تخصيص كاملة بما في ذلك التطريز بالشعارات وألوان العلامة التجارية والقياسات المخصصة.'
     },
     {
-      icon: '/images/icons/delivery.svg',
+      icon: '/images/default-placeholder.jpg',
       title: 'توصيل سريع',
       description: 'خدمة توصيل فعالة في جميع أنحاء المملكة بما في ذلك كميات كبيرة للمستشفيات والعيادات.'
     }
@@ -75,7 +75,7 @@ export default function ClientHealthcarePage() {
     {
       id: 'premium-medical-scrubs',
       name: 'ملابس طبية متميزة',
-      image: '/images/products/medical-scrubs.jpg',
+      image: '/images/product-placeholder.jpg',
       price: '١٢٠ ر.س',
       category: 'الرعاية الصحية',
       href: '/ar/shop/medical-scrubs/premium-medical-scrubs',
@@ -84,7 +84,7 @@ export default function ClientHealthcarePage() {
     {
       id: 'medical-lab-coat',
       name: 'معطف مختبر طبي',
-      image: '/images/products/medical-lab-coat.jpg',
+      image: '/images/product-placeholder.jpg',
       price: '١٥٠ ر.س',
       category: 'الرعاية الصحية',
       href: '/ar/shop/medical-scrubs/medical-lab-coat'
@@ -92,7 +92,7 @@ export default function ClientHealthcarePage() {
     {
       id: 'surgical-gown',
       name: 'رداء جراحي',
-      image: '/images/products/surgical-gown.jpg',
+      image: '/images/product-placeholder.jpg',
       price: '١٨٠ ر.س',
       category: 'الرعاية الصحية',
       href: '/ar/shop/medical-scrubs/surgical-gown'
@@ -100,7 +100,7 @@ export default function ClientHealthcarePage() {
     {
       id: 'nurse-uniform',
       name: 'زي تمريض',
-      image: '/images/products/nurse-uniform.jpg',
+      image: '/images/product-placeholder.jpg',
       price: '١٣٥ ر.س',
       category: 'الرعاية الصحية',
       href: '/ar/shop/medical-scrubs/nurse-uniform'
@@ -112,22 +112,22 @@ export default function ClientHealthcarePage() {
     {
       name: 'غرفة العمليات',
       description: 'أزياء متخصصة لفرق الجراحة تتميز بالمتانة والراحة والامتثال للمعايير الطبية.',
-      image: '/images/healthcare/surgery.jpg'
+      image: '/images/default-placeholder.jpg'
     },
     {
       name: 'التمريض',
       description: 'أزياء تمريض راقية مصممة للاستخدام اليومي، مع مراعاة خاصة للحركة والراحة.',
-      image: '/images/healthcare/nursing.jpg'
+      image: '/images/default-placeholder.jpg'
     },
     {
       name: 'المختبر',
       description: 'معاطف مختبر عالية الجودة توفر الحماية اللازمة وتعزز الصورة المهنية.',
-      image: '/images/healthcare/laboratory.jpg'
+      image: '/images/default-placeholder.jpg'
     },
     {
       name: 'الأطباء والمسؤولين',
       description: 'أزياء رسمية تناسب المديرين الطبيين والأطباء، متوفرة بتصاميم تعكس المكانة المهنية.',
-      image: '/images/healthcare/doctors.jpg'
+      image: '/images/default-placeholder.jpg'
     }
   ];
   
@@ -138,8 +138,8 @@ export default function ClientHealthcarePage() {
       name: 'د. أحمد الفيصل',
       role: 'المدير الطبي',
       company: 'مستشفى المملكة الرياض',
-      image: '/images/testimonials/testimonial-healthcare-1.jpg',
-      logo: '/images/logos/kingdom-hospital-ar.png',
+      image: '/images/avatar-placeholder.jpg',
+      logo: '/images/default-placeholder.jpg',
       quote: 'ملابس يونيوم الطبية تجمع بين الجودة العالية والراحة في الاستخدام اليومي. نلاحظ تحسنًا كبيرًا في مظهر فريقنا وثقتهم بأنفسهم.'
     },
     {
@@ -147,8 +147,8 @@ export default function ClientHealthcarePage() {
       name: 'سارة العتيبي',
       role: 'مديرة التمريض',
       company: 'مستشفى الدكتور سليمان الحبيب',
-      image: '/images/testimonials/testimonial-healthcare-2.jpg',
-      logo: '/images/logos/habib-hospital-ar.png',
+      image: '/images/avatar-placeholder.jpg',
+      logo: '/images/default-placeholder.jpg',
       quote: 'منذ انتقالنا إلى أزياء يونيوم، لاحظنا مقاومة أفضل للتآكل وثبات الألوان حتى بعد التعقيم والغسيل المتكرر.'
     },
     {
@@ -156,8 +156,8 @@ export default function ClientHealthcarePage() {
       name: 'د. خالد السويلم',
       role: 'استشاري جراحة',
       company: 'المركز السعودي للجراحة المتقدمة',
-      image: '/images/testimonials/testimonial-healthcare-3.jpg',
-      logo: '/images/logos/saudi-surgery-center-ar.png',
+      image: '/images/avatar-placeholder.jpg',
+      logo: '/images/default-placeholder.jpg',
       quote: 'الأقمشة المقاومة للسوائل والمستخدمة في أردية يونيوم الجراحية أثبتت فعاليتها في توفير الحماية والراحة طوال العمليات الطويلة.'
     }
   ];
@@ -167,22 +167,22 @@ export default function ClientHealthcarePage() {
     {
       name: 'مقاومة للسوائل',
       description: 'تحمي من تناثر السوائل والبقع في بيئة الرعاية الصحية',
-      icon: '/images/icons/liquid-resistant.svg'
+      icon: '/images/default-placeholder.jpg'
     },
     {
       name: 'مضادة للميكروبات',
       description: 'تقنية مضادة للبكتيريا تعزز السلامة والصحة',
-      icon: '/images/icons/antimicrobial.svg'
+      icon: '/images/default-placeholder.jpg'
     },
     {
       name: 'سهلة العناية',
       description: 'تتحمل الغسيل المتكرر والتعقيم دون التأثير على المظهر',
-      icon: '/images/icons/easy-care.svg'
+      icon: '/images/default-placeholder.jpg'
     },
     {
       name: 'قابلة للتنفس',
       description: 'تسمح بتبادل الهواء للحفاظ على البرودة خلال المناوبات الطويلة',
-      icon: '/images/icons/breathable.svg'
+      icon: '/images/default-placeholder.jpg'
     }
   ];
   
@@ -192,7 +192,7 @@ export default function ClientHealthcarePage() {
       <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-24 md:py-32">
         <div className="absolute inset-0 overflow-hidden opacity-30">
           <Image
-            src={getLocalizedImagePath('/images/industries/healthcare/hero.jpg', 'ar')}
+            src={getLocalizedImagePath('/images/banner-placeholder.jpg', 'ar')}
             alt="أزياء الرعاية الصحية من يونيوم - المزود الرائد للزي الموحد في المملكة العربية السعودية"
             fill
             className="object-cover"
@@ -263,7 +263,7 @@ export default function ClientHealthcarePage() {
             >
               <div className="relative h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src={getLocalizedImagePath('/images/industries/healthcare/overview.jpg', 'ar')}
+                  src={getLocalizedImagePath('/images/default-placeholder.jpg', 'ar')}
                   alt="أزياء الرعاية الصحية من يونيوم"
                   fill
                   className="object-cover"
@@ -467,7 +467,7 @@ export default function ClientHealthcarePage() {
             >
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src={getLocalizedImagePath('/images/industries/healthcare/fabric-tech.jpg', 'ar')}
+                  src={getLocalizedImagePath('/images/default-placeholder.jpg', 'ar')}
                   alt="تقنيات الأقمشة المتطورة في منتجات يونيوم"
                   fill
                   className="object-cover"

@@ -17,7 +17,7 @@ export default function HealthcareAccessoriesPage() {
       name: 'غطاء سماعة الطبيب',
       description: 'غطاء مخصص لسماعة الطبيب مصنوع من مواد مضادة للبكتيريا وبألوان متعددة.',
       price: 'من 45 ريال',
-      image: '/images/products/stethoscope-cover.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/healthcare-accessories/stethoscope-cover'
     },
     {
@@ -25,7 +25,7 @@ export default function HealthcareAccessoriesPage() {
       name: 'حامل بطاقة الهوية',
       description: 'حامل بطاقة هوية متين وقابل للسحب للاستخدام في المستشفيات والعيادات الطبية.',
       price: 'من 35 ريال',
-      image: '/images/products/id-badge-holder.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/healthcare-accessories/id-badge-holder'
     },
     {
@@ -33,7 +33,7 @@ export default function HealthcareAccessoriesPage() {
       name: 'قبعة طبية',
       description: 'قبعات طبية مريحة ومتوفرة بأشكال متعددة لتناسب احتياجات الكادر الطبي.',
       price: 'من 29 ريال',
-      image: '/images/products/medical-cap.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/healthcare-accessories/medical-cap'
     },
     {
@@ -41,7 +41,7 @@ export default function HealthcareAccessoriesPage() {
       name: 'منظم الجيب',
       description: 'منظم جيب متعدد الأقسام للأدوات الطبية الضرورية، يتناسب مع جيوب الملابس الطبية.',
       price: 'من 49 ريال',
-      image: '/images/products/pocket-organizer.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/healthcare-accessories/pocket-organizer'
     },
     {
@@ -49,7 +49,7 @@ export default function HealthcareAccessoriesPage() {
       name: 'كمامة طبية',
       description: 'كمامات طبية عالية الجودة توفر حماية ممتازة وراحة أثناء الارتداء لساعات طويلة.',
       price: 'من 25 ريال',
-      image: '/images/products/medical-mask.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/healthcare-accessories/medical-mask'
     },
     {
@@ -57,7 +57,7 @@ export default function HealthcareAccessoriesPage() {
       name: 'ساعة التمريض',
       description: 'ساعة مخصصة للممرضين والممرضات مقاومة للماء ومضادة للصدمات.',
       price: 'من 120 ريال',
-      image: '/images/products/nursing-watch.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/healthcare-accessories/nursing-watch'
     }
   ];
@@ -67,25 +67,25 @@ export default function HealthcareAccessoriesPage() {
     {
       title: 'اكسسوارات للممرضين',
       description: 'اكسسوارات متخصصة للممرضين والممرضات',
-      image: '/images/categories/nurse-accessories.jpg',
+      image: '/images/default-placeholder.jpg',
       url: '/ar/shop/healthcare-accessories/nursing'
     },
     {
       title: 'اكسسوارات للأطباء',
       description: 'اكسسوارات عملية للأطباء والاستشاريين',
-      image: '/images/categories/doctor-accessories.jpg',
+      image: '/images/default-placeholder.jpg',
       url: '/ar/shop/healthcare-accessories/doctor'
     },
     {
       title: 'اكسسوارات للصيادلة',
       description: 'اكسسوارات متخصصة للعاملين في الصيدليات',
-      image: '/images/categories/pharmacy-accessories.jpg',
+      image: '/images/default-placeholder.jpg',
       url: '/ar/shop/healthcare-accessories/pharmacy'
     },
     {
       title: 'اكسسوارات المختبرات',
       description: 'اكسسوارات للعاملين في المختبرات الطبية',
-      image: '/images/categories/lab-accessories.jpg',
+      image: '/images/default-placeholder.jpg',
       url: '/ar/shop/healthcare-accessories/laboratory'
     }
   ];
@@ -139,7 +139,7 @@ export default function HealthcareAccessoriesPage() {
             </div>
             <div className="relative h-64 md:h-80 order-1 md:order-2">
               <Image 
-                src="/images/products/healthcare-accessories-banner.jpg"
+                src="/images/product-placeholder.jpg"
                 alt="اكسسوارات الرعاية الصحية"
                 fill
                 className="object-cover rounded-lg"
@@ -234,7 +234,7 @@ export default function HealthcareAccessoriesPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 order-2 md:order-1">
               <Image 
-                src="/images/custom-medical-accessories.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="اكسسوارات طبية مخصصة"
                 fill
                 className="object-cover rounded-lg"

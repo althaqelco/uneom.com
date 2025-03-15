@@ -50,10 +50,10 @@ export default function ExecutiveOfficeAttirePage() {
       { name: 'Customization', value: 'Corporate logos, custom color matching, bespoke tailoring' }
     ],
     images: [
-      { src: '/images/business-team-meeting-office-wear-SBI-300157244.jpg', alt: 'Business executives in premium office attire during meeting' },
-      { src: '/images/corporate-office-professional-suit-SBI-301293855.jpg', alt: 'Corporate professional in tailored executive suit' },
-      { src: '/images/saudi-businessman-office-professional-SBI-303947266.jpg', alt: 'Saudi business executive in traditional-modern fusion attire' },
-      { src: '/images/saudi-businesswoman-corporate-hijab-SBI-304937285.jpg', alt: 'Saudi businesswoman in professional corporate attire with hijab' }
+      { src: '/images/avatar-placeholder.jpg', alt: 'Business executives in premium office attire during meeting' },
+      { src: '/images/default-placeholder.jpg', alt: 'Corporate professional in tailored executive suit' },
+      { src: '/images/default-placeholder.jpg', alt: 'Saudi business executive in traditional-modern fusion attire' },
+      { src: '/images/default-placeholder.jpg', alt: 'Saudi businesswoman in professional corporate attire with hijab' }
     ],
     category: 'Corporate',
     categorySlug: 'corporate',
@@ -69,12 +69,12 @@ export default function ExecutiveOfficeAttirePage() {
       { name: 'Traditional-Modern Fusion Set', price: 'SAR 845' }
     ],
     colors: [
-      { name: 'Navy Blue', value: '#1a2942', image: '/images/fabrics/navy-suit-fabric.jpg' },
-      { name: 'Charcoal Grey', value: '#36454f', image: '/images/fabrics/charcoal-suit-fabric.jpg' },
-      { name: 'Black', value: '#000000', image: '/images/fabrics/black-suit-fabric.jpg' },
-      { name: 'Dark Brown', value: '#3e2723', image: '/images/fabrics/dark-brown-suit-fabric.jpg' },
-      { name: 'Light Grey', value: '#b0b0b0', image: '/images/fabrics/light-grey-suit-fabric.jpg' },
-      { name: 'Sand', value: '#c2b280', image: '/images/fabrics/sand-suit-fabric.jpg' }
+      { name: 'Navy Blue', value: '#1a2942', image: '/images/default-placeholder.jpg' },
+      { name: 'Charcoal Grey', value: '#36454f', image: '/images/default-placeholder.jpg' },
+      { name: 'Black', value: '#000000', image: '/images/default-placeholder.jpg' },
+      { name: 'Dark Brown', value: '#3e2723', image: '/images/default-placeholder.jpg' },
+      { name: 'Light Grey', value: '#b0b0b0', image: '/images/default-placeholder.jpg' },
+      { name: 'Sand', value: '#c2b280', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'],
     sizeEquivalents: {
@@ -92,14 +92,14 @@ export default function ExecutiveOfficeAttirePage() {
         author: "Khalid Al-Majid",
         position: "Vice President of Operations",
         company: "Saudi International Banking Group",
-        image: "/images/testimonials/khalid-m.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "We've implemented UNEOM's corporate attire program across our entire organization, from entry-level to C-suite. The consistent quality, attention to detail, and ability to incorporate our branding elements subtly has strengthened our corporate identity while providing our employees with comfortable, professional attire.",
         author: "Norah Al-Sheikh",
         position: "Director of Corporate Culture",
         company: "Advanced Saudi Technologies",
-        image: "/images/testimonials/norah-s.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -373,7 +373,7 @@ export default function ExecutiveOfficeAttirePage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/corporate-meeting-boardroom-executives-SBI-300192844.jpg" 
+                src="/images/default-placeholder.jpg" 
                 alt="Corporate executives in custom-tailored business attire" 
                 fill
                 className="object-cover"

@@ -41,10 +41,10 @@ export const metadata: Metadata = {
 
 // Critical images to preload
 const CRITICAL_IMAGES = [
-  '/images/logo.png',
-  '/images/hero-banner.jpg',
   '/images/default-placeholder.jpg',
-  '/images/favicon.ico'
+  '/images/banner-placeholder.jpg',
+  '/images/default-placeholder.jpg',
+  '/images/default-placeholder.jpg'
 ];
 
 export default function RootLayout({
@@ -96,7 +96,7 @@ export default function RootLayout({
             {/* Add emergency image loader for debugging */}
             <div style={{ display: 'none' }}>
               <EmergencyImageLoader 
-                src="/images/logo.png" 
+                src="/images/default-placeholder.jpg" 
                 alt="Preloaded Logo"
                 showDebugInfo={true}
               />

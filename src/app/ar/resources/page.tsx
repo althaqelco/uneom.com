@@ -35,7 +35,7 @@ export default function ResourcesPageArabic() {
           id: 'fabric-technology',
           name: 'تقنية الأقمشة',
           description: 'استكشف تقنيات النسيج المبتكرة التي تعزز الراحة والمتانة والوظائف للأزياء الموحدة الحديثة.',
-          image: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg',
+          image: '/images/avatar-placeholder.jpg',
           href: '/ar/resources/fabric-technology'
         }
       ]
@@ -47,14 +47,14 @@ export default function ResourcesPageArabic() {
           id: 'size-guide',
           name: 'دليل المقاسات',
           description: 'مخططات مقاسات مفصلة وتعليمات القياس لضمان أزياء موحدة مناسبة تمامًا لجميع أنواع الجسم.',
-          image: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg',
+          image: '/images/default-placeholder.jpg',
           href: '/ar/resources/size-guide'
         },
         {
           id: 'fit-optimization',
           name: 'تحسين التناسب',
           description: 'تعرف على كيفية تحسين تناسب الزي الموحد لتحقيق أقصى قدر من الراحة والمظهر المهني في جميع أنحاء مؤسستك.',
-          image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+          image: '/images/default-placeholder.jpg',
           href: '/ar/resources/fit-optimization'
         }
       ]
@@ -66,14 +66,14 @@ export default function ResourcesPageArabic() {
           id: 'procurement-guide',
           name: 'دليل الشراء',
           description: 'أفضل الممارسات لشراء الزي الموحد بكفاءة، من تقييم الاحتياجات إلى التسليم والتنفيذ.',
-          image: '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg',
+          image: '/images/default-placeholder.jpg',
           href: '/ar/resources/procurement-guide'
         },
         {
           id: 'policy-templates',
           name: 'قوالب سياسة الزي الموحد',
           description: 'قوالب قابلة للتخصيص لتطوير سياسات وإرشادات شاملة للزي الموحد للشركات.',
-          image: '/images/smiling-airplane-crew-members-walking-together-on-2023-11-27-05-07-27-utc.jpg',
+          image: '/images/default-placeholder.jpg',
           href: '/ar/resources/policy-templates'
         }
       ]
@@ -92,14 +92,14 @@ export default function ResourcesPageArabic() {
       id: 'case-studies',
       name: 'دراسات الحالة',
       description: 'أمثلة واقعية توضح كيف حلت حلول الزي الموحد لدينا التحديات للمؤسسات عبر الصناعات المختلفة.',
-      image: '/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/resources/case-studies'
     },
     {
       id: 'webinars',
       name: 'الندوات عبر الإنترنت والفعاليات',
       description: 'انضم إلى ندواتنا التعليمية عبر الإنترنت وفعاليات الصناعة لتعميق معرفتك والتواصل مع النظراء.',
-      image: '/images/4k-top-view-of-little-asian-students-with-uniforms-reading-book-in-library-together-SBI-351422735.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/resources/events'
     }
   ];

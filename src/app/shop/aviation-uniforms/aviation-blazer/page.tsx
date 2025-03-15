@@ -186,10 +186,10 @@ export default function AviationBlazerPage() {
     leadTime: '21-25 days',
     customization: true,
     images: [
-      { src: '/images/smiling-airplane-crew-members-walking-together-on-2023-11-27-05-07-27-utc.jpg', alt: 'Aviation professionals in premium blazers' },
-      { src: '/images/the-aviators-stance-2024-11-16-08-18-21-utc.jpg', alt: 'Pilot wearing professional aviation blazer' },
-      { src: '/images/two-beautiful-stewardesses-and-an-airman-staring-a-2024-10-21-02-06-10-utc.jpg', alt: 'Aviation staff in coordinated uniform blazers' },
-      { src: '/images/cheerful-flight-attendant-standing-outdoors-at-air-2023-11-27-05-13-43-utc.jpg', alt: 'Airline staff member in professional aviation blazer' }
+      { src: '/images/default-placeholder.jpg', alt: 'Aviation professionals in premium blazers' },
+      { src: '/images/default-placeholder.jpg', alt: 'Pilot wearing professional aviation blazer' },
+      { src: '/images/default-placeholder.jpg', alt: 'Aviation staff in coordinated uniform blazers' },
+      { src: '/images/default-placeholder.jpg', alt: 'Airline staff member in professional aviation blazer' }
     ],
     colors: [
       { name: 'Navy Blue', value: '#000080' },

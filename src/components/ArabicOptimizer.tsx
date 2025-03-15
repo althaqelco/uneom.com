@@ -5,12 +5,12 @@ import { initArabicOptimizations } from '@/lib/utils/arabicOptimization';
 
 // Critical images for Arabic version
 const CRITICAL_IMAGES = [
-  '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg',
-  '/images/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg',
-  '/images/back-to-elementary-school-concept-children-hold-h-2024-11-29-15-57-59-utc.jpg',
-  '/images/joyful-stewardesses-standing-near-aircraft-at-airp-2023-11-27-04-49-34-utc.jpg',
-  '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg',
-  '/images/uneom_hero.jpg',
+  '/images/avatar-placeholder.jpg',
+  '/images/default-placeholder.jpg',
+  '/images/default-placeholder.jpg',
+  '/images/default-placeholder.jpg',
+  '/images/default-placeholder.jpg',
+  '/images/banner-placeholder.jpg',
   '/images/default-placeholder.jpg'
 ];
 

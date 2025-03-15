@@ -66,35 +66,35 @@ export default function AviationPage() {
         id: "pilot-uniform",
         name: "Professional Pilot Uniforms",
         description: "Distinguished pilot attire with precision tailoring, premium fabrics, and details that reflect aviation authority and professionalism.",
-        image: "/images/products/pilot-uniform.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/aviation/pilot-uniform"
       },
       {
         id: "ground-staff-uniform",
         name: "Ground Staff Uniforms",
         description: "Functional and professional uniforms for check-in, gate agents, and passenger service personnel that balance style with practical operational needs.",
-        image: "/images/products/ground-staff.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/aviation/ground-staff-uniform"
       },
       {
         id: "technical-crew-attire",
         name: "Technical Crew Attire",
         description: "Specialized uniforms for technical and maintenance staff featuring durable construction, safety features, and practical design for engineering tasks.",
-        image: "/images/products/technical-crew.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/aviation/technical-crew-attire"
       },
       {
         id: "modest-aviation-uniform",
         name: "Modest Aviation Uniforms",
         description: "Specially designed aviation attire for female staff that combines modest Islamic dress requirements with international aviation standards.",
-        image: "/images/products/modest-aviation.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/aviation/modest-aviation-uniform"
       },
       {
         id: "vip-lounge-attire",
         name: "VIP Lounge & Premium Service Attire",
         description: "Sophisticated uniforms for staff serving premium and VIP passengers, featuring elevated design elements and luxury fabric options.",
-        image: "/images/products/vip-lounge.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/aviation/vip-lounge-attire"
       }
     ],
@@ -104,25 +104,25 @@ export default function AviationPage() {
       {
         name: "Cabin Services",
         description: "Professional uniforms for cabin crew that combine sophisticated appearance with practical functionality for in-flight service, featuring options for both international and Saudi-specific styling.",
-        image: "/images/industries/aviation-cabin.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Flight Attendant Sets", "Pursers & Cabin Managers", "Saudi-Styled Cabin Attire"]
       },
       {
         name: "Flight Deck",
         description: "Distinguished pilot uniforms that convey authority and professionalism while meeting international aviation standards and Saudi airline regulations.",
-        image: "/images/industries/aviation-flight-deck.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Captain & First Officer Uniforms", "Flight Engineer Attire", "Pilot Accessories"]
       },
       {
         name: "Ground Operations",
         description: "Practical, professional uniforms for ground staff involved in passenger services, featuring weather-appropriate options and clear role identification.",
-        image: "/images/industries/aviation-ground.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Check-in Counter Uniforms", "Boarding Gate Attire", "Passenger Service Sets"]
       },
       {
         name: "Technical & Maintenance",
         description: "Durable, functional uniforms designed for technical personnel with appropriate safety features, tool accessibility, and weather considerations.",
-        image: "/images/industries/aviation-technical.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Aircraft Maintenance Uniforms", "Engineering Staff Attire", "Ramp Operations Wear"]
       }
     ],
@@ -218,19 +218,19 @@ export default function AviationPage() {
           title: "Evolving Trends in Gulf Airline Uniforms: Tradition Meets International Standards",
           excerpt: "Explore how leading Gulf carriers are balancing cultural identity with global aviation standards in their uniform programs.",
           url: "/blog/gulf-airline-uniform-trends",
-          image: "/images/blog/gulf-airline-trends.jpg"
+          image: "/images/default-placeholder.jpg"
         },
         {
           title: "The Role of Uniforms in Airline Brand Identity and Passenger Perception",
           excerpt: "Research insights on how crew attire influences passenger confidence, loyalty, and overall brand perception in the aviation industry.",
           url: "/blog/uniforms-airline-brand-identity",
-          image: "/images/blog/airline-branding.jpg"
+          image: "/images/default-placeholder.jpg"
         },
         {
           title: "Implementing Practical Modest Uniform Options for Female Aviation Staff",
           excerpt: "Best practices for developing flight attendant and ground staff uniforms that respect Islamic dress codes while meeting operational needs.",
           url: "/blog/modest-aviation-uniforms-female-staff",
-          image: "/images/blog/modest-aviation-attire.jpg"
+          image: "/images/default-placeholder.jpg"
         }
       ],
       resources: [
@@ -291,7 +291,7 @@ export default function AviationPage() {
         "Increased practical functionality resulting in 28% fewer uniform-related issues",
         "Successful implementation across 3,500+ staff members in multiple locations"
       ],
-      image: "/images/case-studies/aviation-case-study.jpg",
+      image: "/images/default-placeholder.jpg",
       testimonial: {
         quote: "The uniform program UNEOM created has become a cornerstone of our brand identity and has significantly contributed to our recognition as a premium Saudi carrier in international markets.",
         author: "Faisal Al-Otaibi",

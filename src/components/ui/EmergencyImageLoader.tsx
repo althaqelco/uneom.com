@@ -90,7 +90,7 @@ const EmergencyImageLoader: React.FC<EmergencyImageLoaderProps> = ({
         // Try with leading slash
         !src.startsWith('/') ? `/${src}` : src,
         // Try with _next prefix
-        `/_next/static/images/${src.split('/').pop()}`,
+        `/_next/static/images/default-placeholder.jpg'/').pop()}`,
         // Try with different domain
         `https://uneom-com.vercel.app${src.startsWith('/') ? '' : '/'}${src}`,
       ];

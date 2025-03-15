@@ -51,10 +51,10 @@ export default function SurgicalScrubsPage() {
       { name: 'Customization Options', value: 'Hospital logos, department identification, surgeon name embroidery' }
     ],
     images: [
-      { src: '/images/surgical-team-operating-room-SBI-300143928.jpg', alt: 'Surgical team wearing advanced scrubs in operating room' },
-      { src: '/images/surgeon-nurse-surgical-scrubs-SBI-300817645.jpg', alt: 'Surgeon and nurse in high-performance surgical attire preparing for procedure' },
-      { src: '/images/surgical-scrubs-team-hospital-SBI-301556128.jpg', alt: 'Medical professionals in matching surgical scrubs during operation' },
-      { src: '/images/saudi-surgeon-scrubs-hospital-SBI-301287456.jpg', alt: 'Saudi surgeon in specialized surgical scrubs with team' }
+      { src: '/images/avatar-placeholder.jpg', alt: 'Surgical team wearing advanced scrubs in operating room' },
+      { src: '/images/default-placeholder.jpg', alt: 'Surgeon and nurse in high-performance surgical attire preparing for procedure' },
+      { src: '/images/avatar-placeholder.jpg', alt: 'Medical professionals in matching surgical scrubs during operation' },
+      { src: '/images/default-placeholder.jpg', alt: 'Saudi surgeon in specialized surgical scrubs with team' }
     ],
     category: 'Medical Scrubs',
     categorySlug: 'medical-scrubs',
@@ -70,11 +70,11 @@ export default function SurgicalScrubsPage() {
       { name: 'Modest Design Surgical Set', price: 'SAR 285' }
     ],
     colors: [
-      { name: 'Surgical Green', value: '#5cb85c', image: '/images/fabrics/surgical-green-scrubs.jpg' },
-      { name: 'Caribbean Blue', value: '#0086cb', image: '/images/fabrics/caribbean-blue-scrubs.jpg' },
-      { name: 'Ceil Blue', value: '#92a1cf', image: '/images/fabrics/ceil-blue-scrubs.jpg' },
-      { name: 'Navy', value: '#000080', image: '/images/fabrics/navy-scrubs.jpg' },
-      { name: 'Royal Blue', value: '#4169e1', image: '/images/fabrics/royal-blue-scrubs.jpg' }
+      { name: 'Surgical Green', value: '#5cb85c', image: '/images/default-placeholder.jpg' },
+      { name: 'Caribbean Blue', value: '#0086cb', image: '/images/default-placeholder.jpg' },
+      { name: 'Ceil Blue', value: '#92a1cf', image: '/images/default-placeholder.jpg' },
+      { name: 'Navy', value: '#000080', image: '/images/default-placeholder.jpg' },
+      { name: 'Royal Blue', value: '#4169e1', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -93,14 +93,14 @@ export default function SurgicalScrubsPage() {
         author: "Dr. Khalid Al-Anazi",
         position: "Chief of Surgery",
         company: "King Faisal Specialist Hospital",
-        image: "/images/testimonials/khalid-a.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "After standardizing with Uneom's surgical scrubs across our network of operating facilities, we've documented a measurable improvement in staff comfort during long procedures. The modest design options have been particularly valuable for our female surgeons, and the customized embroidery helps maintain clear identification in surgical environments.",
         author: "Dr. Layla Al-Oraini",
         position: "Surgical Department Director",
         company: "Saudi German Hospitals Group",
-        image: "/images/testimonials/layla-o.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -347,7 +347,7 @@ export default function SurgicalScrubsPage() {
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/surgical-team-preparing-operation-SBI-300177455.jpg" 
+                  src="/images/avatar-placeholder.jpg" 
                   alt="Surgical team in standardized scrubs preparing for operation" 
                   fill
                   className="object-cover"

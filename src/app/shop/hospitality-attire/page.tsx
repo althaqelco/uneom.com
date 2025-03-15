@@ -31,7 +31,7 @@ export default function HospitalityAttirePage() {
       name: 'Luxury Hotel Uniform',
       description: 'Premium hospitality uniform designed for luxury hotels and resorts, featuring refined styling and exceptional comfort for front-of-house staff.',
       price: 'From SAR 399',
-      image: '/images/beautiful-women-in-hotel-reception-administrators-in-dark-suits-standing-near-recep-SBI-351494839.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/hospitality-attire/luxury-hotel-uniform',
       features: ['Premium fabric', 'Tailored fit', 'Professional styling', 'Breathable material'],
       colors: ['Black', 'Navy', 'Burgundy', 'White'],
@@ -42,7 +42,7 @@ export default function HospitalityAttirePage() {
       name: 'Reception Staff Uniform',
       description: 'Professional reception uniforms designed for hotel front desk and customer-facing staff with a polished, approachable appearance.',
       price: 'From SAR 329',
-      image: '/images/women-in-white-uniform-in-the-office-2024-12-16-04-20-34-utc.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/shop/hospitality-attire/reception-staff-uniform',
       features: ['Refined styling', 'Comfortable fabric', 'Easy-care material', 'Corporate branding option'],
       colors: ['White', 'Black', 'Navy', 'Grey'],
@@ -53,7 +53,7 @@ export default function HospitalityAttirePage() {
       name: 'Housekeeping Uniform',
       description: 'Practical and comfortable housekeeping uniforms designed for hotel room attendants and cleaning staff, balancing professionalism with functionality.',
       price: 'From SAR 199',
-      image: '/images/serious-doctor-or-nurse-portrait-medical-professional-in-uniform-looking-at-camera-serio-SBI-351288925.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/shop/hospitality-attire/housekeeping-uniform',
       features: ['Durable fabric', 'Stain-resistant', 'Multiple pockets', 'Comfortable fit'],
       colors: ['Navy', 'Black', 'Grey', 'Light Blue']
@@ -63,7 +63,7 @@ export default function HospitalityAttirePage() {
       name: 'Concierge Uniform',
       description: 'Distinguished concierge uniform designed for luxury hotels and high-end establishments, conveying authority and professional service.',
       price: 'From SAR 449',
-      image: '/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/shop/hospitality-attire/concierge-uniform',
       features: ['Premium tailoring', 'Distinctive styling', 'Professional details', 'Comfortable design'],
       colors: ['Navy', 'Black', 'Burgundy', 'Forest Green']
@@ -73,7 +73,7 @@ export default function HospitalityAttirePage() {
       name: 'Resort Staff Attire',
       description: 'Stylish and comfortable resort uniforms designed for warm climate hospitality venues, combining professionalism with a relaxed aesthetic.',
       price: 'From SAR 279',
-      image: '/images/a-smiling-woman-in-a-white-and-orange-uniform-adjusts-her-collar-and-straightens-her-cloth-SBI-350039290.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/shop/hospitality-attire/resort-staff-attire',
       features: ['Lightweight fabric', 'Breathable design', 'Sun protection', 'Resort branding'],
       colors: ['White', 'Light Blue', 'Beige', 'Pastel colors']
@@ -83,7 +83,7 @@ export default function HospitalityAttirePage() {
       name: 'Restaurant Staff Uniform',
       description: 'Professional restaurant uniforms designed for fine dining establishments, balancing elegance with practical features for service staff.',
       price: 'From SAR 259',
-      image: '/images/kitchen-staff-preparing-food-in-a-commercial-kitchen-2024-11-27-07-04-15-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/hospitality-attire/restaurant-staff-uniform',
       features: ['Stain-resistant', 'Comfortable design', 'Professional appearance', 'Easy care'],
       colors: ['Black', 'White', 'Burgundy', 'Grey']
@@ -143,7 +143,7 @@ export default function HospitalityAttirePage() {
       <section className="relative pt-16 pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/beautiful-women-in-hotel-reception-administrators-in-dark-suits-standing-near-recep-SBI-351494839.jpg"
+            src="/images/default-placeholder.jpg"
             alt="Hospitality Attire"
             fill
             className="object-cover object-center"
@@ -375,7 +375,7 @@ export default function HospitalityAttirePage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/fabric-material-2024-12-06-03-35-02-utc.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="Premium Fabrics"
                   fill
                   className="object-cover"
@@ -392,7 +392,7 @@ export default function HospitalityAttirePage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/hands-of-seamstress-sewing-white-t-shirt-on-a-sewing-machine-tailor-working-at-garme-SBI-304490058.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="Expert Tailoring"
                   fill
                   className="object-cover"
@@ -409,7 +409,7 @@ export default function HospitalityAttirePage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/multi-colored-fabrics-2024-12-16-00-10-14-utc.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="Brand Customization"
                   fill
                   className="object-cover"
@@ -426,7 +426,7 @@ export default function HospitalityAttirePage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="Practical Performance"
                   fill
                   className="object-cover"
@@ -452,7 +452,7 @@ export default function HospitalityAttirePage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/schoolchildren-pretending-to-be-businesspeople-wit-2024-11-08-16-13-21-utc.jpg"
+                    src="/images/default-placeholder.jpg"
                     alt="Corporate Workwear"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -469,7 +469,7 @@ export default function HospitalityAttirePage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/kitchen-staff-preparing-food-in-a-commercial-kitchen-2024-11-27-07-04-15-utc.jpg"
+                    src="/images/default-placeholder.jpg"
                     alt="Culinary Uniforms"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -486,7 +486,7 @@ export default function HospitalityAttirePage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg"
+                    src="/images/product-placeholder.jpg"
                     alt="Security Uniforms"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -523,7 +523,7 @@ export default function HospitalityAttirePage() {
             <div className="hidden lg:block">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/women-in-white-uniform-in-the-office-2024-12-16-04-20-34-utc.jpg"
+                  src="/images/product-placeholder.jpg"
                   alt="Hospitality Uniform Design Service"
                   fill
                   className="object-cover"

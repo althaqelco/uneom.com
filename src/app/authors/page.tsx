@@ -26,7 +26,7 @@ export default function AuthorsPage() {
     {
       id: 'fahad-al-shamri',
       name: 'م. فهد الشمري',
-      image: '/images/team/man-in-gray-shirt-and-black-blazer-SBI-300015242.jpg',
+      image: '/images/avatar-placeholder.jpg',
       title: 'مستشار استراتيجي - صناعة المنسوجات',
       bio: 'مهندس نسيج وخبير في مجال تطوير صناعة المنسوجات والأزياء في المملكة، عمل سابقاً في برنامج تطوير الصناعة الوطنية والخدمات اللوجستية.',
       posts: 4,
@@ -53,7 +53,7 @@ export default function AuthorsPage() {
     {
       id: 'amina-al-zahrani',
       name: 'أمينة الزهراني',
-      image: '/images/adult-beautiful-muslim-woman-with-hijab-on-head-smiling-for-camera-in-room-SBI-351089408.jpg',
+      image: '/images/default-placeholder.jpg',
       title: 'مديرة قسم الاستدامة',
       bio: 'خبيرة في مجال التصميم المستدام والأزياء الصديقة للبيئة، مع تركيز خاص على تقنيات إعادة التدوير وتقليل النفايات في صناعة المنسوجات والأزياء الموحدة.',
       posts: 6,
@@ -62,7 +62,7 @@ export default function AuthorsPage() {
     {
       id: 'dr-khalid-bakr',
       name: 'Dr. Khalid Bakr',
-      image: '/images/doctor-SBI-300813580.jpg',
+      image: '/images/default-placeholder.jpg',
       title: 'Healthcare Uniform Specialist',
       bio: 'Dr. Khalid specializes in healthcare uniforms with a focus on safety standards and infection control. He has consulted for major hospitals across the Kingdom.',
       posts: 2,
@@ -80,7 +80,7 @@ export default function AuthorsPage() {
     {
       id: 'dr-nora-al-atiebi',
       name: 'Dr. Nora Al-Atiebi',
-      image: '/images/team/nora.jpg',
+      image: '/images/avatar-placeholder.jpg',
       title: 'Consultant in Surgical and Preventive Aesthetics',
       bio: 'Dr. Nora Al-Atiebi is an expert in surgical and preventive aesthetics with over 12 years of experience in developing and improving uniforms for healthcare workers.',
       posts: 1,
@@ -89,7 +89,7 @@ export default function AuthorsPage() {
     {
       id: 'sultan-al-ghamdi',
       name: 'سلطان الغامدي',
-      image: '/images/portrait-of-an-arab-man-sheikh-SBI-300981247.jpg',
+      image: '/images/default-placeholder.jpg',
       title: 'خبير التراث والأزياء التقليدية',
       bio: 'مستشار في مجال دمج العناصر التراثية في الأزياء الموحدة العصرية، مع خبرة أكثر من 15 عاماً في الحفاظ على الهوية الثقافية السعودية في التصاميم المعاصرة.',
       posts: 5,
@@ -98,7 +98,7 @@ export default function AuthorsPage() {
     {
       id: 'layla-mohammed',
       name: 'Layla Mohammed',
-      image: '/images/young-muslim-arab-woman-wearing-hijab-veiling-face-looking-at-camera-outdoors-during-s-SBI-351149151.jpg',
+      image: '/images/default-placeholder.jpg',
       title: 'Industrial Uniform Researcher',
       bio: 'Specializing in advanced protective fabrics and ergonomic design for industrial environments, Layla combines her background in materials science with practical field experience.',
       posts: 4,
@@ -107,7 +107,7 @@ export default function AuthorsPage() {
     {
       id: 'tariq-al-mahmoud',
       name: 'طارق المحمود',
-      image: '/images/arabian-businessman-wearing-traditional-clothes-while-using-smartphone-at-home-SBI-350765162.jpg',
+      image: '/images/default-placeholder.jpg',
       title: 'رئيس قسم الابتكار الرقمي',
       bio: 'يقود فريق الابتكار الرقمي في تطوير تقنيات التصنيع المتقدمة وأنظمة إدارة الزي الموحد الذكية، مع خبرة في دمج إنترنت الأشياء والذكاء الاصطناعي في صناعة الأزياء.',
       posts: 3,
@@ -116,7 +116,7 @@ export default function AuthorsPage() {
     {
       id: 'omar-al-saeed',
       name: 'عمر السعيد',
-      image: '/images/modern-arabic-businessman-SBI-300984397.jpg',
+      image: '/images/default-placeholder.jpg',
       title: 'خبير سلاسل التوريد والإمداد',
       bio: 'متخصص في إدارة سلاسل التوريد واللوجستيات لصناعة الأزياء الموحدة، مع خبرة تمتد لأكثر من 10 سنوات في تحسين كفاءة العمليات وتقليل التكاليف وتحقيق الاستدامة.',
       posts: 7,

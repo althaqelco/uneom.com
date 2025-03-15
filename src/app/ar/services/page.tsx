@@ -38,7 +38,7 @@ export default function ServicesPageArabic() {
       id: 'program-management',
       name: 'إدارة برامج الزي الموحد',
       description: 'حلول شاملة لإدارة برنامج الزي الموحد الخاص بمؤسستك من البداية إلى النهاية.',
-      image: '/images/services/program-management.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/ar/services/program-management',
       benefits: [
         'تحليل احتياجات المؤسسة والموظفين',
@@ -52,7 +52,7 @@ export default function ServicesPageArabic() {
       id: 'custom-design',
       name: 'تصميم الزي الموحد حسب الطلب',
       description: 'تصميمات فريدة تعكس هوية علامتك التجارية وتعزز صورتك المؤسسية.',
-      image: '/images/services/custom-design.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/ar/services/custom-design',
       benefits: [
         'مصممون محترفون بخبرة في الزي المؤسسي',
@@ -66,7 +66,7 @@ export default function ServicesPageArabic() {
       id: 'bulk-ordering',
       name: 'طلبات الشراء بالجملة',
       description: 'حلول فعالة من حيث التكلفة لطلبات الزي الموحد بكميات كبيرة مع ضمان الجودة.',
-      image: '/images/services/bulk-ordering.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/ar/services/bulk-ordering',
       benefits: [
         'أسعار تنافسية للطلبات الكبيرة',
@@ -80,7 +80,7 @@ export default function ServicesPageArabic() {
       id: 'measuring-services',
       name: 'خدمات القياس',
       description: 'نضمن ملاءمة مثالية لجميع الموظفين من خلال خدمات القياس الاحترافية.',
-      image: '/images/services/measuring-services.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/ar/services/measuring-services',
       benefits: [
         'فرق قياس متخصصة للرجال والنساء',
@@ -94,7 +94,7 @@ export default function ServicesPageArabic() {
       id: 'uniform-policy',
       name: 'سياسات الزي الموحد',
       description: 'نساعدك في تطوير وتنفيذ سياسات زي موحد فعالة تتوافق مع أهداف مؤسستك.',
-      image: '/images/services/uniform-policy.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/services/uniform-policy',
       benefits: [
         'تحليل احتياجات المؤسسة والصناعة',

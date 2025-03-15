@@ -8,7 +8,7 @@ export default function CustomDesignServicePageArabic() {
     locale: 'ar',
     title: 'تصميم مخصص وعلامات تجارية',
     subtitle: 'حلول أزياء موحدة مميزة ترتقي بهوية علامتك التجارية',
-    heroImage: '/images/services/custom-design-hero.jpg',
+    heroImage: '/images/banner-placeholder.jpg',
     
     overview: [
       "تقدم خدمة التصميم المخصص والعلامات التجارية من يونيوم حلولًا فريدة للأزياء الموحدة تعكس هوية وقيم مؤسستك المميزة. يعمل فريق التصميم المتخصص لدينا بشكل وثيق معك لإنشاء أزياء موحدة لا تلبي المتطلبات الوظيفية فحسب، بل تعمل أيضًا كسفراء قويين لعلامتك التجارية.",
@@ -17,22 +17,22 @@ export default function CustomDesignServicePageArabic() {
     
     steps: [
       {
-        icon: '/images/icons/discovery.svg',
+        icon: '/images/banner-placeholder.jpg',
         title: 'اكتشاف العلامة التجارية',
         description: 'نبدأ بمرحلة اكتشاف شاملة لفهم قيم علامتك التجارية وعناصر الهوية وتفضيلات التصميم. يحلل فريقنا هويتك البصرية الحالية والجمهور المستهدف وموقع الصناعة لتحديد أهداف تصميم واضحة.'
       },
       {
-        icon: '/images/icons/concept.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'تطوير المفهوم',
         description: 'يقوم فريق التصميم لدينا بإنشاء مفاهيم أولية تجمع بين الجاذبية الجمالية والمتطلبات الوظيفية. نقدم اتجاهات تصميم متعددة مع لوحات الأفكار وألواح الألوان والرسومات الأولية لتصور الأساليب المختلفة.'
       },
       {
-        icon: '/images/icons/refinement.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'التحسين وإنشاء النماذج الأولية',
         description: 'بناءً على ملاحظاتك، نقوم بتحسين المفاهيم المختارة وتطوير تصاميم مفصلة. يتم إنشاء نماذج أولية لقطع الزي الموحد الرئيسية، مما يسمح باختبار المقاس وتقييم المواد وإجراء تعديلات إضافية على التصميم.'
       },
       {
-        icon: '/images/icons/production.svg',
+        icon: '/images/product-placeholder.jpg',
         title: 'الإنتاج والتنفيذ',
         description: 'بمجرد الموافقة على التصاميم، ندير عملية الإنتاج بمعايير صارمة لمراقبة الجودة. ينسق فريقنا القياسات والتصنيع والتسليم لضمان طرح سلس لبرنامج الزي الموحد المخصص الخاص بك.'
       }
@@ -40,32 +40,32 @@ export default function CustomDesignServicePageArabic() {
     
     benefits: [
       {
-        icon: '/images/icons/identity.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'تعزيز هوية العلامة التجارية',
         description: 'تعزز الأزياء الموحدة المخصصة هويتك البصرية وتخلق اعترافًا فوريًا بالعلامة التجارية داخليًا ومع العملاء.'
       },
       {
-        icon: '/images/icons/differentiation.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'التمييز التنافسي',
         description: 'تميز عن المنافسين بأزياء موحدة مميزة توصل موقعك الفريد وقيمك في السوق.'
       },
       {
-        icon: '/images/icons/culture.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'تعزيز ثقافة الشركة',
         description: 'تعزز الأزياء الموحدة المصممة جيدًا الشعور بالانتماء والفخر بين الموظفين، مما يقوي ثقافة مؤسستك.'
       },
       {
-        icon: '/images/icons/consistency.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'الاتساق البصري',
         description: 'ضمان عرض متسق للعلامة التجارية عبر جميع المواقع والأقسام ونقاط اتصال العملاء.'
       },
       {
-        icon: '/images/icons/functionality.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'تحسين الوظائف',
         description: 'تتيح التصاميم المخصصة ميزات وتكييفات خاصة بالصناعة تحسن الراحة والأداء لبيئة عملك المحددة.'
       },
       {
-        icon: '/images/icons/perception.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'تحسين إدراك العملاء',
         description: 'ترفع الأزياء الموحدة المهنية والتي تحمل العلامة التجارية من تصور العملاء لجودة الخدمة والاحترافية التنظيمية.'
       }
@@ -77,14 +77,14 @@ export default function CustomDesignServicePageArabic() {
         title: 'تحول العلامة التجارية للفندق الفاخر',
         description: 'إنشاء مجموعة أزياء موحدة مميزة لعلامة فندقية فاخرة جديدة تطلق في المملكة العربية السعودية. تطوير نظام تصميم زي موحد شامل يضم 12 قطعة ملابس فريدة عبر 5 أقسام مع تطوير أقمشة مخصصة.',
         result: 'ذكر 92٪ من الضيوف مظهر الموظفين المميز كعنصر لا ينسى، وتم عرضه في معرض التصميم السنوي، وتم تقييم رضا الموظفين بـ 4.8/5.',
-        image: '/images/case-studies/hotel-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: "banking-identity",
         title: 'تجديد هوية الخدمات المصرفية للشركات',
         description: 'تحديث برنامج زي موحد قديم لمؤسسة مالية رائدة تضم أكثر من 1200 موظف. إنشاء مجموعة أزياء موحدة محدثة تحافظ على لوحة ألوان التراث مع إدخال صور ظلية معاصرة وأقمشة متميزة.',
         result: 'زيادة بنسبة 86٪ في رضا الموظفين، وتقليل تكاليف الصيانة بنسبة 25٪، وزيادة مقاييس تصور العملاء للاحترافية بنسبة 18٪.',
-        image: '/images/case-studies/banking-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       }
     ],
     
@@ -95,7 +95,7 @@ export default function CustomDesignServicePageArabic() {
         author: 'نورة الفيصل',
         position: 'مديرة العلامة التجارية',
         company: 'فنادق ومنتجعات المملكة',
-        image: '/images/testimonials/nora-al-faisal.jpg'
+        image: '/images/avatar-placeholder.jpg'
       },
       {
         id: "2",
@@ -103,7 +103,7 @@ export default function CustomDesignServicePageArabic() {
         author: 'فهد العتيبي',
         position: 'رئيس التسويق',
         company: 'مجموعة الرياض المالية',
-        image: '/images/testimonials/fahad-al-otaibi.jpg'
+        image: '/images/avatar-placeholder.jpg'
       }
     ],
     

@@ -1,0 +1,74 @@
+
+/**
+ * CSS للصور الاحتياطية
+ * يوفر أنماط احتياطية للصور المفقودة
+ */
+
+/* نمط الصورة الاحتياطية الافتراضية */
+img[src*="/images/"][src$=".jpg"],
+img[src*="/images/"][src$=".jpeg"],
+img[src*="/images/"][src$=".png"],
+img[src*="/images/"][src$=".webp"] {
+  background-color: #f3f4f6;
+  background-image: url('/images/default-placeholder.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* نمط صورة المنتج الاحتياطية */
+img[src*="/images/product"],
+img[src*="/images/item"],
+img[src*="/products/"],
+.product-image {
+  background-image: url('/images/product-placeholder.svg');
+}
+
+/* نمط صورة الملف الشخصي الاحتياطية */
+img[src*="/images/avatar"],
+img[src*="/images/profile"],
+img[src*="/images/user"],
+img[src*="/images/team"],
+img[src*="/images/testimonial"],
+.avatar-image {
+  background-image: url('/images/avatar-placeholder.svg');
+}
+
+/* نمط صورة البانر الاحتياطية */
+img[src*="/images/banner"],
+img[src*="/images/hero"],
+img[src*="/images/cover"],
+.banner-image {
+  background-image: url('/images/banner-placeholder.svg');
+}
+
+/* نمط صورة الشعار الاحتياطية */
+img[src*="/images/logo"],
+.logo-image {
+  background-image: url('/images/logo-placeholder.svg');
+}
+
+/* إصلاح لبيئة Vercel */
+.vercel-deployment img[src*="/images/"] {
+  object-fit: contain !important;
+}
+
+/* إصلاح للصور المكسورة */
+img.broken-image {
+  position: relative;
+}
+
+img.broken-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f3f4f6;
+  background-image: url('/images/default-placeholder.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}

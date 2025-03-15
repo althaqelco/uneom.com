@@ -24,11 +24,11 @@ export default function LuxuryHotelUniformArabicPage() {
     basePrice: 349,
     rating: 4.9,
     reviewCount: 78,
-    mainImage: "/images/Luxury_Hotel Staff_Uniform.png",
+    mainImage: "/images/default-placeholder.jpg Staff_Uniform.png",
     additionalImages: [
-      "/images/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg",
-      "/images/hotel-uniform.jpg",
-      "/images/business-people-SBI-300964818.jpg"
+      "/images/default-placeholder.jpg",
+      "/images/product-placeholder.jpg",
+      "/images/default-placeholder.jpg"
     ],
     description: 'طقم زي فندقي فاخر مصمم للمنشآت ذات الخمس نجوم في المملكة العربية السعودية. يجمع بين الأناقة والراحة العملية لموظفي الاستقبال والكونسيرج وطاقم الإدارة.',
     features: [
@@ -50,10 +50,10 @@ export default function LuxuryHotelUniformArabicPage() {
       { name: 'التخصيص', value: 'تطريز شعار الفندق، بطاقات الأسماء، خيارات الزخارف الذهبية' }
     ],
     images: [
-      { src: '/images/portrait-of-female-hotel-receptionist-at-modern-counter-in-hotel-SBI-348922252.jpg', alt: 'زي الفندق الفاخر - موظفي الاستقبال' },
-      { src: '/images/hotel-staff-hands-with-white-gloves-giving-welcome-gesture-at-hotel-reception-SBI-348925262.jpg', alt: 'زي الفندق الفاخر - خدمة الكونسيرج' },
-      { src: '/images/side-view-of-businessman-with-luggage-in-airport-or-hotel-corridor-SBI-336249080.jpg', alt: 'زي الفندق الفاخر - طراز المدير' },
-      { src: '/images/happy-receptionist-standing-at-counter-in-hotel-SBI-336273129.jpg', alt: 'زي الفندق الفاخر - المجموعة الكاملة' }
+      { src: '/images/default-placeholder.jpg', alt: 'زي الفندق الفاخر - موظفي الاستقبال' },
+      { src: '/images/default-placeholder.jpg', alt: 'زي الفندق الفاخر - خدمة الكونسيرج' },
+      { src: '/images/default-placeholder.jpg', alt: 'زي الفندق الفاخر - طراز المدير' },
+      { src: '/images/default-placeholder.jpg', alt: 'زي الفندق الفاخر - المجموعة الكاملة' }
     ],
     category: 'أزياء الضيافة',
     categorySlug: 'hospitality-attire',
@@ -92,21 +92,21 @@ export default function LuxuryHotelUniformArabicPage() {
       {
         id: 'hotel-housekeeping-uniform',
         name: 'زي عمال النظافة الفندقية',
-        image: '/images/happy-receptionist-standing-at-counter-in-hotel-SBI-336273129.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ريال 249',
         href: '/ar/shop/hospitality-attire/hotel-housekeeping-uniform'
       },
       {
         id: 'restaurant-staff-uniform',
         name: 'زي موظفي المطاعم الفاخرة',
-        image: '/images/hotel-staff-hands-with-white-gloves-giving-welcome-gesture-at-hotel-reception-SBI-348925262.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ريال 299',
         href: '/ar/shop/hospitality-attire/restaurant-staff-uniform'
       },
       {
         id: 'hotel-bellboy-uniform',
         name: 'زي حامل الحقائب الفاخر',
-        image: '/images/side-view-of-businessman-with-luggage-in-airport-or-hotel-corridor-SBI-336249080.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ريال 279',
         href: '/ar/shop/hospitality-attire/hotel-bellboy-uniform'
       }
@@ -175,7 +175,7 @@ export default function LuxuryHotelUniformArabicPage() {
         <meta name="description" content="زي فندقي أنيق وعالي الجودة مصمم خصيصًا للفنادق الفاخرة في المملكة العربية السعودية، مع خيارات تخصيص حسب احتياجات منشأتك" />
         <meta property="og:title" content="زي فندقي فاخر - يونيوم للأزياء المهنية" />
         <meta property="og:description" content="زي فندقي أنيق وعالي الجودة مصمم خصيصًا للفنادق الفاخرة في المملكة العربية السعودية، مع خيارات تخصيص حسب احتياجات منشأتك" />
-        <meta property="og:image" content="/images/Luxury_Hotel Staff_Uniform.png" />
+        <meta property="og:image" content="/images/default-placeholder.jpg Staff_Uniform.png" />
       </Head>
       
       {/* مسار التنقل */}

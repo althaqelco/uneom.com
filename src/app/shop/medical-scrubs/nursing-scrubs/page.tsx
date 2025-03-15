@@ -50,10 +50,10 @@ export default function NursingScrubsPage() {
       { name: 'Customization Options', value: 'Hospital logos, name embroidery, department color coding' }
     ],
     images: [
-      { src: '/images/nurses-at-hospital-wearing-scrubs-SBI-301282375.jpg', alt: 'Nursing staff wearing premium scrubs at hospital station' },
-      { src: '/images/doctor-and-nurse-consultation-SBI-300912540.jpg', alt: 'Nurse and doctor in premium medical attire during consultation' },
-      { src: '/images/nurse-checking-patient-chart-hospital-SBI-300157328.jpg', alt: 'Nurse wearing comfortable scrubs checking patient record' },
-      { src: '/images/hijab-nurse-stethoscope-hospital-SBI-301756297.jpg', alt: 'Hijabi nurse wearing culturally appropriate nursing scrubs' }
+      { src: '/images/default-placeholder.jpg', alt: 'Nursing staff wearing premium scrubs at hospital station' },
+      { src: '/images/default-placeholder.jpg', alt: 'Nurse and doctor in premium medical attire during consultation' },
+      { src: '/images/default-placeholder.jpg', alt: 'Nurse wearing comfortable scrubs checking patient record' },
+      { src: '/images/default-placeholder.jpg', alt: 'Hijabi nurse wearing culturally appropriate nursing scrubs' }
     ],
     category: 'Medical Scrubs',
     categorySlug: 'medical-scrubs',
@@ -69,16 +69,16 @@ export default function NursingScrubsPage() {
       { name: 'Maternity Nursing Scrubs', price: 'SAR 305' }
     ],
     colors: [
-      { name: 'Ceil Blue', value: '#92a1cf', image: '/images/fabrics/ceil-blue-scrubs.jpg' },
-      { name: 'Navy', value: '#000080', image: '/images/fabrics/navy-scrubs.jpg' },
-      { name: 'Caribbean Blue', value: '#0086cb', image: '/images/fabrics/caribbean-blue-scrubs.jpg' },
-      { name: 'Wine', value: '#722f37', image: '/images/fabrics/wine-scrubs.jpg' },
-      { name: 'Pewter', value: '#8e8e8e', image: '/images/fabrics/pewter-scrubs.jpg' },
-      { name: 'Hunter Green', value: '#355e3b', image: '/images/fabrics/hunter-green-scrubs.jpg' },
-      { name: 'Royal Blue', value: '#4169e1', image: '/images/fabrics/royal-blue-scrubs.jpg' },
-      { name: 'Black', value: '#000000', image: '/images/fabrics/black-scrubs.jpg' },
-      { name: 'Eggplant', value: '#614051', image: '/images/fabrics/eggplant-scrubs.jpg' },
-      { name: 'Rose Pink', value: '#e8909c', image: '/images/fabrics/rose-pink-scrubs.jpg' }
+      { name: 'Ceil Blue', value: '#92a1cf', image: '/images/default-placeholder.jpg' },
+      { name: 'Navy', value: '#000080', image: '/images/default-placeholder.jpg' },
+      { name: 'Caribbean Blue', value: '#0086cb', image: '/images/default-placeholder.jpg' },
+      { name: 'Wine', value: '#722f37', image: '/images/default-placeholder.jpg' },
+      { name: 'Pewter', value: '#8e8e8e', image: '/images/default-placeholder.jpg' },
+      { name: 'Hunter Green', value: '#355e3b', image: '/images/default-placeholder.jpg' },
+      { name: 'Royal Blue', value: '#4169e1', image: '/images/default-placeholder.jpg' },
+      { name: 'Black', value: '#000000', image: '/images/default-placeholder.jpg' },
+      { name: 'Eggplant', value: '#614051', image: '/images/default-placeholder.jpg' },
+      { name: 'Rose Pink', value: '#e8909c', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -97,14 +97,14 @@ export default function NursingScrubsPage() {
         author: "Nora Al-Mansour",
         position: "Chief Nursing Officer",
         company: "King Salman Medical City",
-        image: "/images/testimonials/nora-m.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "After standardizing with Uneom nursing scrubs across our hospital network, we've seen marked improvements in staff satisfaction and professional appearance. The department color coding system has facilitated patient interactions, and the durability despite constant laundering is exceptional.",
         author: "Dr. Faisal Al-Juhani",
         position: "Executive Director of Nursing",
         company: "National Healthcare Group",
-        image: "/images/testimonials/faisal-j.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -351,7 +351,7 @@ export default function NursingScrubsPage() {
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/nurses-station-hospital-healthcare-SBI-300174244.jpg" 
+                  src="/images/default-placeholder.jpg" 
                   alt="Nursing staff in customized scrubs" 
                   fill
                   className="object-cover"

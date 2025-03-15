@@ -29,11 +29,11 @@ export default function LuxuryHotelUniformPage() {
     longDescription: "Our Luxury Hotel Staff Uniform is specifically designed for front desk personnel, concierge teams, and customer-facing staff in luxury hotels and high-end resorts across Saudi Arabia. This premium uniform combines elegant design elements with practical features, creating a sophisticated look that represents your establishment's commitment to excellence.",
     price: "SAR 449",
     minOrder: 8,
-    mainImage: "/images/Luxury_Hotel Staff_Uniform.png",
+    mainImage: "/images/default-placeholder.jpg Staff_Uniform.png",
     additionalImages: [
-      "/images/products/hotel-uniform-front.jpg",
-      "/images/products/hotel-uniform-back.jpg",
-      "/images/products/hotel-uniform-group.jpg"
+      "/images/product-placeholder.jpg",
+      "/images/product-placeholder.jpg",
+      "/images/product-placeholder.jpg"
     ],
     colors: [
       { name: "Black", value: "#000000" },
@@ -85,43 +85,43 @@ export default function LuxuryHotelUniformPage() {
       { 
         name: "Hotel Logo Embroidery", 
         description: "Add your hotel logo embroidered on chest pocket or sleeve",
-        image: "/images/customization/hotel-logo.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "Accent Color Selection", 
         description: "Choose from a range of accent colors to match your hotel's branding",
-        image: "/images/customization/accent-colors.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "Button Style Options", 
         description: "Select from gold, silver, or covered button options",
-        image: "/images/customization/button-options.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "Name Tag Integration", 
         description: "Options for integrating elegant name tags or badges",
-        image: "/images/customization/name-tag-luxury.jpg"
+        image: "/images/default-placeholder.jpg"
       }
     ],
     relatedProducts: [
       {
         id: "concierge-uniform",
         name: "Luxury Concierge Uniform",
-        image: "/images/products/concierge-uniform.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "SAR 499",
         href: "/shop/hospitality-attire/concierge-uniform"
       },
       {
         id: "bellhop-uniform",
         name: "Premium Bellhop Uniform",
-        image: "/images/products/bellhop-uniform.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "SAR 399",
         href: "/shop/hospitality-attire/bellhop-uniform"
       },
       {
         id: "hotel-management-suit",
         name: "Hotel Management Suit",
-        image: "/images/products/hotel-management-suit.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "SAR 649",
         href: "/shop/hospitality-attire/hotel-management-suit"
       }

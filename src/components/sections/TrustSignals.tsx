@@ -430,7 +430,7 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
                 <div className="relative h-full min-h-[400px]">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary-100/30 to-blue-100/20 mix-blend-overlay"></div>
                   <Image 
-                    src="/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg"
+                    src="/images/avatar-placeholder.jpg"
                     alt={isRTL ? "فريق طبي محترف بأزياء موحدة" : "Professional medical team in uniforms"}
                     fill
                     className="object-cover"

@@ -50,10 +50,10 @@ export default function PremiumSurgicalGownsPage() {
       { name: 'Packaging', value: 'Individual packs or bulk options available' }
     ],
     images: [
-      { src: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg', alt: 'Surgical team wearing premium gowns' },
-      { src: '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg', alt: 'Surgeons in premium gowns during operation' },
-      { src: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg', alt: 'Close-up of premium surgical gown fabric and details' },
-      { src: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg', alt: 'Healthcare professional in premium surgical attire' }
+      { src: '/images/avatar-placeholder.jpg', alt: 'Surgical team wearing premium gowns' },
+      { src: '/images/default-placeholder.jpg', alt: 'Surgeons in premium gowns during operation' },
+      { src: '/images/default-placeholder.jpg', alt: 'Close-up of premium surgical gown fabric and details' },
+      { src: '/images/default-placeholder.jpg', alt: 'Healthcare professional in premium surgical attire' }
     ],
     category: 'Healthcare Apparel',
     categorySlug: 'medical-scrubs',
@@ -68,9 +68,9 @@ export default function PremiumSurgicalGownsPage() {
       { name: 'Custom Hospital Logo Gown', price: 'SAR 469' }
     ],
     colors: [
-      { name: 'Surgical Green', value: '#2d8659', image: '/images/fabrics/surgical-green.jpg' },
-      { name: 'Royal Blue', value: '#1e4d8c', image: '/images/fabrics/royal-blue.jpg' },
-      { name: 'Navy', value: '#0a1e3c', image: '/images/fabrics/navy.jpg' }
+      { name: 'Surgical Green', value: '#2d8659', image: '/images/default-placeholder.jpg' },
+      { name: 'Royal Blue', value: '#1e4d8c', image: '/images/default-placeholder.jpg' },
+      { name: 'Navy', value: '#0a1e3c', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     sizeEquivalents: {
@@ -86,14 +86,14 @@ export default function PremiumSurgicalGownsPage() {
         author: "Dr. Mohammed Al-Harbi",
         position: "Chief of Surgery",
         company: "King Faisal Specialist Hospital",
-        image: "/images/testimonials/dr-mohammed.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "The level of protection these gowns provide is exceptional. The reinforced zones offer extra peace of mind, and the fabric remains breathable even during the most intense procedures.",
         author: "Dr. Sarah Al-Qahtani",
         position: "Head of Surgical Nursing",
         company: "Saudi German Hospital",
-        image: "/images/testimonials/dr-sarah.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -375,7 +375,7 @@ export default function PremiumSurgicalGownsPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/operating-room-team-during-surgical-procedure-in-hospital-surgery-theater-SBI-303656444.jpg" 
+                src="/images/avatar-placeholder.jpg" 
                 alt="Customized surgical gowns for hospital teams" 
                 fill
                 className="object-cover"

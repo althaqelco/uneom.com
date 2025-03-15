@@ -114,25 +114,25 @@ export default function AboutPageArabic() {
       id: 'quality',
       title: 'الجودة',
       description: 'نستخدم فقط أفضل المواد والحرفية في صناعة الزي الموحد لضمان المتانة والراحة والمظهر المهني.',
-      icon: '/images/icons/quality.svg',
+      icon: '/images/default-placeholder.jpg',
     },
     {
       id: 'innovation',
       title: 'الابتكار',
       description: 'نسعى باستمرار لتحسين منتجاتنا من خلال دمج تقنيات الأقمشة الجديدة والتصميمات العصرية والحلول المبتكرة.',
-      icon: '/images/icons/innovation.svg',
+      icon: '/images/default-placeholder.jpg',
     },
     {
       id: 'integrity',
       title: 'النزاهة',
       description: 'نتعامل مع عملائنا وموظفينا وشركائنا بأعلى مستويات الصدق والأخلاق والاحترام.',
-      icon: '/images/icons/integrity.svg',
+      icon: '/images/default-placeholder.jpg',
     },
     {
       id: 'culture',
       title: 'الاحترام الثقافي',
       description: 'نصمم منتجاتنا مع مراعاة خصوصيات المجتمع السعودي والثقافة الإسلامية، ونحترم العادات والتقاليد المحلية.',
-      icon: '/images/icons/culture.svg',
+      icon: '/images/default-placeholder.jpg',
     },
   ];
   
@@ -191,7 +191,7 @@ export default function AboutPageArabic() {
       <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-24 md:py-32">
         <div className="absolute inset-0 overflow-hidden opacity-30">
           <Image
-            src={getLocalizedImagePath('/images/about/about-hero.jpg', 'ar')}
+            src={getLocalizedImagePath('/images/banner-placeholder.jpg', 'ar')}
             alt="عن يونيوم - المورد الرائد للزي الموحد في المملكة العربية السعودية"
             fill
             className="object-cover"

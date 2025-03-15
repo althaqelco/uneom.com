@@ -66,10 +66,10 @@ export default function IndustrialCoverallPage() {
       { name: 'Country of Manufacture', value: 'Saudi Arabia' }
     ],
     images: [
-      { src: '/images/three-warehouse-worker-in-industrial-workplace-inspecting-work-2023-11-27-04-53-52-utc.jpg', alt: 'Industrial Coverall - Front View' },
-      { src: '/images/industrial-worker-using-multimeter-tester-2023-11-27-05-25-54-utc.jpg', alt: 'Industrial Coverall - Side View' },
-      { src: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg', alt: 'Industrial Coverall - Back View' },
-      { src: '/images/industrial-worker-wearing-safety-mask-in-factory-2023-11-27-05-32-22-utc.jpg', alt: 'Industrial Coverall - Detail View' }
+      { src: '/images/default-placeholder.jpg', alt: 'Industrial Coverall - Front View' },
+      { src: '/images/default-placeholder.jpg', alt: 'Industrial Coverall - Side View' },
+      { src: '/images/default-placeholder.jpg', alt: 'Industrial Coverall - Back View' },
+      { src: '/images/default-placeholder.jpg', alt: 'Industrial Coverall - Detail View' }
     ],
     category: 'Industrial Uniforms',
     categorySlug: 'industrial-uniforms',
@@ -109,21 +109,21 @@ export default function IndustrialCoverallPage() {
       {
         id: 'safety-vest',
         name: 'High-Visibility Safety Vest',
-        image: '/images/industrial-worker-using-multimeter-tester-2023-11-27-05-25-54-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'From SAR 59',
         href: '/shop/industrial-uniforms/safety-vest'
       },
       {
         id: 'work-pants',
         name: 'Heavy-Duty Work Pants',
-        image: '/images/three-warehouse-worker-in-industrial-workplace-inspecting-work-2023-11-27-04-53-52-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'From SAR 119',
         href: '/shop/industrial-uniforms/work-pants'
       },
       {
         id: 'industrial-jacket',
         name: 'Insulated Industrial Jacket',
-        image: '/images/industrial-worker-wearing-safety-mask-in-factory-2023-11-27-05-32-22-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'From SAR 229',
         href: '/shop/industrial-uniforms/industrial-jacket'
       }

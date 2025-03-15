@@ -8,7 +8,7 @@ export default function ProcurementGuidePageArabic() {
     locale: 'ar',
     title: 'دليل شراء الزي الموحد',
     subtitle: 'أساليب استراتيجية لتوريد وإدارة برامج الزي الموحد بفعالية',
-    heroImage: '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg',
+    heroImage: '/images/default-placeholder.jpg',
     overview: {
       title: 'تحسين عملية شراء الزي الموحد',
       content: `
@@ -66,7 +66,7 @@ export default function ProcurementGuidePageArabic() {
             </ul>
           </div>
         `,
-        image: '/images/smiling-airplane-crew-members-walking-together-on-2023-11-27-05-07-27-utc.jpg',
+        image: '/images/default-placeholder.jpg',
       },
       {
         title: 'اختيار المورد',
@@ -115,7 +115,7 @@ export default function ProcurementGuidePageArabic() {
             </ul>
           </div>
         `,
-        image: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg',
+        image: '/images/default-placeholder.jpg',
       },
       {
         title: 'تنفيذ البرنامج',
@@ -158,7 +158,7 @@ export default function ProcurementGuidePageArabic() {
             </ul>
           </div>
         `,
-        image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+        image: '/images/default-placeholder.jpg',
       }
     ],
     items: [
@@ -166,25 +166,25 @@ export default function ProcurementGuidePageArabic() {
         id: 'needs-assessment',
         title: 'تقييم الاحتياجات',
         description: 'دليل شامل لتحديد متطلبات الزي الموحد الخاصة بمؤسستك.',
-        image: '/images/resources/needs-assessment.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'vendor-selection',
         title: 'اختيار المورد',
         description: 'معايير وقوائم تدقيق لاختيار مورد الزي الموحد المناسب.',
-        image: '/images/resources/vendor-selection.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'budget-planning',
         title: 'تخطيط الميزانية',
         description: 'أدوات وقوالب لتقدير وإدارة ميزانية برنامج الزي الموحد الخاص بك.',
-        image: '/images/resources/budget-planning.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'implementation',
         title: 'التنفيذ والتوزيع',
         description: 'استراتيجيات لطرح برنامج الزي الموحد بسلاسة في مؤسستك.',
-        image: '/images/resources/implementation.jpg'
+        image: '/images/default-placeholder.jpg'
       }
     ],
     relatedResources: [

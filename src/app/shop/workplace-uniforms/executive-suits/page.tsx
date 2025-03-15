@@ -51,10 +51,10 @@ export default function ExecutiveSuitsPage() {
       { name: 'Custom Options', value: 'Bespoke tailoring, corporate branding, monogramming' }
     ],
     images: [
-      { src: '/images/corporate-man-in-suit.jpg', alt: 'Executive Tailored Suit Front View' },
-      { src: '/images/corporate-woman-in-suit.jpg', alt: 'Executive Tailored Suit for Women' },
-      { src: '/images/executive-team-in-suits.jpg', alt: 'Executive Team in Tailored Suits' },
-      { src: '/images/suit-fabric-detail.jpg', alt: 'Premium Fabric Detail' }
+      { src: '/images/default-placeholder.jpg', alt: 'Executive Tailored Suit Front View' },
+      { src: '/images/default-placeholder.jpg', alt: 'Executive Tailored Suit for Women' },
+      { src: '/images/avatar-placeholder.jpg', alt: 'Executive Team in Tailored Suits' },
+      { src: '/images/default-placeholder.jpg', alt: 'Premium Fabric Detail' }
     ],
     category: 'Corporate Apparel',
     categorySlug: 'workplace-uniforms',
@@ -68,10 +68,10 @@ export default function ExecutiveSuitsPage() {
       { name: 'Executive Package (2 Suits, 3 Shirts)', price: 'SAR 2,899' }
     ],
     colors: [
-      { name: 'Navy Blue', value: '#1a2942', image: '/images/fabrics/navy-wool.jpg' },
-      { name: 'Charcoal Grey', value: '#36454f', image: '/images/fabrics/charcoal-wool.jpg' },
-      { name: 'Classic Black', value: '#232323', image: '/images/fabrics/black-wool.jpg' },
-      { name: 'Deep Brown', value: '#5d4037', image: '/images/fabrics/brown-wool.jpg' }
+      { name: 'Navy Blue', value: '#1a2942', image: '/images/default-placeholder.jpg' },
+      { name: 'Charcoal Grey', value: '#36454f', image: '/images/default-placeholder.jpg' },
+      { name: 'Classic Black', value: '#232323', image: '/images/default-placeholder.jpg' },
+      { name: 'Deep Brown', value: '#5d4037', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['46', '48', '50', '52', '54', '56', '58', '60', '62'],
     sizeEquivalents: {
@@ -90,13 +90,13 @@ export default function ExecutiveSuitsPage() {
         quote: "UNEOM's executive suits have become our standard for corporate representation. The quality is impeccable, and they've mastered the balance between modern style and cultural appropriateness.",
         author: "Ahmad Al-Saud",
         position: "HR Director, Saudi Investment Bank",
-        image: "/images/testimonials/ahmad.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "As a female executive in Saudi Arabia, finding appropriate yet stylish business attire has always been challenging. UNEOM's executive collection solves this perfectly with modest yet sophisticated designs.",
         author: "Noura Al-Qasabi",
         position: "VP of Operations, Aramco",
-        image: "/images/testimonials/noura.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };

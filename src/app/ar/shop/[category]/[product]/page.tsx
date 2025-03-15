@@ -40,9 +40,9 @@ const getProductData = (category: string, productSlug: string) => {
         ],
         images: [
           { src: '/images/products/scrubs-set.jpg', alt: 'واجهة طقم سكرابات فاخر' },
-          { src: '/images/products/scrubs-detail-1.jpg', alt: 'تفاصيل جيب طقم سكرابات فاخر' },
-          { src: '/images/products/scrubs-detail-2.jpg', alt: 'منظر جانبي لطقم سكرابات فاخر' },
-          { src: '/images/products/scrubs-detail-3.jpg', alt: 'لقطة مقربة لمادة طقم سكرابات فاخر' }
+          { src: '/images/product-placeholder.jpg', alt: 'تفاصيل جيب طقم سكرابات فاخر' },
+          { src: '/images/product-placeholder.jpg', alt: 'منظر جانبي لطقم سكرابات فاخر' },
+          { src: '/images/product-placeholder.jpg', alt: 'لقطة مقربة لمادة طقم سكرابات فاخر' }
         ],
         category: 'أزياء الرعاية الصحية',
         categorySlug: 'medical-scrubs',
@@ -62,9 +62,9 @@ const getProductData = (category: string, productSlug: string) => {
           'تكوينات جيب خاصة'
         ],
         relatedProducts: [
-          { id: 'antimicrobial-scrubs', name: 'سكرابات مضادة للميكروبات', image: '/images/products/antimicrobial-scrubs.jpg', price: '٢٩٩ ريال', link: '/ar/shop/medical-scrubs/antimicrobial-scrubs' },
-          { id: 'premium-lab-coat', name: 'معطف مختبر فاخر', image: '/images/products/lab-coat.jpg', price: '٣٤٩ ريال', link: '/ar/shop/medical-scrubs/premium-lab-coat' },
-          { id: 'surgical-scrub-cap', name: 'قبعة جراحية', image: '/images/products/scrub-cap.jpg', price: '٧٩ ريال', link: '/ar/shop/medical-scrubs/surgical-scrub-cap' }
+          { id: 'antimicrobial-scrubs', name: 'سكرابات مضادة للميكروبات', image: '/images/product-placeholder.jpg', price: '٢٩٩ ريال', link: '/ar/shop/medical-scrubs/antimicrobial-scrubs' },
+          { id: 'premium-lab-coat', name: 'معطف مختبر فاخر', image: '/images/product-placeholder.jpg', price: '٣٤٩ ريال', link: '/ar/shop/medical-scrubs/premium-lab-coat' },
+          { id: 'surgical-scrub-cap', name: 'قبعة جراحية', image: '/images/product-placeholder.jpg', price: '٧٩ ريال', link: '/ar/shop/medical-scrubs/surgical-scrub-cap' }
         ]
       }
     },
@@ -97,9 +97,9 @@ const getProductData = (category: string, productSlug: string) => {
         ],
         images: [
           { src: '/images/products/airline-uniform.jpg', alt: 'مجموعة كاملة من زي طاقم الطائرة' },
-          { src: '/images/products/airline-detail-1.jpg', alt: 'تفاصيل سترة طاقم الطائرة' },
-          { src: '/images/products/airline-detail-2.jpg', alt: 'ملحقات طاقم الطائرة' },
-          { src: '/images/products/airline-detail-3.jpg', alt: 'لقطة مقربة لقماش زي طاقم الطائرة' }
+          { src: '/images/product-placeholder.jpg', alt: 'تفاصيل سترة طاقم الطائرة' },
+          { src: '/images/product-placeholder.jpg', alt: 'ملحقات طاقم الطائرة' },
+          { src: '/images/product-placeholder.jpg', alt: 'لقطة مقربة لقماش زي طاقم الطائرة' }
         ],
         category: 'أزياء الطيران',
         categorySlug: 'aviation-uniforms',
@@ -119,9 +119,9 @@ const getProductData = (category: string, productSlug: string) => {
           'تكييفات ثقافية'
         ],
         relatedProducts: [
-          { id: 'pilot-uniform', name: 'زي طيار فاخر', image: '/images/products/pilot-uniform.jpg', price: '١٥٩٩ ريال', link: '/ar/shop/aviation-uniforms/pilot-uniform' },
-          { id: 'ground-staff-uniform', name: 'زي طاقم الأرض', image: '/images/products/ground-staff.jpg', price: '٨٩٩ ريال', link: '/ar/shop/aviation-uniforms/ground-staff-uniform' },
-          { id: 'aviation-accessories', name: 'مجموعة ملحقات الطيران', image: '/images/products/aviation-accessories.jpg', price: '٣٤٩ ريال', link: '/ar/shop/aviation-uniforms/aviation-accessories' }
+          { id: 'pilot-uniform', name: 'زي طيار فاخر', image: '/images/product-placeholder.jpg', price: '١٥٩٩ ريال', link: '/ar/shop/aviation-uniforms/pilot-uniform' },
+          { id: 'ground-staff-uniform', name: 'زي طاقم الأرض', image: '/images/product-placeholder.jpg', price: '٨٩٩ ريال', link: '/ar/shop/aviation-uniforms/ground-staff-uniform' },
+          { id: 'aviation-accessories', name: 'مجموعة ملحقات الطيران', image: '/images/product-placeholder.jpg', price: '٣٤٩ ريال', link: '/ar/shop/aviation-uniforms/aviation-accessories' }
         ]
       }
     }

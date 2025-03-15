@@ -25,7 +25,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   primaryButtonUrl,
   secondaryButtonText,
   secondaryButtonUrl,
-  image = '/images/uneom_hero.jpg'
+  image = '/images/banner-placeholder.jpg'
 }) => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -39,62 +39,62 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     {
       title: "أزياء الرعاية الصحية بمعايير عالمية",
       subtitle: "راحة وحماية فائقة للعاملين في القطاع الطبي",
-      image: "/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg",
+      image: "/images/avatar-placeholder.jpg",
       cta: "استكشف حلول الرعاية الصحية"
     },
     {
       title: "خدمات التوصيل والشحن بزي موحد احترافي",
       subtitle: "أزياء عملية ومتينة لفرق التوصيل والخدمات اللوجستية",
-      image: "/images/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "استكشف خدماتنا"
     },
     {
       title: "أزياء مدرسية عالية الجودة",
       subtitle: "تصاميم مريحة وعملية للطلاب في جميع المراحل التعليمية",
-      image: "/images/back-to-elementary-school-concept-children-hold-h-2024-11-29-15-57-59-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "اكتشف الأزياء المدرسية"
     },
     {
       title: "أناقة وتميز لطاقم الطيران",
       subtitle: "أزياء تعكس رقي وفخامة شركات الطيران السعودية",
-      image: "/images/joyful-stewardesses-standing-near-aircraft-at-airp-2023-11-27-04-49-34-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "اكتشف مجموعة الطيران"
     },
     {
       title: "أزياء مهنية لمختلف القطاعات",
       subtitle: "نلبي احتياجات كافة المهن والتخصصات بتصاميم مبتكرة",
-      image: "/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "استكشف القطاعات"
     }
   ] : [
     {
       title: "World-Class Healthcare Apparel",
       subtitle: "Superior comfort and protection for medical professionals",
-      image: "/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg",
+      image: "/images/avatar-placeholder.jpg",
       cta: "Explore Healthcare Solutions"
     },
     {
       title: "Professional Delivery Service Uniforms",
       subtitle: "Practical and durable attire for logistics teams",
-      image: "/images/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "Discover Our Services"
     },
     {
       title: "Premium School Uniforms",
       subtitle: "Comfortable and practical designs for students of all ages",
-      image: "/images/back-to-elementary-school-concept-children-hold-h-2024-11-29-15-57-59-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "Explore School Uniforms"
     },
     {
       title: "Sophisticated Aviation Attire",
       subtitle: "Uniforms reflecting the elegance of Saudi airlines",
-      image: "/images/joyful-stewardesses-standing-near-aircraft-at-airp-2023-11-27-04-49-34-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "Discover Aviation Collection"
     },
     {
       title: "Professional Attire for All Sectors",
       subtitle: "Meeting the diverse needs of every profession with innovative designs",
-      image: "/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "Explore Industries"
     }
   ];

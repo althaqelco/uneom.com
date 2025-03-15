@@ -50,10 +50,10 @@ export default function PilotUniformSetPage() {
       { name: 'Customization', value: 'Airline logos, rank insignia, name embroidery' }
     ],
     images: [
-      { src: '/images/SAUDIA-pilots-flying-airplane-cockpit-SBI-342346123.jpg', alt: 'Saudi pilots in premium uniform in cockpit' },
-      { src: '/images/pilot-and-flight-attendant-walking-through-airport-SBI-300731574.jpg', alt: 'Pilot in premium uniform walking through airport' },
-      { src: '/images/pilot-adjusting-uniform-SBI-304638237.jpg', alt: 'Close-up of pilot uniform details' },
-      { src: '/images/group-of-professional-airline-crew-members-SBI-305823640.jpg', alt: 'Group of aviation professionals in uniform' }
+      { src: '/images/default-placeholder.jpg', alt: 'Saudi pilots in premium uniform in cockpit' },
+      { src: '/images/default-placeholder.jpg', alt: 'Pilot in premium uniform walking through airport' },
+      { src: '/images/product-placeholder.jpg', alt: 'Close-up of pilot uniform details' },
+      { src: '/images/default-placeholder.jpg', alt: 'Group of aviation professionals in uniform' }
     ],
     category: 'Aviation Uniforms',
     categorySlug: 'aviation-uniforms',
@@ -68,8 +68,8 @@ export default function PilotUniformSetPage() {
       { name: 'Complete Set with Winter Overcoat', price: 'SAR 2,499' }
     ],
     colors: [
-      { name: 'Navy Blue', value: '#1a2942', image: '/images/fabrics/navy-wool.jpg' },
-      { name: 'Black', value: '#232323', image: '/images/fabrics/black-wool.jpg' }
+      { name: 'Navy Blue', value: '#1a2942', image: '/images/default-placeholder.jpg' },
+      { name: 'Black', value: '#232323', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['46', '48', '50', '52', '54', '56', '58', '60', '62'],
     sizeEquivalents: {
@@ -89,14 +89,14 @@ export default function PilotUniformSetPage() {
         author: "Capt. Khalid Al-Mansour",
         position: "Chief Pilot",
         company: "Saudia Airlines",
-        image: "/images/testimonials/capt-khalid.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "After switching to UNEOM for our pilot uniforms, we've received numerous compliments from both passengers and crew. The durability is impressive, and the custom elements perfectly represent our airline's brand identity.",
         author: "Mohammed Al-Qahtani",
         position: "VP of Operations",
         company: "flynas",
-        image: "/images/testimonials/mohammed-qa.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -374,7 +374,7 @@ export default function PilotUniformSetPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/pilots-in-cockpit-of-commercial-airplane-SBI-301200845.jpg" 
+                src="/images/default-placeholder.jpg" 
                 alt="Professional pilots in customized airline uniforms" 
                 fill
                 className="object-cover"

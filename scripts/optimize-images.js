@@ -10,8 +10,8 @@ const fs = require('fs-extra');
 const path = require('path');
 const sharp = require('sharp');
 
-// مجلد الصور
-const imagesDir = path.join(process.cwd(), 'public/images');
+// مجلد الصور الرئيسي
+const imagesBaseDir = path.join(process.cwd(), 'public/images');
 // مجلد الصور المحسنة
 const optimizedDir = path.join(process.cwd(), 'public/images/optimized');
 
@@ -21,146 +21,104 @@ fs.ensureDirSync(optimizedDir);
 // قائمة بالصور التي تم تحسينها
 const optimizedImages = [];
 
-// الحد الأقصى لحجم الصورة (بالبايت) - 500 كيلوبايت
-const MAX_SIZE = 500 * 1024;
+// وظيفة للبحث عن جميع الصور في مجلد معين بشكل متكرر
+const findImagesRecursively = (dir) => {
+  let results = [];
+  const items = fs.readdirSync(dir, { withFileTypes: true });
+  
+  for (const item of items) {
+    const itemPath = path.join(dir, item.name);
+    
+    if (item.isDirectory() && item.name !== 'optimized') {
+      // إذا كان مجلدًا، ابحث بداخله بشكل متكرر
+      results = results.concat(findImagesRecursively(itemPath));
+    } else if (item.isFile()) {
+      // إذا كان ملفًا، تحقق مما إذا كان صورة
+      const ext = path.extname(item.name).toLowerCase();
+      if (['.jpg', '.jpeg', '.png', '.webp'].includes(ext) && 
+          !item.name.includes('placeholder') && 
+          !item.name.includes('logo') && 
+          !item.name.includes('pattern')) {
+        results.push(itemPath);
+      }
+    }
+  }
+  
+  return results;
+};
 
-// خيارات التحسين
-const REPLACE_ORIGINALS = true; // استبدال الصور الأصلية بالصور المضغوطة
-const QUALITY_JPEG = 75; // جودة صور JPEG
-const QUALITY_WEBP = 75; // جودة صور WebP
-const MAX_WIDTH = 1200; // الحد الأقصى للعرض
-const MAX_HEIGHT = 1200; // الحد الأقصى للارتفاع
-const CONVERT_TO_WEBP = false; // تحويل جميع الصور إلى WebP
-
-// قراءة محتويات المجلد
-async function optimizeImages() {
+// معالجة الصور
+const processImages = async () => {
   try {
-    const files = await fs.readdir(imagesDir, { withFileTypes: true });
-    
-    // تصفية الملفات (استبعاد المجلدات)
-    const imageFiles = files.filter(file => 
-      file.isFile() && 
-      !file.name.startsWith('.') && 
-      /\.(jpg|jpeg|png|webp)$/i.test(file.name)
-    );
-
+    const imageFiles = findImagesRecursively(imagesBaseDir);
     console.log(`تم العثور على ${imageFiles.length} صورة للتحسين.`);
-    
-    let totalOriginalSize = 0;
-    let totalOptimizedSize = 0;
 
     // معالجة كل صورة
-    for (const file of imageFiles) {
-      const filePath = path.join(imagesDir, file.name);
-      const stats = fs.statSync(filePath);
-      totalOriginalSize += stats.size;
-      
-      // تخطي الصور الصغيرة والصور الاحتياطية
-      if (stats.size < MAX_SIZE || 
-          file.name.includes('placeholder') || 
-          file.name.includes('logo') ||
-          file.name.includes('pattern')) {
-        console.log(`تخطي: ${file.name} (${(stats.size / 1024).toFixed(2)} KB) - أقل من الحد الأقصى أو صورة احتياطية`);
-        continue;
-      }
-      
-      const ext = path.extname(file.name).toLowerCase();
-      const baseName = path.basename(file.name, ext);
-      
-      // تحديد تنسيق الإخراج
-      const outputFormat = CONVERT_TO_WEBP ? 'webp' : ext.replace('.', '');
-      const outputExt = CONVERT_TO_WEBP ? '.webp' : ext;
-      const outputPath = REPLACE_ORIGINALS 
-        ? path.join(imagesDir, `${baseName}${outputExt}`) 
-        : path.join(optimizedDir, `${baseName}${outputExt}`);
-      
-      // إنشاء نسخة مؤقتة للتحسين
-      const tempOutputPath = path.join(optimizedDir, `temp_${baseName}${outputExt}`);
-      
+    for (const filePath of imageFiles) {
       try {
-        console.log(`تحسين: ${file.name} (${(stats.size / 1024).toFixed(2)} KB)`);
+        const stats = fs.statSync(filePath);
+        const fileName = path.basename(filePath);
+        const dirName = path.dirname(filePath);
+        const relativePath = path.relative(imagesBaseDir, dirName);
+        const ext = path.extname(fileName).toLowerCase();
+        const baseName = path.basename(fileName, ext);
         
-        // إعداد معالج الصورة
-        let imageProcessor = sharp(filePath)
-          .resize({ 
-            width: MAX_WIDTH, 
-            height: MAX_HEIGHT, 
-            fit: 'inside', 
-            withoutEnlargement: true 
-          });
+        // إنشاء مسار الصورة المحسنة
+        const optimizedSubDir = path.join(optimizedDir, relativePath);
+        fs.ensureDirSync(optimizedSubDir);
+        const outputPath = path.join(optimizedSubDir, `${baseName}.webp`);
         
-        // تطبيق التنسيق المناسب
-        if (outputFormat === 'webp') {
-          imageProcessor = imageProcessor.webp({ quality: QUALITY_WEBP });
-        } else if (outputFormat === 'jpg' || outputFormat === 'jpeg') {
-          imageProcessor = imageProcessor.jpeg({ quality: QUALITY_JPEG });
-        } else if (outputFormat === 'png') {
-          imageProcessor = imageProcessor.png({ quality: QUALITY_JPEG });
-        }
+        console.log(`تحسين: ${filePath} (${(stats.size / 1024 / 1024).toFixed(2)} MB)`);
         
-        // حفظ الصورة المحسنة
-        await imageProcessor.toFile(tempOutputPath);
+        // تحسين الصورة وتحويلها إلى WebP
+        await sharp(filePath)
+          .resize({ width: 1200, height: 1200, fit: 'inside', withoutEnlargement: true })
+          .webp({ quality: 80 })
+          .toFile(outputPath);
         
         // الحصول على حجم الصورة المحسنة
-        const optimizedStats = fs.statSync(tempOutputPath);
-        totalOptimizedSize += optimizedStats.size;
+        const optimizedStats = fs.statSync(outputPath);
         
-        // التحقق من أن الصورة المحسنة أصغر من الأصلية
-        if (optimizedStats.size < stats.size) {
-          // نقل الصورة المحسنة إلى المسار النهائي
-          if (REPLACE_ORIGINALS) {
-            // عمل نسخة احتياطية من الصورة الأصلية
-            const backupPath = path.join(optimizedDir, `original_${file.name}`);
-            await fs.copy(filePath, backupPath);
-            
-            // استبدال الصورة الأصلية بالصورة المحسنة
-            await fs.remove(filePath);
-            await fs.move(tempOutputPath, outputPath);
-          } else {
-            await fs.move(tempOutputPath, outputPath, { overwrite: true });
-          }
-          
-          optimizedImages.push({
-            original: file.name,
-            optimized: path.basename(outputPath),
-            originalSize: stats.size,
-            optimizedSize: optimizedStats.size,
-            reduction: ((stats.size - optimizedStats.size) / stats.size * 100).toFixed(2)
-          });
-          
-          console.log(`  -> تم التحسين: ${path.basename(outputPath)} (${(optimizedStats.size / 1024).toFixed(2)} KB, توفير ${((stats.size - optimizedStats.size) / stats.size * 100).toFixed(2)}%)`);
-        } else {
-          console.log(`  -> تخطي: الصورة المحسنة أكبر من الأصلية`);
-          await fs.remove(tempOutputPath);
-        }
+        optimizedImages.push({
+          original: filePath,
+          optimized: outputPath,
+          originalSize: stats.size,
+          optimizedSize: optimizedStats.size,
+          reduction: ((stats.size - optimizedStats.size) / stats.size * 100).toFixed(2)
+        });
+        
+        console.log(`  -> تم التحسين: ${outputPath} (${(optimizedStats.size / 1024 / 1024).toFixed(2)} MB, توفير ${((stats.size - optimizedStats.size) / stats.size * 100).toFixed(2)}%)`);
+        
+        // نسخ الصورة المحسنة إلى المجلد الأصلي مع الاحتفاظ بالامتداد الأصلي
+        await sharp(outputPath)
+          .toFile(filePath + '.temp');
+        
+        // حذف الملف الأصلي وإعادة تسمية الملف المؤقت
+        fs.unlinkSync(filePath);
+        fs.renameSync(filePath + '.temp', filePath);
+        
+        console.log(`  -> تم استبدال الصورة الأصلية بنسخة مضغوطة.`);
       } catch (error) {
-        console.error(`  -> خطأ في تحسين ${file.name}:`, error);
-        // حذف الملف المؤقت في حالة حدوث خطأ
-        if (fs.existsSync(tempOutputPath)) {
-          await fs.remove(tempOutputPath);
-        }
+        console.error(`  -> خطأ في تحسين ${filePath}:`, error);
       }
     }
     
     // طباعة ملخص
     console.log(`\nتم تحسين ${optimizedImages.length} صورة بنجاح.`);
-    console.log(`الحجم الإجمالي الأصلي: ${(totalOriginalSize / 1024 / 1024).toFixed(2)} MB`);
-    console.log(`الحجم الإجمالي بعد التحسين: ${(totalOptimizedSize / 1024 / 1024).toFixed(2)} MB`);
-    console.log(`نسبة التوفير: ${((totalOriginalSize - totalOptimizedSize) / totalOriginalSize * 100).toFixed(2)}%`);
     
     // إنشاء ملف نصي بالتغييرات
     if (optimizedImages.length > 0) {
       const mappingContent = optimizedImages.map(item => 
-        `${item.original} (${(item.originalSize / 1024).toFixed(2)} KB) -> ${item.optimized} (${(item.optimizedSize / 1024).toFixed(2)} KB, توفير ${item.reduction}%)`
+        `${item.original} (${(item.originalSize / 1024 / 1024).toFixed(2)} MB) -> ${item.optimized} (${(item.optimizedSize / 1024 / 1024).toFixed(2)} MB, توفير ${item.reduction}%)`
       ).join('\n');
       
       fs.writeFileSync(path.join(process.cwd(), 'optimized-images.txt'), mappingContent);
       console.log('تم إنشاء ملف optimized-images.txt يحتوي على قائمة بالصور التي تم تحسينها.');
     }
-  } catch (err) {
-    console.error('خطأ في معالجة الصور:', err);
+  } catch (error) {
+    console.error('خطأ في معالجة الصور:', error);
   }
-}
+};
 
-// تشغيل وظيفة تحسين الصور
-optimizeImages(); 
+// تنفيذ المعالجة
+processImages(); 

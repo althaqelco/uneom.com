@@ -8,7 +8,7 @@ export default function BulkOrderingServicePage() {
   const serviceData = {
     title: 'Bulk Ordering',
     subtitle: 'Streamlined procurement solutions for large-scale uniform requirements',
-    heroImage: '/images/services/bulk-ordering-hero.jpg',
+    heroImage: '/images/banner-placeholder.jpg',
     
     overview: [
       "UNEOM's Bulk Ordering service provides a streamlined solution for organizations requiring large quantities of uniforms across multiple departments or locations. Our specialized procurement team works with you to coordinate complex orders, manage logistics, and ensure consistent quality across your entire uniform program.",
@@ -17,22 +17,22 @@ export default function BulkOrderingServicePage() {
     
     steps: [
       {
-        icon: '/images/icons/requirements.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Requirements Assessment',
         description: 'We begin by conducting a thorough assessment of your uniform requirements, including quantities, styles, sizes, customization needs, and delivery timelines. This detailed understanding forms the foundation for an optimized procurement plan.'
       },
       {
-        icon: '/images/icons/proposal.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Proposal & Optimization',
         description: 'Our team develops a comprehensive proposal with volume-based pricing tiers and identifies opportunities for cost optimization without compromising quality. We work with you to refine the proposal until it perfectly aligns with your needs and budget.'
       },
       {
-        icon: '/images/icons/production.svg',
+        icon: '/images/product-placeholder.jpg',
         title: 'Production & Quality Control',
         description: 'Once approved, we coordinate the production process with rigorous quality control standards at every stage. Our dedicated teams ensure consistent sizing, correct customization, and adherence to all specifications across your entire order.'
       },
       {
-        icon: '/images/icons/logistics.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Logistics & Delivery',
         description: 'We manage all aspects of order fulfillment, including inventory management, packaging, shipping, and delivery coordination. For multi-location orders, we ensure each site receives the correct items on schedule.'
       }
@@ -40,32 +40,32 @@ export default function BulkOrderingServicePage() {
     
     benefits: [
       {
-        icon: '/images/icons/savings.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Cost Efficiency',
         description: 'Benefit from significant volume discounts, optimized production processes, and efficient logistics management that can reduce overall uniform costs by 15-30%.'
       },
       {
-        icon: '/images/icons/quality.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Consistent Quality',
         description: 'Our stringent quality control protocols ensure uniform consistency across your entire order, regardless of quantity or complexity.'
       },
       {
-        icon: '/images/icons/time.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Time Savings',
         description: 'Eliminate the administrative burden of managing multiple vendors or orders with our single-source solution for all uniform requirements.'
       },
       {
-        icon: '/images/icons/flexibility.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Flexible Ordering Options',
         description: 'Choose from one-time bulk procurement, scheduled recurring orders, or on-demand ordering systems based on your operational needs.'
       },
       {
-        icon: '/images/icons/logistics.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Simplified Logistics',
         description: 'Our sophisticated logistics management handles complex distribution requirements, ensuring the right uniforms reach the right locations at the right time.'
       },
       {
-        icon: '/images/icons/reports.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Detailed Reporting',
         description: 'Receive comprehensive order tracking, inventory reports, and cost analysis to maintain complete visibility throughout the procurement process.'
       }
@@ -77,21 +77,21 @@ export default function BulkOrderingServicePage() {
         title: "Luxury Hotel Chain Uniform Rollout",
         description: "A leading luxury hotel chain needed to outfit 2,500 staff members across 12 locations with new uniforms as part of a brand refresh.",
         result: "Reduced procurement costs by 22% while ensuring consistent quality and on-time delivery to all locations.",
-        image: "/images/case-studies/hotel-uniform-case.jpg"
+        image: "/images/product-placeholder.jpg"
       },
       {
         id: "airline-rebrand",
         title: "International Airline Rebrand",
         description: "A major airline required 10,000+ new uniforms for flight attendants, ground crew, and administrative staff following a complete brand redesign.",
         result: "Successfully delivered the entire order within a tight 3-month timeline while maintaining impeccable quality standards.",
-        image: "/images/case-studies/airline-uniform-case.jpg"
+        image: "/images/product-placeholder.jpg"
       },
       {
         id: "hospital-network",
         title: "Hospital Network Standardization",
         description: "A network of 8 hospitals needed to standardize staff uniforms across all facilities while accommodating different department requirements.",
         result: "Implemented a comprehensive uniform program with color-coding by department, reducing annual uniform costs by 18%.",
-        image: "/images/case-studies/hospital-uniform-case.jpg"
+        image: "/images/product-placeholder.jpg"
       }
     ],
     
@@ -102,7 +102,7 @@ export default function BulkOrderingServicePage() {
         author: 'Dr. Ibrahim Al-Harbi',
         position: 'Operations Director',
         company: 'National Healthcare Group',
-        image: '/images/testimonials/testimonial1.jpg'
+        image: '/images/avatar-placeholder.jpg'
       },
       {
         id: "education-manager",
@@ -110,7 +110,7 @@ export default function BulkOrderingServicePage() {
         author: 'Nadia Al-Faisal',
         position: 'Procurement Manager',
         company: 'Al-Faisal Educational Foundation',
-        image: '/images/testimonials/testimonial2.jpg'
+        image: '/images/avatar-placeholder.jpg'
       }
     ],
     

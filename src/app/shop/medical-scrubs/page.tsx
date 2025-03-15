@@ -31,7 +31,7 @@ export default function MedicalScrubsPage() {
       name: 'Premium Scrubs Set',
       description: 'High-performance medical scrubs designed for healthcare professionals who require comfort, durability, and a professional appearance.',
       price: 'From SAR 249',
-      image: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/medical-scrubs/premium-scrubs-set',
       features: ['Antimicrobial', 'Moisture-wicking', 'Wrinkle-resistant', 'Multiple pockets'],
       colors: ['Teal', 'Navy', 'Burgundy', 'Grey', 'Black'],
@@ -42,7 +42,7 @@ export default function MedicalScrubsPage() {
       name: 'Antimicrobial Scrubs',
       description: 'Advanced medical scrubs with enhanced antimicrobial properties for healthcare environments where infection control is paramount.',
       price: 'From SAR 279',
-      image: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/medical-scrubs/antimicrobial-scrubs',
       features: ['Enhanced hygiene', 'Odor control', 'Fluid-resistant', 'Durable construction'],
       colors: ['Light Blue', 'Navy', 'White', 'Green'],
@@ -53,7 +53,7 @@ export default function MedicalScrubsPage() {
       name: 'Nursing Scrubs Set',
       description: 'Comfortable and practical scrubs specifically designed for nursing professionals with functional features for daily hospital tasks.',
       price: 'From SAR 229',
-      image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/medical-scrubs/nursing-scrubs',
       features: ['Stretch fabric', 'Ergonomic design', 'Easy care', 'Stain resistant'],
       colors: ['Ceil Blue', 'Navy', 'Pink', 'Burgundy']
@@ -63,7 +63,7 @@ export default function MedicalScrubsPage() {
       name: 'Surgical Scrubs',
       description: 'Specialized medical scrubs designed for the surgical environment with heightened considerations for sterility and comfort.',
       price: 'From SAR 269',
-      image: '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/medical-scrubs/surgical-scrubs',
       features: ['Sterile compatible', 'Specialized fabric', 'Optimal fit', 'Quick-dry material'],
       colors: ['Light Green', 'Light Blue', 'Navy', 'Light Grey']
@@ -73,7 +73,7 @@ export default function MedicalScrubsPage() {
       name: 'Professional Lab Coat',
       description: 'High-quality medical lab coat with modern fit and practical features designed for healthcare and laboratory professionals.',
       price: 'From SAR 199',
-      image: '/images/doctor-SBI-300813580.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/medical-scrubs/medical-lab-coat',
       features: ['Professional look', 'Stain resistant', 'Durable fabric', 'Multiple pockets'],
       colors: ['White', 'Light Blue']
@@ -83,7 +83,7 @@ export default function MedicalScrubsPage() {
       name: 'Executive Medical Uniform',
       description: 'Premium medical uniform designed for healthcare executives and administrators, balancing professional appearance with comfort.',
       price: 'From SAR 349',
-      image: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg',
+      image: '/images/avatar-placeholder.jpg',
       href: '/shop/medical-scrubs/executive-medical-uniform',
       features: ['Premium fabric', 'Executive styling', 'Comfortable fit', 'Professional look'],
       colors: ['Navy', 'Black', 'Grey', 'White']
@@ -143,7 +143,7 @@ export default function MedicalScrubsPage() {
       <section className="relative pt-16 pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg"
+            src="/images/default-placeholder.jpg"
             alt="Medical Scrubs"
             fill
             className="object-cover object-center"
@@ -376,7 +376,7 @@ export default function MedicalScrubsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg"
+                    src="/images/avatar-placeholder.jpg"
                     alt="Healthcare Accessories"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -410,7 +410,7 @@ export default function MedicalScrubsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/schoolchildren-pretending-to-be-businesspeople-wit-2024-11-08-16-13-21-utc.jpg"
+                    src="/images/default-placeholder.jpg"
                     alt="Corporate Workwear"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -447,7 +447,7 @@ export default function MedicalScrubsPage() {
             <div className="hidden lg:block">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="Custom Medical Uniform Design Service"
                   fill
                   className="object-cover"

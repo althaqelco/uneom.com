@@ -50,10 +50,10 @@ export default function PremiumHotelUniformsPage() {
       { name: 'Customization', value: 'Hotel logos, staff names, department color coding' }
     ],
     images: [
-      { src: '/images/staff-at-hotel-reception-desk-SBI-301124909.jpg', alt: 'Hotel reception staff in premium uniforms' },
-      { src: '/images/smiling-hotel-concierge-in-luxury-hotel-SBI-301184583.jpg', alt: 'Concierge in premium hotel uniform' },
-      { src: '/images/professional-housekeeping-staff-in-hotel-corridor-SBI-300983722.jpg', alt: 'Housekeeping staff in professional uniforms' },
-      { src: '/images/hotel-manager-welcoming-guests-at-entrance-SBI-301856284.jpg', alt: 'Hotel manager in executive uniform greeting guests' }
+      { src: '/images/default-placeholder.jpg', alt: 'Hotel reception staff in premium uniforms' },
+      { src: '/images/default-placeholder.jpg', alt: 'Concierge in premium hotel uniform' },
+      { src: '/images/default-placeholder.jpg', alt: 'Housekeeping staff in professional uniforms' },
+      { src: '/images/default-placeholder.jpg', alt: 'Hotel manager in executive uniform greeting guests' }
     ],
     category: 'Hospitality Attire',
     categorySlug: 'hospitality-attire',
@@ -68,11 +68,11 @@ export default function PremiumHotelUniformsPage() {
       { name: 'Management Executive Uniform', price: 'SAR 1,199' }
     ],
     colors: [
-      { name: 'Rich Burgundy', value: '#800020', image: '/images/fabrics/burgundy-wool.jpg' },
-      { name: 'Royal Gold', value: '#caa548', image: '/images/fabrics/gold-wool.jpg' },
-      { name: 'Deep Navy', value: '#1a2942', image: '/images/fabrics/navy-wool.jpg' },
-      { name: 'Emerald Green', value: '#2e5d4b', image: '/images/fabrics/emerald-wool.jpg' },
-      { name: 'Classic Black', value: '#232323', image: '/images/fabrics/black-wool.jpg' }
+      { name: 'Rich Burgundy', value: '#800020', image: '/images/default-placeholder.jpg' },
+      { name: 'Royal Gold', value: '#caa548', image: '/images/default-placeholder.jpg' },
+      { name: 'Deep Navy', value: '#1a2942', image: '/images/default-placeholder.jpg' },
+      { name: 'Emerald Green', value: '#2e5d4b', image: '/images/default-placeholder.jpg' },
+      { name: 'Classic Black', value: '#232323', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -91,14 +91,14 @@ export default function PremiumHotelUniformsPage() {
         author: "Abdullah Al-Mansour",
         position: "General Manager",
         company: "Royal Palms Riyadh Hotel",
-        image: "/images/testimonials/abdullah-m.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "Working with UNEOM has significantly simplified our uniform management. The fabric quality is outstanding - showing minimal wear even after months of constant use, and their design team understood our need to balance traditional Saudi elegance with modern hospitality standards.",
         author: "Nadia Al-Harbi",
         position: "Executive Housekeeper",
         company: "Jeddah Grand Resort & Spa",
-        image: "/images/testimonials/nadia-h.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -376,7 +376,7 @@ export default function PremiumHotelUniformsPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/luxury-hotel-staff-lineup-SBI-304958721.jpg" 
+                src="/images/default-placeholder.jpg" 
                 alt="Luxury hotel staff in coordinated customized uniforms" 
                 fill
                 className="object-cover"

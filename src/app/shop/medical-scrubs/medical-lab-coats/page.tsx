@@ -51,10 +51,10 @@ export default function MedicalLabCoatsPage() {
       { name: 'Customization Options', value: 'Hospital logos, name/credential embroidery, department color coding' }
     ],
     images: [
-      { src: '/images/doctor-lab-coat-stethoscope-SBI-300089088.jpg', alt: 'Doctor wearing premium white lab coat with stethoscope' },
-      { src: '/images/female-doctor-lab-coat-hospital-SBI-300845754.jpg', alt: 'Female physician in professional lab coat in hospital setting' },
-      { src: '/images/medical-professionals-consultation-SBI-300874118.jpg', alt: 'Medical professionals in lab coats during consultation' },
-      { src: '/images/saudi-doctor-lab-coat-hospital-SBI-301256844.jpg', alt: 'Saudi healthcare professional in tailored lab coat' }
+      { src: '/images/default-placeholder.jpg', alt: 'Doctor wearing premium white lab coat with stethoscope' },
+      { src: '/images/default-placeholder.jpg', alt: 'Female physician in professional lab coat in hospital setting' },
+      { src: '/images/default-placeholder.jpg', alt: 'Medical professionals in lab coats during consultation' },
+      { src: '/images/default-placeholder.jpg', alt: 'Saudi healthcare professional in tailored lab coat' }
     ],
     category: 'Medical Scrubs',
     categorySlug: 'medical-scrubs',
@@ -70,11 +70,11 @@ export default function MedicalLabCoatsPage() {
       { name: 'Enhanced Modesty Design', price: 'SAR 315' }
     ],
     colors: [
-      { name: 'White', value: '#FFFFFF', image: '/images/fabrics/white-lab-coat.jpg' },
-      { name: 'Light Blue', value: '#ADD8E6', image: '/images/fabrics/light-blue-lab-coat.jpg' },
-      { name: 'Navy', value: '#000080', image: '/images/fabrics/navy-lab-coat.jpg' },
-      { name: 'Black', value: '#000000', image: '/images/fabrics/black-lab-coat.jpg' },
-      { name: 'Grey', value: '#808080', image: '/images/fabrics/grey-lab-coat.jpg' }
+      { name: 'White', value: '#FFFFFF', image: '/images/default-placeholder.jpg' },
+      { name: 'Light Blue', value: '#ADD8E6', image: '/images/default-placeholder.jpg' },
+      { name: 'Navy', value: '#000080', image: '/images/default-placeholder.jpg' },
+      { name: 'Black', value: '#000000', image: '/images/default-placeholder.jpg' },
+      { name: 'Grey', value: '#808080', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL', '5XL'],
     sizeEquivalents: {
@@ -94,14 +94,14 @@ export default function MedicalLabCoatsPage() {
         author: "Dr. Abdullah Al-Qahtani",
         position: "Medical Director",
         company: "King Fahad Medical City",
-        image: "/images/testimonials/abdullah-q.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "After switching to Uneom's premium lab coats, we've received numerous compliments from patients about our staff's professional appearance. The modest design options have been particularly valuable for our female physicians, and the durability through repeated laundering has made these coats a cost-effective choice for our hospital network.",
         author: "Dr. Samar Al-Zamil",
         position: "Chief of Medical Staff",
         company: "Saudi German Hospital Group",
-        image: "/images/testimonials/samar-z.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -348,7 +348,7 @@ export default function MedicalLabCoatsPage() {
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/hospital-corridor-doctors-lab-coats-SBI-300765421.jpg" 
+                  src="/images/default-placeholder.jpg" 
                   alt="Medical professionals in customized lab coats" 
                   fill
                   className="object-cover"

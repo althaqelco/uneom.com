@@ -8,7 +8,7 @@ export default function ProcurementGuidePage() {
     locale: 'en',
     title: 'Uniform Procurement Guide',
     subtitle: 'Strategic approaches to sourcing and managing uniform programs effectively',
-    heroImage: '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg',
+    heroImage: '/images/default-placeholder.jpg',
     overview: {
       title: 'Optimizing Your Uniform Procurement Process',
       content: `
@@ -66,7 +66,7 @@ export default function ProcurementGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/smiling-airplane-crew-members-walking-together-on-2023-11-27-05-07-27-utc.jpg',
+        image: '/images/default-placeholder.jpg',
       },
       {
         title: 'Supplier Selection',
@@ -115,7 +115,7 @@ export default function ProcurementGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg',
+        image: '/images/default-placeholder.jpg',
       },
       {
         title: 'Program Implementation',
@@ -158,7 +158,7 @@ export default function ProcurementGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+        image: '/images/default-placeholder.jpg',
       }
     ],
     items: [
@@ -166,25 +166,25 @@ export default function ProcurementGuidePage() {
         id: "needs-assessment",
         title: "Needs Assessment",
         description: "Conduct a thorough assessment of functional requirements, compliance standards, and brand considerations.",
-        image: "/images/needs-assessment-uniform.jpg"
+        image: "/images/product-placeholder.jpg"
       },
       {
         id: "supplier-selection",
         title: "Supplier Selection",
         description: "Choose the right supplier based on quality, capacity, experience, and ethical practices.",
-        image: "/images/supplier-selection-uniform.jpg"
+        image: "/images/product-placeholder.jpg"
       },
       {
         id: "budget-planning",
         title: "Budget Planning",
         description: "Create a comprehensive budget accounting for initial costs, replacements, and management expenses.",
-        image: "/images/budget-planning-uniform.jpg"
+        image: "/images/product-placeholder.jpg"
       },
       {
         id: "implementation",
         title: "Implementation & Distribution",
         description: "Develop an effective distribution strategy and timeline for your uniform program rollout.",
-        image: "/images/implementation-uniform.jpg"
+        image: "/images/product-placeholder.jpg"
       }
     ],
     relatedResources: [

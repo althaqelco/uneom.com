@@ -11,7 +11,7 @@ export default function SecurityPageArabic() {
   const securityIndustryData = {
     title: "أزياء الأمن المهنية في المملكة العربية السعودية",
     subtitle: "ملابس عمل ذات سلطة ووظيفة مصممة لأفراد ومنشآت الأمن السعودية",
-    heroImage: "/images/industries/security-hero.jpg",
+    heroImage: "/images/banner-placeholder.jpg",
     
     introduction: [
       "في قطاع الأمن المتوسع في المملكة العربية السعودية، يعد المظهر المهني جانبًا حاسمًا من السلطة والموثوقية والفعالية التشغيلية. توفر يونيوم أزياء أمن فاخرة مصممة خصيصًا لبيئات الأمن السعودية، مع الجمع بين الحضور القيادي والوظائف العملية والتصميم المناسب للمناخ.",
@@ -49,28 +49,28 @@ export default function SecurityPageArabic() {
         id: "formal-security",
         name: "أزياء الأمن الرسمية",
         description: "ملابس أمن من الدرجة المهنية للمرافق التجارية والمباني الحكومية والمواقع رفيعة المستوى التي تتطلب حضوراً ذا سلطة.",
-        image: "/images/ar/shop/formal-security.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/ar/shop/formal-security"
       },
       {
         id: "tactical-security",
         name: "ملابس الأمن التكتيكية",
         description: "أزياء ذات متانة معززة مع جيوب متخصصة وتقوية وميزات تكتيكية لأفراد الأمن النشطين.",
-        image: "/images/ar/shop/tactical-security.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/ar/shop/tactical-security"
       },
       {
         id: "event-security",
         name: "ملابس أمن الفعاليات",
         description: "أزياء عالية الرؤية، يسهل التعرف عليها لطاقم الفعاليات، وإدارة الحشود، وعمليات أمن الأماكن العامة.",
-        image: "/images/ar/shop/event-security.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/ar/shop/event-security"
       },
       {
         id: "executive-protection",
         name: "ملابس الحماية التنفيذية",
         description: "ملابس متحفظة ومهنية لضباط الحماية الشخصية وتفاصيل الأمن التنفيذي مع ميزات تكتيكية مخفية.",
-        image: "/images/ar/shop/executive-protection.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/ar/shop/executive-protection"
       }
     ],
@@ -128,7 +128,7 @@ export default function SecurityPageArabic() {
         author: "عبدالله القحطاني",
         position: "مدير عمليات الأمن",
         company: "خدمات الأمن الملكية",
-        image: "/images/testimonials/abdullah-al-qahtani.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ],
     

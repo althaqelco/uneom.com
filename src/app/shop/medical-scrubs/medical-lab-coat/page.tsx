@@ -184,10 +184,10 @@ export default function MedicalLabCoatPage() {
     leadTime: '10-12 days',
     customization: true,
     images: [
-      { src: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg', alt: 'Medical professional wearing lab coat' },
-      { src: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg', alt: 'Diverse healthcare professionals in medical attire' },
-      { src: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg', alt: 'Medical team in hospital corridor' },
-      { src: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg', alt: 'Doctor smiling in lab coat' }
+      { src: '/images/default-placeholder.jpg', alt: 'Medical professional wearing lab coat' },
+      { src: '/images/default-placeholder.jpg', alt: 'Diverse healthcare professionals in medical attire' },
+      { src: '/images/avatar-placeholder.jpg', alt: 'Medical team in hospital corridor' },
+      { src: '/images/default-placeholder.jpg', alt: 'Doctor smiling in lab coat' }
     ],
     colors: [
       { name: 'Pure White', value: '#FFFFFF' },

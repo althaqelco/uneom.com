@@ -28,7 +28,7 @@ export default function WorkplaceUniformsPage() {
       id: 'executive-suits',
       name: 'Executive Tailored Suits',
       price: 'From SAR 1,299',
-      image: '/images/corporate-man-in-suit.jpg',
+      image: '/images/default-placeholder.jpg',
       rating: 4.9,
       reviews: 87,
       description: 'Premium tailored suits designed for corporate executives who require sophistication, comfort, and a distinguished professional appearance.',
@@ -38,7 +38,7 @@ export default function WorkplaceUniformsPage() {
       id: 'corporate-shirts',
       name: 'Corporate Premium Shirts',
       price: 'From SAR 249',
-      image: '/images/corporate-shirts.jpg',
+      image: '/images/default-placeholder.jpg',
       rating: 4.7,
       reviews: 124,
       description: 'High-quality corporate shirts in a variety of colors, featuring moisture-wicking fabric and easy-care properties for professional daily wear.',
@@ -48,7 +48,7 @@ export default function WorkplaceUniformsPage() {
       id: 'office-blazers',
       name: 'Professional Office Blazers',
       price: 'From SAR 899',
-      image: '/images/office-blazers.jpg',
+      image: '/images/default-placeholder.jpg',
       rating: 4.6,
       reviews: 58,
       description: 'Elegant yet comfortable blazers for business professionals, available in various styles suitable for Saudi corporate environments.',
@@ -58,7 +58,7 @@ export default function WorkplaceUniformsPage() {
       id: 'executive-abayas',
       name: 'Executive Modest Abayas',
       price: 'From SAR 799',
-      image: '/images/executive-abayas.jpg',
+      image: '/images/default-placeholder.jpg',
       rating: 4.8,
       reviews: 92,
       description: 'Professional abayas designed specifically for corporate settings, combining traditional modesty with contemporary business aesthetics.',
@@ -68,7 +68,7 @@ export default function WorkplaceUniformsPage() {
       id: 'formal-trousers',
       name: 'Corporate Formal Trousers',
       price: 'From SAR 399',
-      image: '/images/formal-trousers.jpg',
+      image: '/images/avatar-placeholder.jpg',
       rating: 4.5,
       reviews: 77,
       description: 'Durable formal trousers with comfortable stretch fabric, designed for long days in the office environment.',
@@ -78,7 +78,7 @@ export default function WorkplaceUniformsPage() {
       id: 'corporate-skirts',
       name: 'Professional Modest Skirts',
       price: 'From SAR 349',
-      image: '/images/corporate-skirts.jpg',
+      image: '/images/default-placeholder.jpg',
       rating: 4.6,
       reviews: 64,
       description: 'Professional length skirts designed for corporate settings, maintaining modesty while offering a polished business appearance.',
@@ -143,7 +143,7 @@ export default function WorkplaceUniformsPage() {
         <div className="mt-8 relative rounded-xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-800/40 z-10"></div>
           <Image 
-            src="/images/corporate-team.jpg"
+            src="/images/avatar-placeholder.jpg"
             alt="Corporate team wearing professional uniforms"
             width={1200}
             height={400}
@@ -268,7 +268,7 @@ export default function WorkplaceUniformsPage() {
             </div>
             <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
               <Image 
-                src="/images/corporate-program.jpg" 
+                src="/images/default-placeholder.jpg" 
                 alt="Corporate uniform program" 
                 fill
                 className="object-cover"

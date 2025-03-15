@@ -8,7 +8,7 @@ export default function SizeGuidePage() {
     locale: 'en',
     title: 'Uniform Size Guide',
     subtitle: 'Comprehensive measurements for the perfect fit across all uniform types',
-    heroImage: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg',
+    heroImage: '/images/default-placeholder.jpg',
     overview: {
       title: 'Finding the Right Fit',
       content: `
@@ -60,7 +60,7 @@ export default function SizeGuidePage() {
             <p>Measure around the base of the neck, where a collar would sit.</p>
           </div>
         `,
-        image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+        image: '/images/default-placeholder.jpg',
       },
       {
         title: 'Standard Size Charts',
@@ -174,7 +174,7 @@ export default function SizeGuidePage() {
             </table>
           </div>
         `,
-        image: '/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg',
+        image: '/images/product-placeholder.jpg',
       },
       {
         title: 'Industry-Specific Sizing',
@@ -214,7 +214,7 @@ export default function SizeGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
+        image: '/images/default-placeholder.jpg',
       }
     ],
     items: [
@@ -222,25 +222,25 @@ export default function SizeGuidePage() {
         id: "mens-sizing",
         title: "Men's Sizing Guide",
         description: "Complete measurements and size charts for all men's uniform categories.",
-        image: "/images/mens-sizing-chart.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       {
         id: "womens-sizing",
         title: "Women's Sizing Guide",
         description: "Detailed measurements for women's uniforms with size conversion tables.",
-        image: "/images/womens-sizing-chart.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       {
         id: "measurement-guide",
         title: "Measurement Guide",
         description: "Instructions for taking accurate body measurements for the perfect uniform fit.",
-        image: "/images/measurement-guide.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       {
         id: "size-conversion",
         title: "Size Conversion Tables",
         description: "International size conversion charts for global uniform programs.",
-        image: "/images/size-conversion-chart.jpg"
+        image: "/images/default-placeholder.jpg"
       }
     ],
     relatedResources: [

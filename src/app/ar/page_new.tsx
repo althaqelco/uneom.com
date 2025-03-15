@@ -71,25 +71,25 @@ const services = [
   {
     title: 'تصميم الزي الموحد',
     description: 'تصميمات مبتكرة تعكس هوية علامتك التجارية وتلبي المتطلبات العملية لموظفيك.',
-    icon: '/images/icons/design.svg',
+    icon: '/images/default-placeholder.jpg',
     link: '/ar/services/custom-design',
   },
   {
     title: 'إنتاج وتوريد الزي الموحد',
     description: 'خدمات إنتاج عالية الجودة بأسعار تنافسية، مع مراعاة الاستدامة والراحة.',
-    icon: '/images/icons/production.svg',
+    icon: '/images/product-placeholder.jpg',
     link: '/ar/services/bulk-ordering',
   },
   {
     title: 'إدارة برامج الزي الموحد',
     description: 'حلول متكاملة لإدارة برنامج الزي الموحد الخاص بمؤسستك من البداية إلى النهاية.',
-    icon: '/images/icons/management.svg',
+    icon: '/images/default-placeholder.jpg',
     link: '/ar/services/program-management',
   },
   {
     title: 'خدمات القياس',
     description: 'خدمات قياس احترافية تضمن ملاءمة مثالية لجميع موظفيك مهما اختلفت أحجامهم.',
-    icon: '/images/icons/measuring.svg',
+    icon: '/images/default-placeholder.jpg',
     link: '/ar/services/measurement-services',
   },
 ];
@@ -99,32 +99,32 @@ const features = [
   {
     title: 'تصميم مخصص',
     description: 'نصمم الزي الموحد خصيصًا ليعكس هوية علامتك التجارية ويلبي احتياجات موظفيك.',
-    icon: '/images/icons/custom-design.svg',
+    icon: '/images/default-placeholder.jpg',
   },
   {
     title: 'مواد عالية الجودة',
     description: 'نستخدم فقط أفضل الأقمشة والمواد لضمان الراحة والمتانة والمظهر المهني.',
-    icon: '/images/icons/quality.svg',
+    icon: '/images/default-placeholder.jpg',
   },
   {
     title: 'توافق مع المعايير السعودية',
     description: 'جميع منتجاتنا متوافقة مع المعايير السعودية ومناسبة للبيئة المحلية.',
-    icon: '/images/icons/compliance.svg',
+    icon: '/images/default-placeholder.jpg',
   },
   {
     title: 'التسليم السريع',
     description: 'نلتزم بجداول التسليم المحددة لنضمن وصول طلبك في الوقت المناسب.',
-    icon: '/images/icons/delivery.svg',
+    icon: '/images/default-placeholder.jpg',
   },
   {
     title: 'دعم مستمر',
     description: 'فريق دعم متخصص جاهز لمساعدتك في أي استفسارات أو متطلبات إضافية.',
-    icon: '/images/icons/support.svg',
+    icon: '/images/default-placeholder.jpg',
   },
   {
     title: 'أسعار تنافسية',
     description: 'نقدم أسعارًا تنافسية مع الحفاظ على أعلى معايير الجودة لجميع منتجاتنا.',
-    icon: '/images/icons/price.svg',
+    icon: '/images/default-placeholder.jpg',
   },
 ];
 
@@ -197,49 +197,49 @@ export default function HomePage() {
     {
       title: "الزي الموحد المميز للمؤسسات السعودية",
       subtitle: "حلول متكاملة تجمع بين الهوية الوطنية والمعايير العالمية",
-      image: "/images/montage-about-different-professions-2024-10-11-23-29-42-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "اطلب عرض سعر"
     },
     {
       title: "أزياء الرعاية الصحية بمعايير عالمية",
       subtitle: "راحة وحماية فائقة للعاملين في القطاع الطبي",
-      image: "/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg",
+      image: "/images/avatar-placeholder.jpg",
       cta: "استكشف حلول الرعاية الصحية"
     },
     {
       title: "خدمات التوصيل والشحن بزي موحد احترافي",
       subtitle: "أزياء عملية ومتينة لفرق التوصيل والخدمات اللوجستية",
-      image: "/images/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "استكشف خدماتنا"
     },
     {
       title: "أزياء مدرسية عالية الجودة",
       subtitle: "تصاميم مريحة وعملية للطلاب في جميع المراحل التعليمية",
-      image: "/images/back-to-elementary-school-concept-children-hold-h-2024-11-29-15-57-59-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "اكتشف الأزياء المدرسية"
     },
     {
       title: "أناقة وتميز لطاقم الطيران",
       subtitle: "أزياء تعكس رقي وفخامة شركات الطيران السعودية",
-      image: "/images/joyful-stewardesses-standing-near-aircraft-at-airp-2023-11-27-04-49-34-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "اكتشف مجموعة الطيران"
     },
     {
       title: "أزياء مهنية لمختلف القطاعات",
       subtitle: "نلبي احتياجات كافة المهن والتخصصات بتصاميم مبتكرة",
-      image: "/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "استكشف القطاعات"
     },
     {
       title: "أزياء المطاعم والضيافة",
       subtitle: "تصاميم أنيقة وعملية لفرق الطهي وخدمة العملاء",
-      image: "/images/group-of-chefs-standing-with-arms-crossed-in-kitch-2023-11-27-05-01-36-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "اكتشف أزياء الضيافة"
     },
     {
       title: "مجموعة متكاملة من الأزياء المهنية",
       subtitle: "حلول متخصصة لكل مهنة ولكل قطاع",
-      image: "/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg",
+      image: "/images/default-placeholder.jpg",
       cta: "تصفح منتجاتنا"
     }
   ];
@@ -652,7 +652,7 @@ export default function HomePage() {
             <div className="relative h-[600px] rounded-xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-900/80 to-primary-600/50 mix-blend-multiply z-10"></div>
               <Image
-                src="/images/fabric-material-2024-12-06-03-35-02-utc.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="تقنيات الأقمشة المتطورة"
                 fill
                 className="object-cover"
@@ -767,7 +767,7 @@ export default function HomePage() {
                   author: "د. سارة الفايز",
                   position: "مديرة الخدمات الطبية",
                   company: "مستشفى الأمل",
-                  image: "/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg",
+                  image: "/images/default-placeholder.jpg",
                   industry: "الرعاية الصحية"
                 },
                 {
@@ -775,7 +775,7 @@ export default function HomePage() {
                   author: "كابتن خالد الشمري",
                   position: "مدير العمليات",
                   company: "الخليج للطيران",
-                  image: "/images/female-flight-attendant-or-air-hostess-standing-in-2024-10-18-08-14-24-utc.jpg",
+                  image: "/images/default-placeholder.jpg",
                   industry: "الطيران"
                 },
                 {
@@ -783,7 +783,7 @@ export default function HomePage() {
                   author: "أحمد العتيبي",
                   position: "مدير المشتريات",
                   company: "فنادق القمة",
-                  image: "/images/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg",
+                  image: "/images/default-placeholder.jpg",
                   industry: "الضيافة"
                 }
               ].map((testimonial, index) => (
@@ -951,7 +951,7 @@ export default function HomePage() {
                 excerpt: "استكشف أحدث اتجاهات الزي الموحد في المملكة وكيف تؤثر الرؤية السعودية 2030 على قطاع الملابس المهنية.",
                 slug: "uniform-trends-2023",
                 date: "23 مايو 2023",
-                image: "/images/saudimoving_hero.jpg",
+                image: "/images/banner-placeholder.jpg",
                 author: "محمد العلي",
                 category: "اتجاهات"
               },
@@ -960,7 +960,7 @@ export default function HomePage() {
                 excerpt: "كيف تتبنى الشركات السعودية ممارسات الاستدامة في الزي الموحد وتأثير ذلك على البيئة والاقتصاد.",
                 slug: "sustainable-uniforms",
                 date: "14 يونيو 2023",
-                image: "/images/bright-raincoats-hanging-at-a-fashion-store-2024-12-16-06-50-01-utc.jpg",
+                image: "/images/default-placeholder.jpg",
                 author: "سارة الأحمد",
                 category: "الاستدامة"
               },
@@ -969,7 +969,7 @@ export default function HomePage() {
                 excerpt: "دليل شامل لاختيار الزي الطبي المناسب الذي يلبي متطلبات الراحة والأداء والامتثال للمعايير.",
                 slug: "choosing-healthcare-uniforms",
                 date: "02 يوليو 2023",
-                image: "/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg",
+                image: "/images/avatar-placeholder.jpg",
                 author: "د. فهد العنزي",
                 category: "دليل"
               }

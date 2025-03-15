@@ -43,10 +43,10 @@ export default function SecurityOfficerUniformArabicPage() {
       { name: 'خيارات التخصيص', value: 'تطريز شعار الشركة، شارات الاسم، شارات الكتف' }
     ],
     images: [
-      { src: '/images/firefighters-fight-the-fire-flame-to-control-fire-not-to-spreading-out-firefighter-ind-SBI-349465280.jpg', alt: 'زي ضابط الأمن الاحترافي - منظر أمامي' },
-      { src: '/images/a-brunette-man-with-a-beard-in-a-white-protective-uniform-and-an-orange-vest-presses-c-SBI-351495165.jpg', alt: 'زي ضابط الأمن على النموذج' },
-      { src: '/images/builder-in-helmet-with-a-suitcase-says-on-camera-on-a-green-screen-chroma-key-SBI-351072375.jpg', alt: 'تفاصيل زي ضابط الأمن' },
-      { src: '/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg', alt: 'ملحقات الأمن' }
+      { src: '/images/default-placeholder.jpg', alt: 'زي ضابط الأمن الاحترافي - منظر أمامي' },
+      { src: '/images/product-placeholder.jpg', alt: 'زي ضابط الأمن على النموذج' },
+      { src: '/images/default-placeholder.jpg', alt: 'تفاصيل زي ضابط الأمن' },
+      { src: '/images/default-placeholder.jpg', alt: 'ملحقات الأمن' }
     ],
     category: 'أزياء الأمن',
     categorySlug: 'security-uniforms',
@@ -76,21 +76,21 @@ export default function SecurityOfficerUniformArabicPage() {
       {
         id: 'security-patrol-jacket',
         name: 'سترة دورية أمنية',
-        image: '/images/builder-in-helmet-with-a-suitcase-says-on-camera-on-a-green-screen-chroma-key-SBI-351072375.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ريال 389',
         href: '/ar/shop/security-uniforms/security-patrol-jacket'
       },
       {
         id: 'tactical-security-vest',
         name: 'سترة أمنية تكتيكية',
-        image: '/images/a-brunette-man-with-a-beard-in-a-white-protective-uniform-and-an-orange-vest-presses-c-SBI-351495165.jpg',
+        image: '/images/product-placeholder.jpg',
         price: 'من ريال 249',
         href: '/ar/shop/security-uniforms/tactical-security-vest'
       },
       {
         id: 'security-accessories-kit',
         name: 'طقم ملحقات أمنية',
-        image: '/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ريال 179',
         href: '/ar/shop/security-uniforms/security-accessories-kit'
       }

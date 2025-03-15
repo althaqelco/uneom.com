@@ -51,10 +51,10 @@ export default function ProfessionalLabCoatPage() {
       { name: 'Customization Options', value: 'Institutional embroidery, credential embroidery, professional piping, custom pocket configurations' }
     ],
     images: [
-      { src: '/images/doctor-professional-lab-coat-consultation-SBI-300198271.jpg', alt: 'Medical consultant wearing premium professional lab coat during patient consultation' },
-      { src: '/images/female-doctor-executive-lab-coat-SBI-300876391.jpg', alt: 'Female healthcare executive in tailored professional lab coat at medical center' },
-      { src: '/images/hospital-directors-meeting-SBI-300912478.jpg', alt: 'Hospital directors in professional lab coats during executive medical meeting' },
-      { src: '/images/saudi-physician-professional-attire-SBI-301345621.jpg', alt: 'Saudi specialist physician in premium professional lab coat with medical team' }
+      { src: '/images/default-placeholder.jpg', alt: 'Medical consultant wearing premium professional lab coat during patient consultation' },
+      { src: '/images/default-placeholder.jpg', alt: 'Female healthcare executive in tailored professional lab coat at medical center' },
+      { src: '/images/default-placeholder.jpg', alt: 'Hospital directors in professional lab coats during executive medical meeting' },
+      { src: '/images/default-placeholder.jpg', alt: 'Saudi specialist physician in premium professional lab coat with medical team' }
     ],
     category: 'Medical Scrubs',
     categorySlug: 'medical-scrubs',
@@ -70,11 +70,11 @@ export default function ProfessionalLabCoatPage() {
       { name: 'Department Chairman Attire', price: 'SAR 450' }
     ],
     colors: [
-      { name: 'Classic White', value: '#FFFFFF', image: '/images/fabrics/classic-white-professional.jpg' },
-      { name: 'Ivory White', value: '#FFFFF0', image: '/images/fabrics/ivory-white-professional.jpg' },
-      { name: 'Executive Navy', value: '#000080', image: '/images/fabrics/executive-navy-professional.jpg' },
-      { name: 'Prestigious Black', value: '#000000', image: '/images/fabrics/prestigious-black-professional.jpg' },
-      { name: 'Silver Grey', value: '#C0C0C0', image: '/images/fabrics/silver-grey-professional.jpg' }
+      { name: 'Classic White', value: '#FFFFFF', image: '/images/default-placeholder.jpg' },
+      { name: 'Ivory White', value: '#FFFFF0', image: '/images/default-placeholder.jpg' },
+      { name: 'Executive Navy', value: '#000080', image: '/images/default-placeholder.jpg' },
+      { name: 'Prestigious Black', value: '#000000', image: '/images/default-placeholder.jpg' },
+      { name: 'Silver Grey', value: '#C0C0C0', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL', '5XL'],
     sizeEquivalents: {
@@ -94,14 +94,14 @@ export default function ProfessionalLabCoatPage() {
         author: "Prof. Dr. Ibrahim Al-Sharif",
         position: "Chief Medical Officer",
         company: "Royal Saudi Medical Complex",
-        image: "/images/testimonials/ibrahim-s.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "After implementing Uneom's Professional Elite Lab Coats for our department chairs and consultants, we've observed a measurable improvement in patient confidence and professional presence. The tailored fit and distinguished styling create an immediate impression of expertise and authority. The fabric quality maintains its pristine appearance even with intensive wear, and the customized embroidery options allow us to clearly differentiate our specialists.",
         author: "Dr. Nora Al-Qahtani",
         position: "Head of Executive Medicine",
         company: "King Abdullah Medical City",
-        image: "/images/testimonials/nora-q.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -348,7 +348,7 @@ export default function ProfessionalLabCoatPage() {
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/hospital-executive-meeting-SBI-300574321.jpg" 
+                  src="/images/default-placeholder.jpg" 
                   alt="Hospital executives in professional lab coats during leadership meeting" 
                   fill
                   className="object-cover"

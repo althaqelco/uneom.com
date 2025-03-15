@@ -37,9 +37,9 @@ const productData = {
   ],
   images: [
     { src: '/images/products/scrubs-set.jpg', alt: 'Antimicrobial Scrubs Front View' },
-    { src: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg', alt: 'Medical professionals wearing Antimicrobial Scrubs' },
-    { src: '/images/fabric-material-2024-12-06-03-35-02-utc.jpg', alt: 'Antimicrobial Fabric Close-up' },
-    { src: '/images/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg', alt: 'Fluid-resistant Fabric Demonstration' }
+    { src: '/images/default-placeholder.jpg', alt: 'Medical professionals wearing Antimicrobial Scrubs' },
+    { src: '/images/default-placeholder.jpg', alt: 'Antimicrobial Fabric Close-up' },
+    { src: '/images/default-placeholder.jpg', alt: 'Fluid-resistant Fabric Demonstration' }
   ],
   category: 'Medical Scrubs',
   categorySlug: 'medical-scrubs',

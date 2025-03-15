@@ -187,10 +187,10 @@ export default function AirlineServiceVestPage() {
     leadTime: '14-18 days',
     customization: true,
     images: [
-      { src: '/images/cheerful-women-stewardesses-standing-on-airplane-s-2023-11-27-05-08-55-utc.jpg', alt: 'Airline staff in professional service vests' },
-      { src: '/images/joyful-stewardesses-standing-near-aircraft-at-airp-2023-11-27-04-49-34-utc.jpg', alt: 'Cabin crew members wearing service vests' },
-      { src: '/images/a-delivery-person-dressed-in-a-red-polo-and-cap-shows-approval-with-a-thumbs-up-while--SBI-350024443.jpg', alt: 'Service personnel in professional vest' },
-      { src: '/images/close-up-of-asian-male-courier-in-blue-uniform-showing-a-carton-to-camera-and-smiling--SBI-351601765.jpg', alt: 'Staff member in airline service vest' }
+      { src: '/images/default-placeholder.jpg', alt: 'Airline staff in professional service vests' },
+      { src: '/images/default-placeholder.jpg', alt: 'Cabin crew members wearing service vests' },
+      { src: '/images/default-placeholder.jpg', alt: 'Service personnel in professional vest' },
+      { src: '/images/product-placeholder.jpg', alt: 'Staff member in airline service vest' }
     ],
     colors: [
       { name: 'Navy Blue', value: '#000080' },

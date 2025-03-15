@@ -10,7 +10,7 @@ export default function HospitalityPageArabic() {
   const hospitalityIndustryData = {
     title: "أزياء الضيافة الفاخرة في المملكة العربية السعودية",
     subtitle: "ملابس أنيقة وعملية للفنادق والمنتجعات والمطاعم ومرافق الفعاليات",
-    heroImage: "/images/industries/hospitality-hero.jpg",
+    heroImage: "/images/banner-placeholder.jpg",
     
     introduction: [
       "يشهد قطاع الضيافة في المملكة العربية السعودية نموًا غير مسبوق، مع زيادة الاستثمار في الفنادق الفاخرة والمطاعم الراقية والبنية التحتية السياحية. مع فتح المملكة أبوابها للزوار الدوليين من خلال مبادرات رؤية 2030، أصبحت أهمية مظهر الموظفين أكثر أهمية من أي وقت مضى.",
@@ -48,28 +48,28 @@ export default function HospitalityPageArabic() {
         id: "hotel-front-office",
         name: "مجموعة مكتب استقبال الفندق",
         description: "أزياء راقية لموظفي الاستقبال والكونسيرج ومسؤولي علاقات النزلاء تخلق انطباعًا أوليًا لا يُنسى.",
-        image: "/images/ar/shop/hotel-front-desk.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/ar/ar/shop/hotel-front-office"
       },
       {
         id: "food-beverage",
         name: "ملابس الطعام والمشروبات",
         description: "أزياء عملية وأنيقة لنوادل المطاعم والبارمن وموظفي خدمة الطعام مع تقنيات مقاومة للبقع.",
-        image: "/images/ar/shop/restaurant-staff.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/ar/ar/shop/food-beverage-uniforms"
       },
       {
         id: "housekeeping",
         name: "التدبير المنزلي والصيانة",
         description: "أزياء متينة ومريحة للتدبير المنزلي والصيانة وموظفي الدعم تسمح بسهولة الحركة.",
-        image: "/images/ar/shop/housekeeping.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/ar/ar/shop/housekeeping-uniforms"
       },
       {
         id: "luxury-hospitality",
         name: "المجموعة الفاخرة",
         description: "أزياء فاخرة للمنشآت ذات الخمس نجوم تضم أقمشة عالية الجودة وحرفية مفصلة وعناصر تصميم مخصصة.",
-        image: "/images/ar/shop/luxury-hospitality.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/ar/ar/shop/luxury-hospitality-uniforms"
       }
     ],
@@ -127,7 +127,7 @@ export default function HospitalityPageArabic() {
         author: "محمد الفيصل",
         position: "المدير العام",
         company: "فندق ومنتجع الواحة الكبرى، الرياض",
-        image: "/images/testimonials/mohammad-al-faisal.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ],
     

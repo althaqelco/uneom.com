@@ -187,10 +187,10 @@ export default function FlightAttendantDressPage() {
     leadTime: '18-21 days',
     customization: true,
     images: [
-      { src: '/images/female-flight-attendant-or-air-hostess-standing-in-2024-10-18-08-14-24-utc.jpg', alt: 'Female flight attendant in professional dress uniform' },
-      { src: '/images/cheerful-flight-attendant-standing-in-airport-term-2024-10-18-08-12-48-utc.jpg', alt: 'Flight attendant in elegant cabin crew dress' },
-      { src: '/images/smiling-attractive-stewardess-getting-ready-to-fli-2024-10-18-12-57-27-utc.jpg', alt: 'Saudi airline flight attendant in professional uniform' },
-      { src: '/images/cheerful-women-stewardesses-standing-on-airplane-s-2023-11-27-05-08-55-utc.jpg', alt: 'Group of flight attendants in coordinated uniform dresses' }
+      { src: '/images/default-placeholder.jpg', alt: 'Female flight attendant in professional dress uniform' },
+      { src: '/images/default-placeholder.jpg', alt: 'Flight attendant in elegant cabin crew dress' },
+      { src: '/images/default-placeholder.jpg', alt: 'Saudi airline flight attendant in professional uniform' },
+      { src: '/images/default-placeholder.jpg', alt: 'Group of flight attendants in coordinated uniform dresses' }
     ],
     colors: [
       { name: 'Navy Blue', value: '#000080' },

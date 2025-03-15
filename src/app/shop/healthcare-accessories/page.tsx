@@ -65,25 +65,25 @@ export default function HealthcareAccessoriesPage() {
         {
           title: 'Medical Name Badges',
           description: 'Professional identification badges customized with institutional branding.',
-          image: '/images/products/name-badge.jpg',
+          image: '/images/product-placeholder.jpg',
           url: '/shop/healthcare-accessories/medical-name-badges'
         },
         {
           title: 'Stethoscope Holders',
           description: 'Convenient holders designed for secure and hygienic stethoscope storage.',
-          image: '/images/products/stethoscope-holder.jpg',
+          image: '/images/product-placeholder.jpg',
           url: '/shop/healthcare-accessories/stethoscope-holders'
         },
         {
           title: 'Instrument Pouches',
           description: 'Multi-compartment pouches for organized medical instrument storage.',
-          image: '/images/products/instrument-pouch.jpg',
+          image: '/images/product-placeholder.jpg',
           url: '/shop/healthcare-accessories/instrument-pouches'
         },
         {
           title: 'Medical Footwear',
           description: 'Comfortable and slip-resistant footwear for healthcare professionals.',
-          image: '/images/doctor-SBI-300813580.jpg',
+          image: '/images/default-placeholder.jpg',
           url: '/shop/healthcare-accessories/medical-footwear'
         }
       ],
@@ -94,7 +94,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'premium-stethoscope-case',
           name: 'Premium Stethoscope Case',
           description: 'Protective stethoscope case with antimicrobial lining and personalization options.',
-          image: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg',
+          image: '/images/avatar-placeholder.jpg',
           price: 'SAR 85',
           url: '/shop/healthcare-accessories/premium-stethoscope-case'
         },
@@ -102,7 +102,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'digital-name-badge',
           name: 'Digital Smart Name Badge',
           description: 'Advanced digital badge with programmable displays and institutional branding options.',
-          image: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg',
+          image: '/images/default-placeholder.jpg',
           price: 'SAR 120',
           url: '/shop/healthcare-accessories/digital-name-badge'
         },
@@ -110,7 +110,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'advanced-instrument-pouch',
           name: 'Advanced Instrument Pouch',
           description: 'Multi-compartment pouch with antimicrobial treatment for secure tool organization.',
-          image: '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg',
+          image: '/images/default-placeholder.jpg',
           price: 'SAR 95',
           url: '/shop/healthcare-accessories/advanced-instrument-pouch'
         },
@@ -118,7 +118,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'comfort-pro-medical-clogs',
           name: 'Comfort Pro Medical Clogs',
           description: 'Ergonomic, slip-resistant clogs designed for extended wear in healthcare settings.',
-          image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+          image: '/images/default-placeholder.jpg',
           price: 'SAR 220',
           url: '/shop/healthcare-accessories/comfort-pro-medical-clogs'
         },
@@ -126,7 +126,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'professional-id-holder',
           name: 'Professional ID Holder Kit',
           description: 'Complete ID badge solution with retractable holder and protective covering.',
-          image: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
+          image: '/images/default-placeholder.jpg',
           price: 'SAR 75',
           url: '/shop/healthcare-accessories/professional-id-holder'
         },
@@ -134,7 +134,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'antimicrobial-badge-reel',
           name: 'Antimicrobial Badge Reel',
           description: 'Badge reel with antimicrobial surface treatment and extended cord for convenience.',
-          image: '/images/doctor-SBI-300813580.jpg',
+          image: '/images/default-placeholder.jpg',
           price: 'SAR 45',
           url: '/shop/healthcare-accessories/antimicrobial-badge-reel'
         }
@@ -154,25 +154,25 @@ export default function HealthcareAccessoriesPage() {
         {
           title: 'شارات الأسماء الطبية',
           description: 'شارات تعريفية احترافية مخصصة بالعلامة التجارية للمؤسسة.',
-          image: '/images/products/name-badge.jpg',
+          image: '/images/product-placeholder.jpg',
           url: '/ar/shop/healthcare-accessories/medical-name-badges'
         },
         {
           title: 'حاملات السماعة الطبية',
           description: 'حاملات مريحة مصممة للتخزين الآمن والصحي للسماعة الطبية.',
-          image: '/images/products/stethoscope-holder.jpg',
+          image: '/images/product-placeholder.jpg',
           url: '/ar/shop/healthcare-accessories/stethoscope-holders'
         },
         {
           title: 'حقائب الأدوات',
           description: 'حقائب متعددة الأقسام لتنظيم الأدوات الطبية.',
-          image: '/images/products/instrument-pouch.jpg',
+          image: '/images/product-placeholder.jpg',
           url: '/ar/shop/healthcare-accessories/instrument-pouches'
         },
         {
           title: 'الأحذية الطبية',
           description: 'أحذية مريحة ومقاومة للانزلاق للمتخصصين في الرعاية الصحية.',
-          image: '/images/doctor-SBI-300813580.jpg',
+          image: '/images/default-placeholder.jpg',
           url: '/ar/shop/healthcare-accessories/medical-footwear'
         }
       ],
@@ -183,7 +183,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'premium-stethoscope-case',
           name: 'حافظة السماعة الطبية الفاخرة',
           description: 'حافظة واقية للسماعة الطبية مع بطانة مضادة للميكروبات وخيارات التخصيص.',
-          image: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg',
+          image: '/images/avatar-placeholder.jpg',
           price: 'ريال 85',
           url: '/ar/shop/healthcare-accessories/premium-stethoscope-case'
         },
@@ -191,7 +191,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'digital-name-badge',
           name: 'شارة الاسم الذكية الرقمية',
           description: 'شارة رقمية متقدمة مع شاشات قابلة للبرمجة وخيارات العلامات التجارية المؤسسية.',
-          image: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg',
+          image: '/images/default-placeholder.jpg',
           price: 'ريال 120',
           url: '/ar/shop/healthcare-accessories/digital-name-badge'
         },
@@ -199,7 +199,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'advanced-instrument-pouch',
           name: 'حقيبة أدوات متقدمة',
           description: 'حقيبة متعددة الأقسام مع معالجة مضادة للميكروبات لتنظيم الأدوات بشكل آمن.',
-          image: '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg',
+          image: '/images/default-placeholder.jpg',
           price: 'ريال 95',
           url: '/ar/shop/healthcare-accessories/advanced-instrument-pouch'
         },
@@ -207,7 +207,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'comfort-pro-medical-clogs',
           name: 'أحذية طبية مريحة برو',
           description: 'أحذية مريحة ومقاومة للانزلاق مصممة للارتداء الطويل في بيئات الرعاية الصحية.',
-          image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+          image: '/images/default-placeholder.jpg',
           price: 'ريال 220',
           url: '/ar/shop/healthcare-accessories/comfort-pro-medical-clogs'
         },
@@ -215,7 +215,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'professional-id-holder',
           name: 'طقم حامل بطاقة هوية احترافي',
           description: 'حل كامل لشارة الهوية مع حامل قابل للسحب وغطاء واقي.',
-          image: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
+          image: '/images/default-placeholder.jpg',
           price: 'ريال 75',
           url: '/ar/shop/healthcare-accessories/professional-id-holder'
         },
@@ -223,7 +223,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'antimicrobial-badge-reel',
           name: 'بكرة شارة مضادة للميكروبات',
           description: 'بكرة شارة مع معالجة سطحية مضادة للميكروبات وحبل ممتد للراحة.',
-          image: '/images/doctor-SBI-300813580.jpg',
+          image: '/images/default-placeholder.jpg',
           price: 'ريال 45',
           url: '/ar/shop/healthcare-accessories/antimicrobial-badge-reel'
         }
@@ -332,7 +332,7 @@ export default function HealthcareAccessoriesPage() {
           <div className="md:w-1/3 mt-6 md:mt-0 flex justify-center">
             <div className="w-48 h-48 relative">
               <Image 
-                src="/images/doctor-SBI-300813580.jpg" 
+                src="/images/default-placeholder.jpg" 
                 alt="Healthcare Professional"
                 fill
                 className="object-cover rounded-lg"

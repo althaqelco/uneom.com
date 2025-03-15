@@ -24,21 +24,21 @@ export default function IndustriesPageArabic() {
       id: 'healthcare',
       name: 'الرعاية الصحية',
       description: 'أزياء طبية وملابس رعاية صحية عالية الجودة مصممة للمستشفيات والعيادات والمرافق الطبية في المملكة العربية السعودية.',
-      image: '/images/industries/healthcare-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/ar/industries/healthcare'
     },
     {
       id: 'aviation',
       name: 'الطيران',
       description: 'أزياء فاخرة للطيارين وطاقم الضيافة تمثل شركة طيرانك بتميز وراحة.',
-      image: '/images/industries/aviation-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/ar/industries/aviation'
     },
     {
       id: 'hospitality',
       name: 'الضيافة',
       description: 'أزياء أنيقة وعملية للفنادق والمطاعم وخدمات الضيافة في جميع أنحاء المملكة العربية السعودية.',
-      image: '/images/industries/hospitality-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/ar/industries/hospitality'
     }
   ];
@@ -48,28 +48,28 @@ export default function IndustriesPageArabic() {
       id: 'corporate',
       name: 'الشركات',
       description: 'ملابس وأزياء احترافية للشركات مصممة خصيصًا لبيئات الأعمال السعودية.',
-      image: '/images/industries/corporate-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/ar/industries/corporate'
     },
     {
       id: 'education',
       name: 'التعليم',
       description: 'أزياء متينة ومريحة للمدارس والجامعات والمؤسسات التعليمية.',
-      image: '/images/industries/education-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/ar/industries/education'
     },
     {
       id: 'manufacturing',
       name: 'التصنيع',
       description: 'ملابس عمل متوافقة مع معايير السلامة ومصممة للبيئات الصناعية مع مراعاة مناخ المملكة العربية السعودية.',
-      image: '/images/industries/manufacturing-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/ar/industries/manufacturing'
     },
     {
       id: 'security',
       name: 'الأمن',
       description: 'أزياء أمنية احترافية تعكس السلطة مع توفير الراحة والوظائف العملية.',
-      image: '/images/industries/security-feature.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/ar/industries/security'
     }
   ];
@@ -80,7 +80,7 @@ export default function IndustriesPageArabic() {
       <section className="relative bg-gradient-to-r from-neutral-900 to-neutral-800 text-white py-20">
         <div className="absolute inset-0 overflow-hidden opacity-25">
           <Image
-            src="/images/industries/industries-hero.jpg"
+            src="/images/banner-placeholder.jpg"
             alt="قطاعات يونيوم"
             fill
             className="object-cover"
@@ -126,7 +126,7 @@ export default function IndustriesPageArabic() {
             <div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/industries/industry-expertise.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="خبرة يونيوم في القطاعات"
                   width={600}
                   height={400}

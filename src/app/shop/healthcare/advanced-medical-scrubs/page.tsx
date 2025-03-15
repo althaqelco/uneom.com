@@ -50,10 +50,10 @@ export default function AdvancedMedicalScrubsPage() {
       { name: 'Customization', value: 'Hospital logos, name embroidery, department color coding' }
     ],
     images: [
-      { src: '/images/doctor-consultation-wearing-scrubs-SBI-300174204.jpg', alt: 'Doctor wearing advanced medical scrubs during consultation' },
-      { src: '/images/nurses-at-hospital-wearing-scrubs-SBI-301282375.jpg', alt: 'Nurses in advanced medical scrubs at hospital station' },
-      { src: '/images/surgical-team-operating-theater-SBI-301726744.jpg', alt: 'Surgical team wearing specialized medical attire in operating theater' },
-      { src: '/images/hijab-doctor-stethoscope-hospital-SBI-301837244.jpg', alt: 'Muslim female doctor in hijab-compatible medical scrubs' }
+      { src: '/images/default-placeholder.jpg', alt: 'Doctor wearing advanced medical scrubs during consultation' },
+      { src: '/images/default-placeholder.jpg', alt: 'Nurses in advanced medical scrubs at hospital station' },
+      { src: '/images/avatar-placeholder.jpg', alt: 'Surgical team wearing specialized medical attire in operating theater' },
+      { src: '/images/default-placeholder.jpg', alt: 'Muslim female doctor in hijab-compatible medical scrubs' }
     ],
     category: 'Healthcare',
     categorySlug: 'healthcare',
@@ -69,14 +69,14 @@ export default function AdvancedMedicalScrubsPage() {
       { name: 'Maternity Medical Scrubs', price: 'SAR 339' }
     ],
     colors: [
-      { name: 'Royal Blue', value: '#4169e1', image: '/images/fabrics/royal-blue-scrubs.jpg' },
-      { name: 'Surgical Green', value: '#2e8b57', image: '/images/fabrics/surgical-green-scrubs.jpg' },
-      { name: 'Burgundy', value: '#800020', image: '/images/fabrics/burgundy-scrubs.jpg' },
-      { name: 'Navy', value: '#000080', image: '/images/fabrics/navy-scrubs.jpg' },
-      { name: 'Ceil Blue', value: '#92a1cf', image: '/images/fabrics/ceil-blue-scrubs.jpg' },
-      { name: 'Black', value: '#000000', image: '/images/fabrics/black-scrubs.jpg' },
-      { name: 'Pewter', value: '#8e8e8e', image: '/images/fabrics/pewter-scrubs.jpg' },
-      { name: 'Wine', value: '#722f37', image: '/images/fabrics/wine-scrubs.jpg' }
+      { name: 'Royal Blue', value: '#4169e1', image: '/images/default-placeholder.jpg' },
+      { name: 'Surgical Green', value: '#2e8b57', image: '/images/default-placeholder.jpg' },
+      { name: 'Burgundy', value: '#800020', image: '/images/default-placeholder.jpg' },
+      { name: 'Navy', value: '#000080', image: '/images/default-placeholder.jpg' },
+      { name: 'Ceil Blue', value: '#92a1cf', image: '/images/default-placeholder.jpg' },
+      { name: 'Black', value: '#000000', image: '/images/default-placeholder.jpg' },
+      { name: 'Pewter', value: '#8e8e8e', image: '/images/default-placeholder.jpg' },
+      { name: 'Wine', value: '#722f37', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -95,14 +95,14 @@ export default function AdvancedMedicalScrubsPage() {
         author: "Dr. Fatima Al-Zahrani",
         position: "Chief of Medical Staff",
         company: "King Fahd Medical City",
-        image: "/images/testimonials/dr-fatima.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "After standardizing with UNEOM's medical scrubs across our facilities, we've noticed a significant improvement in staff satisfaction and professional appearance. The department color-coding system has improved visual identification, and the custom features for different specialties have been widely appreciated.",
         author: "Ahmad Al-Nasser",
         position: "Director of Procurement",
         company: "Saudi German Hospitals Group",
-        image: "/images/testimonials/ahmad-n.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -375,7 +375,7 @@ export default function AdvancedMedicalScrubsPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/doctor-and-nurse-consultation-SBI-300912540.jpg" 
+                src="/images/default-placeholder.jpg" 
                 alt="Healthcare professionals in customized medical attire" 
                 fill
                 className="object-cover"

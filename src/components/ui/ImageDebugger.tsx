@@ -119,7 +119,7 @@ const ImageDebugger: React.FC = () => {
         // With and without leading slash
         originalSrc.startsWith('/') ? originalSrc.substring(1) : `/${originalSrc}`,
         // With _next prefix
-        `/_next/static/images/${originalSrc.split('/').pop()}`,
+        `/_next/static/images/default-placeholder.jpg'/').pop()}`,
         // With absolute URL
         `${window.location.origin}${originalSrc.startsWith('/') ? '' : '/'}${originalSrc}`,
         // Fallback

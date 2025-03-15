@@ -187,10 +187,10 @@ export default function GroundCrewUniformPage() {
     leadTime: '16-18 days',
     customization: true,
     images: [
-      { src: '/images/a-brunette-man-with-a-beard-in-a-white-protective-uniform-and-an-orange-vest-presses-c-SBI-351495165.jpg', alt: 'Ground crew member in high-visibility uniform' },
-      { src: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg', alt: 'Aviation ground staff in safety uniform' },
-      { src: '/images/builder-in-helmet-with-a-suitcase-says-on-camera-on-a-green-screen-chroma-key-SBI-351072375.jpg', alt: 'Ground operations personnel in safety attire' },
-      { src: '/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg', alt: 'Ramp service crew member in high-visibility uniform' }
+      { src: '/images/product-placeholder.jpg', alt: 'Ground crew member in high-visibility uniform' },
+      { src: '/images/default-placeholder.jpg', alt: 'Aviation ground staff in safety uniform' },
+      { src: '/images/default-placeholder.jpg', alt: 'Ground operations personnel in safety attire' },
+      { src: '/images/product-placeholder.jpg', alt: 'Ramp service crew member in high-visibility uniform' }
     ],
     colors: [
       { name: 'High Visibility Yellow', value: '#FFFF00' },

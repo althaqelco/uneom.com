@@ -8,7 +8,7 @@ export default function UniformPoliciesServicePageArabic() {
     locale: 'ar',
     title: 'سياسات الزي الموحد للشركات',
     subtitle: 'إرشادات شاملة لحوكمة فعالة لبرنامج الزي الموحد',
-    heroImage: '/images/services/uniform-policies-hero.jpg',
+    heroImage: '/images/product-placeholder.jpg',
     
     overview: [
       "توفر خدمة سياسات الزي الموحد للشركات من يونيوم إرشادات خبيرة في تطوير أطر حوكمة شاملة وفعالة لبرنامج الزي الموحد الخاص بك. نقوم بإنشاء سياسات مخصصة تتوافق مع ثقافة مؤسستك ومتطلبات الصناعة واحتياجاتك التشغيلية مع ضمان الامتثال للوائح ذات الصلة.",
@@ -17,22 +17,22 @@ export default function UniformPoliciesServicePageArabic() {
     
     steps: [
       {
-        icon: '/images/icons/assessment.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'تقييم الاحتياجات',
         description: 'نبدأ بتقييم شامل لهيكل مؤسستك وثقافتها ومتطلبات الصناعة والإجراءات الحالية المتعلقة بالزي الموحد لتحديد احتياجات وأهداف السياسة.'
       },
       {
-        icon: '/images/icons/documents.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'تطوير السياسة',
         description: 'يقوم متخصصونا بصياغة سياسات شاملة للزي الموحد تتناول جميع جوانب برنامجك، من معايير التصميم وإرشادات الارتداء إلى إجراءات الشراء وتدابير الامتثال.'
       },
       {
-        icon: '/images/icons/review.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'مراجعة أصحاب المصلحة',
         description: 'نقوم بتسهيل جلسات مراجعة تعاونية مع أصحاب المصلحة الرئيسيين لجمع التعليقات ومعالجة المخاوف وتحسين عناصر السياسة لضمان المواءمة التنظيمية والتنفيذ العملي.'
       },
       {
-        icon: '/images/icons/implementation.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'تخطيط التنفيذ',
         description: 'نقوم بتطوير استراتيجيات تنفيذ مفصلة وخطط اتصال ومواد تدريبية وإجراءات إدارية لضمان اعتماد السياسة بنجاح في جميع أنحاء مؤسستك.'
       }
@@ -40,32 +40,32 @@ export default function UniformPoliciesServicePageArabic() {
     
     benefits: [
       {
-        icon: '/images/icons/governance.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'حوكمة واضحة',
         description: 'وضع إرشادات شفافة ومحددة بوضوح تزيل الارتباك وعدم الاتساق في إدارة برنامج الزي الموحد.'
       },
       {
-        icon: '/images/icons/compliance.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'الامتثال التنظيمي',
         description: 'ضمان امتثال برنامج الزي الموحد الخاص بك للوائح الصناعة ومعايير السلامة وقوانين العمل ذات الصلة.'
       },
       {
-        icon: '/images/icons/consistency.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'اتساق العلامة التجارية',
         description: 'الحفاظ على معايير موحدة تمثل هوية علامتك التجارية بدقة واتساق عبر جميع المواقع والأقسام.'
       },
       {
-        icon: '/images/icons/efficiency.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'الكفاءة الإدارية',
         description: 'تبسيط عمليات صنع القرار وتقليل العبء الإداري من خلال بروتوكولات واضحة لجميع المسائل المتعلقة بالزي الموحد.'
       },
       {
-        icon: '/images/icons/conflict.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'حل النزاعات',
         description: 'توفير أطر واضحة لمعالجة القضايا المتعلقة بالزي الموحد والتسهيلات والظروف الخاصة.'
       },
       {
-        icon: '/images/icons/integration.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'التكامل التشغيلي',
         description: 'مواءمة سياسات الزي الموحد مع الأنظمة التنظيمية الأخرى بما في ذلك التوظيف وعمليات الموارد البشرية وحوكمة الشركات.'
       }
@@ -77,14 +77,14 @@ export default function UniformPoliciesServicePageArabic() {
         title: 'توحيد سياسات شبكة مصرفية',
         description: 'توحيد ممارسات الزي الموحد غير المتسقة عبر أكثر من 75 فرعًا. تطوير إطار شامل لسياسة الزي الموحد مع إرشادات متدرجة لمختلف الأدوار ومعايير بصرية واضحة.',
         result: 'تحقيق امتثال للسياسة بنسبة 94% خلال 3 أشهر، وتقليل حوادث الموارد البشرية المتعلقة بالزي الموحد بنسبة 78%، وتحسين تقييمات اتساق العلامة التجارية.',
-        image: '/images/case-studies/banking-policy-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: "industrial-safety",
         title: 'سياسة الزي الموحد للسلامة الصناعية',
         description: 'تحقيق التوازن بين الامتثال للسلامة والاعتبارات الثقافية في عملية متعددة المرافق. إنشاء إطار سياسة نمطي للزي الموحد يتناول متطلبات السلامة والتسهيلات الدينية.',
         result: 'تحقيق امتثال تنظيمي كامل، وتقليل حوادث السلامة المتعلقة بالزي الموحد بنسبة 64%، وزيادة رضا الموظفين عن الزي الموحد بنسبة 47%.',
-        image: '/images/case-studies/industrial-policy-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       }
     ],
     
@@ -95,7 +95,7 @@ export default function UniformPoliciesServicePageArabic() {
         author: 'نواف الحربي',
         position: 'مدير العمليات',
         company: 'مجموعة البنك التجاري الوطني',
-        image: '/images/testimonials/nawaf-al-harbi.jpg'
+        image: '/images/avatar-placeholder.jpg'
       },
       {
         id: "2",
@@ -103,7 +103,7 @@ export default function UniformPoliciesServicePageArabic() {
         author: 'م. سعد القحطاني',
         position: 'مدير الامتثال للصحة والسلامة والبيئة',
         company: 'الصناعات البتروكيماوية السعودية',
-        image: '/images/testimonials/saad-al-qahtani.jpg'
+        image: '/images/avatar-placeholder.jpg'
       }
     ],
     

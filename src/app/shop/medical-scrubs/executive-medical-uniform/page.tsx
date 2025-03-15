@@ -205,10 +205,10 @@ export default function ExecutiveMedicalUniformPage() {
     leadTime: '14-18 days',
     customization: true,
     images: [
-      { src: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg', alt: 'Executive medical professionals in premium healthcare uniforms' },
-      { src: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg', alt: 'Medical administration team in executive uniforms' },
-      { src: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg', alt: 'Healthcare executive in professional medical attire' },
-      { src: '/images/doctor-SBI-300813580.jpg', alt: 'Medical director in executive uniform' }
+      { src: '/images/default-placeholder.jpg', alt: 'Executive medical professionals in premium healthcare uniforms' },
+      { src: '/images/avatar-placeholder.jpg', alt: 'Medical administration team in executive uniforms' },
+      { src: '/images/default-placeholder.jpg', alt: 'Healthcare executive in professional medical attire' },
+      { src: '/images/default-placeholder.jpg', alt: 'Medical director in executive uniform' }
     ],
     colors: [
       { name: 'Navy Blue', value: '#000080' },

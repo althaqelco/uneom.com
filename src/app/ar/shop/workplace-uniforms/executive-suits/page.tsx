@@ -49,10 +49,10 @@ export default function ExecutiveSuitsPageArabic() {
       { name: 'خيارات التخصيص', value: 'تفصيل خاص، علامة تجارية للشركة، تطريز شخصي' }
     ],
     images: [
-      { src: '/images/corporate-man-in-suit.jpg', alt: 'منظر أمامي للبدلة التنفيذية' },
-      { src: '/images/corporate-woman-in-suit.jpg', alt: 'بدلة تنفيذية للنساء' },
-      { src: '/images/executive-team-in-suits.jpg', alt: 'فريق تنفيذي بالبدلات المصممة' },
-      { src: '/images/suit-fabric-detail.jpg', alt: 'تفاصيل القماش الفاخر' }
+      { src: '/images/default-placeholder.jpg', alt: 'منظر أمامي للبدلة التنفيذية' },
+      { src: '/images/default-placeholder.jpg', alt: 'بدلة تنفيذية للنساء' },
+      { src: '/images/avatar-placeholder.jpg', alt: 'فريق تنفيذي بالبدلات المصممة' },
+      { src: '/images/default-placeholder.jpg', alt: 'تفاصيل القماش الفاخر' }
     ],
     category: 'ملابس مؤسسية',
     categorySlug: 'workplace-uniforms',
@@ -66,10 +66,10 @@ export default function ExecutiveSuitsPageArabic() {
       { name: 'الباقة التنفيذية (٢ بدلة، ٣ قمصان)', price: '٢,٨٩٩ ريال سعودي' }
     ],
     colors: [
-      { name: 'أزرق داكن', value: '#1a2942', image: '/images/fabrics/navy-wool.jpg' },
-      { name: 'رمادي فحمي', value: '#36454f', image: '/images/fabrics/charcoal-wool.jpg' },
-      { name: 'أسود كلاسيكي', value: '#232323', image: '/images/fabrics/black-wool.jpg' },
-      { name: 'بني غامق', value: '#5d4037', image: '/images/fabrics/brown-wool.jpg' }
+      { name: 'أزرق داكن', value: '#1a2942', image: '/images/default-placeholder.jpg' },
+      { name: 'رمادي فحمي', value: '#36454f', image: '/images/default-placeholder.jpg' },
+      { name: 'أسود كلاسيكي', value: '#232323', image: '/images/default-placeholder.jpg' },
+      { name: 'بني غامق', value: '#5d4037', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['٤٦', '٤٨', '٥٠', '٥٢', '٥٤', '٥٦', '٥٨', '٦٠', '٦٢'],
     sizeEquivalents: {
@@ -89,14 +89,14 @@ export default function ExecutiveSuitsPageArabic() {
         author: "أحمد آل سعود",
         position: "مدير الموارد البشرية، البنك السعودي للاستثمار",
         company: "البنك السعودي للاستثمار",
-        image: "/images/testimonials/ahmad.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "كمديرة تنفيذية في المملكة العربية السعودية، كان العثور على ملابس عمل مناسبة وأنيقة تحديًا دائمًا. تحل مجموعة UNEOM التنفيذية هذا بشكل مثالي مع تصاميم محتشمة وراقية.",
         author: "نورة القصبي",
         position: "نائبة الرئيس للعمليات، أرامكو",
         company: "أرامكو",
-        image: "/images/testimonials/noura.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };

@@ -44,10 +44,10 @@ export default function PremiumScrubsSetArabicPage() {
       { name: 'خيارات التخصيص', value: 'التطريز، المقاسات المخصصة، مطابقة الألوان' }
     ],
     images: [
-      { src: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg', alt: 'طقم البدلة الطبية الممتازة - منظر أمامي' },
-      { src: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg', alt: 'طقم البدلة الطبية الممتازة يرتديها متخصصون طبيون' },
-      { src: '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg', alt: 'طقم البدلة الطبية الممتازة أثناء الاستخدام' },
-      { src: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg', alt: 'فريق طبي يرتدي بدلات طبية' }
+      { src: '/images/default-placeholder.jpg', alt: 'طقم البدلة الطبية الممتازة - منظر أمامي' },
+      { src: '/images/default-placeholder.jpg', alt: 'طقم البدلة الطبية الممتازة يرتديها متخصصون طبيون' },
+      { src: '/images/default-placeholder.jpg', alt: 'طقم البدلة الطبية الممتازة أثناء الاستخدام' },
+      { src: '/images/avatar-placeholder.jpg', alt: 'فريق طبي يرتدي بدلات طبية' }
     ],
     category: 'ملابس الرعاية الصحية',
     categorySlug: 'medical-scrubs',
@@ -86,21 +86,21 @@ export default function PremiumScrubsSetArabicPage() {
       {
         id: 'antimicrobial-scrubs',
         name: 'بدلة طبية مضادة للميكروبات',
-        image: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ريال 279',
         href: '/ar/shop/medical-scrubs/antimicrobial-scrubs'
       },
       {
         id: 'nursing-scrubs',
         name: 'طقم بدلة التمريض',
-        image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ريال 229',
         href: '/ar/shop/medical-scrubs/nursing-scrubs'
       },
       {
         id: 'surgical-scrubs',
         name: 'بدلة الجراحة',
-        image: '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ريال 269',
         href: '/ar/shop/medical-scrubs/surgical-scrubs'
       }

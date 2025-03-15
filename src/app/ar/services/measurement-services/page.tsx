@@ -8,7 +8,7 @@ export default function MeasurementServicesPageArabic() {
     locale: 'ar',
     title: 'خدمات القياس',
     subtitle: 'حلول قياس احترافية للحصول على أزياء موحدة مثالية المقاس',
-    heroImage: '/images/services/measurement-hero.jpg',
+    heroImage: '/images/banner-placeholder.jpg',
     
     overview: [
       "توفر خدمات القياس من يونيوم حلول قياس احترافية لضمان حصول كل موظف على أزياء موحدة مقاسة بدقة تعزز الراحة والمظهر والوظائف. يستخدم متخصصو القياس الخبراء لدينا تقنيات وتكنولوجيات قياس متقدمة لالتقاط بيانات مقاسات دقيقة، مما يلغي التخمين وعدم الاتساق المرتبط غالبًا بالقياس الذاتي.",
@@ -17,17 +17,17 @@ export default function MeasurementServicesPageArabic() {
     
     steps: [
       {
-        icon: '/images/icons/planning.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'التخطيط والتحليل',
         description: 'نبدأ بفهم احتياجات مؤسستك المحددة ومتطلبات الزي الموحد. يحلل فريقنا أفضل نهج للقياس بناءً على عدد الموظفين والمواقع واللوجستيات.'
       },
       {
-        icon: '/images/icons/execution.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'التنفيذ والقياس',
         description: 'ينشر فريق القياس المدرب لدينا في موقعك (أو مواقعك) لإجراء قياسات دقيقة لكل موظف. نستخدم طرق القياس القياسية الصناعية ونوثق بيانات المقاس بنظام آمن.'
       },
       {
-        icon: '/images/icons/data.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'إدارة البيانات وإعداد التقارير',
         description: 'نقوم بمعالجة وتنظيم بيانات القياس في تقارير تفصيلية، مما يوفر نظرة عامة واضحة على متطلبات المقاسات لبرنامج الزي الموحد الخاص بك. يتم مشاركة هذه البيانات معك بتنسيق سهل الاستخدام للتخطيط والطلب.'
       }
@@ -35,32 +35,32 @@ export default function MeasurementServicesPageArabic() {
     
     benefits: [
       {
-        icon: '/images/icons/accuracy.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'دقة محسنة',
         description: 'منع مشاكل المقاسات والعائدات من خلال الحصول على قياسات دقيقة من البداية.'
       },
       {
-        icon: '/images/icons/efficiency.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'كفاءة محسنة',
         description: 'توفير الوقت والموارد من خلال تبسيط عملية قياس الموظفين.'
       },
       {
-        icon: '/images/icons/consistency.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'اتساق في المقاسات',
         description: 'ضمان قياسات موحدة لجميع الموظفين بغض النظر عن الموقع.'
       },
       {
-        icon: '/images/icons/comfort.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'راحة محسنة للموظفين',
         description: 'ضمان أن جميع الموظفين يرتدون أزياء موحدة مقاسة بشكل صحيح تعزز الراحة والأداء.'
       },
       {
-        icon: '/images/icons/presentation.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'مظهر احترافي',
         description: 'تعزيز صورة علامتك التجارية من خلال زي موحد مناسب تمامًا لكل موظف.'
       },
       {
-        icon: '/images/icons/data.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'إدارة بيانات شاملة',
         description: 'الاستفادة من البيانات المنظمة للمقاسات للتخطيط المستقبلي واستبدال الزي الموحد.'
       }
@@ -72,14 +72,14 @@ export default function MeasurementServicesPageArabic() {
         title: 'برنامج قياس سلسلة الضيافة',
         description: 'قياس أكثر من 1200 موظف عبر 4 عقارات مع متطلبات زي موحد متنوعة. تنفيذ برنامج قياس شامل مع محطات قياس متنقلة، وتكنولوجيا قياس رقمية، ونظام جدولة المواعيد.',
         result: 'تقليل معدل التبادل من 32٪ إلى 4٪ فقط، وإكمال جميع القياسات خلال فترة 5 أيام، وتحسين تقييمات مظهر الزي الموحد بنسبة 27٪.',
-        image: '/images/case-studies/hotel-measurement-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: "healthcare-measurement",
         title: 'حل قياس شبكة الرعاية الصحية',
         description: 'تنسيق قياسات لـ 3500 متخصص في الرعاية الصحية عبر 12 منشأة مع عمليات على مدار 24/7. تطوير برنامج قياس متخصص للرعاية الصحية يتميز بمحطات قياس معقمة وجدولة على مدار 24 ساعة.',
         result: 'قياس 100٪ من الموظفين بدون أي تأثير على رعاية المرضى، وتقليل الشكاوى المتعلقة بالزي الموحد بنسبة 92٪، وتحسين تقييمات المقاس الوظيفي من 68٪ إلى 94٪.',
-        image: '/images/case-studies/healthcare-measurement-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       }
     ],
     
@@ -90,7 +90,7 @@ export default function MeasurementServicesPageArabic() {
         author: 'فاطمة آل سعود',
         position: 'مديرة الموارد البشرية',
         company: 'فنادق المملكة الفاخرة',
-        image: '/images/testimonials/fatima-al-saud.jpg'
+        image: '/images/avatar-placeholder.jpg'
       },
       {
         id: "2",
@@ -98,7 +98,7 @@ export default function MeasurementServicesPageArabic() {
         author: 'د. خالد العمري',
         position: 'الرئيس التنفيذي للعمليات',
         company: 'شبكة الرياض الطبية',
-        image: '/images/testimonials/dr-khalid-al-omari.jpg'
+        image: '/images/avatar-placeholder.jpg'
       }
     ],
     

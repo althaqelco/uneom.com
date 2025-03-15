@@ -49,10 +49,10 @@ export default function AdvancedMedicalScrubsPageArabic() {
       { name: 'إمكانيات التخصيص', value: 'إضافة شعارات المستشفيات، تطريز الأسماء، ترميز الأقسام بالألوان' }
     ],
     images: [
-      { src: '/images/doctor-consultation-wearing-scrubs-SBI-300174204.jpg', alt: 'طبيب يرتدي الأزياء الطبية المتطورة أثناء الاستشارة' },
-      { src: '/images/nurses-at-hospital-wearing-scrubs-SBI-301282375.jpg', alt: 'ممرضات في الأزياء الطبية المتطورة في محطة التمريض' },
-      { src: '/images/surgical-team-operating-theater-SBI-301726744.jpg', alt: 'فريق جراحي يرتدي الأزياء الطبية المتخصصة في غرفة العمليات' },
-      { src: '/images/hijab-doctor-stethoscope-hospital-SBI-301837244.jpg', alt: 'طبيبة محجبة ترتدي الأزياء الطبية المتوافقة مع الحجاب' }
+      { src: '/images/default-placeholder.jpg', alt: 'طبيب يرتدي الأزياء الطبية المتطورة أثناء الاستشارة' },
+      { src: '/images/default-placeholder.jpg', alt: 'ممرضات في الأزياء الطبية المتطورة في محطة التمريض' },
+      { src: '/images/avatar-placeholder.jpg', alt: 'فريق جراحي يرتدي الأزياء الطبية المتخصصة في غرفة العمليات' },
+      { src: '/images/default-placeholder.jpg', alt: 'طبيبة محجبة ترتدي الأزياء الطبية المتوافقة مع الحجاب' }
     ],
     category: 'الرعاية الصحية',
     categorySlug: 'healthcare',
@@ -68,14 +68,14 @@ export default function AdvancedMedicalScrubsPageArabic() {
       { name: 'أزياء طبية للحوامل', price: '339 ريال سعودي' }
     ],
     colors: [
-      { name: 'أزرق ملكي', value: '#4169e1', image: '/images/fabrics/royal-blue-scrubs.jpg' },
-      { name: 'أخضر جراحي', value: '#2e8b57', image: '/images/fabrics/surgical-green-scrubs.jpg' },
-      { name: 'نبيذي', value: '#800020', image: '/images/fabrics/burgundy-scrubs.jpg' },
-      { name: 'كحلي', value: '#000080', image: '/images/fabrics/navy-scrubs.jpg' },
-      { name: 'أزرق سماوي', value: '#92a1cf', image: '/images/fabrics/ceil-blue-scrubs.jpg' },
-      { name: 'أسود', value: '#000000', image: '/images/fabrics/black-scrubs.jpg' },
-      { name: 'رمادي فضي', value: '#8e8e8e', image: '/images/fabrics/pewter-scrubs.jpg' },
-      { name: 'عنابي', value: '#722f37', image: '/images/fabrics/wine-scrubs.jpg' }
+      { name: 'أزرق ملكي', value: '#4169e1', image: '/images/default-placeholder.jpg' },
+      { name: 'أخضر جراحي', value: '#2e8b57', image: '/images/default-placeholder.jpg' },
+      { name: 'نبيذي', value: '#800020', image: '/images/default-placeholder.jpg' },
+      { name: 'كحلي', value: '#000080', image: '/images/default-placeholder.jpg' },
+      { name: 'أزرق سماوي', value: '#92a1cf', image: '/images/default-placeholder.jpg' },
+      { name: 'أسود', value: '#000000', image: '/images/default-placeholder.jpg' },
+      { name: 'رمادي فضي', value: '#8e8e8e', image: '/images/default-placeholder.jpg' },
+      { name: 'عنابي', value: '#722f37', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -94,14 +94,14 @@ export default function AdvancedMedicalScrubsPageArabic() {
         author: "د. فاطمة الزهراني",
         position: "رئيسة الطاقم الطبي",
         company: "مدينة الملك فهد الطبية",
-        image: "/images/testimonials/dr-fatima.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "بعد توحيد الأزياء الطبية من يونيوم في جميع منشآتنا، لاحظنا تحسناً ملحوظاً في رضا الكوادر والمظهر الاحترافي. نظام ترميز الأقسام بالألوان سهّل التعرف البصري، وحظيت الميزات المخصصة للتخصصات المختلفة بتقدير كبير من الأطباء والممرضين.",
         author: "أحمد الناصر",
         position: "مدير المشتريات",
         company: "مجموعة مستشفيات السعودي الألماني",
-        image: "/images/testimonials/ahmad-n.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -345,7 +345,7 @@ export default function AdvancedMedicalScrubsPageArabic() {
             <div className="order-2 md:order-1">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/doctor-and-nurse-consultation-SBI-300912540.jpg" 
+                  src="/images/default-placeholder.jpg" 
                   alt="متخصصو الرعاية الصحية في أزياء طبية مخصصة" 
                   fill
                   className="object-cover"

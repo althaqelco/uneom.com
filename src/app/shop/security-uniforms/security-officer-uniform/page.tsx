@@ -44,10 +44,10 @@ export default function SecurityOfficerUniformPage() {
       { name: 'Custom Options', value: 'Company embroidery, name badges, shoulder patches' }
     ],
     images: [
-      { src: '/images/firefighters-fight-the-fire-flame-to-control-fire-not-to-spreading-out-firefighter-ind-SBI-349465280.jpg', alt: 'Professional Security Officer Uniform Front View' },
-      { src: '/images/a-brunette-man-with-a-beard-in-a-white-protective-uniform-and-an-orange-vest-presses-c-SBI-351495165.jpg', alt: 'Security Officer Uniform on Model' },
-      { src: '/images/builder-in-helmet-with-a-suitcase-says-on-camera-on-a-green-screen-chroma-key-SBI-351072375.jpg', alt: 'Security Officer Uniform Detail' },
-      { src: '/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg', alt: 'Security Accessories' }
+      { src: '/images/default-placeholder.jpg', alt: 'Professional Security Officer Uniform Front View' },
+      { src: '/images/product-placeholder.jpg', alt: 'Security Officer Uniform on Model' },
+      { src: '/images/default-placeholder.jpg', alt: 'Security Officer Uniform Detail' },
+      { src: '/images/default-placeholder.jpg', alt: 'Security Accessories' }
     ],
     category: 'Security Uniforms',
     categorySlug: 'security-uniforms',
@@ -77,21 +77,21 @@ export default function SecurityOfficerUniformPage() {
       {
         id: 'security-patrol-jacket',
         name: 'Security Patrol Jacket',
-        image: '/images/builder-in-helmet-with-a-suitcase-says-on-camera-on-a-green-screen-chroma-key-SBI-351072375.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'From SAR 389',
         href: '/shop/security-uniforms/security-patrol-jacket'
       },
       {
         id: 'tactical-security-vest',
         name: 'Tactical Security Vest',
-        image: '/images/a-brunette-man-with-a-beard-in-a-white-protective-uniform-and-an-orange-vest-presses-c-SBI-351495165.jpg',
+        image: '/images/product-placeholder.jpg',
         price: 'From SAR 249',
         href: '/shop/security-uniforms/tactical-security-vest'
       },
       {
         id: 'security-accessories-kit',
         name: 'Security Accessories Kit',
-        image: '/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'From SAR 179',
         href: '/shop/security-uniforms/security-accessories-kit'
       }

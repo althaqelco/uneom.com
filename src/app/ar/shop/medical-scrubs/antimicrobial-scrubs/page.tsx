@@ -36,9 +36,9 @@ const productData = {
   ],
   images: [
     { src: '/images/products/scrubs-set.jpg', alt: 'منظر أمامي للملابس الطبية المضادة للميكروبات' },
-    { src: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg', alt: 'متخصصون طبيون يرتدون ملابس مضادة للميكروبات' },
-    { src: '/images/fabric-material-2024-12-06-03-35-02-utc.jpg', alt: 'صورة مقربة للنسيج المضاد للميكروبات' },
-    { src: '/images/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg', alt: 'عرض توضيحي لمقاومة النسيج للسوائل' }
+    { src: '/images/default-placeholder.jpg', alt: 'متخصصون طبيون يرتدون ملابس مضادة للميكروبات' },
+    { src: '/images/default-placeholder.jpg', alt: 'صورة مقربة للنسيج المضاد للميكروبات' },
+    { src: '/images/default-placeholder.jpg', alt: 'عرض توضيحي لمقاومة النسيج للسوائل' }
   ],
   category: 'الملابس الطبية',
   categorySlug: 'medical-scrubs',

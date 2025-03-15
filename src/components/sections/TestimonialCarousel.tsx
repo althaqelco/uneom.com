@@ -43,8 +43,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
       name: locale === 'en' ? "Dr. Ahmed Al-Saud" : "د. أحمد آل سعود",
       role: locale === 'en' ? "Medical Director" : "المدير الطبي",
       company: locale === 'en' ? "Riyadh Medical Center" : "مركز الرياض الطبي",
-      image: "/images/doctor-SBI-300813580.jpg",
-      logo: "/images/logos/aramco-logo.png",
+      image: "/images/default-placeholder.jpg",
+      logo: "/images/default-placeholder.jpg/aramco-logo.png",
       locale
     },
     {
@@ -55,8 +55,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
       name: locale === 'en' ? "Fatima Al-Zahrani" : "فاطمة الزهراني",
       role: locale === 'en' ? "HR Manager" : "مديرة الموارد البشرية",
       company: locale === 'en' ? "King Faisal Hospital" : "مستشفى الملك فيصل",
-      image: "/images/young-muslim-arab-woman-wearing-hijab-veiling-face-looking-at-camera-outdoors-during-s-SBI-351149151.jpg",
-      logo: "/images/logos/neom-logo.png",
+      image: "/images/default-placeholder.jpg",
+      logo: "/images/default-placeholder.jpg/neom-logo.png",
       locale
     },
     {
@@ -67,8 +67,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
       name: locale === 'en' ? "Dr. Mohammad Al-Fahad" : "د. محمد الفهد",
       role: locale === 'en' ? "Chief Medical Officer" : "المدير الطبي الرئيسي",
       company: locale === 'en' ? "Jeddah General Hospital" : "مستشفى جدة العام",
-      image: "/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg",
-      logo: "/images/logos/jarir-logo.png",
+      image: "/images/default-placeholder.jpg",
+      logo: "/images/default-placeholder.jpg/jarir-logo.png",
       locale
     },
     {
@@ -79,8 +79,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
       name: locale === 'en' ? "Sara Al-Qassim" : "سارة القاسم",
       role: locale === 'en' ? "Cabin Services Manager" : "مديرة خدمات المقصورة",
       company: locale === 'en' ? "Saudi Wings Airlines" : "الخطوط السعودية أجنحة",
-      image: "/images/cheerful-flight-attendant-standing-in-airport-term-2024-10-18-08-12-48-utc.jpg",
-      logo: "/images/logos/albaik-logo.png",
+      image: "/images/default-placeholder.jpg",
+      logo: "/images/default-placeholder.jpg/albaik-logo.png",
       locale
     },
     {
@@ -91,7 +91,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
       name: locale === 'en' ? "Abdullah Al-Otaibi" : "عبدالله العتيبي",
       role: locale === 'en' ? "CEO" : "الرئيس التنفيذي",
       company: locale === 'en' ? "Saudi Investment Bank" : "بنك الاستثمار السعودي",
-      image: "/images/modern-arabic-businessman-SBI-300984397.jpg",
+      image: "/images/default-placeholder.jpg",
       logo: "/images/logos/talabat-logo.png",
       locale
     },
@@ -103,7 +103,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
       name: locale === 'en' ? "Khalid Al-Ghamdi" : "خالد الغامدي",
       role: locale === 'en' ? "Operations Director" : "مدير العمليات",
       company: locale === 'en' ? "FastTrack Logistics" : "فاست تراك للخدمات اللوجستية",
-      image: "/images/close-up-of-asian-male-courier-in-blue-uniform-showing-a-carton-to-camera-and-smiling--SBI-351601765.jpg",
+      image: "/images/product-placeholder.jpg",
       logo: "/images/logos/default-logo.png",
       locale
     },
@@ -115,7 +115,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
       name: locale === 'en' ? "Nora Al-Dosari" : "نورة الدوسري",
       role: locale === 'en' ? "Hospitality Manager" : "مديرة الضيافة",
       company: locale === 'en' ? "Royal Oasis Hotels" : "فنادق الواحة الملكية",
-      image: "/images/portrait-of-young-female-arab-with-covered-head-walking-on-street-near-temple-muslim-w-SBI-349947081.jpg",
+      image: "/images/banner-placeholder.jpg",
       logo: "/images/logos/uneom-logo-en.png",
       locale
     },
@@ -127,8 +127,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
       name: locale === 'en' ? "Saad Al-Rashid" : "سعد الرشيد",
       role: locale === 'en' ? "Retail Manager" : "مدير التجزئة",
       company: locale === 'en' ? "AlMajed Department Stores" : "متاجر الماجد",
-      image: "/images/portrait-of-an-arab-man-sheikh-SBI-300981247.jpg",
-      logo: "/images/logos/uneom-logo-ar.png",
+      image: "/images/default-placeholder.jpg",
+      logo: "/images/default-placeholder.jpg",
       locale
     }
   ];
@@ -355,7 +355,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 h-[500px]">
               <Image 
-                src="/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg"
+                src="/images/default-placeholder.jpg"
                 alt={locale === 'en' ? "Various professionals in uniform" : "محترفون في زي موحد"}
                 fill
                 className="object-cover"

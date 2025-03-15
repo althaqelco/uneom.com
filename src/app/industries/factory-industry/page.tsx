@@ -11,7 +11,7 @@ export default function FactoryIndustryPage() {
   const factoryIndustryData = {
     title: "Factory & Industrial Workwear Solutions in Saudi Arabia",
     subtitle: "High-performance uniforms designed for safety, durability, and comfort in Saudi Arabia's industrial environments",
-    heroImage: "/images/industries/factory-industry-hero.jpg",
+    heroImage: "/images/banner-placeholder.jpg",
     
     introduction: [
       "In Saudi Arabia's rapidly growing industrial sector, the right workwear is essential for maintaining safety standards, enhancing productivity, and ensuring worker comfort. UNEOM specializes in providing factory and industrial uniforms that meet the unique challenges of Saudi industrial environments, from extreme temperatures to specialized safety requirements.",
@@ -54,42 +54,42 @@ export default function FactoryIndustryPage() {
         id: "factory-uniforms",
         name: "Factory Worker Uniforms",
         description: "Durable, comfortable uniforms designed for general factory environments with reinforced stitching and moisture-wicking fabrics.",
-        image: "/images/products/factory-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/industrial-uniforms/factory-workers"
       },
       {
         id: "engineering-workwear",
         name: "Engineering Workwear",
         description: "Technical uniforms with specialized pockets for tools, reinforced knees and elbows, and static-resistant properties.",
-        image: "/images/products/engineering-workwear.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/industrial-uniforms/engineering-workwear"
       },
       {
         id: "heat-resistant-uniforms",
         name: "Heat Resistant Uniforms",
         description: "Specialized workwear for high-temperature environments with flame-retardant properties and thermal protection.",
-        image: "/images/products/heat-resistant-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/industrial-uniforms/heat-resistant"
       },
       {
         id: "oil-field-suits",
         name: "Oil Field Worker Suits",
         description: "Comprehensive protection for oil and gas industry workers with chemical resistance, flame retardant properties, and enhanced durability.",
-        image: "/images/products/oil-field-suits.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/industrial-uniforms/oil-field-workers"
       },
       {
         id: "technician-uniforms",
         name: "Technician Uniforms",
         description: "Smart, functional workwear for technical professionals with multiple pockets, tear-resistant fabrics, and professional appearance.",
-        image: "/images/products/technician-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/industrial-uniforms/technicians"
       },
       {
         id: "protective-workwear",
         name: "Protective Workwear",
         description: "Specialized protective clothing including high-visibility vests, safety harness-compatible designs, and impact-resistant elements.",
-        image: "/images/products/protective-workwear.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/industrial-uniforms/protective-workwear"
       }
     ],

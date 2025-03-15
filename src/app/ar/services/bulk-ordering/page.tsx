@@ -8,7 +8,7 @@ export default function BulkOrderingServicePageArabic() {
     locale: 'ar',
     title: 'طلبات بالجملة',
     subtitle: 'حلول شراء مبسطة لمتطلبات الزي الموحد واسعة النطاق',
-    heroImage: '/images/services/bulk-ordering-hero.jpg',
+    heroImage: '/images/banner-placeholder.jpg',
     
     overview: [
       "توفر خدمة الطلب بالجملة من يونيوم حلاً مبسطًا للمؤسسات التي تتطلب كميات كبيرة من الأزياء الموحدة عبر أقسام أو مواقع متعددة. يعمل فريق المشتريات المتخصص لدينا معك لتنسيق الطلبات المعقدة، وإدارة الخدمات اللوجستية، وضمان جودة متسقة عبر برنامج الزي الموحد بأكمله.",
@@ -17,22 +17,22 @@ export default function BulkOrderingServicePageArabic() {
     
     steps: [
       {
-        icon: '/images/icons/requirements.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'تحديد المتطلبات',
         description: 'نعمل معك لفهم متطلبات الكميات الكبيرة الخاصة بك، بما في ذلك التصميم، والمواصفات الفنية، والموعد النهائي للتسليم، واعتبارات الميزانية. يقوم فريقنا بتوثيق متطلباتك بالتفصيل لضمان تلبية جميع احتياجاتك.'
       },
       {
-        icon: '/images/icons/proposal.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'تطوير العرض',
         description: 'بناءً على متطلباتك، نقوم بإنشاء عرض شامل يتضمن خيارات التصميم والأقمشة، ومواصفات المنتج، والتسعير التفصيلي، وجداول التسليم. نقدم عينات حسب الحاجة للتحقق من الجودة والمقاس قبل التصنيع بكميات كبيرة.'
       },
       {
-        icon: '/images/icons/production.svg',
+        icon: '/images/product-placeholder.jpg',
         title: 'الإنتاج والمراقبة',
         description: 'بمجرد الموافقة على العرض، نبدأ دورة الإنتاج مع ضوابط صارمة لمراقبة الجودة في كل مرحلة. نقدم تحديثات منتظمة حول التقدم المحرز، ونتعامل بشكل استباقي مع أي مشكلات قد تنشأ أثناء عملية التصنيع.'
       },
       {
-        icon: '/images/icons/logistics.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'الشحن والتسليم',
         description: 'نتولى جميع جوانب الشحن والخدمات اللوجستية، بما في ذلك التخليص الجمركي، عند الاقتضاء، لضمان وصول طلبك إلى وجهته في الوقت المحدد وبحالة ممتازة. نوفر خدمات التوزيع والتخزين للطلبات المستمرة.'
       }
@@ -40,32 +40,32 @@ export default function BulkOrderingServicePageArabic() {
     
     benefits: [
       {
-        icon: '/images/icons/savings.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'وفورات ملموسة',
         description: 'وفر ما يصل إلى 25٪ على الطلبات الكبيرة مقارنة بالمشتريات الفردية، مع معدلات تخفيض تصاعدية للكميات الأكبر.'
       },
       {
-        icon: '/images/icons/quality.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'جودة متفوقة',
         description: 'فحوصات مراقبة الجودة المتعددة خلال عملية الإنتاج تضمن أعلى معايير المنتجات النهائية.'
       },
       {
-        icon: '/images/icons/time.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'توفير الوقت',
         description: 'عملية طلب مبسطة مع مدير حساب مخصص يتعامل مع جميع التفاصيل، مما يوفر وقت موظفيك.'
       },
       {
-        icon: '/images/icons/flexibility.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'خيارات مرنة',
         description: 'حلول تصميم مخصصة ومتطلبات العلامة التجارية وبرنامج طلب مستمر متاح للمؤسسات الكبيرة.'
       },
       {
-        icon: '/images/icons/logistics.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'دعم لوجستي',
         description: 'إدارة مخزون متكاملة وحلول تخزين وتوزيع لضمان توفر الأزياء الموحدة عند الحاجة.'
       },
       {
-        icon: '/images/icons/reports.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'تتبع وتقارير',
         description: 'تحليلات المشتريات المفصلة والإبلاغ لمساعدتك في مراقبة الإنفاق وتحسين ميزانيات الزي الموحد المستقبلية.'
       }
@@ -77,14 +77,14 @@ export default function BulkOrderingServicePageArabic() {
         title: "برنامج الزي الطبي على مستوى المستشفى",
         description: "كانت مجموعة مستشفيات الرياض تدير أكثر من 5000 من العاملين في القطاع الصحي عبر خمسة مواقع، مع ضرورة توفير أزياء طبية متسقة وعالية الجودة. قمنا بتطوير نظام توريد بالجملة مع رموز ألوان مخصصة للأقسام وتطريز للشعارات.",
         result: "تخفيض التكاليف بنسبة 22٪ وتحسين معدل رضا الموظفين وتوفير 15 ساعة أسبوعيًا من وقت الموظفين الإداريين.",
-        image: '/images/services/bulk-ordering-hero.jpg'
+        image: '/images/banner-placeholder.jpg'
       },
       {
         id: "campus-uniform",
         title: "برنامج الزي الموحد للحرم الجامعي المتعدد",
         description: "تدير مؤسسة الفيصل 12 مدرسة في جميع أنحاء المملكة العربية السعودية، حيث يحتاج أكثر من 15000 طالب إلى زي مدرسي موحد. قمنا بإنشاء خط إنتاج مخصص للزي المدرسي مع مراقبة صارمة للجودة وشبكة لوجستية متقدمة.",
         result: "تحقيق دقة مخزون بنسبة 99.8٪ وتسليم جميع الأزياء المدرسية قبل أسبوعين من بداية الفصل الدراسي وتقليل معدل العائد بنسبة 64٪.",
-        image: '/images/services/bulk-ordering-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       }
     ],
     
@@ -95,7 +95,7 @@ export default function BulkOrderingServicePageArabic() {
         author: "د. إبراهيم الحربي",
         position: "مدير العمليات",
         company: "مجموعة مستشفيات الرياض",
-        image: '/images/testimonials/testimonial1.jpg'
+        image: '/images/avatar-placeholder.jpg'
       },
       {
         id: "2",
@@ -103,7 +103,7 @@ export default function BulkOrderingServicePageArabic() {
         author: "نادية الفيصل",
         position: "مديرة المشتريات",
         company: "مؤسسة الفيصل التعليمية",
-        image: '/images/testimonials/testimonial2.jpg'
+        image: '/images/avatar-placeholder.jpg'
       }
     ],
     

@@ -78,7 +78,7 @@ export default function SEO({
   const canonicalUrl = customCanonicalUrl || `${baseUrl}${cleanPathname}`;
   
   // Construct OG Image URL (use custom or default)
-  const ogImage = customOgImage || 'https://uneom.com/images/og-image.jpg';
+  const ogImage = customOgImage || 'https://uneom.com/images/default-placeholder.jpg';
   
   // Generate structured data if not provided
   const schemas = [];

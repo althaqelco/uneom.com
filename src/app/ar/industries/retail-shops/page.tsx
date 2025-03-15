@@ -11,7 +11,7 @@ export default function RetailShopsPageArabic() {
   const retailShopsData = {
     title: "أزياء متاجر التجزئة ومراكز التسوق في المملكة العربية السعودية",
     subtitle: "أزياء موحدة احترافية تعزز تجربة العملاء وصورة العلامة التجارية في قطاع التجزئة السعودي",
-    heroImage: "/images/industries/retail-shops-hero.jpg",
+    heroImage: "/images/banner-placeholder.jpg",
     
     introduction: [
       "في مشهد التجزئة التنافسي في المملكة العربية السعودية، تلعب أزياء الموظفين دورًا حاسمًا في بناء هوية العلامة التجارية، وتعزيز تجربة العملاء، والحفاظ على بيئة احترافية. توفر يونيوم أزياء تجزئة عالية الجودة تجمع بين التصاميم الأنيقة والوظائف العملية لمختلف بيئات البيع بالتجزئة.",
@@ -54,42 +54,42 @@ export default function RetailShopsPageArabic() {
         id: "mall-staff-uniforms",
         name: "أزياء موظفي المولات",
         description: "ملابس احترافية ومريحة لموظفي الاستقبال وخدمة العملاء ومكاتب المعلومات في المولات ومراكز التسوق.",
-        image: "/images/products/mall-staff-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/retail-uniforms/mall-staff"
       },
       {
         id: "retail-store-uniforms",
         name: "أزياء متاجر التجزئة",
         description: "ملابس قابلة للتخصيص للمتاجر تجمع بين هوية العلامة التجارية والراحة العملية لمندوبي المبيعات وموظفي الطابق.",
-        image: "/images/products/retail-store-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/retail-uniforms/store-staff"
       },
       {
         id: "beauty-salon-uniforms",
         name: "أزياء صالونات التجميل",
         description: "ملابس أنيقة مقاومة للبقع لمتخصصي التجميل تعبر عن الأناقة مع توفير وظائف عملية.",
-        image: "/images/products/beauty-salon-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/retail-uniforms/beauty-salon"
       },
       {
         id: "cashier-uniforms",
         name: "أزياء أمناء الصندوق",
         description: "ملابس عملية واحترافية لأمناء الصندوق وموظفي نقاط البيع مع تصاميم مريحة لفترات طويلة عند محطات الدفع.",
-        image: "/images/products/cashier-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/retail-uniforms/cashiers"
       },
       {
         id: "sales-representative-uniforms",
         name: "أزياء مندوبي المبيعات",
         description: "أزياء احترافية تجمع بين الأناقة والوظائف العملية لفرق المبيعات، مع دمج العلامة التجارية وتصاميم مريحة.",
-        image: "/images/products/sales-representative-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/retail-uniforms/sales-representatives"
       },
       {
         id: "shopping-center-uniforms",
         name: "أزياء موظفي مراكز التسوق",
         description: "مجموعات أزياء منسقة لجميع موظفي مركز التسوق، مع اختلافات للأدوار المختلفة مع الحفاظ على اتساق العلامة التجارية.",
-        image: "/images/products/shopping-center-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/retail-uniforms/shopping-centers"
       }
     ],

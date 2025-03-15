@@ -11,7 +11,7 @@ export default function SecurityPage() {
   const securityIndustryData = {
     title: "Professional Security Uniforms in Saudi Arabia",
     subtitle: "Authoritative and functional workwear designed for Saudi security personnel and facilities",
-    heroImage: "/images/industries/security-hero.jpg",
+    heroImage: "/images/banner-placeholder.jpg",
     
     introduction: [
       "In Saudi Arabia's expanding security sector, professional appearance is a critical aspect of authority, trustworthiness, and operational effectiveness. UNEOM provides premium security uniforms designed specifically for Saudi security environments, combining a commanding presence with practical functionality and climate-appropriate design.",
@@ -49,28 +49,28 @@ export default function SecurityPage() {
         id: "formal-security",
         name: "Formal Security Uniforms",
         description: "Professional grade security attire for corporate facilities, government buildings, and high-profile locations requiring authoritative presence.",
-        image: "/images/shop/formal-security.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/shop/formal-security"
       },
       {
         id: "tactical-security",
         name: "Tactical Security Wear",
         description: "Enhanced durability uniforms with specialized pockets, reinforcement, and tactical features for active security personnel.",
-        image: "/images/shop/tactical-security.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/shop/tactical-security"
       },
       {
         id: "event-security",
         name: "Event Security Attire",
         description: "Highly visible, easily identifiable uniforms for event staff, crowd management, and public venue security operations.",
-        image: "/images/shop/event-security.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/shop/event-security"
       },
       {
         id: "executive-protection",
         name: "Executive Protection Apparel",
         description: "Discreet yet professional attire for close protection officers and executive security details with concealed tactical features.",
-        image: "/images/shop/executive-protection.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/shop/executive-protection"
       }
     ],
@@ -128,7 +128,7 @@ export default function SecurityPage() {
         author: "Abdullah Al-Qahtani",
         position: "Security Operations Director",
         company: "Royal Security Services",
-        image: "/images/testimonials/abdullah-al-qahtani.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ],
     

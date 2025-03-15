@@ -11,7 +11,7 @@ export default function SupplyManufacturingPageArabic() {
   const supplyManufacturingData = {
     title: "حلول توريد وتصنيع الأزياء الموحدة في المملكة العربية السعودية",
     subtitle: "خدمات متكاملة لتصنيع وتوريد الزي الموحد للمؤسسات والشركات في جميع أنحاء المملكة",
-    heroImage: "/images/industries/supply-manufacturing-hero.jpg",
+    heroImage: "/images/banner-placeholder.jpg",
     
     introduction: [
       "تعد يونيوم شركة رائدة في مجال تصنيع وتوريد الأزياء الموحدة في المملكة العربية السعودية، حيث نقدم حلولاً شاملة من الإنتاج المحلي والتوريد العالمي إلى التسليم في الوقت المحدد للمؤسسات من جميع الأحجام والقطاعات.",
@@ -54,42 +54,42 @@ export default function SupplyManufacturingPageArabic() {
         id: "uniform-manufacturing",
         name: "خدمات تصنيع الزي الموحد",
         description: "تصنيع الأزياء الموحدة بالكامل من مرحلة التصميم إلى الإنتاج النهائي باستخدام مرافق الإنتاج المحلية المتطورة.",
-        image: "/images/products/uniform-manufacturing.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/services/manufacturing"
       },
       {
         id: "riyadh-uniform-supply",
         name: "توريد الزي الموحد في الرياض",
         description: "خدمات توريد الزي الموحد المخصصة للشركات والمؤسسات في منطقة الرياض مع خيارات تسليم سريعة.",
-        image: "/images/products/riyadh-uniform-supply.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/services/manufacturing/riyadh"
       },
       {
         id: "jeddah-uniform-supply",
         name: "توريد الزي الموحد في جدة",
         description: "حلول توريد الزي الموحد الشاملة للشركات في المنطقة الغربية مع خدمات دعم مخصصة.",
-        image: "/images/products/jeddah-uniform-supply.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/services/manufacturing/jeddah"
       },
       {
         id: "uniform-wholesale",
         name: "تصنيع الزي الموحد بالجملة",
         description: "خدمات تصنيع وتفصيل بالجملة للشركات التي تحتاج إلى كميات كبيرة من الأزياء الموحدة عالية الجودة.",
-        image: "/images/products/uniform-wholesale.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/services/manufacturing/wholesale"
       },
       {
         id: "government-uniform-supply",
         name: "توريد الزي الموحد للجهات الحكومية",
         description: "خدمات متخصصة لتوريد الأزياء الموحدة للمؤسسات الحكومية مع الامتثال الكامل لمتطلبات المناقصات والمواصفات.",
-        image: "/images/products/government-uniform-supply.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/services/manufacturing/government"
       },
       {
         id: "hospital-uniform-production",
         name: "إنتاج الزي الموحد للمستشفيات",
         description: "تصنيع ملابس طبية وزي موحد للمستشفيات ومرافق الرعاية الصحية بأعلى معايير النظافة والجودة.",
-        image: "/images/products/hospital-uniform-production.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/services/manufacturing/healthcare"
       }
     ],

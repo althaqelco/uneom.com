@@ -46,10 +46,10 @@ export default function ExecutiveChefCoatPage() {
       { name: 'Customization', value: 'Embroidery options for name and restaurant logo' }
     ],
     images: [
-      { src: '/images/group-of-chefs-standing-with-arms-crossed-in-kitch-2023-11-27-05-01-36-utc.jpg', alt: 'Executive Chef Coat - Front View' },
-      { src: '/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg', alt: 'Executive Chef Coat - Side View' },
-      { src: '/images/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg', alt: 'Chef Coat Detail' },
-      { src: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg', alt: 'Complete Chef Uniform' }
+      { src: '/images/default-placeholder.jpg', alt: 'Executive Chef Coat - Front View' },
+      { src: '/images/default-placeholder.jpg', alt: 'Executive Chef Coat - Side View' },
+      { src: '/images/default-placeholder.jpg', alt: 'Chef Coat Detail' },
+      { src: '/images/default-placeholder.jpg', alt: 'Complete Chef Uniform' }
     ],
     category: 'Culinary Uniforms',
     categorySlug: 'culinary-uniforms',
@@ -78,21 +78,21 @@ export default function ExecutiveChefCoatPage() {
       {
         id: 'chef-pants',
         name: 'Professional Chef Pants',
-        image: '/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'From SAR 189',
         href: '/shop/culinary-uniforms/chef-pants'
       },
       {
         id: 'sous-chef-coat',
         name: 'Sous Chef Coat',
-        image: '/images/group-of-chefs-standing-with-arms-crossed-in-kitch-2023-11-27-05-01-36-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'From SAR 259',
         href: '/shop/culinary-uniforms/sous-chef-coat'
       },
       {
         id: 'chef-apron',
         name: 'Professional Chef Apron',
-        image: '/images/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'From SAR 129',
         href: '/shop/culinary-uniforms/chef-apron'
       }

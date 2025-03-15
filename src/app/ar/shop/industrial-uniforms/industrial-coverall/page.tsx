@@ -65,10 +65,10 @@ export default function IndustrialCoverallArabicPage() {
       { name: 'بلد التصنيع', value: 'المملكة العربية السعودية' }
     ],
     images: [
-      { src: '/images/three-warehouse-worker-in-industrial-workplace-inspecting-work-2023-11-27-04-53-52-utc.jpg', alt: 'بدلة العمل الصناعية - منظر أمامي' },
-      { src: '/images/industrial-worker-using-multimeter-tester-2023-11-27-05-25-54-utc.jpg', alt: 'بدلة العمل الصناعية - منظر جانبي' },
-      { src: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg', alt: 'بدلة العمل الصناعية - منظر خلفي' },
-      { src: '/images/industrial-worker-wearing-safety-mask-in-factory-2023-11-27-05-32-22-utc.jpg', alt: 'بدلة العمل الصناعية - تفاصيل' }
+      { src: '/images/default-placeholder.jpg', alt: 'بدلة العمل الصناعية - منظر أمامي' },
+      { src: '/images/default-placeholder.jpg', alt: 'بدلة العمل الصناعية - منظر جانبي' },
+      { src: '/images/default-placeholder.jpg', alt: 'بدلة العمل الصناعية - منظر خلفي' },
+      { src: '/images/default-placeholder.jpg', alt: 'بدلة العمل الصناعية - تفاصيل' }
     ],
     category: 'الأزياء الصناعية',
     categorySlug: 'industrial-uniforms',
@@ -108,21 +108,21 @@ export default function IndustrialCoverallArabicPage() {
       {
         id: 'safety-vest',
         name: 'سترة السلامة عالية الوضوح',
-        image: '/images/industrial-worker-using-multimeter-tester-2023-11-27-05-25-54-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ريال 59',
         href: '/ar/shop/industrial-uniforms/safety-vest'
       },
       {
         id: 'work-pants',
         name: 'بنطلون العمل الصناعي',
-        image: '/images/three-warehouse-worker-in-industrial-workplace-inspecting-work-2023-11-27-04-53-52-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ريال 119',
         href: '/ar/shop/industrial-uniforms/work-pants'
       },
       {
         id: 'industrial-jacket',
         name: 'جاكيت العمل الصناعي',
-        image: '/images/industrial-worker-wearing-safety-mask-in-factory-2023-11-27-05-32-22-utc.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'من ريال 229',
         href: '/ar/shop/industrial-uniforms/industrial-jacket'
       }

@@ -17,7 +17,7 @@ export default function ManufacturingAttirePage() {
       name: 'أفرول صناعي',
       description: 'أفرول صناعي متين مصمم للحماية والراحة في بيئات التصنيع والصناعة الثقيلة.',
       price: 'من 249 ريال',
-      image: '/images/products/industrial-coveralls.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/manufacturing-attire/industrial-coveralls'
     },
     {
@@ -25,7 +25,7 @@ export default function ManufacturingAttirePage() {
       name: 'ملابس العمل الواقية',
       description: 'ملابس عمل واقية مصممة خصيصاً لحماية العاملين في المصانع والمنشآت الصناعية.',
       price: 'من 279 ريال',
-      image: '/images/products/protective-workwear.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/manufacturing-attire/protective-workwear'
     },
     {
@@ -33,7 +33,7 @@ export default function ManufacturingAttirePage() {
       name: 'سترات السلامة',
       description: 'سترات سلامة عاكسة للضوء لزيادة الرؤية وضمان السلامة في بيئات العمل الصناعية.',
       price: 'من 129 ريال',
-      image: '/images/products/safety-vests.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/manufacturing-attire/safety-vests'
     },
     {
@@ -41,7 +41,7 @@ export default function ManufacturingAttirePage() {
       name: 'سترات صناعية',
       description: 'سترات صناعية متينة ومقاومة للعوامل الخارجية مناسبة للعمل في بيئات صناعية متنوعة.',
       price: 'من 299 ريال',
-      image: '/images/products/industrial-jackets.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/manufacturing-attire/industrial-jackets'
     },
     {
@@ -49,7 +49,7 @@ export default function ManufacturingAttirePage() {
       name: 'ملابس عمل مقاومة للحرارة',
       description: 'ملابس عمل متخصصة مقاومة للحرارة مصممة للبيئات الصناعية ذات درجات الحرارة المرتفعة.',
       price: 'من 399 ريال',
-      image: '/images/products/heat-resistant-workwear.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/manufacturing-attire/heat-resistant-workwear'
     },
     {
@@ -57,7 +57,7 @@ export default function ManufacturingAttirePage() {
       name: 'أزياء واقية صناعية',
       description: 'أزياء واقية صناعية متكاملة توفر الحماية والراحة للعاملين في بيئات التصنيع.',
       price: 'من 349 ريال',
-      image: '/images/products/industrial-protective-uniforms.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/ar/shop/manufacturing-attire/industrial-protective-uniforms',
       isNew: true
     }
@@ -68,25 +68,25 @@ export default function ManufacturingAttirePage() {
     {
       title: 'ملابس المصانع',
       description: 'ملابس متخصصة للعاملين في المصانع',
-      image: '/images/categories/factory-workwear.jpg',
+      image: '/images/default-placeholder.jpg',
       url: '/ar/shop/manufacturing-attire/factory-workwear'
     },
     {
       title: 'ملابس الورش',
       description: 'ملابس متينة مناسبة للعمل في ورش العمل',
-      image: '/images/categories/workshop-attire.jpg',
+      image: '/images/default-placeholder.jpg',
       url: '/ar/shop/manufacturing-attire/workshop-attire'
     },
     {
       title: 'معدات السلامة',
       description: 'معدات سلامة للعاملين في بيئات التصنيع',
-      image: '/images/categories/safety-equipment.jpg',
+      image: '/images/default-placeholder.jpg',
       url: '/ar/shop/manufacturing-attire/safety-equipment'
     },
     {
       title: 'ملابس مقاومة للحرارة',
       description: 'ملابس متخصصة لبيئات العمل الحارة',
-      image: '/images/categories/heat-resistant.jpg',
+      image: '/images/default-placeholder.jpg',
       url: '/ar/shop/manufacturing-attire/heat-resistant'
     }
   ];
@@ -140,7 +140,7 @@ export default function ManufacturingAttirePage() {
             </div>
             <div className="relative h-64 md:h-80 order-1 md:order-2">
               <Image 
-                src="/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="ملابس التصنيع"
                 fill
                 className="object-cover rounded-lg"
@@ -283,7 +283,7 @@ export default function ManufacturingAttirePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 order-2 md:order-1">
               <Image 
-                src="/images/custom-manufacturing-workwear.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="ملابس تصنيع مخصصة"
                 fill
                 className="object-cover rounded-lg"

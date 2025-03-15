@@ -8,7 +8,7 @@ export default function MeasurementServicesPage() {
   const serviceData = {
     title: 'Measurement Services',
     subtitle: 'Professional fitting solutions for perfect-fit uniforms',
-    heroImage: '/images/services/measurement-hero.jpg',
+    heroImage: '/images/banner-placeholder.jpg',
     
     overview: [
       "UNEOM's Measurement Services provide professional fitting solutions to ensure every employee receives precisely fitted uniforms that enhance comfort, appearance, and functionality. Our expert fitting specialists use advanced measurement techniques and technologies to capture accurate sizing data, eliminating the guesswork and inconsistency often associated with self-measurement.",
@@ -17,22 +17,22 @@ export default function MeasurementServicesPage() {
     
     steps: [
       {
-        icon: '/images/icons/planning.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Measurement Planning',
         description: 'We begin by developing a customized measurement plan based on your organizational structure, locations, and scheduling requirements. This includes determining the most appropriate measurement methods and technologies for your specific needs.'
       },
       {
-        icon: '/images/icons/communication.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Employee Communication',
         description: 'We provide comprehensive communication materials to prepare your team for the measurement process, including scheduling information, what to expect, and preparation guidelines to ensure efficient and accurate measurements.'
       },
       {
-        icon: '/images/icons/execution.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Professional Measurement',
         description: 'Our trained fitting specialists conduct measurements using standardized techniques and digital tools to ensure accuracy and consistency. We create individual fit profiles for each employee with comprehensive measurement data.'
       },
       {
-        icon: '/images/icons/data.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Data Management & Analysis',
         description: 'All measurement data is securely stored in our system and analyzed to create size distribution reports, identify trends, and optimize inventory planning. This data becomes a valuable reference for future uniform orders.'
       }
@@ -40,32 +40,32 @@ export default function MeasurementServicesPage() {
     
     benefits: [
       {
-        icon: '/images/icons/accuracy.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Superior Fit Accuracy',
         description: 'Professional measurements result in significantly higher fit accuracy than self-measurement, reducing exchanges and alterations by up to 85%.'
       },
       {
-        icon: '/images/icons/efficiency.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Time Efficiency',
         description: 'Our streamlined process can measure up to 40 employees per hour, minimizing workplace disruption while maximizing accuracy.'
       },
       {
-        icon: '/images/icons/consistency.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Consistent Sizing',
         description: 'Standardized measurement techniques ensure uniform sizing consistency across departments and locations.'
       },
       {
-        icon: '/images/icons/comfort.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Enhanced Comfort',
         description: 'Precisely fitted uniforms improve comfort, mobility, and function, increasing daily wear satisfaction.'
       },
       {
-        icon: '/images/icons/presentation.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Professional Appearance',
         description: "Properly fitted uniforms create a more polished, cohesive appearance that enhances your organization's image."
       },
       {
-        icon: '/images/icons/data.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Valuable Sizing Data',
         description: 'Comprehensive measurement data provides insights for future uniform programs and inventory optimization.'
       }
@@ -77,14 +77,14 @@ export default function MeasurementServicesPage() {
         title: 'Hospitality Chain Measurement Program',
         description: 'Measuring 1,200+ staff across 4 properties with diverse uniform requirements, limited time windows, and previous issues with inconsistent fitting that affected professional appearance.',
         result: 'Reduced exchange rate from 32% to just 4% and improved uniform appearance ratings in guest feedback by 27%.',
-        image: '/images/case-studies/hotel-measurement-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: "healthcare-measurement",
         title: 'Healthcare Network Measurement Solution',
         description: 'Coordinating measurements for 3,500 healthcare professionals across 12 facilities with 24/7 operations, strict hygiene protocols, and minimal disruption to patient care.',
         result: 'Measured 100% of staff with zero impact on patient care and improved functional fit ratings from 68% to 94%.',
-        image: '/images/case-studies/healthcare-measurement-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       }
     ],
     
@@ -95,7 +95,7 @@ export default function MeasurementServicesPage() {
         author: 'Fatima Al-Saud',
         position: 'HR Director',
         company: 'Al-Mamlaka Luxury Hotels',
-        image: '/images/testimonials/fatima-al-saud.jpg'
+        image: '/images/avatar-placeholder.jpg'
       },
       {
         id: "medical-coo",
@@ -103,7 +103,7 @@ export default function MeasurementServicesPage() {
         author: 'Dr. Khalid Al-Omari',
         position: 'Chief Operating Officer',
         company: 'Riyadh Medical Network',
-        image: '/images/testimonials/dr-khalid-al-omari.jpg'
+        image: '/images/avatar-placeholder.jpg'
       }
     ],
     

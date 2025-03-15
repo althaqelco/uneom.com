@@ -35,7 +35,7 @@ export default function ResourcesPage() {
           id: 'fabric-technology',
           name: 'Fabric Technology',
           description: 'Explore the innovative textile technologies that enhance comfort, durability, and functionality of modern uniforms.',
-          image: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg',
+          image: '/images/avatar-placeholder.jpg',
           href: '/resources/fabric-technology'
         }
       ]
@@ -47,14 +47,14 @@ export default function ResourcesPage() {
           id: 'size-guide',
           name: 'Size Guide',
           description: 'Detailed sizing charts and measurement instructions to ensure perfect-fitting uniforms for all body types.',
-          image: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg',
+          image: '/images/default-placeholder.jpg',
           href: '/resources/size-guide'
         },
         {
           id: 'fit-optimization',
           name: 'Fit Optimization',
           description: 'Learn how to optimize uniform fit for maximum comfort and professional appearance across your organization.',
-          image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+          image: '/images/default-placeholder.jpg',
           href: '/resources/fit-optimization'
         }
       ]
@@ -66,14 +66,14 @@ export default function ResourcesPage() {
           id: 'procurement-guide',
           name: 'Procurement Guide',
           description: 'Best practices for efficient uniform procurement, from needs assessment to delivery and implementation.',
-          image: '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg',
+          image: '/images/default-placeholder.jpg',
           href: '/resources/procurement-guide'
         },
         {
           id: 'policy-templates',
           name: 'Uniform Policy Templates',
           description: 'Customizable templates for developing comprehensive corporate uniform policies and guidelines.',
-          image: '/images/smiling-airplane-crew-members-walking-together-on-2023-11-27-05-07-27-utc.jpg',
+          image: '/images/default-placeholder.jpg',
           href: '/resources/policy-templates'
         }
       ]
@@ -92,14 +92,14 @@ export default function ResourcesPage() {
       id: 'case-studies',
       name: 'Case Studies',
       description: 'Real-world examples showcasing how our uniform solutions have solved challenges for organizations across industries.',
-      image: '/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/resources/case-studies'
     },
     {
       id: 'webinars',
       name: 'Webinars & Events',
       description: 'Join our educational webinars and industry events to deepen your knowledge and connect with peers.',
-      image: '/images/4k-top-view-of-little-asian-students-with-uniforms-reading-book-in-library-together-SBI-351422735.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/resources/events'
     }
   ];

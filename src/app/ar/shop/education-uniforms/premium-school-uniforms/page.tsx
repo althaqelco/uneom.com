@@ -49,10 +49,10 @@ export default function PremiumSchoolUniformsPageArabic() {
       { name: 'التخصيص', value: 'شعارات المدارس، تطريز الأسماء، ألوان مخصصة' }
     ],
     images: [
-      { src: '/images/back-to-school-arabian-students-in-classroom-SBI-348572355.jpg', alt: 'طلاب سعوديون يرتدون أزياء مدرسية فاخرة في الفصل الدراسي' },
-      { src: '/images/arabian-teacher-helping-students-at-school-SBI-300912533.jpg', alt: 'معلم وطلاب في زي المدرسة' },
-      { src: '/images/group-of-saudi-children-students-hands-up-SBI-306753477.jpg', alt: 'مجموعة من الطلاب السعوديين في أزياء موحدة' },
-      { src: '/images/muslim-school-girl-standing-by-school-entrance-SBI-301984723.jpg', alt: 'طالبة سعودية في زي مدرسي فاخر' }
+      { src: '/images/default-placeholder.jpg', alt: 'طلاب سعوديون يرتدون أزياء مدرسية فاخرة في الفصل الدراسي' },
+      { src: '/images/default-placeholder.jpg', alt: 'معلم وطلاب في زي المدرسة' },
+      { src: '/images/default-placeholder.jpg', alt: 'مجموعة من الطلاب السعوديين في أزياء موحدة' },
+      { src: '/images/default-placeholder.jpg', alt: 'طالبة سعودية في زي مدرسي فاخر' }
     ],
     category: 'أزياء تعليمية',
     categorySlug: 'education-uniforms',
@@ -69,11 +69,11 @@ export default function PremiumSchoolUniformsPageArabic() {
       { name: 'مجموعة المرحلة الثانوية (بنات)', price: '299 ريال سعودي' }
     ],
     colors: [
-      { name: 'أزرق داكن', value: '#1a2942', image: '/images/fabrics/navy-cotton.jpg' },
-      { name: 'أبيض', value: '#ffffff', image: '/images/fabrics/white-cotton.jpg' },
-      { name: 'أزرق فاتح', value: '#add8e6', image: '/images/fabrics/light-blue-cotton.jpg' },
-      { name: 'أسود', value: '#222222', image: '/images/fabrics/black-cotton.jpg' },
-      { name: 'بيج', value: '#f5f5dc', image: '/images/fabrics/beige-cotton.jpg' }
+      { name: 'أزرق داكن', value: '#1a2942', image: '/images/default-placeholder.jpg' },
+      { name: 'أبيض', value: '#ffffff', image: '/images/default-placeholder.jpg' },
+      { name: 'أزرق فاتح', value: '#add8e6', image: '/images/default-placeholder.jpg' },
+      { name: 'أسود', value: '#222222', image: '/images/default-placeholder.jpg' },
+      { name: 'بيج', value: '#f5f5dc', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['4-5', '6-7', '8-9', '10-11', '12-13', '14-15', '16-18'],
     sizeEquivalents: {
@@ -91,14 +91,14 @@ export default function PremiumSchoolUniformsPageArabic() {
         author: "د. عبدالله السيد",
         position: "مدير المدرسة",
         company: "مدرسة المنار العالمية",
-        image: "/images/testimonials/dr-abdullah.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "العمل مع 'يونيوم' سهّل علينا إدارة برنامج الزي الموحد بشكل كبير. أقمشتهم تتحمل نمط الحياة النشط لطلابنا، ونجح فريق التصميم لديهم في دمج قيمنا التقليدية مع احتياجات التعليم المعاصرة.",
         author: "فاطمة العتيبي",
         position: "المدير الإداري",
         company: "أكاديمية الرياض الحديثة",
-        image: "/images/testimonials/fatima-o.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -342,7 +342,7 @@ export default function PremiumSchoolUniformsPageArabic() {
             <div className="order-2 md:order-1">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/saudi-kids-learning-in-classroom-SBI-310845622.jpg" 
+                  src="/images/default-placeholder.jpg" 
                   alt="طلاب سعوديون في أزياء مدرسية مخصصة" 
                   fill
                   className="object-cover"

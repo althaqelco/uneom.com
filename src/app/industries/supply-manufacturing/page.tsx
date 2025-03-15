@@ -11,7 +11,7 @@ export default function SupplyManufacturingPage() {
   const supplyManufacturingData = {
     title: "Uniform Supply & Manufacturing Solutions in Saudi Arabia",
     subtitle: "Comprehensive uniform production and supply services for businesses across Saudi Arabia with local and international sourcing capabilities",
-    heroImage: "/images/industries/supply-manufacturing-hero.jpg",
+    heroImage: "/images/banner-placeholder.jpg",
     
     introduction: [
       "UNEOM is a leading uniform manufacturing and supply company in Saudi Arabia, providing end-to-end uniform solutions for organizations of all sizes across the Kingdom. With manufacturing facilities in Riyadh, Jeddah, and the Eastern Province, combined with strategic international partnerships, we deliver high-quality uniforms that meet the specific requirements of Saudi businesses.",
@@ -54,42 +54,42 @@ export default function SupplyManufacturingPage() {
         id: "uniform-manufacturing",
         name: "Uniform Manufacturing Services",
         description: "Full-scale production of uniforms in our Saudi facilities with advanced machinery and skilled craftsmanship for consistent quality.",
-        image: "/images/products/uniform-manufacturing.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/services/manufacturing"
       },
       {
         id: "uniform-suppliers-riyadh",
         name: "Uniform Supply Riyadh",
         description: "Comprehensive uniform supply services for organizations in Riyadh and Central Province, with rapid delivery capabilities.",
-        image: "/images/products/riyadh-suppliers.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/services/supply/riyadh"
       },
       {
         id: "uniform-suppliers-jeddah",
         name: "Uniform Supply Jeddah",
         description: "Dedicated uniform supply operations serving Jeddah and the Western Region with customized delivery schedules.",
-        image: "/images/products/jeddah-suppliers.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/services/supply/jeddah"
       },
       {
         id: "uniform-suppliers-dammam",
         name: "Uniform Supply Dammam",
         description: "Specialized uniform supply services for the Eastern Province, including oil & gas industries and manufacturing sectors.",
-        image: "/images/products/dammam-suppliers.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/services/supply/eastern-province"
       },
       {
         id: "wholesale-uniform-tailoring",
         name: "Wholesale Uniform Tailoring",
         description: "Large-scale tailoring services for uniform programs requiring perfect fit and consistent quality across numerous employees.",
-        image: "/images/products/wholesale-tailoring.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/services/wholesale-tailoring"
       },
       {
         id: "government-uniform-suppliers",
         name: "Government Uniform Supply",
         description: "Specialized supply programs for government entities with compliance documentation, security clearances, and tender capabilities.",
-        image: "/images/products/government-suppliers.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/services/government-supply"
       }
     ],

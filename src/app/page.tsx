@@ -126,7 +126,7 @@ export default function HomePage() {
       shortDescription: "Durable two-tone coverall suitable for factory environments and industrial settings",
       price: "SAR 289",
       minOrder: 15,
-      image: "/images/Heavy_Duty_Industrial_Coverall.png",
+      image: "/images/banner-placeholder.jpg",
       colors: [
         { name: "Black/Gray", value: "#333333" },
         { name: "Navy/Royal", value: "#1a3a5f" },
@@ -142,7 +142,7 @@ export default function HomePage() {
       shortDescription: "Elegant front desk attire with design accents for luxury hotels and resorts",
       price: "SAR 449",
       minOrder: 8,
-      image: "/images/Luxury_Hotel Staff_Uniform.png",
+      image: "/images/default-placeholder.jpg Staff_Uniform.png",
       colors: [
         { name: "Black", value: "#000000" },
         { name: "Burgundy", value: "#800020" },
@@ -158,7 +158,7 @@ export default function HomePage() {
       shortDescription: "Professional airline crew attire with customizable logo for aviation staff",
       price: "SAR 399",
       minOrder: 10,
-      image: "/images/Airline_Crew_Uniform.png",
+      image: "/images/product-placeholder.jpg",
       colors: [
         { name: "Navy", value: "#1c2841" },
         { name: "Black", value: "#000000" },
@@ -174,7 +174,7 @@ export default function HomePage() {
       shortDescription: "High-quality medical scrubs in various colors for healthcare professionals",
       price: "SAR 179",
       minOrder: 20,
-      image: "/images/PremiumـMedicalـScrubs.png",
+      image: "/images/default-placeholder.jpg",
       colors: [
         { name: "Sky Blue", value: "#87CEEB" },
         { name: "Surgical Green", value: "#168269" },

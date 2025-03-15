@@ -50,10 +50,10 @@ export default function TacticalSecurityUniformsPage() {
       { name: 'Customization', value: 'Company logos, name patches, rank insignia' }
     ],
     images: [
-      { src: '/images/professional-security-guard-standing-with-arms-crossed-SBI-347232834.jpg', alt: 'Security personnel in tactical uniform' },
-      { src: '/images/security-officer-patrolling-in-commercial-building-SBI-307842455.jpg', alt: 'Security officer on patrol in tactical uniform' },
-      { src: '/images/close-up-of-security-uniform-with-badge-SBI-308742563.jpg', alt: 'Close-up of tactical security uniform details' },
-      { src: '/images/security-team-monitoring-surveillance-system-SBI-304728344.jpg', alt: 'Security team in coordinated tactical uniforms' }
+      { src: '/images/default-placeholder.jpg', alt: 'Security personnel in tactical uniform' },
+      { src: '/images/default-placeholder.jpg', alt: 'Security officer on patrol in tactical uniform' },
+      { src: '/images/product-placeholder.jpg', alt: 'Close-up of tactical security uniform details' },
+      { src: '/images/avatar-placeholder.jpg', alt: 'Security team in coordinated tactical uniforms' }
     ],
     category: 'Security Uniforms',
     categorySlug: 'security-uniforms',
@@ -68,10 +68,10 @@ export default function TacticalSecurityUniformsPage() {
       { name: 'Command Staff Uniform', price: 'SAR 1,499' }
     ],
     colors: [
-      { name: 'Tactical Black', value: '#252525', image: '/images/fabrics/tactical-black.jpg' },
-      { name: 'Navy', value: '#1a2942', image: '/images/fabrics/navy-wool.jpg' },
-      { name: 'Desert Tan', value: '#d2b48c', image: '/images/fabrics/desert-tan.jpg' },
-      { name: 'Olive Green', value: '#556b2f', image: '/images/fabrics/olive-green.jpg' }
+      { name: 'Tactical Black', value: '#252525', image: '/images/default-placeholder.jpg' },
+      { name: 'Navy', value: '#1a2942', image: '/images/default-placeholder.jpg' },
+      { name: 'Desert Tan', value: '#d2b48c', image: '/images/default-placeholder.jpg' },
+      { name: 'Olive Green', value: '#556b2f', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -89,14 +89,14 @@ export default function TacticalSecurityUniformsPage() {
         author: "Khalid Al-Otaibi",
         position: "Security Director",
         company: "Al Mamlaka Security Services",
-        image: "/images/testimonials/khalid-otaibi.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "After switching to UNEOM's tactical uniforms, we've noticed a marked improvement in officer comfort during long shifts. The authoritative appearance has enhanced our professional image, while the robust construction stands up to the demands of daily security operations.",
         author: "Fahad Al-Qahtani",
         position: "Operations Manager",
         company: "Riyadh Protective Services",
-        image: "/images/testimonials/fahad-q.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -374,7 +374,7 @@ export default function TacticalSecurityUniformsPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/security-team-professional-portrait-SBI-307422344.jpg" 
+                src="/images/avatar-placeholder.jpg" 
                 alt="Professional security team in customized tactical uniforms" 
                 fill
                 className="object-cover"

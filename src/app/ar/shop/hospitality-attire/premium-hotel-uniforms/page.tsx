@@ -49,10 +49,10 @@ export default function PremiumHotelUniformsPageArabic() {
       { name: 'التخصيص', value: 'شعارات الفنادق، أسماء الموظفين، ترميز الأقسام بالألوان' }
     ],
     images: [
-      { src: '/images/staff-at-hotel-reception-desk-SBI-301124909.jpg', alt: 'موظفو استقبال الفندق بأزياء فاخرة' },
-      { src: '/images/smiling-hotel-concierge-in-luxury-hotel-SBI-301184583.jpg', alt: 'موظف الكونسيرج بزي فندقي فاخر' },
-      { src: '/images/professional-housekeeping-staff-in-hotel-corridor-SBI-300983722.jpg', alt: 'طاقم التدبير المنزلي بأزياء مهنية' },
-      { src: '/images/hotel-manager-welcoming-guests-at-entrance-SBI-301856284.jpg', alt: 'مدير الفندق بزي تنفيذي يرحب بالضيوف' }
+      { src: '/images/default-placeholder.jpg', alt: 'موظفو استقبال الفندق بأزياء فاخرة' },
+      { src: '/images/default-placeholder.jpg', alt: 'موظف الكونسيرج بزي فندقي فاخر' },
+      { src: '/images/default-placeholder.jpg', alt: 'طاقم التدبير المنزلي بأزياء مهنية' },
+      { src: '/images/default-placeholder.jpg', alt: 'مدير الفندق بزي تنفيذي يرحب بالضيوف' }
     ],
     category: 'أزياء الضيافة',
     categorySlug: 'hospitality-attire',
@@ -67,11 +67,11 @@ export default function PremiumHotelUniformsPageArabic() {
       { name: 'زي الإدارة التنفيذية', price: '١,١٩٩ ريال' }
     ],
     colors: [
-      { name: 'أحمر نبيذي', value: '#800020', image: '/images/fabrics/burgundy-wool.jpg' },
-      { name: 'ذهبي ملكي', value: '#caa548', image: '/images/fabrics/gold-wool.jpg' },
-      { name: 'كحلي غامق', value: '#1a2942', image: '/images/fabrics/navy-wool.jpg' },
-      { name: 'أخضر زمردي', value: '#2e5d4b', image: '/images/fabrics/emerald-wool.jpg' },
-      { name: 'أسود كلاسيكي', value: '#232323', image: '/images/fabrics/black-wool.jpg' }
+      { name: 'أحمر نبيذي', value: '#800020', image: '/images/default-placeholder.jpg' },
+      { name: 'ذهبي ملكي', value: '#caa548', image: '/images/default-placeholder.jpg' },
+      { name: 'كحلي غامق', value: '#1a2942', image: '/images/default-placeholder.jpg' },
+      { name: 'أخضر زمردي', value: '#2e5d4b', image: '/images/default-placeholder.jpg' },
+      { name: 'أسود كلاسيكي', value: '#232323', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -90,14 +90,14 @@ export default function PremiumHotelUniformsPageArabic() {
         author: "عبدالله المنصور",
         position: "المدير العام",
         company: "فندق رويال بالمز الرياض",
-        image: "/images/testimonials/abdullah-m.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "العمل مع UNEOM بسّط إدارة الأزياء الموحدة لدينا بشكل كبير. جودة القماش متميزة - حيث تظهر الحد الأدنى من التآكل حتى بعد أشهر من الاستخدام المستمر، وفهم فريق التصميم لديهم حاجتنا للموازنة بين الأناقة السعودية التقليدية ومعايير الضيافة الحديثة.",
         author: "نادية الحربي",
         position: "مديرة التدبير المنزلي التنفيذية",
         company: "منتجع وسبا جدة جراند",
-        image: "/images/testimonials/nadia-h.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -341,7 +341,7 @@ export default function PremiumHotelUniformsPageArabic() {
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-1 relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/luxury-hotel-staff-lineup-SBI-304958721.jpg" 
+                src="/images/default-placeholder.jpg" 
                 alt="طاقم فندق فاخر في أزياء موحدة مخصصة ومنسقة" 
                 fill
                 className="object-cover"

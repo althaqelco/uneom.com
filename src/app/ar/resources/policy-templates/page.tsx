@@ -8,7 +8,7 @@ export default function PolicyTemplatesPageArabic() {
     locale: 'ar',
     title: 'قوالب سياسة الزي الموحد',
     subtitle: 'أطر قابلة للتخصيص لتطوير إرشادات واضحة وشاملة للزي الموحد',
-    heroImage: '/images/smiling-airplane-crew-members-walking-together-on-2023-11-27-05-07-27-utc.jpg',
+    heroImage: '/images/default-placeholder.jpg',
     overview: {
       title: 'إنشاء سياسات فعالة للزي الموحد',
       content: `
@@ -75,7 +75,7 @@ export default function PolicyTemplatesPageArabic() {
             الامتثال لقوانين العمل المحلية واللوائح.
           </p>
         `,
-        image: '/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg',
+        image: '/images/product-placeholder.jpg',
       },
       {
         title: 'قوالب سياسة خاصة بالصناعة',
@@ -160,7 +160,7 @@ export default function PolicyTemplatesPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg',
+        image: '/images/avatar-placeholder.jpg',
       },
       {
         title: 'دليل تنفيذ السياسة',
@@ -215,7 +215,7 @@ export default function PolicyTemplatesPageArabic() {
             </a>
           </div>
         `,
-        image: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
+        image: '/images/default-placeholder.jpg',
       }
     ],
     items: [
@@ -223,25 +223,25 @@ export default function PolicyTemplatesPageArabic() {
         id: 'basic-policy',
         title: 'نموذج سياسة الزي الموحد الأساسية',
         description: 'نموذج سياسة أساسي يغطي المتطلبات الرئيسية للزي الموحد المناسب للشركات الصغيرة والمتوسطة.',
-        image: '/images/resources/basic-policy.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'healthcare-policy',
         title: 'سياسة الزي الموحد للرعاية الصحية',
         description: 'سياسة شاملة للمؤسسات الطبية تتناول متطلبات النظافة والسلامة والمظهر المهني.',
-        image: '/images/resources/healthcare-policy.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'hospitality-policy',
         title: 'سياسة الزي الموحد للضيافة',
         description: 'إرشادات مفصلة للفنادق والمطاعم والمنتجعات لضمان تمثيل العلامة التجارية بشكل متسق.',
-        image: '/images/resources/hospitality-policy.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: 'corporate-policy',
         title: 'سياسة الزي الموحد للشركات',
         description: 'سياسة للبيئات المكتبية المهنية مع خيارات للأيام الرسمية وغير الرسمية.',
-        image: '/images/resources/corporate-policy.jpg'
+        image: '/images/default-placeholder.jpg'
       }
     ],
     relatedResources: [

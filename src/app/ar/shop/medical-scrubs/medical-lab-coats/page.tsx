@@ -50,10 +50,10 @@ export default function MedicalLabCoatsPageArabic() {
       { name: 'خيارات التخصيص', value: 'شعارات المستشفيات، تطريز الأسماء/المؤهلات، ترميز الأقسام بالألوان' }
     ],
     images: [
-      { src: '/images/doctor-lab-coat-stethoscope-SBI-300089088.jpg', alt: 'طبيب يرتدي معطف مختبر أبيض فاخر مع سماعة طبية' },
-      { src: '/images/female-doctor-lab-coat-hospital-SBI-300845754.jpg', alt: 'طبيبة ترتدي معطف مختبر احترافي في بيئة مستشفى' },
-      { src: '/images/medical-professionals-consultation-SBI-300874118.jpg', alt: 'متخصصون طبيون يرتدون معاطف مختبر أثناء استشارة' },
-      { src: '/images/saudi-doctor-lab-coat-hospital-SBI-301256844.jpg', alt: 'متخصص رعاية صحية سعودي في معطف مختبر مصمم خصيصاً' }
+      { src: '/images/default-placeholder.jpg', alt: 'طبيب يرتدي معطف مختبر أبيض فاخر مع سماعة طبية' },
+      { src: '/images/default-placeholder.jpg', alt: 'طبيبة ترتدي معطف مختبر احترافي في بيئة مستشفى' },
+      { src: '/images/default-placeholder.jpg', alt: 'متخصصون طبيون يرتدون معاطف مختبر أثناء استشارة' },
+      { src: '/images/default-placeholder.jpg', alt: 'متخصص رعاية صحية سعودي في معطف مختبر مصمم خصيصاً' }
     ],
     category: 'الأزياء الطبية',
     categorySlug: 'medical-scrubs',
@@ -69,11 +69,11 @@ export default function MedicalLabCoatsPageArabic() {
       { name: 'تصميم معزز للاحتشام', price: '315 ريال سعودي' }
     ],
     colors: [
-      { name: 'أبيض', value: '#FFFFFF', image: '/images/fabrics/white-lab-coat.jpg' },
-      { name: 'أزرق فاتح', value: '#ADD8E6', image: '/images/fabrics/light-blue-lab-coat.jpg' },
-      { name: 'كحلي', value: '#000080', image: '/images/fabrics/navy-lab-coat.jpg' },
-      { name: 'أسود', value: '#000000', image: '/images/fabrics/black-lab-coat.jpg' },
-      { name: 'رمادي', value: '#808080', image: '/images/fabrics/grey-lab-coat.jpg' }
+      { name: 'أبيض', value: '#FFFFFF', image: '/images/default-placeholder.jpg' },
+      { name: 'أزرق فاتح', value: '#ADD8E6', image: '/images/default-placeholder.jpg' },
+      { name: 'كحلي', value: '#000080', image: '/images/default-placeholder.jpg' },
+      { name: 'أسود', value: '#000000', image: '/images/default-placeholder.jpg' },
+      { name: 'رمادي', value: '#808080', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL', '5XL'],
     sizeEquivalents: {
@@ -93,14 +93,14 @@ export default function MedicalLabCoatsPageArabic() {
         author: "د. عبدالله القحطاني",
         position: "المدير الطبي",
         company: "مدينة الملك فهد الطبية",
-        image: "/images/testimonials/abdullah-q.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "بعد التحول إلى معاطف المختبر الفاخرة من يونيوم، تلقينا العديد من الإشادات من المرضى حول المظهر المهني لكوادرنا. كانت خيارات التصميم المحتشم ذات قيمة خاصة لطبيباتنا، كما أن المتانة مع الغسيل المتكرر جعلت هذه المعاطف خياراً فعالاً من حيث التكلفة لشبكة مستشفياتنا.",
         author: "د. سمر الزامل",
         position: "رئيسة الكادر الطبي",
         company: "مجموعة المستشفى السعودي الألماني",
-        image: "/images/testimonials/samar-z.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -344,7 +344,7 @@ export default function MedicalLabCoatsPageArabic() {
             <div className="order-2 md:order-1">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/hospital-corridor-doctors-lab-coats-SBI-300765421.jpg" 
+                  src="/images/default-placeholder.jpg" 
                   alt="متخصصون طبيون في معاطف مختبر مخصصة" 
                   fill
                   className="object-cover"

@@ -8,7 +8,7 @@ export default function UniformPoliciesPage() {
   const serviceData = {
     title: 'Corporate Uniform Policies',
     subtitle: 'Comprehensive guidelines for effective uniform program governance',
-    heroImage: '/images/services/uniform-policies-hero.jpg',
+    heroImage: '/images/product-placeholder.jpg',
     
     overview: [
       "UNEOM's Corporate Uniform Policies service provides expert guidance in developing comprehensive, effective governance frameworks for your uniform program. We create customized policies that align with your organizational culture, industry requirements, and operational needs while ensuring compliance with relevant regulations.",
@@ -17,22 +17,22 @@ export default function UniformPoliciesPage() {
     
     steps: [
       {
-        icon: '/images/icons/assessment.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Needs Assessment',
         description: 'We begin with a thorough assessment of your organizational structure, culture, industry requirements, and existing uniform-related procedures to identify policy needs and objectives.'
       },
       {
-        icon: '/images/icons/documents.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Policy Development',
         description: 'Our specialists draft comprehensive uniform policies addressing all aspects of your program, from design standards and wearing guidelines to procurement procedures and compliance measures.'
       },
       {
-        icon: '/images/icons/review.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Stakeholder Review',
         description: 'We facilitate collaborative review sessions with key stakeholders to gather feedback, address concerns, and refine policy elements to ensure organizational alignment and practical implementation.'
       },
       {
-        icon: '/images/icons/implementation.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Implementation Planning',
         description: 'We develop detailed implementation strategies, communication plans, training materials, and administrative procedures to ensure successful policy adoption throughout your organization.'
       }
@@ -40,32 +40,32 @@ export default function UniformPoliciesPage() {
     
     benefits: [
       {
-        icon: '/images/icons/governance.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Clear Governance',
         description: 'Establish transparent, well-defined guidelines that eliminate confusion and inconsistency in uniform program management.'
       },
       {
-        icon: '/images/icons/compliance.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Regulatory Compliance',
         description: 'Ensure your uniform program adheres to industry regulations, safety standards, and relevant labor laws.'
       },
       {
-        icon: '/images/icons/consistency.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Brand Consistency',
         description: 'Maintain uniform standards that accurately and consistently represent your brand identity across all locations and departments.'
       },
       {
-        icon: '/images/icons/efficiency.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Administrative Efficiency',
         description: 'Streamline decision-making processes and reduce administrative burden with clear protocols for all uniform-related matters.'
       },
       {
-        icon: '/images/icons/conflict.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Conflict Resolution',
         description: 'Provide clear frameworks for addressing uniform-related issues, accommodations, and special circumstances.'
       },
       {
-        icon: '/images/icons/integration.svg',
+        icon: '/images/default-placeholder.jpg',
         title: 'Operational Integration',
         description: 'Align uniform policies with other organizational systems including onboarding, HR processes, and corporate governance.'
       }
@@ -77,14 +77,14 @@ export default function UniformPoliciesPage() {
         title: 'Banking Network Policy Standardization',
         description: 'Unifying inconsistent uniform practices across 75+ branches with varying interpretations of dress codes, leading to brand inconsistency and enforcement challenges.',
         result: 'Achieved 94% policy compliance within 3 months and reduced uniform-related HR incidents by 78%.',
-        image: '/images/case-studies/banking-policy-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       },
       {
         id: "industrial-safety",
         title: 'Industrial Safety Uniform Policy',
         description: 'Balancing safety compliance, cultural considerations, and practical functionality in a multi-facility operation with diverse workforce demographics and varying hazard levels.',
         result: 'Achieved full regulatory compliance across all facilities and reduced uniform-related safety incidents by 64%.',
-        image: '/images/case-studies/industrial-policy-case-study.jpg'
+        image: '/images/default-placeholder.jpg'
       }
     ],
     
@@ -95,7 +95,7 @@ export default function UniformPoliciesPage() {
         author: 'Nawaf Al-Harbi',
         position: 'Operations Director',
         company: 'National Commercial Bank Group',
-        image: '/images/testimonials/nawaf-al-harbi.jpg'
+        image: '/images/avatar-placeholder.jpg'
       },
       {
         id: "safety-manager",
@@ -103,7 +103,7 @@ export default function UniformPoliciesPage() {
         author: 'Eng. Saad Al-Qahtani',
         position: 'HSE Compliance Manager',
         company: 'Saudi Petrochemical Industries',
-        image: '/images/testimonials/saad-al-qahtani.jpg'
+        image: '/images/avatar-placeholder.jpg'
       }
     ],
     

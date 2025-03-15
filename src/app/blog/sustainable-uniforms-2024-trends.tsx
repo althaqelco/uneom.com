@@ -146,7 +146,7 @@ export default function SustainableUniformTrendsPost() {
 
             <div className="mt-8 mb-8">
               <Image
-                src="/images/blog/eco-fabrics.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="Various sustainable fabrics used in modern uniform production"
                 width={800}
                 height={450}
@@ -198,7 +198,7 @@ export default function SustainableUniformTrendsPost() {
 
             <div className="mt-8 mb-8">
               <Image
-                src="/images/blog/circular-design.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="Circular design principles applied to modern corporate uniforms"
                 width={800}
                 height={450}
@@ -235,7 +235,7 @@ export default function SustainableUniformTrendsPost() {
 
             <div className="mt-8 mb-8">
               <Image
-                src="/images/blog/uniform-durability-testing.jpg"
+                src="/images/product-placeholder.jpg"
                 alt="Uniform durability testing at UNEOM laboratory"
                 width={800}
                 height={450}
@@ -312,7 +312,7 @@ export default function SustainableUniformTrendsPost() {
 
             <div className="mt-8 mb-8">
               <Image
-                src="/images/blog/local-production.jpg"
+                src="/images/product-placeholder.jpg"
                 alt="UNEOM local production facility in Riyadh"
                 width={800}
                 height={450}

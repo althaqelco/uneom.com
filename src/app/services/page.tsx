@@ -27,21 +27,21 @@ export default function ServicesPage() {
       id: 'program-management',
       name: 'Uniform Program Management',
       description: 'End-to-end management of your organization\'s entire uniform program, from design to distribution and inventory tracking.',
-      image: '/images/services/program-management.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/services/program-management'
     },
     {
       id: 'custom-design',
       name: 'Custom Design & Branding',
       description: 'Professional uniform design services that incorporate your brand identity and meet the specific requirements of your industry.',
-      image: '/images/services/custom-design.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/services/custom-design'
     },
     {
       id: 'bulk-ordering',
       name: 'Bulk Ordering',
       description: 'Streamlined procurement process for large-scale uniform orders with optimized pricing, quality control, and delivery logistics.',
-      image: '/images/services/bulk-ordering.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/services/bulk-ordering'
     }
   ];
@@ -51,14 +51,14 @@ export default function ServicesPage() {
       id: 'measurement-services',
       name: 'Measurement Services',
       description: 'On-site professional measurement services to ensure perfect fit for all employees across your organization.',
-      image: '/images/services/measurement-services.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/services/measurement-services'
     },
     {
       id: 'uniform-policies',
       name: 'Corporate Uniform Policies',
       description: 'Expert consulting to develop comprehensive uniform policies that align with your organizational goals and industry standards.',
-      image: '/images/services/uniform-policies.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/services/uniform-policies'
     }
   ];
@@ -69,7 +69,7 @@ export default function ServicesPage() {
       <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-20">
         <div className="absolute inset-0 overflow-hidden opacity-25">
           <Image
-            src="/images/services/services-hero.jpg"
+            src="/images/banner-placeholder.jpg"
             alt="UNEOM Services"
             fill
             className="object-cover"
@@ -115,7 +115,7 @@ export default function ServicesPage() {
             <div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/services/service-expertise.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="UNEOM Service Expertise"
                   width={600}
                   height={400}
@@ -325,7 +325,7 @@ export default function ServicesPage() {
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                     <Image 
-                      src="/images/testimonials/dr-ahmed-al-sayed.jpg"
+                      src="/images/avatar-placeholder.jpg"
                       alt="Dr. Ahmed Al-Sayed"
                       width={48}
                       height={48}

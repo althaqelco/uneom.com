@@ -66,35 +66,35 @@ export default function HospitalityPage() {
         id: "food-beverage-attire",
         name: "Food & Beverage Service Attire",
         description: "Practical, elegant uniforms for restaurant, café, and banquet staff that balance style with functionality for food service environments.",
-        image: "/images/products/restaurant-uniform.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/hospitality/food-beverage-attire"
       },
       {
         id: "housekeeping-uniforms",
         name: "Housekeeping & Facilities Uniforms",
         description: "Durable, comfortable uniforms for housekeeping, maintenance, and facilities staff with practical features for operational efficiency.",
-        image: "/images/products/housekeeping-uniform.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/hospitality/housekeeping-uniforms"
       },
       {
         id: "executive-management-attire",
         name: "Executive & Management Attire",
         description: "Distinguished uniforms for management personnel that convey authority while maintaining brand consistency with other staff attire.",
-        image: "/images/products/hotel-management-uniform.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/hospitality/executive-management-attire"
       },
       {
         id: "spa-wellness-uniforms",
         name: "Spa & Wellness Uniforms",
         description: "Serene, comfortable attire for spa therapists and wellness staff that enhances the relaxation experience for guests.",
-        image: "/images/products/spa-uniform.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/hospitality/spa-wellness-uniforms"
       },
       {
         id: "valet-doorstaff-uniforms",
         name: "Valet & Door Staff Uniforms",
         description: "Distinctive, weather-appropriate uniforms for door staff, valets, and bellhops who create first and last impressions.",
-        image: "/images/products/valet-uniform.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/hospitality/valet-doorstaff-uniforms"
       }
     ],
@@ -104,25 +104,25 @@ export default function HospitalityPage() {
       {
         name: "Front of House",
         description: "Professional uniforms for guest-facing staff that embody your property's brand identity and service philosophy, featuring elegant designs with practical functionality.",
-        image: "/images/industries/hospitality-front.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Reception Attire", "Concierge Uniforms", "Guest Relations Sets"]
       },
       {
         name: "Food & Beverage",
         description: "Specialized uniforms for restaurant, café, and banquet staff that balance sophisticated appearance with practical features for food service environments.",
-        image: "/images/industries/hospitality-fb.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Restaurant Server Attire", "Barista Uniforms", "Banquet Staff Sets"]
       },
       {
         name: "Housekeeping & Facilities",
         description: "Durable, practical uniforms for behind-the-scenes operational staff with features designed for comfort during physical tasks and long shifts.",
-        image: "/images/industries/hospitality-housekeeping.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Housekeeping Uniforms", "Maintenance Staff Attire", "Laundry Team Sets"]
       },
       {
         name: "Specialty & Recreation",
         description: "Custom uniforms for specialized roles including spa therapists, fitness instructors, kids club staff, and recreation personnel.",
-        image: "/images/industries/hospitality-specialty.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Spa Therapist Attire", "Recreation Staff Uniforms", "Kids Club Team Sets"]
       }
     ],
@@ -218,19 +218,19 @@ export default function HospitalityPage() {
           title: "Luxury Hotel Uniform Trends in Saudi Arabia: Balancing Tradition with Modern Elegance",
           excerpt: "Explore how leading Saudi luxury properties are creating distinctive staff attire that reflects both international standards and local heritage.",
           url: "/blog/saudi-luxury-hotel-uniform-trends",
-          image: "/images/blog/luxury-hotel-trends.jpg"
+          image: "/images/default-placeholder.jpg"
         },
         {
           title: "The Impact of Staff Uniforms on Guest Perception and Experience",
           excerpt: "Research insights on how hospitality attire influences guest satisfaction, perceived service quality, and overall brand impression.",
           url: "/blog/uniforms-guest-perception-hospitality",
-          image: "/images/blog/guest-perception.jpg"
+          image: "/images/default-placeholder.jpg"
         },
         {
           title: "Designing Practical Uniforms for Saudi Arabia's Resort Environments",
           excerpt: "Best practices for developing hospitality uniforms that balance luxury appearance with practical functionality in Saudi resort settings.",
           url: "/blog/saudi-resort-uniform-design",
-          image: "/images/blog/resort-uniforms.jpg"
+          image: "/images/product-placeholder.jpg"
         }
       ],
       resources: [
@@ -291,7 +291,7 @@ export default function HospitalityPage() {
         "Reduced uniform replacement costs by 34% compared to industry benchmarks",
         "Successful implementation across 5 properties with over 2,500 staff members"
       ],
-      image: "/images/case-studies/hospitality-case-study.jpg",
+      image: "/images/default-placeholder.jpg",
       testimonial: {
         quote: "The uniform program UNEOM created has become a cornerstone of our brand identity and has significantly contributed to our recognition as a leading luxury hospitality brand in Saudi Arabia.",
         author: "Sultan Al-Saud",

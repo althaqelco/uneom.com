@@ -206,10 +206,10 @@ export default function ReceptionStaffUniformPage() {
     leadTime: '14-18 days',
     customization: true,
     images: [
-      { src: '/images/hotel-uniform.jpg', alt: 'Professional reception staff uniform for hospitality' },
-      { src: '/images/smiling-airplane-crew-members-walking-together-on-2023-11-27-05-07-27-utc.jpg', alt: 'Hotel reception staff in professional uniforms' },
-      { src: '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg', alt: 'Hospitality professionals in reception attire' },
-      { src: '/images/cheerful-flight-attendant-standing-in-airport-term-2024-10-18-08-12-48-utc.jpg', alt: 'Front desk professional in reception uniform' }
+      { src: '/images/product-placeholder.jpg', alt: 'Professional reception staff uniform for hospitality' },
+      { src: '/images/default-placeholder.jpg', alt: 'Hotel reception staff in professional uniforms' },
+      { src: '/images/default-placeholder.jpg', alt: 'Hospitality professionals in reception attire' },
+      { src: '/images/default-placeholder.jpg', alt: 'Front desk professional in reception uniform' }
     ],
     colors: [
       { name: 'Navy Blue', value: '#000080' },

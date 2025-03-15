@@ -11,7 +11,7 @@ export default function ManufacturingPageArabic() {
   const manufacturingIndustryData = {
     title: "أزياء الصناعة والتصنيع في المملكة العربية السعودية",
     subtitle: "ملابس العمل المتوافقة مع معايير السلامة مصممة للبيئات الصناعية مع مراعاة مناخ المملكة العربية السعودية",
-    heroImage: "/images/industries/manufacturing-hero.jpg",
+    heroImage: "/images/banner-placeholder.jpg",
     
     introduction: [
       "في قطاعات التصنيع والصناعة المتنامية في المملكة العربية السعودية، تعد ملابس العمل المتخصصة ضرورية لضمان السلامة والامتثال والإنتاجية. توفر يونيوم أزياء صناعية عالية الجودة مصممة خصيصًا للبيئات التصنيع السعودية، مع الجمع بين معايير السلامة والراحة في ظروف درجات الحرارة المرتفعة.",
@@ -49,28 +49,28 @@ export default function ManufacturingPageArabic() {
         id: "industrial-coveralls",
         name: "أفرهولات صناعية فاخرة",
         description: "حماية كاملة للجسم ومتينة مصممة لمختلف البيئات الصناعية مع خيارات مقاومة للحرارة والمقاومة للهب.",
-        image: "/images/ar/shop/industrial-coveralls.jpg",
+        image: "/images/banner-placeholder.jpg",
         href: "/ar/shop/industrial-coveralls"
       },
       {
         id: "hi-vis-workwear",
         name: "ملابس عمل عالية الرؤية",
         description: "ملابس عالية الرؤية متوافقة مع معايير ANSI/ISEA مع عناصر عاكسة للبيئات الخطرة والعمل الليلي.",
-        image: "/images/ar/shop/hi-vis-workwear.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/ar/shop/hi-vis-workwear"
       },
       {
         id: "flame-resistant-clothing",
         name: "ملابس مقاومة للهب",
         description: "ملابس FR متخصصة لصناعات النفط والغاز والكيماويات والكهرباء مع تقنيات حماية متقدمة.",
-        image: "/images/ar/shop/flame-resistant-clothing.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/ar/shop/flame-resistant-clothing"
       },
       {
         id: "food-processing-uniforms",
         name: "أزياء تصنيع الأغذية",
         description: "ملابس عمل صحية ومضادة للميكروبات لتصنيع الأغذية مع الامتثال لنظام HACCP وميزات منع التلوث.",
-        image: "/images/ar/shop/food-processing-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/food-processing-uniforms"
       }
     ],
@@ -128,7 +128,7 @@ export default function ManufacturingPageArabic() {
         author: "م. محمد العتيبي",
         position: "مدير السلامة",
         company: "التطوير الصناعي بالجبيل",
-        image: "/images/testimonials/mohammed-al-otaibi.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ],
     

@@ -266,10 +266,8 @@ const DirectImage: React.FC<DirectImageProps> = ({
   
   // تحديد ما إذا كان يجب استخدام الصورة المحسنة
   const shouldUseOptimized = () => {
-    if (!isLargeImage()) return false;
-    
-    // استخدام الصورة المحسنة في بيئة Vercel
-    return isVercel;
+    // استخدام الصورة المحسنة في بيئة Vercel أو الإنتاج
+    return isVercel || process.env.NODE_ENV === 'production';
   };
   
   // الحصول على مسار الصورة المحسنة
@@ -277,15 +275,42 @@ const DirectImage: React.FC<DirectImageProps> = ({
     if (!shouldUseOptimized()) return originalSrc;
     
     try {
-      // استخراج اسم الملف من المسار
-      const filename = originalSrc.split('/').pop()?.split('?')[0];
-      if (!filename) return originalSrc;
+      // إذا كان المسار يحتوي على _next، استخدم المسار الأصلي
+      if (originalSrc.includes('/_next/')) return originalSrc;
       
-      // استخراج اسم الملف بدون الامتداد
-      const baseName = filename.substring(0, filename.lastIndexOf('.'));
+      // إذا كان المسار يحتوي على http أو https، استخدم المسار الأصلي
+      if (originalSrc.startsWith('http')) return originalSrc;
+      
+      // إذا كان المسار يحتوي على data:، استخدم المسار الأصلي
+      if (originalSrc.startsWith('data:')) return originalSrc;
+      
+      // إذا كان المسار يحتوي على optimized، استخدم المسار الأصلي
+      if (originalSrc.includes('/optimized/')) return originalSrc;
+      
+      // تنظيف المسار
+      let cleanPath = originalSrc;
+      
+      // إذا كان المسار يبدأ بـ /، قم بإزالته
+      if (cleanPath.startsWith('/')) {
+        cleanPath = cleanPath.substring(1);
+      }
+      
+      // إذا كان المسار لا يحتوي على images/، أضفه
+      if (!cleanPath.startsWith('images/')) {
+        cleanPath = `images/${cleanPath.split('/').pop()}`;
+      }
+      
+      // استخراج اسم الملف والامتداد
+      const pathParts = cleanPath.split('/');
+      const fileName = pathParts.pop() || '';
+      const ext = fileName.substring(fileName.lastIndexOf('.'));
+      const baseName = fileName.substring(0, fileName.lastIndexOf('.'));
       
       // إنشاء مسار الصورة المحسنة
-      return `/images/optimized/${baseName}.webp`;
+      const optimizedPath = [...pathParts, 'optimized', baseName + '.webp'].join('/');
+      
+      console.log(`Using optimized image: ${optimizedPath}`);
+      return `/${optimizedPath}`;
     } catch (e) {
       console.error('خطأ في إنشاء مسار الصورة المحسنة:', e);
       return originalSrc;

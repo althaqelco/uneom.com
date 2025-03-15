@@ -16,28 +16,28 @@ export default function IndustrialUniformsPage() {
       id: 'industrial-coverall',
       name: 'بدلة العمل الصناعية',
       href: '/ar/shop/industrial-uniforms/industrial-coverall',
-      image: '/images/three-warehouse-worker-in-industrial-workplace-inspecting-work-2023-11-27-04-53-52-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       description: 'بدلات عمل صناعية عالية المتانة مصممة للبيئات الصناعية الشاقة، مع مميزات للسلامة والراحة طوال فترات العمل الطويلة.'
     },
     {
       id: 'safety-vest',
       name: 'سترة السلامة عالية الوضوح',
       href: '/ar/shop/industrial-uniforms/safety-vest',
-      image: '/images/industrial-worker-using-multimeter-tester-2023-11-27-05-25-54-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       description: 'سترات سلامة بألوان عاكسة مصممة للاستخدام في بيئات العمل منخفضة الإضاءة، مع أشرطة عاكسة وميزات سلامة متطورة.'
     },
     {
       id: 'work-pants',
       name: 'بنطلون العمل الصناعي',
       href: '/ar/shop/industrial-uniforms/work-pants',
-      image: '/images/industrial-worker-wearing-safety-mask-in-factory-2023-11-27-05-32-22-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       description: 'بناطيل عمل قوية مصنوعة من نسيج متين ومقاوم للتمزق، مع جيوب متعددة الاستخدامات لتخزين المعدات والأدوات.'
     },
     {
       id: 'industrial-jacket',
       name: 'جاكيت العمل الصناعي',
       href: '/ar/shop/industrial-uniforms/industrial-jacket',
-      image: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg',
+      image: '/images/default-placeholder.jpg',
       description: 'جاكيت عمل شتوي مبطن مصمم لتوفير الدفء والحماية في البيئات الصناعية الباردة، مع ميزات مقاومة للماء والرياح.'
     }
   ];
@@ -96,7 +96,7 @@ export default function IndustrialUniformsPage() {
       <section className="relative bg-gray-900 text-white">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/images/three-warehouse-worker-in-industrial-workplace-inspecting-work-2023-11-27-04-53-52-utc.jpg"
+            src="/images/default-placeholder.jpg"
             alt="الملابس الصناعية والزي الموحد للقطاعات الصناعية"
             fill
             className="object-cover opacity-30"
@@ -157,7 +157,7 @@ export default function IndustrialUniformsPage() {
             <div className="order-1 md:order-2">
               <div className="relative h-[450px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/industrial-worker-wearing-safety-mask-in-factory-2023-11-27-05-32-22-utc.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="عامل يرتدي ملابس صناعية في بيئة عمل"
                   fill
                   className="object-cover"

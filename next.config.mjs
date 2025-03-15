@@ -178,6 +178,23 @@ const nextConfig = {
         ],
       },
       {
+        source: '/images/optimized/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+          {
+            key: 'Content-Type',
+            value: 'image/webp',
+          },
+        ],
+      },
+      {
         source: '/css/:path*',
         headers: [
           {

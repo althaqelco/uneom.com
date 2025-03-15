@@ -31,7 +31,7 @@ export default function SecurityUniformsPage() {
       name: 'Executive Security Suit',
       description: 'Professional executive security uniform designed for premium venues and VIP protection services with refined styling and practical features.',
       price: 'From SAR 399',
-      image: '/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/shop/security-uniforms/executive-security-suit',
       features: ['Premium fabric', 'Professional styling', 'Reinforced stitching', 'Badge holder'],
       colors: ['Black', 'Navy', 'Grey', 'White'],
@@ -42,7 +42,7 @@ export default function SecurityUniformsPage() {
       name: 'Tactical Security Uniform',
       description: 'Tactical security uniform with reinforced construction and multiple functional pockets, designed for active security personnel in demanding environments.',
       price: 'From SAR 349',
-      image: '/images/security-guard-or-police-officer-with-helmet-vest-and-radio-on-green-screen-SBI-348686631.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/security-uniforms/tactical-security-uniform',
       features: ['Durable ripstop fabric', 'Multiple pockets', 'Reinforced knees/elbows', 'Belt loops'],
       colors: ['Black', 'Navy', 'Khaki', 'Olive'],
@@ -53,7 +53,7 @@ export default function SecurityUniformsPage() {
       name: 'Hotel Security Uniform',
       description: 'Refined security uniform designed for hotel and hospitality settings, balancing professional appearance with functional security features.',
       price: 'From SAR 299',
-      image: '/images/smiling-security-guards-men-and-women-from-SBI-348608142.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/security-uniforms/hotel-security-uniform',
       features: ['Formal appearance', 'Comfortable fit', 'Hotel branding option', 'Professional styling'],
       colors: ['Black', 'Navy', 'Burgundy', 'White']
@@ -63,7 +63,7 @@ export default function SecurityUniformsPage() {
       name: 'Standard Security Guard Uniform',
       description: 'Standard security guard uniform designed for commercial security services with practical features and professional appearance.',
       price: 'From SAR 249',
-      image: '/images/male-security-guard-portrait-smiling-man-with-radio-in-uniform-security-company-on-SBI-352117618.jpg',
+      image: '/images/product-placeholder.jpg',
       href: '/shop/security-uniforms/security-guard-uniform',
       features: ['Durable fabric', 'Badge holder', 'Multiple pockets', 'Name tag'],
       colors: ['Black', 'Navy', 'Khaki']
@@ -73,7 +73,7 @@ export default function SecurityUniformsPage() {
       name: 'Event Security Uniform',
       description: 'High-visibility event security uniform designed for crowd management and event security services with comfort and recognition features.',
       price: 'From SAR 219',
-      image: '/images/airport-security-looking-at-monitor-2024-12-21-16-59-19-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/security-uniforms/event-security-uniform',
       features: ['High-visibility option', 'Breathable fabric', 'Company branding', 'Weather-resistant'],
       colors: ['Black', 'Hi-Vis Yellow', 'Hi-Vis Orange']
@@ -83,7 +83,7 @@ export default function SecurityUniformsPage() {
       name: 'Security Winter Jacket',
       description: 'Insulated security jacket designed for cold weather conditions with security features and professional styling for outdoor surveillance.',
       price: 'From SAR 329',
-      image: '/images/security-office-manager-talking-mobile-phone-SBI-304451780.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/security-uniforms/security-winter-jacket',
       features: ['Thermal insulation', 'Water-resistant', 'Reflective elements', 'Badge holder'],
       colors: ['Black', 'Navy', 'Grey']
@@ -143,7 +143,7 @@ export default function SecurityUniformsPage() {
       <section className="relative pt-16 pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg"
+            src="/images/product-placeholder.jpg"
             alt="Security Uniforms"
             fill
             className="object-cover object-center"
@@ -375,7 +375,7 @@ export default function SecurityUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/airport-security-looking-at-monitor-2024-12-21-16-59-19-utc.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="Badge & ID Integration"
                   fill
                   className="object-cover"
@@ -392,7 +392,7 @@ export default function SecurityUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/women-in-white-uniform-in-the-office-2024-12-16-04-20-34-utc.jpg"
+                  src="/images/product-placeholder.jpg"
                   alt="Recognition Elements"
                   fill
                   className="object-cover"
@@ -409,7 +409,7 @@ export default function SecurityUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/security-office-manager-talking-mobile-phone-SBI-304451780.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="Tactical Functionality"
                   fill
                   className="object-cover"
@@ -426,7 +426,7 @@ export default function SecurityUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/smiling-security-guards-men-and-women-from-SBI-348608142.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="Professional Aesthetics"
                   fill
                   className="object-cover"
@@ -452,7 +452,7 @@ export default function SecurityUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/schoolchildren-pretending-to-be-businesspeople-wit-2024-11-08-16-13-21-utc.jpg"
+                    src="/images/default-placeholder.jpg"
                     alt="Corporate Workwear"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -469,7 +469,7 @@ export default function SecurityUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/beautiful-women-in-hotel-reception-administrators-in-dark-suits-standing-near-recep-SBI-351494839.jpg"
+                    src="/images/default-placeholder.jpg"
                     alt="Hospitality Attire"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -486,7 +486,7 @@ export default function SecurityUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg"
+                    src="/images/default-placeholder.jpg"
                     alt="Industrial Uniforms"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -523,7 +523,7 @@ export default function SecurityUniformsPage() {
             <div className="hidden lg:block">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/security-guard-or-police-officer-with-helmet-vest-and-radio-on-green-screen-SBI-348686631.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="Security Uniform Design Service"
                   fill
                   className="object-cover"

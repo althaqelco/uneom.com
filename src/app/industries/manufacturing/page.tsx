@@ -11,7 +11,7 @@ export default function ManufacturingPage() {
   const manufacturingIndustryData = {
     title: "Industrial & Manufacturing Uniforms in Saudi Arabia",
     subtitle: "Safety-compliant workwear designed for industrial environments with Saudi Arabia's climate in mind",
-    heroImage: "/images/industries/manufacturing-hero.jpg",
+    heroImage: "/images/banner-placeholder.jpg",
     
     introduction: [
       "In Saudi Arabia's growing manufacturing and industrial sectors, specialized workwear is essential for ensuring safety, compliance, and productivity. UNEOM provides high-quality industrial uniforms designed specifically for Saudi manufacturing environments, combining safety standards with comfort in high-temperature conditions.",
@@ -49,28 +49,28 @@ export default function ManufacturingPage() {
         id: "industrial-coveralls",
         name: "Premium Industrial Coveralls",
         description: "Durable, full-body protection designed for various industrial environments with heat-resistant and flame-retardant options.",
-        image: "/images/shop/industrial-coveralls.jpg",
+        image: "/images/banner-placeholder.jpg",
         href: "/shop/industrial-coveralls"
       },
       {
         id: "hi-vis-workwear",
         name: "High-Visibility Workwear",
         description: "ANSI/ISEA-compliant high-visibility clothing with reflective elements for hazardous environments and night work.",
-        image: "/images/shop/hi-vis-workwear.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/shop/hi-vis-workwear"
       },
       {
         id: "flame-resistant-clothing",
         name: "Flame-Resistant Apparel",
         description: "Specialized FR clothing for oil & gas, chemical, and electrical industries with advanced protection technologies.",
-        image: "/images/shop/flame-resistant-clothing.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/shop/flame-resistant-clothing"
       },
       {
         id: "food-processing-uniforms",
         name: "Food Processing Uniforms",
         description: "Hygienic, antimicrobial workwear for food manufacturing with HACCP compliance and contamination prevention features.",
-        image: "/images/shop/food-processing-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/food-processing-uniforms"
       }
     ],
@@ -128,7 +128,7 @@ export default function ManufacturingPage() {
         author: "Eng. Mohammed Al-Otaibi",
         position: "Safety Director",
         company: "Jubail Industrial Development",
-        image: "/images/testimonials/mohammed-al-otaibi.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ],
     

@@ -187,10 +187,10 @@ export default function RestaurantStaffUniformPage() {
     leadTime: '14-16 days',
     customization: true,
     images: [
-      { src: '/images/hotel-uniform.jpg', alt: 'Restaurant staff uniform for hospitality' },
-      { src: '/images/group-of-chefs-standing-with-arms-crossed-in-kitch-2023-11-27-05-01-36-utc.jpg', alt: 'Restaurant staff in professional uniforms' },
-      { src: '/images/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg', alt: 'Food service professional in restaurant attire' },
-      { src: '/images/cook-flavoring-his-best-meal-2024-11-29-22-42-39-utc.jpg', alt: 'Chef in professional kitchen uniform' }
+      { src: '/images/product-placeholder.jpg', alt: 'Restaurant staff uniform for hospitality' },
+      { src: '/images/default-placeholder.jpg', alt: 'Restaurant staff in professional uniforms' },
+      { src: '/images/default-placeholder.jpg', alt: 'Food service professional in restaurant attire' },
+      { src: '/images/default-placeholder.jpg', alt: 'Chef in professional kitchen uniform' }
     ],
     colors: [
       { name: 'Black', value: '#000000' },

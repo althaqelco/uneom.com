@@ -31,7 +31,7 @@ export default function AviationUniformsPage() {
       name: 'Airline Crew Uniform',
       description: 'Professional and elegant airline uniform for cabin crew, designed with premium fabric for comfort during long flights.',
       price: 'From SAR 1,299',
-      image: '/images/smiling-airplane-crew-members-walking-together-on-2023-11-27-05-07-27-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/aviation-uniforms/airline-crew-uniform',
       features: ['Wrinkle-resistant', 'Comfort stretch', 'Moisture-wicking', 'Stain-resistant'],
       colors: ['Navy Blue', 'Burgundy', 'Charcoal Grey'],
@@ -42,7 +42,7 @@ export default function AviationUniformsPage() {
       name: 'Professional Pilot Uniform',
       description: 'Premium quality pilot uniform with gold embellishments, designed for comfort and a distinguished professional appearance.',
       price: 'From SAR 1,599',
-      image: '/images/the-aviators-stance-2024-11-16-08-18-21-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/aviation-uniforms/pilot-uniform',
       features: ['Premium wool blend', 'Crisp appearance', 'Comfort fit', 'Gold-tone buttons'],
       colors: ['Navy Blue', 'Black']
@@ -52,7 +52,7 @@ export default function AviationUniformsPage() {
       name: 'Ground Crew Uniform',
       description: 'Durable and practical uniform for airport ground crew personnel, designed for visibility and weather protection.',
       price: 'From SAR 899',
-      image: '/images/cheerful-airline-workers-standing-in-airfield-unde-2024-10-20-08-49-20-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/aviation-uniforms/ground-crew-uniform',
       features: ['High-visibility elements', 'Weather-resistant', 'Durable fabric', 'Multiple pockets'],
       colors: ['Hi-Vis Orange/Navy', 'Hi-Vis Yellow/Black']
@@ -62,7 +62,7 @@ export default function AviationUniformsPage() {
       name: 'Flight Attendant Dress',
       description: 'Elegant and professional dress uniform for female flight attendants, featuring modest design with premium fabric.',
       price: 'From SAR 1,199',
-      image: '/images/female-flight-attendant-or-air-hostess-standing-in-2024-10-18-08-14-24-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/aviation-uniforms/flight-attendant-dress',
       features: ['Elegant design', 'Wrinkle-resistant', 'Easy movement', 'Professional look'],
       colors: ['Navy Blue', 'Burgundy', 'Charcoal Grey'],
@@ -73,7 +73,7 @@ export default function AviationUniformsPage() {
       name: 'Premium Aviation Blazer',
       description: 'Premium quality blazer for aviation professionals, featuring a tailored fit and durable construction.',
       price: 'From SAR 999',
-      image: '/images/cheerful-flight-attendant-standing-in-airport-term-2024-10-18-08-12-48-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/aviation-uniforms/aviation-blazer',
       features: ['Tailored fit', 'Premium materials', 'Professional appearance', 'Comfort stretch'],
       colors: ['Navy Blue', 'Burgundy', 'Black', 'Charcoal Grey']
@@ -83,7 +83,7 @@ export default function AviationUniformsPage() {
       name: 'Airline Service Vest',
       description: 'Practical and stylish vest for airline service personnel, designed for a professional look with practical features.',
       price: 'From SAR 499',
-      image: '/images/smiling-attractive-stewardess-getting-ready-to-fli-2024-10-18-12-57-27-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       href: '/shop/aviation-uniforms/airline-service-vest',
       features: ['Multiple pockets', 'Easy care fabric', 'Professional look', 'Easy movement'],
       colors: ['Navy Blue', 'Black', 'Grey', 'Burgundy']
@@ -143,7 +143,7 @@ export default function AviationUniformsPage() {
       <section className="relative pt-16 pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/joyful-stewardesses-standing-near-aircraft-at-airp-2023-11-27-04-49-34-utc.jpg"
+            src="/images/default-placeholder.jpg"
             alt="Aviation Uniforms"
             fill
             className="object-cover object-center"
@@ -332,7 +332,7 @@ export default function AviationUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/schoolchildren-pretending-to-be-businesspeople-wit-2024-11-08-16-13-21-utc.jpg"
+                    src="/images/default-placeholder.jpg"
                     alt="Corporate Workwear"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -366,7 +366,7 @@ export default function AviationUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg"
+                    src="/images/product-placeholder.jpg"
                     alt="Security Uniforms"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -403,7 +403,7 @@ export default function AviationUniformsPage() {
             <div className="hidden lg:block">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/two-beautiful-stewardesses-and-an-airman-staring-a-2024-10-21-02-06-10-utc.jpg"
+                  src="/images/default-placeholder.jpg"
                   alt="Aviation Uniform Design Service"
                   fill
                   className="object-cover"

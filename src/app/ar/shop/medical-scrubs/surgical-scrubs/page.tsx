@@ -50,10 +50,10 @@ export default function SurgicalScrubsPageArabic() {
       { name: 'خيارات التخصيص', value: 'شعارات المستشفيات، تحديد الأقسام، تطريز أسماء الجراحين' }
     ],
     images: [
-      { src: '/images/surgical-team-operating-room-SBI-300143928.jpg', alt: 'فريق جراحي يرتدي أزياء متقدمة في غرفة العمليات' },
-      { src: '/images/surgeon-nurse-surgical-scrubs-SBI-300817645.jpg', alt: 'جراح وممرض بملابس جراحية عالية الأداء يستعدان للإجراء' },
-      { src: '/images/surgical-scrubs-team-hospital-SBI-301556128.jpg', alt: 'متخصصون طبيون في أزياء جراحية متطابقة خلال العملية' },
-      { src: '/images/saudi-surgeon-scrubs-hospital-SBI-301287456.jpg', alt: 'جراح سعودي في أزياء جراحية متخصصة مع فريقه' }
+      { src: '/images/avatar-placeholder.jpg', alt: 'فريق جراحي يرتدي أزياء متقدمة في غرفة العمليات' },
+      { src: '/images/default-placeholder.jpg', alt: 'جراح وممرض بملابس جراحية عالية الأداء يستعدان للإجراء' },
+      { src: '/images/avatar-placeholder.jpg', alt: 'متخصصون طبيون في أزياء جراحية متطابقة خلال العملية' },
+      { src: '/images/default-placeholder.jpg', alt: 'جراح سعودي في أزياء جراحية متخصصة مع فريقه' }
     ],
     category: 'الأزياء الطبية',
     categorySlug: 'medical-scrubs',
@@ -69,11 +69,11 @@ export default function SurgicalScrubsPageArabic() {
       { name: 'طقم جراحي بتصميم محتشم', price: '285 ريال سعودي' }
     ],
     colors: [
-      { name: 'أخضر جراحي', value: '#5cb85c', image: '/images/fabrics/surgical-green-scrubs.jpg' },
-      { name: 'أزرق كاريبي', value: '#0086cb', image: '/images/fabrics/caribbean-blue-scrubs.jpg' },
-      { name: 'أزرق سماوي', value: '#92a1cf', image: '/images/fabrics/ceil-blue-scrubs.jpg' },
-      { name: 'كحلي', value: '#000080', image: '/images/fabrics/navy-scrubs.jpg' },
-      { name: 'أزرق ملكي', value: '#4169e1', image: '/images/fabrics/royal-blue-scrubs.jpg' }
+      { name: 'أخضر جراحي', value: '#5cb85c', image: '/images/default-placeholder.jpg' },
+      { name: 'أزرق كاريبي', value: '#0086cb', image: '/images/default-placeholder.jpg' },
+      { name: 'أزرق سماوي', value: '#92a1cf', image: '/images/default-placeholder.jpg' },
+      { name: 'كحلي', value: '#000080', image: '/images/default-placeholder.jpg' },
+      { name: 'أزرق ملكي', value: '#4169e1', image: '/images/default-placeholder.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -92,14 +92,14 @@ export default function SurgicalScrubsPageArabic() {
         author: "د. خالد العنزي",
         position: "رئيس قسم الجراحة",
         company: "مستشفى الملك فيصل التخصصي",
-        image: "/images/testimonials/khalid-a.jpg"
+        image: "/images/avatar-placeholder.jpg"
       },
       {
         quote: "بعد توحيد الأزياء الجراحية من يونيوم عبر شبكة منشآت العمليات لدينا، وثّقنا تحسناً ملموساً في راحة الطاقم خلال الإجراءات الطويلة. كانت خيارات التصميم المحتشم ذات قيمة خاصة للجراحات لدينا، ويساعد التطريز المخصص في الحفاظ على تحديد واضح في البيئات الجراحية.",
         author: "د. ليلى العريني",
         position: "مديرة قسم الجراحة",
         company: "مجموعة مستشفيات السعودي الألماني",
-        image: "/images/testimonials/layla-o.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ]
   };
@@ -343,7 +343,7 @@ export default function SurgicalScrubsPageArabic() {
             <div className="order-2 md:order-1">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/surgical-team-preparing-operation-SBI-300177455.jpg" 
+                  src="/images/avatar-placeholder.jpg" 
                   alt="فريق جراحي في أزياء موحدة يستعد للعملية" 
                   fill
                   className="object-cover"

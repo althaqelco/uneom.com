@@ -66,35 +66,35 @@ export default function HealthcarePage() {
         id: "antimicrobial-lab-coat",
         name: "Antimicrobial Laboratory Coat",
         description: "High-performance lab coats featuring BioCare Antimicrobial technology, fluid-resistant properties, and customization options.",
-        image: "/images/products/lab-coat.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/medical-scrubs/antimicrobial-lab-coat"
       },
       {
         id: "nursing-uniform-set",
         name: "Nursing Uniform Set",
         description: "Complete nursing attire solutions designed for all-day comfort, professional appearance, and Saudi healthcare facility requirements.",
-        image: "/images/products/nursing-uniform.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/medical-scrubs/nursing-uniform-set"
       },
       {
         id: "surgical-scrubs",
         name: "Specialized Surgical Scrubs",
         description: "Advanced surgical attire with enhanced protection, sterility features, and specialized designs for operating theater environments.",
-        image: "/images/products/surgical-scrubs.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/medical-scrubs/surgical-scrubs"
       },
       {
         id: "modest-medical-uniform",
         name: "Modest Medical Uniforms",
         description: "Specialized healthcare uniforms designed specifically for female healthcare professionals preferring modest attire options.",
-        image: "/images/products/modest-uniform.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/medical-scrubs/modest-medical-uniform"
       },
       {
         id: "department-admin-uniform",
         name: "Department & Administrative Uniforms",
         description: "Professional attire solutions for administrative, reception, and non-clinical staff within healthcare facilities.",
-        image: "/images/products/admin-uniform.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/medical-scrubs/department-admin-uniform"
       }
     ],
@@ -104,25 +104,25 @@ export default function HealthcarePage() {
       {
         name: "Emergency Department",
         description: "High-performance scrubs and attire designed for the demanding environment of emergency medicine, featuring reinforced construction, enhanced mobility, and quick-identification color coding.",
-        image: "/images/industries/healthcare-emergency.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Premium Scrub Sets", "Quick-Release Lab Coats", "Trauma Team Vests"]
       },
       {
         name: "Nursing & Patient Care",
         description: "Comfortable, practical uniforms for nursing staff that combine professional appearance with all-day comfort and functionality, including Saudi-specific modest options for female nursing staff.",
-        image: "/images/industries/healthcare-nursing.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Modern Nursing Scrubs", "Modest Nursing Tunics", "Climate-Adapted Scrub Sets"]
       },
       {
         name: "Surgical Teams",
         description: "Specialized surgical attire meeting the highest standards for safety and sterility, with options for different surgical environments and team identification systems.",
-        image: "/images/industries/healthcare-surgical.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Advanced Surgical Scrubs", "Surgeon-Specific Attire", "Surgical Headwear Options"]
       },
       {
         name: "Laboratory & Diagnostics",
         description: "Professional lab coats and protective attire for laboratory personnel, featuring enhanced protection, comfort for extended wear, and customization options.",
-        image: "/images/industries/healthcare-laboratory.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Premium Lab Coats", "Diagnostic Department Uniforms", "Protective Layering Systems"]
       }
     ],
@@ -218,19 +218,19 @@ export default function HealthcarePage() {
           title: "Best Practices for Healthcare Uniform Programs in Saudi Arabia",
           excerpt: "Learn how leading Saudi healthcare facilities are implementing effective uniform programs that enhance professional image while meeting regulatory requirements.",
           url: "/blog/healthcare-uniform-best-practices-saudi-arabia",
-          image: "/images/blog/healthcare-best-practices.jpg"
+          image: "/images/default-placeholder.jpg"
         },
         {
           title: "Antimicrobial Fabrics: The Science Behind Healthcare Uniform Technology",
           excerpt: "Explore the advanced antimicrobial technologies being incorporated into modern medical uniforms and their impact on healthcare environments.",
           url: "/blog/antimicrobial-fabric-technology-healthcare-uniforms",
-          image: "/images/blog/antimicrobial-technology.jpg"
+          image: "/images/default-placeholder.jpg"
         },
         {
           title: "Implementing Department Color Coding in Saudi Healthcare Facilities",
           excerpt: "A comprehensive guide to creating effective color-coding systems that improve patient experience and operational efficiency.",
           url: "/blog/department-color-coding-saudi-healthcare",
-          image: "/images/blog/color-coding-guide.jpg"
+          image: "/images/default-placeholder.jpg"
         }
       ],
       resources: [
@@ -291,7 +291,7 @@ export default function HealthcarePage() {
         "Improved patient identification of staff roles by 46%",
         "Successfully implemented across all facilities within 90 days"
       ],
-      image: "/images/case-studies/healthcare-case-study.jpg",
+      image: "/images/default-placeholder.jpg",
       testimonial: {
         quote: "The comprehensive approach UNEOM took to understanding our diverse facility needs resulted in a uniform program that has exceeded our expectations in both functionality and appearance.",
         author: "Mohammed Al-Sulaimani",

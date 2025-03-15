@@ -36,11 +36,11 @@ export default function IndustrialCoverallProArabicPage() {
     longDescription: "تم تصميم الأفرول الصناعي المتين الخاص بنا للمهنيين العاملين في بيئات المصانع ومرافق التصنيع والإعدادات الصناعية. يوفر هذا الأفرول الممتاز متانة استثنائية وراحة وحماية للعاملين في الظروف الصعبة. يجمع التصميم ثنائي اللون بين الأناقة والوظائف العملية، في حين تضمن الخياطة المقواة وتوزيع الجيوب الاستراتيجي العملية في الاستخدام اليومي.",
     price: "ريال 289",
     minOrder: 15,
-    mainImage: "/images/Heavy_Duty_Industrial_Coverall.png",
+    mainImage: "/images/banner-placeholder.jpg",
     additionalImages: [
       "/images/products/industrial-coverall.jpg",
-      "/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg",
-      "/images/male-worker-in-a-factory-SBI-302444677.jpg"
+      "/images/default-placeholder.jpg",
+      "/images/default-placeholder.jpg"
     ],
     colors: [
       { name: "أسود/رمادي", value: "#333333" },
@@ -93,43 +93,43 @@ export default function IndustrialCoverallProArabicPage() {
       { 
         name: "تطريز شعار الشركة", 
         description: "إضافة شعار شركتك مطرزًا على الصدر و/أو الظهر",
-        image: "/images/customization/logo-embroidery.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "علامات الاسم/القسم", 
         description: "إضافة اسم الموظف أو تعريف القسم",
-        image: "/images/customization/name-tag.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "شرائط عاكسة", 
         description: "شرائط عاكسة إضافية لتعزيز الرؤية",
-        image: "/images/customization/reflective-strips.jpg"
+        image: "/images/default-placeholder.jpg"
       },
       { 
         name: "تخصيص الجيوب", 
         description: "تعديل تكوين الجيوب بناءً على الاحتياجات المحددة",
-        image: "/images/customization/pocket-custom.jpg"
+        image: "/images/default-placeholder.jpg"
       }
     ],
     relatedProducts: [
       {
         id: "industrial-safety-vest",
         name: "سترة أمان عالية الرؤية",
-        image: "/images/products/safety-vest.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "ريال 89",
         href: "/ar/shop/industrial-uniforms/industrial-safety-vest"
       },
       {
         id: "welding-apron",
         name: "مريلة لحام مقاومة للحرارة",
-        image: "/images/products/welding-apron.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "ريال 159",
         href: "/ar/shop/industrial-uniforms/welding-apron"
       },
       {
         id: "mechanics-overalls",
         name: "أفرول ميكانيكي ممتاز",
-        image: "/images/products/mechanic-overalls.jpg",
+        image: "/images/product-placeholder.jpg",
         price: "ريال 269",
         href: "/ar/shop/industrial-uniforms/mechanics-overalls"
       }
@@ -170,7 +170,7 @@ export default function IndustrialCoverallProArabicPage() {
         <meta name="keywords" content="أفرول صناعي, ملابس عمل صناعية, أفرول متين, زي موحد للمصانع, ملابس عمل سعودية" />
         <meta property="og:title" content="أفرول صناعي متين - يونيوم للأزياء المهنية" />
         <meta property="og:description" content="أفرول صناعي متين عالي الجودة مصمم للاستخدام في البيئات الصناعية القاسية، متوفر بعدة ألوان وأحجام في السعودية" />
-        <meta property="og:image" content="/images/Heavy_Duty_Industrial_Coverall.png" />
+        <meta property="og:image" content="/images/banner-placeholder.jpg" />
         <meta property="og:type" content="product" />
         <link rel="canonical" href="https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall-pro" />
         <link rel="alternate" hrefLang="en" href="https://uneom.com/shop/industrial-uniforms/industrial-coverall-pro" />

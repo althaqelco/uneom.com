@@ -57,42 +57,42 @@ export default function ClientShopPage() {
       id: 'medical-scrubs',
       title: 'الأزياء الطبية',
       description: 'ملابس طبية مريحة وعملية لجميع متخصصي الرعاية الصحية',
-      image: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg',
+      image: '/images/avatar-placeholder.jpg',
       url: '/ar/shop/medical-scrubs',
     },
     {
       id: 'aviation-uniforms',
       title: 'أزياء الطيران',
       description: 'أزياء أنيقة لطاقم الطائرة والطيارين وموظفي المطار',
-      image: '/images/joyful-stewardesses-standing-near-aircraft-at-airp-2023-11-27-04-49-34-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       url: '/ar/shop/aviation-uniforms',
     },
     {
       id: 'hospitality-attire',
       title: 'أزياء الضيافة',
       description: 'ملابس احترافية للعاملين في الفنادق والمطاعم',
-      image: '/images/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       url: '/ar/shop/hospitality-attire',
     },
     {
       id: 'corporate-workwear',
       title: 'أزياء الشركات',
       description: 'ملابس أنيقة وعملية للمكاتب والشركات',
-      image: '/images/modern-arabic-businessman-SBI-300984397.jpg',
+      image: '/images/default-placeholder.jpg',
       url: '/ar/shop/corporate-workwear',
     },
     {
       id: 'security-uniforms',
       title: 'أزياء الأمن',
       description: 'أزياء متينة للأمن والحراسة وفرق الاستجابة',
-      image: '/images/a-firefighter-giving-instructions-to-her-team-SBI-301057339.jpg',
+      image: '/images/avatar-placeholder.jpg',
       url: '/ar/shop/security-uniforms',
     },
     {
       id: 'education-uniforms',
       title: 'أزياء التعليم',
       description: 'أزياء مدرسية وجامعية للطلاب والمعلمين',
-      image: '/images/back-to-elementary-school-concept-children-hold-h-2024-11-29-15-57-59-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       url: '/ar/shop/education-uniforms',
     }
   ];
@@ -103,7 +103,7 @@ export default function ClientShopPage() {
       id: 'premium-medical-scrubs',
       name: 'ملابس طبية متميزة',
       category: 'medical-scrubs',
-      image: '/images/PremiumـMedicalـScrubs.png',
+      image: '/images/default-placeholder.jpg',
       price: '١٢٠ ر.س',
       url: '/ar/shop/medical-scrubs/premium-medical-scrubs',
     },
@@ -111,7 +111,7 @@ export default function ClientShopPage() {
       id: 'pilot-uniform',
       name: 'زي الطيار',
       category: 'aviation-uniforms',
-      image: '/images/the-aviators-stance-2024-11-16-08-18-21-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       price: '٦٥٠ ر.س',
       url: '/ar/shop/aviation-uniforms/pilot-uniform',
     },
@@ -119,7 +119,7 @@ export default function ClientShopPage() {
       id: 'chef-uniform',
       name: 'زي الطاهي',
       category: 'hospitality-attire',
-      image: '/images/cook-flavoring-his-best-meal-2024-11-29-22-42-39-utc.jpg',
+      image: '/images/default-placeholder.jpg',
       price: '٢٢٠ ر.س',
       url: '/ar/shop/hospitality-attire/chef-uniform',
     },
@@ -127,7 +127,7 @@ export default function ClientShopPage() {
       id: 'corporate-suit',
       name: 'بدلة شركات',
       category: 'corporate-workwear',
-      image: '/images/arabian-businessman-in-the-middle-east-SBI-300984430.jpg',
+      image: '/images/default-placeholder.jpg',
       price: '٥٥٠ ر.س',
       url: '/ar/shop/corporate-workwear/corporate-suit',
     },
@@ -135,7 +135,7 @@ export default function ClientShopPage() {
       id: 'security-uniform',
       name: 'زي أمن',
       category: 'security-uniforms',
-      image: '/images/firefighters-fight-the-fire-flame-to-control-fire-not-to-spreading-out-firefighter-ind-SBI-349465280.jpg',
+      image: '/images/default-placeholder.jpg',
       price: '٣٠٠ ر.س',
       url: '/ar/shop/security-uniforms/security-uniform',
     },
@@ -143,7 +143,7 @@ export default function ClientShopPage() {
       id: 'nurse-uniform',
       name: 'زي تمريض',
       category: 'medical-scrubs',
-      image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+      image: '/images/default-placeholder.jpg',
       price: '١٣٥ ر.س',
       url: '/ar/shop/medical-scrubs/nurse-uniform',
     },
@@ -151,7 +151,7 @@ export default function ClientShopPage() {
       id: 'flight-attendant-uniform',
       name: 'زي مضيف طيران',
       category: 'aviation-uniforms',
-      image: '/images/Airline_Crew_Uniform.png',
+      image: '/images/product-placeholder.jpg',
       price: '٤٨٠ ر.س',
       url: '/ar/shop/aviation-uniforms/flight-attendant-uniform',
     },
@@ -159,7 +159,7 @@ export default function ClientShopPage() {
       id: 'hotel-staff-uniform',
       name: 'زي موظفي الفندق',
       category: 'hospitality-attire',
-      image: '/images/Luxury_Hotel Staff_Uniform.png',
+      image: '/images/default-placeholder.jpg Staff_Uniform.png',
       price: '٢٦٠ ر.س',
       url: '/ar/shop/hospitality-attire/hotel-staff-uniform',
     }
@@ -175,7 +175,7 @@ export default function ClientShopPage() {
     name: 'مجموعة الأزياء المهنية',
     description: 'تشكيلة واسعة من الأزياء المهنية والموحدة عالية الجودة للقطاعات المختلفة',
     url: 'https://uneom.com/ar/shop',
-    image: 'https://uneom.com/images/uneom_hero.jpg',
+    image: 'https://uneom.com/images/banner-placeholder.jpg',
     locale: 'ar'
   };
   
@@ -188,7 +188,7 @@ export default function ClientShopPage() {
       <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-16 md:py-24">
         <div className="absolute inset-0 overflow-hidden opacity-30">
           <Image
-            src="/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg"
+            src="/images/default-placeholder.jpg"
             alt="متجر يونيوم - المورد الرائد للزي الموحد في المملكة العربية السعودية"
             fill
             className="object-cover"
@@ -415,7 +415,7 @@ export default function ClientShopPage() {
               >
                 <div className="relative h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/images/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg"
+                    src="/images/default-placeholder.jpg"
                     alt="الطلبات المخصصة من يونيوم"
                     fill
                     className="object-cover"

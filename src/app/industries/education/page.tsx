@@ -11,7 +11,7 @@ export default function EducationPage() {
   const educationIndustryData = {
     title: "Premium Education Uniforms in Saudi Arabia",
     subtitle: "High-quality school and university attire promoting identity and excellence",
-    heroImage: "/images/industries/education-hero.jpg",
+    heroImage: "/images/banner-placeholder.jpg",
     
     introduction: [
       "Education uniforms play a vital role in Saudi Arabia's evolving academic landscape, fostering a sense of belonging and institutional pride while encouraging discipline and equality among students. UNEOM provides premium uniform solutions for educational institutions throughout the Kingdom, from primary schools to prestigious universities.",
@@ -49,28 +49,28 @@ export default function EducationPage() {
         id: "school-uniforms",
         name: "K-12 School Uniforms",
         description: "Comprehensive uniform collections for primary and secondary schools with gender-specific options.",
-        image: "/images/shop/school-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/school-uniforms"
       },
       {
         id: "university-attire",
         name: "University & College Attire",
         description: "Professional uniform solutions for higher education institutions, including department-specific variations.",
-        image: "/images/shop/university-attire.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/shop/university-attire"
       },
       {
         id: "pe-sports",
         name: "Physical Education & Sports",
         description: "Performance sportswear for physical education classes and school athletic teams.",
-        image: "/images/shop/pe-sports.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/shop/pe-sports"
       },
       {
         id: "academic-ceremonies",
         name: "Academic Ceremonial Garments",
         description: "Graduation gowns, caps, and ceremonial attire customized with your institution's colors and emblems.",
-        image: "/images/shop/academic-ceremonies.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/shop/academic-ceremonies"
       }
     ],
@@ -128,7 +128,7 @@ export default function EducationPage() {
         author: "Sarah Al-Otaibi",
         position: "School Director",
         company: "International Academy of Riyadh",
-        image: "/images/testimonials/sarah-al-otaibi.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ],
     

@@ -91,7 +91,7 @@ export default function ResourcePageLayout({ resourceData, skipMainLayout = fals
       <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-24">
         <div className="absolute inset-0 overflow-hidden opacity-40">
           <Image
-            src={resourceData.heroImage || '/images/default-hero.jpg'}
+            src={resourceData.heroImage || '/images/banner-placeholder.jpg'}
             alt={resourceData.title}
             fill
             className="object-cover"
@@ -164,7 +164,7 @@ export default function ResourcePageLayout({ resourceData, skipMainLayout = fals
                 >
                   <div className="rounded-lg overflow-hidden shadow-xl">
                     <Image
-                      src={section.image || '/images/default-section.jpg'}
+                      src={section.image || '/images/default-placeholder.jpg'}
                       alt={section.title}
                       width={600}
                       height={450}
@@ -202,7 +202,7 @@ export default function ResourcePageLayout({ resourceData, skipMainLayout = fals
                     {item.image && (
                       <div className="h-48 relative overflow-hidden">
                         <Image
-                          src={item.image || '/images/default-item.jpg'}
+                          src={item.image || '/images/product-placeholder.jpg'}
                           alt={item.title}
                           fill
                           className="object-cover"

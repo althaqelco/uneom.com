@@ -51,7 +51,7 @@ const services = [
     icon: 'design',
     iconColor: 'from-purple-500 to-indigo-600',
     link: '/ar/services/custom-design',
-    image: '/images/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
+    image: '/images/default-placeholder.jpg',
     stats: [
       { value: '1500+', label: 'تصميم فريد' },
       { value: '98%', label: 'رضا العملاء' }
@@ -63,7 +63,7 @@ const services = [
     icon: 'production',
     iconColor: 'from-blue-500 to-cyan-600',
     link: '/ar/services/bulk-ordering',
-    image: '/images/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg',
+    image: '/images/default-placeholder.jpg',
     stats: [
       { value: '50,000+', label: 'قطعة شهرياً' },
       { value: '99.7%', label: 'دقة التسليم' }
@@ -75,7 +75,7 @@ const services = [
     icon: 'management',
     iconColor: 'from-amber-500 to-orange-600',
     link: '/ar/services/program-management',
-    image: '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg',
+    image: '/images/default-placeholder.jpg',
     stats: [
       { value: '200+', label: 'برنامج نشط' },
       { value: '35%', label: 'توفير التكاليف' }
@@ -87,7 +87,7 @@ const services = [
     icon: 'measuring',
     iconColor: 'from-green-500 to-emerald-600',
     link: '/ar/services/measurement-services',
-    image: '/images/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg',
+    image: '/images/default-placeholder.jpg',
     stats: [
       { value: '99.8%', label: 'دقة المقاسات' },
       { value: '25,000+', label: 'قياس سنوياً' }
@@ -100,32 +100,32 @@ const features = [
   {
     title: 'تصميم مخصص',
     description: 'نصمم الزي الموحد خصيصًا ليعكس هوية علامتك التجارية ويلبي احتياجات موظفيك.',
-    icon: '/images/icons/custom-design.svg',
+    icon: '/images/default-placeholder.jpg',
   },
   {
     title: 'مواد عالية الجودة',
     description: 'نستخدم فقط أفضل الأقمشة والمواد لضمان الراحة والمتانة والمظهر المهني.',
-    icon: '/images/icons/quality.svg',
+    icon: '/images/default-placeholder.jpg',
   },
   {
     title: 'توافق مع المعايير السعودية',
     description: 'جميع منتجاتنا متوافقة مع المعايير السعودية ومناسبة للبيئة المحلية.',
-    icon: '/images/icons/compliance.svg',
+    icon: '/images/default-placeholder.jpg',
   },
   {
     title: 'التسليم السريع',
     description: 'نلتزم بجداول التسليم المحددة لنضمن وصول طلبك في الوقت المناسب.',
-    icon: '/images/icons/delivery.svg',
+    icon: '/images/default-placeholder.jpg',
   },
   {
     title: 'دعم مستمر',
     description: 'فريق دعم متخصص جاهز لمساعدتك في أي استفسارات أو متطلبات إضافية.',
-    icon: '/images/icons/support.svg',
+    icon: '/images/default-placeholder.jpg',
   },
   {
     title: 'أسعار تنافسية',
     description: 'نقدم أسعارًا تنافسية مع الحفاظ على أعلى معايير الجودة لجميع منتجاتنا.',
-    icon: '/images/icons/price.svg',
+    icon: '/images/default-placeholder.jpg',
   },
 ];
 
@@ -196,7 +196,7 @@ const featuredProducts = [
     id: 'premium-medical-scrubs',
     title: 'ملابس طبية متميزة',
     description: 'مصممة خصيصاً للكوادر الطبية في المملكة',
-    image: '/images/PremiumـMedicalـScrubs.png',
+    image: '/images/default-placeholder.jpg',
     category: 'الرعاية الصحية',
     price: 450,
     salePrice: 399,
@@ -217,7 +217,7 @@ const featuredProducts = [
     id: 'airline-crew-uniform',
     title: 'زي طاقم الطيران',
     description: 'أناقة وراحة لطواقم الطيران السعودية',
-    image: '/images/Airline_Crew_Uniform.png',
+    image: '/images/product-placeholder.jpg',
     category: 'الطيران',
     price: 1200,
     salePrice: 950,
@@ -238,7 +238,7 @@ const featuredProducts = [
     id: 'luxury-hotel-uniform',
     title: 'زي فندقي فاخر',
     description: 'تصميم عصري لطاقم الضيافة الفندقية',
-    image: '/images/Luxury_Hotel Staff_Uniform.png',
+    image: '/images/default-placeholder.jpg Staff_Uniform.png',
     category: 'الضيافة',
     price: 850,
     salePrice: 765,
@@ -259,7 +259,7 @@ const featuredProducts = [
     id: 'industrial-coverall',
     title: 'بدلة عمل صناعية',
     description: 'حماية وراحة في بيئات العمل الصناعية',
-    image: '/images/Heavy_Duty_Industrial_Coverall.png',
+    image: '/images/banner-placeholder.jpg',
     category: 'الصناعة',
     price: 550,
     salePrice: 499,
@@ -839,7 +839,7 @@ export default function HomePage() {
             <div className="relative h-[600px] rounded-xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-900/80 to-primary-600/50 mix-blend-multiply z-10"></div>
               <Image
-                src="/images/fabric-material-2024-12-06-03-35-02-utc.jpg"
+                src="/images/default-placeholder.jpg"
                 alt="تقنيات الأقمشة المتطورة"
                 fill
                 className="object-cover"
@@ -1228,7 +1228,7 @@ export default function HomePage() {
                 excerpt: "استكشف أحدث اتجاهات الزي الموحد في المملكة وكيف تؤثر الرؤية السعودية 2030 على قطاع الملابس المهنية.",
                 slug: "uniform-trends-2023",
                 date: "23 مايو 2023",
-                image: "/images/saudimoving_hero.jpg",
+                image: "/images/banner-placeholder.jpg",
                 author: "محمد العلي",
                 category: "اتجاهات"
               },
@@ -1237,7 +1237,7 @@ export default function HomePage() {
                 excerpt: "كيف تتبنى الشركات السعودية ممارسات الاستدامة في الزي الموحد وتأثير ذلك على البيئة والاقتصاد.",
                 slug: "sustainable-uniforms",
                 date: "14 يونيو 2023",
-                image: "/images/bright-raincoats-hanging-at-a-fashion-store-2024-12-16-06-50-01-utc.jpg",
+                image: "/images/default-placeholder.jpg",
                 author: "سارة الأحمد",
                 category: "الاستدامة"
               },
@@ -1246,7 +1246,7 @@ export default function HomePage() {
                 excerpt: "دليل شامل لاختيار الزي الطبي المناسب الذي يلبي متطلبات الراحة والأداء والامتثال للمعايير.",
                 slug: "choosing-healthcare-uniforms",
                 date: "02 يوليو 2023",
-                image: "/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg",
+                image: "/images/avatar-placeholder.jpg",
                 author: "د. فهد العنزي",
                 category: "دليل"
               }

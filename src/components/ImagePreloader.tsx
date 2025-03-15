@@ -4,12 +4,12 @@ import React, { useEffect } from 'react';
 
 // قائمة الصور الأساسية التي يجب تحميلها مسبقًا
 const CRITICAL_IMAGES = [
-  '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg',
-  '/images/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg',
-  '/images/back-to-elementary-school-concept-children-hold-h-2024-11-29-15-57-59-utc.jpg',
-  '/images/joyful-stewardesses-standing-near-aircraft-at-airp-2023-11-27-04-49-34-utc.jpg',
-  '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg',
-  '/images/uneom_hero.jpg',
+  '/images/avatar-placeholder.jpg',
+  '/images/default-placeholder.jpg',
+  '/images/default-placeholder.jpg',
+  '/images/default-placeholder.jpg',
+  '/images/default-placeholder.jpg',
+  '/images/banner-placeholder.jpg',
   '/images/default-placeholder.jpg'
 ];
 
@@ -113,7 +113,7 @@ const ImagePreloader: React.FC = () => {
             img.classList.add('fallback-applied');
             const src = img.src;
             img.src = isVercel 
-              ? `https://uneom-com.vercel.app/images/default-placeholder.jpg` 
+              ? `https://uneom-com.vercel.app/images/default-placeholder.jpg 
               : '/images/default-placeholder.jpg';
             console.warn(`Image failed to load: ${src}, using fallback`);
           }

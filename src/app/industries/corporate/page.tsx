@@ -11,7 +11,7 @@ export default function CorporatePage() {
     locale: locale,
     title: "Professional Corporate Uniforms & Business Attire in Saudi Arabia",
     subtitle: "Tailored business attire for corporate environments that balance professionalism with Saudi workplace culture",
-    heroImage: "/images/industries/corporate.jpg",
+    heroImage: "/images/default-placeholder.jpg",
     
     // SEO metadata
     metaDescription: "UNEOM provides premium corporate uniforms and business attire for Saudi companies, combining professional design with cultural sensitivity and comfort for the Saudi workplace.",
@@ -59,42 +59,42 @@ export default function CorporatePage() {
         id: "executive-suits",
         name: "Executive Suit Collections",
         description: "Premium tailored suits for management and executive staff that project authority and professionalism in corporate settings.",
-        image: "/images/products/executive-suits.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/corporate/executive-suits"
       },
       {
         id: "business-shirts-blouses",
         name: "Business Shirts & Blouses",
         description: "Professional shirts and blouses in various styles, including modest options for female staff that respect Islamic dress preferences.",
-        image: "/images/products/business-shirts.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/corporate/business-shirts-blouses"
       },
       {
         id: "corporate-dresses",
         name: "Professional Corporate Dresses",
         description: "Elegant, modest dresses designed for female professionals in Saudi corporate environments.",
-        image: "/images/products/corporate-dresses.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/corporate/corporate-dresses"
       },
       {
         id: "front-office-attire",
         name: "Front Office & Reception Attire",
         description: "Distinctive uniforms for reception staff and client-facing personnel who represent your company's first impression.",
-        image: "/images/products/front-office-attire.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/corporate/front-office-attire"
       },
       {
         id: "corporate-abayas",
         name: "Professional Corporate Abayas",
         description: "Elegant, business-appropriate abayas designed specifically for professional women in Saudi corporate environments.",
-        image: "/images/products/corporate-abayas.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/corporate/corporate-abayas"
       },
       {
         id: "corporate-accessories",
         name: "Corporate Accessories & Complements",
         description: "Professional accessories including scarves, ties, pins, and other elements that complete the corporate uniform look.",
-        image: "/images/products/corporate-accessories.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/shop/corporate/corporate-accessories"
       }
     ],
@@ -104,25 +104,25 @@ export default function CorporatePage() {
       {
         name: "Executive & Management",
         description: "Distinguished attire for leadership personnel that conveys authority and professionalism while maintaining brand consistency with other corporate attire.",
-        image: "/images/industries/corporate-executive.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Executive Suit Collections", "Premium Business Shirts", "Management Accessories"]
       },
       {
         name: "Client-Facing Roles",
         description: "Professional uniforms for sales, customer service, and client relations staff that project competence and reinforce brand identity during client interactions.",
-        image: "/images/industries/corporate-client-facing.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Sales Team Attire", "Customer Service Uniforms", "Client Relations Sets"]
       },
       {
         name: "Administrative & Support",
         description: "Practical, professional attire for administrative and support staff that maintains corporate image while providing comfort for daily office tasks.",
-        image: "/images/industries/corporate-admin.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Administrative Staff Uniforms", "Office Support Attire", "Practical Business Wear"]
       },
       {
         name: "Technical & Specialized",
         description: "Specialized corporate attire for technical roles that balances professional appearance with practical functionality for specialized work environments.",
-        image: "/images/industries/corporate-technical.jpg",
+        image: "/images/default-placeholder.jpg",
         productTypes: ["Technical Staff Uniforms", "IT Department Attire", "Specialized Role Uniforms"]
       }
     ],
@@ -218,19 +218,19 @@ export default function CorporatePage() {
           title: "Corporate Uniform Trends in Saudi Arabia: Balancing Tradition with Modern Business Standards",
           excerpt: "Explore how leading Saudi companies are creating distinctive corporate attire that reflects both international standards and local business culture.",
           url: "/blog/saudi-corporate-uniform-trends",
-          image: "/images/blog/corporate-trends.jpg"
+          image: "/images/default-placeholder.jpg"
         },
         {
           title: "The Impact of Corporate Uniforms on Employee Performance and Brand Perception",
           excerpt: "Research insights on how professional attire influences workplace productivity, client trust, and overall brand impression.",
           url: "/blog/uniforms-employee-performance-brand-perception",
-          image: "/images/blog/employee-performance.jpg"
+          image: "/images/default-placeholder.jpg"
         },
         {
           title: "Implementing Effective Corporate Uniform Programs in Saudi Organizations",
           excerpt: "Best practices for developing and rolling out corporate attire programs that enhance professional image while respecting cultural considerations.",
           url: "/blog/corporate-uniform-program-implementation",
-          image: "/images/blog/program-implementation.jpg"
+          image: "/images/default-placeholder.jpg"
         }
       ],
       resources: [
@@ -291,7 +291,7 @@ export default function CorporatePage() {
         "Brand recognition improved by 23% in market research studies",
         "Successful implementation across 15 branches with over 2,500 staff members"
       ],
-      image: "/images/case-studies/corporate-case-study.jpg",
+      image: "/images/default-placeholder.jpg",
       testimonial: {
         quote: "The corporate uniform program UNEOM created has become a cornerstone of our professional identity and has significantly contributed to our reputation as a leading financial institution in Saudi Arabia.",
         author: "Khalid Al-Otaibi",

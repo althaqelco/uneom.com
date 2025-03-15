@@ -44,10 +44,10 @@ export default function ExecutiveSuitPage() {
       { name: 'Customization', value: 'Corporate logo embroidery, name embroidery, custom lining' }
     ],
     images: [
-      { src: '/images/well-dressed-businessman-in-his-private-office-portrait-of-a-businessman-in-an-elegant-SBI-300954622.jpg', alt: 'Premium Executive Suit - Front View' },
-      { src: '/images/successful-business-team-standing-hand-in-hand-in-modern-office-SBI-300954574.jpg', alt: 'Executive Team Wearing Corporate Suits' },
-      { src: '/images/a-young-asian-businessman-at-the-office-on-a-green-screen-chroma-key-SBI-301233711.jpg', alt: 'Executive Suit Side View' },
-      { src: '/images/group-of-business-people-discussing-business-issues-during-the-meeting-SBI-300912290.jpg', alt: 'Corporate Meeting With Executive Suits' }
+      { src: '/images/default-placeholder.jpg', alt: 'Premium Executive Suit - Front View' },
+      { src: '/images/avatar-placeholder.jpg', alt: 'Executive Team Wearing Corporate Suits' },
+      { src: '/images/default-placeholder.jpg', alt: 'Executive Suit Side View' },
+      { src: '/images/default-placeholder.jpg', alt: 'Corporate Meeting With Executive Suits' }
     ],
     category: 'Corporate Workwear',
     categorySlug: 'corporate-workwear',
@@ -87,21 +87,21 @@ export default function ExecutiveSuitPage() {
       {
         id: 'executive-shirt',
         name: 'Premium Corporate Shirt',
-        image: '/images/a-young-asian-businessman-at-the-office-on-a-green-screen-chroma-key-SBI-301233711.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'From SAR 249',
         href: '/shop/corporate-workwear/executive-shirt'
       },
       {
         id: 'corporate-blazer',
         name: 'Women\'s Corporate Blazer',
-        image: '/images/successful-business-team-standing-hand-in-hand-in-modern-office-SBI-300954574.jpg',
+        image: '/images/avatar-placeholder.jpg',
         price: 'From SAR 599',
         href: '/shop/corporate-workwear/corporate-blazer'
       },
       {
         id: 'formal-trousers',
         name: 'Premium Formal Trousers',
-        image: '/images/group-of-business-people-discussing-business-issues-during-the-meeting-SBI-300912290.jpg',
+        image: '/images/default-placeholder.jpg',
         price: 'From SAR 349',
         href: '/shop/corporate-workwear/formal-trousers'
       }

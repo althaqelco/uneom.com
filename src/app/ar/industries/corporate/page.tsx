@@ -11,7 +11,7 @@ export default function CorporatePageArabic() {
   const corporateIndustryData = {
     title: "أزياء الشركات المهنية في المملكة العربية السعودية",
     subtitle: "ملابس عمل مخصصة للبيئات المؤسسية توازن بين الاحترافية وثقافة العمل السعودية",
-    heroImage: "/images/industries/corporate-hero.jpg",
+    heroImage: "/images/banner-placeholder.jpg",
     
     introduction: [
       "في المشهد التجاري المتطور في المملكة العربية السعودية، تلعب أزياء الشركات دورًا حاسمًا في تأسيس المصداقية المهنية وتعزيز هوية العلامة التجارية. تقدم يونيوم حلول أزياء مؤسسية فاخرة تساعد المنظمات على الحفاظ على صورة أنيقة ومتناسقة مع احترام القيم الثقافية السعودية.",
@@ -49,28 +49,28 @@ export default function CorporatePageArabic() {
         id: "executive-attire",
         name: "مجموعة ملابس المديرين التنفيذيين",
         description: "بدلات فاخرة، وسترات، وملابس رسمية مصممة لمناصب القيادة والإدارة مع تفصيل وأقمشة متفوقة.",
-        image: "/images/ar/shop/executive-attire.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/ar/shop/executive-attire"
       },
       {
         id: "corporate-uniforms",
         name: "أزياء موظفي الشركات",
         description: "مجموعات أزياء مهنية للموظفين الإداريين، وممثلي خدمة العملاء، وموظفي المكاتب.",
-        image: "/images/ar/shop/corporate-uniforms.jpg",
+        image: "/images/product-placeholder.jpg",
         href: "/ar/shop/corporate-uniforms"
       },
       {
         id: "islamic-business-wear",
         name: "ملابس العمل الإسلامية",
         description: "أزياء مؤسسية أنيقة مصممة مع مراعاة قواعد اللباس الإسلامي، بما في ذلك العباءات المهنية والحجاب للنساء.",
-        image: "/images/ar/shop/islamic-business-wear.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/ar/shop/islamic-business-wear"
       },
       {
         id: "corporate-accessories",
         name: "إكسسوارات الشركات",
         description: "إكسسوارات مهنية تشمل ربطات العنق، والأوشحة، والدبابيس، والشارات التي تكمل مظهر الزي المؤسسي مع عناصر العلامة التجارية.",
-        image: "/images/ar/shop/corporate-accessories.jpg",
+        image: "/images/default-placeholder.jpg",
         href: "/ar/shop/corporate-accessories"
       }
     ],
@@ -128,7 +128,7 @@ export default function CorporatePageArabic() {
         author: "عبدالله آل سعود",
         position: "رئيس الشؤون المؤسسية",
         company: "المجموعة المالية السعودية",
-        image: "/images/testimonials/abdullah-al-saud.jpg"
+        image: "/images/avatar-placeholder.jpg"
       }
     ],
     

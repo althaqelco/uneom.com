@@ -37,9 +37,9 @@ const productData = {
   ],
   images: [
     { src: '/images/products/airline-uniform.jpg', alt: 'Airline Crew Uniform Complete Set' },
-    { src: '/images/cheerful-flight-attendant-standing-outdoors-at-air-2023-11-27-05-13-43-utc.jpg', alt: 'Flight Attendant Wearing Uniform' },
-    { src: '/images/cheerful-women-stewardesses-standing-on-airplane-s-2023-11-27-05-08-55-utc.jpg', alt: 'Stewardesses in Uniform' },
-    { src: '/images/two-beautiful-stewardesses-and-an-airman-staring-a-2024-10-21-02-06-10-utc.jpg', alt: 'Flight Crew in Professional Attire' }
+    { src: '/images/default-placeholder.jpg', alt: 'Flight Attendant Wearing Uniform' },
+    { src: '/images/default-placeholder.jpg', alt: 'Stewardesses in Uniform' },
+    { src: '/images/default-placeholder.jpg', alt: 'Flight Crew in Professional Attire' }
   ],
   category: 'Aviation Uniforms',
   categorySlug: 'aviation-uniforms',
@@ -61,7 +61,7 @@ const productData = {
     'Modesty options for Saudi airlines'
   ],
   relatedProducts: [
-    { id: 'pilot-uniform', name: 'Premium Pilot Uniform', image: '/images/the-aviators-stance-2024-11-16-08-18-21-utc.jpg', price: 'SAR 1,599', link: '/shop/aviation-uniforms/pilot-uniform' },
+    { id: 'pilot-uniform', name: 'Premium Pilot Uniform', image: '/images/default-placeholder.jpg', price: 'SAR 1,599', link: '/shop/aviation-uniforms/pilot-uniform' },
     { id: 'ground-staff-uniform', name: 'Ground Staff Uniform', image: '/images/products/airline-uniform.jpg', price: 'SAR 899', link: '/shop/aviation-uniforms/ground-staff-uniform' },
     { id: 'aviation-accessories', name: 'Aviation Accessories Set', image: '/images/products/airline-uniform.jpg', price: 'SAR 349', link: '/shop/aviation-uniforms/aviation-accessories' }
   ]
