@@ -14,7 +14,11 @@
     "vercel-build": "node scripts/vercel-build.js",
     "clean": "rm -rf .next node_modules/.next node_modules/@next/swc* && npm install --force",
     "test-images": "next dev -p 3001",
-    "build-with-fixes": "npm run ensure-fallbacks && npm run fix-vercel-swc && npm run build"
+    "build-with-fixes": "npm run ensure-fallbacks && npm run fix-vercel-swc && npm run build",
+    "install-image-deps": "node scripts/install-image-deps.js",
+    "rename-images": "node scripts/rename-images.js",
+    "optimize-images": "node scripts/install-image-deps.js && node scripts/optimize-images.js",
+    "prepare-images": "npm run install-image-deps && npm run rename-images && npm run optimize-images"
   },
   "dependencies": {
     "@cloudflare/workers-types": "^4.20250303.0",

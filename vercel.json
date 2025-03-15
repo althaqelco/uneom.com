@@ -71,6 +71,19 @@
       ]
     },
     {
+      "source": "/images/optimized/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
       "source": "/css/(.*)",
       "headers": [
         {
@@ -152,6 +165,11 @@
   },
   "rewrites": [
     { "source": "/images/:path*", "destination": "/images/:path*" },
+    { "source": "/images/optimized/:path*", "destination": "/images/optimized/:path*" },
     { "source": "/css/:path*", "destination": "/css/:path*" }
-  ]
+  ],
+  "github": {
+    "silent": true,
+    "autoJobCancelation": true
+  }
 } 

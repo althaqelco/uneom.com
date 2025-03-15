@@ -74,8 +74,11 @@ const DirectImage: React.FC<DirectImageProps> = ({
       if (isVercelEnv) {
         document.body.classList.add('vercel-deployment');
       }
+      
+      // تسجيل معلومات البيئة للتشخيص
+      console.log(`DirectImage: ${src} - Vercel: ${isVercelEnv}, Production: ${process.env.NODE_ENV === 'production'}`);
     }
-  }, []);
+  }, [src]);
   
   // إعادة تعيين الحالة عند تغيير مصدر الصورة
   useEffect(() => {
@@ -106,8 +109,18 @@ const DirectImage: React.FC<DirectImageProps> = ({
     return `/images/${type}-placeholder.${format}`;
   };
   
+  // التحقق من وجود الصورة
+  const checkImageExists = (url: string): Promise<boolean> => {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = url;
+    });
+  };
+  
   // معالجة خطأ تحميل الصورة
-  const handleError = () => {
+  const handleError = async () => {
     if (attempts >= 5) {
       // بعد 5 محاولات، استخدم الصورة الاحتياطية
       console.error(`Failed to load image after 5 attempts: ${src}`);
@@ -120,11 +133,19 @@ const DirectImage: React.FC<DirectImageProps> = ({
       setCurrentSrc(fallbackSrc);
       
       // إذا فشلت الصورة الاحتياطية JPEG، استخدم SVG
-      setTimeout(() => {
+      setTimeout(async () => {
         if (imgRef.current && imgRef.current.naturalWidth === 0) {
           const svgFallback = getFallbackSrc(imageType, 'svg');
           console.log(`Trying SVG fallback: ${svgFallback}`);
-          setCurrentSrc(svgFallback);
+          
+          // التحقق من وجود الصورة الاحتياطية SVG
+          const svgExists = await checkImageExists(svgFallback);
+          if (svgExists) {
+            setCurrentSrc(svgFallback);
+          } else {
+            // استخدام الصورة الاحتياطية الافتراضية
+            setCurrentSrc('/images/default-placeholder.svg');
+          }
         }
       }, 300);
       
@@ -231,10 +252,53 @@ const DirectImage: React.FC<DirectImageProps> = ({
     return `${imageType}-image`;
   };
   
+  // تحديد ما إذا كانت الصورة كبيرة
+  const isLargeImage = () => {
+    if (typeof src !== 'string') return false;
+    
+    // التحقق من حجم الصورة بناءً على الامتداد أو المسار
+    const isJpg = src.toLowerCase().endsWith('.jpg') || src.toLowerCase().endsWith('.jpeg');
+    const isPng = src.toLowerCase().endsWith('.png');
+    
+    // إذا كانت الصورة من نوع JPG أو PNG، فقد تكون كبيرة
+    return isJpg || isPng;
+  };
+  
+  // تحديد ما إذا كان يجب استخدام الصورة المحسنة
+  const shouldUseOptimized = () => {
+    if (!isLargeImage()) return false;
+    
+    // استخدام الصورة المحسنة في بيئة Vercel
+    return isVercel;
+  };
+  
+  // الحصول على مسار الصورة المحسنة
+  const getOptimizedSrc = (originalSrc: string) => {
+    if (!shouldUseOptimized()) return originalSrc;
+    
+    try {
+      // استخراج اسم الملف من المسار
+      const filename = originalSrc.split('/').pop()?.split('?')[0];
+      if (!filename) return originalSrc;
+      
+      // استخراج اسم الملف بدون الامتداد
+      const baseName = filename.substring(0, filename.lastIndexOf('.'));
+      
+      // إنشاء مسار الصورة المحسنة
+      return `/images/optimized/${baseName}.webp`;
+    } catch (e) {
+      console.error('خطأ في إنشاء مسار الصورة المحسنة:', e);
+      return originalSrc;
+    }
+  };
+  
+  // تحديد مسار الصورة النهائي
+  const finalSrc = shouldUseOptimized() ? getOptimizedSrc(currentSrc) : currentSrc;
+  
   return (
     <img
       ref={imgRef}
-      src={currentSrc}
+      src={finalSrc}
       alt={alt}
       width={width}
       height={height}
@@ -252,6 +316,7 @@ const DirectImage: React.FC<DirectImageProps> = ({
       data-src={src}
       data-attempts={attempts}
       data-vercel-fixed={isVercel ? 'true' : undefined}
+      data-optimized={shouldUseOptimized() ? 'true' : undefined}
     />
   );
 };
