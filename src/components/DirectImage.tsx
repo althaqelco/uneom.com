@@ -44,6 +44,23 @@ const DirectImage: React.FC<DirectImageProps> = ({
         hostname === 'uneom.com' || 
         hostname.endsWith('.uneom.com')
       );
+      
+      // تحميل الصور الاحتياطية مسبقًا
+      const preloadFallbackImages = () => {
+        const fallbackImages = [
+          '/images/default-placeholder.jpg',
+          '/images/default-placeholder.svg',
+          '/images/product-placeholder.jpg',
+          '/images/product-placeholder.svg'
+        ];
+        
+        fallbackImages.forEach(imgSrc => {
+          const img = new Image();
+          img.src = imgSrc;
+        });
+      };
+      
+      preloadFallbackImages();
     }
   }, []);
   
@@ -60,7 +77,36 @@ const DirectImage: React.FC<DirectImageProps> = ({
     if (attempts >= 5) {
       // بعد 5 محاولات، استخدم الصورة الاحتياطية
       console.error(`Failed to load image after 5 attempts: ${src}`);
-      setCurrentSrc('/images/default-placeholder.jpg');
+      
+      // تحديد نوع الصورة الاحتياطية المناسبة
+      let fallbackSrc = '/images/default-placeholder.jpg';
+      
+      // استخدام صورة احتياطية مناسبة بناءً على نوع الصورة
+      if (src.includes('product') || src.includes('item')) {
+        fallbackSrc = '/images/product-placeholder.jpg';
+      } else if (src.includes('avatar') || src.includes('profile') || src.includes('user')) {
+        fallbackSrc = '/images/avatar-placeholder.jpg';
+      } else if (src.includes('banner') || src.includes('hero') || src.includes('cover')) {
+        fallbackSrc = '/images/banner-placeholder.jpg';
+      }
+      
+      // محاولة استخدام SVG إذا كان JPEG لا يعمل
+      const useSvgFallback = () => {
+        const svgSrc = fallbackSrc.replace('.jpg', '.svg');
+        console.log(`Trying SVG fallback: ${svgSrc}`);
+        setCurrentSrc(svgSrc);
+      };
+      
+      // تعيين الصورة الاحتياطية
+      setCurrentSrc(fallbackSrc);
+      
+      // إذا فشلت الصورة الاحتياطية JPEG، استخدم SVG
+      setTimeout(() => {
+        const img = new Image();
+        img.onerror = useSvgFallback;
+        img.src = fallbackSrc;
+      }, 100);
+      
       setError(true);
       if (onError) onError();
       return;
@@ -91,10 +137,17 @@ const DirectImage: React.FC<DirectImageProps> = ({
             const urlParams = new URLSearchParams(src.split('?')[1]);
             const imgUrl = urlParams.get('url');
             if (imgUrl) {
-              setCurrentSrc(decodeURIComponent(imgUrl));
+              const decodedUrl = decodeURIComponent(imgUrl);
+              console.log(`Extracted URL from Next.js image: ${decodedUrl}`);
+              setCurrentSrc(decodedUrl);
             }
           } catch (e) {
             console.error('خطأ في استخراج URL من صورة Next.js:', e);
+            // محاولة بديلة: إزالة الشرطة المائلة الأمامية
+            if (src.startsWith('/')) {
+              console.log(`Trying without leading slash: ${src.substring(1)}`);
+              setCurrentSrc(src.substring(1));
+            }
           }
         } else if (src.startsWith('/')) {
           console.log(`Trying without leading slash: ${src.substring(1)}`);
@@ -106,6 +159,7 @@ const DirectImage: React.FC<DirectImageProps> = ({
         // محاولة 3: تجربة مسار بديل (بدون _next)
         if (src.includes('/_next/')) {
           const altPath = src.replace('/_next/', '/');
+          console.log(`Trying alternative path: ${altPath}`);
           setCurrentSrc(altPath);
         } else if (!src.startsWith('/')) {
           console.log(`Trying with leading slash: /${src}`);
@@ -116,11 +170,12 @@ const DirectImage: React.FC<DirectImageProps> = ({
       case 4:
         // محاولة 4: تجربة مسار مباشر للصورة
         if (src.includes('/images/')) {
-          const directPath = `/images/${src.split('/images/')[1]}`;
+          const directPath = `/images/${src.split('/images/')[1].split('?')[0]}`;
+          console.log(`Trying direct images path: ${directPath}`);
           setCurrentSrc(directPath);
         } else {
-          // Try with images path
-          const filename = src.split('/').pop();
+          // محاولة مع مسار الصور
+          const filename = src.split('/').pop()?.split('?')[0];
           if (filename) {
             console.log(`Trying with direct images path: /images/${filename}`);
             setCurrentSrc(`/images/${filename}`);
@@ -136,8 +191,8 @@ const DirectImage: React.FC<DirectImageProps> = ({
       
       default:
         // استخدام الصورة الاحتياطية المضمنة
-        if (typeof window !== 'undefined' && window.fallbackImageDataUrl) {
-          setCurrentSrc(window.fallbackImageDataUrl);
+        if (typeof window !== 'undefined' && (window as any).fallbackImageDataUrl) {
+          setCurrentSrc((window as any).fallbackImageDataUrl);
         } else {
           setCurrentSrc('/images/default-placeholder.svg');
         }
@@ -170,6 +225,7 @@ const DirectImage: React.FC<DirectImageProps> = ({
       onLoad={handleLoad}
       data-src={src}
       data-attempts={attempts}
+      data-vercel-fixed={isVercel ? 'true' : undefined}
     />
   );
 };

@@ -4,16 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NEXT_TELEMETRY_DISABLED=1 node vercel-build.js",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "ensure-fallbacks": "node scripts/ensure-fallbacks.js",
     "fix-swc": "node scripts/fix-swc.js",
     "check-swc": "node scripts/check-next-swc.js",
     "fix-vercel-swc": "node scripts/fix-vercel-swc.js",
-    "vercel-build": "node vercel-build.js",
+    "vercel-build": "node scripts/vercel-build.js",
     "clean": "rm -rf .next node_modules/.next node_modules/@next/swc* && npm install --force",
-    "test-images": "next dev -p 3001"
+    "test-images": "next dev -p 3001",
+    "build-with-fixes": "npm run ensure-fallbacks && npm run fix-vercel-swc && npm run build"
   },
   "dependencies": {
     "@cloudflare/workers-types": "^4.20250303.0",

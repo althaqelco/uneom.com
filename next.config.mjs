@@ -62,6 +62,7 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    unoptimized: process.env.NODE_ENV === 'production' || process.env.VERCEL === '1',
   },
   
   // Configure server components
@@ -165,6 +166,19 @@ const nextConfig = {
       },
       {
         source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+        ],
+      },
+      {
+        source: '/css/:path*',
         headers: [
           {
             key: 'Cache-Control',
@@ -392,6 +406,20 @@ const nextConfig = {
         source: '/ar/location/%d8%ac%d8%af%d8%a9',
         destination: '/ar/locations/jeddah',
         permanent: true,
+      },
+    ];
+  },
+  
+  // Rewrites for better URL structure
+  async rewrites() {
+    return [
+      {
+        source: '/images/:path*',
+        destination: '/images/:path*',
+      },
+      {
+        source: '/css/:path*',
+        destination: '/css/:path*',
       },
     ];
   },

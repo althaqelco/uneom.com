@@ -1,202 +1,118 @@
-/* Estilos para corregir problemas de imágenes */
+
+/* Image fixes for Vercel environment */
 img {
-  min-height: 1px;
   min-width: 1px;
+  min-height: 1px;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-img.direct-image-error {
-  border: 1px dashed #ccc;
-  padding: 5px;
-  background-color: #f8f8f8;
-}
-
-img.direct-image-loading {
+img.loading {
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
 }
 
-img.direct-image-loaded {
+img.loaded {
   opacity: 1;
 }
 
-/* Estilos para imágenes en Vercel */
-@media screen and (max-width: 768px) {
+img.error {
+  opacity: 0.7;
+  filter: grayscale(100%);
+}
+
+@media (max-width: 768px) {
   img {
     max-width: 100%;
     height: auto;
   }
 }
 
-/* Estilos para imágenes con error */
-img[src$="default-placeholder.jpg"],
-img[src$="default-placeholder.svg"],
-img[src*="data:image/svg+xml"] {
-  border: 1px dashed #ccc;
-  padding: 5px;
-  background-color: #f8f8f8;
-  display: inline-flex;
+/* Placeholder styles */
+.placeholder-image {
+  background-color: #f0f0f0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-
-img[src$="default-placeholder.jpg"]::after,
-img[src$="default-placeholder.svg"]::after,
-img[src*="data:image/svg+xml"]::after {
-  content: "Image not available";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: Arial, sans-serif;
+  color: #666;
   font-size: 14px;
-  color: #888;
   text-align: center;
-  width: 100%;
+  padding: 20px;
+  border-radius: 4px;
 }
 
-/* Image fixes for Vercel deployment */
-
-/* Ensure images don't break layout */
-img {
+/* Vercel specific fixes */
+.vercel-deployment img[src*="/_next/image"] {
   max-width: 100%;
   height: auto;
-  display: inline-block;
-  vertical-align: middle;
 }
 
-/* Add fallback background for images */
-img:not([src]), 
-img[src=""], 
+/* Fix for broken images */
+img:not([src]),
+img[src=""],
 img[src="#"],
 img[src="undefined"],
 img[src="null"] {
   visibility: hidden;
-  position: relative;
-  min-height: 20px;
-  min-width: 20px;
-  background-color: #f0f0f0;
 }
 
-/* Add placeholder for broken images */
-img:not([src])::after, 
-img[src=""]::after, 
-img[src="#"]::after,
-img[src="undefined"]::after,
-img[src="null"]::after,
-img[src$=".jpg"]:not([src^="data:"]):not([src^="http"]):not([src^="/"]):not([src^="blob"]):after,
-img[src$=".png"]:not([src^="data:"]):not([src^="http"]):not([src^="/"]):not([src^="blob"]):after,
-img[src$=".svg"]:not([src^="data:"]):not([src^="http"]):not([src^="/"]):not([src^="blob"]):after,
-img[src$=".webp"]:not([src^="data:"]):not([src^="http"]):not([src^="/"]):not([src^="blob"]):after {
-  content: "Image not available";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f0f0f0;
-  color: #888;
-  font-size: 12px;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  visibility: visible;
-}
-
-/* Fix for Next.js Image component */
-span[style*="box-sizing: border-box; display: block; overflow: hidden;"] img {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.5s ease-in-out;
-}
-
-/* Fix for images in RTL mode */
-[dir="rtl"] img {
-  transform: scaleX(1); /* Prevent flipping of images in RTL mode */
-}
-
-/* Ensure images are loaded with proper dimensions */
-img[width][height] {
-  aspect-ratio: attr(width) / attr(height);
-}
-
-/* Add loading animation */
-@keyframes imageLoadingPulse {
-  0% { opacity: 0.6; }
-  50% { opacity: 0.8; }
-  100% { opacity: 0.6; }
-}
-
-img.loading,
-img[data-loading="true"] {
-  animation: imageLoadingPulse 1.5s infinite;
-  background-color: #f0f0f0;
-}
-
-/* Fix for Vercel deployment */
-.vercel-deployment img:not([src^="data:"]):not([src^="http"]):not([src^="blob:"]) {
-  content: attr(data-original-src);
+/* Show fallback content for broken images */
+img.fallback-visible {
+  visibility: visible !important;
 }
 
 /* Ensure SVG images display correctly */
 img[src$=".svg"] {
-  width: 100%;
+  width: auto;
   height: auto;
+}
+
+/* Ensure JPEG images display correctly */
+img[src$=".jpg"],
+img[src$=".jpeg"] {
+  object-fit: contain;
+}
+
+/* Ensure images with error state display correctly */
+img.error[src$=".jpg"],
+img.error[src$=".jpeg"],
+img.error[src$=".png"],
+img.error[src$=".webp"],
+img.error[src$=".avif"] {
+  content: url('/images/default-placeholder.svg');
+}
+
+/* Product image specific styles */
+img.product-image.error {
+  content: url('/images/product-placeholder.svg');
+}
+
+/* Avatar image specific styles */
+img.avatar-image.error {
+  content: url('/images/avatar-placeholder.svg');
+  border-radius: 50%;
+}
+
+/* Banner image specific styles */
+img.banner-image.error {
+  content: url('/images/banner-placeholder.svg');
+}
+
+/* Fix for Next.js Image component */
+span[style*="box-sizing: border-box; display: block; overflow: hidden;"] > img {
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
   max-height: 100%;
+  object-fit: cover;
 }
-
-/* Fix for lazy-loaded images */
-img.lazy-load {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-img.lazy-load.loaded {
-  opacity: 1;
-}
-
-/* Vercel-specific fixes */
-.vercel-deployment img {
-  /* Prevent FOUC (Flash of Unstyled Content) */
-  opacity: 1 !important;
-  transition: opacity 0.3s ease-in-out;
-}
-
-/* Fix for Next.js Image component in Vercel */
-.vercel-deployment span[style*="box-sizing: border-box; display: inline-block; overflow: hidden"] {
-  display: inline-block !important;
-  overflow: visible !important;
-}
-
-/* Fix for Next.js blur placeholder */
-.vercel-deployment span[style*="background-size: cover"] {
-  background-size: contain !important;
-  background-position: center !important;
-}
-
-/* Fix for images with data-resolved attribute */
-img[data-resolved="true"] {
-  visibility: visible !important;
-}
-
-/* Fix for images with data-vercel-fixed attribute */
-img[data-vercel-fixed="true"] {
-  visibility: visible !important;
-}
-
-/* Fix for images with data-vercel-fixed="fallback" */
-img[data-vercel-fixed="fallback"] {
-  border: 1px dashed #ccc;
-  padding: 2px;
-  background-color: #f8f8f8;
-}
-
-/* Fix for Next.js blur placeholder in Vercel */
-.vercel-deployment [style*="background-image:"][style*="blur"] {
-  background-size: contain !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-} 
