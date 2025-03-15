@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface DirectImageProps {
   src: string;
@@ -34,33 +34,46 @@ const DirectImage: React.FC<DirectImageProps> = ({
   const [loaded, setLoaded] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const [isVercel, setIsVercel] = useState<boolean>(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+  
+  // تحميل الصور الاحتياطية مسبقًا عند تحميل المكون
+  useEffect(() => {
+    const preloadFallbackImages = () => {
+      const fallbackImages = [
+        '/images/default-placeholder.jpg',
+        '/images/default-placeholder.svg',
+        '/images/product-placeholder.jpg',
+        '/images/product-placeholder.svg',
+        '/images/avatar-placeholder.jpg',
+        '/images/avatar-placeholder.svg',
+        '/images/banner-placeholder.jpg',
+        '/images/banner-placeholder.svg'
+      ];
+      
+      fallbackImages.forEach(imgSrc => {
+        const img = new Image();
+        img.src = imgSrc;
+      });
+    };
+    
+    preloadFallbackImages();
+  }, []);
   
   useEffect(() => {
     // تحديد ما إذا كنا في بيئة Vercel
     if (typeof window !== 'undefined') {
       const hostname = window.location.hostname;
-      setIsVercel(
+      const isVercelEnv = 
         hostname.includes('vercel.app') || 
         hostname === 'uneom.com' || 
-        hostname.endsWith('.uneom.com')
-      );
+        hostname.endsWith('.uneom.com');
       
-      // تحميل الصور الاحتياطية مسبقًا
-      const preloadFallbackImages = () => {
-        const fallbackImages = [
-          '/images/default-placeholder.jpg',
-          '/images/default-placeholder.svg',
-          '/images/product-placeholder.jpg',
-          '/images/product-placeholder.svg'
-        ];
-        
-        fallbackImages.forEach(imgSrc => {
-          const img = new Image();
-          img.src = imgSrc;
-        });
-      };
+      setIsVercel(isVercelEnv);
       
-      preloadFallbackImages();
+      // إضافة فئة إلى الجسم للتعرف على بيئة Vercel في CSS
+      if (isVercelEnv) {
+        document.body.classList.add('vercel-deployment');
+      }
     }
   }, []);
   
@@ -72,6 +85,27 @@ const DirectImage: React.FC<DirectImageProps> = ({
     setError(false);
   }, [src]);
   
+  // تحديد نوع الصورة بناءً على المسار أو الفئة
+  const getImageType = () => {
+    const srcString = typeof src === 'string' ? src.toLowerCase() : '';
+    const classString = className.toLowerCase();
+    
+    if (srcString.includes('product') || srcString.includes('item') || classString.includes('product')) {
+      return 'product';
+    } else if (srcString.includes('avatar') || srcString.includes('profile') || srcString.includes('user') || classString.includes('avatar')) {
+      return 'avatar';
+    } else if (srcString.includes('banner') || srcString.includes('hero') || srcString.includes('cover') || classString.includes('banner')) {
+      return 'banner';
+    }
+    
+    return 'default';
+  };
+  
+  // الحصول على مسار الصورة الاحتياطية المناسبة
+  const getFallbackSrc = (type: string, format: 'jpg' | 'svg' = 'jpg') => {
+    return `/images/${type}-placeholder.${format}`;
+  };
+  
   // معالجة خطأ تحميل الصورة
   const handleError = () => {
     if (attempts >= 5) {
@@ -79,33 +113,20 @@ const DirectImage: React.FC<DirectImageProps> = ({
       console.error(`Failed to load image after 5 attempts: ${src}`);
       
       // تحديد نوع الصورة الاحتياطية المناسبة
-      let fallbackSrc = '/images/default-placeholder.jpg';
-      
-      // استخدام صورة احتياطية مناسبة بناءً على نوع الصورة
-      if (src.includes('product') || src.includes('item')) {
-        fallbackSrc = '/images/product-placeholder.jpg';
-      } else if (src.includes('avatar') || src.includes('profile') || src.includes('user')) {
-        fallbackSrc = '/images/avatar-placeholder.jpg';
-      } else if (src.includes('banner') || src.includes('hero') || src.includes('cover')) {
-        fallbackSrc = '/images/banner-placeholder.jpg';
-      }
-      
-      // محاولة استخدام SVG إذا كان JPEG لا يعمل
-      const useSvgFallback = () => {
-        const svgSrc = fallbackSrc.replace('.jpg', '.svg');
-        console.log(`Trying SVG fallback: ${svgSrc}`);
-        setCurrentSrc(svgSrc);
-      };
+      const imageType = getImageType();
+      const fallbackSrc = getFallbackSrc(imageType);
       
       // تعيين الصورة الاحتياطية
       setCurrentSrc(fallbackSrc);
       
       // إذا فشلت الصورة الاحتياطية JPEG، استخدم SVG
       setTimeout(() => {
-        const img = new Image();
-        img.onerror = useSvgFallback;
-        img.src = fallbackSrc;
-      }, 100);
+        if (imgRef.current && imgRef.current.naturalWidth === 0) {
+          const svgFallback = getFallbackSrc(imageType, 'svg');
+          console.log(`Trying SVG fallback: ${svgFallback}`);
+          setCurrentSrc(svgFallback);
+        }
+      }, 300);
       
       setError(true);
       if (onError) onError();
@@ -185,17 +206,15 @@ const DirectImage: React.FC<DirectImageProps> = ({
       
       case 5:
         // محاولة 5: استخدام الصورة الاحتياطية
-        console.log(`Using fallback image`);
-        setCurrentSrc('/images/default-placeholder.jpg');
+        const imageType = getImageType();
+        const fallbackSrc = getFallbackSrc(imageType);
+        console.log(`Using fallback image: ${fallbackSrc}`);
+        setCurrentSrc(fallbackSrc);
         break;
       
       default:
         // استخدام الصورة الاحتياطية المضمنة
-        if (typeof window !== 'undefined' && (window as any).fallbackImageDataUrl) {
-          setCurrentSrc((window as any).fallbackImageDataUrl);
-        } else {
-          setCurrentSrc('/images/default-placeholder.svg');
-        }
+        setCurrentSrc('/images/default-placeholder.svg');
     }
   };
   
@@ -206,13 +225,20 @@ const DirectImage: React.FC<DirectImageProps> = ({
     if (onLoad) onLoad();
   };
   
+  // تحديد فئة CSS المناسبة بناءً على نوع الصورة
+  const getImageClass = () => {
+    const imageType = getImageType();
+    return `${imageType}-image`;
+  };
+  
   return (
     <img
+      ref={imgRef}
       src={currentSrc}
       alt={alt}
       width={width}
       height={height}
-      className={`direct-image ${error ? 'direct-image-error' : ''} ${loaded ? 'direct-image-loaded' : 'direct-image-loading'} ${className}`}
+      className={`direct-image ${getImageClass()} ${error ? 'error' : ''} ${loaded ? 'loaded' : 'loading'} ${className}`}
       style={{
         ...style,
         // إضافة أنماط للتأكد من عدم ظهور رمز الصورة المكسورة

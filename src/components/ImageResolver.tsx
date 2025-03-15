@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect } from 'react';
-import VercelSafeImage from './ui/VercelSafeImage';
 
 /**
  * مكون يحسن تحميل الصور في بيئات مختلفة، خاصة في Vercel
@@ -24,9 +23,12 @@ const ImageResolver: React.FC = () => {
       hostname === 'uneom.com' || 
       hostname.endsWith('.uneom.com');
     
+    console.log(`ImageResolver: Running in Vercel environment: ${isVercel ? 'Yes' : 'No'}`);
+    
     // إضافة فئة إلى الجسم للتعرف على بيئة Vercel في CSS
     if (isVercel) {
       document.body.classList.add('vercel-deployment');
+      console.log('Added vercel-deployment class to body');
     }
     
     // تحميل الصور الاحتياطية مسبقًا
@@ -45,19 +47,43 @@ const ImageResolver: React.FC = () => {
       fallbackImages.forEach(imgSrc => {
         const img = new Image();
         img.src = imgSrc;
+        console.log(`Preloaded fallback image: ${imgSrc}`);
       });
     };
     
     // تحميل الصور الاحتياطية مسبقًا
     preloadFallbackImages();
 
+    // تحديد نوع الصورة بناءً على المسار أو الفئة
+    const getImageType = (src: string, className: string = '') => {
+      const srcString = src.toLowerCase();
+      const classString = className.toLowerCase();
+      
+      if (srcString.includes('product') || srcString.includes('item') || classString.includes('product')) {
+        return 'product';
+      } else if (srcString.includes('avatar') || srcString.includes('profile') || srcString.includes('user') || classString.includes('avatar')) {
+        return 'avatar';
+      } else if (srcString.includes('banner') || srcString.includes('hero') || srcString.includes('cover') || classString.includes('banner')) {
+        return 'banner';
+      }
+      
+      return 'default';
+    };
+    
+    // الحصول على مسار الصورة الاحتياطية المناسبة
+    const getFallbackSrc = (type: string, format: 'jpg' | 'svg' = 'jpg') => {
+      return `/images/${type}-placeholder.${format}`;
+    };
+
     // وظيفة لحل مسارات الصور
     const resolveImagePaths = () => {
       const images = document.querySelectorAll('img:not([data-resolved="true"])');
+      console.log(`ImageResolver: Found ${images.length} unresolved images`);
       
       images.forEach((img) => {
         const imgElement = img as HTMLImageElement;
         const src = imgElement.getAttribute('src') || '';
+        const className = imgElement.className || '';
         
         // تخطي عناوين URL للبيانات والصور التي تم حلها بالفعل
         if (src.startsWith('data:') || imgElement.hasAttribute('data-resolved')) {
@@ -66,15 +92,21 @@ const ImageResolver: React.FC = () => {
         
         // وضع علامة كمحلول
         imgElement.setAttribute('data-resolved', 'true');
+        imgElement.setAttribute('data-original-src', src);
         
-        // تخزين المصدر الأصلي
-        if (!imgElement.hasAttribute('data-original-src')) {
-          imgElement.setAttribute('data-original-src', src);
-        }
+        // إضافة فئة CSS بناءً على نوع الصورة
+        const imageType = getImageType(src, className);
+        imgElement.classList.add(`${imageType}-image`);
         
         // إضافة معالج أخطاء
         imgElement.onerror = () => {
-          const originalSrc = imgElement.getAttribute('data-original-src') || '';
+          console.log(`Image error: ${src}`);
+          
+          // إضافة فئة الخطأ
+          imgElement.classList.add('error');
+          
+          // تحديد نوع الصورة الاحتياطية المناسبة
+          const fallbackSrc = getFallbackSrc(imageType);
           
           // تجربة اختلافات المسار المختلفة
           const variations = [
@@ -83,18 +115,16 @@ const ImageResolver: React.FC = () => {
             // تجربة مع عنوان URL مطلق
             `${window.location.origin}${src.startsWith('/') ? '' : '/'}${src}`,
             // تجربة مع بادئة _next
-            `/_next/static/images/${src.split('/').pop()}`,
+            src.includes('/_next/') ? src.replace('/_next/', '/') : null,
             // تجربة المصدر الأصلي إذا كان مختلفًا
-            originalSrc !== src ? originalSrc : '',
-            // تحديد نوع الصورة الاحتياطية المناسبة
-            src.includes('product') || src.includes('item') 
-              ? '/images/product-placeholder.jpg' 
-              : src.includes('avatar') || src.includes('profile') || src.includes('user')
-                ? '/images/avatar-placeholder.jpg'
-                : src.includes('banner') || src.includes('hero') || src.includes('cover')
-                  ? '/images/banner-placeholder.jpg'
-                  : '/images/default-placeholder.jpg'
-          ].filter(Boolean); // إزالة السلاسل الفارغة
+            imgElement.getAttribute('data-original-src') !== src ? imgElement.getAttribute('data-original-src') : null,
+            // تجربة مع مسار الصور
+            `/images/${src.split('/').pop()?.split('?')[0]}`,
+            // استخدام الصورة الاحتياطية
+            fallbackSrc,
+            // استخدام الصورة الاحتياطية SVG
+            getFallbackSrc(imageType, 'svg')
+          ].filter(Boolean); // إزالة القيم الفارغة
           
           // تجربة كل اختلاف
           let currentIndex = 0;
@@ -102,14 +132,19 @@ const ImageResolver: React.FC = () => {
           const tryNextVariation = () => {
             if (currentIndex >= variations.length) {
               // إذا فشلت جميع الاختلافات، استخدم الاحتياطي
-              imgElement.setAttribute('src', '/images/default-placeholder.jpg');
+              imgElement.setAttribute('src', getFallbackSrc('default', 'svg'));
               imgElement.setAttribute('data-vercel-fixed', 'fallback');
               return;
             }
             
             const variation = variations[currentIndex++];
-            imgElement.setAttribute('src', variation);
-            imgElement.setAttribute('data-vercel-fixed', 'true');
+            if (variation) {
+              console.log(`Trying variation ${currentIndex}: ${variation}`);
+              imgElement.setAttribute('src', variation);
+              imgElement.setAttribute('data-vercel-fixed', 'true');
+            } else {
+              tryNextVariation();
+            }
           };
           
           // إعداد معالج الأخطاء للاختلاف التالي

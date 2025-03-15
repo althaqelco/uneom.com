@@ -47,13 +47,19 @@ export const customImageLoader = ({ src, width, quality, locale, isVercel }: Ext
     }
   }
   
-  // For development environment, add width and quality parameters
-  if (!isVercel && process.env.NODE_ENV === 'development') {
-    return `${formattedSrc}?w=${width}&q=${quality || 75}`;
+  // For Vercel environment, return the path as is (unoptimized)
+  if (isVercel || process.env.NODE_ENV === 'production') {
+    // If the path is for an image in the public directory, return it directly
+    if (formattedSrc.startsWith('/images/')) {
+      return formattedSrc;
+    }
+    
+    // For other paths, return as is
+    return formattedSrc;
   }
   
-  // For production or Vercel, return the path as is
-  return formattedSrc;
+  // For development environment, add width and quality parameters
+  return `${formattedSrc}?w=${width}&q=${quality || 75}`;
 };
 
 /**
@@ -63,7 +69,38 @@ export const customImageLoader = ({ src, width, quality, locale, isVercel }: Ext
  * @returns - srcSet string for use in img tags
  */
 export const generateSrcSet = (src: string, sizes: number[] = [640, 750, 828, 1080, 1200, 1920]): string => {
+  // If we're in Vercel or production, don't generate srcSet
+  if (process.env.NODE_ENV === 'production') {
+    return '';
+  }
+  
   return sizes.map(size => `${src}?w=${size} ${size}w`).join(', ');
+};
+
+/**
+ * Determines the appropriate loading strategy for an image
+ * @param isCritical - Whether the image is critical for LCP
+ * @param priority - Whether the image has priority
+ * @param loading - Explicit loading strategy
+ * @returns - 'eager' or 'lazy' loading strategy
+ */
+export const getLoadingStrategy = (
+  isCritical?: boolean,
+  priority?: boolean,
+  loading?: string
+): 'eager' | 'lazy' => {
+  // If explicit loading is provided, use it
+  if (loading === 'eager' || loading === 'lazy') {
+    return loading as 'eager' | 'lazy';
+  }
+  
+  // If image is critical or has priority, load eagerly
+  if (isCritical || priority) {
+    return 'eager';
+  }
+  
+  // Default to lazy loading
+  return 'lazy';
 };
 
 /**
@@ -106,31 +143,25 @@ export const preloadCriticalImages = (imagePaths: string[]): void => {
 };
 
 /**
- * Determines if an image should be lazy loaded based on its importance
- * @param isCritical - Whether the image is critical for initial render
- * @returns - Loading strategy ('lazy' or 'eager')
+ * Checks if an image exists at the given path
+ * @param src - Image source path
+ * @returns - Promise that resolves to true if image exists, false otherwise
  */
-export const getLoadingStrategy = (isCritical: boolean): 'lazy' | 'eager' => {
-  return isCritical ? 'eager' : 'lazy';
+export const checkImageExists = (src: string): Promise<boolean> => {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => resolve(true);
+    img.onerror = () => resolve(false);
+    img.src = src;
+  });
 };
 
 /**
- * Formats image dimensions to maintain aspect ratio
- * @param originalWidth - Original image width
- * @param originalHeight - Original image height
- * @param targetWidth - Desired width
- * @returns - Object with width and height maintaining aspect ratio
+ * Gets the appropriate fallback image based on image type
+ * @param type - Type of image (product, avatar, banner, etc.)
+ * @param format - Format of the fallback image (jpg or svg)
+ * @returns - Path to the fallback image
  */
-export const maintainAspectRatio = (
-  originalWidth: number,
-  originalHeight: number,
-  targetWidth: number
-): { width: number; height: number } => {
-  const aspectRatio = originalWidth / originalHeight;
-  const height = Math.round(targetWidth / aspectRatio);
-  
-  return {
-    width: targetWidth,
-    height
-  };
+export const getFallbackImage = (type: string = 'default', format: 'jpg' | 'svg' = 'jpg'): string => {
+  return `/images/${type}-placeholder.${format}`;
 }; 

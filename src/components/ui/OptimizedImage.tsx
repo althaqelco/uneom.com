@@ -46,6 +46,7 @@ export default function OptimizedImage({
   const [useRegularImgTag, setUseRegularImgTag] = useState(false);
   const [isVercel, setIsVercel] = useState<boolean>(false);
   const [isClient, setIsClient] = useState<boolean>(false);
+  const [isProduction, setIsProduction] = useState<boolean>(false);
 
   // Update imgSrc if src prop changes
   useEffect(() => {
@@ -69,9 +70,16 @@ export default function OptimizedImage({
       
       setIsVercel(isVercelEnv);
       
-      // Force using DirectImage in production
-      if (isVercelEnv || process.env.NODE_ENV === 'production') {
-        console.log(`Using DirectImage for ${typeof src === 'string' ? src : 'unknown'} (Vercel: ${isVercelEnv})`);
+      // Check if we're in production
+      const isProd = process.env.NODE_ENV === 'production';
+      setIsProduction(isProd);
+      
+      // Log environment info
+      console.log(`OptimizedImage: ${typeof src === 'string' ? src : 'unknown'} - Vercel: ${isVercelEnv}, Production: ${isProd}`);
+      
+      // Add vercel-deployment class to body if in Vercel environment
+      if (isVercelEnv) {
+        document.body.classList.add('vercel-deployment');
       }
     }
   }, []);
@@ -100,65 +108,51 @@ export default function OptimizedImage({
         console.log(`Trying alternative image path without leading slash: ${newSrc}`);
         setImgSrc(newSrc);
       } else {
-        // If not a path starting with slash, try with unoptimized
-        console.log(`Trying with unoptimized image loading`);
-        const unoptimizedSrc = typeof imgSrc === 'string' && !imgSrc.includes('?') 
-          ? `${imgSrc}?unoptimized=true` 
-          : imgSrc;
-        setImgSrc(unoptimizedSrc);
+        // Try with absolute URL
+        if (typeof window !== 'undefined' && typeof imgSrc === 'string' && !imgSrc.startsWith('http') && !imgSrc.startsWith('data:')) {
+          const baseUrl = window.location.origin;
+          const fixedSrc = imgSrc.startsWith('/') 
+            ? `${baseUrl}${imgSrc}` 
+            : `${baseUrl}/${imgSrc}`;
+          console.log(`Trying with absolute URL: ${fixedSrc}`);
+          setImgSrc(fixedSrc);
+        }
       }
     } else if (errorRetryCount === 1) {
-      // Second retry: Try with public URL
-      if (isVercel) {
-        const basePath = window.location.origin;
-        if (typeof imgSrc === 'string' && !imgSrc.startsWith('http')) {
-          const fullPath = imgSrc.startsWith('/') 
-            ? `${basePath}${imgSrc}` 
-            : `${basePath}/${imgSrc}`;
-          console.log(`Trying with full URL path: ${fullPath}`);
-          setImgSrc(fullPath);
-        } else {
-          // Try with original path again but with different query param
-          setImgSrc(`${src}?v=${new Date().getTime()}`);
-        }
-      } else {
-        // If not on Vercel, try with cache busting
-        if (typeof imgSrc === 'string') {
-          setImgSrc(`${imgSrc}?nocache=${new Date().getTime()}`);
-        }
-      }
-    } else if (errorRetryCount === 2) {
-      // Third retry: Fallback to direct image tag
-      console.log(`Final retry: switching to regular img tag`);
+      // Second retry: Try with fallback
+      console.log(`Using fallback image: ${fallbackSrc}`);
+      setImgSrc(fallbackSrc);
+    } else {
+      // Third retry: Use DirectImage component
       setUseRegularImgTag(true);
     }
     
     setErrorRetryCount(prev => prev + 1);
   };
 
-  // Determine loading strategy based on whether the image is critical
-  const loadingStrategy = loading || getLoadingStrategy(priority || isCritical);
+  // Generate blur placeholder if needed
+  const generatedBlurDataURL = !blurDataURL && blurColor ? generateBlurPlaceholder(blurColor) : blurDataURL;
   
-  // Generate blur placeholder if not provided
-  const generatedBlurDataURL = blurDataURL || 
-    (placeholder === 'blur' ? generateBlurPlaceholder(blurColor) : undefined);
-
-  // Use regular img tag as last resort
+  // Determine loading strategy
+  const loadingStrategy = getLoadingStrategy(isCritical, priority, loading as any);
+  
+  // Extract remaining props
+  const { width, height, style, className, objectFit, ...restProps } = rest as any;
+  
+  // If using regular img tag due to errors
   if (useRegularImgTag) {
-    const { width, height, layout, objectFit, ...restProps } = rest as any;
-    
     const styleProps: React.CSSProperties = {
       maxWidth: '100%',
       height: height ? `${height}px` : 'auto',
       width: width ? `${width}px` : '100%',
-      objectFit: objectFit || 'cover',
+      objectFit: objectFit as any || 'cover',
     };
     
     return (
       <img
-        src={imgSrc}
+        src={typeof imgSrc === 'string' ? imgSrc : ''}
         alt={imgAlt}
-        className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
+        className={`${className || ''} ${hasError ? 'error' : ''}`}
         style={styleProps}
         loading={loadingStrategy === 'eager' ? 'eager' : 'lazy'}
         onError={handleError}
@@ -168,16 +162,16 @@ export default function OptimizedImage({
   }
 
   // Always use DirectImage in production or on Vercel
-  if (isClient && (isVercel || process.env.NODE_ENV === 'production')) {
+  if (isClient && (isVercel || isProduction)) {
     return (
       <DirectImage
         src={typeof imgSrc === 'string' ? imgSrc : ''}
         alt={imgAlt}
-        width={typeof rest.width === 'number' ? rest.width : undefined}
-        height={typeof rest.height === 'number' ? rest.height : undefined}
-        className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
+        width={typeof width === 'number' ? width : undefined}
+        height={typeof height === 'number' ? height : undefined}
+        className={`${className || ''} ${hasError ? 'error' : ''}`}
         priority={priority}
-        style={rest.style}
+        style={style}
         onError={handleError}
       />
     );
@@ -193,7 +187,7 @@ export default function OptimizedImage({
       loading={loadingStrategy}
       placeholder={placeholder || (generatedBlurDataURL ? 'blur' : undefined)}
       blurDataURL={generatedBlurDataURL}
-      className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
+      className={`${className || ''} ${hasError ? 'error' : ''}`}
       loader={(params) => {
         // @ts-ignore - locale is added in our custom loader but not in the original type
         return customImageLoader({ ...params, locale, isVercel });
