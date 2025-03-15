@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Loading Test</title>
+  <link rel="stylesheet" href="/css/image-fixes.css">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .image-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .image-container {
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
+    .image-info {
+      padding: 15px;
+    }
+    .image-path {
+      font-family: monospace;
+      font-size: 14px;
+      color: #666;
+      word-break: break-all;
+    }
+    .status {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+    .status.success {
+      color: green;
+    }
+    .status.error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Loading Test</h1>
+  
+  <div class="image-grid">
+    <!-- Test with absolute path -->
+    <div class="image-card">
+      <div class="image-container">
+        <img src="/images/default-placeholder.jpg" alt="Default Placeholder" data-test="absolute-path">
+      </div>
+      <div class="image-info">
+        <div class="image-path">/images/default-placeholder.jpg</div>
+        <div class="status" id="status-absolute-path">Loading...</div>
+      </div>
+    </div>
+    
+    <!-- Test with relative path -->
+    <div class="image-card">
+      <div class="image-container">
+        <img src="images/default-placeholder.jpg" alt="Default Placeholder" data-test="relative-path">
+      </div>
+      <div class="image-info">
+        <div class="image-path">images/default-placeholder.jpg</div>
+        <div class="status" id="status-relative-path">Loading...</div>
+      </div>
+    </div>
+    
+    <!-- Test with _next path -->
+    <div class="image-card">
+      <div class="image-container">
+        <img src="/_next/static/images/default-placeholder.jpg" alt="Default Placeholder" data-test="next-path">
+      </div>
+      <div class="image-info">
+        <div class="image-path">/_next/static/images/default-placeholder.jpg</div>
+        <div class="status" id="status-next-path">Loading...</div>
+      </div>
+    </div>
+    
+    <!-- Test with full URL -->
+    <div class="image-card">
+      <div class="image-container">
+        <img src="" alt="Default Placeholder" data-test="full-url" id="full-url-img">
+      </div>
+      <div class="image-info">
+        <div class="image-path" id="full-url-path">Loading URL...</div>
+        <div class="status" id="status-full-url">Loading...</div>
+      </div>
+    </div>
+    
+    <!-- Test with non-existent image -->
+    <div class="image-card">
+      <div class="image-container">
+        <img src="/images/non-existent-image.jpg" alt="Non-existent Image" data-test="non-existent">
+      </div>
+      <div class="image-info">
+        <div class="image-path">/images/non-existent-image.jpg</div>
+        <div class="status" id="status-non-existent">Loading...</div>
+      </div>
+    </div>
+    
+    <!-- Test with another image from public -->
+    <div class="image-card">
+      <div class="image-container">
+        <img src="/images/uneom-logo.png" alt="UNEOM Logo" data-test="logo">
+      </div>
+      <div class="image-info">
+        <div class="image-path">/images/uneom-logo.png</div>
+        <div class="status" id="status-logo">Loading...</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set full URL image
+      const fullUrlImg = document.getElementById('full-url-img');
+      const fullUrlPath = document.getElementById('full-url-path');
+      const fullUrl = window.location.origin + '/images/default-placeholder.jpg';
+      fullUrlImg.src = fullUrl;
+      fullUrlPath.textContent = fullUrl;
+      
+      // Check image loading status
+      document.querySelectorAll('img[data-test]').forEach(img => {
+        const testId = img.getAttribute('data-test');
+        const statusEl = document.getElementById(`status-${testId}`);
+        
+        img.onload = function() {
+          statusEl.textContent = 'Loaded successfully';
+          statusEl.className = 'status success';
+        };
+        
+        img.onerror = function() {
+          statusEl.textContent = 'Failed to load';
+          statusEl.className = 'status error';
+          
+          // Try to recover with fallback
+          img.src = '/images/default-placeholder.jpg';
+        };
+      });
+    });
+  </script>
+</body>
+</html> 

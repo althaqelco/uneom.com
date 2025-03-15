@@ -7,6 +7,7 @@ import '../globals.css';
 import ArabicOptimizer from '@/components/ArabicOptimizer';
 import CSPHeaders from '@/components/CSPHeaders';
 import ImagePreloader from '@/components/ImagePreloader';
+import ImageResolver from '@/components/ImageResolver';
 
 // Define fonts
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
@@ -28,6 +29,8 @@ export default function RootLayout({
         {/* Preload critical resources */}
         <link rel="preconnect" href="https://uneom-com.vercel.app" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://uneom.com" crossOrigin="anonymous" />
+        {/* Image fixes CSS */}
+        <link rel="stylesheet" href="/css/image-fixes.css" />
       </head>
       <body className={`${dir === 'rtl' ? 'rtl' : 'ltr'} ${inter.variable} font-sans min-h-screen`}>
         <ThemeProvider
@@ -40,6 +43,7 @@ export default function RootLayout({
             {isArabic && <ArabicOptimizer />}
             <CSPHeaders />
             <ImagePreloader />
+            <ImageResolver />
             <div className="relative flex min-h-screen flex-col">
               {children}
             </div>

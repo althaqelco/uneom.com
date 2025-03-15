@@ -19,75 +19,41 @@ interface ExtendedImageLoaderProps extends ImageLoaderProps {
  * This can be extended to use a CDN or image optimization service
  */
 export const customImageLoader = ({ src, width, quality, locale, isVercel }: ExtendedImageLoaderProps): string => {
-  // If using a CDN, you can modify this to use the CDN URL
-  // For example: return `https://cdn.uneom.com/images${src}?w=${width}&q=${quality || 75}`;
-  
-  // On Vercel, handle specifically for production
-  if (isVercel) {
-    // If src is already a full URL, use it directly
-    if (src.startsWith('http://') || src.startsWith('https://')) {
-      return src;
-    }
-    
-    // Ensure src starts with a slash for relative URLs
-    const formattedSrc = src.startsWith('/') ? src : `/${src}`;
-    
-    // Use direct URL to resources on Vercel
-    const baseUrl = 'https://uneom-com.vercel.app';
-    
-    // Handle localized paths
-    if (locale && locale !== 'en') {
-      // Check if path already has locale suffix
-      if (formattedSrc.includes(`-${locale}.`)) {
-        // Already has locale suffix
-        return `${baseUrl}${formattedSrc}`;
-      }
-      
-      // Add locale suffix
-      const hasExtension = formattedSrc.includes('.');
-      if (hasExtension) {
-        const lastDotIndex = formattedSrc.lastIndexOf('.');
-        const fileName = formattedSrc.substring(0, lastDotIndex);
-        const extension = formattedSrc.substring(lastDotIndex);
-        return `${baseUrl}${fileName}-${locale}${extension}`;
-      } else {
-        return `${baseUrl}${formattedSrc}-${locale}`;
-      }
-    }
-    
-    // Return direct URL to the resource
-    return `${baseUrl}${formattedSrc}`;
-  }
-  
-  // Regular development environment
-  
-  // If src is a full URL, return it without modifications to avoid issues
+  // If it's an external URL, return it as is
   if (src.startsWith('http://') || src.startsWith('https://')) {
     return src;
   }
   
-  // Handle localized image paths if locale is provided
+  // Ensure src starts with a slash for relative URLs
+  const formattedSrc = src.startsWith('/') ? src : `/${src}`;
+  
+  // Handle localized paths if locale is provided
   if (locale && locale !== 'en') {
     // Check if path already has locale suffix
-    if (src.includes(`-${locale}.`)) {
-      // Already has Arabic suffix
-      return `${src}?w=${width}&q=${quality || 75}`;
+    if (formattedSrc.includes(`-${locale}.`)) {
+      // Already has locale suffix
+      return formattedSrc;
     }
     
-    // Add locale suffix to the image path
-    const hasExtension = src.includes('.');
+    // Add locale suffix
+    const hasExtension = formattedSrc.includes('.');
     if (hasExtension) {
-      const lastDotIndex = src.lastIndexOf('.');
-      const fileName = src.substring(0, lastDotIndex);
-      const extension = src.substring(lastDotIndex);
-      return `${fileName}-${locale}${extension}?w=${width}&q=${quality || 75}`;
+      const lastDotIndex = formattedSrc.lastIndexOf('.');
+      const fileName = formattedSrc.substring(0, lastDotIndex);
+      const extension = formattedSrc.substring(lastDotIndex);
+      return `${fileName}-${locale}${extension}`;
     } else {
-      return `${src}-${locale}?w=${width}&q=${quality || 75}`;
+      return `${formattedSrc}-${locale}`;
     }
   }
   
-  // Regular image path
-  return `${src}?w=${width}&q=${quality || 75}`;
+  // For development environment, add width and quality parameters
+  if (!isVercel && process.env.NODE_ENV === 'development') {
+    return `${formattedSrc}?w=${width}&q=${quality || 75}`;
+  }
+  
+  // For production or Vercel, return the path as is
+  return formattedSrc;
 };
 
 /**

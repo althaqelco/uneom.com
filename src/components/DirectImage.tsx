@@ -59,6 +59,7 @@ const DirectImage: React.FC<DirectImageProps> = ({
   const handleError = () => {
     if (attempts >= 5) {
       // بعد 5 محاولات، استخدم الصورة الاحتياطية
+      console.error(`Failed to load image after 5 attempts: ${src}`);
       setCurrentSrc('/images/default-placeholder.jpg');
       setError(true);
       if (onError) onError();
@@ -67,16 +68,18 @@ const DirectImage: React.FC<DirectImageProps> = ({
     
     const nextAttempt = attempts + 1;
     setAttempts(nextAttempt);
+    console.warn(`Image load error (attempt ${nextAttempt}): ${src}`);
     
     // استراتيجيات مختلفة بناءً على رقم المحاولة
     switch (nextAttempt) {
       case 1:
         // محاولة 1: إضافة بادئة المضيف إذا كان المسار نسبيًا
-        if (src && !src.startsWith('http') && !src.startsWith('data:') && typeof window !== 'undefined') {
+        if (typeof window !== 'undefined' && !src.startsWith('http') && !src.startsWith('data:')) {
           const baseUrl = window.location.origin;
           const fixedSrc = src.startsWith('/') 
-            ? baseUrl + src 
-            : baseUrl + '/' + src;
+            ? `${baseUrl}${src}` 
+            : `${baseUrl}/${src}`;
+          console.log(`Trying with absolute URL: ${fixedSrc}`);
           setCurrentSrc(fixedSrc);
         }
         break;
@@ -88,21 +91,25 @@ const DirectImage: React.FC<DirectImageProps> = ({
             const urlParams = new URLSearchParams(src.split('?')[1]);
             const imgUrl = urlParams.get('url');
             if (imgUrl) {
-              setCurrentSrc(imgUrl);
+              setCurrentSrc(decodeURIComponent(imgUrl));
             }
           } catch (e) {
             console.error('خطأ في استخراج URL من صورة Next.js:', e);
           }
+        } else if (src.startsWith('/')) {
+          console.log(`Trying without leading slash: ${src.substring(1)}`);
+          setCurrentSrc(src.substring(1));
         }
         break;
       
       case 3:
         // محاولة 3: تجربة مسار بديل (بدون _next)
-        if (src.startsWith('/')) {
+        if (src.includes('/_next/')) {
           const altPath = src.replace('/_next/', '/');
-          if (altPath !== src) {
-            setCurrentSrc(altPath);
-          }
+          setCurrentSrc(altPath);
+        } else if (!src.startsWith('/')) {
+          console.log(`Trying with leading slash: /${src}`);
+          setCurrentSrc(`/${src}`);
         }
         break;
       
@@ -111,11 +118,19 @@ const DirectImage: React.FC<DirectImageProps> = ({
         if (src.includes('/images/')) {
           const directPath = `/images/${src.split('/images/')[1]}`;
           setCurrentSrc(directPath);
+        } else {
+          // Try with images path
+          const filename = src.split('/').pop();
+          if (filename) {
+            console.log(`Trying with direct images path: /images/${filename}`);
+            setCurrentSrc(`/images/${filename}`);
+          }
         }
         break;
       
       case 5:
         // محاولة 5: استخدام الصورة الاحتياطية
+        console.log(`Using fallback image`);
         setCurrentSrc('/images/default-placeholder.jpg');
         break;
       
@@ -131,6 +146,7 @@ const DirectImage: React.FC<DirectImageProps> = ({
   
   // معالجة نجاح تحميل الصورة
   const handleLoad = () => {
+    console.log(`Image loaded successfully: ${currentSrc}`);
     setLoaded(true);
     if (onLoad) onLoad();
   };

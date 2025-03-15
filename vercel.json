@@ -111,14 +111,11 @@
     "domains": [
       "localhost",
       "uneom.com",
-      "*.uneom.com",
       "i.imgur.com",
       "fonts.gstatic.com",
       "uneom-com.vercel.app",
-      "*.vercel.app",
       "vercel.app",
       "vercel.com",
-      "*.vercel.com",
       "assets.vercel.com",
       "lh3.googleusercontent.com"
     ],

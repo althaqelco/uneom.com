@@ -46,7 +46,6 @@ export default function OptimizedImage({
   const [useRegularImgTag, setUseRegularImgTag] = useState(false);
   const [isVercel, setIsVercel] = useState<boolean>(false);
   const [isClient, setIsClient] = useState<boolean>(false);
-  const [errorLoading, setErrorLoading] = useState<boolean>(false);
 
   // Update imgSrc if src prop changes
   useEffect(() => {
@@ -57,15 +56,24 @@ export default function OptimizedImage({
   }, [src]);
 
   useEffect(() => {
-    setIsClient(true);
-    
-    // تحديد ما إذا كنا في بيئة Vercel
-    const hostname = window.location.hostname;
-    setIsVercel(
-      hostname.includes('vercel.app') || 
-      hostname === 'uneom.com' || 
-      hostname.endsWith('.uneom.com')
-    );
+    if (typeof window !== 'undefined') {
+      setIsClient(true);
+      
+      // Check if we're in Vercel environment
+      const hostname = window.location.hostname;
+      const isVercelEnv = 
+        hostname.includes('vercel.app') || 
+        hostname === 'uneom.com' || 
+        hostname.endsWith('.uneom.com') ||
+        process.env.NEXT_PUBLIC_VERCEL_ENV !== undefined;
+      
+      setIsVercel(isVercelEnv);
+      
+      // Force using DirectImage in production
+      if (isVercelEnv || process.env.NODE_ENV === 'production') {
+        console.log(`Using DirectImage for ${typeof src === 'string' ? src : 'unknown'} (Vercel: ${isVercelEnv})`);
+      }
+    }
   }, []);
 
   // Handle image loading errors
@@ -102,12 +110,12 @@ export default function OptimizedImage({
     } else if (errorRetryCount === 1) {
       // Second retry: Try with public URL
       if (isVercel) {
-        const basePath = 'https://uneom-com.vercel.app';
+        const basePath = window.location.origin;
         if (typeof imgSrc === 'string' && !imgSrc.startsWith('http')) {
           const fullPath = imgSrc.startsWith('/') 
             ? `${basePath}${imgSrc}` 
             : `${basePath}/${imgSrc}`;
-          console.log(`Trying with full Vercel path: ${fullPath}`);
+          console.log(`Trying with full URL path: ${fullPath}`);
           setImgSrc(fullPath);
         } else {
           // Try with original path again but with different query param
@@ -159,9 +167,8 @@ export default function OptimizedImage({
     );
   }
 
-  // إذا كنا في بيئة Vercel أو حدث خطأ في تحميل الصورة، استخدم DirectImage
-  if ((isClient && isVercel) || errorLoading) {
-    console.log(`[OptimizedImage] استخدام DirectImage لـ: ${typeof imgSrc === 'string' ? imgSrc : 'غير معروف'}`);
+  // Always use DirectImage in production or on Vercel
+  if (isClient && (isVercel || process.env.NODE_ENV === 'production')) {
     return (
       <DirectImage
         src={typeof imgSrc === 'string' ? imgSrc : ''}
@@ -171,12 +178,12 @@ export default function OptimizedImage({
         className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
         priority={priority}
         style={rest.style}
-        onError={() => console.log(`DirectImage فشل في تحميل الصورة: ${imgSrc}`)}
+        onError={handleError}
       />
     );
   }
 
-  // Use Next.js Image component
+  // Use Next.js Image component for development environment
   return (
     <Image
       {...rest}
@@ -191,7 +198,6 @@ export default function OptimizedImage({
         // @ts-ignore - locale is added in our custom loader but not in the original type
         return customImageLoader({ ...params, locale, isVercel });
       }}
-      unoptimized={true}
     />
   );
 } 

@@ -29,7 +29,11 @@ const nextConfig = {
       'uneom-com.vercel.app',
       'vercel.app',
       'localhost',
-      '127.0.0.1'
+      '127.0.0.1',
+      'i.imgur.com',
+      'fonts.gstatic.com',
+      'lh3.googleusercontent.com',
+      'assets.vercel.com'
     ],
     remotePatterns: [
       {
@@ -43,9 +47,17 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: '**.uneom.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+      {
+        protocol: 'http',
+        hostname: '**',
       }
     ],
-    unoptimized: true, // Disable image optimization for Vercel
+    formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60 * 60 * 24 * 7, // 7 days
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
