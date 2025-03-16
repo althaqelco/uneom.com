@@ -64,24 +64,6 @@ export default function ArabicRootLayout({
                 .forEach(function(el) {
                   el.classList.add('rtl-flip');
                 });
-                
-              // Preload Arabic fonts programmatically
-              const fontUrls = [
-                '/fonts/ar/Cairo-Regular.woff2',
-                '/fonts/ar/Cairo-Bold.woff2',
-                '/fonts/ar/Cairo-Medium.woff2',
-                '/fonts/ar/Cairo-SemiBold.woff2'
-              ];
-              
-              fontUrls.forEach(url => {
-                const link = document.createElement('link');
-                link.rel = 'preload';
-                link.as = 'font';
-                link.type = 'font/woff2';
-                link.href = url;
-                link.crossOrigin = 'anonymous';
-                document.head.appendChild(link);
-              });
             })();
           `}
         </Script>

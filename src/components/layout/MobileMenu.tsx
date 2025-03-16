@@ -315,7 +315,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ locale = 'en', onClose }) => {
         
         <div className="mt-8 pt-4 border-t border-neutral-100">
           <Link 
-            href={locale === 'en' ? pathname.replace(/^\/[a-z]{2}\/?/, '/ar/') || '/ar' : pathname.replace(/^\/[a-z]{2}\/?/, '/') || '/'}
+            href={locale === 'en' ? 
+              pathname === '/' ? '/ar' : pathname.replace(/^\//, '/ar/') : 
+              pathname.replace(/^\/ar(?=\/|$)/, '/')}
             className={`flex items-center ${isRTL ? 'flex-row-reverse justify-end space-x-0 space-x-reverse' : 'space-x-2'} py-3 px-2 text-neutral-800 hover:text-primary-600 transition-colors duration-200`}
             onClick={onClose}
           >

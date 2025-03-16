@@ -1,183 +1,106 @@
 "use client";
 
 import React, { useEffect } from 'react';
+import VercelSafeImage from './ui/VercelSafeImage';
 
 /**
- * مكون يحسن تحميل الصور في بيئات مختلفة، خاصة في Vercel
+ * Componente que mejora la carga de imágenes en diferentes entornos, especialmente en Vercel
  * 
- * هذا المكون:
- * 1. يعمل فقط في جانب العميل
- * 2. يكتشف ما إذا كنا في Vercel ويطبق منطقًا متخصصًا
- * 3. يجرب استراتيجيات مختلفة لتحميل الصور
- * 4. يوفر إصلاحات لمشاكل تحميل الصور الشائعة
+ * Este componente:
+ * 1. Se ejecuta solo en el lado del cliente
+ * 2. Detecta si estamos en Vercel y aplica lógica especializada
+ * 3. Intenta diferentes estrategias para cargar imágenes
+ * 4. Proporciona correcciones para problemas comunes de carga de imágenes
  */
 const ImageResolver: React.FC = () => {
   useEffect(() => {
-    // تشغيل فقط في المتصفح
+    // Only run in browser
     if (typeof window === 'undefined') return;
 
-    // تحديد ما إذا كنا في بيئة Vercel
-    const hostname = window.location.hostname;
-    const isVercel = 
-      hostname.includes('vercel.app') || 
-      hostname === 'uneom.com' || 
-      hostname.endsWith('.uneom.com');
-    
-    console.log(`ImageResolver: Running in Vercel environment: ${isVercel ? 'Yes' : 'No'}`);
-    
-    // إضافة فئة إلى الجسم للتعرف على بيئة Vercel في CSS
-    if (isVercel) {
-      document.body.classList.add('vercel-deployment');
-      console.log('Added vercel-deployment class to body');
-    }
-    
-    // تحميل الصور الاحتياطية مسبقًا
-    const preloadFallbackImages = () => {
-      const fallbackImages = [
-        '/images/default-placeholder.jpg',
-        '/images/default-placeholder.svg',
-        '/images/product-placeholder.jpg',
-        '/images/product-placeholder.svg',
-        '/images/avatar-placeholder.jpg',
-        '/images/avatar-placeholder.svg',
-        '/images/banner-placeholder.jpg',
-        '/images/banner-placeholder.svg'
-      ];
-      
-      fallbackImages.forEach(imgSrc => {
-        const img = new Image();
-        img.src = imgSrc;
-        console.log(`Preloaded fallback image: ${imgSrc}`);
-      });
-    };
-    
-    // تحميل الصور الاحتياطية مسبقًا
-    preloadFallbackImages();
-
-    // تحديد نوع الصورة بناءً على المسار أو الفئة
-    const getImageType = (src: string, className: string = '') => {
-      const srcString = src.toLowerCase();
-      const classString = className.toLowerCase();
-      
-      if (srcString.includes('product') || srcString.includes('item') || classString.includes('product')) {
-        return 'product';
-      } else if (srcString.includes('avatar') || srcString.includes('profile') || srcString.includes('user') || classString.includes('avatar')) {
-        return 'avatar';
-      } else if (srcString.includes('banner') || srcString.includes('hero') || srcString.includes('cover') || classString.includes('banner')) {
-        return 'banner';
-      }
-      
-      return 'default';
-    };
-    
-    // الحصول على مسار الصورة الاحتياطية المناسبة
-    const getFallbackSrc = (type: string, format: 'jpg' | 'svg' = 'jpg') => {
-      return `/images/${type}-placeholder.${format}`;
-    };
-
-    // وظيفة لحل مسارات الصور
+    // Function to resolve image paths
     const resolveImagePaths = () => {
       const images = document.querySelectorAll('img:not([data-resolved="true"])');
-      console.log(`ImageResolver: Found ${images.length} unresolved images`);
       
       images.forEach((img) => {
         const imgElement = img as HTMLImageElement;
         const src = imgElement.getAttribute('src') || '';
-        const className = imgElement.className || '';
         
-        // تخطي عناوين URL للبيانات والصور التي تم حلها بالفعل
+        // Skip data URLs and already resolved images
         if (src.startsWith('data:') || imgElement.hasAttribute('data-resolved')) {
           return;
         }
         
-        // وضع علامة كمحلول
+        // Mark as resolved
         imgElement.setAttribute('data-resolved', 'true');
-        imgElement.setAttribute('data-original-src', src);
         
-        // إضافة فئة CSS بناءً على نوع الصورة
-        const imageType = getImageType(src, className);
-        imgElement.classList.add(`${imageType}-image`);
+        // Store original source
+        if (!imgElement.hasAttribute('data-original-src')) {
+          imgElement.setAttribute('data-original-src', src);
+        }
         
-        // إضافة معالج أخطاء
+        // Add error handler
         imgElement.onerror = () => {
-          console.log(`Image error: ${src}`);
+          const originalSrc = imgElement.getAttribute('data-original-src') || '';
           
-          // إضافة فئة الخطأ
-          imgElement.classList.add('error');
-          
-          // تحديد نوع الصورة الاحتياطية المناسبة
-          const fallbackSrc = getFallbackSrc(imageType);
-          
-          // تجربة اختلافات المسار المختلفة
+          // Try different path variations
           const variations = [
-            // تجربة مع وبدون شرطة مائلة أمامية
+            // Try with and without leading slash
             src.startsWith('/') ? src.substring(1) : `/${src}`,
-            // تجربة مع عنوان URL مطلق
+            // Try with absolute URL
             `${window.location.origin}${src.startsWith('/') ? '' : '/'}${src}`,
-            // تجربة مع بادئة _next
-            src.includes('/_next/') ? src.replace('/_next/', '/') : null,
-            // تجربة المصدر الأصلي إذا كان مختلفًا
-            imgElement.getAttribute('data-original-src') !== src ? imgElement.getAttribute('data-original-src') : null,
-            // تجربة مع مسار الصور
-            `/images/${src.split('/').pop()?.split('?')[0]}`,
-            // استخدام الصورة الاحتياطية
-            fallbackSrc,
-            // استخدام الصورة الاحتياطية SVG
-            getFallbackSrc(imageType, 'svg')
-          ].filter(Boolean); // إزالة القيم الفارغة
+            // Try with _next prefix
+            `/_next/static/images/${src.split('/').pop()}`,
+            // Try original source if different
+            originalSrc !== src ? originalSrc : '',
+            // Fallback
+            '/images/default-placeholder.jpg'
+          ].filter(Boolean); // Remove empty strings
           
-          // تجربة كل اختلاف
+          // Try each variation
           let currentIndex = 0;
           
           const tryNextVariation = () => {
             if (currentIndex >= variations.length) {
-              // إذا فشلت جميع الاختلافات، استخدم الاحتياطي
-              imgElement.setAttribute('src', getFallbackSrc('default', 'svg'));
-              imgElement.setAttribute('data-vercel-fixed', 'fallback');
+              // If all variations fail, use fallback
+              imgElement.setAttribute('src', '/images/default-placeholder.jpg');
               return;
             }
             
             const variation = variations[currentIndex++];
-            if (variation) {
-              console.log(`Trying variation ${currentIndex}: ${variation}`);
-              imgElement.setAttribute('src', variation);
-              imgElement.setAttribute('data-vercel-fixed', 'true');
-            } else {
-              tryNextVariation();
-            }
+            imgElement.setAttribute('src', variation);
           };
           
-          // إعداد معالج الأخطاء للاختلاف التالي
+          // Set up error handler for next variation
           imgElement.onerror = tryNextVariation;
           
-          // تجربة الاختلاف الأول
+          // Try first variation
           tryNextVariation();
         };
         
-        // للصور التي تم تحميلها بالفعل ولكنها معطلة
+        // For images that are already loaded but broken
         if (imgElement.complete && imgElement.naturalWidth === 0) {
-          // تشغيل معالج الأخطاء
+          // Trigger error handler
           if (imgElement.onerror) {
-            imgElement.onerror(new Event('error') as any);
+            imgElement.onerror(new Event('error'));
           }
         }
       });
     };
     
-    // تشغيل في البداية
+    // Run initially
     resolveImagePaths();
     
-    // تشغيل بعد تحميل الصفحة
+    // Run after page load
     window.addEventListener('load', resolveImagePaths);
     
-    // إعداد مراقب التحولات لمراقبة الصور الجديدة
+    // Set up mutation observer to watch for new images
     const observer = new MutationObserver((mutations) => {
       let hasNewImages = false;
       
       mutations.forEach(mutation => {
         if (mutation.type === 'childList') {
           mutation.addedNodes.forEach(node => {
-            if (node.nodeType === 1) { // عقدة عنصر
+            if (node.nodeType === 1) { // Element node
               const element = node as Element;
               if (element.tagName === 'IMG' || element.querySelectorAll('img').length > 0) {
                 hasNewImages = true;
@@ -197,14 +120,14 @@ const ImageResolver: React.FC = () => {
       subtree: true
     });
     
-    // تنظيف
+    // Clean up
     return () => {
       observer.disconnect();
       window.removeEventListener('load', resolveImagePaths);
     };
   }, []);
 
-  // لا تعرض أي شيء مرئي
+  // Don't render anything visible
   return null;
 };
 

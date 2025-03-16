@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Container from '../ui/Container';
-import { MdDateRange, MdGroups, MdLocalShipping, MdSecurity, MdVerified, MdHealthAndSafety, MdOutlineSchool, MdMedicalServices } from 'react-icons/md';
+import { MdDateRange, MdGroups, MdLocalShipping, MdSecurity, MdVerified, MdOutlineSchool, MdCategory, MdStarRate, MdLayers } from 'react-icons/md';
 import Image from 'next/image';
 import { motion, useAnimation, useInView, AnimatePresence } from 'framer-motion';
 
@@ -79,18 +79,18 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
 
   const content = {
     en: {
-      title: "Trusted by Leading Saudi Healthcare Institutions",
-      subtitle: "Providing high-quality professional uniforms for medical staff across the Kingdom",
+      title: "Trusted by Leading Organizations Across Saudi Arabia",
+      subtitle: "Providing high-quality professional uniforms for diverse industries throughout the Kingdom",
       signals: [
         {
-          icon: <MdHealthAndSafety className="w-12 h-12 text-primary-500" />,
-          title: "Medical Compliant",
-          description: "Our uniforms meet all healthcare industry standards for safety and comfort"
+          icon: <MdStarRate className="w-12 h-12 text-primary-500" />,
+          title: "Industry Compliant",
+          description: "Our uniforms meet all industry standards for safety, quality and comfort"
         },
         {
-          icon: <MdOutlineSchool className="w-12 h-12 text-primary-500" />,
-          title: "150+ Hospitals",
-          description: "Serving healthcare facilities of all sizes across Saudi Arabia"
+          icon: <MdCategory className="w-12 h-12 text-primary-500" />,
+          title: "Multiple Industries",
+          description: "Serving diverse sectors from healthcare to hospitality across Saudi Arabia"
         },
         {
           icon: <MdVerified className="w-12 h-12 text-primary-500" />,
@@ -98,25 +98,25 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
           description: "Supporting local manufacturing with Saudi expertise"
         },
         {
-          icon: <MdMedicalServices className="w-12 h-12 text-primary-500" />,
+          icon: <MdLayers className="w-12 h-12 text-primary-500" />,
           title: "Specialized Designs",
-          description: "Custom uniforms for every medical department and role"
+          description: "Custom uniforms for every industry, department and role"
         }
       ]
     },
     ar: {
-      title: "موثوق به من قبل المؤسسات الصحية الرائدة في المملكة",
-      subtitle: "نوفر زيًا موحدًا مهنيًا عالي الجودة للطاقم الطبي في جميع أنحاء المملكة",
+      title: "موثوق به من قبل المؤسسات الرائدة في المملكة العربية السعودية",
+      subtitle: "نوفر زيًا موحدًا مهنيًا عالي الجودة لصناعات متنوعة في جميع أنحاء المملكة",
       signals: [
         {
-          icon: <MdHealthAndSafety className="w-12 h-12 text-primary-500" />,
-          title: "متوافق طبيًا",
-          description: "تلبي أزياؤنا الموحدة جميع معايير الصناعة الصحية للسلامة والراحة"
+          icon: <MdStarRate className="w-12 h-12 text-primary-500" />,
+          title: "متوافق مع المعايير",
+          description: "تلبي أزياؤنا الموحدة جميع معايير الصناعة للسلامة والجودة والراحة"
         },
         {
-          icon: <MdOutlineSchool className="w-12 h-12 text-primary-500" />,
-          title: "+150 مستشفى",
-          description: "خدمة المرافق الصحية من جميع الأحجام في المملكة العربية السعودية"
+          icon: <MdCategory className="w-12 h-12 text-primary-500" />,
+          title: "صناعات متعددة",
+          description: "خدمة قطاعات متنوعة من الرعاية الصحية إلى الضيافة في المملكة العربية السعودية"
         },
         {
           icon: <MdVerified className="w-12 h-12 text-primary-500" />,
@@ -124,9 +124,9 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
           description: "دعم التصنيع المحلي بخبرات سعودية"
         },
         {
-          icon: <MdMedicalServices className="w-12 h-12 text-primary-500" />,
+          icon: <MdLayers className="w-12 h-12 text-primary-500" />,
           title: "تصاميم متخصصة",
-          description: "أزياء موحدة مخصصة لكل قسم طبي ودور"
+          description: "أزياء موحدة مخصصة لكل صناعة وقسم ودور"
         }
       ]
     }
@@ -402,18 +402,18 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
                 <div className="p-10 md:p-12 flex flex-col justify-center">
                   <h3 className="text-2xl md:text-3xl font-bold mb-6 text-neutral-900 leading-tight">
                     {isRTL 
-                      ? "نزود المهنيين الطبيين بأفضل الأزياء الموحدة"
-                      : "Equipping Medical Professionals with the Best Uniforms"}
+                      ? "نزود المهنيين في مختلف القطاعات بأفضل الأزياء الموحدة"
+                      : "Equipping Professionals Across Industries with the Best Uniforms"}
                   </h3>
                   <p className="text-neutral-600 mb-8 text-lg">
                     {isRTL
-                      ? "من الأطباء إلى الممرضات والفنيين، نقدم زيًا موحدًا يجمع بين الوظائف والراحة والمظهر المهني."
-                      : "From doctors to nurses and technicians, we provide uniforms that combine functionality, comfort, and professional appearance."}
+                      ? "من الرعاية الصحية إلى الضيافة والطيران، نقدم زيًا موحدًا يجمع بين الوظائف والراحة والمظهر المهني."
+                      : "From healthcare to hospitality and aviation, we provide uniforms that combine functionality, comfort, and professional appearance."}
                   </p>
                   <ul className="space-y-4">
                     {[
-                      isRTL ? "مواد عالية الجودة مقاومة للبقع" : "High-quality stain-resistant materials",
-                      isRTL ? "تصاميم مريحة للمناوبات الطويلة" : "Comfortable designs for long shifts",
+                      isRTL ? "مواد عالية الجودة مقاومة للتآكل" : "High-quality durable materials",
+                      isRTL ? "تصاميم مريحة للاستخدام اليومي" : "Comfortable designs for daily use",
                       isRTL ? "خيارات متوافقة مع الثقافة السعودية" : "Options compatible with Saudi culture"
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-start">
@@ -430,8 +430,8 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
                 <div className="relative h-full min-h-[400px]">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary-100/30 to-blue-100/20 mix-blend-overlay"></div>
                   <Image 
-                    src="/images/avatar-placeholder.jpg"
-                    alt={isRTL ? "فريق طبي محترف بأزياء موحدة" : "Professional medical team in uniforms"}
+                    src="/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg"
+                    alt={isRTL ? "مهنيون في أزياء موحدة" : "Professionals in uniforms"}
                     fill
                     className="object-cover"
                   />

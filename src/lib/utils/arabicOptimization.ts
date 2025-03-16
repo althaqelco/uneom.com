@@ -104,88 +104,20 @@ export const getRTLImageClasses = (src: string): string => {
  */
 export const prefetchArabicFonts = (): void => {
   if (typeof document !== 'undefined') {
-    // Define the Arabic font URLs to preload
-    const fontUrls = [
-      '/fonts/ar/Cairo-Regular.woff2',
-      '/fonts/ar/Cairo-Medium.woff2',
-      '/fonts/ar/Cairo-Bold.woff2',
-      '/fonts/ar/Cairo-SemiBold.woff2',
-      // Add Tajawal as a fallback Arabic font
-      '/fonts/ar/Tajawal-Regular.woff2',
-      '/fonts/ar/Tajawal-Medium.woff2',
-      '/fonts/ar/Tajawal-Bold.woff2'
-    ];
+    // Create link elements for Google Fonts
+    const cairoLink = document.createElement('link');
+    cairoLink.rel = 'stylesheet';
+    cairoLink.href = 'https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap';
+    document.head.appendChild(cairoLink);
     
-    // Create preload links for each font
-    fontUrls.forEach(url => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'font';
-      link.type = 'font/woff2';
-      link.href = url;
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
+    const tajawalLink = document.createElement('link');
+    tajawalLink.rel = 'stylesheet';
+    tajawalLink.href = 'https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap';
+    document.head.appendChild(tajawalLink);
     
     // Add CSS to define font faces
     const style = document.createElement('style');
     style.textContent = `
-      @font-face {
-        font-family: 'Cairo';
-        src: url('/fonts/ar/Cairo-Regular.woff2') format('woff2');
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-      }
-      
-      @font-face {
-        font-family: 'Cairo';
-        src: url('/fonts/ar/Cairo-Medium.woff2') format('woff2');
-        font-weight: 500;
-        font-style: normal;
-        font-display: swap;
-      }
-      
-      @font-face {
-        font-family: 'Cairo';
-        src: url('/fonts/ar/Cairo-SemiBold.woff2') format('woff2');
-        font-weight: 600;
-        font-style: normal;
-        font-display: swap;
-      }
-      
-      @font-face {
-        font-family: 'Cairo';
-        src: url('/fonts/ar/Cairo-Bold.woff2') format('woff2');
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-      }
-      
-      @font-face {
-        font-family: 'Tajawal';
-        src: url('/fonts/ar/Tajawal-Regular.woff2') format('woff2');
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-      }
-      
-      @font-face {
-        font-family: 'Tajawal';
-        src: url('/fonts/ar/Tajawal-Medium.woff2') format('woff2');
-        font-weight: 500;
-        font-style: normal;
-        font-display: swap;
-      }
-      
-      @font-face {
-        font-family: 'Tajawal';
-        src: url('/fonts/ar/Tajawal-Bold.woff2') format('woff2');
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-      }
-      
       .rtl-text {
         font-family: 'Cairo', 'Tajawal', sans-serif;
       }

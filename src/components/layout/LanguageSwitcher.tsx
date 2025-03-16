@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { HiTranslate } from 'react-icons/hi';
 import { CgSpinner } from 'react-icons/cg';
 import { LANGUAGES } from '@/lib/i18n/config';
+import { useRouter } from 'next/navigation';
 
 interface LanguageSwitcherProps {
   className?: string;
@@ -12,7 +13,7 @@ interface LanguageSwitcherProps {
 
 /**
  * Component for switching between languages
- * Optimized to prevent hydration issues
+ * Optimized for faster transitions and better user experience
  */
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   className = '',
@@ -20,6 +21,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
 }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const router = useRouter();
   
   // تأكد من أن المكون يُعرض فقط على جانب العميل لمنع مشاكل hydration
   useEffect(() => {
@@ -50,33 +52,29 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
     
     setIsLoading(true);
     
-    // بناء المسار الجديد
-    let newPath = '';
-    
     try {
       const pathname = window.location.pathname;
       const search = window.location.search;
       
+      let newPath = '';
+      
       if (currentLocale === LANGUAGES.AR) {
         // من العربية إلى الإنجليزية
-        newPath = pathname.replace(/^\/ar/, '');
+        newPath = pathname.replace(/^\/ar(?=\/|$)/, '');
         if (newPath === '') newPath = '/';
       } else {
         // من الإنجليزية إلى العربية
-        newPath = `/ar${pathname}`;
+        newPath = `/ar${pathname === '/' ? '' : pathname}`;
       }
       
       if (search) {
         newPath += search;
       }
       
-      // تعيين علامة انتقال اللغة
-      sessionStorage.setItem('isLanguageSwitch', 'true');
-      
-      // إضافة مؤشر التحميل
+      // إضافة مؤشر التحميل لتحسين UX
       document.documentElement.classList.add('language-transition');
       
-      // التنقل إلى المسار الجديد
+      // استخدام window.location مباشرة للتنقل الأكثر فعالية بين اللغات
       window.location.href = newPath;
     } catch (e) {
       // في حالة الخطأ، إعادة تعيين الحالة
@@ -94,7 +92,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
     <button
       onClick={handleLanguageChange}
       disabled={isLoading}
-      className={`inline-flex items-center px-3 py-2 text-sm font-medium rounded-md border border-neutral-200 hover:bg-neutral-50 transition-colors duration-300 ${isLoading ? 'opacity-70 cursor-wait' : ''} ${className}`}
+      className={`language-switcher-button inline-flex items-center px-3 py-2 text-sm font-medium rounded-md border border-neutral-200 hover:bg-neutral-50 transition-colors duration-300 ${isLoading ? 'opacity-70 cursor-wait' : ''} ${className}`}
       aria-label={`Switch to ${alternateLanguageLabel}`}
     >
       {isLoading ? (

@@ -38,37 +38,37 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
     {
       id: 1,
       quote: locale === 'en' 
-        ? "UNEOM provided our hospital staff with high-quality uniforms that not only look professional but are incredibly comfortable for long shifts. Their attention to detail and customization options exceeded our expectations."
-        : "قدمت يونيوم لموظفي مستشفانا زيًا موحدًا عالي الجودة لا يبدو احترافيًا فحسب، بل إنه مريح للغاية للمناوبات الطويلة. لقد تجاوز اهتمامهم بالتفاصيل وخيارات التخصيص توقعاتنا.",
-      name: locale === 'en' ? "Dr. Ahmed Al-Saud" : "د. أحمد آل سعود",
-      role: locale === 'en' ? "Medical Director" : "المدير الطبي",
-      company: locale === 'en' ? "Riyadh Medical Center" : "مركز الرياض الطبي",
-      image: "/images/default-placeholder.jpg",
-      logo: "/images/default-placeholder.jpg/aramco-logo.png",
+        ? "UNEOM provided our corporate staff with high-quality uniforms that not only look professional but are incredibly comfortable for daily wear. Their attention to detail and customization options exceeded our expectations."
+        : "قدمت يونيوم لموظفي شركتنا زيًا موحدًا عالي الجودة لا يبدو احترافيًا فحسب، بل إنه مريح للغاية للارتداء اليومي. لقد تجاوز اهتمامهم بالتفاصيل وخيارات التخصيص توقعاتنا.",
+      name: locale === 'en' ? "Ahmed Al-Saud" : "أحمد آل سعود",
+      role: locale === 'en' ? "Executive Director" : "المدير التنفيذي",
+      company: locale === 'en' ? "Saudi Tech Solutions" : "حلول التقنية السعودية",
+      image: "/images/clients/modern-arabic-businessman-SBI-300984397.jpg",
+      logo: "/images/logos/aramco-logo.png",
       locale
     },
     {
       id: 2,
       quote: locale === 'en'
-        ? "Finding modest yet practical uniforms for our female healthcare staff was challenging until we partnered with UNEOM. They understood our requirements and delivered specialized medical uniforms that respect our cultural values while maintaining functionality."
-        : "كان العثور على زي موحد محتشم وعملي لموظفات الرعاية الصحية لدينا أمرًا صعبًا حتى تعاونا مع يونيوم. لقد فهموا متطلباتنا وقدموا زيًا طبيًا متخصصًا يحترم قيمنا الثقافية مع الحفاظ على الوظائف.",
+        ? "Finding practical yet culturally appropriate uniforms for our female staff was challenging until we partnered with UNEOM. They understood our requirements and delivered specialized uniforms that respect our cultural values while maintaining functionality."
+        : "كان العثور على زي موحد عملي ومناسب ثقافيًا لموظفاتنا أمرًا صعبًا حتى تعاونا مع يونيوم. لقد فهموا متطلباتنا وقدموا زيًا متخصصًا يحترم قيمنا الثقافية مع الحفاظ على الوظائف.",
       name: locale === 'en' ? "Fatima Al-Zahrani" : "فاطمة الزهراني",
       role: locale === 'en' ? "HR Manager" : "مديرة الموارد البشرية",
-      company: locale === 'en' ? "King Faisal Hospital" : "مستشفى الملك فيصل",
-      image: "/images/default-placeholder.jpg",
-      logo: "/images/default-placeholder.jpg/neom-logo.png",
+      company: locale === 'en' ? "Saudi Investment Bank" : "البنك السعودي للاستثمار",
+      image: "/images/clients/young-muslim-arab-woman-wearing-hijab-veiling-face-looking-at-camera-outdoors-during-s-SBI-351149151.jpg",
+      logo: "/images/logos/neom-logo.png",
       locale
     },
     {
       id: 3,
       quote: locale === 'en'
-        ? "UNEOM's medical uniforms have helped us establish a more professional image. The quality of materials and their durability are exceptional, and their customer service team was responsive throughout the entire process."
-        : "ساعدت الأزياء الطبية الموحدة من يونيوم في إنشاء صورة أكثر احترافية. جودة المواد ومتانتها استثنائية، وكان فريق خدمة العملاء سريع الاستجابة طوال العملية بأكملها.",
-      name: locale === 'en' ? "Dr. Mohammad Al-Fahad" : "د. محمد الفهد",
-      role: locale === 'en' ? "Chief Medical Officer" : "المدير الطبي الرئيسي",
-      company: locale === 'en' ? "Jeddah General Hospital" : "مستشفى جدة العام",
-      image: "/images/default-placeholder.jpg",
-      logo: "/images/default-placeholder.jpg/jarir-logo.png",
+        ? "UNEOM's corporate uniforms have helped us establish a more professional image. The quality of materials and their durability are exceptional, and their customer service team was responsive throughout the entire process."
+        : "ساعدت الأزياء الموحدة للشركات من يونيوم في إنشاء صورة أكثر احترافية. جودة المواد ومتانتها استثنائية، وكان فريق خدمة العملاء سريع الاستجابة طوال العملية بأكملها.",
+      name: locale === 'en' ? "Mohammad Al-Fahad" : "محمد الفهد",
+      role: locale === 'en' ? "Chief Operations Officer" : "المدير التنفيذي للعمليات",
+      company: locale === 'en' ? "Jeddah Commercial Group" : "مجموعة جدة التجارية",
+      image: "/images/clients/portrait-of-an-arab-man-sheikh-SBI-300981247.jpg",
+      logo: "/images/logos/jarir-logo.png",
       locale
     },
     {
@@ -79,8 +79,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
       name: locale === 'en' ? "Sara Al-Qassim" : "سارة القاسم",
       role: locale === 'en' ? "Cabin Services Manager" : "مديرة خدمات المقصورة",
       company: locale === 'en' ? "Saudi Wings Airlines" : "الخطوط السعودية أجنحة",
-      image: "/images/default-placeholder.jpg",
-      logo: "/images/default-placeholder.jpg/albaik-logo.png",
+      image: "/images/clients/smiling-attractive-stewardess-getting-ready-to-fli-2024-10-18-12-57-27-utc.jpg",
+      logo: "/images/logos/albaik-logo.png",
       locale
     },
     {
@@ -91,7 +91,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
       name: locale === 'en' ? "Abdullah Al-Otaibi" : "عبدالله العتيبي",
       role: locale === 'en' ? "CEO" : "الرئيس التنفيذي",
       company: locale === 'en' ? "Saudi Investment Bank" : "بنك الاستثمار السعودي",
-      image: "/images/default-placeholder.jpg",
+      image: "/images/clients/adult-beautiful-muslim-woman-with-hijab-on-head-smiling-for-camera-in-room-SBI-351089408.jpg",
       logo: "/images/logos/talabat-logo.png",
       locale
     },
@@ -103,8 +103,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
       name: locale === 'en' ? "Khalid Al-Ghamdi" : "خالد الغامدي",
       role: locale === 'en' ? "Operations Director" : "مدير العمليات",
       company: locale === 'en' ? "FastTrack Logistics" : "فاست تراك للخدمات اللوجستية",
-      image: "/images/product-placeholder.jpg",
-      logo: "/images/logos/default-logo.png",
+      image: "/images/clients/portrait-of-an-arab-man-sheikh-SBI-300981247.jpg",
+      logo: "/images/logos/albaik-logo.png",
       locale
     },
     {
@@ -115,8 +115,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
       name: locale === 'en' ? "Nora Al-Dosari" : "نورة الدوسري",
       role: locale === 'en' ? "Hospitality Manager" : "مديرة الضيافة",
       company: locale === 'en' ? "Royal Oasis Hotels" : "فنادق الواحة الملكية",
-      image: "/images/banner-placeholder.jpg",
-      logo: "/images/logos/uneom-logo-en.png",
+      image: "/images/clients/adult-beautiful-muslim-woman-with-hijab-on-head-smiling-for-camera-in-room-SBI-351089408.jpg",
+      logo: "/images/logos/neom-logo.png",
       locale
     },
     {
@@ -127,8 +127,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
       name: locale === 'en' ? "Saad Al-Rashid" : "سعد الرشيد",
       role: locale === 'en' ? "Retail Manager" : "مدير التجزئة",
       company: locale === 'en' ? "AlMajed Department Stores" : "متاجر الماجد",
-      image: "/images/default-placeholder.jpg",
-      logo: "/images/default-placeholder.jpg",
+      image: "/images/clients/modern-arabic-businessman-SBI-300984397.jpg",
+      logo: "/images/logos/jarir-logo.png",
       locale
     }
   ];
@@ -355,7 +355,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 h-[500px]">
               <Image 
-                src="/images/default-placeholder.jpg"
+                src="/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg"
                 alt={locale === 'en' ? "Various professionals in uniform" : "محترفون في زي موحد"}
                 fill
                 className="object-cover"

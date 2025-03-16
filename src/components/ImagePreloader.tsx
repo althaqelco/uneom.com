@@ -2,129 +2,44 @@
 
 import React, { useEffect } from 'react';
 
-// قائمة الصور الأساسية التي يجب تحميلها مسبقًا
-const CRITICAL_IMAGES = [
-  '/images/avatar-placeholder.jpg',
-  '/images/default-placeholder.jpg',
-  '/images/default-placeholder.jpg',
-  '/images/default-placeholder.jpg',
-  '/images/default-placeholder.jpg',
-  '/images/banner-placeholder.jpg',
-  '/images/default-placeholder.jpg'
-];
-
 /**
- * مكون تحميل الصور المسبق
- * يساعد على تحسين أداء الموقع عن طريق تحميل الصور الأساسية مسبقًا
+ * Component that preloads critical images to improve performance
+ * This helps reduce layout shifts and improve LCP (Largest Contentful Paint)
  */
-const ImagePreloader: React.FC = () => {
+export default function ImagePreloader() {
   useEffect(() => {
-    // التحقق مما إذا كان التطبيق يعمل على Vercel
-    const isVercel = typeof window !== 'undefined' && 
-      (window.location.hostname.includes('vercel.app') || 
-       window.location.hostname === 'uneom.com' ||
-       window.location.hostname.endsWith('.uneom.com'));
-    
-    // إزالة أي preload links موجودة (لتجنب التكرار)
-    document.querySelectorAll('link[rel="preload"][as="image"]').forEach(el => {
-      el.remove();
-    });
-    
-    // تحميل الصور المهمة مسبقًا
-    CRITICAL_IMAGES.forEach(imagePath => {
+    // Only run in browser
+    if (typeof window === 'undefined') return;
+
+    // List of critical images to preload
+    const criticalImages = [
+      '/images/default-placeholder.jpg',
+      '/images/default-placeholder.svg',
+    ];
+
+    // Preload critical images
+    criticalImages.forEach(imageSrc => {
       const link = document.createElement('link');
       link.rel = 'preload';
-      link.href = isVercel ? `https://uneom-com.vercel.app${imagePath}` : imagePath;
       link.as = 'image';
+      link.href = imageSrc;
       document.head.appendChild(link);
-      
-      // إنشاء صورة وتحميلها في الذاكرة
-      const img = new Image();
-      img.src = isVercel ? `https://uneom-com.vercel.app${imagePath}` : imagePath;
-      
-      // معالجة الخطأ وإعادة المحاولة
-      img.onerror = () => {
-        console.warn(`Failed to preload image: ${imagePath}`);
-        // محاولة مرة أخرى بمسار مختلف
-        setTimeout(() => {
-          img.src = imagePath.startsWith('/') 
-            ? imagePath.substring(1) // إزالة السلاش الأمامي
-            : `/${imagePath}`; // إضافة سلاش أمامي
-        }, 500);
-      };
     });
-    
-    // إضافة معالجة للصور المعطوبة
-    const style = document.createElement('style');
-    style.textContent = `
-      /* تحسين عرض الصور */
-      img.loading, img.lazy, img[loading="lazy"] {
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-      }
-      
-      img.loaded {
-        opacity: 1;
-      }
-      
-      /* استخدام صورة بديلة للصور المعطوبة */
-      img:not([src]),
-      img[src=""],
-      img[src="#"],
-      img:not([src]).broken,
-      img[src].broken,
-      img.error {
-        content: url('${isVercel ? 'https://uneom-com.vercel.app' : ''}/images/default-placeholder.jpg');
-      }
-    `;
-    document.head.appendChild(style);
-    
-    // تطبيق معالجة أخطاء الصور
-    setTimeout(() => {
-      document.querySelectorAll('img').forEach(img => {
-        // للصور التي لم تحمل بشكل صحيح
-        if ((img.complete && img.naturalWidth === 0) || !img.src || img.src === '') {
-          // محاولة إعادة تحميل الصورة
-          const originalSrc = img.getAttribute('data-src') || img.getAttribute('data-original') || '';
-          const currentSrc = img.src || '';
-          
-          if (originalSrc && originalSrc !== currentSrc) {
-            img.src = isVercel ? `https://uneom-com.vercel.app${originalSrc}` : originalSrc;
-          } else if (currentSrc && !currentSrc.includes('data:image')) {
-            // إعادة تحميل من البداية
-            img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
-            setTimeout(() => {
-              img.src = isVercel ? `https://uneom-com.vercel.app${currentSrc}` : currentSrc;
-            }, 10);
-          }
-        }
-        
-        // إضافة معالج لحدث onload
-        img.addEventListener('load', () => {
-          img.classList.add('loaded');
-          img.classList.remove('error', 'broken');
-        });
-        
-        // إضافة معالج للأخطاء
-        img.addEventListener('error', () => {
-          img.classList.add('error');
-          // محاولة التحميل مع URL بديل
-          if (!img.classList.contains('fallback-applied')) {
-            img.classList.add('fallback-applied');
-            const src = img.src;
-            img.src = isVercel 
-              ? `https://uneom-com.vercel.app/images/default-placeholder.jpg 
-              : '/images/default-placeholder.jpg';
-            console.warn(`Image failed to load: ${src}, using fallback`);
-          }
-        });
-      });
-    }, 1500);
-    
-  }, []);
-  
-  // هذا المكون لا يعرض أي محتوى مرئي
-  return null;
-};
 
-export default ImagePreloader; 
+    // Create a global fallback image data URL
+    const fallbackSvg = '<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="480" fill="#f0f0f0"/><text x="320" y="240" font-family="Arial" font-size="24" text-anchor="middle" fill="#888">Image not available</text></svg>';
+    const fallbackDataUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(fallbackSvg)}`;
+    
+    // Add to window object for global access
+    window.fallbackImageDataUrl = fallbackDataUrl;
+  }, []);
+
+  return null;
+}
+
+// Add fallbackImageDataUrl to Window interface
+declare global {
+  interface Window {
+    fallbackImageDataUrl?: string;
+  }
+} 

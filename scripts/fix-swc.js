@@ -1,52 +1,78 @@
-/**
- * Script to fix SWC binary issues for local development
- */
+// scripts/fix-swc.js
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const os = require('os');
 
-console.log('🔧 Fixing Next.js SWC binary issues for local development...');
+console.log('🔧 Fixing SWC binary issues...');
 
-// Get the root directory
-const rootDir = path.resolve(__dirname, '..');
-const nodeModulesPath = path.join(rootDir, 'node_modules');
-const nextPath = path.join(nodeModulesPath, '@next');
+// Determine platform and architecture
+const platform = os.platform();
+const arch = os.arch();
 
-// Check if Next.js is installed
-if (!fs.existsSync(nextPath)) {
-  console.log('⚠️ Next.js not found in node_modules. Installing dependencies...');
+console.log(`Platform: ${platform}, Architecture: ${arch}`);
+
+// Map platform and architecture to SWC package
+const getSWCPackage = () => {
+  if (platform === 'linux') {
+    if (arch === 'x64') {
+      return ['@next/swc-linux-x64-gnu', '@next/swc-linux-x64-musl'];
+    } else if (arch === 'arm64') {
+      return ['@next/swc-linux-arm64-gnu', '@next/swc-linux-arm64-musl'];
+    }
+  } else if (platform === 'darwin') {
+    if (arch === 'x64') {
+      return ['@next/swc-darwin-x64'];
+    } else if (arch === 'arm64') {
+      return ['@next/swc-darwin-arm64'];
+    }
+  } else if (platform === 'win32') {
+    if (arch === 'x64') {
+      return ['@next/swc-win32-x64-msvc'];
+    } else if (arch === 'ia32') {
+      return ['@next/swc-win32-ia32-msvc'];
+    } else if (arch === 'arm64') {
+      return ['@next/swc-win32-arm64-msvc'];
+    }
+  }
+  
+  return [];
+};
+
+// Get appropriate SWC packages
+const swcPackages = getSWCPackage();
+
+if (swcPackages.length === 0) {
+  console.warn('⚠️ Could not determine appropriate SWC package for your platform');
+} else {
+  console.log(`🔍 Installing SWC packages for your platform: ${swcPackages.join(', ')}`);
+  
   try {
-    execSync('npm install --force', { stdio: 'inherit', cwd: rootDir });
+    // Create .npmrc file to force native builds
+    const npmrcPath = path.join(process.cwd(), '.npmrc');
+    fs.writeFileSync(npmrcPath, 'node-linker=hoisted\nlegacy-peer-deps=true\n');
+    
+    // Install SWC packages
+    execSync(`npm install ${swcPackages.join(' ')} --no-save`, { stdio: 'inherit' });
+    
+    console.log('✅ SWC packages installed successfully');
   } catch (error) {
-    console.error('❌ Failed to install dependencies:', error);
-    process.exit(1);
+    console.error('❌ Error installing SWC packages:', error.message);
   }
 }
 
-// Get Next.js version
-let nextVersion = 'unknown';
-try {
-  const packageJsonPath = path.join(nodeModulesPath, 'next', 'package.json');
-  if (fs.existsSync(packageJsonPath)) {
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    nextVersion = packageJson.version;
-    console.log(`📦 Next.js version: ${nextVersion}`);
-  }
-} catch (error) {
-  console.error('⚠️ Could not determine Next.js version:', error);
-}
-
-// Check for SWC binary
+// Check if SWC binaries are installed
+const nodeModulesPath = path.resolve(process.cwd(), 'node_modules');
 const swcPaths = [
-  path.join(nextPath, 'swc-darwin-arm64'),
-  path.join(nextPath, 'swc-darwin-x64'),
-  path.join(nextPath, 'swc-linux-arm64-gnu'),
-  path.join(nextPath, 'swc-linux-arm64-musl'),
-  path.join(nextPath, 'swc-linux-x64-gnu'),
-  path.join(nextPath, 'swc-linux-x64-musl'),
-  path.join(nextPath, 'swc-win32-arm64-msvc'),
-  path.join(nextPath, 'swc-win32-ia32-msvc'),
-  path.join(nextPath, 'swc-win32-x64-msvc'),
+  path.join(nodeModulesPath, '@next', 'swc-darwin-arm64'),
+  path.join(nodeModulesPath, '@next', 'swc-darwin-x64'),
+  path.join(nodeModulesPath, '@next', 'swc-linux-arm64-gnu'),
+  path.join(nodeModulesPath, '@next', 'swc-linux-arm64-musl'),
+  path.join(nodeModulesPath, '@next', 'swc-linux-x64-gnu'),
+  path.join(nodeModulesPath, '@next', 'swc-linux-x64-musl'),
+  path.join(nodeModulesPath, '@next', 'swc-win32-arm64-msvc'),
+  path.join(nodeModulesPath, '@next', 'swc-win32-ia32-msvc'),
+  path.join(nodeModulesPath, '@next', 'swc-win32-x64-msvc'),
 ];
 
 let swcFound = false;
@@ -54,61 +80,21 @@ for (const swcPath of swcPaths) {
   if (fs.existsSync(swcPath)) {
     console.log(`✅ SWC binary found at: ${swcPath}`);
     swcFound = true;
-    break;
   }
 }
 
-// If no SWC binary found, create WASM fallback
 if (!swcFound) {
-  console.log('⚠️ No SWC binary found. Setting up WASM fallback...');
+  console.warn('⚠️ No SWC binaries found after installation');
   
-  // Create WASM fallback directory
-  const wasmFallbackPath = path.join(nextPath, 'swc-wasm-fallback');
-  if (!fs.existsSync(wasmFallbackPath)) {
-    fs.mkdirSync(wasmFallbackPath, { recursive: true });
+  // Create a flag file to indicate we should use Babel instead
+  const flagPath = path.join(process.cwd(), '.use-babel');
+  fs.writeFileSync(flagPath, 'true');
+  
+  console.log('✅ Created flag to use Babel instead of SWC');
+} else {
+  // Remove the flag file if it exists
+  const flagPath = path.join(process.cwd(), '.use-babel');
+  if (fs.existsSync(flagPath)) {
+    fs.unlinkSync(flagPath);
   }
-  
-  // Create package.json for WASM fallback
-  const packageJsonPath = path.join(wasmFallbackPath, 'package.json');
-  const packageJson = {
-    name: '@next/swc-wasm-fallback',
-    version: nextVersion || '0.0.0',
-    os: ['darwin', 'linux', 'win32'],
-    cpu: ['x64', 'arm64', 'ia32'],
-    main: 'next-swc.wasm',
-    files: ['next-swc.wasm'],
-  };
-  
-  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-  console.log(`✅ Created package.json at ${packageJsonPath}`);
-  
-  // Create dummy WASM file
-  const wasmPath = path.join(wasmFallbackPath, 'next-swc.wasm');
-  if (!fs.existsSync(wasmPath)) {
-    // Create a minimal valid WASM file (8 bytes header)
-    const wasmHeader = Buffer.from([0x00, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00]);
-    fs.writeFileSync(wasmPath, wasmHeader);
-    console.log(`✅ Created dummy WASM file at ${wasmPath}`);
-  }
-  
-  // Update next.config.mjs to use SWC WASM
-  const nextConfigPath = path.join(rootDir, 'next.config.mjs');
-  if (fs.existsSync(nextConfigPath)) {
-    let nextConfig = fs.readFileSync(nextConfigPath, 'utf8');
-    
-    if (!nextConfig.includes('swcMinify')) {
-      // Add SWC configuration
-      nextConfig = nextConfig.replace(
-        'const nextConfig = {',
-        'const nextConfig = {\n  swcMinify: true,\n  experimental: {\n    swcTraceProfiling: false,\n  },'
-      );
-      
-      fs.writeFileSync(nextConfigPath, nextConfig);
-      console.log(`✅ Updated next.config.mjs to use SWC WASM`);
-    } else {
-      console.log(`ℹ️ next.config.mjs already contains SWC configuration`);
-    }
-  }
-}
-
-console.log('✅ SWC binary fix completed successfully!'); 
+} 

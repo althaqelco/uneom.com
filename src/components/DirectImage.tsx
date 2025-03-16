@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface DirectImageProps {
   src: string;
@@ -34,51 +34,18 @@ const DirectImage: React.FC<DirectImageProps> = ({
   const [loaded, setLoaded] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const [isVercel, setIsVercel] = useState<boolean>(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-  
-  // تحميل الصور الاحتياطية مسبقًا عند تحميل المكون
-  useEffect(() => {
-    const preloadFallbackImages = () => {
-      const fallbackImages = [
-        '/images/default-placeholder.jpg',
-        '/images/default-placeholder.svg',
-        '/images/product-placeholder.jpg',
-        '/images/product-placeholder.svg',
-        '/images/avatar-placeholder.jpg',
-        '/images/avatar-placeholder.svg',
-        '/images/banner-placeholder.jpg',
-        '/images/banner-placeholder.svg'
-      ];
-      
-      fallbackImages.forEach(imgSrc => {
-        const img = new Image();
-        img.src = imgSrc;
-      });
-    };
-    
-    preloadFallbackImages();
-  }, []);
   
   useEffect(() => {
     // تحديد ما إذا كنا في بيئة Vercel
     if (typeof window !== 'undefined') {
       const hostname = window.location.hostname;
-      const isVercelEnv = 
+      setIsVercel(
         hostname.includes('vercel.app') || 
         hostname === 'uneom.com' || 
-        hostname.endsWith('.uneom.com');
-      
-      setIsVercel(isVercelEnv);
-      
-      // إضافة فئة إلى الجسم للتعرف على بيئة Vercel في CSS
-      if (isVercelEnv) {
-        document.body.classList.add('vercel-deployment');
-      }
-      
-      // تسجيل معلومات البيئة للتشخيص
-      console.log(`DirectImage: ${src} - Vercel: ${isVercelEnv}, Production: ${process.env.NODE_ENV === 'production'}`);
+        hostname.endsWith('.uneom.com')
+      );
     }
-  }, [src]);
+  }, []);
   
   // إعادة تعيين الحالة عند تغيير مصدر الصورة
   useEffect(() => {
@@ -88,67 +55,26 @@ const DirectImage: React.FC<DirectImageProps> = ({
     setError(false);
   }, [src]);
   
-  // تحديد نوع الصورة بناءً على المسار أو الفئة
-  const getImageType = () => {
-    const srcString = typeof src === 'string' ? src.toLowerCase() : '';
-    const classString = className.toLowerCase();
-    
-    if (srcString.includes('product') || srcString.includes('item') || classString.includes('product')) {
-      return 'product';
-    } else if (srcString.includes('avatar') || srcString.includes('profile') || srcString.includes('user') || classString.includes('avatar')) {
-      return 'avatar';
-    } else if (srcString.includes('banner') || srcString.includes('hero') || srcString.includes('cover') || classString.includes('banner')) {
-      return 'banner';
+  // Normalize image path for Vercel
+  const normalizeImagePath = (imagePath: string): string => {
+    // If it's already an absolute URL, return it as is
+    if (imagePath.startsWith('http') || imagePath.startsWith('data:')) {
+      return imagePath;
     }
-    
-    return 'default';
-  };
-  
-  // الحصول على مسار الصورة الاحتياطية المناسبة
-  const getFallbackSrc = (type: string, format: 'jpg' | 'svg' = 'jpg') => {
-    return `/images/${type}-placeholder.${format}`;
-  };
-  
-  // التحقق من وجود الصورة
-  const checkImageExists = (url: string): Promise<boolean> => {
-    return new Promise((resolve) => {
-      const img = new Image();
-      img.onload = () => resolve(true);
-      img.onerror = () => resolve(false);
-      img.src = url;
-    });
+
+    // For Vercel, ensure paths start with a slash
+    if (isVercel && !imagePath.startsWith('/')) {
+      return '/' + imagePath;
+    }
+
+    return imagePath;
   };
   
   // معالجة خطأ تحميل الصورة
-  const handleError = async () => {
+  const handleError = () => {
     if (attempts >= 5) {
       // بعد 5 محاولات، استخدم الصورة الاحتياطية
-      console.error(`Failed to load image after 5 attempts: ${src}`);
-      
-      // تحديد نوع الصورة الاحتياطية المناسبة
-      const imageType = getImageType();
-      const fallbackSrc = getFallbackSrc(imageType);
-      
-      // تعيين الصورة الاحتياطية
-      setCurrentSrc(fallbackSrc);
-      
-      // إذا فشلت الصورة الاحتياطية JPEG، استخدم SVG
-      setTimeout(async () => {
-        if (imgRef.current && imgRef.current.naturalWidth === 0) {
-          const svgFallback = getFallbackSrc(imageType, 'svg');
-          console.log(`Trying SVG fallback: ${svgFallback}`);
-          
-          // التحقق من وجود الصورة الاحتياطية SVG
-          const svgExists = await checkImageExists(svgFallback);
-          if (svgExists) {
-            setCurrentSrc(svgFallback);
-          } else {
-            // استخدام الصورة الاحتياطية الافتراضية
-            setCurrentSrc('/images/default-placeholder.svg');
-          }
-        }
-      }, 300);
-      
+      setCurrentSrc('/images/default-placeholder.jpg');
       setError(true);
       if (onError) onError();
       return;
@@ -156,18 +82,16 @@ const DirectImage: React.FC<DirectImageProps> = ({
     
     const nextAttempt = attempts + 1;
     setAttempts(nextAttempt);
-    console.warn(`Image load error (attempt ${nextAttempt}): ${src}`);
     
     // استراتيجيات مختلفة بناءً على رقم المحاولة
     switch (nextAttempt) {
       case 1:
         // محاولة 1: إضافة بادئة المضيف إذا كان المسار نسبيًا
-        if (typeof window !== 'undefined' && !src.startsWith('http') && !src.startsWith('data:')) {
+        if (src && !src.startsWith('http') && !src.startsWith('data:') && typeof window !== 'undefined') {
           const baseUrl = window.location.origin;
           const fixedSrc = src.startsWith('/') 
-            ? `${baseUrl}${src}` 
-            : `${baseUrl}/${src}`;
-          console.log(`Trying with absolute URL: ${fixedSrc}`);
+            ? baseUrl + src 
+            : baseUrl + '/' + src;
           setCurrentSrc(fixedSrc);
         }
         break;
@@ -179,20 +103,13 @@ const DirectImage: React.FC<DirectImageProps> = ({
             const urlParams = new URLSearchParams(src.split('?')[1]);
             const imgUrl = urlParams.get('url');
             if (imgUrl) {
-              const decodedUrl = decodeURIComponent(imgUrl);
-              console.log(`Extracted URL from Next.js image: ${decodedUrl}`);
-              setCurrentSrc(decodedUrl);
+              setCurrentSrc(decodeURIComponent(imgUrl));
             }
           } catch (e) {
             console.error('خطأ في استخراج URL من صورة Next.js:', e);
-            // محاولة بديلة: إزالة الشرطة المائلة الأمامية
-            if (src.startsWith('/')) {
-              console.log(`Trying without leading slash: ${src.substring(1)}`);
-              setCurrentSrc(src.substring(1));
-            }
           }
         } else if (src.startsWith('/')) {
-          console.log(`Trying without leading slash: ${src.substring(1)}`);
+          // Try without leading slash
           setCurrentSrc(src.substring(1));
         }
         break;
@@ -201,25 +118,22 @@ const DirectImage: React.FC<DirectImageProps> = ({
         // محاولة 3: تجربة مسار بديل (بدون _next)
         if (src.includes('/_next/')) {
           const altPath = src.replace('/_next/', '/');
-          console.log(`Trying alternative path: ${altPath}`);
           setCurrentSrc(altPath);
         } else if (!src.startsWith('/')) {
-          console.log(`Trying with leading slash: /${src}`);
-          setCurrentSrc(`/${src}`);
+          // Try with leading slash
+          setCurrentSrc('/' + src);
         }
         break;
       
       case 4:
         // محاولة 4: تجربة مسار مباشر للصورة
         if (src.includes('/images/')) {
-          const directPath = `/images/${src.split('/images/')[1].split('?')[0]}`;
-          console.log(`Trying direct images path: ${directPath}`);
+          const directPath = `/images/${src.split('/images/')[1]}`;
           setCurrentSrc(directPath);
         } else {
-          // محاولة مع مسار الصور
-          const filename = src.split('/').pop()?.split('?')[0];
+          // Try with images path
+          const filename = src.split('/').pop();
           if (filename) {
-            console.log(`Trying with direct images path: /images/${filename}`);
             setCurrentSrc(`/images/${filename}`);
           }
         }
@@ -227,107 +141,42 @@ const DirectImage: React.FC<DirectImageProps> = ({
       
       case 5:
         // محاولة 5: استخدام الصورة الاحتياطية
-        const imageType = getImageType();
-        const fallbackSrc = getFallbackSrc(imageType);
-        console.log(`Using fallback image: ${fallbackSrc}`);
-        setCurrentSrc(fallbackSrc);
+        setCurrentSrc('/images/default-placeholder.jpg');
         break;
       
       default:
         // استخدام الصورة الاحتياطية المضمنة
-        setCurrentSrc('/images/default-placeholder.svg');
+        if (typeof window !== 'undefined' && window.fallbackImageDataUrl) {
+          setCurrentSrc(window.fallbackImageDataUrl);
+        } else {
+          setCurrentSrc('/images/default-placeholder.svg');
+        }
     }
   };
   
   // معالجة نجاح تحميل الصورة
   const handleLoad = () => {
-    console.log(`Image loaded successfully: ${currentSrc}`);
     setLoaded(true);
     if (onLoad) onLoad();
   };
   
-  // تحديد فئة CSS المناسبة بناءً على نوع الصورة
-  const getImageClass = () => {
-    const imageType = getImageType();
-    return `${imageType}-image`;
-  };
-  
-  // تحديد ما إذا كانت الصورة كبيرة
-  const isLargeImage = () => {
-    if (typeof src !== 'string') return false;
-    
-    // التحقق من حجم الصورة بناءً على الامتداد أو المسار
-    const isJpg = src.toLowerCase().endsWith('.jpg') || src.toLowerCase().endsWith('.jpeg');
-    const isPng = src.toLowerCase().endsWith('.png');
-    
-    // إذا كانت الصورة من نوع JPG أو PNG، فقد تكون كبيرة
-    return isJpg || isPng;
-  };
-  
-  // تحديد ما إذا كان يجب استخدام الصورة المحسنة
-  const shouldUseOptimized = () => {
-    // استخدام الصورة المحسنة في بيئة Vercel أو الإنتاج
-    return isVercel || process.env.NODE_ENV === 'production';
-  };
-  
-  // الحصول على مسار الصورة المحسنة
-  const getOptimizedSrc = (originalSrc: string) => {
-    if (!shouldUseOptimized()) return originalSrc;
-    
-    try {
-      // إذا كان المسار يحتوي على _next، استخدم المسار الأصلي
-      if (originalSrc.includes('/_next/')) return originalSrc;
-      
-      // إذا كان المسار يحتوي على http أو https، استخدم المسار الأصلي
-      if (originalSrc.startsWith('http')) return originalSrc;
-      
-      // إذا كان المسار يحتوي على data:، استخدم المسار الأصلي
-      if (originalSrc.startsWith('data:')) return originalSrc;
-      
-      // إذا كان المسار يحتوي على optimized، استخدم المسار الأصلي
-      if (originalSrc.includes('/optimized/')) return originalSrc;
-      
-      // تنظيف المسار
-      let cleanPath = originalSrc;
-      
-      // إذا كان المسار يبدأ بـ /، قم بإزالته
-      if (cleanPath.startsWith('/')) {
-        cleanPath = cleanPath.substring(1);
+  // Normalize the initial src
+  useEffect(() => {
+    if (isVercel) {
+      const normalizedSrc = normalizeImagePath(src);
+      if (normalizedSrc !== currentSrc) {
+        setCurrentSrc(normalizedSrc);
       }
-      
-      // إذا كان المسار لا يحتوي على images/، أضفه
-      if (!cleanPath.startsWith('images/')) {
-        cleanPath = `images/${cleanPath.split('/').pop()}`;
-      }
-      
-      // استخراج اسم الملف والامتداد
-      const pathParts = cleanPath.split('/');
-      const fileName = pathParts.pop() || '';
-      const ext = fileName.substring(fileName.lastIndexOf('.'));
-      const baseName = fileName.substring(0, fileName.lastIndexOf('.'));
-      
-      // إنشاء مسار الصورة المحسنة
-      const optimizedPath = [...pathParts, 'optimized', baseName + '.webp'].join('/');
-      
-      console.log(`Using optimized image: ${optimizedPath}`);
-      return `/${optimizedPath}`;
-    } catch (e) {
-      console.error('خطأ في إنشاء مسار الصورة المحسنة:', e);
-      return originalSrc;
     }
-  };
-  
-  // تحديد مسار الصورة النهائي
-  const finalSrc = shouldUseOptimized() ? getOptimizedSrc(currentSrc) : currentSrc;
+  }, [isVercel, src]);
   
   return (
     <img
-      ref={imgRef}
-      src={finalSrc}
+      src={currentSrc}
       alt={alt}
       width={width}
       height={height}
-      className={`direct-image ${getImageClass()} ${error ? 'error' : ''} ${loaded ? 'loaded' : 'loading'} ${className}`}
+      className={`direct-image ${error ? 'direct-image-error' : ''} ${loaded ? 'direct-image-loaded' : 'direct-image-loading'} ${className}`}
       style={{
         ...style,
         // إضافة أنماط للتأكد من عدم ظهور رمز الصورة المكسورة
@@ -340,8 +189,6 @@ const DirectImage: React.FC<DirectImageProps> = ({
       onLoad={handleLoad}
       data-src={src}
       data-attempts={attempts}
-      data-vercel-fixed={isVercel ? 'true' : undefined}
-      data-optimized={shouldUseOptimized() ? 'true' : undefined}
     />
   );
 };

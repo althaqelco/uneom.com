@@ -5,7 +5,8 @@ import Image, { ImageProps } from 'next/image';
 import { 
   generateBlurPlaceholder, 
   getLoadingStrategy,
-  customImageLoader
+  customImageLoader,
+  vercelImageLoader
 } from '@/lib/utils/imageOptimization';
 import DirectImage from '@/components/DirectImage';
 
@@ -46,7 +47,6 @@ export default function OptimizedImage({
   const [useRegularImgTag, setUseRegularImgTag] = useState(false);
   const [isVercel, setIsVercel] = useState<boolean>(false);
   const [isClient, setIsClient] = useState<boolean>(false);
-  const [isProduction, setIsProduction] = useState<boolean>(false);
 
   // Update imgSrc if src prop changes
   useEffect(() => {
@@ -57,30 +57,16 @@ export default function OptimizedImage({
   }, [src]);
 
   useEffect(() => {
+    setIsClient(true);
+    
+    // Check if we're in Vercel environment
     if (typeof window !== 'undefined') {
-      setIsClient(true);
-      
-      // Check if we're in Vercel environment
       const hostname = window.location.hostname;
-      const isVercelEnv = 
+      setIsVercel(
         hostname.includes('vercel.app') || 
         hostname === 'uneom.com' || 
-        hostname.endsWith('.uneom.com') ||
-        process.env.NEXT_PUBLIC_VERCEL_ENV !== undefined;
-      
-      setIsVercel(isVercelEnv);
-      
-      // Check if we're in production
-      const isProd = process.env.NODE_ENV === 'production';
-      setIsProduction(isProd);
-      
-      // Log environment info
-      console.log(`OptimizedImage: ${typeof src === 'string' ? src : 'unknown'} - Vercel: ${isVercelEnv}, Production: ${isProd}`);
-      
-      // Add vercel-deployment class to body if in Vercel environment
-      if (isVercelEnv) {
-        document.body.classList.add('vercel-deployment');
-      }
+        hostname.endsWith('.uneom.com')
+      );
     }
   }, []);
 
@@ -108,51 +94,65 @@ export default function OptimizedImage({
         console.log(`Trying alternative image path without leading slash: ${newSrc}`);
         setImgSrc(newSrc);
       } else {
-        // Try with absolute URL
-        if (typeof window !== 'undefined' && typeof imgSrc === 'string' && !imgSrc.startsWith('http') && !imgSrc.startsWith('data:')) {
-          const baseUrl = window.location.origin;
-          const fixedSrc = imgSrc.startsWith('/') 
-            ? `${baseUrl}${imgSrc}` 
-            : `${baseUrl}/${imgSrc}`;
-          console.log(`Trying with absolute URL: ${fixedSrc}`);
-          setImgSrc(fixedSrc);
-        }
+        // If not a path starting with slash, try with unoptimized
+        console.log(`Trying with unoptimized image loading`);
+        const unoptimizedSrc = typeof imgSrc === 'string' && !imgSrc.includes('?') 
+          ? `${imgSrc}?unoptimized=true` 
+          : imgSrc;
+        setImgSrc(unoptimizedSrc);
       }
     } else if (errorRetryCount === 1) {
-      // Second retry: Try with fallback
-      console.log(`Using fallback image: ${fallbackSrc}`);
-      setImgSrc(fallbackSrc);
-    } else {
-      // Third retry: Use DirectImage component
+      // Second retry: Try with public URL
+      if (isVercel) {
+        const basePath = window.location.origin;
+        if (typeof imgSrc === 'string' && !imgSrc.startsWith('http')) {
+          const fullPath = imgSrc.startsWith('/') 
+            ? `${basePath}${imgSrc}` 
+            : `${basePath}/${imgSrc}`;
+          console.log(`Trying with full URL path: ${fullPath}`);
+          setImgSrc(fullPath);
+        } else {
+          // Try with original path again but with different query param
+          setImgSrc(`${src}?v=${new Date().getTime()}`);
+        }
+      } else {
+        // If not on Vercel, try with cache busting
+        if (typeof imgSrc === 'string') {
+          setImgSrc(`${imgSrc}?nocache=${new Date().getTime()}`);
+        }
+      }
+    } else if (errorRetryCount === 2) {
+      // Third retry: Fallback to direct image tag
+      console.log(`Final retry: switching to regular img tag`);
       setUseRegularImgTag(true);
     }
     
     setErrorRetryCount(prev => prev + 1);
   };
 
-  // Generate blur placeholder if needed
-  const generatedBlurDataURL = !blurDataURL && blurColor ? generateBlurPlaceholder(blurColor) : blurDataURL;
+  // Determine loading strategy based on whether the image is critical
+  const loadingStrategy = loading || getLoadingStrategy(priority || isCritical);
   
-  // Determine loading strategy
-  const loadingStrategy = getLoadingStrategy(isCritical, priority, loading as any);
-  
-  // Extract remaining props
-  const { width, height, style, className, objectFit, ...restProps } = rest as any;
-  
-  // If using regular img tag due to errors
+  // Generate blur placeholder if not provided
+  const generatedBlurDataURL = blurDataURL || 
+    (placeholder === 'blur' ? generateBlurPlaceholder(blurColor) : undefined);
+
+  // Use regular img tag as last resort
   if (useRegularImgTag) {
+    const { width, height, layout, objectFit, ...restProps } = rest as any;
+    
     const styleProps: React.CSSProperties = {
       maxWidth: '100%',
       height: height ? `${height}px` : 'auto',
       width: width ? `${width}px` : '100%',
-      objectFit: objectFit as any || 'cover',
+      objectFit: objectFit || 'cover',
     };
     
     return (
       <img
-        src={typeof imgSrc === 'string' ? imgSrc : ''}
+        src={imgSrc}
         alt={imgAlt}
-        className={`${className || ''} ${hasError ? 'error' : ''}`}
+        className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
         style={styleProps}
         loading={loadingStrategy === 'eager' ? 'eager' : 'lazy'}
         onError={handleError}
@@ -161,23 +161,23 @@ export default function OptimizedImage({
     );
   }
 
-  // Always use DirectImage in production or on Vercel
-  if (isClient && (isVercel || isProduction)) {
+  // Use DirectImage for Vercel environment
+  if (isClient && isVercel) {
     return (
       <DirectImage
         src={typeof imgSrc === 'string' ? imgSrc : ''}
         alt={imgAlt}
-        width={typeof width === 'number' ? width : undefined}
-        height={typeof height === 'number' ? height : undefined}
-        className={`${className || ''} ${hasError ? 'error' : ''}`}
+        width={typeof rest.width === 'number' ? rest.width : undefined}
+        height={typeof rest.height === 'number' ? rest.height : undefined}
+        className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
         priority={priority}
-        style={style}
+        style={rest.style}
         onError={handleError}
       />
     );
   }
 
-  // Use Next.js Image component for development environment
+  // Use Next.js Image component for non-Vercel environments
   return (
     <Image
       {...rest}
@@ -187,8 +187,11 @@ export default function OptimizedImage({
       loading={loadingStrategy}
       placeholder={placeholder || (generatedBlurDataURL ? 'blur' : undefined)}
       blurDataURL={generatedBlurDataURL}
-      className={`${className || ''} ${hasError ? 'error' : ''}`}
+      className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
       loader={(params) => {
+        if (isVercel) {
+          return vercelImageLoader(params);
+        }
         // @ts-ignore - locale is added in our custom loader but not in the original type
         return customImageLoader({ ...params, locale, isVercel });
       }}

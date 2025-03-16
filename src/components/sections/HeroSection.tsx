@@ -37,65 +37,101 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   // Slides data based on locale
   const slides = locale === 'ar' ? [
     {
-      title: "أزياء الرعاية الصحية بمعايير عالمية",
-      subtitle: "راحة وحماية فائقة للعاملين في القطاع الطبي",
-      image: "/images/avatar-placeholder.jpg",
+      title: "خدمات الرعاية الصحية المتميزة",
+      subtitle: "نقدم أزياء طبية عالية الجودة تجمع بين الراحة والأناقة والحماية لكافة الطواقم الطبية",
+      image: "/images/hero/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-sbi-322343728.jpg",
       cta: "استكشف حلول الرعاية الصحية"
     },
     {
-      title: "خدمات التوصيل والشحن بزي موحد احترافي",
-      subtitle: "أزياء عملية ومتينة لفرق التوصيل والخدمات اللوجستية",
-      image: "/images/default-placeholder.jpg",
-      cta: "استكشف خدماتنا"
+      title: "خدمات التوصيل الاحترافية",
+      subtitle: "أزياء مريحة ومتينة مصممة خصيصًا لفرق التوصيل لتعزيز الكفاءة والانطباع المهني",
+      image: "/images/hero/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg",
+      cta: "اكتشف خدمات التوصيل"
     },
     {
-      title: "أزياء مدرسية عالية الجودة",
-      subtitle: "تصاميم مريحة وعملية للطلاب في جميع المراحل التعليمية",
-      image: "/images/default-placeholder.jpg",
+      title: "الأزياء المدرسية المميزة",
+      subtitle: "تصاميم عصرية وعملية تلبي احتياجات الطلاب مع مراعاة الراحة والمتانة في جميع المراحل التعليمية",
+      image: "/images/hero/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-sbi-349929394.jpg",
       cta: "اكتشف الأزياء المدرسية"
     },
     {
-      title: "أناقة وتميز لطاقم الطيران",
-      subtitle: "أزياء تعكس رقي وفخامة شركات الطيران السعودية",
-      image: "/images/default-placeholder.jpg",
+      title: "أزياء طيران فاخرة",
+      subtitle: "تصاميم أنيقة ومريحة تعكس احترافية وجمال خدمات الطيران السعودية",
+      image: "/images/hero/cheerful-women-stewardesses-standing-on-airplane-s-2023-11-27-05-08-55-utc.jpg",
       cta: "اكتشف مجموعة الطيران"
     },
     {
-      title: "أزياء مهنية لمختلف القطاعات",
-      subtitle: "نلبي احتياجات كافة المهن والتخصصات بتصاميم مبتكرة",
-      image: "/images/default-placeholder.jpg",
+      title: "تشكيلة واسعة من الأزياء المهنية",
+      subtitle: "حلول متكاملة لمختلف القطاعات المهنية مع مراعاة متطلبات كل مهنة وخصائصها الفريدة",
+      image: "/images/hero/uniform-collection-hero.jpg",
       cta: "استكشف القطاعات"
+    },
+    {
+      title: "أزياء الطهاة الاحترافية",
+      subtitle: "تصاميم عملية وأنيقة لعالم المطاعم والضيافة تجمع بين الراحة والمظهر الاحترافي",
+      image: "/images/hero/group-of-chefs-standing-with-arms-crossed-in-kitch-2023-11-27-05-01-36-utc.jpg",
+      cta: "اكتشف أزياء الطهاة"
+    },
+    {
+      title: "أزياء رجال الإطفاء",
+      subtitle: "ملابس مقاومة للحريق ومتينة مصممة لتوفير أقصى درجات الحماية والراحة لرجال الإطفاء",
+      image: "/images/hero/firefighters-fight-the-fire-flame-to-control-fire-not-to-spreading-out-firefighter-ind-sbi-349465280.jpg",
+      cta: "اكتشف أزياء الإطفاء"
+    },
+    {
+      title: "أزياء مهنية متعددة الاستخدامات",
+      subtitle: "مجموعة متنوعة من الأزياء المهنية تلبي احتياجات مختلف القطاعات بتصاميم عصرية ومريحة",
+      image: "/images/hero/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg",
+      cta: "اكتشف المزيد"
     }
   ] : [
     {
-      title: "World-Class Healthcare Apparel",
-      subtitle: "Superior comfort and protection for medical professionals",
-      image: "/images/avatar-placeholder.jpg",
+      title: "Excellence in Healthcare Attire",
+      subtitle: "Premium quality medical uniforms combining comfort, elegance, and protection for all healthcare professionals",
+      image: "/images/hero/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-sbi-322343728.jpg",
       cta: "Explore Healthcare Solutions"
     },
     {
-      title: "Professional Delivery Service Uniforms",
-      subtitle: "Practical and durable attire for logistics teams",
-      image: "/images/default-placeholder.jpg",
-      cta: "Discover Our Services"
+      title: "Professional Delivery Uniforms",
+      subtitle: "Comfortable and durable attire specially designed for delivery teams to enhance efficiency and professional impression",
+      image: "/images/hero/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg",
+      cta: "Discover Delivery Services"
     },
     {
-      title: "Premium School Uniforms",
-      subtitle: "Comfortable and practical designs for students of all ages",
-      image: "/images/default-placeholder.jpg",
+      title: "Distinguished School Uniforms",
+      subtitle: "Modern and practical designs meeting student needs with comfort and durability across all educational stages",
+      image: "/images/hero/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-sbi-349929394.jpg",
       cta: "Explore School Uniforms"
     },
     {
-      title: "Sophisticated Aviation Attire",
-      subtitle: "Uniforms reflecting the elegance of Saudi airlines",
-      image: "/images/default-placeholder.jpg",
+      title: "Elegant Aviation Attire",
+      subtitle: "Sophisticated and comfortable designs reflecting the professionalism and beauty of Saudi aviation services",
+      image: "/images/hero/cheerful-women-stewardesses-standing-on-airplane-s-2023-11-27-05-08-55-utc.jpg",
       cta: "Discover Aviation Collection"
     },
     {
-      title: "Professional Attire for All Sectors",
-      subtitle: "Meeting the diverse needs of every profession with innovative designs",
-      image: "/images/default-placeholder.jpg",
+      title: "Comprehensive Professional Uniforms",
+      subtitle: "Integrated solutions for various professional sectors, considering the unique requirements of each profession",
+      image: "/images/hero/uniform-collection-hero.jpg",
       cta: "Explore Industries"
+    },
+    {
+      title: "Professional Chef Attire",
+      subtitle: "Practical and elegant designs for the restaurant and hospitality world, combining comfort with professional appearance",
+      image: "/images/hero/group-of-chefs-standing-with-arms-crossed-in-kitch-2023-11-27-05-01-36-utc.jpg",
+      cta: "Discover Chef Uniforms"
+    },
+    {
+      title: "Firefighter Uniforms",
+      subtitle: "Flame-resistant and durable clothing designed to provide maximum protection and comfort for firefighters",
+      image: "/images/hero/firefighters-fight-the-fire-flame-to-control-fire-not-to-spreading-out-firefighter-ind-sbi-349465280.jpg",
+      cta: "Explore Firefighting Attire"
+    },
+    {
+      title: "Versatile Professional Attire",
+      subtitle: "A diverse collection of professional uniforms meeting the needs of various sectors with modern and comfortable designs",
+      image: "/images/hero/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg",
+      cta: "Discover More"
     }
   ];
   
@@ -270,10 +306,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 alt={slides[currentSlide].title}
                 className="object-cover w-full h-full"
                 style={{ 
-                  opacity: 0.6,
-                  filter: 'brightness(0.65) saturate(1.2)'
+                  opacity: 0.7,
+                  filter: 'brightness(0.7) contrast(1.1) saturate(1.2)'
                 }}
               />
+              {/* Add overlay gradient for better text readability */}
+              <div 
+                className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-70"
+                style={{
+                  mixBlendMode: 'multiply'
+                }}
+              ></div>
             </div>
             
             {/* Content Container */}
@@ -286,17 +329,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 variants={textVariants}
               >
                 <div className={`p-0.5 ${isRTL ? 'mr-0' : 'ml-0'} mb-4 w-16 bg-gradient-to-r from-primary-500 to-primary-300`}></div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-heading leading-tight">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/80">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-heading leading-tight drop-shadow-md">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/90">
                     {slides[currentSlide].title}
                   </span>
                 </h1>
-                <p className="mt-6 text-xl text-white/90 max-w-2xl leading-relaxed">
+                <p className="mt-6 text-xl text-white/95 max-w-2xl leading-relaxed drop-shadow-md backdrop-blur-sm bg-black/10 p-3 rounded-lg inline-block">
                   {slides[currentSlide].subtitle}
                 </p>
                 <div className={`mt-10 flex flex-col sm:flex-row gap-4 ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
                   <Button 
-                    href={text.primaryUrl} 
+                    href={locale === 'ar' ? '/ar' + text.primaryUrl.substring(3) : text.primaryUrl} 
                     variant="primary" 
                     size="lg"
                     className="relative group overflow-hidden"
@@ -305,7 +348,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-gradient-to-r from-primary-600 to-primary-500 transition-transform duration-300 ease-out"></span>
                   </Button>
                   <Button 
-                    href={text.secondaryUrl} 
+                    href={locale === 'ar' ? '/ar' + text.secondaryUrl.substring(3) : text.secondaryUrl} 
                     variant="outline" 
                     size="lg"
                     className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm transition-all duration-300"

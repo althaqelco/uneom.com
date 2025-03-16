@@ -24,42 +24,80 @@ export const customImageLoader = ({ src, width, quality, locale, isVercel }: Ext
     return src;
   }
   
-  // Ensure src starts with a slash for relative URLs
-  const formattedSrc = src.startsWith('/') ? src : `/${src}`;
-  
-  // Handle localized paths if locale is provided
-  if (locale && locale !== 'en') {
-    // Check if path already has locale suffix
-    if (formattedSrc.includes(`-${locale}.`)) {
-      // Already has locale suffix
-      return formattedSrc;
+  // On Vercel, handle specifically for production
+  if (isVercel) {
+    // Ensure src starts with a slash for relative URLs
+    const formattedSrc = src.startsWith('/') ? src : `/${src}`;
+    
+    // Handle localized paths
+    if (locale && locale !== 'en') {
+      // Check if path already has locale suffix
+      if (formattedSrc.includes(`-${locale}.`)) {
+        // Already has locale suffix
+        return formattedSrc;
+      }
+      
+      // Add locale suffix
+      const hasExtension = formattedSrc.includes('.');
+      if (hasExtension) {
+        const lastDotIndex = formattedSrc.lastIndexOf('.');
+        const fileName = formattedSrc.substring(0, lastDotIndex);
+        const extension = formattedSrc.substring(lastDotIndex);
+        return `${fileName}-${locale}${extension}`;
+      } else {
+        return `${formattedSrc}-${locale}`;
+      }
     }
     
-    // Add locale suffix
-    const hasExtension = formattedSrc.includes('.');
-    if (hasExtension) {
-      const lastDotIndex = formattedSrc.lastIndexOf('.');
-      const fileName = formattedSrc.substring(0, lastDotIndex);
-      const extension = formattedSrc.substring(lastDotIndex);
-      return `${fileName}-${locale}${extension}`;
-    } else {
-      return `${formattedSrc}-${locale}`;
-    }
-  }
-  
-  // For Vercel environment, return the path as is (unoptimized)
-  if (isVercel || process.env.NODE_ENV === 'production') {
-    // If the path is for an image in the public directory, return it directly
-    if (formattedSrc.startsWith('/images/')) {
-      return formattedSrc;
-    }
-    
-    // For other paths, return as is
+    // Return direct URL to the resource
     return formattedSrc;
   }
   
-  // For development environment, add width and quality parameters
-  return `${formattedSrc}?w=${width}&q=${quality || 75}`;
+  // Regular development environment
+  
+  // Handle localized image paths if locale is provided
+  if (locale && locale !== 'en') {
+    // Check if path already has locale suffix
+    if (src.includes(`-${locale}.`)) {
+      // Already has locale suffix
+      return `${src}?w=${width}&q=${quality || 75}`;
+    }
+    
+    // Add locale suffix to the image path
+    const hasExtension = src.includes('.');
+    if (hasExtension) {
+      const lastDotIndex = src.lastIndexOf('.');
+      const fileName = src.substring(0, lastDotIndex);
+      const extension = src.substring(lastDotIndex);
+      return `${fileName}-${locale}${extension}?w=${width}&q=${quality || 75}`;
+    } else {
+      return `${src}-${locale}?w=${width}&q=${quality || 75}`;
+    }
+  }
+  
+  // Regular image path
+  return `${src}?w=${width}&q=${quality || 75}`;
+};
+
+/**
+ * Vercel-specific image loader that handles image loading in Vercel environment
+ */
+export const vercelImageLoader = ({ src, width, quality = 75 }: ImageLoaderProps): string => {
+  // If it's an external URL, return it as is
+  if (src.startsWith('http://') || src.startsWith('https://')) {
+    return src;
+  }
+  
+  // Ensure src starts with a slash for relative URLs
+  const formattedSrc = src.startsWith('/') ? src : `/${src}`;
+  
+  // For images in the public directory, use them directly
+  if (formattedSrc.startsWith('/images/')) {
+    return formattedSrc;
+  }
+  
+  // For other images, use Next.js image optimization
+  return `/_next/image?url=${encodeURIComponent(formattedSrc)}&w=${width}&q=${quality}`;
 };
 
 /**
@@ -69,38 +107,7 @@ export const customImageLoader = ({ src, width, quality, locale, isVercel }: Ext
  * @returns - srcSet string for use in img tags
  */
 export const generateSrcSet = (src: string, sizes: number[] = [640, 750, 828, 1080, 1200, 1920]): string => {
-  // If we're in Vercel or production, don't generate srcSet
-  if (process.env.NODE_ENV === 'production') {
-    return '';
-  }
-  
   return sizes.map(size => `${src}?w=${size} ${size}w`).join(', ');
-};
-
-/**
- * Determines the appropriate loading strategy for an image
- * @param isCritical - Whether the image is critical for LCP
- * @param priority - Whether the image has priority
- * @param loading - Explicit loading strategy
- * @returns - 'eager' or 'lazy' loading strategy
- */
-export const getLoadingStrategy = (
-  isCritical?: boolean,
-  priority?: boolean,
-  loading?: string
-): 'eager' | 'lazy' => {
-  // If explicit loading is provided, use it
-  if (loading === 'eager' || loading === 'lazy') {
-    return loading as 'eager' | 'lazy';
-  }
-  
-  // If image is critical or has priority, load eagerly
-  if (isCritical || priority) {
-    return 'eager';
-  }
-  
-  // Default to lazy loading
-  return 'lazy';
 };
 
 /**
@@ -143,25 +150,31 @@ export const preloadCriticalImages = (imagePaths: string[]): void => {
 };
 
 /**
- * Checks if an image exists at the given path
- * @param src - Image source path
- * @returns - Promise that resolves to true if image exists, false otherwise
+ * Determines if an image should be lazy loaded based on its importance
+ * @param isCritical - Whether the image is critical for initial render
+ * @returns - Loading strategy ('lazy' or 'eager')
  */
-export const checkImageExists = (src: string): Promise<boolean> => {
-  return new Promise((resolve) => {
-    const img = new Image();
-    img.onload = () => resolve(true);
-    img.onerror = () => resolve(false);
-    img.src = src;
-  });
+export const getLoadingStrategy = (isCritical: boolean): 'lazy' | 'eager' => {
+  return isCritical ? 'eager' : 'lazy';
 };
 
 /**
- * Gets the appropriate fallback image based on image type
- * @param type - Type of image (product, avatar, banner, etc.)
- * @param format - Format of the fallback image (jpg or svg)
- * @returns - Path to the fallback image
+ * Formats image dimensions to maintain aspect ratio
+ * @param originalWidth - Original image width
+ * @param originalHeight - Original image height
+ * @param targetWidth - Desired width
+ * @returns - Object with width and height maintaining aspect ratio
  */
-export const getFallbackImage = (type: string = 'default', format: 'jpg' | 'svg' = 'jpg'): string => {
-  return `/images/${type}-placeholder.${format}`;
+export const maintainAspectRatio = (
+  originalWidth: number,
+  originalHeight: number,
+  targetWidth: number
+): { width: number; height: number } => {
+  const aspectRatio = originalWidth / originalHeight;
+  const height = Math.round(targetWidth / aspectRatio);
+  
+  return {
+    width: targetWidth,
+    height
+  };
 }; 

@@ -207,61 +207,8 @@ html[lang="ar"] li {
 }
 
 /* Arabic font definitions */
-@font-face {
-  font-family: 'Cairo';
-  src: url('/fonts/ar/Cairo-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Cairo';
-  src: url('/fonts/ar/Cairo-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Cairo';
-  src: url('/fonts/ar/Cairo-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Cairo';
-  src: url('/fonts/ar/Cairo-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Tajawal';
-  src: url('/fonts/ar/Tajawal-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Tajawal';
-  src: url('/fonts/ar/Tajawal-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Tajawal';
-  src: url('/fonts/ar/Tajawal-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+/* Removed local font declarations in favor of Google Fonts */
+/* Font variables will be defined by our ArabicOptimizer component */
 
 /* RTL Font Settings */
 html[dir="rtl"] {
@@ -279,15 +226,17 @@ html[dir="rtl"] body {
 /* عند القيام بتبديل اللغة، إيقاف كل التحولات لضمان استجابة أفضل */
 html.language-transition * {
   transition: none !important;
+  animation: none !important;
 }
 
-/* جعل المحتوى باهتًا أثناء التحميل */
+/* جعل المحتوى باهتًا أثناء التحميل مع تأثير انتقالي أبسط وأسرع */
 html.language-transition body {
-  opacity: 0.7;
+  opacity: 0.8;
   pointer-events: none; /* منع التفاعل مع الصفحة أثناء التحميل */
+  transition: opacity 0.2s ease-out !important;
 }
 
-/* إضافة طبقة شفافة فوق المحتوى */
+/* إضافة طبقة شفافة فوق المحتوى مع تأثير أسرع */
 html.language-transition body::before {
   content: "";
   position: fixed;
@@ -295,38 +244,72 @@ html.language-transition body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 9999;
+  backdrop-filter: blur(2px);
 }
 
-/* مؤشر تحميل دوار */
+/* مؤشر تحميل دوار أكثر خفة مع دوران سريع */
 html.language-transition body::after {
   content: "";
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 36px;
-  height: 36px;
-  border: 3px solid rgba(200, 200, 200, 0.5);
-  border-top: 3px solid #3498db;
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(200, 200, 200, 0.3);
+  border-top: 2px solid #3498db;
   border-radius: 50%;
-  animation: spin 0.7s linear infinite;
-  z-index: 10000;
+  animation: fastSpin 0.6s linear infinite;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-@keyframes spin {
+@keyframes fastSpin {
   0% { transform: translate(-50%, -50%) rotate(0deg); }
   100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-/* إخفاء مؤشر التحميل في الحالة العادية */
+/* التأكد من إزالة مؤشر التحميل بشكل فوري بعد الانتقال */
 html:not(.language-transition) body::before,
 html:not(.language-transition) body::after {
   display: none !important;
 }
 
-/* منع التفاعل أثناء التحميل */
+/* تجربة تبديل اللغة: جعل العملية أسرع */
 html.language-transition {
-  pointer-events: none;
+  overflow: hidden !important;
+}
+
+/* تحسين تجربة التبديل بين اللغات */
+.language-switcher-button {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.language-switcher-button:hover {
+  transform: translateY(-1px);
+}
+
+.language-switcher-button:active {
+  transform: translateY(1px);
+}
+
+/* Background patterns */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Add an alternate diagonal pattern for variation */
+.bg-diagonal-pattern {
+  background-image: 
+    repeating-linear-gradient(
+      45deg, 
+      rgba(0, 0, 0, 0.03), 
+      rgba(0, 0, 0, 0.03) 2px, 
+      transparent 2px, 
+      transparent 10px
+    );
 }

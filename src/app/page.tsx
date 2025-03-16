@@ -11,6 +11,7 @@ import TrustSignals from '@/components/sections/TrustSignals';
 import HeroSection from '@/components/sections/HeroSection';
 import WhyChooseUneom from '@/components/sections/WhyChooseUneom';
 import IndustryGrid from '@/components/sections/IndustryGrid';
+import ServicesGrid from '@/components/sections/ServicesGrid';
 import BlogPreview from '@/components/sections/BlogPreview';
 import { motion } from 'framer-motion';
 
@@ -70,21 +71,35 @@ export default function HomePage() {
       author: "Ahmed Al-Ghamdi",
       position: "CEO",
       company: "Saudi Tech Solutions",
-      image: "/images/testimonials/ahmed.png"
-    },
-    {
-      quote: "Working with UNEOM to develop our healthcare uniforms has been a revelation. Their antimicrobial fabrics and thoughtful designs have received overwhelmingly positive feedback from our medical staff.",
-      author: "Layla Mahmoud",
-      position: "HR Manager",
-      company: "King Faisal Specialist Hospital",
-      image: "/images/testimonials/Lyla.png"
+      image: "/images/clients/modern-arabic-businessman-SBI-300984397.jpg"
     },
     {
       quote: "The durability of UNEOM's uniforms is exceptional. Our factory workers operate in demanding conditions, and these uniforms withstand daily wear while keeping our team comfortable in Saudi Arabia's climate.",
       author: "Khalid Ibrahim",
       position: "Operations Manager",
       company: "Saudi Manufacturing Company",
-      image: "/images/testimonials/khalid.png"
+      image: "/images/clients/portrait-of-an-arab-man-sheikh-SBI-300981247.jpg"
+    },
+    {
+      quote: "The airline crew uniforms designed by UNEOM perfectly balance professional appearance with comfort for our long-haul flights. Our staff love wearing them and our passengers notice the difference.",
+      author: "Sarah Al-Otaibi",
+      position: "Cabin Services Director",
+      company: "Royal Arabian Airlines",
+      image: "/images/clients/smiling-attractive-stewardess-getting-ready-to-fli-2024-10-18-12-57-27-utc.jpg"
+    },
+    {
+      quote: "For our luxury hotel chain, we required staff uniforms that embody our commitment to sophistication and Arabian hospitality. UNEOM created bespoke designs that perfectly balance elegance with practicality.",
+      author: "Nora Al-Zahrani",
+      position: "Hospitality Manager",
+      company: "Royal Oasis Hotels",
+      image: "/images/clients/young-muslim-arab-woman-wearing-hijab-veiling-face-looking-at-camera-outdoors-during-s-SBI-351149151.jpg"
+    },
+    {
+      quote: "As a retail brand with stores across Saudi Arabia, consistency in staff appearance is crucial. UNEOM delivered high-quality uniforms with excellent branding integration that has improved our customer-facing operations.",
+      author: "Layla Mahmoud",
+      position: "Retail Manager",
+      company: "AlMajed Department Stores",
+      image: "/images/clients/adult-beautiful-muslim-woman-with-hijab-on-head-smiling-for-camera-in-room-SBI-351089408.jpg"
     }
   ];
   
@@ -126,7 +141,7 @@ export default function HomePage() {
       shortDescription: "Durable two-tone coverall suitable for factory environments and industrial settings",
       price: "SAR 289",
       minOrder: 15,
-      image: "/images/banner-placeholder.jpg",
+      image: "/images/new-products/heavy_duty_industrial_coverall.png",
       colors: [
         { name: "Black/Gray", value: "#333333" },
         { name: "Navy/Royal", value: "#1a3a5f" },
@@ -142,7 +157,7 @@ export default function HomePage() {
       shortDescription: "Elegant front desk attire with design accents for luxury hotels and resorts",
       price: "SAR 449",
       minOrder: 8,
-      image: "/images/default-placeholder.jpg Staff_Uniform.png",
+      image: "/images/new-products/luxury_hotel_staff_uniform.png",
       colors: [
         { name: "Black", value: "#000000" },
         { name: "Burgundy", value: "#800020" },
@@ -158,7 +173,7 @@ export default function HomePage() {
       shortDescription: "Professional airline crew attire with customizable logo for aviation staff",
       price: "SAR 399",
       minOrder: 10,
-      image: "/images/product-placeholder.jpg",
+      image: "/images/new-products/airline_crew_uniform.png",
       colors: [
         { name: "Navy", value: "#1c2841" },
         { name: "Black", value: "#000000" },
@@ -174,7 +189,7 @@ export default function HomePage() {
       shortDescription: "High-quality medical scrubs in various colors for healthcare professionals",
       price: "SAR 179",
       minOrder: 20,
-      image: "/images/default-placeholder.jpg",
+      image: "/images/new-products/premiummedicalscrubs.png",
       colors: [
         { name: "Sky Blue", value: "#87CEEB" },
         { name: "Surgical Green", value: "#168269" },
@@ -223,6 +238,9 @@ export default function HomePage() {
         </Container>
       </section>
       
+      {/* Our Distinguished Services */}
+      <ServicesGrid locale={locale} />
+      
       {/* Shop Section - Replaces Featured Products */}
       <section className="py-24 bg-gradient-to-b from-white to-neutral-50 relative overflow-hidden">
         {/* Decorative elements */}
@@ -236,7 +254,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
             <div>
               <div className="inline-block px-4 py-1.5 bg-gradient-to-r from-primary-50 to-blue-50 rounded-full text-primary-700 font-medium text-sm mb-4 border border-primary-100">
-                Premium Quality Uniforms
+                Premium Collections
               </div>
               <SectionHeading as="h2" className="mb-3">
                 Shop Our Premium Collections

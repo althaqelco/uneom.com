@@ -4,21 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NEXT_TELEMETRY_DISABLED=1 node vercel-build.js",
     "start": "next start",
     "lint": "next lint",
     "ensure-fallbacks": "node scripts/ensure-fallbacks.js",
     "fix-swc": "node scripts/fix-swc.js",
-    "check-swc": "node scripts/check-next-swc.js",
-    "fix-vercel-swc": "node scripts/fix-vercel-swc.js",
-    "vercel-build": "node scripts/vercel-build.js",
-    "clean": "rm -rf .next node_modules/.next node_modules/@next/swc* && npm install --force",
-    "test-images": "next dev -p 3001",
-    "build-with-fixes": "npm run ensure-fallbacks && npm run fix-vercel-swc && npm run build",
-    "install-image-deps": "node scripts/install-image-deps.js",
-    "rename-images": "node scripts/rename-images.js",
-    "optimize-images": "node scripts/install-image-deps.js && node scripts/optimize-images.js",
-    "prepare-images": "npm run install-image-deps && npm run rename-images && npm run optimize-images"
+    "vercel-build": "node scripts/fix-swc.js && node vercel-build.js"
   },
   "dependencies": {
     "@cloudflare/workers-types": "^4.20250303.0",
@@ -26,7 +17,6 @@
     "@react-aria/i18n": "^3.12.5",
     "critters": "^0.0.23",
     "framer-motion": "^12.4.10",
-    "fs-extra": "^11.3.0",
     "next": "14.2.23",
     "next-intl": "^3.26.5",
     "postcss": "^8",
@@ -34,7 +24,6 @@
     "react-dom": "^18",
     "react-hook-form": "^7.54.2",
     "react-icons": "^5.5.0",
-    "sharp": "^0.33.5",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^3.4.1"
   },
@@ -47,6 +36,7 @@
     "file-loader": "^6.2.0",
     "image-webpack-loader": "^8.1.0",
     "next-video": "^2.1.0",
+    "sharp": "^0.33.5",
     "typescript": "^5"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",

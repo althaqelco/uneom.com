@@ -10,6 +10,7 @@ import TestimonialCarousel from '@/components/sections/TestimonialCarousel';
 import HeroSection from '@/components/sections/HeroSection';
 import WhyChooseUneom from '@/components/sections/WhyChooseUneom';
 import IndustryGrid from '@/components/sections/IndustryGrid';
+import ServicesGrid from '@/components/sections/ServicesGrid';
 import BlogPreview from '@/components/sections/BlogPreview';
 import Button from '@/components/ui/Button';
 import { Amiri, Cairo, Tajawal } from 'next/font/google';
@@ -51,7 +52,7 @@ const services = [
     icon: 'design',
     iconColor: 'from-purple-500 to-indigo-600',
     link: '/ar/services/custom-design',
-    image: '/images/default-placeholder.jpg',
+    image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
     stats: [
       { value: '1500+', label: 'تصميم فريد' },
       { value: '98%', label: 'رضا العملاء' }
@@ -63,7 +64,7 @@ const services = [
     icon: 'production',
     iconColor: 'from-blue-500 to-cyan-600',
     link: '/ar/services/bulk-ordering',
-    image: '/images/default-placeholder.jpg',
+    image: '/images/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg',
     stats: [
       { value: '50,000+', label: 'قطعة شهرياً' },
       { value: '99.7%', label: 'دقة التسليم' }
@@ -75,22 +76,46 @@ const services = [
     icon: 'management',
     iconColor: 'from-amber-500 to-orange-600',
     link: '/ar/services/program-management',
-    image: '/images/default-placeholder.jpg',
+    image: '/images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg',
     stats: [
       { value: '200+', label: 'برنامج نشط' },
       { value: '35%', label: 'توفير التكاليف' }
     ]
   },
   {
-    title: 'خدمات القياس',
-    description: 'خدمات قياس احترافية تضمن ملاءمة مثالية لجميع موظفيك مهما اختلفت أحجامهم.',
+    title: 'خدمات القياس والأقمشة المتخصصة',
+    description: 'خدمات قياس احترافية وأقمشة متخصصة مقاومة للماء وعالية الجودة لضمان ملاءمة مثالية لجميع موظفيك.',
     icon: 'measuring',
     iconColor: 'from-green-500 to-emerald-600',
     link: '/ar/services/measurement-services',
-    image: '/images/default-placeholder.jpg',
+    image: '/images/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg',
     stats: [
       { value: '99.8%', label: 'دقة المقاسات' },
       { value: '25,000+', label: 'قياس سنوياً' }
+    ]
+  },
+  {
+    title: 'أقمشة قطنية عالية الجودة',
+    description: 'نقدم أفضل أنواع الأقمشة القطنية والمزيج القطني المريحة للاستخدام اليومي والمناسبة للمناخ السعودي.',
+    icon: 'fabric',
+    iconColor: 'from-teal-500 to-teal-600',
+    link: '/ar/services/fabrics',
+    image: '/images/services/CottonـandـCottonـBlends.jpg',
+    stats: [
+      { value: '100+', label: 'نوع قماش' },
+      { value: '96%', label: 'راحة ومتانة' }
+    ]
+  },
+  {
+    title: 'أزياء مقاومة للعوامل الجوية',
+    description: 'تصميم وإنتاج أزياء موحدة مقاومة للماء والظروف الجوية المختلفة، مثالية للعمل في البيئات الخارجية.',
+    icon: 'weather',
+    iconColor: 'from-rose-500 to-red-600',
+    link: '/ar/services/weather-resistant',
+    image: '/images/services/bright-raincoats-hanging-at-a-fashion-store-2024-12-16-06-50-01-utc.jpg',
+    stats: [
+      { value: '100%', label: 'مقاومة للماء' },
+      { value: '5+', label: 'سنوات متانة' }
     ]
   },
 ];
@@ -165,16 +190,16 @@ const featuredCategories = [
 // التكنولوجيات المميزة
 const technologies = [
   {
-    name: 'أقمشة كومفورت-تيك',
-    description: 'أقمشة متطورة تمتاز بمقاومة الماء والحرارة مع الحفاظ على التهوية المثالية',
-    icon: 'sparkles',
-    iconColor: 'text-blue-500'
+    name: 'فاير-جارد المقاوم للحريق',
+    description: 'تقنية متطورة تجعل الأقمشة مقاومة للحريق والحرارة والشرر، مثالية لبيئات العمل الصناعية',
+    icon: 'shield-check',
+    iconColor: 'text-red-500'
   },
   {
-    name: 'حماية بيو-شيلد',
-    description: 'تقنية مضادة للميكروبات توفر حماية طويلة الأمد في بيئات العمل المختلفة',
-    icon: 'shield-check',
-    iconColor: 'text-green-500'
+    name: 'ديرت-رابيلنت المقاوم للأوساخ',
+    description: 'طبقة حماية متطورة تصد الأوساخ والبقع وتسهل عملية التنظيف مع الحفاظ على المظهر المهني',
+    icon: 'sparkles',
+    iconColor: 'text-blue-500'
   },
   {
     name: 'دوراتكس الفائق',
@@ -196,7 +221,7 @@ const featuredProducts = [
     id: 'premium-medical-scrubs',
     title: 'ملابس طبية متميزة',
     description: 'مصممة خصيصاً للكوادر الطبية في المملكة',
-    image: '/images/default-placeholder.jpg',
+    image: '/images/new-products/premiummedicalscrubs.png',
     category: 'الرعاية الصحية',
     price: 450,
     salePrice: 399,
@@ -217,7 +242,7 @@ const featuredProducts = [
     id: 'airline-crew-uniform',
     title: 'زي طاقم الطيران',
     description: 'أناقة وراحة لطواقم الطيران السعودية',
-    image: '/images/product-placeholder.jpg',
+    image: '/images/new-products/airline_crew_uniform.png',
     category: 'الطيران',
     price: 1200,
     salePrice: 950,
@@ -238,7 +263,7 @@ const featuredProducts = [
     id: 'luxury-hotel-uniform',
     title: 'زي فندقي فاخر',
     description: 'تصميم عصري لطاقم الضيافة الفندقية',
-    image: '/images/default-placeholder.jpg Staff_Uniform.png',
+    image: '/images/new-products/luxury_hotel_staff_uniform.png',
     category: 'الضيافة',
     price: 850,
     salePrice: 765,
@@ -259,7 +284,7 @@ const featuredProducts = [
     id: 'industrial-coverall',
     title: 'بدلة عمل صناعية',
     description: 'حماية وراحة في بيئات العمل الصناعية',
-    image: '/images/banner-placeholder.jpg',
+    image: '/images/new-products/heavy_duty_industrial_coverall.png',
     category: 'الصناعة',
     price: 550,
     salePrice: 499,
@@ -498,373 +523,7 @@ export default function HomePage() {
       </section>
 
       {/* قسم خدماتنا المميزة */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-        {/* زخارف خلفية */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary-200 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 -left-24 w-80 h-80 bg-blue-200 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-amber-200 rounded-full blur-3xl"></div>
-          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-[0.02] mix-blend-overlay"></div>
-        </div>
-        
-        <Container>
-          <div className="text-center max-w-4xl mx-auto mb-16 relative z-10">
-            <div className="inline-block mb-4">
-              <span className="bg-primary-50 text-primary-700 py-1.5 px-5 rounded-full text-sm font-bold">
-                خدمات متميزة
-              </span>
-            </div>
-            <SectionHeading centered>
-              <span className={`${cairoFont.className} text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary-700 to-primary-500`}>
-                خدماتنا المميزة
-              </span>
-            </SectionHeading>
-            <p className={`${tajawalFont.className} text-lg md:text-xl text-gray-700 mt-6 leading-relaxed max-w-3xl mx-auto`}>
-              نقدم مجموعة متكاملة من الخدمات الاحترافية لتلبية احتياجات عملائنا بأفضل جودة وأعلى كفاءة
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: index * 0.2 }}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
-              >
-                <div className="flex flex-col h-full">
-                  <div className="relative h-64 overflow-hidden">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                    
-                    {/* أيقونة الخدمة */}
-                    <div className="absolute top-4 right-4 w-16 h-16 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center shadow-lg">
-                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.iconColor} flex items-center justify-center shadow-md transform transition-transform group-hover:scale-110`}>
-                        {service.icon === 'design' && (
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                          </svg>
-                        )}
-                        {service.icon === 'production' && (
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                          </svg>
-                        )}
-                        {service.icon === 'management' && (
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                          </svg>
-                        )}
-                        {service.icon === 'measuring' && (
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                          </svg>
-                        )}
-                      </div>
-                    </div>
-                    
-                    {/* عنوان الخدمة */}
-                    <div className="absolute bottom-0 right-0 left-0 p-6 text-right">
-                      <h3 className={`${cairoFont.className} text-2xl font-bold text-white mb-2`}>
-                        {service.title}
-                      </h3>
-                    </div>
-                  </div>
-                  
-                  <div className="p-6 flex-grow flex flex-col">
-                    <p className={`${tajawalFont.className} text-gray-700 mb-6 text-right leading-relaxed`}>
-                      {service.description}
-                    </p>
-                    
-                    {/* إحصائيات الخدمة */}
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      {service.stats.map((stat, idx) => (
-                        <div key={idx} className="bg-gray-50 rounded-lg p-4 text-center">
-                          <div className="text-2xl font-bold text-primary-600 mb-1">{stat.value}</div>
-                          <div className="text-sm text-gray-600">{stat.label}</div>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="mt-auto flex justify-end">
-                      <Link
-                        href={service.link}
-                        className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 shadow-md hover:shadow-lg transition-all duration-300"
-                      >
-                        اكتشف المزيد
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 rtl:rotate-180" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          
-          {/* إحصائيات عامة */}
-          <div className="mt-20 relative">
-            {/* خلفية متدرجة مع تأثيرات */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 rounded-3xl overflow-hidden shadow-2xl">
-              {/* تأثيرات زخرفية */}
-              <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                <div className="absolute top-[10%] right-[5%] w-72 h-72 bg-blue-500/20 rounded-full mix-blend-overlay filter blur-3xl"></div>
-                <div className="absolute bottom-[10%] left-[5%] w-80 h-80 bg-primary-500/20 rounded-full mix-blend-overlay filter blur-3xl"></div>
-                <div className="absolute bottom-[30%] right-[30%] w-64 h-64 bg-indigo-600/20 rounded-full mix-blend-overlay filter blur-2xl"></div>
-                <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-[0.07] mix-blend-overlay"></div>
-              </div>
-              
-              {/* تأثير الضوء العلوي */}
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-300/50 to-transparent"></div>
-              
-              {/* تأثير الضوء الجانبي */}
-              <div className="absolute top-0 bottom-0 right-0 w-px bg-gradient-to-b from-transparent via-primary-300/50 to-transparent"></div>
-            </div>
-            
-            <div className="relative z-10 p-12 md:p-16">
-              {/* العنوان مع تأثيرات */}
-              <div className="text-center mb-16">
-                <div className="inline-block mb-4">
-                  <span className="bg-white/10 text-white py-1.5 px-5 rounded-full text-sm font-bold backdrop-blur-md border border-white/10">
-                    إحصائيات وأرقام
-                  </span>
-                </div>
-                <h3 className={`${cairoFont.className} text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight`}>
-                  <span className="relative">
-                    نتائج ملموسة لعملائنا
-                    <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary-400 to-blue-400 rounded-full transform scale-x-0 animate-expandWidth"></span>
-                  </span>
-                </h3>
-                <p className="text-white/80 max-w-3xl mx-auto text-lg leading-relaxed">
-                  نفخر بتقديم خدمات عالية الجودة تحقق نتائج استثنائية لعملائنا في جميع أنحاء المملكة العربية السعودية
-                </p>
-              </div>
-              
-              {/* الإحصائيات بتصميم متقدم */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
-                {[
-                  { 
-                    value: '15+', 
-                    label: 'سنوات خبرة', 
-                    icon: 'calendar',
-                    gradient: 'from-amber-400 to-amber-600',
-                    shadowColor: 'amber-500/20',
-                    delay: 0
-                  },
-                  { 
-                    value: '500+', 
-                    label: 'عميل', 
-                    icon: 'users',
-                    gradient: 'from-blue-400 to-blue-600',
-                    shadowColor: 'blue-500/20',
-                    delay: 0.1
-                  },
-                  { 
-                    value: '250,000+', 
-                    label: 'زي موحد سنوياً', 
-                    icon: 'shirt',
-                    gradient: 'from-emerald-400 to-emerald-600',
-                    shadowColor: 'emerald-500/20',
-                    delay: 0.2
-                  },
-                  { 
-                    value: '98%', 
-                    label: 'معدل رضا العملاء', 
-                    icon: 'star',
-                    gradient: 'from-purple-400 to-purple-600',
-                    shadowColor: 'purple-500/20',
-                    delay: 0.3
-                  }
-                ].map((stat, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ 
-                      duration: 0.7, 
-                      delay: 0.5 + stat.delay,
-                      type: "spring",
-                      stiffness: 100,
-                      damping: 15
-                    }}
-                    className="relative group"
-                  >
-                    {/* بطاقة الإحصائية */}
-                    <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-8 overflow-hidden border border-white/10 h-full">
-                      {/* تأثير الضوء عند التحويم */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                      
-                      {/* أيقونة الإحصائية */}
-                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${stat.gradient} flex items-center justify-center mx-auto mb-6 shadow-lg shadow-${stat.shadowColor} transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3`}>
-                        {stat.icon === 'calendar' && (
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                          </svg>
-                        )}
-                        {stat.icon === 'users' && (
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                          </svg>
-                        )}
-                        {stat.icon === 'shirt' && (
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 2L2 8l4 2m12-8l4 6-4 2M6 12v8a2 2 0 002 2h8a2 2 0 002-2v-8" />
-                          </svg>
-                        )}
-                        {stat.icon === 'star' && (
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                          </svg>
-                        )}
-                      </div>
-                      
-                      {/* قيمة الإحصائية */}
-                      <div className="relative">
-                        <motion.div
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ 
-                            duration: 0.7, 
-                            delay: 0.7 + stat.delay,
-                            type: "spring"
-                          }}
-                          className="text-4xl md:text-5xl font-bold text-center mb-2"
-                        >
-                          <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
-                            {stat.value}
-                          </span>
-                        </motion.div>
-                        <div className="text-white/80 text-center text-lg font-medium">{stat.label}</div>
-                      </div>
-                      
-                      {/* زخرفة خلفية */}
-                      <div className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-gradient-to-br from-white/5 to-transparent opacity-30 blur-xl"></div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-              
-              {/* زر الدعوة للعمل */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: 1.2 }}
-                className="mt-16 text-center"
-              >
-                <Link
-                  href="/ar/about"
-                  className="relative inline-flex items-center justify-center px-8 py-4 overflow-hidden text-lg font-medium rounded-full text-white group"
-                >
-                  <span className="absolute w-full h-full bg-gradient-to-br from-primary-600 to-blue-600 group-hover:from-primary-500 group-hover:to-blue-500 transition-all duration-500"></span>
-                  <span className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-br from-primary-500/50 to-blue-500/50 blur-md opacity-50 group-hover:opacity-75 transition-opacity duration-500"></span>
-                  <span className="absolute inset-0 w-full h-full backdrop-blur-xl border border-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                  <span className="relative flex items-center">
-                    تعرف على قصة نجاحنا
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 rtl:rotate-180" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* قسم التكنولوجيا المتطورة */}
-      <section className="py-20 bg-gray-50">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">تقنيات متطورة للأزياء المهنية</h2>
-              <p className="text-lg text-gray-600 mb-8">
-                نستخدم أحدث التقنيات والابتكارات في صناعة الأزياء المهنية لضمان الراحة والمتانة والأداء الأمثل في بيئات العمل المختلفة
-              </p>
-              
-              <div className="space-y-6">
-                {technologies.map((tech, index) => (
-                  <motion.div 
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-start"
-                  >
-                    <div className={`shrink-0 w-12 h-12 rounded-full flex items-center justify-center ${tech.iconColor} bg-gray-100`}>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        {tech.icon === 'sparkles' && (
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                        )}
-                        {tech.icon === 'shield-check' && (
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        )}
-                        {tech.icon === 'refresh' && (
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        )}
-                        {tech.icon === 'leaf' && (
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        )}
-                      </svg>
-                    </div>
-                    <div className="mr-5">
-                      <h3 className="text-xl font-bold mb-2">{tech.name}</h3>
-                      <p className="text-gray-600">{tech.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-              
-              <div className="mt-10">
-                <Link
-                  href="/ar/resources/fabric-guide"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition duration-300"
-                >
-                  اكتشف دليل الأقمشة
-                </Link>
-              </div>
-            </div>
-            
-            <div className="relative h-[600px] rounded-xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary-900/80 to-primary-600/50 mix-blend-multiply z-10"></div>
-              <Image
-                src="/images/default-placeholder.jpg"
-                alt="تقنيات الأقمشة المتطورة"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 z-20 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="inline-block rounded-full bg-white/20 p-4 mb-6 backdrop-blur-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-3xl font-bold text-white mb-3">جودة استثنائية</h3>
-                  <p className="text-white/90 text-lg mb-6">نستخدم أفضل الأقمشة والمواد لضمان أداء فائق في جميع بيئات العمل</p>
-                  <div className="flex flex-wrap gap-3 justify-center">
-                    <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white text-sm">مقاومة للماء</span>
-                    <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white text-sm">مضادة للبكتيريا</span>
-                    <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white text-sm">متينة</span>
-                    <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white text-sm">سهلة العناية</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <ServicesGrid locale={locale} />
 
       {/* قسم فئات المتجر المحسن */}
       <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
@@ -894,7 +553,7 @@ export default function HomePage() {
           </div>
           
           {/* عرض المنتجات المميزة */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProducts.map((product, index) => (
               <motion.div
                 key={product.id}
@@ -1034,7 +693,7 @@ export default function HomePage() {
               <p className="text-gray-600">اكتشف مجموعاتنا المتنوعة حسب القطاع المهني</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredCategories.map((category, index) => (
                 <motion.div 
                   key={index}
@@ -1228,7 +887,7 @@ export default function HomePage() {
                 excerpt: "استكشف أحدث اتجاهات الزي الموحد في المملكة وكيف تؤثر الرؤية السعودية 2030 على قطاع الملابس المهنية.",
                 slug: "uniform-trends-2023",
                 date: "23 مايو 2023",
-                image: "/images/banner-placeholder.jpg",
+                image: "/images/blog/vision-2030.jpg",
                 author: "محمد العلي",
                 category: "اتجاهات"
               },
@@ -1237,7 +896,7 @@ export default function HomePage() {
                 excerpt: "كيف تتبنى الشركات السعودية ممارسات الاستدامة في الزي الموحد وتأثير ذلك على البيئة والاقتصاد.",
                 slug: "sustainable-uniforms",
                 date: "14 يونيو 2023",
-                image: "/images/default-placeholder.jpg",
+                image: "/images/blog/sustainable-uniforms.jpg",
                 author: "سارة الأحمد",
                 category: "الاستدامة"
               },
@@ -1246,11 +905,65 @@ export default function HomePage() {
                 excerpt: "دليل شامل لاختيار الزي الطبي المناسب الذي يلبي متطلبات الراحة والأداء والامتثال للمعايير.",
                 slug: "choosing-healthcare-uniforms",
                 date: "02 يوليو 2023",
-                image: "/images/avatar-placeholder.jpg",
+                image: "/images/blog/healthcare-uniforms.jpg",
                 author: "د. فهد العنزي",
                 category: "دليل"
+              },
+              {
+                title: "مكافحة العدوى من خلال الزي الطبي المتخصص",
+                excerpt: "كيف تساهم الأزياء الطبية المتطورة في تقليل انتشار العدوى في المرافق الصحية وحماية الكوادر الطبية.",
+                slug: "healthcare-infection-control",
+                date: "10 يوليو 2023",
+                image: "/images/blog/healthcare-infection-control.jpg",
+                author: "د. منى القحطاني",
+                category: "الرعاية الصحية"
+              },
+              {
+                title: "الابتكارات الحديثة في صناعة الأقمشة والمنسوجات",
+                excerpt: "نظرة على أحدث الابتكارات التكنولوجية في صناعة الأقمشة وكيف تحسن من أداء الزي الموحد في مختلف القطاعات.",
+                slug: "textile-innovations",
+                date: "18 يوليو 2023",
+                image: "/images/blog/textile-innovations.jpg",
+                author: "م. أحمد الشمري",
+                category: "تكنولوجيا"
+              },
+              {
+                title: "أزياء الطيران: توازن بين الأناقة والوظائف العملية",
+                excerpt: "استكشف كيف تجمع أزياء الطيران بين الأناقة والراحة والوظائف العملية لتلبية احتياجات طاقم الطائرة.",
+                slug: "aviation-uniforms",
+                date: "05 أغسطس 2023",
+                image: "/images/blog/aviation-uniforms.jpg",
+                author: "ليلى القحطاني",
+                category: "طيران"
+              },
+              {
+                title: "علم النفس وراء الزي الموحد للشركات",
+                excerpt: "دراسة تأثير الزي الموحد على الهوية المؤسسية وإنتاجية الموظفين والانطباع لدى العملاء.",
+                slug: "corporate-psychology",
+                date: "27 أغسطس 2023",
+                image: "/images/blog/corporate-psychology.jpg",
+                author: "د. عبدالله المالكي",
+                category: "علم النفس المؤسسي"
+              },
+              {
+                title: "أزياء الضيافة وعلاقتها بالثقافة المحلية",
+                excerpt: "استكشاف كيفية دمج العناصر الثقافية المحلية في تصميم أزياء الضيافة وتأثيرها على تجربة الضيوف.",
+                slug: "hospitality-cultural",
+                date: "15 سبتمبر 2023",
+                image: "/images/blog/hospitality-cultural.jpg",
+                author: "نورة السليمان",
+                category: "الضيافة"
+              },
+              {
+                title: "الزي الموحد في قطاع الضيافة: عنوان الفخامة والعملية",
+                excerpt: "نظرة عميقة على أهمية الزي الموحد في قطاع الضيافة ودوره في تعزيز تجربة العملاء وعكس هوية العلامة التجارية.",
+                slug: "hospitality-uniforms",
+                date: "03 أكتوبر 2023",
+                image: "/images/blog/hospitality-uniforms.jpg",
+                author: "خالد المحمدي",
+                category: "الضيافة"
               }
-            ].map((post, index) => (
+            ].slice(0, 3).map((post, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -1339,7 +1052,7 @@ export default function HomePage() {
                       className="flex items-center text-white"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-secondary-400 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"></path>
                       </svg>
                       {item}
                     </motion.li>

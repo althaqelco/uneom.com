@@ -1,20 +1,9 @@
-# Explicitly tell Git not to use LFS for image files
-*.jpg -filter -diff -merge -text
-*.jpeg -filter -diff -merge -text
-*.png -filter -diff -merge -text
-*.gif -filter -diff -merge -text
-*.svg -filter -diff -merge -text
-*.webp -filter -diff -merge -text
-*.avif -filter -diff -merge -text
-
-# Treat all files as binary, with no git magic updating
-*.jpg binary
-*.jpeg binary
-*.png binary
-*.gif binary
-*.svg binary
-*.webp binary
-*.avif binary
-
-# Default behavior for all files
-* text=auto eol=lf
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.svg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.woff2 filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.webp filter=lfs diff=lfs merge=lfs -text

@@ -11,64 +11,25 @@ console.log(`🌐 Building on Vercel: ${isVercel ? 'Yes' : 'No'}`);
 // Check Node.js version
 console.log(`📊 Node.js version: ${process.version}`);
 
-// Fix SWC binary issues
-try {
-  if (isVercel) {
-    // On Vercel, use the WASM fallback
-    const fixVercelSwcPath = path.resolve(__dirname, 'scripts', 'fix-vercel-swc.js');
-    
-    if (fs.existsSync(fixVercelSwcPath)) {
-      console.log('🔧 Running Vercel SWC binary fix...');
-      execSync(`node "${fixVercelSwcPath}"`, { stdio: 'inherit' });
-    }
-  } else {
-    // On local machine, check for native SWC binary
-    const fixSwcPath = path.resolve(__dirname, 'scripts', 'fix-swc.js');
-    
-    if (fs.existsSync(fixSwcPath)) {
-      console.log('🔧 Running SWC binary fix...');
-      try {
-        execSync(`node "${fixSwcPath}"`, { stdio: 'inherit' });
-        console.log('✅ SWC binary fix completed successfully');
-      } catch (error) {
-        console.error('❌ Error running SWC binary fix:', error.message);
-        // Continue with the build even if SWC fix fails
-      }
-    } else {
-      console.log('⚠️ fix-swc.js script not found, checking SWC binary directly');
-      
-      // Check for SWC binary
-      const nodeModulesPath = path.resolve(__dirname, 'node_modules');
-      const swcPaths = [
-        path.join(nodeModulesPath, '@next', 'swc-darwin-arm64'),
-        path.join(nodeModulesPath, '@next', 'swc-darwin-x64'),
-        path.join(nodeModulesPath, '@next', 'swc-linux-arm64-gnu'),
-        path.join(nodeModulesPath, '@next', 'swc-linux-arm64-musl'),
-        path.join(nodeModulesPath, '@next', 'swc-linux-x64-gnu'),
-        path.join(nodeModulesPath, '@next', 'swc-linux-x64-musl'),
-        path.join(nodeModulesPath, '@next', 'swc-win32-arm64-msvc'),
-        path.join(nodeModulesPath, '@next', 'swc-win32-ia32-msvc'),
-        path.join(nodeModulesPath, '@next', 'swc-win32-x64-msvc'),
-      ];
-
-      let swcFound = false;
-      for (const swcPath of swcPaths) {
-        if (fs.existsSync(swcPath)) {
-          console.log(`✅ SWC binary found at: ${swcPath}`);
-          swcFound = true;
-          break;
-        }
-      }
-
-      if (!swcFound) {
-        console.log('⚠️ No SWC binary found. Installing dependencies again...');
-        execSync('npm install --force', { stdio: 'inherit' });
-      }
-    }
+// Fix SWC binary issues on Vercel
+if (isVercel) {
+  console.log('🔧 Applying SWC binary fix for Vercel...');
+  
+  // Set environment variables to help with SWC binary issues
+  process.env.NEXT_TELEMETRY_DISABLED = '1';
+  process.env.NEXT_IGNORE_MISSING_SWC = '1'; // Ignore missing SWC binary
+  
+  // Create .npmrc file to force native builds
+  const npmrcPath = path.join(__dirname, '.npmrc');
+  fs.writeFileSync(npmrcPath, 'node-linker=hoisted\nlegacy-peer-deps=true\n');
+  
+  // Force reinstall of SWC binaries
+  try {
+    console.log('🔄 Reinstalling SWC binaries...');
+    execSync('npm install @next/swc-linux-x64-gnu @next/swc-linux-x64-musl --no-save', { stdio: 'inherit' });
+  } catch (error) {
+    console.warn('⚠️ SWC binary reinstall failed, but continuing build:', error.message);
   }
-} catch (error) {
-  console.error('❌ Error fixing SWC binary:', error);
-  // Continue with the build even if SWC fix fails
 }
 
 // Ensure fallback images exist
@@ -77,70 +38,79 @@ try {
   
   if (fs.existsSync(ensureFallbacksPath)) {
     console.log('🖼️ Ensuring fallback images exist...');
-    try {
-      execSync(`node "${ensureFallbacksPath}"`, { stdio: 'inherit' });
-      console.log('✅ Fallback images created successfully');
-    } catch (error) {
-      console.error('❌ Error running ensure-fallbacks script:', error.message);
-      // Continue with the build even if fallback creation fails
-    }
+    execSync(`node "${ensureFallbacksPath}"`, { stdio: 'inherit' });
   } else {
     console.log('⚠️ ensure-fallbacks.js script not found, creating fallbacks directly');
     
     // Create fallback images directory
-    const publicDir = path.join(__dirname, 'public');
-    const imagesDir = path.join(publicDir, 'images');
-    const cssDir = path.join(publicDir, 'css');
+    const publicDir = path.resolve(__dirname, 'public');
+    const imagesDir = path.resolve(publicDir, 'images');
     
-    // Create directories if they don't exist
     if (!fs.existsSync(imagesDir)) {
       fs.mkdirSync(imagesDir, { recursive: true });
     }
     
-    if (!fs.existsSync(cssDir)) {
-      fs.mkdirSync(cssDir, { recursive: true });
-    }
-    
     // Create a simple fallback image
-    const fallbackPath = path.join(imagesDir, 'default-placeholder.jpg');
+    const fallbackPath = path.resolve(imagesDir, 'default-placeholder.jpg');
     if (!fs.existsSync(fallbackPath)) {
       // Create a simple text file as fallback
       fs.writeFileSync(fallbackPath, 'Fallback Image');
-      console.log(`✅ Created fallback image at ${fallbackPath}`);
     }
     
-    // Create the image-fixes.css file
-    const cssPath = path.join(cssDir, 'image-fixes.css');
-    if (!fs.existsSync(cssPath)) {
-      const cssContent = `
-/* Image fixes for Vercel deployment */
-.image-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.image-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.image-fallback {
-  background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 14px;
-}
-`;
-      fs.writeFileSync(cssPath, cssContent);
-      console.log(`✅ Created CSS file at ${cssPath}`);
+    // Create avatar and banner placeholders
+    const avatarPath = path.resolve(imagesDir, 'avatar-placeholder.jpg');
+    if (!fs.existsSync(avatarPath)) {
+      fs.writeFileSync(avatarPath, 'Avatar Image');
     }
+    
+    const bannerPath = path.resolve(imagesDir, 'banner-placeholder.jpg');
+    if (!fs.existsSync(bannerPath)) {
+      fs.writeFileSync(bannerPath, 'Banner Image');
+    }
+    
+    // Create next static directory and copy files
+    const nextStaticDir = path.resolve(__dirname, '.next/static/images');
+    if (!fs.existsSync(nextStaticDir)) {
+      fs.mkdirSync(nextStaticDir, { recursive: true });
+    }
+    
+    // Copy fallback to next static directory
+    fs.copyFileSync(fallbackPath, path.resolve(nextStaticDir, 'default-placeholder.jpg'));
   }
 } catch (error) {
   console.error('❌ Error ensuring fallback images:', error);
-  // Continue with the build even if fallback creation fails
+}
+
+// Check for SWC binary
+try {
+  const nodeModulesPath = path.resolve(__dirname, 'node_modules');
+  const swcPaths = [
+    path.join(nodeModulesPath, '@next', 'swc-darwin-arm64'),
+    path.join(nodeModulesPath, '@next', 'swc-darwin-x64'),
+    path.join(nodeModulesPath, '@next', 'swc-linux-arm64-gnu'),
+    path.join(nodeModulesPath, '@next', 'swc-linux-arm64-musl'),
+    path.join(nodeModulesPath, '@next', 'swc-linux-x64-gnu'),
+    path.join(nodeModulesPath, '@next', 'swc-linux-x64-musl'),
+    path.join(nodeModulesPath, '@next', 'swc-win32-arm64-msvc'),
+    path.join(nodeModulesPath, '@next', 'swc-win32-ia32-msvc'),
+    path.join(nodeModulesPath, '@next', 'swc-win32-x64-msvc'),
+  ];
+
+  let swcFound = false;
+  for (const swcPath of swcPaths) {
+    if (fs.existsSync(swcPath)) {
+      console.log(`✅ SWC binary found at: ${swcPath}`);
+      swcFound = true;
+      break;
+    }
+  }
+
+  if (!swcFound) {
+    console.log('⚠️ No SWC binary found. Installing dependencies again...');
+    execSync('npm install --force', { stdio: 'inherit' });
+  }
+} catch (error) {
+  console.error('❌ Error checking SWC binary:', error);
 }
 
 // Check for Next.js config
@@ -155,17 +125,18 @@ try {
   console.error('❌ Error checking Next.js config:', error);
 }
 
-// Set environment variables for Vercel
-if (isVercel) {
-  process.env.NEXT_TELEMETRY_DISABLED = '1';
-  process.env.SKIP_TYPE_CHECK = 'true';
-  process.env.NPM_CONFIG_PRODUCTION = 'false';
-}
-
-// Run the build command
+// Run the build command with proper environment variables
 console.log('🚀 Starting Next.js build...');
 try {
-  execSync('next build', { stdio: 'inherit' });
+  // Set environment variables for the build
+  const buildEnv = {
+    ...process.env,
+    NEXT_TELEMETRY_DISABLED: '1',
+    NEXT_IGNORE_MISSING_SWC: '1',
+    NODE_OPTIONS: '--max_old_space_size=4096'
+  };
+  
+  execSync('next build', { stdio: 'inherit', env: buildEnv });
   console.log('✅ Build completed successfully');
 } catch (error) {
   console.error('❌ Build failed:', error);
