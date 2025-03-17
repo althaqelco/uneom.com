@@ -7,6 +7,28 @@ import { notFound } from 'next/navigation';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 
+// This generates all possible static paths during build time
+export async function generateStaticParams() {
+  // Define all possible categories and products
+  return [
+    { category: 'medical-scrubs', product: 'premium-scrubs-set' },
+    { category: 'medical-scrubs', product: 'antimicrobial-scrubs' },
+    { category: 'medical-scrubs', product: 'premium-medical-scrubs' },
+    { category: 'medical-scrubs', product: 'surgical-scrubs' },
+    { category: 'medical-scrubs', product: 'nursing-scrubs' },
+    { category: 'medical-scrubs', product: 'executive-medical-uniforms' },
+    { category: 'medical-scrubs', product: 'medical-lab-coats' },
+    { category: 'medical-scrubs', product: 'premium-surgical-gowns' },
+    { category: 'aviation-uniforms', product: 'airline-crew-uniform' },
+    { category: 'aviation-uniforms', product: 'pilot-uniform' },
+    { category: 'hospitality-attire', product: 'luxury-hotel-uniform' },
+    { category: 'hospitality-attire', product: 'premium-hotel-uniforms' },
+    { category: 'hospitality-attire', product: 'housekeeping-uniform' },
+    { category: 'industrial-uniforms', product: 'industrial-coverall' },
+    { category: 'industrial-uniforms', product: 'industrial-coverall-pro' },
+  ];
+}
+
 // This would normally come from a database or API
 const getProductData = (category: string, productSlug: string) => {
   // This is mock data for demonstration
