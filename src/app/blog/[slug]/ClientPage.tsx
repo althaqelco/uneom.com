@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import { getBlogPostBySlug, getRelatedPosts as getRelatedPostsFromData } from '@/lib/data/blogPosts';
@@ -32,35 +33,23 @@ export default function ClientPage({ slug }: ClientPageProps) {
   // Debug logging
   useEffect(() => {
     console.log('Blog post slug:', slug);
-    const post = getBlogPostBySlug(slug, 'en');
+    const post = getBlogPostBySlug(slug, locale);
     console.log('Found blog post:', post ? 'Yes' : 'No');
     if (!post) {
-      console.log('Available posts:', require('@/lib/data/blogPosts').getBlogPosts('en').map((p: any) => p.slug));
+      console.log('Available posts:', require('@/lib/data/blogPosts').getBlogPosts(locale).map((p: any) => p.slug));
     }
   }, [slug]);
   
   // Get the blog post
-  const blogPost = getBlogPostBySlug(slug, 'en');
+  const blogPost = getBlogPostBySlug(slug, locale);
   
   // Handle case when blog post is not found
   if (!blogPost) {
-    return (
-      <MainLayout>
-        <Container>
-          <div className="py-20 text-center">
-            <h1 className="text-3xl font-bold text-red-600 mb-4">Blog Post Not Found</h1>
-            <p className="text-neutral-600 mb-8">The blog post "{slug}" you're looking for doesn't exist.</p>
-            <Link href="/blog" className="inline-block bg-primary-600 text-white px-6 py-3 rounded-md hover:bg-primary-700 transition-colors duration-200">
-              Back to Blog
-            </Link>
-          </div>
-        </Container>
-      </MainLayout>
-    );
+    return notFound();
   }
   
   // Get related posts
-  const relatedPosts = getRelatedPostsFromData(slug, 'en', 3);
+  const relatedPosts = getRelatedPostsFromData(slug, locale, 3);
   
   return (
     <MainLayout locale={locale}>
@@ -69,7 +58,7 @@ export default function ClientPage({ slug }: ClientPageProps) {
         <Container>
           <div className="mb-8">
             <span className="inline-block bg-primary-100 text-primary-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
-              {'Blog'}
+              Blog
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
               {blogPost.title}
@@ -133,7 +122,7 @@ export default function ClientPage({ slug }: ClientPageProps) {
                     {blogPost.tags.map((tag: string) => (
                       <Link
                         key={tag}
-                        href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
+                        href={`/${locale}/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
                         className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-full text-sm transition-colors duration-200"
                       >
                         {tag}
@@ -153,7 +142,7 @@ export default function ClientPage({ slug }: ClientPageProps) {
                     {relatedPosts.map((post) => (
                       <Link 
                         key={post.slug} 
-                        href={`/blog/${post.slug}`}
+                        href={`/${locale}/blog/${post.slug}`}
                         className="block group"
                       >
                         <div className="flex items-start">
@@ -186,9 +175,9 @@ export default function ClientPage({ slug }: ClientPageProps) {
       <section className="py-16 bg-primary-50">
         <Container>
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Need professional uniform solutions?</h2>
+            <h2 className="text-3xl font-bold mb-6">Need Professional Uniform Solutions?</h2>
             <p className="text-lg text-neutral-600 mb-8">
-              Explore our range of high-quality uniforms designed for various industries or contact us for custom solutions.
+              Explore our collection of high-quality uniforms designed for various industries or contact us for custom solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 

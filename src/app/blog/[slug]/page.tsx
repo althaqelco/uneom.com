@@ -1,13 +1,11 @@
+import React from 'react';
 import { notFound } from 'next/navigation';
 import ClientPage from './ClientPage';
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
+export const dynamic = 'force-static';
+export const revalidate = 3600; // revalidate every hour
 
-// This generates all possible static paths during build time for English blog
+// Generate static params for all blog posts
 export async function generateStaticParams() {
   // Define all possible blog post slugs for the English version
   return [
@@ -27,9 +25,13 @@ export async function generateStaticParams() {
   ];
 }
 
-export default function BlogPostPage({ params }: PageProps) {
+// The page component
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
   
-  // Return the client page with the slug parameter
+  if (!slug) {
+    return notFound();
+  }
+  
   return <ClientPage slug={slug} />;
 }

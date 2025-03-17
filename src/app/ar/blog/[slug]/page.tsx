@@ -1,14 +1,11 @@
-import { getBlogPostBySlug, getRelatedPosts } from '@/lib/data/blogPosts';
-import ClientPage from './ClientPage';
+import React from 'react';
 import { notFound } from 'next/navigation';
+import ClientPage from './ClientPage';
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
+export const dynamic = 'force-static';
+export const revalidate = 3600; // revalidate every hour
 
-// This generates all possible static paths during build time for Arabic blog
+// Generate static params for all blog posts
 export async function generateStaticParams() {
   // Define all possible blog post slugs for the Arabic version
   return [
@@ -25,19 +22,13 @@ export async function generateStaticParams() {
   ];
 }
 
-export default function BlogPostPage({ params }: PageProps) {
-  const locale = 'ar';
+// The page component
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const { slug } = params;
   
-  // Get the blog post
-  const blogPost = getBlogPostBySlug(params.slug, locale);
-  
-  // Handle case when blog post is not found
-  if (!blogPost) {
+  if (!slug) {
     return notFound();
   }
   
-  // Get related posts
-  const relatedPosts = getRelatedPosts(params.slug, locale, 3);
-  
-  return <ClientPage blogPost={blogPost} relatedPosts={relatedPosts} locale={locale} />;
+  return <ClientPage slug={slug} />;
 } 

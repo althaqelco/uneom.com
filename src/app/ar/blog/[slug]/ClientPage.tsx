@@ -1,19 +1,41 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
-import { BlogPost } from '@/lib/types';
+import { getBlogPostBySlug, getRelatedPosts as getRelatedPostsFromData } from '@/lib/data/blogPosts';
 
 interface ClientPageProps {
-  blogPost: BlogPost;
-  relatedPosts: BlogPost[];
-  locale: string;
+  slug: string;
 }
 
-export default function ClientPage({ blogPost, relatedPosts, locale }: ClientPageProps) {
+export default function ClientPage({ slug }: ClientPageProps) {
+  const locale = 'ar';
+  
+  // Debug logging
+  useEffect(() => {
+    console.log('Blog post slug:', slug);
+    const post = getBlogPostBySlug(slug, locale);
+    console.log('Found blog post:', post ? 'Yes' : 'No');
+    if (!post) {
+      console.log('Available posts:', require('@/lib/data/blogPosts').getBlogPosts(locale).map((p: any) => p.slug));
+    }
+  }, [slug]);
+  
+  // Get the blog post
+  const blogPost = getBlogPostBySlug(slug, locale);
+  
+  // Handle case when blog post is not found
+  if (!blogPost) {
+    return notFound();
+  }
+  
+  // Get related posts
+  const relatedPosts = getRelatedPostsFromData(slug, locale, 3);
+  
   return (
     <MainLayout locale={locale}>
       {/* Hero Section */}
@@ -52,21 +74,23 @@ export default function ClientPage({ blogPost, relatedPosts, locale }: ClientPag
       <section className="pb-20">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-8 lg:order-last">
+            <div className="lg:col-span-8 lg:col-start-5">
               {/* Author */}
               <div className="flex items-center mb-8 p-6 bg-neutral-50 rounded-lg">
-                {blogPost.author?.avatar && (
-                  <div className="relative w-16 h-16 rounded-full overflow-hidden ml-4">
+                {typeof blogPost.author === 'object' && blogPost.author.avatar && (
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4">
                     <Image
                       src={blogPost.author.avatar}
-                      alt={blogPost.author.name}
+                      alt={typeof blogPost.author === 'object' ? blogPost.author.name : 'المؤلف'}
                       fill
                       className="object-cover"
                     />
                   </div>
                 )}
-                <div className="text-right">
-                  <h3 className="font-bold text-lg">{blogPost.author?.name}</h3>
+                <div>
+                  <h3 className="font-bold text-lg">
+                    {typeof blogPost.author === 'object' ? blogPost.author.name : blogPost.author}
+                  </h3>
                 </div>
               </div>
               
@@ -83,7 +107,7 @@ export default function ClientPage({ blogPost, relatedPosts, locale }: ClientPag
                     {blogPost.tags.map((tag: string) => (
                       <Link
                         key={tag}
-                        href={`/ar/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
+                        href={`/${locale}/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
                         className="px-4 py-2 bg-neutral-100 hover:bg-neutral-200 rounded-full text-sm transition-colors duration-200"
                       >
                         {tag}
@@ -94,19 +118,19 @@ export default function ClientPage({ blogPost, relatedPosts, locale }: ClientPag
               )}
             </div>
             
-            <div className="lg:col-span-4">
+            <div className="lg:col-span-4 lg:col-start-1 lg:row-start-1">
               {/* Related Posts */}
               {relatedPosts && relatedPosts.length > 0 && (
-                <div className="sticky top-24 text-right">
-                  <h3 className="text-xl font-bold mb-6">مقالات ذات صلة</h3>
+                <div className="sticky top-24">
+                  <h3 className="text-xl font-bold mb-6 text-right">مقالات ذات صلة</h3>
                   <div className="space-y-6">
                     {relatedPosts.map((post) => (
                       <Link 
                         key={post.slug} 
-                        href={`/ar/blog/${post.slug}`}
+                        href={`/${locale}/blog/${post.slug}`}
                         className="block group"
                       >
-                        <div className="flex items-start flex-row-reverse">
+                        <div className="flex items-start">
                           <div className="relative w-20 h-20 rounded-md overflow-hidden flex-shrink-0">
                             <Image
                               src={post.featuredImage}
@@ -136,7 +160,7 @@ export default function ClientPage({ blogPost, relatedPosts, locale }: ClientPag
       <section className="py-16 bg-primary-50">
         <Container>
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">هل تحتاج إلى حلول زي موحد احترافية؟</h2>
+            <h2 className="text-3xl font-bold mb-6">هل تحتاج إلى حلول أزياء موحدة احترافية؟</h2>
             <p className="text-lg text-neutral-600 mb-8">
               استكشف مجموعتنا من الأزياء الموحدة عالية الجودة المصممة لمختلف الصناعات أو اتصل بنا للحصول على حلول مخصصة.
             </p>
