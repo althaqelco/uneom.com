@@ -6,6 +6,9 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig = {
+  // Add output: 'export' for static site generation (Netlify compatibility)
+  output: 'export',
+  
   // Skip type checking in production to make builds faster and more reliable on Vercel
   typescript: {
     // !! WARN !!
@@ -24,6 +27,8 @@ const nextConfig = {
   
   // Configure image optimization
   images: {
+    // Set unoptimized: true for static site generation (Netlify compatibility)
+    unoptimized: true,
     domains: [
       'uneom.com',
       'uneom-com.vercel.app',
