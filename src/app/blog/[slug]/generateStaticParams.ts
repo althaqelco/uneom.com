@@ -12,5 +12,8 @@ export async function generateStaticParams() {
     { slug: 'security-uniform-standards' },
     { slug: 'uniform-customization' },
     { slug: 'medical-scrubs-evolution' },
+    { slug: 'corporate-uniform-employee-satisfaction' },
+    { slug: 'industrial-protective-clothing-advances' },
+    { slug: 'sustainable-uniforms-2024-trends' },
   ];
 } 
