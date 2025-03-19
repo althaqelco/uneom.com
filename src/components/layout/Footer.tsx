@@ -58,7 +58,7 @@ const Footer: React.FC<FooterProps> = ({ locale = 'en' }) => {
     tiktok: "https://www.tiktok.com/@uneomcom",
     pinterest: "https://www.pinterest.com/uneomcompany/",
     youtube: "https://www.youtube.com/@uneom-uniforms",
-    whatsapp: "https://wa.me/966123456789"
+    whatsapp: "https://wa.me/971558164922"
   };
   
   // Certification images
@@ -203,8 +203,39 @@ const Footer: React.FC<FooterProps> = ({ locale = 'en' }) => {
               <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="bg-neutral-800 hover:bg-primary-600 transition duration-300 p-3 rounded-full">
                 <FaYoutube className="w-5 h-5" />
               </a>
-              <a href={socialLinks.whatsapp} target="_blank" rel="noopener noreferrer" className="bg-neutral-800 hover:bg-primary-600 transition duration-300 p-3 rounded-full">
-                <FaWhatsapp className="w-5 h-5" />
+              {/* Enhanced WhatsApp Icon with Animation */}
+              <a 
+                href={socialLinks.whatsapp} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="relative p-3 rounded-full overflow-hidden group"
+                style={{ background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)' }}
+              >
+                {/* Pulse Animation - Only visible on hover */}
+                <span 
+                  className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-70" 
+                  style={{ 
+                    background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
+                    animationDuration: '1.5s'
+                  }}
+                ></span>
+                <span 
+                  className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-50" 
+                  style={{ 
+                    background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
+                    animationDuration: '2s',
+                    animationDelay: '0.3s'
+                  }}
+                ></span>
+                {/* Glow Effect */}
+                <span 
+                  className="absolute inset-1 rounded-full bg-red-500 opacity-0 group-hover:opacity-20 animate-pulse"
+                  style={{ animationDuration: '1.2s' }}
+                ></span>
+                {/* Icon with Rotation on Hover */}
+                <div className="relative z-10 group-hover:rotate-12 transform transition-transform duration-300">
+                  <FaWhatsapp className="w-5 h-5" />
+                </div>
               </a>
             </div>
             <div className="mt-6">
