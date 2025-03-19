@@ -55,6 +55,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/image-fixes.css" />
+        {/* Add scripts for image handling and error checking */}
+        <script src="/js/image-handler.js" defer></script>
+        <script src="/js/404-checker.js" defer></script>
         {/* Agregamos metatags para la cache y cross-origin */}
         <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta httpEquiv="Pragma" content="no-cache" />
@@ -77,6 +83,14 @@ export default function RootLayout({
           httpEquiv="Content-Security-Policy"
           content="img-src 'self' data: https: http: blob: *.vercel.app *.uneom.com *.githubusercontent.com;"
         />
+        
+        {/* Add our image handler script */}
+        <script src="/js/image-handler.js" defer></script>
+        
+        {/* Add 404 checker script (only in development) */}
+        {process.env.NODE_ENV === 'development' && (
+          <script src="/js/404-checker.js" defer></script>
+        )}
       </head>
       <body className={`${inter.variable} font-sans`}>
         <LocaleProvider>
@@ -225,6 +239,37 @@ export default function RootLayout({
             })();
           `}
         </Script>
+        
+        {/* Statcounter Analytics */}
+        <Script id="statcounter-setup" strategy="afterInteractive">
+          {`
+            var sc_project=13105039; 
+            var sc_invisible=1; 
+            var sc_security="f68332e2";
+          `}
+        </Script>
+        <Script 
+          id="statcounter-tracker"
+          src="https://www.statcounter.com/counter/counter.js"
+          strategy="afterInteractive"
+        />
+        <noscript>
+          <div className="statcounter">
+            <a 
+              title="free web stats" 
+              href="https://statcounter.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img 
+                className="statcounter" 
+                src="https://c.statcounter.com/13105039/0/f68332e2/1/" 
+                alt="free web stats" 
+                referrerPolicy="no-referrer-when-downgrade" 
+              />
+            </a>
+          </div>
+        </noscript>
       </body>
     </html>
   );
