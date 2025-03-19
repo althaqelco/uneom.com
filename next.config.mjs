@@ -216,21 +216,26 @@ const nextConfig = {
         destination: '/locations/:path*',
         permanent: true,
       },
+      {
+        source: '/category/:path*',
+        destination: '/blog/categories/:path*', 
+        permanent: true,
+      },
       
-      // English - Specific Sectors
+      // English - Specific Sectors/Products
       {
         source: '/sectors/healthcare-uniforms',
-        destination: '/products/healthcare-uniforms',
+        destination: '/industries/healthcare',
         permanent: true,
       },
       {
         source: '/sectors/corporate-uniforms',
-        destination: '/products/corporate-uniforms',
+        destination: '/industries/corporate',
         permanent: true,
       },
       {
         source: '/sectors/restaurant-uniforms',
-        destination: '/products/hospitality-uniforms/restaurants',
+        destination: '/industries/hospitality/restaurants',
         permanent: true,
       },
       {
@@ -260,32 +265,129 @@ const nextConfig = {
       },
       {
         source: '/sectors/education-uniforms',
-        destination: '/products/education-uniforms',
+        destination: '/industries/education',
         permanent: true,
       },
       {
         source: '/sectors/industrial-uniforms',
-        destination: '/products/industrial-uniforms',
+        destination: '/industries/factory-industry',
         permanent: true,
       },
       {
         source: '/sectors/uniform-factory',
-        destination: '/products/uniform-factory',
+        destination: '/industries/manufacturing',
         permanent: true,
       },
       {
         source: '/sectors/workers-uniform',
-        destination: '/products/workers-uniform',
+        destination: '/industries/factory-industry',
         permanent: true,
       },
       {
         source: '/sectors/uniform-factory-2',
-        destination: '/products/manufacturing',
+        destination: '/industries/manufacturing',
         permanent: true,
       },
       {
         source: '/sectors/hospitality-uniforms',
-        destination: '/products/hospitality-uniforms',
+        destination: '/industries/hospitality',
+        permanent: true,
+      },
+      {
+        source: '/sectors/school-uniforms',
+        destination: '/industries/education',
+        permanent: true,
+      },
+      {
+        source: '/sectors/business-wear-uniform-companies',
+        destination: '/industries/corporate',
+        permanent: true,
+      },
+      {
+        source: '/sectors/jackets-for-scrubs',
+        destination: '/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/sectors/waitress-uniforms',
+        destination: '/industries/hospitality/restaurants',
+        permanent: true,
+      },
+      {
+        source: '/sectors/uniform-for-security',
+        destination: '/industries/security',
+        permanent: true,
+      },
+      {
+        source: '/sectors/company-uniforms',
+        destination: '/industries/corporate',
+        permanent: true,
+      },
+      {
+        source: '/sectors/uniforms-for-hotels',
+        destination: '/industries/hospitality',
+        permanent: true,
+      },
+      {
+        source: '/sectors/pilot-uniforms',
+        destination: '/industries/aviation',
+        permanent: true,
+      },
+      {
+        source: '/sectors/professional-uniforms',
+        destination: '/industries',
+        permanent: true,
+      },
+      {
+        source: '/sectors/med-scrubs',
+        destination: '/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/sectors/medical-scrubs',
+        destination: '/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/sectors/greys-anatomy-scrubs',
+        destination: '/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/sectors/scrub-suits',
+        destination: '/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/sectors/restaurants',
+        destination: '/industries/hospitality/restaurants',
+        permanent: true,
+      },
+      {
+        source: '/sectors/aviation-uniforms',
+        destination: '/industries/aviation',
+        permanent: true,
+      },
+      
+      // Blog redirects
+      {
+        source: '/blog/the-science-behind-uneoms-heat-resistant-industrial-uniforms',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/customizing-your-corporate-identity-uneoms-design-process-revealed',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/from-design-to-delivery-inside-uneoms-quality-control-process',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/uniform-maintenance-tips-expert-advice-from-uneoms-specialists',
+        destination: '/blog',
         permanent: true,
       },
       
@@ -311,10 +413,22 @@ const nextConfig = {
         permanent: true,
       },
       
+      // Category redirects
+      {
+        source: '/category/blog',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/category/sectors',
+        destination: '/industries',
+        permanent: true,
+      },
+      
       // Arabic - Main Sections
       {
         source: '/ar/sectors/:path*',
-        destination: '/ar/products/:path*',
+        destination: '/ar/industries/:path*',
         permanent: true,
       },
       {
@@ -326,17 +440,17 @@ const nextConfig = {
       // Arabic - Specific Sectors
       {
         source: '/ar/sectors/healthcare-uniforms',
-        destination: '/ar/products/healthcare-uniforms',
+        destination: '/ar/industries/healthcare',
         permanent: true,
       },
       {
         source: '/ar/sectors/corporate-uniforms',
-        destination: '/ar/products/corporate-uniforms',
+        destination: '/ar/industries/corporate',
         permanent: true,
       },
       {
         source: '/ar/sectors/restaurant-uniforms',
-        destination: '/ar/products/hospitality-uniforms/restaurants',
+        destination: '/ar/industries/hospitality/restaurants',
         permanent: true,
       },
       {
@@ -366,32 +480,81 @@ const nextConfig = {
       },
       {
         source: '/ar/sectors/education-uniforms',
-        destination: '/ar/products/education-uniforms',
+        destination: '/ar/industries/education',
         permanent: true,
       },
       {
         source: '/ar/sectors/industrial-uniforms',
-        destination: '/ar/products/industrial-uniforms',
+        destination: '/ar/industries/factory-industry',
         permanent: true,
       },
       {
         source: '/ar/sectors/uniform-factory',
-        destination: '/ar/products/uniform-factory',
+        destination: '/ar/industries/manufacturing',
         permanent: true,
       },
       {
         source: '/ar/sectors/workers-uniform',
-        destination: '/ar/products/workers-uniform',
+        destination: '/ar/industries/factory-industry',
         permanent: true,
       },
       {
         source: '/ar/sectors/uniform-factory-2',
-        destination: '/ar/products/manufacturing',
+        destination: '/ar/industries/manufacturing',
         permanent: true,
       },
       {
         source: '/ar/sectors/hospitality-uniforms',
-        destination: '/ar/products/hospitality-uniforms',
+        destination: '/ar/industries/hospitality',
+        permanent: true,
+      },
+      
+      // Arabic blog redirects with encoded URLs
+      {
+        source: '/ar/blog/%d8%aa%d8%ac%d8%b1%d8%a8%d8%a9-%d9%8a%d9%88%d9%86%d9%8a%d9%88%d9%85-%d9%85%d8%b9-%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b7%d8%a8%d9%8a-%d8%af%d9%84%d9%8a%d9%84%d9%83-%d9%84%d8%a7%d8%ae',
+        destination: '/ar/blog',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/%d8%a3%d9%81%d8%b6%d9%84-%d8%a7%d9%84%d8%a3%d9%82%d9%85%d8%b4%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d8%a7%d8%b3%d8%a8%d8%a9-%d9%84%d9%84%d9%85%d9%86%d8%a7%d8%ae-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a',
+        destination: '/ar/blog',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/%d9%83%d9%8a%d9%81-%d9%8a%d8%ba%d9%8a%d8%b1-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d9%88%d8%ad%d8%af-%d9%85%d8%b3%d8%aa%d9%82%d8%a8%d9%84-%d8%b4%d8%b1%d9%83%d8%aa%d9%83',
+        destination: '/ar/blog',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/%d8%a3%d8%b3%d8%b1%d8%a7%d8%b1-%d9%86%d8%ac%d8%a7%d8%ad-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d8%af%d8%b1%d8%b3%d9%8a-%d9%81%d9%8a-%d8%aa%d8%ad%d8%b3%d9%8a%d9%86-%d8%a3%d8%af%d8%a7%d8%a1-%d8%a7',
+        destination: '/ar/blog',
+        permanent: true,
+      },
+      
+      // Arabic - Pages
+      {
+        source: '/ar/contact-us',
+        destination: '/ar/contact',
+        permanent: true,
+      },
+      {
+        source: '/ar/request-a-quote',
+        destination: '/ar/quote',
+        permanent: true,
+      },
+      {
+        source: '/ar/services',
+        destination: '/ar/services',
+        permanent: true,
+      },
+      {
+        source: '/ar/faqs',
+        destination: '/ar/resources/faqs',
+        permanent: true,
+      },
+      {
+        source: '/ar/about-us',
+        destination: '/ar/about',
         permanent: true,
       },
       
