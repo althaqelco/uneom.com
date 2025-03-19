@@ -1,160 +1,213 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { findWorkingImagePath } from '@/lib/utils/vercelImageLoader';
 
 interface EmergencyImageLoaderProps {
   src: string;
   alt: string;
-  className?: string;
   width?: number;
   height?: number;
-  fallbackSrc?: string;
+  className?: string;
   showDebugInfo?: boolean;
 }
 
 /**
- * مكون تحميل الصور في حالات الطوارئ
- * يستخدم عند فشل تحميل الصور بالأساليب العادية
+ * EmergencyImageLoader component
+ * 
+ * A fallback image component that tries multiple loading strategies
+ * to ensure images load correctly, even in problematic environments.
+ * Useful for debugging image loading issues.
  */
 const EmergencyImageLoader: React.FC<EmergencyImageLoaderProps> = ({
   src,
   alt,
-  className = '',
   width,
   height,
-  fallbackSrc = '/images/default-placeholder.jpg',
-  showDebugInfo = false,
+  className = '',
+  showDebugInfo = false
 }) => {
-  const [imageSrc, setImageSrc] = useState<string>(src);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [loadedSrc, setLoadedSrc] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [attempts, setAttempts] = useState<number>(0);
-  const [debugInfo, setDebugInfo] = useState<string[]>([]);
+  const [loadingMethod, setLoadingMethod] = useState<string | null>(null);
+  const [attempts, setAttempts] = useState(0);
+  const [debugInfo, setDebugInfo] = useState<Record<string, any>>({});
 
-  const addDebugInfo = (info: string) => {
-    if (showDebugInfo) {
-      setDebugInfo(prev => [...prev, `${new Date().toISOString().substring(11, 19)}: ${info}`]);
-    }
-  };
+  // Fallback SVG as data URL
+  const fallbackSvg = `data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjMyMCIgeT0iMjQwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM4ODgiPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+`;
 
   useEffect(() => {
-    let isMounted = true;
-    setIsLoading(true);
+    if (!src) {
+      setError('No source provided');
+      setLoadedSrc(fallbackSvg);
+      return;
+    }
+
+    // Reset state when src changes
+    setLoadedSrc(null);
     setError(null);
+    setLoadingMethod(null);
     setAttempts(0);
+    setDebugInfo({});
+
+    // Try different loading methods
+    tryLoadImage();
+  }, [src]);
+
+  const tryLoadImage = async () => {
+    setAttempts(prev => prev + 1);
     
-    const loadImage = async () => {
+    // Collect debug info
+    const info: Record<string, any> = {
+      originalSrc: src,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      windowSize: `${window.innerWidth}x${window.innerHeight}`,
+      devicePixelRatio: window.devicePixelRatio,
+      attempts
+    };
+    
+    // Generate path variations
+    const baseUrl = window.location.origin;
+    const variations = [
+      src, // Original
+      src.startsWith('/') ? src : `/${src}`, // With leading slash
+      src.startsWith('/') ? src.substring(1) : src, // Without leading slash
+      src.startsWith('/') ? `${baseUrl}${src}` : `${baseUrl}/${src}`, // With base URL
+      `/_next/static/images/${src.split('/').pop()}`, // Next.js image path
+      `/images/${src.split('/').pop()}`, // Common images folder
+      '/images/default-placeholder.jpg', // Default fallback
+      fallbackSvg // SVG fallback
+    ];
+    
+    info.variations = variations;
+    
+    // Try each variation
+    for (let i = 0; i < variations.length; i++) {
+      const currentSrc = variations[i];
       try {
-        addDebugInfo(`Starting to load image: ${src}`);
-        
-        // Try to find a working path
-        const workingPath = await findWorkingImagePath(src);
-        
-        if (!isMounted) return;
-        
-        if (workingPath !== src) {
-          addDebugInfo(`Found working path: ${workingPath}`);
-        } else {
-          addDebugInfo(`Using original path: ${src}`);
+        // Method 1: Image constructor
+        if (i < variations.length - 1) { // Skip for fallback SVG
+          const loadResult = await loadWithImageConstructor(currentSrc);
+          if (loadResult) {
+            setLoadedSrc(currentSrc);
+            setLoadingMethod('Image constructor');
+            info.successMethod = 'Image constructor';
+            info.successVariation = currentSrc;
+            setDebugInfo(info);
+            return;
+          }
         }
         
-        setImageSrc(workingPath);
-        setIsLoading(false);
+        // Method 2: Fetch API
+        if (i < variations.length - 1 && !currentSrc.startsWith('data:')) { // Skip for data URLs
+          const fetchResult = await loadWithFetch(currentSrc);
+          if (fetchResult) {
+            setLoadedSrc(currentSrc);
+            setLoadingMethod('Fetch API');
+            info.successMethod = 'Fetch API';
+            info.successVariation = currentSrc;
+            setDebugInfo(info);
+            return;
+          }
+        }
       } catch (err) {
-        if (!isMounted) return;
-        
-        addDebugInfo(`Error finding working path: ${err}`);
-        setError(`Failed to load image: ${err}`);
-        setImageSrc(fallbackSrc);
-        setIsLoading(false);
+        // Continue to next variation
+        info.errors = info.errors || [];
+        info.errors.push({
+          variation: currentSrc,
+          error: err instanceof Error ? err.message : String(err)
+        });
       }
-    };
-    
-    loadImage();
-    
-    return () => {
-      isMounted = false;
-    };
-  }, [src, fallbackSrc, showDebugInfo]);
-
-  const handleImageError = () => {
-    setAttempts(prev => prev + 1);
-    addDebugInfo(`Image load error (attempt ${attempts + 1})`);
-    
-    if (attempts < 2) {
-      // Try different variations
-      const variations = [
-        // Try without leading slash
-        src.startsWith('/') ? src.substring(1) : src,
-        // Try with leading slash
-        !src.startsWith('/') ? `/${src}` : src,
-        // Try with _next prefix
-        `/_next/static/images/default-placeholder.jpg'/').pop()}`,
-        // Try with different domain
-        `https://uneom-com.vercel.app${src.startsWith('/') ? '' : '/'}${src}`,
-      ];
-      
-      setImageSrc(variations[attempts]);
-      addDebugInfo(`Trying alternative path: ${variations[attempts]}`);
-    } else {
-      // Fall back to default image
-      setImageSrc(fallbackSrc);
-      setError('Failed to load image after multiple attempts');
-      addDebugInfo('Falling back to default image');
     }
+    
+    // If all variations fail, use fallback
+    setLoadedSrc(fallbackSvg);
+    setError('All loading methods failed');
+    setLoadingMethod('Fallback SVG');
+    info.finalResult = 'Used fallback SVG';
+    setDebugInfo(info);
   };
 
-  const handleImageLoad = () => {
-    setIsLoading(false);
-    setError(null);
-    addDebugInfo(`Image loaded successfully: ${imageSrc}`);
+  const loadWithImageConstructor = (imgSrc: string): Promise<boolean> => {
+    return new Promise((resolve) => {
+      const img = new Image();
+      
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      
+      img.src = imgSrc;
+      
+      // If image is already cached
+      if (img.complete && img.naturalWidth > 0) {
+        resolve(true);
+      }
+      
+      // Set a timeout to prevent hanging
+      setTimeout(() => resolve(false), 3000);
+    });
   };
 
-  const imageStyle: React.CSSProperties = {
-    opacity: isLoading ? 0 : 1,
-    transition: 'opacity 0.3s ease-in-out',
-    width: width ? `${width}px` : '100%',
-    height: height ? `${height}px` : 'auto',
+  const loadWithFetch = async (imgSrc: string): Promise<boolean> => {
+    try {
+      // Skip data URLs
+      if (imgSrc.startsWith('data:')) return false;
+      
+      const response = await fetch(imgSrc, { method: 'HEAD' });
+      const contentType = response.headers.get('content-type');
+      return response.ok && contentType !== null && contentType.startsWith('image/');
+    } catch (error) {
+      return false;
+    }
   };
 
   return (
-    <div className="relative">
-      {isLoading && (
+    <div className={`emergency-image-loader ${className}`}>
+      {loadedSrc ? (
+        <img 
+          src={loadedSrc} 
+          alt={alt} 
+          width={width} 
+          height={height}
+          className={`emergency-loaded-image ${error ? 'emergency-image-error' : ''}`}
+        />
+      ) : (
         <div 
-          className="absolute inset-0 flex items-center justify-center bg-gray-100 animate-pulse"
-          style={{ width: width ? `${width}px` : '100%', height: height ? `${height}px` : '100%' }}
+          className="emergency-image-loading"
+          style={{ 
+            width: width || 100, 
+            height: height || 100,
+            backgroundColor: '#f0f0f0',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: '#888'
+          }}
         >
-          <span className="text-sm text-gray-500">Loading...</span>
+          Loading...
         </div>
       )}
       
-      <img
-        src={imageSrc}
-        alt={alt}
-        className={className}
-        style={imageStyle}
-        onLoad={handleImageLoad}
-        onError={handleImageError}
-        width={width}
-        height={height}
-      />
-      
-      {error && !isLoading && (
-        <div 
-          className="absolute inset-0 flex items-center justify-center bg-red-50"
-          style={{ width: width ? `${width}px` : '100%', height: height ? `${height}px` : '100%' }}
-        >
-          <span className="text-sm text-red-500">{error}</span>
-        </div>
-      )}
-      
-      {showDebugInfo && debugInfo.length > 0 && (
-        <div className="mt-2 p-2 bg-gray-100 text-xs text-gray-700 rounded">
-          <div className="font-bold mb-1">Debug Info:</div>
-          {debugInfo.map((info, index) => (
-            <div key={index}>{info}</div>
-          ))}
+      {showDebugInfo && (
+        <div className="emergency-image-debug" style={{ 
+          fontSize: '10px', 
+          backgroundColor: '#f8f8f8', 
+          padding: '5px',
+          border: '1px solid #ddd',
+          marginTop: '5px',
+          maxWidth: '300px',
+          overflowX: 'auto'
+        }}>
+          <div><strong>Source:</strong> {src}</div>
+          <div><strong>Status:</strong> {error ? `Error: ${error}` : 'Loaded'}</div>
+          <div><strong>Method:</strong> {loadingMethod || 'Attempting...'}</div>
+          <div><strong>Attempts:</strong> {attempts}</div>
+          {loadedSrc && <div><strong>Loaded:</strong> {loadedSrc.substring(0, 50)}...</div>}
+          <details>
+            <summary>Debug Info</summary>
+            <pre style={{ fontSize: '9px' }}>
+              {JSON.stringify(debugInfo, null, 2)}
+            </pre>
+          </details>
         </div>
       )}
     </div>

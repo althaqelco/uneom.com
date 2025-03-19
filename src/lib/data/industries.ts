@@ -53,7 +53,7 @@ export const industries: Industry[] = [
     nameAr: "الرعاية الصحية",
     title: "Professional Medical Scrubs & Healthcare Uniforms in Saudi Arabia",
     description: "High-quality medical uniforms designed for comfort and functionality in Saudi healthcare settings. Compliant with local regulations and suitable for the Kingdom's climate.",
-    descriptionAr: "أزياء طبية عالية الجودة مصممة للراحة والوظائف العملية في بيئات الرعاية الصحية السعودية. متوافقة مع اللوائح المحلية ومناسبة لمناخ المملكة.",
+    descriptionAr: "يونيفورم طبي عالي الجودة مصمم للراحة والوظائف العملية في بيئات الرعاية الصحية السعودية. متوافق مع اللوائح المحلية ومناسب لمناخ المملكة.",
     image: "/images/industries/healthcare.jpg",
     heroImage: "/images/industries/healthcare-hero.jpg",
     benefits: [
@@ -138,7 +138,7 @@ export const industries: Industry[] = [
     nameAr: "الطيران",
     title: "Professional Airline & Airport Uniforms in Saudi Arabia",
     description: "Sophisticated airline uniforms that blend Saudi cultural heritage with modern aviation standards. Designed for aircrew, ground staff, and airport personnel.",
-    descriptionAr: "أزياء طيران متطورة تمزج بين التراث الثقافي السعودي ومعايير الطيران الحديثة. مصممة لطاقم الطائرة وطاقم الأرض وموظفي المطار.",
+    descriptionAr: "يونيفورم طيران متطور يمزج بين التراث الثقافي السعودي ومعايير الطيران الحديثة. مصمم لطاقم الطائرة وطاقم الأرض وموظفي المطار.",
     image: "/images/industries/aviation.jpg",
     heroImage: "/images/industries/aviation-hero.jpg",
     benefits: [
@@ -212,7 +212,7 @@ export const industries: Industry[] = [
     nameAr: "الضيافة",
     title: "Luxury Hotel & Restaurant Uniforms in Saudi Arabia",
     description: "Elegant hospitality uniforms tailored for Saudi Arabia's growing luxury tourism sector. Designed for hotels, resorts, restaurants, and events.",
-    descriptionAr: "أزياء ضيافة أنيقة مصممة خصيصًا لقطاع السياحة الفاخرة المتنامي في المملكة العربية السعودية. مصممة للفنادق والمنتجعات والمطاعم والفعاليات.",
+    descriptionAr: "زي موحد للضيافة أنيق مصمم خصيصًا لقطاع السياحة الفاخرة المتنامي في المملكة العربية السعودية. مصمم للفنادق والمنتجعات والمطاعم والفعاليات.",
     image: "/images/industries/hospitality.jpg",
     heroImage: "/images/industries/hospitality-hero.jpg",
     benefits: [
@@ -582,7 +582,7 @@ export const industries: Industry[] = [
     nameAr: "خدمات التوصيل",
     title: "Professional Delivery Uniforms in Saudi Arabia",
     description: "Practical and recognizable uniforms for Saudi delivery services. Designed for comfort during long delivery shifts in various weather conditions.",
-    descriptionAr: "أزياء عملية ومميزة لخدمات التوصيل السعودية. مصممة للراحة أثناء مناوبات التوصيل الطويلة في مختلف الظروف الجوية.",
+    descriptionAr: "يونيفورم عملي ومميز لخدمات التوصيل السعودية. مصمم للراحة أثناء مناوبات التوصيل الطويلة في مختلف الظروف الجوية.",
     image: "/images/a-delivery-person-dressed-in-a-red-polo-and-cap-shows-approval-with-a-thumbs-up-while--SBI-350024443.jpg",
     heroImage: "/images/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg",
     benefits: [

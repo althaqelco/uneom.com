@@ -4,121 +4,117 @@ import React, { useEffect, useState } from 'react';
 
 interface ImagePreloaderProps {
   imagePaths: string[];
-  onComplete?: () => void;
-  onProgress?: (progress: number) => void;
-  children?: React.ReactNode;
+  children: React.ReactNode;
+  showLoadingIndicator?: boolean;
 }
 
+/**
+ * ImagePreloader component
+ * 
+ * Preloads critical images before rendering children to prevent layout shifts
+ * and ensure important images are available immediately.
+ */
 const ImagePreloader: React.FC<ImagePreloaderProps> = ({
   imagePaths,
-  onComplete,
-  onProgress,
   children,
+  showLoadingIndicator = false
 }) => {
-  const [loadedCount, setLoadedCount] = useState(0);
-  const [isComplete, setIsComplete] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     if (!imagePaths || imagePaths.length === 0) {
-      setIsComplete(true);
-      if (onComplete) onComplete();
+      setImagesLoaded(true);
       return;
     }
 
-    let mounted = true;
+    let loadedCount = 0;
     const totalImages = imagePaths.length;
-    let loadedImages = 0;
 
-    const preloadImage = (src: string) => {
-      return new Promise<void>((resolve, reject) => {
-        const img = new Image();
-        
-        img.onload = () => {
-          if (mounted) {
-            loadedImages++;
-            setLoadedCount(loadedImages);
-            
-            if (onProgress) {
-              onProgress(loadedImages / totalImages);
-            }
-            
-            if (loadedImages === totalImages) {
-              setIsComplete(true);
-              if (onComplete) onComplete();
-            }
-          }
-          resolve();
-        };
-        
-        img.onerror = () => {
-          // Even if image fails to load, we count it as "loaded" to continue the process
-          if (mounted) {
-            loadedImages++;
-            setLoadedCount(loadedImages);
-            
-            if (onProgress) {
-              onProgress(loadedImages / totalImages);
-            }
-            
-            if (loadedImages === totalImages) {
-              setIsComplete(true);
-              if (onComplete) onComplete();
-            }
-          }
-          resolve(); // Resolve anyway to continue
-        };
-        
-        // Try to load the image with different path variations
-        img.src = src;
-        
-        // If the image is already cached, the onload event might not fire
-        if (img.complete) {
-          if (mounted) {
-            loadedImages++;
-            setLoadedCount(loadedImages);
-            
-            if (onProgress) {
-              onProgress(loadedImages / totalImages);
-            }
-            
-            if (loadedImages === totalImages) {
-              setIsComplete(true);
-              if (onComplete) onComplete();
-            }
-          }
-          resolve();
-        }
-      });
+    // Function to update progress
+    const updateProgress = () => {
+      loadedCount++;
+      setProgress(Math.round((loadedCount / totalImages) * 100));
+      
+      if (loadedCount === totalImages) {
+        setImagesLoaded(true);
+      }
     };
 
-    // Preload all images in parallel
-    Promise.all(imagePaths.map(preloadImage))
-      .then(() => {
-        if (mounted) {
-          setIsComplete(true);
-          if (onComplete) onComplete();
-        }
-      })
-      .catch((error) => {
-        console.error('Error preloading images:', error);
-        if (mounted) {
-          setIsComplete(true);
-          if (onComplete) onComplete();
-        }
-      });
+    // Preload all images
+    imagePaths.forEach(path => {
+      if (!path) {
+        updateProgress();
+        return;
+      }
 
-    return () => {
-      mounted = false;
-    };
-  }, [imagePaths, onComplete, onProgress]);
+      const img = new Image();
+      
+      img.onload = updateProgress;
+      img.onerror = () => {
+        console.warn(`Failed to preload image: ${path}`);
+        updateProgress();
+      };
+      
+      // Start loading the image
+      img.src = path;
+      
+      // If image is already cached, onload might not fire
+      if (img.complete) {
+        updateProgress();
+      }
+    });
 
+    // Set a timeout to prevent infinite loading
+    const timeout = setTimeout(() => {
+      if (!imagesLoaded) {
+        console.warn('Image preloading timed out, rendering content anyway');
+        setImagesLoaded(true);
+      }
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, [imagePaths]);
+
+  // Always render children in production, only show loading in development if enabled
+  if (process.env.NODE_ENV !== 'development' || !showLoadingIndicator) {
+    return <>{children}</>;
+  }
+
+  // In development with loading indicator enabled
   return (
     <>
-      {children && (
-        <div style={{ opacity: isComplete ? 1 : 0, transition: 'opacity 0.5s ease-in-out' }}>
-          {children}
+      {!imagesLoaded && showLoadingIndicator ? (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '3px',
+          zIndex: 9999,
+        }}>
+          <div style={{
+            height: '100%',
+            width: `${progress}%`,
+            backgroundColor: '#4caf50',
+            transition: 'width 0.3s ease-in-out',
+          }} />
+          <div style={{
+            position: 'fixed',
+            top: '10px',
+            right: '10px',
+            background: 'rgba(0,0,0,0.7)',
+            color: 'white',
+            padding: '5px 10px',
+            borderRadius: '3px',
+            fontSize: '12px',
+            zIndex: 9999,
+          }}>
+            Loading images: {progress}%
+          </div>
         </div>
-      )}
+      ) : null}
+      {children}
     </>
   );
 };

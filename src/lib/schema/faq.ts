@@ -58,49 +58,49 @@ export function getIndustryFAQSchema(industry: string, locale: string = 'en') {
     aviation: [
       {
         question: isArabic
-          ? 'كيف تضمن يونيوم مطابقة أزياء الطيران للمعايير الدولية؟'
+          ? 'كيف تضمن يونيوم مطابقة يونيفورم الطيران للمعايير الدولية؟'
           : 'How does UNEOM ensure aviation uniforms meet international standards?',
         answer: isArabic
-          ? 'تلتزم جميع أزياء الطيران لدينا بمعايير IATA ومتطلبات شركات الطيران العالمية. نستخدم أقمشة مقاومة للحريق ومريحة تلبي معايير السلامة مع التركيز على الأناقة والراحة طوال الرحلات الطويلة.'
+          ? 'تلتزم جميع يونيفورم الطيران لدينا بمعايير IATA ومتطلبات شركات الطيران العالمية. نستخدم أقمشة مقاومة للحريق ومريحة تلبي معايير السلامة مع التركيز على الأناقة والراحة طوال الرحلات الطويلة.'
           : 'All our aviation uniforms comply with IATA standards and global airline requirements. We use flame-resistant, comfortable fabrics that meet safety standards while focusing on elegance and comfort during long flights.'
       },
       {
         question: isArabic
-          ? 'هل يمكن تخصيص أزياء الطيران بألوان وشعارات الشركة؟'
+          ? 'هل يمكن تخصيص يونيفورم الطيران بألوان وشعارات الشركة؟'
           : 'Can aviation uniforms be customized with company colors and logos?',
         answer: isArabic
-          ? 'نعم، نقدم خدمات تخصيص كاملة لأزياء الطيران، بما في ذلك دمج ألوان العلامة التجارية للشركة، والشعارات المطرزة، والتصميمات الحصرية التي تعكس هوية شركة الطيران الفريدة.'
-          : 'Yes, we offer full customization services for aviation uniforms, including incorporation of company brand colors, embroidered logos, and exclusive designs that reflect the airline\'s unique identity.'
+          ? 'نعم، نقدم خدمات تخصيص كاملة ليونيفورم الطيران، بما في ذلك دمج ألوان العلامة التجارية للشركة، والشعارات المطرزة، والتصميمات الحصرية التي تعكس هوية شركة الطيران الفريدة.'
+          : 'Yes, we offer full customization services for aviation uniforms, including incorporation of airline brand colors, embroidered logos, and exclusive designs that reflect the unique identity of your airline.'
       }
     ],
     hospitality: [
       {
         question: isArabic
-          ? 'ما الذي يميز أزياء الضيافة من يونيوم؟'
-          : 'What sets UNEOM hospitality uniforms apart?',
+          ? 'ما الذي يميز يونيفورم الضيافة من يونيوم؟'
+          : 'What makes UNEOM hospitality uniforms stand out?',
         answer: isArabic
-          ? 'تتميز أزياء الضيافة لدينا بتصميمات أنيقة تجمع بين التأثيرات العربية التقليدية واتجاهات الموضة العالمية. نستخدم أقمشة فاخرة مريحة ومقاومة للتجاعيد مصممة خصيصًا للعمل الطويل في بيئات الفنادق والمطاعم.'
-          : 'Our hospitality uniforms feature elegant designs that blend traditional Arabian influences with global fashion trends. We use premium fabrics that are comfortable and wrinkle-resistant, specially designed for long shifts in hotel and restaurant environments.'
+          ? 'يتميز يونيفورم الضيافة لدينا بتصميمات أنيقة تجمع بين التأثيرات العربية التقليدية واتجاهات الموضة العالمية. نستخدم أقمشة فاخرة مريحة ومقاومة للتجاعيد مصممة خصيصًا للعمل الطويل في بيئات الفنادق والمطاعم.'
+          : 'Our hospitality uniforms feature elegant designs that blend traditional Arabian influences with global fashion trends. We use luxurious, comfortable, wrinkle-resistant fabrics specifically designed for long hours in hotel and restaurant environments.'
       }
     ],
     corporate: [
       {
         question: isArabic
-          ? 'كيف يمكن للزي الموحد تعزيز هوية العلامة التجارية للشركة؟'
-          : 'How can uniforms enhance a company\'s brand identity?',
+          ? 'كيف يمكن أن يساعد اليونيفورم الموحد شركتي في بناء هويتها؟'
+          : 'How can uniforms help my company build its identity?',
         answer: isArabic
-          ? 'تلعب الأزياء الموحدة دورًا حاسمًا في تعزيز التعرف على العلامة التجارية وتوحيد فريقك. تقوم يونيوم بدمج ألوان وشعارات وقيم علامتك التجارية في تصميمات أنيقة تعزز الهوية المؤسسية وتخلق انطباعًا مهنيًا متناسقًا.'
+          ? 'يلعب الزي الموحد دورًا حاسمًا في تعزيز التعرف على العلامة التجارية وتوحيد فريقك. تقوم يونيوم بدمج ألوان وشعارات وقيم علامتك التجارية في تصميمات أنيقة تعزز الهوية المؤسسية وتخلق انطباعًا مهنيًا متناسقًا.'
           : 'Uniforms play a crucial role in enhancing brand recognition and unifying your team. UNEOM incorporates your brand colors, logos, and values into elegant designs that reinforce corporate identity and create a cohesive professional impression.'
       }
     ],
     education: [
       {
         question: isArabic
-          ? 'ما هي مميزات الزي المدرسي من يونيوم؟'
-          : 'What are the advantages of UNEOM school uniforms?',
+          ? 'ما مدى متانة يونيفورم المدارس من يونيوم؟'
+          : 'How durable are UNEOM school uniforms?',
         answer: isArabic
-          ? 'توفر أزياء المدارس لدينا مزيجًا مثاليًا من المتانة والراحة والسهولة في العناية، وهي مصممة خصيصًا لمناخ المملكة العربية السعودية. نستخدم أقمشة عالية الجودة تدوم طوال العام الدراسي وتحافظ على مظهرها بعد الغسيل المتكرر.'
-          : 'Our school uniforms provide the perfect blend of durability, comfort, and ease of care, designed specifically for Saudi Arabia\'s climate. We use high-quality fabrics that last throughout the school year and maintain their appearance after repeated washing.'
+          ? 'يوفر يونيفورم المدارس لدينا مزيجًا مثاليًا من المتانة والراحة والسهولة في العناية، وهو مصمم خصيصًا لمناخ المملكة العربية السعودية. نستخدم أقمشة عالية الجودة تدوم طوال العام الدراسي وتحافظ على مظهرها بعد الغسيل المتكرر.'
+          : 'Our school uniforms provide the perfect blend of durability, comfort, and ease of care, specifically designed for Saudi Arabia\'s climate. We use high-quality fabrics that last throughout the school year and maintain their appearance after repeated washing.'
       }
     ],
     manufacturing: [
@@ -116,11 +116,29 @@ export function getIndustryFAQSchema(industry: string, locale: string = 'en') {
     security: [
       {
         question: isArabic
-          ? 'ما الذي يميز أزياء الأمن من يونيوم؟'
-          : 'What distinguishes UNEOM security uniforms?',
+          ? 'ما الذي يميز يونيفورم الأمن من يونيوم؟'
+          : 'What makes UNEOM security uniforms stand out?',
         answer: isArabic
-          ? 'تتميز أزياء الأمن لدينا بمظهر احترافي ورسمي يلهم الثقة والاحترام. مصممة باستخدام أقمشة متينة مقاومة للتجاعيد وسهلة الحركة، وتشمل ميزات عملية مثل الجيوب متعددة الأغراض وأنظمة تعليق للمعدات.'
-          : 'Our security uniforms feature a professional, authoritative appearance that inspires confidence and respect. They\'re designed with durable, wrinkle-resistant fabrics that allow ease of movement, including practical features like multi-purpose pockets and equipment suspension systems.'
+          ? 'يتميز يونيفورم الأمن لدينا بمظهر احترافي ورسمي يلهم الثقة والاحترام. مصمم باستخدام أقمشة متينة مقاومة للتجاعيد وسهلة الحركة، ويشمل ميزات عملية مثل الجيوب متعددة الأغراض وأنظمة تعليق للمعدات.'
+          : 'Our security uniforms feature a professional, formal appearance that inspires confidence and respect. They are crafted using durable, wrinkle-resistant fabrics with ease of movement, and include practical features like multi-purpose pockets and equipment suspension systems.'
+      }
+    ],
+    general: [
+      {
+        question: isArabic
+          ? 'ما الذي يميز يونيوم عن مزودي اليونيفورم الآخرين في المملكة العربية السعودية؟'
+          : 'What distinguishes UNEOM from other uniform providers in Saudi Arabia?',
+        answer: isArabic
+          ? 'تقدم يونيوم حلول زي موحد متكاملة مصممة خصيصًا لاحتياجات السوق السعودي. نحن نوفر أقمشة عالية الجودة وتصميمات أنيقة وخدمات شاملة من القياس إلى التسليم، مع التركيز على خدمة العملاء الاستثنائية.'
+          : 'UNEOM offers integrated uniform solutions tailored specifically for the Saudi market needs. We provide high-quality fabrics, elegant designs, and comprehensive services from measurement to delivery, with a focus on exceptional customer service.'
+      },
+      {
+        question: isArabic
+          ? 'ما هي مدة تسليم الطلبات الكبيرة من الزي الموحد؟'
+          : 'What is the delivery timeframe for large uniform orders?',
+        answer: isArabic
+          ? 'تعتمد مواعيد التسليم على حجم الطلب ومتطلبات التخصيص. عمومًا، يمكننا تسليم الطلبات الكبيرة القياسية في غضون 3-4 أسابيع، بينما قد تستغرق الطلبات المخصصة بالكامل من 5-6 أسابيع. نقدم أيضًا خيارات تسليم مستعجلة عند الحاجة.'
+          : 'Delivery timeframes depend on order size and customization requirements. Generally, we can deliver standard large orders within 3-4 weeks, while fully customized orders may take 5-6 weeks. We also offer expedited delivery options when needed.'
       }
     ]
   };
@@ -132,12 +150,12 @@ export function getIndustryFAQSchema(industry: string, locale: string = 'en') {
         ? 'لماذا تختار يونيوم لتوريد الزي الموحد لشركتك؟'
         : 'Why choose UNEOM for your company\'s uniform supply?',
       answer: isArabic
-        ? 'تقدم يونيوم حلول أزياء موحدة متكاملة مصممة خصيصًا لاحتياجات السوق السعودي. نحن نوفر أقمشة عالية الجودة وتصميمات أنيقة وخدمات شاملة من القياس إلى التسليم، مع التركيز على خدمة العملاء الاستثنائية.'
-        : 'UNEOM offers integrated uniform solutions tailored specifically for the Saudi market\'s needs. We provide high-quality fabrics, elegant designs, and comprehensive services from measurement to delivery, with a focus on exceptional customer service.'
+        ? 'تقدم يونيوم حلول زي موحد متكاملة مصممة خصيصًا لاحتياجات السوق السعودي. نحن نوفر أقمشة عالية الجودة وتصميمات أنيقة وخدمات شاملة من القياس إلى التسليم، مع التركيز على خدمة العملاء الاستثنائية.'
+        : 'UNEOM offers integrated uniform solutions tailored specifically for the Saudi market needs. We provide high-quality fabrics, elegant designs, and comprehensive services from measurement to delivery, with a focus on exceptional customer service.'
     },
     {
       question: isArabic 
-        ? 'ما هي مدة تسليم الطلبات الكبيرة من الأزياء الموحدة؟'
+        ? 'ما هي مدة تسليم الطلبات الكبيرة من الزي الموحد؟'
         : 'What is the delivery timeframe for large uniform orders?',
       answer: isArabic
         ? 'تعتمد مواعيد التسليم على حجم الطلب ومتطلبات التخصيص. عمومًا، يمكننا تسليم الطلبات الكبيرة القياسية في غضون 3-4 أسابيع، بينما قد تستغرق الطلبات المخصصة بالكامل من 5-6 أسابيع. نقدم أيضًا خيارات تسليم مستعجلة عند الحاجة.'

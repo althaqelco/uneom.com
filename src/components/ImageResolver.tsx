@@ -14,95 +14,161 @@ import VercelSafeImage from './ui/VercelSafeImage';
  */
 const ImageResolver: React.FC = () => {
   useEffect(() => {
-    // Only run in browser
     if (typeof window === 'undefined') return;
-
-    // Function to resolve image paths
-    const resolveImagePaths = () => {
+    
+    // Default fallback image
+    const DEFAULT_FALLBACK = '/images/default-placeholder.jpg';
+    
+    // Track processed images to avoid duplicate processing
+    const processedImages = new Set<HTMLImageElement>();
+    
+    // Process all images on the page
+    const processImages = () => {
       const images = document.querySelectorAll('img:not([data-resolved="true"])');
       
-      images.forEach((img) => {
+      images.forEach(img => {
+        // Cast to HTMLImageElement
         const imgElement = img as HTMLImageElement;
-        const src = imgElement.getAttribute('src') || '';
         
-        // Skip data URLs and already resolved images
-        if (src.startsWith('data:') || imgElement.hasAttribute('data-resolved')) {
-          return;
-        }
+        // Skip already processed images
+        if (processedImages.has(imgElement)) return;
+        processedImages.add(imgElement);
         
-        // Mark as resolved
+        // Mark as processed
         imgElement.setAttribute('data-resolved', 'true');
         
-        // Store original source
-        if (!imgElement.hasAttribute('data-original-src')) {
-          imgElement.setAttribute('data-original-src', src);
+        // Store original src
+        const originalSrc = imgElement.getAttribute('src');
+        if (originalSrc) {
+          imgElement.setAttribute('data-original-src', originalSrc);
         }
         
-        // Add error handler
-        imgElement.onerror = () => {
-          const originalSrc = imgElement.getAttribute('data-original-src') || '';
-          
-          // Try different path variations
-          const variations = [
-            // Try with and without leading slash
-            src.startsWith('/') ? src.substring(1) : `/${src}`,
-            // Try with absolute URL
-            `${window.location.origin}${src.startsWith('/') ? '' : '/'}${src}`,
-            // Try with _next prefix
-            `/_next/static/images/${src.split('/').pop()}`,
-            // Try original source if different
-            originalSrc !== src ? originalSrc : '',
-            // Fallback
-            '/images/default-placeholder.jpg'
-          ].filter(Boolean); // Remove empty strings
-          
-          // Try each variation
-          let currentIndex = 0;
-          
-          const tryNextVariation = () => {
-            if (currentIndex >= variations.length) {
-              // If all variations fail, use fallback
-              imgElement.setAttribute('src', '/images/default-placeholder.jpg');
-              return;
-            }
-            
-            const variation = variations[currentIndex++];
-            imgElement.setAttribute('src', variation);
-          };
-          
-          // Set up error handler for next variation
-          imgElement.onerror = tryNextVariation;
-          
-          // Try first variation
-          tryNextVariation();
+        // Add loading="lazy" for images below the fold
+        if (!imgElement.hasAttribute('loading') && !isInViewport(imgElement)) {
+          imgElement.setAttribute('loading', 'lazy');
+        }
+        
+        // Handle image errors
+        imgElement.onerror = function() {
+          handleImageError(imgElement);
         };
         
-        // For images that are already loaded but broken
+        // Check if image is already broken
         if (imgElement.complete && imgElement.naturalWidth === 0) {
-          // Trigger error handler
-          if (imgElement.onerror) {
-            imgElement.onerror(new Event('error'));
-          }
+          handleImageError(imgElement);
         }
       });
     };
     
-    // Run initially
-    resolveImagePaths();
+    // Handle image loading errors
+    const handleImageError = (img: HTMLImageElement) => {
+      // Get original source
+      const originalSrc = img.getAttribute('data-original-src') || img.getAttribute('src');
+      if (!originalSrc) return;
+      
+      // Try with different path variations
+      const variations = generatePathVariations(originalSrc);
+      
+      // Try each variation
+      tryImageVariations(img, variations, 0);
+    };
     
-    // Run after page load
-    window.addEventListener('load', resolveImagePaths);
+    // Generate different path variations to try
+    const generatePathVariations = (src: string) => {
+      if (!src || src.startsWith('data:')) return [DEFAULT_FALLBACK];
+      
+      const variations: string[] = [];
+      const baseUrl = window.location.origin;
+      const filename = src.split('/').pop() || '';
+      
+      // Original path
+      variations.push(src);
+      
+      // With and without leading slash
+      if (src.startsWith('/')) {
+        variations.push(baseUrl + src);
+        variations.push(baseUrl + src.substring(1));
+        variations.push(src.substring(1));
+      } else {
+        variations.push('/' + src);
+        variations.push(baseUrl + '/' + src);
+      }
+      
+      // Try in _next/static/images folder
+      variations.push('/_next/static/images/' + filename);
+      variations.push(baseUrl + '/_next/static/images/' + filename);
+      
+      // Try in public/images folder
+      variations.push('/images/' + filename);
+      variations.push(baseUrl + '/images/' + filename);
+      
+      // Add fallback as last resort
+      variations.push(DEFAULT_FALLBACK);
+      
+      // Remove duplicates
+      return Array.from(new Set(variations));
+    };
     
-    // Set up mutation observer to watch for new images
-    const observer = new MutationObserver((mutations) => {
+    // Try each variation until one works
+    const tryImageVariations = (img: HTMLImageElement, variations: string[], index: number) => {
+      if (index >= variations.length) {
+        // All variations failed, use default placeholder
+        img.src = DEFAULT_FALLBACK;
+        return;
+      }
+      
+      const testImg = new Image();
+      
+      testImg.onload = function() {
+        // This variation worked
+        img.src = variations[index];
+        img.setAttribute('data-fixed', 'true');
+      };
+      
+      testImg.onerror = function() {
+        // Try next variation
+        tryImageVariations(img, variations, index + 1);
+      };
+      
+      testImg.src = variations[index];
+      
+      // If image is already cached, onload might not fire
+      if (testImg.complete) {
+        if (testImg.naturalWidth > 0) {
+          img.src = variations[index];
+          img.setAttribute('data-fixed', 'true');
+        } else {
+          tryImageVariations(img, variations, index + 1);
+        }
+      }
+    };
+    
+    // Check if element is in viewport
+    const isInViewport = (element: Element) => {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    };
+    
+    // Process images on load and after DOM changes
+    window.addEventListener('load', processImages);
+    
+    // Process new images when they're added to the DOM
+    const observer = new MutationObserver(mutations => {
       let hasNewImages = false;
       
       mutations.forEach(mutation => {
         if (mutation.type === 'childList') {
           mutation.addedNodes.forEach(node => {
-            if (node.nodeType === 1) { // Element node
-              const element = node as Element;
-              if (element.tagName === 'IMG' || element.querySelectorAll('img').length > 0) {
+            if (node.nodeName === 'IMG') {
+              hasNewImages = true;
+            } else if (node instanceof Element && node.querySelectorAll) {
+              const images = node.querySelectorAll('img');
+              if (images.length > 0) {
                 hasNewImages = true;
               }
             }
@@ -111,23 +177,27 @@ const ImageResolver: React.FC = () => {
       });
       
       if (hasNewImages) {
-        resolveImagePaths();
+        processImages();
       }
     });
     
-    observer.observe(document.body, {
+    // Start observing the document
+    observer.observe(document.documentElement, {
       childList: true,
       subtree: true
     });
     
+    // Run initial processing
+    processImages();
+    
     // Clean up
     return () => {
       observer.disconnect();
-      window.removeEventListener('load', resolveImagePaths);
+      window.removeEventListener('load', processImages);
     };
   }, []);
 
-  // Don't render anything visible
+  // This component doesn't render anything
   return null;
 };
 

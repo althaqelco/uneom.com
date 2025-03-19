@@ -7,7 +7,7 @@ export function getOrganizationSchema(locale: string = 'en') {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': 'https://uneom.com/#organization',
-    name: locale === 'ar' ? 'يونيوم' : 'UNEOM',
+    name: locale === 'ar' ? 'يونيوم - زي موحد مهني' : 'UNEOM - Professional Uniforms',
     alternateName: locale === 'ar' ? 'UNEOM' : 'يونيوم',
     url: 'https://uneom.com',
     logo: {
@@ -17,11 +17,11 @@ export function getOrganizationSchema(locale: string = 'en') {
       height: 60
     },
     description: locale === 'ar' 
-      ? 'المزود الرائد للأزياء الموحدة والملابس المهنية في المملكة العربية السعودية'
-      : 'Saudi Arabia\'s Leading Provider of Professional Uniforms & Scrubs for Businesses',
+      ? 'المزود الرائد للزي الموحد والملابس المهنية في المملكة العربية السعودية'
+      : 'Leading provider of professional uniforms and corporate workwear in Saudi Arabia',
     slogan: locale === 'ar'
-      ? 'ارتقِ بمظهر فريقك مع أزياء موحدة عالية الجودة'
-      : 'Elevate Your Team\'s Appearance with Premium Uniforms',
+      ? 'ارتقِ بمظهر فريقك مع زي موحد عالي الجودة'
+      : 'Elevate your team with premium quality uniforms',
     foundingDate: '2015',
     foundingLocation: {
       '@type': 'Place',
@@ -100,35 +100,35 @@ export function getOrganizationSchema(locale: string = 'en') {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: locale === 'ar' ? 'أزياء طبية وملابس للرعاية الصحية' : 'Medical Scrubs & Healthcare Uniforms'
+          name: locale === 'ar' ? 'يونيفورم طبي وملابس للرعاية الصحية' : 'Medical Scrubs & Healthcare Uniforms'
         }
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: locale === 'ar' ? 'أزياء موحدة للطيران' : 'Aviation Uniforms'
+          name: locale === 'ar' ? 'يونيفورم للطيران' : 'Aviation Uniforms'
         }
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: locale === 'ar' ? 'أزياء الضيافة والفنادق' : 'Hospitality & Hotel Uniforms'
+          name: locale === 'ar' ? 'يونيفورم الضيافة والفنادق' : 'Hospitality & Hotel Uniforms'
         }
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: locale === 'ar' ? 'أزياء الشركات' : 'Corporate Uniforms'
+          name: locale === 'ar' ? 'يونيفورم الشركات' : 'Corporate Uniforms'
         }
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: locale === 'ar' ? 'أزياء المدارس والمؤسسات التعليمية' : 'School & Educational Uniforms'
+          name: locale === 'ar' ? 'يونيفورم المدارس والمؤسسات التعليمية' : 'School & Educational Uniforms'
         }
       }
     ],
@@ -162,7 +162,7 @@ export function getOrganizationSchema(locale: string = 'en') {
       itemListElement: [
         {
           '@type': 'OfferCatalog',
-          name: locale === 'ar' ? 'أزياء الرعاية الصحية' : 'Healthcare Uniforms',
+          name: locale === 'ar' ? 'يونيفورم الرعاية الصحية' : 'Healthcare Uniforms',
           itemListElement: [
             {
               '@type': 'Offer',
@@ -175,7 +175,7 @@ export function getOrganizationSchema(locale: string = 'en') {
         },
         {
           '@type': 'OfferCatalog',
-          name: locale === 'ar' ? 'أزياء الطيران' : 'Aviation Uniforms',
+          name: locale === 'ar' ? 'يونيفورم الطيران' : 'Aviation Uniforms',
           itemListElement: [
             {
               '@type': 'Offer',

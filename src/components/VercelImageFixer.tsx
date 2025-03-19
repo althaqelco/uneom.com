@@ -11,8 +11,10 @@ declare global {
 }
 
 /**
- * مكون يقوم بإصلاح مشاكل تحميل الصور في Vercel بشكل تلقائي
- * يعمل فقط في المتصفح ويطبق استراتيجيات متعددة لضمان تحميل الصور بشكل صحيح
+ * VercelImageFixer component
+ * 
+ * Automatically detects and fixes common image loading issues on Vercel deployments.
+ * This component addresses specific issues with image paths and loading in Vercel environments.
  */
 const VercelImageFixer: React.FC = () => {
   const [isVercel, setIsVercel] = useState<boolean>(false);

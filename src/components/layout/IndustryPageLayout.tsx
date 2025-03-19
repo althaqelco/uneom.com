@@ -22,6 +22,14 @@ interface Product {
   description: string;
   image: string;
   href: string;
+  features?: string[];
+}
+
+interface RelatedContent {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
 }
 
 interface FabricTechnology {
@@ -83,10 +91,13 @@ interface IndustryData {
   keyBenefits?: Benefit[];
   products?: Product[];
   departmentCategories?: any[];
+  relatedContent?: RelatedContent[];
   fabricTechnologies?: FabricTechnology[] | FabricTechnologiesObject;
   customizationOptions?: CustomizationOption[];
   customization?: CustomizationObject;  // For hospitality page
   testimonials?: Testimonial[];
+  features?: any[];
+  faqItems?: any[];
   caseStudy?: any;
   cta?: {
     title: string;
@@ -95,6 +106,7 @@ interface IndustryData {
     buttonUrl?: string;
     buttonHref?: string;  // Some pages use buttonHref instead of buttonUrl
   };
+  seoKeywords?: string;
 }
 
 interface IndustryPageLayoutProps {
@@ -314,7 +326,7 @@ export default function IndustryPageLayout({
               React.createElement(
                 Image,
                 {
-                  src: `/images/default-placeholder.jpg === 'ar' ? 'ar-' : ''}${
+                  src: `/images/${locale === 'ar' ? 'ar-' : ''}${
                     Array.isArray(industryData.products) && industryData.products.length > 0 && industryData.products[0]?.image
                       ? industryData.products[0].image
                       : industryData.heroImage || 'industry-default.jpg'
@@ -410,7 +422,7 @@ export default function IndustryPageLayout({
           React.createElement(
             SectionHeading,
             { centered: true },
-            isRtl ? "منتجات الزي الموحد لدينا" : "Our Uniform Products"
+            isRtl ? "منتجات اليونيفورم لدينا" : "Our Uniform Products"
           ),
           React.createElement(
             "div",
@@ -429,83 +441,104 @@ export default function IndustryPageLayout({
                   variants: fadeIn
                 },
                 React.createElement(
-                  Link,
-                  { href: productHref, className: "block relative" },
+                  "div",
+                  { className: "relative h-64 w-full overflow-hidden" },
                   React.createElement(
-                    "div",
-                    { className: "relative h-64 w-full overflow-hidden" },
-                    React.createElement(
-                      Image,
-                      {
-                        src: product.image,
-                        alt: product.name,
-                        fill: true,
-                        className: "object-cover group-hover:scale-105 transition-transform duration-500"
-                      }
-                    )
-                  ),
+                    Image,
+                    {
+                      src: product.image,
+                      alt: product.name,
+                      fill: true,
+                      className: "object-cover group-hover:scale-105 transition-transform duration-500"
+                    }
+                  )
+                ),
+                React.createElement(
+                  "div",
+                  { className: "p-6 flex flex-col flex-grow" },
                   React.createElement(
-                    "div",
-                    { className: "p-6 flex flex-col flex-grow" },
-                    React.createElement(
-                      "h3",
-                      { className: "text-xl font-bold text-neutral-900 mb-2" },
-                      React.createElement(
-                        Link,
-                        {
-                          href: productHref,
-                          className: "hover:text-primary-600 transition-colors duration-300"
-                        },
-                        product.name
-                      )
-                    ),
-                    React.createElement(
-                      "p",
-                      { className: "text-neutral-600 mb-4 flex-grow" },
-                      product.description
-                    ),
+                    "h3",
+                    { className: "text-xl font-bold text-neutral-900 mb-2" },
                     React.createElement(
                       Link,
                       {
                         href: productHref,
-                        className: "text-primary-600 font-medium hover:text-primary-700 inline-flex items-center"
+                        className: "hover:text-primary-600 transition-colors duration-300"
                       },
-                      isRtl ? 'استكشاف المنتج' : 'Explore Product',
-                      isRtl ? (
+                      product.name
+                    )
+                  ),
+                  React.createElement(
+                    "p",
+                    { className: "text-neutral-600 mb-4 flex-grow" },
+                    product.description
+                  ),
+                  product.features && product.features.length > 0 && React.createElement(
+                    "div",
+                    { className: "mb-4" },
+                    React.createElement(
+                      "h4",
+                      { className: "text-sm font-semibold text-neutral-700 mb-2" },
+                      isRtl ? "المميزات:" : "Features:"
+                    ),
+                    React.createElement(
+                      "ul",
+                      { className: "grid grid-cols-2 gap-x-2 gap-y-1" },
+                      product.features.map((feature, idx) => 
                         React.createElement(
-                          "svg",
-                          {
-                            className: "mr-2 h-5 w-5 transform rotate-180",
-                            xmlns: "http://www.w3.org/2000/svg",
-                            viewBox: "0 0 20 20",
-                            fill: "currentColor"
-                          },
+                          "li",
+                          { key: idx, className: "text-sm text-neutral-600 flex items-center" },
                           React.createElement(
-                            "path",
-                            {
-                              fillRule: "evenodd",
-                              d: "M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z",
-                              clipRule: "evenodd"
-                            }
-                          )
+                            "span",
+                            { className: "text-primary-500 mr-1" },
+                            "•"
+                          ),
+                          feature
                         )
-                      ) : (
+                      )
+                    )
+                  ),
+                  React.createElement(
+                    Link,
+                    {
+                      href: productHref,
+                      className: "text-primary-600 font-medium hover:text-primary-700 inline-flex items-center"
+                    },
+                    isRtl ? 'استكشاف المنتج' : 'Explore Product',
+                    isRtl ? (
+                      React.createElement(
+                        "svg",
+                        {
+                          className: "mr-2 h-5 w-5 transform rotate-180",
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20",
+                          fill: "currentColor"
+                        },
                         React.createElement(
-                          "svg",
+                          "path",
                           {
-                            className: "ml-2 h-5 w-5",
-                            xmlns: "http://www.w3.org/2000/svg",
-                            viewBox: "0 0 20 20",
-                            fill: "currentColor"
-                          },
-                          React.createElement(
-                            "path",
-                            {
-                              fillRule: "evenodd",
-                              d: "M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z",
-                              clipRule: "evenodd"
-                            }
-                          )
+                            fillRule: "evenodd",
+                            d: "M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z",
+                            clipRule: "evenodd"
+                          }
+                        )
+                      )
+                    ) : (
+                      React.createElement(
+                        "svg",
+                        {
+                          className: "ml-2 h-5 w-5",
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20",
+                          fill: "currentColor"
+                        },
+                        React.createElement(
+                          "path",
+                          {
+                            fillRule: "evenodd",
+                            d: "M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z",
+                            clipRule: "evenodd"
+                          }
                         )
                       )
                     )
@@ -800,6 +833,245 @@ export default function IndustryPageLayout({
                 )
               )
             ))
+          )
+        )
+      )
+    ),
+    
+    /* Related Content Section */
+    industryData.relatedContent && Array.isArray(industryData.relatedContent) && industryData.relatedContent.length > 0 && (
+      React.createElement(
+        "section",
+        { className: "py-16 bg-neutral-50" },
+        React.createElement(
+          Container,
+          null,
+          React.createElement(
+            motion.div,
+            {
+              initial: "hidden",
+              whileInView: "visible",
+              viewport: { once: true },
+              variants: fadeIn
+            },
+            React.createElement(
+              SectionHeading,
+              { centered: true },
+              isRtl ? "محتوى ذو صلة" : "Related Content"
+            ),
+            React.createElement(
+              "div",
+              { className: "grid grid-cols-1 md:grid-cols-3 gap-8 mt-12" },
+              industryData.relatedContent.map((item, index) => (
+                React.createElement(
+                  motion.div,
+                  {
+                    key: index,
+                    className: "group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full",
+                    variants: fadeIn
+                  },
+                  React.createElement(
+                    Link,
+                    { href: item.link, className: "block relative" },
+                    React.createElement(
+                      "div",
+                      { className: "relative h-48 w-full overflow-hidden" },
+                      React.createElement(
+                        Image,
+                        {
+                          src: item.image,
+                          alt: item.title,
+                          fill: true,
+                          className: "object-cover group-hover:scale-105 transition-transform duration-500"
+                        }
+                      )
+                    ),
+                    React.createElement(
+                      "div",
+                      { className: "p-5" },
+                      React.createElement(
+                        "h3",
+                        { className: "text-lg font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors duration-300" },
+                        item.title
+                      ),
+                      React.createElement(
+                        "p",
+                        { className: "text-neutral-600 mb-4 text-sm" },
+                        item.description
+                      ),
+                      React.createElement(
+                        "div",
+                        { className: "text-primary-600 font-medium text-sm group-hover:text-primary-700 transition-colors duration-300 flex items-center" },
+                        isRtl ? "اقرأ المزيد" : "Read More",
+                        isRtl ? (
+                          React.createElement(
+                            "svg",
+                            {
+                              className: "mr-1 h-4 w-4 transform rotate-180",
+                              xmlns: "http://www.w3.org/2000/svg",
+                              viewBox: "0 0 20 20",
+                              fill: "currentColor"
+                            },
+                            React.createElement(
+                              "path",
+                              {
+                                fillRule: "evenodd",
+                                d: "M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z",
+                                clipRule: "evenodd"
+                              }
+                            )
+                          )
+                        ) : (
+                          React.createElement(
+                            "svg",
+                            {
+                              className: "ml-1 h-4 w-4",
+                              xmlns: "http://www.w3.org/2000/svg",
+                              viewBox: "0 0 20 20",
+                              fill: "currentColor"
+                            },
+                            React.createElement(
+                              "path",
+                              {
+                                fillRule: "evenodd",
+                                d: "M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z",
+                                clipRule: "evenodd"
+                              }
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              ))
+            )
+          )
+        )
+      )
+    ),
+    
+    /* Features Section */
+    industryData.features && Array.isArray(industryData.features) && industryData.features.length > 0 && (
+      React.createElement(
+        "section",
+        { className: "py-16 bg-white" },
+        React.createElement(
+          Container,
+          null,
+          React.createElement(
+            motion.div,
+            {
+              initial: "hidden",
+              whileInView: "visible",
+              viewport: { once: true },
+              variants: fadeIn
+            },
+            React.createElement(
+              SectionHeading,
+              { centered: true },
+              isRtl ? "لماذا تختار يونيوم" : "Why Choose UNEOM"
+            ),
+            React.createElement(
+              "div",
+              { className: "grid grid-cols-1 md:grid-cols-2 gap-8 mt-12" },
+              industryData.features.map((feature, index) => (
+                React.createElement(
+                  motion.div,
+                  {
+                    key: index,
+                    className: "flex items-start p-4 bg-neutral-50 rounded-lg",
+                    variants: fadeIn
+                  },
+                  feature.icon && React.createElement(
+                    "div",
+                    { className: "flex-shrink-0 mr-4" },
+                    React.createElement(
+                      "div",
+                      { className: "bg-primary-100 rounded-full p-3 w-12 h-12 flex items-center justify-center" },
+                      React.createElement(
+                        Image,
+                        {
+                          src: feature.icon,
+                          alt: "",
+                          width: 24,
+                          height: 24,
+                          className: "text-primary-600"
+                        }
+                      )
+                    )
+                  ),
+                  React.createElement(
+                    "div",
+                    null,
+                    React.createElement(
+                      "h3",
+                      { className: "text-lg font-bold text-neutral-900 mb-2" },
+                      feature.title
+                    ),
+                    React.createElement(
+                      "p",
+                      { className: "text-neutral-600" },
+                      feature.description
+                    )
+                  )
+                )
+              ))
+            )
+          )
+        )
+      )
+    ),
+    
+    /* FAQ Section */
+    industryData.faqItems && Array.isArray(industryData.faqItems) && industryData.faqItems.length > 0 && (
+      React.createElement(
+        "section",
+        { className: "py-16 bg-neutral-50" },
+        React.createElement(
+          Container,
+          null,
+          React.createElement(
+            motion.div,
+            {
+              initial: "hidden",
+              whileInView: "visible",
+              viewport: { once: true },
+              variants: fadeIn
+            },
+            React.createElement(
+              SectionHeading,
+              { centered: true },
+              isRtl ? "الأسئلة الشائعة" : "Frequently Asked Questions"
+            ),
+            React.createElement(
+              "div",
+              { className: "mt-12 max-w-3xl mx-auto space-y-6" },
+              industryData.faqItems.map((faq, index) => (
+                React.createElement(
+                  motion.div,
+                  {
+                    key: index,
+                    className: "bg-white rounded-lg shadow-md overflow-hidden",
+                    variants: fadeIn
+                  },
+                  React.createElement(
+                    "div",
+                    { className: "p-6" },
+                    React.createElement(
+                      "h3",
+                      { className: "text-lg font-bold text-neutral-900 mb-3" },
+                      faq.question
+                    ),
+                    React.createElement(
+                      "div",
+                      { className: "text-neutral-600 prose" },
+                      faq.answer
+                    )
+                  )
+                )
+              ))
+            )
           )
         )
       )

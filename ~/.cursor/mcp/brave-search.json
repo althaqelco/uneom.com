@@ -1,0 +1,11 @@
+{
+  "mcps": [
+    {
+      "protocol": "@modelcontextprotocol/server-brave-search",
+      "name": "brave-search",
+      "config": {
+        "apiKey": "BSAs3L-gZCqq4t22NH-Um1ZJehAoWHT"
+      }
+    }
+  ]
+} 

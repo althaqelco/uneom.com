@@ -578,3 +578,22 @@ export async function getStaticProps({ params, locale }) {
 10. Implement breadcrumb navigation for better user experience
 
 This website should showcase UNEOM as Saudi Arabia's premier B2B uniform supplier with a focus on high-quality products, industry expertise, and excellent customer service.
+
+Planning mode:
+
+
+Please plan from A to Z the entire project so that the next part of the process will know everything - this includes any SQL, navigation, or anything else that is required to understand from the beginning what you will need to do until the very end of the project. Plan to do it in 4 steps, so like a basic implementation, a more advanced implementation, a full implementation, then bug fix and production, with testing at the end of each step
+
+
+
+Act mode:
+
+
+If you feel like you need to refresh any documentation because of recent changes (for example nextjs, stripe, supabase, etc) use the Brave MCP at any time in order to look for real life examples on the internet that are recent
+
+Test all code using the browser function especially stripe, login, and other third party APIs, test them fully, not just whether or not the integration looks good, but that it works  - include verbose terminal logs so that you can effectively bug fix yourself - and ensure that everything is working properly at all times. This should be done before task completion every single time. I want you to make sure that CSS is working through tests, everything looks good, all third party API functionality works completely and is tested etc.
+
+Make sure everything is actually useful to the user - do not create anything that is simply placeholder code, or base functionality (unless you are planning on expanding on it later) at no point should you say something is implemented when it is only 10% implemented or is pure placeholder code - you are expected to code from A to Z and not just placeholder or small parts of code that don’t really do what a user would want.
+
+When you need a new .env variable, you should ask me for it, and then add it to my .env and then test to make sure that is working, in whatever order makes sense to you or to the part of the project we’re working on at that time. 
+

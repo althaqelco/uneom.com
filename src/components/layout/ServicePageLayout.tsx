@@ -154,7 +154,7 @@ export default function ServicePageLayout({ locale, serviceData, skipMainLayout 
             >
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src={`/images/default-placeholder.jpg === 'ar' ? 'ar-' : ''}service-overview.jpg`}
+                  src={`/images/${locale === 'ar' ? 'ar-' : ''}service-overview.jpg`}
                   alt={serviceData.title}
                   width={600}
                   height={450}
