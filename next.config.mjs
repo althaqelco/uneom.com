@@ -589,6 +589,103 @@ const nextConfig = {
         destination: '/ar/locations/jeddah',
         permanent: true,
       },
+      // Healthcare related redirects
+      {
+        source: '/sectors/healthcare',
+        destination: '/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/sectors/medical-uniforms',
+        destination: '/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/sectors/medical-scrubs',
+        destination: '/shop/medical-scrubs',
+        permanent: true,
+      },
+      {
+        source: '/sectors/nursing-uniforms',
+        destination: '/shop/medical-scrubs/nursing-scrubs',
+        permanent: true,
+      },
+      {
+        source: '/sectors/lab-coats',
+        destination: '/shop/medical-scrubs/medical-lab-coat',
+        permanent: true,
+      },
+      {
+        source: '/sectors/hospital-uniforms',
+        destination: '/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/products/medical-scrubs',
+        destination: '/shop/medical-scrubs',
+        permanent: true,
+      },
+      {
+        source: '/products/premium-scrubs-set',
+        destination: '/shop/medical-scrubs/premium-scrubs-set',
+        permanent: true,
+      },
+      {
+        source: '/products/medical-lab-coat',
+        destination: '/shop/medical-scrubs/medical-lab-coat',
+        permanent: true,
+      },
+      {
+        source: '/products/nursing-uniform',
+        destination: '/shop/medical-scrubs/nursing-scrubs',
+        permanent: true,
+      },
+      {
+        source: '/healthcare-uniforms',
+        destination: '/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/hospital-uniforms',
+        destination: '/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/medical-attire',
+        destination: '/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/doctor-uniforms',
+        destination: '/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/blog/healthcare:path*',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/category/healthcare',
+        destination: '/blog',
+        permanent: true,
+      },
+      // Arabic healthcare redirects
+      {
+        source: '/ar/sectors/healthcare',
+        destination: '/ar/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/medical-uniforms',
+        destination: '/ar/industries/healthcare',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/medical-scrubs',
+        destination: '/ar/shop/medical-scrubs',
+        permanent: true,
+      },
     ];
   },
 };

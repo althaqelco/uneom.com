@@ -231,3 +231,122 @@
   to = "/ar/locations/jeddah"
   status = 301
   force = true
+
+# Healthcare-specific redirects
+[[redirects]]
+  from = "/sectors/healthcare"
+  to = "/industries/healthcare"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/medical-uniforms"
+  to = "/industries/healthcare"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/medical-scrubs"
+  to = "/shop/medical-scrubs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/nursing-uniforms"
+  to = "/shop/medical-scrubs/nursing-scrubs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/lab-coats"
+  to = "/shop/medical-scrubs/medical-lab-coat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/hospital-uniforms"
+  to = "/industries/healthcare"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/products/medical-scrubs"
+  to = "/shop/medical-scrubs"
+  status = 301
+  force = true
+
+# Arabic Healthcare-specific redirects
+[[redirects]]
+  from = "/ar/sectors/healthcare"
+  to = "/ar/industries/healthcare"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/medical-uniforms"
+  to = "/ar/industries/healthcare"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/medical-scrubs"
+  to = "/ar/shop/medical-scrubs"
+  status = 301
+  force = true
+
+# Product-specific redirects
+[[redirects]]
+  from = "/products/premium-scrubs-set"
+  to = "/shop/medical-scrubs/premium-scrubs-set"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/products/medical-lab-coat"
+  to = "/shop/medical-scrubs/medical-lab-coat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/products/nursing-uniform"
+  to = "/shop/medical-scrubs/nursing-scrubs"
+  status = 301
+  force = true
+
+# Legacy URL patterns that might exist
+[[redirects]]
+  from = "/healthcare-uniforms"
+  to = "/industries/healthcare"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hospital-uniforms"
+  to = "/industries/healthcare"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/medical-attire"
+  to = "/industries/healthcare"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/doctor-uniforms"
+  to = "/industries/healthcare"
+  status = 301
+  force = true
+
+# Legacy blog URLs that might exist
+[[redirects]]
+  from = "/blog/healthcare*"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/category/healthcare"
+  to = "/blog"
+  status = 301
+  force = true
