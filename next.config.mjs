@@ -9,6 +9,9 @@ const nextConfig = {
   // Comment out static export for development
   // output: 'export',
   
+  // Para Netlify necesitamos exportación estática
+  output: 'export',
+  
   // Skip type checking in production to make builds faster and more reliable on Vercel
   typescript: {
     // !! WARN !!
