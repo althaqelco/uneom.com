@@ -8,6 +8,7 @@ import MainLayout from './MainLayout';
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import Button from '../ui/Button';
+import QuoteForm from '../forms/QuoteForm';
 
 // Define types for all the data that can be passed to the IndustryPageLayout
 interface Benefit {
@@ -1073,6 +1074,43 @@ export default function IndustryPageLayout({
               ))
             )
           )
+        )
+      )
+    ),
+    
+    /* Quote Request Form Section */
+    React.createElement(
+      "section",
+      { className: "py-16 bg-neutral-50" },
+      React.createElement(
+        Container,
+        null,
+        React.createElement(
+          "div",
+          { className: "max-w-4xl mx-auto", style: { direction: isRtl ? 'rtl' : 'ltr' } },
+          React.createElement(
+            motion.div,
+            {
+              initial: "hidden",
+              whileInView: "visible",
+              viewport: { once: true },
+              variants: fadeIn,
+              className: "text-center mb-10"
+            },
+            React.createElement(
+              "h2",
+              { className: "text-3xl font-bold mb-2" },
+              locale === 'ar' ? "طلب عرض سعر سريع" : "Request a Quick Quote"
+            ),
+            React.createElement(
+              "p",
+              { className: "text-lg text-neutral-600" },
+              locale === 'ar' 
+                ? "املأ النموذج أدناه، وسنرد عليك خلال 24 ساعة" 
+                : "Fill in the form below, and we'll get back to you within 24 hours"
+            )
+          ),
+          React.createElement(QuoteForm, { locale: locale })
         )
       )
     ),

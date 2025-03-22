@@ -224,13 +224,22 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ locale }) => {
     setIsError(false);
     
     try {
-      // Send data to our API endpoint
-      const response = await fetch('/api/contact', {
+      // Add date and time
+      const now = new Date();
+      const submissionData = {
+        ...data,
+        submissionDate: now.toISOString().split('T')[0],
+        submissionTime: now.toTimeString().split(' ')[0],
+        language: locale
+      };
+      
+      // Send data to SheetDB API endpoint
+      const response = await fetch('https://sheetdb.io/api/v1/h5ix000ks8562', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ data: submissionData }),
       });
       
       const result = await response.json();
@@ -253,29 +262,29 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ locale }) => {
       setTimeout(() => setIsError(false), 5000);
     }
   };
-
-  // Use the locale as a key, but fallback to 'en' if the locale is not supported
-  const localeKey = (locale === 'ar' ? 'ar' : 'en') as LocaleKey;
+  
+  // Use the appropriate locale or fallback to 'en'
+  const localeKey: LocaleKey = locale === 'ar' ? 'ar' : 'en';
 
   return (
-    <div className={`bg-white p-6 rounded-lg shadow-md ${locale === 'ar' ? 'text-right' : 'text-left'}`}>
-      <h3 className="text-2xl font-bold text-neutral-900 mb-2">{content[localeKey].title}</h3>
+    <div className={`bg-white p-6 rounded-xl shadow-md ${locale === 'ar' ? 'text-right' : 'text-left'}`}>
+      <h3 className="text-xl font-bold mb-2 text-primary-800">{content[localeKey].title}</h3>
       <p className="text-neutral-600 mb-6">{content[localeKey].subtitle}</p>
       
       {isSuccess && (
-        <div className="mb-6 p-4 bg-green-50 text-green-800 rounded-md">
+        <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded mb-6">
           {content[localeKey].fields.success}
         </div>
       )}
       
       {isError && (
-        <div className="mb-6 p-4 bg-red-50 text-red-800 rounded-md">
+        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded mb-6">
           {content[localeKey].fields.error}
         </div>
       )}
       
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           {/* Full Name */}
           <div>
             <label className="block text-sm font-medium text-neutral-700 mb-1">
@@ -292,7 +301,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ locale }) => {
             )}
           </div>
           
-          {/* Company Name */}
+          {/* Company */}
           <div>
             <label className="block text-sm font-medium text-neutral-700 mb-1">
               {content[localeKey].fields.company.label}
@@ -404,11 +413,11 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ locale }) => {
         </div>
         
         {/* Submit Button */}
-        <div>
+        <div className="mt-4">
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-md font-medium transition-colors duration-200 disabled:opacity-70"
+            className="w-full bg-primary-600 hover:bg-primary-700 text-white py-3 px-4 rounded-md font-medium transition-colors duration-300 disabled:opacity-70"
           >
             {isSubmitting 
               ? content[localeKey].fields.sending 
