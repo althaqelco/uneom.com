@@ -17,14 +17,23 @@ import RelatedProducts from '@/components/shop/RelatedProducts';
 import OrderRequirements from '@/components/shop/OrderRequirements';
 import CustomizationOptions from '@/components/shop/CustomizationOptions';
 import RequestInfoForm from '@/components/forms/RequestInfoForm';
+import { StarIcon, ShieldCheckIcon } from '@heroicons/react/24/solid';
+
+interface Size {
+  name: string;
+  description: string;
+  inStock: boolean;
+}
+
+interface Color {
+  name: string;
+  value: string;
+  inStock: boolean;
+}
 
 export default function IndustrialCoverallProPage() {
   const locale = 'en';
-  const [selectedColor, setSelectedColor] = useState('Navy/Royal');
-  const [selectedSize, setSelectedSize] = useState('M');
-  const [activeTab, setActiveTab] = useState('description');
-  const [showRequestForm, setShowRequestForm] = useState(false);
-
+  
   // Product data
   const product = {
     id: "industrial-coverall-pro",
@@ -142,6 +151,15 @@ export default function IndustrialCoverallProPage() {
     
     <p>This coverall is designed to meet Saudi Arabian workplace safety standards and can be customized with your company branding, making it an ideal choice for businesses looking to maintain a professional and consistent workforce appearance while prioritizing employee safety and comfort.</p>`
   };
+  
+  // State for selected options
+  const [selectedColor, setSelectedColor] = useState(product.colors[0].name);
+  const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
+  const [quantity, setQuantity] = useState(product.minOrder);
+  const [activeTab, setActiveTab] = useState('description');
+  const [showSizeChart, setShowSizeChart] = useState(false);
+  const [showRequestForm, setShowRequestForm] = useState(false);
+  const [activeImage, setActiveImage] = useState(0);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -261,14 +279,29 @@ export default function IndustrialCoverallProPage() {
               {/* Size Selection */}
               <div className="mb-6">
                 <div className="flex justify-between items-center mb-3">
-                  <div className="text-sm font-medium text-neutral-900">Size: {selectedSize}</div>
-                  <button className="text-sm text-primary-600 hover:text-primary-700">Size Guide</button>
+                  <p className="text-sm font-medium text-neutral-900">Size: {selectedSize}</p>
+                  <button
+                    onClick={() => setShowSizeChart(true)}
+                    className="text-sm text-primary-600 font-medium"
+                  >
+                    Size Chart
+                  </button>
                 </div>
-                <SizeSelector
-                  sizes={product.sizes}
-                  selectedSize={selectedSize}
-                  onChange={setSelectedSize}
-                />
+                <div className="grid grid-cols-4 gap-2">
+                  {product.sizes.map((size) => (
+                    <button
+                      key={size}
+                      onClick={() => setSelectedSize(size)}
+                      className={`py-2 border rounded-md ${
+                        selectedSize === size
+                          ? 'border-primary-600 bg-primary-50 text-primary-600'
+                          : 'border-neutral-300 text-neutral-700 hover:border-neutral-500'
+                      }`}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
               </div>
 
               {/* Action Buttons */}

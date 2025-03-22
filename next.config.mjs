@@ -205,8 +205,15 @@ const nextConfig = {
     ];
   },
   
-  // Redirects for SEO optimization
+  // Redirects for SEO optimization - these will work in development but not in static export
+  // For static export, see the redirects in netlify.toml
   async redirects() {
+    // Don't return redirects if using static export
+    if (process.env.NEXT_PHASE === 'phase-export') {
+      return [];
+    }
+    
+    // Otherwise return the full list of redirects for development
     return [
       // English - Main Pages
       {

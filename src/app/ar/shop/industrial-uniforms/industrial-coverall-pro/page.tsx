@@ -290,8 +290,8 @@ export default function IndustrialCoverallProArabicPage() {
                       onClick={() => setSelectedSize(size)}
                       className={`py-2 border rounded-md ${
                         selectedSize === size
-                          ? 'bg-primary-50 border-primary-500 text-primary-700'
-                          : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
+                          ? 'border-primary-600 bg-primary-50 text-primary-600'
+                          : 'border-neutral-300 text-neutral-700 hover:border-neutral-500'
                       }`}
                     >
                       {size}

@@ -13,3 +13,221 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# English - Main Sections
+[[redirects]]
+  from = "/sectors/*"
+  to = "/industries/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/location/*"
+  to = "/locations/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/category/*"
+  to = "/blog/categories/:splat"
+  status = 301
+  force = true
+
+# English - Specific Sectors/Products
+[[redirects]]
+  from = "/sectors/healthcare-uniforms"
+  to = "/industries/healthcare"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/corporate-uniforms"
+  to = "/industries/corporate"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/restaurant-uniforms"
+  to = "/industries/hospitality/restaurants"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/uniform-in-riyadh"
+  to = "/locations/riyadh"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/uniform-in-dammam"
+  to = "/locations/dammam"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/uniform-in-jeddah"
+  to = "/locations/jeddah"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/uniform-in-mecca"
+  to = "/locations/mecca"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/uniform-in-medina"
+  to = "/locations/medina"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/education-uniforms"
+  to = "/industries/education"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/industrial-uniforms"
+  to = "/industries/factory-industry"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/uniform-factory"
+  to = "/industries/manufacturing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/workers-uniform"
+  to = "/industries/factory-industry"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/hospitality-uniforms"
+  to = "/industries/hospitality"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/school-uniforms"
+  to = "/industries/education"
+  status = 301
+  force = true
+
+# Blog redirects
+[[redirects]]
+  from = "/blog/the-science-behind-uneoms-heat-resistant-industrial-uniforms"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/customizing-your-corporate-identity-uneoms-design-process-revealed"
+  to = "/blog"
+  status = 301
+  force = true
+
+# English - Locations
+[[redirects]]
+  from = "/location/medina"
+  to = "/locations/medina"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/location/dammam"
+  to = "/locations/dammam"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/location/riyadh"
+  to = "/locations/riyadh"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/location/jeddah"
+  to = "/locations/jeddah"
+  status = 301
+  force = true
+
+# Arabic - Main Sections
+[[redirects]]
+  from = "/ar/sectors/*"
+  to = "/ar/industries/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/location/*"
+  to = "/ar/locations/:splat"
+  status = 301
+  force = true
+
+# Arabic - Specific Sectors
+[[redirects]]
+  from = "/ar/sectors/healthcare-uniforms"
+  to = "/ar/industries/healthcare"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/corporate-uniforms"
+  to = "/ar/industries/corporate"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/restaurant-uniforms"
+  to = "/ar/industries/hospitality/restaurants"
+  status = 301
+  force = true
+
+# Arabic - Pages
+[[redirects]]
+  from = "/ar/contact-us"
+  to = "/ar/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/request-a-quote"
+  to = "/ar/quote"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/about-us"
+  to = "/ar/about"
+  status = 301
+  force = true
+
+# Encoded Arabic URLs
+[[redirects]]
+  from = "/ar/location/%d8%a7%d9%84%d9%85%d8%af%d9%8a%d9%86%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d9%88%d8%b1%d8%a9"
+  to = "/ar/locations/medina"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/location/%d8%a7%d9%84%d8%af%d9%85%d8%a7%d9%85"
+  to = "/ar/locations/dammam"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/location/%d8%a7%d9%84%d8%b1%d9%8a%d8%a7%d8%b6"
+  to = "/ar/locations/riyadh"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/location/%d8%ac%d8%af%d8%a9"
+  to = "/ar/locations/jeddah"
+  status = 301
+  force = true
