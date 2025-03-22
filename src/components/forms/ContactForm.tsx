@@ -61,111 +61,66 @@ export default function ContactForm({ locale = 'en' }: ContactFormProps) {
       
       console.log('Form data to be submitted:', submissionData);
       
-      // Create a simplified dataset for troubleshooting
-      const simplifiedData = {
-        name: formData.firstName + ' ' + formData.lastName,
-        email: formData.email,
-        phone: formData.phone,
-        message: formData.message,
-        subject: formData.subject,
-        company: formData.company,
-        type: 'contact',
-        timestamp: now.toISOString()
+      // Format the data for WhatsApp message
+      const formatWhatsAppMessage = (data: FormData) => {
+        return `*New Contact Form Submission*
+*Name:* ${data.firstName} ${data.lastName}
+*Email:* ${data.email}
+*Phone:* ${data.phone}
+*Company:* ${data.company}
+*Subject:* ${data.subject}
+*Message:* ${data.message}
+*Date:* ${now.toLocaleDateString()}
+*Time:* ${now.toLocaleTimeString()}`;
       };
+
+      // Create WhatsApp URL with formatted message
+      const whatsappMessage = formatWhatsAppMessage(formData);
+      const whatsappUrl = `https://wa.me/971558164922?text=${encodeURIComponent(whatsappMessage)}`;
       
-      console.log('Contact form data being submitted:', simplifiedData);
-      
-      // MODIFIED APPROACH: Backup to localStorage and attempt simpler API call
+      // Back up form data to localStorage before redirecting
       try {
-        // First, backup the form data to localStorage
-        try {
-          const savedForms = JSON.parse(localStorage.getItem('savedContactForms') || '[]');
-          savedForms.push({
-            ...simplifiedData,
-            savedAt: new Date().toISOString()
-          });
-          localStorage.setItem('savedContactForms', JSON.stringify(savedForms));
-          console.log('Contact form backed up to localStorage');
-        } catch (storageError) {
-          console.error('Error saving contact to localStorage:', storageError);
-        }
-        
-        // Try a very simple approach with SheetDB
-        try {
-          // Using a minimal payload with just the essential data
-          const minimalPayload = {
-            name: simplifiedData.name,
-            email: simplifiedData.email,
-            subject: simplifiedData.subject,
-            message: simplifiedData.message
-          };
-          
-          // Using fetch with minimal options and direct JSON
-          const response = await fetch('https://sheetdb.io/api/v1/1ebn2z4bsatqs', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ data: minimalPayload })
-          });
-          
-          console.log('Simple SheetDB response status:', response.status);
-        } catch (apiError) {
-          console.error('API error (can be ignored):', apiError);
-        }
-        
-        // Simulate network delay for better UX
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        // Always show success to user
-        setSubmitStatus('success');
-        
-        // Reset form
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          company: '',
-          subject: '',
-          message: '',
-          privacy: false,
+        const savedForms = JSON.parse(localStorage.getItem('savedContactForms') || '[]');
+        savedForms.push({
+          ...submissionData,
+          savedAt: new Date().toISOString()
         });
-        
-        // Reset status after delay
-        setTimeout(() => {
-          setSubmitStatus('idle');
-        }, 5000);
-      } catch (error) {
-        console.error('Error in submission handling:', error);
-        // Still show success to avoid user frustration
-        setSubmitStatus('success');
-        
-        // Reset form
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          company: '',
-          subject: '',
-          message: '',
-          privacy: false,
-        });
-        
-        // Reset status after delay
-        setTimeout(() => {
-          setSubmitStatus('idle');
-        }, 5000);
-      } finally {
-        setIsSubmitting(false);
+        localStorage.setItem('savedContactForms', JSON.stringify(savedForms));
+        console.log('Contact form backed up to localStorage');
+      } catch (storageError) {
+        console.error('Error saving contact to localStorage:', storageError);
       }
+      
+      // Show success state briefly before redirecting
+      setSubmitStatus('success');
+      
+      // Short delay before redirecting to WhatsApp
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+        
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          company: '',
+          subject: '',
+          message: '',
+          privacy: false,
+        });
+        
+        setIsSubmitting(false);
+        
+        // Reset status after delay
+        setTimeout(() => {
+          setSubmitStatus('idle');
+        }, 3000);
+      }, 1000);
+      
     } catch (error) {
       console.error('Error in form handling:', error);
       setSubmitStatus('error');
-      setTimeout(() => {
-        setSubmitStatus('idle');
-      }, 5000);
       setIsSubmitting(false);
     }
   };

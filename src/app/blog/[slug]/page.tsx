@@ -22,6 +22,10 @@ export async function generateStaticParams() {
     { slug: 'corporate-uniform-employee-satisfaction' },
     { slug: 'industrial-protective-clothing-advances' },
     { slug: 'sustainable-uniforms-2024-trends' },
+    // Add the missing blog slugs that caused the errors
+    { slug: 'vision-2030-reshaping-dress-codes' },
+    { slug: 'sustainable-uniform-solutions' },
+    { slug: 'advanced-fabrics-healthcare-uniforms' },
   ];
 }
 

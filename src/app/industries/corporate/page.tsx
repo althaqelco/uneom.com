@@ -5,6 +5,104 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import ImageGallery from '@/components/sections/corporate/ImageGallery';
+import MainLayout from '@/components/layout/MainLayout';
+import Container from '@/components/ui/Container';
+
+// Related products section
+const RelatedProducts = () => {
+  const products = [
+    {
+      id: 'executive-blazer',
+      name: 'Executive Blazer',
+      description: 'Premium tailored blazer for corporate executives and management personnel.',
+      image: '/images/default-placeholder.jpg',
+      href: '/shop/corporate-workwear/executive-blazer',
+    },
+    {
+      id: 'corporate-shirt',
+      name: 'Corporate Shirt',
+      description: 'High-quality business shirt designed for professional office environments.',
+      image: '/images/default-placeholder.jpg',
+      href: '/shop/corporate-workwear/corporate-shirt',
+    },
+    {
+      id: 'office-trouser',
+      name: 'Office Trousers',
+      description: 'Professional trousers designed for daily office wear with comfortable fit.',
+      image: '/images/default-placeholder.jpg',
+      href: '/shop/corporate-workwear/office-trouser',
+    },
+    {
+      id: 'reception-uniform',
+      name: 'Reception Uniform Set',
+      description: 'Complete front desk uniform set designed for receptionist staff.',
+      image: '/images/avatar-placeholder.jpg',
+      href: '/shop/corporate-workwear/reception-uniform',
+    },
+  ];
+
+  return (
+    <section className="py-16 bg-neutral-50">
+      <Container>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl font-bold mb-4">
+            Explore Our Corporate Uniform Collection
+          </h2>
+          <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+            Discover our premium business attire designed for professional workplace environments
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {products.map((product) => (
+            <motion.div
+              key={product.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div className="relative h-64">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">{product.name}</h3>
+                <p className="text-neutral-600 mb-4">{product.description}</p>
+                <Link
+                  href={product.href}
+                  className="text-primary-600 font-medium hover:text-primary-800 transition-colors duration-300"
+                >
+                  View Details →
+                </Link>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/shop/corporate-workwear"
+            className="inline-block bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
+          >
+            View All Corporate Products
+          </Link>
+        </div>
+      </Container>
+    </section>
+  );
+};
 
 export default function CorporatePage() {
   const locale = 'en';
@@ -47,7 +145,7 @@ export default function CorporatePage() {
   };
 
   return (
-    <div>
+    <MainLayout locale={locale}>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-neutral-900 to-neutral-800 text-white py-24">
         <div className="absolute inset-0 overflow-hidden opacity-40">
@@ -59,7 +157,7 @@ export default function CorporatePage() {
             priority
           />
         </div>
-        <div className="container mx-auto px-4 relative z-10">
+        <Container>
           <motion.div
             className="max-w-3xl"
             initial="hidden"
@@ -75,12 +173,12 @@ export default function CorporatePage() {
               {content.cta.text}
             </Link>
           </motion.div>
-        </div>
+        </Container>
       </section>
 
       {/* Introduction Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial="hidden"
@@ -111,12 +209,12 @@ export default function CorporatePage() {
               />
             </motion.div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Benefits Section */}
       <section className="py-16 bg-neutral-50">
-        <div className="container mx-auto px-4">
+        <Container>
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -154,37 +252,55 @@ export default function CorporatePage() {
               </motion.div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Image Gallery Section */}
-      <ImageGallery locale={locale} />
+      <section className="py-16 bg-white">
+        <Container>
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-4">
+              {content.gallery.title}
+            </h2>
+          </motion.div>
+          <ImageGallery locale={locale} />
+        </Container>
+      </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-primary-600 text-white">
-        <div className="container mx-auto px-4 text-center">
+      {/* Include Related Products section */}
+      <RelatedProducts />
+
+      {/* Call to Action Section */}
+      <section className="py-16 bg-primary-700 text-white">
+        <Container>
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeIn}
-            className="max-w-3xl mx-auto"
+            className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-4">
-              Elevate Your Corporate Image with Professional Uniform Solutions
+            <h2 className="text-3xl font-bold mb-6">
+              Ready to Elevate Your Corporate Image?
             </h2>
-            <p className="text-lg mb-8 opacity-90">
-              Contact our corporate uniform specialists to discuss your organization's specific requirements
+            <p className="text-xl mb-8 opacity-90">
+              Contact us today to discuss your corporate uniform requirements and discover how UNEOM can help your organization make a professional impression.
             </p>
             <Link 
               href={content.cta.url}
-              className="bg-white text-primary-600 hover:bg-neutral-100 px-6 py-3 rounded-md font-medium transition-colors duration-300"
+              className="inline-block bg-white text-primary-700 hover:bg-neutral-100 px-8 py-4 rounded-md font-medium transition-colors duration-300 text-lg"
             >
               {content.cta.text}
             </Link>
           </motion.div>
-        </div>
+        </Container>
       </section>
-    </div>
+    </MainLayout>
   );
 } 

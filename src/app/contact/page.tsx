@@ -35,7 +35,7 @@ export default function ContactPage() {
       address: 'Al Olaya St, Al Olaya District, Riyadh 12213, Saudi Arabia',
       phone: '+971 55 816 4922',
       email: 'info@uneom.com',
-      googleMapsUrl: 'https://goo.gl/maps/YourActualGoogleMapsLink',
+      googleMapsUrl: 'https://maps.app.goo.gl/YourActualGoogleMapsLink',
       image: '/images/default-placeholder.jpg'
     },
     {
@@ -44,7 +44,7 @@ export default function ContactPage() {
       address: 'Prince Mohammed Bin Abdulaziz St, Al Rawdah, Jeddah 23432, Saudi Arabia',
       phone: '+971 55 816 4922',
       email: 'info@uneom.com',
-      googleMapsUrl: 'https://goo.gl/maps/YourActualGoogleMapsLink',
+      googleMapsUrl: 'https://maps.app.goo.gl/YourActualGoogleMapsLink',
       image: '/images/default-placeholder.jpg'
     },
     {
@@ -169,6 +169,15 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer" 
                       className="text-primary-600 hover:text-primary-800 font-medium inline-flex items-center"
+                      onClick={(e) => {
+                        // Prevent the default behavior
+                        e.preventDefault();
+                        
+                        // Open in a new window/tab with a small delay to avoid popup blockers
+                        setTimeout(() => {
+                          window.open(office.googleMapsUrl, '_blank', 'noopener,noreferrer');
+                        }, 100);
+                      }}
                     >
                       View on Google Maps
                       <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

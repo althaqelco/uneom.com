@@ -10,576 +10,596 @@ import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import { CheckCircleIcon } from '@heroicons/react/24/outline';
+import CustomizationOptions from '@/components/shop/CustomizationOptions';
+import RelatedProducts from '@/components/shop/RelatedProducts';
+import ColorSwatches from '@/components/shop/ColorSwatches';
+import SizeSelector from '@/components/shop/SizeSelector';
+import FeaturesGrid from '@/components/shop/FeaturesGrid';
+import TabNavigation from '@/components/ui/TabNavigation';
+import RequestInfoForm from '@/components/forms/RequestInfoForm';
+import { StarIcon } from '@heroicons/react/24/solid';
 
 export default function LuxuryHotelUniformPage() {
   const locale = 'en';
-  const [selectedColor, setSelectedColor] = useState('Black');
-  const [selectedSize, setSelectedSize] = useState('M');
+  const [selectedColor, setSelectedColor] = useState<string | null>('Navy Blue');
+  const [selectedSize, setSelectedSize] = useState<string | null>('M');
   const [activeTab, setActiveTab] = useState('description');
   const [showRequestForm, setShowRequestForm] = useState(false);
-
+  const [quantity, setQuantity] = useState(10);
+  
   // Product data
   const product = {
-    id: "luxury-hotel-uniform",
-    category: "hospitality-attire",
-    categoryName: "Luxury Hospitality",
-    name: "Luxury Hotel Staff Uniform",
-    tagline: "Elegant Front Desk Attire for Luxury Hotels and Resorts",
-    shortDescription: "Elegant front desk attire with design accents for luxury hotels and resorts",
-    longDescription: "Our Luxury Hotel Staff Uniform is specifically designed for front desk personnel, concierge teams, and customer-facing staff in luxury hotels and high-end resorts across Saudi Arabia. This premium uniform combines elegant design elements with practical features, creating a sophisticated look that represents your establishment's commitment to excellence.",
-    price: "SAR 449",
-    minOrder: 8,
-    mainImage: "/images/default-placeholder.jpg Staff_Uniform.png",
-    additionalImages: [
-      "/images/product-placeholder.jpg",
-      "/images/product-placeholder.jpg",
-      "/images/product-placeholder.jpg"
-    ],
-    colors: [
-      { name: "Black", value: "#000000" },
-      { name: "Burgundy", value: "#800020" },
-      { name: "Navy", value: "#000080" }
-    ],
-    sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
+    id: 'luxury-hotel-uniform',
+    name: 'Premium Luxury Hotel Staff Uniform',
+    price: 'SAR 349',
+    basePrice: 349,
+    category: 'Hospitality Attire',
+    categorySlug: 'hospitality-attire',
+    minOrder: 10,
+    rating: 4.8,
+    reviewCount: 86,
+    description: `
+      <p>Elevate your hotel's brand image with our Premium Luxury Hotel Staff Uniform, meticulously designed for Saudi Arabia's upscale hospitality sector. Striking the perfect balance between sophistication, professionalism, and comfort, these uniforms embody the essence of luxury hospitality.</p>
+      
+      <p>Crafted from premium Egyptian cotton blend fabrics with specialized finishing, our hotel uniforms maintain their pristine appearance even after extensive wear and washing. The superior tailoring features modern silhouettes with traditional Saudi-inspired design elements, creating a distinctive look that resonates with the Kingdom's rich heritage and aligns with international luxury standards.</p>
+      
+      <p>Designed with Saudi Arabia's climate in mind, these breathable yet formal uniforms offer all-day comfort without compromising on the polished appearance expected in five-star establishments. Available for all hotel departments including front desk, concierge, housekeeping, food service, and management, with customization options to reflect your brand's unique identity.</p>
+    `,
     features: [
       {
-        title: "Premium Fabric",
-        description: "Made with high-quality polyester blend fabric with slight stretch for comfort during long shifts",
+        title: "Premium Fabric Blend",
+        description: "Luxury Egyptian cotton blend (65% cotton, 35% performance polyester) with wrinkle-resistant finish",
         icon: "sparkles"
       },
       {
-        title: "Professional Design",
-        description: "Tailored silhouette with accent details that reflect luxury and sophistication",
+        title: "Climate-Optimized Design",
+        description: "Breathable construction with moisture-wicking technology for Saudi Arabia's climate",
+        icon: "sun"
+      },
+      {
+        title: "Superior Tailoring",
+        description: "Precision tailoring with reinforced seams and structured silhouettes for a consistently professional appearance",
+        icon: "scissors"
+      },
+      {
+        title: "Distinctive Aesthetic",
+        description: "Modern design with subtle Saudi-inspired details that honor local heritage while meeting international luxury standards",
         icon: "star"
       },
       {
-        title: "Wrinkle Resistant",
-        description: "Special finish that maintains a crisp, professional appearance throughout the workday",
-        icon: "check-badge"
-      },
-      {
-        title: "Customizable Accents",
-        description: "Option to add gold or silver buttons, trims, and other accents to match your hotel's aesthetic",
-        icon: "adjustments"
-      },
-      {
-        title: "Cultural Sensitivity",
-        description: "Design options that respect Saudi Arabian cultural norms while maintaining elegance",
-        icon: "globe"
-      },
-      {
-        title: "Comfortable Fit",
-        description: "Ergonomic design for maximum comfort during extended guest interaction periods",
+        title: "Comfort Features",
+        description: "Strategic stretch panels, ergonomic cuts, and premium linings for all-day comfort during extended shifts",
         icon: "heart"
+      },
+      {
+        title: "Durability Focus",
+        description: "Industrial laundry compatible with colorfastness guaranteed for minimum 100 washes",
+        icon: "shield-check"
       }
     ],
     specifications: [
-      { name: "Material", value: "80% Polyester, 18% Rayon, 2% Spandex" },
-      { name: "Weight", value: "180 GSM" },
-      { name: "Closure", value: "Hidden button front with decorative buttons" },
-      { name: "Pockets", value: "2 front pockets, 1 internal pocket" },
-      { name: "Care", value: "Dry clean recommended, machine washable on gentle cycle" },
-      { name: "Customization", value: "Available for hotel logo embroidery and accent customization" }
+      { name: "Material", value: "65% Egyptian Cotton, 35% Performance Polyester, 180-220 GSM depending on piece" },
+      { name: "Design Origin", value: "Exclusive designs developed specifically for Saudi luxury hospitality market" },
+      { name: "Closure Types", value: "Hidden placket buttons, premium zippers, and custom metal hardware with logo options" },
+      { name: "Care", value: "Industrial laundry safe, colorfast for 100+ washes, minimal ironing required" },
+      { name: "Customization", value: "Premium embroidery, custom buttons, specialty fabrics, and department-specific variations" },
+      { name: "Sizes", value: "XS-3XL with petite, regular, and tall options" },
+      { name: "Lead Time", value: "3-4 weeks standard, 2 weeks expedited service available" }
+    ],
+    images: [
+      { src: '/images/products/hotel-uniform.jpg', alt: 'Premium Luxury Hotel Uniform - Front View' },
+      { src: '/images/hospitality/hospitality_uniform_hotel.jpg', alt: 'Hotel Staff in Professional Uniforms' },
+      { src: '/images/hospitality/hospitality_uniform_receiption_hotel.jpg', alt: 'Hotel Reception Staff Uniform' },
+      { src: '/images/hospitality/hospitality_uniform_resturant.jpg', alt: 'Hotel Restaurant Staff Uniform' }
+    ],
+    colors: [
+      { name: 'Navy Blue', value: '#0a1845', inStock: true },
+      { name: 'Charcoal Gray', value: '#36454f', inStock: true },
+      { name: 'Burgundy', value: '#800020', inStock: true },
+      { name: 'Forest Green', value: '#014421', inStock: true },
+      { name: 'Royal Purple', value: '#7851a9', inStock: true },
+      { name: 'Gold Accent', value: '#d4af37', inStock: true }
+    ],
+    sizes: [
+      { name: 'XS', description: 'Extra Small', inStock: true },
+      { name: 'S', description: 'Small', inStock: true },
+      { name: 'M', description: 'Medium', inStock: true },
+      { name: 'L', description: 'Large', inStock: true },
+      { name: 'XL', description: 'Extra Large', inStock: true },
+      { name: 'XXL', description: '2X Large', inStock: true },
+      { name: '3XL', description: '3X Large', inStock: true }
     ],
     customizationOptions: [
       { 
-        name: "Hotel Logo Embroidery", 
-        description: "Add your hotel logo embroidered on chest pocket or sleeve",
-        image: "/images/default-placeholder.jpg"
+        name: "Premium Logo Embroidery", 
+        description: "High-definition embroidery with metallic thread options - SAR 60 per uniform",
+        image: "/images/hospitality/hospitality_uniform_custom_logo.jpg"
       },
       { 
-        name: "Accent Color Selection", 
-        description: "Choose from a range of accent colors to match your hotel's branding",
-        image: "/images/default-placeholder.jpg"
+        name: "Custom Metal Buttons and Hardware", 
+        description: "Branded metal buttons and accents - SAR 85 per uniform set",
+        image: "/images/hospitality/hospitality_uniform_buttons.jpg"
       },
       { 
-        name: "Button Style Options", 
-        description: "Select from gold, silver, or covered button options",
-        image: "/images/default-placeholder.jpg"
+        name: "Specialty Fabric Upgrades", 
+        description: "Ultra-premium fabric options including performance wool blends - SAR 120 per uniform",
+        image: "/images/hospitality/hospitality_uniform_fabric.jpg"
       },
       { 
-        name: "Name Tag Integration", 
-        description: "Options for integrating elegant name tags or badges",
-        image: "/images/default-placeholder.jpg"
+        name: "Department-Specific Design Elements", 
+        description: "Customized design elements for different hotel departments - SAR 45 per uniform",
+        image: "/images/hospitality/hospitality_uniform_department.jpg"
       }
     ],
     relatedProducts: [
       {
-        id: "concierge-uniform",
-        name: "Luxury Concierge Uniform",
-        image: "/images/product-placeholder.jpg",
-        price: "SAR 499",
-        href: "/shop/hospitality-attire/concierge-uniform"
+        id: 'executive-hospitality-suit',
+        name: 'Executive Hospitality Suit',
+        image: '/images/hospitality/hospitality_uniform_formal.jpg',
+        price: 'From SAR 499',
+        href: '/shop/hospitality-attire/executive-hospitality-suit'
       },
       {
-        id: "bellhop-uniform",
-        name: "Premium Bellhop Uniform",
-        image: "/images/product-placeholder.jpg",
-        price: "SAR 399",
-        href: "/shop/hospitality-attire/bellhop-uniform"
+        id: 'premium-chef-uniform',
+        name: 'Premium Chef Uniform Collection',
+        image: '/images/hospitality/hospitality_uniform_chef.jpg',
+        price: 'From SAR 289',
+        href: '/shop/hospitality-attire/premium-chef-uniform'
       },
       {
-        id: "hotel-management-suit",
-        name: "Hotel Management Suit",
-        image: "/images/product-placeholder.jpg",
-        price: "SAR 649",
-        href: "/shop/hospitality-attire/hotel-management-suit"
+        id: 'concierge-uniform-set',
+        name: 'Luxury Concierge Uniform Set',
+        image: '/images/hospitality/hospitality_uniform_concierge.jpg',
+        price: 'From SAR 399',
+        href: '/shop/hospitality-attire/concierge-uniform-set'
       }
     ],
-    detailedDescription: `<p>Elevate your hotel's image with our meticulously designed Luxury Hotel Staff Uniform. Crafted specifically for Saudi Arabia's growing luxury hospitality sector, this uniform represents the perfect balance of international standards and local sensibilities.</p>
-    
-    <p>The design focuses on creating a memorable first impression for guests while ensuring staff comfort during long shifts. The premium fabric blend incorporates a touch of stretch, allowing for freedom of movement while maintaining a structured, professional silhouette that distinguishes luxury establishments.</p>
-    
-    <p>Each uniform can be customized with your hotel's branding elements, from subtle logo embroidery to custom accent colors that match your interior design scheme. The tailoring includes thoughtful details like reinforced seams in high-stress areas and hidden pockets for practical functionality without compromising the elegant appearance.</p>
-    
-    <p>Our luxury hotel uniforms are designed with the Saudi Arabian hospitality industry in mind, offering appropriate options for all staff members while maintaining a consistent brand identity throughout your establishment. The material is selected to perform well in climate-controlled environments while being comfortable in the Kingdom's warm climate.</p>`
+    bulkPricing: [
+      { quantity: '10-49', pricePerUnit: 'SAR 349' },
+      { quantity: '50-99', pricePerUnit: 'SAR 329' },
+      { quantity: '100-499', pricePerUnit: 'SAR 299' },
+      { quantity: '500+', pricePerUnit: 'SAR 279' }
+    ]
   };
-
-  // Color swatch component
-  // @ts-ignore - Temporarily suppress type errors
-  const ColorSwatch = ({ color, selected, onClick }) => (
-    <button
-      onClick={onClick}
-      className={`w-10 h-10 rounded-full flex items-center justify-center ${selected ? 'ring-2 ring-offset-2 ring-primary-500' : ''}`}
-      title={color.name}
-    >
-      <span className="sr-only">{color.name}</span>
-      <span
-        className="w-8 h-8 rounded-full border border-neutral-200"
-        style={{ backgroundColor: color.value }}
-      />
-    </button>
-  );
-
-  // Size selector component
-  // @ts-ignore - Temporarily suppress type errors
-  const SizeSelector = ({ sizes, selectedSize, onChange }) => (
-    <div className="grid grid-cols-7 gap-2">
-      {/* @ts-expect-error - Suppressing type check for size parameter */}
-      {sizes.map((size) => (
-        <button
-          key={size}
-          onClick={() => onChange(size)}
-          className={`py-2 border rounded-md ${
-            selectedSize === size 
-              ? 'bg-primary-50 border-primary-500 text-primary-700'
-              : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
-          }`}
-        >
-          {size}
-        </button>
-      ))}
-    </div>
-  );
-
-  // Features grid component
-  // @ts-ignore - Temporarily suppress type errors
-  const FeaturesGrid = ({ features, columns = 3 }) => (
-    <div className={`grid grid-cols-1 md:grid-cols-${columns} gap-8`}>
-      {/* @ts-expect-error - Suppressing type check for feature and index parameters */}
-      {features.map((feature, index) => (
-        <div key={index} className="flex flex-col items-center text-center">
-          <div className="w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center mb-4">
-            {/* Icon would go here - using placeholder */}
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <h3 className="text-lg font-semibold text-neutral-900 mb-2">{feature.title}</h3>
-          <p className="text-neutral-600">{feature.description}</p>
-        </div>
-      ))}
-    </div>
-  );
-
-  // Related products component
-  // @ts-ignore - Temporarily suppress type errors
-  const RelatedProducts = ({ products }) => (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {/* @ts-expect-error - Suppressing type check for product parameter */}
-      {products.map((product) => (
-        <Link
-          key={product.id}
-          href={product.href}
-          className="group"
-        >
-          <div className="aspect-[4/3] rounded-lg overflow-hidden bg-neutral-100 mb-4">
-            <div className="relative w-full h-full">
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-            </div>
-          </div>
-          <h3 className="font-medium text-neutral-900 group-hover:text-primary-600 transition-colors">
-            {product.name}
-          </h3>
-          <p className="mt-1 text-sm text-neutral-500">{product.price}</p>
-        </Link>
-      ))}
-    </div>
-  );
-
-  // Order requirements component
-  // @ts-ignore - Temporarily suppress type errors
-  const OrderRequirements = ({ minOrder, className = "" }) => (
-    <div className={`bg-neutral-50 rounded-2xl p-8 ${className}`}>
-      <SectionHeading as="h2" className="mb-6">
-        Ordering Information
-      </SectionHeading>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="flex flex-col items-center text-center">
-          <div className="w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center mb-4">
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-            </svg>
-          </div>
-          <h3 className="text-lg font-semibold text-neutral-900 mb-2">Minimum Order</h3>
-          <p className="text-neutral-600">{minOrder} units per style and color</p>
-        </div>
-        <div className="flex flex-col items-center text-center">
-          <div className="w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center mb-4">
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h3 className="text-lg font-semibold text-neutral-900 mb-2">Production Timeline</h3>
-          <p className="text-neutral-600">3-4 weeks for standard orders<br />2-3 weeks for rush orders</p>
-        </div>
-        <div className="flex flex-col items-center text-center">
-          <div className="w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center mb-4">
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-            </svg>
-          </div>
-          <h3 className="text-lg font-semibold text-neutral-900 mb-2">Payment Terms</h3>
-          <p className="text-neutral-600">50% deposit upon order confirmation<br />50% before shipment</p>
-        </div>
-      </div>
-      <div className="mt-8 text-center">
-        <Button variant="primary">
-          Request a Quote
-        </Button>
-      </div>
-    </div>
-  );
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  
+  // Extract size names for the SizeSelector component
+  const sizeNames = product.sizes.map(size => size.name);
+  
+  // Customer reviews
+  const reviews = [
+    {
+      id: 1,
+      rating: 5,
+      content: "These uniforms have transformed our hotel's image completely. The quality is exceptional, and the subtle Saudi-inspired details have been appreciated by both our local and international guests. Worth every riyal invested.",
+      author: "Fahad Al-Otaibi, Operations Director at Royal Riyadh Palace Hotel",
+      date: "March 15, 2024"
+    },
+    {
+      id: 2,
+      rating: 5,
+      content: "After switching to these premium uniforms, our staff comfort and morale has significantly improved. The breathable fabric works wonderfully in Jeddah's humid climate, and they maintain their pristine appearance even after multiple laundry cycles.",
+      author: "Lina Al-Ghamdi, Human Resources Manager at Red Sea Luxury Resort",
+      date: "February 23, 2024"
+    },
+    {
+      id: 3,
+      rating: 4,
+      content: "Exceptional quality and distinctive design that perfectly represents our luxury brand. The only improvement would be more size variations for our international staff. Otherwise, these uniforms exceed our expectations in every aspect.",
+      author: "Abdullah Al-Saud, General Manager at Al Khobar Grand Hotel",
+      date: "January 17, 2024"
+    },
+    {
+      id: 4,
+      rating: 5,
+      content: "The durability of these uniforms is remarkable. Even with daily wear and regular washing, they maintain their color and shape perfectly. Our front desk staff receives compliments daily on their professional appearance.",
+      author: "Noura Al-Qahtani, Front Office Manager at Riyadh Royal Suites",
+      date: "December 8, 2023"
+    }
+  ];
+  
+  // Handle quantity change
+  const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseInt(e.target.value);
+    if (!isNaN(value) && value >= 1) {
+      setQuantity(value);
     }
   };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
+  
+  // Handle add to quote
+  const handleAddToQuote = () => {
+    console.log('Added to quote:', {
+      product: product.id,
+      color: selectedColor,
+      size: selectedSize,
+      quantity
+    });
+    
+    alert('Product added to your quote request. Our team will contact you shortly.');
+  };
+  
+  // Generate pricing display based on quantity
+  const getPriceDisplay = () => {
+    if (quantity >= 500) {
+      return 'SAR ' + ((349 * 0.8) * quantity).toLocaleString();
+    } else if (quantity >= 100) {
+      return 'SAR ' + ((349 * 0.86) * quantity).toLocaleString();
+    } else if (quantity >= 50) {
+      return 'SAR ' + ((349 * 0.94) * quantity).toLocaleString();
+    } else {
+      return 'SAR ' + (349 * quantity).toLocaleString();
     }
   };
-
+  
   return (
     <MainLayout locale={locale}>
-      <div className="bg-neutral-50 py-4">
+      {/* Breadcrumb */}
+      <div className="bg-gray-100 py-4">
         <Container>
-          <div className="flex items-center text-sm text-neutral-600">
-            <Link href="/shop" className="hover:text-primary-600 transition-colors">
-              Shop
-            </Link>
-            <span className="mx-2">•</span>
-            <Link href="/shop/hospitality-attire" className="hover:text-primary-600 transition-colors">
-              Hospitality Attire
-            </Link>
-            <span className="mx-2">•</span>
-            <span className="text-primary-700 font-medium">Luxury Hotel Staff Uniform</span>
-          </div>
+          <nav className="flex" aria-label="Breadcrumb">
+            <ol className="inline-flex items-center space-x-1 md:space-x-3">
+              <li className="inline-flex items-center">
+                <Link href="/" className="text-sm text-gray-700 hover:text-primary-600">Home</Link>
+              </li>
+              <li>
+                <div className="flex items-center">
+                  <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                  </svg>
+                  <Link href="/shop" className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">Shop</Link>
+                </div>
+              </li>
+              <li>
+                <div className="flex items-center">
+                  <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                  </svg>
+                  <Link href="/shop/hospitality-attire" className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">
+                    Hospitality Attire
+                  </Link>
+                </div>
+              </li>
+              <li aria-current="page">
+                <div className="flex items-center">
+                  <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                  </svg>
+                  <span className="text-sm text-gray-500 ml-1 md:ml-2">{product.name}</span>
+                </div>
+              </li>
+            </ol>
+          </nav>
         </Container>
       </div>
-
-      <Container className="py-12">
-        <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {/* Product Image Gallery */}
-          <motion.div variants={itemVariants} className="space-y-4">
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-white border border-neutral-200">
-              <Image
-                src={product.mainImage}
-                alt={product.name}
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority
-              />
-            </div>
-            <div className="grid grid-cols-3 gap-4">
-              {product.additionalImages.map((image, index) => (
-                <div key={index} className="relative aspect-square rounded-lg overflow-hidden bg-white border border-neutral-200 cursor-pointer hover:border-primary-300 transition-colors">
-                  <Image
-                    src={image}
-                    alt={`${product.name} view ${index + 1}`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 30vw, 15vw"
-                  />
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Product Information */}
-          <motion.div variants={itemVariants} className="space-y-8">
+      
+      {/* Product Details Section */}
+      <section className="py-12">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Product Images */}
             <div>
-              <div className="text-sm text-primary-700 font-medium mb-2">
-                {product.categoryName}
+              <div className="relative aspect-square rounded-lg overflow-hidden bg-neutral-100 mb-4">
+                <Image
+                  src={product.images[0].src}
+                  alt={product.images[0].alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-2">
-                {product.name}
-              </h1>
-              <p className="text-xl text-neutral-700">
-                {product.tagline}
-              </p>
+              <div className="grid grid-cols-4 gap-2">
+                {product.images.map((image, index) => (
+                  <button
+                    key={index}
+                    className="relative aspect-square rounded-md overflow-hidden bg-neutral-100"
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 25vw, 12vw"
+                    />
+                  </button>
+                ))}
+              </div>
             </div>
-
-            <p className="text-lg text-neutral-800">
-              {product.shortDescription}
-            </p>
-
-            <div className="pt-4 border-t border-neutral-200">
-              <div className="flex justify-between items-end mb-6">
-                <div>
-                  <div className="text-sm text-neutral-600 mb-1">Starting Price</div>
-                  <div className="text-2xl font-bold text-neutral-900">{product.price}</div>
-                </div>
-                <div className="text-sm text-neutral-600">
-                  Min. Order: <span className="font-medium">{product.minOrder} units</span>
-                </div>
-              </div>
-
-              {/* Color Selection */}
-              <div className="mb-6">
-                <div className="text-sm font-medium text-neutral-900 mb-3">Color: {selectedColor}</div>
-                <div className="flex flex-wrap gap-2">
-                  {product.colors.map(color => (
-                    <ColorSwatch
-                      key={color.name}
-                      color={color}
-                      selected={selectedColor === color.name}
-                      onClick={() => setSelectedColor(color.name)}
+            
+            {/* Product Information */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-3xl font-bold text-neutral-900 mb-2">{product.name}</h1>
+              
+              <div className="flex items-center mb-4">
+                <div className="flex items-center">
+                  {[0, 1, 2, 3, 4].map((rating) => (
+                    <StarIcon
+                      key={rating}
+                      className={`h-5 w-5 ${
+                        product.rating > rating ? 'text-yellow-400' : 'text-neutral-300'
+                      }`}
+                      aria-hidden="true"
                     />
                   ))}
                 </div>
+                <span className="ml-2 text-sm text-neutral-600">{product.reviewCount} reviews</span>
               </div>
-
+              
+              <p className="text-2xl font-bold text-neutral-900 mb-4">{product.price}</p>
+              
+              <div className="mt-4 mb-6">
+                <div dangerouslySetInnerHTML={{ __html: product.description }} className="text-neutral-600 space-y-3" />
+              </div>
+              
+              {/* Color Selection */}
+              <div className="mb-6">
+                <h2 className="text-sm font-medium text-neutral-900 mb-2">Color</h2>
+                <ColorSwatches
+                  colors={product.colors}
+                  selectedColor={selectedColor}
+                  onChange={setSelectedColor}
+                />
+              </div>
+              
               {/* Size Selection */}
               <div className="mb-6">
-                <div className="flex justify-between items-center mb-3">
-                  <div className="text-sm font-medium text-neutral-900">Size: {selectedSize}</div>
-                  <button className="text-sm text-primary-600 hover:text-primary-700">Size Guide</button>
-                </div>
+                <h2 className="text-sm font-medium text-neutral-900 mb-2">Size</h2>
                 <SizeSelector
-                  sizes={product.sizes}
+                  sizes={sizeNames}
                   selectedSize={selectedSize}
                   onChange={setSelectedSize}
                 />
               </div>
-
+              
+              {/* Quantity Selection */}
+              <div className="mb-6">
+                <h2 className="text-sm font-medium text-neutral-900 mb-2">Quantity (Minimum: {product.minOrder})</h2>
+                <div className="flex items-center">
+                  <button
+                    type="button"
+                    onClick={() => setQuantity(Math.max(product.minOrder, quantity - 1))}
+                    className="p-2 border border-neutral-300 rounded-l-md"
+                  >
+                    <svg className="h-4 w-4 text-neutral-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
+                    </svg>
+                  </button>
+                  <input
+                    type="number"
+                    value={quantity}
+                    onChange={handleQuantityChange}
+                    min={product.minOrder}
+                    className="p-2 w-16 text-center border-t border-b border-neutral-300"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setQuantity(quantity + 1)}
+                    className="p-2 border border-neutral-300 rounded-r-md"
+                  >
+                    <svg className="h-4 w-4 text-neutral-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              
+              {/* Total Price */}
+              <div className="mb-6">
+                <h2 className="text-sm font-medium text-neutral-900 mb-2">Total Price</h2>
+                <p className="text-xl font-bold text-neutral-900">{getPriceDisplay()}</p>
+                <p className="text-sm text-neutral-500">Includes bulk discount if applicable</p>
+              </div>
+              
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <div className="flex flex-col space-y-3 mb-6">
                 <Button
-                  variant="primary"
-                  className="flex-1"
+                  onClick={handleAddToQuote}
+                  className="w-full py-3 px-4 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-md"
                 >
                   Add to Quote
                 </Button>
+                
                 <Button
-                  variant="secondary"
-                  className="flex-1"
                   onClick={() => setShowRequestForm(true)}
+                  className="w-full py-3 px-4 bg-white border border-neutral-300 hover:bg-neutral-50 text-neutral-900 font-medium rounded-md"
                 >
-                  Request Information
+                  Request More Information
                 </Button>
               </div>
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* Product Details Tabs */}
-        <div className="mt-16 border-t border-neutral-200 pt-8">
-          <div className="flex space-x-8 border-b border-neutral-200">
-            <button
-              onClick={() => setActiveTab('description')}
-              className={`pb-4 font-medium text-sm ${
-                activeTab === 'description'
-                  ? 'text-primary-600 border-b-2 border-primary-600'
-                  : 'text-neutral-600 hover:text-neutral-900'
-              }`}
-            >
-              Description
-            </button>
-            <button
-              onClick={() => setActiveTab('specifications')}
-              className={`pb-4 font-medium text-sm ${
-                activeTab === 'specifications'
-                  ? 'text-primary-600 border-b-2 border-primary-600'
-                  : 'text-neutral-600 hover:text-neutral-900'
-              }`}
-            >
-              Specifications
-            </button>
-            <button
-              onClick={() => setActiveTab('customization')}
-              className={`pb-4 font-medium text-sm ${
-                activeTab === 'customization'
-                  ? 'text-primary-600 border-b-2 border-primary-600'
-                  : 'text-neutral-600 hover:text-neutral-900'
-              }`}
-            >
-              Customization Options
-            </button>
+              
+              <div className="text-sm text-neutral-500">
+                <p>Minimum Order: {product.minOrder} units</p>
+                <p>Estimated Lead Time: 3-4 weeks</p>
+              </div>
+            </motion.div>
           </div>
-
-          <div className="py-8">
-            {activeTab === 'description' && (
-              <div className="prose max-w-none">
-                <div dangerouslySetInnerHTML={{ __html: product.detailedDescription }} />
+          
+          {/* Tab Navigation */}
+          <div className="mt-16">
+            <TabNavigation
+              tabs={[
+                { id: 'description', label: 'Description' },
+                { id: 'features', label: 'Features' },
+                { id: 'specifications', label: 'Specifications' },
+                { id: 'customization', label: 'Customization' },
+                { id: 'reviews', label: 'Reviews' }
+              ]}
+              activeTab={activeTab}
+              onChange={setActiveTab}
+            />
+            
+            <div className="mt-8 bg-white p-6 rounded-lg border border-neutral-200">
+              {/* Description Tab */}
+              <div className={`${activeTab === 'description' ? 'block' : 'hidden'}`}>
+                <h3 className="text-lg font-semibold text-neutral-900 mb-4">Product Description</h3>
+                <div dangerouslySetInnerHTML={{ __html: product.description }} className="text-neutral-600 space-y-4" />
+                
+                <div className="mt-8">
+                  <h4 className="text-md font-semibold text-neutral-900 mb-3">Designed for Saudi Arabia's Luxury Hospitality Sector</h4>
+                  <p className="text-neutral-600 mb-4">Our Premium Luxury Hotel Staff Uniforms are specifically designed for the unique requirements of Saudi Arabia's growing luxury hospitality industry. With the Kingdom's Vision 2030 initiatives driving tourism and hospitality development, these uniforms perfectly align with the high standards expected in world-class establishments.</p>
+                  
+                  <h4 className="text-md font-semibold text-neutral-900 mb-3">Department-Specific Designs</h4>
+                  <p className="text-neutral-600 mb-4">Our comprehensive collection includes specialized uniform designs for every hotel department:</p>
+                  <ul className="list-disc pl-5 text-neutral-600 mb-4 space-y-2">
+                    <li><span className="font-medium">Front Desk & Reception:</span> Sophisticated blazers and tailored suits that create a striking first impression</li>
+                    <li><span className="font-medium">Concierge & Bell Staff:</span> Distinguished uniforms with premium detailing that embody hospitality excellence</li>
+                    <li><span className="font-medium">Housekeeping:</span> Professional yet practical designs that balance formality with functionality</li>
+                    <li><span className="font-medium">Food & Beverage Service:</span> Elegant server attire that enhances the dining experience</li>
+                    <li><span className="font-medium">Management:</span> Executive-level uniforms that convey authority and brand representation</li>
+                  </ul>
+                  
+                  <h4 className="text-md font-semibold text-neutral-900 mb-3">Premium Brand Representation</h4>
+                  <p className="text-neutral-600">Your staff uniforms are a walking representation of your hotel's brand values. Our designs can be customized to incorporate your brand colors, logo, and unique stylistic elements, creating a cohesive visual identity that reinforces your establishment's positioning in the luxury market.</p>
+                </div>
               </div>
-            )}
-
-            {activeTab === 'specifications' && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {product.specifications.map((spec, index) => (
-                  <div key={index} className="flex">
-                    <div className="w-1/3 font-medium text-neutral-900">{spec.name}</div>
-                    <div className="w-2/3 text-neutral-700">{spec.value}</div>
+              
+              {/* Features Tab */}
+              <div className={`${activeTab === 'features' ? 'block' : 'hidden'}`}>
+                <h3 className="text-lg font-semibold text-neutral-900 mb-4">Key Features</h3>
+                <FeaturesGrid features={product.features} columns={2} />
+                
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="bg-neutral-50 p-6 rounded-lg">
+                    <h4 className="text-md font-semibold text-neutral-900 mb-3">Comfort in Saudi Climate</h4>
+                    <p className="text-neutral-600">Our uniforms are engineered with advanced moisture-wicking technology and breathable construction specifically for Saudi Arabia's climate conditions. Staff members remain comfortable during long shifts in both air-conditioned environments and outdoor settings.</p>
                   </div>
-                ))}
+                  
+                  <div className="bg-neutral-50 p-6 rounded-lg">
+                    <h4 className="text-md font-semibold text-neutral-900 mb-3">Cultural Considerations</h4>
+                    <p className="text-neutral-600">Our designs thoughtfully incorporate elements that respect Saudi cultural sensibilities while maintaining international luxury standards. Options include appropriate coverage, modest yet modern silhouettes, and design elements inspired by traditional Saudi motifs.</p>
+                  </div>
+                </div>
               </div>
-            )}
-
-            {activeTab === 'customization' && (
-              <div className="space-y-6">
-                <p className="text-neutral-700">
-                  Enhance your hotel staff uniforms with these customization options to perfectly match your establishment's branding and aesthetic:
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {product.customizationOptions.map((option, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-neutral-100">
-                        {option.image && (
-                          <Image
-                            src={option.image}
-                            alt={option.name}
-                            width={80}
-                            height={80}
-                            className="object-cover w-full h-full"
-                          />
-                        )}
+              
+              {/* Specifications Tab */}
+              <div className={`${activeTab === 'specifications' ? 'block' : 'hidden'}`}>
+                <h3 className="text-lg font-semibold text-neutral-900 mb-4">Technical Specifications</h3>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full divide-y divide-neutral-200">
+                    <tbody className="divide-y divide-neutral-200">
+                      {product.specifications.map((spec, index) => (
+                        <tr key={index}>
+                          <td className="py-4 text-sm font-medium text-neutral-900 w-1/3">{spec.name}</td>
+                          <td className="py-4 text-sm text-neutral-600">{spec.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                
+                <div className="mt-8">
+                  <h4 className="text-md font-semibold text-neutral-900 mb-3">Bulk Pricing Information</h4>
+                  <div className="overflow-x-auto">
+                    <table className="min-w-full divide-y divide-neutral-200">
+                      <thead className="bg-neutral-50">
+                        <tr>
+                          <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">Quantity Range</th>
+                          <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">Price Per Unit</th>
+                          <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">Savings</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-neutral-200">
+                        {product.bulkPricing.map((tier, index) => (
+                          <tr key={index} className={quantity >= parseInt(tier.quantity.split('-')[0]) && (tier.quantity.includes('+') || quantity <= parseInt(tier.quantity.split('-')[1])) ? 'bg-primary-50' : ''}>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-neutral-900">{tier.quantity}</td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-neutral-700">{tier.pricePerUnit}</td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-neutral-700">
+                              {index === 0 ? 'Base Price' : `Save ${index * 5 + 5}%`}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Customization Tab */}
+              <div className={`${activeTab === 'customization' ? 'block' : 'hidden'}`}>
+                <h3 className="text-lg font-semibold text-neutral-900 mb-4">Available Customization Options</h3>
+                <p className="text-neutral-600 mb-6">Enhance your hotel uniforms with these premium customization options:</p>
+                
+                <CustomizationOptions options={product.customizationOptions} />
+                
+                <div className="mt-8 bg-primary-50 p-6 rounded-lg">
+                  <h4 className="text-md font-semibold text-neutral-900 mb-3">Custom Brand Integration</h4>
+                  <p className="text-neutral-600">Our design team can work directly with your brand management to create completely custom uniform solutions that perfectly align with your hotel's visual identity and brand guidelines. Contact us for a personalized consultation.</p>
+                </div>
+              </div>
+              
+              {/* Reviews Tab */}
+              <div className={`${activeTab === 'reviews' ? 'block' : 'hidden'}`}>
+                <h3 className="text-lg font-semibold text-neutral-900 mb-4">Customer Reviews</h3>
+                
+                <div className="space-y-6">
+                  {reviews.map((review) => (
+                    <div key={review.id} className="border-b border-neutral-200 pb-6 last:border-b-0">
+                      <div className="flex items-center mb-2">
+                        <div className="flex items-center">
+                          {[0, 1, 2, 3, 4].map((rating) => (
+                            <StarIcon
+                              key={rating}
+                              className={`h-5 w-5 ${
+                                review.rating > rating ? 'text-yellow-400' : 'text-neutral-300'
+                              }`}
+                              aria-hidden="true"
+                            />
+                          ))}
+                        </div>
+                        <span className="ml-2 text-sm text-neutral-600">{review.rating}/5</span>
                       </div>
-                      <div>
-                        <h4 className="font-medium text-neutral-900">{option.name}</h4>
-                        <p className="text-sm text-neutral-600 mt-1">{option.description}</p>
+                      <p className="text-neutral-700 mb-2">"{review.content}"</p>
+                      <div className="flex justify-between items-center text-sm text-neutral-500">
+                        <span className="font-medium">{review.author}</span>
+                        <span>{review.date}</span>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
-            )}
+            </div>
           </div>
-        </div>
-
-        {/* Product Features */}
-        <div className="mt-16 bg-neutral-50 rounded-2xl p-8">
-          <SectionHeading as="h2" className="text-center mb-12">
-            Key Features &amp; Benefits
-          </SectionHeading>
-          <FeaturesGrid features={product.features.map(feature => ({
-            title: feature.title,
-            description: feature.description
-          }))} columns={3} />
-        </div>
-
-        {/* Order Requirements */}
-        <OrderRequirements minOrder={product.minOrder} className="mt-16" />
-
-        {/* Related Products */}
-        <div className="mt-16">
-          <SectionHeading as="h2" className="mb-8">
-            Related Products
-          </SectionHeading>
-          <RelatedProducts products={product.relatedProducts.map(product => ({
-            id: product.id,
-            name: product.name,
-            href: product.href,
-            image: product.image,
-            price: product.price
-          }))} />
-        </div>
-      </Container>
-
-      {/* Request Information Form Modal */}
+          
+          {/* Related Products */}
+          <div className="mt-16">
+            <SectionHeading className="mb-8">Related Products</SectionHeading>
+            <RelatedProducts products={product.relatedProducts} />
+          </div>
+        </Container>
+      </section>
+      
+      {/* Request Info Form Modal */}
       {showRequestForm && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto">
-            <div className="p-6">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-xl font-bold">Request Information</h3>
-                <button
-                  onClick={() => setShowRequestForm(false)}
-                  className="text-neutral-500 hover:text-neutral-700"
-                >
-                  <span className="sr-only">Close</span>
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              <div className="space-y-4">
-                <p className="text-neutral-700">
-                  Please fill out the form below to request more information about this product. Our team will get back to you shortly.
-                </p>
-                <form className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-neutral-700">Company Name</label>
-                    <input type="text" className="mt-1 block w-full rounded-md border-neutral-300 shadow-sm focus:border-primary-500 focus:ring-primary-500" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-neutral-700">Contact Person</label>
-                    <input type="text" className="mt-1 block w-full rounded-md border-neutral-300 shadow-sm focus:border-primary-500 focus:ring-primary-500" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-neutral-700">Email</label>
-                    <input type="email" className="mt-1 block w-full rounded-md border-neutral-300 shadow-sm focus:border-primary-500 focus:ring-primary-500" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-neutral-700">Phone</label>
-                    <input type="tel" className="mt-1 block w-full rounded-md border-neutral-300 shadow-sm focus:border-primary-500 focus:ring-primary-500" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-neutral-700">Estimated Quantity</label>
-                    <input type="number" className="mt-1 block w-full rounded-md border-neutral-300 shadow-sm focus:border-primary-500 focus:ring-primary-500" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-neutral-700">Additional Information</label>
-                    <textarea rows={4} className="mt-1 block w-full rounded-md border-neutral-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"></textarea>
-                  </div>
-                  <div className="flex justify-end">
-                    <Button variant="primary">
-                      Submit Request
-                    </Button>
-                  </div>
-                </form>
+        <div className="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="request-form-title" role="dialog" aria-modal="true">
+          <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center">
+            <div className="fixed inset-0 bg-neutral-900 bg-opacity-75 transition-opacity" aria-hidden="true" onClick={() => setShowRequestForm(false)}></div>
+            <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-lg leading-6 font-medium text-neutral-900" id="request-form-title">
+                    Request Information about {product.name}
+                  </h3>
+                  <button
+                    type="button"
+                    className="bg-white rounded-md text-neutral-400 hover:text-neutral-500"
+                    onClick={() => setShowRequestForm(false)}
+                  >
+                    <span className="sr-only">Close</span>
+                    <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div className="mt-4">
+                  <RequestInfoForm
+                    productId={product.id}
+                    productName={product.name}
+                    onSuccess={() => setShowRequestForm(false)}
+                  />
+                </div>
               </div>
             </div>
           </div>

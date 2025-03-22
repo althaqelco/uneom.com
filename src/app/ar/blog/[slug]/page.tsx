@@ -19,6 +19,13 @@ export async function generateStaticParams() {
     { slug: 'security-uniform-standards' },
     { slug: 'uniform-customization' },
     { slug: 'medical-scrubs-evolution' },
+    // Add additional slugs to match the English version
+    { slug: 'corporate-uniform-employee-satisfaction' },
+    { slug: 'industrial-protective-clothing-advances' },
+    { slug: 'sustainable-uniforms-2024-trends' },
+    { slug: 'vision-2030-reshaping-dress-codes' },
+    { slug: 'sustainable-uniform-solutions' },
+    { slug: 'advanced-fabrics-healthcare-uniforms' },
   ];
 }
 

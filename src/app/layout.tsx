@@ -6,6 +6,7 @@ import LinkPreloader from '@/components/LinkPreloader';
 import LocaleProvider from '@/components/providers/LocaleProvider';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
+import FloatingIcons from '@/components/FloatingIcons';
 
 // Importar ImageResolver dinámicamente para evitar errores de SSR
 const ImageResolver = dynamic(() => import('@/components/ImageResolver'), { 
@@ -118,6 +119,9 @@ export default function RootLayout({
           </QuoteProvider>
           <LinkPreloader />
         </LocaleProvider>
+        
+        {/* Floating WhatsApp and Video icons */}
+        <FloatingIcons />
         
         {/* Script para asignar URLs base a las imágenes */}
         <Script id="image-base-url-helper" strategy="afterInteractive">
@@ -243,16 +247,30 @@ export default function RootLayout({
         {/* Statcounter Analytics */}
         <Script id="statcounter-setup" strategy="afterInteractive">
           {`
-            var sc_project=13105039; 
-            var sc_invisible=1; 
-            var sc_security="f68332e2";
+            try {
+              var sc_project=13105039; 
+              var sc_invisible=1; 
+              var sc_security="f68332e2";
+              
+              // Load counter script only if not blocked
+              // Create a test image to check if requests to statcounter domain are blocked
+              var testImg = new Image();
+              testImg.onerror = function() {
+                console.log('StatCounter might be blocked by browser extensions.');
+              };
+              testImg.onload = function() {
+                // Only load the script if the test image loads successfully
+                var sc = document.createElement('script');
+                sc.src = "https://www.statcounter.com/counter/counter.js";
+                sc.async = true;
+                document.body.appendChild(sc);
+              };
+              testImg.src = "https://c.statcounter.com/ping.gif";
+            } catch (e) {
+              console.log('Error setting up StatCounter:', e);
+            }
           `}
         </Script>
-        <Script 
-          id="statcounter-tracker"
-          src="https://www.statcounter.com/counter/counter.js"
-          strategy="afterInteractive"
-        />
         <noscript>
           <div className="statcounter">
             <a 
