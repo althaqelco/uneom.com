@@ -5,7 +5,6 @@ import { Metadata } from 'next';
 import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
-import { BreadcrumbJsonLd, ArticleJsonLd } from 'next-seo';
 
 export const metadata: Metadata = {
   title: 'Sustainable Uniforms: 2024 Trends in Saudi Arabia | UNEOM',
@@ -31,41 +30,6 @@ export default function SustainableUniformTrendsPost() {
   
   return (
     <MainLayout>
-      <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: 'Home',
-            item: 'https://uneom.com/',
-          },
-          {
-            position: 2,
-            name: 'Blog',
-            item: 'https://uneom.com/blog',
-          },
-          {
-            position: 3,
-            name: 'Sustainable Uniforms: 2024 Trends',
-            item: 'https://uneom.com/blog/sustainable-uniforms-2024-trends',
-          },
-        ]}
-      />
-      
-      <ArticleJsonLd
-        type="BlogPosting"
-        url="https://uneom.com/blog/sustainable-uniforms-2024-trends"
-        title="Sustainable Uniforms: 2024 Trends in Saudi Arabia"
-        images={[
-          'https://uneom.com/images/blog/sustainable-uniforms.jpg',
-        ]}
-        datePublished={publishDate}
-        dateModified={modifiedDate}
-        authorName="Sara Al-Harbi"
-        publisherName="UNEOM"
-        publisherLogo="https://uneom.com/images/logo.png"
-        description="Discover the latest sustainable uniform trends for 2024 in Saudi Arabia, including eco-friendly fabrics, recycled materials, and energy-efficient manufacturing processes."
-      />
-      
       <Container>
         <div className="py-10">
           <div className="mb-8">

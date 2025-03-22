@@ -8,11 +8,11 @@ import SectionHeading from '@/components/ui/SectionHeading';
 
 export const metadata: Metadata = {
   title: 'Industrial Protective Clothing Advances in Saudi Arabia | UNEOM',
-  description: 'Explore the latest innovations in industrial protective clothing designed for Saudi Arabia's extreme environments, from oil fields to construction sites, with enhanced safety and comfort features.',
+  description: 'Explore the latest innovations in industrial protective clothing designed for Saudi Arabia\'s extreme environments, from oil fields to construction sites, with enhanced safety and comfort features.',
   keywords: 'industrial protective clothing, Saudi Arabia workwear, safety uniforms, protective gear, industrial safety, oil field uniforms, construction uniforms, flame resistant clothing, heat protection',
   openGraph: {
     title: 'Industrial Protective Clothing Advances in Saudi Arabia | UNEOM',
-    description: 'Explore the latest innovations in industrial protective clothing designed for Saudi Arabia's extreme environments, from oil fields to construction sites, with enhanced safety and comfort features.',
+    description: 'Explore the latest innovations in industrial protective clothing designed for Saudi Arabia\'s extreme environments, from oil fields to construction sites, with enhanced safety and comfort features.',
     images: [
       {
         url: 'https://uneom.com/images/blog/industrial-protective.jpg',
