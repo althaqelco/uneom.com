@@ -24,129 +24,6 @@ interface RelatedItem {
   link: string;
 }
 
-// Componente personalizado para mostrar productos - not needed as IndustryPageLayout handles rendering
-const ProductsSection = ({ products, isRtl }: { products: ProductFeature[], isRtl: boolean }) => {
-  return (
-    <section className="py-16 bg-white">
-      <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">{isRtl ? "منتجات اليونيفورم لدينا" : "Our Uniform Products"}</h2>
-          <p className="text-neutral-600 max-w-3xl mx-auto">
-            {isRtl ? "مجموعة متكاملة من يونيفورم الضيافة بمعايير عالمية وتصاميم عصرية" : "Complete collection of hospitality uniforms with international standards and modern designs"}
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
-            <div key={product.id} className="bg-neutral-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
-              <div className="relative h-64 w-full overflow-hidden">
-                <Image 
-                  src={product.image} 
-                  alt={product.name}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-neutral-900 mb-2">
-                  <Link href={product.href} className="hover:text-primary-600 transition-colors duration-300">
-                    {product.name}
-                  </Link>
-                </h3>
-                <p className="text-neutral-600 mb-4 flex-grow">
-                  {product.description}
-                </p>
-                
-                {product.features && product.features.length > 0 && (
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-neutral-700 mb-2">
-                      {isRtl ? "المميزات:" : "Features:"}
-                    </h4>
-                    <ul className="grid grid-cols-2 gap-x-2 gap-y-1">
-                      {product.features.map((feature: string, idx: number) => (
-                        <li key={idx} className="text-sm text-neutral-600 flex items-center">
-                          <span className="text-primary-500 mr-1">•</span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                
-                <Link href={product.href} className="text-primary-600 font-medium hover:text-primary-700 inline-flex items-center">
-                  {isRtl ? 'استكشاف المنتج' : 'Explore Product'}
-                  {isRtl ? (
-                    <svg className="mr-2 h-5 w-5 transform rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  ) : (
-                    <svg className="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  )}
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </section>
-  );
-};
-
-// Componente personalizado para mostrar contenido relacionado - not needed as IndustryPageLayout handles rendering
-const RelatedContentSection = ({ content, isRtl }: { content: RelatedItem[], isRtl: boolean }) => {
-  return (
-    <section className="py-16 bg-neutral-50">
-      <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">{isRtl ? "محتوى ذو صلة" : "Related Content"}</h2>
-          <p className="text-neutral-600 max-w-3xl mx-auto">
-            {isRtl ? "تعرف على المزيد حول يونيفورم الضيافة من خلال مقالاتنا المتخصصة" : "Learn more about hospitality uniforms through our specialized articles"}
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {content.map((item: RelatedItem, index: number) => (
-            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
-              <Link href={item.link} className="block relative">
-                <div className="relative h-48 w-full overflow-hidden">
-                  <Image 
-                    src={item.image} 
-                    alt={item.title}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-lg font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors duration-300">
-                    {item.title}
-                  </h3>
-                  <p className="text-neutral-600 mb-4 text-sm">
-                    {item.description}
-                  </p>
-                  <div className="text-primary-600 font-medium text-sm hover:text-primary-700 transition-colors duration-300 flex items-center">
-                    {isRtl ? "اقرأ المزيد" : "Read More"}
-                    {isRtl ? (
-                      <svg className="mr-1 h-4 w-4 transform rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    ) : (
-                      <svg className="ml-1 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    )}
-                  </div>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </section>
-  );
-};
-
 const Page = () => {
   const isRtl = true;
 
@@ -190,7 +67,7 @@ const Page = () => {
       description: 'يونيفورم احترافي للطهاة وطاقم المطبخ مصمم وفق أعلى معايير السلامة والجودة العالمية. يشمل جاكيت الشيف، بنطلون، غطاء الرأس، والمريول بخامات تتحمل بيئة المطبخ الحارة.',
       image: '/images/hospitality/chef-uniform.jpg',
       href: '/ar/shop/culinary-uniforms/executive-chef-coat',
-      features: ['مقاوم للحرارة', 'قطن 100%', 'سهل التنظيف', 'متوفر بمقاسات متعددة', 'مقاوم للزيوت', 'تصميم مريح للحركة', 'أزرار مزدوجة للأمان']
+      features: ['مقاوم للحرارة', 'قطن 100%', 'سهل التنظيف', 'متوفر بمقاسات متعددة', 'مقاومة للزيوت', 'تصميم مريح للحركة', 'أزرار مزدوجة للأمان']
     },
     {
       id: '6',
@@ -271,247 +148,75 @@ const Page = () => {
       locale="ar"
       skipMainLayout={true}
       industryData={{
-        title: "يونيفورم احترافي للضيافة والفنادق",
-        subtitle: "تشكيلة واسعة من يونيفورم الضيافة بأعلى معايير الجودة تناسب الفنادق والمطاعم والمنتجعات",
+        title: "يونيفورم احترافي للضيافة والفنادق والمطاعم | الزي الموحد الأمثل للقطاع الفندقي",
+        subtitle: "تشكيلة واسعة من يونيفورم الضيافة بأعلى معايير الجودة العالمية تناسب الفنادق والمنتجعات والمطاعم في المملكة العربية السعودية",
         heroImage: "/images/hospitality/hero-bg.jpg",
         introduction: {
-          title: "يونيفورم الضيافة بمعايير عالمية",
+          title: "يونيفورم الضيافة بمعايير عالمية وهوية سعودية أصيلة",
           content: `<div class="prose max-w-none">
-<h2 class="text-2xl font-bold mt-6 mb-4 text-primary-800">يونيفورم الضيافة والفنادق في المملكة العربية السعودية</h2>
+<h2 class="text-2xl font-bold mt-6 mb-4 text-primary-800">يونيفورم الضيافة والفنادق في المملكة العربية السعودية - رؤية مستقبلية</h2>
 
 <div class="flex flex-col md:flex-row gap-6 items-center mb-6">
   <div class="md:w-2/3">
-    <p>نوفر تشكيلة متكاملة من <strong>يونيفورم الضيافة والفنادق</strong> المصممة وفق أعلى المعايير العالمية، وباستخدام أجود أنواع الأقمشة التي تضمن الراحة والمتانة والمظهر الاحترافي. تهدف منتجاتنا إلى الارتقاء بصورة منشآت الضيافة في المملكة من خلال توفير <a href="/ar/shop/hospitality-attire" class="text-primary-600 hover:underline">أزياء موحدة احترافية</a> تعكس مستوى الخدمة الراقية التي تقدمها.</p>
+    <p>تتجه المملكة العربية السعودية نحو مستقبل واعد في <strong>قطاع السياحة والضيافة</strong> مع رؤية 2030، لذلك نوفر تشكيلة متكاملة من <strong>يونيفورم الضيافة والفنادق</strong> المصممة وفق أعلى المعايير العالمية، باستخدام أجود أنواع الأقمشة التي تضمن الراحة والمتانة والمظهر الاحترافي. تهدف منتجاتنا إلى الارتقاء بصورة منشآت الضيافة في المملكة من خلال توفير <a href="/ar/shop/hospitality-attire" class="text-primary-600 hover:underline">أزياء موحدة احترافية</a> تعكس مستوى الخدمة الراقية التي تقدمها وتجمع بين التصاميم العصرية والهوية السعودية الأصيلة.</p>
 
-    <p class="mt-4">تشمل منتجاتنا جميع احتياجات قطاع الضيافة بدءًا من <a href="/ar/shop/hospitality-attire/reception-staff-uniform" class="text-primary-600 hover:underline">يونيفورم الاستقبال والكونسيرج</a>، ومرورًا <a href="/ar/shop/hospitality-attire/housekeeping-uniform" class="text-primary-600 hover:underline">بيونيفورم خدمة الغرف</a> والمطاعم، وصولًا إلى <a href="/ar/shop/culinary-uniforms/executive-chef-coat" class="text-primary-600 hover:underline">يونيفورم المطابخ والشيفات</a>.</p>
+    <p class="mt-4">تشمل منتجاتنا جميع احتياجات قطاع الضيافة بدءًا من <a href="/ar/shop/hospitality-attire/reception-staff-uniform" class="text-primary-600 hover:underline">يونيفورم الاستقبال والكونسيرج</a> الذي يمثل واجهة المنشأة، مرورًا <a href="/ar/shop/hospitality-attire/housekeeping-uniform" class="text-primary-600 hover:underline">بيونيفورم خدمة الغرف المتطور</a> والمطاعم، وصولًا إلى <a href="/ar/shop/culinary-uniforms/executive-chef-coat" class="text-primary-600 hover:underline">يونيفورم المطابخ والشيفات التنفيذيين</a> بأعلى معايير الجودة والسلامة المهنية.</p>
   </div>
   <div class="md:w-1/3 relative rounded-lg overflow-hidden shadow-lg">
-    <img src="/images/hospitality/hospitality_uniform_hotel.jpg" alt="يونيفورم فندقي احترافي" class="w-full h-auto rounded-lg" />
+    <img src="/images/hospitality/hospitality_uniform_hotel.jpg" alt="يونيفورم فندقي احترافي للضيافة الراقية في السعودية" class="w-full h-auto rounded-lg" />
   </div>
 </div>
 
-<h2 class="text-2xl font-bold mt-8 mb-4 text-primary-800">لماذا تعتبر اليونيفورمات ضرورية في قطاع الضيافة؟</h2>
+<h2 class="text-2xl font-bold mt-8 mb-4 text-primary-800">لماذا يعتبر اليونيفورم ضرورة استراتيجية في قطاع الضيافة السعودي؟</h2>
 
-<p>تتميز <strong>يونيفورمات الضيافة</strong> لدينا بالمزج المثالي بين الأناقة والراحة والمتانة، مما يساعد فريق العمل على تقديم خدمة استثنائية مع الحفاظ على المظهر الاحترافي طوال فترة العمل. نحن ندرك أن <strong>اليونيفورم ليس مجرد زي موحد</strong>، بل هو انعكاس لهوية العلامة التجارية وجزء أساسي من تجربة الضيوف في الفنادق والمنتجعات والمطاعم.</p>
+<p>في ظل التطور السريع لقطاع الضيافة في المملكة والمنافسة المتزايدة، تتميز <strong>يونيفورمات الضيافة</strong> لدينا بالمزج المثالي بين الأناقة والراحة والمتانة، مما يساعد فريق العمل على تقديم خدمة استثنائية مع الحفاظ على المظهر الاحترافي طوال فترة العمل. نحن ندرك أن <strong>اليونيفورم ليس مجرد زي موحد</strong>، بل هو عنصر استراتيجي في <a href="/ar/blog/uniform-brand-identity" class="text-primary-600 hover:underline">بناء هوية العلامة التجارية</a> وجزء أساسي من تجربة الضيوف في الفنادق والمنتجعات والمطاعم.</p>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
   <div class="bg-neutral-50 p-4 rounded-lg shadow-sm">
-    <h3 class="text-lg font-semibold text-primary-700 mb-2">تعزيز الهوية البصرية</h3>
-    <p>يساهم <strong>الزي الموحد المميز</strong> في تعزيز هوية العلامة التجارية للفندق أو المطعم، مما يخلق انطباعاً موحداً ومميزاً لدى الضيوف. من خلال تصاميم تتماشى مع ديكور وألوان المنشأة، نساعدك على خلق تجربة بصرية متكاملة للضيوف.</p>
+    <h3 class="text-lg font-semibold text-primary-700 mb-2"><i class="fas fa-star mr-2"></i> تعزيز الهوية البصرية وتميز المنشأة</h3>
+    <p>يساهم <strong>الزي الموحد المميز</strong> في تعزيز هوية العلامة التجارية للفندق أو المطعم، مما يخلق انطباعاً موحداً ومميزاً لدى الضيوف. من خلال تصاميم تتماشى مع ديكور وألوان المنشأة، نساعدك على خلق تجربة بصرية متكاملة للضيوف تزيد من معدلات رضاهم وولائهم لمنشأتك الفندقية.</p>
   </div>
   <div class="bg-neutral-50 p-4 rounded-lg shadow-sm">
-    <h3 class="text-lg font-semibold text-primary-700 mb-2">تحسين تجربة الموظف</h3>
-    <p>توفر <strong>يونيفورمات الضيافة</strong> عالية الجودة تجربة مريحة للموظفين خلال ساعات العمل الطويلة، مما ينعكس إيجاباً على أدائهم ومستوى الخدمة المقدمة. نصمم <a href="/ar/blog/employee-comfort-hospitality-uniforms" class="text-primary-600 hover:underline">أزياء تراعي راحة الموظف</a> وحرية الحركة والمظهر الأنيق.</p>
+    <h3 class="text-lg font-semibold text-primary-700 mb-2"><i class="fas fa-smile mr-2"></i> تحسين تجربة الموظف ورفع الإنتاجية</h3>
+    <p>توفر <strong>يونيفورمات الضيافة</strong> عالية الجودة تجربة مريحة للموظفين خلال ساعات العمل الطويلة، مما ينعكس إيجاباً على أدائهم ومستوى الخدمة المقدمة. نصمم <a href="/ar/blog/employee-comfort-hospitality-uniforms" class="text-primary-600 hover:underline">أزياء تراعي راحة الموظف</a> وحرية الحركة والمظهر الأنيق بما يتناسب مع طبيعة عمل كل قسم في منشأتك الفندقية.</p>
+  </div>
+</div>
+
+<div class="space-y-4 mb-8">
+  <div class="bg-white rounded-lg p-4 shadow-sm">
+    <h3 class="font-bold text-primary-700 mb-2">ما هي أفضل أنواع الأقمشة المستخدمة في يونيفورم الفنادق والمطاعم؟</h3>
+    <p>تعتمد أفضل أنواع الأقمشة على طبيعة العمل والقسم. للاستقبال، تُفضل الأقمشة الفاخرة المقاومة للتجاعيد مثل مزيج القطن والبوليستر. للمطبخ، يُفضل القطن 100% المعالج لمقاومة الحرارة والبقع. لخدمة الغرف، تُفضل الأقمشة المتينة المقاومة للبقع وسهلة التنظيف.</p>
+  </div>
+  
+  <div class="bg-white rounded-lg p-4 shadow-sm">
+    <h3 class="font-bold text-primary-700 mb-2">كيف يمكن اختيار اليونيفورم المناسب للمناخ الحار في السعودية؟</h3>
+    <p>للمناخ الحار في المملكة، نوصي باختيار أقمشة طبيعية مثل القطن المصري الفاخر أو مزيج القطن مع البوليستر الخفيف التي توفر تهوية جيدة وتمتص العرق. كما نوفر تصاميم مدروسة تناسب المناخ الحار مع الحفاظ على المظهر الأنيق والاحترافي، مع معالجات خاصة للأقمشة لتعزيز قدرتها على التهوية.</p>
+  </div>
+  
+  <div class="bg-white rounded-lg p-4 shadow-sm">
+    <h3 class="font-bold text-primary-700 mb-2">ما هي مدة تسليم طلبات اليونيفورم الكبيرة للفنادق الجديدة؟</h3>
+    <p>تعتمد مدة التسليم على حجم الطلب والتصاميم المطلوبة. للفنادق الجديدة، نوصي بتقديم الطلب قبل 2-3 أشهر من الافتتاح للطلبات الكبيرة. نوفر أيضاً خدمة التسليم العاجل خلال 4-6 أسابيع للطلبات الأصغر أو الإضافية، مع ضمان الحفاظ على نفس مستوى الجودة العالية.</p>
+  </div>
+  
+  <div class="bg-white rounded-lg p-4 shadow-sm">
+    <h3 class="font-bold text-primary-700 mb-2">كيف يمكنني تضمين هوية علامتك التجارية في تصميم اليونيفورم؟</h3>
+    <p>نوفر خدمات متكاملة لدمج هوية علامتك التجارية في اليونيفورم من خلال عدة طرق: استخدام ألوان العلامة التجارية، تطريز الشعار بتقنيات متطورة، إضافة تفاصيل تصميم فريدة، واستخدام قصات وأنماط معينة تميز منشأتك. يعمل فريق التصميم لدينا معك لتطوير يونيفورم يعكس بوضوح القيم والرؤية الخاصة بعلامتك التجارية.</p>
   </div>
 </div>
 
 <div class="my-8 bg-white rounded-lg overflow-hidden shadow-md">
-  <div class="relative h-64 md:h-80">
-    <img src="/images/hospitality/hospitality_uniform_receiption_hotel.jpg" alt="يونيفورم استقبال الفنادق الفاخر" class="w-full h-full object-cover" />
-  </div>
-  <div class="p-4 bg-neutral-50">
-    <p class="text-sm text-neutral-600 text-center">فريق استقبال فندقي يرتدي يونيفورم أنيق يعكس فخامة المنشأة السياحية</p>
-  </div>
-</div>
-
-<h2 class="text-2xl font-bold mt-8 mb-4 text-primary-800">نهجنا المتكامل في تصميم وتوريد يونيفورم الضيافة</h2>
-
-<p>في <strong>يونيفورم</strong>، نلتزم بتوفير حلول متكاملة تناسب احتياجات منشآت الضيافة بمختلف أحجامها، من الفنادق الفاخرة ذات الخمس نجوم إلى المطاعم العائلية والمقاهي المتخصصة. نحرص على مواكبة <a href="/ar/blog/restaurant-uniform-trends" class="text-primary-600 hover:underline">أحدث صيحات الموضة العالمية</a> في مجال يونيفورم الضيافة مع الحفاظ على الطابع المحلي الذي يناسب المملكة العربية السعودية.</p>
-
-<div class="my-6 bg-primary-50 p-5 rounded-lg border border-primary-100">
-  <h3 class="text-xl font-bold text-primary-800 mb-3">عملية التصميم والتنفيذ</h3>
-  <ul class="list-disc list-inside space-y-2 text-neutral-700">
-    <li><strong class="text-primary-700">الاستشارة الأولية:</strong> نعمل معك لفهم احتياجات منشأتك وهويتها البصرية وميزانيتها المخصصة لليونيفورم.</li>
-    <li><strong class="text-primary-700">التصميم المخصص:</strong> نقدم تصاميم مخصصة تتناسب مع طبيعة عمل كل قسم وتعكس هوية علامتك التجارية.</li>
-    <li><strong class="text-primary-700">اختيار الأقمشة:</strong> نساعدك في اختيار <a href="/ar/blog/hospitality-uniform-fabrics" class="text-primary-600 hover:underline">أنسب أنواع الأقمشة</a> لكل نوع من أنواع اليونيفورم بما يتناسب مع طبيعة العمل والاستخدام.</li>
-    <li><strong class="text-primary-700">التصنيع عالي الجودة:</strong> نلتزم بمعايير صارمة في التصنيع لضمان منتجات عالية الجودة وطويلة العمر.</li>
-    <li><strong class="text-primary-700">التسليم والمتابعة:</strong> نوفر خدمة توصيل سريعة لجميع مناطق المملكة مع متابعة ما بعد البيع لضمان رضاكم التام.</li>
-  </ul>
-</div>
-
-<h2 class="text-2xl font-bold mt-8 mb-4 text-primary-800">أنواع يونيفورم الضيافة التي نوفرها</h2>
-
-<div class="flex flex-col md:flex-row-reverse gap-6 items-center mb-6">
-  <div class="md:w-1/2">
-    <h3 class="text-xl font-semibold mt-2 mb-3 text-primary-700">يونيفورم استقبال الفنادق</h3>
-
-    <p>يعتبر <strong>موظفو الاستقبال</strong> أول نقطة اتصال بين الفندق والضيوف، لذا نحرص على تصميم <a href="/ar/shop/hospitality-attire/reception-staff-uniform" class="text-primary-600 hover:underline">يونيفورمات استقبال</a> أنيقة ومميزة تعكس فخامة المنشأة وتترك انطباعاً أولياً إيجابياً لدى النزلاء. تتميز يونيفورمات الاستقبال لدينا بـ:</p>
-
-    <ul class="list-disc list-inside mb-4 mr-4 space-y-1">
-      <li>تصاميم كلاسيكية وعصرية تتناسب مع مستوى وطراز الفندق</li>
-      <li>أقمشة راقية مقاومة للتجاعيد والبقع</li>
-      <li>إمكانية تطريز شعار الفندق بدقة عالية</li>
-      <li>تناسب مثالي يضمن أناقة الموظفين طوال فترة العمل</li>
-    </ul>
-  </div>
-  <div class="md:w-1/2 relative rounded-lg overflow-hidden shadow-lg">
-    <img src="/images/hospitality/concierge-uniform.jpg" alt="يونيفورم موظفي الكونسيرج الرسمي" class="w-full h-auto" />
-  </div>
-</div>
-
-<div class="my-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-  <div class="col-span-2">
-    <h3 class="text-xl font-semibold mt-2 mb-3 text-primary-700">يونيفورم المطاعم والمقاهي</h3>
-
-    <p>تتطلب <strong>المطاعم والمقاهي</strong> يونيفورمات عملية وأنيقة في آن واحد. توفر <a href="/ar/shop/hospitality-attire/restaurant-staff-uniform" class="text-primary-600 hover:underline">تشكيلتنا من يونيفورمات المطاعم</a> الخيار المثالي لجميع أنواع المطاعم، من المطابخ العالمية الفاخرة إلى المقاهي العصرية والمطاعم الشعبية. تشمل مجموعتنا يونيفورمات لـ:</p>
-
-    <ul class="list-disc list-inside mb-4 mr-4 space-y-1">
-      <li>النوادل والمضيفين</li>
-      <li>الباريستا والبارتندر</li>
-      <li>مديري المطاعم والمشرفين</li>
-      <li>موظفي الكاشير والاستقبال</li>
-    </ul>
-
-    <p>جميع يونيفورماتنا مصممة مع التركيز على المتانة ومقاومة البقع، مع الاحتفاظ بالمظهر الأنيق حتى خلال ساعات العمل المزدحمة.</p>
-  </div>
-  <div class="col-span-1 flex items-center">
-    <div class="rounded-lg overflow-hidden shadow-lg">
-      <img src="/images/hospitality/hospitality_uniform.jpg" alt="يونيفورم المطاعم والمقاهي الأنيق" class="w-full h-auto" />
+  <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="relative h-64 md:h-auto">
+      <img src="/images/hospitality/hospitality_uniform_resturant_2.jpg" alt="يونيفورم المطاعم الراقية في السعودية بتصاميم عصرية" class="w-full h-full object-cover" />
+    </div>
+    <div class="p-6 flex flex-col justify-center">
+      <h2 class="text-2xl font-bold text-primary-800 mb-4">ارتقِ بمستوى خدمات الضيافة لديك مع يونيفورم احترافي</h2>
+      <p class="text-neutral-700 mb-4">استثمر في يونيفورم عالي الجودة يعكس التزامك بتقديم تجربة ضيافة استثنائية. فريقنا جاهز لمساعدتك في اختيار التصاميم والأقمشة المناسبة لمنشأتك الفندقية، مع خيارات متعددة تناسب مختلف الميزانيات والاحتياجات.</p>
+      <a href="/ar/contact" class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300 self-start">تواصل معنا اليوم</a>
     </div>
   </div>
-</div>
-
-<div class="my-8 bg-white rounded-lg overflow-hidden shadow-md">
-  <div class="relative h-64 md:h-80">
-    <img src="/images/hospitality/hospitality_uniform_chef.jpg" alt="يونيفورم الشيف التنفيذي الفاخر" class="w-full h-full object-cover" />
-  </div>
-  <div class="p-4 bg-neutral-50">
-    <p class="text-sm text-neutral-600 text-center">يونيفورم احترافي للشيفات التنفيذيين في المطاعم والفنادق الفاخرة</p>
-  </div>
-</div>
-
-<h3 class="text-xl font-semibold mt-6 mb-3 text-primary-700">يونيفورم المطبخ والشيفات</h3>
-
-<p>في بيئة المطبخ المليئة بالتحديات، يحتاج <strong>الطهاة والشيفات</strong> إلى <a href="/ar/shop/culinary-uniforms/executive-chef-coat" class="text-primary-600 hover:underline">يونيفورمات مصممة خصيصاً</a> لتلبية متطلبات العمل في ظروف درجات الحرارة العالية والحركة المستمرة. توفر يونيفورماتنا للمطابخ:</p>
-
-<ul class="list-disc list-inside mb-4 mr-4 space-y-1">
-  <li>جاكيتات الشيف المصنوعة من قطن 100% مقاوم للحرارة</li>
-  <li>بناطيل المطبخ المريحة والعملية</li>
-  <li>قبعات الطهاة بتصاميم كلاسيكية وعصرية</li>
-  <li>المرايل والمناديل ذات الجودة العالية</li>
-  <li>قمصان وسترات مساعدي الطهاة</li>
-</ul>
-
-<p>جميع يونيفورمات المطبخ لدينا مصممة للتعامل مع متطلبات بيئة المطبخ المكثفة مع الحفاظ على الراحة وسهولة الحركة للطهاة خلال ساعات العمل الطويلة.</p>
-
-<div class="flex flex-col md:flex-row gap-6 items-center my-8">
-  <div class="md:w-1/2 relative rounded-lg overflow-hidden shadow-lg">
-    <img src="/images/hospitality/housekeeping-uniform.jpg" alt="يونيفورم خدمة الغرف والتدبير الفندقي" class="w-full h-auto" />
-  </div>
-  <div class="md:w-1/2">
-    <h3 class="text-xl font-semibold mt-2 mb-3 text-primary-700">يونيفورم خدمة الغرف والتدبير الفندقي</h3>
-
-    <p>يقوم <strong>فريق خدمة الغرف والتدبير الفندقي</strong> بعمل حيوي يتطلب حركة مستمرة وتعامل مع مواد التنظيف المختلفة. لذا، صممنا <a href="/ar/shop/hospitality-attire/housekeeping-uniform" class="text-primary-600 hover:underline">يونيفورمات مخصصة لهذا القطاع</a> تجمع بين العملية والمظهر المهني الأنيق:</p>
-
-    <ul class="list-disc list-inside mb-4 mr-4 space-y-1">
-      <li>فساتين وبدلات التدبير الفندقي المريحة</li>
-      <li>قمصان وبناطيل التنظيف العملية</li>
-      <li>أقمشة متينة مقاومة للاتساخ وسهلة التنظيف</li>
-      <li>جيوب عملية متعددة للاستخدامات المختلفة</li>
-      <li>تصاميم تسمح بحرية الحركة الكاملة</li>
-    </ul>
-  </div>
-</div>
-
-<h3 class="text-xl font-semibold mt-6 mb-3 text-primary-700">يونيفورم المنتجعات والنوادي الصحية</h3>
-
-<p>تتميز <strong>المنتجعات والنوادي الصحية</strong> بطابع خاص يجمع بين الفخامة والراحة. نقدم <a href="/ar/shop/hospitality-attire/luxury-hotel-uniform" class="text-primary-600 hover:underline">يونيفورمات مصممة خصيصاً</a> لهذه البيئات لتعكس الأجواء الهادئة والراقية:</p>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-  <div>
-    <ul class="list-disc list-inside mb-4 mr-4 space-y-1">
-      <li>يونيفورمات المعالجين والمدلكين من أقمشة طبيعية مريحة للبشرة</li>
-      <li>أزياء موظفي الاستقبال في السبا والنوادي الصحية</li>
-      <li>يونيفورمات المدربين الرياضيين والمرشدين</li>
-      <li>ألوان هادئة تعكس أجواء الاسترخاء والراحة</li>
-    </ul>
-  </div>
-  <div>
-    <div class="rounded-lg overflow-hidden shadow-lg">
-      <img src="/images/hospitality/spa-uniform.jpg" alt="يونيفورم النوادي الصحية والسبا الفاخر" class="w-full h-auto" />
-    </div>
-  </div>
-</div>
-
-<h2 class="text-2xl font-bold mt-8 mb-4 text-primary-800">التصميم المخصص لليونيفورم حسب هوية العلامة التجارية</h2>
-
-<p>نقدم خدمات <strong>تصميم وتصنيع اليونيفورم</strong> بما يتوافق مع الهوية البصرية لعلامتك التجارية، مع إمكانية تخصيص الألوان والشعارات والتصاميم حسب متطلباتك. يمكننا دمج عناصر هويتك البصرية في تصميم اليونيفورم من خلال:</p>
-
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-  <div class="bg-neutral-50 p-4 rounded-lg shadow-sm">
-    <h3 class="text-lg font-semibold text-primary-700 mb-2">تطريز الشعارات والرموز</h3>
-    <p>نقدم خدمة تطريز عالية الدقة لشعار منشأتك على جميع قطع اليونيفورم، مما يعزز من هوية علامتك التجارية ويضفي لمسة احترافية على الزي الموحد.</p>
-  </div>
-  <div class="bg-neutral-50 p-4 rounded-lg shadow-sm">
-    <h3 class="text-lg font-semibold text-primary-700 mb-2">اختيار الألوان المميزة</h3>
-    <p>يمكننا تصميم اليونيفورم باستخدام الألوان الرئيسية لعلامتك التجارية لخلق تناسق بصري بين يونيفورم الموظفين وباقي عناصر هوية المنشأة.</p>
-  </div>
-  <div class="bg-neutral-50 p-4 rounded-lg shadow-sm">
-    <h3 class="text-lg font-semibold text-primary-700 mb-2">تفاصيل مخصصة</h3>
-    <p>نضيف لمسات مميزة مثل الأزرار المخصصة، والأشرطة الزخرفية، والتفاصيل المميزة التي تعكس الطابع الفريد لمنشأتك وتميزها عن المنافسين.</p>
-  </div>
-</div>
-
-<div class="my-8 bg-white rounded-lg overflow-hidden shadow-md">
-  <div class="relative h-64 md:h-80">
-    <img src="/images/hospitality/resort-uniform.jpg" alt="يونيفورم المنتجعات السياحية المميز" class="w-full h-full object-cover" />
-  </div>
-  <div class="p-4 bg-neutral-50">
-    <p class="text-sm text-neutral-600 text-center">يونيفورم مخصص للمنتجعات السياحية يعكس الطابع الترفيهي مع الحفاظ على المهنية</p>
-  </div>
-</div>
-
-<h2 class="text-2xl font-bold mt-8 mb-4 text-primary-800">خدماتنا الإضافية لقطاع الضيافة</h2>
-
-<p>بالإضافة إلى توفير اليونيفورمات عالية الجودة، نقدم مجموعة من الخدمات الإضافية لدعم قطاع الضيافة:</p>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-  <div class="border border-primary-100 rounded-lg p-4">
-    <h3 class="text-lg font-semibold text-primary-700 mb-2">خدمة الصيانة والتعديل</h3>
-    <p>نوفر خدمات صيانة وتعديل اليونيفورمات لإطالة عمرها الافتراضي وضمان ظهورها بمظهر مثالي دائماً، مع إمكانية إجراء تعديلات للمقاسات عند الحاجة.</p>
-  </div>
-  <div class="border border-primary-100 rounded-lg p-4">
-    <h3 class="text-lg font-semibold text-primary-700 mb-2">التجديد الموسمي</h3>
-    <p>نقدم استشارات لتجديد يونيفورمات منشأتك بشكل موسمي أو دوري لمواكبة أحدث الصيحات وتحديث مظهر الفريق بما يحافظ على جاذبية المكان.</p>
-  </div>
-  <div class="border border-primary-100 rounded-lg p-4">
-    <h3 class="text-lg font-semibold text-primary-700 mb-2">نظام إدارة المخزون</h3>
-    <p>نساعدك في إدارة مخزون اليونيفورم الخاص بمنشأتك بكفاءة من خلال نظام متابعة متطور يضمن توفر المقاسات المطلوبة للموظفين الجدد وعمليات الاستبدال.</p>
-  </div>
-  <div class="border border-primary-100 rounded-lg p-4">
-    <h3 class="text-lg font-semibold text-primary-700 mb-2">ورش عمل للموظفين</h3>
-    <p>نقدم ورش عمل للموظفين حول كيفية العناية باليونيفورم والحفاظ عليه في أفضل حالة، مما يساهم في إطالة عمره الافتراضي وتحسين مظهر الفريق.</p>
-  </div>
-</div>
-
-<h2 class="text-2xl font-bold mt-8 mb-4 text-primary-800">لماذا تختار يونيفورم لتجهيز منشأتك الفندقية؟</h2>
-
-<p>تقدم شركتنا تجربة متكاملة في توريد <strong>ملابس العمل الموحدة لقطاع الضيافة</strong> في المملكة العربية السعودية، مع التزامنا بأعلى معايير الجودة والخدمة:</p>
-
-<ul class="list-disc list-inside mb-4 mr-4 space-y-2">
-  <li><strong class="text-primary-700">خبرة واسعة:</strong> نمتلك خبرة تمتد لسنوات في مجال تصميم وتوريد يونيفورمات الضيافة للعديد من الفنادق والمطاعم المرموقة في المملكة.</li>
-  <li><strong class="text-primary-700">مواكبة أحدث الصيحات:</strong> نحرص على متابعة <a href="/ar/blog/restaurant-uniform-trends" class="text-primary-600 hover:underline">أحدث اتجاهات يونيفورم الضيافة العالمية</a> وتطبيقها بما يتناسب مع السوق السعودي.</li>
-  <li><strong class="text-primary-700">الالتزام بالمواعيد:</strong> نلتزم بجداول التسليم المتفق عليها مع عملائنا، ونوفر خدمة شحن سريعة لجميع مناطق المملكة.</li>
-  <li><strong class="text-primary-700">خدمة عملاء متميزة:</strong> فريق خدمة العملاء لدينا متاح دائماً للإجابة على استفساراتكم وتلبية احتياجاتكم بكفاءة عالية.</li>
-  <li><strong class="text-primary-700">أسعار تنافسية:</strong> نقدم خيارات متعددة تناسب مختلف الميزانيات مع الحفاظ على مستوى الجودة العالي.</li>
-</ul>
-
-<div class="my-8 bg-white rounded-lg overflow-hidden shadow-md">
-  <div class="relative h-64 md:h-80">
-    <img src="/images/hospitality/event-staff-uniform.jpg" alt="يونيفورم قاعات المؤتمرات والاحتفالات" class="w-full h-full object-cover" />
-  </div>
-  <div class="p-4 bg-neutral-50">
-    <p class="text-sm text-neutral-600 text-center">يونيفورم احترافي لفريق عمل قاعات المؤتمرات والاحتفالات في الفنادق والمنتجعات</p>
-  </div>
-</div>
-
-<div class="mt-8 mb-6 bg-primary-50 p-6 rounded-lg border border-primary-100 text-center">
-  <h3 class="text-xl font-bold text-primary-800 mb-3">جاهزون لرفع مستوى يونيفورم الضيافة في منشأتك؟</h3>
-  <p class="mb-4">تواصل معنا اليوم للحصول على استشارة مجانية وعرض سعر مخصص لاحتياجاتك من يونيفورم الضيافة.</p>
-  <a href="/ar/contact" class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-6 rounded-md transition-colors duration-300">احصل على استشارة مجانية</a>
 </div>
 </div>`,
-          image: "/images/hospitality/hospitality_uniform_hotel.jpg"
         },
         benefits: [
           {
@@ -568,8 +273,8 @@ const Page = () => {
         // Correctly formatted arrays for the IndustryPageLayout component
         products: products,
         relatedContent: relatedContent,
-    testimonials: [
-      {
+        testimonials: [
+          {
             id: "1",
             quote: "كان التعامل مع شركة يونيفورم تجربة رائعة من البداية إلى النهاية. قدموا لنا منتجات عالية الجودة تتناسب تمامًا مع هوية فندقنا، وكان الالتزام بمواعيد التسليم مثاليًا. ساعدنا فريق التصميم المحترف في اختيار التصاميم والألوان التي تعكس الطابع الفاخر لفندقنا خمس نجوم.",
             author: "أحمد الشمري",
@@ -587,7 +292,7 @@ const Page = () => {
             id: "3",
             quote: "وجدنا في يونيفورم شريكًا حقيقيًا يفهم متطلبات قطاع الضيافة والفندقة. اليونيفورم الذي صمموه لفريقنا نال إعجاب الضيوف والموظفين على حد سواء. ما أعجبني بشكل خاص هو اهتمامهم بأدق التفاصيل، واستخدامهم لأقمشة عالية الجودة مقاومة للبقع ومريحة، مما جعل موظفينا يتحركون بحرية وراحة خلال ساعات العمل الطويلة.",
             author: "خالد العتيبي",
-        position: "المدير العام",
+            position: "المدير العام",
             company: "منتجع الشاطئ الذهبي - الخبر"
           },
           {
@@ -605,7 +310,7 @@ const Page = () => {
             company: "سلسلة مطاعم أصالة - الرياض وجدة"
           }
         ],
-    cta: {
+        cta: {
           title: "ارفع مستوى تجربة الضيافة في منشأتك مع يونيفورم احترافي يعكس هويتك",
           description: "تواصل معنا اليوم للحصول على استشارة مجانية وعرض سعر مخصص لاحتياجاتك من يونيفورم الضيافة. فريقنا من الخبراء جاهز لمساعدتك في اختيار التصاميم والأقمشة المناسبة لمنشأتك السياحية، مع خيارات متعددة تناسب مختلف الميزانيات والأذواق.",
           buttonText: "احصل على عرض سعر مجاني",
@@ -618,4 +323,4 @@ const Page = () => {
   );
 };
 
-export default Page; 
+export default Page;
