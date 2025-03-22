@@ -6,8 +6,8 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig = {
-  // Add output: 'export' for static site generation (Netlify compatibility)
-  output: 'export',
+  // Comment out static export for development
+  // output: 'export',
   
   // Skip type checking in production to make builds faster and more reliable on Vercel
   typescript: {
