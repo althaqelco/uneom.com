@@ -47,6 +47,29 @@ const RequestInfoForm: React.FC<RequestInfoFormProps> = ({
         ...formData
       });
       
+      // Format the data for WhatsApp message
+      const now = new Date();
+      const whatsappMessage = `
+*New Product Information Request*
+Product: ${productName}
+Product ID: ${productId || 'Not specified'}
+Company: ${formData.companyName}
+Contact: ${formData.contactPerson}
+Position: ${formData.position}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Quantity: ${formData.quantity}
+Requirements: ${formData.requirements}
+Submitted: ${now.toLocaleString()}
+      `.trim();
+      
+      // Encode the message for WhatsApp URL
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappUrl = `https://wa.me/971558164922?text=${encodedMessage}`;
+      
+      // Open WhatsApp in a new window/tab
+      window.open(whatsappUrl, '_blank');
+      
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
