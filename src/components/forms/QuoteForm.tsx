@@ -239,7 +239,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ locale }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify([submissionData]),
+        body: JSON.stringify({ data: [submissionData] }),
       });
       
       const result = await response.json();
