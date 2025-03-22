@@ -1,16 +1,18 @@
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { Metadata } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
-import { Inter } from 'next/font/google';
-import { ThemeProvider } from '@/components/providers/theme-provider';
-import { ArabicLayoutProvider } from '@/components/providers/arabic-layout-provider';
-import '../globals.css';
-import ArabicOptimizer from '@/components/ArabicOptimizer';
-import CSPHeaders from '@/components/CSPHeaders';
-import ImagePreloader from '@/components/ImagePreloader';
-import ImageResolver from '@/components/ImageResolver';
+import ThemeProvider from '@/components/providers/theme-provider';
+import ArabicLayoutProvider from '@/components/providers/arabic-layout-provider';
+import LocaleProvider from '@/components/providers/LocaleProvider';
 
-// Define fonts
-const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'UNEOM - Premium Uniforms in Saudi Arabia',
+  description: 'Custom uniforms for hospitality, healthcare, and corporate sectors in Saudi Arabia.',
+};
 
 export default function RootLayout({
   children,
@@ -19,38 +21,22 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  const isArabic = params.locale === 'ar';
-  const dir = isArabic ? 'rtl' : 'ltr';
+  // Set direction based on locale
+  const dir = params.locale === 'ar' ? 'rtl' : 'ltr';
+  const lang = params.locale === 'ar' ? 'ar' : 'en';
 
   return (
-    <html lang={params.locale} dir={dir} suppressHydrationWarning>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-        {/* Preload critical resources */}
-        <link rel="preconnect" href="https://uneom-com.vercel.app" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://uneom.com" crossOrigin="anonymous" />
-        {/* Image fixes CSS */}
-        <link rel="stylesheet" href="/css/image-fixes.css" />
-      </head>
-      <body className={`${dir === 'rtl' ? 'rtl' : 'ltr'} ${inter.variable} font-sans min-h-screen`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <ArabicLayoutProvider isRtl={dir === 'rtl'}>
-            {isArabic && <ArabicOptimizer />}
-            <CSPHeaders />
-            <ImagePreloader />
-            <ImageResolver />
-            <div className="relative flex min-h-screen flex-col">
+    <html lang={lang} dir={dir}>
+      <body className={`${inter.className} min-h-screen flex flex-col`}>
+        <ThemeProvider>
+          <LocaleProvider initialLocale={params.locale}>
+            <ArabicLayoutProvider locale={params.locale}>
               {children}
-            </div>
-            <SpeedInsights />
-            <Analytics />
-          </ArabicLayoutProvider>
+            </ArabicLayoutProvider>
+          </LocaleProvider>
         </ThemeProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

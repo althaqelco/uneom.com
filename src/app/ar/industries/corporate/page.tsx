@@ -1,313 +1,194 @@
 'use client';
 
 import React from 'react';
-import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import ImageGallery from '@/components/sections/corporate/ImageGallery';
 
-export default function CorporatePageArabic() {
-  // Define locale for language support
+export default function CorporatePage() {
   const locale = 'ar';
+  const isRtl = true;
   
-  const corporateData = {
-    locale: locale,
+  // Content for the Arabic version
+  const content = {
     title: "الزي الموحد الاحترافي وملابس العمل للشركات في المملكة العربية السعودية",
     subtitle: "ملابس عمل مُصممة خصيصًا للبيئات المؤسسية التي توازن بين الاحترافية وثقافة مكان العمل السعودي",
-    heroImage: "/images/corporate/corporate_uniform_formal.jpg",
-    
-    // SEO metadata
-    metaDescription: "توفر يونيوم أزياء موحدة وملابس عمل للشركات السعودية تجمع بين التصميم الاحترافي والحساسية الثقافية والراحة لبيئة العمل السعودية.",
-    keywords: ['زي موحد للشركات في السعودية', 'ملابس رسمية للموظفين', 'يونيفورم الشركات', 'الزي الموحد المكتبي', 'ملابس العمل الإسلامية', 'يونيفورم احترافي للشركات في الرياض', 'ملابس موظفي الشركات', 'الزي الرسمي الاحترافي', 'يونيفورم مكتبي عصري', 'ملابس الاستقبال للشركات'],
-    canonicalUrl: 'https://uneom.com/ar/industries/corporate',
-    
-    introduction: [
+    intro: [
       "في المشهد التجاري المتطور بسرعة في المملكة العربية السعودية، تلعب ملابس الشركات دورًا حاسمًا في تأسيس المصداقية المهنية وتعزيز هوية العلامة التجارية. تقدم يونيوم حلول الزي الموحد المتميزة للشركات التي تساعد المؤسسات على الحفاظ على صورة أنيقة ومتناسقة مع احترام القيم الثقافية السعودية.",
-      
-      "تشمل مجموعاتنا للشركات البدلات المُفصلة، وقمصان العمل، والبلوزات، والفساتين الرسمية، وإكسسوارات مكان العمل المصممة لإظهار الاحترافية مع ضمان الراحة طوال يوم العمل. كل قطعة مصنوعة من أقمشة عالية الجودة تم اختيارها خصيصًا لمناخ المملكة العربية السعودية وبيئات الشركات.",
-      
-      "كشريك موثوق للشركات السعودية الرائدة، والشركات متعددة الجنسيات العاملة في المملكة، والجهات الحكومية، نحن ندرك أهمية الزي الموحد للشركات الذي يوازن بين معايير الأعمال الدولية والاعتبارات الثقافية المحلية ومتطلبات مكان العمل."
+      "تشمل مجموعاتنا للشركات البدلات المُفصلة، وقمصان العمل، والبلوزات، والفساتين الرسمية، وإكسسوارات مكان العمل المصممة لإظهار الاحترافية مع ضمان الراحة طوال يوم العمل. كل قطعة مصنوعة من أقمشة عالية الجودة تم اختيارها خصيصًا لمناخ المملكة العربية السعودية وبيئات الشركات."
     ],
-    
     benefits: [
       {
         title: "تمثيل احترافي للعلامة التجارية",
-        description: "زي موحد متناسق للشركات يعزز الهوية البصرية لمؤسستك ويعكس صورة مهنية موحدة للعملاء والشركاء.",
-        icon: "/icons/brand-representation.svg"
+        description: "زي موحد متناسق للشركات يعزز الهوية البصرية لمؤسستك ويعكس صورة مهنية موحدة للعملاء والشركاء."
       },
       {
         title: "خبرة في ثقافة الأعمال السعودية",
-        description: "تصاميم تحترم معايير مكان العمل السعودي والقيم الثقافية مع الحفاظ على معايير الأعمال الدولية.",
-        icon: "/icons/saudi-expertise.svg"
+        description: "تصاميم تحترم معايير مكان العمل السعودي والقيم الثقافية مع الحفاظ على معايير الأعمال الدولية."
       },
       {
         title: "أقمشة مناسبة للمناخ",
-        description: "مواد متميزة تم اختيارها للراحة في مناخ المملكة العربية السعودية وبيئات المكاتب المكيفة.",
-        icon: "/icons/climate-appropriate.svg"
-      },
-      {
-        title: "خيارات مهنية محتشمة",
-        description: "خيارات أنيقة لملابس العمل تحترم تفضيلات اللباس الإسلامي مع الحفاظ على المظهر المهني.",
-        icon: "/icons/modest-professional.svg"
-      },
-      {
-        title: "المتانة وسهولة الصيانة",
-        description: "أقمشة وتصنيع عالي الأداء يتحمل الارتداء اليومي مع الحاجة إلى الحد الأدنى من الصيانة.",
-        icon: "/icons/durability.svg"
+        description: "مواد متميزة تم اختيارها للراحة في مناخ المملكة العربية السعودية وبيئات المكاتب المكيفة."
       }
     ],
-    
-    products: [
-      {
-        id: "executive-suits",
-        name: "مجموعات البدلات التنفيذية",
-        description: "بدلات مُفصلة ممتازة لموظفي الإدارة والتنفيذيين تعكس السلطة والاحترافية في بيئات الشركات.",
-        image: "/images/corporate/corporate_uniform_formal.jpg",
-        href: "/ar/shop/corporate/executive-suits"
-      },
-      {
-        id: "business-shirts-blouses",
-        name: "قمصان وبلوزات العمل",
-        description: "قمصان وبلوزات احترافية بأنماط متنوعة، بما في ذلك خيارات محتشمة للموظفات تحترم تفضيلات اللباس الإسلامي.",
-        image: "/images/corporate/corporate_business_uniform.jpg",
-        href: "/ar/shop/corporate/business-shirts-blouses"
-      },
-      {
-        id: "corporate-dresses",
-        name: "فساتين مؤسسية احترافية",
-        description: "فساتين أنيقة ومحتشمة مصممة للمهنيات في بيئات الشركات السعودية.",
-        image: "/images/corporate/corporate_brand.jpg",
-        href: "/ar/shop/corporate/corporate-dresses"
-      },
-      {
-        id: "front-office-attire",
-        name: "ملابس الاستقبال والمكاتب الأمامية",
-        description: "أزياء موحدة مميزة لموظفي الاستقبال والموظفين الذين يتعاملون مع العملاء والذين يمثلون الانطباع الأول لشركتك.",
-        image: "/images/corporate/corporate_formal.jpg",
-        href: "/ar/shop/corporate/front-office-attire"
-      },
-      {
-        id: "corporate-abayas",
-        name: "عباءات مؤسسية احترافية",
-        description: "عباءات أنيقة ومناسبة للعمل مصممة خصيصًا للمهنيات في بيئات الشركات السعودية.",
-        image: "/images/corporate/corporate_comoany.jpg",
-        href: "/ar/shop/corporate/corporate-abayas"
-      },
-      {
-        id: "corporate-accessories",
-        name: "إكسسوارات ومكملات الشركات",
-        description: "إكسسوارات احترافية تشمل الأوشحة وربطات العنق والدبابيس وعناصر أخرى تكمل مظهر الزي الموحد للشركات.",
-        image: "/images/corporate/corporate_custom_logo.jpg",
-        href: "/ar/shop/corporate/corporate-accessories"
-      }
-    ],
-    
-    // Corporate department roles with specialized products
-    departments: [
-      {
-        name: "الإدارة التنفيذية",
-        description: "ملابس مميزة لموظفي القيادة تنقل السلطة والاحترافية مع الحفاظ على اتساق العلامة التجارية مع ملابس الشركة الأخرى.",
-        image: "/images/corporate/corporate_uniform_formal.jpg",
-        productTypes: ["مجموعات البدلات التنفيذية", "قمصان الأعمال الممتازة", "إكسسوارات الإدارة"]
-      },
-      {
-        name: "الأدوار التي تتعامل مع العملاء",
-        description: "أزياء موحدة احترافية لموظفي المبيعات وخدمة العملاء وعلاقات العملاء تعكس الكفاءة وتعزز هوية العلامة التجارية أثناء التفاعلات مع العملاء.",
-        image: "/images/corporate/corporate_business_uniform.jpg",
-        productTypes: ["ملابس فريق المبيعات", "زي موحد لخدمة العملاء", "مجموعات علاقات العملاء"]
-      },
-      {
-        name: "الإدارة والدعم",
-        description: "ملابس عملية واحترافية للموظفين الإداريين والدعم تحافظ على صورة الشركة مع توفير الراحة لمهام المكتب اليومية.",
-        image: "/images/corporate/corporate_comoany.jpg",
-        productTypes: ["الزي الموحد للموظفين الإداريين", "ملابس الدعم المكتبي", "ملابس العمل العملية"]
-      },
-      {
-        name: "الأدوار التقنية والمتخصصة",
-        description: "ملابس شركات متخصصة للأدوار التقنية توازن بين المظهر المهني والوظائف العملية لبيئات العمل المتخصصة.",
-        image: "/images/corporate/corporate_custom_logo.jpg",
-        productTypes: ["الزي الموحد للموظفين التقنيين", "ملابس قسم تكنولوجيا المعلومات", "أزياء موحدة للأدوار المتخصصة"]
-      }
-    ],
-    
-    fabricTechnologies: [
-      {
-        name: "أقمشة كورب كومفورت الممتازة",
-        description: "أقمشة من مستوى الأعمال ذات خصائص راحة استثنائية مصممة خصيصًا لأيام طويلة في بيئات المكاتب.",
-        icon: "/icons/corpcomfort.svg"
-      },
-      {
-        name: "تقنية إيزي بريس",
-        description: "معالجة متقدمة للأقمشة المقاومة للتجعد تحافظ على مظهر مهني أنيق طوال يوم العمل.",
-        icon: "/icons/easypress.svg"
-      },
-      {
-        name: "تصميم فلكس موف للمكاتب",
-        description: "تفصيل مبتكر مع عناصر تمدد استراتيجية تسمح بحركة مريحة مع الحفاظ على مظهر مهني منظم.",
-        icon: "/icons/flexmove.svg"
-      },
-      {
-        name: "نظام كلايمت بالانس",
-        description: "تقنية أقمشة تكيفية تساعد على الحفاظ على الراحة في درجات حرارة المكتب المتفاوتة وخلال الانتقالات بين البيئات الخارجية والداخلية.",
-        icon: "/icons/climatebalance.svg"
-      }
-    ],
-    
-    customizationOptions: [
-      {
-        name: "دمج هوية الشركة",
-        description: "دمج دقيق لعناصر الهوية البصرية لشركتك، بما في ذلك مطابقة الألوان بدقة، ووضع الشعار، وميزات التصميم المميزة.",
-        icon: "/icons/corporate-identity.svg"
-      },
-      {
-        name: "تمييز الأقسام",
-        description: "اختلافات تصميم دقيقة تميز بين الأقسام المختلفة للشركة مع الحفاظ على التماسك العام للعلامة التجارية.",
-        icon: "/icons/department-differentiation.svg"
-      },
-      {
-        name: "إشارة التسلسل الهرمي",
-        description: "عناصر تصميم مدروسة تشير بشكل لطيف إلى التسلسل الهرمي التنظيمي مع الحفاظ على مظهر شركة متماسك.",
-        icon: "/icons/hierarchy-indication.svg"
-      },
-      {
-        name: "التكيفات الثقافية",
-        description: "تعديلات متخصصة على تصاميم الزي الموحد القياسية للشركات التي تحترم التفضيلات الثقافية السعودية مع الحفاظ على المعايير المهنية.",
-        icon: "/icons/cultural-adaptations.svg"
-      }
-    ],
-    
-    testimonials: [
-      {
-        id: "testimonial-1",
-        quote: "حولت يونيوم صورة شركتنا المؤسسية بأزياء موحدة توازن بشكل مثالي بين معايير الأعمال الدولية والاعتبارات الثقافية السعودية. لقد أدى الاهتمام بالتفاصيل في دمج عناصر علامتنا التجارية إلى إنشاء هوية مهنية مميزة عززت وجودنا في السوق وتماسكنا الداخلي.",
-        author: "إبراهيم السعود",
-        position: "الرئيس التنفيذي",
-        company: "المجموعة المالية السعودية"
-      },
-      {
-        id: "testimonial-2",
-        quote: "حظيت ملابس الشركات التي صممتها يونيوم لقوتنا العاملة المتنوعة بردود فعل إيجابية للغاية. لقد أدى فهمهم للاحتياجات الخاصة للأقسام المختلفة، من الأدوار التي تتعامل مع العملاء إلى الفرق التقنية، إلى برنامج زي موحد يعزز الاحترافية مع توفير وظائف عملية لأنشطة العمل اليومية.",
-        author: "نورة القحطاني",
-        position: "مديرة الموارد البشرية",
-        company: "الرياض القابضة التجارية"
-      }
-    ],
-    
-    // FAQ section for SEO enhancement
-    faq: [
-      {
-        question: "كيف تلبي أزياء يونيوم الموحدة للشركات الاحتياجات الخاصة للشركات السعودية؟",
-        answer: "أزياء الشركات الموحدة لدينا مصممة خصيصًا لبيئات الأعمال السعودية، وتتميز بخيارات محتشمة للموظفات تتوافق مع قواعد اللباس الإسلامي مع الحفاظ على المظهر المهني، ودمج عناصر التصميم التي تحترم ثقافة الأعمال السعودية، واستخدام الأقمشة المختارة لظروف المناخ السعودي والمكاتب المكيفة، وضمان التصاميم التي توازن بين معايير الأعمال الدولية والاعتبارات الثقافية المحلية."
-      },
-      {
-        question: "هل يمكنكم إنشاء أنماط زي موحد مختلفة لمختلف أقسام الشركات مع الحفاظ على اتساق العلامة التجارية؟",
-        answer: "نعم، نحن متخصصون في تطوير برامج شاملة للزي الموحد للشركات تميز بشكل دقيق بين الأقسام المختلفة والمستويات الهرمية مع الحفاظ على التماسك العام للعلامة التجارية من خلال لوحات ألوان متسقة وعناصر تصميم وتطبيقات العلامة التجارية. يساعد هذا النهج على تعزيز الهيكل التنظيمي مع تقديم هوية شركة موحدة."
-      },
-      {
-        question: "ما الذي يجعل أقمشتكم مناسبة لبيئات الشركات السعودية؟",
-        answer: "تتميز أقمشة الزي الموحد للشركات لدينا بالعديد من التقنيات المتخصصة: أنظمة كلايمت بالانس التي تتكيف مع الظروف المتغيرة بين الحرارة الخارجية والمكاتب المكيفة، ومعالجات إيزي بريس التي تحافظ على مظهر مهني أنيق طوال أيام العمل الطويلة، ومكونات الراحة والمرونة التي تسمح بالحركة الطبيعية أثناء أنشطة المكتب، ومواد ممتازة تجمع بين المظهر المهني والمتانة العملية."
-      },
-      {
-        question: "كيف تتعاملون مع تنفيذ الزي الموحد للشركات الكبيرة ذات أدوار الموظفين المتنوعة؟",
-        answer: "نحن نقدم برامج تنفيذ شاملة للمؤسسات من جميع الأحجام، بما في ذلك جلسات قياس في الموقع، وأنظمة قياس مفصلة بمقاسات خاصة بالعرب، وتخطيط التنفيذ المرحلي لضمان استمرارية الأعمال، وتدريب الموظفين على العناية بالزي الموحد وتقديمه، والدعم المستمر للموظفين الجدد والبدلاء للحفاظ على المظهر المتسق عبر المؤسسة بأكملها."
-      }
-    ],
-    
-    // Related blog posts for increased internal linking and SEO value
-    relatedContent: {
-      title: "مصادر الزي الموحد للشركات",
-      blogPosts: [
-        {
-          title: "اتجاهات الزي الموحد للشركات في المملكة العربية السعودية: التوازن بين التقاليد ومعايير الأعمال الحديثة",
-          excerpt: "استكشف كيف تقوم الشركات السعودية الرائدة بإنشاء ملابس شركات مميزة تعكس كلاً من المعايير الدولية وثقافة الأعمال المحلية.",
-          url: "/ar/blog/saudi-corporate-uniform-trends",
-          image: "/images/corporate/corporate_uniform.jpg"
-        },
-        {
-          title: "تأثير الزي الموحد للشركات على أداء الموظفين وتصور العلامة التجارية",
-          excerpt: "نظرة على الأبحاث حول كيف تؤثر الملابس المهنية على إنتاجية مكان العمل وثقة العملاء والانطباع العام عن العلامة التجارية.",
-          url: "/ar/blog/uniforms-employee-performance-brand-perception",
-          image: "/images/corporate/corporate_business_uniform.jpg"
-        },
-        {
-          title: "تنفيذ برامج فعالة للزي الموحد للشركات في المؤسسات السعودية",
-          excerpt: "أفضل الممارسات لتطوير وتنفيذ برامج ملابس الشركات التي تعزز الصورة المهنية مع احترام الاعتبارات الثقافية.",
-          url: "/ar/blog/corporate-uniform-program-implementation",
-          image: "/images/corporate/corporate_formal.jpg"
-        }
-      ],
-      resources: [
-        {
-          title: "دليل أداء أقمشة الشركات",
-          description: "المواصفات الفنية للأقمشة التي تلبي متطلبات الأعمال المهنية",
-          url: "/ar/resources/fabric-guide/corporate",
-          icon: "/icons/fabric-guide.svg"
-        },
-        {
-          title: "دليل مقاسات ملابس العمل",
-          description: "معلومات مقاسات مفصلة لمجموعات الزي الموحد للشركات",
-          url: "/ar/resources/size-guide/corporate",
-          icon: "/icons/size-guide.svg"
-        },
-        {
-          title: "نموذج سياسة الزي الموحد للشركات",
-          description: "نموذج قابل للتنزيل لإنشاء سياسات فعالة لملابس الشركات",
-          url: "/ar/resources/policy-templates/corporate",
-          icon: "/icons/policy-template.svg"
-        }
-      ]
-    },
-    
-    // Statistical information for credibility and SEO enhancement
-    statistics: [
-      {
-        value: "+85",
-        label: "شركة سعودية تم التوريد لها",
-        icon: "/icons/corporations.svg"
-      },
-      {
-        value: "+30,000",
-        label: "محترف يرتدي ملابس يونيوم في قطاع الشركات",
-        icon: "/icons/professionals.svg"
-      },
-      {
-        value: "+12",
-        label: "قطاع صناعي مخدوم في جميع أنحاء المملكة العربية السعودية",
-        icon: "/icons/industries.svg"
-      },
-      {
-        value: "%96",
-        label: "معدل الاحتفاظ بالعملاء في قطاع الشركات",
-        icon: "/icons/retention.svg"
-      }
-    ],
-    
-    // Case study for social proof and credibility
-    caseStudy: {
-      title: "برنامج شامل للزي الموحد للشركات لمؤسسة مالية سعودية رائدة",
-      client: "المجموعة المالية السعودية",
-      challenge: "إنشاء برنامج مميز للزي الموحد للشركات لمؤسسة مالية كبرى تضم أكثر من 2,500 موظف عبر أقسام وفروع ومستويات هرمية متعددة.",
-      solution: "تطوير نظام شامل لملابس الشركات مع اختلافات دقيقة عبر الأقسام والأدوار، يتميز بعناصر مستوحاة من السعودية بشكل مميز، وتعديلات عملية لوظائف العمل المختلفة، وخيارات دولية ومحتشمة للموظفات.",
-      results: [
-        "زادت درجات رضا العملاء بنسبة 18% بعد تنفيذ الزي الموحد",
-        "تقييم رضا الموظفين بنسبة 91% مع ملابس الشركات الجديدة",
-        "تحسنت معرفة العلامة التجارية بنسبة 23% في دراسات أبحاث السوق",
-        "تنفيذ ناجح عبر 15 فرعًا بأكثر من 2,500 موظف"
-      ],
-      image: "/images/corporate/corporate_uniform.jpg",
-      testimonial: {
-        quote: "أصبح برنامج الزي الموحد للشركات الذي أنشأته يونيوم حجر الزاوية في هويتنا المهنية وساهم بشكل كبير في سمعتنا كمؤسسة مالية رائدة في المملكة العربية السعودية.",
-        author: "خالد العتيبي",
-        position: "المدير التنفيذي للتسويق",
-        company: "المجموعة المالية السعودية"
-      }
-    },
-    
-    // Call to action section
     cta: {
-      title: "ارتقِ بصورة شركتك مع حلول الزي الموحد المهنية",
-      description: "اتصل بمتخصصي الزي الموحد للشركات لدينا لمناقشة متطلبات مؤسستك الخاصة واكتشف كيف يمكن لحلول ملابس العمل الشاملة لدينا تعزيز هوية علامتك التجارية واحترافية الموظفين والتواجد في السوق.",
-      buttonText: "اطلب استشارة للزي الموحد للشركات",
-      buttonUrl: "/ar/contact?industry=corporate"
+      text: "اطلب عرض سعر",
+      url: "/ar/quote"
+    },
+    gallery: {
+      title: "معرض صور الأزياء المؤسسية"
     }
   };
-  
-  return <IndustryPageLayout locale={locale} industryData={corporateData} />;
+
+  // Animation variants
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  return (
+    <div dir="rtl" className="rtl">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-neutral-800 to-neutral-900 text-white py-24">
+        <div className="absolute inset-0 overflow-hidden opacity-40">
+          <Image
+            src="/images/corporate/corporate_uniform_formal.jpg"
+            alt={content.title}
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            className="max-w-3xl mr-auto"
+            initial="hidden"
+            animate="visible"
+            variants={fadeIn}
+          >
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-right">{content.title}</h1>
+            <p className="text-xl opacity-90 mb-8 text-right">{content.subtitle}</p>
+            <div className="text-right">
+              <Link 
+                href={content.cta.url}
+                className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
+              >
+                {content.cta.text}
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Introduction Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              className="order-2 md:order-1"
+            >
+              <div>
+                {content.intro.map((paragraph, index) => (
+                  <p key={index} className="mb-4 text-lg text-right">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              className="relative h-96 rounded-lg overflow-hidden shadow-xl order-1 md:order-2"
+            >
+              <Image
+                src="/images/corporate/corporate_business_uniform.jpg"
+                alt="الزي الموحد المؤسسي"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-neutral-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-4">
+              مزايا الزي الموحد للشركات من يونيوم
+            </h2>
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+              نقدم حلول ملابس مؤسسية تجمع بين الأناقة والراحة والمتانة
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {content.benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { 
+                    opacity: 1, 
+                    y: 0, 
+                    transition: { delay: index * 0.2, duration: 0.5 } 
+                  }
+                }}
+                className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <h3 className="text-xl font-bold mb-3 text-right">{benefit.title}</h3>
+                <p className="text-neutral-600 text-right">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Image Gallery Section */}
+      <ImageGallery locale={locale} />
+
+      {/* CTA Section */}
+      <section className="py-16 bg-primary-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="max-w-3xl mx-auto"
+          >
+            <h2 className="text-3xl font-bold mb-4">
+              ارتقِ بصورة شركتك مع حلول الزي الموحد المهنية
+            </h2>
+            <p className="text-lg mb-8 opacity-90">
+              اتصل بمتخصصي الزي الموحد للشركات لدينا لمناقشة متطلبات مؤسستك الخاصة
+            </p>
+            <Link 
+              href={content.cta.url}
+              className="bg-white text-primary-600 hover:bg-neutral-100 px-6 py-3 rounded-md font-medium transition-colors duration-300"
+            >
+              {content.cta.text}
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
 }
