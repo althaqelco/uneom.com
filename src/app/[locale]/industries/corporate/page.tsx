@@ -6,14 +6,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import ImageGallery from '@/components/sections/corporate/ImageGallery';
 
-// Definir locales para la generación estática
-export function generateStaticParams() {
-  return [
-    { locale: 'en' },
-    { locale: 'ar' }
-  ];
-}
-
 export default function CorporatePage({ params }: { params: { locale: string } }) {
   const locale = params.locale;
   const isRtl = locale === 'ar';
