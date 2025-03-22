@@ -7,9 +7,9 @@ export const seoData = {
   en: {
     // Home page
     home: {
-      title: 'UNEOM | Leading Provider of Professional Uniforms & Scrubs in Saudi Arabia',
-      description: 'UNEOM offers premium quality, customized B2B uniform solutions for healthcare, aviation, hospitality and corporate sectors across Saudi Arabia. Request a quote today!',
-      keywords: 'uniforms saudi arabia, professional uniforms, custom uniforms, medical scrubs, corporate uniforms, b2b uniforms, saudi uniform supplier, workwear saudi arabia, hospital uniforms, hotel uniforms, aviation uniforms',
+      title: 'UNEOM | #1 Professional Uniform Supplier in Saudi Arabia - Riyadh, Jeddah, Dammam',
+      description: 'UNEOM is Saudi Arabia\'s leading uniform manufacturer and supplier. Premium quality uniforms for healthcare, corporate, hospitality and industrial sectors in all Saudi cities including Riyadh, Jeddah, and Dammam.',
+      keywords: 'uniform Saudi Arabia, uniform Riyadh, uniform Jeddah, uniform Dammam, uniforms Saudi, Saudi uniforms, uniform supplier Saudi Arabia, uniform manufacturer Saudi, professional uniforms Saudi, corporate uniforms, medical uniforms, hospital uniforms, hotel uniforms, industrial uniforms, Saudi uniform company, custom uniforms Saudi Arabia',
     },
     
     // Industry pages
@@ -152,9 +152,9 @@ export const seoData = {
   ar: {
     // الصفحة الرئيسية
     home: {
-      title: 'يونيوم | المزود الرائد للزي الموحد والملابس المهنية في المملكة العربية السعودية',
-      description: 'شركة رائدة في تصنيع الزي الموحد وملابس العمل المخصصة في السعودية. نقدم ملابس مهنية عالية الجودة للشركات والمستشفيات والفنادق والمدارس.',
-      keywords: 'زي موحد المملكة العربية السعودية, ملابس مهنية, زي موحد مخصص, ملابس طبية, زي شركات, ملابس الشركات, مورد يونيفورم سعودي, ملابس عمل السعودية, زي مستشفيات, زي فنادق, زي طيران',
+      title: 'يونيوم | المزود الرائد للزي الموحد واليونيفورم المهني في المملكة العربية السعودية - الرياض، جدة، الدمام',
+      description: 'يونيوم هي الشركة الرائدة في تصنيع وتوريد الزي الموحد واليونيفورم في المملكة العربية السعودية. نقدم أزياء موحدة ويونيفورم عالي الجودة للرعاية الصحية، الشركات، الضيافة والقطاعات الصناعية في جميع المدن السعودية بما في ذلك الرياض، جدة، والدمام.',
+      keywords: 'الزي الموحد, اليونيفورم, زي موحد السعودية, يونيفورم الرياض, الزي الموحد جدة, يونيفورم الدمام, زي موحد الخبر, يونيفورم مكة, الزي الموحد المدينة, يونيفورم تبوك, زي موحد أبها, يونيفورم خميس مشيط, الزي الموحد للمستشفيات, اليونيفورم الطبي, الزي الموحد للشركات, يونيفورم الفنادق, الزي الموحد الصناعي, يونيفورم المصانع, زي موحد المدارس, يونيفورم الجامعات, مصنع الزي الموحد السعودية, مورد اليونيفورم, الزي الموحد المخصص, تصميم اليونيفورم',
     },
     
     // صفحات القطاعات

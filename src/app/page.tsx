@@ -14,10 +14,17 @@ import IndustryGrid from '@/components/sections/IndustryGrid';
 import ServicesGrid from '@/components/sections/ServicesGrid';
 import BlogPreview from '@/components/sections/BlogPreview';
 import { motion } from 'framer-motion';
+import HomePageStructuredData from './StructuredData';
+import UniformSupplierData from './UniformSupplierData';
+import UniformFAQData from './UniformFAQData';
+import BreadcrumbData from './BreadcrumbData';
 
 // Import data for the page
 import { industries } from '@/lib/data/industries';
 import { products } from '@/lib/data/products';
+
+// Import metadata
+import { metadata } from './metadata';
 
 export default function HomePage() {
   const locale = 'en';
@@ -36,29 +43,29 @@ export default function HomePage() {
   const shopCategories = [
     {
       id: 'medical-scrubs',
-      title: 'Healthcare Apparel',
-      description: 'High-quality medical scrubs and uniforms designed for comfort during long shifts.',
+      title: 'Healthcare Uniforms',
+      description: 'High-quality medical uniforms and scrubs designed for healthcare professionals in Saudi Arabia.',
       image: '/images/products/scrubs-set.jpg',
       link: '/shop/medical-scrubs'
     },
     {
       id: 'aviation-uniforms',
       title: 'Aviation Uniforms',
-      description: 'Professional uniforms for airline staff, ground crews, and aviation personnel.',
+      description: 'Professional airline uniforms for aviation personnel across Saudi Arabia\'s major cities.',
       image: '/images/products/airline-uniform.jpg',
       link: '/shop/aviation-uniforms'
     },
     {
       id: 'hospitality-attire',
-      title: 'Hospitality Attire',
-      description: 'Quality uniforms for hotels, resorts, and hospitality teams that blend style and functionality.',
+      title: 'Hospitality Uniforms',
+      description: 'Premium hotel and restaurant uniforms for hospitality teams in Riyadh, Jeddah, and Dammam.',
       image: '/images/products/hotel-uniform.jpg',
       link: '/shop/hospitality-attire'
     },
     {
       id: 'industrial-uniforms',
       title: 'Industrial Uniforms',
-      description: 'Durable and safety-compliant workwear for industrial settings and demanding environments.',
+      description: 'Durable industrial uniforms and workwear for factories and companies throughout Saudi Arabia.',
       image: '/images/products/industrial-coverall.jpg',
       link: '/shop/industrial-uniforms'
     }
@@ -67,35 +74,35 @@ export default function HomePage() {
   // Testimonials
   const testimonials = [
     {
-      quote: "UNEOM's corporate uniforms have transformed our company's professional image. The quality and attention to detail are exceptional.",
+      quote: "UNEOM's corporate uniforms have transformed our company's professional image across all our Riyadh offices. The quality and attention to detail are exceptional.",
       author: "Ahmed Al-Ghamdi",
       position: "CEO",
       company: "Saudi Tech Solutions",
       image: "/images/clients/modern-arabic-businessman-SBI-300984397.jpg"
     },
     {
-      quote: "The durability of UNEOM's uniforms is exceptional. Our factory workers operate in demanding conditions, and these uniforms withstand daily wear while keeping our team comfortable in Saudi Arabia's climate.",
+      quote: "The durability of UNEOM's industrial uniforms is exceptional. Our factory workers in Dammam operate in demanding conditions, and these uniforms withstand daily wear while keeping our team comfortable.",
       author: "Khalid Ibrahim",
       position: "Operations Manager",
       company: "Saudi Manufacturing Company",
       image: "/images/clients/portrait-of-an-arab-man-sheikh-SBI-300981247.jpg"
     },
     {
-      quote: "The airline crew uniforms designed by UNEOM perfectly balance professional appearance with comfort for our long-haul flights. Our staff love wearing them and our passengers notice the difference.",
+      quote: "The airline crew uniforms designed by UNEOM perfectly balance professional appearance with comfort for our Jeddah-based staff. Our team loves wearing them and our passengers notice the difference.",
       author: "Sarah Al-Otaibi",
       position: "Cabin Services Director",
       company: "Royal Arabian Airlines",
       image: "/images/clients/smiling-attractive-stewardess-getting-ready-to-fli-2024-10-18-12-57-27-utc.jpg"
     },
     {
-      quote: "For our luxury hotel chain, we required staff uniforms that embody our commitment to sophistication and Arabian hospitality. UNEOM created bespoke designs that perfectly balance elegance with practicality.",
+      quote: "For our luxury hotel chain across Saudi Arabia, we required staff uniforms that embody our commitment to sophistication and Arabian hospitality. UNEOM created bespoke designs that perfectly balance elegance with practicality.",
       author: "Nora Al-Zahrani",
       position: "Hospitality Manager",
       company: "Royal Oasis Hotels",
       image: "/images/clients/young-muslim-arab-woman-wearing-hijab-veiling-face-looking-at-camera-outdoors-during-s-SBI-351149151.jpg"
     },
     {
-      quote: "As a retail brand with stores across Saudi Arabia, consistency in staff appearance is crucial. UNEOM delivered high-quality uniforms with excellent branding integration that has improved our customer-facing operations.",
+      quote: "As a retail brand with stores across Riyadh, Jeddah and Dammam, consistency in staff uniform appearance is crucial. UNEOM delivered high-quality uniforms with excellent branding integration.",
       author: "Layla Mahmoud",
       position: "Retail Manager",
       company: "AlMajed Department Stores",
@@ -107,27 +114,27 @@ export default function HomePage() {
   const blogPosts = [
     {
       id: 'sustainable-uniforms-2024-trends',
-      title: 'Sustainable Uniform Trends: What to Expect in 2024',
-      excerpt: 'Discover the latest sustainable fabric technologies and design approaches shaping the future of corporate uniforms.',
+      title: 'Sustainable Uniform Trends: Saudi Arabia\'s 2024 Market Focus',
+      excerpt: 'Discover the latest sustainable uniform technologies and design approaches shaping the future of professional uniforms in Saudi Arabia.',
       date: 'March 15, 2024',
       image: '/images/blog/sustainable-uniforms.jpg',
-      category: 'Industry Trends'
+      category: 'Uniform Trends'
     },
     {
       id: 'hospital-uniform-safety-standards',
-      title: 'New Healthcare Uniform Safety Standards in Saudi Arabia',
-      excerpt: 'An overview of recently updated healthcare uniform regulations and how they affect hospitals across the Kingdom.',
+      title: 'New Healthcare Uniform Standards in Saudi Arabian Hospitals',
+      excerpt: 'An overview of recently updated healthcare uniform regulations for hospitals in Riyadh, Jeddah, and across the Kingdom.',
       date: 'February 28, 2024',
       image: '/images/blog/healthcare-uniforms.jpg',
-      category: 'Healthcare'
+      category: 'Healthcare Uniforms'
     },
     {
       id: 'airline-uniform-design-cultural-identity',
-      title: 'Balancing Tradition and Modernity in Saudi Airline Uniform Design',
-      excerpt: 'How UNEOM creates uniforms that represent Saudi cultural heritage while meeting international standards.',
+      title: 'Saudi Airline Uniform Design: Tradition Meets Modern Function',
+      excerpt: 'How UNEOM creates airline uniforms that represent Saudi cultural heritage while meeting international standards.',
       date: 'January 22, 2024',
       image: '/images/blog/aviation-uniforms.jpg',
-      category: 'Aviation'
+      category: 'Aviation Uniforms'
     }
   ];
   
@@ -136,9 +143,9 @@ export default function HomePage() {
     {
       id: "industrial-coverall-pro",
       category: "industrial-uniforms",
-      categoryName: "Industrial Workwear",
-      name: "Heavy Duty Industrial Coverall",
-      shortDescription: "Durable two-tone coverall suitable for factory environments and industrial settings",
+      categoryName: "Industrial Uniforms",
+      name: "Premium Industrial Uniform Coverall",
+      shortDescription: "Durable industrial uniform coveralls suitable for factory environments across Saudi Arabia's industrial cities",
       price: "SAR 289",
       minOrder: 15,
       image: "/images/new-products/heavy_duty_industrial_coverall.png",
@@ -152,9 +159,9 @@ export default function HomePage() {
     {
       id: "luxury-hotel-uniform",
       category: "hospitality-attire",
-      categoryName: "Luxury Hospitality",
-      name: "Luxury Hotel Staff Uniform",
-      shortDescription: "Elegant front desk attire with design accents for luxury hotels and resorts",
+      categoryName: "Hospitality Uniforms",
+      name: "Luxury Hotel Uniform Collection",
+      shortDescription: "Elegant hospitality uniforms with design accents for luxury hotels and resorts in Riyadh, Jeddah and tourist destinations",
       price: "SAR 449",
       minOrder: 8,
       image: "/images/new-products/luxury_hotel_staff_uniform.png",
@@ -168,9 +175,9 @@ export default function HomePage() {
     {
       id: "airline-crew-uniform",
       category: "aviation-uniforms",
-      categoryName: "Aviation Wear",
-      name: "Airline Crew Uniform",
-      shortDescription: "Professional airline crew attire with customizable logo for aviation staff",
+      categoryName: "Aviation Uniforms",
+      name: "Saudi Airline Crew Uniform",
+      shortDescription: "Professional airline uniform collection with customizable logo for aviation staff based in Saudi Arabian airports",
       price: "SAR 399",
       minOrder: 10,
       image: "/images/new-products/airline_crew_uniform.png",
@@ -185,8 +192,8 @@ export default function HomePage() {
       id: "premium-medical-scrubs",
       category: "medical-scrubs",
       categoryName: "Healthcare Uniforms",
-      name: "Premium Medical Scrubs",
-      shortDescription: "High-quality medical scrubs in various colors for healthcare professionals",
+      name: "Premium Medical Uniform Scrubs",
+      shortDescription: "High-quality medical uniform scrubs for healthcare professionals in hospitals and clinics across all Saudi cities",
       price: "SAR 179",
       minOrder: 20,
       image: "/images/new-products/premiummedicalscrubs.png",
@@ -225,8 +232,106 @@ export default function HomePage() {
 
   return (
     <MainLayout locale={locale}>
+      {/* Add structured data for SEO */}
+      <HomePageStructuredData />
+      <UniformSupplierData />
+      <UniformFAQData />
+      <BreadcrumbData />
+      
       {/* Hero Section */}
       <HeroSection locale={locale} />
+      
+      {/* Saudi Arabia Uniform Provider Section */}
+      <section className="py-16 bg-gradient-to-r from-primary-50 to-blue-50">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <div className="inline-block px-4 py-1.5 bg-primary-100 rounded-full text-primary-700 font-medium text-sm mb-4">
+                Saudi Arabia's #1 Uniform Provider
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-neutral-900">
+                Premium Uniforms for Every Saudi City
+              </h2>
+              <p className="text-lg text-neutral-700 mb-6">
+                From Riyadh to Jeddah, Dammam to Mecca, UNEOM delivers high-quality professional uniforms tailored to Saudi Arabian businesses and organizations. Our uniform solutions combine durability, comfort and cultural awareness.
+              </p>
+              <ul className="mb-8 space-y-3">
+                <li className="flex items-center text-neutral-700">
+                  <svg className="w-5 h-5 mr-2 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Custom uniform solutions for all Saudi cities</span>
+                </li>
+                <li className="flex items-center text-neutral-700">
+                  <svg className="w-5 h-5 mr-2 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Climate-appropriate uniform fabrics for Saudi weather</span>
+                </li>
+                <li className="flex items-center text-neutral-700">
+                  <svg className="w-5 h-5 mr-2 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Nationwide delivery of uniform orders</span>
+                </li>
+                <li className="flex items-center text-neutral-700">
+                  <svg className="w-5 h-5 mr-2 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Local uniform specialists in major Saudi cities</span>
+                </li>
+              </ul>
+              <Link
+                href="/contact"
+                className="inline-flex items-center bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors duration-300 font-medium"
+              >
+                <span>Find Your Perfect Uniform Solution</span>
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
+            <div className="order-1 md:order-2 relative">
+              <div className="relative h-96 md:h-[500px] rounded-xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/uniform_saudi_arabia.jpg"
+                  alt="UNEOM Premium Uniforms for Every Saudi City"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <p className="text-sm font-medium mb-2 bg-primary-600/80 rounded-full px-3 py-1 inline-block">
+                    Nationwide Uniform Supply
+                  </p>
+                  <h3 className="text-xl font-bold">
+                    Serving Every Saudi Region
+                  </h3>
+                </div>
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                <div className="flex items-center">
+                  <div className="flex -space-x-2">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="w-10 h-10 rounded-full bg-neutral-200 border-2 border-white flex items-center justify-center text-primary-600 font-bold">
+                        {i}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-xs text-neutral-500 font-medium">
+                      Trusted by
+                    </p>
+                    <p className="text-neutral-800 font-bold">
+                      500+ Saudi Companies
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
       
       {/* Why Choose UNEOM Section */}
       <WhyChooseUneom locale={locale} />
@@ -254,20 +359,20 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
             <div>
               <div className="inline-block px-4 py-1.5 bg-gradient-to-r from-primary-50 to-blue-50 rounded-full text-primary-700 font-medium text-sm mb-4 border border-primary-100">
-                Premium Collections
+                Premium Uniform Collections
               </div>
               <SectionHeading as="h2" className="mb-3">
-                Shop Our Premium Collections
+                Shop Our Professional Saudi Uniform Collections
               </SectionHeading>
               <p className="text-lg text-neutral-700 max-w-2xl">
-                Browse our professional uniform collections, expertly crafted for quality, comfort and brand representation, with exclusive Saudi Arabian market discounts.
+                Browse our professional uniform collections, expertly crafted for Saudi Arabian businesses in Riyadh, Jeddah, Dammam and all Kingdom regions. Quality uniform solutions with nationwide delivery.
               </p>
             </div>
             <Link
               href="/shop"
               className="group inline-flex items-center bg-white px-5 py-3 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 text-primary-700 font-medium mt-6 md:mt-0 border border-neutral-100"
             >
-              <span>View all collections</span>
+              <span>View all uniform collections</span>
               <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -295,7 +400,7 @@ export default function HomePage() {
                     <div className="relative bg-neutral-50 h-72 overflow-hidden">
                       {/* Product badge */}
                       <div className="absolute top-4 left-4 z-10 bg-primary-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                        New Arrival
+                        Premium Uniform
                       </div>
                       
                       {/* Discount badge */}
@@ -383,7 +488,7 @@ export default function HomePage() {
           {/* Category tabs */}
           <div className="mt-16">
             <div className="flex flex-col items-center">
-              <h3 className="text-xl font-bold text-neutral-800 mb-8">Shop by Category</h3>
+              <h3 className="text-xl font-bold text-neutral-800 mb-8">Shop Uniform Categories</h3>
               <div className="flex flex-wrap justify-center gap-4">
                 {shopCategories.map((category, index) => (
                   <Link
@@ -413,22 +518,22 @@ export default function HomePage() {
       <section className="py-20 bg-primary-600 text-white">
         <Container>
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Elevate Your Team's Professional Image?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Elevate Your Team with Premium Saudi Uniforms?</h2>
             <p className="text-xl mb-8 opacity-90">
-              Contact us today to discuss your uniform requirements and get a custom quote for your organization.
+              Contact us today to discuss your uniform requirements and get a custom quote for your organization in any Saudi city.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="inline-block bg-white text-primary-600 hover:bg-neutral-100 px-8 py-3 rounded-md font-medium text-lg shadow-md transition-colors duration-200"
               >
-                Request a Quote
+                Request Uniform Quote
               </Link>
               <Link
                 href="/shop"
                 className="inline-block bg-primary-700 text-white hover:bg-primary-800 px-8 py-3 rounded-md font-medium text-lg shadow-md transition-colors duration-200"
               >
-                Explore Collections
+                Explore Uniform Collections
               </Link>
             </div>
           </div>

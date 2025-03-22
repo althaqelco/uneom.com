@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { motion, AnimatePresence, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
-import { useSearchParams } from 'next/navigation';
 
 interface HeroSectionProps {
   locale?: string;
@@ -34,14 +33,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   const sliderRef = useRef<HTMLDivElement>(null);
   const inViewRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(inViewRef);
-  const searchParams = useSearchParams();
-  
-  // Check for openVideo parameter
-  useEffect(() => {
-    if (searchParams?.get('openVideo') === 'true') {
-      setIsVideoModalOpen(true);
-    }
-  }, [searchParams]);
   
   // Slides data based on locale
   const slides = locale === 'ar' ? [

@@ -25,6 +25,80 @@ export const metadata: Metadata = {
   // This will be handled by ArabicOptimizer component instead
 };
 
+// إضافة StructuredData للصفحة العربية
+export const ArabicStructuredData = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "يونيوم",
+    "alternateName": "UNEOM",
+    "url": "https://uneom.com/ar",
+    "logo": "https://uneom.com/images/logo.png",
+    "description": "يونيوم هي الشركة الرائدة في تصنيع وتوريد الزي الموحد واليونيفورم المهني في المملكة العربية السعودية. نقدم أزياء موحدة عالية الجودة للرعاية الصحية، الشركات، الضيافة والقطاعات الصناعية.",
+    "sameAs": [
+      "https://twitter.com/uneom_sa",
+      "https://www.facebook.com/uneom.sa",
+      "https://www.linkedin.com/company/uneom",
+      "https://www.instagram.com/uneom_sa"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "طريق الملك فهد",
+      "addressLocality": "الرياض",
+      "addressRegion": "الرياض",
+      "postalCode": "12345",
+      "addressCountry": "SA"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+966-11-000-0000",
+      "contactType": "خدمة العملاء",
+      "areaServed": "SA",
+      "availableLanguage": ["Arabic", "English"]
+    },
+    "areaServed": [
+      "الرياض",
+      "جدة",
+      "الدمام",
+      "مكة المكرمة",
+      "المدينة المنورة"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "اليونيفورم والزي الموحد",
+      "itemListElement": [
+        {
+          "@type": "OfferCatalog",
+          "name": "الزي الموحد للرعاية الصحية",
+          "description": "اليونيفورم الطبي عالي الجودة للمستشفيات والمراكز الصحية في المملكة العربية السعودية"
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "يونيفورم الشركات",
+          "description": "الزي الموحد المكتبي الأنيق للشركات والمؤسسات السعودية"
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "الزي الموحد للضيافة",
+          "description": "يونيفورم الفنادق والمطاعم في جميع أنحاء المملكة"
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "اليونيفورم الصناعي",
+          "description": "الزي الموحد المتين للقطاعات الصناعية والإنتاجية في السعودية"
+        }
+      ]
+    }
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  );
+};
+
 export default function ArabicRootLayout({
   children,
 }: {
@@ -36,6 +110,7 @@ export default function ArabicRootLayout({
         <LocaleProvider initialLocale="ar">
           <QuoteProvider>
             <MainLayout locale="ar">
+              <ArabicStructuredData />
               {children}
             </MainLayout>
           </QuoteProvider>

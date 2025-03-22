@@ -6,7 +6,6 @@ import LinkPreloader from '@/components/LinkPreloader';
 import LocaleProvider from '@/components/providers/LocaleProvider';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
-import FloatingIcons from '@/components/FloatingIcons';
 
 // Importar ImageResolver dinámicamente para evitar errores de SSR
 const ImageResolver = dynamic(() => import('@/components/ImageResolver'), { 
@@ -119,9 +118,6 @@ export default function RootLayout({
           </QuoteProvider>
           <LinkPreloader />
         </LocaleProvider>
-        
-        {/* Floating WhatsApp and Video icons */}
-        <FloatingIcons />
         
         {/* Script para asignar URLs base a las imágenes */}
         <Script id="image-base-url-helper" strategy="afterInteractive">

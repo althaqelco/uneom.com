@@ -26,7 +26,7 @@ export default function LuxuryHotelUniformPage() {
   const [activeTab, setActiveTab] = useState('description');
   const [showRequestForm, setShowRequestForm] = useState(false);
   const [quantity, setQuantity] = useState(10);
-  
+
   // Product data
   const product = {
     id: 'luxury-hotel-uniform',
@@ -229,7 +229,7 @@ export default function LuxuryHotelUniformPage() {
       return 'SAR ' + (349 * quantity).toLocaleString();
     }
   };
-  
+
   return (
     <MainLayout locale={locale}>
       {/* Breadcrumb */}
@@ -254,8 +254,8 @@ export default function LuxuryHotelUniformPage() {
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
                   </svg>
                   <Link href="/shop/hospitality-attire" className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">
-                    Hospitality Attire
-                  </Link>
+              Hospitality Attire
+            </Link>
                 </div>
               </li>
               <li aria-current="page">
@@ -264,13 +264,13 @@ export default function LuxuryHotelUniformPage() {
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
                   </svg>
                   <span className="text-sm text-gray-500 ml-1 md:ml-2">{product.name}</span>
-                </div>
+          </div>
               </li>
             </ol>
           </nav>
         </Container>
       </div>
-      
+
       {/* Product Details Section */}
       <section className="py-12">
         <Container>
@@ -278,33 +278,33 @@ export default function LuxuryHotelUniformPage() {
             {/* Product Images */}
             <div>
               <div className="relative aspect-square rounded-lg overflow-hidden bg-neutral-100 mb-4">
-                <Image
+              <Image
                   src={product.images[0].src}
                   alt={product.images[0].alt}
-                  fill
+                fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  priority
-                />
-              </div>
+                priority
+              />
+            </div>
               <div className="grid grid-cols-4 gap-2">
                 {product.images.map((image, index) => (
                   <button
                     key={index}
                     className="relative aspect-square rounded-md overflow-hidden bg-neutral-100"
                   >
-                    <Image
+                  <Image
                       src={image.src}
                       alt={image.alt}
-                      fill
-                      className="object-cover"
+                    fill
+                    className="object-cover"
                       sizes="(max-width: 1024px) 25vw, 12vw"
                     />
                   </button>
                 ))}
               </div>
             </div>
-            
+
             {/* Product Information */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -326,14 +326,14 @@ export default function LuxuryHotelUniformPage() {
                   ))}
                 </div>
                 <span className="ml-2 text-sm text-neutral-600">{product.reviewCount} reviews</span>
-              </div>
+                </div>
               
               <p className="text-2xl font-bold text-neutral-900 mb-4">{product.price}</p>
               
               <div className="mt-4 mb-6">
                 <div dangerouslySetInnerHTML={{ __html: product.description }} className="text-neutral-600 space-y-3" />
               </div>
-              
+
               {/* Color Selection */}
               <div className="mb-6">
                 <h2 className="text-sm font-medium text-neutral-900 mb-2">Color</h2>
@@ -343,7 +343,7 @@ export default function LuxuryHotelUniformPage() {
                   onChange={setSelectedColor}
                 />
               </div>
-              
+
               {/* Size Selection */}
               <div className="mb-6">
                 <h2 className="text-sm font-medium text-neutral-900 mb-2">Size</h2>
@@ -392,7 +392,7 @@ export default function LuxuryHotelUniformPage() {
                 <p className="text-xl font-bold text-neutral-900">{getPriceDisplay()}</p>
                 <p className="text-sm text-neutral-500">Includes bulk discount if applicable</p>
               </div>
-              
+
               {/* Action Buttons */}
               <div className="flex flex-col space-y-3 mb-6">
                 <Button
@@ -413,10 +413,10 @@ export default function LuxuryHotelUniformPage() {
               <div className="text-sm text-neutral-500">
                 <p>Minimum Order: {product.minOrder} units</p>
                 <p>Estimated Lead Time: 3-4 weeks</p>
-              </div>
-            </motion.div>
+            </div>
+          </motion.div>
           </div>
-          
+
           {/* Tab Navigation */}
           <div className="mt-16">
             <TabNavigation
@@ -480,7 +480,7 @@ export default function LuxuryHotelUniformPage() {
                 <div className="overflow-x-auto">
                   <table className="min-w-full divide-y divide-neutral-200">
                     <tbody className="divide-y divide-neutral-200">
-                      {product.specifications.map((spec, index) => (
+                {product.specifications.map((spec, index) => (
                         <tr key={index}>
                           <td className="py-4 text-sm font-medium text-neutral-900 w-1/3">{spec.name}</td>
                           <td className="py-4 text-sm text-neutral-600">{spec.value}</td>
@@ -529,12 +529,12 @@ export default function LuxuryHotelUniformPage() {
                   <p className="text-neutral-600">Our design team can work directly with your brand management to create completely custom uniform solutions that perfectly align with your hotel's visual identity and brand guidelines. Contact us for a personalized consultation.</p>
                 </div>
               </div>
-              
+
               {/* Reviews Tab */}
               <div className={`${activeTab === 'reviews' ? 'block' : 'hidden'}`}>
                 <h3 className="text-lg font-semibold text-neutral-900 mb-4">Customer Reviews</h3>
-                
-                <div className="space-y-6">
+
+              <div className="space-y-6">
                   {reviews.map((review) => (
                     <div key={review.id} className="border-b border-neutral-200 pb-6 last:border-b-0">
                       <div className="flex items-center mb-2">
@@ -562,15 +562,15 @@ export default function LuxuryHotelUniformPage() {
               </div>
             </div>
           </div>
-          
-          {/* Related Products */}
-          <div className="mt-16">
+
+        {/* Related Products */}
+        <div className="mt-16">
             <SectionHeading className="mb-8">Related Products</SectionHeading>
             <RelatedProducts products={product.relatedProducts} />
-          </div>
-        </Container>
+        </div>
+      </Container>
       </section>
-      
+
       {/* Request Info Form Modal */}
       {showRequestForm && (
         <div className="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="request-form-title" role="dialog" aria-modal="true">
@@ -582,24 +582,24 @@ export default function LuxuryHotelUniformPage() {
                   <h3 className="text-lg leading-6 font-medium text-neutral-900" id="request-form-title">
                     Request Information about {product.name}
                   </h3>
-                  <button
+                <button
                     type="button"
                     className="bg-white rounded-md text-neutral-400 hover:text-neutral-500"
-                    onClick={() => setShowRequestForm(false)}
-                  >
-                    <span className="sr-only">Close</span>
+                  onClick={() => setShowRequestForm(false)}
+                >
+                  <span className="sr-only">Close</span>
                     <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
                 <div className="mt-4">
                   <RequestInfoForm
                     productId={product.id}
                     productName={product.name}
                     onSuccess={() => setShowRequestForm(false)}
                   />
-                </div>
+                  </div>
               </div>
             </div>
           </div>

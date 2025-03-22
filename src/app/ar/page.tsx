@@ -123,33 +123,33 @@ const services = [
 // بيانات المميزات
 const features = [
   {
-    title: 'تصميم مخصص',
-    description: 'نصمم الزي الموحد خصيصًا ليعكس هوية علامتك التجارية ويلبي احتياجات موظفيك.',
+    title: 'تصميم مخصص للزي الموحد',
+    description: 'نصمم الزي الموحد واليونيفورم خصيصًا ليعكس هوية علامتك التجارية ويلبي احتياجات موظفيك.',
     icon: '/images/default-placeholder.jpg',
   },
   {
-    title: 'مواد عالية الجودة',
-    description: 'نستخدم فقط أفضل الأقمشة والمواد لضمان الراحة والمتانة والمظهر المهني.',
+    title: 'مواد عالية الجودة لليونيفورم',
+    description: 'نستخدم فقط أفضل الأقمشة والمواد لضمان راحة ومتانة ومظهر مهني للزي الموحد واليونيفورم.',
     icon: '/images/default-placeholder.jpg',
   },
   {
-    title: 'توافق مع المعايير السعودية',
-    description: 'جميع منتجاتنا متوافقة مع المعايير السعودية ومناسبة للبيئة المحلية.',
+    title: 'توافق الزي الموحد مع المعايير السعودية',
+    description: 'جميع اليونيفورم والزي الموحد لدينا متوافق مع المعايير السعودية ومناسب للبيئة المحلية.',
     icon: '/images/default-placeholder.jpg',
   },
   {
-    title: 'التسليم السريع',
-    description: 'نلتزم بجداول التسليم المحددة لنضمن وصول طلبك في الوقت المناسب.',
+    title: 'التسليم السريع لليونيفورم',
+    description: 'نلتزم بجداول التسليم المحددة لنضمن وصول طلب الزي الموحد واليونيفورم في الوقت المناسب.',
     icon: '/images/default-placeholder.jpg',
   },
   {
-    title: 'دعم مستمر',
-    description: 'فريق دعم متخصص جاهز لمساعدتك في أي استفسارات أو متطلبات إضافية.',
+    title: 'دعم مستمر للزي الموحد',
+    description: 'فريق دعم متخصص جاهز لمساعدتك في أي استفسارات أو متطلبات إضافية تتعلق باليونيفورم.',
     icon: '/images/default-placeholder.jpg',
   },
   {
-    title: 'أسعار تنافسية',
-    description: 'نقدم أسعارًا تنافسية مع الحفاظ على أعلى معايير الجودة لجميع منتجاتنا.',
+    title: 'أسعار تنافسية لليونيفورم',
+    description: 'نقدم أسعارًا تنافسية للزي الموحد مع الحفاظ على أعلى معايير الجودة لجميع أنواع اليونيفورم.',
     icon: '/images/default-placeholder.jpg',
   },
 ];
@@ -158,30 +158,30 @@ const features = [
 const featuredCategories = [
   {
     id: 'healthcare',
-    title: 'الرعاية الصحية',
+    title: 'الزي الموحد للرعاية الصحية',
     image: '/images/products/scrubs-set.jpg',
-    items: ['ملابس طبية متطورة', 'أردية معامل', 'بدلات جراحية'],
+    items: ['اليونيفورم الطبي المتطور', 'أردية معامل', 'الزي الموحد للجراحة'],
     link: '/ar/shop/medical-scrubs'
   },
   {
     id: 'aviation',
-    title: 'الطيران',
+    title: 'يونيفورم الطيران',
     image: '/images/products/airline-uniform.jpg',
-    items: ['أزياء طاقم الضيافة', 'بدلات الطيارين', 'أزياء موظفي الأرض'],
+    items: ['الزي الموحد لطاقم الضيافة', 'يونيفورم الطيارين', 'الزي الموحد لموظفي الأرض'],
     link: '/ar/shop/aviation-uniforms'
   },
   {
     id: 'hospitality',
-    title: 'الضيافة والفنادق',
+    title: 'الزي الموحد للضيافة والفنادق',
     image: '/images/products/hotel-uniform.jpg',
-    items: ['أزياء الاستقبال', 'زي طاقم الخدمة', 'بدلات الشيف'],
+    items: ['يونيفورم الاستقبال', 'الزي الموحد لطاقم الخدمة', 'يونيفورم الشيف'],
     link: '/ar/shop/hospitality-attire'
   },
   {
     id: 'corporate-wear',
-    title: 'الصناعة والمؤسسات',
+    title: 'اليونيفورم الصناعي والمؤسسي',
     image: '/images/products/industrial-coverall.jpg',
-    items: ['بدلات عمل صناعية', 'ملابس الأمن والسلامة', 'بدلات رسمية للشركات'],
+    items: ['الزي الموحد للعمل الصناعي', 'يونيفورم الأمن والسلامة', 'الزي الموحد الرسمي للشركات'],
     link: '/ar/shop/workplace-uniforms',
     backgroundImage: '/images/grid-pattern.svg'
   }
@@ -219,10 +219,10 @@ const technologies = [
 const featuredProducts = [
   {
     id: 'premium-medical-scrubs',
-    title: 'ملابس طبية متميزة',
-    description: 'مصممة خصيصاً للكوادر الطبية في المملكة',
+    title: 'الزي الموحد الطبي المتميز',
+    description: 'يونيفورم طبي مصمم خصيصاً للكوادر الطبية في المملكة العربية السعودية',
     image: '/images/new-products/premiummedicalscrubs.png',
-    category: 'الرعاية الصحية',
+    category: 'اليونيفورم الصحي',
     price: 450,
     salePrice: 399,
     discount: 11,
@@ -240,10 +240,10 @@ const featuredProducts = [
   },
   {
     id: 'airline-crew-uniform',
-    title: 'زي طاقم الطيران',
-    description: 'أناقة وراحة لطواقم الطيران السعودية',
+    title: 'يونيفورم طاقم الطيران',
+    description: 'الزي الموحد الأنيق والمريح لطواقم الطيران في المملكة العربية السعودية',
     image: '/images/new-products/airline_crew_uniform.png',
-    category: 'الطيران',
+    category: 'الزي الموحد للطيران',
     price: 1200,
     salePrice: 950,
     discount: 21,
@@ -261,10 +261,10 @@ const featuredProducts = [
   },
   {
     id: 'luxury-hotel-uniform',
-    title: 'زي فندقي فاخر',
-    description: 'تصميم عصري لطاقم الضيافة الفندقية',
+    title: 'اليونيفورم الفندقي الفاخر',
+    description: 'الزي الموحد العصري لطاقم الضيافة الفندقية في فنادق ومنتجعات المملكة',
     image: '/images/new-products/luxury_hotel_staff_uniform.png',
-    category: 'الضيافة',
+    category: 'يونيفورم الضيافة',
     price: 850,
     salePrice: 765,
     discount: 10,
@@ -282,10 +282,10 @@ const featuredProducts = [
   },
   {
     id: 'industrial-coverall',
-    title: 'بدلة عمل صناعية',
-    description: 'حماية وراحة في بيئات العمل الصناعية',
+    title: 'الزي الموحد الصناعي',
+    description: 'يونيفورم متين يوفر الحماية والراحة في بيئات العمل الصناعية السعودية',
     image: '/images/new-products/heavy_duty_industrial_coverall.png',
-    category: 'الصناعة',
+    category: 'اليونيفورم الصناعي',
     price: 550,
     salePrice: 499,
     discount: 9,
@@ -324,29 +324,29 @@ export default function HomePage() {
   const shopCategories = [
     {
       id: 'medical-scrubs',
-      title: 'ملابس الرعاية الصحية',
-      description: 'ملابس طبية وزي موحد عالي الجودة مصمم للراحة أثناء المناوبات الطويلة.',
+      title: 'الزي الموحد للرعاية الصحية',
+      description: 'اليونيفورم الطبي والزي الموحد عالي الجودة مصمم للراحة أثناء المناوبات الطويلة في المستشفيات والمراكز الطبية.',
       image: '/images/products/scrubs-set.jpg',
       link: '/ar/shop/medical-scrubs'
     },
     {
       id: 'aviation-uniforms',
-      title: 'ملابس الطيران',
-      description: 'أزياء مهنية لطاقم الطائرة وطاقم الأرض وموظفي الطيران.',
+      title: 'يونيفورم الطيران',
+      description: 'الزي الموحد المهني لطاقم الطائرة وطاقم الأرض وموظفي الطيران المصمم خصيصاً لشركات الطيران السعودية.',
       image: '/images/products/airline-uniform.jpg',
       link: '/ar/shop/aviation-uniforms'
     },
     {
       id: 'hospitality-attire',
-      title: 'ملابس الضيافة',
-      description: 'أزياء موحدة عالية الجودة للفنادق والمنتجعات وفرق الضيافة تجمع بين الأناقة والوظائف العملية.',
+      title: 'الزي الموحد للضيافة',
+      description: 'يونيفورم عالي الجودة للفنادق والمنتجعات وفرق الضيافة يجمع بين الأناقة والوظائف العملية لقطاع الضيافة السعودي.',
       image: '/images/products/hotel-uniform.jpg',
       link: '/ar/shop/hospitality-attire'
     },
     {
       id: 'corporate-wear',
-      title: 'ملابس الشركات',
-      description: 'ملابس مكتبية أنيقة ومهنية تعزز صورة الشركة والانتماء المؤسسي.',
+      title: 'اليونيفورم المكتبي للشركات',
+      description: 'الزي الموحد المكتبي الأنيق والمهني الذي يعزز صورة الشركة والانتماء المؤسسي في بيئة العمل السعودية.',
       image: '/images/products/industrial-coverall.jpg',
       link: '/ar/shop/workplace-uniforms',
       backgroundImage: '/images/grid-pattern.svg'
@@ -356,20 +356,20 @@ export default function HomePage() {
   // FAQ items
   const faqItems = [
     {
-      question: 'كيف يمكنني طلب عينات من منتجاتكم؟',
-      answer: 'يمكنك طلب عينات من خلال ملء نموذج الاتصال الخاص بنا أو الاتصال بفريق خدمة العملاء لدينا مباشرة. سيقوم ممثل المبيعات بالتواصل معك لمناقشة متطلباتك وترتيب إرسال العينات.'
+      question: 'كيف يمكنني طلب عينات من اليونيفورم لدى يونيوم؟',
+      answer: 'يمكنك طلب عينات من الزي الموحد من خلال ملء نموذج الاتصال الخاص بنا أو الاتصال بفريق خدمة العملاء لدينا مباشرة. سيقوم ممثل المبيعات بالتواصل معك لمناقشة متطلباتك وترتيب إرسال عينات اليونيفورم.'
     },
     {
-      question: 'هل توفرون خدمات التطريز والشعارات المخصصة؟',
-      answer: 'نعم، نقدم خدمات شاملة للتطريز وإضافة الشعارات المخصصة على جميع منتجاتنا. يمكننا تطبيق شعار شركتك بمختلف التقنيات بما في ذلك التطريز والطباعة الحرارية والطباعة الرقمية.'
+      question: 'هل توفرون خدمات التطريز والشعارات المخصصة للزي الموحد؟',
+      answer: 'نعم، نقدم خدمات شاملة للتطريز وإضافة الشعارات المخصصة على جميع أنواع اليونيفورم. يمكننا تطبيق شعار شركتك على الزي الموحد بمختلف التقنيات بما في ذلك التطريز والطباعة الحرارية والطباعة الرقمية.'
     },
     {
-      question: 'ما هي الحد الأدنى للطلب؟',
-      answer: 'يختلف الحد الأدنى للطلب حسب نوع المنتج. للطلبات القياسية، عادة ما يكون الحد الأدنى 50 قطعة. للمنتجات المخصصة بالكامل، قد يكون الحد الأدنى أعلى. يرجى التواصل معنا للحصول على تفاصيل محددة لمنتجات معينة.'
+      question: 'ما هو الحد الأدنى لطلب اليونيفورم من يونيوم؟',
+      answer: 'يختلف الحد الأدنى لطلب الزي الموحد حسب نوع المنتج. للطلبات القياسية، عادة ما يكون الحد الأدنى 50 قطعة. لليونيفورم المخصص بالكامل، قد يكون الحد الأدنى أعلى. يرجى التواصل معنا للحصول على تفاصيل محددة للزي الموحد المطلوب.'
     },
     {
-      question: 'ما هي مدة التسليم المتوقعة؟',
-      answer: 'تتراوح أوقات التسليم عادة من 2-4 أسابيع للمنتجات القياسية، و 4-8 أسابيع للمنتجات المخصصة بالكامل. قد تختلف المواعيد حسب حجم الطلب ومتطلبات التخصيص.'
+      question: 'ما هي مدة تسليم الزي الموحد المتوقعة؟',
+      answer: 'تتراوح أوقات تسليم اليونيفورم عادة من 2-4 أسابيع للمنتجات القياسية، و 4-8 أسابيع للزي الموحد المخصص بالكامل. قد تختلف مواعيد تسليم اليونيفورم حسب حجم الطلب ومتطلبات التخصيص.'
     },
   ];
 
@@ -433,16 +433,16 @@ export default function HomePage() {
           <div className="text-center max-w-4xl mx-auto mb-16 relative z-10">
             <div className="inline-block mb-4">
               <span className="bg-primary-50 text-primary-700 py-1 px-4 rounded-full text-sm font-bold">
-                قطاعات متخصصة
+                قطاعات متخصصة للزي الموحد
               </span>
             </div>
             <SectionHeading centered>
               <span className={`${cairoFont.className} text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary-700 to-primary-500`}>
-                نحن نخدم مجموعة متنوعة من الصناعات
+                نحن نخدم مجموعة متنوعة من اليونيفورم لكافة القطاعات
               </span>
             </SectionHeading>
             <p className={`${tajawalFont.className} text-lg md:text-xl text-gray-700 mt-6 leading-relaxed max-w-3xl mx-auto`}>
-              نقدم حلولاً متخصصة للزي الموحد تلبي الاحتياجات الفريدة لكل قطاع، مصممة خصيصًا لتناسب بيئة العمل في المملكة العربية السعودية
+              نقدم حلولاً متخصصة للزي الموحد واليونيفورم تلبي الاحتياجات الفريدة لكل قطاع، مصممة خصيصًا لتناسب بيئة العمل في المملكة العربية السعودية
             </p>
           </div>
           
@@ -539,16 +539,16 @@ export default function HomePage() {
           <div className="text-center max-w-4xl mx-auto mb-16 relative z-10">
             <div className="inline-block mb-4">
               <span className="bg-primary-50 text-primary-700 py-1.5 px-5 rounded-full text-sm font-bold">
-                منتجات حصرية
+                مجموعات اليونيفورم الحصرية
               </span>
             </div>
             <SectionHeading centered>
               <span className={`${cairoFont.className} text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary-700 to-primary-500`}>
-                اكتشف مجموعاتنا المميزة
+                اكتشف مجموعاتنا المميزة من الزي الموحد
               </span>
             </SectionHeading>
             <p className={`${tajawalFont.className} text-lg md:text-xl text-gray-700 mt-6 leading-relaxed max-w-3xl mx-auto`}>
-              تصفح تشكيلتنا الواسعة من الأزياء المهنية عالية الجودة المصممة خصيصًا لمختلف القطاعات
+              تصفح تشكيلتنا الواسعة من الزي الموحد واليونيفورم المهني عالي الجودة المصمم خصيصًا لمختلف القطاعات في المملكة العربية السعودية
             </p>
           </div>
           
@@ -689,8 +689,8 @@ export default function HomePage() {
           {/* قسم الفئات */}
           <div className="mt-20">
             <div className="text-center mb-12">
-              <h3 className={`${cairoFont.className} text-2xl font-bold text-gray-900 mb-4`}>تصفح حسب الفئة</h3>
-              <p className="text-gray-600">اكتشف مجموعاتنا المتنوعة حسب القطاع المهني</p>
+              <h3 className={`${cairoFont.className} text-2xl font-bold text-gray-900 mb-4`}>أزياء موحدة حسب القطاع</h3>
+              <p className="text-gray-600">اكتشف مجموعاتنا المتنوعة من اليونيفورم حسب القطاع المهني</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1034,14 +1034,14 @@ export default function HomePage() {
               >
                 <h2 className="text-4xl font-bold text-white mb-6 leading-tight">جاهز لتطوير برنامج الزي الموحد لمؤسستك؟</h2>
                 <p className="text-xl text-white/90 mb-6 leading-relaxed">
-                  دعنا نساعدك في تصميم وتنفيذ برنامج زي موحد يعزز هوية علامتك التجارية ويحسن تجربة موظفيك
+                  دعنا نساعدك في تصميم وتنفيذ برنامج اليونيفورم المهني الذي يعزز هوية علامتك التجارية ويحسن تجربة موظفيك
                 </p>
                 <ul className="space-y-4 mb-8">
                   {[
-                    "تصميم مخصص يعكس هويتك",
-                    "أعلى معايير الجودة والمتانة",
-                    "خدمة شاملة من الفكرة إلى التسليم",
-                    "دعم متواصل ما بعد البيع"
+                    "تصميم مخصص للزي الموحد يعكس هويتك",
+                    "أعلى معايير الجودة والمتانة لليونيفورم",
+                    "خدمة شاملة للزي الموحد من الفكرة إلى التسليم",
+                    "دعم متواصل لليونيفورم ما بعد البيع"
                   ].map((item, index) => (
                     <motion.li 
                       key={index}

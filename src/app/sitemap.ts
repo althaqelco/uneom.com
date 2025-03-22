@@ -7,8 +7,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Define all pages for the sitemap with both English and Arabic versions
   const pages = [
     // Main pages
-    { url: '/', lastModified, changeFrequency: 'weekly', priority: 1.0 },
-    { url: '/ar', lastModified, changeFrequency: 'weekly', priority: 1.0 },
+    { url: '/', lastModified, changeFrequency: 'daily', priority: 1.0 },
+    { url: '/ar', lastModified, changeFrequency: 'daily', priority: 1.0 },
     
     // About pages
     { url: '/about', lastModified, changeFrequency: 'monthly', priority: 0.8 },
@@ -101,6 +101,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Blog pages
     { url: '/blog', lastModified, changeFrequency: 'weekly', priority: 0.7 },
     { url: '/ar/blog', lastModified, changeFrequency: 'weekly', priority: 0.7 },
+    
+    // صفحات الزي الموحد واليونيفورم حسب المدن السعودية - اللغة الإنجليزية
+    { url: '/locations/riyadh/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/locations/jeddah/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/locations/dammam/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/locations/makkah/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/locations/medina/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/locations/khobar/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/locations/taif/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
+    { url: '/locations/abha/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
+    
+    // صفحات الزي الموحد واليونيفورم حسب المدن السعودية - اللغة العربية
+    { url: '/ar/locations/riyadh/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/ar/locations/jeddah/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/ar/locations/dammam/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/ar/locations/makkah/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/ar/locations/medina/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/ar/locations/khobar/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/ar/locations/taif/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
+    { url: '/ar/locations/abha/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
+    
+    // صفحات اليونيفورم حسب القطاعات والمدن - اللغة الإنجليزية
+    { url: '/industries/healthcare/riyadh', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/industries/healthcare/jeddah', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/industries/healthcare/dammam', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/industries/aviation/riyadh', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/industries/aviation/jeddah', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/industries/hospitality/riyadh', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/industries/hospitality/jeddah', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/industries/hospitality/dammam', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    
+    // صفحات اليونيفورم حسب القطاعات والمدن - اللغة العربية
+    { url: '/ar/industries/healthcare/riyadh', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/ar/industries/healthcare/jeddah', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/ar/industries/healthcare/dammam', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/ar/industries/aviation/riyadh', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/ar/industries/aviation/jeddah', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/ar/industries/hospitality/riyadh', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/ar/industries/hospitality/jeddah', lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: '/ar/industries/hospitality/dammam', lastModified, changeFrequency: 'weekly', priority: 0.9 },
   ];
   
   // Create sitemap entries with absolute URLs
