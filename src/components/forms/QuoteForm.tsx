@@ -233,13 +233,13 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ locale }) => {
         language: locale
       };
       
-      // Send data to SheetDB API endpoint
+      // Send data to SheetDB API endpoint - try the simplest approach
       const response = await fetch('https://sheetdb.io/api/v1/shbplo8e8uafs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ data: [submissionData] }),
+        body: JSON.stringify(submissionData),
       });
       
       const result = await response.json();
