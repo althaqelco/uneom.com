@@ -234,7 +234,7 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ locale }) => {
       };
       
       // Send data to SheetDB API endpoint
-      const response = await fetch('https://sheetdb.io/api/v1/h5ix000ks8562', {
+      const response = await fetch('https://sheetdb.io/api/v1/shbplo8e8uafs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
