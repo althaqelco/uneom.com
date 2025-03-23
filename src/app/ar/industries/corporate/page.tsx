@@ -46,7 +46,7 @@ export default function CorporatePage() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
-
+  
   return (
     <div dir="rtl" className="rtl">
       {/* Hero Section */}
@@ -191,4 +191,4 @@ export default function CorporatePage() {
       </section>
     </div>
   );
-}
+} 

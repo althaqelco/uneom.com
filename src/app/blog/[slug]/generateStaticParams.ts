@@ -15,5 +15,8 @@ export async function generateStaticParams() {
     { slug: 'corporate-uniform-employee-satisfaction' },
     { slug: 'industrial-protective-clothing-advances' },
     { slug: 'sustainable-uniforms-2024-trends' },
+    { slug: 'evolving-trends-gulf-airline-uniforms' },
+    { slug: 'uniforms-airline-brand-identity' },
+    { slug: 'islamic-compliant-aviation-attire' }
   ];
 } 

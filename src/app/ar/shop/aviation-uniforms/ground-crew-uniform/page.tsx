@@ -1,69 +1,79 @@
-'use client';
+"use client";
 
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Container from '@/components/ui/Container';
-import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { getProductById } from '@/lib/data/products';
 
 // Get product data from the English version and adapt it for Arabic
-const englishProduct = getProductById('airline-crew-uniform');
+const englishProduct = getProductById('ground-crew-uniform');
 
-// Product data - using the data from products.ts but translated to Arabic
+// Product data for Arabic version
 const productData = {
-  id: 'airline-crew-uniform',
-  name: 'زي طاقم الطيران',
-  price: 'ريال سعودي 599',
-  rating: 4.8,
-  reviews: 105,
-  description: 'زي طاقم الطيران المصمم خصيصًا يمزج بين عناصر التصميم السعودي التقليدي والأسلوب المعاصر، مما يخلق مظهرًا مميزًا يمثل هوية شركة الطيران الخاصة بك والهوية الثقافية السعودية.',
-  longDescription: 'تم تصميم أزياء طاقم الطيران لدينا لتمثل أفضل ما في الضيافة السعودية مع الالتزام بمعايير الطيران الدولية. تمزج هذه الأزياء بين عناصر التصميم السعودي التقليدي والأسلوب المعاصر، مما يخلق مظهرًا مميزًا يمثل علامة شركة الطيران التجارية والهوية الثقافية السعودية.',
+  id: 'ground-crew-uniform',
+  name: 'زي طاقم الأرض للمطارات',
+  price: 'ريال سعودي 299',
+  rating: 4.7,
+  reviews: 45,
+  description: 'زي طاقم الأرض المتين والعملي مصمم خصيصًا لموظفي مناولة الأمتعة وفريق الصيانة وموظفي المطارات، مناسب للظروف القاسية مع الحفاظ على الراحة طوال اليوم.',
+  longDescription: 'تمنح أزياء طاقم الأرض لدينا الموظفين السعوديين في المطارات القدرة على العمل بكفاءة وأمان في جميع المناطق الوظيفية. مصممة خصيصًا للمناخات الحارة مع تقنيات تبريد متطورة، ومصنوعة من أقمشة متينة مقاومة للماء والتآكل والبقع، مع ألوان عالية الوضوح وعناصر عاكسة للسلامة القصوى. توفر هذه الأزياء مستويات احترافية بينما تتحمل ضغوط العمل اليومي في مناطق المطار المزدحمة.',
   features: [
-    'قماش مقاوم للتجاعيد للرحلات الطويلة',
-    'مواد منظمة للحرارة',
-    'تصاميم ملائمة ثقافيًا لشركات الطيران السعودية',
-    'خيارات محتشمة لأفراد الطاقم من النساء',
-    'إكسسوارات متناسقة متوفرة',
-    'قابل للتخصيص مع علامة شركة الطيران التجارية'
+    'نسيج خارجي متين وعالي التحمل',
+    'خيارات ألوان عالية الوضوح للسلامة',
+    'أشرطة عاكسة للرؤية في الظلام',
+    'جيوب متعددة وعملية',
+    'قماش مقاوم للماء والبقع',
+    'تقنية تبريد للعمل في المناخات الحارة',
+    'خيارات تخصيص مع شعار المطار',
+    'خيارات أقمشة خفيفة الوزن للعمل في أجواء المملكة العربية السعودية'
   ],
   specifications: [
-    { name: 'التركيبة', value: '80% بوليستر، 18% صوف، 2% إيلاستين' },
-    { name: 'وزن القماش', value: '220 غرام/متر مربع' },
-    { name: 'الميزات', value: 'مقاوم للتجاعيد، راحة مع التمدد، تشطيب احترافي' },
-    { name: 'خيارات التخصيص', value: 'تطريز شعار شركة الطيران، أزرار مخصصة، تصاميم غطاء الرأس للطاقم النسائي' },
+    { name: 'المادة', value: 'قطن مقوى 65%، بوليستر 35%' },
+    { name: 'وزن القماش', value: '280 غرام/متر مربع' },
+    { name: 'الميزات الخاصة', value: 'مقاوم للماء، مقاوم للتمزق، عاكس للضوء' },
+    { name: 'التركيبة', value: 'سترة، بنطلون، قميص، سترة للطقس البارد' },
+    { name: 'خيارات التخصيص', value: 'طباعة شعار المطار، إضافة اسم الموظف، بطاقات الأسماء المدمجة' },
     { name: 'بلد التصنيع', value: 'المملكة العربية السعودية' }
   ],
   images: englishProduct ? englishProduct.images : [
-    { src: '/images/products/aviation/airline-1.jpg', alt: 'زي طاقم الطيران للنساء والرجال' },
-    { src: '/images/products/aviation/airline-2.jpg', alt: 'زي الطاقم النسائي بعناصر تصميم سعودية' },
-    { src: '/images/products/aviation/airline-3.jpg', alt: 'تفاصيل زي الطاقم الرجالي' }
+    { src: '/images/aviation/aviation_uniform_airline.jpg', alt: 'زي طاقم الأرض للمطارات السعودية' },
+    { src: '/images/products/aviation/ground-1.jpg', alt: 'زي طاقم الأرض مع العناصر العاكسة' },
+    { src: '/images/products/aviation/ground-2.jpg', alt: 'تفاصيل زي طاقم الأرض' }
   ],
   colors: [
-    { name: 'أزرق ملكي', value: '#1e3799', image: '/images/products/aviation/airline-blue.jpg' },
-    { name: 'لون رملي صحراوي', value: '#c4a077', image: '/images/products/aviation/airline-sand.jpg' },
-    { name: 'كحلي مؤسسي', value: '#0c2461', image: '/images/products/aviation/airline-navy.jpg' }
+    { name: 'أصفر عالي الوضوح', value: '#f6e58d', image: '/images/products/aviation/ground-yellow.jpg' },
+    { name: 'برتقالي عالي الوضوح', value: '#ffbe76', image: '/images/products/aviation/ground-orange.jpg' },
+    { name: 'أزرق داكن', value: '#0a3d62', image: '/images/products/aviation/ground-navy.jpg' }
   ],
-  sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+  sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
   category: 'أزياء الطيران',
   categorySlug: 'aviation-uniforms',
   inStock: true,
-  minOrderQuantity: 15,
+  minOrderQuantity: 10,
   bulkPricing: [
-    { quantity: '15-24', price: 'ريال سعودي 599' },
-    { quantity: '25-49', price: 'ريال سعودي 569' },
-    { quantity: '50-99', price: 'ريال سعودي 539' },
-    { quantity: '100+', price: 'ريال سعودي 509' }
+    { quantity: '10-24', price: 'ريال سعودي 299' },
+    { quantity: '25-49', price: 'ريال سعودي 279' },
+    { quantity: '50-99', price: 'ريال سعودي 259' },
+    { quantity: '100+', price: 'ريال سعودي 239' }
   ],
   customizationOptions: [
-    'تطريز شعار شركة الطيران',
-    'أزرار مخصصة بعلامة الشركة',
-    'علامات الرتب',
-    'إكسسوارات مستوحاة من التراث السعودي (اختياري)',
-    'تصاميم غطاء الرأس للطاقم النسائي'
+    'طباعة شعار المطار',
+    'إضافة اسم الموظف',
+    'خيارات تصميم مخصصة للألوان',
+    'بطاقات الأسماء المدمجة',
+    'أحزمة مخصصة بشعار المطار'
   ],
   relatedProducts: [
+    {
+      id: 'airline-crew-uniform',
+      name: 'زي طاقم الطيران',
+      price: 'ريال سعودي 599',
+      images: [{ src: '/images/products/aviation/airline-1.jpg', alt: 'زي طاقم الطيران للنساء والرجال' }],
+      category: 'أزياء الطيران',
+      categorySlug: 'aviation-uniforms'
+    },
     {
       id: 'pilot-uniform-set',
       name: 'طقم زي الطيار المحترف',
@@ -71,22 +81,14 @@ const productData = {
       images: [{ src: '/images/aviation/aviation_captin_uniform.jpg', alt: 'زي طيار محترف للخطوط الجوية السعودية' }],
       category: 'أزياء الطيران',
       categorySlug: 'aviation-uniforms'
-    },
-    {
-      id: 'ground-crew-uniform',
-      name: 'زي طاقم الأرض',
-      price: 'ريال سعودي 299',
-      images: [{ src: '/images/aviation/aviation_uniform_airline.jpg', alt: 'زي طاقم الأرض للمطارات السعودية' }],
-      category: 'أزياء الطيران',
-      categorySlug: 'aviation-uniforms'
     }
   ],
-  tags: ['زي طيران', 'طاقم مضيفين', 'يونيفورم طيران', 'زي مضيفات']
+  tags: ['زي طاقم أرضي', 'زي موظفي المطار', 'ملابس المطار', 'زي مناولة الأمتعة', 'زي عمال المطار']
 };
 
-export default function AirlineCrewUniformPageAr() {
+export default function GroundCrewUniformPageAr() {
   const [selectedColor, setSelectedColor] = React.useState(productData.colors[0].value);
-  const [selectedSize, setSelectedSize] = React.useState(productData.sizes[0]);
+  const [selectedSize, setSelectedSize] = React.useState(productData.sizes[2]); // Default to size L
   const [selectedImage, setSelectedImage] = React.useState(0);
   const [selectedQuantity, setSelectedQuantity] = React.useState(productData.minOrderQuantity || 1);
 
@@ -317,11 +319,47 @@ export default function AirlineCrewUniformPageAr() {
                 </table>
               </div>
               
+              {/* Custom Options Section */}
+              <h3 className="text-xl font-semibold mb-4">خيارات التخصيص</h3>
+              <ul className="space-y-3 mb-8">
+                {productData.customizationOptions.map((option, index) => (
+                  <li key={index} className="flex items-start">
+                    <svg className="mt-1 ml-3 w-5 h-5 text-primary-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                    </svg>
+                    <span>{option}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              {/* Related Products */}
+              <h3 className="text-xl font-semibold mb-6 mt-12">منتجات ذات صلة</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {productData.relatedProducts.map((product) => (
+                  <Link href={`/ar/shop/${product.categorySlug}/${product.id}`} key={product.id} className="group">
+                    <div className="bg-white rounded-lg border border-neutral-200 overflow-hidden transition-all group-hover:shadow-md">
+                      <div className="aspect-square relative">
+                        <Image
+                          src={product.images[0].src}
+                          alt={product.images[0].alt}
+                          className="object-cover group-hover:scale-105 transition-transform"
+                          fill
+                        />
+                      </div>
+                      <div className="p-4">
+                        <h4 className="font-medium text-lg mb-2 group-hover:text-primary-600 transition-colors">{product.name}</h4>
+                        <p className="text-neutral-900 font-semibold">{product.price}</p>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              
               {/* SEO Meta Tags */}
               <div className="hidden">
-                <h1>زي طاقم الطيران من يونيوم - زي احترافي لشركات الطيران السعودية</h1>
-                <meta name="description" content="زي طاقم طيران مصمم خصيصًا للخطوط الجوية السعودية، يجمع بين الأناقة والعملية ويعكس الهوية السعودية. متوفر بألوان متعددة ومقاسات مختلفة." />
-                <meta name="keywords" content="زي طاقم طيران، يونيفورم مضيفات، زي طيران سعودي، ملابس طاقم جوي، أزياء شركات طيران" />
+                <h1>زي طاقم الأرض للمطارات - ملابس عملية وآمنة لموظفي المطارات السعودية</h1>
+                <meta name="description" content="زي طاقم أرضي متين ومريح لموظفي المطارات السعودية، مصمم للعمل في الظروف القاسية مع ميزات سلامة عالية وراحة مثالية للعمل في المناخ الحار." />
+                <meta name="keywords" content="زي طاقم أرض، ملابس مطار، يونيفورم موظفي المطار، ملابس مناولة الأمتعة، زي عمال المطار" />
               </div>
             </div>
           </div>

@@ -85,7 +85,7 @@ export const products = [
       "Optional Saudi-inspired accessories",
       "Headscarf designs for female crew"
     ],
-    relatedProducts: ["pilot-uniform", "ground-staff-uniform", "airport-security-uniform"],
+    relatedProducts: ["pilot-uniform", "ground-crew-uniform", "airport-security-uniform"],
     price: "SAR 599",
     minOrder: 15,
     href: "/shop/aviation-uniforms/airline-crew-uniform"
@@ -219,6 +219,93 @@ export const products = [
     price: "SAR 1,299",
     minOrder: 5,
     href: "/shop/corporate-workwear/executive-suit"
+  },
+  {
+    id: "ground-crew-uniform",
+    category: "aviation-uniforms",
+    categoryName: "Aviation Uniforms",
+    industry: "aviation",
+    name: "Ground Staff Uniforms",
+    shortDescription: "Practical and professional attire for airport ground personnel in Saudi aviation",
+    description: "Our ground staff uniforms blend professionalism with practicality, designed specifically for the diverse roles within Saudi Arabian airports. From check-in counter staff to baggage handlers, these uniforms provide durability, comfort, and a polished appearance while representing your airline's brand identity on the ground.",
+    features: [
+      "Durable fabrics for high-traffic environments",
+      "Practical pocket placement for essential tools and documents",
+      "Weather-adaptable designs for indoor/outdoor roles",
+      "Moisture-wicking properties for comfort in Saudi climate",
+      "High-visibility options for ramp and tarmac roles", 
+      "Culturally appropriate designs for Saudi airports"
+    ],
+    images: [
+      { src: "/images/aviation/aviation_uniform_airline.jpg", alt: "Ground staff uniform for Saudi airports" },
+      { src: "/images/products/aviation/ground-1.jpg", alt: "Ground crew uniform details" },
+      { src: "/images/products/aviation/ground-2.jpg", alt: "Ground crew uniform in use" }
+    ],
+    colors: [
+      { name: "Navy Blue", value: "#0c2461", image: "/images/products/aviation/ground-navy.jpg" },
+      { name: "Charcoal Grey", value: "#2c3e50", image: "/images/products/aviation/ground-grey.jpg" },
+      { name: "Corporate Black", value: "#1e272e", image: "/images/products/aviation/ground-black.jpg" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
+    fabricDetails: {
+      composition: "65% Polyester, 35% Cotton",
+      gsm: "240",
+      features: ["Stain-resistant", "High durability", "Easy-care"]
+    },
+    customizationOptions: [
+      "Airline logo application",
+      "Department color-coding",
+      "Role identification badges",
+      "Name embroidery",
+      "High-visibility stripes for ground operations"
+    ],
+    relatedProducts: ["airline-crew-uniform", "pilot-uniform-set", "airport-security-uniform"],
+    price: "SAR 299",
+    minOrder: 20,
+    href: "/shop/aviation-uniforms/ground-crew-uniform"
+  },
+  {
+    id: "pilot-uniform-set",
+    category: "aviation-uniforms",
+    categoryName: "Aviation Uniforms",
+    industry: "aviation",
+    name: "Professional Pilot Uniform Set",
+    shortDescription: "Complete pilot uniform sets designed for Saudi airline captains and officers",
+    description: "Our premium pilot uniforms are designed to convey the professionalism and authority expected of commercial airline pilots while offering exceptional comfort during long flights. These complete uniform sets include shirts, trousers, jackets, and accessories, all crafted to meet international aviation standards while incorporating subtle Saudi design elements.",
+    features: [
+      "Premium wool-blend fabrics for professional appearance",
+      "Wrinkle-resistant materials for long-haul flights",
+      "Traditional and contemporary design options",
+      "Four-season weight options suitable for different routes",
+      "Epaulette and wing badge options for all ranks",
+      "Optional Saudi cultural elements in design details"
+    ],
+    images: [
+      { src: "/images/aviation/aviation_captin_uniform.jpg", alt: "Professional pilot uniform for Saudi airlines" },
+      { src: "/images/products/aviation/pilot-1.jpg", alt: "Pilot uniform jacket details" },
+      { src: "/images/products/aviation/pilot-2.jpg", alt: "Complete pilot uniform set" }
+    ],
+    colors: [
+      { name: "Pilot Black", value: "#0a0a0a", image: "/images/products/aviation/pilot-black.jpg" },
+      { name: "Dark Navy", value: "#0c2461", image: "/images/products/aviation/pilot-navy.jpg" }
+    ],
+    sizes: ["46", "48", "50", "52", "54", "56", "58", "60", "62"],
+    fabricDetails: {
+      composition: "55% Wool, 45% Polyester",
+      gsm: "260",
+      features: ["Wrinkle-resistant", "Breathable", "Professional finish"]
+    },
+    customizationOptions: [
+      "Airline logo embroidery",
+      "Rank stripe customization",
+      "Name plate options",
+      "Saudi wing badge variations",
+      "Optional Arabic calligraphy details"
+    ],
+    relatedProducts: ["airline-crew-uniform", "ground-crew-uniform", "pilot-accessories"],
+    price: "SAR 1,799",
+    minOrder: 5,
+    href: "/shop/aviation-uniforms/pilot-uniform-set"
   }
 ];
 

@@ -12,5 +12,8 @@ export async function generateStaticParams() {
     { slug: 'security-uniform-standards' },
     { slug: 'uniform-customization' },
     { slug: 'medical-scrubs-evolution' },
+    { slug: 'evolving-trends-gulf-airline-uniforms' },
+    { slug: 'uniforms-airline-brand-identity' },
+    { slug: 'islamic-compliant-aviation-attire' }
   ];
 } 

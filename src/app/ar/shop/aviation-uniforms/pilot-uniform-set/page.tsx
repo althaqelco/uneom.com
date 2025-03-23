@@ -9,66 +9,65 @@ import Button from '@/components/ui/Button';
 import { getProductById } from '@/lib/data/products';
 
 // Get product data from the English version and adapt it for Arabic
-const englishProduct = getProductById('airline-crew-uniform');
+const englishProduct = getProductById('pilot-uniform-set');
 
 // Product data - using the data from products.ts but translated to Arabic
 const productData = {
-  id: 'airline-crew-uniform',
-  name: 'زي طاقم الطيران',
-  price: 'ريال سعودي 599',
-  rating: 4.8,
-  reviews: 105,
-  description: 'زي طاقم الطيران المصمم خصيصًا يمزج بين عناصر التصميم السعودي التقليدي والأسلوب المعاصر، مما يخلق مظهرًا مميزًا يمثل هوية شركة الطيران الخاصة بك والهوية الثقافية السعودية.',
-  longDescription: 'تم تصميم أزياء طاقم الطيران لدينا لتمثل أفضل ما في الضيافة السعودية مع الالتزام بمعايير الطيران الدولية. تمزج هذه الأزياء بين عناصر التصميم السعودي التقليدي والأسلوب المعاصر، مما يخلق مظهرًا مميزًا يمثل علامة شركة الطيران التجارية والهوية الثقافية السعودية.',
+  id: 'pilot-uniform-set',
+  name: 'طقم زي الطيار المحترف',
+  price: 'ريال سعودي 1,799',
+  rating: 4.9,
+  reviews: 72,
+  description: 'طقم زي الطيار الكامل المصمم خصيصاً للطيارين السعوديين، مع التركيز على الراحة والأناقة مع الحفاظ على التقاليد المهنية العالمية للطيارين.',
+  longDescription: 'صممت أزياء الطيارين الفاخرة لدينا لتعكس الاحترافية والسلطة المتوقعة من طياري الخطوط الجوية التجارية مع توفير راحة استثنائية أثناء الرحلات الطويلة. تشمل مجموعات الزي الكامل هذه القمصان والسراويل والسترات والإكسسوارات، وكلها مصنوعة لتلبية معايير الطيران الدولية مع دمج عناصر تصميم سعودية دقيقة.',
   features: [
-    'قماش مقاوم للتجاعيد للرحلات الطويلة',
-    'مواد منظمة للحرارة',
-    'تصاميم ملائمة ثقافيًا لشركات الطيران السعودية',
-    'خيارات محتشمة لأفراد الطاقم من النساء',
-    'إكسسوارات متناسقة متوفرة',
-    'قابل للتخصيص مع علامة شركة الطيران التجارية'
+    'أقمشة مزيج الصوف الفاخر للمظهر الاحترافي',
+    'مواد مقاومة للتجاعيد للرحلات الطويلة',
+    'خيارات تصميم تقليدية ومعاصرة',
+    'خيارات وزن للأربعة مواسم مناسبة لمختلف المسارات',
+    'خيارات شارات الأجنحة وحمالات الكتف لجميع الرتب',
+    'عناصر ثقافية سعودية اختيارية في تفاصيل التصميم'
   ],
   specifications: [
-    { name: 'التركيبة', value: '80% بوليستر، 18% صوف، 2% إيلاستين' },
-    { name: 'وزن القماش', value: '220 غرام/متر مربع' },
-    { name: 'الميزات', value: 'مقاوم للتجاعيد، راحة مع التمدد، تشطيب احترافي' },
-    { name: 'خيارات التخصيص', value: 'تطريز شعار شركة الطيران، أزرار مخصصة، تصاميم غطاء الرأس للطاقم النسائي' },
+    { name: 'التركيبة', value: '55% صوف، 45% بوليستر' },
+    { name: 'وزن القماش', value: '260 غرام/متر مربع' },
+    { name: 'الميزات', value: 'مقاوم للتجاعيد، قابل للتنفس، تشطيب احترافي' },
+    { name: 'خيارات التخصيص', value: 'تطريز شعار شركة الطيران، تخصيص شرائط الرتبة، خيارات لوحة الاسم' },
     { name: 'بلد التصنيع', value: 'المملكة العربية السعودية' }
   ],
   images: englishProduct ? englishProduct.images : [
-    { src: '/images/products/aviation/airline-1.jpg', alt: 'زي طاقم الطيران للنساء والرجال' },
-    { src: '/images/products/aviation/airline-2.jpg', alt: 'زي الطاقم النسائي بعناصر تصميم سعودية' },
-    { src: '/images/products/aviation/airline-3.jpg', alt: 'تفاصيل زي الطاقم الرجالي' }
+    { src: '/images/aviation/aviation_captin_uniform.jpg', alt: 'زي طيار محترف للخطوط الجوية السعودية' },
+    { src: '/images/products/aviation/pilot-1.jpg', alt: 'تفاصيل سترة زي الطيار' },
+    { src: '/images/products/aviation/pilot-2.jpg', alt: 'طقم زي الطيار الكامل' }
   ],
   colors: [
-    { name: 'أزرق ملكي', value: '#1e3799', image: '/images/products/aviation/airline-blue.jpg' },
-    { name: 'لون رملي صحراوي', value: '#c4a077', image: '/images/products/aviation/airline-sand.jpg' },
-    { name: 'كحلي مؤسسي', value: '#0c2461', image: '/images/products/aviation/airline-navy.jpg' }
+    { name: 'أسود للطيارين', value: '#0a0a0a', image: '/images/products/aviation/pilot-black.jpg' },
+    { name: 'كحلي داكن', value: '#0c2461', image: '/images/products/aviation/pilot-navy.jpg' }
   ],
-  sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+  sizes: ['46', '48', '50', '52', '54', '56', '58', '60', '62'],
   category: 'أزياء الطيران',
   categorySlug: 'aviation-uniforms',
   inStock: true,
-  minOrderQuantity: 15,
+  minOrderQuantity: 5,
   bulkPricing: [
-    { quantity: '15-24', price: 'ريال سعودي 599' },
-    { quantity: '25-49', price: 'ريال سعودي 569' },
-    { quantity: '50-99', price: 'ريال سعودي 539' },
-    { quantity: '100+', price: 'ريال سعودي 509' }
+    { quantity: '5-9', price: 'ريال سعودي 1,799' },
+    { quantity: '10-19', price: 'ريال سعودي 1,699' },
+    { quantity: '20-49', price: 'ريال سعودي 1,599' },
+    { quantity: '50+', price: 'ريال سعودي 1,499' }
   ],
   customizationOptions: [
     'تطريز شعار شركة الطيران',
-    'أزرار مخصصة بعلامة الشركة',
-    'علامات الرتب',
-    'إكسسوارات مستوحاة من التراث السعودي (اختياري)',
-    'تصاميم غطاء الرأس للطاقم النسائي'
+    'تخصيص شرائط الرتبة',
+    'خيارات لوحة الاسم',
+    'تنويعات شارة جناح سعودية',
+    'تفاصيل خط عربي اختيارية'
   ],
   relatedProducts: [
     {
-      id: 'pilot-uniform-set',
-      name: 'طقم زي الطيار المحترف',
-      price: 'ريال سعودي 1,799',
-      images: [{ src: '/images/aviation/aviation_captin_uniform.jpg', alt: 'زي طيار محترف للخطوط الجوية السعودية' }],
+      id: 'airline-crew-uniform',
+      name: 'زي طاقم الطيران',
+      price: 'ريال سعودي 599',
+      images: [{ src: '/images/products/aviation/airline-1.jpg', alt: 'زي طاقم الطيران للنساء والرجال' }],
       category: 'أزياء الطيران',
       categorySlug: 'aviation-uniforms'
     },
@@ -81,10 +80,10 @@ const productData = {
       categorySlug: 'aviation-uniforms'
     }
   ],
-  tags: ['زي طيران', 'طاقم مضيفين', 'يونيفورم طيران', 'زي مضيفات']
+  tags: ['زي طيار', 'بدلة طيار', 'يونيفورم كابتن طائرة', 'زي طيران محترف']
 };
 
-export default function AirlineCrewUniformPageAr() {
+export default function PilotUniformSetPageAr() {
   const [selectedColor, setSelectedColor] = React.useState(productData.colors[0].value);
   const [selectedSize, setSelectedSize] = React.useState(productData.sizes[0]);
   const [selectedImage, setSelectedImage] = React.useState(0);
@@ -317,11 +316,24 @@ export default function AirlineCrewUniformPageAr() {
                 </table>
               </div>
               
+              {/* Custom Options Section */}
+              <h3 className="text-xl font-semibold mb-4">خيارات التخصيص</h3>
+              <ul className="space-y-3 mb-8">
+                {productData.customizationOptions.map((option, index) => (
+                  <li key={index} className="flex items-start">
+                    <svg className="mt-1 ml-3 w-5 h-5 text-primary-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                    </svg>
+                    <span>{option}</span>
+                  </li>
+                ))}
+              </ul>
+              
               {/* SEO Meta Tags */}
               <div className="hidden">
-                <h1>زي طاقم الطيران من يونيوم - زي احترافي لشركات الطيران السعودية</h1>
-                <meta name="description" content="زي طاقم طيران مصمم خصيصًا للخطوط الجوية السعودية، يجمع بين الأناقة والعملية ويعكس الهوية السعودية. متوفر بألوان متعددة ومقاسات مختلفة." />
-                <meta name="keywords" content="زي طاقم طيران، يونيفورم مضيفات، زي طيران سعودي، ملابس طاقم جوي، أزياء شركات طيران" />
+                <h1>طقم زي الطيار المحترف من يونيوم - زي رسمي لطياري الخطوط الجوية السعودية</h1>
+                <meta name="description" content="طقم زي طيار كامل ذو جودة عالية مصمم خصيصًا لطياري الخطوط السعودية، مصنوع من أفضل الأقمشة المقاومة للتجاعيد مع توفير الراحة الكاملة في الرحلات الطويلة." />
+                <meta name="keywords" content="زي طيار، بدلة طيران، يونيفورم كابتن، أزياء طيران، ملابس طيارين سعودية" />
               </div>
             </div>
           </div>

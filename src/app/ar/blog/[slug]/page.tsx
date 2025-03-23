@@ -26,6 +26,16 @@ export async function generateStaticParams() {
     { slug: 'vision-2030-reshaping-dress-codes' },
     { slug: 'sustainable-uniform-solutions' },
     { slug: 'advanced-fabrics-healthcare-uniforms' },
+    // Add the missing blog post slugs
+    { slug: 'evolving-trends-gulf-airline-uniforms' },
+    { slug: 'uniforms-airline-brand-identity' },
+    { slug: 'islamic-compliant-aviation-attire' },
+    { slug: 'healthcare-uniforms-infection-control' },
+    // Add these newly identified missing slugs
+    { slug: 'hospitality-uniforms-cultural-identity' },
+    { slug: 'corporate-uniform-psychology' },
+    { slug: 'sustainable-uniforms' },
+    { slug: 'healthcare-uniforms' }
   ];
 }
 

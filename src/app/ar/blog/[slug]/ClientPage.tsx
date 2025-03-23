@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import { getBlogPostBySlug, getRelatedPosts as getRelatedPostsFromData } from '@/lib/data/blogPosts';
 
@@ -37,7 +36,7 @@ export default function ClientPage({ slug }: ClientPageProps) {
   const relatedPosts = getRelatedPostsFromData(slug, locale, 3);
   
   return (
-    <MainLayout locale={locale}>
+    <>
       {/* Hero Section */}
       <section className="pt-16 pb-20">
         <Container>
@@ -181,6 +180,6 @@ export default function ClientPage({ slug }: ClientPageProps) {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    </>
   );
 } 

@@ -1,313 +1,458 @@
 'use client';
 
 import React from 'react';
-import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Container from '@/components/ui/Container';
+import Link from 'next/link';
+import MainLayout from '@/components/layout/MainLayout';
+
+// Define animation variants
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6 }
+  }
+};
 
 export default function AviationPage() {
   // Define locale for language support
   const locale = 'en';
   
-  const aviationData = {
-    locale: locale,
-    title: 'Professional Aviation Uniforms & Airline Attire in Saudi Arabia',
-    subtitle: 'Premium cabin crew, ground staff, and aviation personnel uniforms tailored for Saudi airlines',
-    heroImage: '/images/industries/aviation.jpg',
-    
-    // SEO metadata
-    metaDescription: 'UNEOM provides professional aviation uniforms for Saudi airlines, including cabin crew, ground staff, and maintenance personnel attire with Islamic dress options.',
-    keywords: ['aviation uniforms Saudi Arabia', 'airline uniforms', 'cabin crew attire', 'Saudi airline uniforms', 'ground staff uniforms', 'Islamic flight attendant uniforms'],
-    canonicalUrl: 'https://uneom.com/industries/aviation',
-    
-    introduction: [
-      "In Saudi Arabia's rapidly growing aviation sector, professional uniforms play a crucial role in establishing airline identity, ensuring operational efficiency, and projecting the Kingdom's commitment to excellence in global air travel. UNEOM's comprehensive aviation uniform solutions are specifically designed to meet the unique requirements of Saudi airlines and aviation businesses.",
-      
-      "From cabin crew and flight deck personnel to ground operations and technical staff, we provide premium-quality uniforms that combine sophisticated style, practical functionality, and cultural sensitivity. Our aviation collections incorporate advanced fabric technologies that withstand the rigorous demands of air travel while offering options that respect Islamic dress codes and reflect Saudi heritage elements.",
-      
-      "As a trusted partner to leading Saudi airlines and aviation service companies, we understand the critical importance of uniform programs that enhance your brand identity while meeting international aviation standards and local cultural considerations."
-    ],
-    
-    benefits: [
-      {
-        title: "Saudi Aviation Industry Expertise",
-        description: "Our design team possesses specialized knowledge of Saudi Arabia's aviation sector requirements, including GACA standards and airline-specific protocols.",
-        icon: "/icons/industry-expertise.svg"
-      },
-      {
-        title: "Islamic-Compliant Design Options",
-        description: "Specialized uniform designs that respect modest dress requirements while meeting international aviation standards and operational functionality needs.",
-        icon: "/icons/islamic-design.svg"
-      },
-      {
-        title: "International-Standard Fabrics",
-        description: "High-performance textiles that maintain appearance during long-haul flights, resist wrinkles, provide comfort in varying cabin conditions, and meet safety requirements.",
-        icon: "/icons/international-standard.svg"
-      },
-      {
-        title: "Brand Identity Enhancement",
-        description: "Distinctive uniforms that reinforce your airline's visual identity, with careful attention to color matching, logo integration, and unique design elements.",
-        icon: "/icons/brand-identity.svg"
-      },
-      {
-        title: "Comprehensive Role-Based Designs",
-        description: "Coordinated uniform systems that clearly distinguish between different aviation roles while maintaining overall brand cohesion across your organization.",
-        icon: "/icons/role-based.svg"
-      }
-    ],
-    
-    products: [
-      {
-        id: "cabin-crew-uniform",
-        name: "Cabin Crew Uniform Collection",
-        description: "Complete flight attendant uniform sets featuring elegant design, practical functionality, and options for both traditional and international styling.",
-        image: "/images/products/airline-uniform.jpg",
-        href: "/shop/aviation/cabin-crew-uniform"
-      },
-      {
-        id: "pilot-uniform",
-        name: "Professional Pilot Uniforms",
-        description: "Distinguished pilot attire with precision tailoring, premium fabrics, and details that reflect aviation authority and professionalism.",
-        image: "/images/product-placeholder.jpg",
-        href: "/shop/aviation/pilot-uniform"
-      },
-      {
-        id: "ground-staff-uniform",
-        name: "Ground Staff Uniforms",
-        description: "Functional and professional uniforms for check-in, gate agents, and passenger service personnel that balance style with practical operational needs.",
-        image: "/images/product-placeholder.jpg",
-        href: "/shop/aviation/ground-staff-uniform"
-      },
-      {
-        id: "technical-crew-attire",
-        name: "Technical Crew Attire",
-        description: "Specialized uniforms for technical and maintenance staff featuring durable construction, safety features, and practical design for engineering tasks.",
-        image: "/images/product-placeholder.jpg",
-        href: "/shop/aviation/technical-crew-attire"
-      },
-      {
-        id: "modest-aviation-uniform",
-        name: "Modest Aviation Uniforms",
-        description: "Specially designed aviation attire for female staff that combines modest Islamic dress requirements with international aviation standards.",
-        image: "/images/product-placeholder.jpg",
-        href: "/shop/aviation/modest-aviation-uniform"
-      },
-      {
-        id: "vip-lounge-attire",
-        name: "VIP Lounge & Premium Service Attire",
-        description: "Sophisticated uniforms for staff serving premium and VIP passengers, featuring elevated design elements and luxury fabric options.",
-        image: "/images/product-placeholder.jpg",
-        href: "/shop/aviation/vip-lounge-attire"
-      }
-    ],
-    
-    // Aviation department roles with specialized products
-    departments: [
-      {
-        name: "Cabin Services",
-        description: "Professional uniforms for cabin crew that combine sophisticated appearance with practical functionality for in-flight service, featuring options for both international and Saudi-specific styling.",
-        image: "/images/default-placeholder.jpg",
-        productTypes: ["Flight Attendant Sets", "Pursers & Cabin Managers", "Saudi-Styled Cabin Attire"]
-      },
-      {
-        name: "Flight Deck",
-        description: "Distinguished pilot uniforms that convey authority and professionalism while meeting international aviation standards and Saudi airline regulations.",
-        image: "/images/default-placeholder.jpg",
-        productTypes: ["Captain & First Officer Uniforms", "Flight Engineer Attire", "Pilot Accessories"]
-      },
-      {
-        name: "Ground Operations",
-        description: "Practical, professional uniforms for ground staff involved in passenger services, featuring weather-appropriate options and clear role identification.",
-        image: "/images/default-placeholder.jpg",
-        productTypes: ["Check-in Counter Uniforms", "Boarding Gate Attire", "Passenger Service Sets"]
-      },
-      {
-        name: "Technical & Maintenance",
-        description: "Durable, functional uniforms designed for technical personnel with appropriate safety features, tool accessibility, and weather considerations.",
-        image: "/images/default-placeholder.jpg",
-        productTypes: ["Aircraft Maintenance Uniforms", "Engineering Staff Attire", "Ramp Operations Wear"]
-      }
-    ],
-    
-    fabricTechnologies: [
-      {
-        name: "TravelFresh Antimicrobial",
-        description: "Advanced fabric treatment that maintains freshness during long-haul flights, inhibits odor development, and extends the life of aviation uniforms.",
-        icon: "/icons/travelfresh.svg"
-      },
-      {
-        name: "AeroFlex Comfort System",
-        description: "Innovative stretch technology providing exceptional range of motion and comfort during extended flights and active service periods.",
-        icon: "/icons/aeroflex.svg"
-      },
-      {
-        name: "WrinkleFree Travel Tech",
-        description: "Specialized fabric engineering that resists creasing and maintains a professional appearance throughout long duty periods and international travel.",
-        icon: "/icons/wrinklefree.svg"
-      },
-      {
-        name: "ThermoRegulate Cabin Control",
-        description: "Adaptive fabric technology that helps maintain comfort across varying cabin temperatures and climate conditions encountered during international flights.",
-        icon: "/icons/thermoregulate.svg"
-      }
-    ],
-    
-    customizationOptions: [
-      {
-        name: "Airline Branding Integration",
-        description: "Precision incorporation of your airline's visual identity elements, including exact color matching, logo placement, and distinctive design features.",
-        icon: "/icons/airline-branding.svg"
-      },
-      {
-        name: "Role Distinction Systems",
-        description: "Clear visual indicators to differentiate between staff roles, service levels, and personnel seniority through thoughtful design elements.",
-        icon: "/icons/role-distinction.svg"
-      },
-      {
-        name: "Cultural Design Elements",
-        description: "Thoughtful incorporation of Saudi heritage elements and cultural motifs into uniform designs, creating a distinctive Saudi identity.",
-        icon: "/icons/cultural-elements.svg"
-      },
-      {
-        name: "Modesty Adaptations",
-        description: "Specialized modifications to standard aviation uniform designs that respect Islamic dress codes while maintaining professional international standards.",
-        icon: "/icons/modesty-adaptations.svg"
-      }
-    ],
-    
-    testimonials: [
-      {
-        id: "testimonial-1",
-        quote: "UNEOM transformed our airline's visual identity with uniforms that perfectly balance our Saudi heritage with international aviation standards. Their attention to detail in incorporating our branding elements while considering the practical needs of our diverse staff roles has significantly enhanced both our image and operational functionality.",
-        author: "Capt. Abdullah Al-Zahrani",
-        position: "Operations Director",
-        company: "Royal Sky Airlines"
-      },
-      {
-        id: "testimonial-2",
-        quote: "The modest uniform options UNEOM designed for our female cabin crew have received overwhelmingly positive feedback from staff and passengers alike. The uniforms beautifully represent our company's values while meeting all practical requirements for in-flight service. The fabric quality has proven exceptional, maintaining appearance even on our longest international routes.",
-        author: "Norah Al-Saud",
-        position: "Head of Cabin Services",
-        company: "Saudi Wings Aviation"
-      }
-    ],
-    
-    // FAQ section for SEO enhancement
-    faq: [
-      {
-        question: "How do UNEOM's aviation uniforms meet the specific needs of Saudi airlines?",
-        answer: "Our aviation uniforms are specially designed for Saudi airlines, featuring modest options for female staff that conform to Islamic dress codes while meeting international aviation standards, incorporating Saudi heritage elements for distinctive brand identity, using fabrics selected for the rigors of Saudi aviation routes including desert conditions, and ensuring compliance with GACA and international safety standards."
-      },
-      {
-        question: "Can you create different uniform styles for various staff roles while maintaining brand consistency?",
-        answer: "Yes, we specialize in developing comprehensive aviation uniform programs that clearly distinguish between different staff roles (cabin crew, pilots, ground staff, technical personnel) while maintaining overall brand coherence through consistent color palettes, design elements, and branding applications. This approach helps passengers identify staff functions while presenting a unified airline identity."
-      },
-      {
-        question: "What fabric technologies are important for aviation uniforms in Saudi Arabia's climate?",
-        answer: "For Saudi aviation environments, we incorporate several specialized fabric technologies: ThermoRegulate systems that adapt to varying conditions between aircraft and ground environments, antimicrobial treatments that ensure freshness during long duty periods in warm conditions, moisture-wicking properties for comfort in Saudi's hot climate, and advanced wrinkle-resistance to maintain professional appearance throughout extended shifts."
-      },
-      {
-        question: "How do you handle uniform implementation for airlines with large and diverse staff numbers?",
-        answer: "We offer comprehensive implementation programs for airlines of all sizes, including fit sessions at multiple locations, detailed sizing systems with Arabia-specific measurements, phased rollout planning to ensure operational continuity, staff training on uniform care and presentation, and ongoing support for new hires and replacements to maintain consistent appearance across the entire organization."
-      }
-    ],
-    
-    // Related blog posts for increased internal linking and SEO value
-    relatedContent: {
-      title: "Aviation Uniform Resources",
-      blogPosts: [
-        {
-          title: "Evolving Trends in Gulf Airline Uniforms: Tradition Meets International Standards",
-          excerpt: "Explore how leading Gulf carriers are balancing cultural identity with global aviation standards in their uniform programs.",
-          url: "/blog/gulf-airline-uniform-trends",
-          image: "/images/default-placeholder.jpg"
-        },
-        {
-          title: "The Role of Uniforms in Airline Brand Identity and Passenger Perception",
-          excerpt: "Research insights on how crew attire influences passenger confidence, loyalty, and overall brand perception in the aviation industry.",
-          url: "/blog/uniforms-airline-brand-identity",
-          image: "/images/default-placeholder.jpg"
-        },
-        {
-          title: "Implementing Practical Modest Uniform Options for Female Aviation Staff",
-          excerpt: "Best practices for developing flight attendant and ground staff uniforms that respect Islamic dress codes while meeting operational needs.",
-          url: "/blog/modest-aviation-uniforms-female-staff",
-          image: "/images/default-placeholder.jpg"
-        }
-      ],
-      resources: [
-        {
-          title: "Aviation Fabric Performance Guide",
-          description: "Technical specifications for fabrics that meet aviation industry requirements",
-          url: "/resources/fabric-guide/aviation",
-          icon: "/icons/fabric-guide.svg"
-        },
-        {
-          title: "Airline Uniform Size Guide",
-          description: "Detailed sizing information for aviation personnel uniforms",
-          url: "/resources/size-guide/aviation",
-          icon: "/icons/size-guide.svg"
-        },
-        {
-          title: "Airline Uniform Program Management Guide",
-          description: "Comprehensive guide to implementing airline-wide uniform programs",
-          url: "/resources/management-guide/airline-uniform-program",
-          icon: "/icons/management-guide.svg"
-        }
-      ]
+  // Sample data from our original aviation data
+  const featuredProducts = [
+    {
+      id: "airline-crew-uniform",
+      name: "Airline Crew Uniform",
+      description: "Premium flight attendant uniforms with Islamic-compliant options for Saudi airlines",
+      image: "/images/aviation/flightـattendantsـuniforms.jpg",
+      price: "SAR 1,299",
+      href: "/shop/aviation-uniforms/airline-crew-uniform",
+      featured: true,
+      badge: "Best Seller"
     },
-    
-    // Statistical information for credibility and SEO enhancement
-    statistics: [
-      {
-        value: "12+",
-        label: "Saudi & Gulf Airlines Supplied",
-        icon: "/icons/airlines.svg"
-      },
-      {
-        value: "15,000+",
-        label: "Aviation Personnel Wearing UNEOM Uniforms",
-        icon: "/icons/aviation-staff.svg"
-      },
-      {
-        value: "100%",
-        label: "GACA Compliance Rate",
-        icon: "/icons/compliance-check.svg"
-      },
-      {
-        value: "35+",
-        label: "International Destinations Represented",
-        icon: "/icons/destinations.svg"
-      }
-    ],
-    
-    // Case study for social proof and credibility
-    caseStudy: {
-      title: "Comprehensive Uniform Redesign for Expanding Saudi Airline",
-      client: "Saudi Wings Aviation",
-      challenge: "Creating a distinctive uniform program for a rapidly growing airline that needed to establish a strong brand identity while accommodating diverse staff roles and Saudi cultural considerations.",
-      solution: "Developed a comprehensive uniform system with coordinated designs across all aviation roles, featuring distinctive Saudi-inspired elements, practical role-specific adaptations, and both international and modest options for female staff.",
-      results: [
-        "92% passenger recognition improvement in brand identity surveys",
-        "Staff satisfaction rating of 89% with new uniforms compared to 62% with previous attire",
-        "Increased practical functionality resulting in 28% fewer uniform-related issues",
-        "Successful implementation across 3,500+ staff members in multiple locations"
-      ],
-      image: "/images/default-placeholder.jpg",
-      testimonial: {
-        quote: "The uniform program UNEOM created has become a cornerstone of our brand identity and has significantly contributed to our recognition as a premium Saudi carrier in international markets.",
-        author: "Faisal Al-Otaibi",
-        position: "CEO",
-        company: "Saudi Wings Aviation"
-      }
+    {
+      id: "pilot-uniform-set",
+      name: "Professional Pilot Uniform Set",
+      description: "Complete pilot uniform sets designed for Saudi airline captains and officers",
+      image: "/images/aviation/aviation_captin_uniform.jpg",
+      price: "SAR 1,799",
+      href: "/shop/aviation-uniforms/pilot-uniform-set",
+      featured: true,
+      badge: "Premium"
     },
-    
-    // Call to action section
-    cta: {
-      title: "Elevate Your Airline's Image with Professional Uniform Solutions",
-      description: "Contact our aviation uniform specialists to discuss your airline's specific requirements and discover how our comprehensive uniform solutions can enhance your brand identity, staff professionalism, and operational efficiency.",
-      buttonText: "Request Aviation Uniform Consultation",
-      buttonUrl: "/contact?industry=aviation"
+    {
+      id: "ground-crew-uniform",
+      name: "Ground Staff Uniforms",
+      description: "Practical and professional attire for airport ground personnel in Saudi aviation",
+      image: "/images/aviation/aviation_uniform_airline.jpg",
+      price: "SAR 999",
+      href: "/shop/aviation-uniforms/ground-crew-uniform",
+      featured: true,
+      badge: "Popular"
     }
-  };
-  
-  return <IndustryPageLayout locale={locale} industryData={aviationData} />;
+  ];
+
+  // Related blog posts data
+  const relatedPosts = [
+    {
+      title: "Evolving Trends in Gulf Airline Uniforms",
+      excerpt: "Discover how Saudi and Gulf airlines are balancing tradition with contemporary design in their crew uniforms while maintaining cultural sensitivity.",
+      image: "/images/aviation/aviation_uniform_flightـattendants.jpg",
+      date: "May 15, 2023",
+      author: "Nora Al-Rashid",
+      href: "/blog/evolving-trends-gulf-airline-uniforms"
+    },
+    {
+      title: "The Role of Uniforms in Airline Brand Identity",
+      excerpt: "How Saudi airlines use distinctive uniform designs to strengthen brand recognition and create memorable passenger experiences.",
+      image: "/images/aviation/aviation_captin_uniform.jpg",
+      date: "March 22, 2023",
+      author: "Mohammed Tariq",
+      href: "/blog/uniforms-airline-brand-identity"
+    },
+    {
+      title: "Islamic-Compliant Design in Modern Aviation Attire",
+      excerpt: "Exploring innovative approaches to designing modest yet functional uniforms for female flight attendants in Saudi Arabian airlines.",
+      image: "/images/aviation/flightـattendantsـuniforms_details.jpg",
+      date: "January 10, 2023",
+      author: "Layla Al-Otaibi",
+      href: "/blog/islamic-compliant-aviation-attire"
+    }
+  ];
+
+  // تحتوي على محتوى الصفحة
+  const pageContent = (
+    <>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-neutral-900 to-neutral-800 text-white py-24">
+        <div className="absolute inset-0 overflow-hidden opacity-40">
+          <Image
+            src="/images/aviation/aviation_uniform_airline_main_image.jpg"
+            alt="Aviation Uniforms"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <Container>
+          <motion.div
+            className="relative z-10 max-w-3xl"
+            initial="hidden"
+            animate="visible"
+            variants={fadeIn}
+          >
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Professional Aviation Uniforms & Airline Attire in Saudi Arabia
+            </h1>
+            <p className="text-xl opacity-90 mb-8">
+              Premium cabin crew, ground staff, and aviation personnel uniforms tailored for Saudi airlines and private operators
+            </p>
+            <Link 
+              href="/contact?industry=aviation"
+              className="inline-block bg-primary-600 text-white px-6 py-3 rounded hover:bg-primary-700 transition-all duration-300"
+            >
+              Request a Quote
+            </Link>
+          </motion.div>
+        </Container>
+      </section>
+
+      {/* Introduction Section */}
+      <section className="py-16 bg-white">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+            >
+              <h2 className="text-3xl font-bold mb-6">Understanding Your Airline Uniform Needs</h2>
+              <div className="prose max-w-none">
+                <p>
+                  In Saudi Arabia's rapidly expanding aviation sector, professional uniforms play a crucial role in establishing airline identity, ensuring operational efficiency, and projecting the Kingdom's commitment to excellence in global air travel. UNEOM's comprehensive aviation uniform solutions are specifically designed to meet the unique requirements of Saudi airlines and aviation businesses.
+                </p>
+                <p>
+                  From cabin crew and flight deck personnel to ground operations and technical staff, we provide premium-quality uniforms that combine sophisticated style, practical functionality, and cultural sensitivity. Our aviation collections incorporate advanced fabric technologies that withstand the rigorous demands of air travel while offering options that respect Islamic dress codes and reflect Saudi heritage elements.
+                </p>
+              </div>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+            >
+              <div className="rounded-lg overflow-hidden shadow-xl">
+                <Image
+                  src="/images/aviation/aviation_uniform_flightـattendants.jpg"
+                  alt="Saudi flight attendants in professional blue uniforms with coordinated head coverings"
+                  width={600}
+                  height={450}
+                  className="w-full h-auto"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Why Choose Us Section with Animation */}
+      <section className="py-20 bg-gradient-to-r from-sky-50 to-blue-50">
+        <Container>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+              Why Choose Us for Aviation Uniforms?
+            </h2>
+            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+              We offer unique uniform solutions that combine Saudi cultural requirements with global quality standards for the aviation sector
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* First Feature */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            >
+              <div className="rounded-full bg-blue-100 w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-4 text-blue-800">
+                GACA Compliance
+              </h3>
+              <p className="text-neutral-600 text-center">
+                All our designs meet Saudi General Authority of Civil Aviation (GACA) requirements 100% while maintaining the highest standards of comfort and elegance.
+              </p>
+            </motion.div>
+            
+            {/* Second Feature */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            >
+              <div className="rounded-full bg-indigo-100 w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-4 text-indigo-800">
+                Corporate Identity Customization
+              </h3>
+              <p className="text-neutral-600 text-center">
+                We integrate your brand identity into every detail of your flight crew uniforms, enhancing brand recognition and creating a distinctive experience for travelers.
+              </p>
+            </motion.div>
+            
+            {/* Third Feature */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            >
+              <div className="rounded-full bg-rose-100 w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-4 text-rose-800">
+                Modest Designs
+              </h3>
+              <p className="text-neutral-600 text-center">
+                Special designs that respect modest dress requirements for female staff while maintaining an elegant appearance aligned with international aviation standards.
+              </p>
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Featured Products Section */}
+      <section className="py-16 bg-neutral-50">
+        <Container>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
+            <h2 className="text-3xl font-bold text-center mb-6">Featured Products</h2>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            {featuredProducts.map((product, index) => (
+              <motion.div 
+                key={index}
+                className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
+                variants={fadeIn}
+              >
+                <div className="relative h-64 w-full overflow-hidden">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {product.badge && (
+                    <span className="absolute top-4 right-4 bg-primary-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                      {product.badge}
+                    </span>
+                  )}
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-neutral-900 mb-2">
+                    <Link
+                      href={product.href}
+                      className="hover:text-primary-600 transition-colors duration-300"
+                    >
+                      {product.name}
+                    </Link>
+                  </h3>
+                  <p className="text-neutral-600 mb-4 flex-grow">
+                    {product.description}
+                  </p>
+                  {product.price && (
+                    <div className="mb-4 text-lg font-bold text-primary-600">
+                      {product.price}
+                    </div>
+                  )}
+                  <div className="mt-auto">
+                    <Link
+                      href={product.href}
+                      className="inline-block bg-primary-600 text-white px-4 py-2 rounded text-center w-full hover:bg-primary-700 transition-colors duration-300"
+                    >
+                      View Details
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Related Blog Posts Section */}
+      <section className="py-16 bg-white">
+        <Container>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-3">Related Articles</h2>
+            <p className="text-neutral-600">Latest insights and perspectives on aviation uniforms and their developments</p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {relatedPosts.map((post, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center text-sm text-neutral-500 mb-2">
+                    <span>{post.date}</span>
+                    <span className="mx-2">•</span>
+                    <span>{post.author}</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 line-clamp-2 hover:text-primary-600 transition-colors">
+                    <Link href={post.href}>{post.title}</Link>
+                  </h3>
+                  <p className="text-neutral-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                  <Link 
+                    href={post.href} 
+                    className="text-primary-600 font-medium inline-flex items-center hover:text-primary-700"
+                  >
+                    Read More
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Brief Overview Section */}
+      <section className="py-16 bg-white">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+            >
+              <div className="rounded-lg overflow-hidden shadow-xl">
+                <Image
+                  src="/images/aviation/flightـattendantsـuniforms_details.jpg"
+                  alt="Close-up details of flight attendant uniforms"
+                  width={600}
+                  height={450}
+                  className="w-full h-auto"
+                />
+              </div>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+            >
+              <h2 className="text-3xl font-bold mb-6">Why Choose UNEOM</h2>
+              <div className="prose max-w-none">
+                <p>
+                  Our specialized designs for female flight attendants incorporate modest elements that respect Islamic values while maintaining a sophisticated, professional appearance aligned with international aviation standards.
+                </p>
+                <ul className="mt-4 space-y-2">
+                  <li className="flex items-start">
+                    <span className="text-primary-600 font-bold mr-2">✓</span>
+                    <span>Saudi Aviation Industry Expertise with GACA standards</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-600 font-bold mr-2">✓</span>
+                    <span>Islamic-Compliant Design Options for female staff</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-600 font-bold mr-2">✓</span>
+                    <span>International-Standard Fabrics with high performance</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-600 font-bold mr-2">✓</span>
+                    <span>Brand Identity Enhancement for Saudi airlines</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-primary-600 text-white">
+        <Container>
+          <div className="text-center max-w-3xl mx-auto">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+            >
+              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Airline's Appearance?</h2>
+              <p className="text-lg mb-8 opacity-90">
+                Contact our aviation uniform specialists to discuss your requirements and discover how UNEOM can enhance your airline's professional image.
+              </p>
+              <Link
+                href="/contact?industry=aviation"
+                className="inline-block bg-white text-primary-600 px-6 py-3 rounded-lg font-medium hover:bg-neutral-100 transition-colors duration-300"
+              >
+                Request Consultation
+              </Link>
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+    </>
+  );
+
+  // إرجاع الصفحة مغلفة بـ MainLayout
+  return (
+    <MainLayout locale={locale}>
+      {pageContent}
+    </MainLayout>
+  );
 } 

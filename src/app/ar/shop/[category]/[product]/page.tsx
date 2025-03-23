@@ -28,6 +28,10 @@ export async function generateStaticParams() {
     { category: 'security', product: 'security-guard-uniforms' },
     { category: 'security', product: 'surveillance-uniforms' },
     { category: 'security', product: 'event-security-uniforms' },
+    // Add aviation category products
+    { category: 'aviation-uniforms', product: 'airline-crew-uniform' },
+    { category: 'aviation-uniforms', product: 'pilot-uniform-set' },
+    { category: 'aviation-uniforms', product: 'ground-crew-uniform' },
   ];
 }
 

@@ -185,7 +185,7 @@ export default function CorporatePage({ params }: { params: { locale: string } }
       </section>
 
       {/* Image Gallery Section */}
-      <ImageGallery locale={locale} />
+<ImageGallery locale={locale} />
 
       {/* CTA Section */}
       <section className="py-16 bg-primary-600 text-white">

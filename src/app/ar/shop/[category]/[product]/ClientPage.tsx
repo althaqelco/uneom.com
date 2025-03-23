@@ -35,10 +35,27 @@ interface ClientPageProps {
 }
 
 export default function ClientPage({ product, relatedProducts, locale }: ClientPageProps) {
-  const [selectedColor, setSelectedColor] = useState(product.colors[0]);
-  const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
+  const [selectedColor, setSelectedColor] = useState(product?.colors?.[0] || '');
+  const [selectedSize, setSelectedSize] = useState(product?.sizes?.[0] || '');
   const [quantity, setQuantity] = useState(1);
   const [activeImage, setActiveImage] = useState(0);
+
+  // Return a loading or error state if product is undefined
+  if (!product) {
+    return (
+      <MainLayout locale={locale}>
+        <Container>
+          <div className="py-20 text-center">
+            <h2 className="text-2xl font-bold mb-4">المنتج غير متوفر</h2>
+            <p className="mb-6">عذراً، لا يمكن العثور على هذا المنتج.</p>
+            <Link href="/ar/shop" className="inline-block bg-primary-600 text-white px-6 py-3 rounded-md hover:bg-primary-700">
+              العودة إلى المتجر
+            </Link>
+          </div>
+        </Container>
+      </MainLayout>
+    );
+  }
 
   const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(e.target.value);
@@ -269,11 +286,9 @@ export default function ClientPage({ product, relatedProducts, locale }: ClientP
       {/* Related Products */}
       <section className="py-12 bg-neutral-50">
         <Container>
-          <SectionHeading
-            title="منتجات ذات صلة"
-            subtitle="اكتشف المزيد من الأزياء الموحدة المماثلة"
-            alignment="center"
-          />
+          <SectionHeading centered={true} subtitle="منتجات تناسب احتياجاتك">
+            منتجات مشابهة
+          </SectionHeading>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             {relatedProducts.map((relatedProduct) => (

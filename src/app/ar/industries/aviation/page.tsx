@@ -74,32 +74,32 @@ export default function AviationPageArabic() {
         id: "aviation-blazer",
         name: "سترة الطيار الرسمية",
         description: "سترة احترافية مصممة خصيصًا للطيارين، متوافقة تمامًا مع معايير الهيئة العامة للطيران المدني السعودية (GACA). مصنوعة من أقمشة فاخرة مقاومة للتجاعيد والبقع.",
-        image: "/images/products/aviation-blazer.jpg",
-        href: "/ar/shop/aviation-uniforms/aviation-blazer?source=aviation-page",
+        image: "/images/aviation/aviation_captin_uniform.jpg",
+        href: "/ar/shop/aviation-uniforms/pilot-uniform-set?source=aviation-page",
         features: ["متوافقة مع معايير GACA", "مقاومة للتجاعيد والبقع", "تصميم مريح للرحلات الطويلة", "جيوب عملية متعددة"]
       },
       {
         id: "crew-shirts",
         name: "قمصان الطاقم الرسمية",
         description: "قمصان رسمية عالية الجودة مصممة خصيصًا لطاقم الطيران، تجمع بين الأناقة والراحة. مصنوعة من أقمشة كول كور المتطورة التي تمنح تهوية مثالية وتنظيم لدرجة الحرارة.",
-        image: "/images/products/crew-shirts.jpg",
-        href: "/ar/shop/aviation-uniforms/crew-shirts?source=aviation-page",
+        image: "/images/aviation/aviation_uniform_flightـattendants.jpg",
+        href: "/ar/shop/aviation-uniforms/airline-crew-uniform?source=aviation-page",
         features: ["تقنية كول كور لتنظيم الحرارة", "معالجة بيوكير المضادة للبكتيريا", "تصميم مقاوم للتجاعيد", "ياقات وأكمام قابلة للتخصيص"]
       },
       {
         id: "modest-cabin-crew",
         name: "زي مضيفة الطيران المحتشم",
         description: "يونيفورم متكامل لمضيفات الطيران مصمم بعناية ليجمع بين الالتزام بالضوابط الشرعية والمتطلبات المهنية لخدمات الضيافة الجوية. يتميز بتصاميم محتشمة وأنيقة.",
-        image: "/images/products/modest-cabin-crew.jpg",
-        href: "/ar/shop/aviation-uniforms/modest-cabin-crew?source=aviation-page",
+        image: "/images/aviation/flightـattendantsـuniforms_details.jpg",
+        href: "/ar/shop/aviation-uniforms/airline-crew-uniform?source=aviation-page",
         features: ["تصميم محتشم كامل", "تقنية كومفورت فلكس للراحة", "مقاومة للسوائل والبقع", "غطاء رأس مريح وعملي"]
       },
       {
         id: "ground-operations",
         name: "يونيفورم العمليات الأرضية",
         description: "يونيفورم عملي ومتين مصمم خصيصًا لفرق العمليات الأرضية في المطارات. مصنوع من أقمشة متينة مقاومة للتآكل والظروف الجوية المختلفة، مع شرائط عاكسة للضوء لتعزيز عوامل السلامة.",
-        image: "/images/products/ground-crew.jpg",
-        href: "/ar/shop/aviation-uniforms/ground-operations?source=aviation-page",
+        image: "/images/aviation/aviation_uniform_airline.jpg",
+        href: "/ar/shop/aviation-uniforms/ground-crew-uniform?source=aviation-page",
         features: ["متانة عالية للعمل الشاق", "شرائط عاكسة للسلامة", "مقاوم للماء والزيوت", "تهوية ممتازة في المناخ الحار"]
       },
       {
@@ -253,22 +253,22 @@ export default function AviationPageArabic() {
       title: "موارد وأدلة يونيفورم الطيران",
       blogPosts: [
         {
-          title: "التطور في تصميم أزياء الطيران الخليجية: توازن بين الهوية المحلية والمعايير العالمية",
-          excerpt: "نظرة على كيفية تطور يونيفورم شركات الطيران السعودية والخليجية لتجمع بين الهوية الإسلامية والمعايير العالمية مع الحفاظ على التميز والتفرد.",
-          url: "/ar/blog/gulf-airline-uniform-trends",
-          image: "/images/industries/aviation.jpg"
+          title: "تطور اتجاهات يونيفورم شركات الطيران الخليجية",
+          excerpt: "نظرة على كيفية تطور يونيفورم شركات الطيران السعودية والخليجية لتجمع بين الهوية للطيران السعودية، والمعايير العالمية مع الحفاظ على التميز والتفرد.",
+          url: "/ar/blog/evolving-trends-gulf-airline-uniforms",
+          image: "/images/aviation/aviation_uniform_flightـattendants.jpg"
         },
         {
-          title: "تأثير يونيفورم الطاقم على ثقة المسافرين وولائهم للعلامة التجارية",
-          excerpt: "دراسة بحثية توضح العلاقة بين جودة وتصميم يونيفورم طاقم الطائرة وانطباعات المسافرين عن مستوى الخدمة والأمان في شركات الطيران السعودية.",
-          url: "/ar/blog/uniforms-airline-brand-perception",
-          image: "/images/industries/aviation.jpg"
+          title: "دور اليونيفورم في تعزيز هوية العلامة التجارية لشركات الطيران",
+          excerpt: "دراسة تحليلية حول كيفية استخدام شركات الطيران السعودية لتصاميم اليونيفورم المميزة لتعزيز التعرف على العلامة التجارية وخلق تجارب سفر لا تُنسى.",
+          url: "/ar/blog/uniforms-airline-brand-identity",
+          image: "/images/aviation/aviation_captin_uniform.jpg"
         },
         {
-          title: "دليل تصميم وتنفيذ اليونيفورم المحتشم لموظفات الطيران السعوديات",
-          excerpt: "أفضل الممارسات العالمية في تصميم وتنفيذ أزياء محتشمة عملية لمضيفات الطيران وموظفات المطارات تجمع بين الالتزام الديني والكفاءة المهنية.",
-          url: "/ar/blog/modest-aviation-uniforms-guide",
-          image: "/images/industries/aviation.jpg"
+          title: "التصميم المتوافق مع الشريعة الإسلامية في أزياء الطيران الحديثة",
+          excerpt: "استكشاف المناهج المبتكرة لتصميم يونيفورم متواضع وعملي للمضيفات في شركات الطيران السعودية والخليجية.",
+          url: "/ar/blog/islamic-compliant-aviation-attire",
+          image: "/images/aviation/flightـattendantsـuniforms_details.jpg"
         },
         {
           title: "معايير الهيئة العامة للطيران المدني السعودية لأزياء الطاقم الجوي والأرضي",
@@ -620,7 +620,7 @@ export default function AviationPageArabic() {
                     <span>كبير المضيفين (2 شريطة ونجمة)</span>
                   </li>
                 </ul>
-                <Link href="/ar/shop/aviation-uniforms/pilots-uniform" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                <Link href="/ar/shop/aviation-uniforms/pilot-uniform-set" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
                   عرض تفاصيل الزي والمواصفات
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1 transform rotate-180" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -669,7 +669,7 @@ export default function AviationPageArabic() {
                     <span>مضيف جوي متدرب (بدون شرائط)</span>
                   </li>
                 </ul>
-                <Link href="/ar/shop/aviation-uniforms/cabin-crew-uniform" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                <Link href="/ar/shop/aviation-uniforms/airline-crew-uniform" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
                   عرض تفاصيل الزي والمواصفات
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1 transform rotate-180" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -718,7 +718,7 @@ export default function AviationPageArabic() {
                     <span>مناول أمتعة (سترة عاكسة برتقالية)</span>
                   </li>
                 </ul>
-                <Link href="/ar/shop/aviation-uniforms/ground-staff-uniform" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                <Link href="/ar/shop/aviation-uniforms/ground-crew-uniform" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
                   عرض تفاصيل الزي والمواصفات
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1 transform rotate-180" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />

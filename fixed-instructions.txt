@@ -1,0 +1,1 @@
+In src/components/layout/IndustryPageLayout.tsx, the error is at line 1261. Change: ctaSection to ctaSection,

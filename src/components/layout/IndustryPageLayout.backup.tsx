@@ -1259,7 +1259,7 @@ export default function IndustryPageLayout({
     
     /* CTA Section - Now using the conditionally created section */
     ctaSection
-  ))
+  );
   
   // Return with or without MainLayout based on skipMainLayout parameter
   if (skipMainLayout) {

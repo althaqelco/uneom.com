@@ -6,6 +6,7 @@ import Footer from './Footer';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 import VercelImageFixer from '../ui/VercelImageFixer';
+import FloatingWhatsApp from '../ui/FloatingWhatsApp';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -26,6 +27,11 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, locale = 'en' }) => {
         {children}
       </main>
       <Footer locale={locale} />
+      <FloatingWhatsApp 
+        phoneNumber="971558164922" 
+        locale={locale as 'en' | 'ar'} 
+        position={isRTL ? 'left' : 'right'}
+      />
     </div>
   );
 };

@@ -23,6 +23,9 @@ export async function generateStaticParams() {
     { slug: 'industrial-protective-clothing-advances' },
     { slug: 'sustainable-uniforms-2024-trends' },
     // Add the missing blog slugs that caused the errors
+    { slug: 'evolving-trends-gulf-airline-uniforms' },
+    { slug: 'uniforms-airline-brand-identity' },
+    { slug: 'islamic-compliant-aviation-attire' },
     { slug: 'vision-2030-reshaping-dress-codes' },
     { slug: 'sustainable-uniform-solutions' },
     { slug: 'advanced-fabrics-healthcare-uniforms' },
