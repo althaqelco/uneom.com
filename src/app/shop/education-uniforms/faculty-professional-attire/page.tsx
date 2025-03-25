@@ -8,9 +8,11 @@ import { FaStar, FaStarHalfAlt, FaRegStar, FaCheck, FaShippingFast, FaWhatsapp }
 import Head from 'next/head';
 import { Metadata } from 'next';
 
+import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { generateProductWhatsAppUrl, generateQuoteWhatsAppUrl } from '@/utils/whatsapp';
 
 export default function FacultyProfessionalAttirePage() {
@@ -103,6 +105,14 @@ export default function FacultyProfessionalAttirePage() {
     }
   };
 
+  // Breadcrumbs for navigation
+  const breadcrumbs = [
+    { label: 'Home', href: '/' },
+    { label: 'Shop', href: '/shop' },
+    { label: 'Education Uniforms', href: '/shop/education-uniforms' },
+    { label: 'Faculty Professional Attire', href: '#' },
+  ];
+
   // Function to handle contact button clicks
   const handleContactClick = (messageType: 'general' | 'quote', details?: string) => {
     const productName = product.name;
@@ -121,7 +131,7 @@ export default function FacultyProfessionalAttirePage() {
   };
 
   return (
-    <>
+    <MainLayout locale={locale}>
       <Head>
         <title>Faculty Professional Attire for Saudi Educational Institutions | Uneom</title>
         <meta name="description" content="Premium professional attire for faculty members in Saudi Arabian educational institutions. Elegant, durable, and comfortable designs that reflect educational excellence." />
@@ -150,38 +160,10 @@ export default function FacultyProfessionalAttirePage() {
         />
       </Head>
       
-      <div className="bg-white pt-24 pb-16">
+      <div className="bg-white pt-8 pb-16">
         <Container>
           {/* Breadcrumbs with structured data */}
-          <nav className="text-sm mb-6" aria-label="Breadcrumb">
-            <ol className="flex items-center space-x-2" itemScope itemType="https://schema.org/BreadcrumbList">
-              <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                <Link href="/" className="text-neutral-500 hover:text-primary-600" itemProp="item">
-                  <span itemProp="name">Home</span>
-                </Link>
-                <meta itemProp="position" content="1" />
-              </li>
-              <li><span className="text-neutral-400 mx-2">/</span></li>
-              <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                <Link href="/shop" className="text-neutral-500 hover:text-primary-600" itemProp="item">
-                  <span itemProp="name">Shop</span>
-                </Link>
-                <meta itemProp="position" content="2" />
-              </li>
-              <li><span className="text-neutral-400 mx-2">/</span></li>
-              <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                <Link href="/shop/education-uniforms" className="text-neutral-500 hover:text-primary-600" itemProp="item">
-                  <span itemProp="name">Education Uniforms</span>
-                </Link>
-                <meta itemProp="position" content="3" />
-              </li>
-              <li><span className="text-neutral-400 mx-2">/</span></li>
-              <li className="text-primary-600 font-medium truncate max-w-[200px] sm:max-w-none" itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                <span itemProp="name">Faculty Professional Attire</span>
-                <meta itemProp="position" content="4" />
-              </li>
-            </ol>
-          </nav>
+          <Breadcrumbs items={breadcrumbs} className="mb-6" />
           
           {/* Product main section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
@@ -421,6 +403,6 @@ export default function FacultyProfessionalAttirePage() {
           </div>
         </Container>
       </div>
-    </>
+    </MainLayout>
   );
 } 

@@ -8,15 +8,18 @@ import { FaCalendarAlt, FaUser, FaTag, FaShare, FaFacebookF, FaTwitter, FaLinked
 import Head from 'next/head';
 import { Metadata } from 'next';
 
+import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { useRouter } from 'next/navigation';
 import { generateGeneralWhatsAppUrl } from '@/utils/whatsapp';
 
 export default function SustainableSchoolUniformsPage() {
   const router = useRouter();
   const [language, setLanguage] = React.useState<'en' | 'ar'>('en');
+  const locale = language;
   
   const blogPost = {
     en: {
@@ -194,6 +197,24 @@ export default function SustainableSchoolUniformsPage() {
     ? 'https://uneom.com/blog/sustainable-school-uniforms-saudi'
     : 'https://uneom.com/blog/sustainable-school-uniforms-saudi?lang=ar';
   
+  // Breadcrumbs for navigation
+  const breadcrumbs = [
+    { 
+      label: language === 'en' ? 'Home' : 'الرئيسية', 
+      href: language === 'en' ? '/' : '/ar'
+    },
+    { 
+      label: language === 'en' ? 'Blog' : 'المدونة', 
+      href: language === 'en' ? '/blog' : '/ar/blog'
+    },
+    { 
+      label: language === 'en' 
+        ? 'Sustainable School Uniforms' 
+        : 'الزي المدرسي المستدام', 
+      href: '#'
+    },
+  ];
+  
   // Function to handle WhatsApp contact
   const handleWhatsAppContact = (topic?: string) => {
     const subject = language === 'en' 
@@ -204,7 +225,7 @@ export default function SustainableSchoolUniformsPage() {
   };
   
   return (
-    <>
+    <MainLayout locale={locale}>
       {/* Client-side metadata using next/head for dynamic language switching */}
       <Head>
         <title>{metaTitle}</title>
@@ -236,59 +257,38 @@ export default function SustainableSchoolUniformsPage() {
         />
       </Head>
       
-      <div className={`bg-white pt-24 pb-16 ${language === 'ar' ? 'rtl text-right' : 'ltr text-left'}`}>
-        <Container>
-          {/* Language Toggle */}
-          <div className="flex justify-end mb-6">
-            <div className="inline-flex rounded-md shadow-sm">
-              <button
-                onClick={() => setLanguage('en')}
-                className={`px-4 py-2 text-sm font-medium rounded-l-lg ${
-                  language === 'en' 
-                    ? 'bg-primary-600 text-white' 
-                    : 'bg-white text-gray-700 hover:bg-gray-50'
-                } border border-gray-200`}
-                aria-label="Switch to English"
-              >
-                English
-              </button>
-              <button
-                onClick={() => setLanguage('ar')}
-                className={`px-4 py-2 text-sm font-medium rounded-r-lg ${
-                  language === 'ar' 
-                    ? 'bg-primary-600 text-white' 
-                    : 'bg-white text-gray-700 hover:bg-gray-50'
-                } border border-gray-200`}
-                aria-label="Switch to Arabic"
-              >
-                العربية
-              </button>
-            </div>
+      <div className={`bg-white py-8 ${language === 'ar' ? 'rtl text-right' : 'ltr text-left'}`}>
+        {/* Update language toggle buttons with aria-labels */}
+        <div className="flex justify-end mb-6 container mx-auto">
+          <div className="inline-flex rounded-md shadow-sm">
+            <button
+              onClick={() => setLanguage('en')}
+              className={`px-4 py-2 text-sm font-medium rounded-l-lg ${
+                language === 'en' 
+                  ? 'bg-primary-600 text-white' 
+                  : 'bg-white text-gray-700 hover:bg-gray-50'
+              } border border-gray-200`}
+              aria-label="Switch to English"
+            >
+              English
+            </button>
+            <button
+              onClick={() => setLanguage('ar')}
+              className={`px-4 py-2 text-sm font-medium rounded-r-lg ${
+                language === 'ar' 
+                  ? 'bg-primary-600 text-white' 
+                  : 'bg-white text-gray-700 hover:bg-gray-50'
+              } border border-gray-200`}
+              aria-label="Switch to Arabic"
+            >
+              العربية
+            </button>
           </div>
-          
-          {/* Breadcrumb with structured data */}
-          <nav className="text-sm mb-6" aria-label="Breadcrumb">
-            <ol className="flex items-center space-x-2" itemScope itemType="https://schema.org/BreadcrumbList">
-              <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                <Link href="/" className="text-neutral-500 hover:text-primary-600" itemProp="item">
-                  <span itemProp="name">{language === 'en' ? 'Home' : 'الرئيسية'}</span>
-                </Link>
-                <meta itemProp="position" content="1" />
-              </li>
-              <li><span className="text-neutral-400 mx-2">/</span></li>
-              <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                <Link href="/blog" className="text-neutral-500 hover:text-primary-600" itemProp="item">
-                  <span itemProp="name">{language === 'en' ? 'Blog' : 'المدونة'}</span>
-                </Link>
-                <meta itemProp="position" content="2" />
-              </li>
-              <li><span className="text-neutral-400 mx-2">/</span></li>
-              <li className="text-primary-600 font-medium truncate max-w-[200px] sm:max-w-none" itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                <span itemProp="name">{content.title}</span>
-                <meta itemProp="position" content="3" />
-              </li>
-            </ol>
-          </nav>
+        </div>
+        
+        <Container>
+          {/* Breadcrumbs */}
+          <Breadcrumbs items={breadcrumbs} className="mb-6" />
           
           {/* Blog Header */}
           <div className="mb-8">
@@ -484,6 +484,6 @@ export default function SustainableSchoolUniformsPage() {
           </div>
         </Container>
       </div>
-    </>
+    </MainLayout>
   );
 } 
