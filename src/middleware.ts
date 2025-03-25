@@ -148,7 +148,7 @@ function removeTrailingSlash(path: string): string {
 }
 
 // وظيفة middleware الأساسية
-export function middleware(request: NextRequest): NextResponse {
+export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   let path = url.pathname;
   
@@ -169,7 +169,7 @@ export function middleware(request: NextRequest): NextResponse {
       // استبدال المعلمات في الوجهة إذا كان ذلك ضروريًا
       const targetDestination = replaceParams(destination, params);
       
-      // إنشاء عنوان URL للوجهة
+      // إنشاء عنوان URL للوجهة مع مراعاة URL الأصلي كامل للحفاظ على البروتوكول والمجال
       const redirectUrl = new URL(targetDestination, request.url);
       
       // نقل معلمات الاستعلام إلى عنوان URL الجديد
@@ -177,8 +177,14 @@ export function middleware(request: NextRequest): NextResponse {
         redirectUrl.searchParams.set(key, value);
       });
       
-      // إنشاء الاستجابة مع كود الحالة 301 وتعيين العنوان
-      return NextResponse.redirect(redirectUrl, { status: 301 });
+      // تطبيق إعادة التوجيه بكود 301 لتحويل قوة SEO
+      return NextResponse.redirect(redirectUrl, { 
+        status: 301,
+        headers: {
+          'Cache-Control': 'public, max-age=31536000',  // تخزين مؤقت لمدة سنة
+          'X-Redirect-Source': path  // إضافة رأس لتتبع التحويل للتشخيص (اختياري)
+        }
+      });
     }
   }
   
@@ -189,78 +195,7 @@ export function middleware(request: NextRequest): NextResponse {
 // تحديد تكوين المسارات التي سيتم تطبيق الوسيط عليها
 export const config = {
   matcher: [
-    // English paths
-    '/sectors/:path*',
-    '/sectors/school-uniforms',
-    '/sectors/business-wear-uniform-companies',
-    '/sectors/jackets-for-scrubs',
-    '/sectors/waitress-uniforms',
-    '/sectors/uniform-for-security',
-    '/sectors/company-uniforms',
-    '/sectors/uniforms-for-hotels',
-    '/sectors/pilot-uniforms',
-    '/sectors/professional-uniforms',
-    '/sectors/med-scrubs',
-    '/sectors/medical-scrubs',
-    '/sectors/greys-anatomy-scrubs',
-    '/sectors/scrub-suits',
-    '/sectors/restaurants',
-    '/sectors/industrial-uniforms',
-    '/sectors/hospitality-uniforms',
-    '/sectors/healthcare-uniforms',
-    '/sectors/education-uniforms',
-    '/sectors/corporate-uniforms',
-    '/sectors/aviation-uniforms',
-    '/sectors/healthcare',
-    '/sectors/medical-uniforms',
-    
-    '/location/:path*',
-    '/location/medina',
-    '/location/dammam',
-    '/location/riyadh',
-    '/location/jeddah',
-    
-    '/category/:path*',
-    '/category/blog',
-    '/category/sectors',
-    
-    '/blog/the-science-behind-uneoms-heat-resistant-industrial-uniforms',
-    '/blog/customizing-your-corporate-identity-uneoms-design-process-revealed',
-    '/blog/from-design-to-delivery-inside-uneoms-quality-control-process',
-    '/blog/uniform-maintenance-tips-expert-advice-from-uneoms-specialists',
-    
-    // Arabic paths
-    '/ar/sectors/:path*',
-    '/ar/sectors/healthcare-uniforms',
-    '/ar/sectors/corporate-uniforms',
-    '/ar/sectors/restaurant-uniforms',
-    '/ar/sectors/uniform-in-riyadh',
-    '/ar/sectors/uniform-in-dammam',
-    '/ar/sectors/uniform-in-jeddah',
-    '/ar/sectors/uniform-in-mecca',
-    '/ar/sectors/uniform-in-medina',
-    '/ar/sectors/education-uniforms',
-    '/ar/sectors/industrial-uniforms',
-    '/ar/sectors/uniform-factory',
-    '/ar/sectors/workers-uniform',
-    '/ar/sectors/uniform-factory-2',
-    '/ar/sectors/hospitality-uniforms',
-    
-    '/ar/location/:path*',
-    '/ar/location/%d8%a7%d9%84%d9%85%d8%af%d9%8a%d9%86%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d9%88%d8%b1%d8%a9',
-    '/ar/location/%d8%a7%d9%84%d8%af%d9%85%d8%a7%d9%85',
-    '/ar/location/%d8%a7%d9%84%d8%b1%d9%8a%d8%a7%d8%b6',
-    '/ar/location/%d8%ac%d8%af%d8%a9',
-    
-    '/ar/blog/%d8%aa%d8%ac%d8%b1%d8%a8%d8%a9-%d9%8a%d9%88%d9%86%d9%8a%d9%88%d9%85-%d9%85%d8%b9-%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b7%d8%a8%d9%8a-%d8%af%d9%84%d9%8a%d9%84%d9%83-%d9%84%d8%a7%d8%ae',
-    '/ar/blog/%d8%a3%d9%81%d8%b6%d9%84-%d8%a7%d9%84%d8%a3%d9%82%d9%85%d8%b4%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d8%a7%d8%b3%d8%a8%d8%a9-%d9%84%d9%84%d9%85%d9%86%d8%a7%d8%ae-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a',
-    '/ar/blog/%d9%83%d9%8a%d9%81-%d9%8a%d8%ba%d9%8a%d8%b1-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d9%88%d8%ad%d8%af-%d9%85%d8%b3%d8%aa%d9%82%d8%a8%d9%84-%d8%b4%d8%b1%d9%83%d8%aa%d9%83',
-    '/ar/blog/%d8%a3%d8%b3%d8%b1%d8%a7%d8%b1-%d9%86%d8%ac%d8%a7%d8%ad-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d8%af%d8%b1%d8%b3%d9%8a-%d9%81%d9%8a-%d8%aa%d8%ad%d8%b3%d9%8a%d9%86-%d8%a3%d8%af%d8%a7%d8%a1-%d8%a7',
-    
-    '/ar/contact-us',
-    '/ar/request-a-quote',
-    '/ar/services',
-    '/ar/faqs',
-    '/ar/about-us',
+    // تطبيق على جميع المسارات للتأكد من عمل التحويلات
+    '/((?!api|_next/static|_next/image|favicon.ico|images|assets).*)',
   ],
 };
