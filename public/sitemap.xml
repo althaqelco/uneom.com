@@ -257,6 +257,79 @@
     <priority>0.7</priority>
   </url>
   
+  <!-- Newly added pages: Terms of Service, Privacy Policy, Hotels, and Restaurants -->
+  
+  <!-- Terms of Service Pages -->
+  <url>
+    <loc>https://uneom.com/terms-of-service</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/terms-of-service"/>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/terms-of-service</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/terms-of-service"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/terms-of-service"/>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Privacy Policy Pages -->
+  <url>
+    <loc>https://uneom.com/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/privacy-policy"/>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/privacy-policy"/>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Hospitality Industry Subpages -->
+  <url>
+    <loc>https://uneom.com/industries/hospitality/hotels</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/hospitality/hotels"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/hospitality/hotels"/>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/industries/hospitality/hotels</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/hospitality/hotels"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/hospitality/hotels"/>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://uneom.com/industries/hospitality/restaurants</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/hospitality/restaurants"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/hospitality/restaurants"/>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/industries/hospitality/restaurants</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/hospitality/restaurants"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/hospitality/restaurants"/>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- صفحات أخرى هامة -->
   <url>
     <loc>https://uneom.com/about</loc>
