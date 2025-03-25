@@ -92,7 +92,6 @@ const redirectsMap: Redirect[] = [
   // Arabic - Pages
   { source: '/ar/contact-us', destination: '/ar/contact' },
   { source: '/ar/request-a-quote', destination: '/ar/quote' },
-  { source: '/ar/services', destination: '/ar/services' },
   { source: '/ar/faqs', destination: '/ar/faq' },
   { source: '/ar/about-us', destination: '/ar/about' },
   
