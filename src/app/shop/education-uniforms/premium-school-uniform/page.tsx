@@ -5,17 +5,35 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FaStar, FaStarHalfAlt, FaRegStar, FaCheck, FaShippingFast } from 'react-icons/fa';
+import { FaStar, FaStarHalfAlt, FaRegStar, FaCheck, FaShippingFast, FaWhatsapp } from 'react-icons/fa';
 import Head from 'next/head';
 import { Metadata } from 'next';
 
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
+import { generateProductWhatsAppUrl, generateQuoteWhatsAppUrl } from '@/utils/whatsapp';
 
 export default function PremiumSchoolUniformPage() {
   const [quantity, setQuantity] = useState(1);
   const [selectedVariant, setSelectedVariant] = useState('complete-set');
+  
+  // Function to handle contact button clicks
+  const handleContactClick = (messageType: 'product' | 'quote', details?: string) => {
+    const productName = "Premium School Uniform";
+    const variant = variants.find(v => v.id === selectedVariant)?.name || 'Complete Set';
+    
+    let whatsappUrl;
+    if (messageType === 'product') {
+      whatsappUrl = generateProductWhatsAppUrl(productName, variant, quantity);
+    } else {
+      const detailsMsg = details || `Variant: ${variant}, Quantity: ${quantity}, Additional Requirements: ${details || "None"}`;
+      whatsappUrl = generateQuoteWhatsAppUrl(productName, detailsMsg);
+    }
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+  };
   
   // Product images for the gallery
   const images = [
@@ -187,8 +205,211 @@ export default function PremiumSchoolUniformPage() {
             </ol>
           </nav>
           
-          {/* Rest of the component remains the same */}
-          {/* ... keep existing product content ... */}
+          {/* Product main section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Product images */}
+            <div className="grid grid-cols-2 gap-4">
+              {images.slice(0, 4).map((image, index) => (
+                <div 
+                  key={index} 
+                  className={`rounded-lg overflow-hidden ${index === 0 ? "col-span-2 row-span-2" : ""}`}
+                >
+                  <div className="relative w-full h-0" style={{ paddingBottom: index === 0 ? "75%" : "100%" }}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Product info */}
+            <div>
+              <h1 className="text-3xl font-bold text-neutral-900">Premium School Uniform</h1>
+              
+              {/* Rating */}
+              <div className="flex items-center mt-2 mb-4">
+                <div className="flex text-amber-400">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} className="w-5 h-5" />
+                  ))}
+                </div>
+                <span className="ml-2 text-neutral-500">4.9 (124 reviews)</span>
+              </div>
+              
+              <p className="text-2xl font-bold text-primary-600 mb-6">
+                SAR {currentVariant.price}
+              </p>
+              
+              <div className="prose max-w-none mb-6">
+                <p>
+                  Our Premium School Uniforms are specifically designed for Saudi Arabian educational institutions, 
+                  featuring superior quality materials that ensure maximum comfort, durability, and a perfect fit.
+                  Each uniform is crafted to meet the highest standards while respecting cultural values and school identity.
+                </p>
+              </div>
+              
+              {/* Variants selection */}
+              <div className="mb-6">
+                <h3 className="font-medium mb-3">Options</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {variants.map((variant) => (
+                    <button
+                      key={variant.id}
+                      className={`py-2 px-4 text-sm border rounded-md transition ${
+                        selectedVariant === variant.id
+                          ? "border-primary-600 bg-primary-50 text-primary-700"
+                          : "border-neutral-300 hover:border-neutral-400"
+                      }`}
+                      onClick={() => setSelectedVariant(variant.id)}
+                    >
+                      {variant.name} - SAR {variant.price}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Customization options */}
+              <div className="mb-6">
+                <h3 className="font-medium mb-3">Customization Options</h3>
+                <div className="space-y-2 bg-neutral-50 p-4 rounded-md">
+                  {customizationOptions.map((option) => (
+                    <div key={option.id} className="flex justify-between text-sm">
+                      <span>{option.name}</span>
+                      <span className="font-medium">+SAR {option.price}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Quantity and Contact buttons */}
+              <div className="flex items-center mb-6">
+                <div className="border border-neutral-300 rounded-md flex items-center mr-4">
+                  <button
+                    className="px-3 py-2 text-neutral-600 hover:text-primary-600 transition"
+                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                  >
+                    -
+                  </button>
+                  <span className="px-4 py-2 border-x border-neutral-300 min-w-[3rem] text-center">
+                    {quantity}
+                  </span>
+                  <button
+                    className="px-3 py-2 text-neutral-600 hover:text-primary-600 transition"
+                    onClick={() => setQuantity(quantity + 1)}
+                  >
+                    +
+                  </button>
+                </div>
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="flex-1 justify-center items-center gap-2"
+                  onClick={() => handleContactClick('product')}
+                >
+                  <FaWhatsapp /> Contact Now
+                </Button>
+              </div>
+              
+              {/* Features */}
+              <div className="border-t border-b border-neutral-200 py-4 mb-6">
+                <h3 className="font-medium mb-3">Key Features</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <FaCheck className="text-primary-600 mt-1 mr-2 flex-shrink-0" />
+                    <span className="text-neutral-700">Premium poly-cotton blend for comfort and durability</span>
+                  </li>
+                  <li className="flex items-start">
+                    <FaCheck className="text-primary-600 mt-1 mr-2 flex-shrink-0" />
+                    <span className="text-neutral-700">Wrinkle and stain resistant fabric</span>
+                  </li>
+                  <li className="flex items-start">
+                    <FaCheck className="text-primary-600 mt-1 mr-2 flex-shrink-0" />
+                    <span className="text-neutral-700">Ethically manufactured in Saudi Arabia</span>
+                  </li>
+                  <li className="flex items-start">
+                    <FaCheck className="text-primary-600 mt-1 mr-2 flex-shrink-0" />
+                    <span className="text-neutral-700">School logo customization available</span>
+                  </li>
+                  <li className="flex items-start">
+                    <FaCheck className="text-primary-600 mt-1 mr-2 flex-shrink-0" />
+                    <span className="text-neutral-700">Design compliant with Saudi educational standards</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          {/* Quote Request Section */}
+          <div className="mt-16 bg-neutral-50 p-8 rounded-lg">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-primary-800 mb-4">
+                Request Institutional Quote
+              </h3>
+              <p className="text-primary-700 mb-6 max-w-2xl mx-auto">
+                For bulk orders or institutional requirements, contact us directly for a customized quote.
+                Our team specializes in providing tailored uniform solutions for Saudi educational institutions.
+              </p>
+              <Button 
+                variant="primary" 
+                size="lg"
+                className="flex items-center gap-2 mx-auto"
+                onClick={() => handleContactClick('quote', 'Institutional bulk order inquiry')}
+              >
+                <FaWhatsapp /> Request via WhatsApp
+              </Button>
+            </div>
+          </div>
+          
+          {/* Customization Section */}
+          <div className="mt-16">
+            <SectionHeading>School Identity Program</SectionHeading>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div>
+                <p className="text-neutral-700 mb-4">
+                  We offer comprehensive school identity programs that go beyond basic uniforms. Our team works
+                  closely with educational institutions to create distinctive uniform solutions that reinforce
+                  school values and create a sense of belonging and pride.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                  <div className="border border-neutral-200 rounded-md p-4">
+                    <h4 className="font-semibold text-primary-700 mb-2">Custom Designs</h4>
+                    <p className="text-sm">Unique designs that reflect your school's heritage and values</p>
+                  </div>
+                  <div className="border border-neutral-200 rounded-md p-4">
+                    <h4 className="font-semibold text-primary-700 mb-2">Easy Ordering</h4>
+                    <p className="text-sm">Simplified procurement process for schools with regular orders</p>
+                  </div>
+                  <div className="border border-neutral-200 rounded-md p-4">
+                    <h4 className="font-semibold text-primary-700 mb-2">Quality Guarantee</h4>
+                    <p className="text-sm">Extended durability warranty for institutional purchases</p>
+                  </div>
+                  <div className="border border-neutral-200 rounded-md p-4">
+                    <h4 className="font-semibold text-primary-700 mb-2">Size Flexibility</h4>
+                    <p className="text-sm">Special sizing available for all student requirements</p>
+                  </div>
+                </div>
+                <Button 
+                  variant="primary" 
+                  className="mt-6 flex items-center gap-2"
+                  onClick={() => handleContactClick('quote', 'School Identity Program inquiry')}
+                >
+                  <FaWhatsapp /> Discuss Your School's Needs
+                </Button>
+              </div>
+              <div className="relative rounded-lg overflow-hidden shadow-lg h-80">
+                <Image 
+                  src="/images/industries/education/school-uniform-04.webp"
+                  alt="School Identity Program"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </Container>
       </div>
     </>

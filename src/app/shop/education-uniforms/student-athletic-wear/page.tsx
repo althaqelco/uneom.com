@@ -4,13 +4,14 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FaCheck, FaStar, FaStarHalfAlt, FaRegStar, FaShippingFast } from 'react-icons/fa';
+import { FaCheck, FaStar, FaStarHalfAlt, FaRegStar, FaShippingFast, FaWhatsapp } from 'react-icons/fa';
 import Head from 'next/head';
 import { Metadata } from 'next';
 
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
+import { generateProductWhatsAppUrl, generateQuoteWhatsAppUrl } from '@/utils/whatsapp';
 
 export default function StudentAthleticWearPage() {
   const locale = 'en';
@@ -122,6 +123,23 @@ export default function StudentAthleticWearPage() {
       worstRating: '1',
       reviewCount: '116'
     }
+  };
+
+  // Function to handle contact button clicks
+  const handleContactClick = (messageType: 'product' | 'quote', details?: string) => {
+    const productName = "Student Athletic & PE Uniform";
+    const variant = product.variants ? product.variants[selectedVariant].name : '';
+    
+    let whatsappUrl;
+    if (messageType === 'product') {
+      whatsappUrl = generateProductWhatsAppUrl(productName, variant, quantity);
+    } else {
+      const detailsMsg = details || `Variant: ${variant}, Quantity: ${quantity}, Additional Requirements: ${details || "None"}`;
+      whatsappUrl = generateQuoteWhatsAppUrl(productName, detailsMsg);
+    }
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -298,10 +316,10 @@ export default function StudentAthleticWearPage() {
                 <Button
                   variant="primary"
                   size="lg"
-                  className="flex-1 justify-center"
-                  href="#contact"
+                  className="flex-1 justify-center items-center gap-2"
+                  onClick={() => handleContactClick('product')}
                 >
-                  Request Quote
+                  <FaWhatsapp /> Contact Now
                 </Button>
               </div>
               
@@ -386,6 +404,13 @@ export default function StudentAthleticWearPage() {
                     <p className="text-sm">Fast-track replacement systems for growing students or damaged garments throughout the school year.</p>
                   </div>
                 </div>
+                <Button
+                  variant="primary"
+                  className="mt-6 flex items-center gap-2"
+                  onClick={() => handleContactClick('quote', 'School-wide athletic program inquiry')}
+                >
+                  <FaWhatsapp /> Request School Program Quote
+                </Button>
               </div>
               <div className="relative rounded-lg overflow-hidden shadow-lg h-80">
                 <Image 
@@ -394,11 +419,6 @@ export default function StudentAthleticWearPage() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-primary-900/20 flex items-center justify-center">
-                  <Button variant="secondary" size="lg" href="#contact">
-                    Request School Quote
-                  </Button>
-                </div>
               </div>
             </div>
           </div>
@@ -474,58 +494,21 @@ export default function StudentAthleticWearPage() {
           <div className="mt-16" id="contact">
             <SectionHeading>Request a Custom Quote</SectionHeading>
             <div className="mt-8 bg-neutral-50 p-6 rounded-lg">
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-1">Full Name</label>
-                    <input type="text" id="name" className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500" />
-                  </div>
-                  <div>
-                    <label htmlFor="institution" className="block text-sm font-medium text-neutral-700 mb-1">School/Institution</label>
-                    <input type="text" id="institution" className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500" />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-1">Email Address</label>
-                    <input type="email" id="email" className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500" />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-neutral-700 mb-1">Phone Number</label>
-                    <input type="tel" id="phone" className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500" />
-                  </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="product-interest" className="block text-sm font-medium text-neutral-700 mb-1">Interested In</label>
-                  <select id="product-interest" className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
-                    <option value="">Select an option</option>
-                    {product.variants.map((variant, index) => (
-                      <option key={index} value={variant.name}>{variant.name}</option>
-                    ))}
-                    <option value="custom">Custom Requirement</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label htmlFor="quantity" className="block text-sm font-medium text-neutral-700 mb-1">Estimated Quantity</label>
-                  <select id="quantity" className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
-                    <option value="">Select quantity range</option>
-                    <option value="1-50">1-50 sets</option>
-                    <option value="51-100">51-100 sets</option>
-                    <option value="101-250">101-250 sets</option>
-                    <option value="251-500">251-500 sets</option>
-                    <option value="501+">501+ sets</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-1">Additional Requirements</label>
-                  <textarea id="message" rows={4} className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500" placeholder="Please include any specific requirements, customization needs, or questions..."></textarea>
-                </div>
-                
-                <Button variant="primary" size="lg" className="w-full justify-center">
-                  Submit Quote Request
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-4">Contact Us Directly</h3>
+                <p className="mb-6">
+                  Contact our athletic uniform specialists directly through WhatsApp for personalized assistance. 
+                  We can help with custom team kits, school-wide PE uniform programs, and special requirements.
+                </p>
+                <Button 
+                  variant="primary" 
+                  size="lg" 
+                  className="flex items-center justify-center gap-2 mx-auto"
+                  onClick={() => handleContactClick('quote')}
+                >
+                  <FaWhatsapp className="text-xl" /> Get a Quote via WhatsApp
                 </Button>
-              </form>
+              </div>
             </div>
           </div>
           

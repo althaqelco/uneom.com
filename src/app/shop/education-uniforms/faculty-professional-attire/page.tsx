@@ -4,13 +4,14 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FaStar, FaStarHalfAlt, FaRegStar, FaCheck, FaShippingFast } from 'react-icons/fa';
+import { FaStar, FaStarHalfAlt, FaRegStar, FaCheck, FaShippingFast, FaWhatsapp } from 'react-icons/fa';
 import Head from 'next/head';
 import { Metadata } from 'next';
 
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
+import { generateProductWhatsAppUrl, generateQuoteWhatsAppUrl } from '@/utils/whatsapp';
 
 export default function FacultyProfessionalAttirePage() {
   const locale = 'en';
@@ -100,6 +101,23 @@ export default function FacultyProfessionalAttirePage() {
       worstRating: '1',
       reviewCount: '98'
     }
+  };
+
+  // Function to handle contact button clicks
+  const handleContactClick = (messageType: 'general' | 'quote', details?: string) => {
+    const productName = product.name;
+    const variant = product.variants ? product.variants[selectedVariant].name : '';
+    
+    let whatsappUrl;
+    if (messageType === 'general') {
+      whatsappUrl = generateProductWhatsAppUrl(productName, variant, quantity);
+    } else {
+      const detailsMsg = details || `Variant: ${variant}, Quantity: ${quantity}`;
+      whatsappUrl = generateQuoteWhatsAppUrl(productName, detailsMsg);
+    }
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -257,10 +275,10 @@ export default function FacultyProfessionalAttirePage() {
                 <Button
                   variant="primary"
                   size="lg"
-                  className="flex-1 justify-center"
-                  href="#contact"
+                  className="flex-1 justify-center items-center gap-2"
+                  onClick={() => handleContactClick('general')}
                 >
-                  Request Quote
+                  <FaWhatsapp /> Contact Now
                 </Button>
               </div>
               
@@ -355,8 +373,13 @@ export default function FacultyProfessionalAttirePage() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-primary-900/20 flex items-center justify-center">
-                  <Button variant="secondary" size="lg" href="#contact">
-                    Request Institution Quote
+                  <Button 
+                    variant="secondary" 
+                    size="lg" 
+                    className="flex items-center gap-2"
+                    onClick={() => handleContactClick('quote', 'Requesting an institutional quote for faculty attire program')}
+                  >
+                    <FaWhatsapp /> Request Institution Quote
                   </Button>
                 </div>
               </div>
@@ -373,7 +396,21 @@ export default function FacultyProfessionalAttirePage() {
           <div className="mt-16" id="contact">
             <SectionHeading>Request a Custom Quote</SectionHeading>
             <div className="mt-8 bg-neutral-50 p-6 rounded-lg">
-              {/* <ProductReviewForm productId={product.id} /> */}
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-4">Contact Us Directly</h3>
+                <p className="mb-6">
+                  Get in touch with our education uniform specialists directly through WhatsApp for a personalized quote.
+                  Our team is ready to assist with your specific requirements.
+                </p>
+                <Button 
+                  variant="primary" 
+                  size="lg" 
+                  className="flex items-center justify-center gap-2 mx-auto"
+                  onClick={() => handleContactClick('quote')}
+                >
+                  <FaWhatsapp className="text-xl" /> Contact via WhatsApp
+                </Button>
+              </div>
             </div>
           </div>
           

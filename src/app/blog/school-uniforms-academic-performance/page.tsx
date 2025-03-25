@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FaCalendarAlt, FaUser, FaTag, FaShare, FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { FaCalendarAlt, FaUser, FaTag, FaShare, FaFacebookF, FaTwitter, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import Head from 'next/head';
 import { Metadata } from 'next';
 
@@ -12,6 +12,7 @@ import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { useRouter } from 'next/navigation';
+import { generateGeneralWhatsAppUrl } from '@/utils/whatsapp';
 
 export default function SchoolUniformsAcademicPerformancePage() {
   const router = useRouter();
@@ -182,6 +183,15 @@ export default function SchoolUniformsAcademicPerformancePage() {
   const canonicalUrl = language === 'en'
     ? 'https://uneom.com/blog/school-uniforms-academic-performance'
     : 'https://uneom.com/blog/school-uniforms-academic-performance?lang=ar';
+
+  // Function to handle WhatsApp contact
+  const handleWhatsAppContact = () => {
+    const subject = language === 'en' 
+      ? 'School Uniforms Information Request'
+      : 'طلب معلومات عن الزي المدرسي';
+    
+    window.open(generateGeneralWhatsAppUrl(subject), '_blank');
+  };
 
   return (
     <>
@@ -408,9 +418,11 @@ export default function SchoolUniformsAcademicPerformancePage() {
               <Button 
                 variant="primary" 
                 size="lg"
-                href="/shop/education-uniforms/premium-school-uniform"
+                className="flex items-center gap-2 justify-center mx-auto"
+                onClick={handleWhatsAppContact}
               >
-                {language === 'en' ? 'Explore School Uniforms' : 'استكشف الأزياء المدرسية'}
+                <FaWhatsapp />
+                {language === 'en' ? 'Contact Us Now' : 'تواصل معنا الآن'}
               </Button>
             </div>
           </div>

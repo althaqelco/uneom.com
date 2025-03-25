@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FaCalendarAlt, FaUser, FaTag, FaShare, FaFacebookF, FaTwitter, FaLinkedinIn, FaRecycle, FaLeaf, FaWater } from 'react-icons/fa';
+import { FaCalendarAlt, FaUser, FaTag, FaShare, FaFacebookF, FaTwitter, FaLinkedinIn, FaRecycle, FaLeaf, FaWater, FaWhatsapp } from 'react-icons/fa';
 import Head from 'next/head';
 import { Metadata } from 'next';
 
@@ -12,6 +12,7 @@ import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { useRouter } from 'next/navigation';
+import { generateGeneralWhatsAppUrl } from '@/utils/whatsapp';
 
 export default function SustainableSchoolUniformsPage() {
   const router = useRouter();
@@ -192,6 +193,15 @@ export default function SustainableSchoolUniformsPage() {
   const canonicalUrl = language === 'en'
     ? 'https://uneom.com/blog/sustainable-school-uniforms-saudi'
     : 'https://uneom.com/blog/sustainable-school-uniforms-saudi?lang=ar';
+  
+  // Function to handle WhatsApp contact
+  const handleWhatsAppContact = (topic?: string) => {
+    const subject = language === 'en' 
+      ? `Sustainable School Uniforms${topic ? ` - ${topic}` : ''}`
+      : `الزي المدرسي المستدام${topic ? ` - ${topic}` : ''}`;
+    
+    window.open(generateGeneralWhatsAppUrl(subject), '_blank');
+  };
   
   return (
     <>
@@ -442,21 +452,34 @@ export default function SustainableSchoolUniformsPage() {
             <div className="text-center">
               <h3 className="text-2xl font-bold text-primary-800 mb-4">
                 {language === 'en' 
-                  ? 'Discover Our Sustainable Uniform Collection' 
-                  : 'اكتشف مجموعة الزي المستدامة لدينا'}
+                  ? 'Interested in Sustainable School Uniforms?' 
+                  : 'مهتم بالأزياء المدرسية المستدامة؟'}
               </h3>
               <p className="text-primary-700 mb-6 max-w-2xl mx-auto">
                 {language === 'en' 
-                  ? 'Our eco-friendly school uniforms combine sustainability with quality, comfort, and cultural appropriateness for Saudi educational institutions.' 
-                  : 'تجمع أزياؤنا المدرسية الصديقة للبيئة بين الاستدامة والجودة والراحة والملاءمة الثقافية للمؤسسات التعليمية السعودية.'}
+                  ? 'Contact us to learn more about our sustainable uniform solutions for Saudi educational institutions.' 
+                  : 'اتصل بنا لمعرفة المزيد عن حلول الزي المدرسي المستدامة للمؤسسات التعليمية السعودية.'}
               </p>
-              <Button 
-                variant="primary" 
-                size="lg"
-                href="/shop/education-uniforms/premium-school-uniform"
-              >
-                {language === 'en' ? 'Explore Sustainable Uniforms' : 'استكشف الأزياء المستدامة'}
-              </Button>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Button 
+                  variant="primary" 
+                  size="lg"
+                  className="flex items-center gap-2 justify-center"
+                  onClick={() => handleWhatsAppContact('General Inquiry')}
+                >
+                  <FaWhatsapp />
+                  {language === 'en' ? 'Contact Us Now' : 'تواصل معنا الآن'}
+                </Button>
+                <Button 
+                  variant="secondary" 
+                  size="lg"
+                  className="flex items-center gap-2 justify-center"
+                  onClick={() => handleWhatsAppContact('Request Catalog')}
+                >
+                  <FaWhatsapp />
+                  {language === 'en' ? 'Request Sustainable Catalog' : 'اطلب كتالوج المنتجات المستدامة'}
+                </Button>
+              </div>
             </div>
           </div>
         </Container>
