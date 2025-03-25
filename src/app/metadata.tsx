@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'UNEOM | #1 Professional Uniform Supplier in Saudi Arabia - Riyadh, Jeddah, Dammam',
-  description: 'UNEOM is Saudi Arabia\'s leading uniform manufacturer and supplier. Premium quality uniforms for healthcare, corporate, hospitality and industrial sectors in all Saudi cities including Riyadh, Jeddah, and Dammam.',
+  title: 'UNEOM | Premium Uniform Supplier in Saudi Arabia - Riyadh, Jeddah, Dammam',
+  description: 'UNEOM delivers premium quality professional uniforms for healthcare, corporate, hospitality and industrial sectors across Saudi Arabia. Custom designs, high-quality fabrics, and nationwide delivery to Riyadh, Jeddah, Dammam and all Saudi cities.',
   keywords: [
     'uniform Saudi Arabia', 
     'uniform Riyadh', 
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     'custom uniforms Saudi Arabia'
   ],
   openGraph: {
-    title: 'UNEOM | #1 Professional Uniform Supplier in Saudi Arabia',
-    description: 'Saudi Arabia\'s leading uniform manufacturer for all cities including Riyadh, Jeddah, and Dammam. Premium quality uniforms for all industries.',
+    title: 'UNEOM | Premium Uniform Supplier in Saudi Arabia - Custom Designs & Quality Fabrics',
+    description: 'Saudi Arabia\'s leading uniform manufacturer for all industries. Premium custom-designed uniforms delivered to Riyadh, Jeddah, Dammam and all Saudi cities.',
     type: 'website',
     locale: 'en',
     images: [
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UNEOM | #1 Uniform Supplier in Saudi Arabia',
-    description: 'Saudi Arabia\'s leading uniform manufacturer for Riyadh, Jeddah, Dammam and all Saudi cities.',
+    title: 'UNEOM | Premium Uniform Supplier in Saudi Arabia',
+    description: 'Custom-designed professional uniforms manufactured with premium fabrics for all sectors across Riyadh, Jeddah, Dammam and all Saudi cities.',
     images: ['/images/uneom-social-share.jpg'],
   },
   robots: {

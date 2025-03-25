@@ -157,7 +157,8 @@
 /ar/location/%d8%ac%d8%af%d8%a9 /ar/locations/jeddah 301!
 
 # Generic redirects (should be last)
-/sectors/* /industries/:splat 301!
+/sectors    /industries    301
+/sectors/*    /industries/:splat    301
 /location/* /locations/:splat 301!
 /category/* /blog/categories/:splat 301!
 /ar/sectors/* /ar/industries/:splat 301!

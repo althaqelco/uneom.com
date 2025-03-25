@@ -1,13 +1,38 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Quality Assurance for Professional Uniforms | UNEOM - Saudi Arabia',
-  description: 'Comprehensive quality control processes ensuring durability, performance, and consistency in professional uniforms. Rigorous testing methods adapted for Saudi Arabia\'s unique climate and working conditions.',
-  keywords: 'uniform quality assurance, professional uniform testing, quality control uniforms, Saudi Arabia uniform standards, SASO quality certification, uniform durability testing, UNEOM quality assurance',
+  title: 'Uniform Quality Assurance & Testing | UNEOM Saudi Arabia',
+  description: 'Comprehensive uniform quality control and testing services for Saudi organizations. UNEOM ensures durable, high-quality workwear through rigorous material testing and standards compliance.',
+  keywords: 'uniform quality assurance, workwear testing services, Saudi Arabia quality control, fabric testing standards, uniform durability certification, professional attire quality checks, UNEOM quality assurance',
   openGraph: {
-    title: 'Quality Assurance for Professional Uniforms | UNEOM - Saudi Arabia',
-    description: 'Comprehensive quality control processes ensuring durability, performance, and consistency in professional uniforms. Rigorous testing methods adapted for Saudi Arabia\'s unique climate and working conditions.',
+    title: 'Uniform Quality Assurance & Testing | UNEOM Saudi Arabia',
+    description: 'Comprehensive uniform quality control and testing services for Saudi organizations. UNEOM ensures durable, high-quality workwear through rigorous material testing and standards compliance.',
     type: 'website',
     locale: 'en',
+    images: [
+      {
+        url: '/images/services/quality-assurance/quality-header.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'UNEOM Uniform Quality Assurance and Testing Services',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Uniform Quality Assurance & Testing | UNEOM Saudi Arabia',
+    description: 'Comprehensive uniform quality control and testing services for Saudi organizations.',
+    images: ['/images/services/quality-assurance/quality-header.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://uneom.com/services/quality-assurance',
+    languages: {
+      'en': 'https://uneom.com/services/quality-assurance',
+      'ar': 'https://uneom.com/ar/services/quality-assurance',
+    },
   },
 }; 
