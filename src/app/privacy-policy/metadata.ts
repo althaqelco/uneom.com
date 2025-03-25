@@ -1,28 +1,30 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | UNEOM Saudi Arabia',
-  description: 'UNEOM\'s privacy policy details how we collect, use, and protect your data when you interact with our uniform and workwear services across Saudi Arabia.',
-  keywords: 'UNEOM privacy policy, uniform company data protection, Saudi workwear privacy, customer data security, online uniform ordering privacy, UNEOM data protection, personal information security, Saudi business privacy, workwear customer privacy, uniform provider policy',
+  title: 'Privacy Policy | UNEOM B2B Uniform Supplier Saudi Arabia',
+  description: 'Learn how UNEOM collects, protects, and processes your information. Our privacy policy outlines our commitment to data security and transparency for our B2B clients.',
+  keywords: 'UNEOM privacy policy, uniform supplier data protection, B2B privacy policy Saudi Arabia, UNEOM data security, corporate uniform supplier privacy',
   openGraph: {
-    title: 'Privacy Policy | How UNEOM Protects Your Data',
-    description: 'Learn how UNEOM collects, processes, and protects your personal information when you use our professional uniform services in Saudi Arabia.',
+    title: 'Privacy Policy | UNEOM B2B Uniform Supplier',
+    description: 'Learn how UNEOM collects, protects, and processes your information. Our commitment to data security and transparency for our B2B clients in Saudi Arabia.',
+    url: 'https://uneom.com/privacy-policy',
+    siteName: 'UNEOM',
+    locale: 'en_US',
     type: 'website',
-    locale: 'en',
     images: [
       {
-        url: '/images/legal/privacy-policy.jpg',
+        url: 'https://uneom.com/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Privacy Policy - Data Protection Information',
+        alt: 'UNEOM - Professional Uniform Solutions'
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Privacy Policy | UNEOM Saudi Arabia',
-    description: 'How UNEOM collects, processes, and protects your personal information when using our uniform services.',
-    images: ['/images/legal/privacy-policy.jpg'],
+    title: 'Privacy Policy | UNEOM B2B Uniform Supplier',
+    description: 'Learn how UNEOM collects, protects, and processes your information. Our commitment to data security and transparency for our B2B clients.',
+    images: ['https://uneom.com/images/twitter-image.jpg'],
   },
   robots: {
     index: true,
@@ -31,7 +33,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://uneom.com/privacy-policy',
     languages: {
-      'en': 'https://uneom.com/privacy-policy',
       'ar': 'https://uneom.com/ar/privacy-policy',
     },
   },
