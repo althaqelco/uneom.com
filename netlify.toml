@@ -13,6 +13,217 @@
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
+
+# English - Additional Products & Categories
+[[redirects]]
+  from = "/sectors/business-wear-uniform-companies"
+  to = "/industries/corporate"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/jackets-for-scrubs"
+  to = "/shop/healthcare-accessories"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/waitress-uniforms"
+  to = "/industries/hospitality/restaurants"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/uniform-for-security"
+  to = "/industries/security"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/company-uniforms"
+  to = "/industries/corporate"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/uniforms-for-hotels"
+  to = "/industries/hospitality/hotels"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/pilot-uniforms"
+  to = "/industries/aviation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/professional-uniforms"
+  to = "/industries"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/med-scrubs"
+  to = "/shop/medical-scrubs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/greys-anatomy-scrubs"
+  to = "/shop/medical-scrubs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/scrub-suits"
+  to = "/shop/medical-scrubs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/restaurants"
+  to = "/industries/hospitality/restaurants"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sectors/aviation-uniforms"
+  to = "/industries/aviation"
+  status = 301
+  force = true
+
+# Additional Blog redirects
+[[redirects]]
+  from = "/blog/from-design-to-delivery-inside-uneoms-quality-control-process"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/uniform-maintenance-tips-expert-advice-from-uneoms-specialists"
+  to = "/blog"
+  status = 301
+  force = true
+
+# Categories redirects
+[[redirects]]
+  from = "/category/blog"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/category/sectors"
+  to = "/industries"
+  status = 301
+  force = true
+
+# Arabic - Blog
+[[redirects]]
+  from = "/ar/blog/%d8%aa%d8%ac%d8%b1%d8%a8%d8%a9-%d9%8a%d9%88%d9%86%d9%8a%d9%88%d9%85-%d9%85%d8%b9-%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b7%d8%a8%d9%8a-%d8%af%d9%84%d9%8a%d9%84%d9%83-%d9%84%d8%a7%d8%ae"
+  to = "/ar/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/blog/%d8%a3%d9%81%d8%b6%d9%84-%d8%a7%d9%84%d8%a3%d9%82%d9%85%d8%b4%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d8%a7%d8%b3%d8%a8%d8%a9-%d9%84%d9%84%d9%85%d9%86%d8%a7%d8%ae-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a"
+  to = "/ar/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/blog/%d9%83%d9%8a%d9%81-%d9%8a%d8%ba%d9%8a%d8%b1-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d9%88%d8%ad%d8%af-%d9%85%d8%b3%d8%aa%d9%82%d8%a8%d9%84-%d8%b4%d8%b1%d9%83%d8%aa%d9%83"
+  to = "/ar/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/blog/%d8%a3%d8%b3%d8%b1%d8%a7%d8%b1-%d9%86%d8%ac%d8%a7%d8%ad-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d8%af%d8%b1%d8%b3%d9%8a-%d9%81%d9%8a-%d8%aa%d8%ad%d8%b3%d9%8a%d9%86-%d8%a3%d8%af%d8%a7%d8%a1-%d8%a7"
+  to = "/ar/blog"
+  status = 301
+  force = true
+
+# Additional Arabic Sectors
+[[redirects]]
+  from = "/ar/sectors/uniform-in-riyadh"
+  to = "/ar/locations/riyadh"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/uniform-in-dammam"
+  to = "/ar/locations/dammam"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/uniform-in-jeddah"
+  to = "/ar/locations/jeddah"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/uniform-in-mecca"
+  to = "/ar/locations/mecca"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/uniform-in-medina"
+  to = "/ar/locations/medina"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/education-uniforms"
+  to = "/ar/industries/education"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/industrial-uniforms"
+  to = "/ar/industries/factory-industry"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/uniform-factory"
+  to = "/ar/industries/manufacturing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/workers-uniform"
+  to = "/ar/industries/factory-industry"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/uniform-factory-2"
+  to = "/ar/industries/manufacturing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/sectors/hospitality-uniforms"
+  to = "/ar/industries/hospitality"
+  status = 301
+  force = true
+
+# Additional Arabic Pages
+[[redirects]]
+  from = "/ar/services"
+  to = "/ar/services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/faqs"
+  to = "/ar/faq"
+  status = 301
+  force = true
 
 # English - Main Sections
 [[redirects]]
@@ -248,105 +459,5 @@
 [[redirects]]
   from = "/sectors/medical-scrubs"
   to = "/shop/medical-scrubs"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/sectors/nursing-uniforms"
-  to = "/shop/medical-scrubs/nursing-scrubs"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/sectors/lab-coats"
-  to = "/shop/medical-scrubs/medical-lab-coat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/sectors/hospital-uniforms"
-  to = "/industries/healthcare"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/products/medical-scrubs"
-  to = "/shop/medical-scrubs"
-  status = 301
-  force = true
-
-# Arabic Healthcare-specific redirects
-[[redirects]]
-  from = "/ar/sectors/healthcare"
-  to = "/ar/industries/healthcare"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/sectors/medical-uniforms"
-  to = "/ar/industries/healthcare"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/sectors/medical-scrubs"
-  to = "/ar/shop/medical-scrubs"
-  status = 301
-  force = true
-
-# Product-specific redirects
-[[redirects]]
-  from = "/products/premium-scrubs-set"
-  to = "/shop/medical-scrubs/premium-scrubs-set"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/products/medical-lab-coat"
-  to = "/shop/medical-scrubs/medical-lab-coat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/products/nursing-uniform"
-  to = "/shop/medical-scrubs/nursing-scrubs"
-  status = 301
-  force = true
-
-# Legacy URL patterns that might exist
-[[redirects]]
-  from = "/healthcare-uniforms"
-  to = "/industries/healthcare"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/hospital-uniforms"
-  to = "/industries/healthcare"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/medical-attire"
-  to = "/industries/healthcare"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/doctor-uniforms"
-  to = "/industries/healthcare"
-  status = 301
-  force = true
-
-# Legacy blog URLs that might exist
-[[redirects]]
-  from = "/blog/healthcare*"
-  to = "/blog"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/blog/category/healthcare"
-  to = "/blog"
   status = 301
   force = true
