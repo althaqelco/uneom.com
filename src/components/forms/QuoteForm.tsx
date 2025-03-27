@@ -250,11 +250,13 @@ export default function QuoteForm({ locale = 'en' }: QuoteFormProps) {
         phone: values.phone,
         message: values.message,
         company: values.company,
+        industry: values.industry,
+        employeeCount: values.employeeCount,
         type: 'quote',
         timestamp: now.toISOString()
       };
-      
-      console.log('Form data being submitted:', simplifiedData);
+
+      console.log('Quote form data being submitted:', simplifiedData);
       
       // Format the data for WhatsApp message
       const whatsappMessage = `
@@ -264,8 +266,8 @@ Company: ${values.company}
 Email: ${values.email}
 Phone: ${values.phone}
 Industry: ${values.industry}
-Employees: ${values.employeeCount}
-Message: ${values.message}
+Employee Count: ${values.employeeCount}
+Requirements: ${values.message}
 Submitted: ${now.toLocaleString()}
       `.trim();
       
@@ -275,8 +277,7 @@ Submitted: ${now.toLocaleString()}
       
       // Open WhatsApp in a new window/tab
       window.open(whatsappUrl, '_blank');
-      
-      // MODIFIED APPROACH: Backup to localStorage and attempt simpler API call
+
       try {
         // First, backup the form data to localStorage
         try {
