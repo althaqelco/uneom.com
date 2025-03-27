@@ -29,6 +29,10 @@ export async function generateStaticParams() {
     { slug: 'vision-2030-reshaping-dress-codes' },
     { slug: 'sustainable-uniform-solutions' },
     { slug: 'advanced-fabrics-healthcare-uniforms' },
+    { slug: 'cultural-identity-saudi-school-uniforms' },
+    { slug: 'school-uniforms-academic-performance' },
+    { slug: 'sustainable-school-uniforms-saudi' },
+    { slug: 'industrial-safety-compliance-guide' },
   ];
 }
 
