@@ -8,7 +8,7 @@
 
 # next.js
 /.next/
-/out/
+# /out/
 
 # production
 /build
@@ -31,7 +31,7 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+# next-env.d.ts
 
 # IDE
 .vscode/
@@ -39,3 +39,17 @@ next-env.d.ts
 
 # Backup files
 *.bak 
+
+# Additional unnecessary files
+/tmp_edits/
+/tmp_branch_files/
+/temp/
+/pages_backup/
+/fixed-files/
+unused-images.txt
+used-images.txt
+missing-images.txt
+renamed-images.txt
+optimized-images.txt
+*.zip
+/~/ 
