@@ -1,432 +1,272 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { FaCheck, FaStar, FaStarHalfAlt, FaRegStar, FaWhatsapp } from 'react-icons/fa';
-import Head from 'next/head';
-import { Metadata } from 'next';
-
-import MainLayout from '@/components/layout/MainLayout';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
-import { generateProductWhatsAppUrl, generateQuoteWhatsAppUrl } from '@/utils/whatsapp';
+import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
+import { generateProductWhatsAppUrl } from '@/utils/whatsapp';
+import { FaWhatsapp, FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 
-export default function FacultyProfessionalAttirePageArabic() {
+export default function FacultyProfessionalAttireArabicPage() {
   const locale = 'ar';
+  const [selectedColor, setSelectedColor] = useState('كحلي');
+  const [selectedSize, setSelectedSize] = useState('M');
+  const [activeTab, setActiveTab] = useState('description');
+  const [showRequestForm, setShowRequestForm] = useState(false);
   
-  // Product details in Arabic
   const product = {
-    id: 'faculty-professional-attire',
-    name: 'أزياء مهنية للهيئة التدريسية',
-    price: 'من ٣٩٩ ريال سعودي',
-    basePrice: '399',
-    rating: 4.9,
-    reviews: 87,
-    description: 'ملابس مهنية أنيقة مصممة خصيصًا للمعلمين والإداريين في المؤسسات التعليمية السعودية.',
-    longDescription: 'تم تصميم مجموعة الملابس المهنية للهيئة التدريسية لتلبية احتياجات العاملين في قطاع التعليم في المملكة العربية السعودية. تجمع هذه الملابس بين الأناقة المهنية والراحة العملية، مما يجعلها مثالية للبيئة المدرسية. صممت كل قطعة لتعكس الاحترافية والثقة، مع مراعاة متطلبات العمل اليومي للمعلمين. تتوفر المجموعة بمجموعة متنوعة من الأنماط والألوان لتلبية مختلف الأذواق والمتطلبات المؤسسية.',
+    id: "faculty-professional-attire",
+    name: "زي مهني للأساتذة",
+    description: "زي رسمي أنيق للأساتذة في الجامعات والمؤسسات التعليمية يجمع بين الأناقة المهنية والراحة العملية.",
+    price: "ريال 450",
+    minOrder: 10,
+    colors: [
+      { name: "كحلي", value: "#1a2456" },
+      { name: "رمادي غامق", value: "#333333" },
+      { name: "أسود", value: "#000000" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
     features: [
-      'أقمشة عالية الجودة مقاومة للتجاعيد للمظهر المهني طوال اليوم',
-      'تصاميم مريحة تتيح حرية الحركة أثناء التدريس',
-      'تشطيبات متينة تضمن طول العمر حتى مع الاستخدام المنتظم',
-      'أنماط محافظة وأنيقة تناسب البيئة التعليمية السعودية',
-      'ألوان متنوعة يمكن تنسيقها مع هوية المؤسسة التعليمية',
-      'أقمشة خفيفة الوزن مناسبة للمناخ السعودي',
-      'خيارات قابلة للتخصيص لإضافة شعارات المدرسة'
+      {
+        title: "أقمشة فاخرة",
+        description: "مصنوع من أقمشة عالية الجودة تدوم طويلاً وتوفر مظهراً أنيقاً"
+      },
+      {
+        title: "مناسب للمناخ",
+        description: "مصمم ليناسب المناخ في المملكة العربية السعودية مع الحفاظ على المظهر الرسمي"
+      },
+      {
+        title: "تصميم مريح",
+        description: "قصات مريحة تسمح بحرية الحركة مع الحفاظ على المظهر الرسمي"
+      },
+      {
+        title: "سهل العناية",
+        description: "قماش مقاوم للتجعد ويحتفظ بشكله حتى بعد الغسيل المتكرر"
+      }
     ],
     specifications: [
-      { name: 'المواد', value: 'قطن مصري فاخر، مزيج قطن-بوليستر، مزيج صوف-بوليستر (حسب النمط)' },
-      { name: 'تعليمات العناية', value: 'غسيل آلي، كي على درجة حرارة متوسطة، بعض القطع تتطلب تنظيف جاف' },
-      { name: 'المقاسات المتوفرة', value: 'للنساء: XS إلى 3XL، للرجال: S إلى 4XL' },
-      { name: 'الألوان', value: 'أبيض، أزرق فاتح، أزرق داكن، بيج، رمادي، أسود' },
-      { name: 'بلد المنشأ', value: 'المملكة العربية السعودية، تركيا (حسب المجموعة)' },
-      { name: 'التخصيص', value: 'متوفر تطريز وطباعة شعار المؤسسة التعليمية' }
-    ],
-    images: [
-      { src: '/images/industries/education/faculty/professional-attire-faculty-01.webp', alt: 'ملابس مهنية للهيئة التدريسية - النمط الأساسي' },
-      { src: '/images/industries/education/faculty/professional-attire-faculty-02.webp', alt: 'مدرسون يرتدون الزي المهني في بيئة تعليمية' },
-      { src: '/images/industries/education/faculty/professional-attire-faculty-03.webp', alt: 'تفاصيل الخياطة الدقيقة للملابس المهنية' },
-      { src: '/images/industries/education/faculty/professional-attire-faculty-04.webp', alt: 'مجموعة متنوعة من خيارات الملابس المهنية للمعلمين' }
-    ],
-    variants: [
-      { name: 'قميص رسمي للمعلمين (رجال)', price: '١٧٩ ريال سعودي' },
-      { name: 'بنطلون رسمي للمعلمين (رجال)', price: '٢٢٩ ريال سعودي' },
-      { name: 'سترة للمعلمين (رجال)', price: '٢٩٩ ريال سعودي' },
-      { name: 'بلوزة رسمية للمعلمات (نساء)', price: '١٨٩ ريال سعودي' },
-      { name: 'تنورة أو بنطلون رسمي للمعلمات (نساء)', price: '٢٣٩ ريال سعودي' },
-      { name: 'سترة للمعلمات (نساء)', price: '٢٧٩ ريال سعودي' },
-      { name: 'طقم كامل للمعلمين (رجال)', price: 'من ٣٩٩ ريال سعودي' },
-      { name: 'طقم كامل للمعلمات (نساء)', price: 'من ٣٩٩ ريال سعودي' }
-    ],
-    customizationOptions: [
-      { name: 'تطريز شعار المدرسة', price: '+٤٥ ريال سعودي' },
-      { name: 'طباعة شعار المدرسة', price: '+٣٠ ريال سعودي' },
-      { name: 'تطريز اسم المعلم/ة', price: '+٣٥ ريال سعودي' },
-      { name: 'تعديل المقاس', price: '+٥٠ ريال سعودي' }
+      { name: "المادة", value: "65% بوليستر، 35% قطن" },
+      { name: "الوزن", value: "180 جم/م²" },
+      { name: "التصميم", value: "أنيق ومهني مع خياطة متقنة" },
+      { name: "الأزرار", value: "أزرار عالية الجودة بلون متناسق" },
+      { name: "الخياطة", value: "مضاعفة في جميع نقاط الضغط لمتانة إضافية" },
+      { name: "المقاسات", value: "من XS إلى 3XL مع إمكانية التخصيص" }
     ]
   };
-  
-  // State for selected variant and quantity
-  const [selectedVariant, setSelectedVariant] = useState(6); // Default to complete male set
-  const [quantity, setQuantity] = useState(1);
-  
-  // Product images for the gallery
-  const images = [
-    {
-      src: '/images/industries/education/faculty/professional-attire-faculty-01.webp',
-      alt: 'أزياء مهنية عالية الجودة للهيئة التدريسية'
-    },
-    {
-      src: '/images/industries/education/faculty/professional-attire-faculty-02.webp',
-      alt: 'أعضاء هيئة التدريس يرتدون الأزياء المهنية من يونيوم'
-    },
-    {
-      src: '/images/industries/education/faculty/professional-attire-faculty-03.webp',
-      alt: 'لقطة قريبة لتفاصيل الخياطة للأزياء المهنية للمعلمين'
-    },
-    {
-      src: '/images/industries/education/faculty/professional-attire-faculty-04.webp',
-      alt: 'مجموعة متنوعة من خيارات الملابس المهنية للمعلمين والإداريين'
+
+  const whatsappProduct = () => {
+    const message = `استفسار عن: ${product.name}\nاللون: ${selectedColor}\nالمقاس: ${selectedSize}`;
+    const url = generateProductWhatsAppUrl(message);
+    window.open(url, '_blank');
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
     }
-  ];
-  
-  // Find the currently selected variant
-  const currentVariant = product.variants[selectedVariant] || product.variants[0];
-  
-  // JSON-LD Product Schema for SEO
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
   const productSchema = {
     '@context': 'https://schema.org/',
     '@type': 'Product',
-    name: 'أزياء مهنية للهيئة التدريسية',
-    image: images.map(img => `https://uneom.com${img.src}`),
-    description: 'ملابس مهنية أنيقة مصممة خصيصًا للمعلمين والإداريين في المؤسسات التعليمية السعودية، تجمع بين الأناقة المهنية والراحة العملية.',
-    sku: 'EDU-FAC-001',
-    brand: {
-      '@type': 'Brand',
-      name: 'يونيوم'
-    },
+    name: product.name,
+    image: '/images/products/faculty-attire.webp',
+    description: product.description,
     offers: {
-      '@type': 'AggregateOffer',
-      lowPrice: '179',
-      highPrice: '399',
+      '@type': 'Offer',
+      price: product.price.replace('ريال ', ''),
       priceCurrency: 'SAR',
-      availability: 'https://schema.org/InStock',
-      seller: {
-        '@type': 'Organization',
-        name: 'يونيوم'
-      }
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      bestRating: '5',
-      worstRating: '1',
-      reviewCount: '87'
+      availability: 'https://schema.org/InStock'
     }
-  };
-
-  // Breadcrumbs for navigation
-  const breadcrumbs = [
-    { label: 'الرئيسية', href: '/ar' },
-    { label: 'المتجر', href: '/ar/shop' },
-    { label: 'أزياء تعليمية', href: '/ar/shop/education-uniforms' },
-    { label: 'أزياء مهنية للهيئة التدريسية', href: '#' },
-  ];
-
-  // Function to handle contact button clicks
-  const handleContactClick = (messageType: 'product' | 'quote', details?: string) => {
-    const productName = 'أزياء مهنية للهيئة التدريسية';
-    const variant = product.variants ? product.variants[selectedVariant].name : '';
-    
-    let whatsappUrl;
-    if (messageType === 'product') {
-      whatsappUrl = generateProductWhatsAppUrl(productName, variant, quantity);
-    } else {
-      const detailsMsg = details || `الطراز: ${variant}، الكمية: ${quantity}، متطلبات إضافية: ${details || "لا يوجد"}`;
-      whatsappUrl = generateQuoteWhatsAppUrl(productName, detailsMsg);
-    }
-    
-    // Open WhatsApp in a new tab
-    window.open(whatsappUrl, '_blank');
   };
 
   return (
-    <MainLayout locale={locale}>
-      <Head>
-        <title>أزياء مهنية للهيئة التدريسية في المؤسسات التعليمية السعودية | يونيوم</title>
-        <meta name="description" content="ملابس مهنية أنيقة مصممة خصيصًا للمعلمين والإداريين في المؤسسات التعليمية في المملكة العربية السعودية، تجمع بين الأناقة المهنية والراحة اليومية." />
-        <link rel="canonical" href="https://uneom.com/ar/shop/education-uniforms/faculty-professional-attire" />
-        
-        {/* Open Graph tags */}
-        <meta property="og:title" content="أزياء مهنية للهيئة التدريسية في المؤسسات التعليمية السعودية" />
-        <meta property="og:description" content="ملابس مهنية أنيقة مصممة خصيصًا للمعلمين والإداريين في المؤسسات التعليمية السعودية. أقمشة عالية الجودة وتصاميم مريحة تناسب بيئة العمل التعليمية." />
-        <meta property="og:url" content="https://uneom.com/ar/shop/education-uniforms/faculty-professional-attire" />
-        <meta property="og:image" content="https://uneom.com/images/industries/education/faculty/professional-attire-faculty-01.webp" />
-        <meta property="og:type" content="product" />
-        <meta property="og:locale" content="ar_SA" />
-        <meta property="product:price:amount" content={product.basePrice} />
-        <meta property="product:price:currency" content="SAR" />
-        
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="أزياء مهنية للهيئة التدريسية في المؤسسات التعليمية السعودية" />
-        <meta name="twitter:description" content="ملابس مهنية أنيقة مصممة خصيصًا للمعلمين والإداريين في المؤسسات التعليمية السعودية." />
-        <meta name="twitter:image" content="https://uneom.com/images/industries/education/faculty/professional-attire-faculty-01.webp" />
-        
-        {/* JSON-LD schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-        />
-        
-        {/* Hreflang tags */}
-        <link rel="alternate" hrefLang="en" href="https://uneom.com/shop/education-uniforms/faculty-professional-attire" />
-        <link rel="alternate" hrefLang="ar" href="https://uneom.com/ar/shop/education-uniforms/faculty-professional-attire" />
-      </Head>
-      
-      <div className="bg-white pt-8 pb-16">
+    <>
+      {/* Add product schema for SEO */}
+      <div dangerouslySetInnerHTML={{
+        __html: `
+          <script type="application/ld+json">
+            ${JSON.stringify(productSchema)}
+          </script>
+        `
+      }} />
+
+      {/* Breadcrumbs and navigation */}
+      <div className="bg-neutral-50 py-8">
         <Container>
-          {/* Breadcrumbs */}
-          <Breadcrumbs items={breadcrumbs} className="mb-6" />
-          
-          {/* Product main section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {/* Product images */}
-            <div className="relative order-1 md:order-2">
-              <div className="aspect-w-1 aspect-h-1 bg-neutral-100 rounded-lg overflow-hidden">
-                <Image 
-                  src={product.images[0].src}
-                  alt={product.images[0].alt}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="grid grid-cols-4 gap-2 mt-4">
-                {product.images.map((image, index) => (
-                  <div key={index} className="relative aspect-square rounded-md overflow-hidden">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
+          <Breadcrumbs
+            items={[
+              { label: 'الرئيسية', href: '/ar' },
+              { label: 'المتجر', href: '/ar/shop' },
+              { label: 'أزياء تعليمية', href: '/ar/shop/education-uniforms' },
+              { label: product.name, href: '#' },
+            ]}
+            className="mb-6"
+          />
+        </Container>
+      </div>
+
+      <Container className="py-12">
+        <motion.div 
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start lg:flex-row-reverse"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {/* Product Image Gallery */}
+          <motion.div variants={itemVariants} className="space-y-4">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-white border border-neutral-200">
+              <Image
+                src="/images/products/faculty-attire.webp"
+                alt={product.name}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
             </div>
-            
-            {/* Product details */}
-            <div className="order-2 md:order-1">
-              <h1 className="text-3xl font-bold text-neutral-900">{product.name}</h1>
-              
-              {/* Rating */}
-              <div className="flex items-center mt-2 mb-4">
-                <div className="flex text-amber-400">
-                  {[...Array(5)].map((_, i) => {
-                    if (product.rating >= i + 1) {
-                      return <FaStar key={i} className="w-5 h-5" />;
-                    } else if (product.rating >= i + 0.5) {
-                      return <FaStarHalfAlt key={i} className="w-5 h-5" />;
-                    } else {
-                      return <FaRegStar key={i} className="w-5 h-5" />;
-                    }
-                  })}
+            <div className="grid grid-cols-3 gap-4">
+              {[...Array(3)].map((_, index) => (
+                <div key={index} className="relative aspect-square rounded-lg overflow-hidden bg-white border border-neutral-200 cursor-pointer hover:border-primary-300 transition-colors">
+                  <Image
+                    src={`/images/products/faculty-attire-${index + 1}.webp`}
+                    alt={`${product.name} - صورة ${index + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 30vw, 15vw"
+                  />
                 </div>
-                <span className="mr-2 text-neutral-500">{product.rating} ({product.reviews} تقييم)</span>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Product Information */}
+          <motion.div variants={itemVariants} className="space-y-8 text-right">
+            <div>
+              <h1 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-2">
+                {product.name}
+              </h1>
+              <div className="flex items-center justify-end mb-2">
+                <span className="text-xs text-neutral-500 ml-2">4.8 (45 تقييم)</span>
+                <div className="flex text-amber-400">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStarHalfAlt />
+                </div>
               </div>
-              
-              <p className="text-2xl font-bold text-primary-600 mb-6">{product.price}</p>
-              
-              <div className="prose max-w-none mb-6">
-                <p>{product.longDescription}</p>
+              <p className="text-lg text-neutral-700">
+                {product.description}
+              </p>
+            </div>
+
+            <div className="pt-4 border-t border-neutral-200">
+              <div className="flex justify-between items-end mb-6">
+                <div className="text-sm text-neutral-600">
+                  الحد الأدنى للطلب: <span className="font-medium">{product.minOrder} قطع</span>
+                </div>
+                <div>
+                  <div className="text-sm text-neutral-600 mb-1">السعر الأساسي</div>
+                  <div className="text-2xl font-bold text-neutral-900">{product.price}</div>
+                </div>
               </div>
-              
-              {/* Variants selection */}
-              <div className="mb-6">
-                <h3 className="font-medium mb-3">الخيارات</h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {product.variants.map((variant, index) => (
+
+              {/* Color Selection */}
+              <div className="mb-6 text-right">
+                <div className="text-sm font-medium text-neutral-900 mb-3">اللون: {selectedColor}</div>
+                <div className="flex flex-wrap gap-2 justify-end">
+                  {product.colors.map(color => (
                     <button
-                      key={index}
-                      className={`py-2 px-4 text-sm border rounded-md transition ${
-                        selectedVariant === index
-                          ? "border-primary-600 bg-primary-50 text-primary-700"
-                          : "border-neutral-300 hover:border-neutral-400"
-                      }`}
-                      onClick={() => setSelectedVariant(index)}
+                      key={color.name}
+                      onClick={() => setSelectedColor(color.name)}
+                      className={`w-10 h-10 rounded-full flex items-center justify-center ${selectedColor === color.name ? 'ring-2 ring-offset-2 ring-primary-500' : ''}`}
+                      title={color.name}
                     >
-                      {variant.name} - {variant.price}
+                      <span className="sr-only">{color.name}</span>
+                      <span
+                        className="w-6 h-6 rounded-full"
+                        style={{ backgroundColor: color.value }}
+                      />
                     </button>
                   ))}
                 </div>
               </div>
-              
-              {/* Customization options */}
+
+              {/* Size Selection */}
               <div className="mb-6">
-                <h3 className="font-medium mb-3">خيارات التخصيص</h3>
-                <div className="space-y-2 bg-neutral-50 p-4 rounded-md">
-                  {product.customizationOptions.map((option, index) => (
-                    <div key={index} className="flex justify-between text-sm">
-                      <span>{option.name}</span>
-                      <span className="font-medium">{option.price}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Quantity and Add to Quote */}
-              <div className="flex items-center mb-6">
-                <div className="border border-neutral-300 rounded-md flex items-center ml-4">
-                  <button
-                    className="px-3 py-2 text-neutral-600 hover:text-primary-600 transition"
-                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                <div className="flex justify-between items-center mb-3">
+                  <Link 
+                    href="/ar/resources/size-guide" 
+                    className="text-sm text-primary-600 hover:text-primary-700"
                   >
-                    -
-                  </button>
-                  <span className="px-4 py-2 border-x border-neutral-300 min-w-[3rem] text-center">
-                    {quantity}
-                  </span>
-                  <button
-                    className="px-3 py-2 text-neutral-600 hover:text-primary-600 transition"
-                    onClick={() => setQuantity(quantity + 1)}
-                  >
-                    +
-                  </button>
+                    دليل المقاسات
+                  </Link>
+                  <div className="text-sm font-medium text-neutral-900">المقاس: {selectedSize}</div>
                 </div>
-                <Button
-                  variant="primary"
-                  size="lg"
-                  className="flex-1 justify-center items-center gap-2"
-                  onClick={() => handleContactClick('product')}
-                >
-                  <FaWhatsapp /> تواصل الآن
-                </Button>
-              </div>
-              
-              {/* Features */}
-              <div className="border-t border-b border-neutral-200 py-4 mb-6">
-                <h3 className="font-medium mb-3">الميزات الرئيسية</h3>
-                <ul className="space-y-2">
-                  {product.features.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <FaCheck className="text-primary-600 mt-1 ml-2 flex-shrink-0" />
-                      <span className="text-neutral-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              {/* Specifications */}
-              <div>
-                <h3 className="font-medium mb-3">المواصفات</h3>
-                <div className="grid grid-cols-1 gap-2">
-                  {product.specifications.map((spec, index) => (
-                    <div key={index} className="grid grid-cols-3 py-2 border-b border-neutral-100">
-                      <span className="text-neutral-600 font-medium">{spec.name}</span>
-                      <span className="text-neutral-800 col-span-2">{spec.value}</span>
-                    </div>
+                <div className="grid grid-cols-7 gap-2">
+                  {product.sizes.map((size) => (
+                    <button
+                      key={size}
+                      onClick={() => setSelectedSize(size)}
+                      className={`py-2 border rounded-md ${
+                        selectedSize === size
+                          ? 'bg-primary-50 border-primary-500 text-primary-700'
+                          : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
+                      }`}
+                    >
+                      {size}
+                    </button>
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
-          
-          {/* Professional Image Section */}
-          <div className="mt-16 bg-neutral-50 p-6 rounded-lg">
-            <SectionHeading>التأثير المهني في بيئة التعليم</SectionHeading>
-            <div className="mt-4">
-              <p className="text-neutral-700 mb-4">
-                تلعب الملابس المهنية للهيئة التدريسية دورًا مهمًا في تعزيز التأثير التعليمي وخلق بيئة احترافية. 
-                تعزز أزياؤنا المهنية من مكانة المعلمين وتعكس التزام المؤسسة التعليمية بمعايير الاحترافية.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-                <div className="bg-white p-4 rounded-md shadow-sm">
-                  <h4 className="font-semibold mb-2">تعزيز الاحترام المتبادل</h4>
-                  <p className="text-sm text-neutral-600">يساهم المظهر المهني في بناء احترام متبادل بين المعلمين والطلاب وأولياء الأمور.</p>
-                </div>
-                <div className="bg-white p-4 rounded-md shadow-sm">
-                  <h4 className="font-semibold mb-2">إنشاء هوية مؤسسية</h4>
-                  <p className="text-sm text-neutral-600">تساعد الأزياء الموحدة للهيئة التدريسية في خلق هوية بصرية متماسكة للمؤسسة التعليمية.</p>
-                </div>
-                <div className="bg-white p-4 rounded-md shadow-sm">
-                  <h4 className="font-semibold mb-2">إعداد بيئة مهنية</h4>
-                  <p className="text-sm text-neutral-600">تسهم الملابس المهنية الأنيقة في خلق جو تعليمي رسمي يحفز الانضباط والتركيز.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Institutional Packages Section */}
-          <div className="mt-16">
-            <SectionHeading>عروض المؤسسات التعليمية</SectionHeading>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="md:order-1 order-2">
-                <p className="text-neutral-700 mb-4">
-                  نقدم في يونيوم برامج مخصصة للمؤسسات التعليمية لتوفير ملابس مهنية للهيئة التدريسية بأكملها. 
-                  تتضمن عروضنا حلولاً شاملة تتناسب مع احتياجات وميزانية مؤسستكم التعليمية.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                  <div className="border border-neutral-200 rounded-md p-4">
-                    <h4 className="font-semibold text-primary-700 mb-2">حسومات للكميات الكبيرة</h4>
-                    <p className="text-sm">برامج خاصة للطلبيات الكبيرة تناسب المدارس والجامعات بمختلف أحجامها.</p>
-                  </div>
-                  <div className="border border-neutral-200 rounded-md p-4">
-                    <h4 className="font-semibold text-primary-700 mb-2">تجربة الملابس</h4>
-                    <p className="text-sm">إمكانية توفير عينات للتجربة قبل طلب المجموعة الكاملة.</p>
-                  </div>
-                  <div className="border border-neutral-200 rounded-md p-4">
-                    <h4 className="font-semibold text-primary-700 mb-2">التخصيص الشامل</h4>
-                    <p className="text-sm">خيارات متعددة لتخصيص الملابس لتعكس هوية المؤسسة التعليمية.</p>
-                  </div>
-                  <div className="border border-neutral-200 rounded-md p-4">
-                    <h4 className="font-semibold text-primary-700 mb-2">الدعم المستمر</h4>
-                    <p className="text-sm">خدمة مستمرة لتوفير قطع إضافية أو بديلة على مدار العام الدراسي.</p>
-                  </div>
-                </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Button
-                  variant="primary"
-                  className="mt-6 flex items-center gap-2"
-                  onClick={() => handleContactClick('quote', 'استفسار عن أزياء مهنية للمؤسسة التعليمية بالكامل')}
+                  variant="secondary"
+                  className="flex-1 flex items-center justify-center"
+                  onClick={whatsappProduct}
                 >
-                  <FaWhatsapp /> طلب عرض سعر للمؤسسة التعليمية
+                  <FaWhatsapp className="ml-2" />
+                  استفسار عبر الواتساب
                 </Button>
-              </div>
-              <div className="relative order-1 md:order-2 rounded-lg overflow-hidden shadow-lg h-80">
-                <Image 
-                  src="/images/industries/education/faculty/professional-attire-faculty-02.webp"
-                  alt="أزياء مهنية للمعلمين والإداريين"
-                  fill
-                  className="object-cover"
+                <AddToQuoteButton
+                  product={{
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: "/images/products/faculty-attire.webp"
+                  }}
+                  color={selectedColor}
+                  size={selectedSize}
+                  className="flex-1"
                 />
               </div>
             </div>
-          </div>
-          
-          {/* Contact section */}
-          <div className="mt-16" id="contact">
-            <SectionHeading>طلب عرض سعر مخصص</SectionHeading>
-            <div className="mt-8 bg-neutral-50 p-6 rounded-lg">
-              <div className="text-center">
-                <h3 className="text-xl font-semibold mb-4">تواصل معنا مباشرة</h3>
-                <p className="mb-6">
-                  تواصل مع متخصصي الأزياء المهنية لدينا مباشرة عبر واتساب للحصول على مساعدة مخصصة. 
-                  سنساعدك في اختيار الأزياء المناسبة للهيئة التدريسية في مؤسستك التعليمية.
-                </p>
-                <Button 
-                  variant="primary" 
-                  size="lg" 
-                  className="flex items-center justify-center gap-2 mx-auto"
-                  onClick={() => handleContactClick('quote')}
-                >
-                  <FaWhatsapp className="text-xl" /> احصل على عرض سعر عبر واتساب
-                </Button>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </div>
-    </MainLayout>
+          </motion.div>
+        </motion.div>
+
+        {/* Additional product details sections would go here */}
+      </Container>
+    </>
   );
 } 

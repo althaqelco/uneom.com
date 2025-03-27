@@ -35,7 +35,11 @@ export async function generateStaticParams() {
     { slug: 'hospitality-uniforms-cultural-identity' },
     { slug: 'corporate-uniform-psychology' },
     { slug: 'sustainable-uniforms' },
-    { slug: 'healthcare-uniforms' }
+    { slug: 'healthcare-uniforms' },
+    // Add the school uniform related slugs
+    { slug: 'cultural-identity-saudi-school-uniforms' },
+    { slug: 'school-uniforms-academic-performance' },
+    { slug: 'sustainable-school-uniforms-saudi' }
   ];
 }
 

@@ -258,34 +258,6 @@ export default function SustainableSchoolUniformsPage() {
       </Head>
       
       <div className={`bg-white py-8 ${language === 'ar' ? 'rtl text-right' : 'ltr text-left'}`}>
-        {/* Update language toggle buttons with aria-labels */}
-        <div className="flex justify-end mb-6 container mx-auto">
-          <div className="inline-flex rounded-md shadow-sm">
-            <button
-              onClick={() => setLanguage('en')}
-              className={`px-4 py-2 text-sm font-medium rounded-l-lg ${
-                language === 'en' 
-                  ? 'bg-primary-600 text-white' 
-                  : 'bg-white text-gray-700 hover:bg-gray-50'
-              } border border-gray-200`}
-              aria-label="Switch to English"
-            >
-              English
-            </button>
-            <button
-              onClick={() => setLanguage('ar')}
-              className={`px-4 py-2 text-sm font-medium rounded-r-lg ${
-                language === 'ar' 
-                  ? 'bg-primary-600 text-white' 
-                  : 'bg-white text-gray-700 hover:bg-gray-50'
-              } border border-gray-200`}
-              aria-label="Switch to Arabic"
-            >
-              العربية
-            </button>
-          </div>
-        </div>
-        
         <Container>
           {/* Breadcrumbs */}
           <Breadcrumbs items={breadcrumbs} className="mb-6" />

@@ -65,7 +65,7 @@ Submitted: ${now.toLocaleString()}
       
       // Encode the message for WhatsApp URL
       const encodedMessage = encodeURIComponent(whatsappMessage);
-      const whatsappUrl = `https://wa.me/971558164922?text=${encodedMessage}`;
+      const whatsappUrl = `https://wa.me/+971558164922?text=${encodedMessage}`;
       
       // Open WhatsApp in a new window/tab
       window.open(whatsappUrl, '_blank');

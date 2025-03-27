@@ -4,10 +4,14 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { FaStar, FaStarHalfAlt, FaRegStar, FaCheck, FaShoppingCart, FaWhatsapp } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
+
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
-import Head from 'next/head';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { generateProductWhatsAppUrl } from '@/utils/whatsapp';
 
 export default function PremiumMedicalScrubsArabicPage() {
   const locale = 'ar';
@@ -207,23 +211,58 @@ export default function PremiumMedicalScrubsArabicPage() {
     }
   };
 
+  // Create schema for product
+  const productSchema = {
+    '@context': 'https://schema.org/',
+    '@type': 'Product',
+    name: 'ملابس طبية متميزة',
+    image: '/images/default-placeholder.jpg',
+    description: 'ملابس طبية متميزة عالية الجودة مصنوعة من أقمشة متطورة للاستخدام في المستشفيات والمراكز الطبية بالمملكة العربية السعودية',
+    sku: 'MED-SCR-001',
+    brand: {
+      '@type': 'Brand',
+      name: 'يونيوم'
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '349',
+      priceCurrency: 'SAR',
+      availability: 'https://schema.org/InStock'
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.7',
+      bestRating: '5',
+      worstRating: '1',
+      reviewCount: '112'
+    }
+  };
+
   return (
     <>
-      <Head>
-        <title>ملابس طبية متميزة - يونيوم للأزياء المهنية</title>
-        <meta name="description" content="ملابس طبية متميزة عالية الجودة مصنوعة من أقمشة متطورة للاستخدام في المستشفيات والمراكز الطبية بالمملكة العربية السعودية" />
-        <meta name="keywords" content="سكروب طبي, ملابس طبية, ملابس مستشفيات, زي طبي ممتاز, يونيوم, السعودية" />
-        <meta property="og:title" content="ملابس طبية متميزة - يونيوم للأزياء المهنية" />
-        <meta property="og:description" content="ملابس طبية متميزة عالية الجودة مصنوعة من أقمشة متطورة للاستخدام في المستشفيات والمراكز الطبية بالمملكة العربية السعودية" />
-        <meta property="og:image" content="/images/default-placeholder.jpg" />
-        <meta property="og:type" content="product" />
-        <link rel="canonical" href="https://uneom.com/ar/shop/medical-scrubs/premium-medical-scrubs" />
-        <link rel="alternate" hrefLang="en" href="https://uneom.com/shop/medical-scrubs/premium-medical-scrubs" />
-        <link rel="alternate" hrefLang="ar" href="https://uneom.com/ar/shop/medical-scrubs/premium-medical-scrubs" />
-      </Head>
-
-      <div className="bg-gray-100 py-4">
+      {/* Inject JSON-LD schema */}
+      <div dangerouslySetInnerHTML={{
+        __html: `
+          <script type="application/ld+json">
+            ${JSON.stringify(productSchema)}
+          </script>
+        `
+      }} />
+      
+      {/* Product content */}
+      <div className="bg-neutral-50 py-8">
         <Container>
+          {/* Breadcrumbs */}
+          <Breadcrumbs
+            items={[
+              { label: 'الرئيسية', href: '/ar' },
+              { label: 'المتجر', href: '/ar/shop' },
+              { label: 'ملابس طبية', href: '/ar/shop/medical-scrubs' },
+              { label: 'ملابس طبية متميزة', href: '#' },
+            ]}
+            className="mb-6"
+          />
+          
           <div className="flex items-center text-sm text-neutral-600 justify-end">
             <Link href="/ar/shop" className="hover:text-primary-600 transition-colors">
               المتجر

@@ -3,7 +3,7 @@
  */
 
 // WhatsApp number for redirects (example Saudi number)
-export const WHATSAPP_NUMBER = '+966500000000';
+export const WHATSAPP_NUMBER = '+971558164922';
 
 // Generate a WhatsApp URL with template message for product inquiries
 export function generateProductWhatsAppUrl(productName: string, variant?: string, quantity?: number) {

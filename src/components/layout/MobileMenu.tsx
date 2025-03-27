@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
-import LanguageSwitcher from './LanguageSwitcher';
+import { motion } from 'framer-motion';
+import { FaQuoteRight } from 'react-icons/fa';
 
 interface MobileMenuProps {
   locale?: string;
@@ -12,282 +12,225 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ locale = 'en', onClose }) => {
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
-  const lastClickTimeRef = useRef<number>(0);
   const pathname = usePathname();
   const isRTL = locale === 'ar';
   
-  // Navigation items with translations
-  const navigationItems = {
-    en: [
-      {
-        name: "Industries",
-        href: "/industries",
-        dropdown: [
-          { name: "Healthcare", href: "/industries/healthcare" },
-          { name: "Aviation", href: "/industries/aviation" },
-          { name: "Hospitality", href: "/industries/hospitality" },
-          { name: "Corporate", href: "/industries/corporate" },
-          { name: "Education", href: "/industries/education" },
-          { name: "Manufacturing", href: "/industries/manufacturing" },
-          { name: "Security", href: "/industries/security" }
-        ]
-      },
-      {
-        name: "Services",
-        href: "/services",
-        dropdown: [
-          { name: "Uniform Program Management", href: "/services/program-management" },
-          { name: "Custom Design & Branding", href: "/services/custom-design" },
-          { name: "Bulk Ordering", href: "/services/bulk-ordering" },
-          { name: "Measurement Services", href: "/services/measurement-services" },
-          { name: "Corporate Uniform Policies", href: "/services/uniform-policies" }
-        ]
-      },
-      {
-        name: "Resources",
-        href: "/resources",
-        dropdown: [
-          { name: "Fabric Guide", href: "/resources/fabric-guide" },
-          { name: "Size Guide", href: "/resources/size-guide" },
-          { name: "Procurement Guide", href: "/resources/procurement-guide" },
-          { name: "Uniform Policy Templates", href: "/resources/policy-templates" },
-          { name: "Blog", href: "/blog" }
-        ]
-      },
-      { name: "About Us", href: "/about" },
-      { name: "Contact", href: "/contact" },
-      { name: "Shop", href: "/shop" }
-    ],
-    ar: [
-      {
-        name: "الصناعات",
-        href: "/ar/industries",
-        dropdown: [
-          { name: "الرعاية الصحية", href: "/ar/industries/healthcare" },
-          { name: "الطيران", href: "/ar/industries/aviation" },
-          { name: "الضيافة", href: "/ar/industries/hospitality" },
-          { name: "الشركات", href: "/ar/industries/corporate" },
-          { name: "التعليم", href: "/ar/industries/education" },
-          { name: "التصنيع", href: "/ar/industries/manufacturing" },
-          { name: "الأمن", href: "/ar/industries/security" }
-        ]
-      },
-      {
-        name: "الخدمات",
-        href: "/ar/services",
-        dropdown: [
-          { name: "إدارة برامج الزي الموحد", href: "/ar/services/program-management" },
-          { name: "تصميم مخصص وعلامات تجارية", href: "/ar/services/custom-design" },
-          { name: "طلبات بالجملة", href: "/ar/services/bulk-ordering" },
-          { name: "خدمات القياس", href: "/ar/services/measurement-services" },
-          { name: "سياسات الزي الرسمي للشركات", href: "/ar/services/uniform-policies" }
-        ]
-      },
-      {
-        name: "الموارد",
-        href: "/ar/resources",
-        dropdown: [
-          { name: "دليل الأقمشة", href: "/ar/resources/fabric-guide" },
-          { name: "دليل المقاسات", href: "/ar/resources/size-guide" },
-          { name: "دليل المشتريات", href: "/ar/resources/procurement-guide" },
-          { name: "نماذج سياسة الزي الموحد", href: "/ar/resources/policy-templates" },
-          { name: "المدونة", href: "/ar/blog" }
-        ]
-      },
-      { name: "من نحن", href: "/ar/about" },
-      { name: "اتصل بنا", href: "/ar/contact" },
-      { name: "المتجر", href: "/ar/shop" }
-    ]
-  };
-  
-  const items = locale === 'en' ? navigationItems.en : navigationItems.ar;
-  
-  // Improved toggle function with debounce to prevent accidental double touches
-  const toggleSection = (section: string) => {
-    const now = Date.now();
-    // Prevent rapid toggling (debounce)
-    if (now - lastClickTimeRef.current < 200) {
-      return;
-    }
-    lastClickTimeRef.current = now;
-    
-    setExpandedSection(expandedSection === section ? null : section);
-  };
-  
+  // Verificar si una ruta está activa
   const isActive = (href: string) => {
-    if (href === '/') {
-      return pathname === href;
-    }
+    if (href === '/') return pathname === '/';
     return pathname?.startsWith(href);
   };
   
-  // Animation variants
+  // Generar elementos de menú basados en el idioma
+  const items = locale === 'ar' ? [
+    { name: 'الرئيسية', href: '/ar' },
+    { name: 'من نحن', href: '/ar/about' },
+    { name: 'المتجر', href: '/ar/shop', children: [
+      { name: 'أزياء المستشفيات', href: '/ar/shop/healthcare' },
+      { name: 'الأزياء الفندقية', href: '/ar/shop/hospitality-attire' },
+      { name: 'الزي الرسمي للشركات', href: '/ar/shop/corporate-workwear' },
+      { name: 'أزياء الطيران', href: '/ar/shop/aviation-uniforms' },
+      { name: 'ملابس العمل الصناعية', href: '/ar/shop/industrial-uniforms' },
+      { name: 'أزياء تعليمية', href: '/ar/shop/education-uniforms' },
+      { name: 'ملابس مطاعم', href: '/ar/shop/culinary-uniforms' },
+      { name: 'أزياء أمنية', href: '/ar/shop/security-uniforms' },
+    ] },
+    { name: 'خدماتنا', href: '/ar/services', children: [
+      { name: 'تصميم مخصص', href: '/ar/services/custom-design' },
+      { name: 'إدارة برامج الزي الموحد', href: '/ar/services/program-management' },
+      { name: 'الطلبات الجماعية', href: '/ar/services/bulk-ordering' },
+      { name: 'اختيار الأقمشة', href: '/ar/services/fabric-selection' },
+      { name: 'خدمات القياس', href: '/ar/services/measurement-services' },
+      { name: 'ضمان الجودة', href: '/ar/services/quality-assurance' },
+      { name: 'التصنيع', href: '/ar/services/manufacturing' },
+      { name: 'التشطيبات الفنية', href: '/ar/services/technical-finishes' },
+      { name: 'سياسات الزي الموحد', href: '/ar/services/uniform-policies' },
+      { name: 'البرامج المؤسسية', href: '/ar/services/corporate-programs' },
+    ] },
+    { name: 'القطاعات', href: '/ar/industries', children: [
+      { name: 'الرعاية الصحية', href: '/ar/industries/healthcare' },
+      { name: 'الضيافة', href: '/ar/industries/hospitality' },
+      { name: 'الشركات', href: '/ar/industries/corporate' },
+      { name: 'التعليم', href: '/ar/industries/education' },
+      { name: 'الطيران', href: '/ar/industries/aviation' },
+      { name: 'المتاجر', href: '/ar/industries/retail-shops' },
+      { name: 'التصنيع', href: '/ar/industries/manufacturing' },
+      { name: 'المصانع', href: '/ar/industries/factory-industry' },
+      { name: 'توريد وتصنيع', href: '/ar/industries/supply-manufacturing' },
+      { name: 'الأمن', href: '/ar/industries/security' },
+    ] },
+    { name: 'الموارد', href: '/ar/resources', children: [
+      { name: 'دليل الأقمشة', href: '/ar/resources/fabric-guide' },
+      { name: 'دليل المقاسات', href: '/ar/resources/size-guide' },
+      { name: 'دليل المشتريات', href: '/ar/resources/procurement-guide' },
+      { name: 'قوالب السياسات', href: '/ar/resources/policy-templates' },
+      { name: 'أدلة إرشادية', href: '/ar/resources/guides' },
+      { name: 'دراسات حالة', href: '/ar/resources/case-studies' },
+      { name: 'أحداث', href: '/ar/resources/events' },
+    ] },
+    { name: 'المدونة', href: '/ar/blog' },
+    { name: 'اتصل بنا', href: '/ar/contact' },
+  ] : [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Shop', href: '/shop', children: [
+      { name: 'Healthcare Uniforms', href: '/shop/healthcare' },
+      { name: 'Hospitality Attire', href: '/shop/hospitality-attire' },
+      { name: 'Corporate Workwear', href: '/shop/corporate-workwear' },
+      { name: 'Aviation Uniforms', href: '/shop/aviation-uniforms' },
+      { name: 'Industrial Uniforms', href: '/shop/industrial-uniforms' },
+      { name: 'Education Uniforms', href: '/shop/education-uniforms' },
+      { name: 'Culinary Uniforms', href: '/shop/culinary-uniforms' },
+      { name: 'Security Uniforms', href: '/shop/security-uniforms' },
+    ] },
+    { name: 'Services', href: '/services', children: [
+      { name: 'Custom Design', href: '/services/custom-design' },
+      { name: 'Program Management', href: '/services/program-management' },
+      { name: 'Bulk Ordering', href: '/services/bulk-ordering' },
+      { name: 'Fabric Selection', href: '/services/fabric-selection' },
+      { name: 'Measurement Services', href: '/services/measurement-services' },
+      { name: 'Quality Assurance', href: '/services/quality-assurance' },
+      { name: 'Manufacturing', href: '/services/manufacturing' },
+      { name: 'Technical Finishes', href: '/services/technical-finishes' },
+      { name: 'Uniform Policies', href: '/services/uniform-policies' },
+      { name: 'Corporate Programs', href: '/services/corporate-programs' },
+    ] },
+    { name: 'Industries', href: '/industries', children: [
+      { name: 'Healthcare', href: '/industries/healthcare' },
+      { name: 'Hospitality', href: '/industries/hospitality' },
+      { name: 'Corporate', href: '/industries/corporate' },
+      { name: 'Education', href: '/industries/education' },
+      { name: 'Aviation', href: '/industries/aviation' },
+      { name: 'Retail Shops', href: '/industries/retail-shops' },
+      { name: 'Manufacturing', href: '/industries/manufacturing' },
+      { name: 'Factory Industry', href: '/industries/factory-industry' },
+      { name: 'Supply Manufacturing', href: '/industries/supply-manufacturing' },
+      { name: 'Security', href: '/industries/security' },
+    ] },
+    { name: 'Resources', href: '/resources', children: [
+      { name: 'Fabric Guide', href: '/resources/fabric-guide' },
+      { name: 'Size Guide', href: '/resources/size-guide' },
+      { name: 'Procurement Guide', href: '/resources/procurement-guide' },
+      { name: 'Policy Templates', href: '/resources/policy-templates' },
+      { name: 'Guides', href: '/resources/guides' },
+      { name: 'Case Studies', href: '/resources/case-studies' },
+      { name: 'Events', href: '/resources/events' },
+    ] },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
+  ];
+  
+  // Animación para el menú - entrada suave
   const menuVariants = {
-    hidden: { opacity: 0, height: 0 },
+    hidden: { x: isRTL ? '-100%' : '100%' },
     visible: { 
-      opacity: 1, 
-      height: 'auto',
+      x: 0,
       transition: { 
-        duration: 0.3,
-        ease: "easeInOut"
-      } 
-    },
-    exit: {
-      opacity: 0,
-      height: 0,
-      transition: {
-        duration: 0.2,
-        ease: "easeInOut"
-      }
-    }
-  };
-
-  const dropdownVariants = {
-    hidden: { opacity: 0, y: -10 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { 
-        staggerChildren: 0.05, 
-        delayChildren: 0.1,
+        type: 'tween',
+        ease: 'easeOut',
         duration: 0.3
       } 
     },
     exit: {
-      opacity: 0,
-      y: -10,
+      x: isRTL ? '-100%' : '100%',
       transition: {
+        ease: 'easeIn',
         duration: 0.2
       }
     }
   };
 
+  // Efectos de animación para los elementos del menú
   const itemVariants = {
-    hidden: { opacity: 0, x: -10 },
-    visible: { 
+    hidden: { opacity: 0, y: 20 },
+    visible: (custom: number) => ({
       opacity: 1, 
-      x: 0,
+      y: 0,
       transition: {
-        duration: 0.2
+        delay: custom * 0.05,
+        duration: 0.3
       }
-    }
+    })
   };
   
   return (
     <motion.div 
-      className="lg:hidden bg-white/95 backdrop-blur-sm fixed inset-0 z-50 overflow-y-auto"
+      className="fixed inset-0 z-50 bg-black bg-opacity-50"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.2 }}
+      onClick={onClose}
+    >
+      <motion.div 
+        className={`absolute top-0 ${isRTL ? 'right-0' : 'left-0'} bottom-0 w-80 bg-white shadow-xl overflow-y-auto`}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        variants={menuVariants}
+        onClick={(e) => e.stopPropagation()}
+        style={{ textAlign: isRTL ? 'right' : 'left' }}
     >
       <div className="p-6">
-        <div className={`flex ${isRTL ? 'flex-row-reverse' : ''} justify-between items-center mb-8`}>
-          <h2 className={`text-2xl font-bold text-neutral-900 ${isRTL ? 'text-right' : ''}`}>
-            {locale === 'en' ? 'Menu' : 'القائمة'}
-          </h2>
-          <button 
-            onClick={onClose}
-            className="p-2 rounded-full hover:bg-neutral-100 transition-colors duration-200"
-            aria-label="Close menu"
-          >
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="h-6 w-6 text-neutral-700" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M6 18L18 6M6 6l12 12" 
+          <div className="flex items-center justify-between mb-8">
+            <Link href={locale === 'ar' ? '/ar' : '/'} onClick={onClose}>
+              <img 
+                src="/images/logo.png" 
+                alt="UNEOM Logo" 
+                className="h-8 w-auto" 
               />
+            </Link>
+          <button 
+              className="p-2 text-neutral-500 hover:text-neutral-700"
+            onClick={onClose}
+            aria-label="Close menu"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
         
-        <nav className="mt-4">
+          {/* Navegación principal */}
+          <nav className={isRTL ? 'text-right' : 'text-left'}>
           <motion.ul 
-            className="space-y-4"
+              className="space-y-1"
             initial="hidden"
             animate="visible"
             variants={{
-              hidden: {},
               visible: {
-                transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+                  transition: {
+                    staggerChildren: 0.05
+                  }
               }
             }}
           >
             {items.map((item, index) => (
               <motion.li 
-                key={index} 
-                className="border-b border-neutral-100 pb-4"
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 }
-                }}
-              >
-                {item.dropdown ? (
-                  <>
-                    <button
-                      className={`w-full flex ${isRTL ? 'flex-row-reverse' : ''} justify-between items-center py-3 px-2 text-left rounded-md ${
-                        isActive(item.href) 
-                          ? 'text-primary-600 font-semibold bg-primary-50' 
-                          : 'text-neutral-800 hover:bg-neutral-50'
-                      } transition-colors duration-200`}
-                      onClick={() => toggleSection(`section-${index}`)}
-                      aria-expanded={expandedSection === `section-${index}`}
-                    >
-                      <span className="text-lg">{item.name}</span>
-                      <svg 
-                        className={`h-5 w-5 transform transition-transform duration-300 ${
-                          expandedSection === `section-${index}` ? 'rotate-180' : ''
-                        }`}
-                        xmlns="http://www.w3.org/2000/svg" 
-                        viewBox="0 0 20 20" 
-                        fill="currentColor"
-                      >
-                        <path 
-                          fillRule="evenodd" 
-                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" 
-                          clipRule="evenodd" 
-                        />
-                      </svg>
-                    </button>
-                    <AnimatePresence>
-                      {expandedSection === `section-${index}` && (
-                        <motion.div
-                          key={`section-${index}`}
-                          initial="hidden"
-                          animate="visible"
-                          exit="exit"
-                          variants={dropdownVariants}
-                          className="overflow-hidden"
-                        >
-                          <ul className={`${isRTL ? 'pr-6' : 'pl-6'} space-y-2 mt-3 mb-2`}>
-                            {item.dropdown.map((dropdownItem, dropdownIndex) => (
-                              <motion.li key={dropdownIndex} variants={itemVariants}>
+                  key={item.name} 
+                  custom={index}
+                  variants={itemVariants}
+                  className="py-1"
+                >
+                  {item.children ? (
+                    <div className="py-2 px-2 font-medium text-neutral-900">
+                      {item.name}
+                      <div className="mt-2 pl-4 border-l-2 border-neutral-100 space-y-1">
+                        {item.children.map((child) => (
                                 <Link
-                                  href={dropdownItem.href}
+                            key={child.name}
+                            href={child.href}
                                   onClick={onClose}
-                                  className={`block py-2.5 px-3 rounded-md ${isRTL ? 'text-right' : 'text-left'} ${
-                                    isActive(dropdownItem.href) 
-                                      ? 'text-primary-600 font-medium bg-primary-50' 
-                                      : 'text-neutral-700 hover:bg-neutral-50'
-                                  } transition-colors duration-200`}
-                                >
-                                  {dropdownItem.name}
+                            className={`block py-2 px-2 text-sm ${
+                              isActive(child.href) 
+                                ? 'text-primary-600 font-medium' 
+                                : 'text-neutral-600 hover:text-neutral-900'
+                            }`}
+                          >
+                            {child.name}
                                 </Link>
-                              </motion.li>
-                            ))}
-                          </ul>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </>
+                        ))}
+                      </div>
+                    </div>
                 ) : (
                   <Link
                     href={item.href}
@@ -306,36 +249,19 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ locale = 'en', onClose }) => {
           </motion.ul>
         </nav>
         
-        {/* Language Switcher */}
-        <div className="mt-6 border-t border-gray-200 pt-6">
-          <div className="flex justify-center">
-            <LanguageSwitcher currentLocale={locale} className="text-lg" />
-          </div>
-        </div>
-        
-        <div className="mt-8 pt-4 border-t border-neutral-100">
+          {/* Request Quote Button */}
+          <div className="mt-6 pt-4 border-t border-gray-200">
           <Link 
-            href={locale === 'en' ? 
-              pathname === '/' ? '/ar' : pathname.replace(/^\//, '/ar/') : 
-              pathname.replace(/^\/ar(?=\/|$)/, '/')}
-            className={`flex items-center ${isRTL ? 'flex-row-reverse justify-end space-x-0 space-x-reverse' : 'space-x-2'} py-3 px-2 text-neutral-800 hover:text-primary-600 transition-colors duration-200`}
+              href={locale === 'ar' ? '/ar/quote' : '/quote'}
             onClick={onClose}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-            </svg>
-            <span>{locale === 'en' ? 'العربية' : 'English'}</span>
-          </Link>
-          
-          <Link
-            href={locale === 'en' ? '/contact' : '/ar/contact'}
-            onClick={onClose}
-            className={`mt-4 block w-full ${isRTL ? 'text-right pr-4' : 'text-center'} bg-primary-600 hover:bg-primary-700 text-white py-3 px-4 rounded-md font-medium transition-colors duration-200 shadow-sm`}
-          >
-            {locale === 'en' ? 'Request Quote' : 'طلب عرض سعر'}
+              className={`block w-full text-center py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-md font-medium transition duration-200 flex items-center justify-center ${isRTL ? 'flex-row-reverse' : ''}`}
+            >
+              <FaQuoteRight className={isRTL ? 'ml-2' : 'mr-2'} />
+              {locale === 'ar' ? 'طلب عرض سعر' : 'Request Quote'}
           </Link>
         </div>
       </div>
+      </motion.div>
     </motion.div>
   );
 };

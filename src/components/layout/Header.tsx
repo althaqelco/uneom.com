@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import LanguageSwitcher from './LanguageSwitcher';
 import Navigation from './Navigation';
 import MobileMenu from './MobileMenu';
 import Logo from '../ui/Logo';
 import { FaQuoteRight } from 'react-icons/fa';
+import LanguageSwitcher from './LanguageSwitcher';
 
 interface HeaderProps {
   locale?: string;
@@ -84,7 +84,6 @@ const Header: React.FC<HeaderProps> = ({ locale = 'en' }) => {
                 </>
               ) : (
                 <>
-                  <LanguageSwitcher currentLocale={locale} />
                   <Link
                     href="/quote"
                     className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md font-medium transition duration-300 shadow-sm hover:shadow-md flex items-center"
@@ -92,12 +91,17 @@ const Header: React.FC<HeaderProps> = ({ locale = 'en' }) => {
                     <FaQuoteRight className="mr-2 h-4 w-4" />
                     Request Quote
                   </Link>
+                  <LanguageSwitcher currentLocale={locale} />
                 </>
               )}
             </div>
             
             {/* Mobile menu button - mobile only */}
-            <div className="lg:hidden">
+            <div className="lg:hidden flex items-center">
+              <LanguageSwitcher 
+                currentLocale={locale} 
+                className="mr-3" 
+              />
               <button
                 className="p-2"
                 onClick={toggleMobileMenu}

@@ -58,7 +58,7 @@ const Footer: React.FC<FooterProps> = ({ locale = 'en' }) => {
     tiktok: "https://www.tiktok.com/@uneomcom",
     pinterest: "https://www.pinterest.com/uneomcompany/",
     youtube: "https://www.youtube.com/@uneom-uniforms",
-    whatsapp: "https://wa.me/971558164922"
+    whatsapp: "https://wa.me/+971558164922"
   };
   
   // Certification images
