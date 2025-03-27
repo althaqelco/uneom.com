@@ -174,4 +174,24 @@
 /location/* /locations/:splat 301!
 /category/* /blog/categories/:splat 301!
 /ar/sectors/* /ar/industries/:splat 301!
-/ar/location/* /ar/locations/:splat 301! 
+/ar/location/* /ar/locations/:splat 301!
+
+# Asegurar que los archivos de Next.js se sirvan correctamente
+/_next/*  /_next/:splat  200
+/images/*  /images/:splat  200
+
+# Asegurar que otros archivos estáticos sean servidos correctamente
+/*.js  /:splat.js  200
+/*.css  /:splat.css  200
+/*.png  /:splat.png  200
+/*.jpg  /:splat.jpg  200
+/*.svg  /:splat.svg  200
+/*.ico  /:splat.ico  200
+/*.woff2  /:splat.woff2  200
+
+# Para evitar errores 404 en imágenes de placeholder
+/images/default-placeholder.jpg  /images/defaults/default-placeholder.jpg  200
+/images/default-placeholder.svg  /images/defaults/default-placeholder.svg  200
+
+# Asegurar que todas las rutas sean manejadas por Next.js
+/*  /index.html  200 

@@ -7,116 +7,88 @@
  * Only runs in development mode.
  */
 
-// 404 Checker - Development utility to identify missing resources
-(function() {
-  // Only run in development mode
-  if (window.location.hostname !== 'localhost' && 
-      !window.location.hostname.includes('127.0.0.1') &&
-      !window.location.hostname.includes('.local')) {
-    return;
-  }
+// 404 Error Checker Script
+document.addEventListener('DOMContentLoaded', function() {
+  // No ejecutar en producción para evitar sobrecarga de la consola
+  const isProduction = window.location.hostname === 'uneom.com';
+  if (isProduction) return;
   
-  console.log('🔍 404 Checker initialized - Monitoring for missing resources');
+  console.log('404 Checker active - Monitoring for failed resources');
   
-  // Create UI container for errors
+  // Crear un contenedor para mostrar errores (solo en desarrollo)
   const errorContainer = document.createElement('div');
-  errorContainer.id = '404-checker-container';
+  errorContainer.id = 'resource-error-container';
   errorContainer.style.cssText = `
     position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 300px;
-    max-height: 300px;
-    overflow-y: auto;
-    background-color: rgba(255, 230, 230, 0.95);
-    border-top-left-radius: 5px;
-    box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.1);
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
     font-family: monospace;
     font-size: 12px;
-    z-index: 10000;
-    padding: 10px;
+    max-width: 400px;
+    max-height: 300px;
+    overflow: auto;
+    z-index: 9999;
+    border-radius: 5px;
     display: none;
   `;
-  
-  const errorHeader = document.createElement('div');
-  errorHeader.innerHTML = '<h3 style="margin: 0 0 10px 0; display: flex; justify-content: space-between;">404 Checker <button id="404-checker-close" style="background: none; border: none; cursor: pointer;">×</button></h3>';
-  errorContainer.appendChild(errorHeader);
-  
-  const errorList = document.createElement('ul');
-  errorList.style.cssText = `
-    margin: 0;
-    padding: 0 0 0 20px;
-    list-style-type: square;
-  `;
-  errorContainer.appendChild(errorList);
-  
   document.body.appendChild(errorContainer);
   
-  // Event handler for close button
-  document.getElementById('404-checker-close').addEventListener('click', function() {
-    errorContainer.style.display = 'none';
-  });
-  
-  // Store errors to avoid duplicates
+  // Colección de errores para evitar duplicados
   const errors = new Set();
   
-  // Monitor fetch requests for 404 errors
+  // Función para actualizar la visualización de errores
+  function updateErrorDisplay() {
+    if (errors.size > 0) {
+      errorContainer.style.display = 'block';
+      errorContainer.innerHTML = '<strong>Recursos 404:</strong><br>' + 
+        Array.from(errors).map(url => `- ${url}`).join('<br>');
+    } else {
+      errorContainer.style.display = 'none';
+    }
+  }
+  
+  // Interceptar solicitudes de red para detectar errores 404
   const originalFetch = window.fetch;
-  window.fetch = function(input, init) {
-    return originalFetch(input, init).then(response => {
-      // Check for 404 status
+  window.fetch = async function(resource, init) {
+    try {
+      const response = await originalFetch(resource, init);
+      
+      // Comprobar si es un error 404
       if (response.status === 404) {
-        const url = typeof input === 'string' ? input : input.url;
-        reportMissingResource(url, '404 (fetch)');
+        const url = typeof resource === 'string' ? resource : resource.url;
+        errors.add(url);
+        updateErrorDisplay();
+        console.error(`404 Error: ${url}`);
       }
+      
       return response;
-    });
+    } catch (error) {
+      console.error('Fetch error:', error);
+      return Promise.reject(error);
+    }
   };
   
-  // Monitor image load errors
-  document.addEventListener('error', function(event) {
-    const target = event.target;
+  // Monitorear carga de recursos
+  function checkResourceErrors() {
+    const failedImages = Array.from(document.querySelectorAll('img')).filter(
+      img => img.complete && img.naturalHeight === 0 && img.src && !img.src.startsWith('data:')
+    );
     
-    // Only handle resource loading errors
-    if (target.tagName === 'IMG' || target.tagName === 'SCRIPT' || target.tagName === 'LINK') {
-      const src = target.src || target.href;
-      reportMissingResource(src, `Failed to load (${target.tagName.toLowerCase()})`);
-    }
-  }, true);
-  
-  // Report missing resource
-  function reportMissingResource(url, errorType) {
-    // Skip if already reported
-    if (errors.has(url)) return;
-    errors.add(url);
+    failedImages.forEach(img => {
+      errors.add(img.src);
+      // Asignar placeholder
+      img.classList.add('error');
+    });
     
-    // Extract filename from URL
-    const filename = url.split('/').pop();
-    
-    // Skip data URLs
-    if (url.startsWith('data:')) return;
-    
-    // Create error entry
-    const errorItem = document.createElement('li');
-    errorItem.style.cssText = `
-      margin-bottom: 8px;
-      word-break: break-all;
-    `;
-    
-    // Create prettified output
-    errorItem.innerHTML = `
-      <div><strong>${filename}</strong></div>
-      <div style="color: #777; font-size: 10px;">${url}</div>
-      <div style="color: #c00;">${errorType}</div>
-    `;
-    
-    // Add to error list
-    errorList.appendChild(errorItem);
-    
-    // Show error container
-    errorContainer.style.display = 'block';
-    
-    // Log to console
-    console.warn(`404 Checker: ${errorType} - ${url}`);
+    updateErrorDisplay();
   }
-})(); 
+  
+  // Verificar errores después de cargar la página
+  window.addEventListener('load', checkResourceErrors);
+  
+  // Verificar periódicamente para nuevas imágenes añadidas dinámicamente
+  setInterval(checkResourceErrors, 3000);
+}); 
