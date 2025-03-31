@@ -6,9 +6,6 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig = {
-  // Comment out static export for development
-  // output: 'export',
-  
   // Para Netlify necesitamos exportación estática
   output: 'export',
   
@@ -149,8 +146,15 @@ const nextConfig = {
   
   // Enable React strict mode for better development experience
   reactStrictMode: true,
-  // Configure trailing slashes
-  trailingSlash: false,
+  
+  // Configure trailing slashes - CAMBIO CRÍTICO PARA NETLIFY
+  trailingSlash: true,
+  
+  // Este valor es esencial para despliegue en Netlify
+  assetPrefix: '/',
+  
+  // Para trabajar correctamente con archivos estáticos en Netlify
+  basePath: '',
   
   // Configure headers for better image loading
   async headers() {

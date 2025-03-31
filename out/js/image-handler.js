@@ -293,4 +293,44 @@ function fixNextJsImagePaths() {
       img.src = placeholderSrc;
     };
   });
-} 
+}
+
+// Script para manejar errores de carga de imágenes
+document.addEventListener('DOMContentLoaded', function() {
+  // Elegir un placeholder según el tipo de imagen
+  function getPlaceholder(element) {
+    const className = element.className || '';
+    
+    // Placeholders específicos según la clase CSS
+    if (className.includes('product')) {
+      return '/images/defaults/default-product.jpg';
+    } else if (className.includes('blog')) {
+      return '/images/defaults/default-blog.jpg';
+    } else if (className.includes('avatar') || className.includes('team')) {
+      return '/images/defaults/default-team.jpg';
+    } else if (className.includes('industry')) {
+      return '/images/defaults/default-industry.jpg';
+    } else if (className.includes('service')) {
+      return '/images/defaults/default-service.jpg';
+    } else {
+      // Placeholder genérico
+      return '/images/defaults/default-placeholder.jpg';
+    }
+  }
+
+  // Manejar errores en todas las imágenes
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    img.addEventListener('error', function() {
+      if (!this.dataset.failedOnce) {
+        this.dataset.failedOnce = true;
+        this.src = getPlaceholder(this);
+      }
+    });
+    
+    // Intentar cargar la imagen actual
+    if (img.complete && img.naturalHeight === 0) {
+      img.src = getPlaceholder(img);
+    }
+  });
+}); 

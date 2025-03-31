@@ -1,0 +1,255 @@
+2:I[84266,["7699","static/chunks/8e1d74a4-41a3b397593b24f4.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","8335","static/chunks/8335-729ea18b8606b111.js","7065","static/chunks/7065-82c1bc3339fe647a.js","1702","static/chunks/1702-617faceb7dbcdd28.js","4627","static/chunks/app/resources/fabric-guide/healthcare/page-beccfcbfb3f9ba80.js"],"default"]
+8:I[4707,[],""]
+9:I[36423,[],""]
+a:I[33876,["2223","static/chunks/2223-fedf0cdcef2b46a3.js","3185","static/chunks/app/layout-d92981841cb266e6.js"],"default"]
+b:I[92184,["2223","static/chunks/2223-fedf0cdcef2b46a3.js","3185","static/chunks/app/layout-d92981841cb266e6.js"],"QuoteProvider"]
+c:"$Sreact.suspense"
+d:I[81523,["2223","static/chunks/2223-fedf0cdcef2b46a3.js","3185","static/chunks/app/layout-d92981841cb266e6.js"],"BailoutToCSR"]
+e:I[47106,["2223","static/chunks/2223-fedf0cdcef2b46a3.js","3185","static/chunks/app/layout-d92981841cb266e6.js"],"default"]
+f:I[72972,["2972","static/chunks/2972-f9533177a0da070b.js","9160","static/chunks/app/not-found-4cdf7f6fa00d6dad.js"],""]
+10:I[42607,["2223","static/chunks/2223-fedf0cdcef2b46a3.js","3185","static/chunks/app/layout-d92981841cb266e6.js"],"default"]
+11:I[6257,["2223","static/chunks/2223-fedf0cdcef2b46a3.js","3185","static/chunks/app/layout-d92981841cb266e6.js"],"default"]
+12:I[21846,["2223","static/chunks/2223-fedf0cdcef2b46a3.js","3185","static/chunks/app/layout-d92981841cb266e6.js"],"default"]
+13:I[17384,["2223","static/chunks/2223-fedf0cdcef2b46a3.js","3185","static/chunks/app/layout-d92981841cb266e6.js"],"default"]
+14:I[45491,["2223","static/chunks/2223-fedf0cdcef2b46a3.js","3185","static/chunks/app/layout-d92981841cb266e6.js"],"default"]
+15:I[88003,["2223","static/chunks/2223-fedf0cdcef2b46a3.js","3185","static/chunks/app/layout-d92981841cb266e6.js"],""]
+3:T734,
+          <p>Infection control is a critical concern in healthcare settings, making antimicrobial and fluid-resistant fabrics essential for medical uniforms in Saudi Arabia.</p>
+          
+          <h4 class="text-lg font-semibold mt-4 mb-2">MicroShield™ Technology</h4>
+          <p>Our proprietary MicroShield™ fabric technology combines multiple protective properties essential for healthcare environments:</p>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Built-in antimicrobial properties that inhibit the growth of bacteria, fungi, and certain viruses</li>
+            <li>Fluid-repellent finish that prevents the absorption of bodily fluids and potential contaminants</li>
+            <li>Maintains effectiveness through extensive industrial laundering cycles (up to 100+ washes)</li>
+            <li>Non-leaching antimicrobial properties that remain active without releasing harmful substances</li>
+          </ul>
+          
+          <h4 class="text-lg font-semibold mt-4 mb-2">Fluid Barrier Fabrics</h4>
+          <p>For higher-risk environments such as emergency departments, surgical units, and laboratories, we offer specialized fluid barrier fabrics:</p>
+          <ul class="list-disc pl-5 mb-4">
+            <li><strong>FluiBlock Pro™</strong>: Impermeable to liquids while maintaining breathability through microporous technology</li>
+            <li><strong>SplashGuard™</strong>: Targeted protection against fluid splashes with directional repellency</li>
+            <li><strong>BarrierFlex™</strong>: Combines fluid barrier protection with enhanced stretch for unrestricted movement</li>
+          </ul>
+          
+          <p>These technologies maintain their protective properties while being gentle on skin and compliant with all Saudi healthcare regulations for medical textiles.</p>
+        4:T82a,
+          <p>Saudi Arabia's climate presents unique challenges for healthcare professionals. Our climate-optimized fabrics address these specific needs through advanced textile engineering.</p>
+          
+          <h4 class="text-lg font-semibold mt-4 mb-2">CoolCore™ Technology</h4>
+          <p>Designed specifically for Saudi Arabia's hot climate and air-conditioned medical facilities, CoolCore™ fabrics offer:</p>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Advanced moisture-wicking properties that draw perspiration away from the body</li>
+            <li>Quick-dry performance to prevent dampness during long shifts</li>
+            <li>Thermoregulating properties that help maintain comfortable body temperature</li>
+            <li>Four-way stretch that moves with the body during patient care activities</li>
+          </ul>
+          
+          <h4 class="text-lg font-semibold mt-4 mb-2">TransTemp™ Fabric</h4>
+          <p>Our innovative TransTemp™ fabric addresses the transition between outdoor heat and cold air-conditioned environments:</p>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Adaptive insulation that adjusts to body temperature changes</li>
+            <li>Breathable membrane technology that reduces temperature shock when moving between environments</li>
+            <li>Lightweight construction that doesn't add bulk while providing comfort regulation</li>
+          </ul>
+          
+          <div class="bg-blue-50 p-4 rounded-lg mt-4">
+            <h5 class="font-semibold mb-2">Research-Backed Performance</h5>
+            <p>In wear tests conducted at major Saudi healthcare facilities, medical professionals using our climate-optimized fabrics reported:</p>
+            <ul class="list-disc pl-5">
+              <li>43% reduction in perceived thermal discomfort during 12-hour shifts</li>
+              <li>62% improvement in comfort ratings during peak summer months</li>
+              <li>Significant decrease in moisture accumulation compared to standard scrubs</li>
+            </ul>
+          </div>
+        5:T732,
+          <p>Healthcare uniforms in Saudi Arabia undergo rigorous and frequent laundering, requiring exceptional durability without compromising performance or appearance.</p>
+          
+          <h4 class="text-lg font-semibold mt-4 mb-2">EnduraTech™ Fabrics</h4>
+          <p>Our EnduraTech™ fabric blends are engineered specifically for the demanding laundering protocols of Saudi healthcare facilities:</p>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Exceptional colorfastness that resists fading through industrial sanitization processes</li>
+            <li>High tensile strength that prevents tearing and fabric degradation</li>
+            <li>Reinforced seam technology for areas of high stress</li>
+            <li>Resistance to pilling and abrasion even after hundreds of wash cycles</li>
+            <li>Shape retention that maintains professional appearance throughout the garment lifecycle</li>
+          </ul>
+          
+          <h4 class="text-lg font-semibold mt-4 mb-2">InduStrength™ Composition</h4>
+          <p>For departments requiring maximum durability, such as emergency services and intensive care units, we offer InduStrength™ fabrics featuring:</p>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Engineered fiber blends optimized for institutional laundering requirements</li>
+            <li>Reinforced weave patterns that distribute tension across the fabric</li>
+            <li>Specialized treatments that protect against chlorine and harsh disinfectants</li>
+            <li>Quick-drying properties to accommodate frequent laundering schedules</li>
+          </ul>
+          
+          <p>These durability enhancements translate to extended uniform lifecycles, reducing replacement frequency and improving cost-effectiveness for Saudi healthcare facilities.</p>
+        6:T741,
+          <p>Respecting cultural and religious preferences is essential in Saudi healthcare environments. Our specialized modest medical fabrics combine professional functionality with appropriate coverage.</p>
+          
+          <h4 class="text-lg font-semibold mt-4 mb-2">ModestCare™ Fabric Solutions</h4>
+          <p>Our ModestCare™ fabric technology addresses the specific needs of healthcare professionals seeking modest uniform options:</p>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Lightweight, opaque constructions that provide complete coverage without added bulk</li>
+            <li>Enhanced breathability despite fuller coverage to maintain comfort</li>
+            <li>Specially engineered drape that allows for modest silhouettes while permitting freedom of movement</li>
+            <li>Wrinkle-resistant properties that maintain a professional appearance throughout long shifts</li>
+          </ul>
+          
+          <h4 class="text-lg font-semibold mt-4 mb-2">Hijab-Compatible Performance Fabrics</h4>
+          <p>For female healthcare professionals who wear hijab, we offer specialized fabrics that address unique considerations:</p>
+          <ul class="list-disc pl-5 mb-4">
+            <li>Breathable, lightweight constructions that minimize heat retention around the head and neck</li>
+            <li>Quick-drying properties to enhance comfort during active patient care</li>
+            <li>Antimicrobial treatments specifically formulated for head coverings</li>
+            <li>Secure-fit textures that reduce the need for adjustment during procedures</li>
+          </ul>
+          
+          <p>These modesty-conscious fabrics maintain all the technical performance qualities of our standard healthcare fabrics while offering appropriate coverage options for Saudi medical professionals.</p>
+        7:T9d9,
+          <p>Different healthcare departments face unique challenges requiring specialized fabric solutions tailored to their specific environments and activities.</p>
+          
+          <h4 class="text-lg font-semibold mt-4 mb-2">Surgical Settings</h4>
+          <p>Our surgical fabric solutions address the intense demands of operating environments:</p>
+          <ul class="list-disc pl-5 mb-4">
+            <li><strong>SterileGuard™</strong>: Advanced barrier technology that prevents microbial penetration</li>
+            <li><strong>ThermalBalance™</strong>: Regulates body temperature under surgical lighting</li>
+            <li><strong>LintMinimal™</strong>: Reduces particulate shedding to maintain clean environments</li>
+            <li><strong>ComfortFlex™</strong>: Provides stretch in strategic areas for extended procedures</li>
+          </ul>
+          
+          <h4 class="text-lg font-semibold mt-4 mb-2">Emergency and Trauma Departments</h4>
+          <p>Emergency settings require fabrics that can withstand unpredictable challenges:</p>
+          <ul class="list-disc pl-5 mb-4">
+            <li><strong>RapidRepel™</strong>: Instantaneous fluid repellency for sudden exposure situations</li>
+            <li><strong>DuraTough™</strong>: Enhanced abrasion resistance for high-activity environments</li>
+            <li><strong>QuickClean™</strong>: Allows for rapid spot cleaning between patient encounters</li>
+            <li><strong>MaxFlex™</strong>: Maximum stretch capability for emergency response movements</li>
+          </ul>
+          
+          <h4 class="text-lg font-semibold mt-4 mb-2">Laboratory and Diagnostic Services</h4>
+          <p>Laboratory professionals benefit from fabrics specifically designed for their environment:</p>
+          <ul class="list-disc pl-5 mb-4">
+            <li><strong>ChemShield™</strong>: Resistant to common laboratory chemicals and reagents</li>
+            <li><strong>StainGuard™</strong>: Prevents permanent staining from biological samples and dyes</li>
+            <li><strong>StaticControl™</strong>: Reduces static electricity in sensitive testing environments</li>
+            <li><strong>ComfortWeave™</strong>: Enhances comfort during long periods of precision work</li>
+          </ul>
+          
+          <p>These specialized fabrics ensure that every healthcare professional in Saudi Arabian medical facilities has access to uniform materials optimized for their specific working conditions.</p>
+        16:T11e2,
+            // Agregar URLs base a todas las imágenes que no las tengan
+            (function() {
+              if (typeof window !== 'undefined') {
+                // Función para corregir rutas de imágenes
+                window.fixImagePaths = function() {
+                  const images = document.querySelectorAll('img:not([data-fixed="true"])');
+                  const baseUrl = window.location.origin;
+                  const isVercel = window.location.hostname.includes('vercel.app');
+                  
+                  images.forEach(img => {
+                    const src = img.getAttribute('src') || '';
+                    
+                    // Si no es una URL absoluta, corregirla
+                    if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+                      const fixedSrc = src.startsWith('/') 
+                        ? baseUrl + src 
+                        : baseUrl + '/' + src;
+                      
+                      // Establecer una propiedad de respaldo
+                      img.setAttribute('data-original-src', src);
+                      
+                      // En Vercel, intentar diferentes variaciones
+                      if (isVercel) {
+                        // Intentar con y sin slash inicial
+                        const variations = [
+                          fixedSrc,
+                          src.startsWith('/') ? baseUrl + src.substring(1) : fixedSrc,
+                          src.startsWith('/') ? src : '/' + src,
+                          '/_next/static/images/' + src.split('/').pop()
+                        ];
+                        
+                        // Probar cada variación
+                        let imgLoaded = false;
+                        variations.forEach((variation, index) => {
+                          if (!imgLoaded) {
+                            const testImg = new Image();
+                            testImg.onload = function() {
+                              if (!imgLoaded) {
+                                img.setAttribute('src', variation);
+                                img.setAttribute('data-fixed', 'true');
+                                imgLoaded = true;
+                              }
+                            };
+                            testImg.src = variation;
+                            
+                            // Si la imagen ya está en caché, el evento onload podría no dispararse
+                            if (testImg.complete) {
+                              img.setAttribute('src', variation);
+                              img.setAttribute('data-fixed', 'true');
+                              imgLoaded = true;
+                            }
+                          }
+                        });
+                      } else {
+                        // En desarrollo local, simplemente usar la URL fija
+                        img.setAttribute('src', fixedSrc);
+                        img.setAttribute('data-fixed', 'true');
+                      }
+                      
+                      // Configurar manejo de errores
+                      img.onerror = function() {
+                        // Si la URL corregida falla, intentar con la original
+                        if (img.getAttribute('src') !== src) {
+                          img.setAttribute('src', src);
+                        } else {
+                          // Si ambas fallan, usar la imagen de respaldo
+                          img.setAttribute('src', '/images/default-placeholder.jpg');
+                        }
+                      };
+                    }
+                  });
+                };
+                
+                // Ejecutar inicialmente y después de cada carga de página
+                window.fixImagePaths();
+                window.addEventListener('load', window.fixImagePaths);
+                
+                // Crear una imagen de respaldo SVG en caso de que todo falle
+                window.fallbackImageDataUrl = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjMyMCIgeT0iMjQwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM4ODgiPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+';
+                
+                // Precargar la imagen de respaldo
+                const preloadFallback = new Image();
+                preloadFallback.src = '/images/default-placeholder.jpg';
+              }
+            })();
+          17:T496,
+            // تحديد اللغة واتجاه العناصر
+            (function() {
+              if (typeof window !== 'undefined') {
+                // تحديد اللغة الحالية
+                if (window.location.pathname.startsWith('/ar')) {
+                  document.documentElement.lang = 'ar';
+                  document.documentElement.setAttribute('dir', 'rtl');
+                } else {
+                  document.documentElement.lang = 'en';
+                  document.documentElement.setAttribute('dir', 'ltr');
+                }
+                
+                // إنهاء حالة التحميل
+                if (sessionStorage.getItem('isLanguageSwitch') === 'true') {
+                  sessionStorage.removeItem('isLanguageSwitch');
+                  document.documentElement.classList.remove('language-transition');
+                }
+                
+                // إزالة أي مؤشرات تحميل بعد فترة قصيرة
+                setTimeout(function() {
+                  document.documentElement.classList.remove('language-transition');
+                }, 2000);
+              }
+            })();
+          0:["8-A0VsMlrBrfm2JGJV-Hr",[[["",{"children":["resources",{"children":["fabric-guide",{"children":["healthcare",{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["resources",{"children":["fabric-guide",{"children":["healthcare",{"children":["__PAGE__",{},[["$L1",["$","$L2",null,{"resourceData":{"locale":"en","title":"Healthcare Fabric Guide","subtitle":"Advanced materials for Saudi Arabia's medical professionals","heroImage":"/images/healthcare/healthcare_medical_uniform.jpg","overview":{"title":"Selecting the Right Fabrics for Healthcare Environments","content":"\n        <p>At UNEOM, we understand that healthcare uniforms require specialized fabrics that meet the unique demands of medical environments in Saudi Arabia. The right materials must balance infection control, comfort during long shifts, durability through frequent laundering, and compliance with healthcare facility regulations.</p>\n        <p>This comprehensive guide explores the advanced textiles we use in our healthcare uniform solutions, their specific benefits, and how they address the particular challenges faced by medical professionals across the Kingdom.</p>\n      "},"sections":[{"title":"Antimicrobial and Fluid-Resistant Fabrics","content":"$3","image":"/images/healthcare/healthcare_medical_doctor_uniform.jpg"},{"title":"Climate-Optimized Comfort Fabrics","content":"$4","image":"/images/healthcare/healthcare_nurce_uniform.jpg"},{"title":"Durability-Enhanced Medical Fabrics","content":"$5","image":"/images/healthcare/2_pices_nurce_uniform.jpg"},{"title":"Specialized Modesty-Conscious Medical Fabrics","content":"$6","image":"/images/healthcare/medical_hijab_uniform.jpg"},{"title":"Department-Specific Fabric Solutions","content":"$7","image":"/images/healthcare/healthcare_hijab_doctor.jpg"}],"items":[{"id":"microshield","title":"MicroShield™ Antimicrobial Fabric","description":"Advanced antimicrobial protection designed specifically for healthcare environments in Saudi Arabia","image":"/images/healthcare/healthcare_medical_uniform.jpg"},{"id":"coolcore","title":"CoolCore™ Climate-Optimized Fabric","description":"Temperature-regulating technology for comfort in Saudi Arabia's climate","image":"/images/healthcare/healthcare_nurce_uniform.jpg"},{"id":"modestcare","title":"ModestCare™ Medical Fabrics","description":"Professional healthcare fabrics designed with modesty and cultural considerations in mind","image":"/images/healthcare/medical_hijab_uniform.jpg"}],"cta":{"title":"Need Help Selecting the Right Healthcare Fabrics?","description":"Our textile experts can help you choose the optimal fabric solutions for your healthcare facility's specific requirements.","buttonText":"Schedule a Consultation","buttonUrl":"/contact"}}}],null],null],null]},[null,["$","$L8",null,{"parallelRouterKey":"children","segmentPath":["children","resources","children","fabric-guide","children","healthcare","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L8",null,{"parallelRouterKey":"children","segmentPath":["children","resources","children","fabric-guide","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L8",null,{"parallelRouterKey":"children","segmentPath":["children","resources","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/76d2b1ef08bbff47.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/7f3e2bbc28789e41.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"charSet":"utf-8"}],["$","meta",null,{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","link",null,{"rel":"stylesheet","href":"/css/image-fixes.css"}],["$","script",null,{"src":"/js/image-handler.js","defer":true}],["$","script",null,{"src":"/js/404-checker.js","defer":true}],["$","meta",null,{"httpEquiv":"Cache-Control","content":"no-cache, no-store, must-revalidate"}],["$","meta",null,{"httpEquiv":"Pragma","content":"no-cache"}],["$","meta",null,{"httpEquiv":"Expires","content":"0"}],["$","meta",null,{"httpEquiv":"Access-Control-Allow-Origin","content":"*"}],["$","link",null,{"rel":"preload","href":"/images/default-placeholder.jpg","as":"image"}],["$","link",null,{"rel":"preload","href":"/images/default-placeholder.svg","as":"image"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}],["$","link",null,{"rel":"stylesheet","href":"/css/image-fixes.css"}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"img-src 'self' data: https: http: blob: *.vercel.app *.uneom.com *.githubusercontent.com;"}],["$","script",null,{"src":"/js/image-handler.js","defer":true}],false]}],["$","body",null,{"className":"__variable_838c52 font-sans","children":[["$","$La",null,{"children":[["$","$Lb",null,{"children":[["$","$c",null,{"fallback":null,"children":["$","$Ld",null,{"reason":"next/dynamic","children":["$","$Le",null,{"imagePaths":["/images/default-placeholder.jpg","/images/banner-placeholder.jpg","/images/default-placeholder.jpg","/images/default-placeholder.jpg"],"children":["$","$L8",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"flex flex-col items-center justify-center min-h-[70vh] px-4 text-center","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-800 mb-6","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-700 mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-600 mb-8 max-w-md","children":"We couldn't find the page you're looking for. It might have been moved, deleted, or perhaps never existed."}],["$","$Lf",null,{"href":"/","className":"px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors","children":"Back to Home"}]]}],"notFoundStyles":[]}]}]}]}],["$","$c",null,{"fallback":null,"children":["$","$Ld",null,{"reason":"next/dynamic","children":["$","$L10",null,{}]}]}],["$","$c",null,{"fallback":null,"children":["$","$Ld",null,{"reason":"next/dynamic","children":["$","$L11",null,{}]}]}],["$","$c",null,{"fallback":null,"children":["$","$Ld",null,{"reason":"next/dynamic","children":["$","$L12",null,{}]}]}],["$","div",null,{"style":{"display":"none"},"children":["$","$c",null,{"fallback":null,"children":["$","$Ld",null,{"reason":"next/dynamic","children":["$","$L13",null,{"src":"/images/default-placeholder.jpg","alt":"Preloaded Logo","showDebugInfo":true}]}]}]}]]}],["$","$L14",null,{}]]}],["$","$L15",null,{"id":"image-base-url-helper","strategy":"afterInteractive","children":"$16"}],["$","$L15",null,{"id":"language-switch-helper","strategy":"afterInteractive","children":"$17"}],["$","$L15",null,{"id":"statcounter-setup","strategy":"afterInteractive","children":"\n            try {\n              var sc_project=13105039; \n              var sc_invisible=1; \n              var sc_security=\"f68332e2\";\n              \n              // Load counter script only if not blocked\n              // Create a test image to check if requests to statcounter domain are blocked\n              var testImg = new Image();\n              testImg.onerror = function() {\n                console.log('StatCounter might be blocked by browser extensions.');\n              };\n              testImg.onload = function() {\n                // Only load the script if the test image loads successfully\n                var sc = document.createElement('script');\n                sc.src = \"https://www.statcounter.com/counter/counter.js\";\n                sc.async = true;\n                document.body.appendChild(sc);\n              };\n              testImg.src = \"https://c.statcounter.com/ping.gif\";\n            } catch (e) {\n              console.log('Error setting up StatCounter:', e);\n            }\n          "}],["$","noscript",null,{"children":["$","div",null,{"className":"statcounter","children":["$","a",null,{"title":"free web stats","href":"https://statcounter.com/","target":"_blank","rel":"noopener noreferrer","children":["$","img",null,{"className":"statcounter","src":"https://c.statcounter.com/13105039/0/f68332e2/1/","alt":"free web stats","referrerPolicy":"no-referrer-when-downgrade"}]}]}]}]]}]]}]],null],null],["$L18",null]]]]
+18:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Healthcare Fabric Guide | Medical Uniform Materials in Saudi Arabia | UNEOM"}],["$","meta","3",{"name":"description","content":"Comprehensive guide to healthcare uniform fabrics in Saudi Arabia, including antimicrobial, fluid-resistant, and breathable materials for medical professionals."}],["$","meta","4",{"name":"keywords","content":"healthcare fabrics, medical uniform materials, antimicrobial fabrics, Saudi Arabia medical textiles, hospital uniform guide, scrubs fabric, fluid-resistant materials"}],["$","meta","5",{"property":"og:title","content":"Healthcare Fabric Guide | Medical Uniform Materials in Saudi Arabia"}],["$","meta","6",{"property":"og:description","content":"Comprehensive guide to healthcare uniform fabrics in Saudi Arabia, including antimicrobial, fluid-resistant, and breathable materials for medical professionals."}],["$","meta","7",{"property":"og:image","content":"https://uneom.com/images/healthcare/healthcare_medical_uniform.jpg"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"Healthcare professionals in Saudi Arabia wearing uniforms made with advanced medical-grade fabrics"}],["$","meta","11",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","12",{"name":"twitter:title","content":"Healthcare Fabric Guide | Medical Uniform Materials in Saudi Arabia"}],["$","meta","13",{"name":"twitter:description","content":"Comprehensive guide to healthcare uniform fabrics in Saudi Arabia, including antimicrobial, fluid-resistant, and breathable materials for medical professionals."}],["$","meta","14",{"name":"twitter:image","content":"https://uneom.com/images/healthcare/healthcare_medical_uniform.jpg"}],["$","meta","15",{"name":"twitter:image:width","content":"1200"}],["$","meta","16",{"name":"twitter:image:height","content":"630"}],["$","meta","17",{"name":"twitter:image:alt","content":"Healthcare professionals in Saudi Arabia wearing uniforms made with advanced medical-grade fabrics"}],["$","link","18",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","meta","19",{"name":"next-size-adjust"}]]
+1:null

@@ -9,6 +9,31 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# IMPORTANTE: Este redirección debe estar antes de las demás para servir correctamente los archivos estáticos
+[[headers]]
+  for = "/_next/*"
+  [headers.values]
+    "Cache-Control" = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    "Cache-Control" = "public, max-age=31536000, immutable"
+
+# Para asegurar que los archivos estáticos se encuentren correctamente
+[[redirects]]
+  from = "/_next/*"
+  to = "/_next/:splat"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/images/*"
+  to = "/images/:splat"
+  status = 200
+  force = false
+
+# Fallback para rutas no encontradas
 [[redirects]]
   from = "/*"
   to = "/index.html"

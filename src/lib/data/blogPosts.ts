@@ -5,8 +5,13 @@
  * Contains both English and Arabic versions of blog content
  */
 
+// Import blog post content
+import { culturalIdentitySaudiSchoolUniforms as culturalIdentitySaudiSchoolUniformsEn } from './blogPostContentEn';
+import { culturalIdentitySaudiSchoolUniforms as culturalIdentitySaudiSchoolUniformsAr } from './blogPostContentAr';
+
 const blogPosts = {
   en: [
+    culturalIdentitySaudiSchoolUniformsEn,
     {
       slug: 'textile-innovations-2025',
       title: 'Cutting-Edge Textile Innovations Transforming Uniform Manufacturing in 2025',
@@ -935,6 +940,7 @@ const blogPosts = {
     }
   ],
   ar: [
+    culturalIdentitySaudiSchoolUniformsAr,
     {
       slug: 'textile-innovations-2025',
       title: 'ابتكارات النسيج المتطورة التي تغير صناعة الزي الموحد في 2025',
