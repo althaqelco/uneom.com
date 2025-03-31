@@ -7,7 +7,6 @@ import { notFound } from 'next/navigation';
 import Container from '@/components/ui/Container';
 import { getBlogPostBySlug, getRelatedPosts as getRelatedPostsFromData } from '@/lib/data/blogPosts';
 import { generateBlogPostSchema } from '@/lib/schema/blogPost';
-import MainLayout from '@/components/layout/MainLayout';
 
 interface ClientPageProps {
   slug: string;
@@ -41,7 +40,7 @@ export default function ClientPage({ slug }: ClientPageProps) {
   const blogPostSchema = generateBlogPostSchema(blogPost, locale);
   
   return (
-    <MainLayout locale={locale}>
+    <>
       {/* Schema.org structured data */}
       {blogPostSchema && (
         <script
@@ -195,6 +194,6 @@ export default function ClientPage({ slug }: ClientPageProps) {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    </>
   );
 } 
