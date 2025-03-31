@@ -11,7 +11,7 @@ export default function EducationPageArabic() {
   const educationIndustryData = {
     title: "أزياء التعليم الفاخرة في المملكة العربية السعودية",
     subtitle: "ملابس مدرسية وجامعية عالية الجودة تعزز الهوية والتميز",
-    heroImage: "/images/banner-placeholder.jpg",
+    heroImage: "/images/education/uniform_school-2.jpg",
     
     introduction: [
       "تلعب أزياء التعليم دورًا حيويًا في المشهد الأكاديمي المتطور في المملكة العربية السعودية، حيث تعزز الشعور بالانتماء والفخر المؤسسي مع تشجيع الانضباط والمساواة بين الطلاب. توفر يونيوم حلول أزياء فاخرة للمؤسسات التعليمية في جميع أنحاء المملكة، من المدارس الابتدائية إلى الجامعات المرموقة.",
@@ -49,28 +49,28 @@ export default function EducationPageArabic() {
         id: "school-uniforms",
         name: "أزياء المدارس (K-12)",
         description: "مجموعات شاملة من الزي المدرسي للمدارس الابتدائية والثانوية مع خيارات مخصصة حسب الجنس.",
-        image: "/images/product-placeholder.jpg",
+        image: "/images/education/uniform_school_product-5.jpg",
         href: "/ar/shop/school-uniforms"
       },
       {
         id: "university-attire",
         name: "ملابس الجامعات والكليات",
         description: "حلول أزياء احترافية لمؤسسات التعليم العالي، بما في ذلك الاختلافات الخاصة بكل قسم.",
-        image: "/images/default-placeholder.jpg",
+        image: "/images/education/uniform_school_product-6.jpg",
         href: "/ar/shop/university-attire"
       },
       {
         id: "pe-sports",
         name: "التربية البدنية والرياضة",
         description: "ملابس رياضية عالية الأداء لحصص التربية البدنية والفرق الرياضية المدرسية.",
-        image: "/images/default-placeholder.jpg",
+        image: "/images/education/uniform_school_product-7.jpg",
         href: "/ar/shop/pe-sports"
       },
       {
         id: "academic-ceremonies",
         name: "ملابس المناسبات الأكاديمية",
         description: "عباءات التخرج، والقبعات، وملابس المناسبات مخصصة بألوان وشعارات مؤسستك.",
-        image: "/images/default-placeholder.jpg",
+        image: "/images/education/uniform_educations_variations.jpg",
         href: "/ar/shop/academic-ceremonies"
       }
     ],
@@ -128,7 +128,7 @@ export default function EducationPageArabic() {
         author: "سارة العتيبي",
         position: "مديرة المدرسة",
         company: "الأكاديمية الدولية بالرياض",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/education/uniform_educations_3.jpg"
       }
     ],
     

@@ -15,21 +15,21 @@ const educationBlogPosts = [
   {
     title: "How School Uniforms Enhance Academic Performance in Saudi Schools",
     description: "Discover the research-backed benefits of quality school uniforms on student performance, focus, and academic identity in Saudi educational institutions.",
-    image: "/images/industries/education/school-uniform-03.webp",
+    image: "/images/education/uniform_educations_blog-1.jpg",
     link: "/blog/school-uniforms-academic-performance",
     date: "April 18, 2024"
   },
   {
     title: "Sustainable School Uniform Solutions for Modern Saudi Educational Institutions",
     description: "Exploring eco-friendly fabric innovations and sustainable practices for educational uniforms that align with Saudi Vision 2030 environmental goals.",
-    image: "/images/industries/education/school-uniform-04.webp",
+    image: "/images/education/uniform_educations_blog-2.jpg",
     link: "/blog/sustainable-school-uniforms-saudi",
     date: "March 24, 2024"
   },
   {
     title: "Cultural Identity in Saudi School Uniforms: Balancing Tradition and Modernity",
     description: "How thoughtfully designed school uniforms can honor Saudi heritage while embracing contemporary educational environments.",
-    image: "/images/industries/education/school-uniform-05.webp",
+    image: "/images/education/uniform_educations_3.jpg",
     link: "/blog/cultural-identity-saudi-school-uniforms",
     date: "February 12, 2024"
   }
@@ -41,7 +41,7 @@ const featuredProducts = [
     id: "premium-school-uniform",
     name: "Premium School Uniform Collection",
     description: "High-quality, durable school uniforms designed specifically for Saudi educational institutions, featuring climate-appropriate fabrics and customizable branding options.",
-    image: "/images/industries/education/school-uniform-02.webp",
+    image: "/images/education/uniform_school-2.jpg",
     href: "/shop/education-uniforms/premium-school-uniform",
     features: [
       "Reinforced stitching for active students",
@@ -55,7 +55,7 @@ const featuredProducts = [
     id: "faculty-professional-attire",
     name: "Faculty Professional Attire",
     description: "Distinguished professional uniforms for teachers and educational administrators that convey authority while providing comfort during long teaching hours.",
-    image: "/images/industries/education/teachers/school-uniform-teacher-01.webp",
+    image: "/images/education/uniform_school_product-1.jpg",
     href: "/shop/education-uniforms/faculty-professional-attire",
     features: [
       "Professional styling with comfort features",
@@ -69,7 +69,7 @@ const featuredProducts = [
     id: "student-athletic-wear",
     name: "Student Athletic & PE Uniform",
     description: "Performance-oriented physical education and sports uniforms designed for Saudi schools, featuring moisture-wicking fabrics and activity-specific designs.",
-    image: "/images/industries/education/students/school-uniform-students-02.webp",
+    image: "/images/education/uniform_school_product-2.jpg",
     href: "/shop/education-uniforms/student-athletic-wear",
     features: [
       "SweatWick™ moisture management",
@@ -281,7 +281,7 @@ export default function EducationPage() {
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="md:w-1/3">
                     <Image 
-                      src="/images/industries/education/school-uniform-06.webp"
+                      src="/images/education/uniform_school_product-4.jpg"
                       alt="Al-Manar International School Uniform Program"
                       width={300}
                       height={400}
