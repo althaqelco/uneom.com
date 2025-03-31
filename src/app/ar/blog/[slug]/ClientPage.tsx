@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Container from '@/components/ui/Container';
 import { getBlogPostBySlug, getRelatedPosts as getRelatedPostsFromData } from '@/lib/data/blogPosts';
+import { generateBlogPostSchema } from '@/lib/schema/blogPost';
+import MainLayout from '@/components/layout/MainLayout';
 
 interface ClientPageProps {
   slug: string;
@@ -35,8 +37,21 @@ export default function ClientPage({ slug }: ClientPageProps) {
   // Get related posts
   const relatedPosts = getRelatedPostsFromData(slug, locale, 3);
   
+  // Generate structured data for SEO
+  const blogPostSchema = generateBlogPostSchema(blogPost, locale);
+  
   return (
-    <>
+    <MainLayout locale={locale}>
+      {/* Schema.org structured data */}
+      {blogPostSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(blogPostSchema)
+          }}
+        />
+      )}
+      
       {/* Hero Section */}
       <section className="pt-16 pb-20">
         <Container>
@@ -180,6 +195,6 @@ export default function ClientPage({ slug }: ClientPageProps) {
           </div>
         </Container>
       </section>
-    </>
+    </MainLayout>
   );
 } 

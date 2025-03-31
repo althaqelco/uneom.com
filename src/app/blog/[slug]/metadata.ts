@@ -61,4 +61,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
   };
-} 
+}
+
+// Add metadata for the Cultural Identity in Saudi School Uniforms blog post
+export const culturalIdentitySaudiSchoolUniformsMetadata = {
+  title: 'Cultural Identity in Saudi School Uniforms: Balancing Tradition and Modernity',
+  description: 'Explore how thoughtfully designed school uniforms can honor Saudi heritage while embracing contemporary educational environments in line with Vision 2030 goals.',
+  keywords: 'Saudi school uniforms, cultural identity, educational uniforms, Saudi Vision 2030, traditional dress, modern education, Islamic dress code, Saudi education system, school uniform design, cultural heritage',
+  canonical: 'https://uneom.com/blog/cultural-identity-saudi-school-uniforms',
+  ogImage: '/images/education/uniform_educations_3.jpg',
+  ogType: 'article',
+  twitterCard: 'summary_large_image',
+  publishedTime: '2024-02-12T08:00:00+03:00',
+  modifiedTime: '2024-02-12T08:00:00+03:00',
+  authors: ['Dr. Layla Al-Hamdan'],
+  section: 'Education',
+  tags: ['Education', 'Cultural Identity', 'School Uniforms', 'Saudi Vision 2030', 'Tradition']
+}; 

@@ -56,4 +56,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
   };
-} 
+}
+
+// Add metadata for the Cultural Identity in Saudi School Uniforms blog post (Arabic)
+export const culturalIdentitySaudiSchoolUniformsMetadata = {
+  title: 'الهوية الثقافية في الزي المدرسي السعودي: التوازن بين التقاليد والحداثة',
+  description: 'اكتشف كيف يمكن للأزياء المدرسية المصممة بعناية أن تحافظ على التراث السعودي مع تبني البيئات التعليمية المعاصرة بما يتماشى مع أهداف رؤية 2030.',
+  keywords: 'الزي المدرسي السعودي, الهوية الثقافية, الأزياء التعليمية, رؤية السعودية 2030, اللباس التقليدي, التعليم الحديث, الزي الإسلامي, نظام التعليم السعودي, تصميم الزي المدرسي, التراث الثقافي',
+  canonical: 'https://uneom.com/ar/blog/cultural-identity-saudi-school-uniforms',
+  ogImage: '/images/education/uniform_educations_3.jpg',
+  ogType: 'article',
+  twitterCard: 'summary_large_image',
+  publishedTime: '2024-02-12T08:00:00+03:00',
+  modifiedTime: '2024-02-12T08:00:00+03:00',
+  authors: ['د. ليلى الحمدان'],
+  section: 'التعليم',
+  tags: ['التعليم', 'الهوية الثقافية', 'الأزياء المدرسية', 'رؤية السعودية 2030', 'التقاليد']
+}; 
