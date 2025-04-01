@@ -184,5 +184,5 @@ export default function SupplyManufacturingPage() {
     }
   };
 
-  return <IndustryPageLayout locale={locale} industryData={supplyManufacturingData} />;
+  return <IndustryPageLayout locale={locale} industryData={supplyManufacturingData} skipMainLayout={true} />;
 } 

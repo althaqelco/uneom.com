@@ -271,5 +271,5 @@ export default function SizeGuidePage() {
     }
   };
 
-  return <ResourcePageLayout resourceData={resourceData} />;
+  return <ResourcePageLayout resourceData={resourceData} skipMainLayout={true} />;
 } 

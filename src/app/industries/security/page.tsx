@@ -144,6 +144,7 @@ export default function SecurityPage() {
     <IndustryPageLayout 
       locale={locale}
       industryData={securityIndustryData}
+      skipMainLayout={true}
     />
   );
 } 
