@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import ImageGallery from '@/components/sections/corporate/ImageGallery';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 
 // Related products section
@@ -42,6 +41,7 @@ const RelatedProducts = () => {
   ];
 
   return (
+    <div className="bg-white">
     <section className="py-16 bg-neutral-50">
       <Container>
         <motion.div
@@ -101,6 +101,7 @@ const RelatedProducts = () => {
         </div>
       </Container>
     </section>
+      </div>
   );
 };
 
@@ -145,7 +146,8 @@ export default function CorporatePage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-neutral-900 to-neutral-800 text-white py-24">
         <div className="absolute inset-0 overflow-hidden opacity-40">
@@ -301,6 +303,7 @@ export default function CorporatePage() {
           </motion.div>
         </Container>
       </section>
-    </MainLayout>
+    
+      </div>
   );
 } 

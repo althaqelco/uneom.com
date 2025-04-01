@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import SearchBar from '@/components/shop/SearchBar';
@@ -110,7 +109,8 @@ export default function ShopPage() {
   const [searchTerm, setSearchTerm] = React.useState('');
   
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       {/* Hero Section */}
       <section className="bg-gray-100 py-12">
         <Container>
@@ -235,6 +235,7 @@ export default function ShopPage() {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    
+      </div>
   );
 } 

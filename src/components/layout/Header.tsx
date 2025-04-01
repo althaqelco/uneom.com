@@ -103,16 +103,15 @@ const Header: React.FC<HeaderProps> = ({ locale = 'en' }) => {
                 className="mr-3" 
               />
               <button
-                className="p-2"
+                className="p-2 text-neutral-700 hover:text-primary-600"
                 onClick={toggleMobileMenu}
                 aria-label={isRTL ? "فتح القائمة" : "Toggle menu"}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className="h-6 w-6 stroke-current"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
                 >
                   <path
                     strokeLinecap="round"

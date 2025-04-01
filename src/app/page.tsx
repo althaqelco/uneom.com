@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import TestimonialCarousel from '@/components/sections/TestimonialCarousel';
@@ -231,8 +230,8 @@ export default function HomePage() {
   };
 
   return (
-    <MainLayout locale={locale}>
-      {/* Add structured data for SEO */}
+    <>
+      {/* Schema Markup for SEO */}
       <HomePageStructuredData />
       <UniformSupplierData />
       <UniformFAQData />
@@ -539,6 +538,6 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    </>
   );
 }

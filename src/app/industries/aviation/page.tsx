@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 
 // Define animation variants
 const fadeIn = {
@@ -451,8 +450,10 @@ export default function AviationPage() {
 
   // إرجاع الصفحة مغلفة بـ MainLayout
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       {pageContent}
-    </MainLayout>
+    
+      </div>
   );
 } 

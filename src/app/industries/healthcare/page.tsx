@@ -2,7 +2,6 @@
 
 import React from 'react';
 import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
-import MainLayout from '@/components/layout/MainLayout';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -533,11 +532,13 @@ export default function HealthcarePage() {
   );
   
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       <IndustryPageLayout locale={locale} industryData={healthcareData} skipMainLayout={true} />
       <FeaturedProducts />
       <RelatedBlogPosts />
       <QuickQuoteSection />
-    </MainLayout>
+    
+    </div>
   );
 } 
