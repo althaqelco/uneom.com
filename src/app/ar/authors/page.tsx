@@ -92,7 +92,7 @@ export default function AuthorsPage() {
   const locale = 'ar';
 
   return (
-    
+    <>
       {/* Hero Section */}
       <section dir="rtl" className="py-20 bg-primary-700 text-white">
         <Container>
@@ -179,6 +179,6 @@ export default function AuthorsPage() {
           </div>
         </Container>
       </section>
-    
+    </>
   );
 } 

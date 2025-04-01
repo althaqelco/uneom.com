@@ -66,7 +66,7 @@ export default function ClientPage({ author, authorPosts }: ClientPageProps) {
   );
 
   return (
-    
+    <>
       {/* Author Hero Section */}
       <div dir="rtl" className="relative py-24 bg-primary-700 text-white">
         <Container>
@@ -225,6 +225,6 @@ export default function ClientPage({ author, authorPosts }: ClientPageProps) {
           </div>
         </Container>
       </section>
-    
+    </>
   );
 } 
