@@ -8,7 +8,6 @@ import { FaStar, FaStarHalfAlt, FaRegStar, FaCheck, FaShippingFast, FaWhatsapp }
 import Head from 'next/head';
 import { Metadata } from 'next';
 
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -131,7 +130,8 @@ export default function FacultyProfessionalAttirePage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       <Head>
         <title>Faculty Professional Attire for Saudi Educational Institutions | Uneom</title>
         <meta name="description" content="Premium professional attire for faculty members in Saudi Arabian educational institutions. Elegant, durable, and comfortable designs that reflect educational excellence." />
@@ -403,6 +403,6 @@ export default function FacultyProfessionalAttirePage() {
           </div>
         </Container>
       </div>
-    </MainLayout>
+    </div>
   );
 } 

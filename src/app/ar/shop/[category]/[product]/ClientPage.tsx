@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -43,7 +42,7 @@ export default function ClientPage({ product, relatedProducts, locale }: ClientP
   // Return a loading or error state if product is undefined
   if (!product) {
     return (
-      <MainLayout locale={locale}>
+      <>
         <Container>
           <div className="py-20 text-center">
             <h2 className="text-2xl font-bold mb-4">المنتج غير متوفر</h2>
@@ -53,7 +52,7 @@ export default function ClientPage({ product, relatedProducts, locale }: ClientP
             </Link>
           </div>
         </Container>
-      </MainLayout>
+      </>
     );
   }
 
@@ -75,7 +74,7 @@ export default function ClientPage({ product, relatedProducts, locale }: ClientP
   };
 
   return (
-    <MainLayout locale={locale}>
+    <>
       {/* Breadcrumb */}
       <div className="bg-neutral-100 py-4">
         <Container>
@@ -340,6 +339,6 @@ export default function ClientPage({ product, relatedProducts, locale }: ClientP
           </div>
         </Container>
       </section>
-    </MainLayout>
+    </>
   );
 } 

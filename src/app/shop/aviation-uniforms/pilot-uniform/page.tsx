@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -129,7 +128,6 @@ export default function PilotUniformPage() {
       size: selectedSize,
       quantity
     });
-    
     alert('Product added to your quote request.');
   };
   
@@ -147,7 +145,8 @@ export default function PilotUniformPage() {
   };
   
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-4">
         <Container>
@@ -554,6 +553,7 @@ export default function PilotUniformPage() {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    
+      </div>
   );
 } 

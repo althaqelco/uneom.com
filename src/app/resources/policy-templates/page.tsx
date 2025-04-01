@@ -291,5 +291,5 @@ export default function PolicyTemplatesPage() {
     }
   };
 
-  return <ResourcePageLayout resourceData={resourceData} />;
+  return <ResourcePageLayout resourceData={resourceData} skipMainLayout={true} />;
 } 

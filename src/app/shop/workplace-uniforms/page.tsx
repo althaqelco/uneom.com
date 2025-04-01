@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -97,7 +96,7 @@ export default function WorkplaceUniformsPage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
       <Container className="py-8">
         <Breadcrumbs items={breadcrumbs.map(item => ({
           label: item.name,
@@ -317,6 +316,6 @@ export default function WorkplaceUniformsPage() {
           </div>
         </div>
       </Container>
-    </MainLayout>
+    </div>
   );
 } 

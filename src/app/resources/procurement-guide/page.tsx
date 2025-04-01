@@ -215,5 +215,5 @@ export default function ProcurementGuidePage() {
     }
   };
 
-  return <ResourcePageLayout resourceData={resourceData} />;
+  return <ResourcePageLayout resourceData={resourceData} skipMainLayout={true} />;
 } 

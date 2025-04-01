@@ -184,5 +184,5 @@ export default function RetailShopsPage() {
     }
   };
 
-  return <IndustryPageLayout locale={locale} industryData={retailShopsData} />;
+  return <IndustryPageLayout locale={locale} industryData={retailShopsData} skipMainLayout={true} />;
 } 

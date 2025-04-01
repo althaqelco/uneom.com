@@ -3,13 +3,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 
 export default function IndustrialProtectiveClothingPost() {
   return (
-    <MainLayout>
+    <div className="bg-white">
+    
       <Container>
         <div className="py-10">
           <div className="mb-8">
@@ -322,6 +322,7 @@ export default function IndustrialProtectiveClothingPost() {
           </div>
         </div>
       </Container>
-    </MainLayout>
+    
+      </div>
   );
 } 

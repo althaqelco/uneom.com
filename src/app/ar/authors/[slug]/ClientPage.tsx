@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 
@@ -67,7 +66,7 @@ export default function ClientPage({ author, authorPosts }: ClientPageProps) {
   );
 
   return (
-    <MainLayout locale="ar">
+    <>
       {/* Author Hero Section */}
       <div dir="rtl" className="relative py-24 bg-primary-700 text-white">
         <Container>
@@ -226,6 +225,6 @@ export default function ClientPage({ author, authorPosts }: ClientPageProps) {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    </>
   );
 } 

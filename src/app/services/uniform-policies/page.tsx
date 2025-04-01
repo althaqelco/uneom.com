@@ -144,5 +144,5 @@ export default function UniformPoliciesPage() {
     }
   };
   
-  return <ServicePageLayout locale={locale} serviceData={serviceData} />;
+  return <ServicePageLayout locale={locale} serviceData={serviceData} skipMainLayout={true} />;
 } 

@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { QuoteProvider } from '@/contexts/QuoteContext';
 import LinkPreloader from '@/components/LinkPreloader';
 import LocaleProvider from '@/components/providers/LocaleProvider';
+import MainLayout from '@/components/layout/MainLayout';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
 
@@ -49,15 +50,26 @@ const CRITICAL_IMAGES = [
 
 export default function RootLayout({
   children,
+  params
 }: {
   children: React.ReactNode;
+  params?: { locale?: string };
 }) {
+  const locale = params?.locale || 'en';
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/css/image-fixes.css" />
+        {/* Favicon configuration */}
+        <link rel="icon" href="/favicon/uneom-favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon/uneom-favicon.png" />
+        <link rel="shortcut icon" type="image/png" href="/favicon/uneom-favicon.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon/uneom-favicon.png" /> {/* Fallback for older browsers */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="favicon" href="/favicon.ico" />
         {/* Add scripts for image handling and error checking */}
         <script src="/js/image-handler.js" defer></script>
         <script src="/js/404-checker.js" defer></script>
@@ -93,30 +105,26 @@ export default function RootLayout({
         )}
       </head>
       <body className={`${inter.variable} font-sans`}>
-        <LocaleProvider>
+        <LocaleProvider initialLocale={locale}>
           <QuoteProvider>
-            {/* Preload critical images */}
-            <ImagePreloader imagePaths={CRITICAL_IMAGES}>
-              {children}
-            </ImagePreloader>
-            
-            {/* Agregamos nuestro componente de resolución de imágenes */}
-            <ImageResolver />
-            {/* Añadimos el depurador de imágenes en producción - Solo visible en Vercel */}
-            <ImageDebugger />
-            {/* Añadimos el corrector automático de imágenes para Vercel */}
-            <VercelImageFixer />
-            
-            {/* Add emergency image loader for debugging */}
-            <div style={{ display: 'none' }}>
-              <EmergencyImageLoader 
-                src="/images/default-placeholder.jpg" 
-                alt="Preloaded Logo"
-                showDebugInfo={true}
-              />
-            </div>
+            <MainLayout locale={locale}>
+              <ImagePreloader imagePaths={CRITICAL_IMAGES}>
+                {children}
+              </ImagePreloader>
+              
+              <ImageResolver />
+              <ImageDebugger />
+              <VercelImageFixer />
+              <div style={{ display: 'none' }}>
+                <EmergencyImageLoader 
+                  src="/images/default-placeholder.jpg" 
+                  alt="Preloaded Logo"
+                  showDebugInfo={true}
+                />
+              </div>
+            </MainLayout>
+            <LinkPreloader />
           </QuoteProvider>
-          <LinkPreloader />
         </LocaleProvider>
         
         {/* Script para asignar URLs base a las imágenes */}

@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -302,7 +301,7 @@ export default function HousekeepingUniformPage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <>
       <Container className="py-8">
         <div className="flex justify-end mb-4">
           <button 
@@ -447,11 +446,11 @@ export default function HousekeepingUniformPage() {
             <div className="mt-6">
               <p className="text-sm text-neutral-500 mb-2">Lead time: {product.leadTime}</p>
               <AddToQuoteButton 
-  product={product}
-  color={selectedColor || undefined}
-  size={selectedSize || undefined}
-  quantity={quantity}
-/>
+                product={product}
+                color={selectedColor || undefined}
+                size={selectedSize || undefined}
+                quantity={quantity}
+              />
             </div>
           </div>
         </div>
@@ -684,6 +683,6 @@ export default function HousekeepingUniformPage() {
           </div>
         )}
       </Container>
-    </MainLayout>
+    </>
   );
 } 

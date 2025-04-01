@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -72,7 +71,8 @@ export default function AntimicrobialScrubsPage() {
   const [activeTab, setActiveTab] = React.useState('description');
   
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-4">
         <Container>
@@ -472,6 +472,7 @@ export default function AntimicrobialScrubsPage() {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    
+      </div>
   );
 } 

@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { getAllBlogPosts } from '@/lib/data/blogPosts';
@@ -74,7 +73,8 @@ export default function BlogPage() {
   const categories = Array.from(categoriesSet);
   
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       {/* Hero Section */}
       <div className="relative py-24 bg-primary-700 text-white">
         <Container>
@@ -318,6 +318,7 @@ export default function BlogPage() {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    
+      </div>
   );
 } 

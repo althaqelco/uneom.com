@@ -219,5 +219,5 @@ export default function FabricGuidePage() {
     }
   };
   
-  return <ResourcePageLayout resourceData={resourceData} />;
+  return <ResourcePageLayout resourceData={resourceData} skipMainLayout={true} />;
 } 

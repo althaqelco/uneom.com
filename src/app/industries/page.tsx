@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -79,7 +78,8 @@ export default function IndustriesPage() {
   ];
   
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-neutral-900 to-neutral-800 text-white py-20">
         <div className="absolute inset-0 overflow-hidden opacity-25">
@@ -371,6 +371,7 @@ export default function IndustriesPage() {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    
+      </div>
   );
 } 

@@ -144,7 +144,7 @@ export default function SecurityPageArabic() {
     <IndustryPageLayout 
       locale={locale}
       industryData={securityIndustryData}
-      skipMainLayout={true}
+      
     />
   );
 } 

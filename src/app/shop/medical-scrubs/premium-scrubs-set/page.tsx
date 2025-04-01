@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -102,7 +101,8 @@ export default function PremiumScrubsSetPage() {
   };
   
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-4">
         <Container>
@@ -402,6 +402,7 @@ export default function PremiumScrubsSetPage() {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    
+      </div>
   );
 }

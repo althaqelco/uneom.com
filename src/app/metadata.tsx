@@ -21,6 +21,11 @@ export const metadata: Metadata = {
     'Saudi uniform company',
     'custom uniforms Saudi Arabia'
   ],
+  icons: {
+    icon: '/favicon/uneom-favicon.png',
+    shortcut: '/favicon/uneom-favicon.png',
+    apple: '/favicon/uneom-favicon.png',
+  },
   openGraph: {
     title: 'UNEOM | Premium Uniform Supplier in Saudi Arabia - Custom Designs & Quality Fabrics',
     description: 'Saudi Arabia\'s leading uniform manufacturer for all industries. Premium custom-designed uniforms delivered to Riyadh, Jeddah, Dammam and all Saudi cities.',

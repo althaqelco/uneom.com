@@ -144,5 +144,5 @@ export default function CustomDesignServicePage() {
     }
   };
   
-  return <ServicePageLayout locale={locale} serviceData={serviceData} />;
+  return <ServicePageLayout locale={locale} serviceData={serviceData} skipMainLayout={true} />;
 } 

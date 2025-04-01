@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -108,7 +107,7 @@ export default function QuotePage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <>
       <SEO 
         title="Request a Quote"
         description="Request a quote for UNEOM's professional uniforms and corporate attire. Custom bulk orders, competitive pricing, and premium quality."
@@ -410,6 +409,6 @@ export default function QuotePage() {
           )}
         </Container>
       </section>
-    </MainLayout>
+    </>
   );
 } 

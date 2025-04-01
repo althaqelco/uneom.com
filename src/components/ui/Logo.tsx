@@ -32,8 +32,8 @@ export default function Logo({
   
   // Select logo file based on locale and inverted option
   const logoPath = isArabic 
-    ? '/images/uneom-logo-ar.png'  // Arabic logo - use the specific Arabic logo file
-    : '/images/uneom-logo-en.png'; // English logo - use the specific English logo file
+    ? '/images/uneom-logo.png'  // Arabic logo
+    : '/images/uneom-logo-en.png'; // English logo
   
   const logoAlt = isArabic ? 'يونيوم' : 'UNEOM';
   

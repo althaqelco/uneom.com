@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
@@ -234,7 +233,8 @@ export default function HealthcareAccessoriesPage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       <Container className="py-8">
         <div className="flex justify-end mb-4">
           <button 
@@ -341,6 +341,7 @@ export default function HealthcareAccessoriesPage() {
           </div>
         </div>
       </Container>
-    </MainLayout>
+    
+      </div>
   );
 } 

@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -140,7 +139,8 @@ export default function IndustrialProtectiveUniformsPage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       <Container className="py-8">
         <Breadcrumbs items={breadcrumbs.map(item => ({
           label: item.name,
@@ -273,11 +273,11 @@ export default function IndustrialProtectiveUniformsPage() {
             <div className="mt-6">
               <p className="text-sm text-neutral-500 mb-2">Lead time: {product.leadTime}</p>
               <AddToQuoteButton 
-  product={product}
-  color={selectedColor || undefined}
-  size={selectedSize || undefined}
-  quantity={quantity}
-/>
+                product={product}
+                color={selectedColor || undefined}
+                size={selectedSize || undefined}
+                quantity={quantity}
+              />
             </div>
           </div>
         </div>
@@ -479,6 +479,7 @@ export default function IndustrialProtectiveUniformsPage() {
           </div>
         )}
       </Container>
-    </MainLayout>
+    
+      </div>
   );
 } 

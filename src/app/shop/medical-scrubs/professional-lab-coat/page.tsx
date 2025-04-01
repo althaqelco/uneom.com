@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -143,7 +142,8 @@ export default function ProfessionalLabCoatPage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       <Container className="py-8">
         <Breadcrumbs items={breadcrumbs.map(item => ({
           label: item.name,
@@ -498,6 +498,7 @@ export default function ProfessionalLabCoatPage() {
           </div>
         )}
       </Container>
-    </MainLayout>
+    
+      </div>
   );
 } 

@@ -5,7 +5,6 @@ import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -181,7 +180,8 @@ export default function IndustrialCoverallProPage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       <div className="bg-neutral-50 py-4">
         <Container>
           <div className="flex items-center text-sm text-neutral-600">
@@ -449,6 +449,7 @@ export default function IndustrialCoverallProPage() {
           </div>
         </div>
       )}
-    </MainLayout>
+    
+      </div>
   );
 } 

@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 
@@ -29,7 +28,8 @@ export default function SustainableUniformTrendsPost() {
   const modifiedDate = '2024-03-26T10:15:00Z';
   
   return (
-    <MainLayout>
+    <div className="bg-white">
+    
       <Container>
         <div className="py-10">
           <div className="mb-8">
@@ -227,6 +227,7 @@ export default function SustainableUniformTrendsPost() {
           </div>
         </div>
       </Container>
-    </MainLayout>
+    
+      </div>
   );
 } 

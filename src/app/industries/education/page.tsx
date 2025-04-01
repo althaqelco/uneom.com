@@ -7,8 +7,6 @@ import { motion } from 'framer-motion';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 
 // Education industry blog posts
 const educationBlogPosts = [
@@ -119,9 +117,6 @@ export default function EducationPage() {
   
   return (
     <div className="bg-white min-h-screen">
-      {/* Main Header Component */}
-      <Header locale={locale} />
-      
       {/* Hero Section with Main Title */}
       <section className="pt-28 pb-16 bg-gradient-to-r from-primary-50 to-primary-100">
         <Container>
@@ -433,9 +428,6 @@ export default function EducationPage() {
           </motion.div>
         </Container>
       </section>
-      
-      {/* Footer */}
-      <Footer locale={locale} />
     </div>
   );
 } 

@@ -144,5 +144,5 @@ export default function BulkOrderingServicePageArabic() {
     }
   };
   
-  return <ServicePageLayout locale="ar" serviceData={serviceData} skipMainLayout={true} />;
+  return <ServicePageLayout locale="ar" serviceData={serviceData}  />;
 } 

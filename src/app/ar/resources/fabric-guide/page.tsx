@@ -219,5 +219,5 @@ export default function FabricGuidePageArabic() {
     }
   };
   
-  return <ResourcePageLayout resourceData={resourceData} skipMainLayout={true} />;
+  return <ResourcePageLayout resourceData={resourceData}  />;
 } 

@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { metadata } from './metadata';
@@ -107,7 +106,8 @@ export default function AuthorsPage() {
   const locale = 'en';
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       {/* Hero Section */}
       <section className="py-20 bg-primary-700 text-white">
         <Container>
@@ -194,6 +194,7 @@ export default function AuthorsPage() {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    
+      </div>
   );
 } 

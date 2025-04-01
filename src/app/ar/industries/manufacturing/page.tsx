@@ -144,7 +144,7 @@ export default function ManufacturingPageArabic() {
     <IndustryPageLayout 
       locale={locale}
       industryData={manufacturingIndustryData}
-      skipMainLayout={true}
+      
     />
   );
 } 
