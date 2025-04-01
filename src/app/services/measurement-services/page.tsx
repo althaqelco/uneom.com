@@ -144,5 +144,5 @@ export default function MeasurementServicesPage() {
     }
   };
   
-  return <ServicePageLayout locale={locale} serviceData={serviceData} />;
+  return <ServicePageLayout locale={locale} serviceData={serviceData} skipMainLayout={true} />;
 } 

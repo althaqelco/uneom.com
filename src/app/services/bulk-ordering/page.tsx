@@ -151,5 +151,5 @@ export default function BulkOrderingServicePage() {
     }
   };
   
-  return <ServicePageLayout locale={locale} serviceData={serviceData} />;
+  return <ServicePageLayout locale={locale} serviceData={serviceData} skipMainLayout={true} />;
 } 
