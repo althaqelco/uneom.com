@@ -107,8 +107,7 @@ export default function QuotePage() {
   };
 
   return (
-    <div className="bg-white">
-    
+    <>
       <SEO 
         title="Request a Quote"
         description="Request a quote for UNEOM's professional uniforms and corporate attire. Custom bulk orders, competitive pricing, and premium quality."
@@ -410,7 +409,6 @@ export default function QuotePage() {
           )}
         </Container>
       </section>
-    
-    </div>
+    </>
   );
 } 

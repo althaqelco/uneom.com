@@ -98,8 +98,7 @@ export default function ContactPage() {
   ];
   
   return (
-    <div className="bg-white">
-    
+    <>
       {/* Hero Section */}
       <div className="relative py-24 bg-primary-700 text-white">
         <Container>
@@ -393,7 +392,6 @@ export default function ContactPage() {
           </div>
         </Container>
       </section>
-    
-    </div>
+    </>
   );
 } 

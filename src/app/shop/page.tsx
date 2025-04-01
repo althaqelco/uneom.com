@@ -109,8 +109,7 @@ export default function ShopPage() {
   const [searchTerm, setSearchTerm] = React.useState('');
   
   return (
-    <div className="bg-white">
-    
+    <>
       {/* Hero Section */}
       <section className="bg-gray-100 py-12">
         <Container>
@@ -235,6 +234,6 @@ export default function ShopPage() {
           </div>
         </Container>
       </section>
-    </div>
+    </>
   );
 } 
