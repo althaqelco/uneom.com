@@ -64,10 +64,12 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/css/image-fixes.css" />
         {/* Favicon configuration */}
-        <link rel="icon" href="/favicon/UNEOM_FAVICON.png" />
-        <link rel="apple-touch-icon" href="/favicon/UNEOM_FAVICON.png" />
-        <link rel="shortcut icon" type="image/png" href="/favicon/UNEOM_FAVICON.png" />
-        <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" /> {/* Fallback for older browsers */}
+        <link rel="icon" href="/favicon/uneom-favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon/uneom-favicon.png" />
+        <link rel="shortcut icon" type="image/png" href="/favicon/uneom-favicon.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon/uneom-favicon.png" /> {/* Fallback for older browsers */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="favicon" href="/favicon.ico" />
         {/* Add scripts for image handling and error checking */}
         <script src="/js/image-handler.js" defer></script>
         <script src="/js/404-checker.js" defer></script>

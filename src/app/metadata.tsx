@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     'custom uniforms Saudi Arabia'
   ],
   icons: {
-    icon: '/favicon/UNEOM_FAVICON.png',
-    shortcut: '/favicon/UNEOM_FAVICON.png',
-    apple: '/favicon/UNEOM_FAVICON.png',
+    icon: '/favicon/uneom-favicon.png',
+    shortcut: '/favicon/uneom-favicon.png',
+    apple: '/favicon/uneom-favicon.png',
   },
   openGraph: {
     title: 'UNEOM | Premium Uniform Supplier in Saudi Arabia - Custom Designs & Quality Fabrics',
