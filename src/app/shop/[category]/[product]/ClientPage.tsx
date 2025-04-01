@@ -110,8 +110,7 @@ export default function ClientPage({ params }: ClientPageProps) {
   };
   
   return (
-    <div className="bg-white">
-    
+    <>
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-4">
         <Container>
@@ -491,7 +490,6 @@ export default function ClientPage({ params }: ClientPageProps) {
           </div>
         </Container>
       </section>
-    
-    </div>
+    </>
   );
 } 

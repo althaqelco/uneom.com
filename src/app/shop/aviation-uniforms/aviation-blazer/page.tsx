@@ -235,8 +235,7 @@ export default function AviationBlazerPage() {
   };
 
   return (
-    <div className="bg-white">
-    
+    <>
       <Container className="py-8">
         <div className="flex justify-end mb-4">
           <button 
@@ -445,7 +444,6 @@ export default function AviationBlazerPage() {
           </div>
         </div>
       </Container>
-    
-    </div>
+    </>
   );
 }

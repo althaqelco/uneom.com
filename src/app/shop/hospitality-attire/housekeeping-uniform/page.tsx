@@ -301,8 +301,7 @@ export default function HousekeepingUniformPage() {
   };
 
   return (
-    <div className="bg-white">
-    
+    <>
       <Container className="py-8">
         <div className="flex justify-end mb-4">
           <button 
@@ -684,7 +683,6 @@ export default function HousekeepingUniformPage() {
           </div>
         )}
       </Container>
-    
-    </div>
+    </>
   );
 } 

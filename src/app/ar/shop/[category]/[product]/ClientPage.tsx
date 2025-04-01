@@ -42,7 +42,7 @@ export default function ClientPage({ product, relatedProducts, locale }: ClientP
   // Return a loading or error state if product is undefined
   if (!product) {
     return (
-      
+      <>
         <Container>
           <div className="py-20 text-center">
             <h2 className="text-2xl font-bold mb-4">المنتج غير متوفر</h2>
@@ -52,7 +52,7 @@ export default function ClientPage({ product, relatedProducts, locale }: ClientP
             </Link>
           </div>
         </Container>
-      
+      </>
     );
   }
 
@@ -74,7 +74,7 @@ export default function ClientPage({ product, relatedProducts, locale }: ClientP
   };
 
   return (
-    
+    <>
       {/* Breadcrumb */}
       <div className="bg-neutral-100 py-4">
         <Container>
@@ -339,6 +339,6 @@ export default function ClientPage({ product, relatedProducts, locale }: ClientP
           </div>
         </Container>
       </section>
-    
+    </>
   );
 } 

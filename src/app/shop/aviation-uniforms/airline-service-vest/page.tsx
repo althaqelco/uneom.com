@@ -236,8 +236,7 @@ export default function AirlineServiceVestPage() {
   };
 
   return (
-    <div className="bg-white">
-    
+    <>
       <Container className="py-8">
         <div className="flex justify-end mb-4">
           <button 
@@ -446,7 +445,6 @@ export default function AirlineServiceVestPage() {
           </div>
         </div>
       </Container>
-    
-    </div>
+    </>
   );
 } 
