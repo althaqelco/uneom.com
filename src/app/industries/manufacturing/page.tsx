@@ -16,8 +16,7 @@ import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import MainLayout from '@/components/layout/MainLayout';
 
 export default function ManufacturingPage() {
   const locale = 'en';
@@ -241,67 +240,26 @@ export default function ManufacturingPage() {
   
   // Page layout with animation components
   return (
-    <>
-      <Header locale={locale} />
-      <div className="bg-white">
+    <MainLayout locale={locale}>
+      <div className="bg-white min-h-screen">
         {/* Hero Section */}
-        <div className="relative bg-gradient-to-r from-primary-900 to-primary-700 text-white py-16 md:py-24">
-          <div className="absolute inset-0 overflow-hidden opacity-30 mix-blend-overlay">
-            <Image 
-              src="/images/industries/manufacturing/manufacturing_uniform_overview.jpg" 
-              alt="Industrial Manufacturing Uniforms" 
-              fill 
-              className="object-cover" 
-              priority
-            />
-          </div>
-          
+        <section className="pt-28 pb-16 bg-gradient-to-r from-blue-50 to-slate-100">
           <Container>
-            <Breadcrumbs locale={locale} />
-            
-            <div className="mt-8 md:mt-12 max-w-4xl">
-              <motion.h1 
-                initial="hidden" 
-                animate="visible" 
-                variants={fadeInUp}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
-              >
-                Premium Industrial & Manufacturing Uniforms in Saudi Arabia
-              </motion.h1>
-              
-              <motion.p 
-                initial="hidden" 
-                animate="visible" 
-                variants={fadeInUp}
-                className="text-xl md:text-2xl opacity-90 mb-8"
-              >
-                Safety-Certified Workwear Engineered for Saudi Arabian Industrial Excellence
-              </motion.p>
-              
-              <motion.div 
-                initial="hidden" 
-                animate="visible" 
-                variants={fadeInUp}
-                className="flex flex-wrap gap-4"
-              >
-                <Button
-                  onClick={handleWhatsAppInquiry}
-                  className="flex items-center gap-2 text-lg"
-                >
-                  <FaWhatsapp /> Contact Specialist
-                </Button>
-                
-                <Button
-                  href="/quote?industry=manufacturing"
-                  variant="outline"
-                  className="text-lg"
-                >
-                  Request Quote
-                </Button>
-              </motion.div>
-            </div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="max-w-4xl mx-auto text-center"
+            >
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">
+                Industrial Manufacturing Uniforms
+              </h1>
+              <p className="text-xl text-blue-700">
+                Premium-quality uniforms tailored for the manufacturing industry in Saudi Arabia
+              </p>
+            </motion.div>
           </Container>
-        </div>
+        </section>
         
         {/* Introduction Section */}
         <Container className="py-16 md:py-24">
@@ -754,7 +712,6 @@ export default function ManufacturingPage() {
           </Container>
         </div>
       </div>
-      <Footer locale={locale} />
-    </>
+    </MainLayout>
   );
 } 
