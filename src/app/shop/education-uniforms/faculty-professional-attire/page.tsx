@@ -403,7 +403,6 @@ export default function FacultyProfessionalAttirePage() {
           </div>
         </Container>
       </div>
-    
-      </div>
+    </div>
   );
 } 

@@ -395,7 +395,6 @@ export default function PremiumSchoolUniformPage() {
           </div>
         </Container>
       </div>
-    
-      </div>
+    </div>
   );
 } 

@@ -97,7 +97,6 @@ export default function WorkplaceUniformsPage() {
 
   return (
     <div className="bg-white">
-    
       <Container className="py-8">
         <Breadcrumbs items={breadcrumbs.map(item => ({
           label: item.name,
@@ -317,7 +316,6 @@ export default function WorkplaceUniformsPage() {
           </div>
         </div>
       </Container>
-    
-      </div>
+    </div>
   );
 } 

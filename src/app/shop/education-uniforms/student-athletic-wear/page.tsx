@@ -542,7 +542,6 @@ export default function StudentAthleticWearPage() {
           </div>
         </Container>
       </div>
-    
-      </div>
+    </div>
   );
 } 

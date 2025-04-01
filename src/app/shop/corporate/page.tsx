@@ -258,6 +258,6 @@ export default function CorporatePage() {
         </Container>
       </section>
     </div>
-      </div>
+    </div>
   );
 } 

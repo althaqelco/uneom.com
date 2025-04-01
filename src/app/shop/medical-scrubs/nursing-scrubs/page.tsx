@@ -495,7 +495,6 @@ export default function NursingScrubsPage() {
           </div>
         )}
       </Container>
-    
-      </div>
+    </div>
   );
 } 

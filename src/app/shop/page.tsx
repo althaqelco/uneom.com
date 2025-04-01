@@ -235,7 +235,6 @@ export default function ShopPage() {
           </div>
         </Container>
       </section>
-    
-      </div>
+    </div>
   );
 } 

@@ -573,6 +573,6 @@ export default function PremiumMedicalScrubsPage() {
         </div>
       )}
     
-      </div>
+    </div>
   );
 } 
