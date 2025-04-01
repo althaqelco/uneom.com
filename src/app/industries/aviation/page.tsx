@@ -50,32 +50,32 @@ export default function AviationPage() {
     ],
     
     products: [
-      {
-        id: "airline-crew-uniform",
+    {
+      id: "airline-crew-uniform",
         name: "Airline Crew Uniforms",
         description: "Premium quality flight attendant uniforms with modest Islamic-compliant options for Saudi airlines and GCC carriers.",
-        image: "/images/aviation/flightـattendantsـuniforms.jpg",
+      image: "/images/aviation/flightـattendantsـuniforms.jpg",
         href: "/shop/aviation-uniforms/airline-crew-uniform"
-      },
-      {
-        id: "pilot-uniform-set",
+    },
+    {
+      id: "pilot-uniform-set",
         name: "Professional Pilot Uniform Sets",
         description: "Complete pilot uniform sets designed for Saudi airline captains and officers, featuring premium fabrics and traditional styling.",
-        image: "/images/aviation/aviation_captin_uniform.jpg",
+      image: "/images/aviation/aviation_captin_uniform.jpg",
         href: "/shop/aviation-uniforms/pilot-uniform-set"
-      },
-      {
-        id: "ground-crew-uniform",
-        name: "Ground Staff Uniforms",
+    },
+    {
+      id: "ground-crew-uniform",
+      name: "Ground Staff Uniforms",
         description: "Practical and professional attire for airport ground personnel, featuring durable materials and weather-appropriate designs.",
-        image: "/images/aviation/aviation_uniform_airline.jpg",
+      image: "/images/aviation/aviation_uniform_airline.jpg",
         href: "/shop/aviation-uniforms/ground-crew-uniform"
       },
       {
         id: "airport-lounge-uniform",
         name: "Airport Lounge & VIP Service Uniforms",
         description: "Elegant uniforms for premium lounge staff and VIP service personnel that reflect luxury hospitality standards.",
-        image: "/images/aviation/aviation_uniform_flightـattendants.jpg",
+      image: "/images/aviation/aviation_uniform_flightـattendants.jpg",
         href: "/shop/aviation-uniforms/airport-lounge-uniform"
       },
       {
@@ -89,7 +89,7 @@ export default function AviationPage() {
         id: "airline-service-vest",
         name: "Airline Service Vests & Accessories",
         description: "Complementary garments and accessories to complete aviation uniform collections, including vests, scarves, and ties.",
-        image: "/images/aviation/flightـattendantsـuniforms_details.jpg",
+      image: "/images/aviation/flightـattendantsـuniforms_details.jpg",
         href: "/shop/aviation-uniforms/airline-service-vest"
       }
     ],
@@ -184,5 +184,5 @@ export default function AviationPage() {
     }
   };
 
-  return <IndustryPageLayout locale={locale} industryData={aviationData} />;
-}
+  return <IndustryPageLayout locale={locale} industryData={aviationData} skipMainLayout={true} />;
+} 
