@@ -187,7 +187,7 @@ export default function ManufacturingPage() {
     }
   ];
   
-  // Testimonials data - ADJUSTED STRUCTURE
+  // Testimonials data
   const testimonials = [
     {
       content: "UNEOM transformed our safety program with industrial uniforms that not only exceed international standards but are also exceptionally comfortable in Saudi Arabia's high-temperature industrial environments.",
@@ -252,7 +252,7 @@ export default function ManufacturingPage() {
         "Comfort during physically demanding tasks"
       ],
       relevantProducts: ["industrial-coverall-pro", "hi-vis-safety-uniform"],
-      image: "/images/industries/manufacturing/heavy-industry-sub.jpg"
+      image: "/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg"
     },
     {
       id: "petrochemical",
@@ -265,7 +265,7 @@ export default function ManufacturingPage() {
         "Compliance with strict safety regulations"
       ],
       relevantProducts: ["flame-resistant-workwear", "industrial-coverall-pro"],
-      image: "/images/industries/manufacturing/petrochemical-sub.jpg"
+      image: "/images/industries/manufacturing/manufacturing_uniform_perpare.jpg"
     },
     {
       id: "food-processing",
@@ -278,7 +278,7 @@ export default function ManufacturingPage() {
         "Comfort in varying temperature environments (cold storage/hot kitchens)"
       ],
       relevantProducts: [],
-      image: "/images/industries/manufacturing/food-processing-sub.jpg"
+      image: "/images/industries/manufacturing/manufacturing_uniform_basic.jpg"
     }
   ];
   
@@ -317,8 +317,8 @@ export default function ManufacturingPage() {
             animate="visible"
           >
              <Image
-                src="/images/industries/manufacturing/manufacturing-hero.jpg" // Placeholder - needs actual image
-                alt="Manufacturing uniforms in Saudi Arabia"
+                src="/images/industries/manufacturing/manufacturing_uniform_overview.jpg"
+                alt="Manufacturing uniforms overview in Saudi Arabia"
                 width={800}
                 height={600}
                 className="rounded-lg shadow-xl"
