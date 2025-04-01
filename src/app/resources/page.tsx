@@ -104,10 +104,9 @@ export default function ResourcesPage() {
   ];
   
   return (
-    <div className="bg-white">
-    
+    <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-20">
+      <section className="bg-gradient-to-r from-primary-900 to-primary-800 text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-25">
           <Image
             src="/images/blog/sustainable-uniforms.jpg"
@@ -221,7 +220,6 @@ export default function ResourcesPage() {
           </div>
         </Container>
       </section>
-    
-      </div>
+    </>
   );
 } 

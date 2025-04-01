@@ -146,37 +146,38 @@ export default function CorporatePage() {
   };
 
   return (
-    <div className="bg-white">
-    
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-neutral-900 to-neutral-800 text-white py-24">
-        <div className="absolute inset-0 overflow-hidden opacity-40">
-          <Image
-            src="/images/corporate/corporate_uniform_formal.jpg"
-            alt={content.title}
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        <Container>
-          <motion.div
-            className="max-w-3xl"
-            initial="hidden"
-            animate="visible"
-            variants={fadeIn}
-          >
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">{content.title}</h1>
-            <p className="text-xl opacity-90 mb-8">{content.subtitle}</p>
-            <Link 
-              href={content.cta.url}
-              className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
+    <>
+      <div className="relative min-h-[40vh] flex items-center bg-gradient-to-r from-primary-900 to-primary-800 overflow-hidden">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-r from-neutral-900 to-neutral-800 text-white py-24">
+          <div className="absolute inset-0 overflow-hidden opacity-40">
+            <Image
+              src="/images/corporate/corporate_uniform_formal.jpg"
+              alt={content.title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <Container>
+            <motion.div
+              className="max-w-3xl"
+              initial="hidden"
+              animate="visible"
+              variants={fadeIn}
             >
-              {content.cta.text}
-            </Link>
-          </motion.div>
-        </Container>
-      </section>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">{content.title}</h1>
+              <p className="text-xl opacity-90 mb-8">{content.subtitle}</p>
+              <Link 
+                href={content.cta.url}
+                className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
+              >
+                {content.cta.text}
+              </Link>
+            </motion.div>
+          </Container>
+        </section>
+      </div>
 
       {/* Introduction Section */}
       <section className="py-16 bg-white">
@@ -303,7 +304,6 @@ export default function CorporatePage() {
           </motion.div>
         </Container>
       </section>
-    
-      </div>
+    </>
   );
 } 
