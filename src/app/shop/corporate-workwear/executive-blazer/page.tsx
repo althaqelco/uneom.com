@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { IoMdCheckmark } from 'react-icons/io';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -89,7 +88,8 @@ export default function ExecutiveBlazerPage() {
   };
   
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-4">
         <Container>
@@ -341,6 +341,7 @@ export default function ExecutiveBlazerPage() {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    
+      </div>
   );
 } 

@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -128,7 +127,6 @@ export default function SecurityOfficerUniformPage() {
       size: selectedSize,
       quantity
     });
-    
     alert('Product added to your quote request.');
   };
   
@@ -146,7 +144,8 @@ export default function SecurityOfficerUniformPage() {
   };
   
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-4">
         <Container>
@@ -516,6 +515,7 @@ export default function SecurityOfficerUniformPage() {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    
+      </div>
   );
 } 

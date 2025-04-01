@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -111,7 +110,8 @@ export default function ClientPage({ params }: ClientPageProps) {
   };
   
   return (
-    <MainLayout locale="en">
+    <div className="bg-white">
+    
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-4">
         <Container>
@@ -491,6 +491,7 @@ export default function ClientPage({ params }: ClientPageProps) {
           </div>
         </Container>
       </section>
-    </MainLayout>
+    
+    </div>
   );
 } 

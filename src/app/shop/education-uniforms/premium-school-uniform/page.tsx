@@ -9,7 +9,6 @@ import { FaStar, FaStarHalfAlt, FaRegStar, FaCheck, FaShippingFast, FaWhatsapp }
 import Head from 'next/head';
 import { Metadata } from 'next';
 
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -154,7 +153,8 @@ export default function PremiumSchoolUniformPage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       <Head>
         <title>Premium School Uniforms for Saudi Educational Institutions | Uneom</title>
         <meta name="description" content="High-quality premium school uniforms designed for Saudi Arabian schools with superior comfort, durability, and perfect fit. Available in various styles and customization options." />
@@ -395,6 +395,7 @@ export default function PremiumSchoolUniformPage() {
           </div>
         </Container>
       </div>
-    </MainLayout>
+    
+      </div>
   );
 } 

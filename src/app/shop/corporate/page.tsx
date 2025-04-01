@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -101,6 +100,7 @@ export default function CorporatePage() {
   ];
   
   return (
+    <div className="bg-white">
     <div className="bg-gray-50 min-h-screen">
       <div className="bg-gradient-to-b from-white to-gray-50">
         <Container>
@@ -258,5 +258,6 @@ export default function CorporatePage() {
         </Container>
       </section>
     </div>
+      </div>
   );
 } 

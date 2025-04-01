@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -21,11 +20,11 @@ import { StarIcon } from '@heroicons/react/24/solid';
 
 export default function LuxuryHotelUniformPage() {
   const locale = 'en';
-  const [selectedColor, setSelectedColor] = useState<string | null>('Navy Blue');
+  const [selectedColor, setSelectedColor] = useState<string | null>('Dark Gray');
   const [selectedSize, setSelectedSize] = useState<string | null>('M');
   const [activeTab, setActiveTab] = useState('description');
   const [showRequestForm, setShowRequestForm] = useState(false);
-  const [quantity, setQuantity] = useState(10);
+  const [quantity, setQuantity] = useState(30);
 
   // Product data
   const product = {
@@ -213,7 +212,6 @@ export default function LuxuryHotelUniformPage() {
       size: selectedSize,
       quantity
     });
-    
     alert('Product added to your quote request. Our team will contact you shortly.');
   };
   
@@ -231,7 +229,8 @@ export default function LuxuryHotelUniformPage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-4">
         <Container>
@@ -605,6 +604,7 @@ export default function LuxuryHotelUniformPage() {
           </div>
         </div>
       )}
-    </MainLayout>
+    
+      </div>
   );
 } 

@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { useQuote } from '@/contexts/QuoteContext';
@@ -237,7 +236,8 @@ export default function FlightAttendantDressPage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       <Container className="py-8">
         <div className="flex justify-end mb-4">
           <button 
@@ -381,11 +381,11 @@ export default function FlightAttendantDressPage() {
             
             <div className="mt-6">
               <AddToQuoteButton 
-  product={product}
-  color={selectedColor || undefined}
-  size={selectedSize || undefined}
-  quantity={quantity}
-/>
+                product={product}
+                color={selectedColor || undefined}
+                size={selectedSize || undefined}
+                quantity={quantity}
+              />
             </div>
           </div>
         </div>
@@ -446,6 +446,7 @@ export default function FlightAttendantDressPage() {
           </div>
         </div>
       </Container>
-    </MainLayout>
+    
+    </div>
   );
 }

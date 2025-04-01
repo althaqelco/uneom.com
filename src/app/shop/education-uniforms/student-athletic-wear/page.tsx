@@ -8,7 +8,6 @@ import { FaCheck, FaStar, FaStarHalfAlt, FaRegStar, FaShippingFast, FaWhatsapp }
 import Head from 'next/head';
 import { Metadata } from 'next';
 
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -153,7 +152,8 @@ export default function StudentAthleticWearPage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       <Head>
         <title>Student Athletic & PE Uniforms for Saudi Schools | Uneom</title>
         <meta name="description" content="High-performance athletic and PE uniforms designed for Saudi Arabian schools. Durable, comfortable and modest designs with customization options." />
@@ -542,6 +542,7 @@ export default function StudentAthleticWearPage() {
           </div>
         </Container>
       </div>
-    </MainLayout>
+    
+      </div>
   );
 } 

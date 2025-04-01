@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -283,12 +282,13 @@ export default function ConciergeUniformPage() {
     if (selectedColor && selectedSize) {
       addItem({
         id: product.id,
-        name: product.name,
-        price: product.basePrice,
-        quantity: quantity,
-        image: product.images[0].src,
+        name: product.name[locale],
+        description: product.description[locale],
         color: selectedColor,
-        size: selectedSize
+        size: selectedSize,
+        quantity: quantity,
+        price: product.basePrice,
+        image: product.images[0].src
       });
     }
   };
@@ -302,7 +302,8 @@ export default function ConciergeUniformPage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       <Container className="py-8">
         <div className="flex justify-end mb-4">
           <button 
@@ -665,6 +666,7 @@ export default function ConciergeUniformPage() {
           </div>
         )}
       </Container>
-    </MainLayout>
+    
+      </div>
   );
 } 
