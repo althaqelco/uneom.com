@@ -144,7 +144,7 @@ export default function EducationPageArabic() {
     <IndustryPageLayout 
       locale={locale}
       industryData={educationIndustryData}
-      skipMainLayout={true}
+      
     />
   );
 } 

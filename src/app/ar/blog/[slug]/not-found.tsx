@@ -2,12 +2,11 @@
 
 import React from 'react';
 import Link from 'next/link';
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 
 export default function NotFound() {
   return (
-    <MainLayout locale="ar">
+    
       <Container>
         <div className="py-20 text-center">
           <h1 className="text-3xl font-bold text-red-600 mb-4">المقال غير موجود</h1>
@@ -17,6 +16,6 @@ export default function NotFound() {
           </Link>
         </div>
       </Container>
-    </MainLayout>
+    
   );
 } 

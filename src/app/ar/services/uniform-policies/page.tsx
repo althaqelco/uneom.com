@@ -144,5 +144,5 @@ export default function UniformPoliciesServicePageArabic() {
     }
   };
   
-  return <ServicePageLayout locale="ar" serviceData={serviceData} skipMainLayout={true} />;
+  return <ServicePageLayout locale="ar" serviceData={serviceData}  />;
 } 

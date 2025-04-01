@@ -215,5 +215,5 @@ export default function ProcurementGuidePageArabic() {
     }
   };
 
-  return <ResourcePageLayout resourceData={resourceData} skipMainLayout={true} />;
+  return <ResourcePageLayout resourceData={resourceData}  />;
 }

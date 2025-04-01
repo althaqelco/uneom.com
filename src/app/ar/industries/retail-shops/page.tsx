@@ -184,5 +184,5 @@ export default function RetailShopsPageArabic() {
     }
   };
 
-  return <IndustryPageLayout locale={locale} industryData={retailShopsData} skipMainLayout={true} />;
+  return <IndustryPageLayout locale={locale} industryData={retailShopsData}  />;
 } 

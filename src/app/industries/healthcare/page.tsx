@@ -64,6 +64,7 @@ export default function HealthcarePage() {
     }
   ];
   
+  // All content for this industry page
   const healthcareData = {
     locale: locale,
     title: 'Premium Medical Scrubs & Healthcare Uniforms in Saudi Arabia',
@@ -248,32 +249,28 @@ export default function HealthcarePage() {
         id: "testimonial-2",
         quote: "The modest design options UNEOM provided for our female medical staff have been particularly well-received, offering the perfect balance of professional functionality and Islamic dress code compliance. Their fabrics withstand our rigorous infection control protocols, and the uniforms retain their appearance significantly better than previous suppliers, reducing our replacement costs by nearly 40%.",
         author: "Fahad Al-Qasim",
-        position: "Procurement Director",
-        company: "Saudi German Hospital Group, Jeddah"
+        position: "Supply Chain Director",
+        company: "International Medical Group"
       }
     ],
     
     // Enhanced FAQ
     faq: [
       {
-        question: "How do UNEOM's medical uniforms comply with Saudi healthcare regulations?",
-        answer: "All our medical uniforms meet or exceed Saudi Commission for Health Specialties (SCHS) requirements and Ministry of Health standards. We provide compliant color options for different medical specialties, appropriate coverage requirements, and antimicrobial properties that satisfy Saudi infection control guidelines. Our compliance team stays updated on regulatory changes to ensure our products remain fully compliant with the latest standards."
+        question: "How do your healthcare uniforms meet Saudi infection control standards?",
+        answer: "Our medical uniforms incorporate BioCare Antimicrobial Technology that eliminates 99.9% of bacteria, is effective through 100+ industrial washes, and complies with all Saudi Ministry of Health infection control guidelines. Additionally, our fabrics feature DuraSeal fluid protection to prevent cross-contamination in clinical settings."
       },
       {
-        question: "What makes your antimicrobial fabrics essential for Saudi healthcare facilities?",
-        answer: "Our BioCare Antimicrobial technology is specifically valuable in Saudi healthcare settings as it inhibits 99.9% of bacterial growth on fabric surfaces, reduces odor development during long shifts in warm environments, maintains freshness throughout demanding clinical work, and provides an additional layer of protection for both staff and patients in high-traffic medical facilities across the Kingdom."
+        question: "Do you offer modest medical uniform options for female healthcare professionals?",
+        answer: "Yes, we provide a comprehensive range of modest medical attire specifically designed for female healthcare professionals in Saudi Arabia. These include hijab-compatible scrub designs, longer lab coat options, and specialized modest nursing uniforms that maintain full compliance with both Islamic dress requirements and medical standards."
       },
       {
-        question: "Can you create customized uniforms for our entire hospital with department-specific designs?",
-        answer: "Yes, we specialize in comprehensive healthcare uniform programs for Saudi facilities of all sizes. We implement consistent base designs with department-specific color coding (emergency, nursing, surgical, laboratory, etc.), role identifiers, and hospital branding elements. This creates a cohesive institutional appearance while making it easy for patients to identify different departments and staff roles throughout your facility."
+        question: "Can you implement custom color coding for different hospital departments?",
+        answer: "Absolutely. We specialize in creating comprehensive department color coding systems for Saudi healthcare facilities. This includes consistent color application across all uniform items, departmental identification elements, and complementary accessories that help patients and staff quickly identify different medical specialties and services."
       },
       {
-        question: "What options do you offer for female Saudi healthcare professionals requiring modest attire?",
-        answer: "We offer an extensive range of modest medical uniform options designed specifically for Saudi female healthcare professionals, including longer tunic-length tops, looser-fitting medical pants, hijab-friendly designs in clinical-appropriate fabrics, and full coverage options that maintain professional medical standards while fully respecting Islamic dress requirements. All modest options maintain the same antimicrobial properties and functional features as our standard lines."
-      },
-      {
-        question: "How quickly can you outfit our entire healthcare facility with custom uniforms?",
-        answer: "For Saudi healthcare facilities, we typically implement a complete uniform program within 4-8 weeks, depending on customization requirements and facility size. This includes initial consultation, design approval, size collection, production, and distribution. For urgent needs, we offer expedited programs for critical departments. We maintain Saudi-based inventory of core medical styles to ensure quick replacement and new staff outfitting."
+        question: "What is your delivery timeframe for large hospital uniform orders?",
+        answer: "For standard healthcare uniform orders, we typically deliver within 2-3 weeks across Saudi Arabia. For large hospital-wide implementations, we create a phased delivery schedule based on departmental priority, typically completing full facility rollout within 4-6 weeks, with express options available for urgent requirements."
       }
     ],
     
@@ -364,8 +361,8 @@ export default function HealthcarePage() {
     
     // Enhanced call to action
     cta: {
-      title: "Transform Your Saudi Healthcare Facility with Professional Medical Uniforms",
-      description: "Contact our healthcare uniform specialists to discuss your facility's specific requirements and discover how our SCHS-compliant medical uniform solutions can enhance your professional image, staff satisfaction, and operational efficiency.",
+      title: "Enhance Your Healthcare Facility with Professional Medical Uniforms",
+      description: "Contact our healthcare uniform specialists to discuss how UNEOM can provide SCHS-compliant, antimicrobial medical attire for your Saudi healthcare facility.",
       buttonText: "Request Healthcare Uniform Consultation",
       buttonUrl: "/contact?industry=healthcare"
     }
@@ -534,7 +531,7 @@ export default function HealthcarePage() {
   return (
     <div className="bg-white">
     
-      <IndustryPageLayout locale={locale} industryData={healthcareData} skipMainLayout={true} />
+      <IndustryPageLayout locale={locale} industryData={healthcareData} />
       <FeaturedProducts />
       <RelatedBlogPosts />
       <QuickQuoteSection />

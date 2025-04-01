@@ -153,8 +153,7 @@ export default function PremiumSchoolUniformPage() {
   };
 
   return (
-    <div className="bg-white">
-    
+    <>
       <Head>
         <title>Premium School Uniforms for Saudi Educational Institutions | Uneom</title>
         <meta name="description" content="High-quality premium school uniforms designed for Saudi Arabian schools with superior comfort, durability, and perfect fit. Available in various styles and customization options." />
@@ -395,6 +394,6 @@ export default function PremiumSchoolUniformPage() {
           </div>
         </Container>
       </div>
-    </div>
+    </>
   );
 } 

@@ -272,5 +272,5 @@ export default function PolicyTemplatesPageArabic() {
     }
   };
 
-  return <ResourcePageLayout resourceData={resourceData} skipMainLayout={true} />;
+  return <ResourcePageLayout resourceData={resourceData}  />;
 } 

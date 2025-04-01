@@ -8,7 +8,6 @@ import { FaCalendarAlt, FaUser, FaTag, FaShare, FaFacebookF, FaTwitter, FaLinked
 import Head from 'next/head';
 import { Metadata } from 'next';
 
-import MainLayout from '@/components/layout/MainLayout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -215,7 +214,8 @@ export default function SchoolUniformsAcademicPerformancePage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <div className="bg-white">
+    
       {/* Client-side metadata using next/head for dynamic language switching */}
       <Head>
         <title>{metaTitle}</title>
@@ -397,6 +397,7 @@ export default function SchoolUniformsAcademicPerformancePage() {
           </div>
         </Container>
       </div>
-    </MainLayout>
+    
+    </div>
   );
 } 

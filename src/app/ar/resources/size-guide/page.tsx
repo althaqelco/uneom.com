@@ -271,5 +271,5 @@ export default function SizeGuidePageArabic() {
     }
   };
 
-  return <ResourcePageLayout resourceData={resourceData} skipMainLayout={true} />;
+  return <ResourcePageLayout resourceData={resourceData}  />;
 } 

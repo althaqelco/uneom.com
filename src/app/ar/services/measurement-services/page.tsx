@@ -139,5 +139,5 @@ export default function MeasurementServicesPageArabic() {
     }
   };
   
-  return <ServicePageLayout locale="ar" serviceData={serviceData} skipMainLayout={true} />;
+  return <ServicePageLayout locale="ar" serviceData={serviceData}  />;
 } 

@@ -278,8 +278,7 @@ export default function PremiumMedicalScrubsPage() {
   };
 
   return (
-    <div className="bg-white">
-    
+    <>
       <div className="bg-neutral-50 py-4">
         <Container>
           <div className="flex items-center text-sm text-neutral-600">
@@ -572,7 +571,6 @@ export default function PremiumMedicalScrubsPage() {
           </div>
         </div>
       )}
-    
-    </div>
+    </>
   );
 } 

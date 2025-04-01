@@ -100,7 +100,6 @@ export default function CorporatePage() {
   ];
   
   return (
-    <div className="bg-white">
     <div className="bg-gray-50 min-h-screen">
       <div className="bg-gradient-to-b from-white to-gray-50">
         <Container>
@@ -257,7 +256,6 @@ export default function CorporatePage() {
           </div>
         </Container>
       </section>
-    </div>
     </div>
   );
 } 
