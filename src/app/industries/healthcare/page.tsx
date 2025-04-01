@@ -192,5 +192,5 @@ export default function HealthcarePage() {
     }
   };
 
-  return <IndustryPageLayout locale={locale} industryData={healthcareData} />;
+  return <IndustryPageLayout locale={locale} industryData={healthcareData} skipMainLayout={true} />;
 } 

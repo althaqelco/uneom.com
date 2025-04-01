@@ -309,5 +309,5 @@ export default function HospitalityPage() {
     }
   };
   
-  return <IndustryPageLayout locale={locale} industryData={hospitalityData} />;
+  return <IndustryPageLayout locale={locale} industryData={hospitalityData} skipMainLayout={true} />;
 } 
