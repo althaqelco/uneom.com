@@ -3,9 +3,10 @@ import { Inter } from 'next/font/google';
 import { QuoteProvider } from '@/contexts/QuoteContext';
 import { generateMetadata } from '@/lib/metadata';
 import LinkPreloader from '@/components/LinkPreloader';
-import ArabicOptimizer from '@/components/ArabicOptimizer';
+// import ArabicOptimizer from '@/components/ArabicOptimizer'; // Commented out
 import LocaleProvider from '@/components/providers/LocaleProvider';
-import MainLayout from '@/components/layout/MainLayout';
+import ArabicHeader from '@/components/layout/ArabicHeader';
+import ArabicFooter from '@/components/layout/ArabicFooter';
 import '@/app/globals.css';
 import Script from 'next/script';
 
@@ -99,26 +100,22 @@ export const ArabicStructuredData = () => {
   );
 };
 
-export default function ArabicRootLayout({
+export default function ArabicLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ar" dir="rtl">
-      <body className={`${inter.variable} font-sans rtl`}>
-        <LocaleProvider initialLocale="ar">
-          <QuoteProvider>
-            <MainLayout locale="ar">
-              <ArabicStructuredData />
-              {children}
-            </MainLayout>
-          </QuoteProvider>
-          <LinkPreloader criticalPaths={['/ar/services', '/ar/industries', '/ar/shop']} />
-          <ArabicOptimizer />
-        </LocaleProvider>
-        
-        {/* Script to ensure consistent RTL experience across browsers */}
+    <LocaleProvider initialLocale="ar">
+      <QuoteProvider>
+        <ArabicHeader />
+        <main className="flex-grow rtl">
+          <ArabicStructuredData />
+          {children}
+        </main>
+        <ArabicFooter />
+        <LinkPreloader criticalPaths={['/ar/services', '/ar/industries', '/ar/shop']} />
+        {/* <ArabicOptimizer /> */}
         <Script id="rtl-support-script" strategy="afterInteractive">
           {`
             (function() {
@@ -142,7 +139,7 @@ export default function ArabicRootLayout({
             })();
           `}
         </Script>
-      </body>
-    </html>
+      </QuoteProvider>
+    </LocaleProvider>
   );
 } 

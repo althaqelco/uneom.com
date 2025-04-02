@@ -8,6 +8,7 @@ import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
+import ColorSwatch from '@/components/shop/ColorSwatch';
 
 export default function PremiumMedicalScrubsPage() {
   const locale = 'en';
@@ -133,21 +134,6 @@ export default function PremiumMedicalScrubsPage() {
     
     <p>Available in a range of colors suitable for departmental color-coding, our Premium Medical Scrubs can be customized with your institution's logo and staff identification. The fabric meets international healthcare standards while being specifically adapted for Saudi Arabian healthcare environments.</p>`
   };
-
-  // Color swatch component
-  const ColorSwatch = ({ color, selected, onClick }: { color: any; selected: boolean; onClick: () => void }) => (
-    <button
-      onClick={onClick}
-      className={`w-10 h-10 rounded-full flex items-center justify-center ${selected ? 'ring-2 ring-offset-2 ring-primary-500' : ''}`}
-      title={color.name}
-    >
-      <span className="sr-only">{color.name}</span>
-      <span
-        className="w-8 h-8 rounded-full border border-neutral-200"
-        style={{ backgroundColor: color.value }}
-      />
-    </button>
-  );
 
   // Size selector component
   const SizeSelector = ({ sizes, selectedSize, onChange }: { sizes: string[]; selectedSize: string; onChange: (size: string) => void }) => (
@@ -360,8 +346,8 @@ export default function PremiumMedicalScrubsPage() {
 
               {/* Color Selection */}
               <div className="mb-6">
-                <div className="text-sm font-medium text-neutral-900 mb-3">Color: {selectedColor}</div>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="text-sm font-medium text-neutral-900 mb-3">Color: {selectedColor}</h3>
+                <div className="flex gap-2">
                   {product.colors.map(color => (
                     <ColorSwatch
                       key={color.name}

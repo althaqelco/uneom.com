@@ -12,6 +12,7 @@ import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { generateProductWhatsAppUrl } from '@/utils/whatsapp';
+import ColorSwatch from '@/components/shop/ColorSwatch';
 
 export default function PremiumMedicalScrubsArabicPage() {
   const locale = 'ar';
@@ -137,60 +138,6 @@ export default function PremiumMedicalScrubsArabicPage() {
     
     <p>متوفر بمجموعة من الألوان المناسبة لترميز الأقسام المختلفة، يمكن تخصيص سكروب الطبي الممتاز بشعار مؤسستك وتعريف الموظفين. يلبي النسيج المعايير الصحية الدولية مع تكييفه خصيصًا لبيئات الرعاية الصحية في المملكة العربية السعودية.</p>`
   };
-
-  // Define the color type for better TypeScript support
-  interface ColorOption {
-    name: string;
-    value: string;
-  }
-
-  // Define props interface for ColorSwatch component
-  interface ColorSwatchProps {
-    color: ColorOption;
-    selected: boolean;
-    onClick: () => void;
-  }
-
-  // مكون اختيار اللون
-  const ColorSwatch: React.FC<ColorSwatchProps> = ({ color, selected, onClick }) => (
-    <button
-      onClick={onClick}
-      className={`w-10 h-10 rounded-full flex items-center justify-center ${selected ? 'ring-2 ring-offset-2 ring-primary-500' : ''}`}
-      title={color.name}
-    >
-      <span className="sr-only">{color.name}</span>
-      <span
-        className="w-6 h-6 rounded-full"
-        style={{ backgroundColor: color.value }}
-      />
-    </button>
-  );
-
-  // Define props interface for SizeSelector component
-  interface SizeSelectorProps {
-    sizes: string[];
-    selectedSize: string | null;
-    onChange: (size: string) => void;
-  }
-
-  // مكون اختيار المقاس
-  const SizeSelector: React.FC<SizeSelectorProps> = ({ sizes, selectedSize, onChange }) => (
-    <div className="grid grid-cols-7 gap-2">
-      {sizes.map((size) => (
-        <button
-          key={size}
-          onClick={() => onChange(size)}
-          className={`py-2 border rounded-md ${
-            selectedSize === size
-              ? 'bg-primary-50 border-primary-500 text-primary-700'
-              : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
-          }`}
-        >
-          {size}
-        </button>
-      ))}
-    </div>
-  );
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -341,9 +288,9 @@ export default function PremiumMedicalScrubsArabicPage() {
               </div>
 
               {/* Color Selection */}
-              <div className="mb-6 text-right">
-                <div className="text-sm font-medium text-neutral-900 mb-3">اللون: {selectedColor}</div>
-                <div className="flex flex-wrap gap-2 justify-end">
+              <div className="mb-6">
+                <h3 className="text-sm font-medium text-neutral-900 mb-3">اللون: {selectedColor}</h3>
+                <div className="flex gap-2">
                   {product.colors.map(color => (
                     <ColorSwatch
                       key={color.name}
@@ -361,11 +308,21 @@ export default function PremiumMedicalScrubsArabicPage() {
                   <button className="text-sm text-primary-600 hover:text-primary-700">دليل المقاسات</button>
                   <div className="text-sm font-medium text-neutral-900">المقاس: {selectedSize}</div>
                 </div>
-                <SizeSelector
-                  sizes={product.sizes}
-                  selectedSize={selectedSize}
-                  onChange={setSelectedSize}
-                />
+                <div className="grid grid-cols-7 gap-2">
+                  {product.sizes.map((size) => (
+                    <button
+                      key={size}
+                      onClick={() => setSelectedSize(size)}
+                      className={`py-2 border rounded-md ${
+                        selectedSize === size
+                          ? 'bg-primary-50 border-primary-500 text-primary-700'
+                          : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
+                      }`}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
               </div>
 
               {/* Action Buttons */}

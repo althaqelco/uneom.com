@@ -28,25 +28,31 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
         value: '15+', 
         label: 'Years in Business',
         icon: <MdDateRange className="text-2xl" />,
-        color: 'from-amber-500 to-amber-600'
+        color: 'from-amber-500 via-amber-400 to-yellow-500'
       },
       { 
         value: '500+', 
         label: 'Clients Served',
         icon: <MdGroups className="text-2xl" />,
-        color: 'from-primary-500 to-primary-600'
+        color: 'from-blue-600 via-blue-500 to-sky-500'
       },
       { 
-        value: '100%', 
-        label: 'Quality Products',
+        value: 'Saudi-Made',
+        label: 'Saudi-Made Options',
         icon: <MdVerified className="text-2xl" />,
-        color: 'from-green-500 to-green-600'
+        color: 'from-green-600 via-green-500 to-emerald-500'
       },
       { 
-        value: '24/7', 
-        label: 'Customer Support',
-        icon: <MdSecurity className="text-2xl" />,
-        color: 'from-blue-500 to-blue-600'
+        value: 'Compliant',
+        label: 'Industry Compliance',
+        icon: <MdStarRate className="text-2xl" />,
+        color: 'from-primary-600 via-primary-500 to-primary-400'
+      },
+      { 
+        value: 'Reliable',
+        label: 'Nationwide Delivery',
+        icon: <MdLocalShipping className="text-2xl" />,
+        color: 'from-purple-600 via-purple-500 to-indigo-500'
       }
     ],
     ar: [
@@ -54,25 +60,31 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
         value: '+15', 
         label: 'سنوات في العمل',
         icon: <MdDateRange className="text-2xl" />,
-        color: 'from-amber-500 to-amber-600'
+        color: 'from-amber-500 via-amber-400 to-yellow-500'
       },
       { 
         value: '+500', 
         label: 'عملاء تمت خدمتهم',
         icon: <MdGroups className="text-2xl" />,
-        color: 'from-primary-500 to-primary-600'
+        color: 'from-blue-600 via-blue-500 to-sky-500'
       },
       { 
-        value: '100%', 
-        label: 'منتجات عالية الجودة',
+        value: 'صنع في السعودية',
+        label: 'خيارات صناعة سعودية',
         icon: <MdVerified className="text-2xl" />,
-        color: 'from-green-500 to-green-600'
+        color: 'from-green-600 via-green-500 to-emerald-500'
       },
       { 
-        value: '24/7', 
-        label: 'دعم العملاء',
-        icon: <MdSecurity className="text-2xl" />,
-        color: 'from-blue-500 to-blue-600'
+        value: 'متوافق',
+        label: 'الامتثال للمعايير',
+        icon: <MdStarRate className="text-2xl" />,
+        color: 'from-primary-600 via-primary-500 to-primary-400'
+      },
+      { 
+        value: 'موثوق',
+        label: 'توصيل لكافة المناطق',
+        icon: <MdLocalShipping className="text-2xl" />,
+        color: 'from-purple-600 via-purple-500 to-indigo-500'
       }
     ]
   };
@@ -81,54 +93,10 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
     en: {
       title: "Trusted by Leading Organizations Across Saudi Arabia",
       subtitle: "Providing high-quality professional uniforms for diverse industries throughout the Kingdom",
-      signals: [
-        {
-          icon: <MdStarRate className="w-12 h-12 text-primary-500" />,
-          title: "Industry Compliant",
-          description: "Our uniforms meet all industry standards for safety, quality and comfort"
-        },
-        {
-          icon: <MdCategory className="w-12 h-12 text-primary-500" />,
-          title: "Multiple Industries",
-          description: "Serving diverse sectors from healthcare to hospitality across Saudi Arabia"
-        },
-        {
-          icon: <MdVerified className="w-12 h-12 text-primary-500" />,
-          title: "Saudi Made",
-          description: "Supporting local manufacturing with Saudi expertise"
-        },
-        {
-          icon: <MdLayers className="w-12 h-12 text-primary-500" />,
-          title: "Specialized Designs",
-          description: "Custom uniforms for every industry, department and role"
-        }
-      ]
     },
     ar: {
       title: "موثوق به من قبل المؤسسات الرائدة في المملكة العربية السعودية",
       subtitle: "نوفر زيًا موحدًا مهنيًا عالي الجودة لصناعات متنوعة في جميع أنحاء المملكة",
-      signals: [
-        {
-          icon: <MdStarRate className="w-12 h-12 text-primary-500" />,
-          title: "متوافق مع المعايير",
-          description: "تلبي أزياؤنا الموحدة جميع معايير الصناعة للسلامة والجودة والراحة"
-        },
-        {
-          icon: <MdCategory className="w-12 h-12 text-primary-500" />,
-          title: "صناعات متعددة",
-          description: "خدمة قطاعات متنوعة من الرعاية الصحية إلى الضيافة في المملكة العربية السعودية"
-        },
-        {
-          icon: <MdVerified className="w-12 h-12 text-primary-500" />,
-          title: "صناعة سعودية",
-          description: "دعم التصنيع المحلي بخبرات سعودية"
-        },
-        {
-          icon: <MdLayers className="w-12 h-12 text-primary-500" />,
-          title: "تصاميم متخصصة",
-          description: "أزياء موحدة مخصصة لكل صناعة وقسم ودور"
-        }
-      ]
     }
   };
   
@@ -172,8 +140,8 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
       }
     }),
     hover: {
-      scale: 1.1,
-      rotate: 5,
+      scale: 1.05,
+      y: -10,
       transition: {
         type: "spring",
         stiffness: 400,
@@ -217,231 +185,130 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
   
   return (
     <section className="py-24 relative overflow-hidden">
-      {/* Ultra-modern gradient background */}
+      {/* Enhanced gradient background with multiple color accents */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/70 to-white z-0"></div>
       
-      {/* Glass morphism effect */}
+      {/* Enhanced glass morphism effect */}
       <div className="absolute inset-0 backdrop-blur-[100px] z-0"></div>
       
-      {/* Decorative elements */}
+      {/* Enhanced decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <motion.div 
-          className="absolute -top-20 left-[10%] w-64 h-64 rounded-full bg-gradient-to-br from-primary-200/40 to-blue-300/20 blur-3xl"
+          className="absolute -top-20 left-[10%] w-64 h-64 rounded-full bg-gradient-to-br from-primary-300/40 to-blue-400/30 blur-3xl"
           variants={randomFloatVariants}
           initial="initial"
           animate="animate"
           custom={1}
         ></motion.div>
         <motion.div 
-          className="absolute top-[30%] right-[5%] w-96 h-96 rounded-full bg-gradient-to-bl from-amber-200/30 to-amber-100/10 blur-3xl"
+          className="absolute top-[30%] right-[5%] w-96 h-96 rounded-full bg-gradient-to-bl from-amber-300/40 to-amber-100/20 blur-3xl"
           variants={randomFloatVariants}
           initial="initial"
           animate="animate"
           custom={2}
         ></motion.div>
         <motion.div 
-          className="absolute bottom-[10%] left-[20%] w-48 h-48 rounded-full bg-gradient-to-tr from-green-200/30 to-blue-100/20 blur-3xl"
+          className="absolute bottom-[10%] left-[20%] w-48 h-48 rounded-full bg-gradient-to-tr from-green-300/40 to-blue-200/30 blur-3xl"
           variants={randomFloatVariants}
           initial="initial"
           animate="animate"
           custom={3}
         ></motion.div>
+        <motion.div 
+          className="absolute top-[40%] left-[40%] w-72 h-72 rounded-full bg-gradient-to-tl from-purple-300/30 to-indigo-200/20 blur-3xl"
+          variants={randomFloatVariants}
+          initial="initial"
+          animate="animate"
+          custom={4}
+        ></motion.div>
 
-        {/* Mesh grid background */}
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-[0.015] mix-blend-overlay"></div>
+        {/* Enhanced mesh grid background */}
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-[0.03] mix-blend-overlay"></div>
       </div>
       
-      <div className="relative z-10">
-        <Container>
-          {/* Stats Section */}
-          <motion.div 
-            ref={statsRef} 
-            initial="hidden"
-            animate={statsControls}
-            className="relative mb-24 mx-auto max-w-5xl"
-          >
-            {/* Outer container with 3D style and elevated shadow */}
-            <div className="relative rounded-[30px] p-1 bg-gradient-to-br from-white/80 to-white/60 shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
-                style={{
-                  backdropFilter: 'blur(20px)',
-                  WebkitBackdropFilter: 'blur(20px)',
-                  boxShadow: '0 10px 40px rgba(107, 136, 255, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.7) inset, 0 -20px 40px rgba(255, 255, 255, 0.5) inset'
-                }}
-            >
-              {/* Stats container with glass effect */}
-              <div className="p-10 rounded-[28px] bg-gradient-to-br from-white/80 via-white/90 to-blue-50/50 border border-white/80"
-                   style={{ backdropFilter: 'blur(10px)' }}
-              >
-                <h3 className="text-center text-xl text-neutral-500 font-medium mb-10 tracking-wide">{isRTL ? 'بيان حقائق يونيوم' : 'UNEOM BY THE NUMBERS'}</h3>
-                
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                  {statsToDisplay.map((stat, index) => (
-                    <motion.div 
-                      key={index}
-                      custom={index}
-                      variants={counterVariants}
-                      className="relative flex flex-col items-center text-center"
-                      onHoverStart={() => setHoveredStatIndex(index)}
-                      onHoverEnd={() => setHoveredStatIndex(null)}
-                    >
-                      {/* Background circle - subtle growing animation on hover */}
-                      <AnimatePresence>
-                        {hoveredStatIndex === index && (
-                          <motion.div 
-                            className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-primary-50/40 rounded-2xl"
-                            initial={{ opacity: 0, scale: 0.85 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.85 }}
-                            transition={{ duration: 0.3 }}
-                          />
-                        )}
-                      </AnimatePresence>
-                      
-                      {/* Icon container with gradient */}
-                      <motion.div 
-                        className={`relative mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r ${stat.color || 'from-primary-500 to-blue-600'} text-white shadow-lg p-4`}
-                        variants={bounceVariants}
-                        custom={index}
-                        whileHover="hover"
-                      >
-                        {/* Inner circle */}
-                        <div className="absolute inset-[3px] rounded-full bg-white/10"></div>
-                        
-                        {/* Icon */}
-                        {stat.icon}
-                        
-                        {/* Shine effect */}
-                        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-white/30 rounded-full blur-[1px] transform translate-x-1 -translate-y-1"></div>
-                      </motion.div>
-                      
-                      {/* Value with gradient text */}
-                      <motion.div 
-                        className="relative"
-                        variants={valueTextVariants}
-                        custom={index}
-                      >
-                        <div className="text-5xl md:text-6xl font-extrabold mb-2 relative tracking-tight">
-                          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-700 to-blue-600">
-                            {stat.value}
-                          </span>
-                        </div>
-                        
-                        {/* Label with subtle animation */}
-                        <div className="text-neutral-700 font-medium relative z-10 tracking-wide">
-                          {stat.label}
-                        </div>
-                      </motion.div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            
-            {/* Decorative elements */}
-            <div className="absolute -top-8 -right-8 w-16 h-16 rounded-full bg-primary-100/80 shadow-md"></div>
-            <div className="absolute -bottom-6 -left-6 w-12 h-12 rounded-full bg-blue-100/80 shadow-md"></div>
-          </motion.div>
-          
-          <div className="mb-14 text-center relative">
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold font-heading text-neutral-900 mb-3 relative"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.7 }}
-            >
-              {text.title}
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-500 to-blue-500"></div>
-            </motion.h2>
-            <motion.p 
-              className="text-lg text-neutral-600 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.7 }}
-            >
-              {text.subtitle}
-            </motion.p>
-          </div>
-        
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {text.signals.map((signal, index) => (
-              <motion.div 
-                key={index} 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + index * 0.1, duration: 0.7 }}
-                whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
-                className="flex flex-col items-center text-center p-7 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300"
-                style={{
-                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02), 0 0 0 1px rgba(255, 255, 255, 1) inset'
-                }}
-              >
-                <div className="mb-5 bg-gradient-to-br from-primary-50 to-blue-50 p-5 rounded-2xl transform transition-transform group-hover:scale-110">
-                  {signal.icon}
-                </div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-2">{signal.title}</h3>
-                <p className="text-neutral-600">{signal.description}</p>
-              </motion.div>
-            ))}
-          </div>
+      <Container className="relative z-10">
+        {/* Enhanced Section Header with stronger shadow and text effect */}
+        <motion.div
+          className="text-center mb-16 max-w-3xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
+          }}
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-heading tracking-tight bg-gradient-to-r from-neutral-900 via-primary-800 to-neutral-900 text-transparent bg-clip-text drop-shadow-sm">
+            {text.title}
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 drop-shadow-sm">
+            {text.subtitle}
+          </p>
+        </motion.div>
 
-          <motion.div 
-            className="mt-20 relative"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-          >
-            <div className="absolute -top-12 -left-12 w-24 h-24 rounded-full bg-primary-100/80 blur-md"></div>
-            <div className="absolute -bottom-8 -right-8 w-20 h-20 rounded-full bg-blue-100/80 blur-md"></div>
-            
-            <div className="relative z-10 bg-white rounded-2xl shadow-2xl overflow-hidden border border-white/80"
-                 style={{
-                   boxShadow: '0 20px 50px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.9) inset'
-                 }}
+        {/* Enhanced Animated Stats Section */}
+        <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12">
+          {statsToDisplay.map((stat, index) => (
+            <motion.div 
+              key={index}
+              className={`flex flex-col items-center text-center p-6 rounded-2xl bg-gradient-to-br ${stat.color} hover:shadow-2xl transition-all duration-500 cursor-pointer relative overflow-hidden group`}
+              custom={index}
+              variants={bounceVariants}
+              initial="hidden"
+              animate={statsControls}
+              whileHover="hover"
+              onMouseEnter={() => setHoveredStatIndex(index)}
+              onMouseLeave={() => setHoveredStatIndex(null)}
+              style={{ 
+                boxShadow: hoveredStatIndex === index ? `0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1)` : '' 
+              }}
             >
-              <div className="grid md:grid-cols-2">
-                <div className="p-10 md:p-12 flex flex-col justify-center">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-6 text-neutral-900 leading-tight">
-                    {isRTL 
-                      ? "نزود المهنيين في مختلف القطاعات بأفضل الأزياء الموحدة"
-                      : "Equipping Professionals Across Industries with the Best Uniforms"}
-                  </h3>
-                  <p className="text-neutral-600 mb-8 text-lg">
-                    {isRTL
-                      ? "من الرعاية الصحية إلى الضيافة والطيران، نقدم زيًا موحدًا يجمع بين الوظائف والراحة والمظهر المهني."
-                      : "From healthcare to hospitality and aviation, we provide uniforms that combine functionality, comfort, and professional appearance."}
-                  </p>
-                  <ul className="space-y-4">
-                    {[
-                      isRTL ? "مواد عالية الجودة مقاومة للتآكل" : "High-quality durable materials",
-                      isRTL ? "تصاميم مريحة للاستخدام اليومي" : "Comfortable designs for daily use",
-                      isRTL ? "خيارات متوافقة مع الثقافة السعودية" : "Options compatible with Saudi culture"
-                    ].map((item, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center mr-3 mt-0.5 shadow-md">
-                          <svg className="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                          </svg>
-                        </div>
-                        <span className="text-lg text-neutral-700">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="relative h-full min-h-[400px]">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-100/30 to-blue-100/20 mix-blend-overlay"></div>
-                  <Image 
-                    src="/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg"
-                    alt={isRTL ? "مهنيون في أزياء موحدة" : "Professionals in uniforms"}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent"></div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </Container>
-      </div>
+              {/* Glass effect overlay */}
+              <div className="absolute inset-0.5 rounded-xl bg-white/90 backdrop-blur-sm z-0"></div>
+              
+              {/* Colorful background circle */}
+              <motion.div 
+                className={`absolute top-0 right-0 w-32 h-32 rounded-full bg-gradient-to-br ${stat.color} opacity-20 -mt-12 -mr-12 z-0`}
+                animate={{
+                  scale: hoveredStatIndex === index ? 1.2 : 1,
+                  opacity: hoveredStatIndex === index ? 0.3 : 0.2,
+                }}
+                transition={{ duration: 0.5 }}
+              ></motion.div>
+              
+              {/* Enhanced Icon */}
+              <motion.div
+                className={`relative z-10 text-white p-4 rounded-full bg-gradient-to-br ${stat.color} mb-4 shadow-lg group-hover:shadow-xl`}
+                variants={bounceVariants}
+                custom={index}
+              >
+                {stat.icon}
+              </motion.div>
+              
+              {/* Enhanced Value */}
+              <motion.div
+                className={`font-bold text-2xl md:text-3xl mb-2 relative z-10 bg-gradient-to-r ${stat.color} text-transparent bg-clip-text`}
+                variants={valueTextVariants}
+                custom={index}
+              >
+                {stat.value}
+              </motion.div>
+              
+              {/* Enhanced Label */}
+              <motion.div
+                className="font-medium text-neutral-700 relative z-10"
+                variants={counterVariants}
+                custom={index}
+              >
+                {stat.label}
+              </motion.div>
+              
+              {/* Bottom accent */}
+              <div className={`absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r ${stat.color} rounded-b-xl z-10`}></div>
+            </motion.div>
+          ))}
+        </div>
+      </Container>
     </section>
   );
 };

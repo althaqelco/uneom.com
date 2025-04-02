@@ -63,46 +63,24 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/css/image-fixes.css" />
-        {/* Favicon configuration */}
         <link rel="icon" href="/favicon/uneom-favicon.png" />
         <link rel="apple-touch-icon" href="/favicon/uneom-favicon.png" />
-        <link rel="shortcut icon" type="image/png" href="/favicon/uneom-favicon.png" />
-        <link rel="icon" type="image/x-icon" href="/favicon/uneom-favicon.png" /> {/* Fallback for older browsers */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="favicon" href="/favicon.ico" />
-        {/* Add scripts for image handling and error checking */}
         <script src="/js/image-handler.js" defer></script>
-        <script src="/js/404-checker.js" defer></script>
-        {/* Agregamos metatags para la cache y cross-origin */}
+        {process.env.NODE_ENV === 'development' && (
+          <script src="/js/404-checker.js" defer></script>
+        )}
         <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
         <meta httpEquiv="Access-Control-Allow-Origin" content="*" />
-        
-        {/* Precarga de la imagen de respaldo */}
         <link rel="preload" href="/images/default-placeholder.jpg" as="image" />
         <link rel="preload" href="/images/default-placeholder.svg" as="image" />
-        
-        {/* Precarga de fuentes importantes */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Estilos para corregir problemas de imágenes */}
-        <link rel="stylesheet" href="/css/image-fixes.css" />
-        
-        {/* Content Security Policy for images */}
         <meta
           httpEquiv="Content-Security-Policy"
           content="img-src 'self' data: https: http: blob: *.vercel.app *.uneom.com *.githubusercontent.com;"
         />
-        
-        {/* Add our image handler script */}
-        <script src="/js/image-handler.js" defer></script>
-        
-        {/* Add 404 checker script (only in development) */}
-        {process.env.NODE_ENV === 'development' && (
-          <script src="/js/404-checker.js" defer></script>
-        )}
       </head>
       <body className={`${inter.variable} font-sans`}>
         <LocaleProvider initialLocale={locale}>
