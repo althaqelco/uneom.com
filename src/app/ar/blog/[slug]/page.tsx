@@ -13,8 +13,14 @@ export const revalidate = 3600; // revalidate every hour
 
 // Generate static paths for all blog posts
 export function generateStaticParams() {
-  // Hardcode the slugs we know exist
-  return [{ slug: 'industrial-safety-compliance-guide' }];
+  // Hardcode the slugs we know exist - exclude industrial-safety-compliance-guide
+  // which has its own static page
+  return [
+    // Add other Arabic blog slugs here if needed
+    { slug: 'school-uniforms-academic-performance' },
+    { slug: 'sustainable-school-uniforms-saudi' },
+    { slug: 'sustainable-uniforms-2024-trends' }
+  ];
 }
 
 // Format date function
@@ -30,6 +36,11 @@ function formatBlogDate(dateString: string) {
 // The page component
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
+  
+  // Special case for industrial-safety-compliance-guide - redirect to static page
+  if (slug === 'industrial-safety-compliance-guide') {
+    return notFound();
+  }
   
   // Get the blog post directly using the module reference
   const post = blogPostsModule.getBlogPostBySlug(slug, 'ar');
