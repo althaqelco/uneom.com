@@ -459,7 +459,7 @@ export default function HiVisSafetyUniformArabicPage() {
 
         {/* Related Products */}
         <div className="mt-16">
-          <SectionHeading alignment="right">منتجات ذات صلة</SectionHeading>
+          <SectionHeading className="text-right">منتجات ذات صلة</SectionHeading>
           <RelatedProducts products={product.relatedProducts} />
         </div>
       </Container>
@@ -468,7 +468,7 @@ export default function HiVisSafetyUniformArabicPage() {
       {showRequestForm && (
         <RequestInfoForm 
           productName={product.name}
-          productCode={product.productCode}
+          productId={product.id}
           onClose={() => setShowRequestForm(false)}
         />
       )}

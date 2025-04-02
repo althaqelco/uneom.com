@@ -12,8 +12,28 @@ export async function generateStaticParams() {
     { slug: 'security-uniform-standards' },
     { slug: 'uniform-customization' },
     { slug: 'medical-scrubs-evolution' },
+    // Additional slugs to match the English version
+    { slug: 'corporate-uniform-employee-satisfaction' },
+    { slug: 'industrial-protective-clothing-advances' },
+    { slug: 'sustainable-uniforms-2024-trends' },
+    { slug: 'vision-2030-reshaping-dress-codes' },
+    { slug: 'sustainable-uniform-solutions' },
+    { slug: 'advanced-fabrics-healthcare-uniforms' },
+    // Airline-related slugs
     { slug: 'evolving-trends-gulf-airline-uniforms' },
     { slug: 'uniforms-airline-brand-identity' },
-    { slug: 'islamic-compliant-aviation-attire' }
+    { slug: 'islamic-compliant-aviation-attire' },
+    { slug: 'healthcare-uniforms-infection-control' },
+    // Hospitality and corporate slugs
+    { slug: 'hospitality-uniforms-cultural-identity' },
+    { slug: 'corporate-uniform-psychology' },
+    { slug: 'sustainable-uniforms' },
+    { slug: 'healthcare-uniforms' },
+    // School uniform related slugs
+    { slug: 'cultural-identity-saudi-school-uniforms' },
+    { slug: 'school-uniforms-academic-performance' },
+    { slug: 'sustainable-school-uniforms-saudi' },
+    // Industrial safety slug - Important!
+    { slug: 'industrial-safety-compliance-guide' }
   ];
 } 

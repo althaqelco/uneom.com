@@ -17,16 +17,19 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, locale = 'en' }) => {
   const isRTL = locale === 'ar';
   const pathname = usePathname();
   const isHomePage = pathname === '/' || pathname === '/ar';
+  const isArabicPage = pathname?.startsWith('/ar');
   
   // استخدام هيكل موحد لكلا الاتجاهين بدون تعليق التصيير
   return (
     <div className={`min-h-screen flex flex-col`} dir={isRTL ? 'rtl' : 'ltr'}>
       <VercelImageFixer />
-      <Header locale={locale} />
-      <main className={`flex-grow ${isHomePage ? 'pt-0' : 'pt-24'}`}>
+      {/* عرض Header فقط إذا لم تكن صفحة عربية */}
+      {!isArabicPage && <Header locale={locale} />}
+      <main className={`flex-grow ${isHomePage ? 'pt-0' : !isArabicPage ? 'pt-24' : 'pt-0'}`}>
         {children}
       </main>
-      <Footer locale={locale} />
+      {/* عرض Footer فقط إذا لم تكن صفحة عربية */}
+      {!isArabicPage && <Footer locale={locale} />}
       <FloatingWhatsApp 
         phoneNumber="971558164922" 
         locale={locale as 'en' | 'ar'} 

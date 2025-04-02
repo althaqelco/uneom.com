@@ -55,8 +55,60 @@ const config: Config = {
         sans: ['Inter', 'sans-serif'],
         heading: ['Poppins', 'sans-serif'],
       },
+      animation: {
+        'fadeIn': 'fadeIn 0.5s ease-in-out',
+        'scaleIn': 'scaleIn 0.7s ease-in-out',
+        'fadeInDelayed': 'fadeIn 0.5s ease-in-out 0.2s both',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+      },
+      typography: (theme: any) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.neutral.800'),
+            maxWidth: '100%',
+            h1: {
+              color: theme('colors.neutral.900'),
+              fontFamily: theme('fontFamily.heading'),
+            },
+            h2: {
+              color: theme('colors.neutral.900'),
+              fontFamily: theme('fontFamily.heading'),
+            },
+            h3: {
+              color: theme('colors.neutral.900'),
+              fontFamily: theme('fontFamily.heading'),
+            },
+            h4: {
+              color: theme('colors.neutral.900'),
+              fontFamily: theme('fontFamily.heading'),
+            },
+            a: {
+              color: theme('colors.primary.600'),
+              '&:hover': {
+                color: theme('colors.primary.700'),
+              },
+            },
+            img: {
+              borderRadius: theme('borderRadius.lg'),
+            },
+            figcaption: {
+              fontStyle: 'italic',
+              color: theme('colors.neutral.500'),
+            },
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
 export default config;
