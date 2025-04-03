@@ -2,57 +2,20 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { format } from 'date-fns';
-import { FaCalendar, FaUser } from 'react-icons/fa';
 import Container from '@/components/ui/Container';
 // Import blog posts directly to avoid potential issues with server-side imports
 import { blogPostsAr } from '@/lib/data/blogPostsArray';
 
+// Set static rendering 
 export const dynamic = 'force-static';
 export const revalidate = 3600; // revalidate every hour
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
-  // Define all possible blog post slugs for the Arabic version
-  return [
-    { slug: 'uniform-trends-2023' },
-    { slug: 'sustainable-fabrics' },
-    { slug: 'healthcare-uniforms-innovation' },
-    { slug: 'corporate-identity-uniforms' },
-    { slug: 'uniform-maintenance-tips' },
-    { slug: 'aviation-uniform-design' },
-    { slug: 'hotel-staff-uniforms' },
-    { slug: 'security-uniform-standards' },
-    { slug: 'uniform-customization' },
-    { slug: 'medical-scrubs-evolution' },
-    { slug: 'corporate-uniform-employee-satisfaction' },
-    { slug: 'industrial-protective-clothing-advances' },
-    { slug: 'sustainable-uniforms-2024-trends' },
-    // Add the missing blog slugs that caused the errors
-    { slug: 'evolving-trends-gulf-airline-uniforms' },
-    { slug: 'uniforms-airline-brand-identity' },
-    { slug: 'islamic-compliant-aviation-attire' },
-    { slug: 'vision-2030-reshaping-dress-codes' },
-    { slug: 'sustainable-uniform-solutions' },
-    { slug: 'advanced-fabrics-healthcare-uniforms' },
-    { slug: 'cultural-identity-saudi-school-uniforms' },
-    { slug: 'school-uniforms-academic-performance' },
-    { slug: 'sustainable-school-uniforms-saudi' },
-    { slug: 'industrial-safety-compliance-guide' },
-    { slug: 'security-uniform-psychology' },
-    { slug: 'advanced-fabrics-security-uniforms' },
-    { slug: 'corporate-security-branding' },
-  ];
-}
-
-// Format date function
-function formatDate(dateString: string) {
-  try {
-    return format(new Date(dateString), 'MMMM dd, yyyy');
-  } catch (error) {
-    console.error('Error formatting date:', error);
-    return dateString;
-  }
+  // Return all possible slugs
+  return blogPostsAr.map(post => ({
+    slug: post.slug
+  }));
 }
 
 // The page component
@@ -68,6 +31,18 @@ export default function BlogPostPageArabic({ params }: { params: { slug: string 
   
   if (!post) {
     return notFound();
+  }
+  
+  // Format date directly in the JSX to avoid extra function calls
+  let formattedDate = post.date;
+  try {
+    // Simple date formatting without using a function
+    const dateObj = new Date(post.date);
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                   'July', 'August', 'September', 'October', 'November', 'December'];
+    formattedDate = `${months[dateObj.getMonth()]} ${dateObj.getDate()}, ${dateObj.getFullYear()}`;
+  } catch (e) {
+    // Keep the original date string if there's an error
   }
   
   // Return the blog post content directly
@@ -118,15 +93,15 @@ export default function BlogPostPageArabic({ params }: { params: { slug: string 
               
               <div className="flex flex-wrap items-center gap-4 text-neutral-600 mb-8 justify-end">
                 <div className="flex items-center">
-                  <span>{formatDate(post.date)}</span>
-                  <FaCalendar className="text-primary-600 mr-2 ml-2" />
+                  <span>{formattedDate}</span>
+                  <span className="text-primary-600 mx-2">📅</span>
                 </div>
                 <span>•</span>
                 <div className="flex items-center">
                   <span>
                     {typeof post.author === 'object' ? post.author.name : post.author}
                   </span>
-                  <FaUser className="text-primary-600 mr-2 ml-2" />
+                  <span className="text-primary-600 mx-2">👤</span>
                 </div>
               </div>
               
