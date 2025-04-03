@@ -43,6 +43,7 @@ export async function generateStaticParams() {
     { category: 'corporate-workwear', product: 'executive-suit' },
     { category: 'security-uniforms', product: 'security-officer-uniform' },
     { category: 'security-uniforms', product: 'tactical-security-uniforms' },
+    { category: 'security-uniforms', product: 'executive-protection' },
     { category: 'corporate', product: 'executive-office-attire' },
     { category: 'culinary-uniforms', product: 'executive-chef-coat' },
     { category: 'manufacturing-attire', product: 'industrial-protective-uniforms' },
