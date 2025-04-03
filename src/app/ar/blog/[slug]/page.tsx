@@ -54,16 +54,6 @@ function formatBlogDate(dateString: string) {
   }
 }
 
-// Get translated versions of the post
-function getArabicPost(slug: string) {
-  const post = getBlogPostBySlug(slug, 'ar');
-  
-  if (!post) return null;
-  
-  // Use the Arabic post directly since it's already translated in the data file
-  return post;
-}
-
 // The page component
 export default function BlogPostPageArabic({ params }: { params: { slug: string } }) {
   const { slug } = params;
@@ -72,8 +62,8 @@ export default function BlogPostPageArabic({ params }: { params: { slug: string 
     return notFound();
   }
   
-  // Get the Arabic version of the blog post
-  const post = getArabicPost(slug);
+  // Get the Arabic version of the blog post directly
+  const post = getBlogPostBySlug(slug, 'ar');
   
   if (!post) {
     return notFound();
