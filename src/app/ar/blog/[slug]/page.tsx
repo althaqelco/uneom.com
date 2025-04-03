@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { format } from 'date-fns';
 import { FaCalendar, FaUser } from 'react-icons/fa';
 import Container from '@/components/ui/Container';
-import { getBlogPostBySlug } from '@/lib/data/blogPosts.server';
+// Import blog posts directly to avoid potential issues with server-side imports
+import { blogPostsAr } from '@/lib/data/blogPostsArray';
 
 export const dynamic = 'force-static';
 export const revalidate = 3600; // revalidate every hour
@@ -45,7 +46,7 @@ export async function generateStaticParams() {
 }
 
 // Format date function
-function formatBlogDate(dateString: string) {
+function formatDate(dateString: string) {
   try {
     return format(new Date(dateString), 'MMMM dd, yyyy');
   } catch (error) {
@@ -62,8 +63,8 @@ export default function BlogPostPageArabic({ params }: { params: { slug: string 
     return notFound();
   }
   
-  // Get the Arabic version of the blog post directly
-  const post = getBlogPostBySlug(slug, 'ar');
+  // Get the Arabic version of the blog post directly from array
+  const post = blogPostsAr.find(post => post.slug === slug);
   
   if (!post) {
     return notFound();
@@ -117,7 +118,7 @@ export default function BlogPostPageArabic({ params }: { params: { slug: string 
               
               <div className="flex flex-wrap items-center gap-4 text-neutral-600 mb-8 justify-end">
                 <div className="flex items-center">
-                  <span>{formatBlogDate(post.date)}</span>
+                  <span>{formatDate(post.date)}</span>
                   <FaCalendar className="text-primary-600 mr-2 ml-2" />
                 </div>
                 <span>•</span>
