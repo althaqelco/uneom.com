@@ -62,6 +62,7 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="google-site-verification" content="k27-50XLg0yC-wwjyTIqfkGiowHO5nrAjTNiYmmf7is" />
         <link rel="stylesheet" href="/css/image-fixes.css" />
         <link rel="icon" href="/favicon/uneom-favicon.png" />
         <link rel="apple-touch-icon" href="/favicon/uneom-favicon.png" />
