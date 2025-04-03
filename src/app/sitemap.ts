@@ -1,153 +1,153 @@
 import { MetadataRoute } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+// Function to get all page directories recursively
+const getPageDirectories = (dir: string, basePath = '', results: string[] = []) => {
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    // Skip internal Next.js files/directories and API routes
+    if (item.startsWith('_') || item === 'api' || item === 'fonts' || item === '[locale]') continue;
+    
+    const itemPath = path.join(dir, item);
+    const stats = fs.statSync(itemPath);
+    
+    if (stats.isDirectory()) {
+      // If directory contains page.tsx, add it to results
+      if (fs.existsSync(path.join(itemPath, 'page.tsx'))) {
+        // Normalize path for URL (remove src/app and replace backslashes)
+        const urlPath = path.join(basePath, item).replace(/\\/g, '/');
+        results.push(urlPath);
+      }
+      
+      // Recursively search subdirectories
+      getPageDirectories(itemPath, path.join(basePath, item), results);
+    }
+  }
+  
+  return results;
+};
+
+// Function to determine priority based on URL path
+const getPriority = (url: string): number => {
+  // Homepage gets highest priority
+  if (url === '' || url === 'ar') return 1.0;
+  
+  // Primary sections
+  if (['shop', 'ar/shop', 'quote', 'ar/quote'].includes(url)) return 0.9;
+  
+  // Major content sections
+  if (url.includes('/industries/') || 
+      url.includes('/shop/') || 
+      url.includes('/services/')) return 0.8;
+  
+  // Secondary content
+  if (url.includes('/blog/') || 
+      url.includes('/resources/') || 
+      url.includes('/authors/')) return 0.7;
+  
+  // Default priority for other pages
+  return 0.6;
+};
+
+// Function to determine change frequency based on URL path
+const getChangeFrequency = (url: string): 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' => {
+  // Pages that change frequently
+  if (url === '' || url === 'ar' || url.includes('/shop')) return 'daily';
+  
+  // Pages that change somewhat regularly
+  if (url.includes('/blog/') || 
+      url.includes('/industries/') || 
+      url.includes('/products/')) return 'weekly';
+  
+  // Pages that change less frequently
+  return 'monthly';
+};
+
+// Function to get the alternate language URL
+const getAlternateUrl = (url: string): string | null => {
+  if (url.startsWith('ar/')) {
+    // If Arabic, alternate is English
+    return url.substring(3);
+  } else {
+    // If English, alternate is Arabic
+    return `ar/${url}`;
+  }
+};
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://uneom.com';
   const lastModified = new Date();
+  const appDirectory = path.join(process.cwd(), 'src', 'app');
   
-  // Define all pages for the sitemap with both English and Arabic versions
-  const pages = [
-    // Main pages
-    { url: '/', lastModified, changeFrequency: 'daily', priority: 1.0 },
-    { url: '/ar', lastModified, changeFrequency: 'daily', priority: 1.0 },
-    
-    // About pages
-    { url: '/about', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/about', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    
-    // Contact pages
-    { url: '/contact', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/contact', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    
-    // Quote pages
-    { url: '/quote', lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: '/ar/quote', lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    
-    // Industries pages
-    { url: '/industries', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/industries', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    
-    // Industry specific pages - English
-    { url: '/industries/healthcare', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/industries/aviation', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/industries/hospitality', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/industries/corporate', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/industries/education', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/industries/manufacturing', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/industries/security', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    
-    // Industry specific pages - Arabic
-    { url: '/ar/industries/healthcare', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/industries/aviation', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/industries/hospitality', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/industries/corporate', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/industries/education', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/industries/manufacturing', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/industries/security', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    
-    // Services pages
-    { url: '/services', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/services', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    
-    // Service specific pages - English
-    { url: '/services/program-management', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/services/custom-design', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/services/bulk-ordering', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/services/measurement-services', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/services/uniform-policies', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    
-    // Service specific pages - Arabic
-    { url: '/ar/services/program-management', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/services/custom-design', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/services/bulk-ordering', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/services/measurement-services', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: '/ar/services/uniform-policies', lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    
-    // Resources pages
-    { url: '/resources', lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: '/ar/resources', lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    
-    // Resource specific pages - English
-    { url: '/resources/fabric-guide', lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: '/resources/size-guide', lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: '/resources/procurement-guide', lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: '/resources/policy-templates', lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    
-    // Resource specific pages - Arabic
-    { url: '/ar/resources/fabric-guide', lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: '/ar/resources/size-guide', lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: '/ar/resources/procurement-guide', lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: '/ar/resources/policy-templates', lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    
-    // Shop pages
-    { url: '/shop', lastModified, changeFrequency: 'daily', priority: 0.9 },
-    { url: '/ar/shop', lastModified, changeFrequency: 'daily', priority: 0.9 },
-    
-    // Shop category pages - English
-    { url: '/shop/medical-scrubs', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/shop/aviation-uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/shop/hospitality-attire', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/shop/corporate-workwear', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/shop/security-uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/shop/education-uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    
-    // Shop category pages - Arabic
-    { url: '/ar/shop/medical-scrubs', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/ar/shop/aviation-uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/ar/shop/hospitality-attire', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/ar/shop/corporate-workwear', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/ar/shop/security-uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/ar/shop/education-uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    
-    // Blog pages
-    { url: '/blog', lastModified, changeFrequency: 'weekly', priority: 0.7 },
-    { url: '/ar/blog', lastModified, changeFrequency: 'weekly', priority: 0.7 },
-    
-    // صفحات الزي الموحد واليونيفورم حسب المدن السعودية - اللغة الإنجليزية
-    { url: '/locations/riyadh/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/locations/jeddah/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/locations/dammam/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/locations/makkah/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/locations/medina/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/locations/khobar/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/locations/taif/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/locations/abha/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    
-    // صفحات الزي الموحد واليونيفورم حسب المدن السعودية - اللغة العربية
-    { url: '/ar/locations/riyadh/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/ar/locations/jeddah/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/ar/locations/dammam/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/ar/locations/makkah/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/ar/locations/medina/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/ar/locations/khobar/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/ar/locations/taif/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    { url: '/ar/locations/abha/uniforms', lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    
-    // صفحات اليونيفورم حسب القطاعات والمدن - اللغة الإنجليزية
-    { url: '/industries/healthcare/riyadh', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/industries/healthcare/jeddah', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/industries/healthcare/dammam', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/industries/aviation/riyadh', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/industries/aviation/jeddah', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/industries/hospitality/riyadh', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/industries/hospitality/jeddah', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/industries/hospitality/dammam', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    
-    // صفحات اليونيفورم حسب القطاعات والمدن - اللغة العربية
-    { url: '/ar/industries/healthcare/riyadh', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/ar/industries/healthcare/jeddah', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/ar/industries/healthcare/dammam', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/ar/industries/aviation/riyadh', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/ar/industries/aviation/jeddah', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/ar/industries/hospitality/riyadh', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/ar/industries/hospitality/jeddah', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-    { url: '/ar/industries/hospitality/dammam', lastModified, changeFrequency: 'weekly', priority: 0.9 },
-  ];
+  // Get all page directories
+  let pageDirectories = getPageDirectories(appDirectory);
   
-  // Create sitemap entries with absolute URLs
-  return pages.map(page => ({
-    url: `${baseUrl}${page.url}`,
-    lastModified: page.lastModified,
-    changeFrequency: page.changeFrequency as 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',
-    priority: page.priority,
-  }));
+  // Add homepage (root)
+  pageDirectories.unshift('');
+  
+  // Create sitemap entries with absolute URLs and metadata
+  const sitemapEntries = pageDirectories.map(pageDir => {
+    const url = pageDir;
+    const priority = getPriority(url);
+    const changeFrequency = getChangeFrequency(url);
+    
+    return {
+      url: `${baseUrl}/${url}`,
+      lastModified,
+      changeFrequency,
+      priority,
+    };
+  });
+  
+  // Create a map for hreflang alternates
+  const urlMap = new Map();
+  
+  // Group URLs by their base path (removing language prefix)
+  sitemapEntries.forEach(entry => {
+    const urlPath = entry.url.replace(baseUrl + '/', '');
+    const isArabic = urlPath.startsWith('ar/');
+    const basePath = isArabic ? urlPath.substring(3) : urlPath;
+    
+    if (!urlMap.has(basePath)) {
+      urlMap.set(basePath, { en: null, ar: null });
+    }
+    
+    const langData = urlMap.get(basePath);
+    if (isArabic) {
+      langData.ar = entry.url;
+    } else {
+      langData.en = entry.url;
+    }
+  });
+  
+  // Enhanced sitemap with alternates (for search engines that support it)
+  // Note: Next.js's built-in sitemap doesn't support alternates directly,
+  // but we're including them in the static file for completeness
+  const staticSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${sitemapEntries.map(entry => {
+  const urlPath = entry.url.replace(baseUrl + '/', '');
+  const isArabic = urlPath.startsWith('ar/');
+  const basePath = isArabic ? urlPath.substring(3) : urlPath;
+  const langData = urlMap.get(basePath);
+  
+  return `  <url>
+    <loc>${entry.url}</loc>
+    ${langData.en ? `<xhtml:link rel="alternate" hreflang="en" href="${langData.en}"/>` : ''}
+    ${langData.ar ? `<xhtml:link rel="alternate" hreflang="ar" href="${langData.ar}"/>` : ''}
+    <lastmod>${entry.lastModified.toISOString().split('T')[0]}</lastmod>
+    <changefreq>${entry.changeFrequency}</changefreq>
+    <priority>${entry.priority.toFixed(1)}</priority>
+  </url>`;
+}).join('\n')}
+</urlset>`;
+
+  // Write enhanced sitemap to public directory
+  fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), staticSitemap);
+  
+  // Return Next.js compatible sitemap (without alternates)
+  return sitemapEntries;
 } 
