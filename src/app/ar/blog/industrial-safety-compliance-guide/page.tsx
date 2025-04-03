@@ -93,6 +93,9 @@ const post = {
   `
 };
 
+// Force this to be a static page
+export const dynamic = 'force-static';
+
 export default function BlogPostPage() {
   return (
     <div dir="rtl" lang="ar">
@@ -101,11 +104,19 @@ export default function BlogPostPage() {
         <Container>
           <div className="mb-8 text-right">
             <nav className="flex justify-end text-sm mb-6">
-              <Link href="/ar" className="hover:text-primary-600 transition-colors">الرئيسية</Link>
-              <span className="mx-2">/</span>
-              <Link href="/ar/blog" className="hover:text-primary-600 transition-colors">المدونة</Link>
-              <span className="mx-2">/</span>
-              <span className="text-primary-600">{post.title}</span>
+              <ol className="flex items-center space-x-2 space-x-reverse">
+                <li>
+                  <Link href="/ar" className="hover:text-primary-600 transition-colors">الرئيسية</Link>
+                </li>
+                <li className="flex items-center">
+                  <span className="mx-2 text-neutral-400">/</span>
+                  <Link href="/ar/blog" className="hover:text-primary-600 transition-colors">المدونة</Link>
+                </li>
+                <li className="flex items-center">
+                  <span className="mx-2 text-neutral-400">/</span>
+                  <span className="text-primary-600">{post.title}</span>
+                </li>
+              </ol>
             </nav>
             <h1 className="text-3xl md:text-4xl font-bold mb-6">{post.title}</h1>
             

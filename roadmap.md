@@ -1,6 +1,6 @@
 # Optimized Cursor AI Prompt for UNEOM.com NextJS Website
 
-You are inside a new NextJS 14.2.23 project within the `uneom-3` directory. I need you to help me build a professional B2B uniform supplier website for UNEOM - Saudi Arabia's leading provider of professional uniforms and scrubs. The website should be bilingual (English/Arabic) with built-in shop functionality.
+You are inside a new NextJS 14.2.23 project within the `uneom` directory. I need you to help me build a professional B2B uniform supplier website for UNEOM - Saudi Arabia's leading provider of professional uniforms and scrubs. The website should be bilingual (English/Arabic) with built-in shop functionality.
 
 ## Project Setup
 
@@ -119,13 +119,18 @@ const healthcareContent = {
 ### Service Pages (pages/services/[slug].js)
 - Static generation for 5 service pages
 - Each service page should include:
-  1. Service overview
+  1. Service intro with top search related keyword
   2. Service components/steps
   3. Visual process timeline
-  4. Benefits section
-  5. Case studies/examples
-  6. Client testimonials
-  7. CTA for service consultation
+- 4. top 3 related products
+  5. Benefits section
+- 6. Top 3 related posts
+  7. Case studies/examples
+  8. Client testimonials
+  9. CTA for service consultation
+
+
+
 
 ### Shop Implementation (pages/shop/*)
 - Main shop page (pages/shop/index.js)
@@ -596,4 +601,5 @@ Test all code using the browser function especially stripe, login, and other thi
 Make sure everything is actually useful to the user - do not create anything that is simply placeholder code, or base functionality (unless you are planning on expanding on it later) at no point should you say something is implemented when it is only 10% implemented or is pure placeholder code - you are expected to code from A to Z and not just placeholder or small parts of code that don’t really do what a user would want.
 
 When you need a new .env variable, you should ask me for it, and then add it to my .env and then test to make sure that is working, in whatever order makes sense to you or to the part of the project we’re working on at that time. 
+
 

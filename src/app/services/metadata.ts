@@ -1,38 +1,38 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Professional Uniform Services | Custom Workwear Solutions | UNEOM Saudi Arabia',
-  description: 'Comprehensive uniform services in Saudi Arabia including custom design, bulk manufacturing, embroidery, delivery, fitting, and maintenance for all professional sectors.',
-  keywords: 'uniform services Saudi Arabia, custom workwear solutions, professional uniform design, bulk uniform manufacturing, corporate embroidery service, uniform delivery Saudi, staff fitting service, uniform maintenance, workwear customization, Saudi uniform provider',
+  title: 'Professional Uniform Services & Solutions | UNEOM Saudi Arabia',
+  description: 'Comprehensive uniform services for Saudi organizations. Design, program management, custom branding, and consulting solutions to streamline your uniform program.',
+  keywords: 'uniform services Saudi Arabia, corporate uniform program, uniform design services, bulk ordering, measurement services, uniform policy consulting, UNEOM services',
   openGraph: {
-    title: 'Premium Uniform Services for Professional Excellence | UNEOM Saudi Arabia',
-    description: 'Discover UNEOM\'s comprehensive range of professional uniform services. From custom design to delivery and maintenance, we provide end-to-end workwear solutions for Saudi businesses.',
-    type: 'website',
+    title: 'Professional Uniform Services & Solutions | UNEOM Saudi Arabia',
+    description: 'Comprehensive uniform services for Saudi organizations including design, program management, and custom branding solutions.',
     locale: 'en',
+    type: 'website',
     images: [
       {
-        url: '/images/services/services-header.jpg',
+        url: '/images/banner-placeholder.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Professional Uniform Services in Saudi Arabia',
+        alt: 'UNEOM Professional Uniform Services and Solutions'
       }
-    ],
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Professional Uniform Services | UNEOM Saudi Arabia',
-    description: 'End-to-end uniform solutions including custom design, manufacturing, embroidery, delivery, and maintenance for Saudi businesses.',
-    images: ['/images/services/services-header.jpg'],
+    title: 'Professional Uniform Services & Solutions | UNEOM Saudi Arabia',
+    description: 'Comprehensive uniform services for Saudi organizations',
+    images: ['/images/banner-placeholder.jpg']
   },
   robots: {
     index: true,
-    follow: true,
+    follow: true
   },
   alternates: {
     canonical: 'https://uneom.com/services',
     languages: {
       'en': 'https://uneom.com/services',
-      'ar': 'https://uneom.com/ar/services',
-    },
-  },
+      'ar': 'https://uneom.com/ar/services'
+    }
+  }
 }; 
