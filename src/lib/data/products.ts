@@ -306,6 +306,53 @@ export const products = [
     price: "SAR 1,799",
     minOrder: 5,
     href: "/shop/aviation-uniforms/pilot-uniform-set"
+  },
+  {
+    id: "executive-protection",
+    category: "security-uniforms",
+    categoryName: "Security Uniforms",
+    industry: "security",
+    name: "Executive Protection Uniform",
+    shortDescription: "High-performance, discrete protection uniforms for VIP security personnel",
+    description: "Our executive protection uniforms are specifically designed for security professionals working in high-profile VIP protection roles throughout Saudi Arabia. These garments balance a professional appearance with tactical functionality, offering discrete armor compatibility and enhanced mobility. Ideal for security details at royal events, diplomatic missions, executive protection, and high-profile facilities requiring an elevated security presence.",
+    features: [
+      "Covert armor compatibility for ballistic protection",
+      "Tear and abrasion resistant fabrics with stretch properties",
+      "Moisture-wicking technology for Saudi climate comfort",
+      "Enhanced mobility design with action pleats",
+      "Discrete tactical pocket system for essential security tools",
+      "Professional appearance that blends into executive environments",
+      "Available in traditional and modern Saudi-appropriate styles"
+    ],
+    images: [
+      { src: "/images/security/advanced-fabrics-hero.jpg", alt: "Executive protection uniform for professional security personnel" },
+      { src: "/images/security/smart-fabric-technology.jpg", alt: "Advanced fabric technology in executive protection suits" },
+      { src: "/images/security/stab-resistant-fabric.jpg", alt: "Protective features of executive security uniforms" },
+      { src: "/images/security/saudi-events-security.jpg", alt: "Executive protection staff at Saudi formal events" }
+    ],
+    colors: [
+      { name: "Tactical Black", value: "#1a1a1a", image: "/images/security/advanced-fabrics-hero.jpg" },
+      { name: "Executive Navy", value: "#1f2937", image: "/images/security/saudi-events-security.jpg" },
+      { name: "Professional Charcoal", value: "#374151", image: "/images/security/smart-fabric-technology.jpg" }
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL", "3XL", "Custom"],
+    fabricDetails: {
+      composition: "65% Polyester, 30% Cotton, 5% Elastane",
+      gsm: "240",
+      features: ["Tear-resistant", "Stab-resistant options", "Moisture-wicking", "4-way stretch"]
+    },
+    customizationOptions: [
+      "Covert armor integration",
+      "Communications equipment compatibility",
+      "Team identification systems",
+      "Company/event-specific branding",
+      "Modular component system",
+      "Saudi-specific cultural adaptations"
+    ],
+    relatedProducts: ["security-supervisor", "event-security", "hotel-security-uniform"],
+    price: "SAR 899",
+    minOrder: 10,
+    href: "/shop/security-uniforms/executive-protection"
   }
 ];
 
