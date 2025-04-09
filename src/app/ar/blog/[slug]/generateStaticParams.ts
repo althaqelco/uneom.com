@@ -34,6 +34,20 @@ export async function generateStaticParams() {
     { slug: 'school-uniforms-academic-performance' },
     { slug: 'sustainable-school-uniforms-saudi' },
     // Industrial safety slug - Important!
-    { slug: 'industrial-safety-compliance-guide' }
+    { slug: 'industrial-safety-compliance-guide' },
+    { slug: 'hospitality-uniform-guide' },
+    { slug: 'industrial-uniform-color-coding' },
+    { slug: 'industrial-heat-stress-management' },
+    { slug: 'industrial-electrostatic-protection' },
+    { slug: 'security-uniform-psychology' },
+    { slug: 'female-security-uniforms' },
+    { slug: 'corporate-security-branding' },
+    // Retail uniform related slugs
+    { slug: 'retail-uniform-impact' },
+    { slug: 'retail-uniform-selection-guide' },
+    { slug: 'sustainable-retail-uniforms' },
+    { slug: 'luxury-retail-uniforms' },
+    { slug: 'evolution-of-retail-uniforms-saudi-arabia' },
+    { slug: 'choosing-the-right-retail-uniforms' }
   ];
 } 

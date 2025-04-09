@@ -1,200 +1,225 @@
-'use client';
-
 import React from 'react';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaLinkedinIn, FaTwitter, FaFilter, FaSearch } from 'react-icons/fa';
 import Container from '@/components/ui/Container';
-import SectionHeading from '@/components/ui/SectionHeading';
-import { metadata } from './metadata';
+import { authors } from '@/lib/data/authors';
+import AuthorProfile from '@/components/author/AuthorProfile';
 
-// Author type definition
-interface Author {
-  id: string;
-  name: string;
-  image: string;
-  title: string;
-  bio: string;
-  posts: number;
-  expertise: string[];
-}
+// Add metadata
+export const metadata: Metadata = {
+  title: 'Uniform Industry Experts | UNEOM',
+  description: 'Meet our expert team of uniform industry professionals with specialized knowledge in healthcare, security, hospitality, and industrial uniform design and standards.',
+  keywords: 'uniform experts, textile specialists, Saudi uniform consultants, UNEOM team, uniform industry professionals',
+  metadataBase: new URL('https://uneom.com'),
+  openGraph: {
+    title: 'Uniform Industry Experts | UNEOM',
+    description: 'Meet our expert team of uniform industry professionals with specialized knowledge across multiple sectors.',
+    images: [
+      {
+        url: 'https://uneom.com/images/team/experts-banner.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'UNEOM Uniform Industry Experts',
+      }
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Uniform Industry Experts | UNEOM',
+    description: 'Meet our expert team of uniform industry professionals with specialized knowledge across multiple sectors.',
+    images: ['https://uneom.com/images/team/experts-banner.jpg'],
+  },
+};
 
-// Sample authors data - in production this would be fetched from an API or CMS
-const authors = [
-  {
-    id: 'john-doe',
-    name: 'John Doe',
-    image: '/images/team/john-doe.jpg',
-    title: 'Chief Design Officer',
-    bio: 'John is a seasoned uniform designer with over 15 years of experience in the industry. He specializes in corporate and hospitality uniforms.',
-    expertise: ['Corporate Uniform Design', 'Hospitality Uniform Programs', 'Sustainable Textile Selection']
-  },
-  {
-    id: 'jane-smith',
-    name: 'Jane Smith',
-    image: '/images/team/jane-smith.jpg',
-    title: 'Head of Technical Development',
-    bio: 'Jane specializes in technical fabrics and performance workwear, with particular expertise in uniforms for extreme environments.',
-    expertise: ['Technical Fabric Development', 'Performance Workwear', 'Heat-Resistant Uniforms']
-  },
-  {
-    id: 'ahmed-abdullah',
-    name: 'Ahmed Abdullah',
-    image: '/images/avatar-placeholder.jpg',
-    title: 'Healthcare Uniform Specialist',
-    bio: 'Ahmed leads our healthcare division, focusing on antimicrobial fabrics and designs that meet the rigorous demands of medical environments.',
-    expertise: ['Healthcare Uniforms', 'Antimicrobial Fabrics', 'Medical Compliance Standards']
-  },
-  {
-    id: 'sarah-johnson',
-    name: 'Sarah Johnson',
-    image: '/images/default-placeholder.jpg',
-    title: 'Sustainability Director',
-    bio: 'Sarah focuses on developing eco-friendly uniform solutions that reduce environmental impact without compromising on quality or performance.',
-    expertise: ['Sustainable Materials', 'Circular Fashion Economy', 'Environmental Compliance']
-  },
-  {
-    id: 'mohammed-al-farsi',
-    name: 'Mohammed Al-Farsi',
-    image: '/images/default-placeholder.jpg',
-    title: 'Regional Sales Director',
-    bio: 'Mohammed works with major clients across the GCC, helping organizations implement comprehensive uniform programs aligned with their brand identity.',
-    expertise: ['Corporate Programs', 'Regional Requirements', 'Brand Integration']
-  },
-  {
-    id: 'fatima-khan',
-    name: 'Fatima Khan',
-    image: '/images/default-placeholder.jpg',
-    title: 'Manufacturing Operations Manager',
-    bio: 'Fatima oversees our production facilities, ensuring quality control and efficient manufacturing processes for all our uniform products.',
-    expertise: ['Quality Control', 'Production Efficiency', 'Supply Chain Management']
-  },
-  {
-    id: 'david-wilson',
-    name: 'David Wilson',
-    image: '/images/default-placeholder.jpg',
-    title: 'Hospitality Sector Specialist',
-    bio: 'David brings extensive experience in luxury hotel uniforms, having worked with five-star properties throughout the Middle East and Europe.',
-    expertise: ['Luxury Hospitality', 'Front-of-House Uniforms', 'Hospitality Standards']
-  },
-  {
-    id: 'layla-hassan',
-    name: 'Layla Hassan',
-    image: '/images/default-placeholder.jpg',
-    title: 'Industrial Uniform Researcher',
-    bio: 'Layla specializes in protective workwear for industrial environments, with expertise in heat-resistant, flame-retardant, and chemical-resistant fabrics.',
-    expertise: ['Industrial Safety', 'Protective Fabrics', 'Hazard Protection']
-  },
-  {
-    id: 'omar-ibrahim',
-    name: 'Omar Ibrahim',
-    image: '/images/default-placeholder.jpg',
-    title: 'Supply Chain Director',
-    bio: 'Omar manages our global supply chain, ensuring sustainable sourcing and ethical manufacturing practices across all our production facilities.',
-    expertise: ['Global Sourcing', 'Ethical Manufacturing', 'Logistics Optimization']
-  },
-  {
-    id: 'nora-ahmed',
-    name: 'Nora Ahmed',
-    image: '/images/default-placeholder.jpg',
-    title: 'Cultural Design Consultant',
-    bio: 'Nora specializes in integrating traditional Saudi design elements into modern uniform collections, preserving cultural heritage in contemporary workwear.',
-    expertise: ['Cultural Integration', 'Saudi Heritage', 'Modern Traditionalism']
-  }
+// Industry categories for experts
+const industryCategories = [
+  { id: 'all', name: 'All Experts' },
+  { id: 'healthcare', name: 'Healthcare' },
+  { id: 'security', name: 'Security' },
+  { id: 'education', name: 'Education' },
+  { id: 'hospitality', name: 'Hospitality' },
+  { id: 'industrial', name: 'Industrial' },
 ];
 
 export default function AuthorsPage() {
-  const locale = 'en';
+  // Sort authors by featured status and then by experience
+  const sortedAuthors = [...authors].sort((a, b) => {
+    if (a.featured !== b.featured) {
+      return a.featured ? -1 : 1;
+    }
+    return b.experience - a.experience;
+  });
+
+  // Schema.org structured data for the organization and experts
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "UNEOM",
+    "url": "https://www.uneom.com",
+    "logo": "https://www.uneom.com/images/logo.png",
+    "description": "Saudi Arabia's leading provider of professional uniforms & scrubs for businesses",
+    "employee": sortedAuthors.map(author => ({
+      "@type": "Person",
+      "name": author.name,
+      "jobTitle": author.title,
+      "description": author.bio,
+      "image": author.avatar,
+      "sameAs": [
+        author.linkedin,
+        author.twitter,
+      ].filter(Boolean),
+    })),
+  };
 
   return (
-    <div className="bg-white">
-    
+    <>
+      {/* Add structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema)
+        }}
+      />
+      
       {/* Hero Section */}
-      <section className="py-20 bg-primary-700 text-white">
+      <section className="bg-gradient-to-b from-neutral-900 to-neutral-800 text-white py-16 md:py-24">
         <Container>
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Meet Our Expert Team
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+              Meet Our Uniform Industry Experts
             </h1>
-            <p className="text-xl opacity-90 mb-8">
-              Industry leaders and specialists committed to delivering exceptional uniform solutions throughout Saudi Arabia and beyond
+            <p className="text-xl text-neutral-300 mb-8">
+              Saudi Arabia's leading uniform specialists with extensive experience in multiple industries and sectors
             </p>
+            
+            <div className="flex flex-wrap gap-3 justify-center">
+              {industryCategories.map((category) => (
+                <Link
+                  key={category.id}
+                  href={category.id === 'all' ? '/authors' : `/authors?category=${category.id}`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+                    category.id === 'all'
+                      ? 'bg-primary-600 text-white hover:bg-primary-700'
+                      : 'bg-neutral-700 text-neutral-200 hover:bg-neutral-600'
+                  }`}
+                >
+                  {category.name}
+                </Link>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* Team Description */}
-      <section className="py-16">
+      {/* Main Content */}
+      <section className="py-12 md:py-16 bg-neutral-50">
         <Container>
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold mb-3">Industry Expertise</h2>
-            <p className="text-xl text-neutral-600 mb-6">Our team combines technical knowledge, design excellence, and industry insight</p>
-            <p className="mt-6 text-neutral-600">
-              At UNEOM, our strength lies in our diverse team of experts. From technical fabric specialists and sustainable textile researchers to industry-specific consultants, our team brings together decades of experience in the uniform industry. Each team member contributes unique insights to help create uniform solutions that align perfectly with our clients' needs, industry requirements, and Saudi Arabia's unique climate and cultural context.
-            </p>
+          {/* Featured Experts */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold mb-8 pb-4 border-b border-neutral-200">
+              Featured Industry Experts
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {sortedAuthors
+                .filter(author => author.featured)
+                .slice(0, 4)
+                .map((author, index) => (
+                  <AuthorProfile key={author.id} author={author} />
+                ))}
+            </div>
           </div>
-
-          {/* Authors Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {authors.map((author) => (
-              <Link
-                key={author.id}
-                href={`/authors/${author.id}`}
-                className="group"
-              >
-                <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <div className="relative h-64 bg-neutral-100">
-                    <Image
-                      src={author.image}
-                      alt={author.name}
-                      fill
-                      className="object-cover"
-                    />
+          
+          {/* All Experts */}
+          <div>
+            <h2 className="text-2xl font-bold mb-8 pb-4 border-b border-neutral-200">
+              All Uniform Specialists
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {sortedAuthors.map((author) => (
+                <Link 
+                  key={author.id}
+                  href={`/authors/${author.id}`}
+                  className="bg-white rounded-lg border border-neutral-200 p-6 hover:shadow-md transition group"
+                >
+                  <div className="flex items-center">
+                    <div className="flex-shrink-0 mr-4">
+                      <div className="relative h-16 w-16 rounded-full overflow-hidden">
+                        <Image
+                          src={author.avatar}
+                          alt={author.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-bold text-neutral-900 group-hover:text-primary-600 transition-colors">
+                        {author.name}
+                      </h3>
+                      <p className="text-neutral-600 text-sm">{author.title}</p>
+                      <div className="mt-1 inline-flex items-center text-xs bg-primary-50 text-primary-700 px-2 py-0.5 rounded-full">
+                        <span>{author.experience}+ years experience</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary-600 transition-colors">
-                      {author.name}
-                    </h3>
-                    <p className="text-primary-600 font-medium mb-3">{author.title}</p>
-                    <p className="text-neutral-600 mb-4 line-clamp-2">{author.bio}</p>
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      {author.expertise.slice(0, 2).map((skill, idx) => (
-                        <span key={idx} className="bg-neutral-100 text-neutral-700 text-xs px-2 py-1 rounded-full">
-                          {skill}
+                  
+                  <div className="mt-4">
+                    <div className="flex flex-wrap gap-2">
+                      {author.expertise.slice(0, 2).map((area, index) => (
+                        <span 
+                          key={index}
+                          className="bg-neutral-100 text-neutral-700 px-2 py-1 rounded-full text-xs"
+                        >
+                          {area}
                         </span>
                       ))}
                       {author.expertise.length > 2 && (
-                        <span className="bg-neutral-100 text-neutral-700 text-xs px-2 py-1 rounded-full">
+                        <span className="bg-neutral-100 text-neutral-700 px-2 py-1 rounded-full text-xs">
                           +{author.expertise.length - 2} more
                         </span>
                       )}
                     </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
-
+      
       {/* CTA Section */}
-      <section className="py-16 bg-neutral-50">
+      <section className="py-12 bg-primary-50">
         <Container>
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-3">Work With Our Experts</h2>
-            <p className="text-xl text-neutral-600 mb-6">Get in touch to discuss your uniform requirements</p>
-            <p className="mt-6 text-neutral-600 mb-8">
-              Our team is ready to help you create the perfect uniform solution for your organization. Whether you're looking for custom designs, technical expertise, or comprehensive uniform programs, our specialists are here to support you every step of the way.
+          <div className="bg-white rounded-lg shadow-md p-8 max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl font-bold mb-4">
+              Need Expert Advice on Uniforms?
+            </h2>
+            <p className="text-neutral-600 mb-6">
+              Our industry specialists can help you design the perfect uniform program for your business needs.
             </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-primary-600 text-white font-medium px-8 py-4 rounded-lg hover:bg-primary-700 transition-colors"
-            >
-              Contact Our Team
-            </Link>
+            <div className="flex justify-center gap-4">
+              <Link
+                href="/contact"
+                className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-md font-medium transition-colors"
+              >
+                Request a Consultation
+              </Link>
+              <Link
+                href="/quote"
+                className="bg-neutral-100 hover:bg-neutral-200 text-neutral-800 px-6 py-3 rounded-md font-medium transition-colors"
+              >
+                Get a Quote
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
-    
-      </div>
+    </>
   );
 } 

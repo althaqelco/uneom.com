@@ -1,0 +1,366 @@
+2:I[48808,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","5908","static/chunks/5908-fda754c47be2f79f.js","5477","static/chunks/app/ar/blog/retail-uniform-selection-guide/page-5b89b07f1d8e8e0b.js"],"default"]
+4:I[4707,[],""]
+5:I[36423,[],""]
+6:I[74537,["2972","static/chunks/2972-f9533177a0da070b.js","9634","static/chunks/app/ar/blog/not-found-754c849dc8370505.js"],"default"]
+7:I[33876,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","8143","static/chunks/app/ar/layout-1871660eaae427a4.js"],"default"]
+8:I[92184,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","8143","static/chunks/app/ar/layout-1871660eaae427a4.js"],"QuoteProvider"]
+9:I[65625,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","8143","static/chunks/app/ar/layout-1871660eaae427a4.js"],"default"]
+b:I[88192,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","8143","static/chunks/app/ar/layout-1871660eaae427a4.js"],"default"]
+c:I[45491,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","8143","static/chunks/app/ar/layout-1871660eaae427a4.js"],"default"]
+d:I[88003,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","8143","static/chunks/app/ar/layout-1871660eaae427a4.js"],""]
+e:I[94521,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+f:"$Sreact.suspense"
+10:I[81523,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"BailoutToCSR"]
+11:I[47106,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+12:I[72972,["2972","static/chunks/2972-f9533177a0da070b.js","9160","static/chunks/app/not-found-4cdf7f6fa00d6dad.js"],""]
+13:I[42607,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+14:I[6257,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+15:I[21846,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+16:I[17384,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+3:T3d7b,
+      <div class="prose prose-lg max-w-none">
+        <section class="intro">
+          <p class="mb-6">يعد اختيار الأزياء الموحدة المناسبة لفريق التجزئة الخاص بك قراراً حاسماً يؤثر على إدراك العلامة التجارية ورضا الموظفين وكفاءة العمليات. في المملكة العربية السعودية، حيث تشهد صناعة التجزئة نمواً وتطوراً متسارعاً، أصبحت الأزياء الموحدة عنصراً استراتيجياً للتميز. سيساعدك هذا الدليل الشامل على فهم الاعتبارات الرئيسية واتخاذ خيارات مدروسة لبرنامج الأزياء الموحدة لمتجرك.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4">فهم هوية علامتك التجارية</h2>
+          <p class="mb-4">قبل اختيار الأزياء الموحدة، ضع في اعتبارك هذه العناصر المتعلقة بالعلامة التجارية:</p>
+          <ul class="list-disc list-inside space-y-2 mb-6">
+            <li>القيم الأساسية للعلامة التجارية ورسالتها</li>
+            <li>إرشادات الهوية البصرية</li>
+            <li>توقعات السوق المستهدف</li>
+            <li>التموضع التنافسي</li>
+          </ul>
+          <figure class="mb-8">
+            <img src="/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg" alt="أزياء التجزئة تعكس هوية العلامة التجارية" class="w-full h-auto rounded-lg" />
+            <figcaption class="text-sm text-neutral-500 mt-2 text-center">يجب أن تتكامل الأزياء الموحدة بسلاسة مع هوية علامتك التجارية</figcaption>
+          </figure>
+
+          <div class="bg-primary-50 p-6 rounded-lg border-r-4 border-primary-500 mb-8">
+            <h3 class="text-xl font-semibold text-primary-800 mb-3">إحصائية مهمة</h3>
+            <p class="text-primary-700">أظهرت الدراسات أن 67% من المتسوقين السعوديين يعتقدون أن مظهر موظفي المتجر يعكس مباشرة جودة المنتجات والخدمات المقدمة.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4">اعتبارات التصميم الأساسية</h2>
+          <p class="mb-4">العوامل الرئيسية التي يجب تقييمها في تصميم الأزياء الموحدة:</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-neutral-50 p-5 rounded-lg shadow-sm">
+              <div class="flex items-center mb-3">
+                <span class="text-primary-600 ml-2"><FaPalette className="h-5 w-5" /></span>
+                <h3 class="font-semibold">عناصر النمط</h3>
+              </div>
+              <ul class="list-disc list-inside space-y-1">
+                <li>ألوان متوافقة مع العلامة التجارية</li>
+                <li>جماليات عصرية مقابل تقليدية</li>
+                <li>اعتبارات ثقافية (خاصة في المملكة العربية السعودية)</li>
+                <li>قابلية التكيف مع المواسم</li>
+              </ul>
+            </div>
+            
+            <div class="bg-neutral-50 p-5 rounded-lg shadow-sm">
+              <div class="flex items-center mb-3">
+                <span class="text-primary-600 ml-2"><FaTshirt className="h-5 w-5" /></span>
+                <h3 class="font-semibold">المتطلبات الوظيفية</h3>
+              </div>
+              <ul class="list-disc list-inside space-y-1">
+                <li>مرونة الحركة</li>
+                <li>حلول التخزين (جيوب)</li>
+                <li>الراحة في المناخ (هام في المناخ السعودي)</li>
+                <li>ميزات المتانة</li>
+              </ul>
+            </div>
+          </div>
+          
+          <p class="mb-4">في المملكة العربية السعودية، من المهم بشكل خاص مراعاة كل من المعايير الثقافية المحلية والراحة في المناخ الحار، مع الحفاظ على مظهر مهني يعزز هوية علامتك التجارية.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4">اختيار الأقمشة</h2>
+          <p class="mb-4">اختر المواد التي توازن بين:</p>
+          <ul class="list-disc list-inside space-y-2 mb-6">
+            <li>الراحة وقابلية التنفس (ضرورية في المناخ السعودي)</li>
+            <li>المتانة وطول العمر</li>
+            <li>سهولة الصيانة</li>
+            <li>فعالية التكلفة</li>
+          </ul>
+          <figure class="mb-8">
+            <img src="/images/industries/retail-shops/retail-shops-uniform-shop.jpg" alt="أزياء تجزئة ذات أقمشة عالية الجودة" class="w-full h-auto rounded-lg" />
+            <figcaption class="text-sm text-neutral-500 mt-2 text-center">الأقمشة عالية الجودة تضمن الراحة وطول العمر</figcaption>
+          </figure>
+          
+          <div class="overflow-x-auto my-6">
+            <table class="w-full border-collapse">
+              <thead>
+                <tr class="bg-neutral-100">
+                  <th class="border border-neutral-300 p-3 text-right">نوع القماش</th>
+                  <th class="border border-neutral-300 p-3 text-right">المزايا</th>
+                  <th class="border border-neutral-300 p-3 text-right">الاستخدامات المثالية</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-neutral-300 p-3">قطن مخلوط</td>
+                  <td class="border border-neutral-300 p-3">مريح، قابل للتنفس، سهل الصيانة</td>
+                  <td class="border border-neutral-300 p-3">قمصان، بولو، تي شيرت</td>
+                </tr>
+                <tr>
+                  <td class="border border-neutral-300 p-3">بوليستر عالي الأداء</td>
+                  <td class="border border-neutral-300 p-3">متين، مقاوم للتجاعيد، سريع الجفاف</td>
+                  <td class="border border-neutral-300 p-3">سترات، بناطيل</td>
+                </tr>
+                <tr>
+                  <td class="border border-neutral-300 p-3">تويل</td>
+                  <td class="border border-neutral-300 p-3">متانة عالية، مظهر مهني</td>
+                  <td class="border border-neutral-300 p-3">مريلات، سترات عمل</td>
+                </tr>
+                <tr>
+                  <td class="border border-neutral-300 p-3">ميكروفايبر</td>
+                  <td class="border border-neutral-300 p-3">ناعم، خفيف، مقاوم للبقع</td>
+                  <td class="border border-neutral-300 p-3">قمصان، ملابس السوبرماركت</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4">متطلبات محددة حسب الدور</h2>
+          <p class="mb-4">قد تحتاج الأدوار المختلفة إلى عناصر مختلفة من الأزياء الموحدة:</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-neutral-50 p-5 rounded-lg shadow-sm">
+              <div class="flex items-center mb-3">
+                <span class="text-primary-600 ml-2"><FaUsers className="h-5 w-5" /></span>
+                <h3 class="font-semibold">خدمة العملاء</h3>
+              </div>
+              <ul class="list-disc list-inside space-y-1">
+                <li>مظهر احترافي</li>
+                <li>تكامل شارة الاسم</li>
+                <li>مريحة للوقوف لفترات طويلة</li>
+                <li>تعكس قيم العلامة التجارية بوضوح</li>
+              </ul>
+            </div>
+            
+            <div class="bg-neutral-50 p-5 rounded-lg shadow-sm">
+              <div class="flex items-center mb-3">
+                <span class="text-primary-600 ml-2"><FaRuler className="h-5 w-5" /></span>
+                <h3 class="font-semibold">موظفو المخزن</h3>
+              </div>
+              <ul class="list-disc list-inside space-y-1">
+                <li>بناء متين</li>
+                <li>تعزيز الحركة</li>
+                <li>اعتبارات السلامة</li>
+                <li>جيوب عملية للأدوات</li>
+              </ul>
+            </div>
+          </div>
+          
+          <p class="mb-4">في السياق السعودي، يجب أيضًا مراعاة التوافق مع المعايير الثقافية المحلية، مثل توفير خيارات مناسبة للموظفين والموظفات مع احترام التقاليد المحلية.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4">أفضل ممارسات التنفيذ</h2>
+          <p class="mb-4">ضمان الاعتماد الناجح للأزياء الموحدة من خلال:</p>
+          <ul class="list-disc list-inside space-y-2 mb-6">
+            <li>إشراك الموظفين في عملية الاختيار</li>
+            <li>سياسات واضحة للأزياء الموحدة</li>
+            <li>ضبط المقاسات بشكل صحيح</li>
+            <li>إرشادات منتظمة للصيانة</li>
+          </ul>
+          
+          <div class="bg-neutral-50 p-6 rounded-lg my-6">
+            <h3 class="text-xl font-semibold mb-4">خطوات تنفيذ برنامج ناجح للأزياء الموحدة:</h3>
+            <ol class="list-decimal list-inside space-y-2">
+              <li>تشكيل فريق عمل يضم ممثلين من مختلف أقسام المتجر</li>
+              <li>جمع التعليقات والاحتياجات من الموظفين في الخطوط الأمامية</li>
+              <li>تطوير نماذج أولية واختبارها في بيئة العمل الحقيقية</li>
+              <li>تدريب المشرفين على تطبيق سياسات الأزياء الموحدة بشكل متسق</li>
+              <li>وضع جدول زمني للتجديد والاستبدال</li>
+            </ol>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4">اعتبارات الميزانية</h2>
+          <p class="mb-4">خذ في الاعتبار جميع التكاليف:</p>
+          <ul class="list-disc list-inside space-y-2 mb-6">
+            <li>تكاليف الشراء الأولية</li>
+            <li>تكرار الاستبدال</li>
+            <li>نفقات الصيانة</li>
+            <li>توفير من خلال طلبات الشراء بكميات كبيرة</li>
+          </ul>
+          
+          <blockquote class="text-lg italic border-r-4 pr-4 border-primary-500 my-8">
+            <p>"الاستثمار في أزياء موحدة عالية الجودة قد يكون أكثر تكلفة في البداية، لكنه يوفر على المدى الطويل من خلال متانة أكبر ومظهر احترافي مستمر. في سوق التجزئة السعودي التنافسي، فإن المظهر المهني المتناسق هو ميزة لا يمكن المساومة عليها."</p>
+            <cite class="block text-sm text-neutral-600 mt-2">— عبدالله الخطيب، مدير تنفيذي لسلسلة متاجر سعودية رائدة</cite>
+          </blockquote>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4">خيارات التخصيص</h2>
+          <p class="mb-4">ضع في اعتبارك عناصر التخصيص التالية:</p>
+          <ul class="list-disc list-inside space-y-2 mb-6">
+            <li>خيارات وضع الشعار</li>
+            <li>شارات الأسماء أو التطريز</li>
+            <li>ترميز الألوان حسب القسم</li>
+            <li>الاختلافات الموسمية</li>
+          </ul>
+          <figure class="mb-8">
+            <img src="/images/industries/retail-shops/retail-shops-uniform-brands-logo.jpg" alt="أزياء تجزئة مخصصة مع العلامة التجارية" class="w-full h-auto rounded-lg" />
+            <figcaption class="text-sm text-neutral-500 mt-2 text-center">العلامة التجارية الاحترافية تعزز تأثير الأزياء الموحدة</figcaption>
+          </figure>
+          
+          <div class="bg-primary-50 p-6 rounded-lg border-r-4 border-primary-500 mb-8">
+            <h3 class="text-xl font-semibold text-primary-800 mb-3">نصيحة للسوق السعودي</h3>
+            <p class="mb-4">عند تصميم أزياء موحدة للسوق السعودي، ضع في اعتبارك:</p>
+            <ul class="list-disc list-inside space-y-1">
+              <li>الاحترام للقيم والتقاليد المحلية</li>
+              <li>راحة مناسبة للمناخ المحلي</li>
+              <li>توازن بين الحداثة والتقاليد</li>
+              <li>خيارات متنوعة تناسب مختلف الموظفين والموظفات</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="conclusion">
+          <h2 class="text-2xl font-bold mb-4">اتخاذ القرار النهائي</h2>
+          <p class="mb-4">ضع في اعتبارك هذه العوامل عند وضع اللمسات الأخيرة على اختيارك:</p>
+          <ul class="list-disc list-inside space-y-2 mb-6">
+            <li>اختبار عينات مع الموظفين</li>
+            <li>موثوقية المورد ودعمه</li>
+            <li>توفر المخزون وأوقات التسليم</li>
+            <li>سياسات الإرجاع والاستبدال</li>
+          </ul>
+          
+          <div class="cta-section bg-neutral-50 p-6 rounded-lg my-8">
+            <h3 class="text-xl font-semibold mb-3">جاهز للخطوة التالية؟</h3>
+            <p class="mb-4">في يونيوم، نقدم حلول أزياء موحدة مخصصة لقطاع التجزئة في المملكة العربية السعودية، مصممة خصيصًا لتلبية احتياجات علامتك التجارية وفريقك. تشمل خدماتنا:</p>
+            <ul class="list-disc list-inside space-y-2">
+              <li>استشارات تصميم متخصصة</li>
+              <li>اختيار أقمشة عالية الجودة مناسبة للمناخ السعودي</li>
+              <li>خيارات تخصيص متنوعة</li>
+              <li>خدمات تركيب وضبط مقاسات احترافية</li>
+              <li>حلول توريد مستدامة وفعالة</li>
+            </ul>
+            <p class="mt-4">اتصل بمتخصصي الأزياء الموحدة لدينا للحصول على إرشادات خبيرة وحلول مصممة خصيصًا لاحتياجاتك.</p>
+          </div>
+        </section>
+      </div>
+    a:T825,{"@context":"https://schema.org","@type":"Organization","name":"يونيوم","alternateName":"UNEOM","url":"https://uneom.com/ar","logo":"https://uneom.com/images/logo.png","description":"يونيوم هي الشركة الرائدة في تصنيع وتوريد الزي الموحد واليونيفورم المهني في المملكة العربية السعودية. نقدم أزياء موحدة عالية الجودة للرعاية الصحية، الشركات، الضيافة والقطاعات الصناعية.","sameAs":["https://twitter.com/uneom_sa","https://www.facebook.com/uneom.sa","https://www.linkedin.com/company/uneom","https://www.instagram.com/uneom_sa"],"address":{"@type":"PostalAddress","streetAddress":"طريق الملك فهد","addressLocality":"الرياض","addressRegion":"الرياض","postalCode":"12345","addressCountry":"SA"},"contactPoint":{"@type":"ContactPoint","telephone":"+966-11-000-0000","contactType":"خدمة العملاء","areaServed":"SA","availableLanguage":["Arabic","English"]},"areaServed":["الرياض","جدة","الدمام","مكة المكرمة","المدينة المنورة"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"اليونيفورم والزي الموحد","itemListElement":[{"@type":"OfferCatalog","name":"الزي الموحد للرعاية الصحية","description":"اليونيفورم الطبي عالي الجودة للمستشفيات والمراكز الصحية في المملكة العربية السعودية"},{"@type":"OfferCatalog","name":"يونيفورم الشركات","description":"الزي الموحد المكتبي الأنيق للشركات والمؤسسات السعودية"},{"@type":"OfferCatalog","name":"الزي الموحد للضيافة","description":"يونيفورم الفنادق والمطاعم في جميع أنحاء المملكة"},{"@type":"OfferCatalog","name":"اليونيفورم الصناعي","description":"الزي الموحد المتين للقطاعات الصناعية والإنتاجية في السعودية"}]}}17:T11e2,
+            // Agregar URLs base a todas las imágenes que no las tengan
+            (function() {
+              if (typeof window !== 'undefined') {
+                // Función para corregir rutas de imágenes
+                window.fixImagePaths = function() {
+                  const images = document.querySelectorAll('img:not([data-fixed="true"])');
+                  const baseUrl = window.location.origin;
+                  const isVercel = window.location.hostname.includes('vercel.app');
+                  
+                  images.forEach(img => {
+                    const src = img.getAttribute('src') || '';
+                    
+                    // Si no es una URL absoluta, corregirla
+                    if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+                      const fixedSrc = src.startsWith('/') 
+                        ? baseUrl + src 
+                        : baseUrl + '/' + src;
+                      
+                      // Establecer una propiedad de respaldo
+                      img.setAttribute('data-original-src', src);
+                      
+                      // En Vercel, intentar diferentes variaciones
+                      if (isVercel) {
+                        // Intentar con y sin slash inicial
+                        const variations = [
+                          fixedSrc,
+                          src.startsWith('/') ? baseUrl + src.substring(1) : fixedSrc,
+                          src.startsWith('/') ? src : '/' + src,
+                          '/_next/static/images/' + src.split('/').pop()
+                        ];
+                        
+                        // Probar cada variación
+                        let imgLoaded = false;
+                        variations.forEach((variation, index) => {
+                          if (!imgLoaded) {
+                            const testImg = new Image();
+                            testImg.onload = function() {
+                              if (!imgLoaded) {
+                                img.setAttribute('src', variation);
+                                img.setAttribute('data-fixed', 'true');
+                                imgLoaded = true;
+                              }
+                            };
+                            testImg.src = variation;
+                            
+                            // Si la imagen ya está en caché, el evento onload podría no dispararse
+                            if (testImg.complete) {
+                              img.setAttribute('src', variation);
+                              img.setAttribute('data-fixed', 'true');
+                              imgLoaded = true;
+                            }
+                          }
+                        });
+                      } else {
+                        // En desarrollo local, simplemente usar la URL fija
+                        img.setAttribute('src', fixedSrc);
+                        img.setAttribute('data-fixed', 'true');
+                      }
+                      
+                      // Configurar manejo de errores
+                      img.onerror = function() {
+                        // Si la URL corregida falla, intentar con la original
+                        if (img.getAttribute('src') !== src) {
+                          img.setAttribute('src', src);
+                        } else {
+                          // Si ambas fallan, usar la imagen de respaldo
+                          img.setAttribute('src', '/images/default-placeholder.jpg');
+                        }
+                      };
+                    }
+                  });
+                };
+                
+                // Ejecutar inicialmente y después de cada carga de página
+                window.fixImagePaths();
+                window.addEventListener('load', window.fixImagePaths);
+                
+                // Crear una imagen de respaldo SVG en caso de que todo falle
+                window.fallbackImageDataUrl = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjMyMCIgeT0iMjQwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM4ODgiPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+';
+                
+                // Precargar la imagen de respaldo
+                const preloadFallback = new Image();
+                preloadFallback.src = '/images/default-placeholder.jpg';
+              }
+            })();
+          18:T496,
+            // تحديد اللغة واتجاه العناصر
+            (function() {
+              if (typeof window !== 'undefined') {
+                // تحديد اللغة الحالية
+                if (window.location.pathname.startsWith('/ar')) {
+                  document.documentElement.lang = 'ar';
+                  document.documentElement.setAttribute('dir', 'rtl');
+                } else {
+                  document.documentElement.lang = 'en';
+                  document.documentElement.setAttribute('dir', 'ltr');
+                }
+                
+                // إنهاء حالة التحميل
+                if (sessionStorage.getItem('isLanguageSwitch') === 'true') {
+                  sessionStorage.removeItem('isLanguageSwitch');
+                  document.documentElement.classList.remove('language-transition');
+                }
+                
+                // إزالة أي مؤشرات تحميل بعد فترة قصيرة
+                setTimeout(function() {
+                  document.documentElement.classList.remove('language-transition');
+                }, 2000);
+              }
+            })();
+          0:["HBCDXJCnF_RBp5WidyB6v",[[["",{"children":["ar",{"children":["blog",{"children":["retail-uniform-selection-guide",{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["ar",{"children":["blog",{"children":["retail-uniform-selection-guide",{"children":["__PAGE__",{},[["$L1",["$","$L2",null,{"locale":"ar","post":{"title":"اختيار الأزياء الموحدة المناسبة لفريق التجزئة الخاص بك","author":{"name":"محمد السعود","title":"مستشار العلامات التجارية في قطاع التجزئة","avatar":"/images/authors/mohammed-alsaud.jpg"},"date":"2024-04-07","featuredImage":"/images/industries/retail-shops/retail-shops-uniform-shop-industery.jpg","excerpt":"دليل خبراء لاختيار الأزياء الموحدة التي تعزز علامتك التجارية وأداء الموظفين","tags":["أزياء التجزئة","هوية العلامة التجارية","مظهر الموظفين","نجاح التجزئة"],"content":"$3","relatedPosts":[{"title":"تأثير الأزياء الموحدة الاحترافية على نجاح التجزئة","slug":"retail-uniform-impact","excerpt":"اكتشف كيف يمكن للأزياء الموحدة المصممة استراتيجيًا أن تعزز المبيعات وتحسن تجربة العملاء","featuredImage":"/images/industries/retail-shops/retail-shops-uniform-identity.jpg"},{"title":"أزياء التجزئة المستدامة: مستقبل الموضة في المملكة العربية السعودية","slug":"sustainable-retail-uniforms","excerpt":"كيف تعمل حلول الأزياء الموحدة الصديقة للبيئة على تحويل عمليات البيع بالتجزئة مع دعم أهداف الاستدامة في رؤية المملكة 2030","featuredImage":"/images/industries/retail-shops/retail-shops-uniform-shop-factory.jpg"},{"title":"كيف تعزز الأزياء الموحدة الفاخرة مكانة متاجر التجزئة","slug":"luxury-retail-uniforms","excerpt":"استراتيجيات لاستخدام الأزياء الموحدة الفاخرة لتعزيز صورة العلامة التجارية في قطاع التجزئة الفاخر","featuredImage":"/images/industries/retail-shops/retail-shops-uniform-brand.jpg"}]}}],null],null],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","ar","children","blog","children","retail-uniform-selection-guide","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","ar","children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L6",null,{}],"notFoundStyles":[]}]],null]},[[null,["$","$L7",null,{"initialLocale":"ar","children":["$","$L8",null,{"children":[["$","$L9",null,{}],["$","main",null,{"className":"flex-grow rtl","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$a"}}],["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","ar","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]]}],["$","$Lb",null,{}],["$","$Lc",null,{"criticalPaths":["/ar/services","/ar/industries","/ar/shop"]}],["$","$Ld",null,{"id":"rtl-support-script","strategy":"afterInteractive","children":"\n            (function() {\n              // Add RTL class to all elements that need special handling\n              document.querySelectorAll('.flex, .grid, .space-x-1, .space-x-2, .space-x-3, .space-x-4, .space-x-6, .space-x-8')\n                .forEach(function(el) {\n                  el.classList.add('rtl-aware');\n                });\n                \n              // Fix dropdown positioning\n              document.querySelectorAll('.dropdown, .dropdown-menu')\n                .forEach(function(el) {\n                  el.classList.add('rtl-dropdown');\n                });\n                \n              // Fix SVG icons\n              document.querySelectorAll('svg[class*=\"chevron\"], svg[class*=\"arrow\"]')\n                .forEach(function(el) {\n                  el.classList.add('rtl-flip');\n                });\n            })();\n          "}]]}]}]],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/76d2b1ef08bbff47.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/6c482b27360c8c5e.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"charSet":"utf-8"}],["$","meta",null,{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta",null,{"name":"google-site-verification","content":"k27-50XLg0yC-wwjyTIqfkGiowHO5nrAjTNiYmmf7is"}],["$","link",null,{"rel":"stylesheet","href":"/css/image-fixes.css"}],["$","link",null,{"rel":"icon","href":"/favicon/uneom-favicon.png"}],["$","link",null,{"rel":"apple-touch-icon","href":"/favicon/uneom-favicon.png"}],["$","script",null,{"src":"/js/image-handler.js","defer":true}],false,["$","meta",null,{"httpEquiv":"Cache-Control","content":"no-cache, no-store, must-revalidate"}],["$","meta",null,{"httpEquiv":"Pragma","content":"no-cache"}],["$","meta",null,{"httpEquiv":"Expires","content":"0"}],["$","meta",null,{"httpEquiv":"Access-Control-Allow-Origin","content":"*"}],["$","link",null,{"rel":"preload","href":"/images/default-placeholder.jpg","as":"image"}],["$","link",null,{"rel":"preload","href":"/images/default-placeholder.svg","as":"image"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"img-src 'self' data: https: http: blob: *.vercel.app *.uneom.com *.githubusercontent.com;"}]]}],["$","body",null,{"className":"__variable_838c52 font-sans","children":[["$","$L7",null,{"initialLocale":"en","children":["$","$L8",null,{"children":[["$","$Le",null,{"locale":"en","children":[["$","$f",null,{"fallback":null,"children":["$","$L10",null,{"reason":"next/dynamic","children":["$","$L11",null,{"imagePaths":["/images/default-placeholder.jpg","/images/banner-placeholder.jpg","/images/default-placeholder.jpg","/images/default-placeholder.jpg"],"children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"flex flex-col items-center justify-center min-h-[70vh] px-4 text-center","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-800 mb-6","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-700 mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-600 mb-8 max-w-md","children":"We couldn't find the page you're looking for. It might have been moved, deleted, or perhaps never existed."}],["$","$L12",null,{"href":"/","className":"px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors","children":"Back to Home"}]]}],"notFoundStyles":[]}]}]}]}],["$","$f",null,{"fallback":null,"children":["$","$L10",null,{"reason":"next/dynamic","children":["$","$L13",null,{}]}]}],["$","$f",null,{"fallback":null,"children":["$","$L10",null,{"reason":"next/dynamic","children":["$","$L14",null,{}]}]}],["$","$f",null,{"fallback":null,"children":["$","$L10",null,{"reason":"next/dynamic","children":["$","$L15",null,{}]}]}],["$","div",null,{"style":{"display":"none"},"children":["$","$f",null,{"fallback":null,"children":["$","$L10",null,{"reason":"next/dynamic","children":["$","$L16",null,{"src":"/images/default-placeholder.jpg","alt":"Preloaded Logo","showDebugInfo":true}]}]}]}]]}],["$","$Lc",null,{}]]}]}],["$","$Ld",null,{"id":"image-base-url-helper","strategy":"afterInteractive","children":"$17"}],["$","$Ld",null,{"id":"language-switch-helper","strategy":"afterInteractive","children":"$18"}],["$","$Ld",null,{"id":"statcounter-setup","strategy":"afterInteractive","children":"\n            try {\n              var sc_project=13105039; \n              var sc_invisible=1; \n              var sc_security=\"f68332e2\";\n              \n              // Load counter script only if not blocked\n              // Create a test image to check if requests to statcounter domain are blocked\n              var testImg = new Image();\n              testImg.onerror = function() {\n                console.log('StatCounter might be blocked by browser extensions.');\n              };\n              testImg.onload = function() {\n                // Only load the script if the test image loads successfully\n                var sc = document.createElement('script');\n                sc.src = \"https://www.statcounter.com/counter/counter.js\";\n                sc.async = true;\n                document.body.appendChild(sc);\n              };\n              testImg.src = \"https://c.statcounter.com/ping.gif\";\n            } catch (e) {\n              console.log('Error setting up StatCounter:', e);\n            }\n          "}],["$","noscript",null,{"children":["$","div",null,{"className":"statcounter","children":["$","a",null,{"title":"free web stats","href":"https://statcounter.com/","target":"_blank","rel":"noopener noreferrer","children":["$","img",null,{"className":"statcounter","src":"https://c.statcounter.com/13105039/0/f68332e2/1/","alt":"free web stats","referrerPolicy":"no-referrer-when-downgrade"}]}]}]}]]}]]}]],null],null],["$L19",null]]]]
+19:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"اختيار الأزياء الموحدة المناسبة لفريق التجزئة الخاص بك | يونيوم"}],["$","meta","3",{"name":"description","content":"دليل خبراء شامل لاختيار الأزياء الموحدة التي تعزز هوية علامتك التجارية وأداء الموظفين في بيئات البيع بالتجزئة في المملكة العربية السعودية."}],["$","meta","4",{"name":"keywords","content":"أزياء موحدة للتجزئة, اختيار الأزياء الموحدة, ملابس الموظفين, هوية العلامة التجارية, أزياء التجزئة, تجزئة سعودية, تصميم الأزياء الموحدة"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","link","6",{"rel":"canonical","href":"https://uneom.com/ar/blog/retail-uniform-selection-guide/"}],["$","link","7",{"rel":"alternate","hrefLang":"en","href":"https://uneom.com/blog/retail-uniform-selection-guide/"}],["$","meta","8",{"property":"og:title","content":"اختيار الأزياء الموحدة المناسبة لفريق التجزئة الخاص بك"}],["$","meta","9",{"property":"og:description","content":"دليل شامل لاختيار الأزياء الموحدة المثالية لموظفي التجزئة، مما يعزز هوية العلامة التجارية والأداء."}],["$","meta","10",{"property":"og:locale","content":"ar"}],["$","meta","11",{"property":"og:image","content":"http://localhost:3000/images/industries/retail-shops/retail-shops-uniform-shop-industery.jpg"}],["$","meta","12",{"property":"og:type","content":"article"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"يونيوم | المزود الرائد للزي الموحد واليونيفورم المهني في المملكة العربية السعودية - الرياض، جدة، الدمام"}],["$","meta","15",{"name":"twitter:description","content":"يونيوم هي الشركة الرائدة في تصنيع وتوريد الزي الموحد واليونيفورم في المملكة العربية السعودية. نقدم أزياء موحدة ويونيفورم عالي الجودة للرعاية الصحية، الشركات، الضيافة والقطاعات الصناعية في جميع المدن السعودية بما في ذلك الرياض، جدة، والدمام."}],["$","meta","16",{"name":"twitter:image","content":"https://uneom.com/images/uneom-social-share.jpg"}],["$","link","17",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","meta","18",{"name":"next-size-adjust"}]]
+1:null

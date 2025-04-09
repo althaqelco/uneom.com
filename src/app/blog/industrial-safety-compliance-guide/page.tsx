@@ -1,15 +1,14 @@
-'use client';
-
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaCalendarAlt, FaClock, FaTags, FaWhatsapp, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
+import { FaCalendarAlt, FaClock, FaTags, FaWhatsapp, FaLinkedin, FaTwitter, FaFacebook, FaShieldAlt, FaHardHat, FaExclamationTriangle, FaCheckCircle, FaFileAlt, FaUsers } from 'react-icons/fa';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SectionHeading from '@/components/ui/SectionHeading';
-import { generateProductWhatsAppUrl } from '@/utils/whatsapp';
+import BlogAuthor from '@/components/blog/BlogAuthor';
+import TableOfContents from '@/components/blog/TableOfContents';
 
 // Blog post data
 const post = {
@@ -53,65 +52,113 @@ const post = {
   ]
 };
 
+export const metadata: Metadata = {
+  title: 'Industrial Safety Compliance Guide for Saudi Factories | UNEOM',
+  description: 'Comprehensive guide to safety standards, regulations, and workwear compliance requirements for manufacturing facilities in Saudi Arabia. Essential information for factory managers and safety officers.',
+  keywords: 'Saudi industrial safety, factory safety compliance, Saudi factory regulations, SASO industrial standards, manufacturing safety KSA, workplace safety Saudi Arabia, factory uniform compliance, industrial PPE requirements',
+  metadataBase: new URL('https://uneom.com'),
+  openGraph: {
+    title: 'Industrial Safety Compliance Guide for Saudi Factories | UNEOM',
+    description: 'Essential regulations, standards, and best practices for ensuring workplace safety compliance in Saudi Arabia\'s manufacturing sector.',
+    images: [
+      {
+        url: 'https://uneom.com/images/industries/Factory_Industrial/Factory_Industrial_Workwear_post_1.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Industrial safety compliance for Saudi factories',
+      }
+    ],
+    type: 'article',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industrial Safety Compliance Guide for Saudi Factories',
+    description: 'Essential regulations, standards, and best practices for ensuring workplace safety compliance in Saudi Arabia\'s manufacturing sector.',
+    images: ['https://uneom.com/images/industries/Factory_Industrial/Factory_Industrial_Workwear_post_1.webp'],
+  },
+};
+
 export default function IndustrialSafetyComplianceGuidePage() {
-  const handleWhatsAppShare = () => {
-    const text = `Check out this article: ${post.title} - https://uneom.com/blog/${post.slug}`;
-    const url = generateProductWhatsAppUrl(text);
-    window.open(url, '_blank');
+  // Static URL helpers for sharing
+  const shareUrls = {
+    whatsapp: `https://wa.me/?text=${encodeURIComponent(`Check out this article: ${post.title} - https://uneom.com/blog/${post.slug}`)}`,
+    twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://uneom.com/blog/${post.slug}`)}&text=${encodeURIComponent(post.title)}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://uneom.com/blog/${post.slug}`)}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://uneom.com/blog/${post.slug}`)}`
   };
 
-  const shareOnSocialMedia = (platform: string) => {
-    const url = `https://uneom.com/blog/${post.slug}`;
-    const text = post.title;
-    
-    let shareUrl = '';
-    
-    switch (platform) {
-      case 'twitter':
-        shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
-        break;
-      case 'linkedin':
-        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
-        break;
-      case 'facebook':
-        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-        break;
-      default:
-        return;
+  // Table of contents data
+  const tableOfContents = [
+    {
+      id: 'introduction',
+      title: 'Introduction to Industrial Safety in Saudi Arabia',
+    },
+    {
+      id: 'safety-standards',
+      title: 'Key Safety Standards and Regulations',
+      subItems: [
+        { id: 'saso-standards', title: 'SASO Standards' },
+        { id: 'international-standards', title: 'International Standards' },
+        { id: 'vision-2030', title: 'Vision 2030 Safety Initiatives' },
+      ]
+    },
+    {
+      id: 'workwear-requirements',
+      title: 'Industrial Workwear Compliance Requirements',
+      subItems: [
+        { id: 'protective-clothing', title: 'Protective Clothing Standards' },
+        { id: 'specialized-environments', title: 'Requirements for Specialized Environments' },
+      ]
+    },
+    {
+      id: 'safety-management',
+      title: 'Safety Management Systems',
+    },
+    {
+      id: 'compliance-checklist',
+      title: 'Factory Safety Compliance Checklist',
+    },
+    {
+      id: 'conclusion',
+      title: 'Conclusion',
+    },
+  ];
+
+  // Structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Industrial Safety Compliance Guide for Saudi Factories",
+    "image": "https://uneom.com/images/industries/Factory_Industrial/Factory_Industrial_Workwear_post_1.webp",
+    "datePublished": "2023-09-15T08:00:00+03:00",
+    "dateModified": "2023-11-20T10:30:00+03:00",
+    "author": {
+      "@type": "Person",
+      "name": "Eng. Khalid Ibrahim",
+      "url": "https://www.uneom.com/authors/khalid-ibrahim"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "UNEOM",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.uneom.com/images/logo.png"
+      }
+    },
+    "description": "Essential regulations, standards, and best practices for ensuring workplace safety compliance in Saudi Arabia's manufacturing sector.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.uneom.com/blog/industrial-safety-compliance-guide"
     }
-    
-    window.open(shareUrl, '_blank');
   };
 
   return (
     <div className="bg-white pt-6 pb-12">
       {/* Schema Markup */}
-      <div dangerouslySetInnerHTML={{
-        __html: `
-          <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "BlogPosting",
-              "headline": "${post.title}",
-              "image": "https://uneom.com${post.coverImage}",
-              "datePublished": "${post.date}",
-              "author": {
-                "@type": "Person",
-                "name": "${post.author.name}"
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "UNEOM",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "https://uneom.com/images/uneom-logo.png"
-                }
-              },
-              "description": "${post.excerpt}"
-            }
-          </script>
-        `
-      }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       
       {/* Breadcrumbs */}
       <Container>
@@ -126,12 +173,7 @@ export default function IndustrialSafetyComplianceGuidePage() {
       
       {/* Blog Post Header */}
       <Container className="mt-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-4xl"
-        >
+        <div className="mx-auto max-w-4xl">
           {/* Categories */}
           <div className="flex flex-wrap gap-2 mb-4">
             {post.categories.map((category, index) => (
@@ -183,7 +225,7 @@ export default function IndustrialSafetyComplianceGuidePage() {
               priority
             />
           </div>
-        </motion.div>
+        </div>
       </Container>
       
       {/* Blog Post Content */}
@@ -403,41 +445,20 @@ export default function IndustrialSafetyComplianceGuidePage() {
             </p>
           </div>
           
-          {/* Social Sharing */}
-          <div className="border-t border-b border-neutral-200 py-6 my-10">
-            <div className="flex items-center justify-between">
-              <div className="text-neutral-700 font-medium">Share this article:</div>
-              <div className="flex space-x-4">
-                <button 
-                  onClick={handleWhatsAppShare} 
-                  className="text-neutral-600 hover:text-green-600 transition-colors"
-                  aria-label="Share on WhatsApp"
-                >
-                  <FaWhatsapp size={20} />
-                </button>
-                <button 
-                  onClick={() => shareOnSocialMedia('linkedin')} 
-                  className="text-neutral-600 hover:text-blue-600 transition-colors"
-                  aria-label="Share on LinkedIn"
-                >
-                  <FaLinkedin size={20} />
-                </button>
-                <button 
-                  onClick={() => shareOnSocialMedia('twitter')} 
-                  className="text-neutral-600 hover:text-blue-400 transition-colors"
-                  aria-label="Share on Twitter"
-                >
-                  <FaTwitter size={20} />
-                </button>
-                <button 
-                  onClick={() => shareOnSocialMedia('facebook')} 
-                  className="text-neutral-600 hover:text-blue-800 transition-colors"
-                  aria-label="Share on Facebook"
-                >
-                  <FaFacebook size={20} />
-                </button>
-              </div>
-            </div>
+          {/* Social Share Icons */}
+          <div className="flex space-x-2 mt-4">
+            <Link href={shareUrls.whatsapp} target="_blank" rel="noopener noreferrer" className="p-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition">
+              <FaWhatsapp />
+            </Link>
+            <Link href={shareUrls.twitter} target="_blank" rel="noopener noreferrer" className="p-2 bg-blue-400 text-white rounded-full hover:bg-blue-500 transition">
+              <FaTwitter />
+            </Link>
+            <Link href={shareUrls.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 bg-blue-700 text-white rounded-full hover:bg-blue-800 transition">
+              <FaLinkedin />
+            </Link>
+            <Link href={shareUrls.facebook} target="_blank" rel="noopener noreferrer" className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+              <FaFacebook />
+            </Link>
           </div>
           
           {/* Author Bio */}
