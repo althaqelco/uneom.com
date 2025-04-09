@@ -1,181 +1,222 @@
 import React from 'react';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaLinkedinIn, FaTwitter, FaFilter, FaSearch } from 'react-icons/fa';
 import Container from '@/components/ui/Container';
-import { metadata } from './metadata';
+import { authors } from '@/lib/data/authors';
+import AuthorProfile from '@/components/author/AuthorProfile';
 
-// Sample authors data - in production would be fetched from an API or CMS
-const authors = [
-  {
-    id: 'fahad-al-shamri',
-    name: 'م. فهد الشمري',
-    image: '/images/avatar-placeholder.jpg',
-    title: 'مستشار استراتيجي - صناعة المنسوجات',
-    bio: 'مهندس نسيج وخبير في تطوير صناعة المنسوجات والأزياء في المملكة، عمل سابقًا في برنامج تطوير الصناعة الوطنية والخدمات اللوجستية.',
-    expertise: ['رؤية السعودية 2030', 'صناعة المنسوجات', 'توطين الصناعة']
+// Add metadata
+export const metadata: Metadata = {
+  title: 'خبراء صناعة الأزياء الموحدة | UNEOM',
+  description: 'تعرّف على فريق خبرائنا المتخصصين في صناعة الأزياء الموحدة مع معرفة متخصصة في الرعاية الصحية والأمن والضيافة وتصميم ومعايير الأزياء الصناعية.',
+  keywords: 'خبراء الأزياء الموحدة، متخصصون في المنسوجات، استشاريو الأزياء الموحدة السعوديين، فريق UNEOM، متخصصو صناعة الأزياء الموحدة',
+  metadataBase: new URL('https://uneom.com'),
+  openGraph: {
+    title: 'خبراء صناعة الأزياء الموحدة | UNEOM',
+    description: 'تعرّف على فريق خبرائنا المتخصصين في صناعة الأزياء الموحدة مع معرفة متخصصة عبر قطاعات متعددة.',
+    images: [
+      {
+        url: 'https://uneom.com/images/team/experts-banner.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'خبراء صناعة الأزياء الموحدة لدى UNEOM',
+      }
+    ],
+    type: 'website',
   },
-  {
-    id: 'nora-al-otaibi',
-    name: 'د. نورة العتيبي',
-    image: '/images/blog/author-khalid.jpg',
-    title: 'مستشارة الأزياء الطبية',
-    bio: 'خبيرة في الأزياء الطبية مع أكثر من 12 عامًا من الخبرة في تطوير الزي الموحد للعاملين في مجال الرعاية الصحية.',
-    expertise: ['القطاع الصحي', 'الأقمشة الذكية', 'سلامة العاملين']
+  twitter: {
+    card: 'summary_large_image',
+    title: 'خبراء صناعة الأزياء الموحدة | UNEOM',
+    description: 'تعرّف على فريق خبرائنا المتخصصين في صناعة الأزياء الموحدة مع معرفة متخصصة عبر قطاعات متعددة.',
+    images: ['https://uneom.com/images/team/experts-banner.jpg'],
   },
-  {
-    id: 'sara-al-harbi',
-    name: 'سارة الحربي',
-    image: '/images/team/sara.jpg',
-    title: 'مديرة التصميم',
-    bio: 'تمتلك سارة خبرة تزيد عن 15 عامًا في تصميم الأزياء، مع تدريب متخصص في تصميم الزي الموحد. تجلب نهجًا مبتكرًا للتوازن بين الوظائف والراحة والأناقة.',
-    expertise: ['التصميم المستدام', 'الزي الموحد للشركات', 'الأقمشة الصديقة للبيئة']
-  },
-  {
-    id: 'amina-al-zahrani',
-    name: 'أمينة الزهراني',
-    image: '/images/default-placeholder.jpg',
-    title: 'مديرة قسم الاستدامة',
-    bio: 'خبيرة في مجال التصميم المستدام والأزياء الصديقة للبيئة، مع تركيز خاص على تقنيات إعادة التدوير وتقليل النفايات في صناعة المنسوجات والأزياء الموحدة.',
-    expertise: ['الاستدامة', 'المواد المعاد تدويرها', 'الأزياء الخضراء']
-  },
-  {
-    id: 'dr-khalid-bakr',
-    name: 'د. خالد بكر',
-    image: '/images/default-placeholder.jpg',
-    title: 'متخصص الزي الطبي',
-    bio: 'د. خالد متخصص في الزي الطبي مع التركيز على معايير السلامة ومكافحة العدوى. قدم استشارات للمستشفيات الكبرى في جميع أنحاء المملكة.',
-    expertise: ['الرعاية الصحية', 'معايير السلامة', 'المنسوجات الطبية']
-  },
-  {
-    id: 'abdullah-al-qahtani',
-    name: 'عبد الله القحطاني',
-    image: '/images/team/abdullah.jpg',
-    title: 'مصمم زي الطيران',
-    bio: 'يقود عبد الله قسم الطيران في يونيوم، حيث يصمم أزياء تجمع بين العناصر السعودية التقليدية والوظائف الحديثة لشركات الطيران.',
-    expertise: ['الطيران', 'التصميم الثقافي', 'هوية الشركات']
-  },
-  {
-    id: 'sultan-al-ghamdi',
-    name: 'سلطان الغامدي',
-    image: '/images/default-placeholder.jpg',
-    title: 'خبير التراث والأزياء التقليدية',
-    bio: 'مستشار في مجال دمج العناصر التراثية في الأزياء الموحدة العصرية، مع خبرة أكثر من 15 عاماً في الحفاظ على الهوية الثقافية السعودية في التصاميم المعاصرة.',
-    expertise: ['التراث السعودي', 'الأزياء التقليدية', 'الهوية الثقافية']
-  },
-  {
-    id: 'layla-mohammed',
-    name: 'ليلى محمد',
-    image: '/images/default-placeholder.jpg',
-    title: 'باحثة في الزي الصناعي',
-    bio: 'متخصصة في الأقمشة الواقية المتقدمة والتصميم المريح للبيئات الصناعية، تجمع ليلى بين خلفيتها في علوم المواد والخبرة العملية الميدانية.',
-    expertise: ['السلامة الصناعية', 'الأقمشة الواقية', 'الحماية من المخاطر']
-  },
-  {
-    id: 'omar-al-saeed',
-    name: 'عمر السعيد',
-    image: '/images/default-placeholder.jpg',
-    title: 'خبير سلاسل التوريد والإمداد',
-    bio: 'متخصص في إدارة سلاسل التوريد واللوجستيات لصناعة الأزياء الموحدة، مع خبرة تمتد لأكثر من 10 سنوات في تحسين كفاءة العمليات وتقليل التكاليف وتحقيق الاستدامة.',
-    expertise: ['سلاسل التوريد', 'اللوجستيات', 'التصنيع الرشيق']
-  },
-  {
-    id: 'tariq-al-mahmoud',
-    name: 'طارق المحمود',
-    image: '/images/default-placeholder.jpg',
-    title: 'رئيس قسم الابتكار الرقمي',
-    bio: 'يقود فريق الابتكار الرقمي في تطوير تقنيات التصنيع المتقدمة وأنظمة إدارة الزي الموحد الذكية، مع خبرة في دمج إنترنت الأشياء والذكاء الاصطناعي في صناعة الأزياء.',
-    expertise: ['التصنيع الرقمي', 'إنترنت الأشياء', 'الأقمشة الذكية']
-  }
+};
+
+// Industry categories for experts
+const industryCategories = [
+  { id: 'all', name: 'جميع الخبراء' },
+  { id: 'healthcare', name: 'الرعاية الصحية' },
+  { id: 'security', name: 'الأمن' },
+  { id: 'education', name: 'التعليم' },
+  { id: 'hospitality', name: 'الضيافة' },
+  { id: 'industrial', name: 'الصناعي' },
 ];
 
 export default function AuthorsPage() {
-  const locale = 'ar';
+  // Sort authors by featured status and then by experience
+  const sortedAuthors = [...authors].sort((a, b) => {
+    if (a.featured !== b.featured) {
+      return a.featured ? -1 : 1;
+    }
+    return b.experience - a.experience;
+  });
+
+  // Schema.org structured data for the organization and experts
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "UNEOM",
+    "url": "https://www.uneom.com",
+    "logo": "https://www.uneom.com/images/logo.png",
+    "description": "المزود الرائد في المملكة العربية السعودية للأزياء الموحدة والمريول المهني للشركات",
+    "employee": sortedAuthors.map(author => ({
+      "@type": "Person",
+      "name": author.name,
+      "jobTitle": author.title,
+      "description": author.bio,
+      "image": author.avatar,
+      "sameAs": [
+        author.linkedin,
+        author.twitter,
+      ].filter(Boolean),
+    })),
+  };
 
   return (
     <>
+      {/* Add structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema)
+        }}
+      />
+      
       {/* Hero Section */}
-      <section dir="rtl" className="py-20 bg-primary-700 text-white">
+      <section className="bg-gradient-to-b from-neutral-900 to-neutral-800 text-white py-16 md:py-24">
         <Container>
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              تعرف على فريق الخبراء
+          <div className="max-w-4xl mx-auto text-center rtl">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+              تعرّف على خبراء صناعة الأزياء الموحدة لدينا
             </h1>
-            <p className="text-xl opacity-90 mb-8">
-              قادة الصناعة والمتخصصون الملتزمون بتقديم حلول الزي الموحد الاستثنائية في جميع أنحاء المملكة العربية السعودية وخارجها
+            <p className="text-xl text-neutral-300 mb-8">
+              المتخصصون الرائدون في الأزياء الموحدة في المملكة العربية السعودية مع خبرة واسعة في قطاعات وصناعات متعددة
             </p>
+            
+            <div className="flex flex-wrap gap-3 justify-center">
+              {industryCategories.map((category) => (
+                <Link
+                  key={category.id}
+                  href={category.id === 'all' ? '/ar/authors' : `/ar/authors?category=${category.id}`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+                    category.id === 'all'
+                      ? 'bg-primary-600 text-white hover:bg-primary-700'
+                      : 'bg-neutral-700 text-neutral-200 hover:bg-neutral-600'
+                  }`}
+                >
+                  {category.name}
+                </Link>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* Team Description */}
-      <section dir="rtl" className="py-16">
+      {/* Main Content */}
+      <section className="py-12 md:py-16 bg-neutral-50 rtl">
         <Container>
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold mb-3">خبرتنا في الصناعة</h2>
-            <p className="text-xl text-neutral-600 mb-6">يجمع فريقنا بين المعرفة التقنية والتميز في التصميم ورؤية الصناعة</p>
-            <p className="mt-6 text-neutral-600">
-              في يونيوم، تكمن قوتنا في فريقنا المتنوع من الخبراء. من المتخصصين في الأقمشة التقنية وباحثي المنسوجات المستدامة إلى المستشارين المتخصصين في الصناعات المختلفة، يجمع فريقنا عقودًا من الخبرة في صناعة الزي الموحد. يساهم كل عضو في الفريق برؤى فريدة للمساعدة في إنشاء حلول زي موحد تتوافق تمامًا مع احتياجات عملائنا ومتطلبات الصناعة والسياق المناخي والثقافي الفريد للمملكة العربية السعودية.
-            </p>
+          {/* Featured Experts */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold mb-8 pb-4 border-b border-neutral-200">
+              الخبراء المميزون
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {sortedAuthors
+                .filter(author => author.featured)
+                .slice(0, 4)
+                .map((author, index) => (
+                  <AuthorProfile key={author.id} author={author} />
+                ))}
+            </div>
           </div>
-
-          {/* Authors Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {authors.map((author) => (
-              <Link
-                key={author.id}
-                href={`/ar/authors/${author.id}`}
-                className="group"
-              >
-                <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <div className="relative h-64 bg-neutral-100">
-                    <Image
-                      src={author.image}
-                      alt={author.name}
-                      fill
-                      className="object-cover"
-                    />
+          
+          {/* All Experts */}
+          <div>
+            <h2 className="text-2xl font-bold mb-8 pb-4 border-b border-neutral-200">
+              جميع متخصصي الأزياء الموحدة
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {sortedAuthors.map((author) => (
+                <Link 
+                  key={author.id}
+                  href={`/ar/authors/${author.id}`}
+                  className="bg-white rounded-lg border border-neutral-200 p-6 hover:shadow-md transition group"
+                >
+                  <div className="flex items-center">
+                    <div className="ml-4 flex-shrink-0">
+                      <div className="relative h-16 w-16 rounded-full overflow-hidden">
+                        <Image
+                          src={author.avatar}
+                          alt={author.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-bold text-neutral-900 group-hover:text-primary-600 transition-colors">
+                        {author.name}
+                      </h3>
+                      <p className="text-neutral-600 text-sm">{author.title}</p>
+                      <div className="mt-1 inline-flex items-center text-xs bg-primary-50 text-primary-700 px-2 py-0.5 rounded-full">
+                        <span>خبرة {author.experience}+ سنة</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="p-6 text-right">
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary-600 transition-colors">
-                      {author.name}
-                    </h3>
-                    <p className="text-primary-600 font-medium mb-3">{author.title}</p>
-                    <p className="text-neutral-600 mb-4 line-clamp-2">{author.bio}</p>
-                    <div className="flex flex-wrap gap-2 mt-3 justify-end">
-                      {author.expertise.slice(0, 2).map((skill, idx) => (
-                        <span key={idx} className="bg-neutral-100 text-neutral-700 text-xs px-2 py-1 rounded-full">
-                          {skill}
+                  
+                  <div className="mt-4">
+                    <div className="flex flex-wrap gap-2">
+                      {author.expertise.slice(0, 2).map((area, index) => (
+                        <span 
+                          key={index}
+                          className="bg-neutral-100 text-neutral-700 px-2 py-1 rounded-full text-xs"
+                        >
+                          {area}
                         </span>
                       ))}
                       {author.expertise.length > 2 && (
-                        <span className="bg-neutral-100 text-neutral-700 text-xs px-2 py-1 rounded-full">
+                        <span className="bg-neutral-100 text-neutral-700 px-2 py-1 rounded-full text-xs">
                           +{author.expertise.length - 2} المزيد
                         </span>
                       )}
                     </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
-
+      
       {/* CTA Section */}
-      <section dir="rtl" className="py-16 bg-neutral-50">
+      <section className="py-12 bg-primary-50 rtl">
         <Container>
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-3">تعاون مع خبرائنا</h2>
-            <p className="text-xl text-neutral-600 mb-6">تواصل معنا لمناقشة متطلبات الزي الموحد الخاص بك</p>
-            <p className="mt-6 text-neutral-600 mb-8">
-              فريقنا جاهز لمساعدتك في إنشاء حل الزي الموحد المثالي لمؤسستك. سواء كنت تبحث عن تصاميم مخصصة، أو خبرة تقنية، أو برامج شاملة للزي الموحد، فإن متخصصينا هنا لدعمك في كل خطوة على الطريق.
+          <div className="bg-white rounded-lg shadow-md p-8 max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl font-bold mb-4">
+              بحاجة إلى استشارة متخصصة في الأزياء الموحدة؟
+            </h2>
+            <p className="text-neutral-600 mb-6">
+              يمكن لمتخصصينا في الصناعة مساعدتك في تصميم برنامج الأزياء الموحدة المثالي لاحتياجات عملك.
             </p>
-            <Link
-              href="/ar/contact"
-              className="inline-block bg-primary-600 text-white font-medium px-8 py-4 rounded-lg hover:bg-primary-700 transition-colors"
-            >
-              تواصل مع فريقنا
-            </Link>
+            <div className="flex justify-center gap-4">
+              <Link
+                href="/ar/contact"
+                className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-md font-medium transition-colors"
+              >
+                طلب استشارة
+              </Link>
+              <Link
+                href="/ar/quote"
+                className="bg-neutral-100 hover:bg-neutral-200 text-neutral-800 px-6 py-3 rounded-md font-medium transition-colors"
+              >
+                الحصول على عرض سعر
+              </Link>
+            </div>
           </div>
         </Container>
       </section>

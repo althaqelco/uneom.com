@@ -222,6 +222,153 @@ export default function IndustryPageLayout({
       )
     ) : null;
   
+  // Create Featured Products section
+  const createFeaturedProductsSection = () => {
+    console.log("featuredProducts:", industryData.featuredProducts);
+    if (!industryData.featuredProducts || !Array.isArray(industryData.featuredProducts) || industryData.featuredProducts.length === 0) {
+      console.log("No featured products to display");
+      return null;
+    }
+  
+    return (
+      <section className="py-16 bg-neutral-50">
+        <Container>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
+            <SectionHeading centered={true}>{isRtl ? "منتجاتنا المميزة" : "Featured Products"}</SectionHeading>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            {industryData.featuredProducts.map((product, index) => (
+              <motion.div
+                key={index}
+                className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
+                variants={fadeIn}
+              >
+                <div className="relative h-64 w-full overflow-hidden">
+                  <Image
+                    src={product.image || '/images/default-placeholder.jpg'}
+                    alt={product.name || 'Product'}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {product.badge && (
+                    <span className="absolute top-4 right-4 bg-primary-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                      {product.badge}
+                    </span>
+                  )}
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-neutral-900 mb-2">
+                    <Link
+                      href={product.href || `/products/${(product.id || product.name || '').toLowerCase().replace(/ /g, '-')}`}
+                      className="hover:text-primary-600 transition-colors duration-300"
+                    >
+                      {product.name || 'Product'}
+                    </Link>
+                  </h3>
+                  <p className="text-neutral-600 mb-4 flex-grow">
+                    {product.description || 'No description available'}
+                  </p>
+                  {product.price && (
+                    <div className="mb-4 text-lg font-bold text-primary-600">
+                      {product.price}
+                    </div>
+                  )}
+                  <div className="mt-auto">
+                    <Button
+                      href={product.href || `/products/${(product.id || product.name || '').toLowerCase().replace(/ /g, '-')}`}
+                      variant="primary"
+                      size="lg"
+                    >
+                      {isRtl ? "عرض التفاصيل" : "View Details"}
+                    </Button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+    );
+  };
+  
+  // Create Related Content section
+  const createRelatedContentSection = () => {
+    console.log("relatedContent:", industryData.relatedContent);
+    if (!industryData.relatedContent || !Array.isArray(industryData.relatedContent) || industryData.relatedContent.length === 0) {
+      console.log("No related content to display");
+      return null;
+    }
+  
+    return (
+      <section className="py-16 bg-neutral-50">
+        <Container>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
+            <SectionHeading centered={true}>
+              {isRtl ? "محتوى ذو صلة" : "Related Content"}
+            </SectionHeading>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+              {industryData.relatedContent.map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
+                  variants={fadeIn}
+                >
+                  <Link href={item.link} className="block relative">
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="text-lg font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text-neutral-600 mb-4 text-sm">
+                        {item.description}
+                      </p>
+                      <span className="text-primary-600 font-medium flex items-center">
+                        {isRtl ? "اقرأ المزيد" : "Read More"}
+                        <svg
+                          className={`ml-1 ${isRtl ? 'rotate-180' : ''}`}
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7.5 15L12.5 10L7.5 5"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </Container>
+      </section>
+    );
+  };
+  
   // Define JSX content
   const content = React.createElement(
     React.Fragment,
@@ -465,101 +612,7 @@ export default function IndustryPageLayout({
     ),
     
     /* Featured Products Section */
-    (industryData.featuredProducts && Array.isArray(industryData.featuredProducts) && industryData.featuredProducts.length > 0) && 
-      React.createElement(
-        "section",
-        { className: "py-16 bg-neutral-50" },
-        React.createElement(
-          Container,
-          null,
-          React.createElement(
-            motion.div,
-            {
-              initial: "hidden",
-              whileInView: "visible",
-              viewport: { once: true },
-              variants: fadeIn
-            },
-            React.createElement(
-              SectionHeading,
-              { centered: true, children: isRtl ? "منتجاتنا المميزة" : "Featured Products" }
-            )
-          ),
-          React.createElement(
-            "div",
-            { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12" },
-            industryData.featuredProducts.map((product, index) => 
-              React.createElement(
-                motion.div,
-                { 
-                  key: index,
-                  className: "group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full",
-                  variants: fadeIn
-                },
-                React.createElement(
-                  "div",
-                  { className: "relative h-64 w-full overflow-hidden" },
-                  React.createElement(
-                    Image,
-                    {
-                      src: product.image || '/images/default-placeholder.jpg',
-                      alt: product.name || 'Product',
-                      fill: true,
-                      className: "object-cover group-hover:scale-105 transition-transform duration-500"
-                    }
-                  ),
-                  product.badge && React.createElement(
-                    "span",
-                    { 
-                      className: "absolute top-4 right-4 bg-primary-500 text-white text-xs font-semibold px-3 py-1 rounded-full" 
-                    },
-                    product.badge
-                  )
-                ),
-                React.createElement(
-                  "div",
-                  { className: "p-6 flex flex-col flex-grow" },
-                  React.createElement(
-                    "h3",
-                    { className: "text-xl font-bold text-neutral-900 mb-2" },
-                    React.createElement(
-                      Link,
-                      {
-                        href: product.href || `/products/${(product.id || product.name || '').toLowerCase().replace(/ /g, '-')}`,
-                        className: "hover:text-primary-600 transition-colors duration-300"
-                      },
-                      product.name || 'Product'
-                    )
-                  ),
-                  React.createElement(
-                    "p",
-                    { className: "text-neutral-600 mb-4 flex-grow" },
-                    product.description || 'No description available'
-                  ),
-                  product.price && React.createElement(
-                    "div",
-                    { className: "mb-4 text-lg font-bold text-primary-600" },
-                    product.price
-                  ),
-                  React.createElement(
-                    "div",
-                    { className: "mt-auto" },
-                    React.createElement(
-                      Button,
-                      {
-                        href: product.href || `/products/${(product.id || product.name || '').toLowerCase().replace(/ /g, '-')}`,
-                        variant: "primary",
-                        size: "lg",
-                        children: isRtl ? "عرض التفاصيل" : "View Details"
-                      }
-                    )
-                  )
-                )
-              )
-            )
-          )
-        )
-      ),
+    createFeaturedProductsSection(),
     
     /* Products Section */
     industryData.products && Array.isArray(industryData.products) && industryData.products.length > 0 && (
@@ -986,117 +1039,7 @@ export default function IndustryPageLayout({
     ),
     
     /* Related Content Section */
-    industryData.relatedContent && Array.isArray(industryData.relatedContent) && industryData.relatedContent.length > 0 && (
-      React.createElement(
-        "section",
-        { className: "py-16 bg-neutral-50" },
-        React.createElement(
-          Container,
-          null,
-          React.createElement(
-            motion.div,
-            {
-              initial: "hidden",
-              whileInView: "visible",
-              viewport: { once: true },
-              variants: fadeIn
-            },
-            React.createElement(
-              SectionHeading,
-              { centered: true },
-              isRtl ? "محتوى ذو صلة" : "Related Content"
-            ),
-            React.createElement(
-              "div",
-              { className: "grid grid-cols-1 md:grid-cols-3 gap-8 mt-12" },
-              industryData.relatedContent.map((item, index) => (
-                React.createElement(
-                  motion.div,
-                  {
-                    key: index,
-                    className: "group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full",
-                    variants: fadeIn
-                  },
-                  React.createElement(
-                    Link,
-                    { href: item.link, className: "block relative" },
-                    React.createElement(
-                      "div",
-                      { className: "relative h-48 w-full overflow-hidden" },
-                      React.createElement(
-                        Image,
-                        {
-                          src: item.image,
-                          alt: item.title,
-                          fill: true,
-                          className: "object-cover group-hover:scale-105 transition-transform duration-500"
-                        }
-                      )
-                    ),
-                    React.createElement(
-                      "div",
-                      { className: "p-5" },
-                      React.createElement(
-                        "h3",
-                        { className: "text-lg font-bold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors duration-300" },
-                        item.title
-                      ),
-                      React.createElement(
-                        "p",
-                        { className: "text-neutral-600 mb-4 text-sm" },
-                        item.description
-                      ),
-                      React.createElement(
-                        "div",
-                        { className: "text-primary-600 font-medium text-sm group-hover:text-primary-700 transition-colors duration-300 flex items-center" },
-                        isRtl ? "اقرأ المزيد" : "Read More",
-                        isRtl ? (
-                          React.createElement(
-                            "svg",
-                            {
-                              className: "mr-1 h-4 w-4 transform rotate-180",
-                              xmlns: "http://www.w3.org/2000/svg",
-                              viewBox: "0 0 20 20",
-                              fill: "currentColor"
-                            },
-                            React.createElement(
-                              "path",
-                              {
-                                fillRule: "evenodd",
-                                d: "M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z",
-                                clipRule: "evenodd"
-                              }
-                            )
-                          )
-                        ) : (
-                          React.createElement(
-                            "svg",
-                            {
-                              className: "ml-1 h-4 w-4",
-                              xmlns: "http://www.w3.org/2000/svg",
-                              viewBox: "0 0 20 20",
-                              fill: "currentColor"
-                            },
-                            React.createElement(
-                              "path",
-                              {
-                                fillRule: "evenodd",
-                                d: "M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z",
-                                clipRule: "evenodd"
-                              }
-                            )
-                          )
-                        )
-                      )
-                    )
-                  )
-                )
-              ))
-            )
-          )
-        )
-      )
-    ),
+    createRelatedContentSection(),
     
     /* Features Section */
     industryData.features && Array.isArray(industryData.features) && industryData.features.length > 0 && (
@@ -1261,13 +1204,151 @@ export default function IndustryPageLayout({
     ctaSection
   ))
   
-  // Return with or without MainLayout based on skipMainLayout parameter
-  if (skipMainLayout) {
-    return content;
-  }
+  // At the end of the component, just before the return statement:
+  console.log("Rendering IndustryPageLayout with data:", { 
+    title: industryData.title,
+    hasFeaturedProducts: !!industryData.featuredProducts,
+    featuredProductsCount: industryData.featuredProducts?.length,
+    hasRelatedContent: !!industryData.relatedContent,
+    relatedContentCount: industryData.relatedContent?.length
+  });
+
+  const pageContent = (
+    <>
+      {/* Hero Section */}
+      <section className="relative bg-neutral-900 text-white">
+        {/* Hero image */}
+        <div className="absolute inset-0 z-0">
+          <div className="relative w-full h-full">
+            <Image 
+              src={industryData.heroImage} 
+              alt={industryData.title} 
+              fill 
+              className="object-cover"
+              priority 
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/75 via-neutral-900/50 to-neutral-900/30"></div>
+          </div>
+        </div>
+        
+        {/* Hero content */}
+        <Container>
+          <div className="relative z-10 py-20 md:py-32 lg:py-40 max-w-4xl mx-auto text-center">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+            >
+              {industryData.title}
+            </motion.h1>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-lg md:text-xl text-white/80 mb-8"
+            >
+              {industryData.subtitle}
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <Button href="/quote" variant="primary" size="xl">
+                {isRtl ? "اطلب عرض أسعار" : "Request a Quote"}
+              </Button>
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+      
+      {/* Introduction Section */}
+      <section className="py-16 bg-white">
+        <Container>
+          <div className="max-w-4xl mx-auto text-center">
+            {Array.isArray(industryData.introduction) ? 
+              industryData.introduction.map((paragraph, index) => (
+                <motion.p 
+                  key={index} 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-lg text-neutral-700 mb-6"
+                >
+                  {paragraph}
+                </motion.p>
+              )) : 
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="text-lg text-neutral-700"
+              >
+                {industryData.introduction}
+              </motion.p>
+            }
+          </div>
+        </Container>
+      </section>
+      
+      {/* Featured Products Section */}
+      {createFeaturedProductsSection()}
+      
+      {/* Related Content Section */}
+      {createRelatedContentSection()}
+      
+      {/* Other sections */}
+      {industryData.benefits && industryData.benefits.length > 0 && (
+        <section className="py-16 bg-neutral-50">
+          <Container>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+            >
+              <SectionHeading centered={true}>
+                {isRtl ? "المزايا والفوائد" : "Benefits & Advantages"}
+              </SectionHeading>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                {industryData.benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+                    variants={fadeIn}
+                  >
+                    <div className="rounded-full bg-primary-100 p-3 w-16 h-16 flex items-center justify-center mb-4">
+                      <Image
+                        src={benefit.icon}
+                        alt={benefit.title}
+                        width={32}
+                        height={32}
+                        className="text-primary-600"
+                      />
+                    </div>
+                    <h3 className="text-xl font-bold text-neutral-900 mb-2">{benefit.title}</h3>
+                    <p className="text-neutral-600">{benefit.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </Container>
+        </section>
+      )}
+    </>
+  );
   
-  return React.createElement(
-    MainLayout, 
-    { locale, children: content }
+  return skipMainLayout ? (
+    pageContent
+  ) : (
+    <MainLayout locale={locale}>
+      {pageContent}
+    </MainLayout>
   );
 } 

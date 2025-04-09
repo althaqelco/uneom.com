@@ -21,5 +21,18 @@ export async function generateStaticParams() {
     { category: 'aviation-uniforms', product: 'airline-crew-uniform' },
     { category: 'aviation-uniforms', product: 'pilot-uniform-set' },
     { category: 'aviation-uniforms', product: 'ground-crew-uniform' },
+    // Industrial uniforms category products
+    { category: 'industrial-uniforms', product: 'industrial-coverall' },
+    { category: 'industrial-uniforms', product: 'industrial-coverall-pro' },
+    { category: 'industrial-uniforms', product: 'safety-helmet-pro' },
+    { category: 'industrial-uniforms', product: 'supervisor-industrial-uniform' },
+    { category: 'industrial-uniforms', product: 'hi-vis-safety-uniform' },
+    { category: 'industrial-uniforms', product: 'flame-resistant-workwear' },
+    { category: 'industrial-uniforms', product: 'anti-static-industrial-uniform' },
+    { category: 'industrial-uniforms', product: 'related-product-4' },
+    { category: 'industrial-uniforms', product: 'related-product-1' },
+    { category: 'industrial-uniforms', product: 'related-product-2' },
+    { category: 'industrial-uniforms', product: 'related-product-3' },
+    { category: 'industrial-uniforms', product: 'heat-resistant-gloves' },
   ];
 } 

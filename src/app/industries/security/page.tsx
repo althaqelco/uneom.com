@@ -620,11 +620,11 @@ export default function SecurityPage() {
       <CustomFeaturedProductsSection />
       <CustomFAQSection />
       <CustomRelatedContentSection />
-      <IndustryPageLayout 
-        locale={locale}
-        industryData={securityIndustryData}
+    <IndustryPageLayout 
+      locale={locale}
+      industryData={securityIndustryData}
         skipMainLayout={true}
-      />
+    />
     </>
   );
 } 

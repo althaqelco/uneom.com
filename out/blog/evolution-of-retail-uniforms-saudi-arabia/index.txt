@@ -1,0 +1,225 @@
+2:I[48808,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","5908","static/chunks/5908-fda754c47be2f79f.js","4991","static/chunks/app/blog/evolution-of-retail-uniforms-saudi-arabia/page-1905264c30c60ed8.js"],"default"]
+4:I[4707,[],""]
+5:I[36423,[],""]
+6:I[33876,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+7:I[92184,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"QuoteProvider"]
+8:I[94521,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+9:"$Sreact.suspense"
+a:I[81523,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"BailoutToCSR"]
+b:I[47106,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+c:I[72972,["2972","static/chunks/2972-f9533177a0da070b.js","9160","static/chunks/app/not-found-4cdf7f6fa00d6dad.js"],""]
+d:I[42607,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+e:I[6257,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+f:I[21846,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+10:I[17384,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+11:I[45491,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],"default"]
+12:I[88003,["7699","static/chunks/8e1d74a4-dcaa37fb2d938a06.js","1694","static/chunks/c916193b-fa7f8fac77d02489.js","8422","static/chunks/66ec4792-9cb165bb9f74f23c.js","2972","static/chunks/2972-f9533177a0da070b.js","5878","static/chunks/5878-5b59e551aa4676af.js","3255","static/chunks/3255-a2a888b457376ca6.js","4516","static/chunks/4516-6c77fd68ca362617.js","1580","static/chunks/1580-d6659b4233208b5c.js","6121","static/chunks/6121-483b3428d7382dfd.js","4521","static/chunks/4521-6fb7f4a9f57240a1.js","3185","static/chunks/app/layout-50dc9a4d7abfadd5.js"],""]
+3:T2130,
+      <h2>Humble Beginnings: Retail Uniforms in Saudi Arabia During the 1970s and 1980s</h2>
+      <p>The Saudi retail sector has undergone significant transformations since its modest beginnings in the 1970s and 1980s. During that early period, retail staff uniforms were simple and practical, with the focus on function rather than elegance or brand identity.</p>
+
+      <p>Typical men's uniforms at that time consisted of a single-colored shirt with simple trousers, while female employees wore traditional abayas with some simple elements that distinguished the store. There was little strategic thinking about how uniforms could enhance the shopping experience or differentiate the brand.</p>
+
+      <figure>
+        <img src="/images/industries/retail-shops/retail-shops-uniform-brand.jpg" alt="Traditional uniforms in Saudi retail shops" />
+        <figcaption>Traditional uniforms in Saudi retail shops during the early days focused more on function than design.</figcaption>
+      </figure>
+
+      <h2>Transition Period: The 1990s and Early 2000s</h2>
+      <p>As the Saudi economy grew and more modern shopping centers opened in the 1990s and early 2000s, retail uniforms began to witness a notable transformation. Local and international brands recognized the importance of uniforms as a marketing tool and an essential element in the customer experience.</p>
+
+      <p>During this period, we began to see more diversity in colors and designs, with brand logos appearing more prominently on uniforms. Major stores started using specific colors that distinguished them from competitors, helping build a strong visual identity that customers could easily recognize.</p>
+
+      <div class="stat-block">
+        <strong>42%</strong>
+        <span>Increase in retail stores' investments in uniforms during the first decade of the new millennium</span>
+        <cite>Saudi Chamber of Commerce, 2008</cite>
+      </div>
+
+      <h2>The Era of Corporate Identity: 2010-2020</h2>
+      <p>As the Saudi market entered a new era of commercial development, the perspective on uniforms shifted from being merely work clothes to an essential part of the comprehensive corporate identity strategy. During this period, many major retail chains employed professional designers to develop uniforms that reflected the brand's values and personality.</p>
+
+      <p>New trends emerged, such as designing uniforms to suit different functional roles within the same store while maintaining visual consistency and coherence. For example, sales consultants might wear one color, while department managers wear a different color, making it easier for customers to identify whom they can approach for different levels of assistance.</p>
+
+      <blockquote>
+        <p>The transformation in uniform design has been a true revolution in the Saudi retail sector. Consumers now expect a high level of visual excellence and professionalism, and well-designed uniforms are an essential part of this equation.</p>
+        <cite>Fahad Al-Harbi, Marketing Director, Al-Faisaliah Retail Group</cite>
+      </blockquote>
+
+      <figure>
+        <img src="/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg" alt="Modern uniforms in Saudi retail stores" />
+        <figcaption>Uniform design evolved to reflect brand identity and values in the modern era.</figcaption>
+      </figure>
+
+      <h2>Vision 2030 and the Era of Digital Transformation and Sustainability</h2>
+      <p>With the launch of Saudi Vision 2030 and its accompanying profound economic and social transformations, retail uniforms entered a new phase of evolution. Sustainability, innovation, and technology became the main drivers for the development of uniform design during this period.</p>
+
+      <p>Many leading retail chains in the Kingdom have adopted the concept of sustainable uniforms, using eco-friendly materials and considering ethical aspects in production. Technological innovations have also emerged, such as smart fabrics resistant to water, stains, and odors, which help maintain employees' professional appearance throughout the workday.</p>
+
+      <ul>
+        <li>67% increase in the use of sustainable fabrics in local retail store uniforms</li>
+        <li>Adoption of new technologies such as UV-resistant and antibacterial fabrics</li>
+        <li>Design of uniforms that reflect contemporary Saudi identity while preserving cultural values</li>
+        <li>Integration of elements from Saudi heritage into modern uniform designs</li>
+      </ul>
+
+      <div class="stat-block">
+        <strong>78%</strong>
+        <span>of major Saudi retailers consider uniforms a strategic element in achieving Vision 2030 goals</span>
+        <cite>Saudi Retail Sector Trends Study, 2023</cite>
+      </div>
+
+      <h2>Case Study: Uniform Transformation in Major Shopping Centers</h2>
+      <p>Major shopping centers in the Kingdom provide an excellent example of the significant evolution in the concept and design of uniforms. From the period when uniforms were simple and identical for all employees, to the current sophisticated approach that reflects the diversity of roles and hierarchy of responsibilities.</p>
+
+      <p>For example, one of the largest shopping centers in Riyadh developed an integrated uniform system that includes:</p>
+
+      <ol>
+        <li>Distinctive uniforms for the customer service team featuring bright colors that are easily visible from a distance</li>
+        <li>Elegant and formal uniforms for the reception and management team that reflect the center's upscale character</li>
+        <li>Practical and comfortable uniforms for the security and maintenance team while maintaining consistency with the overall identity</li>
+        <li>Seasonal designs that change with seasons and special occasions, adding an element of renewal and vitality</li>
+      </ol>
+
+      <figure>
+        <img src="/images/industries/retail-shops/retail-shops-uniform-shop.jpg" alt="Diversity of uniforms in modern shopping centers" />
+        <figcaption>The diversity of uniforms in modern shopping centers reflects the multiplicity of roles while maintaining identity cohesion.</figcaption>
+      </figure>
+
+      <h2>The Future of Uniforms in the Saudi Retail Sector</h2>
+      <p>As the Saudi retail sector continues to evolve, we are witnessing exciting future trends in the world of uniforms. Technology, sustainability, and personalization are expected to play an increasingly important role in designing uniforms that meet the needs of the digital age and the aspirations of the sophisticated Saudi consumer.</p>
+
+      <p>Some expected future trends include:</p>
+
+      <ul>
+        <li>Integration of wearable technology in uniforms to improve customer service</li>
+        <li>Greater customization of uniforms to suit the needs and preferences of each employee while maintaining consistency</li>
+        <li>Development of fully sustainable uniforms that support the circular economy</li>
+        <li>Use of artificial intelligence in designing uniforms that adapt to different work requirements</li>
+      </ul>
+
+      <blockquote>
+        <p>The future of uniforms in the Saudi retail sector will be a perfect blend of cultural identity, technological innovation, and environmental sustainability. We are already seeing signs of this transformation in the finest stores in the Kingdom.</p>
+        <cite>Noura Al-Otaibi, Corporate Fashion Design Expert</cite>
+      </blockquote>
+
+      <h2>Conclusion: Lessons from the Evolution Journey</h2>
+      <p>The journey of uniform evolution in the Saudi retail sector reflects the larger story of economic and social transformation in the Kingdom. From simple beginnings to the current integrated strategic approach, uniforms have become a powerful tool for competitive differentiation, enhancing customer experience, and improving employee performance.</p>
+
+      <p>Successful brands in the future will be those that view uniforms as a strategic investment rather than merely an operational cost, and recognize their vital role in building an integrated identity and distinguished shopping experience that meets the aspirations of the contemporary Saudi consumer.</p>
+
+      <p>As the retail sector continues to evolve according to Vision 2030, uniforms will continue to evolve to reflect the new values of sustainability, innovation, and excellence, while preserving the cultural specificity that characterizes the Kingdom of Saudi Arabia.</p>
+    13:T11e2,
+            // Agregar URLs base a todas las imágenes que no las tengan
+            (function() {
+              if (typeof window !== 'undefined') {
+                // Función para corregir rutas de imágenes
+                window.fixImagePaths = function() {
+                  const images = document.querySelectorAll('img:not([data-fixed="true"])');
+                  const baseUrl = window.location.origin;
+                  const isVercel = window.location.hostname.includes('vercel.app');
+                  
+                  images.forEach(img => {
+                    const src = img.getAttribute('src') || '';
+                    
+                    // Si no es una URL absoluta, corregirla
+                    if (src && !src.startsWith('http') && !src.startsWith('data:')) {
+                      const fixedSrc = src.startsWith('/') 
+                        ? baseUrl + src 
+                        : baseUrl + '/' + src;
+                      
+                      // Establecer una propiedad de respaldo
+                      img.setAttribute('data-original-src', src);
+                      
+                      // En Vercel, intentar diferentes variaciones
+                      if (isVercel) {
+                        // Intentar con y sin slash inicial
+                        const variations = [
+                          fixedSrc,
+                          src.startsWith('/') ? baseUrl + src.substring(1) : fixedSrc,
+                          src.startsWith('/') ? src : '/' + src,
+                          '/_next/static/images/' + src.split('/').pop()
+                        ];
+                        
+                        // Probar cada variación
+                        let imgLoaded = false;
+                        variations.forEach((variation, index) => {
+                          if (!imgLoaded) {
+                            const testImg = new Image();
+                            testImg.onload = function() {
+                              if (!imgLoaded) {
+                                img.setAttribute('src', variation);
+                                img.setAttribute('data-fixed', 'true');
+                                imgLoaded = true;
+                              }
+                            };
+                            testImg.src = variation;
+                            
+                            // Si la imagen ya está en caché, el evento onload podría no dispararse
+                            if (testImg.complete) {
+                              img.setAttribute('src', variation);
+                              img.setAttribute('data-fixed', 'true');
+                              imgLoaded = true;
+                            }
+                          }
+                        });
+                      } else {
+                        // En desarrollo local, simplemente usar la URL fija
+                        img.setAttribute('src', fixedSrc);
+                        img.setAttribute('data-fixed', 'true');
+                      }
+                      
+                      // Configurar manejo de errores
+                      img.onerror = function() {
+                        // Si la URL corregida falla, intentar con la original
+                        if (img.getAttribute('src') !== src) {
+                          img.setAttribute('src', src);
+                        } else {
+                          // Si ambas fallan, usar la imagen de respaldo
+                          img.setAttribute('src', '/images/default-placeholder.jpg');
+                        }
+                      };
+                    }
+                  });
+                };
+                
+                // Ejecutar inicialmente y después de cada carga de página
+                window.fixImagePaths();
+                window.addEventListener('load', window.fixImagePaths);
+                
+                // Crear una imagen de respaldo SVG en caso de que todo falle
+                window.fallbackImageDataUrl = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjMyMCIgeT0iMjQwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM4ODgiPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+';
+                
+                // Precargar la imagen de respaldo
+                const preloadFallback = new Image();
+                preloadFallback.src = '/images/default-placeholder.jpg';
+              }
+            })();
+          14:T496,
+            // تحديد اللغة واتجاه العناصر
+            (function() {
+              if (typeof window !== 'undefined') {
+                // تحديد اللغة الحالية
+                if (window.location.pathname.startsWith('/ar')) {
+                  document.documentElement.lang = 'ar';
+                  document.documentElement.setAttribute('dir', 'rtl');
+                } else {
+                  document.documentElement.lang = 'en';
+                  document.documentElement.setAttribute('dir', 'ltr');
+                }
+                
+                // إنهاء حالة التحميل
+                if (sessionStorage.getItem('isLanguageSwitch') === 'true') {
+                  sessionStorage.removeItem('isLanguageSwitch');
+                  document.documentElement.classList.remove('language-transition');
+                }
+                
+                // إزالة أي مؤشرات تحميل بعد فترة قصيرة
+                setTimeout(function() {
+                  document.documentElement.classList.remove('language-transition');
+                }, 2000);
+              }
+            })();
+          0:["HBCDXJCnF_RBp5WidyB6v",[[["",{"children":["blog",{"children":["evolution-of-retail-uniforms-saudi-arabia",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":["evolution-of-retail-uniforms-saudi-arabia",{"children":["__PAGE__",{},[["$L1",["$","$L2",null,{"locale":"en","post":{"title":"Evolution of Retail Uniforms in Saudi Arabia","date":"2024-05-08","author":{"name":"Dr. Sarah Al-Muhanna","title":"Corporate Fashion Consultant","avatar":"/images/team/avatar-placeholder.jpg"},"featuredImage":"/images/industries/retail-shops/retail-shops-uniform-identity.jpg","excerpt":"The transformation journey of retail uniforms in Saudi Arabia over the past decades, and how they have evolved to keep pace with cultural, economic, and technological changes in the Kingdom.","tags":["Uniforms","Retail Sector","Brand Identity","Vision 2030","Uniform Evolution"],"content":"$3","relatedPosts":[{"title":"Impact of Professional Uniforms on Retail Success","slug":"retail-uniform-impact","excerpt":"Exploring how professionally designed uniforms contribute to boosting retail sales, enhancing customer experience, and strengthening customer loyalty."},{"title":"Sustainable Retail Uniforms","slug":"sustainable-retail-uniforms","excerpt":"How retail stores in Saudi Arabia are adopting sustainable uniforms in support of Vision 2030 and environmental goals."},{"title":"How to Choose the Perfect Uniform for Your Store","slug":"choosing-the-right-retail-uniforms","excerpt":"A comprehensive guide to selecting uniforms that meet your store's needs, enhance your brand identity, and improve customer experience."}]}}],null],null],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","evolution-of-retail-uniforms-saudi-arabia","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/76d2b1ef08bbff47.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/6c482b27360c8c5e.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"charSet":"utf-8"}],["$","meta",null,{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta",null,{"name":"google-site-verification","content":"k27-50XLg0yC-wwjyTIqfkGiowHO5nrAjTNiYmmf7is"}],["$","link",null,{"rel":"stylesheet","href":"/css/image-fixes.css"}],["$","link",null,{"rel":"icon","href":"/favicon/uneom-favicon.png"}],["$","link",null,{"rel":"apple-touch-icon","href":"/favicon/uneom-favicon.png"}],["$","script",null,{"src":"/js/image-handler.js","defer":true}],false,["$","meta",null,{"httpEquiv":"Cache-Control","content":"no-cache, no-store, must-revalidate"}],["$","meta",null,{"httpEquiv":"Pragma","content":"no-cache"}],["$","meta",null,{"httpEquiv":"Expires","content":"0"}],["$","meta",null,{"httpEquiv":"Access-Control-Allow-Origin","content":"*"}],["$","link",null,{"rel":"preload","href":"/images/default-placeholder.jpg","as":"image"}],["$","link",null,{"rel":"preload","href":"/images/default-placeholder.svg","as":"image"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"img-src 'self' data: https: http: blob: *.vercel.app *.uneom.com *.githubusercontent.com;"}]]}],["$","body",null,{"className":"__variable_838c52 font-sans","children":[["$","$L6",null,{"initialLocale":"en","children":["$","$L7",null,{"children":[["$","$L8",null,{"locale":"en","children":[["$","$9",null,{"fallback":null,"children":["$","$La",null,{"reason":"next/dynamic","children":["$","$Lb",null,{"imagePaths":["/images/default-placeholder.jpg","/images/banner-placeholder.jpg","/images/default-placeholder.jpg","/images/default-placeholder.jpg"],"children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"flex flex-col items-center justify-center min-h-[70vh] px-4 text-center","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-800 mb-6","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-700 mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-600 mb-8 max-w-md","children":"We couldn't find the page you're looking for. It might have been moved, deleted, or perhaps never existed."}],["$","$Lc",null,{"href":"/","className":"px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors","children":"Back to Home"}]]}],"notFoundStyles":[]}]}]}]}],["$","$9",null,{"fallback":null,"children":["$","$La",null,{"reason":"next/dynamic","children":["$","$Ld",null,{}]}]}],["$","$9",null,{"fallback":null,"children":["$","$La",null,{"reason":"next/dynamic","children":["$","$Le",null,{}]}]}],["$","$9",null,{"fallback":null,"children":["$","$La",null,{"reason":"next/dynamic","children":["$","$Lf",null,{}]}]}],["$","div",null,{"style":{"display":"none"},"children":["$","$9",null,{"fallback":null,"children":["$","$La",null,{"reason":"next/dynamic","children":["$","$L10",null,{"src":"/images/default-placeholder.jpg","alt":"Preloaded Logo","showDebugInfo":true}]}]}]}]]}],["$","$L11",null,{}]]}]}],["$","$L12",null,{"id":"image-base-url-helper","strategy":"afterInteractive","children":"$13"}],["$","$L12",null,{"id":"language-switch-helper","strategy":"afterInteractive","children":"$14"}],["$","$L12",null,{"id":"statcounter-setup","strategy":"afterInteractive","children":"\n            try {\n              var sc_project=13105039; \n              var sc_invisible=1; \n              var sc_security=\"f68332e2\";\n              \n              // Load counter script only if not blocked\n              // Create a test image to check if requests to statcounter domain are blocked\n              var testImg = new Image();\n              testImg.onerror = function() {\n                console.log('StatCounter might be blocked by browser extensions.');\n              };\n              testImg.onload = function() {\n                // Only load the script if the test image loads successfully\n                var sc = document.createElement('script');\n                sc.src = \"https://www.statcounter.com/counter/counter.js\";\n                sc.async = true;\n                document.body.appendChild(sc);\n              };\n              testImg.src = \"https://c.statcounter.com/ping.gif\";\n            } catch (e) {\n              console.log('Error setting up StatCounter:', e);\n            }\n          "}],["$","noscript",null,{"children":["$","div",null,{"className":"statcounter","children":["$","a",null,{"title":"free web stats","href":"https://statcounter.com/","target":"_blank","rel":"noopener noreferrer","children":["$","img",null,{"className":"statcounter","src":"https://c.statcounter.com/13105039/0/f68332e2/1/","alt":"free web stats","referrerPolicy":"no-referrer-when-downgrade"}]}]}]}]]}]]}]],null],null],["$L15",null]]]]
+15:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Evolution of Retail Uniforms in Saudi Arabia | UNEOM"}],["$","meta","3",{"name":"description","content":"Explore the journey of retail uniform evolution in Saudi Arabia, from traditional styles to modern innovative designs that reflect the Kingdom's Vision 2030."}],["$","meta","4",{"name":"keywords","content":"retail uniform evolution,Saudi retail uniforms,uniform history,store uniforms,Vision 2030 uniforms,uniform design,brand identity,sustainable uniforms,retail staff clothing,modern uniforms"}],["$","link","5",{"rel":"canonical","href":"https://uneom.com/blog/evolution-of-retail-uniforms-saudi-arabia/"}],["$","link","6",{"rel":"alternate","hrefLang":"ar","href":"https://uneom.com/ar/blog/evolution-of-retail-uniforms-saudi-arabia/"}],["$","meta","7",{"property":"og:title","content":"Evolution of Retail Uniforms in Saudi Arabia | UNEOM"}],["$","meta","8",{"property":"og:description","content":"Explore the journey of retail uniform evolution in Saudi Arabia, from traditional styles to modern innovative designs that reflect the Kingdom's Vision 2030."}],["$","meta","9",{"property":"og:url","content":"https://uneom.com/blog/evolution-of-retail-uniforms-saudi-arabia/"}],["$","meta","10",{"property":"og:site_name","content":"UNEOM - Professional Uniform Solutions"}],["$","meta","11",{"property":"og:locale","content":"en_US"}],["$","meta","12",{"property":"og:image","content":"https://uneom.com/images/industries/retail-shops/retail-shops-uniform-identity.jpg"}],["$","meta","13",{"property":"og:image:width","content":"1200"}],["$","meta","14",{"property":"og:image:height","content":"630"}],["$","meta","15",{"property":"og:image:alt","content":"Evolution of Retail Uniforms in Saudi Arabia"}],["$","meta","16",{"property":"og:type","content":"article"}],["$","meta","17",{"property":"article:published_time","content":"2024-05-08T10:30:00+03:00"}],["$","meta","18",{"property":"article:author","content":"Dr. Sarah Al-Muhanna"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:title","content":"Evolution of Retail Uniforms in Saudi Arabia | UNEOM"}],["$","meta","21",{"name":"twitter:description","content":"Explore the journey of retail uniform evolution in Saudi Arabia, from traditional styles to modern innovative designs that reflect the Kingdom's Vision 2030."}],["$","meta","22",{"name":"twitter:image","content":"https://uneom.com/images/industries/retail-shops/retail-shops-uniform-identity.jpg"}],["$","meta","23",{"name":"twitter:image:width","content":"1200"}],["$","meta","24",{"name":"twitter:image:height","content":"630"}],["$","meta","25",{"name":"twitter:image:alt","content":"Evolution of Retail Uniforms in Saudi Arabia"}],["$","link","26",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","meta","27",{"name":"next-size-adjust"}]]
+1:null

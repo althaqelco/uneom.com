@@ -30,10 +30,18 @@ export async function generateStaticParams() {
     { category: 'security', product: 'security-guard-uniforms' },
     { category: 'security', product: 'surveillance-uniforms' },
     { category: 'security', product: 'event-security-uniforms' },
+    { category: 'security-uniforms', product: 'executive-protection' },
+    { category: 'security-uniforms', product: 'tactical-security-uniforms' },
     // Add aviation category products
     { category: 'aviation-uniforms', product: 'airline-crew-uniform' },
     { category: 'aviation-uniforms', product: 'pilot-uniform-set' },
     { category: 'aviation-uniforms', product: 'ground-crew-uniform' },
+    // Add missing industrial products
+    { category: 'industrial-uniforms', product: 'industrial-coverall' },
+    { category: 'industrial-uniforms', product: 'industrial-coverall-pro' },
+    { category: 'industrial-uniforms', product: 'flame-resistant-workwear' },
+    { category: 'industrial-uniforms', product: 'hi-vis-safety-uniform' },
+    { category: 'industrial-uniforms', product: 'safety-helmet-pro' },
   ];
 }
 
