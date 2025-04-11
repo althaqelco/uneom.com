@@ -10,7 +10,11 @@ export function generateStaticParams() {
     'education-uniforms-guide',
     'industrial-workwear-innovations',
     'uniform-maintenance-tips',
-    'custom-uniform-design-process'
+    'custom-uniform-design-process',
+    'sustainable-retail-uniforms',
+    'retail-uniform-impact',
+    'evolution-of-retail-uniforms-saudi-arabia',
+    'luxury-retail-uniforms'
   ];
 
   const locales = ['en', 'ar'];

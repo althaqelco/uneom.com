@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 
 export const products = [
   {
@@ -682,6 +682,226 @@ export const products = [
         "reviewCount": "124"
       }
     }
+  },
+  {
+    id: "luxury-retail-collection",
+    category: "retail-uniforms",
+    categoryName: "Retail Uniforms",
+    industry: "retail",
+    name: "Luxury Retail Collection",
+    shortDescription: "Sophisticated uniforms for high-end retail environments in Saudi Arabia",
+    description: "Our luxury retail collection is designed specifically for high-end retail environments in Saudi Arabia. These sophisticated uniforms project elegance and professionalism while ensuring comfort during long retail hours. The designs integrate subtle Saudi-inspired elements that resonate with local customers while meeting international luxury standards.",
+    features: [
+      "Premium fabric blends for comfort and appearance",
+      "Wrinkle-resistant properties for all-day elegance",
+      "Stain-resistant treatment for front-of-house roles",
+      "Modest yet fashionable designs for Saudi retail environments",
+      "Breathable materials suitable for mall environments",
+      "Coordinated accessories available"
+    ],
+    images: [
+      { src: "/images/industries/retail-shops/retail-shops-uniform-brand.jpg", alt: "Luxury retail staff uniforms" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-identity.jpg", alt: "Elegantly designed retail uniforms" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg", alt: "Detail of luxury uniform fabrics" }
+    ],
+    colors: [
+      { name: "Classic Black", value: "#000000", image: "/images/industries/retail-shops/retail-shops-uniform-identity.jpg" },
+      { name: "Elegant Navy", value: "#1a237e", image: "/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg" },
+      { name: "Rich Burgundy", value: "#7b1fa2", image: "/images/industries/retail-shops/retail-shops-uniform-brand.jpg" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    fabricDetails: {
+      composition: "70% Polyester, 28% Viscose, 2% Elastane",
+      gsm: "195",
+      features: ["Wrinkle-resistant", "Stain-resistant", "Premium feel"]
+    },
+    customizationOptions: [
+      "Brand logo embroidery",
+      "Custom buttons and accents",
+      "Brand color integration",
+      "Department differentiation",
+      "Saudi-inspired design elements"
+    ],
+    relatedProducts: ["customer-service", "store-staff", "beauty-salon"],
+    price: "SAR 579",
+    minOrder: 10,
+    href: "/shop/retail-uniforms/luxury-retail-collection"
+  },
+  {
+    id: "customer-service",
+    category: "retail-uniforms",
+    categoryName: "Retail Uniforms",
+    industry: "retail",
+    name: "Customer Service Attire",
+    shortDescription: "Professional uniforms for retail customer service representatives",
+    description: "Our customer service attire is designed for retail staff who engage directly with customers in Saudi retail environments. These uniforms are both practical and polished, allowing for ease of movement while maintaining a professional appearance that represents your brand with distinction.",
+    features: [
+      "Comfortable yet professional design",
+      "Durable fabrics for daily wear",
+      "Multiple pockets for practical functionality",
+      "Modest designs suitable for Saudi retail environments",
+      "Easy-care fabrics that maintain appearance",
+      "Brand-friendly design for customization"
+    ],
+    images: [
+      { src: "/images/industries/retail-shops/retail-shops-uniform-shop.jpg", alt: "Customer service staff uniforms" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform.jpg", alt: "Retail staff interacting with customers" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-brands-logo.jpg", alt: "Branded customer service uniforms" }
+    ],
+    colors: [
+      { name: "Corporate Blue", value: "#1976d2", image: "/images/industries/retail-shops/retail-shops-uniform-shop.jpg" },
+      { name: "Professional Gray", value: "#757575", image: "/images/industries/retail-shops/retail-shops-uniform.jpg" },
+      { name: "Brand Black", value: "#212121", image: "/images/industries/retail-shops/retail-shops-uniform-brands-logo.jpg" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    fabricDetails: {
+      composition: "65% Polyester, 33% Cotton, 2% Elastane",
+      gsm: "180",
+      features: ["Easy-care", "Comfort stretch", "Durable"]
+    },
+    customizationOptions: [
+      "Brand logo placement",
+      "Color matching to brand palette",
+      "Name badges integration",
+      "Modest variations for different staff preferences",
+      "Hijab-friendly designs"
+    ],
+    relatedProducts: ["luxury-retail-collection", "store-staff", "beauty-salon"],
+    price: "SAR 349",
+    minOrder: 15,
+    href: "/shop/retail-uniforms/customer-service"
+  },
+  {
+    id: "store-staff",
+    category: "retail-uniforms",
+    categoryName: "Retail Uniforms",
+    industry: "retail",
+    name: "Store Staff Uniforms",
+    shortDescription: "Practical and stylish uniforms for general retail store staff",
+    description: "Our store staff uniforms combine functionality with brand-appropriate styling for general retail environments across Saudi Arabia. These uniforms are designed to be comfortable for long shifts on the sales floor while projecting a professional image that enhances customer confidence and brand perception.",
+    features: [
+      "Durable fabrics for daily retail activities",
+      "Stain-resistant treatment for practical use",
+      "Comfortable fit for active retail roles",
+      "Modest designs culturally appropriate for Saudi settings",
+      "Variety of styles for different retail environments",
+      "Easy identification for customers"
+    ],
+    images: [
+      { src: "/images/industries/retail-shops/retail-shops-uniform-2.jpg", alt: "Retail store staff uniforms" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-shop-industery.jpg", alt: "Staff working in retail environment" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-shop-factory.jpg", alt: "Various store staff uniform options" }
+    ],
+    colors: [
+      { name: "Retail Blue", value: "#2962ff", image: "/images/industries/retail-shops/retail-shops-uniform-2.jpg" },
+      { name: "Brand Green", value: "#43a047", image: "/images/industries/retail-shops/retail-shops-uniform-shop-industery.jpg" },
+      { name: "Modern Black", value: "#212121", image: "/images/industries/retail-shops/retail-shops-uniform-shop-factory.jpg" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
+    fabricDetails: {
+      composition: "60% Cotton, 40% Polyester",
+      gsm: "175",
+      features: ["Breathable", "Durable", "Easy-care"]
+    },
+    customizationOptions: [
+      "Logo embroidery or printing",
+      "Department color-coding",
+      "Name badge areas",
+      "Position indicators",
+      "Branded accessories"
+    ],
+    relatedProducts: ["luxury-retail-collection", "customer-service", "beauty-salon"],
+    price: "SAR 299",
+    minOrder: 20,
+    href: "/shop/retail-uniforms/store-staff"
+  },
+  {
+    id: "beauty-salon",
+    category: "retail-uniforms",
+    categoryName: "Retail Uniforms",
+    industry: "retail",
+    name: "Beauty Salon Attire",
+    shortDescription: "Stylish and practical uniforms for beauty and salon professionals",
+    description: "Our beauty salon attire is designed specifically for Saudi Arabia's growing beauty industry. These uniforms combine style with functionality, projecting a fashion-forward image while offering practical features for salon professionals. All designs respect cultural considerations while creating a distinctive and professional appearance.",
+    features: [
+      "Stain-resistant fabric for beauty products",
+      "Fashionable yet practical designs",
+      "Comfortable for long hours of standing",
+      "Modest options suitable for Saudi salons",
+      "Easy-care fabrics that maintain appearance",
+      "Distinctive style that elevates salon brand"
+    ],
+    images: [
+      { src: "/images/industries/retail-shops/retail-shops-uniform-identity-3.jpg", alt: "Beauty salon staff uniforms" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-identity-4.jpg", alt: "Salon staff in professional attire" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-shop-education.jpg", alt: "Various beauty salon uniform styles" }
+    ],
+    colors: [
+      { name: "Salon Black", value: "#000000", image: "/images/industries/retail-shops/retail-shops-uniform-identity-3.jpg" },
+      { name: "Modern Gray", value: "#616161", image: "/images/industries/retail-shops/retail-shops-uniform-identity-4.jpg" },
+      { name: "Spa White", value: "#ffffff", image: "/images/industries/retail-shops/retail-shops-uniform-shop-education.jpg" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    fabricDetails: {
+      composition: "65% Polyester, 30% Cotton, 5% Elastane",
+      gsm: "170",
+      features: ["Stain-resistant", "Comfort stretch", "Quick-dry"]
+    },
+    customizationOptions: [
+      "Salon logo integration",
+      "Color matching to salon décor",
+      "Style variations for different roles",
+      "Saudi-appropriate modest designs",
+      "Coordinated accessories"
+    ],
+    relatedProducts: ["luxury-retail-collection", "customer-service", "store-staff"],
+    price: "SAR 329",
+    minOrder: 10,
+    href: "/shop/retail-uniforms/beauty-salon"
+  },
+  {
+    id: "mall-security",
+    category: "security-uniforms",
+    categoryName: "Security Uniforms",
+    industry: "security",
+    name: "Mall Security Uniform",
+    shortDescription: "Professional security uniforms for retail and mall environments",
+    description: "Our mall security uniforms are specifically designed for the unique requirements of retail and shopping mall security personnel across Saudi Arabia. These uniforms project authority while maintaining an approachable appearance suitable for high-end retail environments, balancing security presence with customer experience.",
+    features: [
+      "Professional and authoritative appearance",
+      "Comfortable for long shifts and continuous walking",
+      "Durable fabrics for daily wear",
+      "Multiple functional pockets for security equipment",
+      "Modest designs appropriate for Saudi environments",
+      "Visible yet elegant security presence"
+    ],
+    images: [
+      { src: "/images/industries/Security/security-uniform-1.jpg", alt: "Mall security staff uniforms" },
+      { src: "/images/industries/Security/security-uniform-2.jpg", alt: "Security personnel in retail environment" },
+      { src: "/images/industries/Security/security-uniform-3.jpg", alt: "Professional mall security uniforms" }
+    ],
+    colors: [
+      { name: "Security Black", value: "#000000", image: "/images/industries/Security/security-uniform-5.jpg" },
+      { name: "Navy Blue", value: "#0d47a1", image: "/images/industries/Security/security-uniform-4.jpg" },
+      { name: "Professional Gray", value: "#424242", image: "/images/industries/Security/security-uniform-6.jpg" }
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL", "3XL"],
+    fabricDetails: {
+      composition: "65% Polyester, 35% Cotton",
+      gsm: "240",
+      features: ["Durable", "Wrinkle-resistant", "Professional finish"]
+    },
+    customizationOptions: [
+      "Mall or company logo integration",
+      "Security badges and identifiers",
+      "Rank designations if needed",
+      "Reflective elements for visibility",
+      "Custom security patches"
+    ],
+    relatedProducts: ["security-officer-uniform", "tactical-security-uniforms", "executive-protection"],
+    price: "SAR 429",
+    minOrder: 15,
+    href: "/shop/security-uniforms/mall-security"
   }
 ];
 
