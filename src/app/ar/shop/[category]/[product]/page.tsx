@@ -32,6 +32,7 @@ export async function generateStaticParams() {
     { category: 'security', product: 'event-security-uniforms' },
     { category: 'security-uniforms', product: 'executive-protection' },
     { category: 'security-uniforms', product: 'tactical-security-uniforms' },
+    { category: 'security-uniforms', product: 'mall-security' },
     // Add aviation category products
     { category: 'aviation-uniforms', product: 'airline-crew-uniform' },
     { category: 'aviation-uniforms', product: 'pilot-uniform-set' },
@@ -42,6 +43,11 @@ export async function generateStaticParams() {
     { category: 'industrial-uniforms', product: 'flame-resistant-workwear' },
     { category: 'industrial-uniforms', product: 'hi-vis-safety-uniform' },
     { category: 'industrial-uniforms', product: 'safety-helmet-pro' },
+    // Add missing retail products
+    { category: 'retail-uniforms', product: 'luxury-retail-collection' },
+    { category: 'retail-uniforms', product: 'customer-service' },
+    { category: 'retail-uniforms', product: 'store-staff' },
+    { category: 'retail-uniforms', product: 'beauty-salon' },
   ];
 }
 

@@ -45,11 +45,16 @@ export async function generateStaticParams() {
     { category: 'security-uniforms', product: 'security-officer-uniform' },
     { category: 'security-uniforms', product: 'tactical-security-uniforms' },
     { category: 'security-uniforms', product: 'executive-protection' },
+    { category: 'security-uniforms', product: 'mall-security' },
     { category: 'corporate', product: 'executive-office-attire' },
     { category: 'culinary-uniforms', product: 'executive-chef-coat' },
     { category: 'manufacturing-attire', product: 'industrial-protective-uniforms' },
     { category: 'education-uniforms', product: 'premium-school-uniforms' },
     { category: 'workplace-uniforms', product: 'executive-suits' },
+    { category: 'retail-uniforms', product: 'luxury-retail-collection' },
+    { category: 'retail-uniforms', product: 'customer-service' },
+    { category: 'retail-uniforms', product: 'store-staff' },
+    { category: 'retail-uniforms', product: 'beauty-salon' },
   ];
 }
 
