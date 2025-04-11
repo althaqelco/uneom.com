@@ -75,7 +75,7 @@ export default function RetailUniformImpactBlog() {
 
       <p>Recent market research across Saudi Arabia's major retail centers reveals compelling evidence of uniform impact: stores with professionally designed, cohesive staff uniforms consistently outperform competitors across key performance metrics. This performance gap appears most pronounced in high-competition sectors and premium retail environments where customer expectations are elevated.</p>
 
-      <div class="stat-block">
+      <div className="stat-block">
         <strong>76%</strong>
         <span>of Saudi consumers report higher confidence in retail staff wearing professional, branded uniforms</span>
         <cite>Saudi Consumer Perception Study, 2023</cite>
@@ -125,7 +125,7 @@ export default function RetailUniformImpactBlog() {
         <li>Clear role identification facilitates appropriate social interactions</li>
       </ul>
 
-      <div class="stat-block">
+      <div className="stat-block">
         <strong>67%</strong>
         <span>of Saudi shoppers report higher comfort levels when assisted by staff whose uniforms appropriately reflect cultural considerations</span>
         <cite>Saudi Retail Cultural Alignment Study, 2024</cite>
@@ -171,7 +171,7 @@ export default function RetailUniformImpactBlog() {
         <li>Creation of signature service moments through distinctive appearance</li>
       </ul>
 
-      <div class="stat-block">
+      <div className="stat-block">
         <strong>92%</strong>
         <span>of top-performing Saudi retail brands maintain distinctive uniform programs as part of their service differentiation strategy</span>
         <cite>Saudi Retail Excellence Report, 2023</cite>
@@ -219,7 +219,7 @@ export default function RetailUniformImpactBlog() {
         <li>Practical comfort and functionality improvements</li>
       </ul>
 
-      <div class="stat-block">
+      <div className="stat-block">
         <strong>31%</strong>
         <span>lower staff turnover rates among Saudi retailers with well-designed, comfortable uniform programs compared to industry average</span>
         <cite>Saudi Retail Employment Study, 2023</cite>
@@ -273,7 +273,7 @@ export default function RetailUniformImpactBlog() {
         <li>Employee satisfaction and engagement scores</li>
       </ul>
 
-      <div class="stat-block">
+      <div className="stat-block">
         <strong>172%</strong>
         <span>average ROI on professional uniform programs among Saudi luxury retailers within the first 18 months of implementation</span>
         <cite>Saudi Retail Investment Analysis, 2023</cite>
@@ -340,7 +340,7 @@ export default function RetailUniformImpactBlog() {
         <li>Clear communication of implementation timeline and expectations</li>
       </ul>
 
-      <div class="stat-block">
+      <div className="stat-block">
         <strong>3.2×</strong>
         <span>higher staff satisfaction with new uniform programs that included employee input in the design process versus those imposed without consultation</span>
         <cite>Saudi Retail Employment Engagement Study, 2023</cite>
@@ -368,10 +368,10 @@ export default function RetailUniformImpactBlog() {
 
       <p>The most successful Saudi retailers recognize that uniforms represent more than merely what staff wear—they embody the brand promise, shape customer expectations, influence employee performance, and contribute to the overall shopping environment. When approached with this strategic understanding, uniform programs become powerful tools for retail excellence in the Kingdom's dynamic and evolving marketplace.</p>
 
-      <div class="cta-section">
+      <div className="cta-section">
         <h3>Elevate Your Retail Performance Through Professional Uniform Design</h3>
         <p>UNEOM specializes in creating distinctive, culturally appropriate uniform programs for Saudi Arabia's leading retailers. Contact our retail uniform consultants to discuss how a strategic uniform program can enhance your brand, improve customer experience, and drive measurable business results.</p>
-        <a href="/contact?service=retail-uniform-consultation" class="cta-button">Request a Retail Uniform Consultation</a>
+        <a href="/contact?service=retail-uniform-consultation" className="cta-button">Request a Retail Uniform Consultation</a>
       </div>
     `,
     relatedPosts: [
