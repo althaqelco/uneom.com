@@ -730,6 +730,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://uneom.com/ar/shop/industrial-uniforms/industrial-jacket</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/industrial-jacket"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/industrial-jacket"/>
+    <lastmod>2025-04-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://uneom.com/ar/shop/industrial-uniforms/related-product-1</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/related-product-1"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/related-product-1"/>
@@ -1826,6 +1834,30 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://uneom.com/shop/industrial-uniforms/industrial-jacket</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/industrial-jacket"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/industrial-jacket"/>
+    <lastmod>2025-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/shop/industrial-uniforms/industrial-safety-vest</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/industrial-safety-vest"/>
+    
+    <lastmod>2025-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/shop/industrial-uniforms/mechanics-overalls</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/mechanics-overalls"/>
+    
+    <lastmod>2025-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://uneom.com/shop/industrial-uniforms/related-product-1</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/related-product-1"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/related-product-1"/>
@@ -1869,6 +1901,14 @@
     <loc>https://uneom.com/shop/industrial-uniforms/supervisor-industrial-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/supervisor-industrial-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/supervisor-industrial-uniform"/>
+    <lastmod>2025-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/shop/industrial-uniforms/welding-apron</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/welding-apron"/>
+    
     <lastmod>2025-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
