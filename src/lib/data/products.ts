@@ -1090,6 +1090,99 @@ export const products = [
         "reviewCount": "87"
       }
     }
+  },
+  {
+    id: "industrial-safety-vest",
+    category: "industrial-uniforms",
+    categoryName: "Industrial Uniforms",
+    industry: "manufacturing",
+    name: "High-Visibility Industrial Safety Vest",
+    shortDescription: "ANSI/ISEA 107 Class 2 certified safety vest with 360° reflective strips",
+    description: "Our premium industrial safety vests are engineered for Saudi Arabia's demanding industrial environments. Designed with 360° high-visibility reflective strips, these vests meet ANSI/ISEA 107 Class 2 certification standards while addressing the specific needs of construction, oil & gas, and manufacturing sectors. The breathable mesh design is optimized for Saudi Arabia's climate, providing adequate ventilation while maintaining maximum visibility in low-light conditions.",
+    features: [
+      "ANSI/ISEA 107 Class 2 certification",
+      "360° high-visibility reflective strips",
+      "Flame-resistant material option available",
+      "Heat-resistant for extreme Saudi conditions",
+      "Breathable mesh design for Saudi climate",
+      "Multiple utility pockets for tools and ID cards",
+      "Adjustable side straps for perfect fit over workwear"
+    ],
+    images: [
+      { src: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_post_1.webp", alt: "High-visibility industrial safety vest front view" },
+      { src: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_post_2.webp", alt: "Safety vest with reflective strips detail" },
+      { src: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_post_3.webp", alt: "Safety vest in use at industrial workplace" }
+    ],
+    colors: [
+      { name: "Safety Orange", value: "#ff7300", image: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_1.webp" },
+      { name: "Hi-Vis Yellow", value: "#f1c40f", image: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_2.webp" },
+      { name: "Lime Green", value: "#7FFF00", image: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_3.webp" }
+    ],
+    sizes: ["S/M", "L/XL", "2XL/3XL", "4XL/5XL"],
+    fabricDetails: {
+      composition: "100% Polyester Mesh (FR option: 99% FR Polyester, 1% Carbon Fiber)",
+      gsm: "120 (Standard) / 180 (FR Version)",
+      features: ["High-visibility", "Breathable", "Flame-resistant option", "UV-resistant"]
+    },
+    customizationOptions: [
+      "Company logo screen printing",
+      "Reflective company name across back",
+      "Department color-coding",
+      "Additional specialized pockets",
+      "ID badge holders",
+      "Radio/communication device loops"
+    ],
+    relatedProducts: ["flame-resistant-workwear", "industrial-coverall", "heat-resistant-gloves"],
+    price: "SAR 189",
+    minOrder: 25,
+    href: "/shop/industrial-uniforms/industrial-safety-vest"
+  },
+  {
+    id: "welding-apron",
+    category: "industrial-uniforms",
+    categoryName: "Industrial Uniforms",
+    industry: "manufacturing",
+    name: "Premium Leather Welding Apron",
+    shortDescription: "Heavy-duty split cowhide leather welding apron with 1100°C heat protection",
+    description: "Our premium leather welding aprons are designed for Saudi Arabia's industrial sector, providing superior protection for welders working in extreme conditions. Constructed from heavy-duty split cowhide leather with flame-resistant Kevlar stitching, these aprons offer protection from sparks, spatter, and temperatures up to 1100°C. The ergonomic cross-back design distributes weight evenly to reduce neck strain during extended use.",
+    features: [
+      "Split cowhide leather construction (3.5mm thickness)",
+      "Protection against temperatures up to 1100°C",
+      "Flame-resistant Kevlar stitching throughout",
+      "Adjustable cross-back straps for weight distribution",
+      "Extended coverage from chest to below knee",
+      "Multiple reinforced tool pockets and hammer loop",
+      "Reinforced stress points for extended durability",
+      "Oil and chemical-resistant treatment"
+    ],
+    images: [
+      { src: "/images/industries/manufacturing/manufacturing_uniform_product2.jpg", alt: "Premium leather welding apron front view" },
+      { src: "/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg", alt: "Welding apron in use with sparks" },
+      { src: "/images/industries/manufacturing/manufacturing_uniform_perpare.jpg", alt: "Detail of welding apron pockets and reinforcements" }
+    ],
+    colors: [
+      { name: "Bourbon Brown", value: "#8B4513", image: "/images/industries/manufacturing/manufacturing_uniform_product2.jpg" },
+      { name: "Carbon Black", value: "#2C3539", image: "/images/industries/manufacturing/manufacturing_uniform_product3.jpg" },
+      { name: "Industrial Tan", value: "#D2B48C", image: "/images/industries/manufacturing/manufacturing_uniform_product1.jpg" }
+    ],
+    sizes: ["Standard", "Extended"],
+    fabricDetails: {
+      composition: "100% Split Cowhide Leather, Kevlar Thread",
+      thickness: "3.5mm",
+      features: ["Heat-resistant", "Flame-resistant", "Oil-resistant", "Reinforced stress points"]
+    },
+    customizationOptions: [
+      "Company logo embossing",
+      "Custom pocket configurations",
+      "Extended size options",
+      "Specialized tool holder additions",
+      "Optional side protection extensions",
+      "Reflective safety strips for low light environments"
+    ],
+    relatedProducts: ["heat-resistant-gloves", "industrial-safety-vest", "flame-resistant-workwear"],
+    price: "SAR 279",
+    minOrder: 15,
+    href: "/shop/industrial-uniforms/welding-apron"
   }
 ];
 
