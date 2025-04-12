@@ -902,6 +902,194 @@ export const products = [
     price: "SAR 429",
     minOrder: 15,
     href: "/shop/security-uniforms/mall-security"
+  },
+  {
+    id: "industrial-cooling-vest",
+    category: "industrial-uniforms",
+    categoryName: "Industrial Uniforms",
+    industry: "manufacturing",
+    name: "Industrial Cooling Vest",
+    shortDescription: "Advanced cooling technology for extreme Saudi industrial environments",
+    description: "Designed specifically for Saudi Arabia's extreme temperatures, our industrial cooling vests provide essential relief for workers in hot manufacturing environments, oil fields, and construction sites. Using advanced phase-change materials, these vests maintain a comfortable core temperature even in the most challenging conditions, improving worker safety and productivity.",
+    features: [
+      "Advanced cooling technology maintains 21-23°C for up to 4 hours",
+      "Lightweight design allows full mobility",
+      "Fire-resistant outer shell complies with safety regulations",
+      "Machine washable and quick-drying material",
+      "Compatible with other safety equipment and harnesses",
+      "Adjustable fit for use over or under other protective gear"
+    ],
+    images: [
+      { src: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-2.jpg", alt: "Industrial cooling vest front view" },
+      { src: "/images/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg", alt: "Cooling technology fabric detail" },
+      { src: "/images/firefighters-fight-the-fire-flame-to-control-fire-not-to-spreading-out-firefighter-ind-SBI-349465280.jpg", alt: "Cooling vest in industrial environment" }
+    ],
+    colors: [
+      { name: "Safety Blue", value: "#2980b9", image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-2.jpg" },
+      { name: "High-Vis Yellow", value: "#f1c40f", image: "/images/Heavy_Duty_Industrial_Coverall.png" },
+      { name: "Industrial Gray", value: "#7f8c8d", image: "/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg" }
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL", "3XL"],
+    fabricDetails: {
+      composition: "Outer: 100% FR-Treated Polyester, Inner: Phase Change Material",
+      gsm: "320",
+      features: ["Heat-resistant", "Cooling technology", "Moisture-wicking", "Anti-bacterial treatment"]
+    },
+    customizationOptions: [
+      "Company logo application",
+      "Department color-coding",
+      "Additional reflective strips",
+      "Integration with communication systems",
+      "Custom cooling duration options"
+    ],
+    relatedProducts: ["flame-resistant-workwear", "industrial-coverall-pro", "hi-vis-safety-uniform"],
+    price: "SAR 899",
+    minOrder: 10,
+    href: "/shop/industrial-uniforms/industrial-cooling-vest"
+  },
+  {
+    id: "personnel-grounding-system",
+    category: "industrial-uniforms",
+    categoryName: "Industrial Uniforms",
+    industry: "manufacturing",
+    name: "Personnel Grounding System",
+    shortDescription: "Complete ESD protection for electronics manufacturing environments",
+    description: "Our Personnel Grounding System provides comprehensive electrostatic discharge (ESD) protection for workers in sensitive electronics manufacturing and assembly environments across Saudi Arabia. This complete system includes specially designed footwear, garments, and wrist straps that work together to safely channel static electricity away from sensitive components, preventing costly damage and ensuring product quality.",
+    features: [
+      "Complete system provides consistent pathway to ground",
+      "Conductive fibers woven throughout garment material",
+      "Comfortable for all-day wear in climate-controlled facilities",
+      "Meets international ESD safety standards (IEC 61340-5-1)",
+      "Available in cleanroom-compatible versions",
+      "Testing points built into garments for daily verification"
+    ],
+    images: [
+      { src: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-logos.jpg", alt: "Complete personnel grounding system" },
+      { src: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-identity.jpg", alt: "ESD testing verification" },
+      { src: "/images/builder-in-helmet-with-a-suitcase-says-on-camera-on-a-green-screen-chroma-key-SBI-351072375.jpg", alt: "Factory worker wearing ESD protection" }
+    ],
+    colors: [
+      { name: "Cleanroom White", value: "#f5f5f5", image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-mens.jpg" },
+      { name: "ESD Blue", value: "#5d8aa8", image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-accesories.jpg" },
+      { name: "Carbon Black", value: "#333333", image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-custom-workers.jpg" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    fabricDetails: {
+      composition: "98% Polyester, 2% Carbon Fiber Filament",
+      gsm: "180",
+      features: ["Static dissipative", "Low linting", "Durable through multiple launderings", "Maintains ESD properties when damp"]
+    },
+    customizationOptions: [
+      "Company and employee ID integration",
+      "Cleanroom certification levels",
+      "Additional protective properties (FR, chemical resistance)",
+      "Process-specific optimizations",
+      "Integration with monitoring systems"
+    ],
+    relatedProducts: ["anti-static-industrial-uniform", "cleanroom-apparel", "industrial-coverall-pro"],
+    price: "SAR 1,299",
+    minOrder: 8,
+    href: "/shop/industrial-uniforms/personnel-grounding-system"
+  },
+  {
+    id: "heat-resistant-gloves",
+    category: "industrial-uniforms",
+    categoryName: "Industrial Uniforms",
+    industry: "manufacturing",
+    name: "Premium Heat-Resistant Gloves",
+    shortDescription: "Advanced thermal protection for extreme industrial environments in Saudi Arabia",
+    description: "Our Premium Heat-Resistant Gloves are engineered specifically for Saudi Arabia's petrochemical, manufacturing, and metallurgical industries where extreme temperatures are a constant hazard. Developed using multi-layer composite technology with aramid fibers and advanced ceramic coatings, these gloves provide exceptional protection against heat, flames, and molten metal splashes while maintaining the dexterity and tactile sensitivity needed for precision industrial tasks. Certified to meet the rigorous safety requirements of both GCC standards and international safety protocols.",
+    features: [
+      "Withstands extreme temperatures up to 1000°C (1832°F)",
+      "Multi-layer aramid fiber construction with ceramic coating technology",
+      "Enhanced grip pattern for secure handling of hot materials",
+      "Extended gauntlet design protects wrists and forearms",
+      "Reinforced thumb crotch and palm for increased durability",
+      "Moisture-wicking inner liner for comfort in Saudi climate conditions",
+      "Pulse protection system shields arterial points",
+      "Cut-resistant (Level 5) for comprehensive hand protection"
+    ],
+    images: [
+      { src: "/images/manufacturing_manufacturing_industrial_workwear_1.webp", alt: "Premium heat-resistant gloves for extreme industrial environments" },
+      { src: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_1.webp", alt: "Heat-resistant gloves with extended gauntlet protection" },
+      { src: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-safety-protection.jpg", alt: "Close-up of heat-resistant glove grip technology" }
+    ],
+    colors: [
+      { name: "Industrial Gold", value: "#E3A81D", image: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_1.webp" },
+      { name: "Safety Black", value: "#1a1a1a", image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-safety-protection.jpg" },
+      { name: "Heat-Resistant Silver", value: "#C0C0C0", image: "/images/manufacturing_manufacturing_industrial_workwear_1.webp" }
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    fabricDetails: {
+      composition: "External Layer: Aramid Fibers with Ceramic Coating, Middle Layer: Thermal Barrier, Inner Layer: FR Cotton with Moisture Management",
+      certifications: "EN 407:2020, EN 388:2016, ASTM F2675/F2675M, SASO GSO 2550",
+      features: ["Extreme heat resistance", "Cut-resistant", "Puncture-resistant", "Oil and fluid repellent"]
+    },
+    customizationOptions: [
+      "Company logo heat-resistant application",
+      "Length customization (standard or extended gauntlet)",
+      "Custom color coding for different departments or heat tolerance levels",
+      "Integration with safety cuff systems and PPE protocols",
+      "Specialized versions for specific industrial applications"
+    ],
+    relatedProducts: ["flame-resistant-workwear", "industrial-coverall-pro", "safety-helmet-pro"],
+    price: "SAR 349",
+    minOrder: 20,
+    href: "/shop/industrial-uniforms/heat-resistant-gloves",
+    
+    metaTitle: "Premium Heat-Resistant Gloves | 1000°C Protection | UNEOM Saudi Arabia",
+    metaDescription: "Industrial-grade heat-resistant gloves providing protection up to 1000°C for Saudi petrochemical, manufacturing & metallurgical industries. EN 407 & SASO certified with advanced aramid fiber technology.",
+    keywords: ["heat resistant gloves Saudi Arabia", "industrial thermal protection", "aramid fiber gloves", "petrochemical safety equipment", "metallurgy hand protection", "1000 degree heat gloves", "EN 407 certified gloves", "Saudi industrial PPE"],
+    
+    ar: {
+      name: "قفازات مقاومة للحرارة الممتازة",
+      shortDescription: "حماية حرارية متقدمة للبيئات الصناعية القاسية في المملكة العربية السعودية",
+      description: "تم تصميم قفازاتنا المقاومة للحرارة خصيصًا لصناعات البتروكيماويات والتصنيع والمعادن في المملكة العربية السعودية حيث تشكل درجات الحرارة القصوى خطرًا مستمرًا. تم تطويرها باستخدام تقنية مركبة متعددة الطبقات مع ألياف الأراميد وطلاءات سيراميك متقدمة، توفر هذه القفازات حماية استثنائية ضد الحرارة واللهب ورذاذ المعادن المنصهرة مع الحفاظ على الدقة والحساسية اللمسية اللازمة للمهام الصناعية الدقيقة.",
+      features: [
+        "تتحمل درجات حرارة قصوى تصل إلى 1000 درجة مئوية (1832 درجة فهرنهايت)",
+        "بناء متعدد الطبقات من ألياف الأراميد مع تقنية الطلاء السيراميك",
+        "نمط قبضة محسّن للتعامل الآمن مع المواد الساخنة",
+        "تصميم ممتد يحمي المعصمين والساعدين",
+        "تقوية إضافية في منطقة الإبهام والكف لمتانة متزايدة",
+        "بطانة داخلية ماصة للرطوبة للراحة في ظروف المناخ السعودي",
+        "نظام حماية النبض يحمي نقاط الشرايين",
+        "مقاومة للقطع (المستوى 5) لحماية شاملة لليد"
+      ],
+      metaTitle: "قفازات مقاومة للحرارة الممتازة | حماية حتى 1000 درجة مئوية | يونيوم السعودية",
+      metaDescription: "قفازات مقاومة للحرارة صناعية توفر حماية تصل إلى 1000 درجة مئوية لصناعات البتروكيماويات والتصنيع والمعادن السعودية. معتمدة وفقًا لمعايير EN 407 و SASO مع تقنية ألياف الأراميد المتقدمة."
+    },
+    
+    schemaOrg: {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "UNEOM Premium Heat-Resistant Gloves",
+      "image": [
+        "https://uneom.com/images/manufacturing_manufacturing_industrial_workwear_1.webp",
+        "https://uneom.com/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_1.webp",
+        "https://uneom.com/images/industries/supply-manufacturing/supply-manufacturing-uniform-safety-protection.jpg"
+      ],
+      "description": "Advanced heat-resistant gloves providing protection up to 1000°C for Saudi industrial environments, featuring multi-layer aramid fiber construction with ceramic coating technology.",
+      "sku": "UNEOM-HRG-500",
+      "brand": {
+        "@type": "Brand",
+        "name": "UNEOM"
+      },
+      "manufacturer": "UNEOM Professional Workwear",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://uneom.com/shop/industrial-uniforms/heat-resistant-gloves",
+        "priceCurrency": "SAR",
+        "price": "349",
+        "priceValidUntil": "2024-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "87"
+      }
+    }
   }
 ];
 

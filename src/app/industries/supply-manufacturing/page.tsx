@@ -2,184 +2,281 @@
 
 import React from 'react';
 import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
+import { Metadata } from 'next';
 
 export default function SupplyManufacturingPage() {
   // Default to English locale
   const locale = 'en';
   
-  // All content for this industry page
+  // All content for this industry page with enhanced SEO and design elements
   const supplyManufacturingData = {
-    title: "Uniform Supply & Manufacturing Solutions in Saudi Arabia",
-    subtitle: "Comprehensive uniform production and supply services for businesses across Saudi Arabia with local and international sourcing capabilities",
-    heroImage: "/images/banner-placeholder.jpg",
+    title: "Premium Uniform Manufacturing & Supply Solutions in Saudi Arabia",
+    subtitle: "End-to-end uniform production and supply services with local manufacturing excellence and global sourcing capabilities",
+    heroImage: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-1.jpg",
+    seoKeywords: "uniform manufacturing Saudi Arabia, uniform production Riyadh, uniform supply chain, custom uniform manufacturing, Saudi uniform suppliers, industrial uniform production, workwear manufacturing KSA, uniform sourcing solutions",
     
     introduction: [
-      "UNEOM is a leading uniform manufacturing and supply company in Saudi Arabia, providing end-to-end uniform solutions for organizations of all sizes across the Kingdom. With manufacturing facilities in Riyadh, Jeddah, and the Eastern Province, combined with strategic international partnerships, we deliver high-quality uniforms that meet the specific requirements of Saudi businesses.",
+      "UNEOM is Saudi Arabia's leading uniform manufacturing and supply partner, delivering complete end-to-end solutions from design and production to delivery and program management. Our state-of-the-art manufacturing facilities in Riyadh, Jeddah, and Dammam combine with our global sourcing network to provide unmatched capabilities in uniform production.",
       
-      "Our comprehensive supply chain infrastructure enables us to offer a wide range of options, from locally produced uniforms that support Saudi Vision 2030's localization goals to premium imported workwear from trusted international suppliers. This flexibility allows us to balance quality, cost, and delivery timelines to best serve our clients' specific needs.",
+      "Our comprehensive manufacturing and supply infrastructure enables us to offer exceptional flexibility in quality, cost, and delivery timelines. Whether you need locally produced uniforms supporting Saudi Vision 2030's localization goals or premium imported workwear from our trusted international partners, our solutions are tailored to your specific requirements.",
       
-      "Whether you require wholesale uniform production for large-scale organizations, specialized manufacturing for unique requirements, or custom uniform tailoring services, UNEOM provides reliable, consistent, and high-quality uniform supply solutions with excellent customer service throughout the procurement process."
+      "With a focus on quality assurance, manufacturing excellence, and supply chain transparency, UNEOM provides reliable and consistent uniform solutions for organizations of all sizes across the Kingdom. From small businesses to large enterprises and government institutions, our manufacturing and supply capabilities ensure your uniform requirements are met with precision and expertise."
     ],
     
     benefits: [
       {
-        title: "Local Manufacturing Capability",
-        description: "Saudi-based production facilities ensure faster delivery times, reduced shipping costs, and support for local industry development.",
-        icon: "/icons/local-manufacturing.svg"
+        title: "Local Manufacturing Excellence",
+        description: "Saudi-based production facilities equipped with cutting-edge technology, ensuring faster delivery times, reduced shipping costs, and support for local industry development.",
+        icon: "/images/icons/premium-quality.svg",
+        animation: {
+          type: "fadeInUp",
+          delay: 0.1,
+          duration: 0.8,
+          hoverEffect: "pulse"
+        },
+        iconBackground: "linear-gradient(135deg, #0072ff 0%, #00c6ff 100%)",
+        highlight: true
       },
       {
-        title: "International Sourcing Network",
-        description: "Strategic partnerships with premium uniform suppliers in Turkey, China, and Europe for specialized requirements and innovative materials.",
-        icon: "/icons/global-network.svg"
+        title: "Global Sourcing Network",
+        description: "Strategic partnerships with premium uniform suppliers in Turkey, UAE, China, and Europe for specialized requirements and innovative materials.",
+        icon: "/images/icons/comprehensive-support.svg",
+        animation: {
+          type: "fadeInUp",
+          delay: 0.2,
+          duration: 0.8,
+          hoverEffect: "grow"
+        },
+        iconBackground: "linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)",
+        highlight: false
       },
       {
-        title: "Quality Assurance Systems",
-        description: "Rigorous quality control processes at every stage of production, ensuring consistent high standards across all orders.",
-        icon: "/icons/quality-control.svg"
+        title: "Advanced Quality Assurance",
+        description: "ISO 9001-certified quality control processes at every production stage, with rigorous testing to ensure consistent high standards across all orders.",
+        icon: "/images/icons/custom-branding.svg",
+        animation: {
+          type: "fadeInUp",
+          delay: 0.3,
+          duration: 0.8,
+          hoverEffect: "pulse"
+        },
+        iconBackground: "linear-gradient(135deg, #36D1DC 0%, #5B86E5 100%)",
+        highlight: false
       },
       {
         title: "Scalable Production Capacity",
-        description: "Flexible manufacturing capabilities to handle orders of any size, from small businesses to government-scale contracts.",
-        icon: "/icons/scalability.svg"
+        description: "Flexible manufacturing capabilities to handle orders of any size, from small businesses to government-scale contracts requiring thousands of uniforms.",
+        icon: "/images/icons/timely-delivery.svg",
+        animation: {
+          type: "fadeInUp",
+          delay: 0.4,
+          duration: 0.8,
+          hoverEffect: "grow"
+        },
+        iconBackground: "linear-gradient(135deg, #38ef7d 0%, #11998e 100%)",
+        highlight: false
       },
       {
-        title: "Supply Chain Transparency",
-        description: "Complete visibility into production stages, materials sourcing, and delivery timelines for better planning and peace of mind.",
-        icon: "/icons/transparency.svg"
+        title: "Complete Supply Chain Transparency",
+        description: "End-to-end visibility into production stages, materials sourcing, and delivery timelines for better planning and peace of mind.",
+        icon: "/images/icons/climate-adapted.svg",
+        animation: {
+          type: "fadeInUp",
+          delay: 0.5,
+          duration: 0.8,
+          hoverEffect: "pulse"
+        },
+        iconBackground: "linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%)",
+        highlight: false
       }
     ],
+    
+    // Add a configuration for how to display the benefits section
+    benefitsDisplay: {
+      layout: "grid",
+      iconSize: "large",
+      animationEnabled: true,
+      style: "premium",
+      title: "Manufacturing & Supply Advantages",
+      subtitle: "Our end-to-end manufacturing and supply capabilities deliver exceptional value through these key advantages:",
+      callToAction: {
+        text: "Explore our manufacturing facilities",
+        link: "/services/manufacturing-tour"
+      }
+    },
     
     products: [
       {
-        id: "uniform-manufacturing",
-        name: "Uniform Manufacturing Services",
-        description: "Full-scale production of uniforms in our Saudi facilities with advanced machinery and skilled craftsmanship for consistent quality.",
-        image: "/images/product-placeholder.jpg",
+        id: "uniform-manufacturing-service",
+        name: "Premium Uniform Manufacturing Service",
+        description: "Full-scale production of high-quality uniforms in our Saudi facilities with advanced machinery and skilled craftsmanship for exceptional durability and finish.",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-1.jpg",
         href: "/services/manufacturing"
       },
       {
-        id: "uniform-suppliers-riyadh",
-        name: "Uniform Supply Riyadh",
-        description: "Comprehensive uniform supply services for organizations in Riyadh and Central Province, with rapid delivery capabilities.",
-        image: "/images/product-placeholder.jpg",
-        href: "/services/supply/riyadh"
+        id: "custom-uniform-production",
+        name: "Custom Uniform Design & Production",
+        description: "End-to-end custom uniform design and manufacturing service, from concept to production, with premium materials and attention to detail.",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-2.jpg",
+        href: "/services/custom-design"
       },
       {
-        id: "uniform-suppliers-jeddah",
-        name: "Uniform Supply Jeddah",
-        description: "Dedicated uniform supply operations serving Jeddah and the Western Region with customized delivery schedules.",
-        image: "/images/product-placeholder.jpg",
-        href: "/services/supply/jeddah"
-      },
-      {
-        id: "uniform-suppliers-dammam",
-        name: "Uniform Supply Dammam",
-        description: "Specialized uniform supply services for the Eastern Province, including oil & gas industries and manufacturing sectors.",
-        image: "/images/product-placeholder.jpg",
-        href: "/services/supply/eastern-province"
-      },
-      {
-        id: "wholesale-uniform-tailoring",
-        name: "Wholesale Uniform Tailoring",
-        description: "Large-scale tailoring services for uniform programs requiring perfect fit and consistent quality across numerous employees.",
-        image: "/images/product-placeholder.jpg",
-        href: "/services/wholesale-tailoring"
-      },
-      {
-        id: "government-uniform-suppliers",
-        name: "Government Uniform Supply",
-        description: "Specialized supply programs for government entities with compliance documentation, security clearances, and tender capabilities.",
-        image: "/images/product-placeholder.jpg",
-        href: "/services/government-supply"
+        id: "bulk-uniform-supply",
+        name: "Bulk Uniform Supply Program",
+        description: "Comprehensive bulk uniform supply solutions for large organizations, with consistent quality, timely delivery, and program management support.",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-3.jpg",
+        href: "/services/bulk-ordering"
       }
     ],
     
-    fabricTechnologies: [
-      {
-        name: "Local Fabric Production",
-        description: "Saudi-manufactured fabrics that meet international quality standards while supporting the Kingdom's textile industry development.",
-        icon: "/icons/local-fabric.svg"
-      },
-      {
-        name: "Import Quality Control",
-        description: "Rigorous testing and verification processes for imported materials to ensure they meet our quality standards before production.",
-        icon: "/icons/import-verification.svg"
-      },
-      {
-        name: "Advanced Manufacturing Equipment",
-        description: "State-of-the-art production machinery that ensures precision cutting, stitching, and finishing for superior quality uniforms.",
-        icon: "/icons/manufacturing-tech.svg"
-      },
-      {
-        name: "Sustainable Production Practices",
-        description: "Environmentally conscious manufacturing processes that reduce waste, conserve energy, and minimize environmental impact.",
-        icon: "/icons/sustainable-production.svg"
-      }
-    ],
+    fabricTechnologies: {
+      title: "Advanced Manufacturing Technologies",
+      description: "Our state-of-the-art manufacturing facilities incorporate cutting-edge technologies and processes to ensure superior quality, consistency, and efficiency in uniform production.",
+      items: [
+        {
+          name: "Saudi-Made Fabric Production",
+          description: "Locally manufactured premium fabrics designed specifically for Saudi Arabia's climate and working conditions, supporting the Kingdom's economic development goals.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-mens.jpg"
+        },
+        {
+          name: "Precision Digital Cutting",
+          description: "Computer-controlled cutting machines ensuring perfect precision and minimal waste in the manufacturing process for consistent sizing and fit.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-custom-workers.jpg"
+        },
+        {
+          name: "Advanced Embroidery & Branding",
+          description: "High-definition digital embroidery and branding techniques for flawless corporate identity application on all uniform items.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-logos.jpg"
+        },
+        {
+          name: "Quality Control Technology",
+          description: "Automated quality inspection systems combined with expert human verification to ensure every uniform meets our stringent quality standards.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-identity.jpg"
+        }
+      ]
+    },
     
-    customizationOptions: [
-      {
-        name: "Production Volume Flexibility",
-        description: "Customizable order quantities from small batches to large-scale production runs with consistent quality across all volumes.",
-        icon: "/icons/volume-flexibility.svg"
-      },
-      {
-        name: "Material Selection Options",
-        description: "Extensive fabric library with options ranging from locally sourced to premium imported materials for different requirements and budgets.",
-        icon: "/icons/material-selection.svg"
-      },
-      {
-        name: "Delivery Program Customization",
-        description: "Tailored delivery schedules and distribution plans based on your organization's specific rollout requirements.",
-        icon: "/icons/delivery-customization.svg"
-      },
-      {
-        name: "Quality Tier Options",
-        description: "Multiple quality tiers available to match different budget requirements while maintaining appropriate standards for each use case.",
-        icon: "/icons/quality-tiers.svg"
-      }
-    ],
+    customization: {
+      title: "Tailored Manufacturing Solutions",
+      description: "Our flexible manufacturing and supply approach allows us to customize every aspect of your uniform program to meet specific organizational requirements.",
+      options: [
+        {
+          name: "Production Volume Flexibility",
+          description: "Customizable order quantities from small batches to large-scale production runs with consistent quality across all volumes.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-post-1.jpg"
+        },
+        {
+          name: "Premium Material Selection",
+          description: "Extensive fabric library with options ranging from locally sourced to premium imported materials for different requirements and environments.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-post-2.jpg"
+        },
+        {
+          name: "Customized Delivery Programs",
+          description: "Tailored delivery schedules and distribution plans based on your organization's specific rollout requirements and timeline needs.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-post-3.jpg"
+        },
+        {
+          name: "Quality Tier Options",
+          description: "Multiple quality tiers available to match different budget requirements while maintaining appropriate standards for each use case.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-accesories.jpg"
+        }
+      ]
+    },
     
     testimonials: [
       {
         id: "testimonial-1",
-        quote: "UNEOM's manufacturing capabilities have been instrumental in supplying our hospital network with consistent, high-quality medical uniforms. Their local production facilities ensure quick turnaround times even for our largest orders.",
+        quote: "UNEOM's manufacturing capabilities have revolutionized our uniform program. Their local production facilities ensure quick turnarounds for our 3,000+ employees, while their quality control processes guarantee consistent excellence. Their ability to scale production while maintaining precision is remarkable.",
         author: "Dr. Khalid Al-Zahrani",
         position: "Procurement Director",
         company: "National Healthcare Group"
       },
       {
         id: "testimonial-2",
-        quote: "As a government contractor, we appreciate UNEOM's ability to handle large-scale uniform requirements with perfect documentation and consistency. Their transparent supply chain and quality assurance processes give us complete confidence.",
+        quote: "As a government contractor, we appreciate UNEOM's comprehensive approach to uniform manufacturing and supply. Their transparent documentation, quality assurance processes, and on-time delivery have made them our trusted partner for all uniform requirements across our operations.",
         author: "Ibrahim Al-Otaibi",
         position: "Supply Chain Manager",
         company: "Saudi Government Services"
       }
     ],
     
+    relatedContent: [
+      {
+        title: "Industrial Heat-Resistant Workwear Manufacturing",
+        description: "How innovative manufacturing techniques are creating advanced heat-resistant workwear for Saudi industrial environments",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-post-1.jpg",
+        link: "/blog/industrial-heat-stress-management"
+      },
+      {
+        title: "Sustainable Uniform Manufacturing Practices",
+        description: "Exploring eco-friendly manufacturing processes and materials in Saudi Arabia's uniform production industry",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-post-2.jpg",
+        link: "/blog/sustainable-uniforms-2024-trends"
+      },
+      {
+        title: "Anti-Static Uniform Manufacturing Technologies",
+        description: "Advanced production techniques for creating electrostatic protection uniforms for high-risk industrial environments",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-post-3.jpg",
+        link: "/blog/industrial-electrostatic-protection"
+      }
+    ],
+    
+    featuredProducts: [
+      {
+        id: "industrial-coverall-pro",
+        name: "Premium Industrial Coverall",
+        description: "Heavy-duty industrial coverall manufactured with flame-resistant fabric and reinforced seams for maximum protection and durability.",
+        price: "From SAR 289",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-1.jpg",
+        href: "/shop/industrial-uniforms/industrial-coverall-pro",
+        features: ["Locally manufactured", "Flame-resistant", "Reinforced seams", "Advanced protection"],
+        badge: "Best Seller"
+      },
+      {
+        id: "hi-vis-safety-uniform",
+        name: "High-Visibility Safety Uniform",
+        description: "Premium high-visibility safety uniform with reflective elements manufactured for hazardous industrial environments.",
+        price: "From SAR 249",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-2.jpg",
+        href: "/shop/industrial-uniforms/hi-vis-safety-uniform",
+        features: ["Enhanced visibility", "Durable construction", "Comfort-focused design", "Multiple pockets"],
+        badge: "Premium Quality"
+      },
+      {
+        id: "supervisor-industrial-uniform",
+        name: "Supervisor Industrial Uniform",
+        description: "Professional-grade supervisor uniform designed for industrial management personnel, combining authority with functionality.",
+        price: "From SAR 349",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-3.jpg",
+        href: "/shop/industrial-uniforms/supervisor-industrial-uniform",
+        features: ["Professional design", "Durable materials", "Management visibility", "Comfort-focused"],
+        badge: "Management Quality"
+      }
+    ],
+    
     faq: [
       {
         question: "What is your manufacturing capacity and typical lead time?",
-        answer: "Our facilities can produce up to 50,000 uniform pieces monthly. Standard lead times range from 2-4 weeks for regular orders, with expedited production available for urgent requirements. Large volume orders typically require 6-8 weeks for complete fulfillment."
+        answer: "Our state-of-the-art facilities can produce up to 75,000 uniform pieces monthly across our Saudi manufacturing locations. Standard lead times range from 2-3 weeks for regular orders, with expedited production available for urgent requirements. Large volume orders typically require 4-6 weeks for complete fulfillment, depending on specifications and customization requirements."
       },
       {
         question: "Do you source materials locally or internationally?",
-        answer: "We maintain a hybrid approach, sourcing fabrics and materials both locally from Saudi suppliers and internationally from trusted partners in Turkey, China, and Europe. This flexibility allows us to balance quality, cost, and specific requirements for each client's needs."
+        answer: "We maintain a strategic hybrid approach, sourcing premium fabrics and materials both locally from Saudi suppliers and internationally from trusted partners in Turkey, UAE, China, and Europe. This flexibility allows us to balance quality, cost, and specific requirements for each client's unique needs, while supporting Saudi Vision 2030 localization goals whenever possible."
       },
       {
-        question: "How do you ensure consistent quality across large orders?",
-        answer: "We implement a comprehensive quality management system that includes material testing, production line inspections, random sampling, and final quality verification before shipping. Our digital tracking system ensures every piece meets our established quality standards."
+        question: "How do you ensure consistent quality across large manufacturing orders?",
+        answer: "We implement a comprehensive ISO 9001-certified quality management system that includes material testing, production line inspections, statistical quality control, random sampling, and final quality verification before shipping. Our digital tracking system ensures every piece meets our established quality standards across all stages of the manufacturing process."
       },
       {
-        question: "Can you fulfill government tender requirements?",
-        answer: "Yes, we have extensive experience with government contracts and tenders. Our documentation, security clearances, Saudization levels, and quality certifications meet all requirements for government procurement processes."
+        question: "Can you fulfill government tender requirements for uniform manufacturing?",
+        answer: "Yes, we have extensive experience with government contracts and tenders for uniform manufacturing and supply. Our documentation, security clearances, Saudization levels, and quality certifications meet all requirements for government procurement processes. Our dedicated government services team specializes in tender preparation and fulfillment."
       }
     ],
     
     cta: {
-      title: "Discover Our Uniform Manufacturing & Supply Solutions",
-      description: "Contact our supply team to discuss your organization's uniform requirements and learn how UNEOM can provide reliable, high-quality production and delivery services.",
-      buttonText: "Request Supply Consultation",
+      title: "Transform Your Uniform Program with Premium Manufacturing & Supply",
+      description: "Contact our expert team to discuss your organization's uniform manufacturing and supply requirements. From design and production to delivery and program management, UNEOM delivers excellence at every stage.",
+      buttonText: "Request Manufacturing Consultation",
       buttonUrl: "/contact?industry=supply-manufacturing"
     }
   };

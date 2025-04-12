@@ -2,187 +2,284 @@
 
 import React from 'react';
 import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
+import { Metadata } from 'next';
 
 export default function SupplyManufacturingPageArabic() {
   // Use Arabic locale
   const locale = 'ar';
   
-  // All content for this industry page in Arabic
+  // All content for this industry page in Arabic with enhanced SEO and design elements
   const supplyManufacturingData = {
-    title: "حلول توريد وتصنيع الأزياء الموحدة في المملكة العربية السعودية",
-    subtitle: "خدمات متكاملة لتصنيع وتوريد الزي الموحد للمؤسسات والشركات في جميع أنحاء المملكة",
-    heroImage: "/images/banner-placeholder.jpg",
+    title: "حلول تصنيع وتوريد الزي الموحد المتميزة في المملكة العربية السعودية",
+    subtitle: "خدمات متكاملة من التصميم والإنتاج إلى التوريد وإدارة البرامج بمعايير تصنيع محلية عالية الجودة",
+    heroImage: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-1.jpg",
+    seoKeywords: "تصنيع الزي الموحد السعودية, إنتاج اليونيفورم الرياض, سلسلة توريد الملابس الموحدة, تصنيع الزي الموحد المخصص, موردي اليونيفورم السعودي, إنتاج الزي الموحد الصناعي, تصنيع ملابس العمل السعودية, حلول توريد اليونيفورم",
     
     introduction: [
-      "تعد يونيوم شركة رائدة في مجال تصنيع وتوريد الأزياء الموحدة في المملكة العربية السعودية، حيث نقدم حلولاً شاملة من الإنتاج المحلي والتوريد العالمي إلى التسليم في الوقت المحدد للمؤسسات من جميع الأحجام والقطاعات.",
+      "يونيوم هي الشريك الرائد في تصنيع وتوريد الأزياء الموحدة في المملكة العربية السعودية، حيث نقدم حلولاً شاملة متكاملة من التصميم والإنتاج إلى التسليم وإدارة البرامج. تجمع منشآت التصنيع المتطورة لدينا في الرياض وجدة والدمام مع شبكة التوريد العالمية لتوفير قدرات لا مثيل لها في إنتاج الزي الموحد.",
       
-      "تمكننا قدرات التصنيع المحلية المتطورة من تقديم مزايا فريدة لعملائنا في السعودية، بما في ذلك أوقات تسليم أسرع، وأحجام طلبات أكثر مرونة، وتحكم أفضل في الجودة، وقدرة على الاستجابة للمتطلبات المحددة. نعمل بموجب معايير ISO الصارمة لضمان جودة متميزة في كل مرحلة من مراحل عملية التصنيع.",
+      "تتيح لنا بنيتنا التحتية الشاملة للتصنيع والتوريد توفير مرونة استثنائية في الجودة والتكلفة ومواعيد التسليم. سواء كنت بحاجة إلى أزياء موحدة منتجة محلياً تدعم أهداف التوطين في رؤية السعودية 2030 أو ملابس عمل متميزة مستوردة من شركائنا الدوليين الموثوقين، فإن حلولنا مصممة خصيصاً لتلبية متطلباتك المحددة.",
       
-      "تكمل شبكة التوريد العالمية الخاصة بنا قدرات التصنيع المحلية لدينا، مما يتيح لنا الوصول إلى مجموعة واسعة من المواد والتقنيات المتخصصة. سواء كنت تمثل شركة خاصة أو مؤسسة حكومية أو سلسلة متاجر تجزئة متعددة الفروع، فإن حلولنا للتوريد والتصنيع مصممة لتلبية متطلباتك المحددة من حيث الكمية والجودة والميزانية والتسليم."
+      "مع التركيز على ضمان الجودة والتميز في التصنيع وشفافية سلسلة التوريد، توفر يونيوم حلولاً موثوقة ومتسقة للمؤسسات من جميع الأحجام في المملكة. من الشركات الصغيرة إلى المؤسسات الكبرى والجهات الحكومية، تضمن قدراتنا في التصنيع والتوريد تلبية متطلبات الزي الموحد الخاص بك بدقة وخبرة."
     ],
     
     benefits: [
       {
-        title: "قدرات التصنيع المحلي",
-        description: "منشآت إنتاج متطورة في المملكة العربية السعودية توفر أوقات تسليم أسرع وتحكمًا أفضل في الجودة وتقليل تكاليف الشحن.",
-        icon: "/icons/local-manufacturing.svg"
+        title: "تميز التصنيع المحلي",
+        description: "منشآت إنتاج سعودية مجهزة بأحدث التقنيات، مما يضمن أوقات تسليم أسرع، وتكاليف شحن أقل، ودعم تطوير الصناعة المحلية.",
+        icon: "/images/icons/premium-quality.svg",
+        animation: {
+          type: "fadeInUp",
+          delay: 0.1,
+          duration: 0.8,
+          hoverEffect: "pulse"
+        },
+        iconBackground: "linear-gradient(135deg, #0072ff 0%, #00c6ff 100%)",
+        highlight: true
       },
       {
         title: "شبكة توريد عالمية",
-        description: "علاقات مع موردين عالميين موثوقين تضمن الوصول إلى مجموعة واسعة من المواد ذات الجودة العالية والتقنيات المتخصصة.",
-        icon: "/icons/global-sourcing.svg"
+        description: "شراكات استراتيجية مع موردي الأزياء الموحدة المتميزين في تركيا والإمارات والصين وأوروبا للمتطلبات المتخصصة والمواد المبتكرة.",
+        icon: "/images/icons/comprehensive-support.svg",
+        animation: {
+          type: "fadeInUp",
+          delay: 0.2,
+          duration: 0.8,
+          hoverEffect: "grow"
+        },
+        iconBackground: "linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)",
+        highlight: false
       },
       {
-        title: "أنظمة ضمان الجودة",
-        description: "عمليات فحص صارمة متعددة المراحل تضمن أن كل قطعة من الزي الموحد تلبي المعايير العالية من حيث المواد والتصنيع والمتانة.",
-        icon: "/icons/quality-assurance.svg"
+        title: "ضمان جودة متقدم",
+        description: "عمليات مراقبة جودة معتمدة بشهادة ISO 9001 في كل مرحلة من مراحل الإنتاج، مع اختبارات دقيقة لضمان معايير عالية متسقة في جميع الطلبات.",
+        icon: "/images/icons/custom-branding.svg",
+        animation: {
+          type: "fadeInUp",
+          delay: 0.3,
+          duration: 0.8,
+          hoverEffect: "pulse"
+        },
+        iconBackground: "linear-gradient(135deg, #36D1DC 0%, #5B86E5 100%)",
+        highlight: false
       },
       {
-        title: "قدرة إنتاج قابلة للتوسع",
-        description: "مرافق تصنيع واسعة النطاق قادرة على التعامل مع أحجام طلبات صغيرة أو كبيرة بنفس مستوى الدقة والاهتمام بالتفاصيل.",
-        icon: "/icons/scalable-production.svg"
+        title: "قدرة إنتاجية قابلة للتوسع",
+        description: "قدرات تصنيع مرنة للتعامل مع طلبات من أي حجم، من الشركات الصغيرة إلى العقود الحكومية التي تتطلب آلاف القطع من الزي الموحد.",
+        icon: "/images/icons/timely-delivery.svg",
+        animation: {
+          type: "fadeInUp",
+          delay: 0.4,
+          duration: 0.8,
+          hoverEffect: "grow"
+        },
+        iconBackground: "linear-gradient(135deg, #38ef7d 0%, #11998e 100%)",
+        highlight: false
       },
       {
-        title: "شفافية سلسلة التوريد",
-        description: "تتبع كامل لسلسلة التوريد من مصدر المواد إلى التسليم النهائي، مما يوفر الشفافية والامتثال لمعايير المسؤولية الاجتماعية.",
-        icon: "/icons/supply-chain.svg"
+        title: "شفافية كاملة لسلسلة التوريد",
+        description: "رؤية شاملة لمراحل الإنتاج ومصادر المواد ومواعيد التسليم للتخطيط الأفضل وراحة البال.",
+        icon: "/images/icons/climate-adapted.svg",
+        animation: {
+          type: "fadeInUp",
+          delay: 0.5,
+          duration: 0.8,
+          hoverEffect: "pulse"
+        },
+        iconBackground: "linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%)",
+        highlight: false
       }
     ],
+    
+    // Add a configuration for how to display the benefits section
+    benefitsDisplay: {
+      layout: "grid",
+      iconSize: "large",
+      animationEnabled: true,
+      style: "premium",
+      title: "مزايا التصنيع والتوريد",
+      subtitle: "توفر قدراتنا المتكاملة في التصنيع والتوريد قيمة استثنائية من خلال هذه المزايا الرئيسية:",
+      callToAction: {
+        text: "استكشف منشآت التصنيع لدينا",
+        link: "/ar/services/manufacturing-tour"
+      }
+    },
     
     products: [
       {
-        id: "uniform-manufacturing",
-        name: "خدمات تصنيع الزي الموحد",
-        description: "تصنيع الأزياء الموحدة بالكامل من مرحلة التصميم إلى الإنتاج النهائي باستخدام مرافق الإنتاج المحلية المتطورة.",
-        image: "/images/product-placeholder.jpg",
+        id: "uniform-manufacturing-service",
+        name: "خدمة تصنيع الزي الموحد المتميزة",
+        description: "إنتاج شامل للأزياء الموحدة عالية الجودة في منشآتنا السعودية بآلات متطورة وحرفية ماهرة لمتانة وتشطيب استثنائيين.",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-1.jpg",
         href: "/ar/services/manufacturing"
       },
       {
-        id: "riyadh-uniform-supply",
-        name: "توريد الزي الموحد في الرياض",
-        description: "خدمات توريد الزي الموحد المخصصة للشركات والمؤسسات في منطقة الرياض مع خيارات تسليم سريعة.",
-        image: "/images/product-placeholder.jpg",
-        href: "/ar/services/manufacturing/riyadh"
+        id: "custom-uniform-production",
+        name: "تصميم وإنتاج الزي الموحد المخصص",
+        description: "خدمة متكاملة لتصميم وتصنيع الزي الموحد المخصص، من الفكرة إلى الإنتاج، باستخدام مواد متميزة واهتمام بالتفاصيل.",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-2.jpg",
+        href: "/ar/services/custom-design"
       },
       {
-        id: "jeddah-uniform-supply",
-        name: "توريد الزي الموحد في جدة",
-        description: "حلول توريد الزي الموحد الشاملة للشركات في المنطقة الغربية مع خدمات دعم مخصصة.",
-        image: "/images/product-placeholder.jpg",
-        href: "/ar/services/manufacturing/jeddah"
-      },
-      {
-        id: "uniform-wholesale",
-        name: "تصنيع الزي الموحد بالجملة",
-        description: "خدمات تصنيع وتفصيل بالجملة للشركات التي تحتاج إلى كميات كبيرة من الأزياء الموحدة عالية الجودة.",
-        image: "/images/product-placeholder.jpg",
-        href: "/ar/services/manufacturing/wholesale"
-      },
-      {
-        id: "government-uniform-supply",
-        name: "توريد الزي الموحد للجهات الحكومية",
-        description: "خدمات متخصصة لتوريد الأزياء الموحدة للمؤسسات الحكومية مع الامتثال الكامل لمتطلبات المناقصات والمواصفات.",
-        image: "/images/product-placeholder.jpg",
-        href: "/ar/services/manufacturing/government"
-      },
-      {
-        id: "hospital-uniform-production",
-        name: "إنتاج الزي الموحد للمستشفيات",
-        description: "تصنيع ملابس طبية وزي موحد للمستشفيات ومرافق الرعاية الصحية بأعلى معايير النظافة والجودة.",
-        image: "/images/product-placeholder.jpg",
-        href: "/ar/services/manufacturing/healthcare"
+        id: "bulk-uniform-supply",
+        name: "برنامج توريد الزي الموحد بالجملة",
+        description: "حلول شاملة لتوريد الزي الموحد بالجملة للمؤسسات الكبيرة، مع جودة متسقة وتسليم في الوقت المحدد ودعم إدارة البرنامج.",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-3.jpg",
+        href: "/ar/services/bulk-ordering"
       }
     ],
     
-    fabricTechnologies: [
-      {
-        name: "إنتاج الأقمشة المحلية",
-        description: "منشآت إنتاج أقمشة متطورة تصنع أقمشة عالية الجودة مصممة خصيصًا للظروف المناخية في المملكة العربية السعودية.",
-        icon: "/icons/local-fabric.svg"
-      },
-      {
-        name: "ضبط جودة الاستيراد",
-        description: "عمليات تدقيق وفحص صارمة للمواد المستوردة لضمان أن جميع الأقمشة والمكونات تلبي معاييرنا العالية.",
-        icon: "/icons/import-quality.svg"
-      },
-      {
-        name: "معدات تصنيع متقدمة",
-        description: "آلات قص ليزر وخياطة آلية وتطريز رقمي متطورة لضمان الدقة والاتساق في جميع منتجاتنا.",
-        icon: "/icons/advanced-equipment.svg"
-      },
-      {
-        name: "ممارسات إنتاج مستدامة",
-        description: "عمليات تصنيع مصممة لتقليل النفايات وتوفير الطاقة واستخدام مواد صديقة للبيئة حيثما أمكن ذلك.",
-        icon: "/icons/sustainable-production.svg"
-      }
-    ],
+    fabricTechnologies: {
+      title: "تقنيات التصنيع المتقدمة",
+      description: "تتضمن منشآت التصنيع المتطورة لدينا تقنيات وعمليات حديثة لضمان جودة فائقة واتساق وكفاءة في إنتاج الزي الموحد.",
+      items: [
+        {
+          name: "إنتاج الأقمشة السعودية",
+          description: "أقمشة متميزة مصنعة محلياً ومصممة خصيصاً لمناخ وظروف العمل في المملكة العربية السعودية، مما يدعم أهداف التنمية الاقتصادية للمملكة.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-mens.jpg"
+        },
+        {
+          name: "القص الرقمي الدقيق",
+          description: "آلات قص تعمل بالكمبيوتر تضمن دقة مثالية وحد أدنى من النفايات في عملية التصنيع للحصول على مقاسات ومناسبة متسقة.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-custom-workers.jpg"
+        },
+        {
+          name: "تطريز وعلامات تجارية متقدمة",
+          description: "تقنيات تطريز رقمية عالية الدقة وتطبيق العلامات التجارية بشكل مثالي على جميع عناصر الزي الموحد.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-logos.jpg"
+        },
+        {
+          name: "تقنية مراقبة الجودة",
+          description: "أنظمة فحص جودة آلية مدمجة مع التحقق البشري الخبير لضمان تلبية كل قطعة من الزي الموحد لمعاييرنا الصارمة للجودة.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-identity.jpg"
+        }
+      ]
+    },
     
-    customizationOptions: [
-      {
-        name: "مرونة حجم الإنتاج",
-        description: "القدرة على إنتاج طلبات بمختلف الأحجام، من كميات صغيرة للشركات الناشئة إلى إنتاج واسع النطاق للمؤسسات الكبيرة.",
-        icon: "/icons/volume-flexibility.svg"
-      },
-      {
-        name: "خيارات اختيار المواد",
-        description: "مجموعة واسعة من خيارات المواد لتلبية متطلبات مختلفة من حيث المناخ، والوظيفة، والمتانة، والميزانية.",
-        icon: "/icons/material-selection.svg"
-      },
-      {
-        name: "تخصيص برنامج التسليم",
-        description: "جداول تسليم مخصصة تناسب احتياجات عملك، سواء كانت شحنة واحدة كبيرة أو تسليمات منتظمة أصغر حجمًا.",
-        icon: "/icons/delivery-program.svg"
-      },
-      {
-        name: "خيارات مستويات الجودة",
-        description: "مستويات متعددة من الزي الموحد لتناسب مختلف الميزانيات واحتياجات الاستخدام، مع الحفاظ على معايير الجودة الأساسية.",
-        icon: "/icons/quality-tiers.svg"
-      }
-    ],
+    customization: {
+      title: "حلول تصنيع مخصصة",
+      description: "يتيح نهجنا المرن في التصنيع والتوريد تخصيص كل جانب من جوانب برنامج الزي الموحد الخاص بك لتلبية المتطلبات التنظيمية المحددة.",
+      options: [
+        {
+          name: "مرونة حجم الإنتاج",
+          description: "كميات طلبات قابلة للتخصيص من الدفعات الصغيرة إلى عمليات الإنتاج واسعة النطاق مع الحفاظ على الجودة المتسقة في جميع الكميات.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-post-1.jpg"
+        },
+        {
+          name: "اختيار المواد المتميزة",
+          description: "مكتبة أقمشة واسعة مع خيارات تتراوح من المصادر المحلية إلى المواد المستوردة المتميزة لمختلف المتطلبات والبيئات.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-post-2.jpg"
+        },
+        {
+          name: "برامج تسليم مخصصة",
+          description: "جداول تسليم وخطط توزيع مصممة خصيصاً بناءً على متطلبات الطرح الخاصة بمؤسستك واحتياجات الجدول الزمني.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-post-3.jpg"
+        },
+        {
+          name: "خيارات مستويات الجودة",
+          description: "مستويات جودة متعددة متاحة لتناسب متطلبات الميزانية المختلفة مع الحفاظ على المعايير المناسبة لكل حالة استخدام.",
+          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-accesories.jpg"
+        }
+      ]
+    },
     
     testimonials: [
       {
         id: "testimonial-1",
-        quote: "اخترنا يونيوم لتزويد فريقنا البالغ عدده 500 موظف بالزي الموحد لجميع الفروع البالغ عددها 25 فرعًا. كانت جودة المنتج متسقة، وعملية التوريد سلسة، والتسليم في الوقت المحدد. قدرتهم على التعامل مع طلبنا الكبير مع الاهتمام الشخصي كانت مثيرة للإعجاب.",
-        author: "فهد العتيبي",
+        quote: "لقد أحدثت قدرات يونيوم في التصنيع ثورة في برنامج الزي الموحد لدينا. توفر مرافق الإنتاج المحلية لديهم عمليات تسليم سريعة لأكثر من 3000 موظف، بينما تضمن عمليات مراقبة الجودة تميزاً متسقاً. قدرتهم على توسيع نطاق الإنتاج مع الحفاظ على الدقة أمر ملحوظ.",
+        author: "د. خالد الزهراني",
         position: "مدير المشتريات",
-        company: "سلسلة مطاعم الذواق"
+        company: "المجموعة الوطنية للرعاية الصحية"
       },
       {
         id: "testimonial-2",
-        quote: "كجهة حكومية تخضع لضوابط صارمة في المشتريات، وجدنا أن نهج يونيوم الشفاف والمنظم في تصنيع وتوريد الزي الموحد يلبي جميع متطلباتنا. استوفت جميع المواصفات الفنية ووثائق الامتثال توقعاتنا، مما سهل عملية المصادقة لدينا.",
-        author: "د. سارة الحربي",
-        position: "رئيسة قسم المشتريات",
-        company: "وزارة الصحة"
+        quote: "كمقاول حكومي، نقدر نهج يونيوم الشامل في تصنيع وتوريد الزي الموحد. جعلت وثائقهم الشفافة وعمليات ضمان الجودة والتسليم في الوقت المحدد منهم شريكاً موثوقاً لجميع متطلبات الزي الموحد عبر عملياتنا.",
+        author: "إبراهيم العتيبي",
+        position: "مدير سلسلة التوريد",
+        company: "خدمات الحكومة السعودية"
+      }
+    ],
+    
+    relatedContent: [
+      {
+        title: "تصنيع ملابس العمل المقاومة للحرارة الصناعية",
+        description: "كيف تعمل تقنيات التصنيع المبتكرة على إنتاج ملابس عمل متقدمة مقاومة للحرارة للبيئات الصناعية السعودية",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-post-1.jpg",
+        link: "/ar/blog/industrial-heat-stress-management"
+      },
+      {
+        title: "ممارسات تصنيع الزي الموحد المستدامة",
+        description: "استكشاف عمليات التصنيع والمواد الصديقة للبيئة في صناعة إنتاج الزي الموحد بالمملكة العربية السعودية",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-post-2.jpg",
+        link: "/ar/blog/sustainable-uniforms-2024-trends"
+      },
+      {
+        title: "تقنيات تصنيع الزي الموحد المضاد للكهرباء الإستاتيكية",
+        description: "تقنيات إنتاج متقدمة لإنشاء أزياء موحدة للحماية من الكهرباء الإستاتيكية للبيئات الصناعية عالية المخاطر",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-post-3.jpg",
+        link: "/ar/blog/industrial-electrostatic-protection"
+      }
+    ],
+    
+    featuredProducts: [
+      {
+        id: "industrial-coverall-pro",
+        name: "غطاء الجسم الصناعي المتميز",
+        description: "غطاء جسم صناعي متين مصنع من قماش مقاوم للهب وخياطات معززة لأقصى درجات الحماية والمتانة.",
+        price: "من ٢٨٩ ريال سعودي",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-1.jpg",
+        href: "/ar/shop/industrial-uniforms/industrial-coverall-pro",
+        features: ["مصنّع محلياً", "مقاوم للهب", "خياطات معززة", "حماية متقدمة"],
+        badge: "الأكثر مبيعاً"
+      },
+      {
+        id: "hi-vis-safety-uniform",
+        name: "زي الأمان عالي الوضوح",
+        description: "زي أمان متميز عالي الوضوح مع عناصر عاكسة مصنع للبيئات الصناعية الخطرة.",
+        price: "من ٢٤٩ ريال سعودي",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-2.jpg",
+        href: "/ar/shop/industrial-uniforms/hi-vis-safety-uniform",
+        features: ["وضوح محسّن", "بناء متين", "تصميم يركز على الراحة", "جيوب متعددة"],
+        badge: "جودة متميزة"
+      },
+      {
+        id: "supervisor-industrial-uniform",
+        name: "زي المشرف الصناعي",
+        description: "زي مشرف احترافي مصمم للموظفين الإداريين الصناعيين، يجمع بين السلطة والوظائف العملية.",
+        price: "من ٣٤٩ ريال سعودي",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-3.jpg",
+        href: "/ar/shop/industrial-uniforms/supervisor-industrial-uniform",
+        features: ["تصميم احترافي", "مواد متينة", "وضوح للإدارة", "تركيز على الراحة"],
+        badge: "جودة إدارية"
       }
     ],
     
     faq: [
       {
-        question: "ما هي قدرة التصنيع القصوى لديكم للأزياء الموحدة؟",
-        answer: "تمتلك مرافق التصنيع لدينا قدرة إنتاجية تصل إلى 10,000 قطعة زي موحد أسبوعيًا، مما يسمح لنا بتلبية احتياجات المؤسسات الكبيرة والمشاريع الواسعة النطاق. كما نقدم حلول إنتاج مرنة للطلبات الأصغر دون المساس بالجودة."
+        question: "ما هي قدرة التصنيع وفترة التسليم النموذجية لديكم؟",
+        answer: "يمكن لمرافقنا المتطورة إنتاج ما يصل إلى 75,000 قطعة زي موحد شهرياً عبر مواقع التصنيع السعودية. تتراوح فترات التسليم القياسية من 2-3 أسابيع للطلبات العادية، مع توفر الإنتاج المعجل للمتطلبات العاجلة. تتطلب الطلبات كبيرة الحجم عادةً 4-6 أسابيع للتسليم الكامل، اعتماداً على المواصفات ومتطلبات التخصيص."
       },
       {
-        question: "من أين تحصلون على موادكم ومكوناتكم؟",
-        answer: "نحن نجمع بين المصادر المحلية والعالمية للمواد. نستخدم الأقمشة المنتجة محليًا حيثما أمكن، ونستورد المواد المتخصصة من موردين معتمدين في آسيا وأوروبا، مع ضمان أن جميع المواد تخضع لاختبارات جودة صارمة قبل استخدامها في الإنتاج."
+        question: "هل تحصلون على المواد محلياً أم دولياً؟",
+        answer: "نحافظ على نهج هجين استراتيجي، حيث نوفر الأقمشة والمواد المتميزة محلياً من الموردين السعوديين ودولياً من شركائنا الموثوقين في تركيا والإمارات والصين وأوروبا. تتيح لنا هذه المرونة موازنة الجودة والتكلفة والمتطلبات المحددة للاحتياجات الفريدة لكل عميل، مع دعم أهداف التوطين في رؤية السعودية 2030 كلما أمكن ذلك."
       },
       {
-        question: "كيف تضمنون جودة الأزياء الموحدة المصنعة؟",
-        answer: "نطبق نظام ضمان جودة صارم يتضمن اختبارات المواد الأولية، وفحص الجودة أثناء الإنتاج، وفحص نهائي شامل لكل قطعة. تم اعتماد منشآت التصنيع لدينا وفقًا لمعايير ISO 9001، ونستخدم أحدث معدات الاختبار لتقييم المتانة وثبات اللون ومقاومة التآكل."
+        question: "كيف تضمنون الجودة المتسقة عبر طلبات التصنيع الكبيرة؟",
+        answer: "نقوم بتنفيذ نظام إدارة جودة شامل معتمد بشهادة ISO 9001 يتضمن اختبار المواد وفحص خط الإنتاج ومراقبة الجودة الإحصائية وأخذ العينات العشوائية والتحقق النهائي من الجودة قبل الشحن. يضمن نظام التتبع الرقمي لدينا أن كل قطعة تلبي معايير الجودة المعتمدة لدينا في جميع مراحل عملية التصنيع."
       },
       {
-        question: "هل يمكنكم تلبية متطلبات المناقصات الحكومية لتوريد الزي الموحد؟",
-        answer: "نعم، لدينا خبرة واسعة في تلبية متطلبات المناقصات الحكومية السعودية. فريقنا المتخصص على دراية تامة بإجراءات المناقصات الحكومية، ويمكننا تقديم جميع الوثائق والشهادات المطلوبة، والامتثال للمواصفات الفنية المحددة، والالتزام بجداول التسليم الصارمة المطلوبة في المشاريع الحكومية."
+        question: "هل يمكنكم تلبية متطلبات المناقصات الحكومية لتصنيع الزي الموحد؟",
+        answer: "نعم، لدينا خبرة واسعة في العقود والمناقصات الحكومية لتصنيع وتوريد الزي الموحد. تلبي وثائقنا وتصاريح الأمن ومستويات السعودة وشهادات الجودة جميع متطلبات عمليات الشراء الحكومية. يتخصص فريق الخدمات الحكومية المخصص لدينا في إعداد وتنفيذ المناقصات."
       }
     ],
     
     cta: {
-      title: "حلول توريد وتصنيع الأزياء الموحدة المخصصة لاحتياجاتك",
-      description: "تواصل معنا اليوم لمناقشة متطلبات تصنيع وتوريد الزي الموحد الخاصة بك واكتشف كيف يمكن لخبرتنا المحلية وشبكتنا العالمية أن تقدم حلاً متكاملاً لمؤسستك.",
-      buttonText: "استفسر عن خدمات التصنيع",
-      buttonUrl: "/ar/contact?service=manufacturing-supply"
+      title: "حوّل برنامج الزي الموحد لديك مع التصنيع والتوريد المتميز",
+      description: "تواصل مع فريق الخبراء لدينا لمناقشة متطلبات التصنيع والتوريد للزي الموحد لمؤسستك. من التصميم والإنتاج إلى التسليم وإدارة البرنامج، تقدم يونيوم التميز في كل مرحلة.",
+      buttonText: "طلب استشارة التصنيع",
+      buttonUrl: "/ar/contact?industry=supply-manufacturing"
     }
   };
 
-  return <IndustryPageLayout locale={locale} industryData={supplyManufacturingData}  />;
+  return <IndustryPageLayout locale={locale} industryData={supplyManufacturingData} />;
 } 
