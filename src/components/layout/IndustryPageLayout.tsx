@@ -10,12 +10,21 @@ import SectionHeading from '../ui/SectionHeading';
 import Button from '../ui/Button';
 import QuoteForm from '../forms/QuoteForm';
 import FeaturedProducts from '../sections/FeaturedProducts';
+import AnimatedBenefitsSection from '../sections/AnimatedBenefitsSection';
 
 // Define types for all the data that can be passed to the IndustryPageLayout
 interface Benefit {
   title: string;
   description: string;
   icon: string;
+  animation?: {
+    type: string;
+    delay: number;
+    duration: number;
+    hoverEffect: string;
+  };
+  iconBackground?: string;
+  highlight?: boolean;
 }
 
 interface Product {
@@ -91,6 +100,20 @@ interface IntroductionObject {
   image?: string;
 }
 
+// Add BenefitsDisplayConfig interface
+interface BenefitsDisplayConfig {
+  layout: string;
+  iconSize: string;
+  animationEnabled: boolean;
+  style: string;
+  title: string;
+  subtitle: string;
+  callToAction?: {
+    text: string;
+    link: string;
+  };
+}
+
 interface IndustryData {
   title: string;
   subtitle: string;
@@ -116,6 +139,7 @@ interface IndustryData {
     buttonHref?: string;  // Some pages use buttonHref instead of buttonUrl
   };
   seoKeywords?: string;
+  benefitsDisplay?: BenefitsDisplayConfig;
   featuredProducts?: FeaturedProduct[];
 }
 
@@ -548,67 +572,76 @@ export default function IndustryPageLayout({
     /* Key Benefits Section */
     ((industryData.benefits && Array.isArray(industryData.benefits) && industryData.benefits.length > 0) || 
       (industryData.keyBenefits && Array.isArray(industryData.keyBenefits) && industryData.keyBenefits.length > 0)) && (
-      React.createElement(
-        "section",
-        { className: "py-16 bg-neutral-50" },
+      industryData.benefitsDisplay ? 
+        // Use the new AnimatedBenefitsSection if benefitsDisplay configuration is present
+        <AnimatedBenefitsSection 
+          benefits={industryData.benefits || industryData.keyBenefits || []}
+          displayConfig={industryData.benefitsDisplay}
+          locale={locale}
+        />
+        :
+        // Use the original benefits section if no benefitsDisplay config
         React.createElement(
-          motion.div,
-          {
-            initial: "hidden",
-            whileInView: "visible",
-            viewport: { once: true },
-            variants: fadeIn
-          },
+          "section",
+          { className: "py-16 bg-neutral-50" },
           React.createElement(
-            SectionHeading,
-            { 
-              centered: false, 
-              subtitle: isRtl ? "لماذا تختار زي UNEOM لقطاعك" : "Why Choose UNEOM For Your Industry", 
-              children: isRtl ? "المزايا والفوائد" : "Benefits & Advantages" 
-            }
-          ),
-          React.createElement(
-            "div",
-            { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12" },
-            (industryData.benefits || industryData.keyBenefits || []).map((benefit, index) => (
-              React.createElement(
-                motion.div,
-                {
-                  key: index,
-                  className: "bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300",
-                  variants: fadeIn
-                },
+            motion.div,
+            {
+              initial: "hidden",
+              whileInView: "visible",
+              viewport: { once: true },
+              variants: fadeIn
+            },
+            React.createElement(
+              SectionHeading,
+              { 
+                centered: false, 
+                subtitle: isRtl ? "لماذا تختار زي UNEOM لقطاعك" : "Why Choose UNEOM For Your Industry", 
+                children: isRtl ? "المزايا والفوائد" : "Benefits & Advantages" 
+              }
+            ),
+            React.createElement(
+              "div",
+              { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12" },
+              (industryData.benefits || industryData.keyBenefits || []).map((benefit, index) => (
                 React.createElement(
-                  "div",
-                  { className: "rounded-full bg-primary-100 p-3 w-16 h-16 flex items-center justify-center mb-4" },
+                  motion.div,
+                  {
+                    key: index,
+                    className: "bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300",
+                    variants: fadeIn
+                  },
                   React.createElement(
-                    Image,
-                    {
-                      src: typeof benefit.icon === 'string' && !benefit.icon.startsWith('/') && !benefit.icon.startsWith('http') 
-                        ? '/images/default-placeholder.jpg' 
-                        : benefit.icon,
-                      alt: benefit.title,
-                      width: 32,
-                      height: 32,
-                      className: "text-primary-600"
-                    }
-                  ),
-                  React.createElement(
-                    "h3",
-                    { className: "text-xl font-bold text-neutral-900 mb-2" },
-                    benefit.title
-                  ),
-                  React.createElement(
-                    "p",
-                    { className: "text-neutral-600" },
-                    benefit.description
+                    "div",
+                    { className: "rounded-full bg-primary-100 p-3 w-16 h-16 flex items-center justify-center mb-4" },
+                    React.createElement(
+                      Image,
+                      {
+                        src: typeof benefit.icon === 'string' && !benefit.icon.startsWith('/') && !benefit.icon.startsWith('http') 
+                          ? '/images/default-placeholder.jpg' 
+                          : benefit.icon,
+                        alt: benefit.title,
+                        width: 32,
+                        height: 32,
+                        className: "text-primary-600"
+                      }
+                    ),
+                    React.createElement(
+                      "h3",
+                      { className: "text-xl font-bold text-neutral-900 mb-2" },
+                      benefit.title
+                    ),
+                    React.createElement(
+                      "p",
+                      { className: "text-neutral-600" },
+                      benefit.description
+                    )
                   )
                 )
               )
             )
           )
         )
-      )
     ),
     
     /* Featured Products Section */
