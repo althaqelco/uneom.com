@@ -1,5 +1,11 @@
 User-agent: *
 Allow: /
 
+# Exclude placeholder product pages
+Disallow: /shop/*/related-product-*
+Disallow: /shop/*/product-*
+Disallow: /ar/shop/*/related-product-*
+Disallow: /ar/shop/*/product-*
+
 # Sitemaps
 Sitemap: https://uneom.com/sitemap.xml 
