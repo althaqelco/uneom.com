@@ -201,5 +201,11 @@
 /shop/*/product-* /404.html 404
 /ar/shop/*/product-* /404.html 404
 
-# Handle non-existent routes with a 404 status code - This must come before the catch-all route
+# Main pages explicitly defined to ensure they work
+/ /index.html 200
+/about /about/index.html 200
+/contact /contact/index.html 200
+/ar /ar/index.html 200
+
+# Handle non-existent routes with a 404 status code - This is the catch-all rule
 /*  /404.html  404! 
