@@ -61,11 +61,13 @@
   force = true
 
 # Fallback para rutas no encontradas - Modificado para devolver código 404 adecuado
+# Excluimos los archivos estáticos, APIs, y recursos del sistema de Next.js
 [[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
   force = false
+  conditions = {path = {match = "^(?!(api|_next|images|assets|css|js|fonts|favicon)/)"}}
 
 # English - Additional Products & Categories
 [[redirects]]
