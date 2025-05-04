@@ -4,6 +4,9 @@
 /sectors/education-uniforms/ /industries/education/ 301!
 /sectors/education-uniforms /industries/education 301!
 
+# Arabic services redirect - add trailing slash
+/ar/services /ar/services/ 301!
+
 # English - About redirects
 /who-we-are/ /about/ 301!
 /who-we-are /about 301!
@@ -151,8 +154,6 @@
 /ar/contact-us /ar/contact 301!
 /ar/request-a-quote/ /ar/quote/ 301!
 /ar/request-a-quote /ar/quote 301!
-/ar/services/ /ar/services/ 301!
-/ar/services /ar/services 301!
 /ar/faqs/ /ar/faq/ 301!
 /ar/faqs /ar/faq 301!
 /ar/about-us/ /ar/about/ 301!
@@ -193,5 +194,12 @@
 /images/default-placeholder.jpg  /images/defaults/default-placeholder.jpg  200
 /images/default-placeholder.svg  /images/defaults/default-placeholder.svg  200
 
-# Asegurar que todas las rutas sean manejadas por Next.js
-/*  /index.html  200 
+# Explicitly define the 404 page with correct status code - Most important rule
+/404.html /404.html 404
+
+# Product placeholders should return 404
+/shop/*/product-* /404.html 404
+/ar/shop/*/product-* /404.html 404
+
+# Handle non-existent routes with a 404 status code - This must come before the catch-all route
+/*  /404.html  404! 

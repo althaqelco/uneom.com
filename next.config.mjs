@@ -9,6 +9,10 @@ const nextConfig = {
   // Para Netlify necesitamos exportación estática
   output: 'export',
   
+  // Force the generation of a 404.html file for Netlify
+  // This is really important to ensure Netlify serves proper 404 status codes
+  generateEtags: false,
+  
   // Skip type checking in production to make builds faster and more reliable on Vercel
   typescript: {
     // !! WARN !!
@@ -558,7 +562,7 @@ const nextConfig = {
       },
       {
         source: '/ar/services',
-        destination: '/ar/services',
+        destination: '/ar/services/',
         permanent: true,
       },
       {
