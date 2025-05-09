@@ -568,3 +568,23 @@
   to = "/ar/shop/:splat/"
   status = 301
   force = true
+
+# Ensure trailing slash for /resources overview pages
+[[redirects]]
+  from = "/ar/resources"
+  to = "/ar/resources/"
+  status = 301
+  force = true
+
+# Careers page redirects (assessed as per roadmap)
+[[redirects]]
+  from = "/careers/*" # Catches /careers and /careers/
+  to = "/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/careers/*" # Catches /ar/careers and /ar/careers/
+  to = "/ar/about/"
+  status = 301
+  force = true

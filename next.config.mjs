@@ -488,6 +488,17 @@ const nextConfig = {
         destination: '/ar/shop/',
         permanent: true,
       },
+      // Careers page redirects (assessed as per roadmap)
+      {
+        source: '/careers/:path*',
+        destination: '/about/',
+        permanent: true,
+      },
+      {
+        source: '/ar/careers/:path*',
+        destination: '/ar/about/',
+        permanent: true,
+      },
     ];
   },
 };
