@@ -52,31 +52,77 @@
 # English product placeholders
 [[redirects]]
   from = "/shop/*/related-product-*"
-  to = "/shop/:splat"
+  to = "/shop/:splat/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/shop/*/product-*"
-  to = "/shop/:splat"
+  to = "/shop/:splat/"
   status = 301
   force = true
 
 # Arabic product placeholders  
 [[redirects]]
   from = "/ar/shop/*/related-product-*"
-  to = "/ar/shop/:splat"
+  to = "/ar/shop/:splat/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/shop/*/product-*"
-  to = "/ar/shop/:splat"
+  to = "/ar/shop/:splat/"
+  status = 301
+  force = true
+
+# Redirect factory-industry and supply-manufacturing to manufacturing
+[[redirects]]
+  from = "/industries/factory-industry/*"
+  to = "/industries/manufacturing/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/industries/factory-industry/*"
+  to = "/ar/industries/manufacturing/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/industries/supply-manufacturing/*"
+  to = "/industries/manufacturing/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/industries/supply-manufacturing/*"
+  to = "/ar/industries/manufacturing/"
+  status = 301
+  force = true
+
+# Ensure trailing slash for /industries overview pages
+[[redirects]]
+  from = "/industries"
+  to = "/industries/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/industries"
+  to = "/ar/industries/"
+  status = 301
+  force = true
+
+# Blog page redirect
+[[redirects]]
+  from = "/ar/blog" # No slash
+  to = "/ar/blog/" # With slash
   status = 301
   force = true
 
 # Fallback para rutas no encontradas - Modificado para devolver código 404 adecuado
 # Excluimos los archivos estáticos, APIs, y recursos del sistema de Next.js
+# This redirect MUST be the last one for general paths (before specific file type redirects if any)
 [[redirects]]
   from = "/*"
   to = "/404.html"
@@ -474,5 +520,51 @@
 [[redirects]]
   from = "/ar/categories"
   to = "/ar/shop/"
+  status = 301
+  force = true
+
+# Service page redirects
+[[redirects]]
+  from = "/ar/services" # No slash
+  to = "/ar/services/" # With slash
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services-page"
+  to = "/services/"
+  status = 301
+  force = true
+
+# Ensure trailing slash for /locations overview pages
+[[redirects]]
+  from = "/locations" # No slash
+  to = "/locations/" # With slash
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/locations" # No slash
+  to = "/ar/locations/" # With slash
+  status = 301
+  force = true
+
+# Shop page redirect
+[[redirects]]
+  from = "/ar/shop" # No slash
+  to = "/ar/shop/" # With slash
+  status = 301
+  force = true
+
+# Redirect related-product-* URLs to their main category page
+[[redirects]]
+  from = "/shop/*/related-product-*"
+  to = "/shop/:splat/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/shop/*/related-product-*"
+  to = "/ar/shop/:splat/"
   status = 301
   force = true

@@ -316,6 +316,178 @@ const nextConfig = {
         destination: '/ar/faq/',
         permanent: true,
       },
+
+      // Redirect factory-industry and supply-manufacturing to manufacturing
+      {
+        source: '/industries/factory-industry/:path*',
+        destination: '/industries/manufacturing/',
+        permanent: true,
+      },
+      {
+        source: '/ar/industries/factory-industry/:path*',
+        destination: '/ar/industries/manufacturing/',
+        permanent: true,
+      },
+      {
+        source: '/industries/supply-manufacturing/:path*',
+        destination: '/industries/manufacturing/',
+        permanent: true,
+      },
+      {
+        source: '/ar/industries/supply-manufacturing/:path*',
+        destination: '/ar/industries/manufacturing/',
+        permanent: true,
+      },
+
+      // Ensure trailing slash for /industries overview pages
+      {
+        source: '/industries',
+        destination: '/industries/',
+        permanent: true,
+      },
+      {
+        source: '/ar/industries',
+        destination: '/ar/industries/',
+        permanent: true,
+      },
+
+      // Service page redirects
+      {
+        source: '/ar/services', // No slash
+        destination: '/ar/services/', // With slash
+        permanent: true,
+      },
+      {
+        source: '/services-page',
+        destination: '/services/',
+        permanent: true,
+      },
+
+      // Ensure trailing slash for /locations overview pages
+      {
+        source: '/locations', // No slash
+        destination: '/locations/', // With slash
+        permanent: true,
+      },
+      {
+        source: '/ar/locations', // No slash
+        destination: '/ar/locations/', // With slash
+        permanent: true,
+      },
+
+      // Shop page redirect
+      {
+        source: '/ar/shop', // No slash
+        destination: '/ar/shop/', // With slash
+        permanent: true,
+      },
+
+      // Redirect related-product-* URLs to their main category page
+      {
+        source: '/shop/:category*/related-product-:splat*',
+        destination: '/shop/:category*/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/:category*/related-product-:splat*',
+        destination: '/ar/shop/:category*/',
+        permanent: true,
+      },
+      // Redirect product-* URLs to their main category page (matching netlify.toml behavior)
+      {
+        source: '/shop/:category*/product-:splat*',
+        destination: '/shop/:category*/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/:category*/product-:splat*',
+        destination: '/ar/shop/:category*/',
+        permanent: true,
+      },
+
+      // Blog page redirect
+      {
+        source: '/ar/blog', // No slash
+        destination: '/ar/blog/', // With slash
+        permanent: true,
+      },
+
+      // Blog Date Archives redirects
+      {
+        source: '/blog/:year(\\d{4})',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/blog/:year(\\d{4})/:month(\\d{1,2})',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/:year(\\d{4})',
+        destination: '/ar/blog/',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/:year(\\d{4})/:month(\\d{1,2})',
+        destination: '/ar/blog/',
+        permanent: true,
+      },
+      // Blog Pagination redirects
+      {
+        source: '/blog/page/1',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/page/1',
+        destination: '/ar/blog/',
+        permanent: true,
+      },
+
+      // Ensure trailing slash for /resources overview pages
+      {
+        source: '/resources',
+        destination: '/resources/',
+        permanent: true,
+      },
+      {
+        source: '/ar/resources',
+        destination: '/ar/resources/',
+        permanent: true,
+      },
+
+      // Utility Pages redirects (matching netlify.toml)
+      {
+        source: '/sitemap',
+        destination: '/', // Or sitemap.xml if preferred for direct access
+        permanent: true,
+      },
+      {
+        source: '/ar/sitemap',
+        destination: '/ar/',
+        permanent: true,
+      },
+      {
+        source: '/search',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/ar/search',
+        destination: '/ar/',
+        permanent: true,
+      },
+      {
+        source: '/categories',
+        destination: '/shop/',
+        permanent: true,
+      },
+      {
+        source: '/ar/categories',
+        destination: '/ar/shop/',
+        permanent: true,
+      },
     ];
   },
 };
