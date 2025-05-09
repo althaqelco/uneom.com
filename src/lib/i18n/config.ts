@@ -1,6 +1,11 @@
 /**
  * Configuration for internationalization
  * Contains locale settings and language options
+ * 
+ * URL Structure (per roadmap.md):
+ * - English (default): No prefix (e.g., /about/)
+ * - Arabic: /ar/ prefix (e.g., /ar/about/)
+ * - All URLs should have trailing slashes
  */
 
 // Supported locales
@@ -56,13 +61,15 @@ export const isRTL = (lang: Locale): boolean => LANGUAGE_DIRECTION[lang] === 'rt
 
 /**
  * Get language code from path
+ * Only 'ar' is considered a locale prefix
+ * English (default) has no prefix
  */
 export const getLanguageFromPath = (pathname: string): Locale => {
   const pathSegments = pathname.split('/').filter(Boolean);
   const firstSegment = pathSegments[0];
   
-  if (locales.includes(firstSegment as Locale)) {
-    return firstSegment as Locale;
+  if (firstSegment === 'ar') {
+    return 'ar';
   }
   
   return defaultLocale;
@@ -70,16 +77,31 @@ export const getLanguageFromPath = (pathname: string): Locale => {
 
 /**
  * Change language in path
+ * Follows the URL structure:
+ * - English (default): No prefix
+ * - Arabic: /ar/ prefix
  */
 export const changeLanguageInPath = (currentPath: string, newLang: Locale): string => {
   const currentLang = getLanguageFromPath(currentPath);
   
   if (currentLang === defaultLocale) {
-    // Path doesn't have language prefix
-    return `/${newLang}${currentPath}`;
+    // Current path is English (no prefix)
+    if (newLang === defaultLocale) {
+      // Stay in English
+      return currentPath;
+    } else {
+      // Switch to Arabic
+      return `/ar${currentPath === '/' ? '' : currentPath}`;
+    }
   } else {
-    // Replace language in path
-    return currentPath.replace(`/${currentLang}`, newLang === defaultLocale ? '' : `/${newLang}`);
+    // Current path is Arabic (with /ar/ prefix)
+    if (newLang === defaultLocale) {
+      // Switch to English (remove /ar/ prefix)
+      return currentPath.replace(/^\/ar/, '');
+    } else {
+      // Stay in Arabic
+      return currentPath;
+    }
   }
 };
 

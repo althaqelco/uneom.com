@@ -7,11 +7,15 @@ import { usePathname } from 'next/navigation';
 const DEFAULT_LANGUAGE = 'en';
 
 // Define function to get language from path
-const getLanguageFromPath = (pathname: string): string => {
+const getLanguageFromPath = (pathname: string | null): string => {
+  if (!pathname) return DEFAULT_LANGUAGE;
+  
   const pathSegments = pathname.split('/').filter(Boolean);
   const firstSegment = pathSegments[0];
   
-  if (firstSegment === 'en' || firstSegment === 'ar') {
+  // Only 'ar' should be recognized as a locale prefix
+  // English is the default with no prefix
+  if (firstSegment === 'ar') {
     return firstSegment;
   }
   

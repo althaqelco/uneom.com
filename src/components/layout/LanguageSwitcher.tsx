@@ -14,6 +14,9 @@ interface LanguageSwitcherProps {
 /**
  * Component for switching between languages
  * Optimized for faster transitions and better user experience
+ * Follows the URL structure from roadmap.md:
+ * - English (default): No prefix (e.g., /about/)
+ * - Arabic: /ar/ prefix (e.g., /ar/about/)
  */
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   className = '',
@@ -59,12 +62,17 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
       let newPath = '';
       
       if (currentLocale === LANGUAGES.AR) {
-        // من العربية إلى الإنجليزية
+        // من العربية إلى الإنجليزية (الافتراضية، بدون بادئة)
         newPath = pathname.replace(/^\/ar(?=\/|$)/, '');
         if (newPath === '') newPath = '/';
       } else {
-        // من الإنجليزية إلى العربية
+        // من الإنجليزية إلى العربية (إضافة بادئة /ar/)
         newPath = `/ar${pathname === '/' ? '' : pathname}`;
+      }
+      
+      // Ensure trailing slash for SEO
+      if (!newPath.endsWith('/') && !newPath.includes('.')) {
+        newPath += '/';
       }
       
       if (search) {
