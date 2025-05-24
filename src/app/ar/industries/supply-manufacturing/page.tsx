@@ -282,5 +282,5 @@ export default function SupplyManufacturingPageArabic() {
     }
   };
 
-  return <IndustryPageLayout locale={locale} industryData={supplyManufacturingData} skipMainLayout={false} />;
+  return <IndustryPageLayout locale={locale} industryData={supplyManufacturingData} skipMainLayout={true} />;
 } 
