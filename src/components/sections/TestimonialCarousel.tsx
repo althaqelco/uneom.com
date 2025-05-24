@@ -508,9 +508,13 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
                           ? 'bg-primary-500 w-8' 
                           : 'bg-white/30 hover:bg-white/60'
                       }`}
-                      aria-label={locale === 'en' 
-                        ? `Go to testimonial ${index + 1}` 
-                        : `الانتقال إلى الشهادة ${index + 1}`
+                      aria-label={locale === 'en'
+                        ? `View Client Story ${index + 1}`
+                        : `عرض قصة العميل ${index + 1}`
+                      }
+                      title={locale === 'en'
+                        ? `Read Success Story ${index + 1}`
+                        : `اقرأ قصة النجاح ${index + 1}`
                       }
                     />
                   ))}
@@ -520,7 +524,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
                   <button 
                     onClick={prevSlide}
                     className="bg-white/10 border border-white/20 backdrop-blur-sm rounded-full p-3 text-white hover:bg-white/20 transition-colors duration-300"
-                    aria-label={locale === 'en' ? "Previous testimonial" : "الشهادة السابقة"}
+                    aria-label={locale === 'en' ? "Previous Client Success Story" : "قصة نجاح العميل السابقة"}
+                    title={locale === 'en' ? "View Previous Client Experience" : "عرض تجربة العميل السابقة"}
                   >
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
@@ -540,7 +545,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
                   <button 
                     onClick={nextSlide}
                     className="bg-gradient-to-r from-primary-600 to-blue-600 rounded-full p-3 text-white hover:shadow-lg hover:from-primary-500 hover:to-blue-500 transition-all duration-300"
-                    aria-label={locale === 'en' ? "Next testimonial" : "الشهادة التالية"}
+                    aria-label={locale === 'en' ? "Next Client Success Story" : "قصة نجاح العميل التالية"}
+                    title={locale === 'en' ? "Discover More Client Experiences" : "اكتشف المزيد من تجارب العملاء"}
                   >
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 

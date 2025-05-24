@@ -89,6 +89,8 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
               onChange(realValue);
             }}
             className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary-600"
+            aria-label={label || `Adjust value from ${min} to ${max}`}
+            title={label ? `Adjust ${label.toLowerCase()}` : `Set value between ${min} and ${max}`}
           />
         </div>
         
