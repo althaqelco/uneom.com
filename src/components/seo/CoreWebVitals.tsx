@@ -12,13 +12,16 @@ interface CoreWebVitalsProps {
 
 const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ reportWebVitals }) => {
   useEffect(() => {
-    // Import web-vitals library dynamically
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(reportWebVitals || console.log);
-      getFID(reportWebVitals || console.log);
-      getFCP(reportWebVitals || console.log);
-      getLCP(reportWebVitals || console.log);
-      getTTFB(reportWebVitals || console.log);
+    // Import web-vitals library dynamically with error handling for v5.0.1
+    import('web-vitals').then((webVitals) => {
+      // Use the correct API for web-vitals v5
+      if (webVitals.onCLS) webVitals.onCLS(reportWebVitals || console.log);
+      if (webVitals.onINP) webVitals.onINP(reportWebVitals || console.log); // INP replaces FID in v5
+      if (webVitals.onFCP) webVitals.onFCP(reportWebVitals || console.log);
+      if (webVitals.onLCP) webVitals.onLCP(reportWebVitals || console.log);
+      if (webVitals.onTTFB) webVitals.onTTFB(reportWebVitals || console.log);
+    }).catch((error) => {
+      console.log('Web vitals not available:', error);
     });
   }, [reportWebVitals]);
 

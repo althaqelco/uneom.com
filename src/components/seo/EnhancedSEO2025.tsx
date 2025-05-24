@@ -223,8 +223,17 @@ const EnhancedSEO2025: React.FC<EnhancedSEO2025Props> = ({
           // Load web-vitals and report
           if ('requestIdleCallback' in window) {
             requestIdleCallback(() => {
-              import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-                getCLS(reportWebVitals);
+              import('web-vitals').then((webVitals) => {
+                if (webVitals.onCLS) webVitals.onCLS(reportWebVitals);
+                if (webVitals.onINP) webVitals.onINP(reportWebVitals); // INP replaces FID in v5
+                if (webVitals.onFCP) webVitals.onFCP(reportWebVitals);
+                if (webVitals.onLCP) webVitals.onLCP(reportWebVitals);
+                if (webVitals.onTTFB) webVitals.onTTFB(reportWebVitals);
+              }).catch((error) => {
+                console.log('Web vitals not available:', error);
+              });
+            });
+          }
                 getFID(reportWebVitals);
                 getFCP(reportWebVitals);
                 getLCP(reportWebVitals);

@@ -224,28 +224,22 @@ export default function RootLayout({
           `}
         </Script>
         
-        {/* Statcounter Analytics */}
+        {/* Statcounter Analytics - Fixed preload issues */}
         <Script id="statcounter-setup" strategy="afterInteractive">
           {`
             try {
-              var sc_project=13105039; 
-              var sc_invisible=1; 
+              var sc_project=13105039;
+              var sc_invisible=1;
               var sc_security="f68332e2";
               
-              // Load counter script only if not blocked
-              // Create a test image to check if requests to statcounter domain are blocked
-              var testImg = new Image();
-              testImg.onerror = function() {
+              // Load counter script directly without preload to avoid console warnings
+              var sc = document.createElement('script');
+              sc.src = "https://www.statcounter.com/counter/counter.js";
+              sc.async = true;
+              sc.onerror = function() {
                 console.log('StatCounter might be blocked by browser extensions.');
               };
-              testImg.onload = function() {
-                // Only load the script if the test image loads successfully
-                var sc = document.createElement('script');
-                sc.src = "https://www.statcounter.com/counter/counter.js";
-                sc.async = true;
-                document.body.appendChild(sc);
-              };
-              testImg.src = "https://c.statcounter.com/ping.gif";
+              document.body.appendChild(sc);
             } catch (e) {
               console.log('Error setting up StatCounter:', e);
             }
@@ -253,17 +247,17 @@ export default function RootLayout({
         </Script>
         <noscript>
           <div className="statcounter">
-            <a 
-              title="free web stats" 
-              href="https://statcounter.com/" 
-              target="_blank" 
+            <a
+              title="free web stats"
+              href="https://statcounter.com/"
+              target="_blank"
               rel="noopener noreferrer"
             >
-              <img 
-                className="statcounter" 
-                src="https://c.statcounter.com/13105039/0/f68332e2/1/" 
-                alt="free web stats" 
-                referrerPolicy="no-referrer-when-downgrade" 
+              <img
+                className="statcounter"
+                src="https://c.statcounter.com/13105039/0/f68332e2/1/"
+                alt="free web stats"
+                referrerPolicy="no-referrer-when-downgrade"
               />
             </a>
           </div>
