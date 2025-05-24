@@ -60,31 +60,11 @@ export const revalidate = 3600; // revalidate every hour
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
-  // Define all possible blog post slugs
+  // Define only the blog post slugs that actually exist as markdown files
   const slugs = [
-    'uniform-trends-2023',
-    'sustainable-fabrics',
-    'healthcare-uniforms-innovation',
-    'corporate-identity-uniforms',
-    'uniform-maintenance-tips',
-    'aviation-uniform-design',
-    'hotel-staff-uniforms',
-    'security-uniform-standards',
-    'uniform-customization',
-    'medical-scrubs-evolution',
-    'corporate-uniform-employee-satisfaction',
-    'industrial-protective-clothing-advances',
-    'sustainable-uniforms-2024-trends',
-    'evolving-trends-gulf-airline-uniforms',
-    'uniforms-airline-brand-identity',
-    'islamic-compliant-aviation-attire',
-    'vision-2030-reshaping-dress-codes',
-    'sustainable-uniform-solutions',
-    'advanced-fabrics-healthcare-uniforms',
-    'cultural-identity-saudi-school-uniforms',
     'school-uniforms-academic-performance',
     'sustainable-school-uniforms-saudi',
-    'industrial-safety-compliance-guide',
+    'sustainable-uniforms-2024-trends',
     'hospital-uniform-safety-standards',
     'airline-uniform-design-cultural-identity',
   ];
