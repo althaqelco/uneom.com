@@ -1,0 +1,92 @@
+{
+  "en": {
+    "title": "Industrial Construction Workwear Set",
+    "description": "Engineered for Saudi Arabia's construction sector, our Industrial Construction Workwear Set delivers exceptional protection, durability, and comfort in demanding environments. This professional uniform solution ensures your team maintains safety standards while projecting a cohesive professional image.",
+    "features": [
+      "Impact-resistant reinforced areas at critical wear points",
+      "Heat and UV resistant fabric for outdoor construction environments",
+      "High-visibility elements compliant with international safety standards",
+      "Multiple tool-specific pockets and attachments",
+      "Climate-adaptive fabric technology for Saudi weather conditions"
+    ],
+    "specifications": {
+      "material": "Heavy-duty ripstop fabric (60% cotton, 40% polyester)",
+      "weight": "300 gsm",
+      "colors": ["High-Vis Yellow/Navy", "High-Vis Orange/Navy", "Grey/Black"],
+      "sizes": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+      "certification": "Meets EN ISO 20471 high-visibility standards",
+      "care": "Industrial wash recommended, home washable at 40°C"
+    },
+    "customization": "Company logos can be heat-sealed or embroidered. Customize with additional reflective strips, specialized pockets, name/position badges, and department color coding.",
+    "ideal_for": "Construction companies, civil engineering teams, infrastructure development, and site management personnel across Saudi Arabia.",
+    "pricing": {
+      "shirt": "180 SAR",
+      "pants": "210 SAR",
+      "complete_set": "370 SAR",
+      "bulk_20_sets": "350 SAR per set",
+      "bulk_50_sets": "330 SAR per set"
+    },
+    "image_paths": [
+      "/images/products/industrial/construction-1.jpg",
+      "/images/products/industrial/construction-2.jpg",
+      "/images/industries/Factory_Industrial/Factory_Industrial_Workwear.webp"
+    ],
+    "related_products": [
+      "/shop/industrial-uniforms/industrial-jacket/",
+      "/shop/industrial-uniforms/mechanics-overalls/",
+      "/shop/industrial-uniforms/related-product-2/"
+    ],
+    "safety_features": [
+      "High-visibility reflective strips",
+      "Abrasion-resistant panels",
+      "Quick-release fasteners for emergency situations",
+      "UV protection rating UPF 50+",
+      "Anti-static properties"
+    ]
+  },
+  "ar": {
+    "title": "طقم ملابس عمل إنشائية صناعية",
+    "description": "مصممة لقطاع البناء في المملكة العربية السعودية، توفر مجموعة ملابس العمل الإنشائية الصناعية لدينا حماية استثنائية ومتانة وراحة في البيئات الصعبة. يضمن حل الزي المهني هذا الحفاظ على معايير السلامة لفريقك مع عرض صورة مهنية متماسكة.",
+    "features": [
+      "مناطق معززة مقاومة للصدمات في نقاط التآكل الحرجة",
+      "قماش مقاوم للحرارة والأشعة فوق البنفسجية لبيئات البناء الخارجية",
+      "عناصر عالية الوضوح متوافقة مع معايير السلامة الدولية",
+      "جيوب وملحقات متعددة مخصصة للأدوات",
+      "تقنية نسيج متكيفة مع المناخ لظروف الطقس السعودي"
+    ],
+    "specifications": {
+      "material": "قماش ريبستوب متين (60% قطن، 40% بوليستر)",
+      "weight": "300 جم/م²",
+      "colors": ["أصفر عالي الوضوح/كحلي", "برتقالي عالي الوضوح/كحلي", "رمادي/أسود"],
+      "sizes": ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+      "certification": "تلبي معايير EN ISO 20471 للرؤية العالية",
+      "care": "يوصى بالغسيل الصناعي، قابل للغسل في المنزل عند 40 درجة مئوية"
+    },
+    "customization": "يمكن ختم شعارات الشركة بالحرارة أو تطريزها. تخصيص مع شرائط عاكسة إضافية، وجيوب متخصصة، وشارات الاسم/المنصب، وترميز الألوان للأقسام.",
+    "ideal_for": "شركات البناء، وفرق الهندسة المدنية، وتطوير البنية التحتية، وموظفي إدارة المواقع في جميع أنحاء المملكة العربية السعودية.",
+    "pricing": {
+      "shirt": "180 ريال سعودي",
+      "pants": "210 ريال سعودي",
+      "complete_set": "370 ريال سعودي",
+      "bulk_20_sets": "350 ريال سعودي للطقم",
+      "bulk_50_sets": "330 ريال سعودي للطقم"
+    },
+    "image_paths": [
+      "/images/products/industrial/construction-1.jpg",
+      "/images/products/industrial/construction-2.jpg",
+      "/images/industries/Factory_Industrial/Factory_Industrial_Workwear.webp"
+    ],
+    "related_products": [
+      "/shop/industrial-uniforms/industrial-jacket/",
+      "/shop/industrial-uniforms/mechanics-overalls/",
+      "/shop/industrial-uniforms/related-product-2/"
+    ],
+    "safety_features": [
+      "شرائط عاكسة عالية الوضوح",
+      "ألواح مقاومة للتآكل",
+      "مشابك سريعة التحرير لحالات الطوارئ",
+      "تصنيف الحماية من الأشعة فوق البنفسجية UPF 50+",
+      "خصائص مضادة للكهرباء الساكنة"
+    ]
+  }
+} 

@@ -1,8 +1,20 @@
+# Main pages explicitly defined to ensure they work - these should be first
+/ /index.html 200
+/about /about/index.html 200
+/about/ /about/index.html 200
+/contact /contact/index.html 200
+/contact/ /contact/index.html 200
+/ar /ar/index.html 200
+/ar/ /ar/index.html 200
+
 # English - School & Education
 /sectors/school-uniforms/ /industries/education/ 301!
 /sectors/school-uniforms /industries/education 301!
 /sectors/education-uniforms/ /industries/education/ 301!
 /sectors/education-uniforms /industries/education 301!
+
+# Arabic services redirect - add trailing slash
+/ar/services /ar/services/ 301!
 
 # English - About redirects
 /who-we-are/ /about/ 301!
@@ -151,8 +163,6 @@
 /ar/contact-us /ar/contact 301!
 /ar/request-a-quote/ /ar/quote/ 301!
 /ar/request-a-quote /ar/quote 301!
-/ar/services/ /ar/services/ 301!
-/ar/services /ar/services 301!
 /ar/faqs/ /ar/faq/ 301!
 /ar/faqs /ar/faq 301!
 /ar/about-us/ /ar/about/ 301!
@@ -168,13 +178,20 @@
 /ar/location/%d8%ac%d8%af%d8%a9/ /ar/locations/jeddah/ 301!
 /ar/location/%d8%ac%d8%af%d8%a9 /ar/locations/jeddah 301!
 
-# Generic redirects (should be last)
+# Generic redirects (should be placed before wildcards)
 /sectors    /industries    301
 /sectors/*    /industries/:splat    301
 /location/* /locations/:splat 301!
 /category/* /blog/categories/:splat 301!
 /ar/sectors/* /ar/industries/:splat 301!
 /ar/location/* /ar/locations/:splat 301!
+
+# Explicitly define the 404 page with correct status code
+/404.html /404.html 404
+
+# Product placeholders should return 404
+/shop/*/product-* /404.html 404
+/ar/shop/*/product-* /404.html 404
 
 # Asegurar que los archivos de Next.js se sirvan correctamente
 /_next/*  /_next/:splat  200
@@ -193,5 +210,5 @@
 /images/default-placeholder.jpg  /images/defaults/default-placeholder.jpg  200
 /images/default-placeholder.svg  /images/defaults/default-placeholder.svg  200
 
-# Asegurar que todas las rutas sean manejadas por Next.js
-/*  /index.html  200 
+# Handle non-existent routes with a 404 status code - This is the catch-all rule (should be last)
+/*  /404.html  404 

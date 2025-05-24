@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define metadata for SEO optimization
 export const metadata: Metadata = {
@@ -13,6 +14,8 @@ export const metadata: Metadata = {
 export default function LuxurySalonEvolutionCaseStudy() {
   return (
     <main className="bg-white">
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Luxury Salon Evolution Case Study | Premium Spa Uniforms</h1>
+      
       {/* Schema.org structured data */}
       <Script
         id="case-study-structured-data"

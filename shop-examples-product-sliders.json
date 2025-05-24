@@ -1,0 +1,124 @@
+{
+  "en": {
+    "title": "Interactive Product Showcase",
+    "description": "Experience the premium quality of UNEOM uniforms through our interactive product sliders. This showcase demonstrates the exceptional craftsmanship, attention to detail, and superior materials used in our uniform solutions for various industries across Saudi Arabia.",
+    "introduction": "Our interactive product sliders allow you to examine the fine details of our uniforms that set UNEOM apart as Saudi Arabia's premier uniform provider. From fabric textures to tailoring precision, experience our commitment to quality through these detailed product presentations.",
+    "slider_sections": [
+      {
+        "title": "Fabric Technology Showcase",
+        "description": "Explore the advanced fabrics used in UNEOM uniforms, including our proprietary blends optimized for Saudi Arabia's climate. Our sliders demonstrate key features such as moisture-wicking properties, stain resistance, breathability, and durability under various conditions.",
+        "slider_id": "fabric-technology",
+        "image_paths": [
+          "/images/products/examples/slider-1.jpg",
+          "/images/services/CottonـandـCottonـBlends.jpg",
+          "/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg"
+        ]
+      },
+      {
+        "title": "Tailoring Precision",
+        "description": "Witness the exceptional tailoring that ensures every UNEOM uniform provides optimal fit and comfort. These sliders highlight our attention to seams, reinforcement points, and ergonomic design elements that enhance both appearance and functionality.",
+        "slider_id": "tailoring-precision",
+        "image_paths": [
+          "/images/products/examples/slider-2.jpg",
+          "/images/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg",
+          "/images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg"
+        ]
+      },
+      {
+        "title": "Specialized Features",
+        "description": "Discover the industry-specific features integrated into our uniform designs. From healthcare antimicrobial treatments to industrial safety enhancements, these sliders showcase the thoughtful innovations that make UNEOM uniforms ideal for their intended environments.",
+        "slider_id": "specialized-features",
+        "image_paths": [
+          "/images/uneom_dirt_fire_resistant_fabric.webp",
+          "/images/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg",
+          "/images/services/bright-raincoats-hanging-at-a-fashion-store-2024-12-16-06-50-01-utc.jpg"
+        ]
+      },
+      {
+        "title": "Color Fidelity & Branding",
+        "description": "See how we maintain perfect color consistency across uniform batches, essential for your brand identity. These sliders demonstrate our color matching precision and branding integration options for corporate customers.",
+        "slider_id": "color-branding",
+        "image_paths": [
+          "/images/Corporate_Uniforms_Business.png",
+          "/images/industries/retail-shops/retail-shops-uniform-brands-logo.jpg",
+          "/images/industries/retail-shops/retail-shops-uniform-brands-logo-2.jpg"
+        ]
+      }
+    ],
+    "interactive_features": [
+      "Zoom functionality to examine fabric textures and stitching details",
+      "360° rotation views of selected uniform items",
+      "Color variation selector to visualize different options",
+      "Side-by-side comparison tool for different uniform styles",
+      "Annotation markers highlighting key product features"
+    ],
+    "customization_note": "All uniform features shown in these interactive sliders can be customized to your specific industry requirements and brand guidelines. Contact our consultants to discuss your organization's unique needs.",
+    "contact_cta": "Ready to see these quality uniforms in person? Request fabric swatches or schedule a showroom visit to experience UNEOM quality firsthand.",
+    "image_paths": [
+      "/images/products/examples/slider-1.jpg",
+      "/images/products/examples/slider-2.jpg",
+      "/images/uneom_dirt_fire_resistant_fabric.webp"
+    ]
+  },
+  "ar": {
+    "title": "عرض المنتج التفاعلي",
+    "description": "استمتع بجودة أزياء UNEOM الفاخرة من خلال عروض المنتجات التفاعلية. يوضح هذا العرض التقديمي الحرفية الاستثنائية والاهتمام بالتفاصيل والمواد المتفوقة المستخدمة في حلول الزي الموحد لمختلف الصناعات في جميع أنحاء المملكة العربية السعودية.",
+    "introduction": "تتيح لك عروض المنتجات التفاعلية لدينا فحص التفاصيل الدقيقة لأزيائنا الموحدة التي تميز UNEOM كأفضل مزود للزي الموحد في المملكة العربية السعودية. من قوام الأقمشة إلى دقة الخياطة، استمتع بالتزامنا بالجودة من خلال عروض المنتجات المفصلة هذه.",
+    "slider_sections": [
+      {
+        "title": "عرض تقنية الأقمشة",
+        "description": "استكشف الأقمشة المتطورة المستخدمة في أزياء UNEOM الموحدة، بما في ذلك خلطاتنا الخاصة المحسنة لمناخ المملكة العربية السعودية. توضح عروضنا الميزات الرئيسية مثل خصائص امتصاص الرطوبة، ومقاومة البقع، وقابلية التنفس، والمتانة في ظل ظروف مختلفة.",
+        "slider_id": "fabric-technology",
+        "image_paths": [
+          "/images/products/examples/slider-1.jpg",
+          "/images/services/CottonـandـCottonـBlends.jpg",
+          "/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg"
+        ]
+      },
+      {
+        "title": "دقة الخياطة",
+        "description": "شاهد الخياطة الاستثنائية التي تضمن توفير كل زي موحد من UNEOM للمقاس الأمثل والراحة. تسلط هذه العروض الضوء على اهتمامنا بالخياطة، ونقاط التعزيز، وعناصر التصميم المريحة التي تعزز كلاً من المظهر والوظائف.",
+        "slider_id": "tailoring-precision",
+        "image_paths": [
+          "/images/products/examples/slider-2.jpg",
+          "/images/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg",
+          "/images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg"
+        ]
+      },
+      {
+        "title": "الميزات المتخصصة",
+        "description": "اكتشف الميزات الخاصة بالصناعة المدمجة في تصميمات أزيائنا الموحدة. من العلاجات المضادة للميكروبات في الرعاية الصحية إلى تحسينات السلامة الصناعية، تعرض هذه العروض الابتكارات المدروسة التي تجعل أزياء UNEOM الموحدة مثالية لبيئاتها المقصودة.",
+        "slider_id": "specialized-features",
+        "image_paths": [
+          "/images/uneom_dirt_fire_resistant_fabric.webp",
+          "/images/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg",
+          "/images/services/bright-raincoats-hanging-at-a-fashion-store-2024-12-16-06-50-01-utc.jpg"
+        ]
+      },
+      {
+        "title": "دقة الألوان والعلامة التجارية",
+        "description": "شاهد كيف نحافظ على ثبات اللون المثالي عبر دفعات الزي الموحد، وهو أمر ضروري لهوية علامتك التجارية. توضح هذه العروض دقة مطابقة الألوان لدينا وخيارات دمج العلامات التجارية للعملاء من الشركات.",
+        "slider_id": "color-branding",
+        "image_paths": [
+          "/images/Corporate_Uniforms_Business.png",
+          "/images/industries/retail-shops/retail-shops-uniform-brands-logo.jpg",
+          "/images/industries/retail-shops/retail-shops-uniform-brands-logo-2.jpg"
+        ]
+      }
+    ],
+    "interactive_features": [
+      "وظيفة التكبير لفحص قوام الأقمشة وتفاصيل الخياطة",
+      "عروض دوران 360 درجة لعناصر الزي الموحد المختارة",
+      "محدد تباين الألوان لتصور الخيارات المختلفة",
+      "أداة المقارنة جنبًا إلى جنب لأنماط مختلفة من الزي الموحد",
+      "علامات التوضيح التي تسلط الضوء على الميزات الرئيسية للمنتج"
+    ],
+    "customization_note": "يمكن تخصيص جميع ميزات الزي الموحد الموضحة في هذه العروض التفاعلية لتلبية متطلبات صناعتك المحددة وإرشادات علامتك التجارية. اتصل بمستشارينا لمناقشة احتياجات مؤسستك الفريدة.",
+    "contact_cta": "هل أنت جاهز لرؤية هذه الأزياء الموحدة عالية الجودة شخصيًا؟ اطلب عينات من القماش أو حدد موعدًا لزيارة صالة العرض لتجربة جودة UNEOM بشكل مباشر.",
+    "image_paths": [
+      "/images/products/examples/slider-1.jpg",
+      "/images/products/examples/slider-2.jpg",
+      "/images/uneom_dirt_fire_resistant_fabric.webp"
+    ]
+  }
+} 

@@ -45,5 +45,9 @@ export async function generateStaticParams() {
     { category: 'manufacturing-attire', product: 'industrial-protective-uniforms' },
     { category: 'education-uniforms', product: 'premium-school-uniforms' },
     { category: 'workplace-uniforms', product: 'executive-suits' },
+    { category: 'retail-uniforms', product: 'related-product-1' },
+    { category: 'retail-uniforms', product: 'related-product-2' },
+    { category: 'retail-uniforms', product: 'related-product-3' },
+    { category: 'retail-uniforms', product: 'related-product-4' },
   ];
 } 

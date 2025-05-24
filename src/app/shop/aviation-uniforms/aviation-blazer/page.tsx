@@ -9,6 +9,7 @@ import { useQuote } from '@/contexts/QuoteContext';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { useRouter } from 'next/navigation';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 type LocaleContent = {
   title: string;
@@ -70,7 +71,7 @@ export default function AviationBlazerPage() {
   // Multilingual content
   const content: ContentType = {
     en: {
-      title: 'Aviation Blazer',
+      title: "UNEOM - Professional Uniforms",
       description: 'Premium aviation blazers designed for Saudi Arabian airlines, combining professional elegance with practical functionality for pilots, cabin crew, and aviation executives.',
       longDescription: 'Our Aviation Blazers represent the pinnacle of professional aviation attire, meticulously tailored for pilots, senior cabin crew, and airline executives in Saudi Arabia\'s aviation sector. Each blazer combines sophisticated styling with functional features specifically engineered for aviation professionals. The premium wool blend construction with stretch elements ensures comfort during long flights while maintaining an impeccable appearance that commands respect and projects authority. Available with customizable features including airline-specific buttons, embroidered wings, epaulettes, and Saudi Arabian flag details, these blazers are designed to enhance your airline\'s brand identity while meeting international aviation standards. Each piece undergoes rigorous quality testing to ensure exceptional durability in the demanding aviation environment, with specialized treatments that maintain color vibrancy and structural integrity through frequent wear and travel.',
       breadcrumbs: [
@@ -235,7 +236,7 @@ export default function AviationBlazerPage() {
   };
 
   return (
-    <>
+    <main>
       <Container className="py-8">
         <div className="flex justify-end mb-4">
           <button 
@@ -444,6 +445,6 @@ export default function AviationBlazerPage() {
           </div>
         </div>
       </Container>
-    </>
+        </main>
   );
 }

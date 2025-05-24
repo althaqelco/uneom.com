@@ -1,0 +1,110 @@
+{
+  "en": {
+    "title": "New Collections Coming Soon",
+    "description": "We're currently working on exciting new uniform collections designed specifically for Saudi Arabia's evolving professional landscape. Stay tuned for innovative designs that combine functionality, comfort, and cultural appropriateness.",
+    "announcement": "The page you're looking for is currently under development and will be available soon. We appreciate your interest in UNEOM's premium uniform solutions.",
+    "coming_soon": {
+      "title": "Coming in Q2 2025",
+      "collections": [
+        {
+          "name": "Vision 2030 Professional Series",
+          "description": "Aligned with Saudi Arabia's Vision 2030, this collection features modern professional attire that balances traditional values with contemporary business needs."
+        },
+        {
+          "name": "Advanced Healthcare Line",
+          "description": "Next-generation medical uniforms incorporating antimicrobial fabrics, enhanced comfort features, and innovative design elements for Saudi healthcare professionals."
+        },
+        {
+          "name": "Sustainable Uniform Solutions",
+          "description": "Eco-conscious uniform options utilizing sustainable materials and production methods without compromising on quality or performance."
+        }
+      ]
+    },
+    "contact_info": {
+      "message": "If you need immediate assistance with your uniform requirements, please contact our customer service team:",
+      "email": "info@uneom.com",
+      "phone": "+966 12 345 6789",
+      "hours": "Sunday-Thursday: 8:30 AM - 5:30 PM"
+    },
+    "newsletter_signup": {
+      "title": "Be the First to Know",
+      "description": "Subscribe to our newsletter to receive updates about our new collections and exclusive offers.",
+      "button_text": "Subscribe Now"
+    },
+    "redirect_options": [
+      {
+        "text": "View Current Uniform Collections",
+        "url": "/shop"
+      },
+      {
+        "text": "Industrial Uniform Solutions",
+        "url": "/industries/manufacturing"
+      },
+      {
+        "text": "Healthcare Uniforms",
+        "url": "/industries/healthcare"
+      },
+      {
+        "text": "Contact Our Design Team",
+        "url": "/contact"
+      }
+    ],
+    "image_paths": [
+      "/images/default-placeholder.jpg"
+    ]
+  },
+  "ar": {
+    "title": "مجموعات جديدة قادمة قريبًا",
+    "description": "نعمل حاليًا على مجموعات جديدة ومثيرة من الأزياء الموحدة مصممة خصيصًا للمشهد المهني المتطور في المملكة العربية السعودية. ترقبوا التصميمات المبتكرة التي تجمع بين الوظائف والراحة والملاءمة الثقافية.",
+    "announcement": "الصفحة التي تبحث عنها قيد التطوير حاليًا وستكون متاحة قريبًا. نقدر اهتمامك بحلول الزي الموحد المتميزة من UNEOM.",
+    "coming_soon": {
+      "title": "قادم في الربع الثاني من عام 2025",
+      "collections": [
+        {
+          "name": "سلسلة رؤية 2030 المهنية",
+          "description": "تماشياً مع رؤية المملكة العربية السعودية 2030، تتميز هذه المجموعة بزي مهني حديث يوازن بين القيم التقليدية واحتياجات الأعمال المعاصرة."
+        },
+        {
+          "name": "خط الرعاية الصحية المتقدم",
+          "description": "أزياء طبية من الجيل التالي تتضمن أقمشة مضادة للميكروبات، وميزات راحة محسنة، وعناصر تصميم مبتكرة لمتخصصي الرعاية الصحية السعوديين."
+        },
+        {
+          "name": "حلول الزي الموحد المستدام",
+          "description": "خيارات زي موحد صديقة للبيئة تستخدم مواد وأساليب إنتاج مستدامة دون المساومة على الجودة أو الأداء."
+        }
+      ]
+    },
+    "contact_info": {
+      "message": "إذا كنت بحاجة إلى مساعدة فورية في متطلبات الزي الموحد الخاص بك، يرجى الاتصال بفريق خدمة العملاء لدينا:",
+      "email": "info@uneom.com",
+      "phone": "+966 12 345 6789",
+      "hours": "الأحد-الخميس: 8:30 صباحًا - 5:30 مساءً"
+    },
+    "newsletter_signup": {
+      "title": "كن أول من يعلم",
+      "description": "اشترك في نشرتنا الإخبارية لتلقي تحديثات حول مجموعاتنا الجديدة والعروض الحصرية.",
+      "button_text": "اشترك الآن"
+    },
+    "redirect_options": [
+      {
+        "text": "عرض مجموعات الزي الموحد الحالية",
+        "url": "/shop"
+      },
+      {
+        "text": "حلول الزي الموحد الصناعي",
+        "url": "/industries/manufacturing"
+      },
+      {
+        "text": "أزياء الرعاية الصحية",
+        "url": "/industries/healthcare"
+      },
+      {
+        "text": "الاتصال بفريق التصميم لدينا",
+        "url": "/contact"
+      }
+    ],
+    "image_paths": [
+      "/images/default-placeholder.jpg"
+    ]
+  }
+} 

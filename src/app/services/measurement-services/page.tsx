@@ -2,11 +2,12 @@
 
 import React from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function MeasurementServicesPage() {
   const locale = 'en';
   const serviceData = {
-    title: 'Measurement Services',
+    title: "UNEOM - Professional Uniforms",
     subtitle: 'Professional fitting solutions for perfect-fit uniforms',
     heroImage: '/images/banner-placeholder.jpg',
     

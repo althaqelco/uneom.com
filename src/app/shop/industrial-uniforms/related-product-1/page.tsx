@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import ClientPage from '@/app/shop/[category]/[product]/ClientPage';
 import Script from 'next/script';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define metadata for SEO optimization
 export const metadata: Metadata = {
@@ -123,7 +124,9 @@ export default function IndustrialWorkBootsPage() {
   const locale = 'en';
   
   return (
-    <>
+    <main>
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Advanced Industrial Work Boots | SASO-Certified Safety Footwear</h1>
+      
       {/* Schema.org structured data for enhanced SEO */}
       <Script
         id="product-structured-data"
@@ -165,6 +168,6 @@ export default function IndustrialWorkBootsPage() {
       
       {/* Main product page component */}
       <ClientPage params={params} />
-    </>
+        </main>
   );
 }

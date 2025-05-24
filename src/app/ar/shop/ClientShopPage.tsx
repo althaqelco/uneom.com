@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -8,14 +8,40 @@ import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
-import RTLWrapper from '@/components/layout/RTLWrapper';
 import { getTranslation } from '@/lib/i18n';
 import { getLocalizedImagePath } from '@/lib/utils/imageLoader';
 import SchemaMarkup from '@/components/SchemaMarkup';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function ClientShopPage() {
   // Get Arabic translations
   const t = getTranslation('ar');
+  
+  // Prevent redirect loops
+  useEffect(() => {
+    // Get the current URL
+    const url = new URL(window.location.href);
+    
+    // Check if we're in a local development environment
+    const isLocalhost = url.hostname === 'localhost' || url.hostname === '127.0.0.1';
+    
+    // If there's a trailing slash and we're in a development environment
+    if (url.pathname.endsWith('/') && isLocalhost) {
+      // Store a flag in sessionStorage to prevent infinite redirects
+      const redirectCount = parseInt(sessionStorage.getItem('shopRedirectCount') || '0');
+      
+      if (redirectCount > 3) {
+        console.error('Too many redirects detected. Stopping redirect loop.');
+        sessionStorage.removeItem('shopRedirectCount');
+        return;
+      }
+      
+      sessionStorage.setItem('shopRedirectCount', (redirectCount + 1).toString());
+    } else {
+      // Reset the counter if we're not in a redirect situation
+      sessionStorage.removeItem('shopRedirectCount');
+    }
+  }, []);
   
   // Animation variants
   const fadeIn = {
@@ -172,32 +198,59 @@ export default function ClientShopPage() {
   
   // Schema.org data for structured data
   const schemaData = {
-    name: 'مجموعة الأزياء المهنية',
-    description: 'تشكيلة واسعة من الأزياء المهنية والموحدة عالية الجودة للقطاعات المختلفة',
+    '@context': 'https://schema.org',
+    '@type': 'Store',
+    name: 'متجر يونيوم',
+    description: 'متجر يونيوم للأزياء الموحدة المهنية في المملكة العربية السعودية',
     url: 'https://uneom.com/ar/shop',
-    image: 'https://uneom.com/images/banner-placeholder.jpg',
-    locale: 'ar'
+    telephone: '+966500000000',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'طريق الملك فهد',
+      addressLocality: 'الرياض',
+      addressRegion: 'الرياض',
+      postalCode: '12345',
+      addressCountry: 'SA'
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '24.7136',
+      longitude: '46.6753'
+    },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: [
+        'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'
+      ],
+      opens: '09:00',
+      closes: '17:00'
+    }
   };
   
   return (
-    <>
-      {/* Schema.org structured data */}
-      <SchemaMarkup type="product" data={schemaData} />
+    <div dir="rtl">
+      {/* Structured data for SEO */}
+      <SchemaMarkup type="organization" data={schemaData} />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-16 md:py-24">
-        <div className="absolute inset-0 overflow-hidden opacity-30">
+      <section className="relative bg-gradient-to-r from-primary-800 to-primary-700 text-white py-20">
+        <div className="absolute inset-0 opacity-30">
           <Image
-            src="/images/default-placeholder.jpg"
-            alt="متجر يونيوم - المورد الرائد للزي الموحد في المملكة العربية السعودية"
+            src={getLocalizedImagePath('/images/shop-hero.webp', 'ar')}
+            alt="متجر يونيوم للأزياء الموحدة"
             fill
             className="object-cover"
-            priority
           />
         </div>
+        
         <Container>
-          <RTLWrapper locale="ar">
-            <Breadcrumbs locale="ar" className="mb-8 text-white/90" />
+          <Breadcrumbs
+            items={[
+              { label: 'الرئيسية', href: '/ar' },
+              { label: 'المتجر', href: '/ar/shop' }
+            ]}
+            className="text-white/80 mb-6 relative z-10"
+          />
           
             <motion.div 
               className="relative z-10 max-w-3xl"
@@ -205,135 +258,87 @@ export default function ClientShopPage() {
               animate="visible"
               variants={fadeIn}
             >
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                متجر الأزياء المهنية
-              </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">متجر يونيوم للأزياء الموحدة</h1>
               <p className="text-xl opacity-90 mb-8">
-                تشكيلة واسعة من الأزياء المهنية عالية الجودة للقطاعات المختلفة
+              تشكيلة واسعة من الأزياء المهنية عالية الجودة للقطاعات المختلفة في المملكة العربية السعودية
               </p>
-              <div className="flex flex-wrap gap-4">
                 <Button 
-                  href="/ar/quote" 
+              href="#categories"
                   variant="secondary" 
                   size="lg"
                 >
-                  طلب عرض سعر
+              استكشف المجموعات
                 </Button>
-                <Button 
-                  href="#categories" 
-                  variant="outline" 
-                  size="lg"
-                >
-                  استعرض الفئات
-                </Button>
-              </div>
             </motion.div>
-          </RTLWrapper>
         </Container>
       </section>
       
-      {/* Categories Section */}
-      <section id="categories" className="py-16 bg-neutral-50">
+      {/* Featured Collections */}
+      <section className="py-16 bg-white" id="categories">
         <Container>
-          <RTLWrapper locale="ar">
+          <SectionHeading subtitle="اكتشف المنتجات حسب القطاع">
+            مجموعاتنا المميزة
+          </SectionHeading>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            {featuredCollections.map((collection, index) => (
             <motion.div
-              className="text-center max-w-3xl mx-auto mb-16"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
+                key={collection.id}
+                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-64"
               variants={fadeIn}
-            >
-              <SectionHeading centered>مجموعات المنتجات</SectionHeading>
-              <p className="text-lg text-neutral-700">
-                استكشف مجموعاتنا المتخصصة من الأزياء المهنية لكل قطاع
-              </p>
-            </motion.div>
-            
-            <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              variants={staggerContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-            >
-              {featuredCollections.map((collection) => (
-                <motion.div
-                  key={collection.id}
-                  variants={fadeIn}
-                >
-                  <Link 
-                    href={collection.url}
-                    className="group block relative aspect-[4/3] overflow-hidden rounded-lg"
                   >
                     <Image
                       src={collection.image}
                       alt={collection.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                      <div className="p-6 w-full">
-                        <h3 className="text-xl font-bold text-white">{collection.title}</h3>
-                        <p className="mt-2 text-white/80 text-sm line-clamp-2">
-                          {collection.description}
-                        </p>
-                        <div className="mt-4 text-white/90 flex items-center">
-                          <span className="text-sm">عرض المجموعة</span>
-                          <svg 
-                            className="mr-2 h-4 w-4 rtl-flip" 
-                            fill="none" 
-                            stroke="currentColor" 
-                            viewBox="0 0 24 24"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                  <h3 className="text-xl font-bold text-white mb-2">{collection.title}</h3>
+                  <p className="text-white/80 mb-4 line-clamp-2">{collection.description}</p>
+                  <Link
+                    href={collection.url}
+                    className="inline-block text-white font-medium hover:underline"
+                  >
+                    عرض المجموعة →
                   </Link>
+                </div>
                 </motion.div>
               ))}
-            </motion.div>
-          </RTLWrapper>
+          </div>
         </Container>
       </section>
       
-      {/* Popular Products Section */}
-      <section className="py-16">
+      {/* Popular Products */}
+      <section className="py-16 bg-gray-50">
         <Container>
-          <RTLWrapper locale="ar">
-            <motion.div
-              className="text-center max-w-3xl mx-auto mb-8"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeIn}
-            >
-              <SectionHeading centered>المنتجات الشائعة</SectionHeading>
-              <p className="text-lg text-neutral-700">
-                استكشف أكثر منتجاتنا مبيعًا من الأزياء المهنية
-              </p>
-            </motion.div>
+          <SectionHeading subtitle="اكتشف منتجاتنا المفضلة">
+            المنتجات الرائجة
+          </SectionHeading>
             
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
+          {/* Category Filters */}
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
               {categories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
+                className={`px-4 py-2 rounded-full ${
                     activeCategory === category.id
                       ? 'bg-primary-600 text-white'
-                      : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
+                    : 'bg-white text-gray-800 hover:bg-gray-100'
                   }`}
+                onClick={() => setActiveCategory(category.id)}
                 >
                   {category.name}
                 </button>
               ))}
             </div>
             
+          {/* Products Grid */}
             <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
               variants={staggerContainer}
               initial="hidden"
               whileInView="visible"
@@ -342,173 +347,142 @@ export default function ClientShopPage() {
               {filteredProducts.map((product) => (
                 <motion.div
                   key={product.id}
+                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
                   variants={fadeIn}
-                  className="bg-white border border-neutral-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
                 >
                   <Link href={product.url} className="block">
-                    <div className="relative aspect-square overflow-hidden">
+                  <div className="relative h-48">
                       <Image
                         src={product.image}
                         alt={product.name}
                         fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        className="object-cover transition-transform duration-300 hover:scale-105"
+                      className="object-cover"
                       />
                     </div>
-                    
                     <div className="p-4">
-                      <div className="text-sm text-primary-600 font-medium mb-1">
-                        {categories.find(c => c.id === product.category)?.name}
-                      </div>
-                      <h3 className="text-lg font-bold mb-1">
-                        {product.name}
-                      </h3>
-                      <div className="text-neutral-900 font-semibold">
-                        {product.price}
-                      </div>
-                      
-                      <div className="mt-4">
-                        <button
-                          className="w-full bg-primary-100 text-primary-800 hover:bg-primary-200 py-2 px-4 rounded-md text-sm font-medium transition-colors duration-200"
+                    <h3 className="font-medium text-lg mb-1">{product.name}</h3>
+                    <p className="text-primary-600 font-bold">{product.price}</p>
+                    <Button 
+                      href={product.url} 
+                      variant="outline" 
+                      size="sm"
+                      className="w-full mt-3"
                         >
-                          أضف إلى عرض السعر
-                        </button>
-                      </div>
+                      عرض التفاصيل
+                    </Button>
                     </div>
                   </Link>
                 </motion.div>
               ))}
             </motion.div>
-            
-            {activeCategory !== 'all' && (
-              <div className="text-center mt-8">
-                <Link 
-                  href={categories.find(c => c.id === activeCategory)?.url || '#'}
-                  className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700"
-                >
-                  عرض كل منتجات {categories.find(c => c.id === activeCategory)?.name}
-                  <svg 
-                    className="mr-2 h-4 w-4 rtl-flip" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            )}
-          </RTLWrapper>
         </Container>
       </section>
       
-      {/* Custom Orders Section */}
-      <section className="py-16 bg-neutral-50">
+      {/* Services Section */}
+      <section className="py-16 bg-white">
         <Container>
-          <RTLWrapper locale="ar">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <SectionHeading subtitle="خدمات متميزة لعملائنا">
+            ما الذي يميزنا
+          </SectionHeading>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <motion.div
+              className="text-center"
+              variants={fadeIn}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                variants={fadeIn}
               >
-                <div className="relative h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
+              <div className="rounded-full bg-primary-100 p-4 w-20 h-20 flex items-center justify-center mx-auto mb-4">
                   <Image
-                    src="/images/default-placeholder.jpg"
-                    alt="الطلبات المخصصة من يونيوم"
-                    fill
-                    className="object-cover"
+                  src="/icons/customize.svg"
+                  alt="تخصيص كامل"
+                  width={40}
+                  height={40}
+                  className="text-primary-600"
                   />
                 </div>
+              <h3 className="text-xl font-bold mb-2">تخصيص كامل</h3>
+              <p className="text-neutral-600">
+                نقدم خدمات تخصيص شاملة تتيح لك تعديل أي منتج ليناسب هويتك التجارية ومتطلباتك
+              </p>
               </motion.div>
               
               <motion.div
+              className="text-center"
+              variants={fadeIn}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                variants={fadeIn}
-              >
-                <SectionHeading>حلول مخصصة لمؤسستك</SectionHeading>
-                <div className="space-y-4 text-lg">
-                  <p>
-                    هل تبحث عن أزياء مصممة خصيصًا لتناسب احتياجات مؤسستك؟ يقدم فريقنا من المصممين المحترفين حلول أزياء مخصصة تعكس هوية علامتك التجارية.
-                  </p>
-                  <p>
-                    من تطريز الشعارات إلى اختيار الألوان والأقمشة المناسبة، نعمل معك لإنشاء أزياء موحدة فريدة تميز فريقك.
-                  </p>
-                  
-                  <ul className="space-y-2 mt-6">
-                    <li className="flex items-center">
-                      <svg className="ml-2 h-5 w-5 text-primary-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span>اختيار من مئات الأقمشة والألوان</span>
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="ml-2 h-5 w-5 text-primary-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span>تطريز وطباعة الشعارات بدقة عالية</span>
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="ml-2 h-5 w-5 text-primary-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span>قياسات مخصصة لضمان ملاءمة مثالية</span>
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="ml-2 h-5 w-5 text-primary-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span>طلبات بالجملة بأسعار تنافسية</span>
-                    </li>
-                  </ul>
-                  
-                  <div className="mt-8">
-                    <Button 
-                      href="/ar/services/custom-design" 
-                      variant="primary"
-                    >
-                      استكشف خدمات التصميم المخصص
-                    </Button>
+            >
+              <div className="rounded-full bg-primary-100 p-4 w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                <Image
+                  src="/icons/quality.svg"
+                  alt="جودة عالية"
+                  width={40}
+                  height={40}
+                  className="text-primary-600"
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-2">جودة عالية</h3>
+              <p className="text-neutral-600">
+                نستخدم أفضل الخامات والتقنيات لضمان منتجات عالية الجودة تدوم طويلاً
+              </p>
+            </motion.div>
+            
+            <motion.div
+              className="text-center"
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <div className="rounded-full bg-primary-100 p-4 w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                <Image
+                  src="/icons/delivery.svg"
+                  alt="شحن سريع"
+                  width={40}
+                  height={40}
+                  className="text-primary-600"
+                />
                   </div>
-                </div>
+              <h3 className="text-xl font-bold mb-2">شحن سريع</h3>
+              <p className="text-neutral-600">
+                خدمة توصيل سريعة وموثوقة إلى جميع أنحاء المملكة العربية السعودية
+              </p>
               </motion.div>
             </div>
-          </RTLWrapper>
         </Container>
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 bg-primary-600 text-white">
+      <section className="py-16 bg-primary-600 text-white">
         <Container>
-          <RTLWrapper locale="ar">
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">جاهز لتحسين مظهر فريقك المهني؟</h2>
-              <p className="text-xl mb-8 opacity-90">
-                اتصل بنا اليوم للحصول على استشارة مجانية وعرض سعر مخصص.
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                هل تبحث عن حلول الأزياء الموحدة لمؤسستك؟
+              </h2>
+              <p className="text-xl mb-8 text-white/80">
+                تواصل معنا للحصول على استشارة مجانية وعرض سعر مخصص لاحتياجات مؤسستك
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  href="/ar/quote" 
-                  variant="secondary"
-                  size="lg"
-                >
-                  طلب عرض سعر
-                </Button>
-                <Button 
-                  href="/ar/contact" 
-                  variant="ghost"
-                  size="lg"
-                >
+                <Button href="/ar/contact" variant="secondary" size="lg">
                   تواصل معنا
                 </Button>
+                <Button href="/ar/quote" variant="outline" size="lg">
+                  طلب عرض سعر
+                </Button>
               </div>
+            </motion.div>
             </div>
-          </RTLWrapper>
         </Container>
       </section>
-    </>
+    </div>
   );
 } 

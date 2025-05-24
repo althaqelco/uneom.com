@@ -7,6 +7,8 @@ import LocaleProvider from '@/components/providers/LocaleProvider';
 import MainLayout from '@/components/layout/MainLayout';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 // Importar ImageResolver dinámicamente para evitar errores de SSR
 const ImageResolver = dynamic(() => import('@/components/ImageResolver'), { 
@@ -35,9 +37,58 @@ const EmergencyImageLoader = dynamic(() => import('@/components/ui/EmergencyImag
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'UNEOM | Uniform Manufacturing in Saudi Arabia',
-  description: 'UNEOM is a leading uniform manufacturer in Saudi Arabia, offering high-quality corporate, healthcare, hospitality, and industrial uniforms.',
-  keywords: 'uniform, saudi arabia, riyadh, jeddah, dammam, uniform manufacturing, corporate uniforms, healthcare uniforms'
+  title: 'UNEOM | Premium Uniform Manufacturer in Saudi Arabia - Custom Designs & Quality Fabrics',
+  description: 'Leading uniform manufacturer in Saudi Arabia providing high-quality corporate, healthcare, hospitality, and industrial uniforms with custom designs, premium fabrics, and nationwide delivery to Riyadh, Jeddah, Dammam.',
+  keywords: 'uniform Saudi Arabia, uniform manufacturer, corporate uniforms, medical uniforms, hospitality uniforms, industrial uniforms, custom uniforms Saudi, professional workwear, uniform supplier Riyadh, uniform Jeddah, uniform Dammam',
+  authors: [{ name: 'UNEOM Expert Team' }],
+  creator: 'UNEOM',
+  publisher: 'UNEOM',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_SA',
+    url: 'https://uneom.com',
+    siteName: 'UNEOM',
+    title: 'UNEOM | Premium Uniform Manufacturer in Saudi Arabia',
+    description: 'Leading uniform manufacturer in Saudi Arabia providing high-quality corporate, healthcare, hospitality, and industrial uniforms with custom designs and premium fabrics.',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'UNEOM - Premium Uniform Manufacturer in Saudi Arabia',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'UNEOM | Premium Uniform Manufacturer in Saudi Arabia',
+    description: 'Leading uniform manufacturer in Saudi Arabia providing high-quality corporate, healthcare, hospitality, and industrial uniforms.',
+    images: ['/images/og-image.jpg'],
+    creator: '@uneom',
+    site: '@uneom',
+  },
+  alternates: {
+    canonical: 'https://uneom.com',
+    languages: {
+      'en-SA': 'https://uneom.com',
+      'ar-SA': 'https://uneom.com/ar',
+    },
+  },
+  verification: {
+    google: 'k27-50XLg0yC-wwjyTIqfkGiowHO5nrAjTNiYmmf7is',
+  },
+  category: 'Manufacturing',
 };
 
 // Critical images to preload
@@ -61,26 +112,57 @@ export default function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="google-site-verification" content="k27-50XLg0yC-wwjyTIqfkGiowHO5nrAjTNiYmmf7is" />
-        <link rel="stylesheet" href="/css/image-fixes.css" />
-        <link rel="icon" href="/favicon/uneom-favicon.png" />
+        
+        {/* Performance and Security Headers - May 2025 Standards */}
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta name="theme-color" content="#1e40af" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        
+        {/* Enhanced Security Headers */}
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="X-Frame-Options" content="DENY" />
+        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+        <meta httpEquiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains" />
+        
+        {/* Favicon and Icons */}
+        <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon/uneom-favicon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        
+        {/* DNS Prefetch for performance */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        
+        {/* Preload critical resources */}
+        <link rel="preload" href="/images/default-placeholder.jpg" as="image" />
+        <link rel="preload" href="/images/og-image.jpg" as="image" />
+        <link rel="preload" href="/css/image-fixes.css" as="style" />
+        
+        {/* Stylesheets */}
+        <link rel="stylesheet" href="/css/image-fixes.css" />
+        
+        {/* Scripts */}
         <script src="/js/image-handler.js" defer></script>
         {process.env.NODE_ENV === 'development' && (
           <script src="/js/404-checker.js" defer></script>
         )}
-        <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta httpEquiv="Pragma" content="no-cache" />
-        <meta httpEquiv="Expires" content="0" />
-        <meta httpEquiv="Access-Control-Allow-Origin" content="*" />
-        <link rel="preload" href="/images/default-placeholder.jpg" as="image" />
-        <link rel="preload" href="/images/default-placeholder.svg" as="image" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Enhanced Content Security Policy */}
         <meta
           httpEquiv="Content-Security-Policy"
-          content="img-src 'self' data: https: http: blob: *.vercel.app *.uneom.com *.githubusercontent.com;"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://vercel.live; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: http: blob: *.vercel.app *.uneom.com *.githubusercontent.com; connect-src 'self' https://www.google-analytics.com https://vercel.live;"
         />
       </head>
       <body className={`${inter.variable} font-sans`}>
@@ -271,6 +353,10 @@ export default function RootLayout({
             </a>
           </div>
         </noscript>
+        
+        {/* Vercel Analytics and Speed Insights - May 2025 */}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

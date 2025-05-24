@@ -2,6 +2,29 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaCheck, FaTshirt, FaUsers, FaShippingFast, FaStar } from 'react-icons/fa';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+
+export const metadata: Metadata = {
+  title: 'Ar | Industries | Hospitality | Restaurants | يونيوم المملكة العربية السعودية',
+  description: 'توفر يونيوم حلول الزي الموحد والملابس المهنية عالية الجودة المصممة خصيصًا للشركات والمؤسسات السعودية.',
+  keywords: ['زي موحد', 'ملابس مهنية', 'يونيوم', 'المملكة العربية السعودية', 'ar | industries | hospitality | restaurants'],
+  openGraph: {
+    title: 'Ar | Industries | Hospitality | Restaurants | يونيوم المملكة العربية السعودية',
+    description: 'توفر يونيوم حلول الزي الموحد والملابس المهنية عالية الجودة المصممة خصيصًا للشركات والمؤسسات السعودية.',
+    url: 'https://uneom.com/ar/industries/hospitality/restaurants/',
+    siteName: 'UNEOM',
+    images: [
+      {
+        url: 'https://uneom.com/images/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Ar | Industries | Hospitality | Restaurants - يونيوم المملكة العربية السعودية'
+      }
+    ],
+    locale: 'ar'
+  }
+};
+
 
 export default function RestaurantsPage() {
   return (

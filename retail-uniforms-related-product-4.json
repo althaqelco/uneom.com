@@ -1,0 +1,78 @@
+{
+  "en": {
+    "title": "Casual Retail Team Uniform",
+    "description": "Create an approachable yet professional retail environment with our Casual Retail Team Uniform. Perfect for modern Saudi retail spaces that aim to balance professionalism with accessibility, this uniform promotes staff comfort while maintaining a cohesive brand identity.",
+    "features": [
+      "Lightweight performance blend (70% cotton, 30% polyester)",
+      "Breathable fabric suitable for extended retail shifts",
+      "Modern fit with subtle branding opportunities",
+      "Saudi climate-adapted design for all-day comfort",
+      "Casual yet professional appearance for contemporary retail"
+    ],
+    "specifications": {
+      "material": "Premium cotton blend (70% cotton, 30% polyester)",
+      "weight": "170 gsm",
+      "colors": ["Heather Grey", "Navy Blue", "Black", "Khaki", "Custom Colors"],
+      "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+      "care": "Machine washable, tumble dry low, minimal ironing"
+    },
+    "customization": "Available with embroidered or heat-transferred brand logos, color customization, and optional accessories like caps, aprons, or name tags. Volume discounts available for complete team outfitting.",
+    "ideal_for": "Technology retailers, bookstores, specialty shops, casual dining establishments, and modern retail concepts.",
+    "pricing": {
+      "single_shirt": "95 SAR",
+      "single_with_cap": "125 SAR",
+      "bulk_50": "85 SAR per unit",
+      "bulk_100": "75 SAR per unit"
+    },
+    "image_paths": [
+      "/images/products/retail/casual-1.jpg",
+      "/images/products/retail/casual-2.jpg",
+      "/images/industries/retail-shops/retail-shops-uniform-2.jpg"
+    ],
+    "related_products": [
+      "/shop/retail-uniforms/related-product-1/",
+      "/shop/retail-uniforms/related-product-2/",
+      "/shop/retail-uniforms/related-product-3/"
+    ]
+  },
+  "ar": {
+    "title": "زي فريق التجزئة غير الرسمي",
+    "description": "أزياء عصرية وغير رسمية مصممة خصيصًا لتلبية احتياجات متاجر التجزئة العصرية في المملكة العربية السعودية. يوفر هذا الزي مزيجًا مثاليًا من الأناقة المعاصرة والراحة العملية، مما يعزز تجربة التسوق من خلال إنشاء بيئة ودية وعصرية. مثالي للعلامات التجارية الشبابية ومتاجر التكنولوجيا والترفيه التي تستهدف الزبائن الشباب في السوق السعودي المتطور.",
+    "features": [
+      "قماش قطني فائق النعومة (95% قطن عضوي، 5% إيلاستين) يوفر المرونة والراحة الاستثنائية طوال فترات العمل",
+      "تصميم عصري بقصات محدثة تناسب الذوق السعودي المعاصر مع الحفاظ على الحشمة المناسبة",
+      "ألوان حيوية مع تقنية الصباغة المتطورة المقاومة للبهتان حتى بعد غسيل متكرر",
+      "معالجة خاصة مضادة للروائح والبكتيريا تناسب ساعات العمل الطويلة في بيئة تجارية نشطة",
+      "إمكانية التكيف مع المواسم المختلفة (وحدات قابلة للتبديل - قمصان بولو، تي شيرت، قمصان بأكمام طويلة)"
+    ],
+    "specifications": {
+      "material": "قماش قطني فاخر (95% قطن عضوي معتمد، 5% إيلاستين مرن)",
+      "weight": "170-190 جم/م² - خفيف ومريح مع الحفاظ على الشكل والهيكل",
+      "colors": ["أزرق تيفاني منعش", "رمادي حيادي عصري", "أخضر زيتي هادئ", "برتقالي مشمشي دافئ", "أرجواني لافندر ناعم", "مخصص وفق ألوان علامتك التجارية"],
+      "sizes": ["XXS (36-38)", "XS (40-42)", "S (44-46)", "M (48-50)", "L (52-54)", "XL (56-58)", "2XL (60-62)", "3XL (64-66)", "تصميمات شاملة لجميع أنواع الجسم"],
+      "care": "غسيل آلي على 30 درجة مئوية، تنشيف منخفض الحرارة، لا يحتاج للكي، مقاوم للتجعد ويحافظ على مظهره الأنيق"
+    },
+    "customization": "نهج مبتكر للتخصيص يشمل: طباعة سابليميشن كاملة لعرض التصاميم العصرية، شعارات مطبوعة بتقنية HD متكاملة مع التصميم، أساليب طباعة صديقة للبيئة، توافق كامل مع وسائل التواصل الاجتماعي وتصميمات الموسمية، وخيارات 'التوقيع الشخصي' للموظفين (اسم الموظف أو خبرته مدمجة في التصميم).",
+    "ideal_for": "متاجر الملابس العصرية، متاجر التكنولوجيا والإلكترونيات، متاجر الألعاب والترفيه، المقاهي المتخصصة، متاجر مستلزمات الرياضة والنشاط البدني، المتاجر المستهدفة للجيل Z والألفية، ومتاجر الهدايا والمنتجات المبتكرة.",
+    "pricing": {
+      "single_polo": "150 ريال سعودي",
+      "single_tshirt": "120 ريال سعودي",
+      "seasonal_package": "450 ريال سعودي (3 قطع مختلفة للموظف الواحد)",
+      "bulk_20": "135 ريال سعودي للقطعة (توفير 10%)",
+      "bulk_50": "120 ريال سعودي للقطعة (توفير 20%)",
+      "bulk_100": "105 ريال سعودي للقطعة (توفير 30%)",
+      "startup_package": "اتصل بنا للحصول على باقة متكاملة للشركات الناشئة (تشمل التصميم المجاني)"
+    },
+    "image_paths": [
+      "/images/products/retail/casual-1.jpg",
+      "/images/industries/retail-shops/retail-shops-uniform-casual.jpg",
+      "/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg",
+      "/images/industries/retail-shops/retail-shops-uniform-identity-3.jpg"
+    ],
+    "related_products": [
+      "/shop/retail-uniforms/related-product-1/",
+      "/shop/retail-uniforms/related-product-2/",
+      "/shop/retail-uniforms/related-product-3/"
+    ]
+  }
+} 

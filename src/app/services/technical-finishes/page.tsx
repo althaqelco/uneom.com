@@ -9,6 +9,7 @@ import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { motion } from 'framer-motion';
 import { Poppins, Inter } from 'next/font/google';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define the fonts
 const poppinsFont = Poppins({ 
@@ -29,7 +30,7 @@ const TechnicalFinishesPage = () => {
   // Technical Finishes Categories
   const finishCategories = [
     {
-      title: 'Protective Finishes',
+      title: "UNEOM - Professional Uniforms",
       description: 'Specialized treatments that enhance the protective qualities of uniform fabrics',
       icon: '🛡️',
     },
@@ -98,7 +99,7 @@ const TechnicalFinishesPage = () => {
         'Improves hygiene in critical environments'
       ],
       applications: ['Healthcare uniforms', 'Food service attire', 'Hospitality staff', 'Fitness center staff'],
-      image: '/images/uneom_antimicrobial_treatment.webp',
+      image: '/images/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg',
     },
     {
       name: 'Flame Retardant Finish',
@@ -122,7 +123,7 @@ const TechnicalFinishesPage = () => {
         'Enhances overall uniform comfort'
       ],
       applications: ['Physical security uniforms', 'Kitchen staff', 'Outdoor workers', 'Fitness staff'],
-      image: '/images/uneom_moisture_wicking.webp',
+      image: '/images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg',
     },
   ];
   
@@ -186,6 +187,23 @@ const TechnicalFinishesPage = () => {
 
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform services","custom uniform design","uniform manufacturing"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       <div className={`${poppinsFont.variable} ${interFont.variable}`}>
         {/* Hero Section */}
         <div className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-20">

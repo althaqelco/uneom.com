@@ -1,0 +1,355 @@
+{
+  "canonical": {
+    "pass": [
+      {
+        "page": "/ar/contact/",
+        "canonical": "https://uneom.com/ar/contact/"
+      },
+      {
+        "page": "/ar/services/",
+        "canonical": "https://uneom.com/ar/services/"
+      }
+    ],
+    "fail": [
+      {
+        "page": "/",
+        "reason": "No canonical tag found"
+      },
+      {
+        "page": "/ar/",
+        "reason": "No canonical tag found"
+      },
+      {
+        "page": "/about/",
+        "reason": "No canonical tag found"
+      },
+      {
+        "page": "/ar/about/",
+        "reason": "No canonical tag found"
+      },
+      {
+        "page": "/contact/",
+        "reason": "No canonical tag found"
+      },
+      {
+        "page": "/industries/healthcare/",
+        "reason": "No canonical tag found"
+      },
+      {
+        "page": "/ar/industries/healthcare/",
+        "reason": "No canonical tag found"
+      },
+      {
+        "page": "/industries/corporate/",
+        "reason": "No canonical tag found"
+      },
+      {
+        "page": "/ar/industries/corporate/",
+        "reason": "No canonical tag found"
+      },
+      {
+        "page": "/services/",
+        "reason": "No canonical tag found"
+      }
+    ]
+  },
+  "hreflang": {
+    "pass": [],
+    "fail": [
+      {
+        "page": "/",
+        "reason": "No hreflang tags found"
+      },
+      {
+        "page": "/ar/",
+        "reason": "No hreflang tags found"
+      },
+      {
+        "page": "/about/",
+        "reason": "No hreflang tags found"
+      },
+      {
+        "page": "/ar/about/",
+        "reason": "No hreflang tags found"
+      },
+      {
+        "page": "/contact/",
+        "reason": "No hreflang tags found"
+      },
+      {
+        "page": "/ar/contact/",
+        "missingTags": [
+          "ar-SA",
+          "en-SA",
+          "x-default"
+        ],
+        "incorrectTags": []
+      },
+      {
+        "page": "/industries/healthcare/",
+        "reason": "No hreflang tags found"
+      },
+      {
+        "page": "/ar/industries/healthcare/",
+        "reason": "No hreflang tags found"
+      },
+      {
+        "page": "/industries/corporate/",
+        "reason": "No hreflang tags found"
+      },
+      {
+        "page": "/ar/industries/corporate/",
+        "reason": "No hreflang tags found"
+      },
+      {
+        "page": "/services/",
+        "reason": "No hreflang tags found"
+      },
+      {
+        "page": "/ar/services/",
+        "missingTags": [
+          "ar-SA",
+          "en-SA",
+          "x-default"
+        ],
+        "incorrectTags": []
+      }
+    ]
+  },
+  "h1": {
+    "pass": [],
+    "fail": [
+      {
+        "page": "/",
+        "reason": "No H1 tag found"
+      },
+      {
+        "page": "/ar/",
+        "reason": "No H1 tag found"
+      },
+      {
+        "page": "/about/",
+        "reason": "No H1 tag found"
+      },
+      {
+        "page": "/ar/about/",
+        "reason": "No H1 tag found"
+      },
+      {
+        "page": "/contact/",
+        "reason": "No H1 tag found"
+      },
+      {
+        "page": "/ar/contact/",
+        "reason": "No H1 tag found"
+      },
+      {
+        "page": "/industries/healthcare/",
+        "reason": "No H1 tag found"
+      },
+      {
+        "page": "/ar/industries/healthcare/",
+        "reason": "No H1 tag found"
+      },
+      {
+        "page": "/industries/corporate/",
+        "reason": "No H1 tag found"
+      },
+      {
+        "page": "/ar/industries/corporate/",
+        "reason": "No H1 tag found"
+      },
+      {
+        "page": "/services/",
+        "reason": "No H1 tag found"
+      },
+      {
+        "page": "/ar/services/",
+        "reason": "No H1 tag found"
+      }
+    ]
+  },
+  "wordCount": {
+    "pass": [],
+    "fail": [
+      {
+        "page": "/",
+        "wordCount": 1,
+        "reason": "Word count too low"
+      },
+      {
+        "page": "/ar/",
+        "wordCount": 1,
+        "reason": "Word count too low"
+      },
+      {
+        "page": "/about/",
+        "wordCount": 1,
+        "reason": "Word count too low"
+      },
+      {
+        "page": "/ar/about/",
+        "wordCount": 1,
+        "reason": "Word count too low"
+      },
+      {
+        "page": "/contact/",
+        "wordCount": 1,
+        "reason": "Word count too low"
+      },
+      {
+        "page": "/ar/contact/",
+        "wordCount": 1,
+        "reason": "Word count too low"
+      },
+      {
+        "page": "/industries/healthcare/",
+        "wordCount": 1,
+        "reason": "Word count too low"
+      },
+      {
+        "page": "/ar/industries/healthcare/",
+        "wordCount": 1,
+        "reason": "Word count too low"
+      },
+      {
+        "page": "/industries/corporate/",
+        "wordCount": 1,
+        "reason": "Word count too low"
+      },
+      {
+        "page": "/ar/industries/corporate/",
+        "wordCount": 1,
+        "reason": "Word count too low"
+      },
+      {
+        "page": "/services/",
+        "wordCount": 1,
+        "reason": "Word count too low"
+      },
+      {
+        "page": "/ar/services/",
+        "wordCount": 1,
+        "reason": "Word count too low"
+      }
+    ]
+  },
+  "metaTags": {
+    "pass": [
+      {
+        "page": "/",
+        "title": "UNEOM | Uniform Manufacturing in Saudi Arabia",
+        "description": "UNEOM is a leading uniform manufacturer in Saudi Arabia, offering high-quality corporate, healthcare, hospitality, and industrial uniforms."
+      },
+      {
+        "page": "/ar/",
+        "title": "يونيوم | المزود الرائد للزي الموحد واليونيفورم المهني في المملكة العربية السعودية - الرياض، جدة، الدمام",
+        "description": "يونيوم هي الشركة الرائدة في تصنيع وتوريد الزي الموحد واليونيفورم في المملكة العربية السعودية. نقدم أزياء موحدة ويونيفورم عالي الجودة للرعاية الصحية، الشركات، الضيافة والقطاعات الصناعية في جميع المدن السعودية بما في ذلك الرياض، جدة، والدمام."
+      },
+      {
+        "page": "/about/",
+        "title": "UNEOM | Uniform Manufacturing in Saudi Arabia",
+        "description": "UNEOM is a leading uniform manufacturer in Saudi Arabia, offering high-quality corporate, healthcare, hospitality, and industrial uniforms."
+      },
+      {
+        "page": "/ar/about/",
+        "title": "عن يونيوم | المورد الرائد للزي الموحد في المملكة العربية السعودية",
+        "description": "تعرف على يونيوم، المزود الرائد للزي المهني في المملكة العربية السعودية. تاريخنا، مهمتنا، قيمنا، والتزامنا بالجودة والخدمة."
+      },
+      {
+        "page": "/contact/",
+        "title": "UNEOM | Uniform Manufacturing in Saudi Arabia",
+        "description": "UNEOM is a leading uniform manufacturer in Saudi Arabia, offering high-quality corporate, healthcare, hospitality, and industrial uniforms."
+      },
+      {
+        "page": "/ar/contact/",
+        "title": "اتصل بنا | يونيوم - حلول الزي الموحد في المملكة العربية السعودية",
+        "description": "تواصل مع فريق يونيوم للحصول على استشارة مجانية أو للاستفسار عن خدماتنا المتخصصة في الزي الموحد للشركات والمؤسسات."
+      },
+      {
+        "page": "/industries/healthcare/",
+        "title": "UNEOM | Uniform Manufacturing in Saudi Arabia",
+        "description": "UNEOM is a leading uniform manufacturer in Saudi Arabia, offering high-quality corporate, healthcare, hospitality, and industrial uniforms."
+      },
+      {
+        "page": "/ar/industries/healthcare/",
+        "title": "يونيوم | المزود الرائد للزي الموحد واليونيفورم المهني في المملكة العربية السعودية - الرياض، جدة، الدمام",
+        "description": "يونيوم هي الشركة الرائدة في تصنيع وتوريد الزي الموحد واليونيفورم في المملكة العربية السعودية. نقدم أزياء موحدة ويونيفورم عالي الجودة للرعاية الصحية، الشركات، الضيافة والقطاعات الصناعية في جميع المدن السعودية بما في ذلك الرياض، جدة، والدمام."
+      },
+      {
+        "page": "/industries/corporate/",
+        "title": "UNEOM | Uniform Manufacturing in Saudi Arabia",
+        "description": "UNEOM is a leading uniform manufacturer in Saudi Arabia, offering high-quality corporate, healthcare, hospitality, and industrial uniforms."
+      },
+      {
+        "page": "/ar/industries/corporate/",
+        "title": "يونيوم | المزود الرائد للزي الموحد واليونيفورم المهني في المملكة العربية السعودية - الرياض، جدة، الدمام",
+        "description": "يونيوم هي الشركة الرائدة في تصنيع وتوريد الزي الموحد واليونيفورم في المملكة العربية السعودية. نقدم أزياء موحدة ويونيفورم عالي الجودة للرعاية الصحية، الشركات، الضيافة والق��اعات الصناعية في جميع المدن السعودية بما في ذلك الرياض، جدة، والدمام."
+      },
+      {
+        "page": "/services/",
+        "title": "UNEOM | Uniform Manufacturing in Saudi Arabia",
+        "description": "UNEOM is a leading uniform manufacturer in Saudi Arabia, offering high-quality corporate, healthcare, hospitality, and industrial uniforms."
+      },
+      {
+        "page": "/ar/services/",
+        "title": "خدماتنا | يونيوم - حلول الزي الموحد المبتكرة",
+        "description": "نقدم حلول شاملة للزي الموحد للشركات والمؤسسات في المملكة العربية السعودية. تعرف على خدماتنا المتميزة في التصميم والإنتاج والتوريد."
+      }
+    ],
+    "fail": []
+  },
+  "structuredData": {
+    "pass": [],
+    "fail": [
+      {
+        "page": "/",
+        "reason": "No structured data found"
+      },
+      {
+        "page": "/ar/",
+        "reason": "No structured data found"
+      },
+      {
+        "page": "/about/",
+        "reason": "No structured data found"
+      },
+      {
+        "page": "/ar/about/",
+        "reason": "No structured data found"
+      },
+      {
+        "page": "/contact/",
+        "reason": "No structured data found"
+      },
+      {
+        "page": "/ar/contact/",
+        "reason": "No structured data found"
+      },
+      {
+        "page": "/industries/healthcare/",
+        "reason": "No structured data found"
+      },
+      {
+        "page": "/ar/industries/healthcare/",
+        "reason": "No structured data found"
+      },
+      {
+        "page": "/industries/corporate/",
+        "reason": "No structured data found"
+      },
+      {
+        "page": "/ar/industries/corporate/",
+        "reason": "No structured data found"
+      },
+      {
+        "page": "/services/",
+        "reason": "No structured data found"
+      },
+      {
+        "page": "/ar/services/",
+        "reason": "No structured data found"
+      }
+    ]
+  }
+}

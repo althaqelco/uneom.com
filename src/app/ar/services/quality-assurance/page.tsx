@@ -10,6 +10,7 @@ import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { motion } from 'framer-motion';
 import { Cairo, Tajawal } from 'next/font/google';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // تعريف الخطوط العربية
 const cairoFont = Cairo({ 
@@ -30,7 +31,7 @@ const QualityAssurancePage = () => {
   // مراحل عملية ضمان الجودة
   const qualityProcessSteps = [
     {
-      title: 'فحص المواد الخام',
+      title: "UNEOM - Professional Uniforms",
       description: 'اختبار دقيق لجميع المواد الخام والأقمشة قبل بدء عملية الإنتاج',
       icon: '🧵',
     },

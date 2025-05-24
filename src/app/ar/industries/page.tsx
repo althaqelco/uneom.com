@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 interface IndustryInfo {
   id: string;
@@ -76,6 +77,23 @@ export default function IndustriesPageArabic() {
   
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-neutral-900 to-neutral-800 text-white py-20">
         <div className="absolute inset-0 overflow-hidden opacity-25">

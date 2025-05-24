@@ -33,6 +33,13 @@
   status = 200
   force = false
 
+# Remove /en prefix from URLs as English is the default language
+[[redirects]]
+  from = "/en/*"
+  to = "/:splat"
+  status = 301
+  force = true
+
 # Redirect product placeholder pages to category pages (Added 5/3/2025)
 # English product placeholders
 [[redirects]]
@@ -61,11 +68,13 @@
   force = true
 
 # Fallback para rutas no encontradas - Modificado para devolver código 404 adecuado
+# Excluimos los archivos estáticos, APIs, y recursos del sistema de Next.js
 [[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
   force = false
+  conditions = {path = {match = "^(?!(api|_next|images|assets|css|js|fonts|favicon)/)"}}
 
 # English - Additional Products & Categories
 [[redirects]]

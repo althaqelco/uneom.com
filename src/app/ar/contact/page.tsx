@@ -6,6 +6,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import { Metadata } from 'next';
 import ContactForm from '@/components/forms/ContactForm';
 import ClientMotion from '@/components/ui/ClientMotion';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // SEO metadata for the page
 export const metadata: Metadata = {
@@ -64,6 +65,23 @@ const contactInfo = [
 export default function ContactPage() {
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-900 to-primary-800 text-white py-24">
         <Container>
@@ -72,6 +90,60 @@ export default function ContactPage() {
             <p className="text-lg md:text-xl text-slate-300">
               نحن هنا للإجابة على جميع استفساراتك ومساعدتك في العثور على الحل المثالي للزي الموحد
             </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* SEO Enhanced Introduction - Arabic */}
+      <section className="py-10 bg-neutral-50">
+        <Container>
+          <div className="max-w-4xl mx-auto">
+            <SectionHeading as="h2" centered={true}>
+              المزود الرائد للزي الموحد في المملكة العربية السعودية
+            </SectionHeading>
+            <div className="prose prose-lg mx-auto text-center text-neutral-700">
+              <p>
+                تعد شركة يونيوم المزود الرائد للأزياء الموحدة عالية الجودة في جميع أنحاء المملكة العربية السعودية، مع مكاتب رئيسية في الرياض وفروع في جدة والدمام. يتخصص فريقنا المحترف في تصميم وإنتاج الزي الموحد للمنشآت الصحية والفنادق والمدارس والشركات والمصانع في جميع مناطق المملكة.
+              </p>
+              <p>
+                سواء كنت تبحث عن تجهيز مؤسستك بالكامل بزي موحد مصمم خصيصاً، أو تحتاج إلى ملابس متخصصة للكادر الطبي، أو تتطلب ملابس عمل متينة لفريقك الصناعي، فإن مستشاري الزي الموحد لدينا جاهزون لمساعدتك بحلول شخصية مصممة وفقاً لمتطلباتك المحددة.
+              </p>
+              <p>
+                تواصل معنا اليوم من خلال أي من مكاتبنا في الرياض أو جدة أو الدمام، أو أرسل استفسارك باستخدام نموذج الاتصال عبر الإنترنت. سيرد متخصصو الزي الموحد لدينا خلال 24 ساعة لمناقشة احتياجاتك وترتيب استشارة أو تقديم عرض سعر مفصل لمؤسستك.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100 text-center">
+                <div className="w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold mb-2">طلب عرض سعر</h3>
+                <p className="text-neutral-600 mb-4">احصل على عرض سعر مفصل لاحتياجات الزي الموحد لمؤسستك</p>
+                <Link href="/ar/quote" className="text-primary-600 font-medium hover:text-primary-800">طلب عرض سعر ←</Link>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100 text-center">
+                <div className="w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold mb-2">جدولة استشارة</h3>
+                <p className="text-neutral-600 mb-4">حدد موعدًا مع متخصصي الزي الموحد لدينا لمناقشة احتياجاتك</p>
+                <Link href="/ar/contact?consultation=true" className="text-primary-600 font-medium hover:text-primary-800">حجز استشارة ←</Link>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100 text-center">
+                <div className="w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold mb-2">استكشاف العينات</h3>
+                <p className="text-neutral-600 mb-4">اطلب عينات من الأقمشة أو كتالوجات المنتجات لقطاعك</p>
+                <Link href="/ar/contact?samples=true" className="text-primary-600 font-medium hover:text-primary-800">طلب عينات ←</Link>
+              </div>
+            </div>
           </div>
         </Container>
       </section>

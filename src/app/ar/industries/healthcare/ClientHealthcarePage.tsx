@@ -11,6 +11,7 @@ import ProductCard from '@/components/ui/ProductCard';
 import TestimonialCard from '@/components/ui/TestimonialCard';
 import { getTranslation } from '@/lib/i18n';
 import { getLocalizedImagePath } from '@/lib/utils/imageLoader';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function ClientHealthcarePage() {
   // Get Arabic translations
@@ -188,6 +189,23 @@ export default function ClientHealthcarePage() {
   
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="Healthcare Uniforms & Medical Scrubs | UNEOM Saudi Arabia"
+        description="Professional healthcare uniforms and medical scrubs for hospitals and clinics across Saudi Arabia."
+        keywords={["healthcare uniforms","medical scrubs","hospital uniforms","nursing uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-24 md:py-32">
         <div className="absolute inset-0 overflow-hidden opacity-30">

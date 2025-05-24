@@ -1,153 +1,758 @@
 import { MetadataRoute } from 'next';
-import fs from 'fs';
-import path from 'path';
-
-// Function to get all page directories recursively
-const getPageDirectories = (dir: string, basePath = '', results: string[] = []) => {
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    // Skip internal Next.js files/directories and API routes
-    if (item.startsWith('_') || item === 'api' || item === 'fonts' || item === '[locale]') continue;
-    
-    const itemPath = path.join(dir, item);
-    const stats = fs.statSync(itemPath);
-    
-    if (stats.isDirectory()) {
-      // If directory contains page.tsx, add it to results
-      if (fs.existsSync(path.join(itemPath, 'page.tsx'))) {
-        // Normalize path for URL (remove src/app and replace backslashes)
-        const urlPath = path.join(basePath, item).replace(/\\/g, '/');
-        results.push(urlPath);
-      }
-      
-      // Recursively search subdirectories
-      getPageDirectories(itemPath, path.join(basePath, item), results);
-    }
-  }
-  
-  return results;
-};
-
-// Function to determine priority based on URL path
-const getPriority = (url: string): number => {
-  // Homepage gets highest priority
-  if (url === '' || url === 'ar') return 1.0;
-  
-  // Primary sections
-  if (['shop', 'ar/shop', 'quote', 'ar/quote'].includes(url)) return 0.9;
-  
-  // Major content sections
-  if (url.includes('/industries/') || 
-      url.includes('/shop/') || 
-      url.includes('/services/')) return 0.8;
-  
-  // Secondary content
-  if (url.includes('/blog/') || 
-      url.includes('/resources/') || 
-      url.includes('/authors/')) return 0.7;
-  
-  // Default priority for other pages
-  return 0.6;
-};
-
-// Function to determine change frequency based on URL path
-const getChangeFrequency = (url: string): 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' => {
-  // Pages that change frequently
-  if (url === '' || url === 'ar' || url.includes('/shop')) return 'daily';
-  
-  // Pages that change somewhat regularly
-  if (url.includes('/blog/') || 
-      url.includes('/industries/') || 
-      url.includes('/products/')) return 'weekly';
-  
-  // Pages that change less frequently
-  return 'monthly';
-};
-
-// Function to get the alternate language URL
-const getAlternateUrl = (url: string): string | null => {
-  if (url.startsWith('ar/')) {
-    // If Arabic, alternate is English
-    return url.substring(3);
-  } else {
-    // If English, alternate is Arabic
-    return `ar/${url}`;
-  }
-};
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://uneom.com';
-  const lastModified = new Date();
-  const appDirectory = path.join(process.cwd(), 'src', 'app');
-  
-  // Get all page directories
-  let pageDirectories = getPageDirectories(appDirectory);
-  
-  // Add homepage (root)
-  pageDirectories.unshift('');
-  
-  // Create sitemap entries with absolute URLs and metadata
-  const sitemapEntries = pageDirectories.map(pageDir => {
-    const url = pageDir;
-    const priority = getPriority(url);
-    const changeFrequency = getChangeFrequency(url);
-    
-    return {
-      url: `${baseUrl}/${url}`,
-      lastModified,
-      changeFrequency,
-      priority,
-    };
-  });
-  
-  // Create a map for hreflang alternates
-  const urlMap = new Map();
-  
-  // Group URLs by their base path (removing language prefix)
-  sitemapEntries.forEach(entry => {
-    const urlPath = entry.url.replace(baseUrl + '/', '');
-    const isArabic = urlPath.startsWith('ar/');
-    const basePath = isArabic ? urlPath.substring(3) : urlPath;
-    
-    if (!urlMap.has(basePath)) {
-      urlMap.set(basePath, { en: null, ar: null });
-    }
-    
-    const langData = urlMap.get(basePath);
-    if (isArabic) {
-      langData.ar = entry.url;
-    } else {
-      langData.en = entry.url;
-    }
-  });
-  
-  // Enhanced sitemap with alternates (for search engines that support it)
-  // Note: Next.js's built-in sitemap doesn't support alternates directly,
-  // but we're including them in the static file for completeness
-  const staticSitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${sitemapEntries.map(entry => {
-  const urlPath = entry.url.replace(baseUrl + '/', '');
-  const isArabic = urlPath.startsWith('ar/');
-  const basePath = isArabic ? urlPath.substring(3) : urlPath;
-  const langData = urlMap.get(basePath);
-  
-  return `  <url>
-    <loc>${entry.url}</loc>
-    ${langData.en ? `<xhtml:link rel="alternate" hreflang="en" href="${langData.en}"/>` : ''}
-    ${langData.ar ? `<xhtml:link rel="alternate" hreflang="ar" href="${langData.ar}"/>` : ''}
-    <lastmod>${entry.lastModified.toISOString().split('T')[0]}</lastmod>
-    <changefreq>${entry.changeFrequency}</changefreq>
-    <priority>${entry.priority.toFixed(1)}</priority>
-  </url>`;
-}).join('\n')}
-</urlset>`;
+  const baseUrl = 'https://uneom.com';
+  const currentDate = new Date().toISOString();
 
-  // Write enhanced sitemap to public directory
-  fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), staticSitemap);
-  
-  // Return Next.js compatible sitemap (without alternates)
-  return sitemapEntries;
-} 
+  // Homepage - Maximum priority
+  const homepage = [
+    {
+      url: baseUrl,
+      lastModified: currentDate,
+      changeFrequency: 'daily' as const,
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/ar/`,
+      lastModified: currentDate,
+      changeFrequency: 'daily' as const,
+      priority: 1.0,
+    },
+  ];
+
+  // Core business pages - High priority
+  const corePages = [
+    {
+      url: `${baseUrl}/quote/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/ar/quote/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/contact/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ar/contact/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+  ];
+
+  // Service pages - High priority for business
+  const servicePages = [
+    {
+      url: `${baseUrl}/services/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ar/services/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/custom-design/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/services/custom-design/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/services/fabric-selection/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/services/fabric-selection/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/services/manufacturing/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/services/manufacturing/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/services/quality-assurance/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/services/quality-assurance/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/services/technical-finishes/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/services/technical-finishes/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/services/corporate-programs/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/services/corporate-programs/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/services/bulk-ordering/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ar/services/bulk-ordering/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/measurement-services/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ar/services/measurement-services/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/program-management/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ar/services/program-management/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/uniform-policies/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ar/services/uniform-policies/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+  ];
+
+  // Industry pages - High priority for targeting
+  const industryPages = [
+    {
+      url: `${baseUrl}/industries/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ar/industries/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/industries/corporate/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ar/industries/corporate/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/industries/healthcare/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ar/industries/healthcare/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/industries/aviation/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ar/industries/aviation/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/industries/hospitality/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ar/industries/hospitality/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/industries/education/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/industries/education/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/industries/manufacturing/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/industries/manufacturing/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/industries/security/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ar/industries/security/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/retail-shops/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ar/industries/retail-shops/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+  ];
+
+  // Location pages - High priority for local SEO
+  const locationPages = [
+    {
+      url: `${baseUrl}/locations/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ar/locations/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/locations/riyadh/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.95, // Headquarters - highest priority
+    },
+    {
+      url: `${baseUrl}/ar/locations/riyadh/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/locations/jeddah/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ar/locations/jeddah/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/locations/dammam/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ar/locations/dammam/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/locations/mecca/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/locations/mecca/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/locations/medina/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/locations/medina/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+  ];
+
+  // Shop pages - High priority for e-commerce
+  const shopPages = [
+    {
+      url: `${baseUrl}/shop/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ar/shop/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    // Medical Scrubs Category
+    {
+      url: `${baseUrl}/shop/medical-scrubs/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/shop/medical-scrubs/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    // Aviation Uniforms Category
+    {
+      url: `${baseUrl}/shop/aviation-uniforms/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/shop/aviation-uniforms/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    // Hospitality Attire Category
+    {
+      url: `${baseUrl}/shop/hospitality-attire/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/shop/hospitality-attire/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    // Industrial Uniforms Category
+    {
+      url: `${baseUrl}/shop/industrial-uniforms/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ar/shop/industrial-uniforms/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    // Education Uniforms Category
+    {
+      url: `${baseUrl}/shop/education-uniforms/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ar/shop/education-uniforms/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    // Corporate Workwear Category
+    {
+      url: `${baseUrl}/shop/corporate-workwear/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ar/shop/corporate-workwear/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    // Security Uniforms Category
+    {
+      url: `${baseUrl}/shop/security-uniforms/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ar/shop/security-uniforms/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+  ];
+
+  // Top product pages - Key revenue drivers
+  const productPages = [
+    // Premium Medical Scrubs
+    {
+      url: `${baseUrl}/shop/medical-scrubs/premium-medical-scrubs/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ar/shop/medical-scrubs/premium-medical-scrubs/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    // Antimicrobial Scrubs
+    {
+      url: `${baseUrl}/shop/medical-scrubs/antimicrobial-scrubs/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/ar/shop/medical-scrubs/antimicrobial-scrubs/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    // Surgical Scrubs
+    {
+      url: `${baseUrl}/shop/medical-scrubs/surgical-scrubs/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/ar/shop/medical-scrubs/surgical-scrubs/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    // Airline Crew Uniform
+    {
+      url: `${baseUrl}/shop/aviation-uniforms/airline-crew-uniform/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/ar/shop/aviation-uniforms/airline-crew-uniform/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    // Pilot Uniform
+    {
+      url: `${baseUrl}/shop/aviation-uniforms/pilot-uniform/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/ar/shop/aviation-uniforms/pilot-uniform-set/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    // Luxury Hotel Uniform
+    {
+      url: `${baseUrl}/shop/hospitality-attire/luxury-hotel-uniform/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/ar/shop/hospitality-attire/luxury-hotel-uniform/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    // Restaurant Staff Uniform
+    {
+      url: `${baseUrl}/shop/hospitality-attire/restaurant-staff-uniform/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/ar/shop/hospitality-attire/restaurant-staff-uniform/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    // Industrial Coverall Pro
+    {
+      url: `${baseUrl}/shop/industrial-uniforms/industrial-coverall-pro/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/ar/shop/industrial-uniforms/industrial-coverall-pro/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+  ];
+
+  // Blog pages - Content marketing
+  const blogPages = [
+    {
+      url: `${baseUrl}/blog/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ar/blog/`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/sustainable-uniforms-2024-trends/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ar/blog/sustainable-uniforms-2024-trends/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/school-uniforms-academic-performance/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ar/blog/school-uniforms-academic-performance/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/sustainable-school-uniforms-saudi/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ar/blog/sustainable-school-uniforms-saudi/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+  ];
+
+  // Resources and support pages
+  const resourcePages = [
+    {
+      url: `${baseUrl}/resources/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ar/resources/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/resources/fabric-guide/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.65,
+    },
+    {
+      url: `${baseUrl}/ar/resources/fabric-guide/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.65,
+    },
+    {
+      url: `${baseUrl}/resources/size-guide/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.65,
+    },
+    {
+      url: `${baseUrl}/ar/resources/size-guide/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.65,
+    },
+    {
+      url: `${baseUrl}/resources/procurement-guide/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.65,
+    },
+    {
+      url: `${baseUrl}/ar/resources/procurement-guide/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.65,
+    },
+  ];
+
+  // Static informational pages
+  const staticPages = [
+    {
+      url: `${baseUrl}/about/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ar/about/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/faq/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ar/faq/`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/privacy-policy/`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/ar/privacy-policy/`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms-of-service/`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/ar/terms-of-service/`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+  ];
+
+  return [
+    ...homepage,
+    ...corePages,
+    ...servicePages,
+    ...industryPages,
+    ...locationPages,
+    ...shopPages,
+    ...productPages,
+    ...blogPages,
+    ...resourcePages,
+    ...staticPages,
+  ];
+}

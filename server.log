@@ -1,0 +1,11 @@
+
+> uneom-5@0.1.0 dev
+> NEXT_TELEMETRY_DISABLED=1 next dev
+
+  ▲ Next.js 14.2.23
+  - Local:        http://localhost:3000
+  - Experiments (use with caution):
+    · scrollRestoration
+
+ ✓ Starting...
+ ✓ Ready in 1121ms

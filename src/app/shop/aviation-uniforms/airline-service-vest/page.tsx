@@ -9,6 +9,7 @@ import { useQuote } from '@/contexts/QuoteContext';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { useRouter } from 'next/navigation';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 type LocaleContent = {
   title: string;
@@ -70,7 +71,7 @@ export default function AirlineServiceVestPage() {
   // Multilingual content
   const content: ContentType = {
     en: {
-      title: 'Airline Service Vest',
+      title: "UNEOM - Professional Uniforms",
       description: 'Professional airline service vests designed for Saudi Arabian aviation staff, combining practical functionality with airline branding for cabin crew, ground staff, and service personnel.',
       longDescription: 'Our Airline Service Vests are specially engineered for the diverse operational needs of Saudi Arabian aviation personnel. These versatile garments provide the perfect balance of professional appearance, practical functionality, and airline brand identity for cabin crew, ground staff, and service personnel. The thoughtful design includes multiple specialized pockets for service tools, documentation, and personal items, while the durable yet lightweight construction ensures comfort during long shifts. Each vest features flame-retardant properties meeting international aviation safety standards, with customizable elements including airline logo embroidery, color-matched piping, and Arabic script options. The specialized fabric blend resists stains and wrinkles while maintaining a crisp, professional appearance throughout demanding aviation operations. Available in a range of airline-specific colors with customization options to perfectly align with your brand standards.',
       breadcrumbs: [
@@ -236,7 +237,7 @@ export default function AirlineServiceVestPage() {
   };
 
   return (
-    <>
+    <main>
       <Container className="py-8">
         <div className="flex justify-end mb-4">
           <button 
@@ -445,6 +446,6 @@ export default function AirlineServiceVestPage() {
           </div>
         </div>
       </Container>
-    </>
+        </main>
   );
 } 

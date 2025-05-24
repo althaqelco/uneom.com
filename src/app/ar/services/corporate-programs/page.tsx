@@ -10,6 +10,7 @@ import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { motion } from 'framer-motion';
 import { Cairo, Tajawal } from 'next/font/google';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // تعريف الخطوط العربية
 const cairoFont = Cairo({ 
@@ -30,7 +31,7 @@ const CorporateProgramsPage = () => {
   // مكونات برنامج الزي الموحد
   const programComponents = [
     {
-      title: 'تقييم الاحتياجات',
+      title: "UNEOM - Professional Uniforms",
       description: 'تحليل شامل لمتطلبات مؤسستك والبيئة التشغيلية لتصميم برنامج مخصص يلبي احتياجاتك المحددة.',
       features: [
         'تحليل الاحتياجات الخاصة بكل قسم',

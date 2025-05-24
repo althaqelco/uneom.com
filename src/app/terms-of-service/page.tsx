@@ -1,6 +1,29 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+
+export const metadata: Metadata = {
+  title: 'Terms Of Service | UNEOM Saudi Arabia',
+  description: 'High-quality professional uniforms and workwear solutions tailored for Saudi Arabian businesses and institutions.',
+  keywords: ['uniform', 'workwear', 'Saudi Arabia', 'terms of service'],
+  openGraph: {
+    title: 'Terms Of Service | UNEOM Saudi Arabia',
+    description: 'High-quality professional uniforms and workwear solutions tailored for Saudi Arabian businesses and institutions.',
+    url: 'https://uneom.com/terms-of-service/',
+    siteName: 'UNEOM',
+    images: [
+      {
+        url: 'https://uneom.com/images/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Terms Of Service - UNEOM Saudi Arabia'
+      }
+    ],
+    locale: 'en_US'
+  }
+};
+
 
 export default function TermsOfServicePage() {
   return (

@@ -9,6 +9,7 @@ import { useQuote } from '@/contexts/QuoteContext';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { useRouter } from 'next/navigation';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 type LocaleContent = {
   title: string;
@@ -70,7 +71,7 @@ export default function FlightAttendantDressPage() {
   // Multilingual content
   const content: ContentType = {
     en: {
-      title: 'Flight Attendant Dress',
+      title: "UNEOM - Professional Uniforms",
       description: 'Premium flight attendant dresses designed for Saudi Arabian airlines, combining elegant styling with practical functionality for female cabin crew members.',
       longDescription: 'Our Flight Attendant Dresses are meticulously crafted to meet the exacting standards of Saudi Arabian airlines and cultural requirements. These premium garments blend sophisticated styling with functional design elements that enhance cabin crew performance while maintaining a distinctive and professional airline image. The thoughtfully engineered construction provides exceptional range of motion for inflight duties while the wrinkle-resistant, flame-retardant fabric ensures a pristine appearance throughout long-haul flights. Each dress includes specialized features tailored to cabin crew needs, including hidden pockets for essential items, secure badge attachments, and modest design elements that respect Saudi Arabian values while maintaining international aviation standards. Available in airline-specific colors and designs with customization options to perfectly align with your brand identity.',
       breadcrumbs: [
@@ -236,7 +237,7 @@ export default function FlightAttendantDressPage() {
   };
 
   return (
-    <>
+    <main>
       <Container className="py-8">
         <div className="flex justify-end mb-4">
           <button 
@@ -445,6 +446,6 @@ export default function FlightAttendantDressPage() {
           </div>
         </div>
       </Container>
-    </>
+        </main>
   );
 }

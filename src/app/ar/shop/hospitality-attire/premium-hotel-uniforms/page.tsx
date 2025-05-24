@@ -10,6 +10,7 @@ import { useQuote } from '@/contexts/QuoteContext';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import TestimonialCard from '@/components/ui/TestimonialCard';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function PremiumHotelUniformsPageArabic() {
   const locale = 'ar';
@@ -139,8 +140,9 @@ export default function PremiumHotelUniformsPageArabic() {
   };
 
   return (
-    <>
+    <main>
       <Container className="py-8">
+        <h1 className="sr-only">أزياء الفنادق الفاخرة | يونيفورم فندقي عالي الجودة للضيافة السعودية | يونيوم</h1>
         <Breadcrumbs items={breadcrumbs} />
         
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -485,6 +487,6 @@ export default function PremiumHotelUniformsPageArabic() {
           </div>
         )}
       </Container>
-    </>
+        </main>
   );
 } 

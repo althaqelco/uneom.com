@@ -1,6 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import ResourcePageLayout from '@/components/layout/ResourcePageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export const metadata: Metadata = {
   title: 'Healthcare Fabric Guide | Medical Uniform Materials in Saudi Arabia | UNEOM',

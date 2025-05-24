@@ -1,0 +1,72 @@
+{
+  "en": {
+    "title": "Premium Retail Staff Polo",
+    "description": "Elevate your retail brand with our Premium Staff Polo, designed specifically for Saudi Arabia's upscale retail environments. Made with breathable, durable fabric that maintains a professional appearance through long shifts and repeated washing.",
+    "features": [
+      "Moisture-wicking performance fabric (65% cotton, 35% polyester)",
+      "Stain-resistant treatment for long-lasting appearance",
+      "Custom embroidery option for your brand logo",
+      "Tailored fit design for professional appearance",
+      "Climate-adapted fabric suitable for Saudi environments"
+    ],
+    "specifications": {
+      "material": "Premium blend (65% cotton, 35% polyester)",
+      "weight": "210 gsm",
+      "colors": ["Navy Blue", "Black", "White", "Burgundy"],
+      "sizes": ["S", "M", "L", "XL", "2XL", "3XL"],
+      "care": "Machine washable, tumble dry low"
+    },
+    "customization": "Available with custom embroidery, color matching to your brand guidelines, and bulk order discounts.",
+    "ideal_for": "Department stores, luxury retail, electronics retailers, and shopping mall staff.",
+    "pricing": {
+      "single": "185 SAR",
+      "bulk_50": "165 SAR per unit",
+      "bulk_100": "155 SAR per unit"
+    },
+    "image_paths": [
+      "/images/products/retail/uniform-1.jpg",
+      "/images/products/retail/luxury-1.jpg"
+    ],
+    "related_products": [
+      "/shop/retail-uniforms/related-product-2/",
+      "/shop/retail-uniforms/related-product-3/",
+      "/shop/retail-uniforms/related-product-4/"
+    ]
+  },
+  "ar": {
+    "title": "بولو فاخر لموظفي المتاجر",
+    "description": "ارتقِ بعلامتك التجارية في قطاع البيع بالتجزئة مع بولو الموظفين الفاخر، المصمم خصيصًا لبيئات البيع بالتجزئة الراقية في المملكة العربية السعودية. تعكس هذه القطعة الفاخرة أعلى معايير الجودة مع توفير الراحة الاستثنائية لموظفيك، مما يعزز الأداء المهني المتميز ويضمن استمرارية المظهر الأنيق حتى بعد ساعات العمل الطويلة والغسيل المتكرر.",
+    "features": [
+      "قماش تقني متميز ماص للرطوبة (65% قطن عالي الجودة، 35% بوليستر) يوفر الراحة طوال اليوم",
+      "معالجة مبتكرة مقاومة للبقع والروائح تضمن مظهراً مثالياً حتى في نوبات العمل الطويلة",
+      "تطريز عالي الدقة لشعار علامتك التجارية مع إمكانية التخصيص الكامل وفق هويتك البصرية",
+      "تصميم أنيق بقصة مُحسّنة تناسب مختلف أنماط الجسم وتحافظ على المظهر المهني المتكامل",
+      "نسيج متطور مكيف مع المناخ السعودي، مثالي للعمل في بيئات التسوق المكيفة والمفتوحة"
+    ],
+    "specifications": {
+      "material": "مزيج فاخر (65% قطن مصري طويل التيلة، 35% بوليستر فائق النعومة)",
+      "weight": "210 جم/م² - وزن مثالي يوازن بين متانة النسيج وخفته",
+      "colors": ["أزرق كحلي فاخر", "أسود أنيق", "أبيض نقي", "نبيذي عميق"],
+      "sizes": ["S (46-48)", "M (50-52)", "L (54-56)", "XL (58-60)", "2XL (62-64)", "3XL (66-68)"],
+      "care": "قابل للغسل في الغسالة (30 درجة)، تجفيف منخفض، كوي على درجة متوسطة"
+    },
+    "customization": "نقدم خدمة تخصيص شاملة تشمل تطريز الشعار بألوان متعددة، مطابقة دقيقة للألوان حسب معايير هويتك البصرية، إمكانية تعديل القصة والتفاصيل، وخصومات تنافسية للطلبات الكبيرة تصل إلى 25% للكميات التي تتجاوز 200 قطعة.",
+    "ideal_for": "المتاجر الكبرى الراقية، بوتيكات الأزياء، متاجر الإلكترونيات المتخصصة، مراكز التسوق الفاخرة، محلات المجوهرات، متاجر مستحضرات التجميل الراقية، وجميع نقاط البيع بالتجزئة التي تسعى لتعزيز هويتها البصرية.",
+    "pricing": {
+      "single": "185 ريال سعودي",
+      "bulk_50": "165 ريال سعودي للقطعة (توفير 10.8%)",
+      "bulk_100": "155 ريال سعودي للقطعة (توفير 16.2%)",
+      "bulk_200_plus": "اتصل بنا للحصول على أفضل الأسعار الحصرية"
+    },
+    "image_paths": [
+      "/images/products/retail/uniform-1.jpg",
+      "/images/products/retail/luxury-1.jpg",
+      "/images/industries/retail-shops/retail-shops-uniform-identity.jpg"
+    ],
+    "related_products": [
+      "/shop/retail-uniforms/related-product-2/",
+      "/shop/retail-uniforms/related-product-3/",
+      "/shop/retail-uniforms/related-product-4/"
+    ]
+  }
+} 

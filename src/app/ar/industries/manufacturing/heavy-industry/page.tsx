@@ -8,11 +8,12 @@ import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SectionHeading from '@/components/ui/SectionHeading';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Arabic Page Data
 const pageData = {
   hero: {
-    title: "حلول الصناعات الثقيلة",
+    title: "UNEOM - Professional Uniforms",
     subtitle: "ملابس السلامة المتقدمة لقطاع الصناعات الثقيلة في المملكة العربية السعودية",
     image: "/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg",
   },
@@ -83,7 +84,7 @@ export default function HeavyIndustryPageAr() {
   };
 
   return (
-    <>
+    <main>
       <Container className="py-8 md:py-12">
         {/* Breadcrumbs */}
         <Breadcrumbs items={[
@@ -292,6 +293,6 @@ export default function HeavyIndustryPageAr() {
           </div>
         </motion.div>
       </Container>
-    </>
+        </main>
   );
 } 

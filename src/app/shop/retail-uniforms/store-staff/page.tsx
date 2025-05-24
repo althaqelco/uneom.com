@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ProductDetail from '@/components/product/ProductDetail';
 import { getProductById } from '@/lib/data/products';
 import SeoSchema from '@/components/seo/SeoSchema';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export const metadata: Metadata = {
   title: 'Store Staff Uniforms | Retail Employee Attire Saudi Arabia | UNEOM',
@@ -101,6 +102,8 @@ export default function StoreStaffPage() {
 
   return (
     <main className="bg-white pb-24">
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Store Staff Uniforms | Retail Employee Attire Saudi Arabia</h1>
+      
       <div className="container mx-auto px-4">
         <ProductDetail product={enhancedProduct} />
         <SeoSchema 

@@ -2,11 +2,12 @@
 
 import React from 'react';
 import ResourcePageLayout from '@/components/layout/ResourcePageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function PolicyTemplatesPage() {
   const resourceData = {
     locale: 'en',
-    title: 'Uniform Policy Templates',
+    title: "UNEOM - Professional Uniforms",
     subtitle: 'Customizable frameworks for developing clear and comprehensive uniform guidelines',
     heroImage: '/images/default-placeholder.jpg',
     overview: {

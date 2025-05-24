@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function PremiumScrubsSetArabicPage() {
   const locale = 'ar';
@@ -156,6 +157,23 @@ export default function PremiumScrubsSetArabicPage() {
   
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform shop","buy uniforms","professional workwear","uniform store"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="product"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       {/* مسار التنقل */}
       <div className="bg-gray-100 py-4">
         <Container>

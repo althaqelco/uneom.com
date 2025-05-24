@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { FaGraduationCap, FaAward, FaBriefcase, FaBook, FaLinkedinIn, FaTwitter, FaIndustry, FaThumbsUp } from 'react-icons/fa';
 import Container from '@/components/ui/Container';
 import { authors } from '@/lib/data/authors';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 interface AuthorPageProps {
   params: {
@@ -18,7 +19,7 @@ export function generateMetadata({ params }: AuthorPageProps): Metadata {
   
   if (!author) {
     return {
-      title: 'Author Not Found | UNEOM',
+      title: "UNEOM - Professional Uniforms",
       description: 'The requested author profile could not be found.',
     };
   }
@@ -84,6 +85,23 @@ export default function AuthorPage({ params }: AuthorPageProps) {
 
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       {/* Add structured data */}
       <script
         type="application/ld+json"

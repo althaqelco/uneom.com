@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
 interface Redirect {
   source: string;
   destination: string;
+  permanent?: boolean;
 }
 
 /**
@@ -11,6 +12,9 @@ interface Redirect {
  * تم تنظيمها حسب النوع واللغة للسهولة
  */
 const redirectsMap: Redirect[] = [
+  // Remove /en prefix since English is the default language
+  { source: '/en/:path*', destination: '/:path*', permanent: true },
+  
   // English - School & Education
   { source: '/sectors/school-uniforms', destination: '/industries/education' },
   { source: '/sectors/education-uniforms', destination: '/industries/education' },
@@ -95,6 +99,7 @@ const redirectsMap: Redirect[] = [
   { source: '/ar/faqs', destination: '/ar/faq' },
   { source: '/ar/about-us', destination: '/ar/about' },
   
+  
   // Arabic - Locations
   { source: '/ar/location/%d8%a7%d9%84%d9%85%d8%af%d9%8a%d9%86%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d9%88%d8%b1%d8%a9', destination: '/ar/locations/medina' },
   { source: '/ar/location/%d8%a7%d9%84%d8%af%d9%85%d8%a7%d9%85', destination: '/ar/locations/dammam' },
@@ -157,12 +162,33 @@ function extractAndReplaceParams(path: string, source: string, destination: stri
 
 // وظيفة middleware الأساسية
 export function middleware(request: NextRequest) {
+  // Debug log
+  console.log(`Middleware processing: ${request.nextUrl.pathname}`);
+  
   // نأخذ المسار من الطلب
   const url = request.nextUrl.clone();
   let path = url.pathname;
   
+  
+  // Handle /en/* redirects - remove the /en prefix as English is the default language
+  if (path.startsWith('/en/')) {
+    console.log(`Redirecting from ${path} to ${path.replace(/^\/en\//, '/')}`);
+    const redirectUrl = new URL(path.replace(/^\/en\//, '/'), request.url);
+    // Copy over all query parameters
+    url.searchParams.forEach((value, key) => {
+      redirectUrl.searchParams.set(key, value);
+    });
+    return NextResponse.redirect(redirectUrl, {
+      status: 301,
+      headers: {
+        'Cache-Control': 'public, max-age=31536000',
+      }
+    });
+  }
+  
   // نزيل الشرطة النهائية للتوحيد
   const cleanPath = removeTrailingSlash(path);
+  
   
   // نبحث عن تطابق في قائمة التحويلات
   for (const { source, destination } of redirectsMap) {
@@ -216,6 +242,7 @@ export function middleware(request: NextRequest) {
 // تكوين المطابقة: جميع المسارات ما عدا الاستثناءات
 export const config = {
   matcher: [
-    '/((?!_next/|api/|favicon.ico|robots.txt|sitemap.xml|images/|assets/).*)'
+    // تجاهل مسارات المدونة العربية، ومسارات _next، وغيرها من المسارات الخاصة
+    '/((?!_next/|api/|favicon.ico|robots.txt|sitemap.xml|images/|assets/|ar/blog|ar/services).*)'
   ],
 };

@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Industry-Specific Uniform Solutions | UNEOM Saudi Arabia',
   description: 'Specialized uniform solutions for every industry sector in Saudi Arabia. Premium workwear tailored for healthcare, hospitality, corporate, education, manufacturing, and security industries.',
-  keywords: 'industry uniforms Saudi Arabia, sector-specific workwear, professional uniform solutions, Saudi industry workwear, UNEOM industry collections, specialized uniform provider, Saudi Arabia uniforms by sector',
+  // Removed generic meta keywords as they're no longer relevant for modern SEO
   openGraph: {
     title: 'Industry-Specific Uniform Solutions | UNEOM Saudi Arabia',
     description: 'Specialized uniform solutions for every industry sector in Saudi Arabia with premium quality and cultural considerations.',
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     images: ['/images/banner-placeholder.jpg']
   },
   alternates: {
-    canonical: 'https://uneom.com/industries',
+    canonical: 'https://uneom.com/industries/',
     languages: {
-      'en': 'https://uneom.com/industries',
-      'ar': 'https://uneom.com/ar/industries'
+      'en': 'https://uneom.com/industries/',
+      'ar': 'https://uneom.com/ar/industries/'
     }
   },
   robots: {
     index: true,
     follow: true
   }
-}; 
+};

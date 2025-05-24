@@ -9,6 +9,7 @@ import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import ColorSwatch from '@/components/shop/ColorSwatch';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function PremiumMedicalScrubsPage() {
   const locale = 'en';
@@ -264,7 +265,7 @@ export default function PremiumMedicalScrubsPage() {
   };
 
   return (
-    <>
+    <main>
       <div className="bg-neutral-50 py-4">
         <Container>
           <div className="flex items-center text-sm text-neutral-600">
@@ -557,6 +558,6 @@ export default function PremiumMedicalScrubsPage() {
           </div>
         </div>
       )}
-    </>
+        </main>
   );
 } 

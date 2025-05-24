@@ -10,6 +10,7 @@ import { useQuote } from '@/contexts/QuoteContext';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import TestimonialCard from '@/components/ui/TestimonialCard';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function HousekeepingUniformPageArabic() {
   const locale = 'ar';
@@ -141,7 +142,7 @@ export default function HousekeepingUniformPageArabic() {
   };
 
   return (
-    <>
+    <main>
       <Container className="py-8 rtl">
         <Breadcrumbs items={breadcrumbs} />
         
@@ -488,6 +489,6 @@ export default function HousekeepingUniformPageArabic() {
           </div>
         )}
       </Container>
-    </>
+        </main>
   );
 } 

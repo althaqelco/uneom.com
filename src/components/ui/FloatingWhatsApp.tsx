@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 interface FloatingWhatsAppProps {
@@ -16,7 +16,18 @@ const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({
   position = 'right',
   locale = 'en',
 }) => {
+  const [isMounted, setIsMounted] = useState(false);
   const isRTL = locale === 'ar';
+  
+  // Only render on client-side
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  
+  // Don't render anything on the server
+  if (!isMounted) {
+    return null;
+  }
   
   const whatsappUrl = `https://wa.me/${phoneNumber}${message ? `?text=${encodeURIComponent(message)}` : ''}`;
   

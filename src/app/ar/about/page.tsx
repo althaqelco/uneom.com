@@ -7,6 +7,7 @@ import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { getTranslation } from '@/lib/i18n';
 import { getLocalizedImagePath } from '@/lib/utils/imageLoader';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function AboutPageArabic() {
   // Get Arabic translations
@@ -112,7 +113,7 @@ export default function AboutPageArabic() {
   const values = [
     {
       id: 'quality',
-      title: 'الجودة',
+      title: "UNEOM - Professional Uniforms",
       description: 'نستخدم فقط أفضل المواد والحرفية في صناعة الزي الموحد لضمان المتانة والراحة والمظهر المهني.',
       icon: '/images/default-placeholder.jpg',
     },
@@ -187,6 +188,23 @@ export default function AboutPageArabic() {
   
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-24 md:py-32">
         <div className="absolute inset-0 overflow-hidden opacity-30">

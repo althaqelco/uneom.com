@@ -2,6 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Enhanced SEO Metadata
 export const metadata: Metadata = {

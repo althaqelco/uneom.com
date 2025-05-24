@@ -1,0 +1,90 @@
+{
+  "en": {
+    "title": "Premium Mechanics Overalls",
+    "description": "Designed for Saudi Arabia's maintenance professionals, our Premium Mechanics Overalls provide superior protection, comfort, and functionality. Engineered to withstand heavy industrial use while enabling maximum mobility for precision maintenance work.",
+    "features": [
+      "Oil and chemical resistant fabric (meets EN ISO 13034 standards)",
+      "Reinforced knee panels with pocket for optional knee pads",
+      "Strategic tool pockets and loops for essential equipment access",
+      "Adjustable elasticated waist for perfect fit across body types",
+      "Ventilation zones to manage heat in Saudi industrial environments"
+    ],
+    "specifications": {
+      "material": "Heavy-duty twill (65% polyester, 35% cotton) with stain-resistant treatment",
+      "weight": "310 gsm",
+      "colors": ["Navy Blue", "Dark Grey", "Black", "Royal Blue"],
+      "sizes": ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+      "certification": "Meets NFPA 2112 standards for flash fire protection",
+      "care": "Industrial laundering recommended, home washable at 60°C"
+    },
+    "customization": "Available with embroidered company logos, reflective safety taping, and specialized pocket configurations for industry-specific tools. Name tags and department identification can be added.",
+    "ideal_for": "Automotive workshops, manufacturing maintenance teams, oil and gas facilities, assembly lines, and industrial maintenance contractors throughout Saudi Arabia.",
+    "pricing": {
+      "single": "320 SAR",
+      "bulk_20": "290 SAR per unit",
+      "bulk_50": "275 SAR per unit",
+      "bulk_100+": "260 SAR per unit"
+    },
+    "image_paths": [
+      "/images/products/industrial/mechanic-1.jpg",
+      "/images/products/industrial/mechanic-2.jpg",
+      "/images/industries/Factory_Industrial/industrial-coverall-pro.webp"
+    ],
+    "related_products": [
+      "/shop/industrial-uniforms/industrial-jacket/",
+      "/shop/industrial-uniforms/related-product-1/",
+      "/shop/industrial-uniforms/related-product-3/"
+    ],
+    "safety_features": [
+      "Oil and chemical resistant fabric",
+      "Reinforced stitching at stress points",
+      "Optional flame-resistant treatment",
+      "Two-way front zipper with protective flap",
+      "High-visibility reflective options"
+    ]
+  },
+  "ar": {
+    "title": "أفرهولات ميكانيكي فاخرة",
+    "description": "مصممة لمحترفي الصيانة في المملكة العربية السعودية، توفر أفرهولات الميكانيكي الفاخرة لدينا حماية فائقة وراحة وأداء وظيفي. مهندسة لتحمل الاستخدام الصناعي الثقيل مع تمكين أقصى قدر من الحركة لأعمال الصيانة الدقيقة.",
+    "features": [
+      "قماش مقاوم للزيوت والمواد الكيميائية (يلبي معايير EN ISO 13034)",
+      "لوحات ركبة معززة مع جيب لوسادات الركبة الاختيارية",
+      "جيوب وحلقات أدوات استراتيجية للوصول إلى المعدات الأساسية",
+      "خصر مطاطي قابل للتعديل لتناسب مثالي عبر أنواع الجسم المختلفة",
+      "مناطق تهوية لإدارة الحرارة في البيئات الصناعية السعودية"
+    ],
+    "specifications": {
+      "material": "تويل متين (65% بوليستر، 35% قطن) مع معالجة مقاومة للبقع",
+      "weight": "310 جم/م²",
+      "colors": ["أزرق داكن", "رمادي داكن", "أسود", "أزرق ملكي"],
+      "sizes": ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+      "certification": "تلبي معايير NFPA 2112 للحماية من الحريق الوميضي",
+      "care": "يوصى بالغسيل الصناعي، قابل للغسل في المنزل عند 60 درجة مئوية"
+    },
+    "customization": "متوفرة مع شعارات الشركات المطرزة، وشريط السلامة العاكس، وتكوينات الجيوب المتخصصة للأدوات الخاصة بالصناعة. يمكن إضافة بطاقات الاسم وتحديد القسم.",
+    "ideal_for": "ورش السيارات، وفرق صيانة التصنيع، ومنشآت النفط والغاز، وخطوط التجميع، ومقاولي الصيانة الصناعية في جميع أنحاء المملكة العربية السعودية.",
+    "pricing": {
+      "single": "320 ريال سعودي",
+      "bulk_20": "290 ريال سعودي للوحدة",
+      "bulk_50": "275 ريال سعودي للوحدة",
+      "bulk_100+": "260 ريال سعودي للوحدة"
+    },
+    "image_paths": [
+      "/images/products/industrial/mechanic-1.jpg",
+      "/images/products/industrial/mechanic-2.jpg",
+      "/images/industries/Factory_Industrial/industrial-coverall-pro.webp"
+    ],
+    "related_products": [
+      "/shop/industrial-uniforms/industrial-jacket/",
+      "/shop/industrial-uniforms/related-product-1/",
+      "/shop/industrial-uniforms/related-product-3/"
+    ],
+    "safety_features": [
+      "قماش مقاوم للزيوت والمواد الكيميائية",
+      "خياطة معززة في نقاط الإجهاد",
+      "معالجة اختيارية مقاومة للهب",
+      "سحاب أمامي ثنائي الاتجاه مع غطاء واقي",
+      "خيارات عاكسة عالية الوضوح"
+    ]
+  }
+} 

@@ -110,6 +110,7 @@ export default function ProductSlidersExamplePage() {
         <pre className="bg-gray-100 p-4 rounded-md overflow-x-auto text-sm">
 {`// Import the component
 import WeightRangeSelector from '@/components/shop/WeightRangeSelector';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Use the component
 const [weight, setWeight] = useState(75);

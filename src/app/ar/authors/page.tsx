@@ -6,6 +6,7 @@ import { FaLinkedinIn, FaTwitter, FaFilter, FaSearch } from 'react-icons/fa';
 import Container from '@/components/ui/Container';
 import { authors } from '@/lib/data/authors';
 import AuthorProfile from '@/components/author/AuthorProfile';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Add metadata
 export const metadata: Metadata = {
@@ -76,6 +77,23 @@ export default function AuthorsPage() {
 
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       {/* Add structured data */}
       <script
         type="application/ld+json"
@@ -86,6 +104,12 @@ export default function AuthorsPage() {
       
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-neutral-900 to-neutral-800 text-white py-16 md:py-24">
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl rtl:font-arabic">خبراء صناعة الأزياء الموحدة</h1>
+      
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl rtl:font-arabic">خبراء صناعة الأزياء الموحدة</h1>
+      
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl rtl:font-arabic">خبراء صناعة الأزياء الموحدة</h1>
+      
         <Container>
           <div className="max-w-4xl mx-auto text-center rtl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">

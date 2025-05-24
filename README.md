@@ -136,6 +136,29 @@ The project uses the following dependencies for image optimization:
 - `image-webpack-loader`: For optimizing images during build
 - `critters`: For CSS optimization
 
+## SEO Helper Scripts
+
+We've created a set of scripts to help identify and fix SEO issues throughout the site:
+
+1. **SEO Checker** - Analyzes pages for SEO issues and generates a detailed report:
+   ```bash
+   node src/scripts/check-seo.js
+   ```
+
+2. **Client/Server Component Finder** - Identifies pages that violate Next.js patterns:
+   ```bash
+   node src/scripts/find-client-metadata-pages.js
+   ```
+
+3. **Metadata Migration Tool** - Automatically fixes problematic pages:
+   ```bash
+   node src/scripts/update-metadata.js
+   ```
+
+These tools help ensure proper separation of client and server components in the Next.js App Router, resolving issues where pages have both 'use client' directives and metadata exports.
+
+For more details, see the [scripts README](src/scripts/README.md).
+
 ## License
 
 This project is proprietary and confidential. Unauthorized copying, distribution, or use is strictly prohibited.

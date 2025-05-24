@@ -1,6 +1,29 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+
+export const metadata: Metadata = {
+  title: 'Ar | Terms Of Service | يونيوم المملكة العربية السعودية',
+  description: 'توفر يونيوم حلول الزي الموحد والملابس المهنية عالية الجودة المصممة خصيصًا للشركات والمؤسسات السعودية.',
+  keywords: ['زي موحد', 'ملابس مهنية', 'يونيوم', 'المملكة العربية السعودية', 'ar | terms of service'],
+  openGraph: {
+    title: 'Ar | Terms Of Service | يونيوم المملكة العربية السعودية',
+    description: 'توفر يونيوم حلول الزي الموحد والملابس المهنية عالية الجودة المصممة خصيصًا للشركات والمؤسسات السعودية.',
+    url: 'https://uneom.com/ar/terms-of-service/',
+    siteName: 'UNEOM',
+    images: [
+      {
+        url: 'https://uneom.com/images/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Ar | Terms Of Service - يونيوم المملكة العربية السعودية'
+      }
+    ],
+    locale: 'ar'
+  }
+};
+
 
 export default function TermsOfServicePage() {
   return (

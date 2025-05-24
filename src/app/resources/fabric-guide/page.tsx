@@ -2,11 +2,12 @@
 
 import React from 'react';
 import ResourcePageLayout from '@/components/layout/ResourcePageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function FabricGuidePage() {
   const resourceData = {
     locale: 'en',
-    title: 'Fabric Guide',
+    title: "UNEOM - Professional Uniforms",
     subtitle: 'Understanding the materials that make quality uniforms',
     heroImage: '/images/default-placeholder.jpg',
     

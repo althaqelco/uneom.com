@@ -7,6 +7,7 @@ import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { Cairo, Tajawal } from 'next/font/google';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Arabic fonts
 const cairo = Cairo({ subsets: ['arabic'] });
@@ -43,6 +44,23 @@ export default function ClientPage({ product, relatedProducts, locale }: ClientP
   if (!product) {
     return (
       <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform shop","buy uniforms","professional workwear","uniform store"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="product"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
         <Container>
           <div className="py-20 text-center">
             <h2 className="text-2xl font-bold mb-4">المنتج غير متوفر</h2>

@@ -11,6 +11,7 @@ type Locale = 'en' | 'ar';
 
 const defaultTitleTemplate = '%s | UNEOM';
 
+// Use absolute URLs for language base paths to comply with SEO best practices
 const languageURLs = {
   en: 'https://uneom.com',
   ar: 'https://uneom.com/ar'
@@ -41,6 +42,7 @@ interface SEOProps {
   breadcrumbs?: Array<{ name: string; url: string }>;
   pageType?: string;
   structuredData?: any;
+  hreflangAlternatives?: Array<{ href: string; lang: string }>;
 }
 
 export default function SEO({
@@ -54,7 +56,8 @@ export default function SEO({
   noIndex = false,
   breadcrumbs,
   pageType,
-  structuredData
+  structuredData,
+  hreflangAlternatives: customHreflangAlternatives
 }: SEOProps) {
   const locale = useLocale() as Locale;
   const pathname = usePathname() || '';
@@ -65,20 +68,72 @@ export default function SEO({
   // Use custom values or fallback to metadata from translations
   const title = customTitle || metadata.title || 'UNEOM';
   const description = customDescription || metadata.description || '';
-  const keywords = customKeywords || metadata.keywords || '';
+  
+  // We're not using meta keywords as they're not relevant for Google SEO anymore
+  // const keywords = customKeywords || metadata.keywords || '';
   
   // Format title with template unless it already contains the brand name
   const formattedTitle = title.includes('UNEOM') || title.includes('يونيوم') 
     ? title 
     : defaultTitleTemplate.replace('%s', title);
   
-  // Determine canonical URL
-  const baseUrl = locale === 'ar' ? 'https://uneom.com/ar' : 'https://uneom.com';
-  const cleanPathname = pathname.replace(`/${locale}`, '');
-  const canonicalUrl = customCanonicalUrl || `${baseUrl}${cleanPathname}`;
+  // Determine canonical URL - always ensure trailing slash
+  let baseUrl;
+  let pathForCanonical;
+  
+  // Clean pathname for alternate URLs - carefully handle paths to avoid duplication
+  // Remove any locale prefix from the pathname to get the pure path
+  let cleanPathname = pathname;
+  
+  if (locale === 'ar' && pathname.startsWith('/ar')) {
+    cleanPathname = pathname.substring(3); // Remove /ar prefix
+  } else if (locale === 'en' && pathname.startsWith('/en')) {
+    cleanPathname = pathname.substring(3); // Remove /en prefix if somehow present
+  }
+  
+  // Make sure path starts with / for consistency
+  if (!cleanPathname.startsWith('/') && cleanPathname !== '') {
+    cleanPathname = '/' + cleanPathname;
+  }
+  
+  // For home page (/ path), don't add another slash
+  if (cleanPathname === '' || cleanPathname === '/') {
+    cleanPathname = '/';
+  }
+  // For all other pages, ensure trailing slash
+  else if (!cleanPathname.endsWith('/')) {
+    cleanPathname += '/';
+  }
+  
+  // Set base URL based on locale
+  if (locale === 'ar') {
+    baseUrl = languageURLs.ar;
+    pathForCanonical = cleanPathname;
+  } else {
+    baseUrl = languageURLs.en;
+    pathForCanonical = cleanPathname;
+  }
+  
+  // Use custom canonical if provided, otherwise build it
+  const canonicalUrl = customCanonicalUrl || `${baseUrl}${pathForCanonical}`;
   
   // Construct OG Image URL (use custom or default)
   const ogImage = customOgImage || 'https://uneom.com/images/default-placeholder.jpg';
+  
+  // Generate alternate URLs for different languages
+  // The hreflang implementation specifically uses en-SA and ar-SA for Saudi Arabia targeting
+  // with x-default pointing to the English version as per roadmap.md and scramefrog.md
+  
+  // Calculate alternateUrls programmatically to ensure consistency
+  const enUrl = `${languageURLs.en}${cleanPathname}`;
+  const arUrl = `${languageURLs.ar}${cleanPathname}`;
+  
+  // Define the alternate URLs with proper hreflang codes for Saudi Arabia
+  const alternateUrls = [
+    { lang: 'en-SA', url: enUrl },
+    { lang: 'ar-SA', url: arUrl },
+    { lang: 'x-default', url: enUrl } // English as default per roadmap.md
+  ];
   
   // Generate structured data if not provided
   const schemas = [];
@@ -96,41 +151,30 @@ export default function SEO({
     schemas.push(structuredData);
   }
   
-  // Generate alternate URLs for different languages
-  const alternateUrls = Object.entries(languageURLs).map(([lang, url]) => {
-    if (pathname === '/') {
-      return { lang, url };
-    }
-    
-    // For non-root paths, construct proper alternate URLs
-    if (lang === 'en') {
-      return { lang, url: `${url}${cleanPathname}` };
-    } else {
-      return { lang, url: `${url}${cleanPathname}` };
-    }
-  });
-  
   return (
     <>
       <Head>
         {/* Basic Meta Tags */}
         <title>{formattedTitle}</title>
         <meta name="description" content={description} />
-        {keywords && <meta name="keywords" content={keywords} />}
+        {/* Removed meta keywords as they're no longer relevant for SEO */}
+        {/* {keywords && <meta name="keywords" content={keywords} />} */}
         
-        {/* Canonical URL */}
+        {/* Canonical URL - Self-referencing */}
         <link rel="canonical" href={canonicalUrl} />
         
-        {/* Hreflang Tags */}
-        {alternateUrls.map(({ lang, url }) => (
-          <link 
-            key={lang} 
-            rel="alternate" 
-            hrefLang={lang === 'ar' ? 'ar-SA' : 'en'} 
-            href={url} 
-          />
-        ))}
-        <link rel="alternate" hrefLang="x-default" href={languageURLs.en} />
+        {/* Hreflang Tags - Fixed implementation per scramefrog.md */}
+        {customHreflangAlternatives ? (
+          // Use custom alternatives if provided
+          customHreflangAlternatives.map(({ lang, href }) => (
+            <link key={lang} rel="alternate" hrefLang={lang} href={href} />
+          ))
+        ) : (
+          // Otherwise use our calculated alternatives
+          alternateUrls.map(({ lang, url }) => (
+            <link key={lang} rel="alternate" hrefLang={lang} href={url} />
+          ))
+        )}
         
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content={formattedTitle} />

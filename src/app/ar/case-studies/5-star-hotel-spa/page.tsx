@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define metadata for SEO optimization
 export const metadata: Metadata = {
@@ -13,6 +14,8 @@ export const metadata: Metadata = {
 export default function FiveStarHotelSpaCaseStudyArabic() {
   return (
     <main className="bg-white" dir="rtl">
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl rtl:font-arabic">دراسة حالة سبا فندق خمس نجوم | أزياء سبا فاخرة</h1>
+      
       {/* Schema.org structured data */}
       <Script
         id="case-study-structured-data"
@@ -189,7 +192,7 @@ export default function FiveStarHotelSpaCaseStudyArabic() {
               </div>
               <div className="md:order-1 relative h-96">
                 <Image 
-                  src="/images/hospitality/hospitality_uniform_formal.jpg" 
+                  src="/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg" 
                   alt="زي معالج سبا فندق فاخر" 
                   fill
                   className="object-cover rounded-xl shadow-lg"
@@ -200,7 +203,7 @@ export default function FiveStarHotelSpaCaseStudyArabic() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1 relative h-96">
                 <Image 
-                  src="/images/hospitality/hospitality_uniform_concierge.jpg" 
+                  src="/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg" 
                   alt="زي استقبال سبا فندق خمس نجوم" 
                   fill
                   className="object-cover rounded-xl shadow-lg"

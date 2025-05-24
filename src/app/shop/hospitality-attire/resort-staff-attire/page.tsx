@@ -9,6 +9,7 @@ import { useQuote } from '@/contexts/QuoteContext';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { useRouter } from 'next/navigation';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 type LocaleContent = {
   title: string;
@@ -70,7 +71,7 @@ export default function ResortStaffAttirePage() {
   // Multilingual content
   const content: ContentType = {
     en: {
-      title: 'Resort Staff Attire',
+      title: "UNEOM - Professional Uniforms",
       description: 'Premium resort staff uniforms designed for comfort and style in luxury Saudi Arabian resorts and vacation destinations, combining elegance with practicality for hospitality professionals.',
       longDescription: 'Our Resort Staff Attire is thoughtfully designed for the unique needs of luxury resort environments in Saudi Arabia. These premium uniforms blend relaxed sophistication with practical functionality, featuring specialized climate-adaptive fabrics that ensure staff comfort throughout the day in both indoor and outdoor settings. The distinctive resort styling projects a welcoming, vacation-ready aesthetic while maintaining professional appearance and brand alignment. Available in coordinated collections that can distinguish different departments while maintaining a cohesive resort identity, these uniforms are perfect for front desk, concierge, pool staff, resort activities, and guest services teams. Each piece is engineered for comfort in Saudi Arabia\'s climate with breathable, quick-drying fabrics that resist fading from sun exposure.',
       breadcrumbs: [

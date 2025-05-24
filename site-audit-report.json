@@ -1,0 +1,3076 @@
+{
+  "timestamp": "2025-05-03T22:46:21.773Z",
+  "siteUrl": "https://uneom.com",
+  "summary": {
+    "totalUrls": 298,
+    "statusCounts": {
+      "200": 297,
+      "ERROR": 1
+    },
+    "avgResponseTime": 671,
+    "medianResponseTime": 702,
+    "redirectCount": 0,
+    "errorCount": 1,
+    "contentTypes": {
+      "text/html": 297
+    },
+    "discoveryMethods": {
+      "sitemap": 271,
+      "crawl": 27
+    },
+    "pageTypes": {
+      "home": 2,
+      "blog": 35,
+      "industries": 45,
+      "services": 28,
+      "resources": 22,
+      "shop": 140,
+      "contact": 3,
+      "about": 3,
+      "locations": 0,
+      "other": 20
+    },
+    "languages": {
+      "english": 182,
+      "arabic": 116,
+      "unknown": 0
+    }
+  },
+  "analysis": {
+    "popularPages": [
+      {
+        "url": "https://uneom.com/",
+        "incomingLinks": 184
+      },
+      {
+        "url": "https://uneom.com/industries/healthcare/",
+        "incomingLinks": 184
+      },
+      {
+        "url": "https://uneom.com/industries/aviation/",
+        "incomingLinks": 184
+      },
+      {
+        "url": "https://uneom.com/industries/hospitality/",
+        "incomingLinks": 184
+      },
+      {
+        "url": "https://uneom.com/industries/corporate/",
+        "incomingLinks": 184
+      },
+      {
+        "url": "https://uneom.com/industries/education/",
+        "incomingLinks": 184
+      },
+      {
+        "url": "https://uneom.com/industries/manufacturing/",
+        "incomingLinks": 184
+      },
+      {
+        "url": "https://uneom.com/industries/security/",
+        "incomingLinks": 184
+      },
+      {
+        "url": "https://uneom.com/industries/factory-industry/",
+        "incomingLinks": 184
+      },
+      {
+        "url": "https://uneom.com/industries/retail-shops/",
+        "incomingLinks": 184
+      }
+    ],
+    "slowPages": [
+      {
+        "url": "https://uneom.com/resources",
+        "responseTime": 2072
+      }
+    ],
+    "redirects": [],
+    "errors": [
+      {
+        "url": "https://uneom.com/ar/services",
+        "status": "ERROR",
+        "error": "Maximum number of redirects exceeded"
+      }
+    ]
+  },
+  "allResults": [
+    {
+      "url": "https://uneom.com/",
+      "status": 200,
+      "responseTime": 73,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/ar",
+      "status": 200,
+      "responseTime": 630,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/about",
+      "status": 200,
+      "responseTime": 848,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/about/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/about",
+      "status": 200,
+      "responseTime": 912,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/about/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/ar/authors",
+      "status": 200,
+      "responseTime": 993,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/authors/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/authors/[slug]",
+      "status": 200,
+      "responseTime": 387,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/ar/blog/[slug]",
+      "status": 200,
+      "responseTime": 529,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/ar/blog/corporate-security-branding",
+      "status": 200,
+      "responseTime": 534,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/blog/corporate-security-branding/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/blog/choosing-the-right-retail-uniforms",
+      "status": 200,
+      "responseTime": 618,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/blog/choosing-the-right-retail-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/blog",
+      "status": 200,
+      "responseTime": 679,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/blog/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/blog/industrial-heat-stress-management",
+      "status": 200,
+      "responseTime": 489,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/blog/industrial-heat-stress-management/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/blog/retail-uniform-impact",
+      "status": 200,
+      "responseTime": 527,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/blog/retail-uniform-impact/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/blog/industrial-safety-compliance-guide",
+      "status": 200,
+      "responseTime": 581,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/blog/industrial-safety-compliance-guide/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/blog/evolution-of-retail-uniforms-saudi-arabia",
+      "status": 200,
+      "responseTime": 596,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/blog/evolution-of-retail-uniforms-saudi-arabia/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/blog/retail-uniform-selection-guide",
+      "status": 200,
+      "responseTime": 675,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/blog/retail-uniform-selection-guide/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/blog/sustainable-school-uniforms-saudi",
+      "status": 200,
+      "responseTime": 491,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/blog/sustainable-school-uniforms-saudi/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/blog/school-uniforms-academic-performance",
+      "status": 200,
+      "responseTime": 596,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/blog/school-uniforms-academic-performance/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/blog/sustainable-retail-uniforms",
+      "status": 200,
+      "responseTime": 674,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/blog/sustainable-retail-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/blog/security-uniform-psychology",
+      "status": 200,
+      "responseTime": 734,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/blog/security-uniform-psychology/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/blog/sustainable-uniforms-2024-trends",
+      "status": 200,
+      "responseTime": 755,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/blog/sustainable-uniforms-2024-trends/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/contact",
+      "status": 200,
+      "responseTime": 559,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/contact/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/case-studies/hospital-aesthetic-clinic",
+      "status": 200,
+      "responseTime": 793,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/case-studies/hospital-aesthetic-clinic/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries",
+      "status": 200,
+      "responseTime": 800,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/case-studies/luxury-salon-evolution",
+      "status": 200,
+      "responseTime": 844,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/case-studies/luxury-salon-evolution/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/case-studies/5-star-hotel-spa",
+      "status": 200,
+      "responseTime": 905,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/case-studies/5-star-hotel-spa/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/corporate",
+      "status": 200,
+      "responseTime": 599,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/corporate/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/education",
+      "status": 200,
+      "responseTime": 602,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/education/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/delivery",
+      "status": 200,
+      "responseTime": 612,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/delivery/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/aviation",
+      "status": 200,
+      "responseTime": 622,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/aviation/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/factory-industry",
+      "status": 200,
+      "responseTime": 713,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/factory-industry/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/healthcare",
+      "status": 200,
+      "responseTime": 654,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/healthcare/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/firefighting",
+      "status": 200,
+      "responseTime": 671,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/firefighting/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/hospitality",
+      "status": 200,
+      "responseTime": 698,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/hospitality/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/factory-security",
+      "status": 200,
+      "responseTime": 703,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/factory-security/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/hospitality/hotels",
+      "status": 200,
+      "responseTime": 745,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/hospitality/hotels/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/manufacturing",
+      "status": 200,
+      "responseTime": 531,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/manufacturing/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/manufacturing/petrochemical",
+      "status": 200,
+      "responseTime": 657,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/manufacturing/petrochemical/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/retail-shops",
+      "status": 200,
+      "responseTime": 724,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/retail-shops/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/manufacturing/heavy-industry",
+      "status": 200,
+      "responseTime": 751,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/manufacturing/heavy-industry/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/hospitality/restaurants",
+      "status": 200,
+      "responseTime": 827,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/hospitality/restaurants/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/security",
+      "status": 200,
+      "responseTime": 623,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/security/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/quote",
+      "status": 200,
+      "responseTime": 626,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/quote/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/resources",
+      "status": 200,
+      "responseTime": 734,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/resources/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/privacy-policy",
+      "status": 200,
+      "responseTime": 777,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/privacy-policy/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/industries/supply-manufacturing",
+      "status": 200,
+      "responseTime": 821,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/industries/supply-manufacturing/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/resources/guides",
+      "status": 200,
+      "responseTime": 670,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/resources/guides/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/resources/fabric-guide",
+      "status": 200,
+      "responseTime": 721,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/resources/fabric-guide/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/resources/events",
+      "status": 200,
+      "responseTime": 802,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/resources/events/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/resources/policy-templates",
+      "status": 200,
+      "responseTime": 832,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/resources/policy-templates/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/resources/case-studies",
+      "status": 200,
+      "responseTime": 860,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/resources/case-studies/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/resources/size-guide",
+      "status": 200,
+      "responseTime": 695,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/resources/size-guide/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/services/bulk-ordering",
+      "status": 200,
+      "responseTime": 755,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/services/bulk-ordering/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/services/corporate-programs",
+      "status": 200,
+      "responseTime": 792,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/services/corporate-programs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/resources/procurement-guide",
+      "status": 200,
+      "responseTime": 866,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/resources/procurement-guide/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/services",
+      "status": "ERROR",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/services/fabric-selection",
+      "status": 200,
+      "responseTime": 615,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/services/fabric-selection/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/services/custom-design",
+      "status": 200,
+      "responseTime": 687,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/services/custom-design/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/services/manufacturing",
+      "status": 200,
+      "responseTime": 755,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/services/manufacturing/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/services/measurement-services",
+      "status": 200,
+      "responseTime": 783,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/services/measurement-services/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/services/program-management",
+      "status": 200,
+      "responseTime": 790,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/services/program-management/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/[category]/[product]",
+      "status": 200,
+      "responseTime": 246,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/ar/shop",
+      "status": 200,
+      "responseTime": 442,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/services/uniform-policies",
+      "status": 200,
+      "responseTime": 577,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/services/uniform-policies/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/services/technical-finishes",
+      "status": 200,
+      "responseTime": 590,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/services/technical-finishes/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/services/quality-assurance",
+      "status": 200,
+      "responseTime": 600,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/services/quality-assurance/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/aviation-uniforms",
+      "status": 200,
+      "responseTime": 684,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/aviation-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/aviation-uniforms/pilot-uniform-set",
+      "status": 200,
+      "responseTime": 686,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/aviation-uniforms/pilot-uniform-set/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/aviation-uniforms/airline-crew-uniform",
+      "status": 200,
+      "responseTime": 855,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/aviation-uniforms/airline-crew-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/aviation-uniforms/ground-crew-uniform",
+      "status": 200,
+      "responseTime": 949,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/aviation-uniforms/ground-crew-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/corporate-workwear",
+      "status": 200,
+      "responseTime": 996,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/corporate-workwear/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/culinary-uniforms",
+      "status": 200,
+      "responseTime": 630,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/culinary-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/education-uniforms/premium-school-uniform",
+      "status": 200,
+      "responseTime": 674,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/education-uniforms/premium-school-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/education-uniforms/faculty-professional-attire",
+      "status": 200,
+      "responseTime": 688,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/education-uniforms/faculty-professional-attire/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/education-uniforms",
+      "status": 200,
+      "responseTime": 700,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/education-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/education-uniforms/premium-school-uniforms",
+      "status": 200,
+      "responseTime": 702,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/education-uniforms/premium-school-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/healthcare",
+      "status": 200,
+      "responseTime": 631,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/healthcare/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/education-uniforms/student-athletic-wear",
+      "status": 200,
+      "responseTime": 639,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/education-uniforms/student-athletic-wear/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/healthcare/advanced-medical-scrubs",
+      "status": 200,
+      "responseTime": 646,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/healthcare/advanced-medical-scrubs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/healthcare-accessories",
+      "status": 200,
+      "responseTime": 670,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/healthcare-accessories/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/examples/product-sliders",
+      "status": 200,
+      "responseTime": 709,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/examples/product-sliders/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/hospitality-attire",
+      "status": 200,
+      "responseTime": 612,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/hospitality-attire/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/hospitality-attire/housekeeping-uniform",
+      "status": 200,
+      "responseTime": 638,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/hospitality-attire/housekeeping-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/hospitality-attire/luxury-hotel-uniform",
+      "status": 200,
+      "responseTime": 656,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/hospitality-attire/luxury-hotel-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms",
+      "status": 200,
+      "responseTime": 661,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/hospitality-attire/premium-hotel-uniforms",
+      "status": 200,
+      "responseTime": 675,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/hospitality-attire/premium-hotel-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/anti-static-industrial-uniform",
+      "status": 200,
+      "responseTime": 672,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/anti-static-industrial-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/hi-vis-safety-uniform",
+      "status": 200,
+      "responseTime": 701,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/hi-vis-safety-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall",
+      "status": 200,
+      "responseTime": 796,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/heat-resistant-gloves",
+      "status": 200,
+      "responseTime": 826,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/heat-resistant-gloves/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/flame-resistant-workwear",
+      "status": 200,
+      "responseTime": 851,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/flame-resistant-workwear/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall-pro",
+      "status": 200,
+      "responseTime": 655,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall-pro/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/industrial-jacket",
+      "status": 200,
+      "responseTime": 718,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/industrial-jacket/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/related-product-3",
+      "status": 200,
+      "responseTime": 729,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/related-product-3/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/related-product-2",
+      "status": 200,
+      "responseTime": 734,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/related-product-2/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/related-product-1",
+      "status": 200,
+      "responseTime": 758,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/related-product-1/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/manufacturing-attire",
+      "status": 200,
+      "responseTime": 633,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/manufacturing-attire/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs",
+      "status": 200,
+      "responseTime": 648,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/related-product-4",
+      "status": 200,
+      "responseTime": 686,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/related-product-4/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/supervisor-industrial-uniform",
+      "status": 200,
+      "responseTime": 692,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/supervisor-industrial-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/safety-helmet-pro",
+      "status": 200,
+      "responseTime": 702,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/safety-helmet-pro/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/nursing-scrubs",
+      "status": 200,
+      "responseTime": 495,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/nursing-scrubs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/premium-medical-scrubs",
+      "status": 200,
+      "responseTime": 628,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/premium-medical-scrubs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/medical-lab-coats",
+      "status": 200,
+      "responseTime": 739,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/medical-lab-coats/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/antimicrobial-scrubs",
+      "status": 200,
+      "responseTime": 744,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/antimicrobial-scrubs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/executive-medical-uniforms",
+      "status": 200,
+      "responseTime": 861,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/executive-medical-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/premium-scrubs-set",
+      "status": 200,
+      "responseTime": 544,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/premium-scrubs-set/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/premium-surgical-gowns",
+      "status": 200,
+      "responseTime": 649,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/premium-surgical-gowns/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/surgical-scrubs",
+      "status": 200,
+      "responseTime": 763,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/surgical-scrubs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/retail-uniforms/related-product-1",
+      "status": 200,
+      "responseTime": 784,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/retail-uniforms/related-product-1/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/retail-uniforms/mall-staff",
+      "status": 200,
+      "responseTime": 806,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/retail-uniforms/mall-staff/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/security-uniforms/executive-protection",
+      "status": 200,
+      "responseTime": 626,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/security-uniforms/executive-protection/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/retail-uniforms/related-product-2",
+      "status": 200,
+      "responseTime": 634,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/retail-uniforms/related-product-2/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/security-uniforms",
+      "status": 200,
+      "responseTime": 644,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/security-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/retail-uniforms/related-product-4",
+      "status": 200,
+      "responseTime": 727,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/retail-uniforms/related-product-4/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/retail-uniforms/related-product-3",
+      "status": 200,
+      "responseTime": 819,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/retail-uniforms/related-product-3/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/security-uniforms/security-officer-uniform",
+      "status": 200,
+      "responseTime": 598,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/security-uniforms/security-officer-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/workplace-uniforms/executive-suits",
+      "status": 200,
+      "responseTime": 607,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/workplace-uniforms/executive-suits/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/shop/workplace-uniforms",
+      "status": 200,
+      "responseTime": 624,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/shop/workplace-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/ar/terms-of-service",
+      "status": 200,
+      "responseTime": 665,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/ar/terms-of-service/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 0
+    },
+    {
+      "url": "https://uneom.com/authors",
+      "status": 200,
+      "responseTime": 750,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/authors/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/[slug]",
+      "status": 200,
+      "responseTime": 244,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/authors/[slug]",
+      "status": 200,
+      "responseTime": 254,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog",
+      "status": 200,
+      "responseTime": 457,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/advanced-fabrics-security-uniforms",
+      "status": 200,
+      "responseTime": 608,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/advanced-fabrics-security-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/choosing-the-right-retail-uniforms",
+      "status": 200,
+      "responseTime": 758,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/choosing-the-right-retail-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/evolution-of-retail-uniforms-saudi-arabia",
+      "status": 200,
+      "responseTime": 699,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/evolution-of-retail-uniforms-saudi-arabia/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/corporate-uniform-employee-satisfaction",
+      "status": 200,
+      "responseTime": 719,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/corporate-uniform-employee-satisfaction/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/corporate-security-branding",
+      "status": 200,
+      "responseTime": 751,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/corporate-security-branding/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/industrial-heat-stress-management",
+      "status": 200,
+      "responseTime": 850,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/industrial-heat-stress-management/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/industrial-electrostatic-protection",
+      "status": 200,
+      "responseTime": 868,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/industrial-electrostatic-protection/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/industrial-protective-clothing-advances",
+      "status": 200,
+      "responseTime": 657,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/industrial-protective-clothing-advances/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/industrial-safety-compliance-guide",
+      "status": 200,
+      "responseTime": 734,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/industrial-safety-compliance-guide/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/retail-uniform-impact",
+      "status": 200,
+      "responseTime": 857,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/retail-uniform-impact/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/industrial-security-uniform-features",
+      "status": 200,
+      "responseTime": 874,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/industrial-security-uniform-features/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/industrial-uniform-color-coding",
+      "status": 200,
+      "responseTime": 1051,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/industrial-uniform-color-coding/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/retail-uniform-selection-guide",
+      "status": 200,
+      "responseTime": 720,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/retail-uniform-selection-guide/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/school-uniforms-academic-performance",
+      "status": 200,
+      "responseTime": 752,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/school-uniforms-academic-performance/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/security-uniform-psychology",
+      "status": 200,
+      "responseTime": 862,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/security-uniform-psychology/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/sustainable-school-uniforms-saudi",
+      "status": 200,
+      "responseTime": 878,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/sustainable-school-uniforms-saudi/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/sustainable-retail-uniforms",
+      "status": 200,
+      "responseTime": 953,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/sustainable-retail-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/case-studies",
+      "status": 200,
+      "responseTime": 740,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/case-studies/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/case-studies/hospital-aesthetic-clinic",
+      "status": 200,
+      "responseTime": 762,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/case-studies/hospital-aesthetic-clinic/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/sustainable-uniforms-2024-trends",
+      "status": 200,
+      "responseTime": 773,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/blog/sustainable-uniforms-2024-trends/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/case-studies/5-star-hotel-spa",
+      "status": 200,
+      "responseTime": 791,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/case-studies/5-star-hotel-spa/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/case-studies/beauty-chain-standardization",
+      "status": 200,
+      "responseTime": 852,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/case-studies/beauty-chain-standardization/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries",
+      "status": 200,
+      "responseTime": 653,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/corporate",
+      "status": 200,
+      "responseTime": 664,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/corporate/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/contact",
+      "status": 200,
+      "responseTime": 684,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/contact/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/aviation",
+      "status": 200,
+      "responseTime": 691,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/aviation/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/case-studies/luxury-salon-evolution",
+      "status": 200,
+      "responseTime": 732,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/case-studies/luxury-salon-evolution/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/factory-industry",
+      "status": 200,
+      "responseTime": 478,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/factory-industry/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/healthcare",
+      "status": 200,
+      "responseTime": 531,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/healthcare/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/hospitality",
+      "status": 200,
+      "responseTime": 673,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/hospitality/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/education",
+      "status": 200,
+      "responseTime": 695,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/education/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/factory-security",
+      "status": 200,
+      "responseTime": 726,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/factory-security/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/hospitality/hotels",
+      "status": 200,
+      "responseTime": 663,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/hospitality/hotels/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/hospitality/restaurants",
+      "status": 200,
+      "responseTime": 671,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/hospitality/restaurants/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/manufacturing",
+      "status": 200,
+      "responseTime": 695,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/manufacturing/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/manufacturing/petrochemical",
+      "status": 200,
+      "responseTime": 699,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/manufacturing/petrochemical/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/manufacturing/heavy-industry",
+      "status": 200,
+      "responseTime": 730,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/manufacturing/heavy-industry/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/security",
+      "status": 200,
+      "responseTime": 685,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/security/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/quote",
+      "status": 200,
+      "responseTime": 696,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/quote/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/privacy-policy",
+      "status": 200,
+      "responseTime": 701,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/privacy-policy/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/retail-shops",
+      "status": 200,
+      "responseTime": 824,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/retail-shops/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/supply-manufacturing",
+      "status": 200,
+      "responseTime": 832,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/industries/supply-manufacturing/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources/events",
+      "status": 200,
+      "responseTime": 641,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/resources/events/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources/fabric-guide",
+      "status": 200,
+      "responseTime": 654,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/resources/fabric-guide/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources/policy-templates",
+      "status": 200,
+      "responseTime": 955,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/resources/policy-templates/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources/fabric-guide/healthcare",
+      "status": 200,
+      "responseTime": 960,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/resources/fabric-guide/healthcare/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources",
+      "status": 200,
+      "responseTime": 2072,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/resources/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services",
+      "status": 200,
+      "responseTime": 680,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/services/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources/size-guide/medical",
+      "status": 200,
+      "responseTime": 735,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/resources/size-guide/medical/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources/size-guide",
+      "status": 200,
+      "responseTime": 764,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/resources/size-guide/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources/policy-templates/hospital",
+      "status": 200,
+      "responseTime": 838,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/resources/policy-templates/hospital/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources/procurement-guide",
+      "status": 200,
+      "responseTime": 860,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/resources/procurement-guide/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/manufacturing",
+      "status": 200,
+      "responseTime": 716,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/services/manufacturing/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/corporate-programs",
+      "status": 200,
+      "responseTime": 739,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/services/corporate-programs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/fabric-selection",
+      "status": 200,
+      "responseTime": 815,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/services/fabric-selection/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/bulk-ordering",
+      "status": 200,
+      "responseTime": 819,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/services/bulk-ordering/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/custom-design",
+      "status": 200,
+      "responseTime": 830,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/services/custom-design/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/technical-finishes",
+      "status": 200,
+      "responseTime": 564,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/services/technical-finishes/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/quality-assurance",
+      "status": 200,
+      "responseTime": 663,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/services/quality-assurance/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/program-management",
+      "status": 200,
+      "responseTime": 666,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/services/program-management/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/uniform-policies",
+      "status": 200,
+      "responseTime": 787,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/services/uniform-policies/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/measurement-services",
+      "status": 200,
+      "responseTime": 1102,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/services/measurement-services/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/[category]/[product]",
+      "status": 200,
+      "responseTime": 72,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop",
+      "status": 200,
+      "responseTime": 548,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/airline-crew-uniform",
+      "status": 200,
+      "responseTime": 764,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/airline-crew-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/airline-service-vest",
+      "status": 200,
+      "responseTime": 840,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/airline-service-vest/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms",
+      "status": 200,
+      "responseTime": 1010,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/aviation-blazer",
+      "status": 200,
+      "responseTime": 671,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/aviation-blazer/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/pilot-uniform-set",
+      "status": 200,
+      "responseTime": 689,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/pilot-uniform-set/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/flight-attendant-dress",
+      "status": 200,
+      "responseTime": 710,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/flight-attendant-dress/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/ground-crew-uniform",
+      "status": 200,
+      "responseTime": 718,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/ground-crew-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/pilot-uniform",
+      "status": 200,
+      "responseTime": 860,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/pilot-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/corporate-workwear",
+      "status": 200,
+      "responseTime": 630,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/corporate-workwear/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/corporate/executive-office-attire",
+      "status": 200,
+      "responseTime": 719,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/corporate/executive-office-attire/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/corporate",
+      "status": 200,
+      "responseTime": 723,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/corporate/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/corporate-workwear/corporate-shirt",
+      "status": 200,
+      "responseTime": 727,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/corporate-workwear/corporate-shirt/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/corporate-workwear/executive-blazer",
+      "status": 200,
+      "responseTime": 775,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/corporate-workwear/executive-blazer/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/culinary-uniforms/executive-chef-coat",
+      "status": 200,
+      "responseTime": 690,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/culinary-uniforms/executive-chef-coat/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/corporate-workwear/executive-suit",
+      "status": 200,
+      "responseTime": 701,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/corporate-workwear/executive-suit/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/corporate-workwear/reception-uniform",
+      "status": 200,
+      "responseTime": 713,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/corporate-workwear/reception-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/culinary-uniforms",
+      "status": 200,
+      "responseTime": 834,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/culinary-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/corporate-workwear/office-trouser",
+      "status": 200,
+      "responseTime": 849,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/corporate-workwear/office-trouser/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/education-uniforms/premium-school-uniform",
+      "status": 200,
+      "responseTime": 658,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/education-uniforms/premium-school-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/education-uniforms",
+      "status": 200,
+      "responseTime": 662,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/education-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/education-uniforms/faculty-professional-attire",
+      "status": 200,
+      "responseTime": 668,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/education-uniforms/faculty-professional-attire/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/education-uniforms/premium-school-uniforms",
+      "status": 200,
+      "responseTime": 777,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/education-uniforms/premium-school-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/education-uniforms/student-athletic-wear",
+      "status": 200,
+      "responseTime": 817,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/education-uniforms/student-athletic-wear/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/examples/product-sliders",
+      "status": 200,
+      "responseTime": 677,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/examples/product-sliders/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/healthcare-accessories",
+      "status": 200,
+      "responseTime": 733,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/healthcare-accessories/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/healthcare",
+      "status": 200,
+      "responseTime": 829,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/healthcare/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/healthcare/advanced-medical-scrubs",
+      "status": 200,
+      "responseTime": 913,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/healthcare/advanced-medical-scrubs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire",
+      "status": 200,
+      "responseTime": 940,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/luxury-hotel-uniform",
+      "status": 200,
+      "responseTime": 709,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/luxury-hotel-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/housekeeping-uniform",
+      "status": 200,
+      "responseTime": 780,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/housekeeping-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/premium-hotel-uniforms",
+      "status": 200,
+      "responseTime": 872,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/premium-hotel-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/reception-staff-uniform",
+      "status": 200,
+      "responseTime": 875,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/reception-staff-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/concierge-uniform",
+      "status": 200,
+      "responseTime": 879,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/concierge-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/restaurant-staff-uniform",
+      "status": 200,
+      "responseTime": 702,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/restaurant-staff-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/resort-staff-attire",
+      "status": 200,
+      "responseTime": 710,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/resort-staff-attire/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms",
+      "status": 200,
+      "responseTime": 896,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/anti-static-industrial-uniform",
+      "status": 200,
+      "responseTime": 984,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/anti-static-industrial-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/flame-resistant-workwear",
+      "status": 200,
+      "responseTime": 1068,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/flame-resistant-workwear/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/industrial-jacket",
+      "status": 200,
+      "responseTime": 670,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/industrial-jacket/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/hi-vis-safety-uniform",
+      "status": 200,
+      "responseTime": 684,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/hi-vis-safety-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/industrial-coverall-pro",
+      "status": 200,
+      "responseTime": 688,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/industrial-coverall-pro/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/heat-resistant-gloves",
+      "status": 200,
+      "responseTime": 693,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/heat-resistant-gloves/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/industrial-coverall",
+      "status": 200,
+      "responseTime": 811,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/industrial-coverall/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/related-product-2",
+      "status": 200,
+      "responseTime": 920,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/related-product-2/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/industrial-safety-vest",
+      "status": 200,
+      "responseTime": 1008,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/industrial-safety-vest/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/mechanics-overalls",
+      "status": 200,
+      "responseTime": 1153,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/mechanics-overalls/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/related-product-1",
+      "status": 200,
+      "responseTime": 1161,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/related-product-1/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/related-product-3",
+      "status": 200,
+      "responseTime": 1243,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/related-product-3/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/safety-helmet-pro",
+      "status": 200,
+      "responseTime": 672,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/safety-helmet-pro/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/related-product-4",
+      "status": 200,
+      "responseTime": 675,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/related-product-4/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/welding-apron",
+      "status": 200,
+      "responseTime": 702,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/welding-apron/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/supervisor-industrial-uniform",
+      "status": 200,
+      "responseTime": 801,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/supervisor-industrial-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/manufacturing-attire",
+      "status": 200,
+      "responseTime": 839,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/manufacturing-attire/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/manufacturing-attire/industrial-protective-uniforms",
+      "status": 200,
+      "responseTime": 646,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/manufacturing-attire/industrial-protective-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs",
+      "status": 200,
+      "responseTime": 689,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/antimicrobial-scrubs",
+      "status": 200,
+      "responseTime": 702,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/antimicrobial-scrubs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/executive-medical-uniform",
+      "status": 200,
+      "responseTime": 704,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/executive-medical-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/executive-medical-uniforms",
+      "status": 200,
+      "responseTime": 736,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/executive-medical-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/nursing-scrubs",
+      "status": 200,
+      "responseTime": 730,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/nursing-scrubs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/medical-lab-coats",
+      "status": 200,
+      "responseTime": 745,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/medical-lab-coats/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/medical-lab-coat",
+      "status": 200,
+      "responseTime": 909,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/medical-lab-coat/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/premium-medical-scrubs",
+      "status": 200,
+      "responseTime": 914,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/premium-medical-scrubs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/premium-scrubs-set",
+      "status": 200,
+      "responseTime": 922,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/premium-scrubs-set/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/surgical-scrubs",
+      "status": 200,
+      "responseTime": 695,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/surgical-scrubs/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/beauty-salon",
+      "status": 200,
+      "responseTime": 720,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/beauty-salon/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/customer-service",
+      "status": 200,
+      "responseTime": 818,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/customer-service/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/premium-surgical-gowns",
+      "status": 200,
+      "responseTime": 832,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/premium-surgical-gowns/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/professional-lab-coat",
+      "status": 200,
+      "responseTime": 834,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/professional-lab-coat/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/related-product-3",
+      "status": 200,
+      "responseTime": 686,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/related-product-3/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/related-product-1",
+      "status": 200,
+      "responseTime": 787,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/related-product-1/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/luxury-retail-collection",
+      "status": 200,
+      "responseTime": 798,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/luxury-retail-collection/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/mall-staff",
+      "status": 200,
+      "responseTime": 804,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/mall-staff/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/related-product-2",
+      "status": 200,
+      "responseTime": 813,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/related-product-2/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/security-uniforms",
+      "status": 200,
+      "responseTime": 676,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/security-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/related-product-4",
+      "status": 200,
+      "responseTime": 682,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/related-product-4/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/security-uniforms/mall-security",
+      "status": 200,
+      "responseTime": 719,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/security-uniforms/mall-security/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/security-uniforms/executive-protection",
+      "status": 200,
+      "responseTime": 726,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/security-uniforms/executive-protection/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/store-staff",
+      "status": 200,
+      "responseTime": 805,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/store-staff/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/terms-of-service",
+      "status": 200,
+      "responseTime": 689,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/terms-of-service/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/workplace-uniforms/executive-suits",
+      "status": 200,
+      "responseTime": 717,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/workplace-uniforms/executive-suits/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/security-uniforms/security-officer-uniform",
+      "status": 200,
+      "responseTime": 839,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/security-uniforms/security-officer-uniform/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/workplace-uniforms",
+      "status": 200,
+      "responseTime": 841,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/workplace-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/security-uniforms/tactical-security-uniforms",
+      "status": 200,
+      "responseTime": 933,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/shop/security-uniforms/tactical-security-uniforms/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/tmp",
+      "status": 200,
+      "responseTime": 677,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": "https://uneom.com/tmp/",
+      "referrer": null,
+      "discoveredBy": "sitemap",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/healthcare/",
+      "status": 200,
+      "responseTime": 69,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/aviation/",
+      "status": 200,
+      "responseTime": 67,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/hospitality/",
+      "status": 200,
+      "responseTime": 70,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/corporate/",
+      "status": 200,
+      "responseTime": 66,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/education/",
+      "status": 200,
+      "responseTime": 79,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/manufacturing/",
+      "status": 200,
+      "responseTime": 69,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/security/",
+      "status": 200,
+      "responseTime": 70,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/factory-industry/",
+      "status": 200,
+      "responseTime": 68,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/retail-shops/",
+      "status": 200,
+      "responseTime": 71,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/supply-manufacturing/",
+      "status": 200,
+      "responseTime": 69,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/program-management/",
+      "status": 200,
+      "responseTime": 70,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/custom-design/",
+      "status": 200,
+      "responseTime": 67,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/bulk-ordering/",
+      "status": 200,
+      "responseTime": 68,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/measurement-services/",
+      "status": 200,
+      "responseTime": 69,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/uniform-policies/",
+      "status": 200,
+      "responseTime": 68,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources/fabric-guide/",
+      "status": 200,
+      "responseTime": 67,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources/size-guide/",
+      "status": 200,
+      "responseTime": 68,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources/procurement-guide/",
+      "status": 200,
+      "responseTime": 67,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources/policy-templates/",
+      "status": 200,
+      "responseTime": 67,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/blog/",
+      "status": 200,
+      "responseTime": 68,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/about/",
+      "status": 200,
+      "responseTime": 67,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/contact/",
+      "status": 200,
+      "responseTime": 67,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/shop/",
+      "status": 200,
+      "responseTime": 68,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/quote/",
+      "status": 200,
+      "responseTime": 68,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/industries/",
+      "status": 200,
+      "responseTime": 67,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/services/",
+      "status": 200,
+      "responseTime": 66,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    },
+    {
+      "url": "https://uneom.com/resources/",
+      "status": 200,
+      "responseTime": 67,
+      "contentType": "text/html; charset=UTF-8",
+      "redirectUrl": null,
+      "referrer": "crawl",
+      "discoveredBy": "crawl",
+      "linkCount": 28
+    }
+  ]
+}

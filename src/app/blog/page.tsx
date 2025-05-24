@@ -1,324 +1,221 @@
-'use client';
-
-import React from 'react';
-import Link from 'next/link';
+import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
+import { getAllBlogPosts, getAllTags } from '../../lib/data/blogPosts.server';
 import Container from '@/components/ui/Container';
-import SectionHeading from '@/components/ui/SectionHeading';
-import { getAllBlogPosts } from '@/lib/data/blogPosts';
+import { formatDate } from '@/lib/utils';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
-// Blog post type definition
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  author: {
-    name: string;
-    image: string;
-  };
-  category: string;
-  coverImage: string;
-  readTime: number;
-}
+export const metadata: Metadata = {
+  title: 'Blog | Uneom - Professional Uniforms & Workwear',
+  description: 'Explore our blog for insights, tips, and trends in professional uniforms, workwear, and corporate attire across various industries.',
+  openGraph: {
+    title: 'Blog | Uneom - Professional Uniforms & Workwear',
+    description: 'Explore our blog for insights, tips, and trends in professional uniforms, workwear, and corporate attire across various industries.',
+    url: 'https://uneom.com/blog',
+    siteName: 'Uneom',
+    images: [
+      {
+        url: 'https://uneom.com/images/og-blog.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Uneom Blog'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  }
+};
 
-// Define type for the blog post data we get from the API
-interface BlogPostData {
-  slug: string;
-  title: string;
-  excerpt: string;
-  featuredImage: string;
-  content: string;
-  author: {
-    name: string;
-    avatar: string;
-  };
-  date: string;
-  tags: string[];
-}
+export const dynamic = 'force-static';
 
 export default function BlogPage() {
-  const locale = 'en';
-  
-  // Get blog posts from the data file
-  const blogPostsData = getAllBlogPosts(locale);
-  
-  // Transform the data to match the expected format
-  const blogPosts: BlogPost[] = blogPostsData.map((post: BlogPostData) => ({
-    id: post.slug,
-    title: post.title,
-    excerpt: post.excerpt,
-    date: new Date(post.date).toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    }),
-    author: {
-      name: post.author.name,
-      image: post.author.avatar
-    },
-    category: post.tags[0] || 'General',
-    coverImage: post.featuredImage,
-    readTime: Math.ceil(post.content.length / 2000) // Approximate read time based on content length
-  }));
-  
-  // Featured post is the most recent one
-  const featuredPost = blogPosts[0];
-  // Regular posts are all but the featured one
-  const regularPosts = blogPosts.slice(1);
-  
-  // Categories extracted from blog posts
-  const categoriesSet = new Set<string>();
-  blogPosts.forEach(post => categoriesSet.add(post.category));
-  const categories = Array.from(categoriesSet);
+  const allPosts = getAllBlogPosts();
+  const allTags = getAllTags();
   
   return (
-    <div className="bg-white">
-    
-      {/* Hero Section */}
-      <div className="relative py-24 bg-primary-700 text-white">
-        <Container>
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold font-heading leading-tight mb-6">
-              UNEOM Insights
-            </h1>
-            <p className="text-xl text-white/90 mb-8">
-              Expert insights, industry trends, and best practices in uniform design and management for Saudi Arabian businesses.
+    <main className="py-10">
+      <Container>
+        <div className="max-w-7xl mx-auto">
+          <header className="mb-12 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Uneom Blog</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Insights, trends, and expertise in professional uniforms and workwear across various industries
             </p>
-          </div>
-        </Container>
-      </div>
-      
-      {/* Featured Post */}
-      <section className="py-16">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <div className="lg:col-span-7 relative rounded-lg overflow-hidden h-96 lg:h-auto">
-              <Image
-                src={featuredPost.coverImage}
-                alt={featuredPost.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="lg:col-span-5 flex flex-col justify-center">
-              <div className="mb-4">
-                <span className="inline-block bg-primary-100 text-primary-800 text-sm font-medium px-3 py-1 rounded-full mb-2">
-                  {featuredPost.category}
-                </span>
-                <span className="text-neutral-500 text-sm ml-3">
-                  {featuredPost.date} • {featuredPost.readTime} min read
-                </span>
-              </div>
-              <h2 className="text-3xl font-bold mb-4 hover:text-primary-600 transition-colors duration-200">
-                <Link href={`/blog/${featuredPost.id}`}>
-                  {featuredPost.title}
-                </Link>
-              </h2>
-              <p className="text-neutral-600 mb-6">
-                {featuredPost.excerpt}
-              </p>
-              <div className="flex items-center">
-                <Link href={`/authors/${featuredPost.author.name.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center">
-                  <div className="relative w-10 h-10 rounded-full overflow-hidden mr-3">
+          </header>
+          
+          {/* Featured Post */}
+          {allPosts.length > 0 && (
+            <div className="mb-16">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {allPosts[0].featuredImage && (
+                  <div className="relative aspect-video rounded-xl overflow-hidden">
                     <Image
-                      src={featuredPost.author.image}
-                      alt={featuredPost.author.name}
+                      src={allPosts[0].featuredImage}
+                      alt={allPosts[0].title}
                       fill
                       className="object-cover"
+                      priority
                     />
                   </div>
-                  <span className="font-medium hover:text-primary-600 transition-colors">{featuredPost.author.name}</span>
-                </Link>
+                )}
+                
+                <div className={allPosts[0].featuredImage ? "" : "md:col-span-2"}>
+                  <div className="mb-2 text-sm text-gray-500">
+                    {formatDate(allPosts[0].date)} • 
+                    {typeof allPosts[0].author === 'string' 
+                      ? ` By ${allPosts[0].author}` 
+                      : ` By ${allPosts[0].author.name}`}
+                  </div>
+                  
+                  <h2 className="text-3xl font-bold mb-4">
+                    <Link href={`/blog/${allPosts[0].slug}`} className="hover:text-blue-600 transition-colors">
+                      {allPosts[0].title}
+                    </Link>
+                  </h2>
+                  
+                  <p className="text-lg text-gray-600 mb-6">{allPosts[0].excerpt}</p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {allPosts[0].tags && allPosts[0].tags.map(tag => (
+                      <Link 
+                        key={tag}
+                        href={`/blog/tag/${tag}`}
+                        className="text-xs px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full"
+                      >
+                        #{tag}
+                      </Link>
+                    ))}
+                  </div>
+                  
+                  <Link 
+                    href={`/blog/${allPosts[0].slug}`}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    Read Full Article
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        </Container>
-      </section>
-      
-      {/* Category Filter */}
-      <section className="pb-8">
-        <Container>
-          <div className="flex flex-wrap gap-2 justify-center">
-            <button className="inline-block bg-primary-600 text-white text-sm font-medium px-4 py-2 rounded-full transition-colors duration-200 hover:bg-primary-700">
-              All Posts
-            </button>
-            {categories.map((category, index) => (
-              <button 
-                key={index}
-                className="inline-block bg-neutral-100 text-neutral-800 text-sm font-medium px-4 py-2 rounded-full transition-colors duration-200 hover:bg-neutral-200"
-              >
-                {category}
-              </button>
-            ))}
-            <Link 
-              href="/authors"
-              className="inline-block bg-neutral-100 text-neutral-800 text-sm font-medium px-4 py-2 rounded-full transition-colors duration-200 hover:bg-neutral-200"
-            >
-              <div className="flex items-center gap-1">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
-                </svg>
-                Authors
-              </div>
-            </Link>
-          </div>
-        </Container>
-      </section>
-      
-      {/* Regular Posts Grid */}
-      <section className="py-16">
-        <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularPosts.map((post, index) => (
-              <article key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200">
-                <Link href={`/blog/${post.id}`} className="block relative h-56">
-                  <Image
-                    src={post.coverImage}
-                    alt={post.title}
-                    fill
-                    className="object-cover"
-                  />
-                </Link>
-                <div className="p-6">
-                  <div className="mb-3">
-                    <span className="inline-block bg-primary-100 text-primary-800 text-xs font-medium px-2 py-1 rounded-full mr-2">
-                      {post.category}
-                    </span>
-                    <span className="text-neutral-500 text-xs">
-                      {post.readTime} min read
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 hover:text-primary-600 transition-colors duration-200">
-                    <Link href={`/blog/${post.id}`}>
-                      {post.title}
-                    </Link>
-                  </h3>
-                  <p className="text-neutral-600 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex justify-between items-center">
-                    <Link href={`/authors/${post.author.name.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center">
-                      <div className="relative w-8 h-8 rounded-full overflow-hidden mr-2">
-                        <Image
-                          src={post.author.image}
-                          alt={post.author.name}
-                          fill
-                          className="object-cover"
-                        />
+          )}
+          
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            {/* Main Content - Blog Posts */}
+            <div className="lg:col-span-3">
+              <h2 className="text-2xl font-bold mb-8">Latest Articles</h2>
+              
+              <div className="grid gap-10">
+                {allPosts.slice(1).map(post => {
+                  const authorName = typeof post.author === 'string' ? post.author : post.author.name;
+                  
+                  return (
+                    <article key={post.slug} className="border-b border-gray-200 pb-10 last:border-0">
+                      <div className="grid md:grid-cols-3 gap-6">
+                        {post.featuredImage && (
+                          <div className="md:col-span-1">
+                            <Link href={`/blog/${post.slug}`} className="block relative aspect-video overflow-hidden rounded-lg">
+                              <Image
+                                src={post.featuredImage}
+                                alt={post.title}
+                                fill
+                                className="object-cover transition-transform hover:scale-105 duration-300"
+                              />
+                            </Link>
+                          </div>
+                        )}
+                        
+                        <div className={post.featuredImage ? "md:col-span-2" : "md:col-span-3"}>
+                          <div className="mb-2 text-sm text-gray-500">
+                            {formatDate(post.date)} • By {authorName}
+                          </div>
+                          
+                          <h3 className="text-xl font-bold mb-2 hover:text-blue-600 transition-colors">
+                            <Link href={`/blog/${post.slug}`}>
+                              {post.title}
+                            </Link>
+                          </h3>
+                          
+                          <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                          
+                          <div className="flex items-center justify-between">
+                            <div className="flex flex-wrap gap-2">
+                              {post.tags && post.tags.slice(0, 3).map(tag => (
+                                <Link 
+                                  key={tag}
+                                  href={`/blog/tag/${tag}`}
+                                  className="text-xs px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200"
+                                >
+                                  #{tag}
+                                </Link>
+                              ))}
+                            </div>
+                            
+                            <Link 
+                              href={`/blog/${post.slug}`}
+                              className="text-blue-600 hover:text-blue-800 font-medium text-sm inline-flex items-center"
+                            >
+                              Read More
+                              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                              </svg>
+                            </Link>
+                          </div>
+                        </div>
                       </div>
-                      <span className="text-sm font-medium hover:text-primary-600 transition-colors">{post.author.name}</span>
-                    </Link>
-                    <span className="text-neutral-500 text-xs">
-                      {post.date}
-                    </span>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+            
+            {/* Sidebar */}
+            <div className="lg:col-span-1">
+              <div className="sticky top-24">
+                <div className="bg-gray-50 p-6 rounded-xl mb-8">
+                  <h3 className="text-lg font-bold mb-4">Categories</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {allTags.map(tag => (
+                      <Link 
+                        key={tag}
+                        href={`/blog/tag/${tag}`}
+                        className="text-sm px-3 py-1 bg-white border border-gray-200 hover:bg-gray-100 rounded-full mb-2 inline-block"
+                      >
+                        {tag}
+                      </Link>
+                    ))}
                   </div>
                 </div>
-              </article>
-            ))}
-          </div>
-        </Container>
-      </section>
-      
-      {/* Newsletter Signup */}
-      <section className="py-16 bg-primary-50">
-        <Container>
-          <div className="max-w-3xl mx-auto text-center">
-            <SectionHeading centered>
-              Stay Updated with UNEOM Insights
-            </SectionHeading>
-            <p className="text-lg text-neutral-700 mb-8">
-              Subscribe to our newsletter to receive the latest industry trends, uniform best practices, and UNEOM news directly to your inbox.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="px-4 py-3 rounded-md border border-neutral-300 flex-grow focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                required
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 bg-primary-600 text-white font-medium rounded-md hover:bg-primary-700 transition-colors duration-200"
-              >
-                Subscribe
-              </button>
-            </form>
-            <p className="text-xs text-neutral-500 mt-4">
-              By subscribing, you agree to receive marketing emails from UNEOM. You can unsubscribe at any time.
-            </p>
-          </div>
-        </Container>
-      </section>
-      
-      {/* Related Resources */}
-      <section className="py-16">
-        <Container>
-          <SectionHeading centered>
-            Explore More Resources
-          </SectionHeading>
-          <p className="text-center text-neutral-700 max-w-3xl mx-auto mb-12">
-            Discover more ways to optimize your uniform program and stay up-to-date with industry standards.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md border border-neutral-100 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 text-primary-600">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
+                
+                <div className="bg-blue-50 p-6 rounded-xl">
+                  <h3 className="text-lg font-bold mb-3">Subscribe to Our Newsletter</h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Stay updated with the latest trends and insights in professional uniforms
+                  </p>
+                  <form className="space-y-3">
+                    <div>
+                      <input 
+                        type="email" 
+                        placeholder="Your email address" 
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                        required
+                      />
+                    </div>
+                    <button 
+                      type="submit" 
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
+                    >
+                      Subscribe
+                    </button>
+                  </form>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-3">Case Studies</h3>
-              <p className="text-neutral-600 mb-6">
-                Real-world examples of how our uniform solutions have helped businesses across various industries.
-              </p>
-              <Link 
-                href="/resources/case-studies" 
-                className="inline-block text-primary-600 font-medium hover:text-primary-800 transition-colors duration-200"
-              >
-                View Case Studies
-              </Link>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md border border-neutral-100 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 text-primary-600">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3">Uniform Guides</h3>
-              <p className="text-neutral-600 mb-6">
-                Comprehensive industry-specific guides to help you develop effective uniform programs.
-              </p>
-              <Link 
-                href="/resources/guides" 
-                className="inline-block text-primary-600 font-medium hover:text-primary-800 transition-colors duration-200"
-              >
-                Download Guides
-              </Link>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md border border-neutral-100 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 text-primary-600">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3">Webinars & Events</h3>
-              <p className="text-neutral-600 mb-6">
-                Join our upcoming webinars and events to learn from industry experts and network with peers.
-              </p>
-              <Link 
-                href="/resources/events" 
-                className="inline-block text-primary-600 font-medium hover:text-primary-800 transition-colors duration-200"
-              >
-                View Schedule
-              </Link>
             </div>
           </div>
-        </Container>
-      </section>
-    
-      </div>
+        </div>
+      </Container>
+    </main>
   );
 } 

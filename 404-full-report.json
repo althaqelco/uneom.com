@@ -1,0 +1,790 @@
+{
+  "summary": {
+    "totalUrlsChecked": 96,
+    "status200Count": 56,
+    "status404Count": 40,
+    "status301Count": 0,
+    "status302Count": 0,
+    "otherStatusesCount": 0,
+    "errorsCount": 0
+  },
+  "timestamp": "2025-05-04T01:07:53.918Z",
+  "results": {
+    "status200": [
+      {
+        "url": "/",
+        "fullUrl": "https://uneom.com/",
+        "statusCode": 200,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/about",
+        "fullUrl": "https://uneom.com/about",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/about/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/contact",
+        "fullUrl": "https://uneom.com/contact",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/contact/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar",
+        "fullUrl": "https://uneom.com/ar",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/about",
+        "fullUrl": "https://uneom.com/ar/about",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/about/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/contact",
+        "fullUrl": "https://uneom.com/ar/contact",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/contact/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/blog",
+        "fullUrl": "https://uneom.com/blog",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/blog/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/shop",
+        "fullUrl": "https://uneom.com/shop",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/shop/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/industries",
+        "fullUrl": "https://uneom.com/industries",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/industries/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/services",
+        "fullUrl": "https://uneom.com/services",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/services/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/resources",
+        "fullUrl": "https://uneom.com/resources",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/resources/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/privacy-policy",
+        "fullUrl": "https://uneom.com/privacy-policy",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/privacy-policy/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/terms-of-service",
+        "fullUrl": "https://uneom.com/terms-of-service",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/terms-of-service/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/blog",
+        "fullUrl": "https://uneom.com/ar/blog",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/blog/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/shop",
+        "fullUrl": "https://uneom.com/ar/shop",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/shop/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/industries",
+        "fullUrl": "https://uneom.com/ar/industries",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/industries/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/services",
+        "fullUrl": "https://uneom.com/ar/services",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/services/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/resources",
+        "fullUrl": "https://uneom.com/ar/resources",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/resources/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/privacy-policy",
+        "fullUrl": "https://uneom.com/ar/privacy-policy",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/privacy-policy/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/terms-of-service",
+        "fullUrl": "https://uneom.com/ar/terms-of-service",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/terms-of-service/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/industries/healthcare",
+        "fullUrl": "https://uneom.com/industries/healthcare",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/industries/healthcare/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/industries/corporate",
+        "fullUrl": "https://uneom.com/industries/corporate",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/industries/corporate/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/industries/hospitality",
+        "fullUrl": "https://uneom.com/industries/hospitality",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/industries/hospitality/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/industries/aviation",
+        "fullUrl": "https://uneom.com/industries/aviation",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/industries/aviation/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/industries/education",
+        "fullUrl": "https://uneom.com/industries/education",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/industries/education/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/industries/manufacturing",
+        "fullUrl": "https://uneom.com/industries/manufacturing",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/industries/manufacturing/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/industries/security",
+        "fullUrl": "https://uneom.com/industries/security",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/industries/security/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/industries/factory-industry",
+        "fullUrl": "https://uneom.com/industries/factory-industry",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/industries/factory-industry/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/industries/retail-shops",
+        "fullUrl": "https://uneom.com/industries/retail-shops",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/industries/retail-shops/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/industries/supply-manufacturing",
+        "fullUrl": "https://uneom.com/industries/supply-manufacturing",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/industries/supply-manufacturing/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/services/program-management",
+        "fullUrl": "https://uneom.com/services/program-management",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/services/program-management/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/services/custom-design",
+        "fullUrl": "https://uneom.com/services/custom-design",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/services/custom-design/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/services/bulk-ordering",
+        "fullUrl": "https://uneom.com/services/bulk-ordering",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/services/bulk-ordering/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/services/measurement-services",
+        "fullUrl": "https://uneom.com/services/measurement-services",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/services/measurement-services/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/services/uniform-policies",
+        "fullUrl": "https://uneom.com/services/uniform-policies",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/services/uniform-policies/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/who-we-are",
+        "fullUrl": "https://uneom.com/who-we-are",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/about/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/sectors",
+        "fullUrl": "https://uneom.com/sectors",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/industries/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/industries/healthcare",
+        "fullUrl": "https://uneom.com/ar/industries/healthcare",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/industries/healthcare/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/industries/corporate",
+        "fullUrl": "https://uneom.com/ar/industries/corporate",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/industries/corporate/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/industries/hospitality",
+        "fullUrl": "https://uneom.com/ar/industries/hospitality",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/industries/hospitality/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/industries/aviation",
+        "fullUrl": "https://uneom.com/ar/industries/aviation",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/industries/aviation/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/industries/education",
+        "fullUrl": "https://uneom.com/ar/industries/education",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/industries/education/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/industries/manufacturing",
+        "fullUrl": "https://uneom.com/ar/industries/manufacturing",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/industries/manufacturing/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/industries/security",
+        "fullUrl": "https://uneom.com/ar/industries/security",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/industries/security/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/industries/factory-industry",
+        "fullUrl": "https://uneom.com/ar/industries/factory-industry",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/industries/factory-industry/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/industries/retail-shops",
+        "fullUrl": "https://uneom.com/ar/industries/retail-shops",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/industries/retail-shops/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/industries/supply-manufacturing",
+        "fullUrl": "https://uneom.com/ar/industries/supply-manufacturing",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/industries/supply-manufacturing/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/services/program-management",
+        "fullUrl": "https://uneom.com/ar/services/program-management",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/services/program-management/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/services/custom-design",
+        "fullUrl": "https://uneom.com/ar/services/custom-design",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/services/custom-design/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/services/bulk-ordering",
+        "fullUrl": "https://uneom.com/ar/services/bulk-ordering",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/services/bulk-ordering/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/services/measurement-services",
+        "fullUrl": "https://uneom.com/ar/services/measurement-services",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/services/measurement-services/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/services/uniform-policies",
+        "fullUrl": "https://uneom.com/ar/services/uniform-policies",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/services/uniform-policies/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/quote",
+        "fullUrl": "https://uneom.com/quote",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/quote/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/quote",
+        "fullUrl": "https://uneom.com/ar/quote",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/quote/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/authors",
+        "fullUrl": "https://uneom.com/authors",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/authors/",
+        "finalStatusCode": 200
+      },
+      {
+        "url": "/ar/authors",
+        "fullUrl": "https://uneom.com/ar/authors",
+        "statusCode": 200,
+        "isRedirect": true,
+        "redirectUrl": "https://uneom.com/ar/authors/",
+        "finalStatusCode": 200
+      }
+    ],
+    "status404": [
+      {
+        "url": "/this-page-does-not-exist",
+        "fullUrl": "https://uneom.com/this-page-does-not-exist",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/page-not-found-test",
+        "fullUrl": "https://uneom.com/page-not-found-test",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/404-test-page",
+        "fullUrl": "https://uneom.com/404-test-page",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/blog/non-existent-blog-post",
+        "fullUrl": "https://uneom.com/blog/non-existent-blog-post",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/shop/non-existent-product",
+        "fullUrl": "https://uneom.com/shop/non-existent-product",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/industries/non-existent-industry",
+        "fullUrl": "https://uneom.com/industries/non-existent-industry",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/services/non-existent-service",
+        "fullUrl": "https://uneom.com/services/non-existent-service",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/authors/non-existent-author",
+        "fullUrl": "https://uneom.com/authors/non-existent-author",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/case-studies/non-existent-case-study",
+        "fullUrl": "https://uneom.com/case-studies/non-existent-case-study",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/services-page",
+        "fullUrl": "https://uneom.com/services-page",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/contactus",
+        "fullUrl": "https://uneom.com/contactus",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/book-a-demo",
+        "fullUrl": "https://uneom.com/book-a-demo",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/careers",
+        "fullUrl": "https://uneom.com/careers",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/sitemap",
+        "fullUrl": "https://uneom.com/sitemap",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/shop/industrial-uniforms/product-12345",
+        "fullUrl": "https://uneom.com/shop/industrial-uniforms/product-12345",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/shop/retail-uniforms/product-67890",
+        "fullUrl": "https://uneom.com/shop/retail-uniforms/product-67890",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/locations",
+        "fullUrl": "https://uneom.com/locations",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/ar/locations",
+        "fullUrl": "https://uneom.com/ar/locations",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/locations/riyadh",
+        "fullUrl": "https://uneom.com/locations/riyadh",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/locations/jeddah",
+        "fullUrl": "https://uneom.com/locations/jeddah",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/locations/dammam",
+        "fullUrl": "https://uneom.com/locations/dammam",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/locations/mecca",
+        "fullUrl": "https://uneom.com/locations/mecca",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/locations/medina",
+        "fullUrl": "https://uneom.com/locations/medina",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/contact-us",
+        "fullUrl": "https://uneom.com/contact-us",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/request-a-quote",
+        "fullUrl": "https://uneom.com/request-a-quote",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/faqs",
+        "fullUrl": "https://uneom.com/faqs",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/about-us",
+        "fullUrl": "https://uneom.com/about-us",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/ar/locations/riyadh",
+        "fullUrl": "https://uneom.com/ar/locations/riyadh",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/ar/locations/jeddah",
+        "fullUrl": "https://uneom.com/ar/locations/jeddah",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/ar/locations/dammam",
+        "fullUrl": "https://uneom.com/ar/locations/dammam",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/ar/locations/mecca",
+        "fullUrl": "https://uneom.com/ar/locations/mecca",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/ar/locations/medina",
+        "fullUrl": "https://uneom.com/ar/locations/medina",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/faq",
+        "fullUrl": "https://uneom.com/faq",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/ar/faq",
+        "fullUrl": "https://uneom.com/ar/faq",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/categories",
+        "fullUrl": "https://uneom.com/categories",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/ar/categories",
+        "fullUrl": "https://uneom.com/ar/categories",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/tags",
+        "fullUrl": "https://uneom.com/tags",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/ar/tags",
+        "fullUrl": "https://uneom.com/ar/tags",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/search",
+        "fullUrl": "https://uneom.com/search",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      },
+      {
+        "url": "/ar/search",
+        "fullUrl": "https://uneom.com/ar/search",
+        "statusCode": 404,
+        "isRedirect": false,
+        "redirectUrl": null,
+        "finalStatusCode": 404
+      }
+    ],
+    "status301": [],
+    "status302": [],
+    "otherStatuses": [],
+    "errors": []
+  }
+}

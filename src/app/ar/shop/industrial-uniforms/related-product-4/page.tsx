@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import ClientPage from '@/app/ar/shop/[category]/[product]/ClientPage';
 import Script from 'next/script';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define Arabic metadata for SEO optimization
 export const metadata: Metadata = {
@@ -125,7 +126,9 @@ export default function IndustrialFallProtectionPageArabic() {
   const locale = 'ar';
   
   return (
-    <>
+    <main>
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl rtl:font-arabic">نظام الحماية من السقوط الصناعي | حزام أمان معتمد وفق معايير السلامة العالمية | يونيوم</h1>
+      
       {/* Schema.org structured data for enhanced SEO */}
       <Script
         id="product-structured-data-ar"
@@ -167,6 +170,6 @@ export default function IndustrialFallProtectionPageArabic() {
       
       {/* Main product page component */}
       <ClientPage product={product} relatedProducts={relatedProducts} locale={locale} />
-    </>
+        </main>
   );
 }

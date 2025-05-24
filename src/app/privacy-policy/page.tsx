@@ -1,10 +1,50 @@
 import React from 'react';
 import Link from 'next/link';
 import Container from '@/components/ui/Container';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | UNEOM Saudi Arabia',
+  description: 'High-quality professional uniforms and workwear solutions tailored for Saudi Arabian businesses and institutions.',
+  keywords: ['uniform', 'workwear', 'Saudi Arabia', 'privacy policy'],
+  openGraph: {
+    title: 'Privacy Policy | UNEOM Saudi Arabia',
+    description: 'High-quality professional uniforms and workwear solutions tailored for Saudi Arabian businesses and institutions.',
+    url: 'https://uneom.com/privacy-policy/',
+    siteName: 'UNEOM',
+    images: [
+      {
+        url: 'https://uneom.com/images/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Privacy Policy - UNEOM Saudi Arabia'
+      }
+    ],
+    locale: 'en_US'
+  }
+};
+
 
 export default function PrivacyPolicyPage() {
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       <section className="bg-gradient-to-b from-neutral-100 to-white py-16 md:py-24">
         <Container>
           <div className="text-center max-w-4xl mx-auto">

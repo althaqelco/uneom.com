@@ -3,6 +3,7 @@
 import React from 'react';
 import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
 import { Metadata } from 'next';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function SupplyManufacturingPageArabic() {
   // Use Arabic locale
@@ -281,5 +282,5 @@ export default function SupplyManufacturingPageArabic() {
     }
   };
 
-  return <IndustryPageLayout locale={locale} industryData={supplyManufacturingData} />;
+  return <IndustryPageLayout locale={locale} industryData={supplyManufacturingData} skipMainLayout={false} />;
 } 

@@ -1,0 +1,124 @@
+{
+  "en": {
+    "title": "Comprehensive Medical Uniform Sizing Guide",
+    "description": "Ensure perfect fit for your healthcare staff with our detailed Medical Uniform Sizing Guide. Developed specifically for Saudi Arabian healthcare professionals, this resource helps healthcare facilities order appropriately sized uniforms that enhance comfort, professionalism, and staff satisfaction.",
+    "introduction": "Properly fitted medical uniforms are essential for healthcare professionals to perform their duties effectively and comfortably. This comprehensive sizing guide provides detailed measurements and fitting advice for all types of medical attire, accounting for the unique requirements of Saudi Arabian healthcare environments.",
+    "benefits": [
+      "Reduce uniform returns and exchanges by up to 80%",
+      "Ensure proper fit for optimal freedom of movement in clinical settings",
+      "Account for layering needs in air-conditioned hospital environments",
+      "Provide accurate guidance for both male and female healthcare professionals",
+      "Include specialized sizing for cultural and religious accommodation"
+    ],
+    "size_chart_sections": [
+      {
+        "title": "Scrubs & Clinical Uniforms",
+        "description": "Detailed sizing charts for medical scrubs, lab coats, and clinical attire with measurements for chest, waist, hips, and inseam. Includes recommendations for layering and movement considerations.",
+        "chart_image": "/images/resources/medical-uniform-sizing.jpg"
+      },
+      {
+        "title": "Modest Healthcare Attire",
+        "description": "Specialized sizing guidance for modest medical uniforms including hijab-friendly scrubs, modest-fit lab coats, and full-coverage options that maintain professional appearance while respecting cultural preferences.",
+        "chart_image": "/images/healthcare/medical_hijab_uniform.jpg"
+      },
+      {
+        "title": "Department-Specific Uniforms",
+        "description": "Targeted sizing recommendations for specialized departments including surgical scrubs, maternity unit attire, emergency services, and intensive care units, factoring in functional requirements for each area.",
+        "chart_image": "/images/healthcare/healthcare_medical_uniform.jpg"
+      },
+      {
+        "title": "Measurement Guidelines",
+        "description": "Illustrated instructions for taking accurate body measurements to determine correct uniform size, including specialized considerations for Saudi Arabian body types and preferences.",
+        "chart_image": "/images/healthcare/healthcare_nurce_uniform.jpg"
+      }
+    ],
+    "special_considerations": [
+      "Temperature regulation in air-conditioned hospital environments",
+      "Movement requirements for various clinical roles",
+      "Layering needs for different hospital areas",
+      "Cultural and religious accommodation considerations",
+      "Durability expectations for frequent industrial laundering"
+    ],
+    "fitting_service": "UNEOM offers professional fitting services for healthcare organizations, including on-site measurement sessions for staff and personalized sizing consultation. Contact us to arrange this service for your facility.",
+    "downloadable_resources": [
+      "Printable Measurement Guide (PDF)",
+      "Department-Specific Size Charts (Excel)",
+      "Uniform Ordering Worksheet for Facility Managers",
+      "Size Conversion Tables for International Brands"
+    ],
+    "contact_cta": "Need assistance with bulk uniform sizing? Contact our healthcare uniform specialists for personalized sizing consultation.",
+    "image_paths": [
+      "/images/resources/medical-uniform-sizing.jpg",
+      "/images/healthcare/healthcare_medical_uniform.jpg",
+      "/images/healthcare/medical_hijab_uniform.jpg"
+    ],
+    "sizing_tips": [
+      "Consider ordering one size larger for frequent laundering",
+      "Factor in range of motion needed for your specific role",
+      "Confirm sleeve length for clinical procedures",
+      "Check shoulder width for comfort during extended shifts",
+      "Verify inseam length for proper professional appearance"
+    ]
+  },
+  "ar": {
+    "title": "دليل شامل لمقاسات الزي الطبي",
+    "description": "اضمن المقاس المثالي لموظفي الرعاية الصحية لديك مع دليل مقاسات الزي الطبي المفصل. تم تطويره خصيصًا لمتخصصي الرعاية الصحية في المملكة العربية السعودية، تساعد هذه الموارد مرافق الرعاية الصحية على طلب أزياء موحدة ذات مقاسات مناسبة تعزز الراحة والاحترافية ورضا الموظفين.",
+    "introduction": "الأزياء الطبية ذات المقاس المناسب ضرورية لمتخصصي الرعاية الصحية لأداء واجباتهم بفعالية وراحة. يوفر دليل المقاسات الشامل هذا قياسات مفصلة ونصائح للملاءمة لجميع أنواع الملابس الطبية، مع مراعاة المتطلبات الفريدة لبيئات الرعاية الصحية السعودية.",
+    "benefits": [
+      "تقليل إرجاع الزي الموحد والتبادلات بنسبة تصل إلى 80%",
+      "ضمان المقاس المناسب لحرية الحركة المثلى في البيئات السريرية",
+      "مراعاة احتياجات الطبقات في بيئات المستشفيات المكيفة",
+      "تقديم إرشادات دقيقة لكل من متخصصي الرعاية الصحية الذكور والإناث",
+      "تضمين مقاسات متخصصة للاستيعاب الثقافي والديني"
+    ],
+    "size_chart_sections": [
+      {
+        "title": "الملابس الجراحية والزي السريري",
+        "description": "مخططات مقاسات مفصلة للملابس الطبية، والمعاطف المخبرية، والزي السريري مع قياسات للصدر، والخصر، والوركين، والساق. يتضمن توصيات لطبقات الملابس واعتبارات الحركة.",
+        "chart_image": "/images/resources/medical-uniform-sizing.jpg"
+      },
+      {
+        "title": "زي الرعاية الصحية المحتشم",
+        "description": "إرشادات مقاسات متخصصة للأزياء الطبية المحتشمة بما في ذلك الملابس الجراحية المناسبة للحجاب، ومعاطف المختبر ذات المقاس المحتشم، وخيارات التغطية الكاملة التي تحافظ على المظهر المهني مع احترام التفضيلات الثقافية.",
+        "chart_image": "/images/healthcare/medical_hijab_uniform.jpg"
+      },
+      {
+        "title": "أزياء موحدة خاصة بالأقسام",
+        "description": "توصيات مقاسات مستهدفة للأقسام المتخصصة بما في ذلك الملابس الجراحية، وملابس وحدة الأمومة، وخدمات الطوارئ، ووحدات العناية المركزة، مع مراعاة المتطلبات الوظيفية لكل منطقة.",
+        "chart_image": "/images/healthcare/healthcare_medical_uniform.jpg"
+      },
+      {
+        "title": "إرشادات القياس",
+        "description": "تعليمات موضحة لأخذ قياسات دقيقة للجسم لتحديد مقاس الزي الموحد الصحيح، بما في ذلك اعتبارات متخصصة لأنماط الجسم السعودي والتفضيلات.",
+        "chart_image": "/images/healthcare/healthcare_nurce_uniform.jpg"
+      }
+    ],
+    "special_considerations": [
+      "تنظيم درجة الحرارة في بيئات المستشفيات المكيفة",
+      "متطلبات الحركة لمختلف الأدوار السريرية",
+      "احتياجات الطبقات لمناطق المستشفى المختلفة",
+      "اعتبارات الاستيعاب الثقافي والديني",
+      "توقعات المتانة للغسيل الصناعي المتكرر"
+    ],
+    "fitting_service": "تقدم UNEOM خدمات قياس احترافية للمؤسسات الصحية، بما في ذلك جلسات قياس في الموقع للموظفين واستشارات مقاسات شخصية. اتصل بنا لترتيب هذه الخدمة لمنشأتك.",
+    "downloadable_resources": [
+      "دليل القياس القابل للطباعة (PDF)",
+      "مخططات مقاسات خاصة بالقسم (Excel)",
+      "ورقة عمل طلب الزي الموحد لمديري المنشآت",
+      "جداول تحويل المقاسات للعلامات التجارية الدولية"
+    ],
+    "contact_cta": "هل تحتاج إلى مساعدة في مقاسات الزي الموحد بالجملة؟ اتصل بمتخصصي الزي الموحد للرعاية الصحية لدينا للحصول على استشارة مقاسات شخصية.",
+    "image_paths": [
+      "/images/resources/medical-uniform-sizing.jpg",
+      "/images/healthcare/healthcare_medical_uniform.jpg",
+      "/images/healthcare/medical_hijab_uniform.jpg"
+    ],
+    "sizing_tips": [
+      "فكر في طلب مقاس أكبر للغسيل المتكرر",
+      "ضع في اعتبارك نطاق الحركة المطلوب لدورك المحدد",
+      "تأكد من طول الأكمام للإجراءات السريرية",
+      "تحقق من عرض الكتف للراحة أثناء المناوبات الممتدة",
+      "تحقق من طول الساق للمظهر المهني المناسب"
+    ]
+  }
+} 

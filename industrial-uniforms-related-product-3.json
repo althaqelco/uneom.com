@@ -1,0 +1,106 @@
+{
+  "en": {
+    "title": "Industrial Safety Uniform Set",
+    "description": "Prioritize worker safety with our Industrial Safety Uniform Set, engineered specifically for Saudi Arabia's hazardous industrial environments. This premium uniform solution combines advanced protection technologies with comfort features to enhance safety compliance while maintaining workforce productivity.",
+    "features": [
+      "Multi-hazard protection (flame resistant, chemical splash resistant, arc flash rated)",
+      "High-visibility elements meeting international safety standards",
+      "Moisture-wicking inner layer for comfort in Saudi industrial environments",
+      "Strategic reinforcement at high-stress points for extended durability",
+      "Ergonomic design to reduce fatigue during extended shifts"
+    ],
+    "specifications": {
+      "material": "FR-treated ripstop (88% cotton, 12% high-tenacity nylon)",
+      "weight": "320 gsm",
+      "colors": ["High-Vis Yellow/Navy", "High-Vis Orange/Navy", "Grey/Red"],
+      "sizes": ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
+      "certification": "Meets NFPA 2112, ASTM F1506, and ANSI 107 standards",
+      "care": "Industrial wash recommended, follow specific care instructions for FR properties"
+    },
+    "customization": "Customize with company logos, additional reflective elements, specialized tool pockets, emergency information tags, and department/function identification. Special sizes available upon request.",
+    "ideal_for": "Petrochemical facilities, power plants, chemical manufacturing, hazardous materials handling, and high-risk industrial environments across Saudi Arabia.",
+    "pricing": {
+      "shirt": "320 SAR",
+      "pants": "350 SAR",
+      "complete_set": "650 SAR",
+      "bulk_20_sets": "620 SAR per set",
+      "bulk_50_sets": "590 SAR per set"
+    },
+    "image_paths": [
+      "/images/products/industrial/safety-1.jpg",
+      "/images/products/industrial/safety-2.jpg",
+      "/images/industries/Factory_Industrial/Factory_Industrial_Heat_Management.webp"
+    ],
+    "related_products": [
+      "/shop/industrial-uniforms/industrial-jacket/",
+      "/shop/industrial-uniforms/mechanics-overalls/",
+      "/shop/industrial-uniforms/related-product-4/"
+    ],
+    "safety_features": [
+      "Flame resistance meeting NFPA 2112 standards",
+      "Arc flash protection category 2 (ATPV 12 cal/cm²)",
+      "Chemical splash resistance per ASTM F1499",
+      "Enhanced visibility with strategic reflective placement",
+      "Anti-static properties for hazardous environments"
+    ],
+    "certifications": [
+      "Saudi Quality Mark certified",
+      "ISO 11612 (Heat and Flame Protection)",
+      "ISO 11611 (Welding Protection)",
+      "EN 1149-5 (Electrostatic Properties)",
+      "EN 13034 (Chemical Splash Protection)"
+    ]
+  },
+  "ar": {
+    "title": "طقم زي السلامة الصناعية",
+    "description": "أعط الأولوية لسلامة العاملين مع طقم زي السلامة الصناعية، المصمم خصيصًا للبيئات الصناعية الخطرة في المملكة العربية السعودية. يجمع حل الزي الفاخر هذا بين تقنيات الحماية المتقدمة وميزات الراحة لتعزيز الامتثال للسلامة مع الحفاظ على إنتاجية القوى العاملة.",
+    "features": [
+      "حماية متعددة المخاطر (مقاوم للهب، مقاوم لتناثر المواد الكيميائية، مصنف لحماية من الومضات الكهربائية)",
+      "عناصر عالية الوضوح تلبي معايير السلامة الدولية",
+      "طبقة داخلية ماصة للرطوبة للراحة في البيئات الصناعية السعودية",
+      "تعزيز استراتيجي في نقاط الإجهاد العالية لمتانة طويلة الأمد",
+      "تصميم مريح لتقليل التعب أثناء المناوبات الطويلة"
+    ],
+    "specifications": {
+      "material": "قماش ريبستوب معالج بمقاومة اللهب (88% قطن، 12% نايلون عالي المتانة)",
+      "weight": "320 جم/م²",
+      "colors": ["أصفر عالي الوضوح/كحلي", "برتقالي عالي الوضوح/كحلي", "رمادي/أحمر"],
+      "sizes": ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"],
+      "certification": "يلبي معايير NFPA 2112، ASTM F1506، و ANSI 107",
+      "care": "يوصى بالغسيل الصناعي، اتبع تعليمات العناية المحددة لخصائص مقاومة اللهب"
+    },
+    "customization": "تخصيص مع شعارات الشركة، وعناصر عاكسة إضافية، وجيوب متخصصة للأدوات، وعلامات معلومات الطوارئ، وتحديد القسم/الوظيفة. مقاسات خاصة متوفرة عند الطلب.",
+    "ideal_for": "منشآت البتروكيماويات، ومحطات الطاقة، وتصنيع المواد الكيميائية، والتعامل مع المواد الخطرة، والبيئات الصناعية عالية المخاطر في جميع أنحاء المملكة العربية السعودية.",
+    "pricing": {
+      "shirt": "320 ريال سعودي",
+      "pants": "350 ريال سعودي",
+      "complete_set": "650 ريال سعودي",
+      "bulk_20_sets": "620 ريال سعودي للطقم",
+      "bulk_50_sets": "590 ريال سعودي للطقم"
+    },
+    "image_paths": [
+      "/images/products/industrial/safety-1.jpg",
+      "/images/products/industrial/safety-2.jpg",
+      "/images/industries/Factory_Industrial/Factory_Industrial_Heat_Management.webp"
+    ],
+    "related_products": [
+      "/shop/industrial-uniforms/industrial-jacket/",
+      "/shop/industrial-uniforms/mechanics-overalls/",
+      "/shop/industrial-uniforms/related-product-4/"
+    ],
+    "safety_features": [
+      "مقاومة اللهب التي تلبي معايير NFPA 2112",
+      "حماية من الومضات الكهربائية من الفئة 2 (ATPV 12 كال/سم²)",
+      "مقاومة لتناثر المواد الكيميائية وفقًا لـ ASTM F1499",
+      "رؤية معززة مع وضع استراتيجي للعناصر العاكسة",
+      "خصائص مضادة للكهرباء الساكنة للبيئات الخطرة"
+    ],
+    "certifications": [
+      "معتمد من علامة الجودة السعودية",
+      "ISO 11612 (حماية من الحرارة واللهب)",
+      "ISO 11611 (حماية من اللحام)",
+      "EN 1149-5 (خصائص كهروستاتيكية)",
+      "EN 13034 (حماية من تناثر المواد الكيميائية)"
+    ]
+  }
+} 

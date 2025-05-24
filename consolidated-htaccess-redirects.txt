@@ -1,0 +1,136 @@
+# قواعد إعادة التوجيه لمعالجة روابط 404 لموقع Uneom
+# تم إنشاء هذا الملف في 22 يوليو 2024
+
+# ------------------------------------------------------------------
+# 1. إعادة توجيه صفحات الشائعة 
+# ------------------------------------------------------------------
+Redirect 301 /about-us /about
+Redirect 301 /ar/faq /ar/about
+Redirect 301 /book-a-demo /quote
+Redirect 301 /careers /about
+Redirect 301 /contact-us /contact
+Redirect 301 /contactus /contact
+Redirect 301 /faq /about
+Redirect 301 /faqs /about
+Redirect 301 /request-a-quote /quote
+Redirect 301 /services-page /services
+Redirect 301 /sitemap /
+
+# ------------------------------------------------------------------
+# 2. إعادة توجيه صفحات المواقع
+# ------------------------------------------------------------------
+# توجيه صفحات المواقع الرئيسية
+Redirect 301 /locations /about
+Redirect 301 /ar/locations /ar/about
+
+# توجيه صفحات المواقع الفرعية
+Redirect 301 /locations/riyadh /about
+Redirect 301 /locations/jeddah /about
+Redirect 301 /locations/dammam /about
+Redirect 301 /locations/mecca /about
+Redirect 301 /locations/medina /about
+Redirect 301 /ar/locations/riyadh /ar/about
+Redirect 301 /ar/locations/jeddah /ar/about
+Redirect 301 /ar/locations/dammam /ar/about
+Redirect 301 /ar/locations/mecca /ar/about
+Redirect 301 /ar/locations/medina /ar/about
+
+# ------------------------------------------------------------------
+# 3. إعادة توجيه صفحات الوظائف الإضافية
+# ------------------------------------------------------------------
+Redirect 301 /categories /
+Redirect 301 /search /
+Redirect 301 /tags /
+Redirect 301 /ar/categories /ar
+Redirect 301 /ar/search /ar
+Redirect 301 /ar/tags /ar
+
+# ------------------------------------------------------------------
+# 4. إعادة توجيه صفحات المتجر وأقسامه
+# ------------------------------------------------------------------
+# توجيه أقسام المتجر - النسخة الإنجليزية
+Redirect 301 /shop/corporate-uniforms/ /shop/
+Redirect 301 /shop/healthcare-uniforms/ /shop/
+Redirect 301 /shop/hospitality-uniforms/ /shop/
+Redirect 301 /shop/manufacturing-uniforms/ /shop/
+
+# توجيه أقسام المتجر - النسخة العربية
+Redirect 301 /ar/shop/corporate-uniforms/ /ar/shop/
+Redirect 301 /ar/shop/healthcare-uniforms/ /ar/shop/
+Redirect 301 /ar/shop/hospitality-uniforms/ /ar/shop/
+Redirect 301 /ar/shop/manufacturing-uniforms/ /ar/shop/
+
+# ------------------------------------------------------------------
+# 5. قواعد RewriteRule للتعامل مع أنماط صفحات المنتجات
+# ------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # إعادة توجيه صفحات المنتجات - النسخة الإنجليزية
+  RewriteRule ^shop/aviation-uniforms/product-([0-9]+)/$ /shop/aviation-uniforms/ [R=301,L]
+  RewriteRule ^shop/corporate-uniforms/product-([0-9]+)/$ /shop/corporate-uniforms/ [R=301,L]
+  RewriteRule ^shop/education-uniforms/product-([0-9]+)/$ /shop/education-uniforms/ [R=301,L]
+  RewriteRule ^shop/healthcare-uniforms/product-([0-9]+)/$ /shop/healthcare-uniforms/ [R=301,L]
+  RewriteRule ^shop/hospitality-uniforms/product-([0-9]+)/$ /shop/hospitality-uniforms/ [R=301,L]
+  RewriteRule ^shop/industrial-uniforms/product-([0-9]+)/$ /shop/industrial-uniforms/ [R=301,L]
+  RewriteRule ^shop/manufacturing-uniforms/product-([0-9]+)/$ /shop/manufacturing-uniforms/ [R=301,L]
+  RewriteRule ^shop/retail-uniforms/product-([0-9]+)/$ /shop/retail-uniforms/ [R=301,L]
+  RewriteRule ^shop/security-uniforms/product-([0-9]+)/$ /shop/security-uniforms/ [R=301,L]
+
+  # إعادة توجيه صفحات المنتجات - النسخة العربية
+  RewriteRule ^ar/shop/aviation-uniforms/product-([0-9]+)/$ /ar/shop/aviation-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/corporate-uniforms/product-([0-9]+)/$ /ar/shop/corporate-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/education-uniforms/product-([0-9]+)/$ /ar/shop/education-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/healthcare-uniforms/product-([0-9]+)/$ /ar/shop/healthcare-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/hospitality-uniforms/product-([0-9]+)/$ /ar/shop/hospitality-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/industrial-uniforms/product-([0-9]+)/$ /ar/shop/industrial-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/manufacturing-uniforms/product-([0-9]+)/$ /ar/shop/manufacturing-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/retail-uniforms/product-([0-9]+)/$ /ar/shop/retail-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/security-uniforms/product-([0-9]+)/$ /ar/shop/security-uniforms/ [R=301,L]
+
+  # إعادة توجيه صفحات المنتجات ذات الصلة - النسخة الإنجليزية
+  RewriteRule ^shop/aviation-uniforms/related-product-([0-9]+)/$ /shop/aviation-uniforms/ [R=301,L]
+  RewriteRule ^shop/corporate-uniforms/related-product-([0-9]+)/$ /shop/corporate-uniforms/ [R=301,L]
+  RewriteRule ^shop/education-uniforms/related-product-([0-9]+)/$ /shop/education-uniforms/ [R=301,L]
+  RewriteRule ^shop/healthcare-uniforms/related-product-([0-9]+)/$ /shop/healthcare-uniforms/ [R=301,L]
+  RewriteRule ^shop/hospitality-uniforms/related-product-([0-9]+)/$ /shop/hospitality-uniforms/ [R=301,L]
+  RewriteRule ^shop/industrial-uniforms/related-product-([0-9]+)/$ /shop/industrial-uniforms/ [R=301,L]
+  RewriteRule ^shop/manufacturing-uniforms/related-product-([0-9]+)/$ /shop/manufacturing-uniforms/ [R=301,L]
+  RewriteRule ^shop/retail-uniforms/related-product-([0-9]+)/$ /shop/retail-uniforms/ [R=301,L]
+  RewriteRule ^shop/security-uniforms/related-product-([0-9]+)/$ /shop/security-uniforms/ [R=301,L]
+
+  # إعادة توجيه صفحات المنتجات ذات الصلة - النسخة العربية
+  RewriteRule ^ar/shop/aviation-uniforms/related-product-([0-9]+)/$ /ar/shop/aviation-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/corporate-uniforms/related-product-([0-9]+)/$ /ar/shop/corporate-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/education-uniforms/related-product-([0-9]+)/$ /ar/shop/education-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/healthcare-uniforms/related-product-([0-9]+)/$ /ar/shop/healthcare-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/hospitality-uniforms/related-product-([0-9]+)/$ /ar/shop/hospitality-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/industrial-uniforms/related-product-([0-9]+)/$ /ar/shop/industrial-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/manufacturing-uniforms/related-product-([0-9]+)/$ /ar/shop/manufacturing-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/retail-uniforms/related-product-([0-9]+)/$ /ar/shop/retail-uniforms/ [R=301,L]
+  RewriteRule ^ar/shop/security-uniforms/related-product-([0-9]+)/$ /ar/shop/security-uniforms/ [R=301,L]
+  
+  # قاعدة عامة شاملة لتغطية أي أنماط منتجات غير مدرجة أعلاه
+  RewriteRule ^shop/([^/]+)/product-([0-9]+)/$ /shop/$1/ [R=301,L]
+  RewriteRule ^ar/shop/([^/]+)/product-([0-9]+)/$ /ar/shop/$1/ [R=301,L]
+  RewriteRule ^shop/([^/]+)/related-product-([0-9]+)/$ /shop/$1/ [R=301,L]
+  RewriteRule ^ar/shop/([^/]+)/related-product-([0-9]+)/$ /ar/shop/$1/ [R=301,L]
+</IfModule>
+
+# ------------------------------------------------------------------
+# 6. إعادة توجيه صفحات الاختبار (اختياري)
+# ------------------------------------------------------------------
+# Redirect 301 /404-test-page /
+# Redirect 301 /authors/non-existent-author /
+# Redirect 301 /blog/non-existent-blog-post /blog
+# Redirect 301 /case-studies/non-existent-case-study /case-studies
+# Redirect 301 /industries/non-existent-industry /industries
+# Redirect 301 /page-not-found-test /
+# Redirect 301 /services/non-existent-service /services
+# Redirect 301 /this-page-does-not-exist /
+
+# ------------------------------------------------------------------
+# 7. إعادة توجيه المحتوى المفقود أو الأخطاء العامة
+# ------------------------------------------------------------------
+# توجيه أي صفحة 404 غير معالجة إلى الصفحة الرئيسية (اختياري - احذف # للتفعيل)
+# ErrorDocument 404 / 

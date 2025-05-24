@@ -1,21 +1,22 @@
 import { Metadata } from 'next';
 import ClientPage from '@/app/shop/[category]/[product]/ClientPage';
 import Script from 'next/script';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define metadata for SEO optimization
 export const metadata: Metadata = {
-  title: 'زي مستشار مبيعات البوتيك | ملابس متاجر التصميم الراقية | يونيوم المملكة العربية السعودية',
-  description: 'أزياء مستشاري مبيعات البوتيك المتطورة والمصممة خصيصًا لمتاجر التجزئة الراقية في السعودية. ملابس أنيقة واحترافية بأقمشة فاخرة وخيارات تصميم محتشمة. ارتقِ بفريق متجرك الفاخر في الرياض وجدة وجميع أنحاء المملكة.',
-  keywords: 'زي مبيعات البوتيك السعودية, ملابس موظفي التجزئة الفاخرة, زي المتاجر الراقية, ملابس بوتيكات الأزياء السعودية, يونيفورم متاجر التصميم الرياض, أزياء المستشارين الفاخرة, حلول البيع بالتجزئة الفاخرة السعودية',
+  title: 'طقم بليزر فاخر للبيع بالتجزئة | أزياء محلات راقية | يونيوم المملكة العربية السعودية',
+  description: 'اجعل علامتك التجارية رمزاً للتميز والفخامة مع طقم البليزر الراقي من يونيوم، المصمم خصيصاً لقطاع التجزئة السعودي الفاخر. أزياء تجمع بين الأناقة الاستثنائية والراحة الفائقة، مع خيارات تخصيص متعددة.',
+  keywords: 'بليزر فاخر للبيع بالتجزئة, يونيفورم متاجر فاخرة السعودية, زي رسمي للبوتيكات, ملابس موظفي المتاجر الراقية, أزياء موحدة للبيع بالتجزئة, بدلات موظفي المتاجر الفاخرة, يونيوم السعودية',
   openGraph: {
-    title: 'زي مستشار مبيعات البوتيك | ارتقِ بتجربة التجزئة الفاخرة',
-    description: 'مصممة بدقة للبوتيكات الراقية وبيئات البيع بالتجزئة المتخصصة في المملكة العربية السعودية. أزياء متطورة وأنيقة تعزز هيبة علامتك التجارية وتجربة العملاء. خيارات تخصيص متعددة مع أقمشة فاخرة.',
+    title: 'طقم بليزر فاخر للبيع بالتجزئة | أزياء محلات متميزة',
+    description: 'أزياء راقية مصممة خصيصًا لبيئات البيع بالتجزئة الفاخرة في المملكة العربية السعودية. تعكس التزام مؤسستك بأعلى معايير الجودة والاحترافية وتعزز الهوية البصرية لعلامتك التجارية.',
     images: [
       {
-        url: 'https://uneom.com/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg',
+        url: 'https://uneom.com/images/industries/retail-shops/retail-shops-uniform-identity.jpg',
         width: 1200,
         height: 630,
-        alt: 'زي مستشار مبيعات البوتيك من يونيوم'
+        alt: 'طقم بليزر فاخر للبيع بالتجزئة من يونيوم'
       }
     ],
     locale: 'ar_SA',
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BoutiqueSalesConsultantUniformPageArabic() {
+export default function LuxuryRetailBlazerSetPageArabic() {
   // Create params object to match ClientPageProps interface
   const params = {
     category: 'retail-uniforms',
@@ -50,80 +51,82 @@ export default function BoutiqueSalesConsultantUniformPageArabic() {
   // Create product data
   const productData = {
     id: 'related-product-2',
-    name: 'زي مستشار مبيعات البوتيك',
-    description: 'ارتقِ بعلامتك التجارية مع زي مستشار المبيعات المتطور، المصمم خصيصًا لبيئات البيع بالتجزئة الراقية في المملكة العربية السعودية. تُظهر هذه المجموعة الأنيقة الفخامة والاهتمام بالتفاصيل، مصنوعة من أقمشة فاخرة توفر راحة استثنائية أثناء استشارات العملاء. تشير الخطوط المنقحة وتفاصيل التصميم الدقيقة إلى الجودة والخبرة للعملاء المتميزين، مما يكمل بشكل مثالي بيئات البيع بالتجزئة الفاخرة.',
+    name: 'طقم بليزر فاخر للبيع بالتجزئة',
+    description: 'اجعل علامتك التجارية رمزاً للتميز والفخامة مع طقم البليزر الراقي المصمم خصيصاً لقطاع التجزئة السعودي الفاخر. يجمع هذا الزي الاحترافي بين الأناقة الاستثنائية والراحة الفائقة، ويعكس التزام مؤسستك بأعلى معايير الجودة والاحترافية. مصمم بعناية لتعزيز ثقة موظفيك وانطباع عملائك في بيئات البيع بالتجزئة الراقية في المملكة العربية السعودية.',
     features: [
-      'مصنوعة من مزيج الأقمشة الإيطالية الفاخرة (80% صوف، 20% بوليستر) لانسيابية وراحة متطورة',
-      'خطوط أنيقة مع خيارات تخصيص دقيقة خاصة بالعلامة التجارية',
-      'متوفرة بلوحات ألوان مناسبة للبوتيكات لتكمل ديكور المتاجر الداخلي',
-      'تنوعات تصميم محتشمة مناسبة لبيئات البيع بالتجزئة الفاخرة السعودية',
-      'خصائص مقاومة للتجاعيد للحفاظ على مظهر لا تشوبه شائبة طوال المناوبات الطويلة',
-      'إكسسوارات تنسيق اختيارية (أوشحة، مناديل الجيب، مجوهرات) للتناغم الكامل مع العلامة التجارية'
+      'نسيج فائق الجودة من مزيج الصوف (80% بوليستر فاخر، 20% صوف استرالي) لمظهر راقٍ ومتانة استثنائية',
+      'معالجة متطورة مقاومة للبقع والتجاعيد تحافظ على الأناقة طوال يوم العمل وتقلل تكاليف الصيانة',
+      'تفاصيل أنيقة لإبراز هوية العلامة التجارية (أزرار مخصصة، ألوان حصرية، تصميم جيب مميز)',
+      'قصة عصرية مع اهتمام خاص بتفضيلات الراحة في المملكة العربية السعودية',
+      'بطانة فاخرة قابلة للتنفس من الحرير الصناعي عالي الجودة مثالية للارتداء طوال اليوم في بيئات التسوق المكيفة'
     ],
-    price: 680,
+    price: 650,
     images: [
-      '/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg',
-      '/images/industries/retail-shops/retail-shops-uniform-identity-4.jpg',
-      '/images/industries/retail-shops/retail-shops-uniform-brands-logo.jpg'
+      '/images/products/retail/luxury-1.jpg',
+      '/images/products/retail/luxury-2.jpg',
+      '/images/industries/retail-shops/retail-shops-uniform-identity.jpg',
+      '/images/industries/retail-shops/retail-shops-uniform-brand.jpg'
     ],
-    colors: ['#2c3e50', '#34495e', '#8e44ad', '#ecf0f1'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['#2c3e50', '#34495e', '#000000', '#7f0000'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', 'مقاس مخصص'],
     category: 'retail-uniforms',
-    tags: ['زي البوتيك الفاخر', 'ملابس متاجر المصممين', 'أزياء البيع بالتجزئة الفاخرة', 'مستشار المبيعات الراقي', 'ملابس بوتيك الأزياء'],
-    rating: 4.9,
-    reviews: 65
+    tags: ['زي البيع بالتجزئة الفاخر', 'بليزر للمتاجر', 'يونيفورم البوتيكات', 'أزياء متاجر المجوهرات', 'ملابس متاجر الساعات', 'زي احترافي'],
+    rating: 4.8,
+    reviews: 62
   };
   
   // Create related products
   const relatedProducts = [
     {
-      id: 'luxury-retail-collection',
-      name: 'مجموعة أزياء البيع بالتجزئة الفاخرة',
-      description: 'مجموعة كاملة من أزياء البيع بالتجزئة الفاخرة للمتاجر والبوتيكات الراقية',
-      features: ['أقمشة فاخرة', 'قصة محكمة', 'مخططات ألوان قابلة للتخصيص'],
-      price: 795,
-      images: ['/images/industries/retail-shops/retail-shops-uniform-identity-4.jpg'],
-      colors: ['#2c3e50', '#34495e', '#7f8c8d'],
-      sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
-      category: 'retail-uniforms',
-      tags: ['البيع بالتجزئة الفاخر', 'زي البوتيك', 'ملابس المتاجر الراقية'],
-      rating: 4.9,
-      reviews: 92
-    },
-    {
-      id: 'customer-service',
-      name: 'زي مكتب خدمة العملاء',
-      description: 'ملابس احترافية مصممة خصيصًا لممثلي خدمة العملاء',
-      features: ['مظهر احترافي', 'راحة للمناوبات الطويلة', 'تخصيص العلامة التجارية'],
-      price: 380,
-      images: ['/images/industries/retail-shops/retail-shops-uniform-brand.jpg'],
-      colors: ['#2c3e50', '#34495e', '#7f8c8d', '#ecf0f1'],
-      sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL'],
-      category: 'retail-uniforms',
-      tags: ['خدمة العملاء', 'مكتب المساعدة', 'موظفي دعم البيع بالتجزئة'],
-      rating: 4.7,
-      reviews: 63
-    },
-    {
       id: 'related-product-1',
-      name: 'زي موظف المتجر الفاخر',
-      description: 'ارتقِ بعلامتك التجارية مع مجموعة أزياء موظفي المتاجر الفاخرة',
-      features: ['قصة محكمة', 'مزيج قماش فاخر مريح', 'خيارات تخصيص'],
-      price: 450,
-      images: ['/images/industries/retail-shops/retail-shops-uniform-identity.jpg'],
-      colors: ['#2c3e50', '#34495e', '#7f8c8d', '#ecf0f1'],
-      sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL'],
+      name: 'بولو فاخر لموظفي المتاجر',
+      description: 'قميص بولو فاخر مصمم خصيصًا لموظفي المتاجر الراقية في المملكة العربية السعودية',
+      features: ['قماش فاخر مريح', 'مقاوم للبقع', 'خيارات تخصيص متعددة'],
+      price: 185,
+      images: ['/images/products/retail/uniform-1.jpg'],
+      colors: ['#2c3e50', '#34495e', '#000000', '#ffffff'],
+      sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
       category: 'retail-uniforms',
-      tags: ['زي البيع بالتجزئة', 'ملابس موظفي المتجر', 'أزياء البيع بالتجزئة الفاخرة'],
+      tags: ['بولو فاخر', 'زي المتاجر', 'قميص موظفين'],
       rating: 4.9,
       reviews: 78
+    },
+    {
+      id: 'related-product-3',
+      name: 'طقم متجر متعدد الأقسام',
+      description: 'طقم احترافي متكامل مصمم للمتاجر متعددة الأقسام ومراكز التسوق الكبرى',
+      features: ['تصميم عملي', 'نسيج متين', 'خيارات تمييز الأقسام المختلفة'],
+      price: 320,
+      images: ['/images/products/retail/department-1.jpg'],
+      colors: ['#2c3e50', '#7f8c8d', '#3e5c76', '#654a32'],
+      sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'],
+      category: 'retail-uniforms',
+      tags: ['زي متاجر الأقسام', 'يونيفورم هايبر ماركت', 'أزياء المراكز التجارية'],
+      rating: 4.7,
+      reviews: 53
+    },
+    {
+      id: 'related-product-4',
+      name: 'زي فريق التجزئة غير الرسمي',
+      description: 'أزياء عصرية وغير رسمية مصممة خصيصًا لمتاجر التجزئة المعاصرة',
+      features: ['أقمشة مريحة', 'تصميم عصري', 'مناسب للمتاجر الشبابية'],
+      price: 150,
+      images: ['/images/products/retail/casual-1.jpg'],
+      colors: ['#2ac3e2', '#7f8c8d', '#60714F', '#e67e22', '#8e44ad'],
+      sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'],
+      category: 'retail-uniforms',
+      tags: ['زي كاجوال', 'ملابس متاجر التكنولوجيا', 'أزياء العلامات الشبابية'],
+      rating: 4.6,
+      reviews: 45
     }
   ];
   
   const locale = 'ar';
   
   return (
-    <>
+    <main>
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl rtl:font-arabic">طقم بليزر فاخر للبيع بالتجزئة | أزياء محلات راقية | يونيوم المملكة العربية السعودية</h1>
+      
       {/* Schema.org structured data for enhanced SEO */}
       <Script
         id="product-structured-data"
@@ -132,14 +135,14 @@ export default function BoutiqueSalesConsultantUniformPageArabic() {
           __html: JSON.stringify({
             "@context": "https://schema.org/",
             "@type": "Product",
-            "name": "زي مستشار مبيعات البوتيك من يونيوم",
+            "name": "طقم بليزر فاخر للبيع بالتجزئة من يونيوم",
             "image": [
-              "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg",
-              "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-identity-4.jpg",
-              "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-brands-logo.jpg"
+              "https://uneom.com/images/products/retail/luxury-1.jpg",
+              "https://uneom.com/images/products/retail/luxury-2.jpg",
+              "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-identity.jpg"
             ],
-            "description": "زي مستشار مبيعات البوتيك المتطور مصمم لبيئات البيع بالتجزئة الراقية السعودية، يتميز بأقمشة إيطالية فاخرة، وخطوط أنيقة، وخيارات تخصيص.",
-            "sku": "UNEOM-RT-BTQ-02",
+            "description": "طقم بليزر فاخر للبيع بالتجزئة مصمم خصيصًا لبيئات التجزئة السعودية الراقية، يتميز بأقمشة عالية الجودة ومقاومة للتجاعيد، مع خيارات تخصيص لتعزيز هوية العلامة التجارية.",
+            "sku": "UNEOM-RT-LUX-02",
             "brand": {
               "@type": "Brand",
               "name": "UNEOM"
@@ -149,15 +152,15 @@ export default function BoutiqueSalesConsultantUniformPageArabic() {
               "@type": "Offer",
               "url": "https://uneom.com/ar/shop/retail-uniforms/related-product-2",
               "priceCurrency": "SAR",
-              "price": "680",
+              "price": "650",
               "priceValidUntil": "2024-12-31",
               "availability": "https://schema.org/InStock",
               "itemCondition": "https://schema.org/NewCondition"
             },
             "aggregateRating": {
               "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "65"
+              "ratingValue": "4.8",
+              "reviewCount": "62"
             }
           })
         }}
@@ -165,6 +168,6 @@ export default function BoutiqueSalesConsultantUniformPageArabic() {
       
       {/* Main product page component */}
       <ClientPage params={params} />
-    </>
+        </main>
   );
 } 

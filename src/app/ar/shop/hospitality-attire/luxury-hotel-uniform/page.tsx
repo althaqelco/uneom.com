@@ -7,6 +7,8 @@ import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function LuxuryHotelUniformArabicPage() {
   const locale = 'ar';
@@ -170,6 +172,23 @@ export default function LuxuryHotelUniformArabicPage() {
   
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform shop","buy uniforms","professional workwear","uniform store"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="product"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       <Head>
         <title>زي فندقي فاخر - يونيوم للأزياء المهنية</title>
         <meta name="description" content="زي فندقي أنيق وعالي الجودة مصمم خصيصًا للفنادق الفاخرة في المملكة العربية السعودية، مع خيارات تخصيص حسب احتياجات منشأتك" />
@@ -220,6 +239,7 @@ export default function LuxuryHotelUniformArabicPage() {
       {/* قسم تفاصيل المنتج */}
       <section className="py-12">
         <Container>
+          <h1 className="sr-only">زي فنادق فاخر | يونيفورم استقبال وضيافة راقي للفنادق السعودية | يونيوم</h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* صور المنتج */}
             <div className="order-2 lg:order-1">
@@ -467,9 +487,9 @@ export default function LuxuryHotelUniformArabicPage() {
                   <p className="mt-2 text-sm text-gray-500 text-right">اتصل بنا للحصول على مزيد من المعلومات حول خيارات التطريز المخصص وطلبات التصميم الخاصة لطاقم الفندق الخاص بك.</p>
                 </div>
               )}
+                          </div>
             </div>
-          </div>
-        </Container>
+          </Container>
       </section>
       
       {/* المنتجات ذات الصلة */}

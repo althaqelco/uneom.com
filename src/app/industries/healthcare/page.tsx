@@ -1,196 +1,312 @@
 'use client';
 
 import React from 'react';
-import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
+import SEO from '@/components/SEO';
+import Container from '@/components/ui/Container';
+import SectionHeading from '@/components/ui/SectionHeading';
+import Button from '@/components/ui/Button';
+import Image from 'next/image';
+import Link from 'next/link';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
-export default function HealthcarePage() {
-  // Define locale for language support
-  const locale = 'en';
-  
-  // All content for this industry page
-  const healthcareData = {
-    title: 'Premium Medical Scrubs & Healthcare Uniforms in Saudi Arabia',
-    subtitle: 'SCHS-compliant, antimicrobial medical attire for Saudi healthcare professionals',
-    heroImage: '/images/healthcare/healthcare_medical_doctor_uniform.jpg',
-    
-    // Enhanced introduction with more keywords and benefits
-    introduction: [
-      "In Saudi Arabia's rapidly evolving healthcare sector, professional medical uniforms are essential for establishing clinical excellence, maintaining SCHS compliance, and building patient trust. UNEOM offers specialized healthcare uniform solutions designed specifically for Saudi medical facilities, addressing the Kingdom's unique cultural requirements and regulatory standards.",
-      
-      "Our comprehensive range includes premium-quality scrubs, lab coats, nursing uniforms, and departmental attire that combine functionality, durability, and professional presentation. Every UNEOM healthcare garment incorporates advanced antimicrobial fabric technology that withstands rigorous hospital environments while offering modest design options that respect Islamic dress codes and accommodate Saudi Arabia's climate considerations.",
-      
-      "As the trusted uniform partner to leading healthcare institutions across the Kingdom—including major government hospitals in Riyadh, Jeddah, and Dammam, private healthcare networks, and specialized medical centers—we understand Saudi healthcare uniform requirements better than any other provider. Our dedicated healthcare consultants work directly with medical facility management to develop uniform programs that enhance institutional identity while meeting all compliance standards."
-    ],
-    
-    // Use string paths instead of React components for icon values to match expected type
+// Placeholder data - in a real scenario, this would come from a CMS or dedicated data files
+const healthcarePageData = {
+  en: {
+    meta: {
+      title: 'Healthcare Uniforms & Medical Scrubs in Saudi Arabia | UNEOM',
+      description: 'UNEOM provides high-quality, hygienic healthcare uniforms, medical scrubs, and lab coats tailored for hospitals and clinics across Saudi Arabia. Durability & comfort guaranteed.',
+    },
+    hero: {
+      headline: 'Advanced Healthcare Uniforms for Saudi Arabia\'s Medical Professionals',
+      subheadline: 'Hygienic, Durable, and Comfortable Medical Scrubs, Lab Coats, and Staff Attire. Designed for KSA\'s leading hospitals and clinics in Riyadh, Jeddah, Dammam.',
+      cta: 'Request a Quote for Healthcare Uniforms',
+      ctaLink: '/quote',
+      image: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg', // Placeholder image
+    },
+    intro: {
+      title: 'Setting the Standard for Medical Workwear in KSA',
+      paragraphs: [
+        'UNEOM is dedicated to supplying the Saudi healthcare sector with superior quality medical uniforms that meet the stringent demands of hospitals, clinics, and laboratories. Our range includes meticulously designed scrubs, lab coats, and specialized attire, ensuring comfort, functionality, and a professional appearance for all medical staff.',
+        'We understand the critical importance of hygiene and durability in medical environments. That\'s why our healthcare uniforms are crafted from advanced, breathable fabrics with antimicrobial properties, suitable for the Saudi climate and compliant with local and international healthcare standards.',
+      ],
+    },
+    keyBenefits: {
+      title: 'Key Benefits of UNEOM Healthcare Uniforms',
     benefits: [
       {
-        title: "SCHS & MOH Compliance",
-        description: "All our medical uniforms comply with Saudi Commission for Health Specialties requirements and Ministry of Health standards for healthcare attire in the Kingdom.",
-        icon: "/icons/compliance.svg"
-      },
-      {
-        title: "Islamic Dress Code Options",
-        description: "Specialized designs accommodate hijab and modest dress requirements while maintaining professional medical standards and infection control compliance.",
-        icon: "/icons/islamic.svg"
-      },
-      {
-        title: "Climate-Optimized Fabrics",
-        description: "Breathable, moisture-wicking fabrics selected specifically for Saudi Arabia's climate ensure comfort in hospital environments during long shifts.",
-        icon: "/icons/climate.svg"
-      },
-      {
-        title: "BioCare Antimicrobial Protection",
-        description: "Advanced antimicrobial technology inhibits bacterial growth by 99.9%, reduces odor development, and maintains freshness throughout demanding clinical shifts.",
-        icon: "/icons/antimicrobial.svg"
-      },
-      {
-        title: "Hospital Branding Solutions",
-        description: "Enhance facility identity with precision embroidery, department color-coding systems, and customized design elements that reinforce your healthcare brand.",
-        icon: "/icons/branding.svg"
-      }
-    ],
-    
-    // Products with actual images from the healthcare folder
+          name: 'Enhanced Hygiene & Safety',
+          description: 'Utilizing antimicrobial fabrics and designs that minimize contamination risks, crucial for patient and staff safety.',
+          icon: '/images/icons/hygiene.svg', // Placeholder
+        },
+        {
+          name: 'Superior Comfort & Durability',
+          description: 'Ergonomically designed for long shifts, made from durable materials that withstand frequent industrial laundering.',
+          icon: '/images/icons/comfort.svg', // Placeholder
+        },
+        {
+          name: 'Professional Image & Team Cohesion',
+          description: 'Smart, consistent uniforms that enhance your institution\'s professional image and foster team identity.',
+          icon: '/images/icons/professionalism.svg', // Placeholder
+        },
+        {
+          name: 'Customization & Branding',
+          description: 'Options for embroidery and branding to reflect your healthcare facility\'s identity.',
+          icon: '/images/icons/customization.svg', // Placeholder
+        },
+      ],
+    },
+    featuredProducts: {
+      title: 'Featured Healthcare Uniform Products',
     products: [
       {
-        id: "premium-scrubs-set",
-        name: "Premium Medical Scrubs Set",
-        description: "Professional-grade antimicrobial scrubs available in both standard and modest Islamic-compatible designs. Features BioCare protection and 4-way stretch fabric.",
-        image: "/images/healthcare/healthcare_medical_uniform.jpg",
-        href: "/shop/medical-scrubs/premium-scrubs-set"
-      },
-      {
-        id: "antimicrobial-lab-coat",
-        name: "Executive Medical Lab Coat",
-        description: "Premium white lab coats with BioCare Antimicrobial technology, fluid-resistant finish, and customization options for healthcare professionals.",
-        image: "/images/healthcare/full_clothes_doctor_uniform.jpg",
-        href: "/shop/medical-scrubs/medical-lab-coat"
-      },
-      {
-        id: "nursing-uniform-set",
-        name: "Professional Nursing Uniform",
-        description: "Comfortable, durable nursing uniforms designed for all-day comfort, featuring antimicrobial protection and Saudi healthcare facility compliance.",
-        image: "/images/healthcare/healthcare_nurce_uniform.jpg",
-        href: "/shop/medical-scrubs/nursing-scrubs"
-      },
-      {
-        id: "surgical-scrubs",
-        name: "Advanced Surgical Scrubs",
-        description: "Specialized surgical attire with enhanced fluid protection, sterility features, and specialized designs for operating room environments.",
-        image: "/images/healthcare/2_pices_nurce_uniform.jpg",
-        href: "/shop/medical-scrubs/surgical-scrubs"
-      },
-      {
-        id: "modest-medical-uniform",
-        name: "Modest Medical Uniforms for Women",
-        description: "Specialized healthcare uniforms designed specifically for female Saudi healthcare professionals with full hijab compatibility.",
-        image: "/images/healthcare/medical_hijab_uniform.jpg",
-        href: "/shop/medical-scrubs/modest-medical-uniform"
-      },
-      {
-        id: "hospital-admin-uniform",
-        name: "Hospital Administrative Uniforms",
-        description: "Professional attire for reception, administrative, and non-clinical hospital staff that maintains cohesive facility branding.",
-        image: "/images/healthcare/healthcare_hijab_doctor.jpg",
-        href: "/shop/medical-scrubs/department-admin-uniform"
-      }
-    ],
-    
-    // Use string paths for fabric technology icons
-    fabricTechnologies: [
-      {
-        name: "BioCare Antimicrobial Protection",
-        description: "Advanced fabric treatment that inhibits bacterial growth by 99.9%, reduces odor development, and maintains freshness throughout long hospital shifts.",
-        icon: "/icons/biocare.svg"
-      },
-      {
-        name: "ComfortFlex 4-Way Stretch",
-        description: "Medical-grade 4-way stretch technology providing exceptional range of motion for healthcare professionals who need mobility during active procedures.",
-        icon: "/icons/comfortflex.svg"
-      },
-      {
-        name: "DuraSeal Fluid Protection",
-        description: "Hospital-grade fluid-repellent finish that protects against biological spills and splashes while maintaining breathability for all-day comfort.",
-        icon: "/icons/duraseal.svg"
-      },
-      {
-        name: "CoolCore Temperature Regulation",
-        description: "Innovative fabric technology specifically engineered to regulate body temperature in Saudi hospital environments, preventing overheating during long shifts.",
-        icon: "/icons/coolcore.svg"
-      }
-    ],
-    
-    // Use string paths for customization option icons
-    customizationOptions: [
-      {
-        name: "Hospital Department Color Coding",
-        description: "Implement systematic color coding systems across departments to enhance patient navigation and organizational clarity in Saudi healthcare facilities.",
-        icon: "/icons/department-colors.svg"
-      },
-      {
-        name: "Medical Facility Branding",
-        description: "Incorporate your Saudi healthcare facility's logo, name, and identity through precision embroidery and consistent design elements.",
-        icon: "/icons/institutional-branding.svg"
-      },
-      {
-        name: "Staff Role Identification",
-        description: "Clear designation of medical staff roles through specialized uniform elements, helping patients quickly identify doctors, nurses, and support personnel.",
-        icon: "/icons/role-identification.svg"
-      },
-      {
-        name: "Modest Design Adaptations",
-        description: "Specialized modifications to standard medical uniform designs to accommodate hijab and modest dress preferences for Saudi female healthcare professionals.",
-        icon: "/icons/modest-modifications.svg"
-      }
-    ],
-    
-    // Enhanced testimonials
-    testimonials: [
-      {
-        id: "testimonial-1",
-        quote: "UNEOM's healthcare uniforms have transformed both staff satisfaction and our hospital's professional image. Their deep understanding of Saudi regulatory requirements and SCHS compliance made implementation seamless. The antimicrobial technology has proven invaluable in reducing infection concerns, and their department color-coding system has significantly improved patient navigation throughout our facility.",
-        author: "Dr. Alya Al-Harbi",
-        position: "Chief Medical Officer",
-        company: "Kingdom Medical Center, Riyadh"
-      },
-      {
-        id: "testimonial-2",
-        quote: "The modest design options UNEOM provided for our female medical staff have been particularly well-received, offering the perfect balance of professional functionality and Islamic dress code compliance. Their fabrics withstand our rigorous infection control protocols, and the uniforms retain their appearance significantly better than previous suppliers, reducing our replacement costs by nearly 40%.",
-        author: "Fahad Al-Qasim",
-        position: "Supply Chain Director",
-        company: "International Medical Group"
-      }
-    ],
-    
-    // Enhanced FAQ
-    faq: [
-      {
-        question: "How do your healthcare uniforms meet Saudi infection control standards?",
-        answer: "Our medical uniforms incorporate BioCare Antimicrobial Technology that eliminates 99.9% of bacteria, is effective through 100+ industrial washes, and complies with all Saudi Ministry of Health infection control guidelines. Additionally, our fabrics feature DuraSeal fluid protection to prevent cross-contamination in clinical settings."
-      },
-      {
-        question: "Do you offer modest medical uniform options for female healthcare professionals?",
-        answer: "Yes, we provide a comprehensive range of modest medical attire specifically designed for female healthcare professionals in Saudi Arabia. These include hijab-compatible scrub designs, longer lab coat options, and specialized modest nursing uniforms that maintain full compliance with both Islamic dress requirements and medical standards."
-      },
-      {
-        question: "Can you implement custom color coding for different hospital departments?",
-        answer: "Absolutely. We specialize in creating comprehensive department color coding systems for Saudi healthcare facilities. This includes consistent color application across all uniform items, departmental identification elements, and complementary accessories that help patients and staff quickly identify different medical specialties and services."
-      },
-      {
-        question: "What is your delivery timeframe for large hospital uniform orders?",
-        answer: "For standard healthcare uniform orders, we typically deliver within 2-3 weeks across Saudi Arabia. For large hospital-wide implementations, we create a phased delivery schedule based on departmental priority, typically completing full facility rollout within 4-6 weeks, with express options available for urgent requirements."
-      }
-    ],
-    
-    // Enhanced call to action
-    cta: {
-      title: "Enhance Your Healthcare Facility with Professional Medical Uniforms",
-      description: "Contact our healthcare uniform specialists to discuss how UNEOM can provide SCHS-compliant, antimicrobial medical attire for your Saudi healthcare facility.",
-      buttonText: "Request Healthcare Uniform Consultation",
-      buttonUrl: "/contact?industry=healthcare"
-    }
-  };
+          name: 'Premium Medical Scrub Set',
+          description: 'Unisex scrub set made from soft, breathable, antimicrobial fabric. Available in various colors.',
+          image: '/images/products/scrubs-set.jpg', // Placeholder
+          link: '/shop/medical-scrubs/premium-scrubs-set',
+        },
+        {
+          name: 'Professional Lab Coat',
+          description: 'Durable and stain-resistant lab coat with multiple pockets, offering a professional look.',
+          image: '/images/doctor-SBI-300813580.jpg', // Placeholder
+          link: '/shop/medical-scrubs/medical-lab-coat',
+        },
+        {
+          name: 'Comfort Nursing Uniform',
+          description: 'Specially designed nursing uniforms focusing on comfort and ease of movement.',
+          image: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg', // Placeholder
+          link: '/shop/medical-scrubs/nursing-scrubs',
+        },
+      ],
+    },
+    fabricTech: {
+      title: 'Advanced Fabrics & Technology',
+      description: 'Our healthcare uniforms incorporate the latest in fabric technology to ensure optimal performance, including moisture-wicking, stain resistance, and flexible materials for enhanced mobility.',
+      image: '/images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg', // Placeholder
+    },
+    customization: {
+      title: 'Tailored to Your Needs',
+      description: 'From specific color requirements to logo embroidery and departmental badging, UNEOM offers comprehensive customization options to meet the unique needs of your healthcare institution.',
+      image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg', // Placeholder
+    },
+    testimonials: {
+      title: 'What Our Healthcare Clients Say',
+      // Add 1-2 placeholder testimonials specific to healthcare if available, or general ones
+      items: [
+        {
+          quote: "UNEOM\'s medical scrubs are top-notch. Our staff in Riyadh find them comfortable and durable for long shifts.",
+          author: 'Dr. Fatima Al-Salem',
+          position: 'Chief of Medicine, Riyadh Central Hospital',
+        },
+      ],
+    },
+    relatedBlogs: {
+      title: 'Insights on Healthcare Uniforms',
+      posts: [
+        {
+          title: 'Choosing the Right Medical Scrubs for Your Team',
+          link: '/blog/choosing-medical-scrubs', // Placeholder
+          image: '/images/blog/placeholder1.jpg',
+        },
+        {
+          title: 'The Importance of Hygienic Uniforms in Hospitals',
+          link: '/blog/hygienic-uniforms-hospitals', // Placeholder
+          image: '/images/blog/placeholder2.jpg',
+        },
+      ],
+    },
+    finalCta: {
+      title: 'Partner with UNEOM for Your Healthcare Uniform Needs',
+      description: 'Ensure your medical team is equipped with the best. Contact us today for a consultation and quote tailored to your specific requirements in Saudi Arabia.',
+      cta: 'Get Your Custom Quote Now',
+      ctaLink: '/quote',
+    },
+  },
+};
 
-  return <IndustryPageLayout locale={locale} industryData={healthcareData} skipMainLayout={true} />;
+export default function HealthcareIndustryPage() {
+  const content = healthcarePageData.en;
+  const locale = 'en'; // Explicitly set for this page
+
+  return (
+    <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="Healthcare Uniforms & Medical Scrubs | UNEOM Saudi Arabia"
+        description="Professional healthcare uniforms and medical scrubs for hospitals and clinics across Saudi Arabia."
+        keywords={["healthcare uniforms","medical scrubs","hospital uniforms","nursing uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
+      <SEO
+        title={content.meta.title}
+        description={content.meta.description}
+        canonicalUrl="https://uneom.com/industries/healthcare/"
+        // Add other SEO props like ogImage if available
+      />
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-20 md:py-32">
+        <div className="absolute inset-0">
+          <Image
+            src={content.hero.image}
+            alt={content.hero.headline}
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+        </div>
+        <Container className="relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            {content.hero.headline}
+          </h1>
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
+            {content.hero.subheadline}
+          </p>
+          <Button href={content.hero.ctaLink} size="lg" variant="secondary">
+            {content.hero.cta}
+          </Button>
+        </Container>
+      </section>
+
+      {/* Intro Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <Container>
+          <SectionHeading className="text-center mb-12">{content.intro.title}</SectionHeading>
+          <div className="max-w-3xl mx-auto space-y-6 text-lg text-neutral-700">
+            {content.intro.paragraphs.map((p, i) => (<p key={i}>{p}</p>))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Key Benefits Section */}
+      <section className="py-16 md:py-24 bg-neutral-50">
+        <Container>
+          <SectionHeading className="text-center mb-16">{content.keyBenefits.title}</SectionHeading>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {content.keyBenefits.benefits.map((benefit) => (
+              <div key={benefit.name} className="bg-white p-6 rounded-lg shadow-lg text-center">
+                {/* Placeholder for icon */}
+                {/* <Image src={benefit.icon} alt="" width={48} height={48} className="mx-auto mb-4" /> */}
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  {/* Icon would go here */}
+                </div>
+                <h3 className="text-xl font-semibold text-neutral-800 mb-2">{benefit.name}</h3>
+                <p className="text-neutral-600 text-sm">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Featured Products Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <Container>
+          <SectionHeading className="text-center mb-16">{content.featuredProducts.title}</SectionHeading>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {content.featuredProducts.products.map((product) => (
+              <div key={product.name} className="border rounded-lg overflow-hidden shadow-lg group">
+                <Link href={product.link} className="block">
+                  <div className="relative w-full h-64 bg-neutral-100">
+                    <Image src={product.image} alt={product.name} fill className="object-contain group-hover:scale-105 transition-transform duration-300" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-neutral-800 mb-2">{product.name}</h3>
+                    <p className="text-neutral-600 text-sm mb-4">{product.description}</p>
+                    <span className="text-primary-600 hover:text-primary-700 font-medium">
+                      View Product &rarr;
+                    </span>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Fabric & Technology Section */}
+      <section className="py-16 md:py-24 bg-neutral-800 text-white">
+        <Container className="md:flex items-center gap-12">
+          <div className="md:w-1/2 mb-8 md:mb-0">
+            <Image src={content.fabricTech.image} alt={content.fabricTech.title} width={600} height={400} className="rounded-lg shadow-xl" />
+          </div>
+          <div className="md:w-1/2">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">{content.fabricTech.title}</h2>
+            <p className="text-lg text-neutral-300 leading-relaxed">{content.fabricTech.description}</p>
+          </div>
+        </Container>
+      </section>
+
+      {/* Customization Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <Container className="md:flex flex-row-reverse items-center gap-12">
+          <div className="md:w-1/2 mb-8 md:mb-0">
+            <Image src={content.customization.image} alt={content.customization.title} width={600} height={400} className="rounded-lg shadow-xl" />
+          </div>
+          <div className="md:w-1/2">
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-6">{content.customization.title}</h2>
+            <p className="text-lg text-neutral-700 leading-relaxed">{content.customization.description}</p>
+          </div>
+        </Container>
+      </section>
+      
+      {/* Testimonials Section - Minimalistic Placeholder */}
+      {content.testimonials && content.testimonials.items.length > 0 && (
+        <section className="py-16 md:py-24 bg-neutral-50">
+          <Container>
+            <SectionHeading className="text-center mb-12">{content.testimonials.title}</SectionHeading>
+            <div className="max-w-2xl mx-auto">
+              {content.testimonials.items.map((testimonial, index) => (
+                <div key={index} className="bg-white p-8 rounded-lg shadow-lg mb-8">
+                  <p className="text-lg text-neutral-700 italic mb-4">"{testimonial.quote}"</p>
+                  <p className="text-right font-semibold text-neutral-800">&mdash; {testimonial.author}, {testimonial.position}</p>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Related Blogs Section - Placeholder */}
+      {content.relatedBlogs && content.relatedBlogs.posts.length > 0 && (
+        <section className="py-16 md:py-24 bg-white">
+          <Container>
+            <SectionHeading className="text-center mb-16">{content.relatedBlogs.title}</SectionHeading>
+            <div className="grid md:grid-cols-2 gap-8">
+              {content.relatedBlogs.posts.map((post) => (
+                <Link key={post.title} href={post.link} className="block group border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="relative w-full h-48 bg-neutral-100">
+                    <Image src={post.image} alt={post.title} fill className="object-cover" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-neutral-800 mb-2 group-hover:text-primary-600 transition-colors">{post.title}</h3>
+                    <span className="text-primary-600 font-medium">Read More &rarr;</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Final CTA Section */}
+      <section className="py-20 md:py-32 bg-primary-600 text-white">
+        <Container className="text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{content.finalCta.title}</h2>
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">{content.finalCta.description}</p>
+          <Button href={content.finalCta.ctaLink} size="lg" variant="secondary">
+            {content.finalCta.cta}
+          </Button>
+        </Container>
+      </section>
+    </>
+  );
 } 

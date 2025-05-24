@@ -14,13 +14,29 @@ export function generateStaticParams() {
     'sustainable-retail-uniforms',
     'retail-uniform-impact',
     'evolution-of-retail-uniforms-saudi-arabia',
-    'luxury-retail-uniforms'
+    'luxury-retail-uniforms',
+    'hospital-uniform-safety-standards',
+    'airline-uniform-design-cultural-identity',
+    'sustainable-uniforms-2024-trends',
+    'school-uniforms-academic-performance',
+    'sustainable-school-uniforms-saudi'
   ];
 
   const locales = ['en', 'ar'];
   
+  // Filter out any slugs that might look like image paths
+  const filteredSlugs = slugs.filter(slug => 
+    !slug.includes('.jpg') && 
+    !slug.includes('.jpeg') && 
+    !slug.includes('.png') && 
+    !slug.includes('.svg') && 
+    !slug.includes('.webp') &&
+    !slug.includes('/images/') &&
+    !slug.includes('/icons/')
+  );
+  
   return locales.flatMap(locale => 
-    slugs.map(slug => ({
+    filteredSlugs.map(slug => ({
       locale,
       slug
     }))

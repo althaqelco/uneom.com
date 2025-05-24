@@ -10,6 +10,7 @@ import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { motion } from 'framer-motion';
 import { Cairo, Tajawal } from 'next/font/google';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // تعريف الخطوط العربية
 const cairoFont = Cairo({ 
@@ -30,7 +31,7 @@ const DeliveryPage = () => {
   // مميزات ملابس التوصيل
   const features = [
     {
-      title: 'مناسبة للبيئة السعودية',
+      title: "UNEOM - Professional Uniforms",
       description: 'مصممة خصيصًا لتناسب الظروف المناخية في المملكة العربية السعودية مع أقمشة تنفس ممتازة',
       icon: '☀️',
     },

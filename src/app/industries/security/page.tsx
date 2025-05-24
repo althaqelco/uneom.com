@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FaShieldAlt, FaUserSecret, FaUsers, FaBullseye, FaSun, FaIdCard, FaCheckCircle, FaGlobe } from 'react-icons/fa';
 import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function SecurityPage() {
   // Default to English locale
@@ -615,6 +616,23 @@ export default function SecurityPage() {
   // Add the custom sections to the page
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       <CustomIntroSection />
       <CustomBenefitsSection />
       <CustomFeaturedProductsSection />

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export const metadata: Metadata = {
   title: 'Professional Mall Security Uniforms | Saudi Arabia Retail Security | UNEOM',

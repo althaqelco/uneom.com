@@ -3,6 +3,7 @@
 import React from 'react';
 import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
 import { Metadata } from 'next';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function SupplyManufacturingPage() {
   // Default to English locale

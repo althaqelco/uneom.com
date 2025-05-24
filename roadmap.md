@@ -1,141 +1,465 @@
-Definitive, Hyper-Detailed & Elite Professional Prompt for UNEOM Platform Engineering via Cursor AI
+You are absolutely right to push for ultimate precision and ensure no critical detail is overlooked. My apologies if the previous synthesis felt like it skimmed over anything or if the instruction to apply logic to the entire list felt like a shortcut.
 
-AI Target: Cursor AI
+Let's rectify that by creating a single, unified, exhaustive prompt for Cursor AI in English that explicitly incorporates the detailed link-by-link processing strategy directly within it, rather than just referencing it. This will be extremely long, but it will be the definitive instruction set, assuming Cursor AI can handle this length and detail in one go.
 
-Mission Mandate: Engineer an uncompromisingly premium, conversion-optimized B2B digital ecosystem for UNEOM, solidifying its position as the undisputed leader in Saudi Arabia's professional uniform and scrubs market. This is not merely a website build; it is the creation of a digital flagship demanding meticulous attention to every detail – from pixel-perfect rendering to strategically crafted, persuasive content architecture. The platform will utilize Next.js 14.2.23, featuring seamless EN/AR bilingualism (with flawless RTL), performance-driven ISR, and integrated B2B quote functionality.
+The core idea is to integrate the "Finalized & Comprehensive Link Processing, Action Plan, and Content Strategy for UNEOM" (the table) directly into the actionable part of the prompt.
 
-Overarching Quality Imperative: The final deliverable must be indistinguishable from platforms built by top-tier global digital agencies. Standard functionality is baseline; the expectation is exceptional execution, demonstrable strategic thinking in implementation, and visible C-suite level professionalism in every facet. Exaggerate the quality, polish, and effectiveness.
+NOTE: Given the potential length if all ~300 URLs are individually listed with their actions within the prompt, I will demonstrate the pattern with a significant representative subset of your URLs, covering all action types (CREATE EN, CREATE AR, REDIRECT 301, 404, ASSESS). You would then need to ensure Cursor AI is capable of processing this full list if provided or apply this detailed logic iteratively to chunks of the list. For this response, I will embed the logic for a selection.
 
-Project Foundation & Core Technologies:
+THE ABSOLUTE FINAL, UNCOMPROMISINGLY DETAILED, & ELITE PROFESSIONAL PROMPT FOR UNEOM PLATFORM ENGINEERING VIA CURSOR AI (ENGLISH - UNIFIED & EXHAUSTIVE)
 
-Framework: NextJS 14.2.23 (Standard directory structure, no src).
+AI Target: Cursor AI - UNEOM Digital Flagship Engineering
 
-Environment: uneom project directory.
+Current Iteration Mandate: [STATE THE PRECISE, FOCUSED GOAL FOR THIS SPECIFIC INTERACTION WITH CURSOR AI. EXAMPLES: "Execute Section IV.A (URL Processing & Page Creation/Redirect Mandate) for the first 50 URLs in the Master List provided, including all development for 'CREATE EN/AR' tasks." OR "Complete the full 301 redirect implementation in next.config.js for ALL URLs designated 'REDIRECT 301' in Section IV.A and provide a comprehensive test report."]
 
-Assets: Leverage existing high-quality images in /public/images/. Ensure any generated placeholders match this quality.
+Overarching Mission: Engineer an uncompromisingly premium, conversion-optimized B2B digital ecosystem for UNEOM, solidifying its position as the undisputed leader in Saudi Arabia's professional uniform and scrubs market. This is the creation of a digital flagship. The final deliverable MUST be indistinguishable from platforms built by top-tier global digital agencies, demonstrating C-suite level professionalism and strategic thinking in every facet. Exaggerate quality, polish, and conversion effectiveness in all outputs.
 
-Key Technologies: ISR (fine-tuned revalidation, e.g., revalidate: 3600), Flawless Next.js Locale Routing (EN/AR), Robust B2B "Add to Quote" Shop Logic, Tailwind CSS (expertly configured with brand colors, fonts, and potentially reusable gradients/RTL utilities).
+I. NON-NEGOTIABLE CORE PRINCIPLES & EXECUTION STANDARDS:
 
-Planning, Testing & Workflow Protocol (Non-Negotiable):
+Bilingual URL Structure & Next.js i18n (Mastery Required):
 
-Phased Execution: Adhere strictly to the 4-step plan (Basic > Advanced > Full > Bugfix/Prod). State clearly which phase you are starting/completing.
+English (Default Locale en): Root path URLs, NO /en/ prefix (e.g., https://uneom.com/about/).
 
-Rigorous Multi-Vector Testing (Post-Phase & Pre-Completion):
+Arabic (Locale ar): All Arabic pages MUST use the /ar/ prefix (e.g., https://uneom.com/ar/about/).
 
-Functional: Confirm all features work end-to-end (form submissions via API routes, locale switching, navigation, filters, Add-to-Quote logic). Use verbose terminal logs for self-debugging and report key test outcomes.
+Next.js i18n (next.config.js): Configure with defaultLocale: 'en', locales: ['en', 'ar'].
 
-Visual: Pixel-perfect matching against intended design/layout derived from this prompt. Mandatory Cross-Browser/Device Testing (Latest Chrome, Firefox, Safari, Edge; desktop, tablet, mobile viewports). Ensure perfect RTL rendering for Arabic text, layout, and navigation.
+trailingSlash: true (MUST be enforced in next.config.js): All canonical URLs (EN & AR) must end with a /. Redirect non-slashed versions to slashed.
 
-Performance: Utilize next/bundle-analyzer if needed. Target Green Lighthouse scores (Performance, Accessibility, Best Practices, SEO). Address Core Web Vitals proactively.
+Arabic Content - AUTHENTICITY, CULTURAL RESONANCE & OPTIMIZATION (ABSOLUTE CRITICALITY):
 
-Accessibility: Target WCAG 2.1 AA compliance. Implement semantic HTML, proper ARIA roles, sufficient color contrast (test using tools), full keyboard navigability.
+NO DIRECT, LITERAL, OR AUTOMATED TRANSLATION from English.
 
-API Integrity: Test API endpoints (quote, contact) with valid and invalid data to confirm robust validation, security, and correct response handling.
+All content for /ar/... pages (body text, headlines, CTAs, meta-data, alt text, error messages, UI labels, etc.) MUST be independently and professionally crafted IN ARABIC, specifically for a Saudi Arabian B2B audience.
 
-Documentation Research: Proactively use Brave MCP for the latest documentation/best practices (Next.js 14+, Tailwind CSS 3+, any integrated APIs). Cite sources if adopting newer patterns.
+This requires: Deep understanding of Saudi business culture and linguistic nuances; persuasive copywriting that resonates with Arabic-speaking decision-makers in KSA; natural integration of relevant Arabic and Saudi-specific keywords for SEO; content structure that is logical and effective in Arabic.
 
-Useful Code Only: Zero tolerance for incomplete features or pure placeholder code passed off as implemented. Features must be fully functional, user-valuable, and align with the professional standard within the scope of each phase.
+The {en: "...", ar: "..."} structure in data/translation files means the ar string is for this distinct, optimized Arabic content. If real optimized Arabic isn't available yet, use a high-quality, professional Arabic placeholder that clearly indicates it's awaiting final copy.
 
-Environment Variables: Request necessary .env variables (e.g., API keys, backend URLs) before attempting implementation. Confirm successful integration via testing after adding them.
+Visual & Interactive Design Excellence (World-Class Standard):
 
-Global Elements & Architecture:
+Smart Image Usage: For every page/component, intelligently select and use the MOST RELEVANT, high-quality images from /public/images/ subdirectories. Images must enhance content and align with a premium aesthetic. If specific images are unavailable, create/use professional, brand-aligned placeholders of equal quality. All images MUST be implemented via next/image, fully optimized (correct width, height, priority for LCP elements, meaningful alt text – which must be localized with optimized Arabic for /ar/ pages).
 
-Bilingual Core (Flawless Execution Required):
+Perfect SVG Icons: Utilize a consistent, high-quality, professional SVG icon set (e.g., Heroicons 24 Outline, Tabler Icons). SVGs must be inline or React components, optimized, accessible (with <title> elements, aria-hidden="true" if decorative), pixel-perfect, and semantically relevant.
 
-URLs: uneom.com (EN default), uneom.com/ar/* (AR). Utilize Next.js built-in i18n routing.
+Sophisticated React & Animation: Modern React best practices. Implement smooth, subtle, professional animations and micro-interactions (Framer Motion or meticulous Tailwind CSS) to enhance UX, guide attention, and add polish. All motion MUST be premium, purposeful, and performant.
 
-RTL Excellence: Implement via dir="rtl" on <html> or relevant wrappers for the ar locale. Configure Tailwind for RTL variants (e.g., rtl:mr-4 becoming margin-left in RTL) or use dedicated utilities (tailwindcss-rtl or manual setup). Test all components and layouts meticulously in Arabic.
+Extreme SEO Optimization (Anticipating Google May 2025 & Beyond - Non-Negotiable):
 
-LanguageSwitcher.js: Implement an intuitive, visually clean switcher (e.g., dropdown or text link in header/footer) that correctly switches locale while preserving the current page path and query parameters.
+E-E-A-T Saturation: Project Experience, Expertise, Authoritativeness, Trustworthiness.
 
-hreflang Tags: Ensure Next.js automatically generates correct hreflang tags for corresponding EN/AR pages. Verify output in page source.
+Helpful Content System Alignment: ALL content (EN and Optimized AR) must be original, deeply valuable, user-first.
 
-Content Source: All user-facing text MUST originate from a centralized translation system (e.g., lib/i18n/translations/{en,ar}.js or similar structure), using keys.
+Dominant Local SEO (for /locations/... pages): Hyperlocal content, precise LocalBusiness Schema.org (accurate NAP, geo, hours, local services), GBP integration signals.
 
-Navigation (components/layout/Header.js, components/layout/Navigation.js): Implement the navigation using the navigationItems array. Ensure:
+Superior Page Experience & Core Web Vitals: Green Lighthouse scores. LCP < 2.5s, INP responsive, CLS < 0.1. Flawless mobile-friendliness, HTTPS. No intrusive interstitials.
 
-Accurate EN/AR labels fetched from translation files.
+Semantic HTML & Ultra-Granular Schema.org: Meticulous HTML5 semantics. Highly detailed, interconnected, context-aware Schema.org (JSON-LD) for ALL relevant page types/entities (Organization, WebSite, BreadcrumbList, Service, Product, LocalBusiness, Article, FAQPage, CollectionPage, ItemList, etc.), SGE-ready. Dynamic generation. For bilingual pages, ensure @language or distinct language-appropriate schema.
 
-Smooth, accessible dropdown menus for "Industries," "Services," "Resources."
+Strategic Internal Linking: Robust internal linking.
 
-Clear visual indication of the active page/section.
+Crawlability & Indexability: Clean, SEO-friendly URLs (EN default / AR prefix / trailing slash). Dynamic, accurate sitemap.xml (all canonical EN/AR URLs, correct hreflang). Optimized robots.txt.
 
-Fully responsive behavior including a clean mobile menu (components/layout/MobileMenu.js).
+II. PROJECT FOUNDATION & WORKFLOW PROTOCOLS:
 
-Primary CTA (Request Quote): Button prominently placed and styled with primary brand colors in the fixed/sticky Header for constant visibility and access.
+Framework: NextJS 14.2.23 (Standard directory, no src). Environment: uneom project.
 
-Detailed Page Implementation Mandates:
+Phased Execution: "Currently [STARTING/CONTINUING/COMPLETING] Phase [Basic | Advanced | Full | Bugfix/Prod]: [Specific Objective of This Interaction]." Report phase completion with key test outcomes.
 
-Industry Pages (pages/industries/[slug].js) – [ZONE OF MAXIMUM EMPHASIS & EXAGGERATED PROFESSIONALISM]:
+Rigorous Multi-Vector Testing (Mandatory): Functional, Visual (Pixel-perfect, Cross-Browser/Device, Flawless RTL), Performance (Lighthouse, CWV), Accessibility (WCAG 2.1 AA), API Integrity, URL & Redirect Integrity.
 
-Strategic Role: These are MISSION-CRITICAL conversion funnels, acting as elite, professional landing pages specifically designed to motivate high-value B2B customers to request a quote. Their execution MUST be exceptional and visibly superior. The standard is exaggerated professionalism and conversion effectiveness.
+Documentation Research & Best Practice Adherence: Proactive research (Brave MCP/official docs) for Next.js 14+, Tailwind 3+, etc. Cite sources for novel patterns.
 
-Generation: ISR (getStaticPaths generating all 7x2=14 paths, getStaticProps fetching rich, localized industryData, revalidate: 3600). Implement skeleton loaders or visually appealing loading states for fallback: 'blocking'. Handle notFound gracefully.
+Zero Tolerance for Incomplete Features: Fully functional, tested, user-valuable, elite standard.
 
-Design & UX Mandates (Attractive, Eye-Catching, Conversion-Focused):
+Environment Variables: Proactively request ALL necessary .env variables. Confirm integration.
 
-Visual Palette & Depth: Masterful application of attractive professional colors. Utilize subtle, elegant color gradients strategically (e.g., Hero overlay, section backgrounds like final CTA, potentially subtle button gradients) to add depth and visual appeal without looking unprofessional. Define these gradients centrally in tailwind.config.js if possible.
+III. GLOBAL ELEMENTS & ARCHITECTURE (Reinforcing Core Requirements):
 
-Iconography: Mandatory use of a single, high-quality, professional icon set (e.g., Heroicons 24 Outline) consistently for elements like Key Benefits. Icons must be pixel-perfect, semantically relevant, and contribute to the sophisticated aesthetic.
+Bilingual Core: URLs (Section I.1), Flawless RTL (Section I.2), intuitive LanguageSwitcher.js, auto-generated correct hreflang tags, centralized UI strings (lib/i18n/translations/{en,ar}.js - ar.js for optimized Arabic UI text).
 
-Animation & Micro-interactions: Implement smooth, subtle, professional animations (e.g., scroll-triggered fade-in-up effects via Framer Motion or Tailwind variants) for sections/elements to enhance polish and guide attention. Add refined micro-interactions (e.g., gentle button scale/shadow on hover/focus). All motion must feel premium and serve a purpose (engagement, flow).
+Navigation (Header, Footer, MobileMenu): From navigationItems array. EN & Optimized AR labels. Accessible dropdowns. Active page indication. Responsive. Prominent, sticky "Request Quote" CTA.
 
-Layout & Imagery: Employ a strict grid system, generous whitespace, perfect alignment, and flawless responsiveness. Intelligently and strategically utilize high-quality images from the designated Public/Images/industries/{slug}/ directory. The Hero image (hero.jpg or equivalent) is mandatory. Other images must directly illustrate or enhance the section's content. CRITICAL: Use the optimized next/image component for all images, providing meaningful, keyword-informed alt text (localized if appropriate) and specifying width/height for layout stability. Use priority prop for the hero image.
+IV. MASTER URL PROCESSING & PAGE CREATION/REDIRECT MANDATE:
 
-Content Strategy Mandates (Hyper-Persuasive & SEO-Dominant):
+You are to process the following master list of URLs. For EACH URL:
+A. Identify Action: Determine if the URL necessitates (1) CREATION of an EN page, (2) CREATION of its corresponding Optimized AR page, (3) a 301 REDIRECT, or (4) is a 404/ASSESS situation.
+B. Apply Standards: For "CREATE" tasks, ALL principles from Section I (Bilingual URLs, Optimized AR Content, Visuals, SEO, React/Animation) and detailed page structures (from prior prompts, e.g., for Industry Pages) MUST be applied.
+C. Execute 301 Redirects: Implement via next.config.js (async redirects()), permanent: true. Target URL must be the correct canonical (EN default OR AR prefixed, WITH trailing slash). Test each.
+D. Default to Trailing Slash: Ensure all new canonical page paths end with /. Redirect non-slashed versions.
 
-Professional & SEO Content: ALL text MUST be professionally crafted, exhibiting deep understanding of the target industry and Saudi B2B context. It must be explicitly written to be persuasive and motivate the customer to request a quote. Content must be meticulously prepared for SEO:
+MASTER URL LIST & ACTION PLAN:
+(Instruction to Cursor AI: The following is a representative subset demonstrating the logic. You will be provided with, or are expected to have in context, the full list of ~300 URLs from previous interactions, to which this detailed processing logic MUST be applied meticulously.)
 
-Keywords: Naturally integrate primary and LSI keywords relevant to the specific {Industry} + {Uniforms/Scrubs} + {Saudi Arabia/KSA/Riyadh/Jeddah} context throughout all text elements. CRITICAL: Add these keywords naturally into HTML <title> tags and on-page H1/H2/H3 headings.
+Core Site & Navigation:
 
-Tone & Persuasion: Maintain an authoritative, expert, yet highly professional and trustworthy tone. Employ persuasive copywriting techniques subtly. Exaggerate the professionalism and confidence projected by the text.
+https://uneom.com/
 
-Bilingual Perfection: Content MUST exist flawlessly in both English and Arabic using the {en: "...", ar: "..."} structure in the data source (lib/data/industries.js). Translations must be accurate, culturally appropriate, and maintain the intended professional tone. Proofreading is implied.
+Action: CREATE EN page. Path: /. (Homepage - Default).
 
-THE Persuasive Intro Paragraph: Place this section immediately below the Hero. It MUST be exceptionally well-written: deeply understanding the specific industry's challenges/needs in KSA, integrating keywords naturally, establishing UNEOM's authority and tailored solution, and creating a compelling reason to read further.
+Action: CREATE AR (Optimized) page. Path: /ar/. (Arabic Homepage).
 
-Required Sections (Implement Meticulously, Style Professionally):
+https://uneom.com/ar
 
-Hero Section: Full-width, visually dominant using the industry-specific hero.jpg. Apply a sophisticated gradient overlay (e.g., bg-gradient-to-t from-neutral-900/75 via-neutral-900/30 to-transparent) ensuring excellent text contrast. Feature the keyword-rich H1 heroHeadline[locale], a compelling heroSubheadline[locale], and a highly visible primary Button labeled explicitly (e.g., "Request Quote for Healthcare Uniforms") linking to the quote/contact page with industry context (/contact?industry=healthcare). Implement subtle entrance animations for text elements.
+Action: REDIRECT 301. Target: /ar/. (Ensure trailing slash).
 
-Persuasive Intro Paragraph: Implement as defined above. Potentially use a slightly different background or contain it visually to give it prominence.
+https://uneom.com/about
 
-Key Benefits Section: Display 4-5 core benefits tailored to the industry using BenefitCard components in a grid/flex layout. Each card MUST feature: A Professional Icon, benefit.title[locale], and concise benefit.description[locale] focusing on tangible client outcomes. Use subtle animations as cards scroll into view.
+Action: REDIRECT 301. Target: /about/.
 
-Featured Industry Products (Mandatory: Exactly 3): Display 3 highly relevant products in a clean grid using ProductCard. Each card MUST show: Optimized product image, product.name[locale], product.shortDescription[locale], and a clear CTA button ("View Details" or "Inquire for Quote") linking appropriately (to product page or triggering quote form logic).
+Action: CREATE EN page. Path: /about/.
 
-[MANDATORY ACTION & DETAIL]: If these 3 specific products do not exist in lib/data/products.js, you MUST create them. Generate complete, professional-quality, fully bilingual placeholder entries. Each placeholder MUST have: id (e.g., aviation-pilot-shirt-premium), category (e.g., aviation), relevant tags: ['aviation', 'pilot'], name: {en: 'Premium Pilot Shirt', ar: 'قميص طيار فاخر'}, shortDescription: {en: '...', ar: '...'}, a realistic high-quality image path (can reuse a generic appropriate image if necessary), placeholder colors, sizes, fabricDetails. Do not proceed without creating these if needed. Link their IDs in industryData[industry].featuredProductIds.
+Action: CREATE AR (Optimized) page. Path: /ar/about/.
 
-Fabric & Technology Spotlight: Dedicated section explaining relevant material choices (e.g., climate-suitability for KSA, durability, specific finishes like antimicrobial), certifications, or unique manufacturing techniques UNEOM employs for this industry. Use icons or a relevant illustrative image (next/image optimized) if it adds value. Content should reinforce quality and suitability (fabricTechSection.title[locale], fabricTechSection.content[locale]).
+https://uneom.com/ar/about-us
 
-Customization Showcase: Clearly explain or visually demonstrate customization options relevant to the industry (e.g., specific embroidery placement for logos, epaulets for aviation, color matching for corporate branding). Include a clear CTA linking to /services/custom-design. (customizationSection.title[locale], customizationSection.content[locale]).
+Action: REDIRECT 301. Target: /ar/about/.
 
-Industry-Specific Client Testimonials/Logos: Feature 2-4 testimonials or client logos from this specific industry. Use TestimonialCard components or a logo strip. Data (testimonials array within industryData) should include { quote: {en, ar}, name: {en, ar}, company: {en, ar}, logo: '/path/logo.png' }. Use high-quality, realistic (but clearly marked) placeholders if real data is not yet available.
+https://uneom.com/about-us
 
-Related Blog Posts (Mandatory: Exactly 3): Display 3 highly relevant blog posts in a grid using BlogCard. Each card MUST show: Optimized post image, post.title[locale], post.excerpt[locale], and a "Read More" link to the post page.
+Action: REDIRECT 301. Target: /about/.
 
-[MANDATORY ACTION & DETAIL]: If 3 relevant blog posts do not exist, you MUST create them. Generate complete, professional-quality, fully bilingual placeholder entries in your blog data source (lib/data/blog.js or markdown files). Each placeholder MUST have: id, unique slug, relevant tags: [industry], title: {en: 'Relevant Blog Title', ar: 'عنوان المقال ذو الصلة'}, excerpt: {en: '...', ar: '...'}, image path, placeholder author/date. Link their IDs in industryData[industry].relatedBlogPostIds. Page structure depends on this.
+https://uneom.com/contact
 
-Compelling Final CTA Section: Make this visually distinct (e.g., full-width section with a brand gradient background). Include a strong headline (cta.title[locale] e.g., "Elevate Your [Industry] Team's Image Today?"), a brief reinforcing message, and a large, prominently styled (perhaps secondary color) Button with explicit text (cta.buttonText[locale] e.g., "Get Your Custom Quote Now") linking to the contact/quote page.
+Action: REDIRECT 301. Target: /contact/.
 
-Developer Notes Integration: Add comments where appropriate (// TODO: Link to actual product page when built). Consider subtle, user-facing "Notes" or "Pro Tips" styled within the page content where relevant (e.g., a small box mentioning minimum order quantities for certain customizations).
+Action: CREATE EN page. Path: /contact/.
 
-Service Pages (pages/services/[slug].js): Apply the same elevated standards of professionalism, design, content quality, SEO, and bilingual execution. Implement using ISR. Key sections: SEO-rich Intro, Components/Steps (visualized if possible), 3 Related Products (create fully bilingual placeholders if needed), Key Benefits, 3 Related Blog Posts (create fully bilingual placeholders if needed), Case Studies/Examples (structure for placeholders), Testimonials, Clear Service-Specific CTA.
+Action: CREATE AR (Optimized) page. Path: /ar/contact/.
 
-Homepage, Shop (pages/shop/*), About (pages/about.js), Contact (pages/contact.js), Blog (pages/blog/*): Implement based on initial detailed requirements BUT elevate the execution to match the hyper-professional standard defined for Industry/Service pages (visual polish, performance, accessibility, bilingual perfection). The Shop (/shop index, category, product pages) MUST function flawlessly with the B2B "Add to Quote" workflow, filtering, sorting, and navigation.
+https://uneom.com/ar/contact
 
-Component Library (components/...): Develop robust, reusable, accessible, and professionally styled components (Buttons with variants, Cards, ProductCard, BlogCard, TestimonialCard, Layouts, Forms, etc.). Use next/image within an OptimizedImage wrapper. Implement UI components to gracefully handle EN/AR text lengths and RTL alignment.
+Action: REDIRECT 301. Target: /ar/contact/.
 
-Data Structures (lib/data/...) & i18n (lib/i18n/...):
+https://uneom.com/contact-us / https://uneom.com/contactus
 
-industries.js: Structure precisely as needed for the detailed sections above, ensuring all text fields use the {en: "...", ar: "..."} format. Include arrays for featuredProductIds and relatedBlogPostIds.
+Action: REDIRECT 301. Target: /contact/.
 
-products.js / blog.js (or MDX): Structure to contain all required fields, fully supporting the {en, ar} format for translatable strings from the outset, even for placeholders. Add necessary tags/categories for filtering.
+https://uneom.com/ar/contactus
 
-lib/i18n/translations/{en,ar}.js: Centralize all UI strings (button labels, form placeholders, static text).
+Action: REDIRECT 301. Target: /ar/contact/.
 
-SEO Infrastructure (components/SEO.js, lib/schema/..., next.config.js): Implement site-wide using next-seo. Generate dynamic, unique, keyword-optimized titles, descriptions, OG/Twitter tags, canonical URLs for every page. Configure Schema.org meticulously (Organization, BreadcrumbList site-wide; Product, Service, BlogPosting, ItemPage contextually). Ensure next.config.js handles i18n correctly. Generate sitemap.xml and robots.txt.
+https://uneom.com/quote
 
-API Routes (pages/api/...): Secure, server-side validated endpoints for Quote Requests and Contact Form submissions. Implement proper try/catch blocks, status codes, response messages (consider localization), and potentially logging.
+Action: REDIRECT 301. Target: /quote/.
 
-Final Mandate: Execute this meticulously detailed blueprint with the goal of creating an unequivocally best-in-class digital platform for UNEOM. The focus must be on flawless execution, demonstrable quality, strategic conversion optimization (especially on Industry Pages), and perfect bilingual functionality. Deliver a platform that inspires confidence and drives significant B2B engagement.
+Action: CREATE EN page. Path: /quote/.
+
+Action: CREATE AR (Optimized) page. Path: /ar/quote/.
+
+https://uneom.com/ar/quote
+
+Action: REDIRECT 301. Target: /ar/quote/.
+
+https://uneom.com/request-a-quote / https://uneom.com/book-a-demo
+
+Action: REDIRECT 301. Target: /quote/.
+
+https://uneom.com/faq / https://uneom.com/faqs
+
+Action: REDIRECT 301. Target: /faq/.
+
+Action: CREATE EN page. Path: /faq/. Implement with FAQPage Schema.
+
+Action: CREATE AR (Optimized) page. Path: /ar/faq/. Implement with FAQPage Schema.
+
+https://uneom.com/ar/faq
+
+Action: REDIRECT 301. Target: /ar/faq/.
+
+Industry Pages:
+
+https://uneom.com/industries/corporate/
+
+Action: CREATE EN page. Path: /industries/corporate/. (Zone of Maximum Emphasis standards apply).
+
+Action: CREATE AR (Optimized) page. Path: /ar/industries/corporate/. (Zone of Maximum Emphasis standards apply).
+
+https://uneom.com/industries/education/
+
+Action: CREATE EN page. Path: /industries/education/. (High standards).
+
+Action: CREATE AR (Optimized) page. Path: /ar/industries/education/. (High standards).
+
+https://uneom.com/industries/aviation/
+
+Action: CREATE EN page. Path: /industries/aviation/.
+
+Action: CREATE AR (Optimized) page. Path: /ar/industries/aviation/.
+
+https://uneom.com/industries/healthcare/
+
+Action: CREATE EN page. Path: /industries/healthcare/.
+
+Action: CREATE AR (Optimized) page. Path: /ar/industries/healthcare/.
+
+https://uneom.com/industries/hospitality/
+
+Action: CREATE EN page. Path: /industries/hospitality/.
+
+Action: CREATE AR (Optimized) page. Path: /ar/industries/hospitality/.
+
+https://uneom.com/industries/security/
+
+Action: CREATE EN page. Path: /industries/security/.
+
+Action: CREATE AR (Optimized) page. Path: /ar/industries/security/.
+
+https://uneom.com/industries/manufacturing/
+
+Action: CREATE EN page. Path: /industries/manufacturing/. (Consider if factory-industry / supply-manufacturing merge here).
+
+Action: CREATE AR (Optimized) page. Path: /ar/industries/manufacturing/.
+
+https://uneom.com/industries/retail-shops/
+
+Action: CREATE EN page. Path: /industries/retail-shops/.
+
+Action: CREATE AR (Optimized) page. Path: /ar/industries/retail-shops/.
+
+https://uneom.com/industries/factory-industry/
+
+Action: ASSESS. If distinct from manufacturing, CREATE EN/AR. Else, REDIRECT 301 to /industries/manufacturing/ (and its AR counterpart).
+
+https://uneom.com/industries/supply-manufacturing/
+
+Action: REDIRECT 301. Target: /industries/manufacturing/. (And AR counterpart).
+
+https://uneom.com/industries/ (if it exists as a bare page)
+
+Action: ASSESS. Usually, this isn't a page itself; individual industry pages are listed. Could REDIRECT 301 to / or a new /industries-overview/ if valuable.
+
+https://uneom.com/ar/industries (if it exists as a bare page)
+
+Action: ASSESS. Redirect to /ar/ or /ar/industries-overview/.
+
+Service Pages:
+
+https://uneom.com/services/
+
+Action: CREATE EN page. Path: /services/. (Main services listing/overview).
+
+Action: CREATE AR (Optimized) page. Path: /ar/services/.
+
+https://uneom.com/ar/services
+
+Action: REDIRECT 301. Target: /ar/services/.
+
+https://uneom.com/services-page
+
+Action: REDIRECT 301. Target: /services/.
+
+https://uneom.com/services/custom-design/
+
+Action: CREATE EN page. Path: /services/custom-design/.
+
+Action: CREATE AR (Optimized) page. Path: /ar/services/custom-design/.
+
+... (Apply CREATE EN / CREATE AR (Optimized) for measurement-services, program-management, uniform-policies, bulk-ordering - ensure paths end with /).
+
+Location Pages (CRITICAL FOR LOCAL SEO):
+
+https://uneom.com/locations/
+
+Action: CREATE EN page. Path: /locations/. (Main locations overview, map, list). LocalBusiness or Organization with areaServed.
+
+Action: CREATE AR (Optimized) page. Path: /ar/locations/.
+
+https://uneom.com/ar/locations (ensure target is /ar/locations/)
+
+Action: If source is /ar/locations (no slash), REDIRECT 301 to /ar/locations/. Ensure page exists.
+
+https://uneom.com/locations/riyadh (ensure target is /locations/riyadh/)
+
+Action: If source is /locations/riyadh (no slash), REDIRECT 301 to /locations/riyadh/.
+
+Action: CREATE EN page. Path: /locations/riyadh/. Implement with highly detailed LocalBusiness Schema. Hyperlocal content.
+
+Action: CREATE AR (Optimized) page. Path: /ar/locations/riyadh/. Detailed LocalBusiness Schema. Hyperlocal AR content.
+
+https://uneom.com/ar/locations/riyadh (ensure target is /ar/locations/riyadh/)
+
+Action: If source is /ar/locations/riyadh (no slash), REDIRECT 301 to /ar/locations/riyadh/. Ensure AR page exists.
+
+... (Apply this exact CREATE EN / CREATE AR (Optimized) & LocalBusiness Schema logic for jeddah, dammam, mecca, medina. Ensure all paths end with /.)
+
+Shop Pages (Categories, Collections, Products):
+
+https://uneom.com/shop/
+
+Action: CREATE EN page. Path: /shop/. (Main shop page, B2B quote logic).
+
+Action: CREATE AR (Optimized) page. Path: /ar/shop/.
+
+https://uneom.com/ar/shop
+
+Action: REDIRECT 301. Target: /ar/shop/.
+
+Shop Categories (e.g., /shop/healthcare-uniforms/):
+
+https://uneom.com/shop/healthcare-uniforms/
+
+Action: CREATE EN page. Path: /shop/healthcare-uniforms/. Schema: CollectionPage, ItemList.
+
+Action: CREATE AR (Optimized) page. Path: /ar/shop/healthcare-uniforms/.
+
+... (Apply for corporate-uniforms, hospitality-uniforms, manufacturing-uniforms, education-uniforms, security-uniforms, retail-uniforms, aviation-uniforms, industrial-uniforms, school-uniforms. Ensure paths end with /. Create both EN and Optimized AR.)
+
+https://uneom.com/ar/shop/manufacturing-uniforms/ (example if AR source has slash already)
+
+Action: CREATE AR (Optimized) page. Path: /ar/shop/manufacturing-uniforms/.
+
+Action: CREATE EN page. Path: /shop/manufacturing-uniforms/.
+
+Shop Collections (e.g., /shop/healthcare-uniforms/standard-collection/):
+
+https://uneom.com/shop/school-uniforms/standard-collection
+
+Action: CREATE EN page. Path: /shop/school-uniforms/standard-collection/. (Distinct content for this collection).
+
+Action: CREATE AR (Optimized) page. Path: /ar/shop/school-uniforms/standard-collection/.
+
+... (Apply for all specified standard-collection, premium-collection, custom-design URLs. Ensure paths end with /. Create EN and Optimized AR).
+
+Problematic Product URLs (related-product & product-[number]):
+
+ALL URLs like .../related-product-[number]/ (EN & AR versions)
+
+Action: REDIRECT 301. Target: Respective main category page (EN or AR, slashed). E.g., .../ar/shop/education-uniforms/related-product-4/ to /ar/shop/education-uniforms/.
+
+ALL URLs like .../product-[number]/ (EN & AR versions, e.g., .../shop/healthcare-uniforms/product-5/)
+
+Action: ASSESS.
+
+If product is real & distinct: REDIRECT 301 old URL to a NEW slug-based product URL. CREATE EN page (e.g., /shop/healthcare-uniforms/premium-model-x-scrub-top/). CREATE AR (Optimized) page (e.g., /ar/shop/healthcare-uniforms/سيكراب-طبي-فاخر-موديل-اكس/). Implement full Product schema.
+
+If product is not real/duplicate/error: REDIRECT 301 to the main category page (EN or AR).
+
+Blog Pages (Main, Categories, Tags, Posts):
+
+https://uneom.com/blog/
+
+Action: CREATE EN page. Path: /blog/.
+
+Action: CREATE AR (Optimized) page. Path: /ar/blog/.
+
+https://uneom.com/ar/blog
+
+Action: REDIRECT 301. Target: /ar/blog/.
+
+Blog Categories (e.g., /blog/category/uniform-trends/):
+
+https://uneom.com/blog/category/uniform-trends
+
+Action: CREATE EN page. Path: /blog/category/uniform-trends/. (Enhance with intro text, CollectionPage schema).
+
+Action: CREATE AR (Optimized) page. Path: /ar/blog/category/uniform-trends/. (Optimized AR intro text).
+
+... (Apply to ALL listed category URLs, EN & AR, ensuring paths end with /. Create Optimized AR).
+
+Blog Tags (e.g., /blog/tag/retail-uniforms/):
+
+Action: ASSESS STRATEGIC VALUE.
+
+If Kept: CREATE EN pages (e.g., /blog/tag/retail-uniforms/) and CREATE AR (Optimized) pages (e.g., /ar/blog/tag/retail-uniforms/). Add intro text. CollectionPage schema.
+
+If Low Value: Consider redirecting to related Category or noindex, follow. Avoid thin content.
+
+Strategic Blog Posts (e.g., /blog/corporate-security-branding/):
+
+https://uneom.com/blog/corporate-security-branding
+
+Action: CREATE EN page. Path: /blog/corporate-security-branding/. (High-quality strategic content, Article/BlogPosting Schema).
+
+Action: CREATE AR (Optimized) page. Path: /ar/blog/corporate-security-branding/. (Optimized AR, Schema).
+
+... (Apply to ALL important blog posts from your list. Ensure paths end with /. Create Optimized AR).
+
+Blog Date Archives (e.g., /blog/2025, /blog/2025/1):
+
+Action: REDIRECT 301. All /blog/YYYY/ and /blog/YYYY/MM/ (EN) to /blog/. All /ar/blog/YYYY/ and /ar/blog/YYYY/MM/ (AR) to /ar/blog/.
+
+Blog Pagination:
+
+/blog/page/1 to REDIRECT 301 to /blog/. /ar/blog/page/1 to REDIRECT 301 to /ar/blog/.
+
+Other pagination URLs (/blog/page/2, etc.) are kept if standard pagination is used.
+
+Resource Pages:
+
+https://uneom.com/resources/
+
+Action: CREATE EN page. Path: /resources/. (Knowledge hub main).
+
+Action: CREATE AR (Optimized) page. Path: /ar/resources/.
+
+... (Apply CREATE EN / CREATE AR (Optimized) for fabric-guide, size-guide, policy-templates, procurement-guide. Ensure paths end with /).
+
+Legal & Utility Pages:
+
+https://uneom.com/terms-of-service
+
+Action: CREATE EN page. Path: /terms-of-service/.
+
+Action: CREATE AR (Optimized/Accurate Legal AR) page. Path: /ar/terms-of-service/.
+
+https://uneom.com/privacy-policy
+
+Action: CREATE EN page. Path: /privacy-policy/.
+
+Action: CREATE AR (Optimized/Accurate Legal AR) page. Path: /ar/privacy-policy/.
+
+https://uneom.com/sitemap (if HTML): REDIRECT 301 to / or remove (rely on sitemap.xml).
+
+https://uneom.com/careers: ASSESS. If creating: Path /careers/ (EN) and /ar/careers/ (Optimized AR). Else, REDIRECT 301 to /about/.
+
+https://uneom.com/search / https://uneom.com/ar/search: ASSESS. If not implementing advanced site search, REDIRECT 301 to / or /ar/.
+
+https://uneom.com/categories / https://uneom.com/ar/categories: REDIRECT 301 to /shop/ or /ar/shop/.
+
+All non-existent- / 404-test-page / this-page-does-not-exist / page-not-found-test: Ensure these correctly serve the custom 404 page. Remove any internal links to them.
+
+General URL Patterns (Templates for dynamic generation):
+
+https://uneom.com/ar/blog/[slug] - AR Blog Post Template
+
+https://uneom.com/blog/[slug] - EN Blog Post Template
+
+https://uneom.com/shop/[category]/[product] - EN Product Page Template
+
+https://uneom.com/ar/shop/[category]/[product] - AR Product Page Template
+
+https://uneom.com/authors/[slug] - EN Author Page Template (If used)
+
+https://uneom.com/ar/authors/[slug] - AR Author Page Template (If used)
+
+(End of Master URL List & Action Plan section)
+
+V. DETAILED PAGE IMPLEMENTATION MANDATES (Reiterate if a specific page type is the focus of this interaction):
+
+If this interaction is about developing specific page types (e.g., Industry Pages, Service Pages, etc.), then re-insert the detailed "Required Sections," "Design & UX Mandates," and "Content Strategy Mandates" from the earlier "Definitive, Hyper-Detailed & Elite Professional Prompt..." tailoring them to the current page type and consistently applying the Bilingual/Optimized AR/SEO/Visual standards from Section I of this prompt.
+
+For example, if developing Industry Pages:
+
+Strategic Role: MISSION-CRITICAL. Exceptional execution.
+
+Generation (ISR): As defined, EN default routes, AR /ar/ routes.
+
+Design & UX: Visual palette, Heroicons, Framer Motion/Tailwind animations, grid, whitespace, next/image mastery.
+
+Content Strategy (Hyper-Persuasive, SEO-Dominant, BILINGUALLY OPTIMIZED): Professional EN, Independently Crafted & Optimized AR. Keyword integration (EN specific, AR/Saudi specific).
+
+Required Sections: Hero (EN/Optimized AR headline/subheadline/CTA), Persuasive Intro (EN & Natively Crafted AR), Key Benefits (EN/Optimized AR), Featured Products (3, placeholders with EN & Optimized AR if needed), Fabric & Tech (EN/Optimized AR), Customization (EN/Optimized AR), Testimonials (EN/Optimized AR), Related Blogs (3, placeholders with EN & Optimized AR if needed), Final CTA (EN/Optimized AR).
+
+Placeholder data creation for products/blogs is MANDATORY if needed, complete with professional EN and distinct, optimized AR content.
+
+VI. DELIVERABLES FOR THIS SPECIFIC INTERACTION:
+
+[MUST BE VERY SPECIFIC. Example: "1. Full code for next.config.js implementing ALL 'REDIRECT 301' actions identified in Section IV for URLs starting with /shop/ and /blog/. 2. Test report verifying each redirect (source, target, status code). 3. The English FAQ page at /faq/ and its Optimized Arabic counterpart at /ar/faq/ fully developed with 5 distinct, relevant FAQs each (professionally written EN and independently crafted Optimized AR for the AR version), styled to premium standards, using appropriate SVG icons, subtle animations for accordion toggles, and including FAQPage Schema.org markup for both versions. 4. Smartly selected imagery for the FAQ page banners (if any) from /public/images/general/. 5. Lighthouse scores >90 for Performance, Accessibility, Best Practices, SEO for both /faq/ and /ar/faq/."].
+
+Confirmation of adherence to ALL testing protocols.
+
+Clear communication: "Starting Phase X: [Goal]", "Completed Phase X. Key Outcomes: [...]", any blockers.
+
+Final Mandate Reminder: Your execution must result in an unequivocally best-in-class digital platform for UNEOM. The focus remains on: flawless execution, demonstrable quality, strategic conversion optimization, perfect bilingual functionality (EN default URLs, Optimized AR content for /ar/ URLs), elite SEO (May 2025+), superior visual/interactive design using smart assets, perfect SVGs, and professional React/animations. Create a platform that inspires absolute confidence and drives significant B2B engagement. Query for clarification if ANY aspect of this hyper-detailed mandate is ambiguous. This is the definitive blueprint.
+

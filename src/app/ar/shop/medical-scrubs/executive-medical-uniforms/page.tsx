@@ -10,6 +10,7 @@ import { useQuote } from '@/contexts/QuoteContext';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import TestimonialCard from '@/components/ui/TestimonialCard';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function ExecutiveMedicalUniformsPageArabic() {
   const locale = 'ar';
@@ -141,8 +142,9 @@ export default function ExecutiveMedicalUniformsPageArabic() {
   };
 
   return (
-    <>
+    <main>
       <Container className="py-8">
+        <h1 className="sr-only">الأزياء الطبية التنفيذية المتميزة للقيادات الصحية | أزياء طبية فاخرة للإدارة الطبية | يونيوم</h1>
         <Breadcrumbs items={breadcrumbs} />
         
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -488,6 +490,6 @@ export default function ExecutiveMedicalUniformsPageArabic() {
           </div>
         )}
       </Container>
-    </>
+        </main>
   );
 } 

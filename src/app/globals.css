@@ -9,14 +9,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
-    --foreground: #ffffff;
+    --background: #ffffff; /* Override dark mode to always use light background */
+    --foreground: #000000;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: var(--background);
+  min-height: 100vh;
 }
 
 /* RTL Support */
@@ -82,6 +83,11 @@ html[dir="rtl"] .rtl-flip {
   /* RTL-specific utilities */
   .rtl-space-x-reverse {
     --tw-space-x-reverse: 1;
+  }
+  
+  /* Header spacing utility - add to sections that come immediately after the header */
+  .header-spacing {
+    padding-top: 6rem !important; /* Space for the header */
   }
 }
 

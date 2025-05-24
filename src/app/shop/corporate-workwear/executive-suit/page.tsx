@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function ExecutiveSuitPage() {
   const locale = 'en';

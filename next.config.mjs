@@ -1,3 +1,4 @@
+// Test comment to check tool reliability
 /** @type {import('next').NextConfig} */
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -8,6 +9,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const nextConfig = {
   // Para Netlify necesitamos exportación estática
   output: 'export',
+  
+  // Force the generation of a 404.html file for Netlify
+  // This is really important to ensure Netlify serves proper 404 status codes
+  generateEtags: false,
   
   // Skip type checking in production to make builds faster and more reliable on Vercel
   typescript: {
@@ -74,11 +79,15 @@ const nextConfig = {
     disableStaticImages: false,
   },
   
-  // Configure server components
+  // Configure server components - May 2025 Optimizations
   experimental: {
-    optimizeCss: false,
+    optimizeCss: false, // Disabled due to build issues with static export
     scrollRestoration: true,
-    serverComponentsExternalPackages: [],
+    serverComponentsExternalPackages: ['web-vitals'],
+    optimizePackageImports: ['@/components', '@/lib'],
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
+    instrumentationHook: true,
+    ppr: false, // Partial Prerendering - enable when stable
   },
   
   // Explicitly set the output directory for the build
@@ -156,27 +165,48 @@ const nextConfig = {
   // Para trabajar correctamente con archivos estáticos en Netlify
   basePath: '',
   
-  // Configure headers for better image loading
+  // Configure headers for better performance and security - May 2025 Standards
   async headers() {
     return [
       {
         source: '/:path*',
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
           },
           {
-            key: 'Access-Control-Allow-Origin',
-            value: '*',
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
           },
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
           },
           {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on',
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+      {
+        source: '/api/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-store, max-age=0',
           },
         ],
       },
@@ -190,6 +220,59 @@ const nextConfig = {
           {
             key: 'Access-Control-Allow-Origin',
             value: '*',
+          },
+          {
+            key: 'Cross-Origin-Resource-Policy',
+            value: 'cross-origin',
+          },
+        ],
+      },
+      {
+        source: '/:path*\\.(css|js|woff|woff2|ttf|eot)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/manifest.json',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400',
+          },
+          {
+            key: 'Content-Type',
+            value: 'application/manifest+json',
+          },
+        ],
+      },
+      {
+        source: '/css/image-fixes.css',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex',
+          },
+        ],
+      },
+      {
+        source: '/js/404-checker.js',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex',
+          },
+        ],
+      },
+      {
+        source: '/js/image-handler.js',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex',
           },
         ],
       },
@@ -209,485 +292,313 @@ const nextConfig = {
     ];
   },
   
-  // Redirects for SEO optimization - these will work in development but not in static export
-  // For static export, see the redirects in netlify.toml
+  // Configure redirects
   async redirects() {
-    // Don't return redirects if using static export
-    if (process.env.NEXT_PHASE === 'phase-export') {
-      return [];
-    }
-    
-    // Otherwise return the full list of redirects for development
     return [
-      // English - Main Pages
-      {
-        source: '/sectors/:path*',
-        destination: '/products/:path*',
-        permanent: true,
-      },
-      {
-        source: '/location/:path*',
-        destination: '/locations/:path*',
-        permanent: true,
-      },
-      {
-        source: '/category/:path*',
-        destination: '/blog/categories/:path*', 
-        permanent: true,
-      },
-      
-      // English - Specific Sectors/Products
-      {
-        source: '/sectors/healthcare-uniforms',
-        destination: '/industries/healthcare',
-        permanent: true,
-      },
-      {
-        source: '/sectors/corporate-uniforms',
-        destination: '/industries/corporate',
-        permanent: true,
-      },
-      {
-        source: '/sectors/restaurant-uniforms',
-        destination: '/industries/hospitality/restaurants',
-        permanent: true,
-      },
-      {
-        source: '/sectors/uniform-in-riyadh',
-        destination: '/locations/riyadh',
-        permanent: true,
-      },
-      {
-        source: '/sectors/uniform-in-dammam',
-        destination: '/locations/dammam',
-        permanent: true,
-      },
-      {
-        source: '/sectors/uniform-in-jeddah',
-        destination: '/locations/jeddah',
-        permanent: true,
-      },
-      {
-        source: '/sectors/uniform-in-mecca',
-        destination: '/locations/mecca',
-        permanent: true,
-      },
-      {
-        source: '/sectors/uniform-in-medina',
-        destination: '/locations/medina',
-        permanent: true,
-      },
-      {
-        source: '/sectors/education-uniforms',
-        destination: '/industries/education',
-        permanent: true,
-      },
-      {
-        source: '/sectors/industrial-uniforms',
-        destination: '/industries/factory-industry',
-        permanent: true,
-      },
-      {
-        source: '/sectors/uniform-factory',
-        destination: '/industries/manufacturing',
-        permanent: true,
-      },
-      {
-        source: '/sectors/workers-uniform',
-        destination: '/industries/factory-industry',
-        permanent: true,
-      },
-      {
-        source: '/sectors/uniform-factory-2',
-        destination: '/industries/manufacturing',
-        permanent: true,
-      },
-      {
-        source: '/sectors/hospitality-uniforms',
-        destination: '/industries/hospitality',
-        permanent: true,
-      },
-      {
-        source: '/sectors/school-uniforms',
-        destination: '/industries/education',
-        permanent: true,
-      },
-      {
-        source: '/sectors/business-wear-uniform-companies',
-        destination: '/industries/corporate',
-        permanent: true,
-      },
-      {
-        source: '/sectors/jackets-for-scrubs',
-        destination: '/industries/healthcare',
-        permanent: true,
-      },
-      {
-        source: '/sectors/waitress-uniforms',
-        destination: '/industries/hospitality/restaurants',
-        permanent: true,
-      },
-      {
-        source: '/sectors/uniform-for-security',
-        destination: '/industries/security',
-        permanent: true,
-      },
-      {
-        source: '/sectors/company-uniforms',
-        destination: '/industries/corporate',
-        permanent: true,
-      },
-      {
-        source: '/sectors/uniforms-for-hotels',
-        destination: '/industries/hospitality',
-        permanent: true,
-      },
-      {
-        source: '/sectors/pilot-uniforms',
-        destination: '/industries/aviation',
-        permanent: true,
-      },
-      {
-        source: '/sectors/professional-uniforms',
-        destination: '/industries',
-        permanent: true,
-      },
-      {
-        source: '/sectors/med-scrubs',
-        destination: '/industries/healthcare',
-        permanent: true,
-      },
-      {
-        source: '/sectors/medical-scrubs',
-        destination: '/industries/healthcare',
-        permanent: true,
-      },
-      {
-        source: '/sectors/greys-anatomy-scrubs',
-        destination: '/industries/healthcare',
-        permanent: true,
-      },
-      {
-        source: '/sectors/scrub-suits',
-        destination: '/industries/healthcare',
-        permanent: true,
-      },
-      {
-        source: '/sectors/restaurants',
-        destination: '/industries/hospitality/restaurants',
-        permanent: true,
-      },
-      {
-        source: '/sectors/aviation-uniforms',
-        destination: '/industries/aviation',
-        permanent: true,
-      },
-      
-      // Blog redirects
-      {
-        source: '/blog/the-science-behind-uneoms-heat-resistant-industrial-uniforms',
-        destination: '/blog',
-        permanent: true,
-      },
-      {
-        source: '/blog/customizing-your-corporate-identity-uneoms-design-process-revealed',
-        destination: '/blog',
-        permanent: true,
-      },
-      {
-        source: '/blog/from-design-to-delivery-inside-uneoms-quality-control-process',
-        destination: '/blog',
-        permanent: true,
-      },
-      {
-        source: '/blog/uniform-maintenance-tips-expert-advice-from-uneoms-specialists',
-        destination: '/blog',
-        permanent: true,
-      },
-      
-      // English - Locations
-      {
-        source: '/location/medina',
-        destination: '/locations/medina',
-        permanent: true,
-      },
-      {
-        source: '/location/dammam',
-        destination: '/locations/dammam',
-        permanent: true,
-      },
-      {
-        source: '/location/riyadh',
-        destination: '/locations/riyadh',
-        permanent: true,
-      },
-      {
-        source: '/location/jeddah',
-        destination: '/locations/jeddah',
-        permanent: true,
-      },
-      
-      // Category redirects
-      {
-        source: '/category/blog',
-        destination: '/blog',
-        permanent: true,
-      },
-      {
-        source: '/category/sectors',
-        destination: '/industries',
-        permanent: true,
-      },
-      
-      // Arabic - Main Sections
-      {
-        source: '/ar/sectors/:path*',
-        destination: '/ar/industries/:path*',
-        permanent: true,
-      },
-      {
-        source: '/ar/location/:path*',
-        destination: '/ar/locations/:path*',
-        permanent: true,
-      },
-      
-      // Arabic - Specific Sectors
-      {
-        source: '/ar/sectors/healthcare-uniforms',
-        destination: '/ar/industries/healthcare',
-        permanent: true,
-      },
-      {
-        source: '/ar/sectors/corporate-uniforms',
-        destination: '/ar/industries/corporate',
-        permanent: true,
-      },
-      {
-        source: '/ar/sectors/restaurant-uniforms',
-        destination: '/ar/industries/hospitality/restaurants',
-        permanent: true,
-      },
-      {
-        source: '/ar/sectors/uniform-in-riyadh',
-        destination: '/ar/locations/riyadh',
-        permanent: true,
-      },
-      {
-        source: '/ar/sectors/uniform-in-dammam',
-        destination: '/ar/locations/dammam',
-        permanent: true,
-      },
-      {
-        source: '/ar/sectors/uniform-in-jeddah',
-        destination: '/ar/locations/jeddah',
-        permanent: true,
-      },
-      {
-        source: '/ar/sectors/uniform-in-mecca',
-        destination: '/ar/locations/mecca',
-        permanent: true,
-      },
-      {
-        source: '/ar/sectors/uniform-in-medina',
-        destination: '/ar/locations/medina',
-        permanent: true,
-      },
-      {
-        source: '/ar/sectors/education-uniforms',
-        destination: '/ar/industries/education',
-        permanent: true,
-      },
-      {
-        source: '/ar/sectors/industrial-uniforms',
-        destination: '/ar/industries/factory-industry',
-        permanent: true,
-      },
-      {
-        source: '/ar/sectors/uniform-factory',
-        destination: '/ar/industries/manufacturing',
-        permanent: true,
-      },
-      {
-        source: '/ar/sectors/workers-uniform',
-        destination: '/ar/industries/factory-industry',
-        permanent: true,
-      },
-      {
-        source: '/ar/sectors/uniform-factory-2',
-        destination: '/ar/industries/manufacturing',
-        permanent: true,
-      },
-      {
-        source: '/ar/sectors/hospitality-uniforms',
-        destination: '/ar/industries/hospitality',
-        permanent: true,
-      },
-      
-      // Arabic blog redirects with encoded URLs
-      {
-        source: '/ar/blog/%d8%aa%d8%ac%d8%b1%d8%a8%d8%a9-%d9%8a%d9%88%d9%86%d9%8a%d9%88%d9%85-%d9%85%d8%b9-%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b7%d8%a8%d9%8a-%d8%af%d9%84%d9%8a%d9%84%d9%83-%d9%84%d8%a7%d8%ae',
-        destination: '/ar/blog',
-        permanent: true,
-      },
-      {
-        source: '/ar/blog/%d8%a3%d9%81%d8%b6%d9%84-%d8%a7%d9%84%d8%a3%d9%82%d9%85%d8%b4%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d8%a7%d8%b3%d8%a8%d8%a9-%d9%84%d9%84%d9%85%d9%86%d8%a7%d8%ae-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a',
-        destination: '/ar/blog',
-        permanent: true,
-      },
-      {
-        source: '/ar/blog/%d9%83%d9%8a%d9%81-%d9%8a%d8%ba%d9%8a%d8%b1-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d9%88%d8%ad%d8%af-%d9%85%d8%b3%d8%aa%d9%82%d8%a8%d9%84-%d8%b4%d8%b1%d9%83%d8%aa%d9%83',
-        destination: '/ar/blog',
-        permanent: true,
-      },
-      {
-        source: '/ar/blog/%d8%a3%d8%b3%d8%b1%d8%a7%d8%b1-%d9%86%d8%ac%d8%a7%d8%ad-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d8%af%d8%b1%d8%b3%d9%8a-%d9%81%d9%8a-%d8%aa%d8%ad%d8%b3%d9%8a%d9%86-%d8%a3%d8%af%d8%a7%d8%a1-%d8%a7',
-        destination: '/ar/blog',
-        permanent: true,
-      },
-      
-      // Arabic - Pages
-      {
-        source: '/ar/contact-us',
-        destination: '/ar/contact',
-        permanent: true,
-      },
-      {
-        source: '/ar/request-a-quote',
-        destination: '/ar/quote',
-        permanent: true,
-      },
-      {
-        source: '/ar/services',
-        destination: '/ar/services',
-        permanent: true,
-      },
-      {
-        source: '/ar/faqs',
-        destination: '/ar/resources/faqs',
+      // Redirect for /ar to /ar/ (ensuring trailing slash for Arabic base path)
+      // Commenting out as trailingSlash:true should handle this for the /ar route.
+      // This might be causing a loop with the built-in trailingSlash behavior.
+      // {
+      //   source: '/ar',
+      //   destination: '/ar/',
+      //   permanent: true,
+      // },
+
+      // Redirects for About Us
+      {
+        source: '/about-us',
+        destination: '/about/',
         permanent: true,
       },
       {
         source: '/ar/about-us',
-        destination: '/ar/about',
+        destination: '/ar/about/',
         permanent: true,
       },
-      
-      // Arabic - Locations with encoded URLs
+      // Redirects for Contact Us
       {
-        source: '/ar/location/%d8%a7%d9%84%d9%85%d8%af%d9%8a%d9%86%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d9%88%d8%b1%d8%a9',
-        destination: '/ar/locations/medina',
-        permanent: true,
-      },
-      {
-        source: '/ar/location/%d8%a7%d9%84%d8%af%d9%85%d8%a7%d9%85',
-        destination: '/ar/locations/dammam',
+        source: '/contact-us',
+        destination: '/contact/',
         permanent: true,
       },
       {
-        source: '/ar/location/%d8%a7%d9%84%d8%b1%d9%8a%d8%a7%d8%b6',
-        destination: '/ar/locations/riyadh',
+        source: '/contactus',
+        destination: '/contact/',
         permanent: true,
       },
       {
-        source: '/ar/location/%d8%ac%d8%af%d8%a9',
-        destination: '/ar/locations/jeddah',
+        source: '/ar/contactus',
+        destination: '/ar/contact/',
         permanent: true,
       },
-      // Healthcare related redirects
+      // Redirects for Quote page
       {
-        source: '/sectors/healthcare',
-        destination: '/industries/healthcare',
-        permanent: true,
-      },
-      {
-        source: '/sectors/medical-uniforms',
-        destination: '/industries/healthcare',
+        source: '/quote',
+        destination: '/quote/',
         permanent: true,
       },
       {
-        source: '/sectors/medical-scrubs',
-        destination: '/shop/medical-scrubs',
+        source: '/ar/quote',
+        destination: '/ar/quote/',
         permanent: true,
       },
       {
-        source: '/sectors/nursing-uniforms',
-        destination: '/shop/medical-scrubs/nursing-scrubs',
+        source: '/request-a-quote',
+        destination: '/quote/',
         permanent: true,
       },
       {
-        source: '/sectors/lab-coats',
-        destination: '/shop/medical-scrubs/medical-lab-coat',
+        source: '/book-a-demo',
+        destination: '/quote/',
+        permanent: true,
+      },
+      // Redirects for FAQ page
+      {
+        source: '/faq',
+        destination: '/faq/',
         permanent: true,
       },
       {
-        source: '/sectors/hospital-uniforms',
-        destination: '/industries/healthcare',
+        source: '/faqs',
+        destination: '/faq/',
         permanent: true,
       },
       {
-        source: '/products/medical-scrubs',
-        destination: '/shop/medical-scrubs',
+        source: '/ar/faq',
+        destination: '/ar/faq/',
+        permanent: true,
+      },
+      // Redirects for Industry Pages aliases/consolidations
+      {
+        source: '/industries/supply-manufacturing',
+        destination: '/industries/manufacturing/',
         permanent: true,
       },
       {
-        source: '/products/premium-scrubs-set',
-        destination: '/shop/medical-scrubs/premium-scrubs-set',
+        source: '/ar/industries/supply-manufacturing',
+        destination: '/ar/industries/manufacturing/',
         permanent: true,
       },
       {
-        source: '/products/medical-lab-coat',
-        destination: '/shop/medical-scrubs/medical-lab-coat',
+        source: '/industries/factory-industry',
+        destination: '/industries/manufacturing/',
         permanent: true,
       },
       {
-        source: '/products/nursing-uniform',
-        destination: '/shop/medical-scrubs/nursing-scrubs',
+        source: '/ar/industries/factory-industry',
+        destination: '/ar/industries/manufacturing/',
         permanent: true,
       },
       {
-        source: '/healthcare-uniforms',
-        destination: '/industries/healthcare',
+        source: '/industries',
+        destination: '/',
         permanent: true,
       },
       {
-        source: '/hospital-uniforms',
-        destination: '/industries/healthcare',
+        source: '/ar/industries',
+        destination: '/ar/',
+        permanent: true,
+      },
+      // Redirects for Service Pages
+      {
+        source: '/services-page',
+        destination: '/services/',
+        permanent: true,
+      },
+      // Redirects for Location Pages (ensuring trailing slashes for key paths)
+      {
+        source: '/ar/locations',
+        destination: '/ar/locations/',
         permanent: true,
       },
       {
-        source: '/medical-attire',
-        destination: '/industries/healthcare',
+        source: '/locations/riyadh',
+        destination: '/locations/riyadh/',
         permanent: true,
       },
       {
-        source: '/doctor-uniforms',
-        destination: '/industries/healthcare',
+        source: '/ar/locations/riyadh',
+        destination: '/ar/locations/riyadh/',
         permanent: true,
       },
       {
-        source: '/blog/healthcare:path*',
-        destination: '/blog',
+        source: '/locations/jeddah',
+        destination: '/locations/jeddah/',
         permanent: true,
       },
       {
-        source: '/blog/category/healthcare',
-        destination: '/blog',
-        permanent: true,
-      },
-      // Arabic healthcare redirects
-      {
-        source: '/ar/sectors/healthcare',
-        destination: '/ar/industries/healthcare',
+        source: '/ar/locations/jeddah',
+        destination: '/ar/locations/jeddah/',
         permanent: true,
       },
       {
-        source: '/ar/sectors/medical-uniforms',
-        destination: '/ar/industries/healthcare',
+        source: '/locations/dammam',
+        destination: '/locations/dammam/',
         permanent: true,
       },
       {
-        source: '/ar/sectors/medical-scrubs',
-        destination: '/ar/shop/medical-scrubs',
+        source: '/ar/locations/dammam',
+        destination: '/ar/locations/dammam/',
+        permanent: true,
+      },
+      {
+        source: '/locations/mecca',
+        destination: '/locations/mecca/',
+        permanent: true,
+      },
+      {
+        source: '/ar/locations/mecca',
+        destination: '/ar/locations/mecca/',
+        permanent: true,
+      },
+      {
+        source: '/locations/medina',
+        destination: '/locations/medina/',
+        permanent: true,
+      },
+      {
+        source: '/ar/locations/medina',
+        destination: '/ar/locations/medina/',
+        permanent: true,
+      },
+      // Redirect for main Arabic shop page (ensuring trailing slash)
+      // Commenting out this redirect as it might be causing an infinite redirect loop
+      // {
+      //   source: '/ar/shop',
+      //   destination: '/ar/shop/',
+      //   permanent: true,
+      // },
+      // Redirects for problematic product URLs (related-product-n and product-n)
+      {
+        source: '/shop/:category*/related-product-:n(.*)',
+        destination: '/shop/:category*/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/:category*/related-product-:n(.*)',
+        destination: '/ar/shop/:category*/',
+        permanent: true,
+      },
+      {
+        source: '/shop/:category*/product-:n(.*)',
+        destination: '/shop/:category*/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/:category*/product-:n(.*)',
+        destination: '/ar/shop/:category*/',
+        permanent: true,
+      },
+      // Blog related redirects (trailing slashes, date archives, pagination, specific old posts)
+      // {
+      //   source: '/ar/blog',
+      //   destination: '/ar/blog/',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/blog/:year(\\d{4})',
+      //   destination: '/blog/',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/blog/:year(\\d{4})/:month(\\d{1,2})',
+      //   destination: '/blog/',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/ar/blog/:year(\\d{4})',
+      //   destination: '/ar/blog/',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/ar/blog/:year(\\d{4})/:month(\\d{1,2})',
+      //   destination: '/ar/blog/',
+      //   permanent: true,
+      // },
+      {
+        source: '/blog/page/1',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/page/1',
+        destination: '/ar/blog/',
+        permanent: true,
+      },
+      {
+        source: '/blog/the-science-behind-uneoms-heat-resistant-industrial-uniforms',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/blog/customizing-your-corporate-identity-uneoms-design-process-revealed',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/blog/from-design-to-delivery-inside-uneoms-quality-control-process',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/blog/uniform-maintenance-tips-expert-advice-from-uneoms-specialists',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/%d8%aa%d8%ac%d8%b1%d8%a8%d8%a9-%d9%8a%d9%88%d9%86%d9%8a%d9%88%d9%85-%d9%85%d8%b9-%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b7%d8%a8%d9%8a-%d8%af%d9%84%d9%8a%d9%84%d9%83-%d9%84%d8%a7%d8%ae',
+        destination: '/ar/blog/',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/%d8%a3%d9%81%d8%b6%d9%84-%d8%a7%d9%84%d8%a3%d9%82%d9%85%d8%b4%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d8%a7%d8%b3%d8%a8%d8%a9-%d9%84%d9%84%d9%85%d9%86%d8%a7%d8%ae-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a',
+        destination: '/ar/blog/',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/%d9%83%d9%8a%d9%81-%d9%8a%d8%ba%d9%8a%d8%b1-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d9%88%d8%ad%d8%af-%d9%85%d8%b3%d8%aa%d9%82%d8%a8%d9%84-%d8%b4%d8%b1%d9%83%d8%aa%d9%83',
+        destination: '/ar/blog/',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/%d8%a3%d8%b3%d8%b1%d8%a7%d8%b1-%d9%86%d8%ac%d8%a7%d8%ad-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d8%af%d8%b1%d8%b3%d9%8a-%d9%81%d9%8a-%d8%aa%d8%ad%d8%b3%d9%8a%d9%86-%d8%a3%d8%af%d8%a7%d8%a1-%d8%a7',
+        destination: '/ar/blog/',
+        permanent: true,
+      },
+      // General alias redirects (sitemap, careers, search, categories)
+      {
+        source: '/sitemap',
+        destination: '/', // Or /sitemap.xml if preferred, roadmap suggests / or remove
+        permanent: true,
+      },
+      {
+        source: '/careers',
+        destination: '/about/',
+        permanent: true,
+      },
+      {
+        source: '/ar/careers',
+        destination: '/ar/about/',
+        permanent: true,
+      },
+      {
+        source: '/search',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/ar/search',
+        destination: '/ar/',
+        permanent: true,
+      },
+      {
+        source: '/categories',
+        destination: '/shop/',
+        permanent: true,
+      },
+      {
+        source: '/ar/categories',
+        destination: '/ar/shop/',
         permanent: true,
       },
     ];

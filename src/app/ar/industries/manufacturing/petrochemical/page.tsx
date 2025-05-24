@@ -8,11 +8,12 @@ import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SectionHeading from '@/components/ui/SectionHeading';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Arabic Page Data
 const pageData = {
   hero: {
-    title: "حلول صناعة البتروكيماويات",
+    title: "UNEOM - Professional Uniforms",
     subtitle: "ملابس السلامة المتقدمة لقطاع البتروكيماويات في المملكة العربية السعودية",
     image: "/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg",
   },
@@ -66,7 +67,7 @@ export default function PetrochemicalPageAr() {
   };
 
   return (
-    <>
+    <main>
       <Container className="py-8 md:py-12">
         {/* Breadcrumbs */}
         <Breadcrumbs items={[
@@ -237,6 +238,6 @@ export default function PetrochemicalPageAr() {
           </div>
         </motion.div>
       </Container>
-    </>
+        </main>
   );
 } 

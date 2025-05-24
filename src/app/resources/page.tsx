@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 interface ResourceInfo {
   id: string;
@@ -21,7 +22,7 @@ export default function ResourcesPage() {
   // Resources content
   const resourceCategories = [
     {
-      title: 'Fabric & Materials',
+      title: "UNEOM - Professional Uniforms",
       resources: [
         {
           id: 'fabric-guide',
@@ -105,6 +106,23 @@ export default function ResourcesPage() {
   
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-900 to-primary-800 text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-25">

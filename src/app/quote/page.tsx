@@ -8,6 +8,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { useQuote } from '@/contexts/QuoteContext';
 import SEO from '@/components/SEO';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function QuotePage() {
   const locale = 'en';
@@ -108,8 +109,25 @@ export default function QuotePage() {
 
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       <SEO 
-        title="Request a Quote"
+        title="UNEOM - Professional Uniforms"
         description="Request a quote for UNEOM's professional uniforms and corporate attire. Custom bulk orders, competitive pricing, and premium quality."
       />
       
