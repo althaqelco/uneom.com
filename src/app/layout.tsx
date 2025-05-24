@@ -145,19 +145,13 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         
-        {/* Preload critical resources with proper 'as' values */}
-        <link rel="preload" href="/images/default-placeholder.jpg" as="image" type="image/jpeg" />
-        <link rel="preload" href="/images/og-image.jpg" as="image" type="image/jpeg" />
-        <link rel="preload" href="/css/image-fixes.css" as="style" type="text/css" />
+        {/* Critical resource preloading - removed problematic preloads */}
+        <link rel="preload" href="/css/image-fixes.css" as="style" />
         
         {/* Stylesheets */}
         <link rel="stylesheet" href="/css/image-fixes.css" />
         
-        {/* Scripts */}
-        <script src="/js/image-handler.js" defer></script>
-        {process.env.NODE_ENV === 'development' && (
-          <script src="/js/404-checker.js" defer></script>
-        )}
+        {/* Scripts - removed problematic scripts causing NextRouter issues */}
         
         {/* Enhanced Content Security Policy */}
         <meta
@@ -188,94 +182,15 @@ export default function RootLayout({
           </QuoteProvider>
         </LocaleProvider>
         
-        {/* Script para asignar URLs base a las imágenes */}
-        <Script id="image-base-url-helper" strategy="afterInteractive">
+        {/* Simplified image handling - removed complex script causing NextRouter issues */}
+        <Script id="simple-image-fallback" strategy="afterInteractive">
           {`
-            // Agregar URLs base a todas las imágenes que no las tengan
-            (function() {
-              if (typeof window !== 'undefined') {
-                // Función para corregir rutas de imágenes
-                window.fixImagePaths = function() {
-                  const images = document.querySelectorAll('img:not([data-fixed="true"])');
-                  const baseUrl = window.location.origin;
-                  const isVercel = window.location.hostname.includes('vercel.app');
-                  
-                  images.forEach(img => {
-                    const src = img.getAttribute('src') || '';
-                    
-                    // Si no es una URL absoluta, corregirla
-                    if (src && !src.startsWith('http') && !src.startsWith('data:')) {
-                      const fixedSrc = src.startsWith('/') 
-                        ? baseUrl + src 
-                        : baseUrl + '/' + src;
-                      
-                      // Establecer una propiedad de respaldo
-                      img.setAttribute('data-original-src', src);
-                      
-                      // En Vercel, intentar diferentes variaciones
-                      if (isVercel) {
-                        // Intentar con y sin slash inicial
-                        const variations = [
-                          fixedSrc,
-                          src.startsWith('/') ? baseUrl + src.substring(1) : fixedSrc,
-                          src.startsWith('/') ? src : '/' + src,
-                          '/_next/static/images/' + src.split('/').pop()
-                        ];
-                        
-                        // Probar cada variación
-                        let imgLoaded = false;
-                        variations.forEach((variation, index) => {
-                          if (!imgLoaded) {
-                            const testImg = new Image();
-                            testImg.onload = function() {
-                              if (!imgLoaded) {
-                                img.setAttribute('src', variation);
-                                img.setAttribute('data-fixed', 'true');
-                                imgLoaded = true;
-                              }
-                            };
-                            testImg.src = variation;
-                            
-                            // Si la imagen ya está en caché, el evento onload podría no dispararse
-                            if (testImg.complete) {
-                              img.setAttribute('src', variation);
-                              img.setAttribute('data-fixed', 'true');
-                              imgLoaded = true;
-                            }
-                          }
-                        });
-                      } else {
-                        // En desarrollo local, simplemente usar la URL fija
-                        img.setAttribute('src', fixedSrc);
-                        img.setAttribute('data-fixed', 'true');
-                      }
-                      
-                      // Configurar manejo de errores
-                      img.onerror = function() {
-                        // Si la URL corregida falla, intentar con la original
-                        if (img.getAttribute('src') !== src) {
-                          img.setAttribute('src', src);
-                        } else {
-                          // Si ambas fallan, usar la imagen de respaldo
-                          img.setAttribute('src', '/images/default-placeholder.jpg');
-                        }
-                      };
-                    }
-                  });
-                };
-                
-                // Ejecutar inicialmente y después de cada carga de página
-                window.fixImagePaths();
-                window.addEventListener('load', window.fixImagePaths);
-                
-                // Crear una imagen de respaldo SVG en caso de que todo falle
-                window.fallbackImageDataUrl = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjMyMCIgeT0iMjQwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM4ODgiPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+';
-                
-                // Precargar la imagen de respaldo
-                const preloadFallback = new Image();
-                preloadFallback.src = '/images/default-placeholder.jpg';
+            // Simple image error handling
+            document.addEventListener('error', function(e) {
+              if (e.target.tagName === 'IMG') {
+                e.target.src = '/images/default-placeholder.jpg';
               }
-            })();
+            }, true);
           `}
         </Script>
         

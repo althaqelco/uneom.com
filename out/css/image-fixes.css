@@ -1,357 +1,65 @@
-/**
- * Image Fixes CSS
- * 
- * This stylesheet provides fixes for common image issues and styling for fallback images.
- */
+/* Image Fixes CSS - May 2025 */
+/* Fallback styles for images that fail to load */
 
-/* Prevent image overflow */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Style for fallback images */
-img[data-fixed="true"] {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-/* Add subtle indicator for images that failed to load */
-img[src^="data:image/svg+xml"] {
-  background-color: #f5f5f5;
-  border: 1px dashed #ccc;
-  border-radius: 4px;
-}
-
-/* Fix for Next.js Image component issues */
-span[style*="display:block;overflow:hidden"] img {
-  position: relative !important;
-  height: auto !important;
-  width: 100% !important;
-}
-
-/* Fix for RTL image alignment */
-html[dir="rtl"] .rtl-image-fix {
-  transform: scaleX(-1);
-}
-
-/* Fix for image placeholders */
-.image-placeholder {
-  background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #888;
-  font-size: 14px;
-  min-height: 100px;
-}
-
-/* Fix for lazy-loaded images */
-img.lazy-load {
+img[src=""], img:not([src]) {
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  display: inline-block;
+  min-height: 100px;
+  min-width: 100px;
 }
 
-img.lazy-load.loaded {
+img[data-fixed="true"] {
   opacity: 1;
 }
 
-/* Fix for image aspect ratio issues */
-.aspect-ratio-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  overflow: hidden;
-}
-
-.aspect-ratio-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Common aspect ratios */
-.aspect-ratio-1-1 {
-  padding-top: 100%; /* 1:1 */
-}
-
-.aspect-ratio-4-3 {
-  padding-top: 75%; /* 4:3 */
-}
-
-.aspect-ratio-16-9 {
-  padding-top: 56.25%; /* 16:9 */
-}
-
-.aspect-ratio-3-2 {
-  padding-top: 66.67%; /* 3:2 */
-}
-
-/* Fix for Next.js Image component in Safari */
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) {
-    .next-image-wrapper > span {
-      display: block !important;
-    }
-  }
-}
-
-/* Fix for image loading animation */
-@keyframes imagePulse {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0.6;
-  }
-}
-
+/* Loading state for images */
 .image-loading {
-  animation: imagePulse 1.5s infinite;
-  background-color: #f0f0f0;
-}
-
-/* Fix for broken images in older browsers */
-img::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f0f0f0;
-}
-
-img::after {
-  content: attr(alt);
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #888;
-  font-size: 14px;
-  font-style: italic;
-}
-
-/* Fix for image container overflow */
-.image-container {
-  overflow: hidden;
-  position: relative;
-}
-
-/* Fix for responsive images in grid layouts */
-.image-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Fix for image blur-up effect */
-.blur-up {
-  filter: blur(5px);
-  transition: filter 0.3s ease-in-out;
-}
-
-.blur-up.lazyloaded {
-  filter: blur(0);
-}
-
-/* Image path fixes for better loading */
-
-/* Fix for RTL image paths */
-html[dir="rtl"] img {
-  transform: scaleX(1); /* Prevent automatic flipping */
-}
-
-/* Fallback image styles */
-img.fallback-image {
-  background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  color: #888;
-  font-size: 14px;
-}
-
-/* Fix for image processing in template literals */
-img[src*="%20"] {
-  opacity: 0;
-}
-
-img[src*="%20"] + .image-placeholder {
-  display: block;
-  background-color: #f0f0f0;
-  color: #888;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
-
-/* Fix broken image paths */
-img.image-error {
-  display: none;
-}
-
-.placeholder-container {
-  position: relative;
-}
-
-/* Helper for path resolution */
-[data-image-path-fixed="true"] {
-  opacity: 1 !important;
-}
-
-/* Image Fixes and Fallbacks */
-
-/* Fallback image styling */
-.image-fallback {
-  background-color: #f0f0f0;
-  border-radius: 4px;
-  padding: 10px;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Prevent broken images from showing their default broken icon */
-img {
-  min-height: 1px; /* Fix for Firefox */
-}
-
-/* Add styling for lazy-loaded images */
-img[loading="lazy"] {
-  transition: opacity 0.3s ease-in-out;
-}
-
-img[loading="lazy"]:not([src]) {
-  opacity: 0;
-}
-
-/* Style for images using fallback */
-img[data-fallback-used="true"] {
-  border: 1px solid #f0f0f0;
-}
-
-/* Hide broken image icons in Chrome/Safari/Firefox */
-img:-moz-broken {
-  visibility: hidden;
-}
-
-img:-moz-loading {
-  visibility: hidden;
-}
-
-/* Next.js specific image fixes */
-[data-nimg] {
-  position: relative;
-}
-
-/* Add placeholder background for Next.js images that are loading */
-[data-nimg]:not([src]) {
-  background-color: #f8f8f8;
-  background-image: linear-gradient(to right, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
-  animation: placeholderShimmer 1.5s infinite;
+  animation: loading 1.5s infinite;
 }
 
-@keyframes placeholderShimmer {
-  0% {
-    background-position: -100% 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
-/* Estilos para manejar imágenes que fallan en la carga */
-
-/* Estilo por defecto para imágenes que no se cargan */
-img {
-  min-height: 20px;
-  min-width: 20px;
-}
-
-/* Agregar un borde sutil a las imágenes para mejor visibilidad */
-img:not([src]), 
-img[src=""], 
-img[src="#"],
-img[src="undefined"],
-img[src="null"] {
-  visibility: hidden;
-  position: relative;
-}
-
-/* Placeholder visual para imágenes que fallan en la carga */
-img:not([src])::after, 
-img[src=""]::after, 
-img[src="#"]::after,
-img[src="undefined"]::after,
-img[src="null"]::after,
-img.error::after {
-  content: " ";
+/* Hide broken image icons */
+img::before {
+  content: "";
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
-  background-color: #f8f8f8;
-  background-image: url('/images/defaults/default-placeholder.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border-radius: 4px;
-  visibility: visible;
-}
-
-/* Estilos específicos para diferentes tipos de imágenes */
-img.product.error::after {
-  background-image: url('/images/defaults/default-product.jpg');
-}
-
-img.blog.error::after {
-  background-image: url('/images/defaults/default-blog.jpg');
-}
-
-img.team.error::after,
-img.avatar.error::after {
-  background-image: url('/images/defaults/default-team.jpg');
-}
-
-img.industry.error::after {
-  background-image: url('/images/defaults/default-industry.jpg');
-}
-
-img.service.error::after {
-  background-image: url('/images/defaults/default-service.jpg');
-}
-
-/* Corrección para Next.js Image component */
-span[style*="display:"] img {
-  transition: opacity 0.5s ease-in-out !important;
-}
-
-/* Animación de imagen cargando */
-@keyframes pulse {
-  0% { opacity: 0.6; }
-  50% { opacity: 0.8; }
-  100% { opacity: 0.6; }
-}
-
-.image-loading {
-  animation: pulse 1.5s infinite ease-in-out;
+  width: 100%;
   background-color: #f0f0f0;
-} 
+  border: 1px solid #ddd;
+}
+
+/* Responsive image containers */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  transition: opacity 0.3s ease;
+}
+
+/* Error state styling */
+.image-error {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  font-size: 14px;
+}

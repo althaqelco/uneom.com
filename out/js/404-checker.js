@@ -1,94 +1,145 @@
-/**
- * 404 Checker Script
- * 
- * This script monitors all image and link requests on the page and logs any 404 errors
- * to help developers identify broken links and images during development.
- * 
- * Only runs in development mode.
- */
+// 404 Checker JS - Development Only
+// Monitors and reports 404 errors for debugging
 
-// 404 Error Checker Script
-document.addEventListener('DOMContentLoaded', function() {
-  // No ejecutar en producción para evitar sobrecarga de la consola
-  const isProduction = window.location.hostname === 'uneom.com';
-  if (isProduction) return;
+(function() {
+  'use strict';
   
-  console.log('404 Checker active - Monitoring for failed resources');
-  
-  // Crear un contenedor para mostrar errores (solo en desarrollo)
-  const errorContainer = document.createElement('div');
-  errorContainer.id = 'resource-error-container';
-  errorContainer.style.cssText = `
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(255, 0, 0, 0.8);
-    color: white;
-    padding: 10px;
-    font-family: monospace;
-    font-size: 12px;
-    max-width: 400px;
-    max-height: 300px;
-    overflow: auto;
-    z-index: 9999;
-    border-radius: 5px;
-    display: none;
-  `;
-  document.body.appendChild(errorContainer);
-  
-  // Colección de errores para evitar duplicados
-  const errors = new Set();
-  
-  // Función para actualizar la visualización de errores
-  function updateErrorDisplay() {
-    if (errors.size > 0) {
-      errorContainer.style.display = 'block';
-      errorContainer.innerHTML = '<strong>Recursos 404:</strong><br>' + 
-        Array.from(errors).map(url => `- ${url}`).join('<br>');
-    } else {
-      errorContainer.style.display = 'none';
-    }
+  if (typeof window === 'undefined' || window.location.hostname === 'uneom.com') {
+    return; // Only run in development
   }
   
-  // Interceptar solicitudes de red para detectar errores 404
-  const originalFetch = window.fetch;
-  window.fetch = async function(resource, init) {
-    try {
-      const response = await originalFetch(resource, init);
+  const Checker404 = {
+    errors: [],
+    
+    // Log 404 errors
+    log404: function(url, type = 'unknown') {
+      const error = {
+        url: url,
+        type: type,
+        timestamp: new Date().toISOString(),
+        page: window.location.pathname
+      };
       
-      // Comprobar si es un error 404
-      if (response.status === 404) {
-        const url = typeof resource === 'string' ? resource : resource.url;
-        errors.add(url);
-        updateErrorDisplay();
-        console.error(`404 Error: ${url}`);
+      this.errors.push(error);
+      console.warn(`404 Error [${type}]:`, url);
+      
+      // Store in localStorage for persistence
+      try {
+        const stored = JSON.parse(localStorage.getItem('404-errors') || '[]');
+        stored.push(error);
+        localStorage.setItem('404-errors', JSON.stringify(stored.slice(-100))); // Keep last 100
+      } catch (e) {
+        // Ignore localStorage errors
       }
+    },
+    
+    // Check if a resource exists
+    checkResource: function(url) {
+      return fetch(url, { method: 'HEAD' })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+          return true;
+        })
+        .catch(() => false);
+    },
+    
+    // Monitor network requests
+    monitorRequests: function() {
+      // Override fetch to monitor API calls
+      const originalFetch = window.fetch;
+      window.fetch = function(...args) {
+        return originalFetch.apply(this, args)
+          .then(response => {
+            if (!response.ok && response.status === 404) {
+              Checker404.log404(args[0], 'fetch');
+            }
+            return response;
+          });
+      };
       
-      return response;
-    } catch (error) {
-      console.error('Fetch error:', error);
-      return Promise.reject(error);
+      // Monitor image loading errors
+      document.addEventListener('error', (e) => {
+        if (e.target.tagName === 'IMG') {
+          Checker404.log404(e.target.src, 'image');
+        } else if (e.target.tagName === 'LINK') {
+          Checker404.log404(e.target.href, 'stylesheet');
+        } else if (e.target.tagName === 'SCRIPT') {
+          Checker404.log404(e.target.src, 'script');
+        }
+      }, true);
+    },
+    
+    // Check common resources
+    checkCommonResources: function() {
+      const resources = [
+        '/favicon.ico',
+        '/manifest.json',
+        '/robots.txt',
+        '/sitemap.xml',
+        '/images/og-image.jpg',
+        '/images/default-placeholder.jpg'
+      ];
+      
+      resources.forEach(resource => {
+        this.checkResource(resource).then(exists => {
+          if (!exists) {
+            this.log404(resource, 'common-resource');
+          }
+        });
+      });
+    },
+    
+    // Generate report
+    generateReport: function() {
+      const stored = JSON.parse(localStorage.getItem('404-errors') || '[]');
+      const allErrors = [...this.errors, ...stored];
+      
+      // Group by type
+      const grouped = allErrors.reduce((acc, error) => {
+        acc[error.type] = acc[error.type] || [];
+        acc[error.type].push(error);
+        return acc;
+      }, {});
+      
+      console.group('404 Error Report');
+      Object.keys(grouped).forEach(type => {
+        console.group(`${type} (${grouped[type].length} errors)`);
+        grouped[type].forEach(error => {
+          console.log(`${error.timestamp}: ${error.url} (on ${error.page})`);
+        });
+        console.groupEnd();
+      });
+      console.groupEnd();
+      
+      return grouped;
+    },
+    
+    // Clear stored errors
+    clearErrors: function() {
+      this.errors = [];
+      localStorage.removeItem('404-errors');
+      console.log('404 errors cleared');
+    },
+    
+    // Initialize
+    init: function() {
+      this.monitorRequests();
+      this.checkCommonResources();
+      
+      // Make available globally
+      window.Checker404 = this;
+      
+      console.log('404 Checker initialized. Use Checker404.generateReport() to see errors.');
     }
   };
   
-  // Monitorear carga de recursos
-  function checkResourceErrors() {
-    const failedImages = Array.from(document.querySelectorAll('img')).filter(
-      img => img.complete && img.naturalHeight === 0 && img.src && !img.src.startsWith('data:')
-    );
-    
-    failedImages.forEach(img => {
-      errors.add(img.src);
-      // Asignar placeholder
-      img.classList.add('error');
-    });
-    
-    updateErrorDisplay();
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => Checker404.init());
+  } else {
+    Checker404.init();
   }
   
-  // Verificar errores después de cargar la página
-  window.addEventListener('load', checkResourceErrors);
-  
-  // Verificar periódicamente para nuevas imágenes añadidas dinámicamente
-  setInterval(checkResourceErrors, 3000);
-}); 
+})();
