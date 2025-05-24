@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://uneom.com/ar/services',
+    canonical: 'https://uneom.com/ar/services/',
     languages: {
-      'en': 'https://uneom.com/services',
-      'ar': 'https://uneom.com/ar/services',
+      'en': 'https://uneom.com/services/',
+      'ar': 'https://uneom.com/ar/services/',
     },
   },
 }; 

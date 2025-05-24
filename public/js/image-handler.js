@@ -16,30 +16,29 @@
   // Create a fallback SVG data URL for extreme cases
   const FALLBACK_SVG = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjMyMCIgeT0iMjQwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM4ODgiPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+PC9zdmc+';
   
-  // Track loaded images to avoid duplicate processing
-  const processedImages = new Set();
+  // Use WeakMap and WeakSet to track images instead of data attributes
+  const originalSrcs = new WeakMap();
+  const processedImages = new WeakSet();
+  const attemptCounts = new WeakMap();
   
   // Process all images on the page
   function processImages() {
-    const images = document.querySelectorAll('img:not([data-processed="true"])');
+    const images = document.querySelectorAll('img');
     
     images.forEach(img => {
       // Skip already processed images
       if (processedImages.has(img)) return;
-      processedImages.add(img);
       
       // Mark as processed
-      img.setAttribute('data-processed', 'true');
+      processedImages.add(img);
       
-      // Store original src
-      const originalSrc = img.getAttribute('src');
-      if (originalSrc) {
-        img.setAttribute('data-original-src', originalSrc);
-      }
+      // Store original src in WeakMap
+      originalSrcs.set(img, img.src);
+      attemptCounts.set(img, 0);
       
       // Add loading="lazy" for images below the fold
       if (!img.hasAttribute('loading') && !isInViewport(img)) {
-        img.setAttribute('loading', 'lazy');
+        img.loading = 'lazy'; // Use property instead of setAttribute
       }
       
       // Handle image errors
@@ -47,7 +46,7 @@
         handleImageError(img);
       };
       
-      // Check if image is already broken (for images that failed before script loaded)
+      // Check if image is already broken
       if (img.complete && img.naturalWidth === 0) {
         handleImageError(img);
       }
@@ -56,13 +55,24 @@
   
   // Handle image loading errors
   function handleImageError(img) {
+    // Skip if no src
+    if (!img.src) return;
+    
     // Get original source
-    const originalSrc = img.getAttribute('data-original-src') || img.getAttribute('src');
+    const originalSrc = originalSrcs.get(img) || img.src;
+    const attempts = attemptCounts.get(img) || 0;
     
-    // Try with different path variations
+    if (attempts >= 5) {
+      // Too many attempts, use fallback
+      img.src = DEFAULT_FALLBACK;
+      return;
+    }
+    
+    // Increment attempt count
+    attemptCounts.set(img, attempts + 1);
+    
+    // Try different variations
     const variations = generatePathVariations(originalSrc);
-    
-    // Try each variation
     tryImageVariations(img, variations, 0);
   }
   
@@ -79,7 +89,7 @@
     // With and without leading slash
     if (src.startsWith('/')) {
       variations.push(baseUrl + src);
-      variations.push(baseUrl + src.substring(1));
+      variations.push(src.substring(1));
     } else {
       variations.push('/' + src);
       variations.push(baseUrl + '/' + src);
@@ -87,12 +97,10 @@
     
     // Try in _next/static/images folder
     const filename = src.split('/').pop();
-    variations.push('/_next/static/images/' + filename);
-    variations.push(baseUrl + '/_next/static/images/' + filename);
-    
-    // Try in public/images folder
-    variations.push('/images/' + filename);
-    variations.push(baseUrl + '/images/' + filename);
+    if (filename) {
+      variations.push('/_next/static/images/' + filename);
+      variations.push('/images/' + filename);
+    }
     
     // Add fallback as last resort
     variations.push(DEFAULT_FALLBACK);
@@ -113,7 +121,6 @@
     testImg.onload = function() {
       // This variation worked
       img.src = variations[index];
-      img.setAttribute('data-fixed', 'true');
     };
     
     testImg.onerror = function() {
@@ -127,7 +134,6 @@
     if (testImg.complete) {
       if (testImg.naturalWidth > 0) {
         img.src = variations[index];
-        img.setAttribute('data-fixed', 'true');
       } else {
         tryImageVariations(img, variations, index + 1);
       }
@@ -145,9 +151,30 @@
     );
   }
   
-  // Process images on load and after DOM changes
-  window.addEventListener('load', processImages);
-  window.addEventListener('DOMContentLoaded', processImages);
+  // Clean up any data attributes that might already exist
+  function cleanupDataAttributes() {
+    document.querySelectorAll('[data-processed], [data-original-src], [data-fixed]').forEach(el => {
+      el.removeAttribute('data-processed');
+      el.removeAttribute('data-original-src');
+      el.removeAttribute('data-fixed');
+    });
+  }
+  
+  // Process images on DOM ready and after load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      cleanupDataAttributes();
+      processImages();
+    });
+  } else {
+    cleanupDataAttributes();
+    processImages();
+  }
+  
+  window.addEventListener('load', () => {
+    cleanupDataAttributes();
+    processImages();
+  });
   
   // Process new images when they're added to the DOM
   const observer = new MutationObserver(mutations => {
@@ -179,158 +206,70 @@
     subtree: true
   });
   
-  // Run initial processing
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', processImages);
-  } else {
-    processImages();
-  }
-  
   // Make functions available globally
   window.imageHandler = {
     processImages,
     handleImageError,
-    tryImageVariations
+    tryImageVariations,
+    cleanupDataAttributes
   };
+  
+  // Make fallback available globally
+  window.fallbackImageDataUrl = FALLBACK_SVG;
 })();
 
-// Image Handler - Utility to fix broken images and provide fallbacks
-document.addEventListener('DOMContentLoaded', () => {
-  // Find all images in the document
-  const images = document.querySelectorAll('img');
-  
-  // Handle each image
-  images.forEach(img => {
-    // Skip images that are already loaded
-    if (img.complete && img.naturalHeight !== 0) return;
-    
-    // Store original source
-    const originalSrc = img.src;
-    
-    // Add error handler to replace broken images
-    img.onerror = () => {
-      // Try different path variations
-      const filename = originalSrc.split('/').pop();
-      const paths = [
-        `/images/${filename}`,
-        `/images/products/${filename}`,
-        `/images/default-placeholder.jpg`
-      ];
-      
-      // Try each path until one works
-      tryNextPath(img, paths, 0);
-      
-      // Log the error for debugging
-      console.warn(`Image load failed: ${originalSrc}`);
-    };
-    
-    // Add data attribute for tracking
-    img.setAttribute('data-original-src', originalSrc);
-    
-    // Force reload to trigger error handler if needed
-    if (!img.complete) {
-      img.src = originalSrc;
-    }
-  });
-  
-  // Try loading image with different paths
-  function tryNextPath(img, paths, index) {
-    if (index >= paths.length) {
-      // All paths failed, use inline SVG as ultimate fallback
-      img.insertAdjacentHTML('afterend', `
-        <svg xmlns="http://www.w3.org/2000/svg" width="${img.width || 24}" height="${img.height || 24}" 
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
-          stroke-linecap="round" stroke-linejoin="round" class="image-fallback">
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-          <circle cx="8.5" cy="8.5" r="1.5"></circle>
-          <polyline points="21 15 16 10 5 21"></polyline>
-        </svg>
-      `);
-      img.style.display = 'none';
-      return;
-    }
-    
-    // Try next path
-    const newSrc = paths[index];
-    const testImg = new Image();
-    
-    testImg.onload = () => {
-      img.src = newSrc;
-      img.setAttribute('data-fallback-used', 'true');
-      img.style.display = '';
-    };
-    
-    testImg.onerror = () => {
-      tryNextPath(img, paths, index + 1);
-    };
-    
-    testImg.src = newSrc;
-  }
-  
-  // Fix Next.js Image component path issues
-  fixNextJsImagePaths();
-});
-
-// Fix malformed Next.js Image src paths
+// Fix for Next.js image paths
 function fixNextJsImagePaths() {
-  // Find all Next.js image elements
-  const nextImages = document.querySelectorAll('[data-nimg]');
-  
-  nextImages.forEach(img => {
-    const src = img.src;
+  try {
+    // Look for Next.js images with _next/image paths
+    const nextImages = document.querySelectorAll('img[src^="/_next/image"]');
+    const processedImages = new WeakSet();
     
-    // Fix common malformed template paths
-    if (src && src.includes('undefined')) {
-      const fixedSrc = src.replace('undefined', '');
-      img.src = fixedSrc;
-      console.info(`Fixed malformed image path: ${src} → ${fixedSrc}`);
-    }
-    
-    // Add error handler for Next.js images
-    img.onerror = () => {
-      const placeholderSrc = '/images/default-placeholder.jpg';
-      console.warn(`Next.js image load failed: ${img.src}, using placeholder`);
-      img.src = placeholderSrc;
-    };
-  });
-}
-
-// Script para manejar errores de carga de imágenes
-document.addEventListener('DOMContentLoaded', function() {
-  // Elegir un placeholder según el tipo de imagen
-  function getPlaceholder(element) {
-    const className = element.className || '';
-    
-    // Placeholders específicos según la clase CSS
-    if (className.includes('product')) {
-      return '/images/defaults/default-product.jpg';
-    } else if (className.includes('blog')) {
-      return '/images/defaults/default-blog.jpg';
-    } else if (className.includes('avatar') || className.includes('team')) {
-      return '/images/defaults/default-team.jpg';
-    } else if (className.includes('industry')) {
-      return '/images/defaults/default-industry.jpg';
-    } else if (className.includes('service')) {
-      return '/images/defaults/default-service.jpg';
-    } else {
-      // Placeholder genérico
-      return '/images/defaults/default-placeholder.jpg';
-    }
-  }
-
-  // Manejar errores en todas las imágenes
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    img.addEventListener('error', function() {
-      if (!this.dataset.failedOnce) {
-        this.dataset.failedOnce = true;
-        this.src = getPlaceholder(this);
+    nextImages.forEach(img => {
+      // Skip already processed images
+      if (processedImages.has(img)) return;
+      processedImages.add(img);
+      
+      // Extract the actual image path
+      const src = img.src;
+      if (!src) return;
+      
+      // Extract the url parameter
+      try {
+        const url = new URL(src);
+        const imagePath = url.searchParams.get('url');
+        
+        if (imagePath) {
+          const testImg = new Image();
+          testImg.onload = function() {
+            // Replace with the direct path if it loads
+            img.src = imagePath;
+          };
+          testImg.src = imagePath;
+        }
+      } catch (e) {
+        console.error('Error parsing image URL:', e);
       }
     });
-    
-    // Intentar cargar la imagen actual
-    if (img.complete && img.naturalHeight === 0) {
-      img.src = getPlaceholder(img);
-    }
-  });
-}); 
+  } catch (e) {
+    console.error('Error fixing Next.js image paths:', e);
+  }
+}
+
+// Execute the next.js image fix on load
+window.addEventListener('load', fixNextJsImagePaths);
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(fixNextJsImagePaths, 1000); // Delay to allow Next.js to complete initial loading
+});
+
+// Helper function to create image placeholder
+function getPlaceholder(element) {
+  const width = element.width || 300;
+  const height = element.height || 200;
+  
+  return `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+    <rect width="${width}" height="${height}" fill="#f0f0f0"/>
+    <text x="${width/2}" y="${height/2}" font-family="Arial" font-size="14" 
+      text-anchor="middle" fill="#888">Image not available</text>
+  </svg>`;
+} 

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function AboutPage() {
   const locale = 'en';
@@ -88,7 +89,7 @@ export default function AboutPage() {
   // Company values
   const values = [
     {
-      title: 'Quality Excellence',
+      title: "UNEOM - Professional Uniforms",
       description: 'We are committed to delivering uniforms of uncompromising quality that exceed industry standards and client expectations.',
       icon: (
         <svg className="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -127,6 +128,23 @@ export default function AboutPage() {
   
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       {/* Hero Section */}
       <div className="relative py-24 bg-primary-700 text-white">
         <Container>

@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'UNEOM | Premium Uniform Manufacturer in Saudi Arabia',
-  description: 'Leading uniform manufacturer in Saudi Arabia offering premium-quality professional workwear for healthcare, corporate, hospitality, and industrial sectors across the Kingdom.',
-  keywords: 'uniform manufacturer Saudi Arabia, professional workwear, corporate uniforms Riyadh, healthcare uniforms Jeddah, hospitality uniforms KSA, industrial workwear Saudi, custom uniform solutions, UNEOM Saudi Arabia',
+  description: 'UNEOM: Saudi Arabia\'s top uniform supplier. We design & manufacture premium workwear for healthcare, corporate & industrial sectors. Request your quote today!',
+  // Removed generic meta keywords as they're no longer relevant for modern SEO
   openGraph: {
     title: 'UNEOM | Premium Uniform Manufacturer in Saudi Arabia',
-    description: 'Leading manufacturer of high-quality professional uniforms serving Saudi organizations with premium workwear solutions across all major industries.',
+    description: 'UNEOM: Saudi Arabia\'s top uniform supplier. We design & manufacture premium workwear for healthcare, corporate & industrial sectors. Request your quote today!',
     locale: 'en',
     type: 'website',
     images: [
@@ -21,18 +21,19 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'UNEOM | Premium Uniform Manufacturer in Saudi Arabia',
-    description: 'Leading uniform manufacturer serving Saudi organizations with premium workwear solutions',
+    description: 'UNEOM: Saudi Arabia\'s top uniform supplier. We design & manufacture premium workwear for healthcare, corporate & industrial sectors. Request your quote today!',
     images: ['/images/home-hero.jpg']
   },
   alternates: {
-    canonical: 'https://uneom.com',
+    canonical: 'https://uneom.com/',
     languages: {
-      'en': 'https://uneom.com',
-      'ar': 'https://uneom.com/ar'
+      'en-SA': 'https://uneom.com/',
+      'ar-SA': 'https://uneom.com/ar/',
+      'x-default': 'https://uneom.com/'
     }
   },
   robots: {
     index: true,
     follow: true
   }
-}; 
+};

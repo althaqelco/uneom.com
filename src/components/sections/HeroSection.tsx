@@ -137,7 +137,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   
   const content = {
     en: {
-      headline: title || "Saudi Arabia's Leading Provider of Professional Uniforms & Scrubs for Businesses",
+      headline: title || "Premium Uniform Manufacturing & Supply in Saudi Arabia | UNEOM",
       subheading: subtitle || "Tailored B2B Solutions for Healthcare, Aviation, Hospitality & Corporate Sectors",
       ctaPrimary: primaryButtonText || "Request a Quote",
       ctaSecondary: secondaryButtonText || "Explore Industries",
@@ -148,8 +148,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       nextSlide: "Next"
     },
     ar: {
-      headline: title || "المزود الرائد في المملكة العربية السعودية للأزياء المهنية للشركات",
-      subheading: subtitle || "حلول مخصصة للشركات في قطاعات الرعاية الصحية والطيران والضيافة والشركات",
+      headline: title || "يونيوم | الشركة الرائدة في تصنيع وتوريد الزي الموحد في المملكة العربية السعودية",
+      subheading: subtitle || "حلول مخصصة للشركات في قطاعات الرعاية الصحية والطيران والضيافة والقطاع المؤسسي",
       ctaPrimary: primaryButtonText || "طلب عرض سعر",
       ctaSecondary: secondaryButtonText || "استكشاف الصناعات",
       primaryUrl: primaryButtonUrl || "/ar/contact",
@@ -245,7 +245,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   };
   
   return (
-    <div ref={inViewRef} className="relative h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+    <div ref={inViewRef} className="relative h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black pt-16">
       {/* Loading animation */}
       {loading && (
         <motion.div 
@@ -329,20 +329,46 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 variants={textVariants}
               >
                 <div className={`p-0.5 ${isRTL ? 'mr-0' : 'ml-0'} mb-4 w-16 bg-gradient-to-r from-primary-500 to-primary-300`}></div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-heading leading-tight drop-shadow-md">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/90">
-                    {slides[currentSlide].title}
+                <motion.h1 
+                  className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white font-heading leading-tight drop-shadow-lg mb-8"
+                  variants={textVariants}
+                >
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-100 to-neutral-300">
+                    {text.headline}
                   </span>
-                </h1>
-                <p className="mt-6 text-xl text-white/95 max-w-2xl leading-relaxed drop-shadow-md backdrop-blur-sm bg-black/10 p-3 rounded-lg inline-block">
-                  {slides[currentSlide].subtitle}
-                </p>
-                <div className={`mt-10 flex flex-col sm:flex-row gap-4 ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
+                </motion.h1>
+                <AnimatePresence mode='wait'>
+                  <motion.h2
+                    key={`slide-title-${currentSlide}`}
+                    className="text-3xl md:text-4xl font-semibold text-white mb-4 drop-shadow-md"
+                    variants={textVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    {slides[currentSlide].title}
+                  </motion.h2>
+                </AnimatePresence>
+                
+                <AnimatePresence mode='wait'>
+                  <motion.p 
+                    key={`slide-subtitle-${currentSlide}`}
+                    className="mt-6 text-xl text-white/95 max-w-2xl leading-relaxed drop-shadow-md backdrop-blur-sm bg-black/10 p-3 rounded-lg inline-block"
+                    variants={textVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    {slides[currentSlide].subtitle}
+                  </motion.p>
+                </AnimatePresence>
+
+                <div className={`mt-8 flex flex-col sm:flex-row gap-4 ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
                   <Button 
-                    href={locale === 'ar' ? '/ar' + text.primaryUrl.substring(3) : text.primaryUrl} 
+                    href={text.primaryUrl}
                     variant="primary" 
                     size="lg"
-                    className="relative group overflow-hidden"
+                    className="relative group overflow-hidden shadow-lg"
                   >
                     <span className="relative z-10">{slides[currentSlide].cta}</span>
                     <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-gradient-to-r from-primary-600 to-primary-500 transition-transform duration-300 ease-out"></span>

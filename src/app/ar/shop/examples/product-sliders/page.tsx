@@ -16,7 +16,7 @@ import { Metadata } from 'next';
 const useCases = [
   {
     id: 'product-filters',
-    title: 'تصفية المنتجات',
+    title: "UNEOM - Professional Uniforms",
     icon: <FaSlidersH className="text-amber-500" size={24} />,
     description: 'تمكين العملاء من تخصيص عمليات البحث عن المنتجات بسهولة عبر مرشحات متعددة مثل السعر، المقاس، أو الوزن.',
     image: '/images/default-placeholder.jpg',
@@ -381,6 +381,7 @@ export default function ProductSlidersExamplePage() {
               <pre className="bg-gray-900 text-white p-4 rounded-md overflow-x-auto text-sm font-mono shadow-sm" dir="ltr">
 {`// استيراد المكون
 import WeightRangeSelector from '@/components/shop/WeightRangeSelector';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // في مكونك الرئيسي
 export default function ProductPage() {

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import SearchBar from '@/components/shop/SearchBar';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function ShopPage() {
   const locale = 'en';
@@ -110,6 +111,34 @@ export default function ShopPage() {
   
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025
+        title="Professional Uniforms & Workwear Shop | UNEOM Saudi Arabia"
+        description="Shop premium quality uniforms and professional workwear for healthcare, aviation, hospitality, and industrial sectors. Custom designs and bulk orders available across Saudi Arabia."
+        keywords={[
+          'uniform shop Saudi Arabia',
+          'professional workwear',
+          'medical scrubs',
+          'aviation uniforms',
+          'hospitality uniforms',
+          'industrial workwear',
+          'custom uniforms',
+          'bulk uniform orders',
+          'uniform supplier KSA'
+        ]}
+        author="UNEOM Sales Team"
+        expertise="Professional Uniform Retail & Manufacturing"
+        contentType="product"
+        trustSignals={[
+          'Premium quality materials',
+          'Custom sizing available',
+          'Bulk order discounts',
+          'Fast delivery across KSA'
+        ]}
+        canonicalUrl="https://uneom.com/shop/"
+        locale="en"
+      />
+      
       {/* Hero Section */}
       <section className="bg-gray-100 py-12">
         <Container>

@@ -10,6 +10,7 @@ import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { generateProductWhatsAppUrl } from '@/utils/whatsapp';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function StudentAthleticWearArabicPage() {
   // State for product options
@@ -79,7 +80,7 @@ export default function StudentAthleticWearArabicPage() {
   };
 
   return (
-    <>
+    <main>
       {/* Add product schema for SEO */}
       <div dangerouslySetInnerHTML={{
         __html: `
@@ -302,6 +303,6 @@ export default function StudentAthleticWearArabicPage() {
           </div>
         </div>
       </Container>
-    </>
+        </main>
   );
 } 

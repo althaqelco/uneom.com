@@ -10,6 +10,7 @@ import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { motion } from 'framer-motion';
 import { Cairo, Tajawal } from 'next/font/google';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // تعريف الخطوط العربية
 const cairoFont = Cairo({ 
@@ -30,7 +31,7 @@ const TechnicalFinishesPage = () => {
   // أنواع التشطيبات الفنية
   const finishTypes = [
     {
-      title: 'المعالجة المضادة للبكتيريا',
+      title: "UNEOM - Professional Uniforms",
       description: 'معالجة متطورة تمنع نمو البكتيريا والفطريات وتقضي على الروائح، مثالية للقطاع الصحي والمناخ الحار في المملكة',
       icon: '🦠',
       features: [

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { getProductById } from '@/lib/data/products';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Get product data from the English version and adapt it for Arabic
 const englishProduct = getProductById('ground-crew-uniform');
@@ -70,7 +71,7 @@ const productData = {
       id: 'airline-crew-uniform',
       name: 'زي طاقم الطيران',
       price: 'ريال سعودي 599',
-      images: [{ src: '/images/products/aviation/airline-1.jpg', alt: 'زي طاقم الطيران للنساء والرجال' }],
+      images: [{ src: '/images/aviation/aviation_uniform_airline_main_image.jpg', alt: 'زي طاقم الطيران للنساء والرجال' }],
       category: 'أزياء الطيران',
       categorySlug: 'aviation-uniforms'
     },

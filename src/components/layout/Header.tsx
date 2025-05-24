@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ locale = 'en' }) => {
   };
 
   // Determine if we're on the homepage
-  const isHomePage = pathname === '/' || pathname === '/ar';
+  const isHomePage = pathname === '/' || pathname === '/ar' || pathname === '/ar/';
 
   // Determine header styles based on scroll position and current page
   const headerClasses = `fixed w-full transition-all duration-300 z-50 ${

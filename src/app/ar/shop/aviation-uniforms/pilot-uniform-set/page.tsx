@@ -7,6 +7,7 @@ import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { getProductById } from '@/lib/data/products';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Get product data from the English version and adapt it for Arabic
 const englishProduct = getProductById('pilot-uniform-set');
@@ -67,7 +68,7 @@ const productData = {
       id: 'airline-crew-uniform',
       name: 'زي طاقم الطيران',
       price: 'ريال سعودي 599',
-      images: [{ src: '/images/products/aviation/airline-1.jpg', alt: 'زي طاقم الطيران للنساء والرجال' }],
+      images: [{ src: '/images/aviation/aviation_uniform_airline_main_image.jpg', alt: 'زي طاقم الطيران للنساء والرجال' }],
       category: 'أزياء الطيران',
       categorySlug: 'aviation-uniforms'
     },
@@ -94,6 +95,7 @@ export default function PilotUniformSetPageAr() {
       <Container>
         {/* Product Display */}
         <div className="py-12">
+          <h1 className="sr-only">طقم زي الطيار المحترف من يونيوم - زي رسمي لطياري الخطوط الجوية السعودية</h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Product Images */}
             <div className="space-y-4">
@@ -330,11 +332,8 @@ export default function PilotUniformSetPageAr() {
               </ul>
               
               {/* SEO Meta Tags */}
-              <div className="hidden">
-                <h1>طقم زي الطيار المحترف من يونيوم - زي رسمي لطياري الخطوط الجوية السعودية</h1>
-                <meta name="description" content="طقم زي طيار كامل ذو جودة عالية مصمم خصيصًا لطياري الخطوط السعودية، مصنوع من أفضل الأقمشة المقاومة للتجاعيد مع توفير الراحة الكاملة في الرحلات الطويلة." />
-                <meta name="keywords" content="زي طيار، بدلة طيران، يونيفورم كابتن، أزياء طيران، ملابس طيارين سعودية" />
-              </div>
+              <meta name="description" content="طقم زي طيار كامل ذو جودة عالية مصمم خصيصًا لطياري الخطوط السعودية، مصنوع من أفضل الأقمشة المقاومة للتجاعيد مع توفير الراحة الكاملة في الرحلات الطويلة." />
+              <meta name="keywords" content="زي طيار، بدلة طيران، يونيفورم كابتن، أزياء طيران، ملابس طيارين سعودية" />
             </div>
           </div>
         </div>

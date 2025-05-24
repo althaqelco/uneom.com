@@ -1,0 +1,4887 @@
+{
+  "total": 428,
+  "ok": 28,
+  "notFound": 136,
+  "redirect301": 264,
+  "redirect302": 0,
+  "otherStatus": 0,
+  "errors": 0,
+  "allLinks": [
+    {
+      "url": "https://uneom.com/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:19.236Z"
+    },
+    {
+      "url": "https://uneom.com/ar",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/",
+      "timestamp": "2025-05-04T13:14:19.491Z"
+    },
+    {
+      "url": "https://uneom.com/blog",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/",
+      "timestamp": "2025-05-04T13:14:19.483Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/blog/",
+      "timestamp": "2025-05-04T13:14:19.550Z"
+    },
+    {
+      "url": "https://uneom.com/shop",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/",
+      "timestamp": "2025-05-04T13:14:19.515Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/",
+      "timestamp": "2025-05-04T13:14:20.709Z"
+    },
+    {
+      "url": "https://uneom.com/industries",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/",
+      "timestamp": "2025-05-04T13:14:21.031Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/",
+      "timestamp": "2025-05-04T13:14:21.204Z"
+    },
+    {
+      "url": "https://uneom.com/about",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/about/",
+      "timestamp": "2025-05-04T13:14:21.094Z"
+    },
+    {
+      "url": "https://uneom.com/ar/about",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/about/",
+      "timestamp": "2025-05-04T13:14:23.774Z"
+    },
+    {
+      "url": "https://uneom.com/ar/authors",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/authors/",
+      "timestamp": "2025-05-04T13:14:23.797Z"
+    },
+    {
+      "url": "https://uneom.com/ar/authors/[slug]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:23.660Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/[slug]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:24.612Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/choosing-the-right-retail-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/blog/choosing-the-right-retail-uniforms/",
+      "timestamp": "2025-05-04T13:14:24.713Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/corporate-security-branding",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/blog/corporate-security-branding/",
+      "timestamp": "2025-05-04T13:14:24.879Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/evolution-of-retail-uniforms-saudi-arabia",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/blog/evolution-of-retail-uniforms-saudi-arabia/",
+      "timestamp": "2025-05-04T13:14:24.933Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/industrial-heat-stress-management",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/blog/industrial-heat-stress-management/",
+      "timestamp": "2025-05-04T13:14:24.762Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/industrial-safety-compliance-guide",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/blog/industrial-safety-compliance-guide/",
+      "timestamp": "2025-05-04T13:14:25.935Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/retail-uniform-impact",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/blog/retail-uniform-impact/",
+      "timestamp": "2025-05-04T13:14:25.743Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/retail-uniform-selection-guide",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/blog/retail-uniform-selection-guide/",
+      "timestamp": "2025-05-04T13:14:25.750Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/school-uniforms-academic-performance",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/blog/school-uniforms-academic-performance/",
+      "timestamp": "2025-05-04T13:14:25.742Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/security-uniform-psychology",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/blog/security-uniform-psychology/",
+      "timestamp": "2025-05-04T13:14:25.819Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/sustainable-retail-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/blog/sustainable-retail-uniforms/",
+      "timestamp": "2025-05-04T13:14:26.744Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/sustainable-school-uniforms-saudi",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/blog/sustainable-school-uniforms-saudi/",
+      "timestamp": "2025-05-04T13:14:26.691Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/sustainable-uniforms-2024-trends",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/blog/sustainable-uniforms-2024-trends/",
+      "timestamp": "2025-05-04T13:14:26.745Z"
+    },
+    {
+      "url": "https://uneom.com/industries/healthcare/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:26.787Z"
+    },
+    {
+      "url": "https://uneom.com/industries/aviation/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:26.787Z"
+    },
+    {
+      "url": "https://uneom.com/industries/hospitality/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:27.827Z"
+    },
+    {
+      "url": "https://uneom.com/industries/corporate/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:28.061Z"
+    },
+    {
+      "url": "https://uneom.com/industries/education/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:28.516Z"
+    },
+    {
+      "url": "https://uneom.com/industries/manufacturing/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:28.136Z"
+    },
+    {
+      "url": "https://uneom.com/industries/security/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:28.120Z"
+    },
+    {
+      "url": "https://uneom.com/industries/factory-industry/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:29.784Z"
+    },
+    {
+      "url": "https://uneom.com/industries/retail-shops/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:30.142Z"
+    },
+    {
+      "url": "https://uneom.com/industries/supply-manufacturing/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:30.216Z"
+    },
+    {
+      "url": "https://uneom.com/services/program-management/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:30.225Z"
+    },
+    {
+      "url": "https://uneom.com/services/custom-design/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:30.233Z"
+    },
+    {
+      "url": "https://uneom.com/services/bulk-ordering/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:31.715Z"
+    },
+    {
+      "url": "https://uneom.com/services/measurement-services/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:31.857Z"
+    },
+    {
+      "url": "https://uneom.com/services/uniform-policies/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:31.659Z"
+    },
+    {
+      "url": "https://uneom.com/resources/fabric-guide/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:31.865Z"
+    },
+    {
+      "url": "https://uneom.com/resources/size-guide/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:31.802Z"
+    },
+    {
+      "url": "https://uneom.com/resources/procurement-guide/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:33.284Z"
+    },
+    {
+      "url": "https://uneom.com/resources/policy-templates/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:33.458Z"
+    },
+    {
+      "url": "https://uneom.com/blog/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:33.381Z"
+    },
+    {
+      "url": "https://uneom.com/about/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:33.278Z"
+    },
+    {
+      "url": "https://uneom.com/contact/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:33.468Z"
+    },
+    {
+      "url": "https://uneom.com/shop/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:34.955Z"
+    },
+    {
+      "url": "https://uneom.com/quote/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:35.083Z"
+    },
+    {
+      "url": "https://uneom.com/industries/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:34.990Z"
+    },
+    {
+      "url": "https://uneom.com/services/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:35.094Z"
+    },
+    {
+      "url": "https://uneom.com/resources/",
+      "status": 200,
+      "statusText": "OK",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:35.081Z"
+    },
+    {
+      "url": "https://uneom.com/ar/case-studies/5-star-hotel-spa",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/case-studies/5-star-hotel-spa/",
+      "timestamp": "2025-05-04T13:14:36.566Z"
+    },
+    {
+      "url": "https://uneom.com/ar/case-studies/hospital-aesthetic-clinic",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/case-studies/hospital-aesthetic-clinic/",
+      "timestamp": "2025-05-04T13:14:36.693Z"
+    },
+    {
+      "url": "https://uneom.com/ar/case-studies/luxury-salon-evolution",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/case-studies/luxury-salon-evolution/",
+      "timestamp": "2025-05-04T13:14:36.716Z"
+    },
+    {
+      "url": "https://uneom.com/ar/contact",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/contact/",
+      "timestamp": "2025-05-04T13:14:36.683Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/aviation",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/aviation/",
+      "timestamp": "2025-05-04T13:14:36.922Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/corporate",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/corporate/",
+      "timestamp": "2025-05-04T13:14:37.882Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/delivery",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/delivery/",
+      "timestamp": "2025-05-04T13:14:37.652Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/education",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/education/",
+      "timestamp": "2025-05-04T13:14:37.866Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/factory-industry",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/factory-industry/",
+      "timestamp": "2025-05-04T13:14:37.747Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/factory-security",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/factory-security/",
+      "timestamp": "2025-05-04T13:14:37.926Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/firefighting",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/firefighting/",
+      "timestamp": "2025-05-04T13:14:39.048Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/healthcare",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/healthcare/",
+      "timestamp": "2025-05-04T13:14:38.898Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/hospitality",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/hospitality/",
+      "timestamp": "2025-05-04T13:14:38.811Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/hospitality/hotels",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/hospitality/hotels/",
+      "timestamp": "2025-05-04T13:14:38.899Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/hospitality/restaurants",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/hospitality/restaurants/",
+      "timestamp": "2025-05-04T13:14:38.986Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/manufacturing",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/manufacturing/",
+      "timestamp": "2025-05-04T13:14:39.910Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/manufacturing/heavy-industry",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/manufacturing/heavy-industry/",
+      "timestamp": "2025-05-04T13:14:39.955Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/manufacturing/petrochemical",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/manufacturing/petrochemical/",
+      "timestamp": "2025-05-04T13:14:39.943Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/retail-shops",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/retail-shops/",
+      "timestamp": "2025-05-04T13:14:39.977Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/security",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/security/",
+      "timestamp": "2025-05-04T13:14:40.012Z"
+    },
+    {
+      "url": "https://uneom.com/ar/industries/supply-manufacturing",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/industries/supply-manufacturing/",
+      "timestamp": "2025-05-04T13:14:41.036Z"
+    },
+    {
+      "url": "https://uneom.com/ar/privacy-policy",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/privacy-policy/",
+      "timestamp": "2025-05-04T13:14:40.849Z"
+    },
+    {
+      "url": "https://uneom.com/ar/quote",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/quote/",
+      "timestamp": "2025-05-04T13:14:40.830Z"
+    },
+    {
+      "url": "https://uneom.com/ar/resources",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/resources/",
+      "timestamp": "2025-05-04T13:14:40.837Z"
+    },
+    {
+      "url": "https://uneom.com/ar/resources/case-studies",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/resources/case-studies/",
+      "timestamp": "2025-05-04T13:14:40.789Z"
+    },
+    {
+      "url": "https://uneom.com/ar/resources/events",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/resources/events/",
+      "timestamp": "2025-05-04T13:14:42.003Z"
+    },
+    {
+      "url": "https://uneom.com/ar/resources/fabric-guide",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/resources/fabric-guide/",
+      "timestamp": "2025-05-04T13:14:41.760Z"
+    },
+    {
+      "url": "https://uneom.com/ar/resources/guides",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/resources/guides/",
+      "timestamp": "2025-05-04T13:14:41.771Z"
+    },
+    {
+      "url": "https://uneom.com/ar/resources/policy-templates",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/resources/policy-templates/",
+      "timestamp": "2025-05-04T13:14:41.848Z"
+    },
+    {
+      "url": "https://uneom.com/ar/resources/procurement-guide",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/resources/procurement-guide/",
+      "timestamp": "2025-05-04T13:14:41.827Z"
+    },
+    {
+      "url": "https://uneom.com/ar/resources/size-guide",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/resources/size-guide/",
+      "timestamp": "2025-05-04T13:14:42.766Z"
+    },
+    {
+      "url": "https://uneom.com/ar/services",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/services/",
+      "timestamp": "2025-05-04T13:14:42.971Z"
+    },
+    {
+      "url": "https://uneom.com/ar/services/bulk-ordering",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/services/bulk-ordering/",
+      "timestamp": "2025-05-04T13:14:42.743Z"
+    },
+    {
+      "url": "https://uneom.com/ar/services/corporate-programs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/services/corporate-programs/",
+      "timestamp": "2025-05-04T13:14:42.743Z"
+    },
+    {
+      "url": "https://uneom.com/ar/services/custom-design",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/services/custom-design/",
+      "timestamp": "2025-05-04T13:14:42.765Z"
+    },
+    {
+      "url": "https://uneom.com/ar/services/fabric-selection",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/services/fabric-selection/",
+      "timestamp": "2025-05-04T13:14:43.855Z"
+    },
+    {
+      "url": "https://uneom.com/ar/services/manufacturing",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/services/manufacturing/",
+      "timestamp": "2025-05-04T13:14:43.740Z"
+    },
+    {
+      "url": "https://uneom.com/ar/services/measurement-services",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/services/measurement-services/",
+      "timestamp": "2025-05-04T13:14:43.788Z"
+    },
+    {
+      "url": "https://uneom.com/ar/services/program-management",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/services/program-management/",
+      "timestamp": "2025-05-04T13:14:43.812Z"
+    },
+    {
+      "url": "https://uneom.com/ar/services/quality-assurance",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/services/quality-assurance/",
+      "timestamp": "2025-05-04T13:14:43.782Z"
+    },
+    {
+      "url": "https://uneom.com/ar/services/technical-finishes",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/services/technical-finishes/",
+      "timestamp": "2025-05-04T13:14:44.827Z"
+    },
+    {
+      "url": "https://uneom.com/ar/services/uniform-policies",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/services/uniform-policies/",
+      "timestamp": "2025-05-04T13:14:44.640Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/[category]/[product]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:44.523Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/aviation-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/aviation-uniforms/",
+      "timestamp": "2025-05-04T13:14:44.630Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/aviation-uniforms/airline-crew-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/aviation-uniforms/airline-crew-uniform/",
+      "timestamp": "2025-05-04T13:14:44.623Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/aviation-uniforms/ground-crew-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/aviation-uniforms/ground-crew-uniform/",
+      "timestamp": "2025-05-04T13:14:46.035Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/aviation-uniforms/pilot-uniform-set",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/aviation-uniforms/pilot-uniform-set/",
+      "timestamp": "2025-05-04T13:14:46.043Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/corporate-workwear",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/corporate-workwear/",
+      "timestamp": "2025-05-04T13:14:46.035Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/culinary-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/culinary-uniforms/",
+      "timestamp": "2025-05-04T13:14:46.022Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/education-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/education-uniforms/",
+      "timestamp": "2025-05-04T13:14:46.039Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/education-uniforms/faculty-professional-attire",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/education-uniforms/faculty-professional-attire/",
+      "timestamp": "2025-05-04T13:14:46.801Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/education-uniforms/premium-school-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/education-uniforms/premium-school-uniform/",
+      "timestamp": "2025-05-04T13:14:46.793Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/education-uniforms/premium-school-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/education-uniforms/premium-school-uniforms/",
+      "timestamp": "2025-05-04T13:14:46.822Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/education-uniforms/student-athletic-wear",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/education-uniforms/student-athletic-wear/",
+      "timestamp": "2025-05-04T13:14:46.823Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/examples/product-sliders",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/examples/product-sliders/",
+      "timestamp": "2025-05-04T13:14:46.817Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/healthcare",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/healthcare/",
+      "timestamp": "2025-05-04T13:14:47.625Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/healthcare/advanced-medical-scrubs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/healthcare/advanced-medical-scrubs/",
+      "timestamp": "2025-05-04T13:14:47.758Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/healthcare-accessories",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/healthcare-accessories/",
+      "timestamp": "2025-05-04T13:14:47.569Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/hospitality-attire",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/hospitality-attire/",
+      "timestamp": "2025-05-04T13:14:47.783Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/hospitality-attire/housekeeping-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/hospitality-attire/housekeeping-uniform/",
+      "timestamp": "2025-05-04T13:14:47.572Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/hospitality-attire/luxury-hotel-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/hospitality-attire/luxury-hotel-uniform/",
+      "timestamp": "2025-05-04T13:14:48.827Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/hospitality-attire/premium-hotel-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/hospitality-attire/premium-hotel-uniforms/",
+      "timestamp": "2025-05-04T13:14:48.822Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/",
+      "timestamp": "2025-05-04T13:14:48.839Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/anti-static-industrial-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/anti-static-industrial-uniform/",
+      "timestamp": "2025-05-04T13:14:48.813Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/flame-resistant-workwear",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/flame-resistant-workwear/",
+      "timestamp": "2025-05-04T13:14:48.823Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/heat-resistant-gloves",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/heat-resistant-gloves/",
+      "timestamp": "2025-05-04T13:14:49.677Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/hi-vis-safety-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/hi-vis-safety-uniform/",
+      "timestamp": "2025-05-04T13:14:49.698Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall/",
+      "timestamp": "2025-05-04T13:14:49.865Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall-pro",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall-pro/",
+      "timestamp": "2025-05-04T13:14:49.868Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/industrial-jacket",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/industrial-jacket/",
+      "timestamp": "2025-05-04T13:14:49.656Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/related-product-1",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/related-product-1/",
+      "timestamp": "2025-05-04T13:14:50.840Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/related-product-2",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/related-product-2/",
+      "timestamp": "2025-05-04T13:14:50.841Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/related-product-3",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/related-product-3/",
+      "timestamp": "2025-05-04T13:14:50.888Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/related-product-4",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/related-product-4/",
+      "timestamp": "2025-05-04T13:14:50.841Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/safety-helmet-pro",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/safety-helmet-pro/",
+      "timestamp": "2025-05-04T13:14:50.840Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/industrial-uniforms/supervisor-industrial-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/industrial-uniforms/supervisor-industrial-uniform/",
+      "timestamp": "2025-05-04T13:14:51.656Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/manufacturing-attire",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/manufacturing-attire/",
+      "timestamp": "2025-05-04T13:14:51.773Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/",
+      "timestamp": "2025-05-04T13:14:51.676Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/antimicrobial-scrubs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/antimicrobial-scrubs/",
+      "timestamp": "2025-05-04T13:14:51.836Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/executive-medical-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/executive-medical-uniforms/",
+      "timestamp": "2025-05-04T13:14:51.676Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/medical-lab-coats",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/medical-lab-coats/",
+      "timestamp": "2025-05-04T13:14:52.602Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/nursing-scrubs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/nursing-scrubs/",
+      "timestamp": "2025-05-04T13:14:52.830Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/premium-medical-scrubs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/premium-medical-scrubs/",
+      "timestamp": "2025-05-04T13:14:52.578Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/premium-scrubs-set",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/premium-scrubs-set/",
+      "timestamp": "2025-05-04T13:14:52.648Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/premium-surgical-gowns",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/premium-surgical-gowns/",
+      "timestamp": "2025-05-04T13:14:52.830Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/medical-scrubs/surgical-scrubs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/medical-scrubs/surgical-scrubs/",
+      "timestamp": "2025-05-04T13:14:53.717Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/retail-uniforms/mall-staff",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/retail-uniforms/mall-staff/",
+      "timestamp": "2025-05-04T13:14:53.717Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/retail-uniforms/related-product-1",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/retail-uniforms/related-product-1/",
+      "timestamp": "2025-05-04T13:14:53.650Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/retail-uniforms/related-product-2",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/retail-uniforms/related-product-2/",
+      "timestamp": "2025-05-04T13:14:53.716Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/retail-uniforms/related-product-3",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/retail-uniforms/related-product-3/",
+      "timestamp": "2025-05-04T13:14:53.669Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/retail-uniforms/related-product-4",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/retail-uniforms/related-product-4/",
+      "timestamp": "2025-05-04T13:14:54.615Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/security-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/security-uniforms/",
+      "timestamp": "2025-05-04T13:14:54.469Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/security-uniforms/executive-protection",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/security-uniforms/executive-protection/",
+      "timestamp": "2025-05-04T13:14:54.513Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/security-uniforms/security-officer-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/security-uniforms/security-officer-uniform/",
+      "timestamp": "2025-05-04T13:14:54.592Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/workplace-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/workplace-uniforms/",
+      "timestamp": "2025-05-04T13:14:54.500Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/workplace-uniforms/executive-suits",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/shop/workplace-uniforms/executive-suits/",
+      "timestamp": "2025-05-04T13:14:55.408Z"
+    },
+    {
+      "url": "https://uneom.com/ar/terms-of-service",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/ar/terms-of-service/",
+      "timestamp": "2025-05-04T13:14:55.408Z"
+    },
+    {
+      "url": "https://uneom.com/authors",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/authors/",
+      "timestamp": "2025-05-04T13:14:55.817Z"
+    },
+    {
+      "url": "https://uneom.com/authors/[slug]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:55.409Z"
+    },
+    {
+      "url": "https://uneom.com/blog/[slug]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:55.416Z"
+    },
+    {
+      "url": "https://uneom.com/blog/advanced-fabrics-security-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/advanced-fabrics-security-uniforms/",
+      "timestamp": "2025-05-04T13:14:56.806Z"
+    },
+    {
+      "url": "https://uneom.com/blog/choosing-the-right-retail-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/choosing-the-right-retail-uniforms/",
+      "timestamp": "2025-05-04T13:14:56.854Z"
+    },
+    {
+      "url": "https://uneom.com/blog/corporate-security-branding",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/corporate-security-branding/",
+      "timestamp": "2025-05-04T13:14:56.703Z"
+    },
+    {
+      "url": "https://uneom.com/blog/corporate-uniform-employee-satisfaction",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/corporate-uniform-employee-satisfaction/",
+      "timestamp": "2025-05-04T13:14:56.705Z"
+    },
+    {
+      "url": "https://uneom.com/blog/evolution-of-retail-uniforms-saudi-arabia",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/evolution-of-retail-uniforms-saudi-arabia/",
+      "timestamp": "2025-05-04T13:14:56.720Z"
+    },
+    {
+      "url": "https://uneom.com/blog/industrial-electrostatic-protection",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/industrial-electrostatic-protection/",
+      "timestamp": "2025-05-04T13:14:57.767Z"
+    },
+    {
+      "url": "https://uneom.com/blog/industrial-heat-stress-management",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/industrial-heat-stress-management/",
+      "timestamp": "2025-05-04T13:14:57.814Z"
+    },
+    {
+      "url": "https://uneom.com/blog/industrial-protective-clothing-advances",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/industrial-protective-clothing-advances/",
+      "timestamp": "2025-05-04T13:14:57.681Z"
+    },
+    {
+      "url": "https://uneom.com/blog/industrial-safety-compliance-guide",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/industrial-safety-compliance-guide/",
+      "timestamp": "2025-05-04T13:14:57.716Z"
+    },
+    {
+      "url": "https://uneom.com/blog/industrial-security-uniform-features",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/industrial-security-uniform-features/",
+      "timestamp": "2025-05-04T13:14:57.767Z"
+    },
+    {
+      "url": "https://uneom.com/blog/industrial-uniform-color-coding",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/industrial-uniform-color-coding/",
+      "timestamp": "2025-05-04T13:14:58.778Z"
+    },
+    {
+      "url": "https://uneom.com/blog/retail-uniform-impact",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/retail-uniform-impact/",
+      "timestamp": "2025-05-04T13:14:58.694Z"
+    },
+    {
+      "url": "https://uneom.com/blog/retail-uniform-selection-guide",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/retail-uniform-selection-guide/",
+      "timestamp": "2025-05-04T13:14:58.629Z"
+    },
+    {
+      "url": "https://uneom.com/blog/school-uniforms-academic-performance",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/school-uniforms-academic-performance/",
+      "timestamp": "2025-05-04T13:14:58.768Z"
+    },
+    {
+      "url": "https://uneom.com/blog/security-uniform-psychology",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/security-uniform-psychology/",
+      "timestamp": "2025-05-04T13:14:58.750Z"
+    },
+    {
+      "url": "https://uneom.com/blog/sustainable-retail-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/sustainable-retail-uniforms/",
+      "timestamp": "2025-05-04T13:14:59.664Z"
+    },
+    {
+      "url": "https://uneom.com/blog/sustainable-school-uniforms-saudi",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/sustainable-school-uniforms-saudi/",
+      "timestamp": "2025-05-04T13:14:59.560Z"
+    },
+    {
+      "url": "https://uneom.com/blog/sustainable-uniforms-2024-trends",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/blog/sustainable-uniforms-2024-trends/",
+      "timestamp": "2025-05-04T13:14:59.559Z"
+    },
+    {
+      "url": "https://uneom.com/case-studies",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/case-studies/",
+      "timestamp": "2025-05-04T13:14:59.734Z"
+    },
+    {
+      "url": "https://uneom.com/case-studies/5-star-hotel-spa",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/case-studies/5-star-hotel-spa/",
+      "timestamp": "2025-05-04T13:14:59.690Z"
+    },
+    {
+      "url": "https://uneom.com/case-studies/beauty-chain-standardization",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/case-studies/beauty-chain-standardization/",
+      "timestamp": "2025-05-04T13:15:00.799Z"
+    },
+    {
+      "url": "https://uneom.com/case-studies/hospital-aesthetic-clinic",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/case-studies/hospital-aesthetic-clinic/",
+      "timestamp": "2025-05-04T13:15:00.617Z"
+    },
+    {
+      "url": "https://uneom.com/case-studies/luxury-salon-evolution",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/case-studies/luxury-salon-evolution/",
+      "timestamp": "2025-05-04T13:15:00.731Z"
+    },
+    {
+      "url": "https://uneom.com/contact",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/contact/",
+      "timestamp": "2025-05-04T13:15:00.430Z"
+    },
+    {
+      "url": "https://uneom.com/industries/aviation",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/aviation/",
+      "timestamp": "2025-05-04T13:15:00.414Z"
+    },
+    {
+      "url": "https://uneom.com/industries/corporate",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/corporate/",
+      "timestamp": "2025-05-04T13:15:01.690Z"
+    },
+    {
+      "url": "https://uneom.com/industries/education",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/education/",
+      "timestamp": "2025-05-04T13:15:02.525Z"
+    },
+    {
+      "url": "https://uneom.com/industries/factory-industry",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/factory-industry/",
+      "timestamp": "2025-05-04T13:15:02.117Z"
+    },
+    {
+      "url": "https://uneom.com/industries/factory-security",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/factory-security/",
+      "timestamp": "2025-05-04T13:15:01.934Z"
+    },
+    {
+      "url": "https://uneom.com/industries/healthcare",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/healthcare/",
+      "timestamp": "2025-05-04T13:15:02.101Z"
+    },
+    {
+      "url": "https://uneom.com/industries/hospitality",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/hospitality/",
+      "timestamp": "2025-05-04T13:15:03.412Z"
+    },
+    {
+      "url": "https://uneom.com/industries/hospitality/hotels",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/hospitality/hotels/",
+      "timestamp": "2025-05-04T13:15:03.561Z"
+    },
+    {
+      "url": "https://uneom.com/industries/hospitality/restaurants",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/hospitality/restaurants/",
+      "timestamp": "2025-05-04T13:15:03.339Z"
+    },
+    {
+      "url": "https://uneom.com/industries/manufacturing",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/manufacturing/",
+      "timestamp": "2025-05-04T13:15:03.402Z"
+    },
+    {
+      "url": "https://uneom.com/industries/manufacturing/heavy-industry",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/manufacturing/heavy-industry/",
+      "timestamp": "2025-05-04T13:15:03.291Z"
+    },
+    {
+      "url": "https://uneom.com/industries/manufacturing/petrochemical",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/manufacturing/petrochemical/",
+      "timestamp": "2025-05-04T13:15:04.521Z"
+    },
+    {
+      "url": "https://uneom.com/industries/retail-shops",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/retail-shops/",
+      "timestamp": "2025-05-04T13:15:04.263Z"
+    },
+    {
+      "url": "https://uneom.com/industries/security",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/security/",
+      "timestamp": "2025-05-04T13:15:04.451Z"
+    },
+    {
+      "url": "https://uneom.com/industries/supply-manufacturing",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/industries/supply-manufacturing/",
+      "timestamp": "2025-05-04T13:15:04.312Z"
+    },
+    {
+      "url": "https://uneom.com/privacy-policy",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/privacy-policy/",
+      "timestamp": "2025-05-04T13:15:04.450Z"
+    },
+    {
+      "url": "https://uneom.com/quote",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/quote/",
+      "timestamp": "2025-05-04T13:15:05.163Z"
+    },
+    {
+      "url": "https://uneom.com/resources",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/resources/",
+      "timestamp": "2025-05-04T13:15:05.192Z"
+    },
+    {
+      "url": "https://uneom.com/resources/events",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/resources/events/",
+      "timestamp": "2025-05-04T13:15:05.494Z"
+    },
+    {
+      "url": "https://uneom.com/resources/fabric-guide",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/resources/fabric-guide/",
+      "timestamp": "2025-05-04T13:15:05.161Z"
+    },
+    {
+      "url": "https://uneom.com/resources/fabric-guide/healthcare",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/resources/fabric-guide/healthcare/",
+      "timestamp": "2025-05-04T13:15:05.494Z"
+    },
+    {
+      "url": "https://uneom.com/resources/policy-templates",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/resources/policy-templates/",
+      "timestamp": "2025-05-04T13:15:06.228Z"
+    },
+    {
+      "url": "https://uneom.com/resources/policy-templates/hospital",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/resources/policy-templates/hospital/",
+      "timestamp": "2025-05-04T13:15:06.302Z"
+    },
+    {
+      "url": "https://uneom.com/resources/procurement-guide",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/resources/procurement-guide/",
+      "timestamp": "2025-05-04T13:15:06.368Z"
+    },
+    {
+      "url": "https://uneom.com/resources/size-guide",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/resources/size-guide/",
+      "timestamp": "2025-05-04T13:15:06.177Z"
+    },
+    {
+      "url": "https://uneom.com/resources/size-guide/medical",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/resources/size-guide/medical/",
+      "timestamp": "2025-05-04T13:15:06.532Z"
+    },
+    {
+      "url": "https://uneom.com/services",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/services/",
+      "timestamp": "2025-05-04T13:15:07.418Z"
+    },
+    {
+      "url": "https://uneom.com/services/bulk-ordering",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/services/bulk-ordering/",
+      "timestamp": "2025-05-04T13:15:07.303Z"
+    },
+    {
+      "url": "https://uneom.com/services/corporate-programs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/services/corporate-programs/",
+      "timestamp": "2025-05-04T13:15:07.350Z"
+    },
+    {
+      "url": "https://uneom.com/services/custom-design",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/services/custom-design/",
+      "timestamp": "2025-05-04T13:15:07.293Z"
+    },
+    {
+      "url": "https://uneom.com/services/fabric-selection",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/services/fabric-selection/",
+      "timestamp": "2025-05-04T13:15:07.423Z"
+    },
+    {
+      "url": "https://uneom.com/services/manufacturing",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/services/manufacturing/",
+      "timestamp": "2025-05-04T13:15:08.407Z"
+    },
+    {
+      "url": "https://uneom.com/services/measurement-services",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/services/measurement-services/",
+      "timestamp": "2025-05-04T13:15:08.205Z"
+    },
+    {
+      "url": "https://uneom.com/services/program-management",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/services/program-management/",
+      "timestamp": "2025-05-04T13:15:08.093Z"
+    },
+    {
+      "url": "https://uneom.com/services/quality-assurance",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/services/quality-assurance/",
+      "timestamp": "2025-05-04T13:15:08.205Z"
+    },
+    {
+      "url": "https://uneom.com/services/technical-finishes",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/services/technical-finishes/",
+      "timestamp": "2025-05-04T13:15:08.401Z"
+    },
+    {
+      "url": "https://uneom.com/services/uniform-policies",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/services/uniform-policies/",
+      "timestamp": "2025-05-04T13:15:09.057Z"
+    },
+    {
+      "url": "https://uneom.com/shop/[category]/[product]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:09.083Z"
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/",
+      "timestamp": "2025-05-04T13:15:09.142Z"
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/airline-crew-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/airline-crew-uniform/",
+      "timestamp": "2025-05-04T13:15:09.411Z"
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/airline-service-vest",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/airline-service-vest/",
+      "timestamp": "2025-05-04T13:15:09.365Z"
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/aviation-blazer",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/aviation-blazer/",
+      "timestamp": "2025-05-04T13:15:10.229Z"
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/flight-attendant-dress",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/flight-attendant-dress/",
+      "timestamp": "2025-05-04T13:15:10.245Z"
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/ground-crew-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/ground-crew-uniform/",
+      "timestamp": "2025-05-04T13:15:10.342Z"
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/pilot-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/pilot-uniform/",
+      "timestamp": "2025-05-04T13:15:10.257Z"
+    },
+    {
+      "url": "https://uneom.com/shop/aviation-uniforms/pilot-uniform-set",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/aviation-uniforms/pilot-uniform-set/",
+      "timestamp": "2025-05-04T13:15:10.281Z"
+    },
+    {
+      "url": "https://uneom.com/shop/corporate",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/corporate/",
+      "timestamp": "2025-05-04T13:15:11.452Z"
+    },
+    {
+      "url": "https://uneom.com/shop/corporate/executive-office-attire",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/corporate/executive-office-attire/",
+      "timestamp": "2025-05-04T13:15:11.147Z"
+    },
+    {
+      "url": "https://uneom.com/shop/corporate-workwear",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/corporate-workwear/",
+      "timestamp": "2025-05-04T13:15:11.452Z"
+    },
+    {
+      "url": "https://uneom.com/shop/corporate-workwear/corporate-shirt",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/corporate-workwear/corporate-shirt/",
+      "timestamp": "2025-05-04T13:15:11.302Z"
+    },
+    {
+      "url": "https://uneom.com/shop/corporate-workwear/executive-blazer",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/corporate-workwear/executive-blazer/",
+      "timestamp": "2025-05-04T13:15:11.452Z"
+    },
+    {
+      "url": "https://uneom.com/shop/corporate-workwear/executive-suit",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/corporate-workwear/executive-suit/",
+      "timestamp": "2025-05-04T13:15:12.352Z"
+    },
+    {
+      "url": "https://uneom.com/shop/corporate-workwear/office-trouser",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/corporate-workwear/office-trouser/",
+      "timestamp": "2025-05-04T13:15:12.242Z"
+    },
+    {
+      "url": "https://uneom.com/shop/corporate-workwear/reception-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/corporate-workwear/reception-uniform/",
+      "timestamp": "2025-05-04T13:15:12.470Z"
+    },
+    {
+      "url": "https://uneom.com/shop/culinary-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/culinary-uniforms/",
+      "timestamp": "2025-05-04T13:15:12.264Z"
+    },
+    {
+      "url": "https://uneom.com/shop/culinary-uniforms/executive-chef-coat",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/culinary-uniforms/executive-chef-coat/",
+      "timestamp": "2025-05-04T13:15:12.196Z"
+    },
+    {
+      "url": "https://uneom.com/shop/education-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/education-uniforms/",
+      "timestamp": "2025-05-04T13:15:13.211Z"
+    },
+    {
+      "url": "https://uneom.com/shop/education-uniforms/faculty-professional-attire",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/education-uniforms/faculty-professional-attire/",
+      "timestamp": "2025-05-04T13:15:13.415Z"
+    },
+    {
+      "url": "https://uneom.com/shop/education-uniforms/premium-school-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/education-uniforms/premium-school-uniform/",
+      "timestamp": "2025-05-04T13:15:13.296Z"
+    },
+    {
+      "url": "https://uneom.com/shop/education-uniforms/premium-school-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/education-uniforms/premium-school-uniforms/",
+      "timestamp": "2025-05-04T13:15:13.209Z"
+    },
+    {
+      "url": "https://uneom.com/shop/education-uniforms/student-athletic-wear",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/education-uniforms/student-athletic-wear/",
+      "timestamp": "2025-05-04T13:15:13.202Z"
+    },
+    {
+      "url": "https://uneom.com/shop/examples/product-sliders",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/examples/product-sliders/",
+      "timestamp": "2025-05-04T13:15:14.194Z"
+    },
+    {
+      "url": "https://uneom.com/shop/healthcare",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/healthcare/",
+      "timestamp": "2025-05-04T13:15:14.256Z"
+    },
+    {
+      "url": "https://uneom.com/shop/healthcare/advanced-medical-scrubs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/healthcare/advanced-medical-scrubs/",
+      "timestamp": "2025-05-04T13:15:14.197Z"
+    },
+    {
+      "url": "https://uneom.com/shop/healthcare-accessories",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/healthcare-accessories/",
+      "timestamp": "2025-05-04T13:15:14.200Z"
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/",
+      "timestamp": "2025-05-04T13:15:14.404Z"
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/concierge-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/concierge-uniform/",
+      "timestamp": "2025-05-04T13:15:15.542Z"
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/housekeeping-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/housekeeping-uniform/",
+      "timestamp": "2025-05-04T13:15:15.534Z"
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/luxury-hotel-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/luxury-hotel-uniform/",
+      "timestamp": "2025-05-04T13:15:15.541Z"
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/premium-hotel-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/premium-hotel-uniforms/",
+      "timestamp": "2025-05-04T13:15:15.460Z"
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/reception-staff-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/reception-staff-uniform/",
+      "timestamp": "2025-05-04T13:15:15.634Z"
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/resort-staff-attire",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/resort-staff-attire/",
+      "timestamp": "2025-05-04T13:15:16.692Z"
+    },
+    {
+      "url": "https://uneom.com/shop/hospitality-attire/restaurant-staff-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/hospitality-attire/restaurant-staff-uniform/",
+      "timestamp": "2025-05-04T13:15:16.691Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/",
+      "timestamp": "2025-05-04T13:15:16.510Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/anti-static-industrial-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/anti-static-industrial-uniform/",
+      "timestamp": "2025-05-04T13:15:16.716Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/flame-resistant-workwear",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/flame-resistant-workwear/",
+      "timestamp": "2025-05-04T13:15:16.567Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/heat-resistant-gloves",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/heat-resistant-gloves/",
+      "timestamp": "2025-05-04T13:15:17.706Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/hi-vis-safety-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/hi-vis-safety-uniform/",
+      "timestamp": "2025-05-04T13:15:17.501Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/industrial-coverall",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/industrial-coverall/",
+      "timestamp": "2025-05-04T13:15:17.481Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/industrial-coverall-pro",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/industrial-coverall-pro/",
+      "timestamp": "2025-05-04T13:15:17.464Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/industrial-jacket",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/industrial-jacket/",
+      "timestamp": "2025-05-04T13:15:17.603Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/industrial-safety-vest",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/industrial-safety-vest/",
+      "timestamp": "2025-05-04T13:15:18.475Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/mechanics-overalls",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/mechanics-overalls/",
+      "timestamp": "2025-05-04T13:15:18.475Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/related-product-1",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/related-product-1/",
+      "timestamp": "2025-05-04T13:15:18.462Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/related-product-2",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/related-product-2/",
+      "timestamp": "2025-05-04T13:15:18.457Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/related-product-3",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/related-product-3/",
+      "timestamp": "2025-05-04T13:15:18.466Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/related-product-4",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/related-product-4/",
+      "timestamp": "2025-05-04T13:15:19.299Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/safety-helmet-pro",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/safety-helmet-pro/",
+      "timestamp": "2025-05-04T13:15:19.247Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/supervisor-industrial-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/supervisor-industrial-uniform/",
+      "timestamp": "2025-05-04T13:15:19.278Z"
+    },
+    {
+      "url": "https://uneom.com/shop/industrial-uniforms/welding-apron",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/industrial-uniforms/welding-apron/",
+      "timestamp": "2025-05-04T13:15:19.229Z"
+    },
+    {
+      "url": "https://uneom.com/shop/manufacturing-attire",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/manufacturing-attire/",
+      "timestamp": "2025-05-04T13:15:19.233Z"
+    },
+    {
+      "url": "https://uneom.com/shop/manufacturing-attire/industrial-protective-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/manufacturing-attire/industrial-protective-uniforms/",
+      "timestamp": "2025-05-04T13:15:20.214Z"
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/",
+      "timestamp": "2025-05-04T13:15:20.116Z"
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/antimicrobial-scrubs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/antimicrobial-scrubs/",
+      "timestamp": "2025-05-04T13:15:20.122Z"
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/executive-medical-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/executive-medical-uniform/",
+      "timestamp": "2025-05-04T13:15:20.292Z"
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/executive-medical-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/executive-medical-uniforms/",
+      "timestamp": "2025-05-04T13:15:20.371Z"
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/medical-lab-coat",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/medical-lab-coat/",
+      "timestamp": "2025-05-04T13:15:21.090Z"
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/medical-lab-coats",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/medical-lab-coats/",
+      "timestamp": "2025-05-04T13:15:21.098Z"
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/nursing-scrubs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/nursing-scrubs/",
+      "timestamp": "2025-05-04T13:15:21.119Z"
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/premium-medical-scrubs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/premium-medical-scrubs/",
+      "timestamp": "2025-05-04T13:15:21.127Z"
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/premium-scrubs-set",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/premium-scrubs-set/",
+      "timestamp": "2025-05-04T13:15:21.127Z"
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/premium-surgical-gowns",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/premium-surgical-gowns/",
+      "timestamp": "2025-05-04T13:15:21.976Z"
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/professional-lab-coat",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/professional-lab-coat/",
+      "timestamp": "2025-05-04T13:15:21.976Z"
+    },
+    {
+      "url": "https://uneom.com/shop/medical-scrubs/surgical-scrubs",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/medical-scrubs/surgical-scrubs/",
+      "timestamp": "2025-05-04T13:15:22.222Z"
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/beauty-salon",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/beauty-salon/",
+      "timestamp": "2025-05-04T13:15:22.235Z"
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/customer-service",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/customer-service/",
+      "timestamp": "2025-05-04T13:15:22.276Z"
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/luxury-retail-collection",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/luxury-retail-collection/",
+      "timestamp": "2025-05-04T13:15:23.052Z"
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/mall-staff",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/mall-staff/",
+      "timestamp": "2025-05-04T13:15:23.051Z"
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/related-product-1",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/related-product-1/",
+      "timestamp": "2025-05-04T13:15:23.123Z"
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/related-product-2",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/related-product-2/",
+      "timestamp": "2025-05-04T13:15:23.086Z"
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/related-product-3",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/related-product-3/",
+      "timestamp": "2025-05-04T13:15:23.330Z"
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/related-product-4",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/related-product-4/",
+      "timestamp": "2025-05-04T13:15:24.358Z"
+    },
+    {
+      "url": "https://uneom.com/shop/retail-uniforms/store-staff",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/retail-uniforms/store-staff/",
+      "timestamp": "2025-05-04T13:15:25.257Z"
+    },
+    {
+      "url": "https://uneom.com/shop/security-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/security-uniforms/",
+      "timestamp": "2025-05-04T13:15:24.406Z"
+    },
+    {
+      "url": "https://uneom.com/shop/security-uniforms/executive-protection",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/security-uniforms/executive-protection/",
+      "timestamp": "2025-05-04T13:15:24.149Z"
+    },
+    {
+      "url": "https://uneom.com/shop/security-uniforms/mall-security",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/security-uniforms/mall-security/",
+      "timestamp": "2025-05-04T13:15:24.375Z"
+    },
+    {
+      "url": "https://uneom.com/shop/security-uniforms/security-officer-uniform",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/security-uniforms/security-officer-uniform/",
+      "timestamp": "2025-05-04T13:15:26.040Z"
+    },
+    {
+      "url": "https://uneom.com/shop/security-uniforms/tactical-security-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/security-uniforms/tactical-security-uniforms/",
+      "timestamp": "2025-05-04T13:15:26.059Z"
+    },
+    {
+      "url": "https://uneom.com/shop/workplace-uniforms",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/workplace-uniforms/",
+      "timestamp": "2025-05-04T13:15:26.093Z"
+    },
+    {
+      "url": "https://uneom.com/shop/workplace-uniforms/executive-suits",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/shop/workplace-uniforms/executive-suits/",
+      "timestamp": "2025-05-04T13:15:26.093Z"
+    },
+    {
+      "url": "https://uneom.com/terms-of-service",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/terms-of-service/",
+      "timestamp": "2025-05-04T13:15:26.178Z"
+    },
+    {
+      "url": "https://uneom.com/tmp",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "redirectUrl": "https://uneom.com/tmp/",
+      "timestamp": "2025-05-04T13:15:28.305Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:27.524Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:28.407Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:27.551Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:28.098Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.285Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.285Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.153Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.399Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.216Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.367Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.177Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.367Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.177Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.158Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.066Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.058Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.053Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.105Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.105Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.796Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.908Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.812Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.930Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.821Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.668Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.841Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.657Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.847Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.653Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.518Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.502Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.628Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.615Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.687Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.494Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.470Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.489Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.589Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.495Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.287Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.284Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.401Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.276Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.297Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.124Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.125Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.107Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.107Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.108Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.827Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.868Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.860Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.970Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.863Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.624Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.848Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.771Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.772Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.642Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.809Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.687Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.593Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.603Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.589Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.524Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.732Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.525Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.888Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.731Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:40.900Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:40.900Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:40.740Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:41.273Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:40.622Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.099Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.218Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.143Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.029Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/corporate-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.034Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/corporate-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.151Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/retail-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.219Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/retail-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.197Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/hospitality-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.219Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/hospitality-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.202Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/healthcare-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.852Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/healthcare-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.989Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/industrial-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.875Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/industrial-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.875Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/school-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.881Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/school-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.669Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/security-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.869Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/security-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.657Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/uniform-trends",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.683Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/uniform-trends",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.683Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/corporate-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.746Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/corporate-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.744Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/retail-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.561Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/retail-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.766Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/hospitality-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.764Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/hospitality-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.466Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/healthcare-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.466Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/healthcare-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.466Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/industrial-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.656Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/industrial-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.657Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/school-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.730Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/school-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.725Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/security-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.735Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/security-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.735Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/uniform-trends",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.732Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/uniform-trends",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.733Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.733Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.534Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.640Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.733Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.642Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.448Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.662Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.504Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.598Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.342Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.349Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.483Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.586Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.384Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.282Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.323Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.287Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.314Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.296Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:52.236Z"
+    }
+  ],
+  "notFoundLinks": [
+    {
+      "url": "https://uneom.com/ar/authors/[slug]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:23.660Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/[slug]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:24.612Z"
+    },
+    {
+      "url": "https://uneom.com/ar/shop/[category]/[product]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:44.523Z"
+    },
+    {
+      "url": "https://uneom.com/authors/[slug]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:55.409Z"
+    },
+    {
+      "url": "https://uneom.com/blog/[slug]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:55.416Z"
+    },
+    {
+      "url": "https://uneom.com/shop/[category]/[product]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:09.083Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:27.524Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:28.407Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:27.551Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:28.098Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.285Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.285Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.153Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.399Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.216Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.367Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.177Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.367Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.177Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.158Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.066Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.058Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.053Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.105Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.105Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.796Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.908Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.812Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.930Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.821Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.668Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.841Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.657Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.847Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.653Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.518Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.502Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.628Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.615Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.687Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.494Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.470Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.489Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.589Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.495Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.287Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.284Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.401Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.276Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.297Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.124Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.125Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.107Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.107Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.108Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.827Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.868Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.860Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.970Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.863Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.624Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.848Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.771Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.772Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.642Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.809Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.687Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.593Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.603Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.589Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.524Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.732Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.525Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.888Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.731Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:40.900Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:40.900Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:40.740Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:41.273Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:40.622Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.099Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.218Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.143Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.029Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/corporate-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.034Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/corporate-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.151Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/retail-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.219Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/retail-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.197Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/hospitality-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.219Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/hospitality-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.202Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/healthcare-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.852Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/healthcare-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.989Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/industrial-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.875Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/industrial-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.875Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/school-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.881Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/school-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.669Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/security-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.869Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/security-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.657Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/uniform-trends",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.683Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/uniform-trends",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.683Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/corporate-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.746Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/corporate-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.744Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/retail-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.561Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/retail-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.766Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/hospitality-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.764Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/hospitality-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.466Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/healthcare-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.466Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/healthcare-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.466Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/industrial-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.656Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/industrial-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.657Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/school-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.730Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/school-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.725Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/security-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.735Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/security-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.735Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/uniform-trends",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.732Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/uniform-trends",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.733Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.733Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.534Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.640Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.733Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.642Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.448Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.662Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.504Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.598Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.342Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.349Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.483Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.586Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.384Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.282Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.323Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.287Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.314Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.296Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:52.236Z"
+    }
+  ],
+  "blogNotFoundLinks": [
+    {
+      "url": "https://uneom.com/ar/blog/[slug]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:24.612Z"
+    },
+    {
+      "url": "https://uneom.com/blog/[slug]",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:14:55.416Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:27.524Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:28.407Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:27.551Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:28.098Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.285Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.285Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.153Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.399Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:29.216Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.367Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.177Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.367Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2023/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.177Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:30.158Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.066Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.058Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.053Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.105Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.105Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.796Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.908Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.812Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.930Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:31.821Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.668Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2024/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.841Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.657Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.847Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:32.653Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.518Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.502Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.628Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.615Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:33.687Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.494Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.470Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.489Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.589Z"
+    },
+    {
+      "url": "https://uneom.com/blog/2025/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:34.495Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.287Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.284Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.401Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.276Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:35.297Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.124Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.125Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.107Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.107Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.108Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.827Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.868Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2023/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.860Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.970Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:36.863Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.624Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.848Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.771Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.772Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:37.642Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.809Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.687Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.593Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.603Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:38.589Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2024/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.524Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.732Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.525Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.888Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:39.731Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:40.900Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:40.900Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:40.740Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:41.273Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:40.622Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.099Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.218Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/11",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.143Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/2025/12",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.029Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/corporate-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:42.034Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/corporate-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.151Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/retail-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.219Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/retail-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.197Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/hospitality-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.219Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/hospitality-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.202Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/healthcare-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.852Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/healthcare-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.989Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/industrial-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.875Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/industrial-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.875Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/school-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:43.881Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/school-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.669Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/security-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.869Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/security-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.657Z"
+    },
+    {
+      "url": "https://uneom.com/blog/category/uniform-trends",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.683Z"
+    },
+    {
+      "url": "https://uneom.com/blog/tag/uniform-trends",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:44.683Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/corporate-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.746Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/corporate-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.744Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/retail-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.561Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/retail-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.766Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/hospitality-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:45.764Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/hospitality-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.466Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/healthcare-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.466Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/healthcare-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.466Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/industrial-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.656Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/industrial-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:46.657Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/school-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.730Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/school-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.725Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/security-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.735Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/security-uniforms",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.735Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/category/uniform-trends",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:47.732Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/tag/uniform-trends",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.733Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.733Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.534Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.640Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:48.733Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.642Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.448Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.662Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.504Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:49.598Z"
+    },
+    {
+      "url": "https://uneom.com/blog/page/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.342Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/1",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.349Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/2",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.483Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/3",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.586Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/4",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:50.384Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/5",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.282Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/6",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.323Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/7",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.287Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/8",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.314Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/9",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:51.296Z"
+    },
+    {
+      "url": "https://uneom.com/ar/blog/page/10",
+      "status": 404,
+      "statusText": "Not Found",
+      "redirectUrl": null,
+      "timestamp": "2025-05-04T13:15:52.236Z"
+    }
+  ]
+}

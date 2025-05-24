@@ -10,6 +10,7 @@ import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function ExecutiveSuitsPage() {
   const router = useRouter();

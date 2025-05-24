@@ -3,7 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Locale, defaultLocale } from '@/lib/i18n/config';
-import LocationPageLayout from '@/components/layout/LocationPageLayout';
+import { generateMetadata as generateSEO } from '@/components/seo/ServerSEO';
+import MainLayout from '@/components/layout/MainLayout';
+import { HiOutlineMapPin, HiOutlinePhone, HiOutlineEnvelope, HiOutlineClock } from 'react-icons/hi2';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define possible locale values for static generation
 export function generateStaticParams() {
@@ -11,6 +14,38 @@ export function generateStaticParams() {
     { locale: 'en' },
     { locale: 'ar' }
   ];
+}
+
+// Define metadata for the page
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = params.locale;
+  const isArabic = locale === 'ar';
+
+  const title = isArabic 
+    ? 'يونيوم الدمام | خدمات الزي الموحد الصناعي في المنطقة الشرقية' 
+    : 'UNEOM Dammam | Industrial Uniform Services in Eastern Saudi Arabia';
+    
+  const description = isArabic
+    ? 'زيارة فرع يونيوم في الدمام. نقدم تصميم وإنتاج وتوريد اليونيفورم الصناعي عالي الجودة للشركات والمنشآت النفطية والمصانع في المنطقة الشرقية من المملكة العربية السعودية.'
+    : 'Visit UNEOM branch in Dammam. We provide high-quality industrial uniform design, production, and supply for oil companies, factories, and industrial facilities across Eastern Saudi Arabia.';
+    
+  const keywords = [
+    isArabic ? 'يونيوم الدمام' : 'UNEOM Dammam',
+    isArabic ? 'زي موحد صناعي' : 'industrial uniforms',
+    isArabic ? 'ملابس مهنية' : 'professional clothing',
+    isArabic ? 'يونيفورم شركات النفط' : 'oil company uniforms',
+    isArabic ? 'المملكة العربية السعودية' : 'Saudi Arabia',
+    isArabic ? 'المنطقة الشرقية' : 'Eastern Province'
+  ];
+
+  return generateSEO({
+    title,
+    description,
+    keywords,
+    path: '/locations/dammam',
+    locale: locale as 'en' | 'ar',
+    imageUrl: '/images/locations/dammam-cityscape.jpg'
+  });
 }
 
 // Define location data
@@ -206,27 +241,6 @@ const locationData = {
   relatedIndustries: ['industrial', 'energy', 'corporate', 'marine'] as const
 };
 
-// Get metadata for the page
-export const generateMetadata = ({ params }: { params: { locale: Locale } }): Metadata => {
-  const locale = params.locale || defaultLocale;
-  
-  return {
-    title: locale === 'ar' 
-      ? `يونيوم الدمام | حلول الزي الموحد للقطاعات الصناعية وقطاعات الطاقة` 
-      : `UNEOM Dammam | Industrial & Energy Sector Uniform Solutions`,
-    description: locale === 'ar'
-      ? `استكشف خدمات يونيوم للزي الموحد في الدمام، المتخصصة في حلول ملابس العمل للقطاعات الصناعية والطاقة والبحرية. نقدم تصاميم آمنة ومتينة تلبي المعايير الدولية.`
-      : `Explore UNEOM's uniform services in Dammam, specializing in workwear solutions for industrial, energy, and marine sectors. We provide safe, durable designs meeting international standards.`,
-    alternates: {
-      canonical: `https://uneom.com/locations/dammam/`,
-      languages: {
-        'en': `https://uneom.com/locations/dammam/`,
-        'ar': `https://uneom.com/ar/locations/dammam/`
-      }
-    }
-  };
-};
-
 export default function DammamLocationPage({ params }: { params: { locale: Locale } }) {
   const locale = params.locale || defaultLocale;
   const isArabic = locale === 'ar';
@@ -291,291 +305,291 @@ export default function DammamLocationPage({ params }: { params: { locale: Local
   };
 
   return (
-    <LocationPageLayout locale={locale}>
-      <main className={`min-h-screen ${isArabic ? 'rtl text-right' : 'ltr text-left'}`}>
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-b from-gray-900 to-gray-700 py-28 pt-36">
-          <div className="absolute inset-0 z-0 opacity-40">
-            <Image 
-              src={locationData.heroImage}
-              alt={locationData.name[locale]}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              {isArabic ? `يونيوم ${locationData.name[locale]}` : `UNEOM ${locationData.name[locale]}`}
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl">
-              {locationData.description[locale]}
-            </p>
-          </div>
-        </section>
+    <main className={`min-h-screen ${isArabic ? 'rtl text-right' : 'ltr text-left'}`}>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-b from-gray-900 to-gray-700 py-28">
+        <div className="absolute inset-0 z-0 opacity-40">
+          <Image 
+            src={locationData.heroImage}
+            alt={locationData.name[locale]}
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            {isArabic 
+              ? 'يونيوم الدمام | حلول الزي الموحد المتخصصة للقطاعات الصناعية والبترولية في المنطقة الشرقية'
+              : 'UNEOM Dammam | Industrial & Petroleum Safety Workwear Solutions in Eastern Province'}
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl">
+            {locationData.description[locale]}
+          </p>
+        </div>
+      </section>
 
-        {/* Introduction & Contact */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-              {/* Introduction */}
-              <div className="lg:col-span-2">
-                <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                  {isArabic ? `فرعنا في ${locationData.name[locale]}` : `Our Branch in ${locationData.name[locale]}`}
-                </h2>
-                <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                  {locationData.introduction[locale]}
-                </p>
+      {/* Introduction & Contact */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Introduction */}
+            <div className="lg:col-span-2">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                {isArabic ? `فرعنا في ${locationData.name[locale]}` : `Our Branch in ${locationData.name[locale]}`}
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                {locationData.introduction[locale]}
+              </p>
+            </div>
+            
+            {/* Contact Information */}
+            <div className="lg:col-span-1 bg-gray-50 rounded-lg p-8 shadow-md">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                {translations.visitUs}
+              </h2>
+              
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-500 uppercase mb-2">
+                  {translations.contactInfo}
+                </h3>
+                <p className="text-gray-700 mb-1">{locationData.address[locale]}</p>
+                <p className="text-gray-700 mb-1">{locationData.phone}</p>
+                <p className="text-gray-700 mb-4">{locationData.email}</p>
+                
+                <h3 className="text-sm font-semibold text-gray-500 uppercase mb-2">
+                  {translations.workingHours}
+                </h3>
+                <p className="text-gray-700 mb-4">{locationData.workingHours[locale]}</p>
+                
+                <a 
+                  href={locationData.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors duration-200"
+                >
+                  {translations.getDirections}
+                </a>
               </div>
               
-              {/* Contact Information */}
-              <div className="lg:col-span-1 bg-gray-50 rounded-lg p-8 shadow-md">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                  {translations.visitUs}
-                </h2>
-                
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-gray-500 uppercase mb-2">
-                    {translations.contactInfo}
-                  </h3>
-                  <p className="text-gray-700 mb-1">{locationData.address[locale]}</p>
-                  <p className="text-gray-700 mb-1">{locationData.phone}</p>
-                  <p className="text-gray-700 mb-4">{locationData.email}</p>
-                  
-                  <h3 className="text-sm font-semibold text-gray-500 uppercase mb-2">
-                    {translations.workingHours}
-                  </h3>
-                  <p className="text-gray-700 mb-4">{locationData.workingHours[locale]}</p>
-                  
-                  <a 
-                    href={locationData.googleMapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors duration-200"
-                  >
-                    {translations.getDirections}
-                  </a>
-                </div>
-                
-                <div className="relative h-48 rounded-lg overflow-hidden">
+              <div className="relative h-48 rounded-lg overflow-hidden">
+                <Image 
+                  src={locationData.mapImage}
+                  alt={`${locationData.name[locale]} ${isArabic ? 'خريطة' : 'map'}`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              {translations.ourTeam}
+            </h2>
+            <p className="text-lg text-gray-600">
+              {translations.teamDescription}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {locationData.team.map((member, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="relative h-64">
                   <Image 
-                    src={locationData.mapImage}
-                    alt={`${locationData.name[locale]} ${isArabic ? 'خريطة' : 'map'}`}
+                    src={member.image}
+                    alt={member.name[locale]}
                     fill
                     className="object-cover"
                   />
                 </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-800">
+                    {member.name[locale]}
+                  </h3>
+                  <p className="text-blue-600 mb-4">{member.position[locale]}</p>
+                  <p className="text-gray-600">{member.bio[locale]}</p>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Team Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                {translations.ourTeam}
-              </h2>
-              <p className="text-lg text-gray-600">
-                {translations.teamDescription}
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {locationData.team.map((member, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <div className="relative h-64">
-                    <Image 
-                      src={member.image}
-                      alt={member.name[locale]}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-800">
-                      {member.name[locale]}
-                    </h3>
-                    <p className="text-blue-600 mb-4">{member.position[locale]}</p>
-                    <p className="text-gray-600">{member.bio[locale]}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Specialized Services */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                {translations.specializedServices}
-              </h2>
-              <p className="text-lg text-gray-600">
-                {translations.servicesDescription}
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {locationData.specializedServices.map((service, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 flex items-start">
-                  <div className="mr-4 rtl:ml-4 rtl:mr-0 flex-shrink-0">
-                    <Image 
-                      src={service.icon}
-                      alt=""
-                      width={40}
-                      height={40}
-                      className="text-blue-600"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">
-                      {service.title[locale]}
-                    </h3>
-                    <p className="text-gray-600">
-                      {service.description[locale]}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Case Studies */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                {translations.successStories}
-              </h2>
-              <p className="text-lg text-gray-600">
-                {translations.successDescription}
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {locationData.caseStudies.map((study, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <div className="relative h-64">
-                    <Image 
-                      src={study.image}
-                      alt={study.title[locale]}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">
-                      {study.title[locale]}
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      {study.description[locale]}
-                    </p>
-                    
-                    <div className="bg-blue-50 p-4 rounded-lg">
-                      <h4 className="text-sm font-semibold text-blue-800 uppercase mb-2">
-                        {translations.results}
-                      </h4>
-                      <p className="text-gray-700">{study.results[locale]}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                  {translations.commonQuestions}
-                </h2>
-                <p className="text-lg text-gray-600">
-                  {translations.questionsDescription}
-                </p>
-              </div>
-              
-              <div className="space-y-6">
-                {locationData.faqs.map((faq, index) => (
-                  <div key={index} className="bg-gray-50 rounded-lg p-6">
-                    <h3 className="text-xl font-bold text-gray-800 mb-3">
-                      {faq.question[locale]}
-                    </h3>
-                    <p className="text-gray-600">
-                      {faq.answer[locale]}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Industries */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                {translations.exploreIndustries}
-              </h2>
-              <p className="text-lg text-gray-600">
-                {translations.industriesDescription}
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {locationData.relatedIndustries.map((industry) => (
-                <div key={industry} className="relative rounded-lg overflow-hidden shadow-lg group">
-                  <div className="relative h-64">
-                    <Image 
-                      src={industryMapping[industry].image}
-                      alt={industryMapping[industry].name}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {industryMapping[industry].name}
-                    </h3>
-                    <Link 
-                      href={`/${locale}/industries/${industry}`}
-                      className="inline-block bg-white/90 hover:bg-white text-blue-700 text-sm font-semibold py-2 px-4 rounded transition-colors duration-200"
-                    >
-                      {translations.viewIndustry}
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">
-              {translations.ctaHeading}
+      {/* Specialized Services */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              {translations.specializedServices}
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              {translations.ctaDescription}
+            <p className="text-lg text-gray-600">
+              {translations.servicesDescription}
             </p>
-            <Link 
-              href={`/${locale}/quote?location=dammam`}
-              className="inline-block bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              {translations.getQuote}
-            </Link>
           </div>
-        </section>
-      </main>
-    </LocationPageLayout>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {locationData.specializedServices.map((service, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-6 flex items-start">
+                <div className="mr-4 rtl:ml-4 rtl:mr-0 flex-shrink-0">
+                  <Image 
+                    src={service.icon}
+                    alt=""
+                    width={40}
+                    height={40}
+                    className="text-blue-600"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                    {service.title[locale]}
+                  </h3>
+                  <p className="text-gray-600">
+                    {service.description[locale]}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              {translations.successStories}
+            </h2>
+            <p className="text-lg text-gray-600">
+              {translations.successDescription}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {locationData.caseStudies.map((study, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="relative h-64">
+                  <Image 
+                    src={study.image}
+                    alt={study.title[locale]}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                    {study.title[locale]}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {study.description[locale]}
+                  </p>
+                  
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="text-sm font-semibold text-blue-800 uppercase mb-2">
+                      {translations.results}
+                    </h4>
+                    <p className="text-gray-700">{study.results[locale]}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                {translations.commonQuestions}
+              </h2>
+              <p className="text-lg text-gray-600">
+                {translations.questionsDescription}
+              </p>
+            </div>
+            
+            <div className="space-y-6">
+              {locationData.faqs.map((faq, index) => (
+                <div key={index} className="bg-gray-50 rounded-lg p-6">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">
+                    {faq.question[locale]}
+                  </h3>
+                  <p className="text-gray-600">
+                    {faq.answer[locale]}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Industries */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              {translations.exploreIndustries}
+            </h2>
+            <p className="text-lg text-gray-600">
+              {translations.industriesDescription}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {locationData.relatedIndustries.map((industry) => (
+              <div key={industry} className="relative rounded-lg overflow-hidden shadow-lg group">
+                <div className="relative h-64">
+                  <Image 
+                    src={industryMapping[industry].image}
+                    alt={industryMapping[industry].name}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {industryMapping[industry].name}
+                  </h3>
+                  <Link 
+                    href={`/${locale}/industries/${industry}`}
+                    className="inline-block bg-white/90 hover:bg-white text-blue-700 text-sm font-semibold py-2 px-4 rounded transition-colors duration-200"
+                  >
+                    {translations.viewIndustry}
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            {translations.ctaHeading}
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            {translations.ctaDescription}
+          </p>
+          <Link 
+            href={`/${locale}/quote?location=dammam`}
+            className="inline-block bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-colors duration-200"
+          >
+            {translations.getQuote}
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 } 

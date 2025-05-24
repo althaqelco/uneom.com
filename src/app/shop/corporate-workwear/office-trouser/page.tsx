@@ -8,6 +8,7 @@ import { IoMdCheckmark } from 'react-icons/io';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function OfficeTrouserPage() {
   const locale = 'en';

@@ -2,11 +2,12 @@
 
 import React from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function CustomDesignServicePage() {
   const locale = 'en';
   const serviceData = {
-    title: 'Custom Design & Branding',
+    title: "UNEOM - Professional Uniforms",
     subtitle: 'Distinctive uniform solutions that elevate your brand identity',
     heroImage: '/images/banner-placeholder.jpg',
     

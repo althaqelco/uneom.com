@@ -1,0 +1,76 @@
+{
+  "en": {
+    "title": "Luxury Retail Blazer Set",
+    "description": "Project sophistication and brand excellence with our Luxury Retail Blazer Set. Tailored specifically for Saudi Arabia's high-end retail environments, this premium uniform elevates your brand's visual identity while providing exceptional comfort for staff working in luxury retail settings.",
+    "features": [
+      "Premium wool-blend fabric (80% polyester, 20% wool)",
+      "Stain and wrinkle-resistant treatment",
+      "Subtle brand integration options (buttons, pocket design)",
+      "Modern tailored fit with Arabian comfort considerations",
+      "Breathable lining suitable for climate-controlled environments"
+    ],
+    "specifications": {
+      "material": "Premium wool blend (80% polyester, 20% wool)",
+      "weight": "260 gsm (blazer), 220 gsm (trousers/skirt)",
+      "colors": ["Charcoal Grey", "Navy Blue", "Black", "Burgundy"],
+      "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL", "Custom"],
+      "care": "Dry clean recommended, spot clean for minor stains"
+    },
+    "customization": "Full customization available including color matching to brand guidelines, embroidered logos, and custom sizing for all staff members. Complementary alteration service available for bulk orders.",
+    "ideal_for": "Luxury department stores, designer boutiques, high-end jewelry retailers, and premium electronic stores.",
+    "pricing": {
+      "single": "650 SAR",
+      "bulk_20": "590 SAR per set",
+      "bulk_50": "560 SAR per set",
+      "custom_sizing": "Additional 150 SAR per set"
+    },
+    "image_paths": [
+      "/images/products/retail/luxury-1.jpg",
+      "/images/products/retail/luxury-2.jpg",
+      "/images/industries/retail-shops/retail-shops-uniform-identity.jpg"
+    ],
+    "related_products": [
+      "/shop/retail-uniforms/related-product-1/",
+      "/shop/retail-uniforms/related-product-3/",
+      "/shop/retail-uniforms/related-product-4/"
+    ]
+  },
+  "ar": {
+    "title": "طقم بليزر فاخر للبيع بالتجزئة",
+    "description": "اجعل علامتك التجارية رمزاً للتميز والفخامة مع طقم البليزر الراقي المصمم خصيصاً لقطاع التجزئة السعودي الفاخر. يجمع هذا الزي الاحترافي بين الأناقة الاستثنائية والراحة الفائقة، ويعكس التزام مؤسستك بأعلى معايير الجودة والاحترافية. مصمم بعناية لتعزيز ثقة موظفيك وانطباع عملائك في بيئات البيع بالتجزئة الراقية في المملكة العربية السعودية.",
+    "features": [
+      "نسيج فائق الجودة من مزيج الصوف (80% بوليستر فاخر، 20% صوف استرالي) لمظهر راقٍ ومتانة استثنائية",
+      "معالجة متطورة مقاومة للبقع والتجاعيد تحافظ على الأناقة طوال يوم العمل وتقلل تكاليف الصيانة",
+      "تفاصيل أنيقة لإبراز هوية العلامة التجارية (أزرار مخصصة، ألوان حصرية، تصميم جيب مميز)",
+      "قصة عصرية مع اهتمام خاص بتفضيلات الراحة في المملكة العربية السعودية",
+      "بطانة فاخرة قابلة للتنفس من الحرير الصناعي عالي الجودة مثالية للارتداء طوال اليوم في بيئات التسوق المكيفة"
+    ],
+    "specifications": {
+      "material": "مزيج الصوف الفاخر (80% بوليستر متطور، 20% صوف استرالي منتقى)",
+      "weight": "260 جم/م² (البليزر) - يوفر الهيكل المثالي مع الراحة، 220 جم/م² (البنطلون/التنورة) - انسيابية وسهولة الحركة",
+      "colors": ["رمادي فحمي أنيق", "أزرق كحلي عميق", "أسود كلاسيكي", "نبيذي راقٍ"],
+      "sizes": ["XS (40-42)", "S (44-46)", "M (48-50)", "L (52-54)", "XL (56-58)", "2XL (60-62)", "3XL (64-66)", "مقاسات مخصصة"],
+      "care": "يُنصح بالتنظيف الجاف للحفاظ على الجودة الفائقة، تنظيف موضعي للبقع الطفيفة، تعليق على علاقات فاخرة للحفاظ على الشكل المثالي"
+    },
+    "customization": "نقدم تجربة تخصيص استثنائية تشمل مطابقة دقيقة للألوان وفق هوية علامتك التجارية، شعارات مطرزة بدقة عالية، مقاسات مخصصة مأخوذة بعناية لكل موظف، وتفاصيل فريدة حسب طلبك. تشمل الخدمة جلسة استشارية لتحديد أفضل الخيارات لفريقك، وخدمة تعديل مجانية للطلبات فوق 10 أطقم.",
+    "ideal_for": "المتاجر الكبرى الفاخرة، بوتيكات المصممين العالميين، متاجر المجوهرات الراقية، معارض السيارات الفاخرة، متاجر الساعات الثمينة، متاجر الإلكترونيات المتميزة، وجميع نقاط البيع بالتجزئة التي تستهدف العملاء ذوي الذوق الرفيع.",
+    "pricing": {
+      "single": "650 ريال سعودي",
+      "bulk_20": "590 ريال سعودي للطقم (توفير 9.2%)",
+      "bulk_50": "560 ريال سعودي للطقم (توفير 13.8%)",
+      "custom_sizing": "إضافة 150 ريال سعودي للطقم (يشمل جلسة قياس خاصة وتعديلات)",
+      "premium_package": "اتصل بنا للحصول على باقة التميز الشاملة (تشمل 3 قطع إضافية وخدمات VIP)"
+    },
+    "image_paths": [
+      "/images/products/retail/luxury-1.jpg",
+      "/images/products/retail/luxury-2.jpg",
+      "/images/industries/retail-shops/retail-shops-uniform-identity.jpg",
+      "/images/industries/retail-shops/retail-shops-uniform-brand.jpg"
+    ],
+    "related_products": [
+      "/shop/retail-uniforms/related-product-1/",
+      "/shop/retail-uniforms/related-product-3/",
+      "/shop/retail-uniforms/related-product-4/"
+    ]
+  }
+} 

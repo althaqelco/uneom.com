@@ -107,4 +107,32 @@ export function clearBrowserData() {
   console.log('All cookies, localStorage, and cache cleared');
   
   return true;
+}
+
+/**
+ * Codifica de manera segura las cadenas para uso en URLs, 
+ * especialmente útil para caracteres árabes y otros caracteres no latinos
+ */
+export function safeEncodeURIComponent(str: string): string {
+  if (!str) return '';
+  return encodeURIComponent(str)
+    .replace(/%20/g, '-')
+    .replace(/%/g, '')
+    .toLowerCase();
+}
+
+/**
+ * Decodifica de manera segura las cadenas de URL, 
+ * manejando correctamente caracteres árabes y otros caracteres no latinos
+ */
+export function safeDecodeURIComponent(str: string): string {
+  if (!str) return '';
+  try {
+    // Reemplazar guiones con espacios y luego decodificar
+    return decodeURIComponent(str.replace(/-/g, ' '));
+  } catch (error) {
+    // Si hay un error al decodificar, devolver la cadena original
+    console.error('Error decodificando URL:', error);
+    return str;
+  }
 } 

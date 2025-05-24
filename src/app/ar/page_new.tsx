@@ -36,6 +36,7 @@ const amiriFont = Amiri({
 // Import data for the page
 import { industries } from '@/lib/data/industries';
 import { products } from '@/lib/data/products';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // بيانات العملاء
 const clients = [
@@ -325,6 +326,23 @@ export default function HomePage() {
 
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       {/* قسم البطل الرئيسي المحسن */}
       <section className="relative h-[90vh] overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800">
         {/* شرائح العرض الرئيسية */}

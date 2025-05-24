@@ -1,6 +1,53 @@
 import { products, getProductById, getProductsByCategory } from '@/lib/data/products';
 import ClientPage from './ClientPage';
-import { notFound } from 'next/navigation';
+import { notFound } from 'next/navigation';import { Metadata } from 'next';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+
+export async function generateMetadata(
+  { params: { category, product } }: { 
+    params: { category: string; product: string } 
+  }
+): Promise<Metadata> {
+  // You might fetch data here for dynamic metadata
+  // const data = await fetchData(params.category);
+  
+  // Get the page name from the URL parameter
+  const pageName = category;
+  const formattedPageName = pageName
+    .split('-')
+    .map(p => p.charAt(0).toUpperCase() + p.slice(1))
+    .join(' ');
+    
+  return {
+    title: `${formattedPageName} | يونيوم المملكة العربية السعودية`,
+    description: `استكشف مجموعتنا المتميزة من ${formattedPageName}. توفر يونيوم حلول الزي الموحد والملابس المهنية عالية الجودة المصممة خصيصًا للشركات والمؤسسات السعودية.`,
+    keywords: [
+      pageName.toLowerCase(),
+      'زي موحد',
+      'ملابس مهنية',
+      'يونيوم',
+      'المملكة العربية السعودية',
+      'ملابس العمل',
+      'الزي المؤسسي'
+    ],
+    openGraph: {
+      title: `${formattedPageName} | يونيوم المملكة العربية السعودية`,
+      description: `استكشف مجموعتنا المتميزة من ${formattedPageName}. توفر يونيوم حلول الزي الموحد والملابس المهنية عالية الجودة المصممة خصيصًا للشركات والمؤسسات السعودية.`,
+      url: `https://uneom.com/ar/shop/${pageName}`,
+      siteName: 'UNEOM',
+      images: [
+        {
+          url: `https://uneom.com/images/products/${pageName.replace(/\//g, '-')}.webp`,
+          width: 1200,
+          height: 630,
+          alt: `${formattedPageName} - يونيوم المملكة العربية السعودية`
+        }
+      ],
+      locale: 'ar'
+    }
+  };
+}
+
 
 interface PageProps {
   params: {

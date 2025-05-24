@@ -13,6 +13,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { generateProductWhatsAppUrl, generateQuoteWhatsAppUrl } from '@/utils/whatsapp';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function StudentAthleticWearPage() {
   const locale = 'en';

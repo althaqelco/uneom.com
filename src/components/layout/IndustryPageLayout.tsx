@@ -11,6 +11,7 @@ import Button from '../ui/Button';
 import QuoteForm from '../forms/QuoteForm';
 import FeaturedProducts from '../sections/FeaturedProducts';
 import AnimatedBenefitsSection from '../sections/AnimatedBenefitsSection';
+import { MainHeading, SmartHeading } from '@/lib/seo-helpers';
 
 // Define types for all the data that can be passed to the IndustryPageLayout
 interface Benefit {
@@ -161,7 +162,7 @@ export default function IndustryPageLayout({
     return skipMainLayout ? (
       <Container>
         <div className="py-20 text-center">
-          <h1 className="text-3xl font-bold mb-6">Industry Information Not Available</h1>
+                      <MainHeading className="text-3xl font-bold mb-6">Industry Information Not Available</MainHeading>
           <p className="mb-8">The requested industry information could not be found.</p>
           <Link href={locale === 'ar' ? '/ar/industries' : '/industries'} className="inline-block bg-primary-600 text-white px-4 py-2 rounded">
             {locale === 'ar' ? 'العودة إلى صفحة القطاعات' : 'Go back to Industries'}
@@ -172,7 +173,7 @@ export default function IndustryPageLayout({
       <MainLayout locale={locale}>
         <Container>
           <div className="py-20 text-center">
-            <h1 className="text-3xl font-bold mb-6">Industry Information Not Available</h1>
+            <MainHeading className="text-3xl font-bold mb-6">Industry Information Not Available</MainHeading>
             <p className="mb-8">The requested industry information could not be found.</p>
             <Link href={locale === 'ar' ? '/ar/industries' : '/industries'} className="inline-block bg-primary-600 text-white px-4 py-2 rounded">
               {locale === 'ar' ? 'العودة إلى صفحة القطاعات' : 'Go back to Industries'}
@@ -401,7 +402,7 @@ export default function IndustryPageLayout({
     React.createElement(
       "section",
       {
-        className: "relative bg-gradient-to-r from-neutral-900 to-neutral-800 text-white py-24"
+        className: "relative bg-gradient-to-r from-neutral-900 to-neutral-800 text-white py-24 pt-32"
       },
       React.createElement(
         "div",
@@ -999,77 +1000,80 @@ export default function IndustryPageLayout({
     ),
     
     /* Testimonials Section */
-    industryData.testimonials && Array.isArray(industryData.testimonials) && industryData.testimonials.length > 0 && (
-      React.createElement(
-        "section",
-        { className: "py-16 bg-primary-600 text-white" },
-        React.createElement(
-          motion.div,
-          {
-            initial: "hidden",
-            whileInView: "visible",
-            viewport: { once: true },
-            variants: fadeIn
-          },
+    industryData.testimonials && Array.isArray(industryData.testimonials) && industryData.testimonials.length > 0 && (() => {
+      try {
+        return React.createElement(
+          "section",
+          { className: "py-16 bg-primary-600 text-white" },
           React.createElement(
-            SectionHeading,
-            { centered: true, className: "text-white" },
-            isRtl ? "ماذا يقول عملاؤنا" : "What Our Clients Say"
-          ),
-          React.createElement(
-            "div",
-            { className: "mt-12 relative" },
-            industryData.testimonials.map((testimonial, index) => (
-              React.createElement(
-                "div",
-                { key: testimonial.id, className: index === 0 ? "" : "hidden" },
+            motion.div,
+            {
+              initial: "hidden",
+              whileInView: "visible",
+              viewport: { once: true },
+              variants: fadeIn
+            },
+            React.createElement(
+              SectionHeading,
+              { centered: true, className: "text-white", children: isRtl ? "ماذا يقول عملاؤنا" : "What Our Clients Say" }
+            ),
+            React.createElement(
+              "div",
+              { className: "mt-12 relative" },
+              industryData.testimonials.map((testimonial, index) => (
                 React.createElement(
                   "div",
-                  { className: "flex flex-col items-center text-center" },
-                  testimonial.image && React.createElement(
+                  { key: testimonial.id || index, className: index === 0 ? "" : "hidden" },
+                  React.createElement(
                     "div",
-                    { className: "w-20 h-20 rounded-full overflow-hidden mb-4" },
-                    React.createElement(
-                      Image,
-                      {
-                        src: testimonial.image,
-                        alt: testimonial.author,
-                        width: 80,
-                        height: 80,
-                        className: "object-cover w-full h-full"
-                      }
-                    )
-                  ),
-                  React.createElement(
-                    "blockquote",
-                    { className: "text-xl italic text-neutral-700 mb-6" },
-                    "&ldquo;",
-                    testimonial.quote,
-                    "&rdquo;"
-                  ),
-                  React.createElement(
-                    "cite",
-                    null,
-                    React.createElement(
+                    { className: "flex flex-col items-center text-center" },
+                    testimonial.image && React.createElement(
                       "div",
-                      { className: "font-bold text-neutral-900" },
-                      testimonial.author
+                      { className: "w-20 h-20 rounded-full overflow-hidden mb-4" },
+                      React.createElement(
+                        Image,
+                        {
+                          src: testimonial.image,
+                          alt: testimonial.author || "",
+                          width: 80,
+                          height: 80,
+                          className: "object-cover w-full h-full"
+                        }
+                      )
                     ),
                     React.createElement(
-                      "div",
-                      { className: "text-neutral-600" },
-                      testimonial.position,
-                      ", ",
-                      testimonial.company
+                      "blockquote",
+                      { className: "text-xl italic max-w-4xl mx-auto text-white mb-6" },
+                      "\"",
+                      testimonial.quote,
+                      "\""
+                    ),
+                    React.createElement(
+                      "cite",
+                      null,
+                      React.createElement(
+                        "div",
+                        { className: "font-bold text-white" },
+                        testimonial.author
+                      ),
+                      React.createElement(
+                        "div",
+                        { className: "text-neutral-100" },
+                        testimonial.position,
+                        testimonial.company ? ", " + testimonial.company : ""
+                      )
                     )
                   )
                 )
-              )
-            ))
+              ))
+            )
           )
-        )
-      )
-    ),
+        );
+      } catch (error) {
+        console.error("Error rendering testimonials:", error);
+        return null;
+      }
+    })(),
     
     /* Related Content Section */
     createRelatedContentSection(),
@@ -1267,14 +1271,15 @@ export default function IndustryPageLayout({
         {/* Hero content */}
         <Container>
           <div className="relative z-10 py-20 md:py-32 lg:py-40 max-w-4xl mx-auto text-center">
-            <motion.h1 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
             >
-              {industryData.title}
-            </motion.h1>
+              <MainHeading className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                {industryData.title}
+              </MainHeading>
+            </motion.div>
             
             <motion.p 
               initial={{ opacity: 0, y: 20 }}

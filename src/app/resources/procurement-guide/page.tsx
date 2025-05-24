@@ -2,11 +2,12 @@
 
 import React from 'react';
 import ResourcePageLayout from '@/components/layout/ResourcePageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function ProcurementGuidePage() {
   const resourceData = {
     locale: 'en',
-    title: 'Uniform Procurement Guide',
+    title: "UNEOM - Professional Uniforms",
     subtitle: 'Strategic approaches to sourcing and managing uniform programs effectively',
     heroImage: '/images/default-placeholder.jpg',
     overview: {

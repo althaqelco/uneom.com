@@ -1,0 +1,92 @@
+{
+  "en": {
+    "title": "Factory & Warehouse Uniform Set",
+    "description": "Optimize productivity and safety with our Factory & Warehouse Uniform Set, specially designed for Saudi Arabia's manufacturing and logistics environments. This professional uniform solution balances practicality with comfort for extended shifts in controlled industrial settings.",
+    "features": [
+      "Static-dissipative fabric for electronics and sensitive manufacturing areas",
+      "Strategically reinforced stress points for extended durability",
+      "Ergonomic design allowing full range of motion for warehouse activities",
+      "Soil-release finish to maintain professional appearance through shifts",
+      "Ventilated panels for temperature regulation in factory environments"
+    ],
+    "specifications": {
+      "material": "Durable twill (60% cotton, 40% polyester) with static-dissipative treatment",
+      "weight": "240 gsm",
+      "colors": ["Light Grey", "Navy Blue", "Dark Green", "Khaki"],
+      "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+      "certification": "Meets EN 1149-5 antistatic garment standards",
+      "care": "Industrial or home wash at 60°C, tumble dry low"
+    },
+    "customization": "Customize with embroidered company logos, departmental color identification, specialized pockets for scanning devices or inventory tools, and optional safety features for specific factory zones.",
+    "ideal_for": "Manufacturing facilities, warehouse operations, logistics centers, assembly plants, and distribution facilities throughout Saudi Arabia.",
+    "pricing": {
+      "shirt": "140 SAR",
+      "pants": "160 SAR",
+      "complete_set": "280 SAR",
+      "bulk_20_sets": "260 SAR per set",
+      "bulk_50_sets": "240 SAR per set"
+    },
+    "image_paths": [
+      "/images/products/industrial/factory-1.jpg",
+      "/images/products/industrial/factory-2.jpg",
+      "/images/industries/Factory_Industrial/Factory_Industrial_Anti_Static.webp"
+    ],
+    "related_products": [
+      "/shop/industrial-uniforms/industrial-jacket/",
+      "/shop/industrial-uniforms/related-product-1/",
+      "/shop/industrial-uniforms/related-product-3/"
+    ],
+    "safety_features": [
+      "Anti-static properties for electronics handling",
+      "Limited flammability for industrial environments",
+      "Reinforced belt loops for tool attachments",
+      "Hidden snap closures to prevent product scratching",
+      "Optional high-visibility elements for specific zones"
+    ]
+  },
+  "ar": {
+    "title": "طقم زي المصنع والمستودع",
+    "description": "عزز الإنتاجية والسلامة مع طقم زي المصنع والمستودع الخاص بنا، المصمم خصيصًا لبيئات التصنيع والخدمات اللوجستية في المملكة العربية السعودية. يوازن حل الزي المهني هذا بين العملية والراحة للمناوبات الطويلة في البيئات الصناعية المتحكم بها.",
+    "features": [
+      "قماش مشتت للكهرباء الساكنة لمناطق الإلكترونيات والتصنيع الحساسة",
+      "نقاط إجهاد معززة استراتيجيًا لمتانة طويلة الأمد",
+      "تصميم مريح يسمح بنطاق كامل من الحركة لأنشطة المستودع",
+      "تشطيب مقاوم للاتساخ للحفاظ على المظهر المهني خلال المناوبات",
+      "لوحات تهوية لتنظيم درجة الحرارة في بيئات المصنع"
+    ],
+    "specifications": {
+      "material": "تويل متين (60% قطن، 40% بوليستر) مع معالجة مشتتة للكهرباء الساكنة",
+      "weight": "240 جم/م²",
+      "colors": ["رمادي فاتح", "أزرق داكن", "أخضر داكن", "كاكي"],
+      "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+      "certification": "تلبي معايير EN 1149-5 للملابس المضادة للكهرباء الساكنة",
+      "care": "غسيل صناعي أو منزلي عند 60 درجة مئوية، تجفيف منخفض"
+    },
+    "customization": "التخصيص مع شعارات الشركة المطرزة، وتحديد ألوان الأقسام، وجيوب متخصصة لأجهزة المسح أو أدوات الجرد، وميزات السلامة الاختيارية لمناطق المصنع المحددة.",
+    "ideal_for": "مرافق التصنيع، وعمليات المستودعات، ومراكز الخدمات اللوجستية، ومصانع التجميع، ومرافق التوزيع في جميع أنحاء المملكة العربية السعودية.",
+    "pricing": {
+      "shirt": "140 ريال سعودي",
+      "pants": "160 ريال سعودي",
+      "complete_set": "280 ريال سعودي",
+      "bulk_20_sets": "260 ريال سعودي للطقم",
+      "bulk_50_sets": "240 ريال سعودي للطقم"
+    },
+    "image_paths": [
+      "/images/products/industrial/factory-1.jpg",
+      "/images/products/industrial/factory-2.jpg",
+      "/images/industries/Factory_Industrial/Factory_Industrial_Anti_Static.webp"
+    ],
+    "related_products": [
+      "/shop/industrial-uniforms/industrial-jacket/",
+      "/shop/industrial-uniforms/related-product-1/",
+      "/shop/industrial-uniforms/related-product-3/"
+    ],
+    "safety_features": [
+      "خصائص مضادة للكهرباء الساكنة للتعامل مع الإلكترونيات",
+      "قابلية محدودة للاشتعال للبيئات الصناعية",
+      "حلقات حزام معززة لملحقات الأدوات",
+      "إغلاق بمشابك مخفية لمنع خدش المنتج",
+      "عناصر اختيارية عالية الوضوح لمناطق محددة"
+    ]
+  }
+} 

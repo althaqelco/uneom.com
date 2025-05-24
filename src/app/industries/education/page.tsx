@@ -1,433 +1,287 @@
-'use client';
+"use client";
 
-import React, { useEffect } from 'react';
-import Link from 'next/link';
+import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Container from '@/components/ui/Container';
+import SEO from '@/components/SEO';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
-// Education industry blog posts
-const educationBlogPosts = [
-  {
-    title: "How School Uniforms Enhance Academic Performance in Saudi Schools",
-    description: "Discover the research-backed benefits of quality school uniforms on student performance, focus, and academic identity in Saudi educational institutions.",
-    image: "/images/education/uniform_educations_blog-1.jpg",
-    link: "/blog/school-uniforms-academic-performance",
-    date: "April 18, 2024"
-  },
-  {
-    title: "Sustainable School Uniform Solutions for Modern Saudi Educational Institutions",
-    description: "Exploring eco-friendly fabric innovations and sustainable practices for educational uniforms that align with Saudi Vision 2030 environmental goals.",
-    image: "/images/education/uniform_educations_blog-2.jpg",
-    link: "/blog/sustainable-school-uniforms-saudi",
-    date: "March 24, 2024"
-  },
-  {
-    title: "Cultural Identity in Saudi School Uniforms: Balancing Tradition and Modernity",
-    description: "How thoughtfully designed school uniforms can honor Saudi heritage while embracing contemporary educational environments.",
-    image: "/images/education/uniform_educations_3.jpg",
-    link: "/blog/cultural-identity-saudi-school-uniforms",
-    date: "February 12, 2024"
-  }
-];
-
-// Featured education products
-const featuredProducts = [
-  {
-    id: "premium-school-uniform",
-    name: "Premium School Uniform Collection",
-    description: "High-quality, durable school uniforms designed specifically for Saudi educational institutions, featuring climate-appropriate fabrics and customizable branding options.",
-    image: "/images/education/uniform_school-2.jpg",
-    href: "/shop/education-uniforms/premium-school-uniform",
-    features: [
-      "Reinforced stitching for active students",
-      "ClimateComfort™ fabric technology",
-      "Customizable school logo integration",
-      "Islamic dress code compliant options"
-    ],
-    price: "SAR 199"
-  },
-  {
-    id: "faculty-professional-attire",
-    name: "Faculty Professional Attire",
-    description: "Distinguished professional uniforms for teachers and educational administrators that convey authority while providing comfort during long teaching hours.",
-    image: "/images/education/uniform_school_product-1.jpg",
-    href: "/shop/education-uniforms/faculty-professional-attire",
-    features: [
-      "Professional styling with comfort features",
-      "Department color customization",
-      "Modest options for all faculty members",
-      "Durable fabrics for daily classroom wear"
-    ],
-    price: "SAR 349"
-  },
-  {
-    id: "student-athletic-wear",
-    name: "Student Athletic & PE Uniform",
-    description: "Performance-oriented physical education and sports uniforms designed for Saudi schools, featuring moisture-wicking fabrics and activity-specific designs.",
-    image: "/images/education/uniform_school_product-2.jpg",
-    href: "/shop/education-uniforms/student-athletic-wear",
-    features: [
-      "SweatWick™ moisture management",
-      "UV protection for outdoor activities",
-      "Gender-appropriate athletic designs",
-      "Customizable with school athletics branding"
-    ],
-    price: "SAR 149"
-  }
-];
-
-// Animation variants
-const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: { duration: 0.6 }
-  }
-};
-
-const staggerChildren = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-};
-
-export default function EducationPage() {
-  // Default to English locale
+export default function EducationIndustryPage() {
   const locale = 'en';
   
-  // Set background color to ensure consistency
-  useEffect(() => {
-    // Force white background on the entire document
-    document.documentElement.style.background = '#ffffff';
-    document.body.style.background = '#ffffff';
-    
-    return () => {
-      document.documentElement.style.background = '';
-      document.body.style.background = '';
-    };
-  }, []);
+  const content = {
+    meta: {
+      title: 'Academic & School Uniforms in Saudi Arabia | UNEOM',
+      description: 'UNEOM provides high-quality, durable, and comfortable school uniforms, academic attire, and staff wear for educational institutions across KSA (Riyadh, Jeddah, Dammam).',
+    },
+    hero: {
+      headline: 'Inspiring Excellence: Premium Uniforms for the Education Sector by UNEOM',
+      subheadline: 'Custom-designed school uniforms, university attire, and staff apparel that promote identity, pride, and a conducive learning environment. Serving educational institutions throughout Saudi Arabia.',
+      cta: 'Discuss Your Uniform Needs',
+      ctaLink: '/quote?industry=education',
+      image: '/images/industries/education/hero-education-uniforms.jpg',
+    },
+    intro: {
+      title: 'Fostering Academic Identity Across Saudi Arabia',
+      paragraphs: [
+        'UNEOM is dedicated to supplying the education sector in Saudi Arabia with premium-quality uniforms that are both smart and practical. We understand the importance of attire that reflects an institution\'s values, fosters a sense of belonging among students, and presents a professional image for faculty and staff.',
+        'From K-12 schools to universities and vocational training centers in Riyadh, Jeddah, Dammam, and beyond, we partner with educational bodies to deliver durable, comfortable, and appropriately designed uniforms that meet the specific needs of students and educators.',
+      ],
+    },
+    keyBenefits: {
+      title: 'Why Choose UNEOM for Educational Uniforms?',
+      benefits: [
+        {
+          name: 'Institutional Identity & Pride',
+          description: 'Cohesive uniforms that strengthen school spirit and institutional identity.',
+          icon: '/images/icons/identity-badge.svg',
+        },
+        {
+          name: 'Durability & Comfort',
+          description: 'High-quality, resilient fabrics designed for active students and daily wear.',
+          icon: '/images/icons/comfort-fabric.svg',
+        },
+        {
+          name: 'Professional Staff Appearance',
+          description: 'Smart and professional attire for teachers and administrative staff, enhancing authority and respect.',
+          icon: '/images/icons/teacher-professional.svg',
+        },
+        {
+          name: 'Safety & Easy Identification',
+          description: 'Uniforms aid in easy identification of students, contributing to safety and security on campus.',
+          icon: '/images/icons/safety-shield.svg',
+        },
+      ],
+    },
+    featuredServices: {
+      title: 'Our Educational Uniform Solutions',
+      services: [
+        {
+          name: 'Custom School Uniforms (K-12)',
+          description: 'Complete uniform sets including shirts, trousers, skirts, blazers, and sportswear, tailored to your school\'s branding and requirements.',
+          image: '/images/services/education-school-uniforms.jpg',
+          link: '/shop/education/school-uniforms',
+        },
+        {
+          name: 'University & College Attire',
+          description: 'Official academic wear, faculty gowns, and departmental uniforms that uphold institutional prestige.',
+          image: '/images/services/education-university-attire.jpg',
+          link: '/shop/education/university-attire',
+        },
+        {
+          name: 'Staff & Faculty Uniforms',
+          description: 'Professional and comfortable uniforms for teaching staff, administrative personnel, and support services.',
+          image: '/images/services/education-staff-uniforms.jpg',
+          link: '/shop/education/staff-uniforms',
+        },
+      ],
+    },
+    customizationOptions: {
+      title: 'Bespoke Designs for Your Institution',
+      description: 'UNEOM offers full customization, from fabric selection and color matching to logo embroidery and unique design accents, ensuring your educational uniforms are a perfect representation of your institution\'s ethos and brand.',
+      image: '/images/industries/education/customization-education.jpg',
+    },
+    testimonials: {
+      title: 'Trusted by Educational Leaders',
+      items: [
+        {
+          quote: "UNEOM delivered exceptional quality and service for our school uniforms. The students look smart, and the parents are very pleased with the durability.",
+          author: 'Fatima Al-Mansour',
+          position: 'Principal, Bright Future International School, Riyadh',
+        },
+      ],
+    },
+    relatedBlogs: {
+      title: 'Insights on Educational Attire',
+      posts: [
+        {
+          title: 'The Role of Uniforms in Modern Education',
+          link: '/blog/uniforms-modern-education', 
+          image: '/images/blog/placeholder-education1.jpg',
+        },
+        {
+          title: 'Choosing Safe and Comfortable Fabrics for Student Uniforms',
+          link: '/blog/fabrics-student-uniforms', 
+          image: '/images/blog/placeholder-education2.jpg',
+        },
+      ],
+    },
+    finalCta: {
+      title: 'Partner with UNEOM for Your Educational Uniform Needs',
+      description: 'Ensure your students and staff represent your institution with pride and professionalism. Contact our specialists for a consultation on academic and school uniforms in Saudi Arabia.',
+      cta: 'Request an Education Sector Consultation',
+      ctaLink: '/quote?industry=education&focused=true',
+    },
+  };
   
   return (
-    <div className="bg-white min-h-screen">
-      {/* Hero Section with Main Title */}
-      <section className="pt-28 pb-16 bg-gradient-to-r from-primary-50 to-primary-100">
-        <Container>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
-            className="max-w-6xl mx-auto text-center"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary-900">
-              Professional School & Education Uniforms in Saudi Arabia
+    <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
+      <SEO
+        title={content.meta.title}
+        description={content.meta.description}
+        canonicalUrl="https://uneom.com/industries/education/"
+        // ogImage={content.meta.ogImage} // Example if you add OG images
+      />
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-sky-600 to-blue-800 text-white py-20 md:py-32">
+        <div className="absolute inset-0">
+          <Image
+            src={content.hero.image}
+            alt={content.hero.headline}
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+        </div>
+        <Container className="relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            {content.hero.headline}
             </h1>
-          </motion.div>
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
+            {content.hero.subheadline}
+          </p>
+          <Button href={content.hero.ctaLink} size="lg" variant="primary">
+            {content.hero.cta}
+          </Button>
         </Container>
       </section>
 
-      {/* Featured Products Section with Animation */}
-      <section className="py-16 bg-white">
+      {/* Intro Section */}
+      <section className="py-16 md:py-24 bg-white">
         <Container>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerChildren}
-            className="max-w-6xl mx-auto"
-          >
-            <SectionHeading>Featured Education Uniform Products</SectionHeading>
-            <p className="text-center max-w-3xl mx-auto mb-12 text-neutral-600">
-              Discover our premium collection of education uniforms, designed specifically for Saudi Arabian schools and educational institutions.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {featuredProducts.map((product, index) => (
-                <motion.div 
-                  key={index} 
-                  variants={fadeIn}
-                  className="bg-white rounded-lg overflow-hidden shadow-lg border border-neutral-200 transition-transform duration-300 hover:shadow-xl hover:-translate-y-1"
-                >
-                  <div className="h-56 relative">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute top-4 right-4 bg-primary-600 text-white text-sm font-bold px-3 py-1 rounded-full">
-                      {product.price}
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-bold text-xl mb-3">{product.name}</h3>
-                    <p className="text-neutral-600 mb-4">{product.description}</p>
-                    
-                    <div className="mb-5">
-                      <h4 className="text-sm font-semibold text-neutral-700 mb-2">Key Features:</h4>
-                      <ul className="space-y-1">
-                        {product.features.map((feature, idx) => (
-                          <li key={idx} className="text-sm text-neutral-600 flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-primary-600 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                            </svg>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <Link href={product.href} className="block text-center bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded transition-colors duration-200">
-                      View Product Details
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
+          <SectionHeading className="text-center mb-12">{content.intro.title}</SectionHeading>
+          <div className="max-w-3xl mx-auto space-y-6 text-lg text-neutral-700">
+            {content.intro.paragraphs.map((p, i) => (<p key={i}>{p}</p>))}
             </div>
-            
-            <div className="mt-12 text-center">
-              <Button
-                href="/shop/education-uniforms"
-                variant="outline"
-                size="lg"
-              >
-                View Full Education Collection
-              </Button>
-            </div>
-          </motion.div>
         </Container>
       </section>
       
-      {/* Additional SEO-enhanced sections added below the standard layout */}
-      <section className="py-16 bg-neutral-50">
+      {/* Key Benefits Section */}
+      <section className="py-16 md:py-24 bg-neutral-50">
         <Container>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerChildren}
-            className="max-w-5xl mx-auto"
-          >
-            <SectionHeading>Educational Uniform Expertise</SectionHeading>
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-              <motion.div variants={fadeIn} className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600">
-                <h3 className="text-xl font-semibold text-primary-800 mb-3">Uniform Policy Development</h3>
-                <p className="text-neutral-700">
-                  Our education consultants work directly with Saudi schools to develop comprehensive uniform policies that 
-                  align with institutional values, practical requirements, and Ministry of Education standards. We provide template 
-                  policies, parent communication materials, and implementation guidelines customized for your school's specific needs.
-                </p>
-              </motion.div>
-              
-              <motion.div variants={fadeIn} className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600">
-                <h3 className="text-xl font-semibold text-primary-800 mb-3">Student Measurement Programs</h3>
-                <p className="text-neutral-700">
-                  UNEOM offers on-site measurement services for Saudi educational institutions, with gender-appropriate staff and 
-                  private measurement areas. Our digital sizing systems capture accurate measurements while our specialized educational 
-                  software manages class distributions, order tracking, and reorder management.
-                </p>
-              </motion.div>
-              
-              <motion.div variants={fadeIn} className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600">
-                <h3 className="text-xl font-semibold text-primary-800 mb-3">Seasonal Uniform Transitions</h3>
-                <p className="text-neutral-700">
-                  For schools requiring distinct summer and winter uniforms, we develop coordinated seasonal collections with 
-                  appropriate fabric weights and styles for Saudi Arabia's climate variations. Our transition management program 
-                  ensures smooth seasonal changeovers with timely production and distribution.
-                </p>
-              </motion.div>
-              
-              <motion.div variants={fadeIn} className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600">
-                <h3 className="text-xl font-semibold text-primary-800 mb-3">Educational Identity Consulting</h3>
-                <p className="text-neutral-700">
-                  Beyond uniform production, we offer specialized consulting on translating educational philosophy and institutional 
-                  values into tangible uniform elements. Our design consultants help Saudi schools and universities develop distinctive 
-                  uniform programs that authentically reflect their educational approach.
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
-        </Container>
-      </section>
-      
-      {/* Case Study Section for SEO Enhancement */}
-      <section className="py-16 bg-white">
-        <Container>
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="rounded-xl overflow-hidden shadow-lg">
-              <div className="bg-primary-900 text-white px-6 py-4">
-                <h3 className="text-xl font-bold">Case Study: Al-Manar International School Uniform Program</h3>
-              </div>
-              <div className="p-6 bg-white">
-                <div className="flex flex-col md:flex-row gap-6">
-                  <div className="md:w-1/3">
-                    <Image 
-                      src="/images/education/uniform_school_product-4.jpg"
-                      alt="Al-Manar International School Uniform Program"
-                      width={300}
-                      height={400}
-                      className="rounded-md shadow-sm"
-                    />
-                  </div>
-                  <div className="md:w-2/3">
-                    <h4 className="text-lg font-semibold mb-3">Challenge</h4>
-                    <p className="mb-4 text-neutral-700">
-                      Al-Manar International School, with 2,500+ students across primary and secondary levels, faced challenges with uniform inconsistency, 
-                      high replacement rates, and complicated distribution processes affecting both school operations and student appearance.
-                    </p>
-                    
-                    <h4 className="text-lg font-semibold mb-3">Solution</h4>
-                    <p className="mb-4 text-neutral-700">
-                      UNEOM implemented a comprehensive uniform program featuring:
-                    </p>
-                    <ul className="list-disc list-inside mb-4 text-neutral-700 space-y-1">
-                      <li>Custom-designed uniforms with reinforced construction</li>
-                      <li>Distinctive elements for different educational levels</li>
-                      <li>Digital measurement and ordering system</li>
-                      <li>On-campus uniform store with specialized staff</li>
-                      <li>Parent portal for replacement ordering</li>
-                    </ul>
-                    
-                    <h4 className="text-lg font-semibold mb-3">Results</h4>
-                    <p className="text-neutral-700">
-                      Within one academic year, the school experienced a 42% reduction in uniform replacements, 97% parent satisfaction rate, 
-                      significantly improved student appearance, and elimination of administrative burden on school staff.
-                    </p>
-                  </div>
+          <SectionHeading className="text-center mb-16">{content.keyBenefits.title}</SectionHeading>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {content.keyBenefits.benefits.map((benefit) => (
+              <div key={benefit.name} className="bg-white p-6 rounded-lg shadow-lg text-center">
+                <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4"> {/* Adjusted icon bg and size */}
+                  <Image src={benefit.icon} alt={benefit.name} width={32} height={32} /> {/* Assuming SVG icons */}
                 </div>
+                <h3 className="text-xl font-semibold text-neutral-800 mb-2">{benefit.name}</h3>
+                <p className="text-neutral-600 text-sm">{benefit.description}</p>
               </div>
+            ))}
             </div>
-          </motion.div>
         </Container>
       </section>
       
-      {/* Educational Blog Posts Preview */}
-      <section className="py-16 bg-neutral-50">
+      {/* Featured Services Section */}
+      <section className="py-16 md:py-24 bg-white">
         <Container>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerChildren}
-          >
-            <SectionHeading>Educational Uniform Insights</SectionHeading>
-            <p className="text-center max-w-3xl mx-auto mb-12 text-neutral-600">
-              Explore our latest research and insights on school uniforms, educational identity, and uniform program management for Saudi Arabian educational institutions.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {educationBlogPosts.map((post, index) => (
-                <motion.div 
-                  key={index} 
-                  variants={fadeIn}
-                  className="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:shadow-lg hover:-translate-y-1"
-                >
-                  <div className="h-48 relative">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover"
-                    />
+          <SectionHeading className="text-center mb-16">{content.featuredServices.title}</SectionHeading>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {content.featuredServices.services.map((service) => (
+              <div key={service.name} className="border rounded-lg overflow-hidden shadow-lg group">
+                <Link href={service.link} className="block">
+                  <div className="relative w-full h-72 bg-neutral-100">
+                    <Image src={service.image} alt={service.name} fill className="object-cover group-hover:scale-105 transition-transform duration-300 p-2" /> {/* Added cover, slight padding for image */}
                   </div>
                   <div className="p-6">
-                    <div className="text-sm text-neutral-500 mb-2">{post.date}</div>
-                    <h3 className="font-bold text-lg mb-2 line-clamp-2">{post.title}</h3>
-                    <p className="text-neutral-600 mb-4 line-clamp-3">{post.description}</p>
-                    <Link href={post.link} className="text-primary-600 font-medium hover:text-primary-700 inline-flex items-center">
-                      Read Article
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
+                    <h3 className="text-xl font-semibold text-neutral-800 mb-2">{service.name}</h3>
+                    <p className="text-neutral-600 text-sm mb-4">{service.description}</p>
+                    <span className="text-sky-600 hover:text-sky-700 font-medium">
+                      Learn More &rarr;
+                    </span>
                   </div>
-                </motion.div>
-              ))}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Customization Options Section */}
+      <section className="py-16 md:py-24 bg-neutral-800 text-white">
+        <Container className="md:flex items-center gap-12 flex-row-reverse"> {/* Reversed for variety */}
+          <div className="md:w-1/2 mb-8 md:mb-0">
+            <Image src={content.customizationOptions.image} alt={content.customizationOptions.title} width={600} height={450} className="rounded-lg shadow-xl object-cover" />
+          </div>
+          <div className="md:w-1/2">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">{content.customizationOptions.title}</h2>
+            <p className="text-lg text-neutral-300 leading-relaxed">{content.customizationOptions.description}</p>
             </div>
-          </motion.div>
         </Container>
       </section>
       
-      {/* Call to Action Section */}
-      <section className="relative py-20 overflow-hidden">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-700 to-primary-900"></div>
-        
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
-        </div>
-        
+      {/* Testimonials Section */}
+      {content.testimonials && content.testimonials.items.length > 0 && (
+        <section className="py-16 md:py-24 bg-neutral-50">
         <Container>
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
-            className="relative z-10 max-w-4xl mx-auto text-center text-white"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Elevate Your Educational Institution's Image with Professional Uniforms
-            </h2>
-            <p className="text-lg md:text-xl mb-10 opacity-90">
-              Join hundreds of Saudi educational institutions that trust UNEOM for high-quality, compliant, and climate-appropriate school uniforms. Get a custom quote tailored to your specific requirements.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                href="/contact?service=education-uniforms"
-                variant="secondary"
-                size="lg"
-                className="px-8 font-medium"
-              >
-                Request a Custom Quote
-              </Button>
-              <Button
-                href="/shop/education-uniforms"
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-primary-700 font-medium"
-              >
-                Browse Our Education Collection
-              </Button>
+            <SectionHeading className="text-center mb-12">{content.testimonials.title}</SectionHeading>
+            <div className="max-w-2xl mx-auto">
+              {content.testimonials.items.map((testimonial, index) => (
+                <div key={index} className="bg-white p-8 rounded-lg shadow-lg mb-8">
+                  <p className="text-lg text-neutral-700 italic mb-4">"{testimonial.quote}"</p>
+                  <p className="text-right font-semibold text-sky-700">&mdash; {testimonial.author}, {testimonial.position}</p>
+                </div>
+              ))}
             </div>
-            
-            {/* Trust Factors */}
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div className="flex flex-col items-center">
-                <div className="text-2xl font-bold mb-1">100+</div>
-                <div className="text-sm opacity-80">Educational Institutions</div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-2xl font-bold mb-1">15+</div>
-                <div className="text-sm opacity-80">Years Experience</div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-2xl font-bold mb-1">98%</div>
-                <div className="text-sm opacity-80">Client Satisfaction</div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-2xl font-bold mb-1">24/7</div>
-                <div className="text-sm opacity-80">Customer Support</div>
-              </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Related Blogs Section */}
+      {content.relatedBlogs && content.relatedBlogs.posts.length > 0 && (
+        <section className="py-16 md:py-24 bg-white">
+          <Container>
+            <SectionHeading className="text-center mb-16">{content.relatedBlogs.title}</SectionHeading>
+            <div className="grid md:grid-cols-2 gap-8">
+              {content.relatedBlogs.posts.map((post) => (
+                <Link key={post.title} href={post.link} className="block group border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="relative w-full h-56 bg-neutral-100">
+                    <Image src={post.image} alt={post.title} fill className="object-cover" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-neutral-800 mb-2 group-hover:text-sky-600 transition-colors">{post.title}</h3>
+                    <span className="text-sky-600 font-medium">Read Article &rarr;</span>
+                  </div>
+                </Link>
+              ))}
             </div>
-          </motion.div>
         </Container>
       </section>
-    </div>
+      )}
+
+      {/* Final CTA Section */}
+      <section className="py-20 md:py-32 bg-sky-700 text-white">
+        <Container className="text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{content.finalCta.title}</h2>
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">{content.finalCta.description}</p>
+          <Button href={content.finalCta.ctaLink} size="lg" variant="secondary">
+            {content.finalCta.cta}
+              </Button>
+        </Container>
+      </section>
+    </>
   );
 } 

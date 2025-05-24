@@ -1,3 +1,4 @@
+// Test comment to check tool reliability
 /** @type {import('next').NextConfig} */
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -28,19 +29,6 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-  
-  // i18n configuration - this is commented out because we're using app router with [locale] parameter
-  // but the configuration below documents our approach for reference
-  /* 
-  i18n: {
-    // These are all the locales you want to support
-    locales: ['en', 'ar'],
-    // The default locale is English - no /en/ prefix
-    defaultLocale: 'en',
-    // We don't use automatic locale detection
-    localeDetection: false,
-  },
-  */
   
   // Configure image optimization
   images: {
@@ -91,11 +79,15 @@ const nextConfig = {
     disableStaticImages: false,
   },
   
-  // Configure server components
+  // Configure server components - May 2025 Optimizations
   experimental: {
-    optimizeCss: false,
+    optimizeCss: false, // Disabled due to build issues with static export
     scrollRestoration: true,
-    serverComponentsExternalPackages: [],
+    serverComponentsExternalPackages: ['web-vitals'],
+    optimizePackageImports: ['@/components', '@/lib'],
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
+    instrumentationHook: true,
+    ppr: false, // Partial Prerendering - enable when stable
   },
   
   // Explicitly set the output directory for the build
@@ -164,7 +156,7 @@ const nextConfig = {
   // Enable React strict mode for better development experience
   reactStrictMode: true,
   
-  // Configure trailing slashes - CRITICAL FOR SEO AND NETLIFY
+  // Configure trailing slashes - CAMBIO CRÍTICO PARA NETLIFY
   trailingSlash: true,
   
   // Este valor es esencial para despliegue en Netlify
@@ -173,27 +165,48 @@ const nextConfig = {
   // Para trabajar correctamente con archivos estáticos en Netlify
   basePath: '',
   
-  // Configure headers for better image loading
+  // Configure headers for better performance and security - May 2025 Standards
   async headers() {
     return [
       {
         source: '/:path*',
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
           },
           {
-            key: 'Access-Control-Allow-Origin',
-            value: '*',
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
           },
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
           },
           {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on',
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+      {
+        source: '/api/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-store, max-age=0',
           },
         ],
       },
@@ -207,6 +220,59 @@ const nextConfig = {
           {
             key: 'Access-Control-Allow-Origin',
             value: '*',
+          },
+          {
+            key: 'Cross-Origin-Resource-Policy',
+            value: 'cross-origin',
+          },
+        ],
+      },
+      {
+        source: '/:path*\\.(css|js|woff|woff2|ttf|eot)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/manifest.json',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400',
+          },
+          {
+            key: 'Content-Type',
+            value: 'application/manifest+json',
+          },
+        ],
+      },
+      {
+        source: '/css/image-fixes.css',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex',
+          },
+        ],
+      },
+      {
+        source: '/js/404-checker.js',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex',
+          },
+        ],
+      },
+      {
+        source: '/js/image-handler.js',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex',
           },
         ],
       },
@@ -226,56 +292,19 @@ const nextConfig = {
     ];
   },
   
-  // Redirects for SEO optimization - these will work in development but not in static export
-  // For static export, see the redirects in netlify.toml
+  // Configure redirects
   async redirects() {
-    // Don't return redirects if using static export
-    if (process.env.NEXT_PHASE === 'phase-export') {
-      return [];
-    }
-    
-    // Otherwise return the full list of redirects for development
     return [
-      // Basic redirects that should work in development
-      {
-        source: '/en/:path*',
-        destination: '/:path*',
-        permanent: true,
-      },
-      {
-        source: '/sectors/:path*',
-        destination: '/products/:path*',
-        permanent: true,
-      },
-      {
-        source: '/location/:path*',
-        destination: '/locations/:path*',
-        permanent: true,
-      },
-      {
-        source: '/category/:path*',
-        destination: '/blog/categories/:path*', 
-        permanent: true,
-      },
-      
-      // Arabic - Main Pages
-      {
-        source: '/ar/sectors/:path*',
-        destination: '/ar/products/:path*',
-        permanent: true,
-      },
-      {
-        source: '/ar/location/:path*',
-        destination: '/ar/locations/:path*',
-        permanent: true,
-      },
-      {
-        source: '/ar/category/:path*',
-        destination: '/ar/blog/categories/:path*',
-        permanent: true,
-      },
-      
-      // Common redirects
+      // Redirect for /ar to /ar/ (ensuring trailing slash for Arabic base path)
+      // Commenting out as trailingSlash:true should handle this for the /ar route.
+      // This might be causing a loop with the built-in trailingSlash behavior.
+      // {
+      //   source: '/ar',
+      //   destination: '/ar/',
+      //   permanent: true,
+      // },
+
+      // Redirects for About Us
       {
         source: '/about-us',
         destination: '/about/',
@@ -286,14 +315,31 @@ const nextConfig = {
         destination: '/ar/about/',
         permanent: true,
       },
+      // Redirects for Contact Us
       {
         source: '/contact-us',
         destination: '/contact/',
         permanent: true,
       },
       {
-        source: '/ar/contact-us',
+        source: '/contactus',
+        destination: '/contact/',
+        permanent: true,
+      },
+      {
+        source: '/ar/contactus',
         destination: '/ar/contact/',
+        permanent: true,
+      },
+      // Redirects for Quote page
+      {
+        source: '/quote',
+        destination: '/quote/',
+        permanent: true,
+      },
+      {
+        source: '/ar/quote',
+        destination: '/ar/quote/',
         permanent: true,
       },
       {
@@ -302,8 +348,14 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/ar/request-a-quote',
-        destination: '/ar/quote/',
+        source: '/book-a-demo',
+        destination: '/quote/',
+        permanent: true,
+      },
+      // Redirects for FAQ page
+      {
+        source: '/faq',
+        destination: '/faq/',
         permanent: true,
       },
       {
@@ -312,128 +364,157 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/ar/faqs',
+        source: '/ar/faq',
         destination: '/ar/faq/',
         permanent: true,
       },
-
-      // Redirect factory-industry and supply-manufacturing to manufacturing
+      // Redirects for Industry Pages aliases/consolidations
       {
-        source: '/industries/factory-industry/:path*',
+        source: '/industries/supply-manufacturing',
         destination: '/industries/manufacturing/',
         permanent: true,
       },
       {
-        source: '/ar/industries/factory-industry/:path*',
+        source: '/ar/industries/supply-manufacturing',
         destination: '/ar/industries/manufacturing/',
         permanent: true,
       },
       {
-        source: '/industries/supply-manufacturing/:path*',
+        source: '/industries/factory-industry',
         destination: '/industries/manufacturing/',
         permanent: true,
       },
       {
-        source: '/ar/industries/supply-manufacturing/:path*',
+        source: '/ar/industries/factory-industry',
         destination: '/ar/industries/manufacturing/',
         permanent: true,
       },
-
-      // Ensure trailing slash for /industries overview pages
       {
         source: '/industries',
-        destination: '/industries/',
+        destination: '/',
         permanent: true,
       },
       {
         source: '/ar/industries',
-        destination: '/ar/industries/',
+        destination: '/ar/',
         permanent: true,
       },
-
-      // Service page redirects
-      {
-        source: '/ar/services', // No slash
-        destination: '/ar/services/', // With slash
-        permanent: true,
-      },
+      // Redirects for Service Pages
       {
         source: '/services-page',
         destination: '/services/',
         permanent: true,
       },
-
-      // Ensure trailing slash for /locations overview pages
+      // Redirects for Location Pages (ensuring trailing slashes for key paths)
       {
-        source: '/locations', // No slash
-        destination: '/locations/', // With slash
+        source: '/ar/locations',
+        destination: '/ar/locations/',
         permanent: true,
       },
       {
-        source: '/ar/locations', // No slash
-        destination: '/ar/locations/', // With slash
+        source: '/locations/riyadh',
+        destination: '/locations/riyadh/',
         permanent: true,
       },
-
-      // Shop page redirect
       {
-        source: '/ar/shop', // No slash
-        destination: '/ar/shop/', // With slash
+        source: '/ar/locations/riyadh',
+        destination: '/ar/locations/riyadh/',
         permanent: true,
       },
-
-      // Redirect related-product-* URLs to their main category page
       {
-        source: '/shop/:category*/related-product-:splat*',
+        source: '/locations/jeddah',
+        destination: '/locations/jeddah/',
+        permanent: true,
+      },
+      {
+        source: '/ar/locations/jeddah',
+        destination: '/ar/locations/jeddah/',
+        permanent: true,
+      },
+      {
+        source: '/locations/dammam',
+        destination: '/locations/dammam/',
+        permanent: true,
+      },
+      {
+        source: '/ar/locations/dammam',
+        destination: '/ar/locations/dammam/',
+        permanent: true,
+      },
+      {
+        source: '/locations/mecca',
+        destination: '/locations/mecca/',
+        permanent: true,
+      },
+      {
+        source: '/ar/locations/mecca',
+        destination: '/ar/locations/mecca/',
+        permanent: true,
+      },
+      {
+        source: '/locations/medina',
+        destination: '/locations/medina/',
+        permanent: true,
+      },
+      {
+        source: '/ar/locations/medina',
+        destination: '/ar/locations/medina/',
+        permanent: true,
+      },
+      // Redirect for main Arabic shop page (ensuring trailing slash)
+      // Commenting out this redirect as it might be causing an infinite redirect loop
+      // {
+      //   source: '/ar/shop',
+      //   destination: '/ar/shop/',
+      //   permanent: true,
+      // },
+      // Redirects for problematic product URLs (related-product-n and product-n)
+      {
+        source: '/shop/:category*/related-product-:n(.*)',
         destination: '/shop/:category*/',
         permanent: true,
       },
       {
-        source: '/ar/shop/:category*/related-product-:splat*',
+        source: '/ar/shop/:category*/related-product-:n(.*)',
         destination: '/ar/shop/:category*/',
         permanent: true,
       },
-      // Redirect product-* URLs to their main category page (matching netlify.toml behavior)
       {
-        source: '/shop/:category*/product-:splat*',
+        source: '/shop/:category*/product-:n(.*)',
         destination: '/shop/:category*/',
         permanent: true,
       },
       {
-        source: '/ar/shop/:category*/product-:splat*',
+        source: '/ar/shop/:category*/product-:n(.*)',
         destination: '/ar/shop/:category*/',
         permanent: true,
       },
-
-      // Blog page redirect
-      {
-        source: '/ar/blog', // No slash
-        destination: '/ar/blog/', // With slash
-        permanent: true,
-      },
-
-      // Blog Date Archives redirects
-      {
-        source: '/blog/:year(\\d{4})',
-        destination: '/blog/',
-        permanent: true,
-      },
-      {
-        source: '/blog/:year(\\d{4})/:month(\\d{1,2})',
-        destination: '/blog/',
-        permanent: true,
-      },
-      {
-        source: '/ar/blog/:year(\\d{4})',
-        destination: '/ar/blog/',
-        permanent: true,
-      },
-      {
-        source: '/ar/blog/:year(\\d{4})/:month(\\d{1,2})',
-        destination: '/ar/blog/',
-        permanent: true,
-      },
-      // Blog Pagination redirects
+      // Blog related redirects (trailing slashes, date archives, pagination, specific old posts)
+      // {
+      //   source: '/ar/blog',
+      //   destination: '/ar/blog/',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/blog/:year(\\d{4})',
+      //   destination: '/blog/',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/blog/:year(\\d{4})/:month(\\d{1,2})',
+      //   destination: '/blog/',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/ar/blog/:year(\\d{4})',
+      //   destination: '/ar/blog/',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/ar/blog/:year(\\d{4})/:month(\\d{1,2})',
+      //   destination: '/ar/blog/',
+      //   permanent: true,
+      // },
       {
         source: '/blog/page/1',
         destination: '/blog/',
@@ -444,28 +525,60 @@ const nextConfig = {
         destination: '/ar/blog/',
         permanent: true,
       },
-
-      // Ensure trailing slash for /resources overview pages
       {
-        source: '/resources',
-        destination: '/resources/',
+        source: '/blog/the-science-behind-uneoms-heat-resistant-industrial-uniforms',
+        destination: '/blog/',
         permanent: true,
       },
       {
-        source: '/ar/resources',
-        destination: '/ar/resources/',
+        source: '/blog/customizing-your-corporate-identity-uneoms-design-process-revealed',
+        destination: '/blog/',
         permanent: true,
       },
-
-      // Utility Pages redirects (matching netlify.toml)
+      {
+        source: '/blog/from-design-to-delivery-inside-uneoms-quality-control-process',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/blog/uniform-maintenance-tips-expert-advice-from-uneoms-specialists',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/%d8%aa%d8%ac%d8%b1%d8%a8%d8%a9-%d9%8a%d9%88%d9%86%d9%8a%d9%88%d9%85-%d9%85%d8%b9-%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b7%d8%a8%d9%8a-%d8%af%d9%84%d9%8a%d9%84%d9%83-%d9%84%d8%a7%d8%ae',
+        destination: '/ar/blog/',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/%d8%a3%d9%81%d8%b6%d9%84-%d8%a7%d9%84%d8%a3%d9%82%d9%85%d8%b4%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d8%a7%d8%b3%d8%a8%d8%a9-%d9%84%d9%84%d9%85%d9%86%d8%a7%d8%ae-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a',
+        destination: '/ar/blog/',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/%d9%83%d9%8a%d9%81-%d9%8a%d8%ba%d9%8a%d8%b1-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d9%88%d8%ad%d8%af-%d9%85%d8%b3%d8%aa%d9%82%d8%a8%d9%84-%d8%b4%d8%b1%d9%83%d8%aa%d9%83',
+        destination: '/ar/blog/',
+        permanent: true,
+      },
+      {
+        source: '/ar/blog/%d8%a3%d8%b3%d8%b1%d8%a7%d8%b1-%d9%86%d8%ac%d8%a7%d8%ad-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d8%af%d8%b1%d8%b3%d9%8a-%d9%81%d9%8a-%d8%aa%d8%ad%d8%b3%d9%8a%d9%86-%d8%a3%d8%af%d8%a7%d8%a1-%d8%a7',
+        destination: '/ar/blog/',
+        permanent: true,
+      },
+      // General alias redirects (sitemap, careers, search, categories)
       {
         source: '/sitemap',
-        destination: '/', // Or sitemap.xml if preferred for direct access
+        destination: '/', // Or /sitemap.xml if preferred, roadmap suggests / or remove
         permanent: true,
       },
       {
-        source: '/ar/sitemap',
-        destination: '/ar/',
+        source: '/careers',
+        destination: '/about/',
+        permanent: true,
+      },
+      {
+        source: '/ar/careers',
+        destination: '/ar/about/',
         permanent: true,
       },
       {
@@ -486,17 +599,6 @@ const nextConfig = {
       {
         source: '/ar/categories',
         destination: '/ar/shop/',
-        permanent: true,
-      },
-      // Careers page redirects (assessed as per roadmap)
-      {
-        source: '/careers/:path*',
-        destination: '/about/',
-        permanent: true,
-      },
-      {
-        source: '/ar/careers/:path*',
-        destination: '/ar/about/',
         permanent: true,
       },
     ];

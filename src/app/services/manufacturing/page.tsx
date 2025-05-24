@@ -9,6 +9,7 @@ import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { motion } from 'framer-motion';
 import { Poppins, Inter } from 'next/font/google';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define the fonts
 const poppinsFont = Poppins({
@@ -29,7 +30,7 @@ const ManufacturingPage = () => {
   // Manufacturing Capabilities
   const manufacturingCapabilities = [
     {
-      title: 'Precision Cutting',
+      title: "UNEOM - Professional Uniforms",
       description: 'Computer-controlled cutting systems that ensure accuracy and consistency across all uniform pieces',
       icon: '✂️',
     },
@@ -605,7 +606,7 @@ const ManufacturingPage = () => {
             <div className="flex flex-col md:flex-row">
               <div className="md:w-2/5 relative">
                 <Image
-                  src="/images/woman-in-business-casual-attire-smiling-SBI-300979979.jpg"
+                  src="/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg"
                   alt="Client testimonial about uniform manufacturing"
                   width={600}
                   height={800}

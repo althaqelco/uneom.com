@@ -187,8 +187,6 @@ const DirectImage: React.FC<DirectImageProps> = ({
       fetchPriority={priority ? 'high' : 'auto'}
       onError={handleError}
       onLoad={handleLoad}
-      data-src={src}
-      data-attempts={attempts}
     />
   );
 };

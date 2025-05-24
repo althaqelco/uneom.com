@@ -17,6 +17,7 @@ import OrderRequirements from '@/components/shop/OrderRequirements';
 import CustomizationOptions from '@/components/shop/CustomizationOptions';
 import RequestInfoForm from '@/components/forms/RequestInfoForm';
 import { StarIcon, ShieldCheckIcon } from '@heroicons/react/24/solid';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 interface Size {
   name: string;

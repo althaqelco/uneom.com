@@ -1,279 +1,211 @@
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import { Metadata } from 'next';
-import { Locale, defaultLocale, locales } from '@/lib/i18n/config';
+import { Locale } from '@/lib/i18n/config';
+import Link from 'next/link';
+import Image from 'next/image';
+import { HiOutlineMapPin } from 'react-icons/hi2';
+import MainLayout from '@/components/layout/MainLayout';
+import { generateMetadata as generateSEO } from '@/components/seo/ServerSEO';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
-// Define types for location data
-interface LocationData {
-  slug: string;
-  name: {
-    en: string;
-    ar: string;
-  };
-  image: string;
-  description: {
-    en: string;
-    ar: string;
-  };
-  address: {
-    en: string;
-    ar: string;
-  };
-  phone: string;
-  email: string;
+// Define possible locale values for static generation
+export function generateStaticParams() {
+  return [
+    { locale: 'en' },
+    { locale: 'ar' }
+  ];
 }
 
-// Generate static params for all supported locales
-export async function generateStaticParams() {
-  return locales.map((locale) => ({
-    locale: locale,
-  }));
+// Define metadata for the page
+export function generateMetadata({ params }: { params: { locale: Locale } }): Metadata {
+  const locale = params.locale;
+  const isArabic = locale === 'ar';
+
+  const title = isArabic 
+    ? 'مواقع يونيوم | خدمات الزي الموحد في الرياض، جدة، الدمام، مكة والمدينة' 
+    : 'UNEOM Locations | Premium Uniform Services in Riyadh, Jeddah, Dammam, Mecca & Medina';
+    
+  const description = isArabic
+    ? 'تفضل بزيارة مراكز يونيوم للزي الموحد في المملكة العربية السعودية. نوفر تصميم وإنتاج وتوريد اليونيفورم عالي الجودة للشركات والمستشفيات والفنادق والمدارس في الرياض وجدة والدمام ومكة والمدينة.'
+    : 'Visit UNEOM uniform centers across Saudi Arabia. We provide high-quality uniform design, production, and supply for corporate, healthcare, hospitality, and education sectors in Riyadh, Jeddah, Dammam, Mecca, and Medina.';
+    
+  const keywords = [
+    isArabic ? 'مواقع يونيوم' : 'UNEOM locations',
+    isArabic ? 'زي موحد الرياض' : 'uniforms Riyadh',
+    isArabic ? 'يونيفورم جدة' : 'uniforms Jeddah',
+    isArabic ? 'ملابس مهنية الدمام' : 'workwear Dammam',
+    isArabic ? 'زي موحد مكة' : 'uniforms Mecca',
+    isArabic ? 'يونيفورم المدينة' : 'uniforms Medina',
+    isArabic ? 'المملكة العربية السعودية' : 'Saudi Arabia'
+  ];
+
+  return generateSEO({
+    title,
+    description,
+    keywords,
+    path: '/locations',
+    locale: locale as 'en' | 'ar',
+    imageUrl: '/images/locations/saudi-map-og.jpg'
+  });
 }
 
-// Location data for all UNEOM locations
-const locations: LocationData[] = [
+// Define location data
+const locations = [
   {
-    slug: 'riyadh',
     name: {
       en: 'Riyadh',
       ar: 'الرياض'
     },
+    slug: 'riyadh',
     image: '/images/locations/riyadh-cityscape.jpg',
     description: {
-      en: 'Our headquarters in Riyadh serves as the central hub for UNEOM\'s operations across Saudi Arabia, offering comprehensive uniform solutions for healthcare, corporate, hospitality, and educational institutions.',
-      ar: 'مقرنا الرئيسي في الرياض هو المركز المحوري لعمليات يونيوم في جميع أنحاء المملكة العربية السعودية، حيث نقدم حلولاً شاملة للزي الموحد لقطاعات الرعاية الصحية والشركات والضيافة والمؤسسات التعليمية.'
-    },
-    address: {
-      en: 'King Fahd Road, Al Olaya District, Riyadh 12214, Saudi Arabia',
-      ar: 'طريق الملك فهد، حي العليا، الرياض 12214، المملكة العربية السعودية'
-    },
-    phone: '+966 11 234 5678',
-    email: 'riyadh@uneom.com'
+      en: 'Our headquarters, featuring design studios, production facilities, and showroom.',
+      ar: 'مقرنا الرئيسي، يضم استوديوهات التصميم ومرافق الإنتاج وصالة العرض.'
+    }
   },
   {
-    slug: 'jeddah',
     name: {
       en: 'Jeddah',
       ar: 'جدة'
     },
-    image: '/images/locations/jeddah-waterfront.jpg',
+    slug: 'jeddah',
+    image: '/images/locations/jeddah-cityscape.jpg',
     description: {
-      en: 'Our Jeddah branch specializes in hospitality and aviation uniforms, serving the western region of Saudi Arabia with innovative designs and high-performance fabrics suitable for the coastal climate.',
-      ar: 'يتخصص فرعنا في جدة في زي الضيافة والطيران، حيث يخدم المنطقة الغربية من المملكة العربية السعودية بتصاميم مبتكرة وأقمشة عالية الأداء مناسبة للمناخ الساحلي.'
-    },
-    address: {
-      en: 'Prince Sultan Road, Al Zahra District, Jeddah 23424, Saudi Arabia',
-      ar: 'طريق الأمير سلطان، حي الزهراء، جدة 23424، المملكة العربية السعودية'
-    },
-    phone: '+966 12 345 6789',
-    email: 'jeddah@uneom.com'
+      en: 'Serving the Western Region with specialized hospitality uniform solutions.',
+      ar: 'خدمة المنطقة الغربية بحلول متخصصة للزي الموحد في قطاع الضيافة.'
+    }
   },
   {
-    slug: 'dammam',
     name: {
       en: 'Dammam',
       ar: 'الدمام'
     },
-    image: '/images/locations/dammam-corniche.jpg',
+    slug: 'dammam',
+    image: '/images/locations/dammam-cityscape.jpg',
     description: {
-      en: 'Our Dammam location focuses on industrial and manufacturing uniforms, providing specialized workwear solutions for the oil and gas sector and other industries in the Eastern Province.',
-      ar: 'يركز موقعنا في الدمام على الزي الصناعي والتصنيعي، حيث يوفر حلولاً متخصصة لملابس العمل لقطاع النفط والغاز والصناعات الأخرى في المنطقة الشرقية.'
-    },
-    address: {
-      en: 'King Saud Street, Al Adama District, Dammam 32415, Saudi Arabia',
-      ar: 'شارع الملك سعود، حي العدامة، الدمام 32415، المملكة العربية السعودية'
-    },
-    phone: '+966 13 456 7890',
-    email: 'dammam@uneom.com'
+      en: 'Our Eastern Province hub focusing on industrial uniforms and workwear.',
+      ar: 'مركزنا في المنطقة الشرقية يركز على الزي الموحد الصناعي وملابس العمل.'
+    }
   },
   {
-    slug: 'mecca',
     name: {
       en: 'Mecca',
       ar: 'مكة'
     },
-    image: '/images/locations/mecca-skyline.jpg',
+    slug: 'mecca',
+    image: '/images/locations/mecca-cityscape.jpg',
     description: {
-      en: 'Our Mecca branch provides specialized uniform solutions for hospitality and religious facilities, with a focus on modest designs, comfort, and functionality for the unique climate and requirements of the Holy City.',
-      ar: 'يوفر فرعنا في مكة حلولاً متخصصة للزي الموحد للضيافة والمرافق الدينية، مع التركيز على التصاميم المحتشمة والراحة والوظائف العملية للمناخ والمتطلبات الفريدة للمدينة المقدسة.'
-    },
-    address: {
-      en: 'Ibrahim Al Khalil Road, Al Hajla District, Mecca 24231, Saudi Arabia',
-      ar: 'طريق إبراهيم الخليل، حي الحجلة، مكة 24231، المملكة العربية السعودية'
-    },
-    phone: '+966 12 567 8901',
-    email: 'mecca@uneom.com'
+      en: 'Specialized location for hospitality uniforms serving the holy city.',
+      ar: 'موقع متخصص للزي الموحد في قطاع الضيافة يخدم المدينة المقدسة.'
+    }
   },
   {
-    slug: 'medina',
     name: {
       en: 'Medina',
       ar: 'المدينة'
     },
-    image: '/images/locations/medina-mosque.jpg',
+    slug: 'medina',
+    image: '/images/locations/medina-cityscape.jpg',
     description: {
-      en: 'Our Medina location serves the hospitality and education sectors with custom uniform solutions that combine traditional values with modern functionality, designed specifically for the unique environment of the Prophet\'s City.',
-      ar: 'يخدم موقعنا في المدينة قطاعات الضيافة والتعليم بحلول مخصصة للزي الموحد تجمع بين القيم التقليدية والوظائف العصرية، مصممة خصيصًا للبيئة الفريدة لمدينة الرسول.'
-    },
-    address: {
-      en: 'King Abdullah Road, Al Amir District, Medina 42317, Saudi Arabia',
-      ar: 'طريق الملك عبدالله، حي الأمير، المدينة المنورة 42317، المملكة العربية السعودية'
-    },
-    phone: '+966 14 678 9012',
-    email: 'medina@uneom.com'
+      en: 'Serving the holy city with dedicated uniform solutions for various sectors.',
+      ar: 'خدمة المدينة المنورة بحلول مخصصة للزي الموحد لمختلف القطاعات.'
+    }
   }
 ];
 
-// Get metadata for the page
-export const generateMetadata = ({ params }: { params: { locale: Locale } }): Metadata => {
-  const locale = params.locale || defaultLocale;
-  
-  return {
-    title: locale === 'ar' 
-      ? 'مواقع يونيوم | تواجدنا في المملكة العربية السعودية' 
-      : 'UNEOM Locations | Our Presence Across Saudi Arabia',
-    description: locale === 'ar'
-      ? 'استكشف مواقع يونيوم في جميع أنحاء المملكة العربية السعودية. نقدم خدمات متخصصة للزي الموحد في الرياض وجدة والدمام ومكة والمدينة المنورة.'
-      : 'Explore UNEOM locations throughout Saudi Arabia. We provide specialized uniform services in Riyadh, Jeddah, Dammam, Mecca, and Medina.',
-    alternates: {
-      canonical: 'https://uneom.com/locations/',
-      languages: {
-        'en': 'https://uneom.com/locations/',
-        'ar': 'https://uneom.com/ar/locations/'
-      }
-    }
-  };
-};
-
 export default function LocationsPage({ params }: { params: { locale: Locale } }) {
-  const locale = params.locale || defaultLocale;
+  const locale = params.locale;
   const isArabic = locale === 'ar';
-  
-  // Translations
-  const translations = {
-    heading: isArabic ? 'مواقع يونيوم في المملكة العربية السعودية' : 'UNEOM Locations in Saudi Arabia',
-    subheading: isArabic 
-      ? 'خدمات متخصصة للزي الموحد المهني في جميع أنحاء المملكة'
-      : 'Specialized Professional Uniform Services Throughout the Kingdom',
-    introduction: isArabic
-      ? 'تفخر يونيوم بتقديم خدماتها المتخصصة في الزي الموحد المهني عبر شبكة استراتيجية من المواقع في جميع أنحاء المملكة العربية السعودية. كل موقع مجهز بشكل فريد لتلبية احتياجات الزي الموحد المحددة للمنطقة والقطاعات المهنية المحلية.'
-      : 'UNEOM proudly serves its specialized professional uniform services through a strategic network of locations across Saudi Arabia. Each location is uniquely equipped to address the specific uniform needs of the region and local professional sectors.',
-    viewDetails: isArabic ? 'عرض التفاصيل' : 'View Details',
-    contact: isArabic ? 'معلومات الاتصال' : 'Contact Information',
-    nationalPresence: isArabic ? 'تواجدنا الوطني' : 'Our National Presence',
-    nationalPresenceText: isArabic
-      ? 'تغطي شبكة مواقعنا المناطق الرئيسية في المملكة العربية السعودية، مما يضمن قدرتنا على تقديم خدمات سريعة وفعالة لجميع عملائنا. سواء كنت في المنطقة الوسطى أو الغربية أو الشرقية، فإن خبراء يونيوم على استعداد لتلبية احتياجاتك.'
-      : 'Our network of locations covers the key regions of Saudi Arabia, ensuring we can provide rapid and efficient service to all our clients. Whether you are in the Central, Western, or Eastern Region, UNEOM experts are ready to meet your needs.',
-    getQuote: isArabic ? 'طلب عرض سعر' : 'Request a Quote'
-  };
 
   return (
-    <main className={`min-h-screen ${isArabic ? 'rtl text-right' : 'ltr text-left'}`}>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-gray-900 to-gray-700 py-20">
-        <div className="absolute inset-0 z-0 opacity-20">
-          <Image 
-            src="/images/hero/uneom_locations_map.jpg"
-            alt={isArabic ? "خريطة مواقع يونيوم" : "UNEOM locations map"}
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            {translations.heading}
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl">
-            {translations.subheading}
-          </p>
-        </div>
-      </section>
-
-      {/* Introduction */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              {translations.introduction}
+    <MainLayout locale={locale}>
+      <main className={`min-h-screen ${isArabic ? 'rtl text-right' : 'ltr text-left'}`}>
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-b from-gray-900 to-gray-700 py-28 pt-36">
+          <div className="absolute inset-0 z-0 opacity-40">
+            <Image 
+              src="/images/locations/saudi-map-bg.jpg"
+              alt={isArabic ? "خريطة المملكة العربية السعودية" : "Map of Saudi Arabia"}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="container mx-auto px-4 relative z-10 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              {isArabic 
+                ? 'مواقع يونيوم للزي الموحد عبر المملكة العربية السعودية' 
+                : 'UNEOM Uniform Locations Across Saudi Arabia'}
+            </h1>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              {isArabic 
+                ? 'اكتشف مواقعنا في جميع أنحاء المملكة العربية السعودية، حيث نقدم حلول الزي الموحد عالية الجودة للشركات والرعاية الصحية والضيافة والمؤسسات التعليمية.'
+                : 'Discover our locations across Saudi Arabia, where we provide high-quality uniform solutions for corporate, healthcare, hospitality, and educational institutions.'}
             </p>
+          </div>
+        </section>
+
+        {/* Locations Grid */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              {isArabic ? 'تواجدنا في المملكة' : 'Our Presence in the Kingdom'}
+            </h2>
             
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                {translations.nationalPresence}
-              </h2>
-              <p className="text-gray-700">
-                {translations.nationalPresenceText}
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {locations.map((location) => (
+                <Link 
+                  href={`/${locale}/locations/${location.slug}`} 
+                  key={location.slug}
+                  className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="relative h-64">
+                    <Image
+                      src={location.image}
+                      alt={location.name[locale]}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                      <h3 className="text-xl font-bold text-white flex items-center">
+                        <HiOutlineMapPin className="mr-2" size={20} />
+                        {location.name[locale]}
+                      </h3>
+                      <span className="bg-primary-600 text-white text-sm py-1 px-3 rounded-full">
+                        {isArabic ? 'عرض' : 'View'}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <p className="text-gray-700">{location.description[locale]}</p>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Locations Grid */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {locations.map((location) => (
-              <div key={location.slug} className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-1">
-                <div className="relative h-56">
-                  <Image 
-                    src={location.image}
-                    alt={location.name[locale]}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-2">
-                    {location.name[locale]}
-                  </h2>
-                  <p className="text-gray-600 mb-4">
-                    {location.description[locale]}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h3 className="text-sm font-semibold text-gray-500 uppercase mb-2">
-                      {translations.contact}
-                    </h3>
-                    <p className="text-gray-700 mb-1">{location.address[locale]}</p>
-                    <p className="text-gray-700 mb-1">{location.phone}</p>
-                    <p className="text-gray-700">{location.email}</p>
-                  </div>
-                  
-                  <Link 
-                    href={`/${locale}/locations/${location.slug}`}
-                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors duration-200"
-                  >
-                    {translations.viewDetails}
-                  </Link>
-                </div>
-              </div>
-            ))}
+        {/* CTA Section */}
+        <section className="py-16 bg-primary-50">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-6">
+              {isArabic ? 'لا يوجد موقع بالقرب منك؟' : 'No Location Near You?'}
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              {isArabic 
+                ? 'نحن نخدم العملاء في جميع أنحاء المملكة العربية السعودية. اتصل بنا لمناقشة كيف يمكننا تلبية احتياجاتك من الزي الموحد بغض النظر عن موقعك.'
+                : 'We serve clients throughout Saudi Arabia. Contact us to discuss how we can meet your uniform needs regardless of your location.'}
+            </p>
+            <Link 
+              href={`/${locale}/contact`}
+              className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-md transition-colors duration-300"
+            >
+              {isArabic ? 'اتصل بنا' : 'Contact Us'}
+            </Link>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            {isArabic ? 'هل تبحث عن حلول مخصصة للزي الموحد؟' : 'Looking for Customized Uniform Solutions?'}
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            {isArabic 
-              ? 'اتصل بنا اليوم للحصول على استشارة مجانية ومعرفة كيف يمكن ليونيوم تلبية احتياجات الزي الموحد لمؤسستك.' 
-              : 'Contact us today for a free consultation and discover how UNEOM can meet your organization\'s uniform needs.'}
-          </p>
-          <Link 
-            href={`/${locale}/quote`}
-            className="inline-block bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-colors duration-200"
-          >
-            {translations.getQuote}
-          </Link>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </MainLayout>
   );
 } 

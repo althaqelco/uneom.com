@@ -10,6 +10,7 @@ import { useQuote } from '@/contexts/QuoteContext';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { useRouter } from 'next/navigation';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 type LocaleContent = {
   title: string;
@@ -73,7 +74,7 @@ export default function ReceptionStaffUniformPage() {
   // Multilingual content
   const content: ContentType = {
     en: {
-      title: 'Reception Staff Uniform',
+      title: "UNEOM - Professional Uniforms",
       description: 'Premium reception staff uniforms designed to create a polished and professional first impression for your hospitality establishment in Saudi Arabia.',
       longDescription: 'Our Reception Staff Uniforms are meticulously crafted to reflect the professionalism and hospitality of your establishment\'s front line. Designed specifically for the Saudi hospitality industry, these premium uniforms combine elegant styling with practical functionality to ensure your reception staff make a lasting positive impression on guests. The tailored silhouettes create a refined appearance while the high-performance fabrics provide comfort during long shifts at the front desk. Available in a range of sophisticated colors that can be coordinated with your brand identity, these uniforms offer both modesty and style for Saudi Arabian hospitality environments.',
       breadcrumbs: [

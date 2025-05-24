@@ -18,8 +18,10 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import ProductCard from '@/components/ui/ProductCard';
 import TestimonialCarousel from '@/components/sections/TestimonialCarousel';
+import SEO from '@/components/SEO';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
-export default function ManufacturingPage() {
+export default function ManufacturingIndustryPage() {
   const locale = 'en';
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   
@@ -282,325 +284,281 @@ export default function ManufacturingPage() {
     }
   ];
   
-  // Page layout with animation components
+  const content = {
+    meta: {
+      title: "Manufacturing Uniforms & Workwear in Saudi Arabia | UNEOM",
+      description: "Premium industrial workwear and manufacturing uniforms tailored for Saudi factories, ensuring safety, durability, and compliance with Saudi industrial standards.",
+    },
+    hero: {
+      headline: "Manufacturing Uniforms & Industrial Workwear in Saudi Arabia",
+      subheadline: "Premium workwear for production facilities, factories, and industrial operations in the Kingdom, combining safety compliance, durability, and professional identity.",
+      cta: "Request Manufacturing Workwear Quote",
+      ctaLink: '/quote?industry=manufacturing',
+      image: "/images/manufacturing/manufacturing_facility_workers_main.jpg", 
+    },
+    intro: {
+      title: "Industrial Excellence Through Professional Workwear",
+      paragraphs: [
+        "In Saudi Arabia's rapidly growing manufacturing sector, professional workwear plays a crucial role in workplace safety, operational efficiency, and projecting a modern industrial identity. UNEOM's comprehensive manufacturing uniform solutions are specifically designed to meet the unique requirements of Saudi factories and industrial facilities.",
+        "From production line personnel and machine operators to supervisors, quality control teams, and maintenance staff, we provide premium-quality workwear that combines practical functionality, maximum protection, and professional appearance. Our manufacturing collections incorporate advanced fabric technologies that withstand the rigorous demands of industrial environments while offering design options that respect Islamic dress codes and reflect Saudi industrial standards.",
+        "As Saudi manufacturing continues its remarkable growth under Vision 2030, we partner with factories and industrial operations to develop uniform programs that enhance workplace safety, boost employee morale, and create a professional corporate identity that showcases Saudi Arabia's industrial capabilities."
+      ],
+    },
+    keyBenefits: {
+      title: "The UNEOM Advantage in Manufacturing Workwear",
+      benefits: [
+        {
+          name: "Saudi Safety Compliance",
+          description: "All our workwear meets or exceeds Saudi Occupational Safety and Health (SOSH) standards and international safety certifications applicable to various manufacturing environments.",
+          icon: "/images/icons/safety-compliance-shield.svg"
+        },
+        {
+          name: "Enhanced Corporate Identity",
+          description: "We integrate your company branding into every uniform detail, creating a consistent professional appearance that strengthens your industrial brand identity.",
+          icon: "/images/icons/corporate-identity-manufacturing.svg"
+        },
+        {
+          name: "Modest & Practical Designs",
+          description: "Special designs that respect modest dress requirements for female staff while maintaining practical functionality for industrial work environments.",
+          icon: "/images/icons/modest-design-industrial.svg"
+        },
+        {
+          name: "High-Performance Fabrics",
+          description: "Manufacturing-specific textiles that offer durability, heat resistance, chemical protection, and comfort during long shifts in challenging industrial environments.",
+          icon: "/images/icons/fabric-tech-industrial.svg"
+        },
+      ],
+    },
+    featuredOfferings: {
+      title: "Comprehensive Manufacturing Workwear Collections",
+      offerings: [
+        {
+          name: "Production Line Uniforms",
+          description: "Durable and comfortable workwear designed for production line personnel, with features for movement flexibility and protection against common manufacturing hazards.",
+          image: "/images/manufacturing/production_line_uniforms.jpg",
+          link: "/shop/manufacturing-workwear/production-line-uniform"
+        },
+        {
+          name: "Supervisor & Management Workwear",
+          description: "Professional workwear that distinguishes supervisory and management staff while maintaining practical functionality for the factory floor environment.",
+          image: "/images/manufacturing/supervisor_workwear.jpg",
+          link: "/shop/manufacturing-workwear/supervisor-uniform"
+        },
+        {
+          name: "Maintenance & Technical Uniforms",
+          description: "Specialized workwear for maintenance and technical teams, featuring reinforced fabrics, multiple tool pockets, and enhanced protection against mechanical and electrical hazards.",
+          image: "/images/manufacturing/maintenance_technical_uniform.jpg",
+          link: "/shop/manufacturing-workwear/maintenance-uniform"
+        }
+      ],
+    },
+    customizationOptions: {
+      title: "Tailored to Your Manufacturing Requirements",
+      description: "UNEOM provides extensive customization for different manufacturing environments, from fabric technology selection (DuraTech™, ChemGuard™, HeatShield™) to department color-coding and hazard-specific protective features, ensuring your workwear meets the exact requirements of your industrial operation.",
+      image: "/images/industries/manufacturing/customization-manufacturing-workwear.jpg", 
+    },
+    testimonials: {
+      title: "Trusted by Leading Saudi Manufacturers",
+      items: [
+        {
+          quote: "UNEOM's manufacturing workwear has significantly improved our workplace safety metrics and streamlined our uniform management process. Their attention to safety standards while maintaining comfort is exceptional.",
+          author: "Mohammed Al-Harbi",
+          position: "Operations Director, Saudi Advanced Industries",
+        },
+        {
+          quote: "The durability and practicality of UNEOM's workwear has been impressive. Our employees appreciate the comfort during long shifts, and the modest options for our female engineers have been perfectly designed for industrial environments.",
+          author: "Fatima Al-Otaibi",
+          position: "HR Manager, Riyadh Manufacturing Complex",
+        }
+      ],
+    },
+    relatedBlogs: {
+      title: "Manufacturing Workwear Insights",
+      posts: [
+        {
+          title: "Safety Standards for Saudi Manufacturing Facilities",
+          link: "/blog/safety-standards-saudi-manufacturing",
+          image: "/images/blog/placeholder-manufacturing1.jpg",
+        },
+        {
+          title: "Workwear Innovations for Modern Saudi Factories",
+          link: "/blog/workwear-innovations-saudi-factories",
+          image: "/images/blog/placeholder-manufacturing2.jpg",
+        }
+      ],
+    },
+    finalCta: {
+      title: "Elevate Your Manufacturing Operation with UNEOM",
+      description: "Partner with UNEOM to design and deliver manufacturing workwear that prioritizes safety, durability, and professional identity. Contact our specialists today.",
+      cta: "Get a Manufacturing Workwear Quote",
+      ctaLink: '/quote?industry=manufacturing&focused=true',
+    },
+  };
+
   return (
-    <div className="bg-white min-h-screen">
+    <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
+      <SEO
+        title={content.meta.title}
+        description={content.meta.description}
+        canonicalUrl="https://uneom.com/industries/manufacturing/"
+      />
+
       {/* Hero Section */}
-      <section className="relative isolate overflow-hidden bg-gradient-to-b from-blue-100/20 pt-14">
-        {/* ... Background elements ... */}
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
-          <motion.div 
-            className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto"
-            variants={fadeInLeft}
-            initial="hidden"
-            animate="visible"
-          >
-            <SectionHeading 
-              subtitle="Premium-quality uniforms tailored for the manufacturing industry in Saudi Arabia" 
-              centered={false}
-              as="h1"
-            >
-              Industrial Manufacturing Uniforms
-            </SectionHeading>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              UNEOM specializes in providing durable, safe, and comfortable workwear designed for the unique demands of Saudi Arabia's diverse manufacturing sector.
-            </p>
-            <div className="mt-10 flex items-center gap-x-6">
-              <Button href="#sub-industries" variant="primary">Explore Solutions</Button>
-              <Button onClick={handleWhatsAppInquiry} variant="outline">Get Expert Advice <span aria-hidden="true">→</span></Button>
-            </div>
-          </motion.div>
-          <motion.div 
-            className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow"
-            variants={fadeInRight}
-            initial="hidden"
-            animate="visible"
-          >
+      <section className="relative bg-gradient-to-r from-gray-800 to-gray-700 text-white py-20 md:py-32">
+        <div className="absolute inset-0">
              <Image
-                src="/images/industries/manufacturing/manufacturing_uniform_overview.jpg"
-                alt="Manufacturing uniforms overview in Saudi Arabia"
-                width={800}
-                height={600}
-                className="rounded-lg shadow-xl"
-              />
-          </motion.div>
+            src={content.hero.image}
+            alt={content.hero.headline}
+            fill
+            className="object-cover opacity-25"
+            priority
+          />
         </div>
+        <Container className="relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            {content.hero.headline}
+          </h1>
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
+            {content.hero.subheadline}
+          </p>
+          <Button href={content.hero.ctaLink} size="lg" variant="primary">
+            {content.hero.cta}
+          </Button>
+        </Container>
       </section>
       
-      {/* Breadcrumbs - CORRECTED PROP NAME */}
-      <Container className="my-6">
-        <Breadcrumbs items={[
-          { label: 'Home', href: '/' }, 
-          { label: 'Industries', href: '/industries' }, 
-          { label: 'Manufacturing', href: '/industries/manufacturing' }
-        ]} />
-      </Container>
-      
-      {/* Why Choose UNEOM Section */}
-      <section className="py-16 bg-white">
+      {/* Intro Section */}
+      <section className="py-16 md:py-24 bg-white">
         <Container>
-          <SectionHeading 
-            subtitle="Tailored uniform solutions for Saudi Arabia's manufacturing powerhouses" 
-            centered
-          >
-            Why Choose UNEOM for Manufacturing Uniforms?
-          </SectionHeading>
-          <motion.div 
-            className="mt-12 grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            {[
-              { icon: <FaHardHat className="h-8 w-8 text-white" />, title: 'Industry Specialization', description: 'Deep understanding of manufacturing needs in KSA.' },
-              { icon: <FaShieldAlt className="h-8 w-8 text-white" />, title: 'Uncompromising Safety', description: 'Certified FR, chemical-resistant, and high-vis options.' },
-              { icon: <FaTemperatureHigh className="h-8 w-8 text-white" />, title: 'Climate Adapted', description: 'Engineered for comfort and performance in extreme heat.' },
-              { icon: <FaTshirt className="h-8 w-8 text-white" />, title: 'Superior Durability', description: 'Built to withstand rigorous industrial environments.' },
-              { icon: <FaCertificate className="h-8 w-8 text-white" />, title: 'Compliance Guaranteed', description: 'Meeting SASO, ISO, NFPA, and other key standards.' },
-              { icon: <FaGlobeAsia className="h-8 w-8 text-white" />, title: 'Saudi Focused Service', description: 'Dedicated support and logistics across the Kingdom.' },
-            ].map((feature, index) => (
-              <motion.div key={index} variants={fadeInUp} className="text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary-600">
-                  {feature.icon}
+          <SectionHeading className="text-center mb-12">{content.intro.title}</SectionHeading>
+          <div className="max-w-3xl mx-auto space-y-6 text-lg text-neutral-700">
+            {content.intro.paragraphs.map((p, i) => (<p key={i}>{p}</p>))}
                 </div>
-                <h3 className="mt-6 text-lg font-semibold leading-7 text-gray-900">{feature.title}</h3>
-                <p className="mt-2 text-base leading-7 text-gray-600">{feature.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
         </Container>
       </section>
       
       {/* Key Benefits Section */}
-      <section className="py-16 bg-neutral-50">
+      <section className="py-16 md:py-24 bg-neutral-50">
         <Container>
-           <SectionHeading centered> 
-            Key Benefits of UNEOM Uniforms 
-           </SectionHeading>
-           <motion.div 
-              className="mt-12 grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2"
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-           >
-              {[
-                { icon: <FaUserShield className="h-10 w-10 text-primary-600" />, title: 'Enhanced Worker Safety', description: 'Reduce workplace accidents with certified protective gear designed for specific hazards like heat, fire, chemicals, and low visibility.' },
-                { icon: <FaChartLine className="h-10 w-10 text-primary-600" />, title: 'Increased Productivity', description: 'Comfortable, well-fitting uniforms improve focus and efficiency, especially in demanding Saudi climate conditions.' },
-                { icon: <FaIndustry className="h-10 w-10 text-primary-600" />, title: 'Professional Brand Image', description: 'Project a unified, professional image that builds trust with clients and boosts employee morale.' },
-                { icon: <FaLock className="h-10 w-10 text-primary-600" />, title: 'Long-Term Cost Savings', description: 'Durable materials and construction mean longer uniform life, reducing replacement frequency and overall costs.' },
-              ].map((benefit, index) => (
-                 <motion.div key={index} variants={fadeInUp} className="flex gap-x-6">
-                    <div className="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-primary-100">
-                      {benefit.icon}
+          <SectionHeading className="text-center mb-16">{content.keyBenefits.title}</SectionHeading>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {content.keyBenefits.benefits.map((benefit) => (
+              <div key={benefit.name} className="bg-white p-6 rounded-lg shadow-lg text-center">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Image src={benefit.icon} alt={benefit.name} width={32} height={32} />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold leading-7 text-gray-900">{benefit.title}</h3>
-                      <p className="mt-2 text-base leading-7 text-gray-600">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-neutral-800 mb-2">{benefit.name}</h3>
+                <p className="text-neutral-600 text-sm">{benefit.description}</p>
                     </div>
-                  </motion.div>
-              ))}
-           </motion.div>
-        </Container>
-      </section>
-      
-      {/* Sub-Industry Sections */}
-      <div id="sub-industries">
-        {subIndustries.map((subIndustry, index) => (
-          <section 
-            key={subIndustry.id} 
-            className={`py-16 ${index % 2 === 0 ? 'bg-white' : 'bg-blue-50/50'}`}
-          >
-            <Container>
-              <motion.div 
-                className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-              >
-                {/* Image */}
-                <motion.div variants={index % 2 === 0 ? fadeInLeft : fadeInRight} className={`rounded-lg overflow-hidden shadow-xl ${index % 2 !== 0 ? 'md:order-2' : ''}`}>
-                  <Image 
-                    src={subIndustry.image || '/images/default-placeholder.jpg'} 
-                    alt={subIndustry.title} 
-                    width={600} 
-                    height={450} 
-                    className="w-full h-auto object-cover"
-                  />
-                </motion.div>
-                {/* Content */}
-                <motion.div variants={index % 2 === 0 ? fadeInRight : fadeInLeft} className={`${index % 2 !== 0 ? 'md:order-1' : ''}`}>
-                  <SectionHeading centered={false}>
-                    {subIndustry.title}
-                  </SectionHeading>
-                  <p className="mt-4 text-lg text-gray-600 mb-6">
-                    {subIndustry.description}
-                  </p>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Key Challenges Addressed:</h4>
-                  <ul className="space-y-2 mb-6">
-                    {subIndustry.keyChallenges.map((challenge, cIndex) => (
-                      <li key={cIndex} className="flex items-start">
-                        <FaCheckCircle className="h-5 w-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">{challenge}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  {subIndustry.relevantProducts.length > 0 && (
-                    <div>
-                      <h4 className="text-lg font-semibold text-gray-800 mb-3">Relevant Uniform Solutions:</h4>
-                      <div className="flex flex-wrap gap-4">
-                        {subIndustry.relevantProducts.map(productId => {
-                          const product = products.find(p => p.id === productId);
-                          return product ? (
-                            <Link key={product.id} href={product.href} legacyBehavior>
-                              <a className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors">
-                                {product.name}
-                                <FaArrowRight className="ml-2 h-4 w-4" />
-                              </a>
-                            </Link>
-                          ) : null;
-                        })}
-                      </div>
-                    </div>
-                  )}
-                </motion.div>
-              </motion.div>
-            </Container>
-          </section>
-        ))}
-      </div>
-      
-      {/* Featured Industrial Uniforms Section */}
-      <section className="py-16 bg-white">
-        <Container>
-          <SectionHeading 
-            subtitle="Explore our specialized workwear designed for manufacturing environments" 
-            centered
-          >
-            Featured Industrial Uniforms
-          </SectionHeading>
-          <motion.div 
-              className="mt-12 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-            >
-              {products.map((product) => (
-                <ProductCard key={product.id} product={product} locale={locale} /> 
-              ))}
-          </motion.div>
-           <div className="mt-12 text-center">
-             <Button 
-               href="/shop/industrial-uniforms"
-               variant="outline"
-               className="flex items-center gap-2 mx-auto"
-             >
-               View All Industrial Uniforms <FaAngleRight />
-             </Button>
+            ))}
            </div>
         </Container>
       </section>
       
-      {/* Advanced Technologies Section */}
-      <section className="py-16 bg-blue-50/50">
+      {/* Featured Offerings Section */}
+      <section className="py-16 md:py-24 bg-white">
         <Container>
-           <SectionHeading 
-             subtitle="Leveraging innovation for superior uniform performance and comfort" 
-             centered
-           >
-             Advanced Technologies & Materials
-           </SectionHeading>
-           <motion.div 
-            className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-           >
-            {technologies.map((tech, index) => (
-              <motion.div 
-                key={index}
-                variants={fadeInUp}
-                className="text-center p-6 bg-white rounded-lg shadow hover:shadow-md transition-shadow"
-              >
-                <div className="flex justify-center mb-4">
-                  {tech.icon}
+          <SectionHeading className="text-center mb-16">{content.featuredOfferings.title}</SectionHeading>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {content.featuredOfferings.offerings.map((offering) => (
+              <div key={offering.name} className="border rounded-lg overflow-hidden shadow-lg group">
+                <Link href={offering.link} className="block">
+                  <div className="relative w-full h-72 bg-neutral-100">
+                    <Image src={offering.image} alt={offering.name} fill className="object-cover group-hover:scale-105 transition-transform duration-300 p-2" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-neutral-800 mb-2">{offering.name}</h3>
+                    <p className="text-neutral-600 text-sm mb-4">{offering.description}</p>
+                    <span className="text-blue-600 hover:text-blue-700 font-medium">
+                      View Details &rarr;
+                    </span>
+                  </div>
+                </Link>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{tech.name}</h3>
-                <p className="text-gray-600">{tech.description}</p>
-              </motion.div>
             ))}
-           </motion.div>
-        </Container>
-      </section>
-      
-      {/* Success Stories Section - Passing adjusted testimonials data */}
-      <section className="py-16 bg-white">
-        <Container>
-          <SectionHeading 
-            subtitle="See how we've helped Saudi manufacturing leaders enhance safety and image" 
-            centered 
-          >
-            Success Stories & Client Testimonials 
-          </SectionHeading>
-          <motion.div 
-            className="mt-12"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <TestimonialCarousel testimonials={testimonials} locale={locale}/>
-          </motion.div>
-        </Container>
-      </section>
-      
-      {/* Statistics Section */}
-      <section className="py-16 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
-        <Container>
-          <SectionHeading centered className="text-white"> 
-            UNEOM Manufacturing Impact: By the Numbers 
-          </SectionHeading>
-          <motion.dl 
-            className="mt-16 grid grid-cols-1 gap-x-8 gap-y-10 text-center sm:grid-cols-2 lg:grid-cols-4"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            {statistics.map((stat, index) => (
-               <motion.div key={index} variants={fadeInUp} className="flex flex-col items-center">
-                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 mb-4">
-                   {stat.icon}
-                 </div>
-                 <dt className="text-sm font-semibold leading-6 text-gray-300">{stat.label}</dt>
-                 <dd className="order-first text-3xl font-semibold tracking-tight text-white">{stat.value}</dd>
-               </motion.div>
-            ))}
-          </motion.dl>
-        </Container>
-      </section>
-      
-      {/* Call to Action Section */}
-      <section className="py-16 bg-neutral-100">
-        <Container>
-          <div className="mx-auto max-w-2xl text-center">
-             <SectionHeading centered>
-              Ready to Equip Your Manufacturing Workforce?
-             </SectionHeading>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Contact UNEOM today for a personalized consultation and discover how our specialized industrial uniforms can enhance safety, productivity, and your brand image in Saudi Arabia.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button onClick={handleWhatsAppInquiry} variant="primary" size="lg">Request a Consultation</Button>
-              <Button href="/contact" variant="outline" size="lg">Contact Us</Button>
-            </div>
           </div>
         </Container>
       </section>
-    </div>
+      
+      {/* Customization Options Section */}
+      <section className="py-16 md:py-24 bg-neutral-800 text-white">
+        <Container className="md:flex items-center gap-12 flex-row-reverse">
+          <div className="md:w-1/2 mb-8 md:mb-0">
+            <Image src={content.customizationOptions.image} alt={content.customizationOptions.title} width={600} height={450} className="rounded-lg shadow-xl object-cover" />
+          </div>
+          <div className="md:w-1/2">
+            <SectionHeading className="text-left mb-6 !text-3xl md:!text-4xl">{content.customizationOptions.title}</SectionHeading>
+            <p className="text-lg text-neutral-300 leading-relaxed">{content.customizationOptions.description}</p>
+          </div>
+        </Container>
+      </section>
+      
+      {/* Testimonials Section */}
+      {content.testimonials && content.testimonials.items.length > 0 && (
+        <section className="py-16 md:py-24 bg-neutral-50">
+        <Container>
+            <SectionHeading className="text-center mb-12">{content.testimonials.title}</SectionHeading>
+            <div className="max-w-2xl mx-auto">
+              {content.testimonials.items.map((testimonial, index) => (
+                <div key={index} className="bg-white p-8 rounded-lg shadow-lg mb-8">
+                  <p className="text-lg text-neutral-700 italic mb-4">"{testimonial.quote}"</p>
+                  <p className="text-right font-semibold text-gray-700">&mdash; {testimonial.author}, {testimonial.position}</p>
+                 </div>
+            ))}
+            </div>
+        </Container>
+      </section>
+      )}
+      
+      {/* Related Blogs Section */}
+      {content.relatedBlogs && content.relatedBlogs.posts.length > 0 && (
+        <section className="py-16 md:py-24 bg-white">
+        <Container>
+            <SectionHeading className="text-center mb-16">{content.relatedBlogs.title}</SectionHeading>
+            <div className="grid md:grid-cols-2 gap-8">
+              {content.relatedBlogs.posts.map((post) => (
+                <Link key={post.title} href={post.link} className="block group border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="relative w-full h-56 bg-neutral-100">
+                    <Image src={post.image} alt={post.title} fill className="object-cover" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-neutral-800 mb-2 group-hover:text-blue-600 transition-colors">{post.title}</h3>
+                    <span className="text-blue-600 font-medium">Read Article &rarr;</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Final CTA Section */}
+      <section className="py-20 md:py-32 bg-gray-800 text-white">
+        <Container className="text-center">
+          <SectionHeading className="mb-6 !text-3xl md:!text-4xl">{content.finalCta.title}</SectionHeading>
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">{content.finalCta.description}</p>
+          <Button href={content.finalCta.ctaLink} size="lg" variant="secondary">
+            {content.finalCta.cta}
+          </Button>
+        </Container>
+      </section>
+    </>
   );
 } 

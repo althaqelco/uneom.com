@@ -2,6 +2,7 @@
 
 import React from 'react';
 import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function HospitalityPage() {
   // Define locale for language support
@@ -30,12 +31,12 @@ export default function HospitalityPage() {
       {
         title: "Saudi Hospitality Expertise",
         description: "Our design team possesses specialized knowledge of Saudi Arabia's hospitality sector requirements, including cultural considerations and service standards.",
-        icon: "/icons/saudi-expertise.svg"
+        icon: "/images/icons/saudi-expertise.svg"
       },
       {
         title: "Brand-Aligned Design",
         description: "Custom uniform programs that perfectly reflect your property's unique identity, service philosophy, and design aesthetic.",
-        icon: "/icons/brand-aligned.svg"
+        icon: "/images/icons/brand-aligned.svg"
       },
       {
         title: "Practical Durability",

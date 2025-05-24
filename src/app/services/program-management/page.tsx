@@ -2,11 +2,12 @@
 
 import React from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function ProgramManagementServicePage() {
   const locale = 'en';
   const serviceData = {
-    title: 'Uniform Program Management',
+    title: "UNEOM - Professional Uniforms",
     subtitle: 'Comprehensive solutions for enterprise-level uniform programs',
     heroImage: '/images/banner-placeholder.jpg',
     

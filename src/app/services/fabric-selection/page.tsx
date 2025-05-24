@@ -9,6 +9,7 @@ import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { motion } from 'framer-motion';
 import { Poppins, Inter } from 'next/font/google';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define the fonts
 const poppinsFont = Poppins({
@@ -29,7 +30,7 @@ const FabricSelectionPage = () => {
   // Process Steps
   const processSteps = [
     {
-      title: 'Initial Consultation',
+      title: "UNEOM - Professional Uniforms",
       description: 'We meet with your team to understand your specific needs, industry requirements, and brand identity',
       icon: '🤝',
     },
@@ -276,7 +277,7 @@ const FabricSelectionPage = () => {
             <div className="md:w-1/2">
               <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg"
+                  src="/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg"
                   alt="Fabric selection consultation"
                   fill
                   className="object-cover"

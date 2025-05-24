@@ -1,6 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Enhanced SEO Metadata for Arabic version with improved descriptions
 export const metadata: Metadata = {

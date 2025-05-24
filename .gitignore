@@ -53,3 +53,5 @@ renamed-images.txt
 optimized-images.txt
 *.zip
 /~/ 
+# Local Netlify folder
+.netlify

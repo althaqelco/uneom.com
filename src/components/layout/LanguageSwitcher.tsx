@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { HiTranslate } from 'react-icons/hi';
 import { CgSpinner } from 'react-icons/cg';
-import { LANGUAGES } from '@/lib/i18n/config';
+import { locales, Locale } from '@/lib/i18n/config';
 import { useRouter } from 'next/navigation';
 
 interface LanguageSwitcherProps {
@@ -14,9 +14,6 @@ interface LanguageSwitcherProps {
 /**
  * Component for switching between languages
  * Optimized for faster transitions and better user experience
- * Follows the URL structure from roadmap.md:
- * - English (default): No prefix (e.g., /about/)
- * - Arabic: /ar/ prefix (e.g., /ar/about/)
  */
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   className = '',
@@ -45,10 +42,10 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   }, []);
   
   // Get the language we'll switch to (opposite of current)
-  const alternateLanguage = currentLocale === LANGUAGES.AR ? LANGUAGES.EN : LANGUAGES.AR;
+  const alternateLanguage = currentLocale === 'ar' ? 'en' : 'ar';
   
   // Get the display name for the alternate language
-  const alternateLanguageLabel = currentLocale === LANGUAGES.AR ? 'English' : 'العربية';
+  const alternateLanguageLabel = currentLocale === 'ar' ? 'English' : 'العربية';
   
   const handleLanguageChange = () => {
     if (!isMounted || isLoading) return;
@@ -61,18 +58,15 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
       
       let newPath = '';
       
-      if (currentLocale === LANGUAGES.AR) {
-        // من العربية إلى الإنجليزية (الافتراضية، بدون بادئة)
+      if (currentLocale === 'ar') {
+        // من العربية إلى الإنجليزية
+        // Remove the /ar prefix for Arabic to English switch
         newPath = pathname.replace(/^\/ar(?=\/|$)/, '');
         if (newPath === '') newPath = '/';
       } else {
-        // من الإنجليزية إلى العربية (إضافة بادئة /ar/)
+        // من الإنجليزية إلى العربية
+        // Add /ar prefix for English to Arabic switch
         newPath = `/ar${pathname === '/' ? '' : pathname}`;
-      }
-      
-      // Ensure trailing slash for SEO
-      if (!newPath.endsWith('/') && !newPath.includes('.')) {
-        newPath += '/';
       }
       
       if (search) {
@@ -104,9 +98,9 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
       aria-label={`Switch to ${alternateLanguageLabel}`}
     >
       {isLoading ? (
-        <CgSpinner className={`h-4 w-4 ${currentLocale === LANGUAGES.AR ? 'ml-1.5' : 'mr-1.5'} animate-spin`} />
+        <CgSpinner className={`h-4 w-4 ${currentLocale === 'ar' ? 'ml-1.5' : 'mr-1.5'} animate-spin`} />
       ) : (
-        <HiTranslate className={`h-4 w-4 ${currentLocale === LANGUAGES.AR ? 'ml-1.5' : 'mr-1.5'}`} />
+        <HiTranslate className={`h-4 w-4 ${currentLocale === 'ar' ? 'ml-1.5' : 'mr-1.5'}`} />
       )}
       <span>{alternateLanguageLabel}</span>
     </button>

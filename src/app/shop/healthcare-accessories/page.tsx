@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 type LocaleContent = {
   title: string;
@@ -53,7 +54,7 @@ export default function HealthcareAccessoriesPage() {
   // Multilingual content
   const content: ContentType = {
     en: {
-      title: 'Healthcare Accessories',
+      title: "UNEOM - Professional Uniforms",
       description: 'Complete your medical uniform with our premium healthcare accessories designed for comfort, functionality, and professionalism. UNEOM offers a comprehensive range of high-quality medical accessories for healthcare professionals across Saudi Arabia.',
       breadcrumbs: [
         { name: 'Home', url: '/' },

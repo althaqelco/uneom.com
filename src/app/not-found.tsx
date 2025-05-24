@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // نضيف البيانات الوصفية لصفحة 404
 export const metadata: Metadata = {

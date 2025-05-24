@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Author type definition
 interface Author {

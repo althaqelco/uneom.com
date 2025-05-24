@@ -6,6 +6,28 @@ import { notFound } from 'next/navigation';
 import { FaGraduationCap, FaAward, FaBriefcase, FaBook, FaLinkedinIn, FaTwitter, FaIndustry, FaThumbsUp } from 'react-icons/fa';
 import Container from '@/components/ui/Container';
 import { authors } from '@/lib/data/authors';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+export const metadata: Metadata = {
+  title: 'Ar | Authors | _old_id | يونيوم المملكة العربية السعودية',
+  description: 'توفر يونيوم حلول الزي الموحد والملابس المهنية عالية الجودة المصممة خصيصًا للشركات والمؤسسات السعودية.',
+  keywords: ['زي موحد', 'ملابس مهنية', 'يونيوم', 'المملكة العربية السعودية', 'ar | authors | _old_id'],
+  openGraph: {
+    title: 'Ar | Authors | _old_id | يونيوم المملكة العربية السعودية',
+    description: 'توفر يونيوم حلول الزي الموحد والملابس المهنية عالية الجودة المصممة خصيصًا للشركات والمؤسسات السعودية.',
+    url: 'https://uneom.com/ar/authors/_old_id/',
+    siteName: 'UNEOM',
+    images: [
+      {
+        url: 'https://uneom.com/images/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Ar | Authors | _old_id - يونيوم المملكة العربية السعودية'
+      }
+    ],
+    locale: 'ar'
+  }
+};
+
 
 interface AuthorPageProps {
   params: {
@@ -83,6 +105,23 @@ export default function AuthorPage({ params }: AuthorPageProps) {
 
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       {/* Add structured data */}
       <script
         type="application/ld+json"
@@ -93,6 +132,12 @@ export default function AuthorPage({ params }: AuthorPageProps) {
       
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-neutral-900 to-neutral-800 text-white py-16 md:py-24 relative overflow-hidden">
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl rtl:font-arabic">Ar | Authors | _old_id | يونيوم المملكة العربية السعودية</h1>
+      
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl rtl:font-arabic">Ar | Authors | _old_id | يونيوم المملكة العربية السعودية</h1>
+      
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl rtl:font-arabic">Ar | Authors | _old_id | يونيوم المملكة العربية السعودية</h1>
+      
         <div className="absolute inset-0 opacity-10 bg-pattern"></div>
         <Container>
           <div className="relative z-10 flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start rtl">

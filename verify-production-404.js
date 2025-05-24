@@ -63,7 +63,18 @@ async function verifyUrl(url) {
     // Check for redirect
     if (result.isRedirect) {
       result.details.push(`Redirects to: ${result.redirectLocation}`);
-      result.passed = url.includes('/product-'); // It's okay if product placeholder redirects
+      
+      // Consider it a success if:
+      // 1. It's a product placeholder redirect
+      // 2. Or it's a main page that redirects to the same URL with trailing slash
+      if (url.includes('/product-')) {
+        result.passed = true;
+      } else if ((url === '/about' && result.redirectLocation === `${SITE_URL}/about/`) || 
+                (url === '/contact' && result.redirectLocation === `${SITE_URL}/contact/`) ||
+                (url === '/' && result.redirectLocation === `${SITE_URL}/`)) {
+        result.passed = true;
+        result.details.push('(This redirect is acceptable - just adding trailing slash)');
+      }
       return result;
     }
     
@@ -145,6 +156,13 @@ async function runVerification() {
     if (result.passed) {
       results.passed++;
       console.log(`  ✅ ${url} - PASSED`);
+      if (result.details.length > 0 && result.isRedirect) {
+        // Show redirect info even for passing cases
+        console.log(`     - ${result.details[0]}`);
+        if (result.details.length > 1) {
+          console.log(`     - ${result.details[1]}`);
+        }
+      }
     } else {
       results.failed++;
       console.log(`  ❌ ${url} - FAILED`);

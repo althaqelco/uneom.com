@@ -2,11 +2,12 @@
 
 import React from 'react';
 import ResourcePageLayout from '@/components/layout/ResourcePageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function SizeGuidePage() {
   const resourceData = {
     locale: 'en',
-    title: 'Uniform Size Guide',
+    title: "UNEOM - Professional Uniforms",
     subtitle: 'Comprehensive measurements for the perfect fit across all uniform types',
     heroImage: '/images/default-placeholder.jpg',
     overview: {

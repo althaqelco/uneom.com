@@ -1,4 +1,51 @@
-import ClientPage from './ClientPage';
+import ClientPage from './ClientPage';import { Metadata } from 'next';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+
+export async function generateMetadata(
+  { params: { category, product } }: { 
+    params: { category: string; product: string } 
+  }
+): Promise<Metadata> {
+  // You might fetch data here for dynamic metadata
+  // const data = await fetchData(params.category);
+  
+  // Get the page name from the URL parameter
+  const pageName = category;
+  const formattedPageName = pageName
+    .split('-')
+    .map(p => p.charAt(0).toUpperCase() + p.slice(1))
+    .join(' ');
+    
+  return {
+    title: `${formattedPageName} | UNEOM Saudi Arabia`,
+    description: `Explore our premium ${formattedPageName} collection. UNEOM provides high-quality professional uniforms and workwear solutions tailored for Saudi Arabian businesses and institutions.`,
+    keywords: [
+      pageName.toLowerCase(),
+      'uniform',
+      'professional clothing',
+      'UNEOM',
+      'Saudi Arabia',
+      'workwear',
+      'corporate attire'
+    ],
+    openGraph: {
+      title: `${formattedPageName} | UNEOM Saudi Arabia`,
+      description: `Explore our premium ${formattedPageName} collection. UNEOM provides high-quality professional uniforms and workwear solutions tailored for Saudi Arabian businesses and institutions.`,
+      url: `https://uneom.com/shop/${pageName}`,
+      siteName: 'UNEOM',
+      images: [
+        {
+          url: `https://uneom.com/images/products/${pageName.replace(/\//g, '-')}.webp`,
+          width: 1200,
+          height: 630,
+          alt: `${formattedPageName} - UNEOM Saudi Arabia`
+        }
+      ],
+      locale: 'en_US'
+    }
+  };
+}
+
 
 interface PageProps {
   params: {

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import QuoteForm from '@/components/forms/QuoteForm';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 interface OfficeLocation {
   id: string;
@@ -99,6 +100,23 @@ export default function ContactPage() {
   
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       {/* Hero Section */}
       <div className="relative py-24 bg-primary-700 text-white">
         <Container>
@@ -112,6 +130,60 @@ export default function ContactPage() {
           </div>
         </Container>
       </div>
+      
+      {/* SEO Enhanced Introduction */}
+      <section className="py-10 bg-neutral-50">
+        <Container>
+          <div className="max-w-4xl mx-auto">
+            <SectionHeading as="h2" centered={true}>
+              Saudi Arabia's Premium Uniform Provider
+            </SectionHeading>
+            <div className="prose prose-lg mx-auto text-center text-neutral-700">
+              <p>
+                UNEOM is the leading supplier of professional uniforms across Saudi Arabia, with headquarters in Riyadh and offices in Jeddah and Dammam. Our dedicated team specializes in creating premium-quality uniforms for healthcare facilities, hotels, schools, corporate offices, and industrial workplaces throughout the Kingdom.
+              </p>
+              <p>
+                Whether you're looking to outfit your entire organization with custom-designed uniforms, need specialized attire for your medical staff, or require durable workwear for your industrial team, our uniform consultants are ready to assist you with personalized solutions tailored to your specific requirements.
+              </p>
+              <p>
+                Contact us today through any of our offices in Riyadh, Jeddah, or Dammam, or submit your inquiry using our online form. Our uniform specialists will respond within 24 hours to discuss your needs, arrange a consultation, or provide a detailed quote for your organization.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100 text-center">
+                <div className="w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold mb-2">Request a Quote</h3>
+                <p className="text-neutral-600 mb-4">Get a detailed pricing proposal for your organization's uniform requirements</p>
+                <Link href="/quote" className="text-primary-600 font-medium hover:text-primary-800">Request Quote →</Link>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100 text-center">
+                <div className="w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold mb-2">Schedule a Consultation</h3>
+                <p className="text-neutral-600 mb-4">Book a meeting with our uniform specialists to discuss your needs</p>
+                <Link href="/contact?consultation=true" className="text-primary-600 font-medium hover:text-primary-800">Book Consultation →</Link>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-neutral-100 text-center">
+                <div className="w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold mb-2">Explore Samples</h3>
+                <p className="text-neutral-600 mb-4">Request fabric samples or product catalogs for your industry</p>
+                <Link href="/contact?samples=true" className="text-primary-600 font-medium hover:text-primary-800">Request Samples →</Link>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
       
       {/* Main Contact Grid */}
       <section className="py-16">

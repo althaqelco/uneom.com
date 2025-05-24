@@ -3,14 +3,15 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, usePathname } from 'next/navigation';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { products, getProductById, getProductsByCategory } from '@/lib/data/products';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Fetch product data based on category and product slug
-const getProductData = (category: string, productSlug: string) => {
+const getProductData = (category: string, productSlug: string, locale?: string) => {
   // From our products data, find the product that matches
   const product = products.find(p => p.category === category && p.id === productSlug);
   
@@ -24,11 +25,22 @@ const getProductData = (category: string, productSlug: string) => {
     .slice(0, 3)
     .map(p => ({
       id: p.id,
-      name: p.name,
+      name: locale === 'ar' && p.ar ? p.ar.name : p.name,
       image: p.images[0].src,
       price: p.price,
-      href: `/shop/${p.category}/${p.id}`
+      href: locale === 'ar' ? `/ar/shop/${p.category}/${p.id}` : `/shop/${p.category}/${p.id}`
     }));
+
+  // If locale is Arabic and we have Arabic data, use it for name, description and features
+  if (locale === 'ar' && product.ar) {
+    return {
+      ...product,
+      name: product.ar.name,
+      description: product.ar.description,
+      features: product.ar.features,
+      relatedProducts
+    };
+  }
 
   return {
     ...product,
@@ -51,8 +63,12 @@ export default function ClientPage({ params }: ClientPageProps) {
   const [quantity, setQuantity] = useState(5);
   const [showSizeChart, setShowSizeChart] = useState(false);
   
+  // Check if we're on an Arabic page
+  const pathname = usePathname();
+  const isArabic = pathname?.startsWith('/ar');
+  
   // Get product data
-  const product = getProductData(category, productSlug);
+  const product = getProductData(category, productSlug, isArabic ? 'ar' : 'en');
   
   // If product not found
   if (!product) {
@@ -92,7 +108,7 @@ export default function ClientPage({ params }: ClientPageProps) {
     });
     
     // Could dispatch to a global state manager or send to an API
-    alert('Product added to your quote request.');
+    alert(isArabic ? 'تمت إضافة المنتج إلى طلب الاقتباس الخاص بك.' : 'Product added to your quote request.');
   };
   
   // Generate pricing display based on quantity
@@ -108,38 +124,69 @@ export default function ClientPage({ params }: ClientPageProps) {
       return 'SAR ' + ((parseFloat(product.price.replace('SAR ', ''))) * quantity).toLocaleString();
     }
   };
+
+  // Text content based on locale
+  const labels = {
+    home: isArabic ? 'الرئيسية' : 'Home',
+    shop: isArabic ? 'متجر' : 'Shop',
+    color: isArabic ? 'اللون' : 'Color',
+    size: isArabic ? 'المقاس' : 'Size',
+    sizeChart: isArabic ? 'جدول المقاسات' : 'Size chart',
+    quantity: isArabic ? 'الكمية' : 'Quantity',
+    requestQuote: isArabic ? 'طلب عرض سعر' : 'Request Quote',
+    features: isArabic ? 'المميزات' : 'Features',
+    relatedProducts: isArabic ? 'منتجات ذات صلة' : 'Related Products',
+    viewProduct: isArabic ? 'عرض المنتج' : 'View Product'
+  };
   
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform shop","buy uniforms","professional workwear","uniform store"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="product"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-4">
         <Container>
           <nav className="flex" aria-label="Breadcrumb">
-            <ol className="inline-flex items-center space-x-1 md:space-x-3">
+            <ol className={`inline-flex items-center space-x-1 md:space-x-3 ${isArabic ? 'rtl:space-x-reverse flex-row-reverse' : ''}`}>
               <li className="inline-flex items-center">
-                <Link href="/" className="text-sm text-gray-700 hover:text-primary-600">Home</Link>
+                <Link href={isArabic ? "/ar" : "/"} className="text-sm text-gray-700 hover:text-primary-600">{labels.home}</Link>
               </li>
               <li>
                 <div className="flex items-center">
-                  <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <svg className={`w-3 h-3 text-gray-400 mx-1 ${isArabic ? 'rotate-180' : ''}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
                   </svg>
-                  <Link href="/shop" className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">Shop</Link>
+                  <Link href={isArabic ? "/ar/shop" : "/shop"} className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">{labels.shop}</Link>
                 </div>
               </li>
               <li>
                 <div className="flex items-center">
-                  <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <svg className={`w-3 h-3 text-gray-400 mx-1 ${isArabic ? 'rotate-180' : ''}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
                   </svg>
-                  <Link href={`/shop/${category}`} className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">
+                  <Link href={isArabic ? `/ar/shop/${category}` : `/shop/${category}`} className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">
                     {product.categoryName}
                   </Link>
                 </div>
               </li>
               <li aria-current="page">
                 <div className="flex items-center">
-                  <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <svg className={`w-3 h-3 text-gray-400 mx-1 ${isArabic ? 'rotate-180' : ''}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
                   </svg>
                   <span className="text-sm text-gray-500 ml-1 md:ml-2">{product.name}</span>
@@ -185,7 +232,7 @@ export default function ClientPage({ params }: ClientPageProps) {
             </div>
             
             {/* Product Info */}
-            <div>
+            <div className={isArabic ? 'rtl text-right' : ''}>
               <span className="text-sm text-primary-600 font-medium">{product.categoryName}</span>
               <h1 className="text-3xl font-bold text-gray-900 mt-1 mb-2">{product.name}</h1>
               
@@ -198,7 +245,7 @@ export default function ClientPage({ params }: ClientPageProps) {
               {/* Color Selection */}
               {product.colors && product.colors.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="text-sm font-medium text-gray-900 mb-3">Color</h3>
+                  <h3 className="text-sm font-medium text-gray-900 mb-3">{labels.color}</h3>
                   <div className="flex flex-wrap gap-3">
                     {product.colors.map((color, index) => (
                       <button
@@ -218,12 +265,12 @@ export default function ClientPage({ params }: ClientPageProps) {
               {product.sizes && product.sizes.length > 0 && (
                 <div className="mb-6">
                   <div className="flex justify-between items-center mb-3">
-                    <h3 className="text-sm font-medium text-gray-900">Size</h3>
+                    <h3 className="text-sm font-medium text-gray-900">{labels.size}</h3>
                     <button 
                       onClick={() => setShowSizeChart(!showSizeChart)}
                       className="text-sm text-primary-600 hover:text-primary-700"
                     >
-                      Size chart
+                      {labels.sizeChart}
                     </button>
                   </div>
                   
@@ -247,44 +294,41 @@ export default function ClientPage({ params }: ClientPageProps) {
                     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
                       <div className="bg-white rounded-lg shadow-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6">
                         <div className="flex justify-between items-center mb-4">
-                          <h2 className="text-xl font-bold">Size Chart</h2>
+                          <h2 className="text-xl font-bold">{labels.sizeChart}</h2>
                           <button 
                             onClick={() => setShowSizeChart(false)}
-                            className="text-gray-500 hover:text-gray-700"
+                            className="text-gray-400 hover:text-gray-500"
                           >
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                           </button>
                         </div>
-                        
                         <div className="overflow-x-auto">
-                          <table className="w-full text-sm text-gray-700">
-                            <thead className="bg-gray-50">
+                          <table className="w-full text-sm text-left text-gray-500">
+                            <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                               <tr>
-                                <th className="px-4 py-2 border">Size</th>
-                                <th className="px-4 py-2 border">Chest</th>
-                                <th className="px-4 py-2 border">Waist</th>
-                                <th className="px-4 py-2 border">Hip</th>
-                                <th className="px-4 py-2 border">Inseam</th>
+                                <th scope="col" className="px-6 py-3">Size</th>
+                                <th scope="col" className="px-6 py-3">Chest</th>
+                                <th scope="col" className="px-6 py-3">Waist</th>
+                                <th scope="col" className="px-6 py-3">Hip</th>
+                                <th scope="col" className="px-6 py-3">Inseam</th>
                               </tr>
                             </thead>
                             <tbody>
                               {sizeChart.unisex.map((size, index) => (
-                                <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                                  <td className="px-4 py-2 border font-medium">{size.size}</td>
-                                  <td className="px-4 py-2 border">{size.chest}</td>
-                                  <td className="px-4 py-2 border">{size.waist}</td>
-                                  <td className="px-4 py-2 border">{size.hip}</td>
-                                  <td className="px-4 py-2 border">{size.inseam}</td>
+                                <tr key={index} className="bg-white border-b">
+                                  <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    {size.size}
+                                  </th>
+                                  <td className="px-6 py-4">{size.chest}</td>
+                                  <td className="px-6 py-4">{size.waist}</td>
+                                  <td className="px-6 py-4">{size.hip}</td>
+                                  <td className="px-6 py-4">{size.inseam}</td>
                                 </tr>
                               ))}
                             </tbody>
                           </table>
-                        </div>
-                        
-                        <div className="mt-6 text-sm text-gray-500">
-                          <p>All measurements are in inches. For best results, take your measurements over undergarments similar to those you will wear with your uniform.</p>
                         </div>
                       </div>
                     </div>
@@ -294,16 +338,15 @@ export default function ClientPage({ params }: ClientPageProps) {
               
               {/* Quantity Selection */}
               <div className="mb-6">
-                <h3 className="text-sm font-medium text-gray-900 mb-3">Quantity</h3>
-                <div className="flex items-center">
+                <h3 className="text-sm font-medium text-gray-900 mb-3">{labels.quantity}</h3>
+                <div className="flex items-center gap-2">
                   <input
                     type="number"
+                    min="1"
                     value={quantity}
                     onChange={handleQuantityChange}
-                    min="1"
-                    className="w-20 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                    className="block w-20 py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
                   />
-                  <span className="ml-3 text-sm text-gray-500">Minimum order: {product.minOrder || 5} units</span>
                 </div>
               </div>
               
@@ -324,7 +367,7 @@ export default function ClientPage({ params }: ClientPageProps) {
                   size="lg"
                   className="flex-1"
                 >
-                  Add to Quote
+                  {labels.requestQuote}
                 </Button>
                 <Link href="/contact" className="flex-1">
                   <Button
@@ -442,7 +485,7 @@ export default function ClientPage({ params }: ClientPageProps) {
       {product.relatedProducts && product.relatedProducts.length > 0 && (
         <section className="py-12 bg-gray-50">
           <Container>
-            <SectionHeading centered>Related Products</SectionHeading>
+            <SectionHeading centered>{labels.relatedProducts}</SectionHeading>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
               {product.relatedProducts.map((relatedProduct, index) => (
@@ -460,7 +503,7 @@ export default function ClientPage({ params }: ClientPageProps) {
                       <h3 className="text-lg font-bold mt-1 group-hover:text-primary-600 transition-colors duration-200">{relatedProduct.name}</h3>
                       <p className="text-primary-600 font-medium mt-2">{relatedProduct.price}</p>
                       <span className="text-sm text-primary-600 group-hover:text-primary-500 transition-colors duration-200 flex items-center mt-3">
-                        View Details
+                        {labels.viewProduct}
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>

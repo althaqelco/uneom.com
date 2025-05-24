@@ -14,6 +14,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { generateProductWhatsAppUrl, generateQuoteWhatsAppUrl } from '@/utils/whatsapp';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function PremiumSchoolUniformPage() {
   const locale = 'en';
@@ -153,7 +154,7 @@ export default function PremiumSchoolUniformPage() {
   };
 
   return (
-    <>
+    <main>
       <Head>
         <title>Premium School Uniforms for Saudi Educational Institutions | Uneom</title>
         <meta name="description" content="High-quality premium school uniforms designed for Saudi Arabian schools with superior comfort, durability, and perfect fit. Available in various styles and customization options." />
@@ -394,6 +395,6 @@ export default function PremiumSchoolUniformPage() {
           </div>
         </Container>
       </div>
-    </>
+        </main>
   );
 } 

@@ -11,6 +11,7 @@ import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import TestimonialCard from '@/components/ui/TestimonialCard';
 import { useRouter } from 'next/navigation';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 type LocaleContent = {
   title: string;
@@ -72,7 +73,7 @@ export default function HousekeepingUniformPage() {
   // Multilingual content
   const content: ContentType = {
     en: {
-      title: 'Housekeeping Uniform',
+      title: "UNEOM - Professional Uniforms",
       description: 'Professional housekeeping uniforms designed for comfort and durability in Saudi Arabia\'s hospitality sector, featuring practical design elements and modern styling.',
       longDescription: 'Our premium Housekeeping Uniforms are specifically designed for the unique needs of housekeeping staff in Saudi Arabia\'s hospitality sector. These uniforms combine practical functionality with professional appearance to enhance staff efficiency while maintaining a polished hotel image. Crafted from durable, stain-resistant fabrics that withstand rigorous cleaning duties and frequent washing, these uniforms feature thoughtful design elements like reinforced pockets, strategic stretch panels, and comfortable fits that facilitate movement during housekeeping tasks. Available in both traditional and modern styles with modest design options, our housekeeping uniforms ensure your staff maintain a professional appearance while working comfortably throughout their shifts.',
       breadcrumbs: [
@@ -301,7 +302,7 @@ export default function HousekeepingUniformPage() {
   };
 
   return (
-    <>
+    <main>
       <Container className="py-8">
         <div className="flex justify-end mb-4">
           <button 
@@ -683,6 +684,6 @@ export default function HousekeepingUniformPage() {
           </div>
         )}
       </Container>
-    </>
+        </main>
   );
 } 

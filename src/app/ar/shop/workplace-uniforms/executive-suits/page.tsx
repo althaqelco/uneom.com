@@ -10,6 +10,7 @@ import { useQuote } from '@/contexts/QuoteContext';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import TestimonialCard from '@/components/ui/TestimonialCard';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function ExecutiveSuitsPageArabic() {
   const locale = 'ar';
@@ -138,7 +139,7 @@ export default function ExecutiveSuitsPageArabic() {
   };
 
   return (
-    <>
+    <main>
       <Container>
         <Breadcrumbs items={breadcrumbs} />
         
@@ -400,6 +401,6 @@ export default function ExecutiveSuitsPageArabic() {
           </div>
         )}
       </Container>
-    </>
+        </main>
   );
 } 

@@ -9,6 +9,7 @@ import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { motion } from 'framer-motion';
 import { Poppins, Inter } from 'next/font/google';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define the fonts
 const poppinsFont = Poppins({
@@ -29,7 +30,7 @@ const CorporateProgramsPage = () => {
   // Program Benefits
   const programBenefits = [
     {
-      title: 'Cohesive Brand Identity',
+      title: "UNEOM - Professional Uniforms",
       description: 'Establish a unified and consistent brand image across all departments and locations',
       icon: '🏢',
     },
@@ -72,7 +73,7 @@ const CorporateProgramsPage = () => {
         'Budget planning assistance',
         'Timeline development'
       ],
-      image: '/images/men-shaking-hands-over-business-meeting-2025-01-25-05-47-49-utc.jpg',
+      image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg',
     },
     {
       title: 'Custom Design & Development',
@@ -84,7 +85,7 @@ const CorporateProgramsPage = () => {
         'Mockup creation and revision process',
         'Prototype development and testing'
       ],
-      image: '/images/diverse-business-meeting-manager-brainstorming-with-meeting-participants-in-office-conf-SBI-391494217.jpg',
+      image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg',
     },
     {
       title: 'Implementation Strategy',
@@ -173,7 +174,7 @@ const CorporateProgramsPage = () => {
         '40% improvement in uniform longevity',
         'Significant increase in guest satisfaction scores'
       ],
-      image: '/images/woman-in-business-casual-attire-smiling-SBI-300979979.jpg',
+      image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
     },
   ];
 
@@ -183,7 +184,7 @@ const CorporateProgramsPage = () => {
       <div className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-20">
         <div className="absolute inset-0 overflow-hidden opacity-30">
           <Image
-            src="/images/businessman-checking-documents-and-using-laptop-w-2024-11-01-23-29-12-utc.jpg"
+            src="/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg"
             alt="Corporate Uniform Programs"
             fill
             className="object-cover"
@@ -544,7 +545,7 @@ const CorporateProgramsPage = () => {
             <div className="md:w-1/2">
               <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl border-8 border-white">
                 <Image
-                  src="/images/businessman-checking-documents-and-using-laptop-w-2024-11-01-23-29-12-utc.jpg"
+                  src="/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg"
                   alt="Corporate Uniform Program Management Dashboard"
                   fill
                   className="object-cover"

@@ -10,6 +10,7 @@ import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import TestimonialCard from '@/components/ui/TestimonialCard';
 import { useRouter } from 'next/navigation';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 type LocaleContent = {
   title: string;
@@ -71,7 +72,7 @@ export default function MedicalLabCoatPage() {
   // Multilingual content
   const content: ContentType = {
     en: {
-      title: 'Medical Lab Coat',
+      title: "UNEOM - Professional Uniforms",
       description: 'Premium quality medical lab coats for healthcare professionals, featuring durable, stain-resistant fabric with antimicrobial properties - perfect for hospitals and clinics across Saudi Arabia.',
       longDescription: 'Our Medical Lab Coats are designed specifically for the needs of healthcare professionals in Saudi Arabia. Made from high-quality, durable fabric with antimicrobial properties, these lab coats offer superior protection while maintaining comfort during long shifts. The stain-resistant treatment ensures a professional appearance throughout the day, while the breathable fabric keeps you cool in busy hospital environments. Available in various sizes and styles, including options that comply with modest dress requirements.',
       breadcrumbs: [

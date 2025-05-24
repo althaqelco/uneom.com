@@ -1,4 +1,5 @@
 import React from 'react';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function HomePageStructuredData() {
   const structuredData = {

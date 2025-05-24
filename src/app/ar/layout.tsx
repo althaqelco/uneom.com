@@ -1,30 +1,24 @@
-import type { Metadata } from 'next';
+'use client';
+
 import { Inter } from 'next/font/google';
 import { QuoteProvider } from '@/contexts/QuoteContext';
 import { generateMetadata } from '@/lib/metadata';
 import LinkPreloader from '@/components/LinkPreloader';
 // import ArabicOptimizer from '@/components/ArabicOptimizer'; // Commented out
 import LocaleProvider from '@/components/providers/LocaleProvider';
-import ArabicHeader from '@/components/layout/ArabicHeader';
-import ArabicFooter from '@/components/layout/ArabicFooter';
 import '@/app/globals.css';
 import Script from 'next/script';
+import MainLayout from '@/components/layout/MainLayout';
+import { usePathname } from 'next/navigation';
 
 // Define fonts for Arabic support - Inter doesn't have Arabic subset, but will be used for Latin characters
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
 
-// Generate Arabic-specific metadata
+// جلب البيانات الوصفية ولكن عدم تصديرها هنا (ستكون في metadata.ts)
 const baseMetadata = generateMetadata({
   locale: 'ar',
   page: 'home'
 });
-
-export const metadata: Metadata = {
-  ...baseMetadata,
-  metadataBase: baseMetadata.metadataBase,
-  // We can't use 'other' with custom font preloading due to type constraints
-  // This will be handled by ArabicOptimizer component instead
-};
 
 // إضافة StructuredData للصفحة العربية
 export const ArabicStructuredData = () => {
@@ -100,20 +94,44 @@ export const ArabicStructuredData = () => {
   );
 };
 
+// التحقق مما إذا كانت الصفحة تحتوي على خيارات خاصة بالهيدر والفوتر
+function shouldHideHeaderFooter(pathname: string | null): boolean {
+  if (!pathname) return false;
+  
+  // التأكد من أن المسار مطابق بالضبط للصفحة الرئيسية
+  // أو صفحات القطاعات والخدمات التي تستخدم layouts مع skipMainLayout=true
+  const isExactlyHomePage = pathname === '/ar' || pathname === '/ar/';
+  const isIndustryPage = pathname.startsWith('/ar/industries/');
+  const isServicePage = pathname.startsWith('/ar/services/');
+  const isResourcesPage = pathname.startsWith('/ar/resources');
+  
+  // الصفحة الرئيسية تخفي الهيدر والفوتر بالكامل
+  // بينما صفحات القطاعات والخدمات والموارد تستخدم skipMainLayout=true وتحتاج لتجنب التكرار
+  return isExactlyHomePage || isIndustryPage || isServicePage || isResourcesPage;
+}
+
 export default function ArabicLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // التحقق من المسار باستخدام usePathname
+  const pathname = usePathname();
+  
+  // تحديد ما إذا كان يجب إخفاء الهيدر والفوتر بناءً على المسار
+  const hideHeader = shouldHideHeaderFooter(pathname);
+  const hideFooter = shouldHideHeaderFooter(pathname);
+
+  // ملاحظة مهمة:
+  // MainLayout هو المكون الوحيد المسؤول عن عرض الهيدر والفوتر
+  // الصفحات الفرعية لا يجب أن تضيف هيدر أو فوتر إضافي
   return (
     <LocaleProvider initialLocale="ar">
       <QuoteProvider>
-        <ArabicHeader />
-        <main className="flex-grow rtl">
+        <MainLayout locale="ar" hideHeader={hideHeader} hideFooter={hideFooter}>
           <ArabicStructuredData />
           {children}
-        </main>
-        <ArabicFooter />
+        </MainLayout>
         <LinkPreloader criticalPaths={['/ar/services', '/ar/industries', '/ar/shop']} />
         {/* <ArabicOptimizer /> */}
         <Script id="rtl-support-script" strategy="afterInteractive">

@@ -6,12 +6,13 @@ import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Event data
 const upcomingEvents = [
   {
     id: 'saudi-uniform-expo-2024',
-    title: 'Saudi Uniform Expo 2024',
+    title: "UNEOM - Professional Uniforms",
     date: 'September 15-17, 2024',
     location: 'Riyadh Front Exhibition & Conference Center',
     description: 'Join us at the largest uniform industry exhibition in the Kingdom. Experience our latest designs and meet our expert team to discuss your uniform program needs.',
@@ -82,6 +83,23 @@ export default function EventsPage() {
 
   return (
     <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
       <div className="bg-neutral-50">
         {/* Hero Section */}
         <section className="bg-primary-700 text-white py-16 md:py-24">

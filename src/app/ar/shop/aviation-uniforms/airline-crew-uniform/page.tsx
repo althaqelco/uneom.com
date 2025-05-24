@@ -7,6 +7,7 @@ import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { getProductById } from '@/lib/data/products';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Get product data from the English version and adapt it for Arabic
 const englishProduct = getProductById('airline-crew-uniform');
@@ -36,9 +37,9 @@ const productData = {
     { name: 'بلد التصنيع', value: 'المملكة العربية السعودية' }
   ],
   images: englishProduct ? englishProduct.images : [
-    { src: '/images/products/aviation/airline-1.jpg', alt: 'زي طاقم الطيران للنساء والرجال' },
-    { src: '/images/products/aviation/airline-2.jpg', alt: 'زي الطاقم النسائي بعناصر تصميم سعودية' },
-    { src: '/images/products/aviation/airline-3.jpg', alt: 'تفاصيل زي الطاقم الرجالي' }
+    { src: '/images/aviation/aviation_uniform_airline_main_image.jpg', alt: 'زي طاقم الطيران للنساء والرجال' },
+    { src: '/images/aviation/aviation_uniform_airline.jpg', alt: 'زي الطاقم النسائي بعناصر تصميم سعودية' },
+    { src: '/images/aviation/aviation_uniform_flightـattendants.jpg', alt: 'تفاصيل زي الطاقم الرجالي' }
   ],
   colors: [
     { name: 'أزرق ملكي', value: '#1e3799', image: '/images/products/aviation/airline-blue.jpg' },
@@ -95,6 +96,7 @@ export default function AirlineCrewUniformPageAr() {
       <Container>
         {/* Product Display */}
         <div className="py-12">
+          <h1 className="sr-only">زي طاقم الطائرة المتميز - أزياء طيران احترافية للخطوط السعودية | يونيوم</h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Product Images */}
             <div className="space-y-4">
@@ -315,13 +317,6 @@ export default function AirlineCrewUniformPageAr() {
                     ))}
                   </tbody>
                 </table>
-              </div>
-              
-              {/* SEO Meta Tags */}
-              <div className="hidden">
-                <h1>زي طاقم الطيران من يونيوم - زي احترافي لشركات الطيران السعودية</h1>
-                <meta name="description" content="زي طاقم طيران مصمم خصيصًا للخطوط الجوية السعودية، يجمع بين الأناقة والعملية ويعكس الهوية السعودية. متوفر بألوان متعددة ومقاسات مختلفة." />
-                <meta name="keywords" content="زي طاقم طيران، يونيفورم مضيفات، زي طيران سعودي، ملابس طاقم جوي، أزياء شركات طيران" />
               </div>
             </div>
           </div>

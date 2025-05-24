@@ -33,15 +33,7 @@
   status = 200
   force = false
 
-# Add trailing slashes to all URLs (per roadmap requirements)
-[[redirects]]
-  from = "/*"
-  to = "/:splat/"
-  status = 301
-  force = true
-  conditions = {path = {regex = "^(?!.+/$|.+\\..+$)"}}
-
-# Remove /en/ prefix from URLs (English is default with no prefix)
+# Remove /en prefix from URLs as English is the default language
 [[redirects]]
   from = "/en/*"
   to = "/:splat"
@@ -52,77 +44,31 @@
 # English product placeholders
 [[redirects]]
   from = "/shop/*/related-product-*"
-  to = "/shop/:splat/"
+  to = "/shop/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "/shop/*/product-*"
-  to = "/shop/:splat/"
+  to = "/shop/:splat"
   status = 301
   force = true
 
 # Arabic product placeholders  
 [[redirects]]
   from = "/ar/shop/*/related-product-*"
-  to = "/ar/shop/:splat/"
+  to = "/ar/shop/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/shop/*/product-*"
-  to = "/ar/shop/:splat/"
-  status = 301
-  force = true
-
-# Redirect factory-industry and supply-manufacturing to manufacturing
-[[redirects]]
-  from = "/industries/factory-industry/*"
-  to = "/industries/manufacturing/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/industries/factory-industry/*"
-  to = "/ar/industries/manufacturing/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/industries/supply-manufacturing/*"
-  to = "/industries/manufacturing/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/industries/supply-manufacturing/*"
-  to = "/ar/industries/manufacturing/"
-  status = 301
-  force = true
-
-# Ensure trailing slash for /industries overview pages
-[[redirects]]
-  from = "/industries"
-  to = "/industries/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/industries"
-  to = "/ar/industries/"
-  status = 301
-  force = true
-
-# Blog page redirect
-[[redirects]]
-  from = "/ar/blog" # No slash
-  to = "/ar/blog/" # With slash
+  to = "/ar/shop/:splat"
   status = 301
   force = true
 
 # Fallback para rutas no encontradas - Modificado para devolver código 404 adecuado
 # Excluimos los archivos estáticos, APIs, y recursos del sistema de Next.js
-# This redirect MUST be the last one for general paths (before specific file type redirects if any)
 [[redirects]]
   from = "/*"
   to = "/404.html"
@@ -133,210 +79,210 @@
 # English - Additional Products & Categories
 [[redirects]]
   from = "/sectors/business-wear-uniform-companies"
-  to = "/industries/corporate/"
+  to = "/industries/corporate"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/jackets-for-scrubs"
-  to = "/shop/healthcare-accessories/"
+  to = "/shop/healthcare-accessories"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/waitress-uniforms"
-  to = "/industries/hospitality/restaurants/"
+  to = "/industries/hospitality/restaurants"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/uniform-for-security"
-  to = "/industries/security/"
+  to = "/industries/security"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/company-uniforms"
-  to = "/industries/corporate/"
+  to = "/industries/corporate"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/uniforms-for-hotels"
-  to = "/industries/hospitality/hotels/"
+  to = "/industries/hospitality/hotels"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/pilot-uniforms"
-  to = "/industries/aviation/"
+  to = "/industries/aviation"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/professional-uniforms"
-  to = "/industries/"
+  to = "/industries"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/med-scrubs"
-  to = "/shop/medical-scrubs/"
+  to = "/shop/medical-scrubs"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/greys-anatomy-scrubs"
-  to = "/shop/medical-scrubs/"
+  to = "/shop/medical-scrubs"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/scrub-suits"
-  to = "/shop/medical-scrubs/"
+  to = "/shop/medical-scrubs"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/restaurants"
-  to = "/industries/hospitality/restaurants/"
+  to = "/industries/hospitality/restaurants"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/aviation-uniforms"
-  to = "/industries/aviation/"
+  to = "/industries/aviation"
   status = 301
   force = true
 
 # Additional Blog redirects
 [[redirects]]
   from = "/blog/from-design-to-delivery-inside-uneoms-quality-control-process"
-  to = "/blog/"
+  to = "/blog"
   status = 301
   force = true
 
 [[redirects]]
   from = "/blog/uniform-maintenance-tips-expert-advice-from-uneoms-specialists"
-  to = "/blog/"
+  to = "/blog"
   status = 301
   force = true
 
 # Categories redirects
 [[redirects]]
   from = "/category/blog"
-  to = "/blog/"
+  to = "/blog"
   status = 301
   force = true
 
 [[redirects]]
   from = "/category/sectors"
-  to = "/industries/"
+  to = "/industries"
   status = 301
   force = true
 
 # Arabic - Blog
 [[redirects]]
   from = "/ar/blog/%d8%aa%d8%ac%d8%b1%d8%a8%d8%a9-%d9%8a%d9%88%d9%86%d9%8a%d9%88%d9%85-%d9%85%d8%b9-%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b7%d8%a8%d9%8a-%d8%af%d9%84%d9%8a%d9%84%d9%83-%d9%84%d8%a7%d8%ae"
-  to = "/ar/blog/"
+  to = "/ar/blog"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/blog/%d8%a3%d9%81%d8%b6%d9%84-%d8%a7%d9%84%d8%a3%d9%82%d9%85%d8%b4%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d8%a7%d8%b3%d8%a8%d8%a9-%d9%84%d9%84%d9%85%d9%86%d8%a7%d8%ae-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a"
-  to = "/ar/blog/"
+  to = "/ar/blog"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/blog/%d9%83%d9%8a%d9%81-%d9%8a%d8%ba%d9%8a%d8%b1-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d9%88%d8%ad%d8%af-%d9%85%d8%b3%d8%aa%d9%82%d8%a8%d9%84-%d8%b4%d8%b1%d9%83%d8%aa%d9%83"
-  to = "/ar/blog/"
+  to = "/ar/blog"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/blog/%d8%a3%d8%b3%d8%b1%d8%a7%d8%b1-%d9%86%d8%ac%d8%a7%d8%ad-%d8%a7%d9%84%d8%b2%d9%8a-%d8%a7%d9%84%d9%85%d8%af%d8%b1%d8%b3%d9%8a-%d9%81%d9%8a-%d8%aa%d8%ad%d8%b3%d9%8a%d9%86-%d8%a3%d8%af%d8%a7%d8%a1-%d8%a7"
-  to = "/ar/blog/"
+  to = "/ar/blog"
   status = 301
   force = true
 
 # Additional Arabic Sectors
 [[redirects]]
   from = "/ar/sectors/uniform-in-riyadh"
-  to = "/ar/locations/riyadh/"
+  to = "/ar/locations/riyadh"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/sectors/uniform-in-dammam"
-  to = "/ar/locations/dammam/"
+  to = "/ar/locations/dammam"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/sectors/uniform-in-jeddah"
-  to = "/ar/locations/jeddah/"
+  to = "/ar/locations/jeddah"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/sectors/uniform-in-mecca"
-  to = "/ar/locations/mecca/"
+  to = "/ar/locations/mecca"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/sectors/uniform-in-medina"
-  to = "/ar/locations/medina/"
+  to = "/ar/locations/medina"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/sectors/education-uniforms"
-  to = "/ar/industries/education/"
+  to = "/ar/industries/education"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/sectors/industrial-uniforms"
-  to = "/ar/industries/factory-industry/"
+  to = "/ar/industries/factory-industry"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/sectors/uniform-factory"
-  to = "/ar/industries/manufacturing/"
+  to = "/ar/industries/manufacturing"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/sectors/workers-uniform"
-  to = "/ar/industries/factory-industry/"
+  to = "/ar/industries/factory-industry"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/sectors/uniform-factory-2"
-  to = "/ar/industries/manufacturing/"
+  to = "/ar/industries/manufacturing"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/sectors/hospitality-uniforms"
-  to = "/ar/industries/hospitality/"
+  to = "/ar/industries/hospitality"
   status = 301
   force = true
 
 # Additional Arabic Pages
 [[redirects]]
   from = "/ar/contact-us"
-  to = "/ar/contact/"
+  to = "/ar/contact"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/request-a-quote"
-  to = "/ar/quote/"
+  to = "/ar/quote"
   status = 301
   force = true
 
@@ -349,242 +295,50 @@
 
 [[redirects]]
   from = "/ar/about-us"
-  to = "/ar/about/"
+  to = "/ar/about"
   status = 301
   force = true
 
 # Encoded Arabic URLs
 [[redirects]]
   from = "/ar/location/%d8%a7%d9%84%d9%85%d8%af%d9%8a%d9%86%d8%a9-%d8%a7%d9%84%d9%85%d9%86%d9%88%d8%b1%d8%a9"
-  to = "/ar/locations/medina/"
+  to = "/ar/locations/medina"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/location/%d8%a7%d9%84%d8%af%d9%85%d8%a7%d9%85"
-  to = "/ar/locations/dammam/"
+  to = "/ar/locations/dammam"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/location/%d8%a7%d9%84%d8%b1%d9%8a%d8%a7%d8%b6"
-  to = "/ar/locations/riyadh/"
+  to = "/ar/locations/riyadh"
   status = 301
   force = true
 
 [[redirects]]
   from = "/ar/location/%d8%ac%d8%af%d8%a9"
-  to = "/ar/locations/jeddah/"
+  to = "/ar/locations/jeddah"
   status = 301
   force = true
 
 # Healthcare-specific redirects
 [[redirects]]
   from = "/sectors/healthcare"
-  to = "/industries/healthcare/"
+  to = "/industries/healthcare"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/medical-uniforms"
-  to = "/industries/healthcare/"
+  to = "/industries/healthcare"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sectors/medical-scrubs"
-  to = "/shop/medical-scrubs/"
-  status = 301
-  force = true
-
-# Blog date archives redirects
-[[redirects]]
-  from = "/blog/20*"
-  to = "/blog/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/blog/20*/[0-9]*"
-  to = "/blog/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/blog/20*"
-  to = "/ar/blog/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/blog/20*/[0-9]*"
-  to = "/ar/blog/"
-  status = 301
-  force = true
-
-# Blog pagination redirects
-[[redirects]]
-  from = "/blog/page/1"
-  to = "/blog/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/blog/page/1"
-  to = "/ar/blog/"
-  status = 301
-  force = true
-
-# Industry pages redirects
-[[redirects]]
-  from = "/industries"
-  to = "/industries/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/industries"
-  to = "/ar/industries/"
-  status = 301
-  force = true
-
-# Resource pages redirects
-[[redirects]]
-  from = "/resources"
-  to = "/resources/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/resources"
-  to = "/ar/resources/"
-  status = 301
-  force = true
-
-# Legal pages redirects
-[[redirects]]
-  from = "/terms-of-service"
-  to = "/terms-of-service/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/terms-of-service"
-  to = "/ar/terms-of-service/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/privacy-policy"
-  to = "/privacy-policy/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/privacy-policy"
-  to = "/ar/privacy-policy/"
-  status = 301
-  force = true
-
-# Utility pages redirects
-[[redirects]]
-  from = "/sitemap"
-  to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/sitemap"
-  to = "/ar/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/search"
-  to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/search"
-  to = "/ar/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/categories"
-  to = "/shop/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/categories"
-  to = "/ar/shop/"
-  status = 301
-  force = true
-
-# Service page redirects
-[[redirects]]
-  from = "/ar/services" # No slash
-  to = "/ar/services/" # With slash
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/services-page"
-  to = "/services/"
-  status = 301
-  force = true
-
-# Ensure trailing slash for /locations overview pages
-[[redirects]]
-  from = "/locations" # No slash
-  to = "/locations/" # With slash
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/locations" # No slash
-  to = "/ar/locations/" # With slash
-  status = 301
-  force = true
-
-# Shop page redirect
-[[redirects]]
-  from = "/ar/shop" # No slash
-  to = "/ar/shop/" # With slash
-  status = 301
-  force = true
-
-# Redirect related-product-* URLs to their main category page
-[[redirects]]
-  from = "/shop/*/related-product-*"
-  to = "/shop/:splat/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/shop/*/related-product-*"
-  to = "/ar/shop/:splat/"
-  status = 301
-  force = true
-
-# Ensure trailing slash for /resources overview pages
-[[redirects]]
-  from = "/ar/resources"
-  to = "/ar/resources/"
-  status = 301
-  force = true
-
-# Careers page redirects (assessed as per roadmap)
-[[redirects]]
-  from = "/careers/*" # Catches /careers and /careers/
-  to = "/about/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/ar/careers/*" # Catches /ar/careers and /ar/careers/
-  to = "/ar/about/"
+  to = "/shop/medical-scrubs"
   status = 301
   force = true

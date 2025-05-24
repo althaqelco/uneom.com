@@ -10,6 +10,7 @@ import ProductCard from '@/components/ui/ProductCard';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SearchBar from '@/components/shop/SearchBar';
 import { FilterIcon, GridIcon, ListIcon } from '@/components/ui/Icons';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function WorkplaceUniformsPage() {
   const locale = 'en';
@@ -282,7 +283,7 @@ export default function WorkplaceUniformsPage() {
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: 'Corporate Branding',
+                title: "UNEOM - Professional Uniforms",
                 description: 'Custom embroidery and printing of company logos and identifiers.',
                 icon: '🏢'
               },

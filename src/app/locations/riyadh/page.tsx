@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define location data
 const locationData = {
@@ -32,7 +33,7 @@ const locationData = {
   ],
   specializedServices: [
     {
-      title: 'Corporate Uniform Design',
+      title: "UNEOM - Professional Uniforms",
       description: 'Tailored uniform solutions for Riyadh\'s corporate sector, including banks, telecommunications, and government institutions.',
       icon: '/icons/corporate-design.svg'
     },
@@ -88,14 +89,30 @@ const locationData = {
 };
 
 export const metadata: Metadata = {
-  title: 'UNEOM Riyadh | Specialized Uniform Solutions in the Capital',
-  description: 'Explore UNEOM\'s uniform services in Riyadh, our headquarters for operations in the Kingdom. We provide tailored uniform solutions for corporate, healthcare, education, and hospitality sectors.',
+  title: 'UNEOM Riyadh | Premium Uniform Manufacturer & Supplier in the Capital',
+  description: 'Visit UNEOM\'s headquarters in Riyadh for premium uniform manufacturing and design services. We offer custom corporate, healthcare, hospitality, and educational uniforms, with specialized services for the Central Region of Saudi Arabia.',
+  keywords: ['Riyadh uniforms', 'uniform supplier Riyadh', 'corporate uniforms Saudi Arabia', 'healthcare uniforms Riyadh', 'educational uniforms', 'hospitality uniforms', 'UNEOM Riyadh', 'professional workwear Saudi Arabia', 'uniform manufacturing Riyadh'],
   alternates: {
     canonical: 'https://uneom.com/locations/riyadh/',
     languages: {
       'en': 'https://uneom.com/locations/riyadh/',
       'ar': 'https://uneom.com/ar/locations/riyadh/'
     }
+  },
+  openGraph: {
+    title: 'UNEOM Riyadh | Premium Uniform Manufacturer & Supplier in the Capital',
+    description: 'Visit UNEOM\'s headquarters in Riyadh for premium uniform manufacturing and design services. We offer custom corporate, healthcare, hospitality, and educational uniforms, with specialized services for the Central Region of Saudi Arabia.',
+    url: 'https://uneom.com/locations/riyadh/',
+    siteName: 'UNEOM',
+    images: [
+      {
+        url: 'https://uneom.com/images/locations/riyadh-cityscape.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'UNEOM Riyadh Headquarters'
+      }
+    ],
+    locale: 'en'
   }
 };
 
@@ -146,6 +163,38 @@ export default function RiyadhLocationPage() {
 
   return (
     <main className="min-h-screen ltr text-left">
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025
+        title="UNEOM Riyadh | Premium Uniform Manufacturer & Supplier in the Capital"
+        description="Visit UNEOM's headquarters in Riyadh for premium uniform manufacturing and design services. We offer custom corporate, healthcare, hospitality, and educational uniforms, with specialized services for the Central Region of Saudi Arabia."
+        keywords={[
+          'uniforms Riyadh',
+          'uniform supplier Riyadh',
+          'corporate uniforms Riyadh',
+          'healthcare uniforms Riyadh',
+          'hospitality uniforms Riyadh',
+          'educational uniforms Riyadh',
+          'professional workwear Riyadh',
+          'uniform manufacturing Riyadh',
+          'custom uniforms Saudi Arabia',
+          'UNEOM Riyadh headquarters',
+          'Central Region uniforms',
+          'Riyadh uniform showroom'
+        ]}
+        author="UNEOM Riyadh Team"
+        expertise="Uniform Manufacturing & Design in Riyadh"
+        contentType="location"
+        trustSignals={[
+          'Headquarters location in Riyadh',
+          'Serving 500+ companies in Central Region',
+          'On-site measurement services',
+          'Rush production available',
+          'Specialized design consultants'
+        ]}
+        canonicalUrl="https://uneom.com/locations/riyadh/"
+        locale="en"
+      />
+      
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-gray-900 to-gray-700 py-28">
         <div className="absolute inset-0 z-0 opacity-40">
@@ -159,7 +208,7 @@ export default function RiyadhLocationPage() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            {`UNEOM ${locationData.name}`}
+            UNEOM Premium Uniform Solutions in Riyadh, Saudi Arabia
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl">
             {locationData.description}

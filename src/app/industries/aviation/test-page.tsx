@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import Link from 'next/link';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define animation variants
 const fadeIn = {

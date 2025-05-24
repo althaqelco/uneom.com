@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import ClientPage from '../../[category]/[product]/ClientPage';
 import Script from 'next/script';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define metadata for SEO optimization
 export const metadata: Metadata = {
@@ -48,7 +49,9 @@ export default function HiVisUniformPage() {
   };
   
   return (
-    <>
+    <main>
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">High-Visibility Safety Uniforms | ISO-Certified Industrial Workwear</h1>
+      
       {/* Schema.org structured data for enhanced SEO */}
       <Script
         id="product-structured-data"
@@ -90,6 +93,6 @@ export default function HiVisUniformPage() {
       
       {/* Main product page component */}
       <ClientPage params={params} />
-    </>
+        </main>
   );
 }

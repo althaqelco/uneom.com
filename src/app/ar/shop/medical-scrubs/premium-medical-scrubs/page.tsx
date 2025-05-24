@@ -13,6 +13,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { generateProductWhatsAppUrl } from '@/utils/whatsapp';
 import ColorSwatch from '@/components/shop/ColorSwatch';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function PremiumMedicalScrubsArabicPage() {
   const locale = 'ar';
@@ -186,7 +187,7 @@ export default function PremiumMedicalScrubsArabicPage() {
   };
 
   return (
-    <>
+    <main>
       {/* Inject JSON-LD schema */}
       <div dangerouslySetInnerHTML={{
         __html: `
@@ -199,6 +200,7 @@ export default function PremiumMedicalScrubsArabicPage() {
       {/* Product content */}
       <div className="bg-neutral-50 py-8">
         <Container>
+          <h1 className="sr-only">سكروب طبي ممتاز | ملابس طبية عالية الجودة للعاملين في الرعاية الصحية | يونيوم</h1>
           {/* Breadcrumbs */}
           <Breadcrumbs
             items={[
@@ -587,6 +589,6 @@ export default function PremiumMedicalScrubsArabicPage() {
           </div>
         </div>
       )}
-    </>
+        </main>
   );
 } 

@@ -10,6 +10,7 @@ import { useQuote } from '@/contexts/QuoteContext';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import TestimonialCard from '@/components/ui/TestimonialCard';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function PremiumSurgicalGownsPageArabic() {
   const locale = 'ar';
@@ -134,7 +135,7 @@ export default function PremiumSurgicalGownsPageArabic() {
   };
 
   return (
-    <>
+    <main>
       <Container className="py-8">
         <Breadcrumbs items={breadcrumbs} />
         
@@ -440,6 +441,6 @@ export default function PremiumSurgicalGownsPageArabic() {
           </div>
         )}
       </Container>
-    </>
+        </main>
   );
 } 

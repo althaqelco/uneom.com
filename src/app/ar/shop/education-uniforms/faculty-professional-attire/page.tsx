@@ -11,6 +11,7 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import { generateProductWhatsAppUrl } from '@/utils/whatsapp';
 import { FaWhatsapp, FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function FacultyProfessionalAttireArabicPage() {
   const locale = 'ar';
@@ -99,7 +100,7 @@ export default function FacultyProfessionalAttireArabicPage() {
   };
 
   return (
-    <>
+    <main>
       {/* Add product schema for SEO */}
       <div dangerouslySetInnerHTML={{
         __html: `
@@ -267,6 +268,6 @@ export default function FacultyProfessionalAttireArabicPage() {
 
         {/* Additional product details sections would go here */}
       </Container>
-    </>
+        </main>
   );
 } 

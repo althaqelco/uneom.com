@@ -8,6 +8,7 @@ import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SectionHeading from '@/components/ui/SectionHeading';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Page Data
 const pageData = {
@@ -83,7 +84,7 @@ export default function HeavyIndustryPage() {
   };
 
   return (
-    <>
+    <main>
       <Container className="py-8 md:py-12">
         {/* Breadcrumbs */}
         <Breadcrumbs items={[
@@ -292,6 +293,6 @@ export default function HeavyIndustryPage() {
           </div>
         </motion.div>
       </Container>
-    </>
+        </main>
   );
 } 

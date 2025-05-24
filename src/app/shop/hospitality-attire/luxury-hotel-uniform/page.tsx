@@ -17,6 +17,7 @@ import FeaturesGrid from '@/components/shop/FeaturesGrid';
 import TabNavigation from '@/components/ui/TabNavigation';
 import RequestInfoForm from '@/components/forms/RequestInfoForm';
 import { StarIcon } from '@heroicons/react/24/solid';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function LuxuryHotelUniformPage() {
   const locale = 'en';
@@ -112,29 +113,29 @@ export default function LuxuryHotelUniformPage() {
       { 
         name: "Premium Logo Embroidery", 
         description: "High-definition embroidery with metallic thread options - SAR 60 per uniform",
-        image: "/images/hospitality/hospitality_uniform_custom_logo.jpg"
+        image: "/images/Luxury_Hotel Staff_Uniform.png"
       },
       { 
         name: "Custom Metal Buttons and Hardware", 
         description: "Branded metal buttons and accents - SAR 85 per uniform set",
-        image: "/images/hospitality/hospitality_uniform_buttons.jpg"
+        image: "/images/cook-flavoring-his-best-meal-2024-11-29-22-42-39-utc.jpg"
       },
       { 
         name: "Specialty Fabric Upgrades", 
         description: "Ultra-premium fabric options including performance wool blends - SAR 120 per uniform",
-        image: "/images/hospitality/hospitality_uniform_fabric.jpg"
+        image: "/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg"
       },
       { 
         name: "Department-Specific Design Elements", 
         description: "Customized design elements for different hotel departments - SAR 45 per uniform",
-        image: "/images/hospitality/hospitality_uniform_department.jpg"
+        image: "/images/group-of-chefs-standing-with-arms-crossed-in-kitch-2023-11-27-05-01-36-utc.jpg"
       }
     ],
     relatedProducts: [
       {
         id: 'executive-hospitality-suit',
         name: 'Executive Hospitality Suit',
-        image: '/images/hospitality/hospitality_uniform_formal.jpg',
+        image: '/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg',
         price: 'From SAR 499',
         href: '/shop/hospitality-attire/executive-hospitality-suit'
       },
@@ -148,7 +149,7 @@ export default function LuxuryHotelUniformPage() {
       {
         id: 'concierge-uniform-set',
         name: 'Luxury Concierge Uniform Set',
-        image: '/images/hospitality/hospitality_uniform_concierge.jpg',
+        image: '/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg',
         price: 'From SAR 399',
         href: '/shop/hospitality-attire/concierge-uniform-set'
       }

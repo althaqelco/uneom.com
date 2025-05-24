@@ -8,6 +8,7 @@ import { FaShieldAlt, FaTools, FaHardHat, FaTemperatureHigh, FaWind, FaIndustry,
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function FactoryIndustryPage() {
   // Default to English locale
@@ -242,7 +243,7 @@ export default function FactoryIndustryPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-neutral-900 text-white h-[60vh] min-h-[400px]">
+      <section className="relative bg-neutral-900 text-white h-[60vh] min-h-[400px] header-spacing">
         <div className="absolute inset-0">
           <Image 
             src={factoryIndustryData.heroImage} 

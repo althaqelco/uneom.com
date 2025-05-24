@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import ClientPage from '@/app/shop/[category]/[product]/ClientPage';
 import Script from 'next/script';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define metadata for SEO optimization
 export const metadata: Metadata = {
@@ -123,7 +124,9 @@ export default function RetailStoreUniformPageArabic() {
   const locale = 'ar';
   
   return (
-    <>
+    <main>
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl rtl:font-arabic">زي موظف المتجر الفاخر | ملابس موظفين متاجر أنيقة | يونيوم المملكة العربية السعودية</h1>
+      
       {/* Schema.org structured data for enhanced SEO */}
       <Script
         id="product-structured-data"
@@ -165,6 +168,6 @@ export default function RetailStoreUniformPageArabic() {
       
       {/* Main product page component */}
       <ClientPage params={params} />
-    </>
+        </main>
   );
 } 

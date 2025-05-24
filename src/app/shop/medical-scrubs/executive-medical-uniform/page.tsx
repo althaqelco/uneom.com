@@ -9,6 +9,7 @@ import { useQuote } from '@/contexts/QuoteContext';
 import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { useRouter } from 'next/navigation';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 type LocaleContent = {
   title: string;
@@ -72,7 +73,7 @@ export default function ExecutiveMedicalUniformPage() {
   // Multilingual content
   const content: ContentType = {
     en: {
-      title: 'Executive Medical Uniform',
+      title: "UNEOM - Professional Uniforms",
       description: 'Premium executive medical uniforms designed for healthcare leaders and administrators, featuring elegant styling with exceptional comfort and durability - perfect for Saudi healthcare management professionals.',
       longDescription: 'Our Executive Medical Uniforms represent the pinnacle of healthcare professional attire, designed specifically for medical directors, department heads, and healthcare executives in Saudi Arabian medical institutions. These premium uniforms blend sophisticated styling with functional design to create a distinct professional appearance that communicates authority and expertise. Crafted from superior performance fabrics with natural stretch and enhanced durability, these uniforms maintain their impeccable appearance through long workdays while ensuring excellent freedom of movement. The tailored fit provides a refined silhouette that distinguishes leadership personnel while the antimicrobial properties and soil-release technology ensure continuous protection and pristine presentation.',
       breadcrumbs: [

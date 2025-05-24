@@ -2,11 +2,12 @@
 
 import React from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function MeasurementServicesPageArabic() {
   const serviceData = {
     locale: 'ar',
-    title: 'خدمات القياس',
+    title: "UNEOM - Professional Uniforms",
     subtitle: 'حلول قياس احترافية للحصول على أزياء موحدة مثالية المقاس',
     heroImage: '/images/banner-placeholder.jpg',
     
@@ -139,5 +140,5 @@ export default function MeasurementServicesPageArabic() {
     }
   };
   
-  return <ServicePageLayout locale="ar" serviceData={serviceData}  />;
+  return <ServicePageLayout locale="ar" serviceData={serviceData} skipMainLayout={true} />;
 } 

@@ -1,6 +1,349 @@
 // 'use client';
 
 export const products = [
+  // Retail Uniform Products
+  {
+    id: "related-product-1",
+    category: "retail-uniforms",
+    categoryName: "Retail Uniforms",
+    industry: "retail",
+    name: "Premium Retail Staff Polo",
+    shortDescription: "High-quality polo shirts for luxury retail environments",
+    description: "Our premium retail staff polo is designed for upscale retail environments in Saudi Arabia. Made with high-quality fabric blend that provides exceptional comfort during long shifts while maintaining a polished appearance. Each polo can be customized with your brand colors and logo placement, creating a cohesive staff look that enhances your brand identity and customer confidence.",
+    features: [
+      "Tailored fit with modern styling suitable for Saudi retail environments",
+      "Luxury fabric blend (65% cotton, 35% polyester) for all-day comfort",
+      "Wrinkle and stain-resistant for maintaining professional appearance",
+      "Multiple customization options including embroidery and color matching",
+      "Modest designs suitable for Saudi cultural requirements",
+      "Available with coordinating accessories (name badges, scarves/ties)"
+    ],
+    images: [
+      { src: "/images/industries/retail-shops/retail-shops-uniform-identity.jpg", alt: "Front view of retail staff polo" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-shop.jpg", alt: "Retail staff wearing premium polo in store environment" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-2.jpg", alt: "Detail of premium retail staff polo fabric" }
+    ],
+    colors: [
+      { name: "Navy Blue", value: "#2c3e50", image: "/images/industries/retail-shops/retail-shops-uniform-identity.jpg" },
+      { name: "Dark Blue", value: "#34495e", image: "/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg" },
+      { name: "Gray", value: "#7f8c8d", image: "/images/industries/retail-shops/retail-shops-uniform-identity-3.jpg" },
+      { name: "Light Gray", value: "#ecf0f1", image: "/images/industries/retail-shops/retail-shops-uniform-identity-4.jpg" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
+    fabricDetails: {
+      composition: "65% Cotton, 35% Polyester",
+      gsm: "220",
+      features: ["Wrinkle-resistant", "Stain-resistant", "Breathable"]
+    },
+    customizationOptions: [
+      "Brand logo embroidery",
+      "Custom collar and cuff designs",
+      "Color matching to brand identity",
+      "Name embroidery options",
+      "Department color coding"
+    ],
+    relatedProducts: ["related-product-2", "related-product-3", "related-product-4"],
+    price: "SAR 185",
+    minOrder: 10,
+    href: "/shop/retail-uniforms/related-product-1",
+    
+    // Arabic translation
+    ar: {
+      name: "بولو فاخر لموظفي المتاجر",
+      shortDescription: "قمصان بولو عالية الجودة لبيئات البيع بالتجزئة الفاخرة",
+      description: "تم تصميم بولو موظفي المتاجر الفاخرة لبيئات البيع بالتجزئة الراقية في المملكة العربية السعودية. مصنوعة من مزيج قماش عالي الجودة يوفر راحة استثنائية خلال المناوبات الطويلة مع الحفاظ على مظهر أنيق. يمكن تخصيص كل قميص بولو بألوان علامتك التجارية وموضع الشعار، مما يخلق مظهرًا متناسقًا للموظفين يعزز هوية علامتك التجارية وثقة العملاء.",
+      features: [
+        "قصة محكمة بتصميم عصري مناسب لبيئات البيع بالتجزئة السعودية",
+        "مزيج قماش فاخر (65% قطن، 35% بوليستر) للراحة طوال اليوم",
+        "مقاومة للتجاعيد وسهلة العناية للحفاظ على المظهر الاحترافي",
+        "خيارات تخصيص متعددة تشمل التطريز ومطابقة الألوان",
+        "تصاميم محتشمة مناسبة للمتطلبات الثقافية السعودية",
+        "متوفرة مع إكسسوارات متناسقة (شارات الأسماء، الأوشحة/ربطات العنق)"
+      ]
+    },
+    
+    // Schema.org structured data
+    schemaOrg: {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "UNEOM Premium Retail Staff Polo",
+      "image": [
+        "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-identity.jpg",
+        "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-shop.jpg",
+        "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-2.jpg"
+      ],
+      "description": "Premium retail staff polo designed for upscale retail environments in Saudi Arabia, featuring luxury fabric blend and multiple customization options.",
+      "sku": "UNEOM-RT-PRO-01",
+      "brand": {
+        "@type": "Brand",
+        "name": "UNEOM"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://uneom.com/shop/retail-uniforms/related-product-1",
+        "priceCurrency": "SAR",
+        "price": "185",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  },
+  {
+    id: "related-product-2",
+    category: "retail-uniforms",
+    categoryName: "Retail Uniforms",
+    industry: "retail",
+    name: "Luxury Retail Blazer Set",
+    shortDescription: "Sophisticated blazer sets for high-end retail environments",
+    description: "Elevate your brand with our luxury retail blazer set, designed specifically for upscale retail environments in Saudi Arabia. This professional ensemble combines exceptional elegance with superior comfort, reflecting your establishment's commitment to quality and professionalism. Carefully crafted to enhance employee confidence and customer impressions in high-end retail settings across Saudi Arabia.",
+    features: [
+      "Premium wool-blend fabric (80% premium polyester, 20% Australian wool) for elegant appearance and exceptional durability",
+      "Advanced stain and wrinkle-resistant treatment maintains elegance throughout the workday and reduces maintenance costs",
+      "Elegant details for brand identity enhancement (custom buttons, exclusive colors, distinctive pocket design)",
+      "Modern cut with special attention to comfort preferences in Saudi Arabia",
+      "Luxury breathable synthetic silk lining ideal for all-day wear in air-conditioned shopping environments"
+    ],
+    images: [
+      { src: "/images/industries/retail-shops/retail-shops-uniform-brand.jpg", alt: "Front view of luxury retail blazer" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-identity.jpg", alt: "Staff wearing luxury retail blazer" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg", alt: "Detail of luxury blazer fabric and styling" }
+    ],
+    colors: [
+      { name: "Navy Blue", value: "#2c3e50", image: "/images/industries/retail-shops/retail-shops-uniform-brand.jpg" },
+      { name: "Dark Blue", value: "#34495e", image: "/images/industries/retail-shops/retail-shops-uniform-identity.jpg" },
+      { name: "Black", value: "#000000", image: "/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg" },
+      { name: "Burgundy", value: "#7f0000", image: "/images/industries/retail-shops/retail-shops-uniform-identity-4.jpg" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL", "Custom Size"],
+    fabricDetails: {
+      composition: "80% Polyester, 20% Australian Wool",
+      gsm: "280",
+      features: ["Stain-resistant", "Wrinkle-resistant", "Breathable lining"]
+    },
+    customizationOptions: [
+      "Brand logo integration in buttons and lining",
+      "Custom color matching to brand palette",
+      "Personalized internal labeling",
+      "Department-specific styling options",
+      "Complementary accessories design"
+    ],
+    relatedProducts: ["related-product-1", "related-product-3", "related-product-4"],
+    price: "SAR 650",
+    minOrder: 5,
+    href: "/shop/retail-uniforms/related-product-2",
+    
+    // Arabic translation
+    ar: {
+      name: "طقم بليزر فاخر للبيع بالتجزئة",
+      shortDescription: "أطقم بليزر أنيقة لبيئات البيع بالتجزئة الراقية",
+      description: "ارتقِ بعلامتك التجارية مع مجموعة البليزر الفاخرة للبيع بالتجزئة، المصممة خصيصًا لبيئات البيع بالتجزئة الراقية في المملكة العربية السعودية. تجمع هذه المجموعة المهنية بين الأناقة الاستثنائية والراحة الفائقة، مما يعكس التزام مؤسستك بالجودة والاحترافية. تم تصميمها بعناية لتعزيز ثقة الموظفين وانطباعات العملاء في بيئات البيع بالتجزئة الفاخرة في جميع أنحاء المملكة العربية السعودية.",
+      features: [
+        "قماش فاخر من مزيج الصوف (80% بوليستر فاخر، 20% صوف أسترالي) لمظهر أنيق ومتانة استثنائية",
+        "معالجة متقدمة مقاومة للبقع والتجاعيد تحافظ على الأناقة طوال يوم العمل وتقلل تكاليف الصيانة",
+        "تفاصيل أنيقة لتعزيز هوية العلامة التجارية (أزرار مخصصة، ألوان حصرية، تصميم جيب مميز)",
+        "قصة عصرية مع اهتمام خاص بتفضيلات الراحة في المملكة العربية السعودية",
+        "بطانة حريرية صناعية فاخرة قابلة للتنفس مثالية للارتداء طوال اليوم في بيئات التسوق المكيفة"
+      ]
+    },
+    
+    // Schema.org structured data
+    schemaOrg: {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "UNEOM Luxury Retail Blazer Set",
+      "image": [
+        "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-brand.jpg",
+        "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-identity.jpg",
+        "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg"
+      ],
+      "description": "Luxury retail blazer set designed specifically for upscale retail environments in Saudi Arabia, combining exceptional elegance with superior comfort.",
+      "sku": "UNEOM-RT-BLZ-01",
+      "brand": {
+        "@type": "Brand",
+        "name": "UNEOM"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://uneom.com/shop/retail-uniforms/related-product-2",
+        "priceCurrency": "SAR",
+        "price": "650",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  },
+  {
+    id: "related-product-3",
+    category: "retail-uniforms",
+    categoryName: "Retail Uniforms",
+    industry: "retail",
+    name: "Retail Department Store Set",
+    shortDescription: "Practical uniform sets for multi-department retail stores",
+    description: "Comprehensive and practical uniforms designed specifically for multi-department retail stores in the Saudi market. This set offers an ideal blend of professional elegance and everyday durability with cost-optimized solutions for organizations with large teams. The set features customization capabilities for different departments while maintaining visual brand consistency, providing employees with superior comfort during long shifts in active retail environments.",
+    features: [
+      "Durable comfortable fabric with ideal blend ratio (60% treated cotton, 40% high-performance polyester) for repeated use while maintaining elegant appearance",
+      "Multi-layered design adaptable for seasonal suitability - base shirt and removable light vest/jacket",
+      "Practical pockets designed for daily work needs with clear visibility for name badges and department symbols",
+      "Wrinkle and stain-resistant finishes stay elegant throughout the day and reduce maintenance costs",
+      "Gender-neutral design suitable for diverse teams with customization options for different departments (distinct color accents, department badges)"
+    ],
+    images: [
+      { src: "/images/industries/retail-shops/retail-shops-uniform-brands-logo.jpg", alt: "Front view of department store uniform" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-brands-logo-2.jpg", alt: "Department store uniform with branding" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-shop.jpg", alt: "Staff wearing department store uniform" }
+    ],
+    colors: [
+      { name: "Navy Blue", value: "#1d3f6e", image: "/images/industries/retail-shops/retail-shops-uniform-brands-logo.jpg" },
+      { name: "Dark Gray", value: "#4a4a4a", image: "/images/industries/retail-shops/retail-shops-uniform-brands-logo-2.jpg" },
+      { name: "Olive Green", value: "#556b2f", image: "/images/industries/retail-shops/retail-shops-uniform-shop.jpg" },
+      { name: "Brown", value: "#654321", image: "/images/industries/retail-shops/retail-shops-uniform-shop-factory.jpg" }
+    ],
+    sizes: ["XXS", "XS", "S", "M", "L", "XL", "2XL", "3XL", "Custom Sizes"],
+    fabricDetails: {
+      composition: "60% Treated Cotton, 40% High-Performance Polyester",
+      gsm: "230",
+      features: ["Wrinkle-resistant", "Stain-resistant", "Durable construction"]
+    },
+    customizationOptions: [
+      "Department-specific color coding",
+      "Role-based badge systems",
+      "Seasonal variation options",
+      "Modular component selection",
+      "Departmental branding elements"
+    ],
+    relatedProducts: ["related-product-1", "related-product-2", "related-product-4"],
+    price: "SAR 320",
+    minOrder: 20,
+    href: "/shop/retail-uniforms/related-product-3",
+    
+    // Arabic translation
+    ar: {
+      name: "طقم متجر متعدد الأقسام",
+      shortDescription: "أطقم زي عملية لمتاجر البيع بالتجزئة متعددة الأقسام",
+      description: "أزياء شاملة وعملية مصممة خصيصًا لمتاجر البيع بالتجزئة متعددة الأقسام في السوق السعودي. يوفر هذا الطقم مزيجًا مثاليًا من الأناقة المهنية والمتانة اليومية مع حلول مُحسّنة التكلفة للمؤسسات ذات الفرق الكبيرة. يتميز الطقم بقدرات تخصيص للأقسام المختلفة مع الحفاظ على اتساق العلامة التجارية المرئية، مما يوفر للموظفين راحة فائقة خلال المناوبات الطويلة في بيئات البيع بالتجزئة النشطة.",
+      features: [
+        "قماش مريح ومتين بنسبة مزج مثالية (60% قطن معالج، 40% بوليستر عالي الأداء) للاستخدام المتكرر مع الحفاظ على المظهر الأنيق",
+        "تصميم متعدد الطبقات قابل للتكيف مع الملاءمة الموسمية - قميص أساسي وسترة/جاكيت خفيف قابل للإزالة",
+        "جيوب عملية مصممة لاحتياجات العمل اليومية مع وضوح شارات الأسماء ورموز الأقسام",
+        "تشطيبات مقاومة للتجاعيد والبقع تبقى أنيقة طوال اليوم وتقلل تكاليف الصيانة",
+        "تصميم محايد للجنسين مناسب للفرق المتنوعة مع خيارات تخصيص للأقسام المختلفة (لمسات لونية مميزة، شارات الأقسام)"
+      ]
+    },
+    
+    // Schema.org structured data
+    schemaOrg: {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "UNEOM Retail Department Store Set",
+      "image": [
+        "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-brands-logo.jpg",
+        "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-brands-logo-2.jpg",
+        "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-shop.jpg"
+      ],
+      "description": "Practical uniform sets for multi-department retail stores in Saudi Arabia, offering professional elegance and everyday durability with customization options.",
+      "sku": "UNEOM-RT-DEP-01",
+      "brand": {
+        "@type": "Brand",
+        "name": "UNEOM"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://uneom.com/shop/retail-uniforms/related-product-3",
+        "priceCurrency": "SAR",
+        "price": "320",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  },
+  {
+    id: "related-product-4",
+    category: "retail-uniforms",
+    categoryName: "Retail Uniforms",
+    industry: "retail",
+    name: "Casual Retail Team Uniform",
+    shortDescription: "Contemporary casual uniforms for modern retail brands",
+    description: "Contemporary and casual uniforms designed specifically to meet the needs of modern retail stores in Saudi Arabia. This attire provides an ideal blend of modern elegance and practical comfort, enhancing the shopping experience by creating a friendly, contemporary environment. Perfect for youth-oriented brands, technology stores, and entertainment retailers targeting young customers in Saudi Arabia's evolving market.",
+    features: [
+      "Ultra-soft cotton fabric (95% organic cotton, 5% elastane) providing exceptional flexibility and comfort throughout work periods",
+      "Contemporary design with updated cuts suitable for modern Saudi taste while maintaining appropriate modesty",
+      "Vibrant colors with advanced dyeing technology resistant to fading even after repeated washing",
+      "Special anti-odor and antibacterial treatment suitable for long hours in active commercial environments",
+      "Seasonal adaptability (interchangeable units - polo shirts, t-shirts, long-sleeve shirts)"
+    ],
+    images: [
+      { src: "/images/industries/retail-shops/retail-shops-uniform-casual.jpg", alt: "Front view of casual retail uniform" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-shop-industery.jpg", alt: "Staff wearing casual retail uniform" },
+      { src: "/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg", alt: "Casual uniform with modern styling" }
+    ],
+    colors: [
+      { name: "Turquoise", value: "#2ac3e2", image: "/images/industries/retail-shops/retail-shops-uniform-casual.jpg" },
+      { name: "Gray", value: "#7f8c8d", image: "/images/industries/retail-shops/retail-shops-uniform-shop-industery.jpg" },
+      { name: "Olive Green", value: "#60714F", image: "/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg" },
+      { name: "Orange", value: "#e67e22", image: "/images/industries/retail-shops/retail-shops-uniform-identity-3.jpg" },
+      { name: "Purple", value: "#8e44ad", image: "/images/industries/retail-shops/retail-shops-uniform-identity-3.jpg" },
+      { name: "Amber", value: "#f39c12", image: "/images/industries/retail-shops/retail-shops-uniform-identity-3.jpg" }
+    ],
+    sizes: ["XXS", "XS", "S", "M", "L", "XL", "2XL", "3XL", "Inclusive Body Types"],
+    fabricDetails: {
+      composition: "95% Organic Cotton, 5% Elastane",
+      gsm: "180",
+      features: ["Anti-bacterial", "Anti-odor", "Fade-resistant", "Stretch comfort"]
+    },
+    customizationOptions: [
+      "Contemporary logo application techniques",
+      "Seasonal variation programs",
+      "Department-specific accent colors",
+      "Technology pocket integration options",
+      "Sustainable material upgrade options"
+    ],
+    relatedProducts: ["related-product-1", "related-product-2", "related-product-3"],
+    price: "SAR 150",
+    minOrder: 15,
+    href: "/shop/retail-uniforms/related-product-4",
+    
+    // Arabic translation
+    ar: {
+      name: "زي فريق التجزئة غير الرسمي",
+      shortDescription: "أزياء عصرية غير رسمية للعلامات التجارية الحديثة للبيع بالتجزئة",
+      description: "أزياء عصرية وغير رسمية مصممة خصيصًا لتلبية احتياجات متاجر البيع بالتجزئة الحديثة في المملكة العربية السعودية. توفر هذه الملابس مزيجًا مثاليًا من الأناقة العصرية والراحة العملية، مما يعزز تجربة التسوق من خلال خلق بيئة ودية ومعاصرة. مثالية للعلامات التجارية الموجهة للشباب، ومتاجر التكنولوجيا، وتجار التجزئة للترفيه الذين يستهدفون العملاء الشباب في سوق المملكة العربية السعودية المتطور.",
+      features: [
+        "قماش قطني فائق النعومة (95% قطن عضوي، 5% إيلاستين) يوفر مرونة استثنائية وراحة طوال فترات العمل",
+        "تصميم معاصر بقصات محدثة مناسبة للذوق السعودي الحديث مع الحفاظ على الحشمة المناسبة",
+        "ألوان نابضة بالحياة مع تقنية صباغة متقدمة مقاومة للبهتان حتى بعد الغسيل المتكرر",
+        "معالجة خاصة مضادة للروائح والبكتيريا مناسبة لساعات طويلة في البيئات التجارية النشطة",
+        "قابلية التكيف الموسمي (وحدات قابلة للتبديل - قمصان بولو، تي شيرت، قمصان بأكمام طويلة)"
+      ]
+    },
+    
+    // Schema.org structured data
+    schemaOrg: {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "UNEOM Casual Retail Team Uniform",
+      "image": [
+        "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-casual.jpg",
+        "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-shop-industery.jpg",
+        "https://uneom.com/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg"
+      ],
+      "description": "Contemporary casual uniforms for modern retail brands in Saudi Arabia, providing modern elegance and practical comfort for youth-oriented stores.",
+      "sku": "UNEOM-RT-CSL-01",
+      "brand": {
+        "@type": "Brand",
+        "name": "UNEOM"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://uneom.com/shop/retail-uniforms/related-product-4",
+        "priceCurrency": "SAR",
+        "price": "150",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  },
+  
+  // Original products continue below
   {
     id: "premium-scrubs",
     category: "medical-scrubs",
@@ -63,9 +406,9 @@ export const products = [
       "Customizable with airline branding"
     ],
     images: [
-      { src: "/images/products/aviation/airline-1.jpg", alt: "Female and male airline crew uniforms" },
-      { src: "/images/products/aviation/airline-2.jpg", alt: "Female crew uniform with Saudi design elements" },
-      { src: "/images/products/aviation/airline-3.jpg", alt: "Male crew uniform details" }
+      { src: "/images/aviation/aviation_uniform_airline_main_image.jpg", alt: "Female and male airline crew uniforms" },
+      { src: "/images/aviation/aviation_uniform_airline.jpg", alt: "Female crew uniform with Saudi design elements" },
+      { src: "/images/aviation/aviation_uniform_flightـattendants.jpg", alt: "Male crew uniform details" }
     ],
     colors: [
       { name: "Royal Blue", value: "#1e3799", image: "/images/products/aviation/airline-blue.jpg" },

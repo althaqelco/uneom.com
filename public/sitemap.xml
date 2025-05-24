@@ -5,7 +5,7 @@
     <loc>https://uneom.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,7 +13,7 @@
     <loc>https://uneom.com/about</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/about"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/about"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -21,7 +21,7 @@
     <loc>https://uneom.com/ar</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/ar"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -29,7 +29,7 @@
     <loc>https://uneom.com/ar/about</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/about"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/about"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -37,7 +37,7 @@
     <loc>https://uneom.com/ar/authors</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/authors"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/authors"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -45,7 +45,7 @@
     <loc>https://uneom.com/ar/authors/[slug]</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/authors/[slug]"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/authors/[slug]"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -53,7 +53,7 @@
     <loc>https://uneom.com/ar/blog</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -61,103 +61,15 @@
     <loc>https://uneom.com/ar/blog/[slug]</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/[slug]"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/[slug]"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://uneom.com/ar/blog/choosing-the-right-retail-uniforms</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/choosing-the-right-retail-uniforms"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/choosing-the-right-retail-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/ar/blog/corporate-security-branding</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/corporate-security-branding"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/corporate-security-branding"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/ar/blog/evolution-of-retail-uniforms-saudi-arabia</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/evolution-of-retail-uniforms-saudi-arabia"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/evolution-of-retail-uniforms-saudi-arabia"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/ar/blog/industrial-heat-stress-management</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/industrial-heat-stress-management"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/industrial-heat-stress-management"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/ar/blog/industrial-safety-compliance-guide</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/industrial-safety-compliance-guide"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/industrial-safety-compliance-guide"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/ar/blog/retail-uniform-impact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/retail-uniform-impact"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/retail-uniform-impact"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/ar/blog/retail-uniform-selection-guide</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/retail-uniform-selection-guide"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/retail-uniform-selection-guide"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/ar/blog/school-uniforms-academic-performance</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/school-uniforms-academic-performance"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/school-uniforms-academic-performance"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/ar/blog/security-uniform-psychology</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/security-uniform-psychology"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/security-uniform-psychology"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/ar/blog/sustainable-retail-uniforms</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/sustainable-retail-uniforms"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/sustainable-retail-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/ar/blog/sustainable-school-uniforms-saudi</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/sustainable-school-uniforms-saudi"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/sustainable-school-uniforms-saudi"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/ar/blog/sustainable-uniforms-2024-trends</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/sustainable-uniforms-2024-trends"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/sustainable-uniforms-2024-trends"/>
-    <lastmod>2025-04-12</lastmod>
+    <loc>https://uneom.com/ar/blog/tag/[tag]</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/tag/[tag]"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/tag/[tag]"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -165,7 +77,7 @@
     <loc>https://uneom.com/ar/case-studies/5-star-hotel-spa</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/case-studies/5-star-hotel-spa"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/case-studies/5-star-hotel-spa"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -173,7 +85,7 @@
     <loc>https://uneom.com/ar/case-studies/hospital-aesthetic-clinic</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/case-studies/hospital-aesthetic-clinic"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/case-studies/hospital-aesthetic-clinic"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -181,7 +93,7 @@
     <loc>https://uneom.com/ar/case-studies/luxury-salon-evolution</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/case-studies/luxury-salon-evolution"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/case-studies/luxury-salon-evolution"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -189,7 +101,15 @@
     <loc>https://uneom.com/ar/contact</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/contact"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/contact"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/faq"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -197,7 +117,7 @@
     <loc>https://uneom.com/ar/industries</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -205,7 +125,7 @@
     <loc>https://uneom.com/ar/industries/aviation</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/aviation"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/aviation"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -213,7 +133,7 @@
     <loc>https://uneom.com/ar/industries/corporate</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/corporate"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/corporate"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -221,7 +141,7 @@
     <loc>https://uneom.com/ar/industries/delivery</loc>
     
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/delivery"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -229,7 +149,7 @@
     <loc>https://uneom.com/ar/industries/education</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/education"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/education"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -237,7 +157,7 @@
     <loc>https://uneom.com/ar/industries/factory-industry</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/factory-industry"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/factory-industry"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -245,7 +165,7 @@
     <loc>https://uneom.com/ar/industries/factory-security</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/factory-security"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/factory-security"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -253,7 +173,7 @@
     <loc>https://uneom.com/ar/industries/firefighting</loc>
     
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/firefighting"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -261,7 +181,7 @@
     <loc>https://uneom.com/ar/industries/healthcare</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/healthcare"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/healthcare"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -269,7 +189,7 @@
     <loc>https://uneom.com/ar/industries/hospitality</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/hospitality"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/hospitality"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -277,7 +197,7 @@
     <loc>https://uneom.com/ar/industries/hospitality/hotels</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/hospitality/hotels"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/hospitality/hotels"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -285,7 +205,7 @@
     <loc>https://uneom.com/ar/industries/hospitality/restaurants</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/hospitality/restaurants"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/hospitality/restaurants"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -293,7 +213,7 @@
     <loc>https://uneom.com/ar/industries/manufacturing</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/manufacturing"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/manufacturing"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -301,7 +221,7 @@
     <loc>https://uneom.com/ar/industries/manufacturing/heavy-industry</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/manufacturing/heavy-industry"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/manufacturing/heavy-industry"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -309,7 +229,7 @@
     <loc>https://uneom.com/ar/industries/manufacturing/petrochemical</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/manufacturing/petrochemical"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/manufacturing/petrochemical"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -317,7 +237,7 @@
     <loc>https://uneom.com/ar/industries/retail-shops</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/retail-shops"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/retail-shops"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -325,7 +245,7 @@
     <loc>https://uneom.com/ar/industries/security</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/security"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/security"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -333,15 +253,71 @@
     <loc>https://uneom.com/ar/industries/supply-manufacturing</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/supply-manufacturing"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/supply-manufacturing"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/locations</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/locations"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/locations"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/locations/dammam</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/locations/dammam"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/locations/dammam"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/locations/jeddah</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/locations/jeddah"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/locations/jeddah"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/locations/mecca</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/locations/mecca"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/locations/mecca"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/locations/medina</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/locations/medina"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/locations/medina"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/locations/riyadh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/locations/riyadh"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/locations/riyadh"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/privacy"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://uneom.com/ar/privacy-policy</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/privacy-policy"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -349,7 +325,7 @@
     <loc>https://uneom.com/ar/quote</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/quote"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/quote"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -357,7 +333,7 @@
     <loc>https://uneom.com/ar/resources</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -365,7 +341,7 @@
     <loc>https://uneom.com/ar/resources/case-studies</loc>
     
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources/case-studies"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -373,7 +349,7 @@
     <loc>https://uneom.com/ar/resources/events</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources/events"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources/events"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -381,7 +357,7 @@
     <loc>https://uneom.com/ar/resources/fabric-guide</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources/fabric-guide"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources/fabric-guide"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -389,7 +365,7 @@
     <loc>https://uneom.com/ar/resources/guides</loc>
     
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources/guides"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -397,7 +373,7 @@
     <loc>https://uneom.com/ar/resources/policy-templates</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources/policy-templates"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources/policy-templates"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -405,7 +381,7 @@
     <loc>https://uneom.com/ar/resources/procurement-guide</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources/procurement-guide"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources/procurement-guide"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -413,7 +389,7 @@
     <loc>https://uneom.com/ar/resources/size-guide</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources/size-guide"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources/size-guide"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -421,7 +397,7 @@
     <loc>https://uneom.com/ar/services</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -429,7 +405,7 @@
     <loc>https://uneom.com/ar/services/bulk-ordering</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/bulk-ordering"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/bulk-ordering"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -437,7 +413,7 @@
     <loc>https://uneom.com/ar/services/corporate-programs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/corporate-programs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/corporate-programs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -445,7 +421,7 @@
     <loc>https://uneom.com/ar/services/custom-design</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/custom-design"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/custom-design"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -453,7 +429,7 @@
     <loc>https://uneom.com/ar/services/fabric-selection</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/fabric-selection"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/fabric-selection"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -461,7 +437,7 @@
     <loc>https://uneom.com/ar/services/manufacturing</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/manufacturing"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/manufacturing"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -469,7 +445,7 @@
     <loc>https://uneom.com/ar/services/measurement-services</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/measurement-services"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/measurement-services"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -477,7 +453,7 @@
     <loc>https://uneom.com/ar/services/program-management</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/program-management"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/program-management"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -485,7 +461,7 @@
     <loc>https://uneom.com/ar/services/quality-assurance</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/quality-assurance"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/quality-assurance"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -493,7 +469,7 @@
     <loc>https://uneom.com/ar/services/technical-finishes</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/technical-finishes"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/technical-finishes"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -501,7 +477,7 @@
     <loc>https://uneom.com/ar/services/uniform-policies</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/uniform-policies"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/uniform-policies"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -509,7 +485,7 @@
     <loc>https://uneom.com/ar/shop</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -517,7 +493,7 @@
     <loc>https://uneom.com/ar/shop/[category]/[product]</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/[category]/[product]"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/[category]/[product]"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -525,7 +501,7 @@
     <loc>https://uneom.com/ar/shop/aviation-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/aviation-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -533,7 +509,7 @@
     <loc>https://uneom.com/ar/shop/aviation-uniforms/airline-crew-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms/airline-crew-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/aviation-uniforms/airline-crew-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -541,7 +517,7 @@
     <loc>https://uneom.com/ar/shop/aviation-uniforms/ground-crew-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms/ground-crew-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/aviation-uniforms/ground-crew-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -549,7 +525,15 @@
     <loc>https://uneom.com/ar/shop/aviation-uniforms/pilot-uniform-set</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms/pilot-uniform-set"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/aviation-uniforms/pilot-uniform-set"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/corporate-attire</loc>
+    
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/corporate-attire"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -557,7 +541,7 @@
     <loc>https://uneom.com/ar/shop/corporate-workwear</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/corporate-workwear"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/corporate-workwear"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -565,7 +549,7 @@
     <loc>https://uneom.com/ar/shop/culinary-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/culinary-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/culinary-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -573,7 +557,7 @@
     <loc>https://uneom.com/ar/shop/education-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/education-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/education-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -581,7 +565,7 @@
     <loc>https://uneom.com/ar/shop/education-uniforms/faculty-professional-attire</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/education-uniforms/faculty-professional-attire"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/education-uniforms/faculty-professional-attire"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -589,7 +573,7 @@
     <loc>https://uneom.com/ar/shop/education-uniforms/premium-school-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/education-uniforms/premium-school-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/education-uniforms/premium-school-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -597,7 +581,7 @@
     <loc>https://uneom.com/ar/shop/education-uniforms/premium-school-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/education-uniforms/premium-school-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/education-uniforms/premium-school-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -605,7 +589,7 @@
     <loc>https://uneom.com/ar/shop/education-uniforms/student-athletic-wear</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/education-uniforms/student-athletic-wear"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/education-uniforms/student-athletic-wear"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -613,7 +597,15 @@
     <loc>https://uneom.com/ar/shop/examples/product-sliders</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/examples/product-sliders"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/examples/product-sliders"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/executive-apparel</loc>
+    
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/executive-apparel"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -621,7 +613,7 @@
     <loc>https://uneom.com/ar/shop/healthcare</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/healthcare"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/healthcare"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -629,7 +621,7 @@
     <loc>https://uneom.com/ar/shop/healthcare/advanced-medical-scrubs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/healthcare/advanced-medical-scrubs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/healthcare/advanced-medical-scrubs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -637,7 +629,23 @@
     <loc>https://uneom.com/ar/shop/healthcare-accessories</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/healthcare-accessories"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/healthcare-accessories"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/high-visibility-clothing</loc>
+    
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/high-visibility-clothing"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/high-visibility-clothing/industrial-safety-vest</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/high-visibility-clothing/industrial-safety-vest"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/high-visibility-clothing/industrial-safety-vest"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -645,7 +653,7 @@
     <loc>https://uneom.com/ar/shop/hospitality-attire</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/hospitality-attire"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -653,7 +661,7 @@
     <loc>https://uneom.com/ar/shop/hospitality-attire/housekeeping-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire/housekeeping-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/hospitality-attire/housekeeping-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -661,7 +669,7 @@
     <loc>https://uneom.com/ar/shop/hospitality-attire/luxury-hotel-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire/luxury-hotel-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/hospitality-attire/luxury-hotel-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -669,7 +677,23 @@
     <loc>https://uneom.com/ar/shop/hospitality-attire/premium-hotel-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire/premium-hotel-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/hospitality-attire/premium-hotel-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/hospitality-attire/restaurant-staff-uniform</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire/restaurant-staff-uniform"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/hospitality-attire/restaurant-staff-uniform"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/industrial-attire</loc>
+    
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-attire"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -677,7 +701,7 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -685,7 +709,15 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms/anti-static-industrial-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/anti-static-industrial-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/anti-static-industrial-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/industrial-uniforms/chemical-resistant-uniform</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/chemical-resistant-uniform"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/chemical-resistant-uniform"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -693,7 +725,7 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms/flame-resistant-workwear</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/flame-resistant-workwear"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/flame-resistant-workwear"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -701,7 +733,7 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms/heat-resistant-gloves</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/heat-resistant-gloves"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/heat-resistant-gloves"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -709,7 +741,7 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms/hi-vis-safety-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/hi-vis-safety-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/hi-vis-safety-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -717,7 +749,7 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/industrial-coverall"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -725,7 +757,7 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall-pro</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/industrial-coverall-pro"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall-pro"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -733,7 +765,23 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms/industrial-jacket</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/industrial-jacket"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/industrial-jacket"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/industrial-uniforms/industrial-safety-vest</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/industrial-safety-vest"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/industrial-safety-vest"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/industrial-uniforms/mechanics-overalls</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/mechanics-overalls"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/mechanics-overalls"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -741,7 +789,7 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms/related-product-1</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/related-product-1"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/related-product-1"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -749,7 +797,7 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms/related-product-2</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/related-product-2"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/related-product-2"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -757,7 +805,7 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms/related-product-3</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/related-product-3"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/related-product-3"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -765,7 +813,7 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms/related-product-4</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/related-product-4"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/related-product-4"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -773,7 +821,7 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms/safety-helmet-pro</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/safety-helmet-pro"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/safety-helmet-pro"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -781,7 +829,15 @@
     <loc>https://uneom.com/ar/shop/industrial-uniforms/supervisor-industrial-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/supervisor-industrial-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/supervisor-industrial-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/industrial-uniforms/welding-apron</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/welding-apron"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/welding-apron"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -789,7 +845,7 @@
     <loc>https://uneom.com/ar/shop/manufacturing-attire</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/manufacturing-attire"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/manufacturing-attire"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -797,7 +853,7 @@
     <loc>https://uneom.com/ar/shop/medical-scrubs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -805,7 +861,7 @@
     <loc>https://uneom.com/ar/shop/medical-scrubs/antimicrobial-scrubs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/antimicrobial-scrubs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/antimicrobial-scrubs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -813,7 +869,7 @@
     <loc>https://uneom.com/ar/shop/medical-scrubs/executive-medical-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/executive-medical-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/executive-medical-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -821,7 +877,7 @@
     <loc>https://uneom.com/ar/shop/medical-scrubs/medical-lab-coats</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/medical-lab-coats"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/medical-lab-coats"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -829,7 +885,7 @@
     <loc>https://uneom.com/ar/shop/medical-scrubs/nursing-scrubs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/nursing-scrubs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/nursing-scrubs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -837,7 +893,7 @@
     <loc>https://uneom.com/ar/shop/medical-scrubs/premium-medical-scrubs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/premium-medical-scrubs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/premium-medical-scrubs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -845,7 +901,7 @@
     <loc>https://uneom.com/ar/shop/medical-scrubs/premium-scrubs-set</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/premium-scrubs-set"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/premium-scrubs-set"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -853,7 +909,7 @@
     <loc>https://uneom.com/ar/shop/medical-scrubs/premium-surgical-gowns</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/premium-surgical-gowns"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/premium-surgical-gowns"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -861,7 +917,15 @@
     <loc>https://uneom.com/ar/shop/medical-scrubs/surgical-scrubs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/surgical-scrubs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/surgical-scrubs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/shop/retail-uniforms</loc>
+    
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/retail-uniforms"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -869,7 +933,7 @@
     <loc>https://uneom.com/ar/shop/retail-uniforms/mall-staff</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/mall-staff"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/retail-uniforms/mall-staff"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -877,7 +941,7 @@
     <loc>https://uneom.com/ar/shop/retail-uniforms/related-product-1</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/related-product-1"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/retail-uniforms/related-product-1"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -885,7 +949,7 @@
     <loc>https://uneom.com/ar/shop/retail-uniforms/related-product-2</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/related-product-2"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/retail-uniforms/related-product-2"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -893,7 +957,7 @@
     <loc>https://uneom.com/ar/shop/retail-uniforms/related-product-3</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/related-product-3"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/retail-uniforms/related-product-3"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -901,7 +965,7 @@
     <loc>https://uneom.com/ar/shop/retail-uniforms/related-product-4</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/related-product-4"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/retail-uniforms/related-product-4"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -909,7 +973,7 @@
     <loc>https://uneom.com/ar/shop/security-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/security-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/security-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -917,7 +981,7 @@
     <loc>https://uneom.com/ar/shop/security-uniforms/executive-protection</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/security-uniforms/executive-protection"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/security-uniforms/executive-protection"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -925,7 +989,7 @@
     <loc>https://uneom.com/ar/shop/security-uniforms/security-officer-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/security-uniforms/security-officer-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/security-uniforms/security-officer-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -933,7 +997,7 @@
     <loc>https://uneom.com/ar/shop/workplace-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/workplace-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/workplace-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -941,15 +1005,23 @@
     <loc>https://uneom.com/ar/shop/workplace-uniforms/executive-suits</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/workplace-uniforms/executive-suits"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/workplace-uniforms/executive-suits"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/ar/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/terms"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://uneom.com/ar/terms-of-service</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/terms-of-service"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/terms-of-service"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -957,7 +1029,7 @@
     <loc>https://uneom.com/authors</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/authors"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/authors"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -965,7 +1037,7 @@
     <loc>https://uneom.com/authors/[slug]</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/authors/[slug]"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/authors/[slug]"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -973,7 +1045,7 @@
     <loc>https://uneom.com/blog</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -981,151 +1053,23 @@
     <loc>https://uneom.com/blog/[slug]</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/[slug]"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/[slug]"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://uneom.com/blog/advanced-fabrics-security-uniforms</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/advanced-fabrics-security-uniforms"/>
+    <loc>https://uneom.com/blog/posts/[slug]</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/posts/[slug]"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://uneom.com/blog/choosing-the-right-retail-uniforms</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/choosing-the-right-retail-uniforms"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/choosing-the-right-retail-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/corporate-security-branding</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/corporate-security-branding"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/corporate-security-branding"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/corporate-uniform-employee-satisfaction</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/corporate-uniform-employee-satisfaction"/>
-    
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/evolution-of-retail-uniforms-saudi-arabia</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/evolution-of-retail-uniforms-saudi-arabia"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/evolution-of-retail-uniforms-saudi-arabia"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/industrial-electrostatic-protection</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/industrial-electrostatic-protection"/>
-    
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/industrial-heat-stress-management</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/industrial-heat-stress-management"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/industrial-heat-stress-management"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/industrial-protective-clothing-advances</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/industrial-protective-clothing-advances"/>
-    
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/industrial-safety-compliance-guide</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/industrial-safety-compliance-guide"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/industrial-safety-compliance-guide"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/industrial-security-uniform-features</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/industrial-security-uniform-features"/>
-    
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/industrial-uniform-color-coding</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/industrial-uniform-color-coding"/>
-    
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/retail-uniform-impact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/retail-uniform-impact"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/retail-uniform-impact"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/retail-uniform-selection-guide</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/retail-uniform-selection-guide"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/retail-uniform-selection-guide"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/school-uniforms-academic-performance</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/school-uniforms-academic-performance"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/school-uniforms-academic-performance"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/security-uniform-psychology</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/security-uniform-psychology"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/security-uniform-psychology"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/sustainable-retail-uniforms</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/sustainable-retail-uniforms"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/sustainable-retail-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/sustainable-school-uniforms-saudi</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/sustainable-school-uniforms-saudi"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/sustainable-school-uniforms-saudi"/>
-    <lastmod>2025-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://uneom.com/blog/sustainable-uniforms-2024-trends</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/sustainable-uniforms-2024-trends"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/sustainable-uniforms-2024-trends"/>
-    <lastmod>2025-04-12</lastmod>
+    <loc>https://uneom.com/blog/tag/[tag]</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/blog/tag/[tag]"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/blog/tag/[tag]"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1133,7 +1077,7 @@
     <loc>https://uneom.com/case-studies</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/case-studies"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1141,7 +1085,7 @@
     <loc>https://uneom.com/case-studies/5-star-hotel-spa</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/case-studies/5-star-hotel-spa"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/case-studies/5-star-hotel-spa"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1149,7 +1093,7 @@
     <loc>https://uneom.com/case-studies/beauty-chain-standardization</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/case-studies/beauty-chain-standardization"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1157,7 +1101,7 @@
     <loc>https://uneom.com/case-studies/hospital-aesthetic-clinic</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/case-studies/hospital-aesthetic-clinic"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/case-studies/hospital-aesthetic-clinic"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1165,7 +1109,7 @@
     <loc>https://uneom.com/case-studies/luxury-salon-evolution</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/case-studies/luxury-salon-evolution"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/case-studies/luxury-salon-evolution"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1173,7 +1117,15 @@
     <loc>https://uneom.com/contact</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/contact"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/contact"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/faq"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1181,7 +1133,7 @@
     <loc>https://uneom.com/industries</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1189,7 +1141,7 @@
     <loc>https://uneom.com/industries/aviation</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/aviation"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/aviation"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1197,7 +1149,7 @@
     <loc>https://uneom.com/industries/corporate</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/corporate"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/corporate"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1205,7 +1157,7 @@
     <loc>https://uneom.com/industries/education</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/education"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/education"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1213,7 +1165,7 @@
     <loc>https://uneom.com/industries/factory-industry</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/factory-industry"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/factory-industry"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1221,7 +1173,7 @@
     <loc>https://uneom.com/industries/factory-security</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/factory-security"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/factory-security"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1229,7 +1181,7 @@
     <loc>https://uneom.com/industries/healthcare</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/healthcare"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/healthcare"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1237,7 +1189,7 @@
     <loc>https://uneom.com/industries/hospitality</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/hospitality"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/hospitality"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1245,7 +1197,7 @@
     <loc>https://uneom.com/industries/hospitality/hotels</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/hospitality/hotels"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/hospitality/hotels"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1253,7 +1205,7 @@
     <loc>https://uneom.com/industries/hospitality/restaurants</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/hospitality/restaurants"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/hospitality/restaurants"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1261,7 +1213,7 @@
     <loc>https://uneom.com/industries/manufacturing</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/manufacturing"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/manufacturing"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1269,7 +1221,7 @@
     <loc>https://uneom.com/industries/manufacturing/heavy-industry</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/manufacturing/heavy-industry"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/manufacturing/heavy-industry"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1277,7 +1229,7 @@
     <loc>https://uneom.com/industries/manufacturing/petrochemical</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/manufacturing/petrochemical"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/manufacturing/petrochemical"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1285,7 +1237,7 @@
     <loc>https://uneom.com/industries/retail-shops</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/retail-shops"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/retail-shops"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1293,7 +1245,7 @@
     <loc>https://uneom.com/industries/security</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/security"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/security"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1301,7 +1253,63 @@
     <loc>https://uneom.com/industries/supply-manufacturing</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/industries/supply-manufacturing"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/industries/supply-manufacturing"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/locations</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/locations"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/locations"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/locations/dammam</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/locations/dammam"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/locations/dammam"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/locations/jeddah</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/locations/jeddah"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/locations/jeddah"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/locations/mecca</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/locations/mecca"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/locations/mecca"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/locations/medina</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/locations/medina"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/locations/medina"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/locations/riyadh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/locations/riyadh"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/locations/riyadh"/>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/privacy"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1309,7 +1317,7 @@
     <loc>https://uneom.com/privacy-policy</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/privacy-policy"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1317,7 +1325,7 @@
     <loc>https://uneom.com/quote</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/quote"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/quote"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1325,7 +1333,7 @@
     <loc>https://uneom.com/resources</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1333,7 +1341,7 @@
     <loc>https://uneom.com/resources/events</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources/events"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources/events"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1341,7 +1349,7 @@
     <loc>https://uneom.com/resources/fabric-guide</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources/fabric-guide"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources/fabric-guide"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1349,7 +1357,7 @@
     <loc>https://uneom.com/resources/fabric-guide/healthcare</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources/fabric-guide/healthcare"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1357,7 +1365,7 @@
     <loc>https://uneom.com/resources/policy-templates</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources/policy-templates"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources/policy-templates"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1365,7 +1373,7 @@
     <loc>https://uneom.com/resources/policy-templates/hospital</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources/policy-templates/hospital"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1373,7 +1381,7 @@
     <loc>https://uneom.com/resources/procurement-guide</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources/procurement-guide"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources/procurement-guide"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1381,7 +1389,7 @@
     <loc>https://uneom.com/resources/size-guide</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources/size-guide"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/resources/size-guide"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1389,7 +1397,7 @@
     <loc>https://uneom.com/resources/size-guide/medical</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/resources/size-guide/medical"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1397,7 +1405,7 @@
     <loc>https://uneom.com/services</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1405,7 +1413,7 @@
     <loc>https://uneom.com/services/bulk-ordering</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/bulk-ordering"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/bulk-ordering"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1413,7 +1421,7 @@
     <loc>https://uneom.com/services/corporate-programs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/corporate-programs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/corporate-programs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1421,7 +1429,7 @@
     <loc>https://uneom.com/services/custom-design</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/custom-design"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/custom-design"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1429,7 +1437,7 @@
     <loc>https://uneom.com/services/fabric-selection</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/fabric-selection"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/fabric-selection"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1437,7 +1445,7 @@
     <loc>https://uneom.com/services/manufacturing</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/manufacturing"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/manufacturing"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1445,7 +1453,7 @@
     <loc>https://uneom.com/services/measurement-services</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/measurement-services"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/measurement-services"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1453,7 +1461,7 @@
     <loc>https://uneom.com/services/program-management</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/program-management"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/program-management"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1461,7 +1469,7 @@
     <loc>https://uneom.com/services/quality-assurance</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/quality-assurance"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/quality-assurance"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1469,7 +1477,7 @@
     <loc>https://uneom.com/services/technical-finishes</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/technical-finishes"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/technical-finishes"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1477,7 +1485,7 @@
     <loc>https://uneom.com/services/uniform-policies</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/services/uniform-policies"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/services/uniform-policies"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1485,7 +1493,7 @@
     <loc>https://uneom.com/shop</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1493,7 +1501,7 @@
     <loc>https://uneom.com/shop/[category]/[product]</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/[category]/[product]"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/[category]/[product]"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1501,7 +1509,7 @@
     <loc>https://uneom.com/shop/aviation-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/aviation-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1509,7 +1517,7 @@
     <loc>https://uneom.com/shop/aviation-uniforms/airline-crew-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms/airline-crew-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/aviation-uniforms/airline-crew-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1517,7 +1525,7 @@
     <loc>https://uneom.com/shop/aviation-uniforms/airline-service-vest</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms/airline-service-vest"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1525,7 +1533,7 @@
     <loc>https://uneom.com/shop/aviation-uniforms/aviation-blazer</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms/aviation-blazer"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1533,7 +1541,7 @@
     <loc>https://uneom.com/shop/aviation-uniforms/flight-attendant-dress</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms/flight-attendant-dress"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1541,7 +1549,7 @@
     <loc>https://uneom.com/shop/aviation-uniforms/ground-crew-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms/ground-crew-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/aviation-uniforms/ground-crew-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1549,7 +1557,7 @@
     <loc>https://uneom.com/shop/aviation-uniforms/pilot-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms/pilot-uniform"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1557,7 +1565,7 @@
     <loc>https://uneom.com/shop/aviation-uniforms/pilot-uniform-set</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/aviation-uniforms/pilot-uniform-set"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/aviation-uniforms/pilot-uniform-set"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1565,7 +1573,7 @@
     <loc>https://uneom.com/shop/corporate</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/corporate"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1573,7 +1581,7 @@
     <loc>https://uneom.com/shop/corporate/executive-office-attire</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/corporate/executive-office-attire"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1581,7 +1589,7 @@
     <loc>https://uneom.com/shop/corporate-workwear</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/corporate-workwear"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/corporate-workwear"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1589,7 +1597,7 @@
     <loc>https://uneom.com/shop/corporate-workwear/corporate-shirt</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/corporate-workwear/corporate-shirt"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1597,7 +1605,7 @@
     <loc>https://uneom.com/shop/corporate-workwear/executive-blazer</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/corporate-workwear/executive-blazer"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1605,7 +1613,7 @@
     <loc>https://uneom.com/shop/corporate-workwear/executive-suit</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/corporate-workwear/executive-suit"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1613,7 +1621,7 @@
     <loc>https://uneom.com/shop/corporate-workwear/office-trouser</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/corporate-workwear/office-trouser"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1621,7 +1629,7 @@
     <loc>https://uneom.com/shop/corporate-workwear/reception-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/corporate-workwear/reception-uniform"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1629,7 +1637,7 @@
     <loc>https://uneom.com/shop/culinary-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/culinary-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/culinary-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1637,7 +1645,7 @@
     <loc>https://uneom.com/shop/culinary-uniforms/executive-chef-coat</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/culinary-uniforms/executive-chef-coat"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1645,7 +1653,7 @@
     <loc>https://uneom.com/shop/education-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/education-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/education-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1653,7 +1661,7 @@
     <loc>https://uneom.com/shop/education-uniforms/faculty-professional-attire</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/education-uniforms/faculty-professional-attire"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/education-uniforms/faculty-professional-attire"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1661,7 +1669,7 @@
     <loc>https://uneom.com/shop/education-uniforms/premium-school-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/education-uniforms/premium-school-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/education-uniforms/premium-school-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1669,7 +1677,7 @@
     <loc>https://uneom.com/shop/education-uniforms/premium-school-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/education-uniforms/premium-school-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/education-uniforms/premium-school-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1677,7 +1685,7 @@
     <loc>https://uneom.com/shop/education-uniforms/student-athletic-wear</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/education-uniforms/student-athletic-wear"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/education-uniforms/student-athletic-wear"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1685,7 +1693,7 @@
     <loc>https://uneom.com/shop/examples/product-sliders</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/examples/product-sliders"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/examples/product-sliders"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1693,7 +1701,7 @@
     <loc>https://uneom.com/shop/healthcare</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/healthcare"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/healthcare"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1701,7 +1709,7 @@
     <loc>https://uneom.com/shop/healthcare/advanced-medical-scrubs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/healthcare/advanced-medical-scrubs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/healthcare/advanced-medical-scrubs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1709,7 +1717,15 @@
     <loc>https://uneom.com/shop/healthcare-accessories</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/healthcare-accessories"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/healthcare-accessories"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/shop/high-visibility-clothing/industrial-safety-vest</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/high-visibility-clothing/industrial-safety-vest"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/high-visibility-clothing/industrial-safety-vest"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1717,7 +1733,7 @@
     <loc>https://uneom.com/shop/hospitality-attire</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/hospitality-attire"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1725,7 +1741,7 @@
     <loc>https://uneom.com/shop/hospitality-attire/concierge-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire/concierge-uniform"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1733,7 +1749,7 @@
     <loc>https://uneom.com/shop/hospitality-attire/housekeeping-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire/housekeeping-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/hospitality-attire/housekeeping-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1741,7 +1757,7 @@
     <loc>https://uneom.com/shop/hospitality-attire/luxury-hotel-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire/luxury-hotel-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/hospitality-attire/luxury-hotel-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1749,7 +1765,7 @@
     <loc>https://uneom.com/shop/hospitality-attire/premium-hotel-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire/premium-hotel-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/hospitality-attire/premium-hotel-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1757,7 +1773,7 @@
     <loc>https://uneom.com/shop/hospitality-attire/reception-staff-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire/reception-staff-uniform"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1765,15 +1781,15 @@
     <loc>https://uneom.com/shop/hospitality-attire/resort-staff-attire</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire/resort-staff-attire"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://uneom.com/shop/hospitality-attire/restaurant-staff-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/hospitality-attire/restaurant-staff-uniform"/>
-    
-    <lastmod>2025-04-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/hospitality-attire/restaurant-staff-uniform"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1781,7 +1797,7 @@
     <loc>https://uneom.com/shop/industrial-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1789,7 +1805,15 @@
     <loc>https://uneom.com/shop/industrial-uniforms/anti-static-industrial-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/anti-static-industrial-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/anti-static-industrial-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/shop/industrial-uniforms/chemical-resistant-uniform</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/chemical-resistant-uniform"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/chemical-resistant-uniform"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1797,7 +1821,7 @@
     <loc>https://uneom.com/shop/industrial-uniforms/flame-resistant-workwear</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/flame-resistant-workwear"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/flame-resistant-workwear"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1805,7 +1829,7 @@
     <loc>https://uneom.com/shop/industrial-uniforms/heat-resistant-gloves</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/heat-resistant-gloves"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/heat-resistant-gloves"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1813,7 +1837,7 @@
     <loc>https://uneom.com/shop/industrial-uniforms/hi-vis-safety-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/hi-vis-safety-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/hi-vis-safety-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1821,7 +1845,7 @@
     <loc>https://uneom.com/shop/industrial-uniforms/industrial-coverall</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/industrial-coverall"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1829,7 +1853,7 @@
     <loc>https://uneom.com/shop/industrial-uniforms/industrial-coverall-pro</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/industrial-coverall-pro"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall-pro"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1837,23 +1861,23 @@
     <loc>https://uneom.com/shop/industrial-uniforms/industrial-jacket</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/industrial-jacket"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/industrial-jacket"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://uneom.com/shop/industrial-uniforms/industrial-safety-vest</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/industrial-safety-vest"/>
-    
-    <lastmod>2025-04-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/industrial-safety-vest"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://uneom.com/shop/industrial-uniforms/mechanics-overalls</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/mechanics-overalls"/>
-    
-    <lastmod>2025-04-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/mechanics-overalls"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1861,7 +1885,7 @@
     <loc>https://uneom.com/shop/industrial-uniforms/related-product-1</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/related-product-1"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/related-product-1"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1869,7 +1893,7 @@
     <loc>https://uneom.com/shop/industrial-uniforms/related-product-2</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/related-product-2"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/related-product-2"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1877,7 +1901,7 @@
     <loc>https://uneom.com/shop/industrial-uniforms/related-product-3</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/related-product-3"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/related-product-3"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1885,7 +1909,7 @@
     <loc>https://uneom.com/shop/industrial-uniforms/related-product-4</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/related-product-4"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/related-product-4"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1893,7 +1917,7 @@
     <loc>https://uneom.com/shop/industrial-uniforms/safety-helmet-pro</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/safety-helmet-pro"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/safety-helmet-pro"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1901,15 +1925,15 @@
     <loc>https://uneom.com/shop/industrial-uniforms/supervisor-industrial-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/supervisor-industrial-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/supervisor-industrial-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://uneom.com/shop/industrial-uniforms/welding-apron</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/industrial-uniforms/welding-apron"/>
-    
-    <lastmod>2025-04-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/industrial-uniforms/welding-apron"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1917,7 +1941,7 @@
     <loc>https://uneom.com/shop/manufacturing-attire</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/manufacturing-attire"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/manufacturing-attire"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1925,7 +1949,7 @@
     <loc>https://uneom.com/shop/manufacturing-attire/industrial-protective-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/manufacturing-attire/industrial-protective-uniforms"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1933,7 +1957,7 @@
     <loc>https://uneom.com/shop/medical-scrubs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1941,7 +1965,7 @@
     <loc>https://uneom.com/shop/medical-scrubs/antimicrobial-scrubs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/antimicrobial-scrubs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/antimicrobial-scrubs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1949,7 +1973,7 @@
     <loc>https://uneom.com/shop/medical-scrubs/executive-medical-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/executive-medical-uniform"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1957,7 +1981,7 @@
     <loc>https://uneom.com/shop/medical-scrubs/executive-medical-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/executive-medical-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/executive-medical-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1965,7 +1989,7 @@
     <loc>https://uneom.com/shop/medical-scrubs/medical-lab-coat</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/medical-lab-coat"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1973,7 +1997,7 @@
     <loc>https://uneom.com/shop/medical-scrubs/medical-lab-coats</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/medical-lab-coats"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/medical-lab-coats"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1981,7 +2005,7 @@
     <loc>https://uneom.com/shop/medical-scrubs/nursing-scrubs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/nursing-scrubs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/nursing-scrubs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1989,7 +2013,7 @@
     <loc>https://uneom.com/shop/medical-scrubs/premium-medical-scrubs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/premium-medical-scrubs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/premium-medical-scrubs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1997,7 +2021,7 @@
     <loc>https://uneom.com/shop/medical-scrubs/premium-scrubs-set</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/premium-scrubs-set"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/premium-scrubs-set"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2005,7 +2029,7 @@
     <loc>https://uneom.com/shop/medical-scrubs/premium-surgical-gowns</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/premium-surgical-gowns"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/premium-surgical-gowns"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2013,7 +2037,7 @@
     <loc>https://uneom.com/shop/medical-scrubs/professional-lab-coat</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/professional-lab-coat"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2021,7 +2045,7 @@
     <loc>https://uneom.com/shop/medical-scrubs/surgical-scrubs</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/medical-scrubs/surgical-scrubs"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/medical-scrubs/surgical-scrubs"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2029,7 +2053,7 @@
     <loc>https://uneom.com/shop/retail-uniforms/beauty-salon</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/beauty-salon"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2037,7 +2061,7 @@
     <loc>https://uneom.com/shop/retail-uniforms/customer-service</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/customer-service"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2045,7 +2069,7 @@
     <loc>https://uneom.com/shop/retail-uniforms/luxury-retail-collection</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/luxury-retail-collection"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2053,7 +2077,7 @@
     <loc>https://uneom.com/shop/retail-uniforms/mall-staff</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/mall-staff"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/retail-uniforms/mall-staff"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2061,7 +2085,7 @@
     <loc>https://uneom.com/shop/retail-uniforms/related-product-1</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/related-product-1"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/retail-uniforms/related-product-1"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2069,7 +2093,7 @@
     <loc>https://uneom.com/shop/retail-uniforms/related-product-2</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/related-product-2"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/retail-uniforms/related-product-2"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2077,7 +2101,7 @@
     <loc>https://uneom.com/shop/retail-uniforms/related-product-3</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/related-product-3"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/retail-uniforms/related-product-3"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2085,7 +2109,7 @@
     <loc>https://uneom.com/shop/retail-uniforms/related-product-4</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/related-product-4"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/retail-uniforms/related-product-4"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2093,7 +2117,7 @@
     <loc>https://uneom.com/shop/retail-uniforms/store-staff</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/retail-uniforms/store-staff"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2101,7 +2125,7 @@
     <loc>https://uneom.com/shop/security-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/security-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/security-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2109,7 +2133,7 @@
     <loc>https://uneom.com/shop/security-uniforms/executive-protection</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/security-uniforms/executive-protection"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/security-uniforms/executive-protection"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2117,7 +2141,7 @@
     <loc>https://uneom.com/shop/security-uniforms/mall-security</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/security-uniforms/mall-security"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2125,7 +2149,7 @@
     <loc>https://uneom.com/shop/security-uniforms/security-officer-uniform</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/security-uniforms/security-officer-uniform"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/security-uniforms/security-officer-uniform"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2133,7 +2157,7 @@
     <loc>https://uneom.com/shop/security-uniforms/tactical-security-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/security-uniforms/tactical-security-uniforms"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2141,7 +2165,7 @@
     <loc>https://uneom.com/shop/workplace-uniforms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/workplace-uniforms"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/workplace-uniforms"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2149,7 +2173,15 @@
     <loc>https://uneom.com/shop/workplace-uniforms/executive-suits</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/shop/workplace-uniforms/executive-suits"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/shop/workplace-uniforms/executive-suits"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/terms"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2157,7 +2189,15 @@
     <loc>https://uneom.com/terms-of-service</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/terms-of-service"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://uneom.com/ar/terms-of-service"/>
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uneom.com/test-whatsapp</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/test-whatsapp"/>
+    
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2165,7 +2205,7 @@
     <loc>https://uneom.com/tmp</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://uneom.com/tmp"/>
     
-    <lastmod>2025-04-12</lastmod>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

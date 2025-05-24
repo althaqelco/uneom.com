@@ -2,11 +2,12 @@
 
 import React from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function UniformPoliciesPage() {
   const locale = 'en';
   const serviceData = {
-    title: 'Corporate Uniform Policies',
+    title: "UNEOM - Professional Uniforms",
     subtitle: 'Comprehensive guidelines for effective uniform program governance',
     heroImage: '/images/product-placeholder.jpg',
     

@@ -11,6 +11,7 @@ import AddToQuoteButton from '@/components/shop/AddToQuoteButton';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import TestimonialCard from '@/components/ui/TestimonialCard';
 import { useRouter } from 'next/navigation';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 type LocaleContent = {
   title: string;
@@ -72,7 +73,7 @@ export default function ConciergeUniformPage() {
   // Multilingual content
   const content: ContentType = {
     en: {
-      title: 'Concierge Uniform',
+      title: "UNEOM - Professional Uniforms",
       description: 'Premium concierge uniforms designed to create an elegant and sophisticated first impression for luxury hospitality establishments in Saudi Arabia.',
       longDescription: 'Our Concierge Uniforms represent the pinnacle of hospitality presentation, meticulously crafted for the front-line ambassadors of luxury hotels and resorts across Saudi Arabia. These premium uniforms combine sophisticated styling with practical functionality to create a distinctive and memorable first impression. The refined tailoring and superior fabric selection ensure staff can maintain a dignified appearance throughout demanding shifts while the thoughtful design elements facilitate the practical duties of the concierge position. Available in classic and contemporary styles with modest design options, these uniforms convey the prestige of your establishment while ensuring staff comfort and confidence.',
       breadcrumbs: [

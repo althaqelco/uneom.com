@@ -2,11 +2,12 @@
 
 import React from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function BulkOrderingServicePage() {
   const locale = 'en';
   const serviceData = {
-    title: 'Bulk Ordering',
+    title: "UNEOM - Professional Uniforms",
     subtitle: 'Streamlined procurement solutions for large-scale uniform requirements',
     heroImage: '/images/banner-placeholder.jpg',
     

@@ -9,6 +9,7 @@ import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { motion } from 'framer-motion';
 import { Poppins, Inter } from 'next/font/google';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Define the fonts
 const poppinsFont = Poppins({ 
@@ -29,7 +30,7 @@ const QualityAssurancePage = () => {
   // Quality Assurance Processes
   const qaProcesses = [
     {
-      title: 'Material Inspection',
+      title: "UNEOM - Professional Uniforms",
       description: 'Rigorous testing of all fabrics and materials before production to ensure they meet our quality standards',
       icon: '🧵',
     },

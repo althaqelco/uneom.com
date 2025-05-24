@@ -8,6 +8,7 @@
  * - Semantic correctness (404 pages have proper title, description)
  */
 
+// Import fetch correctly for Node.js environment
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 const fs = require('fs');
@@ -43,6 +44,9 @@ const urlsToTest = [
   '/ar'
 ];
 
+// Valid pages that should return 200
+const validPages = ['/', '/about', '/contact', '/ar', '/about/', '/contact/', '/ar/'];
+
 // Function to evaluate a page for SEO factors
 async function evaluatePage(url, response) {
   const result = {
@@ -53,12 +57,18 @@ async function evaluatePage(url, response) {
     seoScore: 100 // Start with perfect score and deduct for issues
   };
   
+  // Add detailed information about the response headers
+  result.headers = {};
+  response.headers.forEach((value, name) => {
+    result.headers[name] = value;
+  });
+  
   try {
     const body = await response.text();
     const $ = cheerio.load(body);
     
     // Check if page should be a 404
-    const shouldBe404 = !url.match(/^\/(about|contact|$|ar$)/);
+    const shouldBe404 = !validPages.includes(url);
     
     // Check if page has a "noindex" robots tag (good for 404 pages)
     const hasNoIndexTag = $('meta[name="robots"]').attr('content')?.includes('noindex') || false;
@@ -68,11 +78,33 @@ async function evaluatePage(url, response) {
     const hasProperDescription = $('meta[name="description"]').attr('content')?.includes('not found') || 
                                  $('meta[name="description"]').attr('content')?.includes('does not exist') || false;
     
-    // Check if content indicates 404
+    // More precise check for proper 404 content - requires specific formats
+    const has404Title = $('title').text().includes('404') || $('title').text().includes('Not Found');
+    const hasVisibleError = $('.text-6xl.font-bold.text-primary.mb-6').text().includes('404') ||
+                           $('h1:contains("404")').length > 0;
+    const hasErrorMessage = $('h2:contains("Page Not Found")').length > 0 || 
+                           $('p:contains("We couldn\'t find the page")').length > 0;
+    
+    // More flexible content check for 404 detection (for actual 404 pages)
     const contentIndicates404 = body.includes('page not found') || 
-                                body.includes('404') || 
-                                body.includes('does not exist') ||
-                                body.includes('صفحة غير موجودة'); // Arabic "page not found"
+                              body.includes('404') ||
+                              body.includes('does not exist') ||
+                              body.includes('صفحة غير موجودة') || // Arabic "page not found"
+                              has404Title || 
+                              hasVisibleError; 
+    
+    // Better content detection for 404 pages in valid pages (more strict to avoid false positives)
+    const is404Page = (hasVisibleError && hasErrorMessage) || 
+                     (has404Title && (hasVisibleError || hasErrorMessage));
+    
+    // Log X-Robots-Tag header if present
+    const xRobotsTag = response.headers.get('x-robots-tag');
+    if (xRobotsTag) {
+      console.log(`  📋 X-Robots-Tag header: ${xRobotsTag}`);
+      if (xRobotsTag.includes('noindex')) {
+        console.log(`  ✅ X-Robots-Tag contains noindex directive`);
+      }
+    }
     
     // Evaluate SEO factors based on page type
     if (shouldBe404) {
@@ -82,8 +114,8 @@ async function evaluatePage(url, response) {
         result.seoScore -= 30;
       }
       
-      if (!hasNoIndexTag) {
-        result.seoIssues.push('Missing noindex directive in robots meta tag');
+      if (!hasNoIndexTag && !xRobotsTag?.includes('noindex')) {
+        result.seoIssues.push('Missing noindex directive in robots meta tag or header');
         result.seoScore -= 20;
       }
       
@@ -113,7 +145,7 @@ async function evaluatePage(url, response) {
         result.seoScore -= 20;
       }
       
-      if (contentIndicates404) {
+      if (is404Page) {
         result.seoIssues.push('Valid page contains 404 error content');
         result.seoScore -= 40;
       }

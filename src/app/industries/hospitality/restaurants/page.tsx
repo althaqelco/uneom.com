@@ -2,6 +2,29 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaCheck, FaTshirt, FaUsers, FaShippingFast, FaStar } from 'react-icons/fa';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+
+export const metadata: Metadata = {
+  title: 'Industries | Hospitality | Restaurants | UNEOM Saudi Arabia',
+  description: 'High-quality professional uniforms and workwear solutions tailored for Saudi Arabian businesses and institutions.',
+  keywords: ['uniform', 'workwear', 'Saudi Arabia', 'industries | hospitality | restaurants'],
+  openGraph: {
+    title: 'Industries | Hospitality | Restaurants | UNEOM Saudi Arabia',
+    description: 'High-quality professional uniforms and workwear solutions tailored for Saudi Arabian businesses and institutions.',
+    url: 'https://uneom.com/industries/hospitality/restaurants/',
+    siteName: 'UNEOM',
+    images: [
+      {
+        url: 'https://uneom.com/images/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Industries | Hospitality | Restaurants - UNEOM Saudi Arabia'
+      }
+    ],
+    locale: 'en_US'
+  }
+};
+
 
 export default function RestaurantsPage() {
   return (

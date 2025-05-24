@@ -1,82 +1,45 @@
-import React from 'react';
-import { Metadata } from 'next';
-import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
+'use client';
 
-// Enhanced SEO Metadata with more detailed keywords and descriptions
-export const metadata: Metadata = {
-  title: 'Premium Retail & Shopping Mall Uniforms in Saudi Arabia | Uneom',
-  description: 'Elevate your brand with custom professional uniforms for shopping malls, retail stores & beauty salons. Enhance customer experience, boost sales & strengthen brand identity with a professional staff appearance in Riyadh, Jeddah & across KSA.',
-  keywords: 'Saudi retail uniforms, shopping mall staff uniforms, mall employee uniforms, Riyadh retail uniforms, Jeddah beauty salon uniforms, professional retail appearance, Saudi retail sector uniforms, luxury retail brand uniforms, store staff uniforms, sales team uniform, uniform ROI, retail success in Saudi, retail staff identity solutions, branded workwear for retail, customer engagement uniforms',
-  openGraph: {
-    title: 'Premium Retail & Shopping Mall Uniforms in Saudi Arabia | Uneom',
-    description: 'Elevate your brand with custom professional uniforms for shopping malls, retail stores & beauty salons. Enhance customer experience, boost sales & strengthen brand identity.',
-    images: ['/images/industries/retail-shops/retail-shops-uniform-identity.jpg'],
-    type: 'website',
-    locale: 'en',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Professional Retail Uniforms in Saudi Arabia | Uneom',
-    description: 'Elevate your brand with professional staff uniforms that enhance customer engagement, trust, and loyalty',
-    images: ['/images/industries/retail-shops/retail-shops-uniform-identity.jpg'],
-  },
-  alternates: {
-    canonical: 'https://uneom.com/industries/retail-shops',
-    languages: {
-      'ar': 'https://uneom.com/ar/industries/retail-shops',
-    }
-  }
-};
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Container from '@/components/ui/Container';
+import Button from '@/components/ui/Button';
+import SectionHeading from '@/components/ui/SectionHeading';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import ProductCard from '@/components/ui/ProductCard';
+import TestimonialCarousel from '@/components/sections/TestimonialCarousel';
+import SEO from '@/components/SEO';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export default function RetailShopsPage() {
   // Use English locale
   const locale = 'en';
   
-  // Enhanced content for retail shops industry page with better visual layout and descriptions
-  const retailShopsData = {
-    title: "Premium Retail & Shopping Mall Uniforms in Saudi Arabia",
-    subtitle: "Elevate your brand with professional uniforms that enhance customer engagement and drive sales",
-    heroImage: "/images/industries/retail-shops/retail-shops-uniform-identity.jpg",
-    
-    introduction: [
+  // Content structured according to standard industry page format
+  const content = {
+    meta: {
+      title: "Premium Retail & Shopping Mall Uniforms in Saudi Arabia | UNEOM",
+      description: "Elevate your brand with professional retail uniforms that enhance customer engagement and drive sales in Saudi Arabia's shopping malls, stores, and beauty salons.",
+    },
+    hero: {
+      headline: "Premium Retail & Shopping Mall Uniforms in Saudi Arabia",
+      subheadline: "Elevate your brand with professional uniforms that enhance customer engagement and drive sales",
+      image: "/images/industries/retail-shops/retail-shops-uniform-identity.jpg",
+      cta: "Request Consultation",
+      ctaLink: "/contact?industry=retail-shops",
+    },
+    intro: {
+      title: "Transform Your Retail Brand Presence",
+      paragraphs: [
       "In Saudi Arabia's competitive retail landscape, your staff's appearance is a crucial element in brand differentiation and customer experience excellence. Uneom provides premium retail uniforms that combine contemporary design with practical functionality, helping your brand create a memorable shopping environment that enhances customer loyalty and sales.",
-      
       "Our comprehensive uniform solutions are meticulously tailored for diverse retail environments—from luxury shopping malls and flagship stores to specialized boutiques and beauty centers in Riyadh, Jeddah, and all major Saudi cities. Each uniform is professionally designed to reflect your unique brand identity while ensuring staff comfort during extended customer interaction periods.",
-      
       "With our deep understanding of Saudi retail sector requirements and Vision 2030 growth objectives, we offer innovative customization options that perfectly balance modern aesthetics with cultural sensitivity. Transform your retail brand presence with uniforms that embody professionalism, build customer confidence, and contribute to a cohesive shopping experience that drives business success."
     ],
-    
-    features: [
-      {
-        title: "Brand-Aligned Premium Design",
-        description: "Each uniform is precision-designed to perfectly reflect your brand's visual identity, creating instant recognition and cohesion in your retail space.",
-        icon: "/icons/institutional-branding.svg",
-        animation: "fade-right",
-        color: "bg-gradient-to-r from-indigo-500 to-purple-600"
-      },
-      {
-        title: "Superior Comfort Technology",
-        description: "Our retail uniforms incorporate advanced fabric technologies ensuring all-day comfort for staff working extended hours on sales floors, enhancing their performance and morale.",
-        icon: "/icons/comfortflex.svg",
-        animation: "fade-up",
-        color: "bg-gradient-to-r from-blue-500 to-teal-400"
-      },
-      {
-        title: "Cultural Sensitivity Integration",
-        description: "Uniforms specifically designed for the Saudi market, balancing contemporary aesthetics with local cultural considerations to ensure appropriateness across all retail environments.",
-        icon: "/icons/modest-modifications.svg",
-        animation: "fade-left",
-        color: "bg-gradient-to-r from-emerald-500 to-green-600"
-      },
-      {
-        title: "Multi-Season Durability",
-        description: "Premium materials that maintain their professional appearance through intensive daily use in demanding retail environments, providing excellent long-term return on investment.",
-        icon: "/icons/duraseal.svg",
-        animation: "fade-right",
-        color: "bg-gradient-to-r from-amber-500 to-orange-600"
-      }
-    ],
-    
+    },
+    keyBenefits: {
+      title: "Benefits for Your Retail Business",
     benefits: [
       {
         title: "Enhanced Brand Identity",
@@ -109,9 +72,10 @@ export default function RetailShopsPage() {
         gradient: "from-amber-500 to-orange-600"
       }
     ],
-    
-    // Convert products to featuredProducts for proper rendering
-    featuredProducts: [
+    },
+    featuredOfferings: {
+      title: "Premium Retail Uniform Collections",
+      offerings: [
       {
         id: "mall-staff-uniforms",
         name: "Luxury Mall Staff Uniforms",
@@ -143,8 +107,10 @@ export default function RetailShopsPage() {
         price: "From SAR 400"
       }
     ],
-    
-    fabricTechnologies: [
+    },
+    fabricTechnologies: {
+      title: "Advanced Fabric Technologies",
+      technologies: [
       {
         name: "Premium Comfort Technology™",
         description: "A blend of advanced fabrics with moisture-wicking properties that provide unparalleled all-day comfort and breathability for retail staff in temperature-controlled environments.",
@@ -170,8 +136,10 @@ export default function RetailShopsPage() {
         animation: "fade-up"
       }
     ],
-    
-    customizationOptions: [
+    },
+    customizationOptions: {
+      title: "Tailored to Your Retail Brand",
+      options: [
       {
         name: "Precise Brand Integration",
         description: "Perfect Pantone color matching and expert logo application for seamless alignment with overall brand guidelines and marketing materials across all retail touchpoints.",
@@ -197,35 +165,27 @@ export default function RetailShopsPage() {
         gradient: "from-amber-400 to-orange-500"
       }
     ],
-    
-    testimonials: [
-      {
-        id: "testimonial-1",
-        quote: "Uneom has completely transformed our sales staff's appearance with uniforms that perfectly embody our luxury brand positioning. The quality, attention to detail, and positive impact on customer perception has exceeded our expectations. We've seen a notable increase in positive customer feedback since implementation.",
-        author: "Sarah Al-Otaibi",
-        position: "Operations Director",
-        company: "Riyadh Luxury Mall",
-        image: "/images/testimonials/sarah.jpg"
-      },
-      {
-        id: "testimonial-2",
-        quote: "The exceptional comfort and remarkable durability of Uneom's retail uniforms has significantly improved our staff's performance, confidence, and satisfaction. Our customers consistently comment on how professional our team looks, and our sales associates report feeling more confident and empowered in their customer interactions.",
-        author: "Mohammed Al-Saud",
-        position: "Retail Brand Manager",
-        company: "Jeddah Premium Outlets",
-        image: "/images/testimonials/mohammed.jpg"
-      },
-      {
-        id: "testimonial-3",
-        quote: "Working with Uneom allowed us to create distinctive, brand-aligned uniforms for our multiple retail locations. Their understanding of the Saudi retail environment ensures our staff uniforms balance modern aesthetics with cultural sensitivity. The result has been improved brand recognition and a more cohesive customer experience.",
-        author: "Layla Al-Harbi",
-        position: "Brand Director",
-        company: "Fashion House Group",
-        image: "/images/testimonials/layla.jpg"
-      }
-    ],
-    
-    stats: [
+    },
+    testimonials: {
+      title: "What Our Retail Clients Say",
+      items: [
+        {
+          quote: "Uneom transformed our brand presence with retail uniforms that perfectly align with our upscale positioning. Our staff receives constant compliments, and the customer-staff interactions have improved significantly.",
+          author: "Sarah Al-Fahad",
+          position: "Brand Director",
+          company: "Riyadh Luxury Retail Group"
+        },
+        {
+          quote: "The combination of excellent design and practical functionality in our mall staff uniforms has exceeded expectations. Staff report high comfort levels even during busy 10-hour shifts, and customer feedback has been overwhelmingly positive.",
+          author: "Ahmed Al-Dosari",
+          position: "Operations Manager",
+          company: "Premium Mall Jeddah"
+        }
+      ],
+    },
+    stats: {
+      title: "Retail Uniform Excellence",
+      items: [
       {
         value: "96%",
         label: "Customer Satisfaction",
@@ -247,9 +207,10 @@ export default function RetailShopsPage() {
         description: "Annually to retail staff across Saudi Arabia, ensuring consistent brand representation."
       }
     ],
-    
-    // Convert relatedProducts to work with the component
-    relatedContent: [
+    },
+    relatedBlogs: {
+      title: "Retail Uniform Insights",
+      posts: [
       {
         title: "The Impact of Professional Uniforms on Retail Success",
         description: "Discover how strategically designed uniforms can significantly boost sales, enhance customer experience, and strengthen brand loyalty in the Saudi retail sector",
@@ -269,23 +230,21 @@ export default function RetailShopsPage() {
         link: "/blog/sustainable-retail-uniforms"
       }
     ],
-    
-    faqItems: [
+      },
+    faq: {
+      title: "Frequently Asked Questions",
+      questions: [
       {
-        question: "How does Uneom ensure perfect brand color accuracy in retail uniforms?",
-        answer: "We use advanced Pantone color matching technology and implement rigorous quality control processes to ensure precise alignment with your brand colors across all uniform elements. Our experienced design team works directly with your brand guidelines to achieve perfect consistency, providing color samples for approval before production."
+          question: "How can retail uniforms improve customer experience?",
+          answer: "Professional retail uniforms enhance customer experience in multiple ways: they create instant staff recognition, allowing customers to easily identify who can assist them; they communicate professionalism and attention to detail, building customer confidence; they reinforce your brand identity visually, strengthening overall brand perception; and they create a cohesive atmosphere that reflects your brand's quality standards throughout the entire shopping journey."
       },
       {
-        question: "Can uniforms be customized for different store departments?",
-        answer: "Yes, we specialize in creating coordinated uniform collections with strategic variations in design elements, color accents, or styling details to effectively distinguish between different departments while maintaining cohesive brand consistency throughout the retail operation. This enhances customer navigation while preserving overall brand identity."
+          question: "What factors should we consider when selecting retail uniforms?",
+          answer: "Key factors for retail uniform selection include: brand alignment (color, styling, visual elements), comfort for long retail shifts, durability for frequent washing, fabric performance in retail environments, department differentiation requirements, seasonal adaptability, Islamic dress code considerations for Saudi contexts, and cost-effectiveness over the uniform lifecycle. Our consultation process helps systematically address each of these factors."
       },
       {
-        question: "What is the minimum order quantity for retail uniform collections?",
-        answer: "Our minimum order quantities vary by product type, but we typically accommodate orders starting from 20 pieces per style. For larger retail operations, we offer tiered pricing structures that ensure cost-effectiveness with increasing quantities, with significant advantages for enterprise-level rollouts."
-      },
-      {
-        question: "How long does it take to fulfill a custom retail uniform order?",
-        answer: "Standard production time for custom retail uniforms is 4-6 weeks from design approval, with expedition options available for urgent requirements. For large-scale rollouts, we recommend an 8-10 week timeline to allow for comprehensive sampling and quality assurance. We provide detailed project timelines at the beginning of each contract."
+          question: "How are retail uniforms tailored for Saudi Arabia's unique requirements?",
+          answer: "Our retail uniforms for Saudi Arabia incorporate several unique adaptations: modest design options that respect Islamic dress codes while maintaining professional retail functionality; fabric selections optimized for Saudi Arabia's climate combined with air-conditioned retail environments; color and design elements that resonate with Saudi consumers' expectations for premium retail experiences; and customization options that accommodate both traditional Saudi retail contexts and international brand guidelines for global retailers operating in the Kingdom."
       },
       {
         question: "Do you offer design consultation services for retail uniforms?",
@@ -296,32 +255,302 @@ export default function RetailShopsPage() {
         answer: "Our retail uniforms feature fabrics and construction techniques specifically selected and optimized for Saudi Arabia's climate. We utilize breathable, moisture-wicking materials that maintain comfort in air-conditioned environments while providing appropriate coverage and professional appearance aligned with local cultural expectations."
       }
     ],
-    
-    cta: {
+    },
+    finalCta: {
       title: "Elevate Your Brand with Premium Uniform Solutions",
       description: "Transform your retail brand presence with expertly designed and custom-tailored uniforms that enhance brand identity, boost staff confidence, and create exceptional customer experiences that drive sales and loyalty.",
-      buttonText: "Request Your Free Consultation",
-      buttonUrl: "/contact?industry=retail-shops",
-      secondaryButton: {
-        text: "Explore Retail Catalog",
-        url: "/shop/retail-uniforms"
-      },
-      background: "bg-gradient-to-r from-indigo-600 to-purple-700"
+      cta: "Request Your Free Consultation",
+      ctaLink: "/contact?industry=retail-shops",
+      secondaryCta: "Explore Retail Catalog",
+      secondaryCtaLink: "/shop/retail-uniforms"
     },
-    
-    animation: {
-      enabled: true,
-      heroFade: "fade-down",
-      sectionFade: "fade-up",
-      itemStagger: true
-    }
   };
 
   return (
-    <IndustryPageLayout 
-      locale={locale} 
-      industryData={retailShopsData} 
-      skipMainLayout={true}
-    />
+    <>
+      {/* Enhanced SEO for Google May 2025 Standards */}
+      <EnhancedSEO2025 
+        title="UNEOM - Professional Uniforms Saudi Arabia"
+        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
+        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
+        author="UNEOM Expert Team"
+        expertise="Uniform Manufacturing & Design"
+        contentType="service"
+        trustSignals={[
+          'ISO certified manufacturing',
+          'Premium quality materials',
+          'Custom design solutions',
+          'Saudi Arabia market leader'
+        ]}
+        locale="en"
+      />
+
+      <SEO
+        title={content.meta.title}
+        description={content.meta.description}
+        canonicalUrl="https://uneom.com/industries/retail-shops/"
+      />
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20 md:py-32">
+        <div className="absolute inset-0">
+          <Image
+            src={content.hero.image}
+            alt={content.hero.headline}
+            fill
+            className="object-cover opacity-25"
+            priority
+          />
+        </div>
+        <Container className="relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            {content.hero.headline}
+          </h1>
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
+            {content.hero.subheadline}
+          </p>
+          <Button href={content.hero.ctaLink} size="lg" variant="secondary">
+            {content.hero.cta}
+          </Button>
+        </Container>
+      </section>
+
+      {/* Intro Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <Container>
+          <SectionHeading className="text-center mb-12">{content.intro.title}</SectionHeading>
+          <div className="max-w-3xl mx-auto space-y-6 text-lg text-neutral-700">
+            {content.intro.paragraphs.map((p, i) => (<p key={i}>{p}</p>))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Key Benefits Section */}
+      <section className="py-16 md:py-24 bg-neutral-50">
+        <Container>
+          <SectionHeading className="text-center mb-16">{content.keyBenefits.title}</SectionHeading>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {content.keyBenefits.benefits.map((benefit) => (
+              <div key={benefit.title} className="bg-white p-6 rounded-lg shadow-lg">
+                <div className={`w-16 h-16 mb-4 rounded-full bg-gradient-to-r ${benefit.gradient} flex items-center justify-center text-white`}>
+                  <Image src={benefit.icon} alt={benefit.title} width={24} height={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-neutral-800 mb-2">{benefit.title}</h3>
+                <p className="text-neutral-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Featured Offerings Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <Container>
+          <SectionHeading className="text-center mb-16">{content.featuredOfferings.title}</SectionHeading>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {content.featuredOfferings.offerings.map((offering) => (
+              <div key={offering.id} className="border rounded-lg overflow-hidden shadow-lg group">
+                <Link href={offering.href}>
+                  <div className="relative h-64 overflow-hidden">
+                    <Image 
+                      src={offering.image} 
+                      alt={offering.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    {offering.badge && (
+                      <span className="absolute top-4 right-4 bg-primary-600 text-white text-sm font-semibold py-1 px-3 rounded-full">
+                        {offering.badge}
+                      </span>
+                    )}
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-neutral-800 mb-2">{offering.name}</h3>
+                    <p className="text-neutral-600 mb-4 text-sm">{offering.description}</p>
+                    {offering.features && (
+                      <ul className="space-y-2 mb-4">
+                        {offering.features.map((feature, index) => (
+                          <li key={index} className="flex items-start text-sm">
+                            <span className="text-primary-600 mr-2">✓</span>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {offering.price && (
+                      <p className="font-semibold text-primary-600">{offering.price}</p>
+                    )}
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Fabric Technologies Section */}
+      <section className="py-16 md:py-24 bg-neutral-50">
+        <Container>
+          <SectionHeading className="text-center mb-16">{content.fabricTechnologies.title}</SectionHeading>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {content.fabricTechnologies.technologies.map((tech) => (
+              <motion.div 
+                key={tech.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-lg shadow-md"
+              >
+                <div className="flex justify-center mb-4">
+                  <Image src={tech.icon} alt={tech.name} width={48} height={48} />
+                </div>
+                <h3 className="text-lg font-semibold text-center text-neutral-800 mb-3">{tech.name}</h3>
+                <p className="text-neutral-600 text-sm text-center">{tech.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Customization Options Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <Container>
+          <SectionHeading className="text-center mb-16">{content.customizationOptions.title}</SectionHeading>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {content.customizationOptions.options.map((option) => (
+              <div key={option.name} className={`p-6 rounded-lg bg-gradient-to-r ${option.gradient}`}>
+                <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                  <Image src={option.icon} alt={option.name} width={32} height={32} />
+                </div>
+                <h3 className="text-lg font-semibold text-white text-center mb-3">{option.name}</h3>
+                <p className="text-white/90 text-sm text-center">{option.description}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Testimonials Section */}
+      {content.testimonials && content.testimonials.items.length > 0 && (
+        <section className="py-16 md:py-24 bg-neutral-50">
+          <Container>
+            <SectionHeading className="text-center mb-12">{content.testimonials.title}</SectionHeading>
+            <div className="max-w-3xl mx-auto">
+              {content.testimonials.items.map((testimonial, index) => (
+                <motion.div 
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-white p-8 rounded-lg shadow-lg mb-6"
+                >
+                  <p className="text-lg text-neutral-700 italic mb-4">"{testimonial.quote}"</p>
+                  <p className="text-right font-semibold text-gray-700">
+                    &mdash; {testimonial.author}, {testimonial.position}
+                    {testimonial.company && <span>, {testimonial.company}</span>}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Stats Section */}
+      {content.stats && content.stats.items.length > 0 && (
+        <section className="py-16 md:py-24 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
+          <Container>
+            <SectionHeading className="text-center mb-16 text-white">{content.stats.title}</SectionHeading>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+              {content.stats.items.map((stat, index) => (
+                <motion.div 
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <p className="text-4xl lg:text-5xl font-bold mb-2">{stat.value}</p>
+                  <p className="text-lg font-semibold mb-2">{stat.label}</p>
+                  <p className="text-sm text-white/80">{stat.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Related Blogs Section */}
+      {content.relatedBlogs && content.relatedBlogs.posts.length > 0 && (
+        <section className="py-16 md:py-24 bg-white">
+          <Container>
+            <SectionHeading className="text-center mb-16">{content.relatedBlogs.title}</SectionHeading>
+            <div className="grid md:grid-cols-3 gap-8">
+              {content.relatedBlogs.posts.map((post, index) => (
+                <Link key={index} href={post.link} className="group">
+                  <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
+                    <Image 
+                      src={post.image} 
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 group-hover:text-primary-600 transition-colors">{post.title}</h3>
+                  <p className="text-neutral-600 text-sm">{post.description}</p>
+                </Link>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* FAQ Section */}
+      {content.faq && content.faq.questions.length > 0 && (
+        <section className="py-16 md:py-24 bg-neutral-50">
+          <Container>
+            <SectionHeading className="text-center mb-16">{content.faq.title}</SectionHeading>
+            <div className="max-w-3xl mx-auto divide-y">
+              {content.faq.questions.map((faq, index) => (
+                <details key={index} className="py-5 group" open={index === 0}>
+                  <summary className="flex justify-between items-center cursor-pointer list-none font-semibold text-lg text-neutral-800">
+                    {faq.question}
+                    <span className="transition-transform transform group-open:rotate-180">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-down">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="mt-3 text-neutral-600">
+                    <p>{faq.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Final CTA Section */}
+      <section className="py-20 md:py-32 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
+        <Container className="text-center">
+          <SectionHeading className="text-white mb-6">{content.finalCta.title}</SectionHeading>
+          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">{content.finalCta.description}</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href={content.finalCta.ctaLink} size="lg" variant="secondary">
+              {content.finalCta.cta}
+            </Button>
+            {content.finalCta.secondaryCta && (
+              <Button href={content.finalCta.secondaryCtaLink} size="lg" variant="outline">
+                {content.finalCta.secondaryCta}
+              </Button>
+            )}
+          </div>
+        </Container>
+      </section>
+    </>
   );
 } 
