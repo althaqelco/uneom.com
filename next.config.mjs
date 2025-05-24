@@ -90,6 +90,11 @@ const nextConfig = {
     ppr: false, // Partial Prerendering - enable when stable
   },
   
+  // Fix NextRouter not mounted issue for static export
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  
   // Explicitly set the output directory for the build
   distDir: '.next',
   

@@ -7,8 +7,9 @@ import LocaleProvider from '@/components/providers/LocaleProvider';
 import MainLayout from '@/components/layout/MainLayout';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from '@vercel/analytics/react';
+// Removed Vercel Analytics for Netlify deployment
+// import { SpeedInsights } from '@vercel/speed-insights/next';
+// import { Analytics } from '@vercel/analytics/react';
 
 // Importar ImageResolver dinámicamente para evitar errores de SSR
 const ImageResolver = dynamic(() => import('@/components/ImageResolver'), { 
@@ -124,9 +125,8 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         
-        {/* Enhanced Security Headers */}
+        {/* Enhanced Security Headers - X-Frame-Options moved to netlify.toml */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
         <meta httpEquiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains" />
         
@@ -145,10 +145,10 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         
-        {/* Preload critical resources */}
-        <link rel="preload" href="/images/default-placeholder.jpg" as="image" />
-        <link rel="preload" href="/images/og-image.jpg" as="image" />
-        <link rel="preload" href="/css/image-fixes.css" as="style" />
+        {/* Preload critical resources with proper 'as' values */}
+        <link rel="preload" href="/images/default-placeholder.jpg" as="image" type="image/jpeg" />
+        <link rel="preload" href="/images/og-image.jpg" as="image" type="image/jpeg" />
+        <link rel="preload" href="/css/image-fixes.css" as="style" type="text/css" />
         
         {/* Stylesheets */}
         <link rel="stylesheet" href="/css/image-fixes.css" />
@@ -354,9 +354,7 @@ export default function RootLayout({
           </div>
         </noscript>
         
-        {/* Vercel Analytics and Speed Insights - May 2025 */}
-        <SpeedInsights />
-        <Analytics />
+        {/* Analytics removed for Netlify deployment - using StatCounter instead */}
       </body>
     </html>
   );

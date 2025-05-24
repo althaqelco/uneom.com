@@ -9,6 +9,16 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Security Headers for all pages - May 2025 Standards
+[[headers]]
+  for = "/*"
+  [headers.values]
+    "X-Frame-Options" = "DENY"
+    "X-Content-Type-Options" = "nosniff"
+    "X-XSS-Protection" = "1; mode=block"
+    "Referrer-Policy" = "strict-origin-when-cross-origin"
+    "Permissions-Policy" = "camera=(), microphone=(), geolocation=()"
+
 # IMPORTANTE: Este redirección debe estar antes de las demás para servir correctamente los archivos estáticos
 [[headers]]
   for = "/_next/*"
