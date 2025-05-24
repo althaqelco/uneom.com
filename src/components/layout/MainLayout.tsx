@@ -23,13 +23,12 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   hideHeader = false,
   hideFooter = false
 }) => {
-  const isRTL = locale === 'ar';
   const pathname = usePathname();
+  const isArabicPage = pathname?.startsWith('/ar');
+  const isRTL = isArabicPage || locale === 'ar';
   
   // تحديد ما إذا كنا في الصفحة الرئيسية (الإنجليزية أو العربية)
   const isHomePage = pathname === '/' || pathname === '/ar' || pathname === '/ar/';
-  
-  const isArabicPage = pathname?.startsWith('/ar');
   
   return (
     <div className={`min-h-screen flex flex-col`} dir={isRTL ? 'rtl' : 'ltr'}>
