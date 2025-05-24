@@ -1,262 +1,506 @@
+import React from 'react';
 import { Metadata } from 'next';
-import ClientPage from '../../[category]/[product]/ClientPage';
-import Script from 'next/script';
-import Container from '@/components/ui/Container';
-import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
+import Image from 'next/image';
 import Link from 'next/link';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import { 
+  FaShieldAlt, 
+  FaTools, 
+  FaCog, 
+  FaIndustry, 
+  FaCheckCircle, 
+  FaStar,
+  FaPhone,
+  FaEnvelope,
+  FaWhatsapp
+} from 'react-icons/fa';
+import { 
+  WrenchScrewdriverIcon,
+  ShieldCheckIcon,
+  FireIcon,
+  EyeIcon,
+  HandRaisedIcon,
+  TruckIcon
+} from '@heroicons/react/24/outline';
 
-// Define metadata for SEO optimization
 export const metadata: Metadata = {
-  title: 'Premium Mechanics Overalls | Oil-Resistant Workwear | UNEOM Saudi Arabia',
-  description: 'Heavy-duty mechanics overalls designed for Saudi automotive and industrial sectors. Features oil-resistant fabric, reinforced knees, multiple tool pockets, and adjustable waist for maximum comfort and protection in demanding environments.',
-  keywords: 'mechanics overalls Saudi Arabia, automotive workwear Riyadh, oil-resistant coveralls, industrial mechanic uniform, Saudi garage workwear, heavy-duty mechanics clothing, automotive repair PPE, durable mechanics coveralls KSA',
+  title: 'Premium Mechanics Overalls - Industrial Workwear | UNEOM Saudi Arabia',
+  description: 'Professional mechanics overalls and industrial coveralls designed for Saudi Arabian workshops and factories. Durable, comfortable, and safety-compliant workwear solutions from UNEOM.',
+  keywords: [
+    'mechanics overalls Saudi Arabia',
+    'industrial coveralls',
+    'workshop uniforms',
+    'safety workwear',
+    'UNEOM mechanics clothing',
+    'professional overalls',
+    'factory uniforms',
+    'automotive workwear',
+    'دبل ميكانيكي',
+    'ملابس عمل صناعية'
+  ],
   openGraph: {
-    title: 'Premium Mechanics Overalls | Oil-Resistant Workwear | UNEOM Saudi Arabia',
-    description: 'Heavy-duty mechanics overalls designed for Saudi automotive and industrial sectors. Features oil-resistant fabric, reinforced knees, multiple tool pockets, and adjustable waist for maximum comfort and protection in demanding environments.',
+    title: 'Premium Mechanics Overalls - Industrial Workwear | UNEOM',
+    description: 'Professional mechanics overalls designed for Saudi Arabian workshops. Durable, comfortable, and safety-compliant.',
+    url: 'https://uneom.com/shop/industrial-uniforms/mechanics-overalls/',
+    siteName: 'UNEOM',
     images: [
       {
-        url: 'https://uneom.com/images/products/industrial-coverall.jpg',
+        url: 'https://uneom.com/images/products/industrial/mechanic-1.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Premium Mechanics Overalls'
+        alt: 'Premium Mechanics Overalls - UNEOM Saudi Arabia'
       }
     ],
     locale: 'en_US',
-    type: 'website',
+    type: 'website'
   },
   alternates: {
-    canonical: 'https://uneom.com/shop/industrial-uniforms/mechanics-overalls',
+    canonical: 'https://uneom.com/shop/industrial-uniforms/mechanics-overalls/',
     languages: {
-      'ar': 'https://uneom.com/ar/shop/industrial-uniforms/mechanics-overalls',
-    },
+      'ar-SA': 'https://uneom.com/ar/shop/industrial-uniforms/mechanics-overalls/',
+      'en-US': 'https://uneom.com/shop/industrial-uniforms/mechanics-overalls/'
+    }
+  }
+};
+
+// Structured Data for Product
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Premium Mechanics Overalls",
+  "description": "Professional mechanics overalls designed for Saudi Arabian workshops and industrial facilities. Features durable construction, multiple pockets, and safety compliance.",
+  "brand": {
+    "@type": "Brand",
+    "name": "UNEOM"
   },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "United Uniform Manufacturing Company",
+    "url": "https://uneom.com"
   },
+  "image": [
+    "https://uneom.com/images/products/industrial/mechanic-1.jpg",
+    "https://uneom.com/images/products/industrial/mechanic-2.jpg",
+    "https://uneom.com/images/products/industrial-coverall.jpg"
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "SAR",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "UNEOM"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127"
+  },
+  "category": "Industrial Workwear",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Material",
+      "value": "Heavy-duty cotton blend"
+    },
+    {
+      "@type": "PropertyValue", 
+      "name": "Safety Standards",
+      "value": "SASO compliant"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Origin",
+      "value": "Made in Saudi Arabia"
+    }
+  ]
 };
 
 export default function MechanicsOverallsPage() {
-  // Use params to get product data
-  const params = {
-    category: 'industrial-uniforms',
-    product: 'mechanics-overalls'
-  };
-  
   return (
     <>
-      {/* Enhanced SEO for Google May 2025 Standards */}
-      <EnhancedSEO2025 
-        title="UNEOM - Professional Uniforms Saudi Arabia"
-        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
-        keywords={["uniform shop","buy uniforms","professional workwear","uniform store"]}
-        author="UNEOM Expert Team"
-        expertise="Uniform Manufacturing & Design"
-        contentType="product"
-        trustSignals={[
-          'ISO certified manufacturing',
-          'Premium quality materials',
-          'Custom design solutions',
-          'Saudi Arabia market leader'
-        ]}
-        locale="en"
-      />
-
-      {/* Schema.org structured data for enhanced SEO */}
-      <Script
-        id="product-structured-data"
+      <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org/",
-            "@type": "Product",
-            "name": "UNEOM Premium Mechanics Overalls",
-            "image": [
-              "https://uneom.com/images/products/industrial-coverall.jpg",
-              "https://uneom.com/images/industries/Factory_Industrial/industrial-coverall-pro.webp",
-              "https://uneom.com/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg"
-            ],
-            "description": "Heavy-duty mechanics overalls engineered for Saudi Arabia's automotive and industrial maintenance sectors. Features oil and chemical-resistant fabric, CORDURA® reinforced knees and elbows, multiple specialized tool pockets, and bi-swing back for maximum mobility during complex mechanical tasks.",
-            "sku": "UNEOM-MO-350",
-            "brand": {
-              "@type": "Brand",
-              "name": "UNEOM"
-            },
-            "manufacturer": "UNEOM Professional Workwear",
-            "offers": {
-              "@type": "Offer",
-              "url": "https://uneom.com/shop/industrial-uniforms/mechanics-overalls",
-              "priceCurrency": "SAR",
-              "price": "329",
-              "priceValidUntil": "2024-12-31",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "112"
-            }
-          })
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
       
-      {/* Main product page component */}
-      <ClientPage params={params} />
-      
-      {/* Enhanced Product Description Section */}
-      <section className="py-16 bg-neutral-50">
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Premium Mechanics Overalls | Oil-Resistant Workwear</h1>
-      
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Premium Mechanics Overalls | Oil-Resistant Workwear</h1>
-      
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Premium Mechanics Overalls | Oil-Resistant Workwear</h1>
-      
-        <Container>
-          <SectionHeading subtitle="Engineered Protection for Automotive and Industrial Maintenance Professionals">
-            Premium Mechanics Overalls
-          </SectionHeading>
-          
-          <div className="max-w-4xl mx-auto mt-10">
-            <div className="prose prose-lg mx-auto">
-              <h2>Advanced Workwear for Saudi Arabia's Demanding Mechanical Environments</h2>
-              <p>
-                UNEOM's mechanics overalls represent the ultimate solution for professionals working in Saudi Arabia's automotive repair shops, industrial maintenance departments, and manufacturing facilities. Engineered specifically for the unique challenges faced by mechanics and maintenance personnel in the Kingdom, our overalls combine superior protection against oils, chemicals, and abrasion with exceptional comfort and mobility features essential for complex mechanical tasks.
-              </p>
-              
-              <h3>Superior Protection for Mechanical Work</h3>
-              <p>
-                Our premium mechanics overalls are constructed with advanced fabrics that provide comprehensive protection against the specific hazards found in Saudi Arabian mechanical environments:
-              </p>
-              <ul>
-                <li>Oil and hydrocarbon-resistant fabric that repels automotive fluids, lubricants, and fuel while maintaining breathability in warm workshop environments</li>
-                <li>Chemical splash protection that guards against batteries acids, cleaning solvents, and other corrosive substances commonly used in Saudi automotive and industrial facilities</li>
-                <li>300g/m² heavyweight twill construction with enhanced tensile strength that resists tears and punctures from sharp edges and metal components</li>
-                <li>Flame-resistant options available for mechanics working in petroleum processing facilities and other high-risk environments in compliance with Saudi Aramco safety requirements</li>
-                <li>Anti-static properties that reduce the risk of spark generation in environments where flammable materials are present</li>
-                <li>CORDURA® reinforced knees and elbows that provide up to 25 times the abrasion resistance of standard workwear fabrics</li>
-              </ul>
-              
-              <h3>Designed for Saudi Arabian Working Conditions</h3>
-              <p>
-                Unlike standard mechanics overalls, UNEOM's premium workwear is specifically engineered to perform in the unique working conditions found in Saudi Arabia:
-              </p>
-              <ul>
-                <li>Enhanced breathability with strategically placed ventilation panels to combat high workshop temperatures common in Riyadh, Jeddah, and Dammam</li>
-                <li>Moisture-wicking properties that help maintain comfort during physically demanding tasks in non-climate-controlled environments</li>
-                <li>Extended sizing options to accommodate layering needs during cooler winter months in northern regions of the Kingdom</li>
-                <li>Color options specifically selected to minimize visible staining from oils and dirt while maintaining professional appearance in Saudi Arabian workplace environments</li>
-                <li>UV-resistant fabrics that maintain their integrity even when mechanics must perform outdoor repairs in intense sunlight</li>
-                <li>Quick-drying properties essential for industrial laundry systems commonly used by major Saudi automotive and maintenance operations</li>
-              </ul>
-              
-              <h3>Ergonomic Features for Maximum Productivity</h3>
-              <p>
-                UNEOM understands the complex physical demands placed on mechanics in Saudi Arabia's automotive and industrial sectors. Our overalls include advanced ergonomic features designed to enhance mobility and reduce fatigue during long shifts:
-              </p>
-              <ul>
-                <li>Bi-swing back design that expands to accommodate reaching and stretching movements when working on elevated equipment or underneath vehicles</li>
-                <li>Articulated knees with expansion pleats that provide unrestricted movement when crouching, kneeling, or climbing</li>
-                <li>Adjustable elastic waist and side tabs that ensure a secure fit across various body types while allowing for natural movement</li>
-                <li>Gusseted crotch construction that eliminates fabric binding and increases comfort during active work</li>
-                <li>Strategic seam placement that minimizes pressure points when leaning against hard surfaces or equipment</li>
-                <li>Lightweight yet durable YKK zippers and closures designed for one-handed operation in tight spaces</li>
-                <li>Adjustable cuffs with secure closures to prevent intrusion of debris while working underneath vehicles</li>
-              </ul>
-              
-              <h3>Specialized Storage Solutions for Mechanics</h3>
-              <p>
-                Our mechanics overalls feature a comprehensive storage system designed specifically for the tools and equipment used in Saudi Arabian automotive and maintenance environments:
-              </p>
-              <ul>
-                <li>20+ strategically positioned pockets designed through consultation with working mechanics throughout the Kingdom</li>
-                <li>Reinforced hammer loop and wrench pockets positioned for ideal weight distribution</li>
-                <li>Specialized compartments for digital diagnostic tools and tablets increasingly used in modern Saudi automotive workshops</li>
-                <li>Secure zippered pockets for valuable small parts and fasteners</li>
-                <li>Easy-access chest pockets with transparent ID window compatible with Saudi workplace security requirements</li>
-                <li>Dedicated smartphone pocket with cable routing channel for communication while working</li>
-                <li>Removable PALS/MOLLE attachment system for customizable tool organization</li>
-                <li>Integrated ruler pocket specifically sized for standard measuring tools</li>
-              </ul>
-              
-              <h3>Customization for Saudi Automotive Businesses</h3>
-              <p>
-                UNEOM offers extensive customization options for our mechanics overalls to meet the specific needs of automotive businesses throughout Saudi Arabia:
-              </p>
-              <ul>
-                <li>Corporate branding with durable embroidery that withstands industrial laundering</li>
-                <li>Technician name and certification level embroidery in both Arabic and English</li>
-                <li>Department color-coding system for visual management in large facilities</li>
-                <li>Integration of dealership or automotive brand colors</li>
-                <li>Specialized pocket configurations based on specific maintenance specialties</li>
-                <li>RFID tag integration for tool inventory control and technician tracking</li>
-                <li>Enhanced high-visibility options for roadside service personnel</li>
-                <li>Custom sizing program for accurate fit across diverse workforce demographics</li>
-              </ul>
-              
-              <div className="my-8 bg-primary-50 p-8 rounded-lg text-center">
-                <h3 className="text-xl font-bold mb-4">Request a Consultation for Your Mechanics Workwear Program</h3>
-                <p className="mb-6">
-                  Our automotive workwear specialists can conduct an assessment of your specific mechanical environment in Riyadh, Jeddah, Dammam, or any location in Saudi Arabia to develop customized mechanics overalls that meet your exact operational requirements.
+      <main className="min-h-screen bg-white">
+        {/* Breadcrumb Navigation */}
+        <div className="bg-gray-50 py-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav className="flex" aria-label="Breadcrumb">
+              <ol className="flex items-center space-x-4">
+                <li>
+                  <Link href="/" className="text-gray-500 hover:text-gray-700">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <span className="text-gray-400">/</span>
+                </li>
+                <li>
+                  <Link href="/shop/" className="text-gray-500 hover:text-gray-700">
+                    Shop
+                  </Link>
+                </li>
+                <li>
+                  <span className="text-gray-400">/</span>
+                </li>
+                <li>
+                  <Link href="/shop/industrial-uniforms/" className="text-gray-500 hover:text-gray-700">
+                    Industrial Uniforms
+                  </Link>
+                </li>
+                <li>
+                  <span className="text-gray-400">/</span>
+                </li>
+                <li>
+                  <span className="text-gray-900 font-medium">Mechanics Overalls</span>
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 text-white py-20">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center space-x-2 mb-4">
+                  <FaTools className="h-6 w-6 text-blue-400" />
+                  <span className="text-blue-400 font-semibold">Professional Workwear</span>
+                </div>
+                <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                  Premium Mechanics Overalls
+                  <span className="block text-blue-400">Built for Saudi Workshops</span>
+                </h1>
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                  Engineered for the demanding conditions of Saudi Arabian industrial environments. 
+                  Our mechanics overalls combine durability, comfort, and safety compliance to keep 
+                  your workforce protected and productive.
                 </p>
-                <div className="flex justify-center">
-                  <Link href="/contact">
-                    <Button variant="primary" size="lg">
-                      Contact Our Automotive Workwear Team
-                    </Button>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
+                    <FaPhone className="h-5 w-5" />
+                    <span>Request Quote</span>
+                  </button>
+                  <Link 
+                    href="/contact/"
+                    className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors text-center"
+                  >
+                    Contact Sales Team
                   </Link>
                 </div>
               </div>
-              
-              <h3>Compliance with Saudi Standards</h3>
-              <p>
-                Our mechanics overalls comply with all relevant Saudi Arabian workplace safety regulations and industry standards:
-              </p>
-              <ul>
-                <li>Saudi Aramco Engineering Standards for maintenance personnel workwear</li>
-                <li>Saudi Arabian Standards Organization (SASO) requirements for industrial workwear</li>
-                <li>General Organization for Social Insurance (GOSI) workplace safety guidelines</li>
-                <li>Ministry of Labor occupational safety requirements for automotive sector</li>
-                <li>International standards including EN ISO 13688:2013 for protective clothing</li>
-                <li>EN 14325 standards for chemical protective clothing when applicable</li>
-              </ul>
-              
-              <h3>Bulk Programs for Automotive Businesses</h3>
-              <p>
-                UNEOM specializes in providing mechanics overalls for automotive dealerships, fleet maintenance operations, and industrial maintenance departments throughout Saudi Arabia. Our dedicated account managers work directly with fleet managers, workshop supervisors, and procurement teams to develop comprehensive workwear programs that enhance safety, productivity, and professional image.
-              </p>
-              <p>
-                With local manufacturing facilities in Saudi Arabia, we offer faster delivery times, responsive service for both initial orders and replacements, and the ability to quickly address changing requirements. Our inventory management system can integrate with your operations for streamlined reordering processes, particularly valuable for large automotive operations with multiple locations throughout the Kingdom.
-              </p>
-              
-              <h3>Quality Assurance and Durability</h3>
-              <p>
-                Every pair of UNEOM mechanics overalls undergoes rigorous quality testing designed to simulate the challenging conditions found in Saudi Arabian automotive and industrial environments:
-              </p>
-              <ul>
-                <li>Hydrocarbon resistance testing to verify performance against oils and fuels</li>
-                <li>Martindale abrasion testing to ensure durability in high-wear areas</li>
-                <li>Tensile strength testing for all critical seams and stress points</li>
-                <li>Wash durability testing simulating a minimum of 50 industrial laundering cycles</li>
-                <li>Color fastness testing to verify appearance retention after repeated exposure to automotive chemicals</li>
-                <li>Ergonomic movement testing performed by working mechanics to verify comfort and functionality</li>
-              </ul>
-              <p>
-                Our mechanics overalls are designed to maintain their protective properties and professional appearance for a minimum of 18 months of daily use in demanding Saudi automotive and industrial environments, offering exceptional value and performance for your workwear investment.
-              </p>
+              <div className="relative">
+                <Image
+                  src="/images/products/industrial/mechanic-1.jpg"
+                  alt="Premium Mechanics Overalls - UNEOM Saudi Arabia"
+                  width={600}
+                  height={700}
+                  className="rounded-xl shadow-2xl"
+                  priority
+                />
+                <div className="absolute -bottom-6 -left-6 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
+                  <div className="flex items-center space-x-2">
+                    <FaStar className="h-5 w-5 text-yellow-400" />
+                    <span className="font-bold">4.8/5</span>
+                  </div>
+                  <p className="text-sm">127+ Reviews</p>
+                </div>
+              </div>
             </div>
           </div>
-        </Container>
-      </section>
+        </section>
+
+        {/* Key Features Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Why Choose UNEOM Mechanics Overalls?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Designed specifically for the harsh conditions of Saudi Arabian workshops, 
+                our overalls meet international safety standards while ensuring maximum comfort.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <ShieldCheckIcon className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Safety Compliant</h3>
+                <p className="text-gray-600">
+                  Meets SASO safety standards and international workplace safety requirements. 
+                  Flame-resistant options available for high-risk environments.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                  <WrenchScrewdriverIcon className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Functional Design</h3>
+                <p className="text-gray-600">
+                  Multiple reinforced pockets, tool loops, and knee pad inserts. 
+                  Designed by mechanics for mechanics working in Saudi conditions.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                  <FireIcon className="h-6 w-6 text-orange-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Heat Resistant</h3>
+                <p className="text-gray-600">
+                  Special fabric treatment for extreme heat resistance, perfect for 
+                  Saudi Arabia's challenging climate and hot workshop environments.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                  <EyeIcon className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">High Visibility</h3>
+                <p className="text-gray-600">
+                  Reflective strips and high-visibility color options ensure worker 
+                  safety in low-light industrial environments.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <HandRaisedIcon className="h-6 w-6 text-red-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Comfort Fit</h3>
+                <p className="text-gray-600">
+                  Ergonomic design with reinforced stress points and breathable fabric 
+                  for all-day comfort during intensive mechanical work.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                  <TruckIcon className="h-6 w-6 text-indigo-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Fast Delivery</h3>
+                <p className="text-gray-600">
+                  Quick turnaround times across Saudi Arabia with bulk order capabilities 
+                  for large industrial facilities and workshops.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Product Gallery */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Product Gallery
+              </h2>
+              <p className="text-xl text-gray-600">
+                See our mechanics overalls in action across Saudi Arabian workshops
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="relative group overflow-hidden rounded-xl">
+                <Image
+                  src="/images/products/industrial/mechanic-2.jpg"
+                  alt="Mechanics Overall - Side View"
+                  width={400}
+                  height={500}
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span className="text-white font-semibold">Side View Details</span>
+                </div>
+              </div>
+              
+              <div className="relative group overflow-hidden rounded-xl">
+                <Image
+                  src="/images/products/industrial-coverall.jpg"
+                  alt="Industrial Coverall Full Body"
+                  width={400}
+                  height={500}
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span className="text-white font-semibold">Full Body Coverage</span>
+                </div>
+              </div>
+              
+              <div className="relative group overflow-hidden rounded-xl">
+                <Image
+                  src="/images/new-products/heavy_duty_industrial_coverall.png"
+                  alt="Heavy Duty Industrial Coverall"
+                  width={400}
+                  height={500}
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span className="text-white font-semibold">Heavy Duty Option</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Specifications */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                  Technical Specifications
+                </h2>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <FaCheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Material Composition</h3>
+                      <p className="text-gray-600">65% Cotton, 35% Polyester blend for optimal durability and comfort</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <FaCheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Weight & Thickness</h3>
+                      <p className="text-gray-600">280 GSM fabric weight, 0.8mm thickness for industrial protection</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <FaCheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Size Range</h3>
+                      <p className="text-gray-600">Available in sizes S to 5XL, custom sizing available</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <FaCheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Color Options</h3>
+                      <p className="text-gray-600">Navy Blue, Gray, Khaki, High-Vis Orange, Custom colors available</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <FaCheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Care Instructions</h3>
+                      <p className="text-gray-600">Machine washable up to 60°C, industrial laundry compatible</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <Image
+                  src="/images/case-studies/dammam-industrial.jpg"
+                  alt="UNEOM Mechanics Overalls in Saudi Workshop"
+                  width={600}
+                  height={400}
+                  className="rounded-xl shadow-lg w-full h-auto"
+                />
+                <div className="mt-6 bg-blue-50 p-6 rounded-xl">
+                  <h3 className="font-bold text-blue-900 mb-3">Saudi Arabia Compliance</h3>
+                  <ul className="space-y-2 text-blue-800">
+                    <li className="flex items-center space-x-2">
+                      <FaCheckCircle className="h-4 w-4 text-blue-600" />
+                      <span>SASO certified for workplace safety</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <FaCheckCircle className="h-4 w-4 text-blue-600" />
+                      <span>Ministry of Labor approved</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <FaCheckCircle className="h-4 w-4 text-blue-600" />
+                      <span>Vision 2030 manufacturing standards</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 bg-blue-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              Ready to Equip Your Workshop?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Join hundreds of Saudi Arabian businesses who trust UNEOM for their industrial workwear needs. 
+              Get a custom quote for your mechanics overalls today.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
+                <FaPhone className="h-5 w-5" />
+                <span>Call +966 13 123 4567</span>
+              </button>
+              <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
+                <FaWhatsapp className="h-5 w-5" />
+                <span>WhatsApp Quote</span>
+              </button>
+              <Link 
+                href="/contact/"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
+              >
+                <FaEnvelope className="h-5 w-5" />
+                <span>Email Us</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Products */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Related Industrial Products
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <Link href="/shop/industrial-uniforms/" className="group">
+                <div className="bg-gray-50 rounded-xl p-6 group-hover:shadow-lg transition-shadow">
+                  <FaIndustry className="h-12 w-12 text-blue-600 mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Industrial Uniforms</h3>
+                  <p className="text-gray-600">Complete range of industrial workwear solutions</p>
+                </div>
+              </Link>
+              
+              <Link href="/shop/industrial-uniforms/safety-vests/" className="group">
+                <div className="bg-gray-50 rounded-xl p-6 group-hover:shadow-lg transition-shadow">
+                  <FaShieldAlt className="h-12 w-12 text-orange-600 mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Safety Vests</h3>
+                  <p className="text-gray-600">High-visibility safety vests for industrial sites</p>
+                </div>
+              </Link>
+              
+              <Link href="/shop/industrial-uniforms/work-boots/" className="group">
+                <div className="bg-gray-50 rounded-xl p-6 group-hover:shadow-lg transition-shadow">
+                  <FaCog className="h-12 w-12 text-gray-600 mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Work Boots</h3>
+                  <p className="text-gray-600">Steel-toe boots and safety footwear</p>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   );
-} 
+}
