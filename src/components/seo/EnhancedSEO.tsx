@@ -18,7 +18,7 @@
 
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import { useSafeRouter } from '@/lib/hooks/useSafeRouter';
 import CanonicalUrl from '@/components/seo/CanonicalUrl';
 import HreflangTags from '@/components/seo/HreflangTags';
 import { getPageKeywords } from '@/lib/seo/keyword-optimizer';
@@ -112,7 +112,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   includeLanguageTags = true,
   h1Content
 }) => {
-  const router = useRouter();
+  const router = useSafeRouter();
   const locale = router.locale || 'en';
   const isArabic = locale === 'ar';
   

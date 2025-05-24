@@ -7,7 +7,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useSafeRouter } from '@/lib/hooks/useSafeRouter';
 import StructuredData from '@/components/seo/StructuredData';
 
 interface BreadcrumbItem {
@@ -26,7 +26,7 @@ interface BreadcrumbsProps {
  * Generate breadcrumb items based on the current URL path
  */
 export const useBreadcrumbs = (): BreadcrumbItem[] => {
-  const router = useRouter();
+  const router = useSafeRouter();
   const locale = router.locale || 'en';
   const isArabic = locale === 'ar';
   const baseUrl = isArabic ? '/ar' : '';
@@ -152,7 +152,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   className = '',
   showSchema = true
 }) => {
-  const router = useRouter();
+  const router = useSafeRouter();
   const locale = router.locale || 'en';
   const isRTL = locale === 'ar';
   const autoBreadcrumbs = useBreadcrumbs();

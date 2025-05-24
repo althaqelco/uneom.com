@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import { useRouter } from 'next/router';
+import { useSafeRouter } from '@/lib/hooks/useSafeRouter';
 
 interface OrganizationSchema {
   name: string;
@@ -73,7 +73,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
   data,
   language
 }) => {
-  const router = useRouter();
+  const router = useSafeRouter();
   const locale = language || router.locale || 'en';
   
   // Base schema data with @context and language

@@ -13,7 +13,7 @@
 
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import { useSafeRouter } from '@/lib/hooks/useSafeRouter';
 
 interface HreflangTagsProps {
   /**
@@ -31,7 +31,7 @@ const HreflangTags: React.FC<HreflangTagsProps> = ({
   path,
   baseUrl = 'https://uneom.com'
 }) => {
-  const router = useRouter();
+  const router = useSafeRouter();
   
   // Get the current path, ensuring it has a trailing slash
   const currentPath = path || router.asPath;

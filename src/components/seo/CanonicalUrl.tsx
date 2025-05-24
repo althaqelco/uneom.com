@@ -12,7 +12,7 @@
 
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import { useSafeRouter } from '@/lib/hooks/useSafeRouter';
 import { getCanonicalUrl } from '@/lib/seo/url-formatter';
 
 interface CanonicalUrlProps {
@@ -31,7 +31,7 @@ const CanonicalUrl: React.FC<CanonicalUrlProps> = ({
   path,
   baseUrl = 'https://uneom.com'
 }) => {
-  const router = useRouter();
+  const router = useSafeRouter();
   const locale = router.locale || 'en';
   
   // Use the provided path or current path from router
