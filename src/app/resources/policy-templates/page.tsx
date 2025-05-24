@@ -7,9 +7,9 @@ import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 export default function PolicyTemplatesPage() {
   const resourceData = {
     locale: 'en',
-    title: "UNEOM - Professional Uniforms",
-    subtitle: 'Customizable frameworks for developing clear and comprehensive uniform guidelines',
-    heroImage: '/images/default-placeholder.jpg',
+    title: "Uniform Policy Templates - UNEOM",
+    subtitle: 'Professional policy frameworks by United Uniform Manufacturing Company',
+    heroImage: '/images/resources/policy-templates-hero.jpg',
     overview: {
       title: 'Creating Effective Uniform Policies',
       content: `
@@ -20,10 +20,10 @@ export default function PolicyTemplatesPage() {
           expectations and requirements.
         </p>
         <p class="mb-4">
-          UNEOM's customizable policy templates provide a foundation for organizations to develop 
-          comprehensive uniform guidelines tailored to their specific needs. Each template can be 
-          adapted to reflect your organization's culture, industry requirements, and operational 
-          considerations.
+          UNEOM (United Uniform Manufacturing Company) provides customizable policy templates as part of our
+          comprehensive uniform solutions. Based in Saudi Arabia, we understand the unique requirements of
+          Middle Eastern businesses and have developed these templates to address both international standards
+          and local cultural considerations.
         </p>
         <p class="mb-4">
           Download and customize these templates to create clear, effective uniform policies for your organization.
@@ -57,19 +57,19 @@ export default function PolicyTemplatesPage() {
             <h4 class="font-bold text-lg mb-3 text-primary-700">Example: Purpose Statement</h4>
             <div class="bg-white p-4 rounded border border-gray-200 text-sm">
               <p class="font-medium italic text-neutral-700">
-                "[Organization Name] requires employees to wear uniforms to present a professional and consistent 
-                image to our customers/clients, promote team identity, ensure safety and practicality for job functions, 
-                and comply with industry regulations. This policy outlines the standards, procedures, and responsibilities 
+                "UNEOM requires employees to wear uniforms to present a professional and consistent
+                image to our customers and clients, promote team identity, ensure safety and practicality for job functions,
+                and comply with industry regulations. This policy outlines the standards, procedures, and responsibilities
                 related to company uniforms."
               </p>
             </div>
           </div>
           
-          <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 mb-6">
+          <a href="/downloads/policy-templates/general-uniform-policy-template.pdf" download class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 mb-6">
             <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
-            Download General Policy Template (DOCX)
+            Download General Policy Template (PDF)
           </a>
           
           <p class="text-sm italic text-neutral-500 mb-4">
@@ -99,7 +99,7 @@ export default function PolicyTemplatesPage() {
                 <li>Laundering protocols</li>
                 <li>Identification badge standards</li>
               </ul>
-              <a href="#" class="inline-flex items-center px-3 py-1.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+              <a href="/downloads/policy-templates/healthcare-uniform-policy.pdf" download class="inline-flex items-center px-3 py-1.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
                 <svg class="-ml-1 mr-1 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
@@ -117,7 +117,7 @@ export default function PolicyTemplatesPage() {
                 <li>Branded accessories specifications</li>
                 <li>Customer-facing presentation standards</li>
               </ul>
-              <a href="#" class="inline-flex items-center px-3 py-1.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+              <a href="/downloads/policy-templates/hospitality-uniform-policy.pdf" download class="inline-flex items-center px-3 py-1.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
                 <svg class="-ml-1 mr-1 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
@@ -135,7 +135,7 @@ export default function PolicyTemplatesPage() {
                 <li>Seasonal adaptations for extreme temperatures</li>
                 <li>Prohibited accessories and materials</li>
               </ul>
-              <a href="#" class="inline-flex items-center px-3 py-1.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+              <a href="/downloads/policy-templates/industrial-manufacturing-policy.pdf" download class="inline-flex items-center px-3 py-1.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
                 <svg class="-ml-1 mr-1 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
@@ -153,7 +153,7 @@ export default function PolicyTemplatesPage() {
                 <li>Business travel considerations</li>
                 <li>Accessory and personalization guidelines</li>
               </ul>
-              <a href="#" class="inline-flex items-center px-3 py-1.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+              <a href="/downloads/policy-templates/corporate-office-policy.pdf" download class="inline-flex items-center px-3 py-1.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
                 <svg class="-ml-1 mr-1 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
@@ -209,7 +209,7 @@ export default function PolicyTemplatesPage() {
           <div class="border border-primary-200 rounded-lg p-6 mb-6 bg-primary-50">
             <h4 class="font-bold text-lg mb-3 text-primary-700">Implementation Checklist</h4>
             <p class="mb-3">Our comprehensive checklist helps you track the progress of your policy implementation:</p>
-            <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+            <a href="/downloads/policy-templates/uniform-policy-implementation-checklist.pdf" download class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
               <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
@@ -286,7 +286,7 @@ export default function PolicyTemplatesPage() {
     ],
     cta: {
       title: 'Need Custom Policy Development?',
-      description: 'UNEOM\'s uniform consultants can help develop tailored policies specific to your organization\'s culture, industry, and operational needs.',
+      description: 'UNEOM (United Uniform Manufacturing Company) offers comprehensive policy development services. Our experienced consultants work with organizations across Saudi Arabia and the Middle East to create tailored uniform policies that meet industry standards, cultural requirements, and operational needs.',
       buttonText: 'Contact Our Policy Specialists',
       buttonUrl: '/contact'
     }
