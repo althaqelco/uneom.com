@@ -8,7 +8,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useSafeRouter } from '@/lib/hooks/useSafeRouter';
 import internalLinkingStrategy from '@/lib/seo/internal-linking-strategy';
 
 export interface RelatedLink {
@@ -36,7 +36,7 @@ const InternalLinkingModule: React.FC<InternalLinkingModuleProps> = ({
   showDescriptions = true,
   className = ''
 }) => {
-  const router = useRouter();
+  const router = useSafeRouter();
   const locale = router.locale || 'en';
   const isRTL = locale === 'ar';
   const textDir = isRTL ? 'rtl' : 'ltr';

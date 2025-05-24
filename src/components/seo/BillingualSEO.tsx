@@ -11,7 +11,7 @@
 
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import { useSafeRouter } from '@/lib/hooks/useSafeRouter';
 import { getAlternateUrl } from '@/lib/seo/config-check';
 
 interface BillingualSEOProps {
@@ -23,7 +23,7 @@ const BilingualSEO: React.FC<BillingualSEOProps> = ({
   canonicalPath,
   noindex = false
 }) => {
-  const router = useRouter();
+  const router = useSafeRouter();
   const locale = router.locale || 'en';
   const isArabic = locale === 'ar';
   const siteUrl = 'https://uneom.com';
@@ -55,19 +55,19 @@ const BilingualSEO: React.FC<BillingualSEOProps> = ({
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Hreflang tags - properly implemented for Saudi audience */}
-      <link 
-        rel="alternate" 
-        hreflang={currentLangRegion} 
+      <link
+        rel="alternate"
+        hrefLang={currentLangRegion}
         href={canonicalUrl} 
       />
-      <link 
-        rel="alternate" 
-        hreflang={alternateLangRegion}
+      <link
+        rel="alternate"
+        hrefLang={alternateLangRegion}
         href={alternateUrl} 
       />
-      <link 
-        rel="alternate" 
-        hreflang="x-default" 
+      <link
+        rel="alternate"
+        hrefLang="x-default"
         href={isArabic ? alternateUrl : canonicalUrl} 
       />
       

@@ -11,7 +11,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { useSafeLocale } from '@/lib/hooks/useSafeRouter';
 
 // Define the component props
 interface OptimizedImageProps {
@@ -72,8 +72,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   onLoad,
   onError,
 }) => {
-  const router = useRouter();
-  const locale = router.locale;
+  const { locale } = useSafeLocale();
   
   // State to track image loading errors
   const [imgSrc, setImgSrc] = React.useState(src);

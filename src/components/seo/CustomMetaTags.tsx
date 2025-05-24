@@ -10,7 +10,7 @@
 
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import { useSafeRouter } from '@/lib/hooks/useSafeRouter';
 
 interface CustomMetaTagsProps {
   /**
@@ -67,7 +67,7 @@ const CustomMetaTags: React.FC<CustomMetaTagsProps> = ({
   geoPlaceName,
   newsKeywords
 }) => {
-  const router = useRouter();
+  const router = useSafeRouter();
   const locale = router.locale || 'en';
   const isArabic = locale === 'ar';
   

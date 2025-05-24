@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGraduationCap, FaAward, FaBriefcase, FaShieldAlt } from 'react-icons/fa';
-import { useRouter } from 'next/router';
+import { useSafeLocale } from '@/lib/hooks/useSafeRouter';
 import { getEeatSignalsForPost } from '@/lib/api/blog';
 
 interface EeatSignalsProps {
@@ -9,8 +9,7 @@ interface EeatSignalsProps {
 }
 
 const EeatSignals: React.FC<EeatSignalsProps> = ({ postSlug, minimal = false }) => {
-  const { locale } = useRouter();
-  const isArabic = locale === 'ar';
+  const { locale, isArabic } = useSafeLocale();
   
   // Get E-E-A-T signals for this post
   const signals = getEeatSignalsForPost(postSlug);

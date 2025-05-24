@@ -12,7 +12,7 @@
  */
 
 import React from 'react';
-import { useRouter } from 'next/router';
+import { useSafeRouter } from '@/lib/hooks/useSafeRouter';
 import StructuredData from '@/components/seo/StructuredData';
 import { generateFAQSchema } from '@/lib/seo/schema-generator';
 
@@ -40,7 +40,7 @@ const FAQSchemaSection: React.FC<FAQSchemaSectionProps> = ({
   questionClassName = 'text-lg font-semibold mb-2',
   answerClassName = 'text-gray-700'
 }) => {
-  const router = useRouter();
+  const router = useSafeRouter();
   const locale = router.locale || 'en';
   const isRTL = locale === 'ar';
   

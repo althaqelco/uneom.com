@@ -11,7 +11,7 @@
 
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import { useSafeRouter } from '@/lib/hooks/useSafeRouter';
 import StructuredData from '@/components/seo/StructuredData';
 import CustomMetaTags from '@/components/seo/CustomMetaTags';
 import { generateLocalBusinessSchema } from '@/lib/seo/schema-generator';
@@ -136,7 +136,7 @@ const LocalSEO: React.FC<LocalSEOProps> = ({
   priceRange = "₪₪-₪₪₪",
   showMap = true
 }) => {
-  const router = useRouter();
+  const router = useSafeRouter();
   const locale = router.locale || 'en';
   const isArabic = locale === 'ar';
   const baseUrl = 'https://uneom.com';

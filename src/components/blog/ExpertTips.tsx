@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { FaQuoteLeft, FaQuoteRight, FaLightbulb } from 'react-icons/fa';
 import { ExpertTip } from '@/lib/api/blog';
 import { authors, Author } from '@/lib/data/authors';
-import { useRouter } from 'next/router';
+import { useSafeLocale } from '@/lib/hooks/useSafeRouter';
 
 interface ExpertTipsProps {
   tips: ExpertTip[];
@@ -12,8 +12,7 @@ interface ExpertTipsProps {
 }
 
 const ExpertTips: React.FC<ExpertTipsProps> = ({ tips, showImage = true }) => {
-  const { locale } = useRouter();
-  const isArabic = locale === 'ar';
+  const { locale, isArabic } = useSafeLocale();
 
   if (!tips || tips.length === 0) {
     return null;
@@ -45,7 +44,7 @@ const ExpertTips: React.FC<ExpertTipsProps> = ({ tips, showImage = true }) => {
                       <div className="relative h-16 w-16 rounded-full overflow-hidden border-2 border-primary-100">
                         <Image
                           src={tip.author.avatar}
-                          alt={isArabic && tip.author.nameAr ? tip.author.nameAr : tip.author.name}
+                          alt={tip.author.name}
                           fill
                           className="object-cover"
                         />
@@ -69,14 +68,10 @@ const ExpertTips: React.FC<ExpertTipsProps> = ({ tips, showImage = true }) => {
                     <div className="mt-3 flex justify-between items-center">
                       <div>
                         <p className="font-bold text-neutral-800">
-                          {isArabic && tip.author.nameAr
-                            ? tip.author.nameAr
-                            : tip.author.name}
+                          {tip.author.name}
                         </p>
                         <p className="text-neutral-600 text-sm">
-                          {isArabic && tip.author.titleAr
-                            ? tip.author.titleAr
-                            : tip.author.title}
+                          {tip.author.title}
                         </p>
                       </div>
 
