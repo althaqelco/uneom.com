@@ -153,8 +153,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   
   const content = {
     en: {
-      headline: title || "Premium Uniform Manufacturing & Supply in Saudi Arabia | UNEOM",
-      subheading: subtitle || "Tailored B2B Solutions for Healthcare, Aviation, Hospitality & Corporate Sectors",
+      headline: title || slides[currentSlide].title,
+      subheading: subtitle || slides[currentSlide].subtitle,
       ctaPrimary: primaryButtonText || "Request a Quote",
       ctaSecondary: secondaryButtonText || "Explore Industries",
       primaryUrl: primaryButtonUrl || "/contact",
@@ -166,8 +166,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       nextSlideTitle: "Discover Next Uniform Innovation"
     },
     ar: {
-      headline: title || "يونيوم | الشركة الرائدة في تصنيع وتوريد الزي الموحد في المملكة العربية السعودية",
-      subheading: subtitle || "حلول مخصصة للشركات في قطاعات الرعاية الصحية والطيران والضيافة والقطاع المؤسسي",
+      headline: title || slides[currentSlide].title,
+      subheading: subtitle || slides[currentSlide].subtitle,
       ctaPrimary: primaryButtonText || "طلب عرض سعر",
       ctaSecondary: secondaryButtonText || "استكشاف الصناعات",
       primaryUrl: primaryButtonUrl || "/ar/contact",
@@ -349,25 +349,19 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 variants={textVariants}
               >
                 <div className={`p-0.5 ${isRTL ? 'mr-0' : 'ml-0'} mb-4 w-16 bg-gradient-to-r from-primary-500 to-primary-300`}></div>
-                <motion.h1 
-                  className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white font-heading leading-tight drop-shadow-lg mb-8"
-                  variants={textVariants}
-                >
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-100 to-neutral-300">
-                    {text.headline}
-                  </span>
-                </motion.h1>
                 <AnimatePresence mode='wait'>
-                  <motion.h2
+                  <motion.h1
                     key={`slide-title-${currentSlide}`}
-                    className="text-3xl md:text-4xl font-semibold text-white mb-4 drop-shadow-md"
+                    className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white font-heading leading-tight drop-shadow-lg mb-8"
                     variants={textVariants}
                     initial="hidden"
                     animate="visible"
                     exit="exit"
                   >
-                    {slides[currentSlide].title}
-                  </motion.h2>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-100 to-neutral-300">
+                      {text.headline}
+                    </span>
+                  </motion.h1>
                 </AnimatePresence>
                 
                 <AnimatePresence mode='wait'>
