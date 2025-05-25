@@ -44,10 +44,10 @@ export default function SecurityOfficerUniformPage() {
       { name: 'Custom Options', value: 'Company embroidery, name badges, shoulder patches' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Professional Security Officer Uniform Front View' },
+      { src: '/images/products/industrial-coverall.jpg', alt: 'Professional Security Officer Uniform Front View' },
       { src: '/images/product-placeholder.jpg', alt: 'Security Officer Uniform on Model' },
-      { src: '/images/default-placeholder.jpg', alt: 'Security Officer Uniform Detail' },
-      { src: '/images/default-placeholder.jpg', alt: 'Security Accessories' }
+      { src: '/images/products/industrial-coverall.jpg', alt: 'Security Officer Uniform Detail' },
+      { src: '/images/products/industrial-coverall.jpg', alt: 'Security Accessories' }
     ],
     category: 'Security Uniforms',
     categorySlug: 'security-uniforms',
@@ -77,7 +77,7 @@ export default function SecurityOfficerUniformPage() {
       {
         id: 'security-patrol-jacket',
         name: 'Security Patrol Jacket',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/products/industrial-coverall.jpg',
         price: 'From SAR 389',
         href: '/shop/security-uniforms/security-patrol-jacket'
       },
@@ -91,7 +91,7 @@ export default function SecurityOfficerUniformPage() {
       {
         id: 'security-accessories-kit',
         name: 'Security Accessories Kit',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/products/industrial-coverall.jpg',
         price: 'From SAR 179',
         href: '/shop/security-uniforms/security-accessories-kit'
       }

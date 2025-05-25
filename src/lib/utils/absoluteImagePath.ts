@@ -79,7 +79,7 @@ export const getImagePathAlternatives = (src: string): string[] => {
     `/public/images/${filename}`,
     
     // Ruta de respaldo
-    '/images/default-placeholder.jpg'
+    '/images/defaults/default-placeholder.jpg'
   ];
   
   // Filtrar duplicados usando Array.filter en lugar de Set

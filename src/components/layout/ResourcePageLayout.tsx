@@ -164,7 +164,7 @@ export default function ResourcePageLayout({ resourceData, skipMainLayout = fals
                 >
                   <div className="rounded-lg overflow-hidden shadow-xl">
                     <Image
-                      src={section.image || '/images/default-placeholder.jpg'}
+                      src={section.image || '/images/icons/premium-quality.svg'}
                       alt={section.title}
                       width={600}
                       height={450}

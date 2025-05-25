@@ -46,10 +46,10 @@ export default function ExecutiveChefCoatPage() {
       { name: 'Customization', value: 'Embroidery options for name and restaurant logo' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Executive Chef Coat - Front View' },
-      { src: '/images/default-placeholder.jpg', alt: 'Executive Chef Coat - Side View' },
-      { src: '/images/default-placeholder.jpg', alt: 'Chef Coat Detail' },
-      { src: '/images/default-placeholder.jpg', alt: 'Complete Chef Uniform' }
+      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'Executive Chef Coat - Front View' },
+      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'Executive Chef Coat - Side View' },
+      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'Chef Coat Detail' },
+      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'Complete Chef Uniform' }
     ],
     category: 'Culinary Uniforms',
     categorySlug: 'culinary-uniforms',
@@ -78,21 +78,21 @@ export default function ExecutiveChefCoatPage() {
       {
         id: 'chef-pants',
         name: 'Professional Chef Pants',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'From SAR 189',
         href: '/shop/culinary-uniforms/chef-pants'
       },
       {
         id: 'sous-chef-coat',
         name: 'Sous Chef Coat',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'From SAR 259',
         href: '/shop/culinary-uniforms/sous-chef-coat'
       },
       {
         id: 'chef-apron',
         name: 'Professional Chef Apron',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'From SAR 129',
         href: '/shop/culinary-uniforms/chef-apron'
       }

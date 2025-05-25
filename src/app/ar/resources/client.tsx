@@ -33,14 +33,14 @@ export default function ResourcesClientPageArabic() {
           id: 'size-guide',
           name: 'دليل المقاسات',
           description: 'مخططات مقاسات مفصلة وتعليمات القياس لضمان أزياء موحدة مناسبة تمامًا لجميع أنواع الجسم.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           href: '/ar/resources/size-guide'
         },
         {
           id: 'fit-optimization',
           name: 'تحسين التناسب',
           description: 'تعرف على كيفية تحسين تناسب الزي الموحد لتحقيق أقصى قدر من الراحة والمظهر المهني في جميع أنحاء مؤسستك.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           href: '/ar/resources/fit-optimization'
         }
       ]
@@ -52,14 +52,14 @@ export default function ResourcesClientPageArabic() {
           id: 'procurement-guide',
           name: 'دليل الشراء',
           description: 'أفضل الممارسات لشراء الزي الموحد بكفاءة، من تقييم الاحتياجات إلى التسليم والتنفيذ.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           href: '/ar/resources/procurement-guide'
         },
         {
           id: 'policy-templates',
           name: 'قوالب سياسة الزي الموحد',
           description: 'قوالب قابلة للتخصيص لتطوير سياسات وإرشادات شاملة للزي الموحد للشركات.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           href: '/ar/resources/policy-templates'
         }
       ]
@@ -161,7 +161,7 @@ export default function ResourcesClientPageArabic() {
             `).join('')}
           </div>
         `,
-        image: '/images/default-placeholder.jpg',
+        image: '/images/healthcare/medical_hijab_uniform.jpg',
       },
       {
         title: 'الموارد التعليمية',

@@ -33,11 +33,11 @@ export default function PremiumMedicalScrubsArabicPage() {
     longDescription: "توفر ملابس السكروب الطبية الممتازة للمتخصصين في الرعاية الصحية راحة استثنائية ومتانة ومظهرًا احترافيًا. تم تصميمها خصيصًا لبيئة الرعاية الصحية في المملكة العربية السعودية، تتميز هذه الملابس بخصائص مضادة للميكروبات، ونسيج يمتص الرطوبة، وتكوينات عملية للجيوب لتلبية جميع احتياجات الطاقم الطبي.",
     price: "ريال 179",
     minOrder: 20,
-    mainImage: "/images/default-placeholder.jpg",
+    mainImage: "/images/healthcare/medical_hijab_uniform.jpg",
     additionalImages: [
       "/images/avatar-placeholder.jpg",
-      "/images/default-placeholder.jpg",
-      "/images/default-placeholder.jpg"
+      "/images/healthcare/medical_hijab_uniform.jpg",
+      "/images/healthcare/medical_hijab_uniform.jpg"
     ],
     colors: [
       { name: "أزرق سماوي", value: "#87CEEB" },
@@ -90,22 +90,22 @@ export default function PremiumMedicalScrubsArabicPage() {
       { 
         name: "شعار المستشفى/العيادة", 
         description: "إضافة شعار مؤسستك مطرزًا على الصدر أو الكم",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/healthcare/medical_hijab_uniform.jpg"
       },
       { 
         name: "تطريز الاسم", 
         description: "اسم الموظف ومؤهلاته مطرزة للتعريف",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/healthcare/medical_hijab_uniform.jpg"
       },
       { 
         name: "ترميز الألوان للأقسام", 
         description: "خيارات الألوان لتمييز الأقسام المختلفة أو الأدوار",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/healthcare/medical_hijab_uniform.jpg"
       },
       { 
         name: "تكوين جيوب مخصص", 
         description: "تعديل موضع الجيوب بناءً على احتياجات قسم معين",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/healthcare/medical_hijab_uniform.jpg"
       }
     ],
     relatedProducts: [
@@ -164,7 +164,7 @@ export default function PremiumMedicalScrubsArabicPage() {
     '@context': 'https://schema.org/',
     '@type': 'Product',
     name: 'ملابس طبية متميزة',
-    image: '/images/default-placeholder.jpg',
+    image: '/images/healthcare/medical_hijab_uniform.jpg',
     description: 'ملابس طبية متميزة عالية الجودة مصنوعة من أقمشة متطورة للاستخدام في المستشفيات والمراكز الطبية بالمملكة العربية السعودية',
     sku: 'MED-SCR-001',
     brand: {

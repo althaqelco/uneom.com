@@ -9,7 +9,7 @@ export default function PolicyTemplatesClientPageArabic() {
     locale: 'ar',
     title: 'قوالب سياسة الزي الموحد',
     subtitle: 'أطر قابلة للتخصيص لتطوير إرشادات واضحة وشاملة للزي الموحد',
-    heroImage: '/images/default-placeholder.jpg',
+    heroImage: '/images/icons/premium-quality.svg',
     overview: {
       title: 'إنشاء سياسات فعالة للزي الموحد',
       content: `

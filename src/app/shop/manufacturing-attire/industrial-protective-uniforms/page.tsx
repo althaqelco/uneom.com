@@ -52,7 +52,7 @@ export default function IndustrialProtectiveUniformsPage() {
     images: [
       { src: '/images/product-placeholder.jpg', alt: 'Workers in industrial protective uniforms in factory setting' },
       { src: '/images/product-placeholder.jpg', alt: 'Manufacturing worker in blue protective uniform' },
-      { src: '/images/default-placeholder.jpg', alt: 'Saudi engineer in protective gear at industrial site' },
+      { src: '/images/products/corporate-suit-executive.jpg', alt: 'Saudi engineer in protective gear at industrial site' },
       { src: '/images/product-placeholder.jpg', alt: 'Female industrial worker in protective uniform' }
     ],
     category: 'Manufacturing Attire',
@@ -69,11 +69,11 @@ export default function IndustrialProtectiveUniformsPage() {
       { name: 'High-Heat Environment Suit', price: 'SAR 595' }
     ],
     colors: [
-      { name: 'Navy Blue', value: '#1a2942', image: '/images/default-placeholder.jpg' },
-      { name: 'Safety Orange', value: '#ff6600', image: '/images/default-placeholder.jpg' },
-      { name: 'Khaki', value: '#c3b091', image: '/images/default-placeholder.jpg' },
-      { name: 'Grey', value: '#808080', image: '/images/default-placeholder.jpg' },
-      { name: 'Royal Blue', value: '#4169e1', image: '/images/default-placeholder.jpg' }
+      { name: 'Navy Blue', value: '#1a2942', image: '/images/products/corporate-suit-executive.jpg' },
+      { name: 'Safety Orange', value: '#ff6600', image: '/images/products/corporate-suit-executive.jpg' },
+      { name: 'Khaki', value: '#c3b091', image: '/images/products/corporate-suit-executive.jpg' },
+      { name: 'Grey', value: '#808080', image: '/images/products/corporate-suit-executive.jpg' },
+      { name: 'Royal Blue', value: '#4169e1', image: '/images/products/corporate-suit-executive.jpg' }
     ],
     sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {

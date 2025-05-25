@@ -28,7 +28,7 @@ export default function DirectImage({
   className = '',
   style = {},
   priority = false,
-  fallbackSrc = '/images/default-placeholder.jpg',
+  fallbackSrc = '/images/defaults/default-placeholder.jpg',
   onClick,
   onLoad,
 }: DirectImageProps) {

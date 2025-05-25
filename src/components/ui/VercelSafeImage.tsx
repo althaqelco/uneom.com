@@ -53,7 +53,7 @@ const VercelSafeImage: React.FC<VercelSafeImageProps> = ({
   const handleError = () => {
     // Si ya estamos usando un tag nativo, intentar con la imagen de respaldo
     if (useNativeImg) {
-      setImageSrc('/images/default-placeholder.jpg');
+      setImageSrc('/images/products/chef-uniform.jpg');
       return;
     }
     
@@ -101,8 +101,8 @@ const VercelSafeImage: React.FC<VercelSafeImageProps> = ({
         }}
         loading={priority ? 'eager' : 'lazy'}
         onError={() => {
-          if (imageSrc !== '/images/default-placeholder.jpg') {
-            setImageSrc('/images/default-placeholder.jpg');
+          if (imageSrc !== '/images/products/chef-uniform.jpg') {
+            setImageSrc('/images/products/chef-uniform.jpg');
           }
         }}
       />

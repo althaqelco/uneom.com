@@ -13,7 +13,7 @@ export default function ImagePreloader() {
 
     // List of critical images to preload
     const criticalImages = [
-      '/images/default-placeholder.jpg',
+      '/images/defaults/default-placeholder.jpg',
       '/images/default-placeholder.svg',
     ];
 

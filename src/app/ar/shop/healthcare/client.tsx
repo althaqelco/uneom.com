@@ -234,7 +234,7 @@ export default function HealthcareClientPage() {
             </div>
             <div className="relative h-64 md:h-80 order-1 md:order-2">
               <Image 
-                src="/images/default-placeholder.jpg"
+                src="/images/healthcare/medical_hijab_uniform.jpg"
                 alt="منتجات الرعاية الصحية"
                 fill
                 className="object-cover rounded-lg"
@@ -286,7 +286,7 @@ export default function HealthcareClientPage() {
               >
                 <div className="relative h-48">
                   <Image 
-                    src="/images/default-placeholder.jpg"
+                    src="/images/healthcare/medical_hijab_uniform.jpg"
                     alt={dept.name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -348,7 +348,7 @@ export default function HealthcareClientPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 md:h-96 rounded-lg overflow-hidden">
               <Image 
-                src="/images/default-placeholder.jpg"
+                src="/images/healthcare/medical_hijab_uniform.jpg"
                 alt="تفاصيل منتجات الرعاية الصحية عالية الجودة"
                 fill
                 className="object-cover"

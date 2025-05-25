@@ -51,10 +51,10 @@ export default function PremiumSchoolUniformsClientPage() {
       { name: 'التخصيص', value: 'شعارات المدارس، تطريز الأسماء، ألوان مخصصة' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'طلاب سعوديون يرتدون أزياء مدرسية فاخرة في الفصل الدراسي' },
-      { src: '/images/default-placeholder.jpg', alt: 'معلم وطلاب في زي المدرسة' },
-      { src: '/images/default-placeholder.jpg', alt: 'مجموعة من الطلاب السعوديين في أزياء موحدة' },
-      { src: '/images/default-placeholder.jpg', alt: 'طالبة سعودية في زي مدرسي فاخر' }
+      { src: '/images/products/industrial-coverall.jpg', alt: 'طلاب سعوديون يرتدون أزياء مدرسية فاخرة في الفصل الدراسي' },
+      { src: '/images/products/industrial-coverall.jpg', alt: 'معلم وطلاب في زي المدرسة' },
+      { src: '/images/products/industrial-coverall.jpg', alt: 'مجموعة من الطلاب السعوديين في أزياء موحدة' },
+      { src: '/images/products/industrial-coverall.jpg', alt: 'طالبة سعودية في زي مدرسي فاخر' }
     ],
     category: 'أزياء تعليمية',
     categorySlug: 'education-uniforms',
@@ -71,11 +71,11 @@ export default function PremiumSchoolUniformsClientPage() {
       { name: 'مجموعة المرحلة الثانوية (بنات)', price: '299 ريال سعودي' }
     ],
     colors: [
-      { name: 'أزرق داكن', value: '#1a2942', image: '/images/default-placeholder.jpg' },
-      { name: 'أبيض', value: '#ffffff', image: '/images/default-placeholder.jpg' },
-      { name: 'أزرق فاتح', value: '#add8e6', image: '/images/default-placeholder.jpg' },
-      { name: 'أسود', value: '#222222', image: '/images/default-placeholder.jpg' },
-      { name: 'بيج', value: '#f5f5dc', image: '/images/default-placeholder.jpg' }
+      { name: 'أزرق داكن', value: '#1a2942', image: '/images/products/industrial-coverall.jpg' },
+      { name: 'أبيض', value: '#ffffff', image: '/images/products/industrial-coverall.jpg' },
+      { name: 'أزرق فاتح', value: '#add8e6', image: '/images/products/industrial-coverall.jpg' },
+      { name: 'أسود', value: '#222222', image: '/images/products/industrial-coverall.jpg' },
+      { name: 'بيج', value: '#f5f5dc', image: '/images/products/industrial-coverall.jpg' }
     ],
     sizes: ['4-5', '6-7', '8-9', '10-11', '12-13', '14-15', '16-18'],
     sizeEquivalents: {

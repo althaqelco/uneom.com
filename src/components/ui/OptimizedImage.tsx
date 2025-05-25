@@ -18,7 +18,7 @@ interface OptimizedImageProps extends Omit<ImageProps, 'onError'> {
   locale?: string;
 }
 
-const defaultFallbackImage = '/images/default-placeholder.jpg';
+const defaultFallbackImage = '/images/defaults/default-placeholder.jpg';
 
 /**
  * OptimizedImage component that handles image loading errors gracefully

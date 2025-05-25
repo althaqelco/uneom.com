@@ -75,7 +75,7 @@ const EmergencyImageLoader: React.FC<EmergencyImageLoaderProps> = ({
       src.startsWith('/') ? `${baseUrl}${src}` : `${baseUrl}/${src}`, // With base URL
       `/_next/static/images/${src.split('/').pop()}`, // Next.js image path
       `/images/${src.split('/').pop()}`, // Common images folder
-      '/images/default-placeholder.jpg', // Default fallback
+      '/images/defaults/default-placeholder.jpg', // Default fallback
       fallbackSvg // SVG fallback
     ];
     

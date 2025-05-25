@@ -44,10 +44,10 @@ export default function SecurityOfficerUniformClientPage() {
       { name: 'خيارات التخصيص', value: 'تطريز شعار الشركة، شارات الاسم، شارات الكتف' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'زي ضابط الأمن الاحترافي - منظر أمامي' },
+      { src: '/images/products/industrial-coverall.jpg', alt: 'زي ضابط الأمن الاحترافي - منظر أمامي' },
       { src: '/images/product-placeholder.jpg', alt: 'زي ضابط الأمن على النموذج' },
-      { src: '/images/default-placeholder.jpg', alt: 'تفاصيل زي ضابط الأمن' },
-      { src: '/images/default-placeholder.jpg', alt: 'ملحقات الأمن' }
+      { src: '/images/products/industrial-coverall.jpg', alt: 'تفاصيل زي ضابط الأمن' },
+      { src: '/images/products/industrial-coverall.jpg', alt: 'ملحقات الأمن' }
     ],
     category: 'أزياء الأمن',
     categorySlug: 'security-uniforms',
@@ -77,7 +77,7 @@ export default function SecurityOfficerUniformClientPage() {
       {
         id: 'security-patrol-jacket',
         name: 'سترة دورية أمنية',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/products/industrial-coverall.jpg',
         price: 'من ريال 389',
         href: '/ar/shop/security-uniforms/security-patrol-jacket'
       },
@@ -91,7 +91,7 @@ export default function SecurityOfficerUniformClientPage() {
       {
         id: 'security-accessories-kit',
         name: 'طقم ملحقات أمنية',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/products/industrial-coverall.jpg',
         price: 'من ريال 179',
         href: '/ar/shop/security-uniforms/security-accessories-kit'
       }

@@ -9,7 +9,7 @@ export default function SizeGuideClientPageArabic() {
     locale: 'ar',
     title: 'دليل المقاسات للزي الموحد',
     subtitle: 'قياسات شاملة للحصول على تناسب مثالي لجميع أنواع الزي الموحد',
-    heroImage: '/images/default-placeholder.jpg',
+    heroImage: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
     overview: {
       title: 'العثور على المقاس المناسب',
       content: `
@@ -61,7 +61,7 @@ export default function SizeGuideClientPageArabic() {
             <p>قم بالقياس حول قاعدة الرقبة، حيث سيستقر الياقة.</p>
           </div>
         `,
-        image: '/images/default-placeholder.jpg',
+        image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
       },
       {
         title: 'مخططات المقاسات القياسية',
@@ -215,7 +215,7 @@ export default function SizeGuideClientPageArabic() {
             </ul>
           </div>
         `,
-        image: '/images/default-placeholder.jpg',
+        image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
       }
     ],
     items: [
@@ -223,25 +223,25 @@ export default function SizeGuideClientPageArabic() {
         id: 'mens-sizing',
         title: 'دليل مقاسات الرجال',
         description: 'جداول مقاسات مفصلة للزي الموحد للرجال مع إرشادات القياس.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg'
       },
       {
         id: 'womens-sizing',
         title: 'دليل مقاسات النساء',
         description: 'جداول مقاسات مفصلة للزي الموحد للنساء مع إرشادات القياس.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg'
       },
       {
         id: 'measurement-guide',
         title: 'دليل القياس',
         description: 'تعليمات خطوة بخطوة لأخذ قياسات دقيقة للحصول على أفضل تناسب.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg'
       },
       {
         id: 'size-conversion',
         title: 'جدول تحويل المقاسات',
         description: 'جداول تحويل المقاسات بين المعايير الدولية المختلفة.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg'
       }
     ],
     relatedResources: [

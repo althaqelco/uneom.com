@@ -53,8 +53,8 @@ export default function ExecutiveMedicalUniformsPageArabic() {
     images: [
       { src: '/images/product-placeholder.jpg', alt: 'قيادي في الرعاية الصحية يرتدي زي طبي تنفيذي كحلي فاخر' },
       { src: '/images/product-placeholder.jpg', alt: 'قيادية في الرعاية الصحية بزي طبي تنفيذي احترافي' },
-      { src: '/images/default-placeholder.jpg', alt: 'إداريون طبيون في أزياء تنفيذية خلال اجتماع قيادي' },
-      { src: '/images/default-placeholder.jpg', alt: 'مدير طبي سعودي في زي تنفيذي مصمم مع فريقه' }
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'إداريون طبيون في أزياء تنفيذية خلال اجتماع قيادي' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'مدير طبي سعودي في زي تنفيذي مصمم مع فريقه' }
     ],
     category: 'الأزياء الطبية',
     categorySlug: 'medical-scrubs',

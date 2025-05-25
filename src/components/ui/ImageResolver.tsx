@@ -21,7 +21,7 @@ interface ImageResolverProps extends Omit<ImageProps, 'src'> {
  */
 const ImageResolver: React.FC<ImageResolverProps> = ({
   src,
-  fallbackSrc = '/images/default-placeholder.jpg',
+  fallbackSrc = '/images/icons/premium-quality.svg',
   locale = 'en',
   basePath = '/images',
   alt,

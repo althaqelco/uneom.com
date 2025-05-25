@@ -17,28 +17,28 @@ export default function IndustrialUniformsClientPage() {
       id: 'industrial-coverall',
       name: 'بدلة العمل الصناعية',
       href: '/ar/shop/industrial-uniforms/industrial-coverall',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       description: 'بدلات عمل صناعية عالية المتانة مصممة للبيئات الصناعية الشاقة، مع مميزات للسلامة والراحة طوال فترات العمل الطويلة.'
     },
     {
       id: 'safety-vest',
       name: 'سترة السلامة عالية الوضوح',
       href: '/ar/shop/industrial-uniforms/safety-vest',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       description: 'سترات سلامة بألوان عاكسة مصممة للاستخدام في بيئات العمل منخفضة الإضاءة، مع أشرطة عاكسة وميزات سلامة متطورة.'
     },
     {
       id: 'work-pants',
       name: 'بنطلون العمل الصناعي',
       href: '/ar/shop/industrial-uniforms/work-pants',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       description: 'بناطيل عمل قوية مصنوعة من نسيج متين ومقاوم للتمزق، مع جيوب متعددة الاستخدامات لتخزين المعدات والأدوات.'
     },
     {
       id: 'industrial-jacket',
       name: 'جاكيت العمل الصناعي',
       href: '/ar/shop/industrial-uniforms/industrial-jacket',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       description: 'جاكيت عمل شتوي مبطن مصمم لتوفير الدفء والحماية في البيئات الصناعية الباردة، مع ميزات مقاومة للماء والرياح.'
     }
   ];
@@ -114,7 +114,7 @@ export default function IndustrialUniformsClientPage() {
       <section className="relative bg-gray-900 text-white">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/images/default-placeholder.jpg"
+            src="/images/products/industrial-coverall.jpg"
             alt="الملابس الصناعية والزي الموحد للقطاعات الصناعية"
             fill
             className="object-cover opacity-30"
@@ -175,7 +175,7 @@ export default function IndustrialUniformsClientPage() {
             <div className="order-1 md:order-2">
               <div className="relative h-[450px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/products/industrial-coverall.jpg"
                   alt="عامل يرتدي ملابس صناعية في بيئة عمل"
                   fill
                   className="object-cover"

@@ -31,7 +31,7 @@ export default function CulinaryUniformsPage() {
       name: 'Premium Chef Coat',
       description: 'Professional chef coat made with premium fabric, designed for comfort and style in the kitchen environment.',
       price: 'From SAR 189',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/culinary-uniforms/premium-chef-coat',
       features: ['Stain-resistant', 'Double-breasted design', 'Breathable fabric', 'Easy-care'],
       colors: ['White', 'Black', 'Navy'],
@@ -42,7 +42,7 @@ export default function CulinaryUniformsPage() {
       name: 'Executive Chef Set',
       description: 'Complete chef uniform set including premium coat, pants, and hat for professional kitchen staff.',
       price: 'From SAR 349',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/culinary-uniforms/executive-chef-set',
       features: ['Full set', 'Premium materials', 'Professional look', 'Restaurant standard'],
       colors: ['White', 'Black'],
@@ -53,7 +53,7 @@ export default function CulinaryUniformsPage() {
       name: 'Kitchen Staff Uniform',
       description: 'Practical and comfortable uniform designed for all kitchen staff, including cooks and assistants.',
       price: 'From SAR 279',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/culinary-uniforms/kitchen-staff-uniform',
       features: ['Durable fabric', 'Heat-resistant', 'Comfort fit', 'Easy maintenance'],
       colors: ['White', 'Black', 'Grey']
@@ -63,7 +63,7 @@ export default function CulinaryUniformsPage() {
       name: 'Professional Chef Apron',
       description: 'Heavy-duty professional apron with adjustable neck strap and waist ties for perfect fit in busy kitchens.',
       price: 'From SAR 99',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/culinary-uniforms/professional-chef-apron',
       features: ['Heavy-duty fabric', 'Multiple pockets', 'Adjustable fit', 'Stain-resistant'],
       colors: ['Black', 'White', 'Burgundy', 'Navy']
@@ -73,7 +73,7 @@ export default function CulinaryUniformsPage() {
       name: 'Kitchen Manager Uniform',
       description: 'Distinguished uniform for kitchen managers and head chefs, designed for a professional appearance.',
       price: 'From SAR 449',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/culinary-uniforms/kitchen-manager-uniform',
       features: ['Premium fabric', 'Distinctive design', 'Comfortable fit', 'Professional look'],
       colors: ['Black', 'White', 'Grey']
@@ -83,7 +83,7 @@ export default function CulinaryUniformsPage() {
       name: 'Culinary Student Uniform',
       description: 'Affordable yet high-quality uniform set for culinary students and training establishments.',
       price: 'From SAR 219',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/culinary-uniforms/culinary-student-uniform',
       features: ['Cost-effective', 'Durable', 'Easy-care', 'Complete set'],
       colors: ['White']
@@ -144,7 +144,7 @@ export default function CulinaryUniformsPage() {
       <section className="relative pt-16 pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/default-placeholder.jpg"
+            src="/images/healthcare/medical_hijab_uniform.jpg"
             alt="Culinary Uniforms"
             fill
             className="object-cover object-center"
@@ -350,7 +350,7 @@ export default function CulinaryUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/default-placeholder.jpg"
+                    src="/images/healthcare/medical_hijab_uniform.jpg"
                     alt="Corporate Workwear"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -367,7 +367,7 @@ export default function CulinaryUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/default-placeholder.jpg"
+                    src="/images/healthcare/medical_hijab_uniform.jpg"
                     alt="Medical Scrubs"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -404,7 +404,7 @@ export default function CulinaryUniformsPage() {
             <div className="hidden lg:block">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/healthcare/medical_hijab_uniform.jpg"
                   alt="Culinary Uniform Design Service"
                   fill
                   className="object-cover"

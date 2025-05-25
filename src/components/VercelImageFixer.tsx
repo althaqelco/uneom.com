@@ -71,7 +71,7 @@ const VercelImageFixer: React.FC = () => {
           
           // Don't try more than 3 times
           if (attempts >= 3) {
-            imgElement.setAttribute('src', '/images/default-placeholder.jpg');
+            imgElement.setAttribute('src', '/images/defaults/default-placeholder.jpg');
             imgElement.setAttribute('data-vercel-fixed', 'fallback');
             return;
           }
@@ -84,11 +84,11 @@ const VercelImageFixer: React.FC = () => {
             // Original with and without leading slash
             originalSrc.startsWith('/') ? originalSrc.substring(1) : `/${originalSrc}`,
             // With _next prefix
-            `/_next/static/images/default-placeholder.jpg'/').pop()}`,
+            `/_next/static/images/defaults/default-placeholder.jpg'/').pop()}`,
             // With absolute URL
             `${window.location.origin}${originalSrc.startsWith('/') ? '' : '/'}${originalSrc}`,
             // Fallback
-            '/images/default-placeholder.jpg'
+            '/images/defaults/default-placeholder.jpg'
           ];
           
           // Find a variation that hasn't been tried yet
@@ -97,7 +97,7 @@ const VercelImageFixer: React.FC = () => {
           if (nextVariation) {
             imgElement.setAttribute('src', nextVariation);
           } else {
-            imgElement.setAttribute('src', '/images/default-placeholder.jpg');
+            imgElement.setAttribute('src', '/images/defaults/default-placeholder.jpg');
             imgElement.setAttribute('data-vercel-fixed', 'fallback');
           }
         };

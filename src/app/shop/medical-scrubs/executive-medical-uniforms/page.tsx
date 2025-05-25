@@ -53,8 +53,8 @@ export default function ExecutiveMedicalUniformsPage() {
     images: [
       { src: '/images/product-placeholder.jpg', alt: 'Healthcare executive wearing premium navy medical uniform' },
       { src: '/images/product-placeholder.jpg', alt: 'Female healthcare leader in professional executive medical attire' },
-      { src: '/images/default-placeholder.jpg', alt: 'Medical administrators in executive uniforms during leadership meeting' },
-      { src: '/images/default-placeholder.jpg', alt: 'Saudi medical director in tailored executive uniform with staff' }
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'Medical administrators in executive uniforms during leadership meeting' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'Saudi medical director in tailored executive uniform with staff' }
     ],
     category: 'Medical Scrubs',
     categorySlug: 'medical-scrubs',

@@ -51,10 +51,10 @@ export default function NursingScrubsClientPage() {
       { name: 'إمكانيات التخصيص', value: 'إضافة شعارات المستشفيات، تطريز الأسماء، ترميز الأقسام بالألوان' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'كوادر التمريض ترتدي أزياء فاخرة في محطة المستشفى' },
-      { src: '/images/default-placeholder.jpg', alt: 'ممرضة وطبيب في أزياء طبية فاخرة أثناء الاستشارة' },
-      { src: '/images/default-placeholder.jpg', alt: 'ممرضة ترتدي أزياء مريحة تتحقق من سجل المريض' },
-      { src: '/images/default-placeholder.jpg', alt: 'ممرضة محجبة ترتدي أزياء تمريض متوافقة مع الثقافة المحلية' }
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'كوادر التمريض ترتدي أزياء فاخرة في محطة المستشفى' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'ممرضة وطبيب في أزياء طبية فاخرة أثناء الاستشارة' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'ممرضة ترتدي أزياء مريحة تتحقق من سجل المريض' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'ممرضة محجبة ترتدي أزياء تمريض متوافقة مع الثقافة المحلية' }
     ],
     category: 'الأزياء الطبية',
     categorySlug: 'medical-scrubs',
@@ -70,16 +70,16 @@ export default function NursingScrubsClientPage() {
       { name: 'أزياء تمريض للحوامل', price: '305 ريال سعودي' }
     ],
     colors: [
-      { name: 'أزرق سماوي', value: '#92a1cf', image: '/images/default-placeholder.jpg' },
-      { name: 'كحلي', value: '#000080', image: '/images/default-placeholder.jpg' },
-      { name: 'أزرق كاريبي', value: '#0086cb', image: '/images/default-placeholder.jpg' },
-      { name: 'عنابي', value: '#722f37', image: '/images/default-placeholder.jpg' },
-      { name: 'رمادي فضي', value: '#8e8e8e', image: '/images/default-placeholder.jpg' },
-      { name: 'أخضر غامق', value: '#355e3b', image: '/images/default-placeholder.jpg' },
-      { name: 'أزرق ملكي', value: '#4169e1', image: '/images/default-placeholder.jpg' },
-      { name: 'أسود', value: '#000000', image: '/images/default-placeholder.jpg' },
-      { name: 'باذنجاني', value: '#614051', image: '/images/default-placeholder.jpg' },
-      { name: 'وردي', value: '#e8909c', image: '/images/default-placeholder.jpg' }
+      { name: 'أزرق سماوي', value: '#92a1cf', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'كحلي', value: '#000080', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'أزرق كاريبي', value: '#0086cb', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'عنابي', value: '#722f37', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'رمادي فضي', value: '#8e8e8e', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'أخضر غامق', value: '#355e3b', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'أزرق ملكي', value: '#4169e1', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'أسود', value: '#000000', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'باذنجاني', value: '#614051', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'وردي', value: '#e8909c', image: '/images/healthcare/medical_hijab_uniform.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {

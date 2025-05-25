@@ -26,11 +26,11 @@ export default function LuxuryHotelUniformArabicPage() {
     basePrice: 349,
     rating: 4.9,
     reviewCount: 78,
-    mainImage: "/images/default-placeholder.jpg Staff_Uniform.png",
+    mainImage: "/images/healthcare/medical_hijab_uniform.jpg Staff_Uniform.png",
     additionalImages: [
-      "/images/default-placeholder.jpg",
+      "/images/hospitality/hospitality_uniform_formal.jpg",
       "/images/product-placeholder.jpg",
-      "/images/default-placeholder.jpg"
+      "/images/hospitality/hospitality_uniform_formal.jpg"
     ],
     description: 'طقم زي فندقي فاخر مصمم للمنشآت ذات الخمس نجوم في المملكة العربية السعودية. يجمع بين الأناقة والراحة العملية لموظفي الاستقبال والكونسيرج وطاقم الإدارة.',
     features: [
@@ -52,10 +52,10 @@ export default function LuxuryHotelUniformArabicPage() {
       { name: 'التخصيص', value: 'تطريز شعار الفندق، بطاقات الأسماء، خيارات الزخارف الذهبية' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'زي الفندق الفاخر - موظفي الاستقبال' },
-      { src: '/images/default-placeholder.jpg', alt: 'زي الفندق الفاخر - خدمة الكونسيرج' },
-      { src: '/images/default-placeholder.jpg', alt: 'زي الفندق الفاخر - طراز المدير' },
-      { src: '/images/default-placeholder.jpg', alt: 'زي الفندق الفاخر - المجموعة الكاملة' }
+      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'زي الفندق الفاخر - موظفي الاستقبال' },
+      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'زي الفندق الفاخر - خدمة الكونسيرج' },
+      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'زي الفندق الفاخر - طراز المدير' },
+      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'زي الفندق الفاخر - المجموعة الكاملة' }
     ],
     category: 'أزياء الضيافة',
     categorySlug: 'hospitality-attire',
@@ -94,21 +94,21 @@ export default function LuxuryHotelUniformArabicPage() {
       {
         id: 'hotel-housekeeping-uniform',
         name: 'زي عمال النظافة الفندقية',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'من ريال 249',
         href: '/ar/shop/hospitality-attire/hotel-housekeeping-uniform'
       },
       {
         id: 'restaurant-staff-uniform',
         name: 'زي موظفي المطاعم الفاخرة',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'من ريال 299',
         href: '/ar/shop/hospitality-attire/restaurant-staff-uniform'
       },
       {
         id: 'hotel-bellboy-uniform',
         name: 'زي حامل الحقائب الفاخر',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'من ريال 279',
         href: '/ar/shop/hospitality-attire/hotel-bellboy-uniform'
       }
@@ -194,7 +194,7 @@ export default function LuxuryHotelUniformArabicPage() {
         <meta name="description" content="زي فندقي أنيق وعالي الجودة مصمم خصيصًا للفنادق الفاخرة في المملكة العربية السعودية، مع خيارات تخصيص حسب احتياجات منشأتك" />
         <meta property="og:title" content="زي فندقي فاخر - يونيوم للأزياء المهنية" />
         <meta property="og:description" content="زي فندقي أنيق وعالي الجودة مصمم خصيصًا للفنادق الفاخرة في المملكة العربية السعودية، مع خيارات تخصيص حسب احتياجات منشأتك" />
-        <meta property="og:image" content="/images/default-placeholder.jpg Staff_Uniform.png" />
+        <meta property="og:image" content="/images/healthcare/medical_hijab_uniform.jpg Staff_Uniform.png" />
       </Head>
       
       {/* مسار التنقل */}

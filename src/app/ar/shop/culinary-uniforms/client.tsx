@@ -31,7 +31,7 @@ export default function CulinaryUniformsClientPage() {
       name: 'سترة الشيف الفاخرة',
       description: 'سترة شيف احترافية مصنوعة من قماش فاخر، مصممة للراحة والأناقة في بيئة المطبخ.',
       price: 'من 189 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       href: '/ar/shop/culinary-uniforms/premium-chef-coat',
       features: ['مقاومة للبقع', 'تصميم مزدوج الصدر', 'قماش قابل للتنفس', 'سهلة العناية'],
       colors: ['أبيض', 'أسود', 'كحلي'],
@@ -42,7 +42,7 @@ export default function CulinaryUniformsClientPage() {
       name: 'طقم الشيف التنفيذي',
       description: 'طقم زي شيف كامل يشمل سترة فاخرة وبنطلون وقبعة لطاقم المطبخ الاحترافي.',
       price: 'من 349 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       href: '/ar/shop/culinary-uniforms/executive-chef-set',
       features: ['طقم كامل', 'خامات ممتازة', 'مظهر احترافي', 'معيار مطاعم'],
       colors: ['أبيض', 'أسود'],
@@ -53,7 +53,7 @@ export default function CulinaryUniformsClientPage() {
       name: 'زي طاقم المطبخ',
       description: 'زي عملي ومريح مصمم لجميع طاقم المطبخ، بما في ذلك الطهاة والمساعدين.',
       price: 'من 279 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       href: '/ar/shop/culinary-uniforms/kitchen-staff-uniform',
       features: ['قماش متين', 'مقاوم للحرارة', 'مقاس مريح', 'سهل الصيانة'],
       colors: ['أبيض', 'أسود', 'رمادي']
@@ -63,7 +63,7 @@ export default function CulinaryUniformsClientPage() {
       name: 'مريلة الشيف الاحترافية',
       description: 'مريلة احترافية متينة مع حزام رقبة قابل للتعديل وأربطة خصر لمقاس مثالي في المطابخ المزدحمة.',
       price: 'من 99 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       href: '/ar/shop/culinary-uniforms/professional-chef-apron',
       features: ['قماش متين', 'جيوب متعددة', 'مقاس قابل للتعديل', 'مقاوم للبقع'],
       colors: ['أسود', 'أبيض', 'نبيذي', 'كحلي']
@@ -73,7 +73,7 @@ export default function CulinaryUniformsClientPage() {
       name: 'زي مدير المطبخ',
       description: 'زي مميز لمديري المطبخ ورؤساء الطهاة، مصمم لمظهر احترافي.',
       price: 'من 449 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       href: '/ar/shop/culinary-uniforms/kitchen-manager-uniform',
       features: ['قماش فاخر', 'تصميم مميز', 'مقاس مريح', 'مظهر احترافي'],
       colors: ['أسود', 'أبيض', 'رمادي']
@@ -83,7 +83,7 @@ export default function CulinaryUniformsClientPage() {
       name: 'زي طالب الطهي',
       description: 'طقم زي بأسعار معقولة وجودة عالية لطلاب الطهي والمؤسسات التدريبية.',
       price: 'من 219 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       href: '/ar/shop/culinary-uniforms/culinary-student-uniform',
       features: ['فعال من حيث التكلفة', 'متين', 'سهل العناية', 'طقم كامل'],
       colors: ['أبيض']
@@ -160,7 +160,7 @@ export default function CulinaryUniformsClientPage() {
       <section className="relative pt-16 pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/default-placeholder.jpg"
+            src="/images/products/industrial-coverall.jpg"
             alt="أزياء الطهي"
             fill
             className="object-cover object-center"
@@ -450,7 +450,7 @@ export default function CulinaryUniformsClientPage() {
             </div>
             <div className="relative h-80 md:h-full order-1 md:order-2">
               <Image
-                src="/images/default-placeholder.jpg"
+                src="/images/products/industrial-coverall.jpg"
                 alt="خدمات تخصيص أزياء الطهي"
                 fill
                 className="object-cover rounded-lg"

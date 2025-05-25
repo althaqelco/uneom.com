@@ -54,7 +54,7 @@ export default function HousekeepingUniformPageArabic() {
       { src: '/images/product-placeholder.jpg', alt: 'طاقم النظافة المحترف بزي متين يحافظ على غرفة فندق فاخرة' },
       { src: '/images/product-placeholder.jpg', alt: 'عاملة نظافة بزي محتشم مع ميزات تصميم مريحة في فندق فاخر سعودي' },
       { src: '/images/avatar-placeholder.jpg', alt: 'فريق التدبير المنزلي بالفندق في أزياء مهنية منسقة للحفاظ على معايير الممتلكات' },
-      { src: '/images/default-placeholder.jpg', alt: 'فريق النظافة السعودي في أزياء مهنية مناسبة ثقافيًا في منشأة من فئة خمس نجوم' }
+      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'فريق النظافة السعودي في أزياء مهنية مناسبة ثقافيًا في منشأة من فئة خمس نجوم' }
     ],
     category: 'أزياء الضيافة',
     categorySlug: 'hospitality-attire',

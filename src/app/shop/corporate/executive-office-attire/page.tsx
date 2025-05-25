@@ -51,9 +51,9 @@ export default function ExecutiveOfficeAttirePage() {
     ],
     images: [
       { src: '/images/avatar-placeholder.jpg', alt: 'Business executives in premium office attire during meeting' },
-      { src: '/images/default-placeholder.jpg', alt: 'Corporate professional in tailored executive suit' },
-      { src: '/images/default-placeholder.jpg', alt: 'Saudi business executive in traditional-modern fusion attire' },
-      { src: '/images/default-placeholder.jpg', alt: 'Saudi businesswoman in professional corporate attire with hijab' }
+      { src: '/images/products/corporate-suit-executive.jpg', alt: 'Corporate professional in tailored executive suit' },
+      { src: '/images/products/corporate-suit-executive.jpg', alt: 'Saudi business executive in traditional-modern fusion attire' },
+      { src: '/images/products/corporate-suit-executive.jpg', alt: 'Saudi businesswoman in professional corporate attire with hijab' }
     ],
     category: 'Corporate',
     categorySlug: 'corporate',
@@ -69,12 +69,12 @@ export default function ExecutiveOfficeAttirePage() {
       { name: 'Traditional-Modern Fusion Set', price: 'SAR 845' }
     ],
     colors: [
-      { name: 'Navy Blue', value: '#1a2942', image: '/images/default-placeholder.jpg' },
-      { name: 'Charcoal Grey', value: '#36454f', image: '/images/default-placeholder.jpg' },
-      { name: 'Black', value: '#000000', image: '/images/default-placeholder.jpg' },
-      { name: 'Dark Brown', value: '#3e2723', image: '/images/default-placeholder.jpg' },
-      { name: 'Light Grey', value: '#b0b0b0', image: '/images/default-placeholder.jpg' },
-      { name: 'Sand', value: '#c2b280', image: '/images/default-placeholder.jpg' }
+      { name: 'Navy Blue', value: '#1a2942', image: '/images/products/corporate-suit-executive.jpg' },
+      { name: 'Charcoal Grey', value: '#36454f', image: '/images/products/corporate-suit-executive.jpg' },
+      { name: 'Black', value: '#000000', image: '/images/products/corporate-suit-executive.jpg' },
+      { name: 'Dark Brown', value: '#3e2723', image: '/images/products/corporate-suit-executive.jpg' },
+      { name: 'Light Grey', value: '#b0b0b0', image: '/images/products/corporate-suit-executive.jpg' },
+      { name: 'Sand', value: '#c2b280', image: '/images/products/corporate-suit-executive.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'],
     sizeEquivalents: {
@@ -374,7 +374,7 @@ export default function ExecutiveOfficeAttirePage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/default-placeholder.jpg" 
+                src="/images/products/corporate-suit-executive.jpg" 
                 alt="Corporate executives in custom-tailored business attire" 
                 fill
                 className="object-cover"

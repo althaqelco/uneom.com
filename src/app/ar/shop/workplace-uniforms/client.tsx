@@ -26,7 +26,7 @@ export default function WorkplaceUniformsClientPage() {
       id: 'executive-suits',
       name: 'بدلات تنفيذية مصممة',
       price: 'من ١,٢٩٩ ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       rating: 4.9,
       reviews: 87,
       description: 'بدلات مصممة فاخرة للمدراء التنفيذيين الذين يتطلبون الأناقة والراحة والمظهر المهني المتميز.',
@@ -36,7 +36,7 @@ export default function WorkplaceUniformsClientPage() {
       id: 'corporate-shirts',
       name: 'قمصان مؤسسية فاخرة',
       price: 'من ٢٤٩ ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       rating: 4.7,
       reviews: 124,
       description: 'قمصان مؤسسية عالية الجودة بمجموعة متنوعة من الألوان، تتميز بقماش يمتص الرطوبة وخصائص سهلة العناية للارتداء المهني اليومي.',
@@ -46,7 +46,7 @@ export default function WorkplaceUniformsClientPage() {
       id: 'office-blazers',
       name: 'سترات مكتبية احترافية',
       price: 'من ٨٩٩ ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       rating: 4.6,
       reviews: 58,
       description: 'سترات أنيقة ومريحة للمهنيين في مجال الأعمال، متوفرة بأنماط متنوعة مناسبة للبيئات المؤسسية السعودية.',
@@ -56,7 +56,7 @@ export default function WorkplaceUniformsClientPage() {
       id: 'executive-abayas',
       name: 'عباءات تنفيذية محتشمة',
       price: 'من ٧٩٩ ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       rating: 4.8,
       reviews: 92,
       description: 'عباءات مهنية مصممة خصيصًا للبيئات المؤسسية، تجمع بين الحشمة التقليدية وجماليات الأعمال المعاصرة.',
@@ -76,7 +76,7 @@ export default function WorkplaceUniformsClientPage() {
       id: 'corporate-skirts',
       name: 'تنانير مهنية محتشمة',
       price: 'من ٣٤٩ ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       rating: 4.6,
       reviews: 64,
       description: 'تنانير بطول مهني مصممة للبيئات المؤسسية، تحافظ على الحشمة مع توفير مظهر أنيق للأعمال.',
@@ -287,7 +287,7 @@ export default function WorkplaceUniformsClientPage() {
             <div className="bg-white rounded-lg shadow overflow-hidden">
               <div className="relative h-48">
                 <Image 
-                  src="/images/default-placeholder.jpg"
+                  src="/images/products/corporate-suit-executive.jpg"
                   alt="بدلات تنفيذية"
                   fill
                   className="object-cover"
@@ -329,7 +329,7 @@ export default function WorkplaceUniformsClientPage() {
             <div className="bg-white rounded-lg shadow overflow-hidden">
               <div className="relative h-48">
                 <Image 
-                  src="/images/default-placeholder.jpg"
+                  src="/images/products/corporate-suit-executive.jpg"
                   alt="برامج ملابس الشركات"
                   fill
                   className="object-cover"

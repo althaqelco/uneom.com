@@ -44,10 +44,10 @@ export default function ExecutiveSuitPage() {
       { name: 'Customization', value: 'Corporate logo embroidery, name embroidery, custom lining' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Premium Executive Suit - Front View' },
+      { src: '/images/products/corporate-suit-executive.jpg', alt: 'Premium Executive Suit - Front View' },
       { src: '/images/avatar-placeholder.jpg', alt: 'Executive Team Wearing Corporate Suits' },
-      { src: '/images/default-placeholder.jpg', alt: 'Executive Suit Side View' },
-      { src: '/images/default-placeholder.jpg', alt: 'Corporate Meeting With Executive Suits' }
+      { src: '/images/products/corporate-suit-executive.jpg', alt: 'Executive Suit Side View' },
+      { src: '/images/products/corporate-suit-executive.jpg', alt: 'Corporate Meeting With Executive Suits' }
     ],
     category: 'Corporate Workwear',
     categorySlug: 'corporate-workwear',
@@ -87,7 +87,7 @@ export default function ExecutiveSuitPage() {
       {
         id: 'executive-shirt',
         name: 'Premium Corporate Shirt',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/products/corporate-suit-executive.jpg',
         price: 'From SAR 249',
         href: '/shop/corporate-workwear/executive-shirt'
       },
@@ -101,7 +101,7 @@ export default function ExecutiveSuitPage() {
       {
         id: 'formal-trousers',
         name: 'Premium Formal Trousers',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/products/corporate-suit-executive.jpg',
         price: 'From SAR 349',
         href: '/shop/corporate-workwear/formal-trousers'
       }

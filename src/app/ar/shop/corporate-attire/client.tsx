@@ -31,7 +31,7 @@ export default function CorporateAttireClientPage() {
       name: 'بدلات رسمية',
       description: 'بدلات رسمية فاخرة للشركات مصنوعة من أجود أنواع الأقمشة، مناسبة للمدراء والتنفيذيين.',
       price: 'من 899 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       href: '/ar/shop/corporate-attire/business-suits',
       features: ['أقمشة ممتازة', 'تفصيل دقيق', 'راحة فائقة', 'تصاميم عصرية'],
       colors: ['كحلي', 'أسود', 'رمادي', 'أزرق'],
@@ -42,7 +42,7 @@ export default function CorporateAttireClientPage() {
       name: 'أزياء مكتبية',
       description: 'أزياء مكتبية أنيقة ومريحة مناسبة لبيئة العمل الاحترافية في الشركات والمؤسسات السعودية.',
       price: 'من 499 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       href: '/ar/shop/corporate-attire/office-uniforms',
       features: ['راحة طوال اليوم', 'سهولة العناية', 'مظهر احترافي', 'خيارات متنوعة'],
       colors: ['أبيض', 'أزرق فاتح', 'رمادي', 'بيج'],
@@ -53,7 +53,7 @@ export default function CorporateAttireClientPage() {
       name: 'قمصان الشركات',
       description: 'قمصان رسمية عالية الجودة مناسبة لبيئة الشركات، متوفرة بخيارات مختلفة من الألوان والتصاميم.',
       price: 'من 199 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       href: '/ar/shop/corporate-attire/corporate-shirts',
       features: ['قطن مصري', 'سهولة الكي', 'تناسب مثالي', 'ألوان ثابتة'],
       colors: ['أبيض', 'أزرق سماوي', 'وردي فاتح', 'أزرق داكن']
@@ -63,7 +63,7 @@ export default function CorporateAttireClientPage() {
       name: 'أزياء تنفيذية',
       description: 'ملابس فاخرة مصممة خصيصًا للمدراء التنفيذيين، تعكس المكانة المهنية وتوفر الراحة والأناقة.',
       price: 'من 1299 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       href: '/ar/shop/corporate-attire/executive-wear',
       features: ['أقمشة فاخرة', 'تفصيل متقن', 'تصاميم حصرية', 'خيارات تخصيص'],
       colors: ['أسود', 'كحلي', 'رمادي داكن', 'بني']
@@ -73,7 +73,7 @@ export default function CorporateAttireClientPage() {
       name: 'أزياء نسائية للشركات',
       description: 'تشكيلة متكاملة من الأزياء النسائية الرسمية المناسبة لبيئة الشركات، بتصاميم أنيقة وعصرية.',
       price: 'من 599 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       href: '/ar/shop/corporate-attire/women-corporate-wear',
       features: ['أناقة عصرية', 'راحة فائقة', 'مظهر احترافي', 'خيارات متعددة'],
       colors: ['أسود', 'كحلي', 'رمادي', 'بيج']
@@ -83,7 +83,7 @@ export default function CorporateAttireClientPage() {
       name: 'إكسسوارات الشركات',
       description: 'إكسسوارات رسمية تكمل المظهر الاحترافي، تشمل ربطات العنق، الإيشاربات، أزرار الأكمام وغيرها.',
       price: 'من 99 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       href: '/ar/shop/corporate-attire/corporate-accessories',
       features: ['تصاميم أنيقة', 'جودة عالية', 'خيارات متنوعة', 'تكمل الزي الرسمي'],
       colors: ['متعددة']
@@ -117,7 +117,7 @@ export default function CorporateAttireClientPage() {
             <div className="mt-12 relative rounded-xl overflow-hidden shadow-xl">
               <div className="aspect-w-16 aspect-h-7 w-full">
                 <Image 
-                  src="/images/default-placeholder.jpg"
+                  src="/images/products/corporate-suit-executive.jpg"
                   alt="مجموعة أزياء الشركات"
                   fill
                   className="object-cover"
@@ -244,7 +244,7 @@ export default function CorporateAttireClientPage() {
               <div className="relative rounded-xl overflow-hidden">
                 <div className="aspect-w-4 aspect-h-3">
                   <Image 
-                    src="/images/default-placeholder.jpg"
+                    src="/images/products/corporate-suit-executive.jpg"
                     alt="خدمة تخصيص أزياء الشركات"
                     fill
                     className="object-cover"

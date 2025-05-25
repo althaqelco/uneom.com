@@ -83,7 +83,7 @@ export default function HealthcareAccessoriesPage() {
         {
           title: 'Medical Footwear',
           description: 'Comfortable and slip-resistant footwear for healthcare professionals.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           url: '/shop/healthcare-accessories/medical-footwear'
         }
       ],
@@ -102,7 +102,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'digital-name-badge',
           name: 'Digital Smart Name Badge',
           description: 'Advanced digital badge with programmable displays and institutional branding options.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           price: 'SAR 120',
           url: '/shop/healthcare-accessories/digital-name-badge'
         },
@@ -110,7 +110,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'advanced-instrument-pouch',
           name: 'Advanced Instrument Pouch',
           description: 'Multi-compartment pouch with antimicrobial treatment for secure tool organization.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           price: 'SAR 95',
           url: '/shop/healthcare-accessories/advanced-instrument-pouch'
         },
@@ -118,7 +118,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'comfort-pro-medical-clogs',
           name: 'Comfort Pro Medical Clogs',
           description: 'Ergonomic, slip-resistant clogs designed for extended wear in healthcare settings.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           price: 'SAR 220',
           url: '/shop/healthcare-accessories/comfort-pro-medical-clogs'
         },
@@ -126,7 +126,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'professional-id-holder',
           name: 'Professional ID Holder Kit',
           description: 'Complete ID badge solution with retractable holder and protective covering.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           price: 'SAR 75',
           url: '/shop/healthcare-accessories/professional-id-holder'
         },
@@ -134,7 +134,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'antimicrobial-badge-reel',
           name: 'Antimicrobial Badge Reel',
           description: 'Badge reel with antimicrobial surface treatment and extended cord for convenience.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           price: 'SAR 45',
           url: '/shop/healthcare-accessories/antimicrobial-badge-reel'
         }
@@ -172,7 +172,7 @@ export default function HealthcareAccessoriesPage() {
         {
           title: 'الأحذية الطبية',
           description: 'أحذية مريحة ومقاومة للانزلاق للمتخصصين في الرعاية الصحية.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           url: '/ar/shop/healthcare-accessories/medical-footwear'
         }
       ],
@@ -191,7 +191,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'digital-name-badge',
           name: 'شارة الاسم الذكية الرقمية',
           description: 'شارة رقمية متقدمة مع شاشات قابلة للبرمجة وخيارات العلامات التجارية المؤسسية.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           price: 'ريال 120',
           url: '/ar/shop/healthcare-accessories/digital-name-badge'
         },
@@ -199,7 +199,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'advanced-instrument-pouch',
           name: 'حقيبة أدوات متقدمة',
           description: 'حقيبة متعددة الأقسام مع معالجة مضادة للميكروبات لتنظيم الأدوات بشكل آمن.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           price: 'ريال 95',
           url: '/ar/shop/healthcare-accessories/advanced-instrument-pouch'
         },
@@ -207,7 +207,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'comfort-pro-medical-clogs',
           name: 'أحذية طبية مريحة برو',
           description: 'أحذية مريحة ومقاومة للانزلاق مصممة للارتداء الطويل في بيئات الرعاية الصحية.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           price: 'ريال 220',
           url: '/ar/shop/healthcare-accessories/comfort-pro-medical-clogs'
         },
@@ -215,7 +215,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'professional-id-holder',
           name: 'طقم حامل بطاقة هوية احترافي',
           description: 'حل كامل لشارة الهوية مع حامل قابل للسحب وغطاء واقي.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           price: 'ريال 75',
           url: '/ar/shop/healthcare-accessories/professional-id-holder'
         },
@@ -223,7 +223,7 @@ export default function HealthcareAccessoriesPage() {
           id: 'antimicrobial-badge-reel',
           name: 'بكرة شارة مضادة للميكروبات',
           description: 'بكرة شارة مع معالجة سطحية مضادة للميكروبات وحبل ممتد للراحة.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/healthcare/medical_hijab_uniform.jpg',
           price: 'ريال 45',
           url: '/ar/shop/healthcare-accessories/antimicrobial-badge-reel'
         }
@@ -333,7 +333,7 @@ export default function HealthcareAccessoriesPage() {
           <div className="md:w-1/3 mt-6 md:mt-0 flex justify-center">
             <div className="w-48 h-48 relative">
               <Image 
-                src="/images/default-placeholder.jpg" 
+                src="/images/healthcare/medical_hijab_uniform.jpg" 
                 alt="Healthcare Professional"
                 fill
                 className="object-cover rounded-lg"

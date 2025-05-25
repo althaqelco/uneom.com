@@ -43,7 +43,7 @@ export default function ExecutiveSuitsPage() {
     ],
     sizes: ['46', '48', '50', '52', '54', '56'],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Executive Suit' }
+      { src: '/images/products/corporate-suit-executive.jpg', alt: 'Executive Suit' }
     ]
   };
 

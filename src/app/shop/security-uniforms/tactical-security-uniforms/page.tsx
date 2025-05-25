@@ -50,8 +50,8 @@ export default function TacticalSecurityUniformsPage() {
       { name: 'Customization', value: 'Company logos, name patches, rank insignia' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Security personnel in tactical uniform' },
-      { src: '/images/default-placeholder.jpg', alt: 'Security officer on patrol in tactical uniform' },
+      { src: '/images/products/industrial-coverall.jpg', alt: 'Security personnel in tactical uniform' },
+      { src: '/images/products/industrial-coverall.jpg', alt: 'Security officer on patrol in tactical uniform' },
       { src: '/images/product-placeholder.jpg', alt: 'Close-up of tactical security uniform details' },
       { src: '/images/avatar-placeholder.jpg', alt: 'Security team in coordinated tactical uniforms' }
     ],
@@ -68,10 +68,10 @@ export default function TacticalSecurityUniformsPage() {
       { name: 'Command Staff Uniform', price: 'SAR 1,499' }
     ],
     colors: [
-      { name: 'Tactical Black', value: '#252525', image: '/images/default-placeholder.jpg' },
-      { name: 'Navy', value: '#1a2942', image: '/images/default-placeholder.jpg' },
-      { name: 'Desert Tan', value: '#d2b48c', image: '/images/default-placeholder.jpg' },
-      { name: 'Olive Green', value: '#556b2f', image: '/images/default-placeholder.jpg' }
+      { name: 'Tactical Black', value: '#252525', image: '/images/products/industrial-coverall.jpg' },
+      { name: 'Navy', value: '#1a2942', image: '/images/products/industrial-coverall.jpg' },
+      { name: 'Desert Tan', value: '#d2b48c', image: '/images/products/industrial-coverall.jpg' },
+      { name: 'Olive Green', value: '#556b2f', image: '/images/products/industrial-coverall.jpg' }
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL'],
     sizeEquivalents: {

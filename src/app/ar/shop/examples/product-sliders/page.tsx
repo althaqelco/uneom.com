@@ -19,28 +19,28 @@ const useCases = [
     title: "UNEOM - Professional Uniforms",
     icon: <FaSlidersH className="text-amber-500" size={24} />,
     description: 'تمكين العملاء من تخصيص عمليات البحث عن المنتجات بسهولة عبر مرشحات متعددة مثل السعر، المقاس، أو الوزن.',
-    image: '/images/default-placeholder.jpg',
+    image: '/images/education/uniform_school_product-2.jpg',
   },
   {
     id: 'size-selection',
     title: 'اختيار المقاسات',
     icon: <FaRuler className="text-blue-500" size={24} />,
     description: 'تحسين تجربة اختيار المقاسات للملابس المهنية والزي الموحد بطريقة بصرية واضحة.',
-    image: '/images/default-placeholder.jpg',
+    image: '/images/education/uniform_school_product-2.jpg',
   },
   {
     id: 'quantity-selection',
     title: 'تحديد الكميات',
     icon: <FaWeightHanging className="text-emerald-500" size={24} />,
     description: 'تسهيل اختيار الكميات في طلبات الجملة والمؤسسات بشكل مرئي سلس ودقيق.',
-    image: '/images/default-placeholder.jpg',
+    image: '/images/education/uniform_school_product-2.jpg',
   },
   {
     id: 'customization',
     title: 'تخصيص المنتجات',
     icon: <FaMoneyBillWave className="text-violet-500" size={24} />,
     description: 'السماح للعملاء بتخصيص خيارات المنتجات المتقدمة مثل نسبة المواد أو درجات الألوان.',
-    image: '/images/default-placeholder.jpg',
+    image: '/images/education/uniform_school_product-2.jpg',
   },
 ];
 

@@ -14,7 +14,7 @@ interface ImageFallbackProps extends Omit<ImageProps, 'onError'> {
 const ImageFallback = ({
   src,
   alt,
-  fallbackSrc = '/images/default-placeholder.jpg',
+  fallbackSrc = '/images/defaults/default-placeholder.jpg',
   ...props
 }: ImageFallbackProps) => {
   // Use null initial state to avoid hydration mismatch

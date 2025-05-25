@@ -45,9 +45,9 @@ export default function PremiumScrubsSetArabicPage() {
       { name: 'خيارات التخصيص', value: 'التطريز، المقاسات المخصصة، مطابقة الألوان' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'طقم البدلة الطبية الممتازة - منظر أمامي' },
-      { src: '/images/default-placeholder.jpg', alt: 'طقم البدلة الطبية الممتازة يرتديها متخصصون طبيون' },
-      { src: '/images/default-placeholder.jpg', alt: 'طقم البدلة الطبية الممتازة أثناء الاستخدام' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'طقم البدلة الطبية الممتازة - منظر أمامي' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'طقم البدلة الطبية الممتازة يرتديها متخصصون طبيون' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'طقم البدلة الطبية الممتازة أثناء الاستخدام' },
       { src: '/images/avatar-placeholder.jpg', alt: 'فريق طبي يرتدي بدلات طبية' }
     ],
     category: 'ملابس الرعاية الصحية',
@@ -87,21 +87,21 @@ export default function PremiumScrubsSetArabicPage() {
       {
         id: 'antimicrobial-scrubs',
         name: 'بدلة طبية مضادة للميكروبات',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/healthcare/medical_hijab_uniform.jpg',
         price: 'من ريال 279',
         href: '/ar/shop/medical-scrubs/antimicrobial-scrubs'
       },
       {
         id: 'nursing-scrubs',
         name: 'طقم بدلة التمريض',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/healthcare/medical_hijab_uniform.jpg',
         price: 'من ريال 229',
         href: '/ar/shop/medical-scrubs/nursing-scrubs'
       },
       {
         id: 'surgical-scrubs',
         name: 'بدلة الجراحة',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/healthcare/medical_hijab_uniform.jpg',
         price: 'من ريال 269',
         href: '/ar/shop/medical-scrubs/surgical-scrubs'
       }

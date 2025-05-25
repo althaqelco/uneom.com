@@ -52,10 +52,10 @@ export default function MedicalLabCoatsClientPage() {
       { name: 'خيارات التخصيص', value: 'شعارات المستشفيات، تطريز الأسماء/المؤهلات، ترميز الأقسام بالألوان' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'طبيب يرتدي معطف مختبر أبيض فاخر مع سماعة طبية' },
-      { src: '/images/default-placeholder.jpg', alt: 'طبيبة ترتدي معطف مختبر احترافي في بيئة مستشفى' },
-      { src: '/images/default-placeholder.jpg', alt: 'متخصصون طبيون يرتدون معاطف مختبر أثناء استشارة' },
-      { src: '/images/default-placeholder.jpg', alt: 'متخصص رعاية صحية سعودي في معطف مختبر مصمم خصيصاً' }
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'طبيب يرتدي معطف مختبر أبيض فاخر مع سماعة طبية' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'طبيبة ترتدي معطف مختبر احترافي في بيئة مستشفى' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'متخصصون طبيون يرتدون معاطف مختبر أثناء استشارة' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'متخصص رعاية صحية سعودي في معطف مختبر مصمم خصيصاً' }
     ],
     category: 'الأزياء الطبية',
     categorySlug: 'medical-scrubs',
@@ -71,11 +71,11 @@ export default function MedicalLabCoatsClientPage() {
       { name: 'تصميم معزز للاحتشام', price: '315 ريال سعودي' }
     ],
     colors: [
-      { name: 'أبيض', value: '#FFFFFF', image: '/images/default-placeholder.jpg' },
-      { name: 'أزرق فاتح', value: '#ADD8E6', image: '/images/default-placeholder.jpg' },
-      { name: 'كحلي', value: '#000080', image: '/images/default-placeholder.jpg' },
-      { name: 'أسود', value: '#000000', image: '/images/default-placeholder.jpg' },
-      { name: 'رمادي', value: '#808080', image: '/images/default-placeholder.jpg' }
+      { name: 'أبيض', value: '#FFFFFF', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'أزرق فاتح', value: '#ADD8E6', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'كحلي', value: '#000080', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'أسود', value: '#000000', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'رمادي', value: '#808080', image: '/images/healthcare/medical_hijab_uniform.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL', '5XL'],
     sizeEquivalents: {

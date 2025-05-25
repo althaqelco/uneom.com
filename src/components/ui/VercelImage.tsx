@@ -25,7 +25,7 @@ const VercelImage: React.FC<VercelImageProps> = ({
   width,
   height,
   className = '',
-  fallbackSrc = '/images/default-placeholder.jpg',
+  fallbackSrc = '/images/defaults/default-placeholder.jpg',
   disableVercelOptimization = false,
   enableEmergencyMode = false,
   ...props

@@ -70,25 +70,25 @@ export default function ManufacturingAttireClientPage() {
     {
       title: 'ملابس المصانع',
       description: 'ملابس متخصصة للعاملين في المصانع',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       url: '/ar/shop/manufacturing-attire/factory-workwear'
     },
     {
       title: 'ملابس الورش',
       description: 'ملابس متينة مناسبة للعمل في ورش العمل',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       url: '/ar/shop/manufacturing-attire/workshop-attire'
     },
     {
       title: 'معدات السلامة',
       description: 'معدات سلامة للعاملين في بيئات التصنيع',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       url: '/ar/shop/manufacturing-attire/safety-equipment'
     },
     {
       title: 'ملابس مقاومة للحرارة',
       description: 'ملابس متخصصة لبيئات العمل الحارة',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial-coverall.jpg',
       url: '/ar/shop/manufacturing-attire/heat-resistant'
     }
   ];
@@ -226,7 +226,7 @@ export default function ManufacturingAttireClientPage() {
             </div>
             <div className="relative h-64 md:h-80 order-1 md:order-2">
               <Image 
-                src="/images/default-placeholder.jpg"
+                src="/images/products/industrial-coverall.jpg"
                 alt="ملابس التصنيع"
                 fill
                 className="object-cover rounded-lg"
@@ -341,7 +341,7 @@ export default function ManufacturingAttireClientPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 md:h-96 rounded-lg overflow-hidden">
               <Image 
-                src="/images/default-placeholder.jpg"
+                src="/images/products/industrial-coverall.jpg"
                 alt="تفاصيل ملابس التصنيع العالية الجودة"
                 fill
                 className="object-cover"

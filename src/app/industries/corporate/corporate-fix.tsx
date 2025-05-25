@@ -22,13 +22,13 @@ export default function CorporateImageFix() {
         
         // Create placeholder for the corporate image
         const placeholderImg = new Image();
-        placeholderImg.src = '/images/default-placeholder.jpg';
+        placeholderImg.src = '/images/products/corporate-suit-executive.jpg';
         placeholderImg.onload = () => {
           // When placeholder loads, assign it to all corporate images
           const images = document.querySelectorAll('img[src*="corporate.jpg"]');
           images.forEach((img: Element) => {
             if (img instanceof HTMLImageElement) {
-              img.src = '/images/default-placeholder.jpg';
+              img.src = '/images/products/corporate-suit-executive.jpg';
             }
           });
         };

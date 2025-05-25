@@ -115,7 +115,7 @@ export default function EventsPageArabic() {
             `).join('')}
           </div>
         `,
-        image: '/images/default-placeholder.jpg',
+        image: '/images/healthcare/medical_hijab_uniform.jpg',
       },
       {
         title: 'الفعاليات السابقة',

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: 'Premium medical scrubs designed for healthcare professionals in Saudi Arabia, featuring antimicrobial technology, superior comfort, and professional appearance.',
     images: [
       {
-        url: 'https://uneom.com/images/default-placeholder.jpg',
+        url: 'https://uneom.com/images/healthcare/medical_hijab_uniform.jpg',
         width: 1200,
         height: 630,
         alt: 'UNEOM Advanced Medical Scrubs for Healthcare Professionals',

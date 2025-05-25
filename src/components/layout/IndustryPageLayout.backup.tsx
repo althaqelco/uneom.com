@@ -438,7 +438,7 @@ export default function IndustryPageLayout({
                     Image,
                     {
                       src: typeof benefit.icon === 'string' && !benefit.icon.startsWith('/') && !benefit.icon.startsWith('http') 
-                        ? '/images/default-placeholder.jpg' 
+                        ? '/images/healthcare/medical_hijab_uniform.jpg' 
                         : benefit.icon,
                       alt: benefit.title,
                       width: 32,
@@ -502,7 +502,7 @@ export default function IndustryPageLayout({
                   React.createElement(
                     Image,
                     {
-                      src: product.image || '/images/default-placeholder.jpg',
+                      src: product.image || '/images/healthcare/medical_hijab_uniform.jpg',
                       alt: product.name || 'Product',
                       fill: true,
                       className: "object-cover group-hover:scale-105 transition-transform duration-500"
@@ -748,7 +748,7 @@ export default function IndustryPageLayout({
                         Image,
                         {
                           src: typeof tech.icon === 'string' && !tech.icon.startsWith('/') && !tech.icon.startsWith('http') 
-                            ? '/images/default-placeholder.jpg' 
+                            ? '/images/healthcare/medical_hijab_uniform.jpg' 
                             : tech.icon,
                           alt: tech.name,
                           width: 24,
@@ -851,7 +851,7 @@ export default function IndustryPageLayout({
                           Image,
                           {
                             src: typeof option.icon === 'string' && !option.icon.startsWith('/') && !option.icon.startsWith('http') 
-                              ? '/images/default-placeholder.jpg' 
+                              ? '/images/healthcare/medical_hijab_uniform.jpg' 
                               : option.icon,
                             alt: option.name,
                             width: 24,

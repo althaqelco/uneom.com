@@ -60,7 +60,7 @@ export function getFallbackImage(category: 'product' | 'blog' | 'team' | 'indust
     team: '/images/defaults/default-team.jpg',
     industry: '/images/defaults/default-industry.jpg',
     service: '/images/defaults/default-service.jpg',
-    general: '/images/defaults/default-placeholder.jpg',
+    general: '/images/icons/premium-quality.svg',
   };
 
   return fallbacks[category];

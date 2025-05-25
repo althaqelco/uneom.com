@@ -31,7 +31,7 @@ export default function ExecutiveApparelClientPage() {
       name: 'بدلات رسمية',
       description: 'بدلات رجالية أنيقة مصممة من أفخم الأقمشة، بقصات عصرية تناسب المدراء التنفيذيين والمناسبات الرسمية.',
       price: 'من 1,599 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       href: '/ar/shop/executive-apparel/business-suits',
       features: ['قماش فاخر', 'خياطة دقيقة', 'قصات عصرية', 'متوفر بقياسات مخصصة'],
       colors: ['كحلي', 'رمادي', 'أسود', 'أزرق'],
@@ -42,7 +42,7 @@ export default function ExecutiveApparelClientPage() {
       name: 'قمصان رسمية',
       description: 'قمصان تنفيذية أنيقة من القطن المصري الفاخر، مناسبة لبيئة العمل الاحترافية والمناسبات الرسمية.',
       price: 'من 349 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       href: '/ar/shop/executive-apparel/formal-shirts',
       features: ['قطن مصري', 'أزرار أصلية', 'قصة مريحة', 'سهلة العناية'],
       colors: ['أبيض', 'أزرق فاتح', 'رمادي فاتح', 'وردي فاتح'],
@@ -53,7 +53,7 @@ export default function ExecutiveApparelClientPage() {
       name: 'أزياء رسمية نسائية',
       description: 'مجموعة متكاملة من الأزياء الرسمية النسائية للمديرات التنفيذيات، تجمع بين الأناقة والراحة في بيئة العمل.',
       price: 'من 1,299 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       href: '/ar/shop/executive-apparel/women-business-attire',
       features: ['تصاميم أنيقة', 'أقمشة فاخرة', 'خيارات متنوعة', 'قصات مريحة'],
       colors: ['أسود', 'كحلي', 'رمادي', 'بيج']
@@ -63,7 +63,7 @@ export default function ExecutiveApparelClientPage() {
       name: 'إكسسوارات تنفيذية',
       description: 'إكسسوارات راقية تكمل المظهر الرسمي للمدراء التنفيذيين، بما في ذلك ربطات العنق وأزرار الأكمام والمحافظ الجلدية.',
       price: 'من 199 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       href: '/ar/shop/executive-apparel/executive-accessories',
       features: ['تصنيع فاخر', 'مواد عالية الجودة', 'تصاميم أنيقة', 'هدايا مثالية'],
       colors: ['متعدد']
@@ -73,7 +73,7 @@ export default function ExecutiveApparelClientPage() {
       name: 'أحذية رسمية',
       description: 'أحذية جلدية فاخرة مصممة خصيصاً للمدراء التنفيذيين، تجمع بين الأناقة والراحة للاستخدام اليومي.',
       price: 'من 799 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       href: '/ar/shop/executive-apparel/formal-footwear',
       features: ['جلد طبيعي', 'صناعة يدوية', 'نعل مريح', 'تصاميم كلاسيكية'],
       colors: ['أسود', 'بني داكن', 'بني فاتح']
@@ -83,7 +83,7 @@ export default function ExecutiveApparelClientPage() {
       name: 'أزياء العمل غير الرسمية',
       description: 'مجموعة من الأزياء شبه الرسمية المناسبة لأيام العمل غير الرسمية أو المناسبات الترفيهية للشركات.',
       price: 'من 699 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       href: '/ar/shop/executive-apparel/business-casual',
       features: ['أنيقة وعملية', 'خامات عالية الجودة', 'مريحة', 'مناسبة للعمل والمناسبات الاجتماعية'],
       colors: ['متنوعة']
@@ -117,7 +117,7 @@ export default function ExecutiveApparelClientPage() {
             <div className="mt-12 relative rounded-xl overflow-hidden shadow-xl">
               <div className="aspect-w-16 aspect-h-7 w-full">
                 <Image 
-                  src="/images/default-placeholder.jpg"
+                  src="/images/products/corporate-suit-executive.jpg"
                   alt="مجموعة الأزياء التنفيذية"
                   fill
                   className="object-cover"
@@ -243,7 +243,7 @@ export default function ExecutiveApparelClientPage() {
               <div className="relative rounded-xl overflow-hidden">
                 <div className="aspect-w-4 aspect-h-3">
                   <Image 
-                    src="/images/default-placeholder.jpg"
+                    src="/images/products/corporate-suit-executive.jpg"
                     alt="خدمة التفصيل الخاص"
                     fill
                     className="object-cover"

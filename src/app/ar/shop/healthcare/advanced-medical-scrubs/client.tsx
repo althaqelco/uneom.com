@@ -51,10 +51,10 @@ export default function AdvancedMedicalScrubsClientPage() {
       { name: 'إمكانيات التخصيص', value: 'إضافة شعارات المستشفيات، تطريز الأسماء، ترميز الأقسام بالألوان' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'طبيب يرتدي الأزياء الطبية المتطورة أثناء الاستشارة' },
-      { src: '/images/default-placeholder.jpg', alt: 'ممرضات في الأزياء الطبية المتطورة في محطة التمريض' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'طبيب يرتدي الأزياء الطبية المتطورة أثناء الاستشارة' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'ممرضات في الأزياء الطبية المتطورة في محطة التمريض' },
       { src: '/images/avatar-placeholder.jpg', alt: 'فريق جراحي يرتدي الأزياء الطبية المتخصصة في غرفة العمليات' },
-      { src: '/images/default-placeholder.jpg', alt: 'طبيبة محجبة ترتدي الأزياء الطبية المتوافقة مع الحجاب' }
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'طبيبة محجبة ترتدي الأزياء الطبية المتوافقة مع الحجاب' }
     ],
     category: 'الرعاية الصحية',
     categorySlug: 'healthcare',
@@ -70,14 +70,14 @@ export default function AdvancedMedicalScrubsClientPage() {
       { name: 'أزياء طبية للحوامل', price: '339 ريال سعودي' }
     ],
     colors: [
-      { name: 'أزرق ملكي', value: '#4169e1', image: '/images/default-placeholder.jpg' },
-      { name: 'أخضر جراحي', value: '#2e8b57', image: '/images/default-placeholder.jpg' },
-      { name: 'نبيذي', value: '#800020', image: '/images/default-placeholder.jpg' },
-      { name: 'كحلي', value: '#000080', image: '/images/default-placeholder.jpg' },
-      { name: 'أزرق سماوي', value: '#92a1cf', image: '/images/default-placeholder.jpg' },
-      { name: 'أسود', value: '#000000', image: '/images/default-placeholder.jpg' },
-      { name: 'رمادي فضي', value: '#8e8e8e', image: '/images/default-placeholder.jpg' },
-      { name: 'عنابي', value: '#722f37', image: '/images/default-placeholder.jpg' }
+      { name: 'أزرق ملكي', value: '#4169e1', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'أخضر جراحي', value: '#2e8b57', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'نبيذي', value: '#800020', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'كحلي', value: '#000080', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'أزرق سماوي', value: '#92a1cf', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'أسود', value: '#000000', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'رمادي فضي', value: '#8e8e8e', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'عنابي', value: '#722f37', image: '/images/healthcare/medical_hijab_uniform.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -173,8 +173,8 @@ export default function AdvancedMedicalScrubsClientPage() {
             "@type": "Product",
             "name": "الأزياء الطبية المتطورة من يونيوم",
             "image": [
-              "https://uneom.com/images/default-placeholder.jpg",
-              "https://uneom.com/images/default-placeholder.jpg",
+              "https://uneom.com/images/healthcare/medical_hijab_uniform.jpg",
+              "https://uneom.com/images/healthcare/medical_hijab_uniform.jpg",
               "https://uneom.com/images/avatar-placeholder.jpg"
             ],
             "description": "أزياء طبية مبتكرة وعالية الجودة مصممة خصيصاً للكوادر الصحية في المملكة العربية السعودية، مع تقنيات مضادة للميكروبات، راحة فائقة ومظهر احترافي يليق بالقطاع الطبي.",
@@ -441,7 +441,7 @@ export default function AdvancedMedicalScrubsClientPage() {
             <div className="group">
               <div className="aspect-square bg-neutral-100 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/default-placeholder.jpg"
+                  src="/images/healthcare/medical_hijab_uniform.jpg"
                   alt="روب الطبيب التنفيذي"
                   width={400}
                   height={400}
@@ -454,7 +454,7 @@ export default function AdvancedMedicalScrubsClientPage() {
             <div className="group">
               <div className="aspect-square bg-neutral-100 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/default-placeholder.jpg"
+                  src="/images/healthcare/medical_hijab_uniform.jpg"
                   alt="مجموعة أزياء العمليات الجراحية"
                   width={400}
                   height={400}
@@ -467,7 +467,7 @@ export default function AdvancedMedicalScrubsClientPage() {
             <div className="group">
               <div className="aspect-square bg-neutral-100 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/default-placeholder.jpg"
+                  src="/images/healthcare/medical_hijab_uniform.jpg"
                   alt="ملابس التمريض الأساسية"
                   width={400}
                   height={400}
@@ -480,7 +480,7 @@ export default function AdvancedMedicalScrubsClientPage() {
             <div className="group">
               <div className="aspect-square bg-neutral-100 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/default-placeholder.jpg"
+                  src="/images/healthcare/medical_hijab_uniform.jpg"
                   alt="معطف الطبيب الكلاسيكي"
                   width={400}
                   height={400}

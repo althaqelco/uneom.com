@@ -31,7 +31,7 @@ export default function RetailUniformsClientPage() {
       name: 'زي موظفي المولات',
       description: 'زي احترافي وأنيق لموظفي المولات والمراكز التجارية، مصمم للراحة خلال ساعات العمل الطويلة.',
       price: 'من 299 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/education/uniform_school_product-2.jpg',
       href: '/ar/shop/retail-uniforms/mall-staff',
       features: ['مريح', 'أنيق', 'سهل العناية', 'متين'],
       colors: ['أسود', 'أزرق داكن', 'رمادي'],
@@ -42,7 +42,7 @@ export default function RetailUniformsClientPage() {
       name: 'زي موظفي المتاجر',
       description: 'زي عملي وأنيق لموظفي المتاجر، يمكن تخصيصه بشعار وألوان العلامة التجارية.',
       price: 'من 249 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/education/uniform_school_product-2.jpg',
       href: '/ar/shop/retail-uniforms/related-product-1',
       features: ['قابل للتخصيص', 'عملي', 'مظهر احترافي', 'متنوع'],
       colors: ['أبيض', 'أسود', 'أزرق', 'أحمر'],
@@ -53,7 +53,7 @@ export default function RetailUniformsClientPage() {
       name: 'زي أمناء الصندوق',
       description: 'زي مريح ومميز لأمناء الصندوق في المتاجر والمراكز التجارية.',
       price: 'من 219 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/education/uniform_school_product-2.jpg',
       href: '/ar/shop/retail-uniforms/related-product-2',
       features: ['مريح للجلوس', 'جيوب عملية', 'سهل التنظيف', 'أنيق'],
       colors: ['أسود', 'أزرق داكن', 'بيج']
@@ -63,7 +63,7 @@ export default function RetailUniformsClientPage() {
       name: 'زي مدراء المتاجر',
       description: 'زي أنيق ورسمي لمدراء المتاجر والمشرفين، يعكس المكانة القيادية.',
       price: 'من 399 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/education/uniform_school_product-2.jpg',
       href: '/ar/shop/retail-uniforms/related-product-3',
       features: ['أنيق', 'فاخر', 'مظهر قيادي', 'راحة طوال اليوم'],
       colors: ['أسود', 'كحلي', 'رمادي داكن']
@@ -73,7 +73,7 @@ export default function RetailUniformsClientPage() {
       name: 'زي سفراء العلامة التجارية',
       description: 'زي مميز لسفراء العلامة التجارية ومندوبي المبيعات، يمكن تخصيصه بالكامل.',
       price: 'من 329 ريال',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/education/uniform_school_product-2.jpg',
       href: '/ar/shop/retail-uniforms/related-product-4',
       features: ['تصميم مميز', 'قابل للتخصيص بالكامل', 'عصري', 'عالي الجودة'],
       colors: ['متعدد الألوان', 'حسب الطلب']
@@ -108,7 +108,7 @@ export default function RetailUniformsClientPage() {
             <div className="mt-12 relative rounded-xl overflow-hidden shadow-xl">
               <div className="aspect-w-16 aspect-h-7 w-full">
                 <Image 
-                  src="/images/default-placeholder.jpg"
+                  src="/images/education/uniform_school_product-2.jpg"
                   alt="مجموعة أزياء البيع بالتجزئة"
                   fill
                   className="object-cover"

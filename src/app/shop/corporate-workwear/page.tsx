@@ -31,7 +31,7 @@ export default function CorporateWorkwearPage() {
       name: 'Executive Blazer',
       description: 'Premium tailored blazer for corporate executives and management personnel, featuring sophisticated design and premium fabric.',
       price: 'From SAR 359',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/corporate-workwear/executive-blazer',
       features: ['Premium fabric', 'Tailored fit', 'Professional look', 'Wrinkle-resistant'],
       colors: ['Navy', 'Charcoal', 'Black'],
@@ -42,7 +42,7 @@ export default function CorporateWorkwearPage() {
       name: 'Corporate Shirt',
       description: 'High-quality business shirt designed for professional office environments, featuring easy-care fabric and modern fit.',
       price: 'From SAR 149',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/corporate-workwear/corporate-shirt',
       features: ['Easy care', 'Moisture-wicking', 'Comfort stretch', 'Professional look'],
       colors: ['White', 'Light Blue', 'Pink', 'Light Grey'],
@@ -53,7 +53,7 @@ export default function CorporateWorkwearPage() {
       name: 'Office Trousers',
       description: 'Professional trousers designed for daily office wear with comfortable fit and durable fabric for extended use.',
       price: 'From SAR 179',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/corporate-workwear/office-trouser',
       features: ['Stain-resistant', 'Comfort waistband', 'Multiple pockets', 'Classic fit'],
       colors: ['Navy', 'Charcoal', 'Black', 'Khaki']
@@ -83,7 +83,7 @@ export default function CorporateWorkwearPage() {
       name: 'Business Formal Set',
       description: 'Complete business formal attire set for professional environments that demand a higher level of presentation.',
       price: 'From SAR 499',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/corporate-workwear/business-formal-set',
       features: ['Premium materials', 'Coordinated set', 'Professional design', 'Custom sizing'],
       colors: ['Navy', 'Black', 'Charcoal']
@@ -144,7 +144,7 @@ export default function CorporateWorkwearPage() {
       <section className="relative pt-16 pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/default-placeholder.jpg"
+            src="/images/healthcare/medical_hijab_uniform.jpg"
             alt="Corporate Workwear"
             fill
             className="object-cover object-center"
@@ -394,7 +394,7 @@ export default function CorporateWorkwearPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/default-placeholder.jpg"
+                    src="/images/healthcare/medical_hijab_uniform.jpg"
                     alt="Medical Scrubs"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -448,7 +448,7 @@ export default function CorporateWorkwearPage() {
             <div className="hidden lg:block">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/healthcare/medical_hijab_uniform.jpg"
                   alt="Corporate Workwear Design Service"
                   fill
                   className="object-cover"

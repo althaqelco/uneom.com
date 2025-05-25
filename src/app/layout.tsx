@@ -188,7 +188,7 @@ export default function RootLayout({
             // Simple image error handling
             document.addEventListener('error', function(e) {
               if (e.target.tagName === 'IMG') {
-                e.target.src = '/images/defaults/default-placeholder.jpg';
+                e.target.src = '/images/healthcare/medical_hijab_uniform.jpg';
               }
             }, true);
           `}

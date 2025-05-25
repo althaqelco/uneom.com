@@ -17,7 +17,7 @@ interface EnhancedImageProps extends Omit<ImageProps, 'src'> {
   errorComponent?: React.ReactNode;
 }
 
-const DEFAULT_FALLBACK = '/images/default-placeholder.jpg';
+const DEFAULT_FALLBACK = '/images/defaults/default-placeholder.jpg';
 const MAX_RETRY_COUNT = 3;
 const RETRY_DELAY = 1000;
 

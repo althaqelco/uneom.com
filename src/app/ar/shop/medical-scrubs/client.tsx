@@ -217,7 +217,7 @@ export default function MedicalScrubsClientPage() {
             </div>
             <div className="relative h-96 order-1 md:order-2">
               <Image
-                src="/images/default-placeholder.jpg"
+                src="/images/healthcare/medical_hijab_uniform.jpg"
                 alt="أزياء طبية احترافية"
                 fill
                 className="object-cover rounded-lg"

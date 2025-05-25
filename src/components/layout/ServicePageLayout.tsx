@@ -331,7 +331,7 @@ export default function ServicePageLayout({ locale, serviceData, skipMainLayout 
                 >
                   <div className="relative h-64 w-full overflow-hidden">
                     <Image 
-                      src={caseStudy.image || '/images/default-placeholder.jpg'}
+                      src={caseStudy.image || '/images/products/industrial-coverall.jpg'}
                       alt={caseStudy.title}
                       fill
                       className="object-cover"
