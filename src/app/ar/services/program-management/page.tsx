@@ -1,37 +1,32 @@
 import { Metadata } from 'next';
-import ProgramManagementClientPageArabic from './client';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import EnhancedProgramManagementClient from './EnhancedProgramManagementClient';
 
 export const metadata: Metadata = {
-  title: 'إدارة برامج الزي الموحد | خدمات إدارة برامج اليونيفورم المؤسسي | يونيوم',
-  description: 'خدمات متكاملة لإدارة برامج الزي الموحد للمؤسسات والشركات، من التخطيط الاستراتيجي إلى التنفيذ والمتابعة المستمرة. حلول مخصصة تضمن أعلى معايير الجودة وكفاءة التوريد والتوزيع',
-  keywords: [
-    'إدارة برامج الزي الموحد',
-    'خدمات إدارة اليونيفورم',
-    'برنامج الزي المؤسسي',
-    'إدارة مخزون الزي الموحد',
-    'سياسات الزي الشركات',
-    'توحيد الزي المؤسسي',
-    'توريد الزي للشركات',
-    'إدارة الزي الموحد للموظفين',
-    'تخطيط برامج الزي',
-    'خدمات يونيوم السعودية'
-  ],
+  title: 'إدارة برامج الأزياء الموحدة | يونيوم السعودية',
+  description: 'خدمات إدارة برامج الأزياء الموحدة للشركات في السعودية. تخطيط استراتيجي، إدارة موردين، مراقبة جودة، توفير تكاليف. 150+ برنامج، 97% رضا، 10+ سنوات خبرة.',
+  keywords: 'إدارة برامج الأزياء, حلول أزياء الشركات, إدارة موحدة, برامج أزياء السعودية, تخطيط أزياء, إدارة توريد الأزياء, استشارات أزياء الشركات, إدارة مخزون الأزياء, دعم فني للأزياء',
   openGraph: {
-    title: 'إدارة برامج الزي الموحد | خدمات إدارة برامج اليونيفورم المؤسسي | يونيوم',
-    description: 'خدمات متكاملة لإدارة برامج الزي الموحد للمؤسسات والشركات في المملكة العربية السعودية',
-    url: 'https://uneom.com/ar/services/program-management',
-    siteName: 'Uneom',
-    images: [
-      {
-        url: 'https://uneom.com/images/og/program-management-service.webp',
-        width: 1200,
-        height: 630,
-        alt: 'إدارة برامج الزي الموحد | يونيوم'
-      }
-    ],
+    title: 'إدارة برامج الأزياء الموحدة | يونيوم السعودية',
+    description: 'حلول متكاملة لإدارة برامج الأزياء الموحدة للشركات والمؤسسات، من التخطيط والتصميم إلى التوريد والمتابعة.',
+    url: 'https://uneom.com/ar/services/program-management/',
+    siteName: 'يونيوم للأزياء الموحدة',
     locale: 'ar_SA',
     type: 'website',
+    images: [
+      {
+        url: 'https://uneom.com/images/service-overview.jpg', // Replace with a relevant image for program management
+        width: 1200,
+        height: 630,
+        alt: 'إدارة برامج الأزياء الموحدة من يونيوم السعودية',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://uneom.com/ar/services/program-management/',
+    languages: {
+      'en': 'https://uneom.com/services/program-management/', // Assuming English version exists or will exist
+      'ar': 'https://uneom.com/ar/services/program-management/',
+    },
   },
   robots: {
     index: true,
@@ -42,17 +37,11 @@ export const metadata: Metadata = {
       follow: true,
       'max-image-preview': 'large',
       'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: 'https://uneom.com/ar/services/program-management',
-    languages: {
-      'en': 'https://uneom.com/services/program-management',
-      'ar': 'https://uneom.com/ar/services/program-management',
-    },
-  },
+      'max-video-preview': -1
+    }
+  }
 };
 
-export default function ProgramManagementArabicPage() {
-  return <ProgramManagementClientPageArabic />;
-} 
+export default function ProgramManagementPage() {
+  return <EnhancedProgramManagementClient />;
+}
