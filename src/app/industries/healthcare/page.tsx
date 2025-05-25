@@ -1,312 +1,469 @@
-'use client';
-
-import React from 'react';
-import SEO from '@/components/SEO';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
-import Image from 'next/image';
-import Link from 'next/link';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import ProductCard from '@/components/ui/ProductCard';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
-// Placeholder data - in a real scenario, this would come from a CMS or dedicated data files
-const healthcarePageData = {
-  en: {
-    meta: {
-      title: 'Healthcare Uniforms & Medical Scrubs in Saudi Arabia | UNEOM',
-      description: 'UNEOM provides high-quality, hygienic healthcare uniforms, medical scrubs, and lab coats tailored for hospitals and clinics across Saudi Arabia. Durability & comfort guaranteed.',
-    },
-    hero: {
-      headline: 'Advanced Healthcare Uniforms for Saudi Arabia\'s Medical Professionals',
-      subheadline: 'Hygienic, Durable, and Comfortable Medical Scrubs, Lab Coats, and Staff Attire. Designed for KSA\'s leading hospitals and clinics in Riyadh, Jeddah, Dammam.',
-      cta: 'Request a Quote for Healthcare Uniforms',
-      ctaLink: '/quote',
-      image: '/images/doctors-team-walking-in-modern-hospital-corridor-indoors-poeople-group-SBI-322343728.jpg', // Placeholder image
-    },
-    intro: {
-      title: 'Setting the Standard for Medical Workwear in KSA',
-      paragraphs: [
-        'UNEOM is dedicated to supplying the Saudi healthcare sector with superior quality medical uniforms that meet the stringent demands of hospitals, clinics, and laboratories. Our range includes meticulously designed scrubs, lab coats, and specialized attire, ensuring comfort, functionality, and a professional appearance for all medical staff.',
-        'We understand the critical importance of hygiene and durability in medical environments. That\'s why our healthcare uniforms are crafted from advanced, breathable fabrics with antimicrobial properties, suitable for the Saudi climate and compliant with local and international healthcare standards.',
-      ],
-    },
-    keyBenefits: {
-      title: 'Key Benefits of UNEOM Healthcare Uniforms',
-    benefits: [
+export const metadata: Metadata = {
+  title: 'Healthcare Uniforms & Medical Scrubs | Professional Medical Attire | Uneom',
+  description: 'Premium healthcare uniforms and medical scrubs designed for Saudi Arabian healthcare professionals. Antimicrobial fabrics, comfortable fits, and professional designs for hospitals, clinics, and medical facilities.',
+  keywords: 'healthcare uniforms, medical scrubs, hospital uniforms, nursing uniforms, doctor scrubs, antimicrobial uniforms, medical attire Saudi Arabia, healthcare workwear',
+  openGraph: {
+    title: 'Healthcare Uniforms & Medical Scrubs | Professional Medical Attire | Uneom',
+    description: 'Premium healthcare uniforms and medical scrubs designed for Saudi Arabian healthcare professionals.',
+    url: 'https://uneom.com/industries/healthcare/',
+    siteName: 'Uneom',
+    images: [
       {
-          name: 'Enhanced Hygiene & Safety',
-          description: 'Utilizing antimicrobial fabrics and designs that minimize contamination risks, crucial for patient and staff safety.',
-          icon: '/images/icons/hygiene.svg', // Placeholder
-        },
-        {
-          name: 'Superior Comfort & Durability',
-          description: 'Ergonomically designed for long shifts, made from durable materials that withstand frequent industrial laundering.',
-          icon: '/images/icons/comfort.svg', // Placeholder
-        },
-        {
-          name: 'Professional Image & Team Cohesion',
-          description: 'Smart, consistent uniforms that enhance your institution\'s professional image and foster team identity.',
-          icon: '/images/icons/professionalism.svg', // Placeholder
-        },
-        {
-          name: 'Customization & Branding',
-          description: 'Options for embroidery and branding to reflect your healthcare facility\'s identity.',
-          icon: '/images/icons/customization.svg', // Placeholder
-        },
-      ],
-    },
-    featuredProducts: {
-      title: 'Featured Healthcare Uniform Products',
-    products: [
-      {
-          name: 'Premium Medical Scrub Set',
-          description: 'Unisex scrub set made from soft, breathable, antimicrobial fabric. Available in various colors.',
-          image: '/images/products/scrubs-set.jpg', // Placeholder
-          link: '/shop/medical-scrubs/premium-scrubs-set',
-        },
-        {
-          name: 'Professional Lab Coat',
-          description: 'Durable and stain-resistant lab coat with multiple pockets, offering a professional look.',
-          image: '/images/doctor-SBI-300813580.jpg', // Placeholder
-          link: '/shop/medical-scrubs/medical-lab-coat',
-        },
-        {
-          name: 'Comfort Nursing Uniform',
-          description: 'Specially designed nursing uniforms focusing on comfort and ease of movement.',
-          image: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg', // Placeholder
-          link: '/shop/medical-scrubs/nursing-scrubs',
-        },
-      ],
-    },
-    fabricTech: {
-      title: 'Advanced Fabrics & Technology',
-      description: 'Our healthcare uniforms incorporate the latest in fabric technology to ensure optimal performance, including moisture-wicking, stain resistance, and flexible materials for enhanced mobility.',
-      image: '/images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg', // Placeholder
-    },
-    customization: {
-      title: 'Tailored to Your Needs',
-      description: 'From specific color requirements to logo embroidery and departmental badging, UNEOM offers comprehensive customization options to meet the unique needs of your healthcare institution.',
-      image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg', // Placeholder
-    },
-    testimonials: {
-      title: 'What Our Healthcare Clients Say',
-      // Add 1-2 placeholder testimonials specific to healthcare if available, or general ones
-      items: [
-        {
-          quote: "UNEOM\'s medical scrubs are top-notch. Our staff in Riyadh find them comfortable and durable for long shifts.",
-          author: 'Dr. Fatima Al-Salem',
-          position: 'Chief of Medicine, Riyadh Central Hospital',
-        },
-      ],
-    },
-    relatedBlogs: {
-      title: 'Insights on Healthcare Uniforms',
-      posts: [
-        {
-          title: 'Choosing the Right Medical Scrubs for Your Team',
-          link: '/blog/choosing-medical-scrubs', // Placeholder
-          image: '/images/blog/placeholder1.jpg',
-        },
-        {
-          title: 'The Importance of Hygienic Uniforms in Hospitals',
-          link: '/blog/hygienic-uniforms-hospitals', // Placeholder
-          image: '/images/blog/placeholder2.jpg',
-        },
-      ],
-    },
-    finalCta: {
-      title: 'Partner with UNEOM for Your Healthcare Uniform Needs',
-      description: 'Ensure your medical team is equipped with the best. Contact us today for a consultation and quote tailored to your specific requirements in Saudi Arabia.',
-      cta: 'Get Your Custom Quote Now',
-      ctaLink: '/quote',
-    },
+        url: 'https://uneom.com/images/Healthcare_Uniforms.png',
+        width: 1200,
+        height: 630,
+        alt: 'Healthcare Uniforms by Uneom'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
+  alternates: {
+    canonical: 'https://uneom.com/industries/healthcare/',
+    languages: {
+      'en-SA': 'https://uneom.com/industries/healthcare/',
+      'ar-SA': 'https://uneom.com/ar/industries/healthcare/',
+      'x-default': 'https://uneom.com/industries/healthcare/'
+    }
+  }
 };
 
-export default function HealthcareIndustryPage() {
-  const content = healthcarePageData.en;
-  const locale = 'en'; // Explicitly set for this page
+export const dynamic = 'force-static';
 
+// Featured healthcare products
+const featuredProducts = [
+  {
+    id: '1',
+    name: 'Premium Medical Scrubs',
+    image: '/images/PremiumـMedicalـScrubs.png',
+    price: 'Request Quote',
+    href: '/shop/medical-scrubs/premium-medical-scrubs/',
+    category: 'Medical Scrubs'
+  },
+  {
+    id: '2',
+    name: 'Professional Lab Coats',
+    image: '/images/Healthcare_Uniforms.png',
+    price: 'Request Quote',
+    href: '/shop/medical-scrubs/professional-lab-coat/',
+    category: 'Lab Coats'
+  },
+  {
+    id: '3',
+    name: 'Nursing Uniforms',
+    image: '/images/healthcare/medical_hijab_uniform.jpg',
+    price: 'Request Quote',
+    href: '/shop/medical-scrubs/nursing-scrubs/',
+    category: 'Nursing Uniforms'
+  }
+];
+
+// Healthcare benefits
+const healthcareBenefits = [
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+    title: 'Antimicrobial Protection',
+    description: 'Advanced antimicrobial treatments that inhibit bacterial growth and maintain hygiene standards throughout long shifts.'
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+    title: 'Moisture Management',
+    description: 'Moisture-wicking fabrics keep healthcare professionals dry and comfortable during demanding work environments.'
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+      </svg>
+    ),
+    title: 'Comfort & Durability',
+    description: 'Ergonomic designs with reinforced stress points ensure long-lasting comfort and professional appearance.'
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+      </svg>
+    ),
+    title: 'Compliance Ready',
+    description: 'All uniforms meet Saudi healthcare regulations and international quality standards for medical environments.'
+  }
+];
+
+// Fabric technologies
+const fabricTechnologies = [
+  {
+    name: 'Antimicrobial Treatment',
+    description: 'Silver-ion technology that provides lasting protection against bacteria and odors',
+    image: '/images/uneom_antimicrobial_treatment.webp'
+  },
+  {
+    name: 'Moisture Wicking',
+    description: 'Advanced polyester blends that move moisture away from the skin',
+    image: '/images/uneom_moisture_wicking.webp'
+  },
+  {
+    name: 'Stain Release',
+    description: 'Special fabric treatments that make cleaning easier and maintain appearance',
+    image: '/images/fabric-cotton-blends.webp'
+  }
+];
+
+export default function HealthcareIndustryPage() {
   return (
-    <>
-      {/* Enhanced SEO for Google May 2025 Standards */}
+    <div>
       <EnhancedSEO2025 
-        title="Healthcare Uniforms & Medical Scrubs | UNEOM Saudi Arabia"
-        description="Professional healthcare uniforms and medical scrubs for hospitals and clinics across Saudi Arabia."
-        keywords={["healthcare uniforms","medical scrubs","hospital uniforms","nursing uniforms"]}
-        author="UNEOM Expert Team"
-        expertise="Uniform Manufacturing & Design"
-        contentType="service"
-        trustSignals={[
-          'ISO certified manufacturing',
-          'Premium quality materials',
-          'Custom design solutions',
-          'Saudi Arabia market leader'
-        ]}
+        title="Healthcare Uniforms & Medical Scrubs | Professional Medical Attire | Uneom"
+        description="Premium healthcare uniforms and medical scrubs designed for Saudi Arabian healthcare professionals. Antimicrobial fabrics, comfortable fits, and professional designs."
+        canonicalUrl="https://uneom.com/industries/healthcare/"
         locale="en"
       />
 
-      <SEO
-        title={content.meta.title}
-        description={content.meta.description}
-        canonicalUrl="https://uneom.com/industries/healthcare/"
-        // Add other SEO props like ogImage if available
-      />
-
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-20 md:py-32">
-        <div className="absolute inset-0">
+      <section className="relative bg-gradient-to-r from-primary-800 to-primary-700 text-white py-20">
+        <div className="absolute inset-0 opacity-30">
           <Image
-            src={content.hero.image}
-            alt={content.hero.headline}
+            src="/images/Healthcare_Uniforms.png"
+            alt="Healthcare Uniforms by Uneom"
             fill
-            className="object-cover opacity-30"
+            className="object-cover"
             priority
           />
         </div>
-        <Container className="relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            {content.hero.headline}
-          </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
-            {content.hero.subheadline}
-          </p>
-          <Button href={content.hero.ctaLink} size="lg" variant="secondary">
-            {content.hero.cta}
-          </Button>
-        </Container>
-      </section>
-
-      {/* Intro Section */}
-      <section className="py-16 md:py-24 bg-white">
+        
         <Container>
-          <SectionHeading className="text-center mb-12">{content.intro.title}</SectionHeading>
-          <div className="max-w-3xl mx-auto space-y-6 text-lg text-neutral-700">
-            {content.intro.paragraphs.map((p, i) => (<p key={i}>{p}</p>))}
+          <Breadcrumbs
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Industries', href: '/industries' },
+              { label: 'Healthcare', href: '/industries/healthcare' }
+            ]}
+            className="text-white/80 mb-6 relative z-10"
+          />
+          
+          <div className="relative z-10 max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Healthcare Uniforms & Medical Scrubs</h1>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl">
+              Professional medical attire designed for Saudi Arabian healthcare professionals. Featuring antimicrobial protection, moisture management, and superior comfort for demanding healthcare environments.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                href="/quote"
+                variant="secondary" 
+                size="lg"
+              >
+                Request Healthcare Quote
+              </Button>
+              <Button 
+                href="#featured-products"
+                variant="outline" 
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-primary-700"
+              >
+                View Products
+              </Button>
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* Key Benefits Section */}
-      <section className="py-16 md:py-24 bg-neutral-50">
+      <main className="py-16">
         <Container>
-          <SectionHeading className="text-center mb-16">{content.keyBenefits.title}</SectionHeading>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {content.keyBenefits.benefits.map((benefit) => (
-              <div key={benefit.name} className="bg-white p-6 rounded-lg shadow-lg text-center">
-                {/* Placeholder for icon */}
-                {/* <Image src={benefit.icon} alt="" width={48} height={48} className="mx-auto mb-4" /> */}
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {/* Icon would go here */}
-                </div>
-                <h3 className="text-xl font-semibold text-neutral-800 mb-2">{benefit.name}</h3>
-                <p className="text-neutral-600 text-sm">{benefit.description}</p>
+          {/* Introduction */}
+          <section className="mb-16">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <SectionHeading subtitle="Professional Medical Attire">
+                  Excellence in Healthcare Uniforms
+                </SectionHeading>
+                <p className="text-lg text-gray-600 mb-6">
+                  At Uneom, we understand that healthcare professionals need uniforms that perform as hard as they do. Our healthcare uniform collection combines cutting-edge fabric technology with professional styling to create medical attire that meets the demanding requirements of Saudi Arabian healthcare facilities.
+                </p>
+                <p className="text-gray-600 mb-8">
+                  From antimicrobial treatments that maintain hygiene standards to moisture-wicking fabrics that ensure comfort during long shifts, every detail is designed with healthcare professionals in mind.
+                </p>
+                <Button href="/contact" variant="primary" size="lg">
+                  Discuss Your Requirements
+                </Button>
               </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Featured Products Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <Container>
-          <SectionHeading className="text-center mb-16">{content.featuredProducts.title}</SectionHeading>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {content.featuredProducts.products.map((product) => (
-              <div key={product.name} className="border rounded-lg overflow-hidden shadow-lg group">
-                <Link href={product.link} className="block">
-                  <div className="relative w-full h-64 bg-neutral-100">
-                    <Image src={product.image} alt={product.name} fill className="object-contain group-hover:scale-105 transition-transform duration-300" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-neutral-800 mb-2">{product.name}</h3>
-                    <p className="text-neutral-600 text-sm mb-4">{product.description}</p>
-                    <span className="text-primary-600 hover:text-primary-700 font-medium">
-                      View Product &rarr;
-                    </span>
-                  </div>
-                </Link>
+              <div className="relative aspect-square rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/PremiumـMedicalـScrubs.png"
+                  alt="Premium Medical Scrubs"
+                  fill
+                  className="object-cover"
+                />
               </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+            </div>
+          </section>
 
-      {/* Fabric & Technology Section */}
-      <section className="py-16 md:py-24 bg-neutral-800 text-white">
-        <Container className="md:flex items-center gap-12">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <Image src={content.fabricTech.image} alt={content.fabricTech.title} width={600} height={400} className="rounded-lg shadow-xl" />
-          </div>
-          <div className="md:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">{content.fabricTech.title}</h2>
-            <p className="text-lg text-neutral-300 leading-relaxed">{content.fabricTech.description}</p>
-          </div>
-        </Container>
-      </section>
-
-      {/* Customization Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <Container className="md:flex flex-row-reverse items-center gap-12">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <Image src={content.customization.image} alt={content.customization.title} width={600} height={400} className="rounded-lg shadow-xl" />
-          </div>
-          <div className="md:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-6">{content.customization.title}</h2>
-            <p className="text-lg text-neutral-700 leading-relaxed">{content.customization.description}</p>
-          </div>
-        </Container>
-      </section>
-      
-      {/* Testimonials Section - Minimalistic Placeholder */}
-      {content.testimonials && content.testimonials.items.length > 0 && (
-        <section className="py-16 md:py-24 bg-neutral-50">
-          <Container>
-            <SectionHeading className="text-center mb-12">{content.testimonials.title}</SectionHeading>
-            <div className="max-w-2xl mx-auto">
-              {content.testimonials.items.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-lg shadow-lg mb-8">
-                  <p className="text-lg text-neutral-700 italic mb-4">"{testimonial.quote}"</p>
-                  <p className="text-right font-semibold text-neutral-800">&mdash; {testimonial.author}, {testimonial.position}</p>
+          {/* Key Benefits */}
+          <section className="mb-16">
+            <SectionHeading subtitle="Why Choose Uneom Healthcare Uniforms" centered>
+              Advanced Features for Healthcare Professionals
+            </SectionHeading>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+              {healthcareBenefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center text-primary-600">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
                 </div>
               ))}
             </div>
-          </Container>
-        </section>
-      )}
+          </section>
 
-      {/* Related Blogs Section - Placeholder */}
-      {content.relatedBlogs && content.relatedBlogs.posts.length > 0 && (
-        <section className="py-16 md:py-24 bg-white">
-          <Container>
-            <SectionHeading className="text-center mb-16">{content.relatedBlogs.title}</SectionHeading>
-            <div className="grid md:grid-cols-2 gap-8">
-              {content.relatedBlogs.posts.map((post) => (
-                <Link key={post.title} href={post.link} className="block group border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="relative w-full h-48 bg-neutral-100">
-                    <Image src={post.image} alt={post.title} fill className="object-cover" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-neutral-800 mb-2 group-hover:text-primary-600 transition-colors">{post.title}</h3>
-                    <span className="text-primary-600 font-medium">Read More &rarr;</span>
-                  </div>
-                </Link>
+          {/* Featured Products */}
+          <section id="featured-products" className="mb-16">
+            <SectionHeading subtitle="Our Healthcare Collection" centered>
+              Featured Medical Uniforms
+            </SectionHeading>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {featuredProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
               ))}
             </div>
-          </Container>
-        </section>
-      )}
+            
+            <div className="text-center mt-12">
+              <Button href="/shop/medical-scrubs/" variant="primary" size="lg">
+                View All Healthcare Products
+              </Button>
+            </div>
+          </section>
 
-      {/* Final CTA Section */}
-      <section className="py-20 md:py-32 bg-primary-600 text-white">
-        <Container className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">{content.finalCta.title}</h2>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">{content.finalCta.description}</p>
-          <Button href={content.finalCta.ctaLink} size="lg" variant="secondary">
-            {content.finalCta.cta}
-          </Button>
+          {/* Fabric Technologies */}
+          <section className="mb-16">
+            <SectionHeading subtitle="Advanced Fabric Technology" centered>
+              Innovation in Medical Textiles
+            </SectionHeading>
+            
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              {fabricTechnologies.map((tech, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="relative aspect-video">
+                    <Image
+                      src={tech.image}
+                      alt={tech.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">{tech.name}</h3>
+                    <p className="text-gray-600">{tech.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Customization Options */}
+          <section className="mb-16 bg-gray-50 rounded-2xl p-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative aspect-square rounded-xl overflow-hidden">
+                <Image
+                  src="/images/healthcare/medical_hijab_uniform.jpg"
+                  alt="Custom Healthcare Uniforms"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <SectionHeading subtitle="Tailored Solutions">
+                  Custom Healthcare Uniforms
+                </SectionHeading>
+                <p className="text-lg text-gray-600 mb-6">
+                  Every healthcare facility has unique requirements. Our customization services ensure your uniforms reflect your brand while meeting specific functional needs.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Custom embroidery and logo placement
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Department-specific color coding
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Specialized pocket configurations
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Size range from XS to 5XL
+                  </li>
+                </ul>
+                <Button href="/services/custom-design/" variant="primary" size="lg">
+                  Explore Customization
+                </Button>
+              </div>
+            </div>
+          </section>
+
+          {/* Testimonials */}
+          <section className="mb-16">
+            <SectionHeading subtitle="Client Success Stories" centered>
+              Trusted by Healthcare Professionals
+            </SectionHeading>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-primary-600 font-semibold">KF</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">King Faisal Hospital</h4>
+                    <p className="text-sm text-gray-500">Riyadh</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 italic">
+                  "The antimicrobial properties and comfort of Uneom's scrubs have significantly improved our staff satisfaction. The quality is exceptional."
+                </p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-primary-600 font-semibold">SMC</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Saudi Medical Center</h4>
+                    <p className="text-sm text-gray-500">Jeddah</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 italic">
+                  "Professional appearance and durability that withstands frequent washing. Our nursing staff loves the comfortable fit."
+                </p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-primary-600 font-semibold">DHH</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Dammam Health Hub</h4>
+                    <p className="text-sm text-gray-500">Dammam</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 italic">
+                  "Excellent customization options allowed us to maintain our brand identity while ensuring compliance with health regulations."
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Related Blog Posts */}
+          <section className="mb-16">
+            <SectionHeading subtitle="Healthcare Insights" centered>
+              Latest Healthcare Uniform Trends
+            </SectionHeading>
+            
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="relative aspect-video">
+                  <Image
+                    src="/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg"
+                    alt="Healthcare Uniform Innovation"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">Innovation in Medical Textiles</h3>
+                  <p className="text-gray-600 mb-4">Discover the latest advances in antimicrobial treatments and moisture-wicking technologies for healthcare uniforms.</p>
+                  <Link href="/blog/medical-textile-innovation/" className="text-primary-600 hover:text-primary-700 font-medium">
+                    Read More →
+                  </Link>
+                </div>
+              </article>
+              
+              <article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="relative aspect-video">
+                  <Image
+                    src="/images/Healthcare_Uniforms.png"
+                    alt="Healthcare Compliance"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">Healthcare Compliance Standards</h3>
+                  <p className="text-gray-600 mb-4">Understanding Saudi healthcare regulations and how proper uniforms contribute to compliance and safety.</p>
+                  <Link href="/blog/healthcare-compliance-guide/" className="text-primary-600 hover:text-primary-700 font-medium">
+                    Read More →
+                  </Link>
+                </div>
+              </article>
+              
+              <article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="relative aspect-video">
+                  <Image
+                    src="/images/PremiumـMedicalـScrubs.png"
+                    alt="Sustainable Healthcare Uniforms"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">Sustainable Healthcare Uniforms</h3>
+                  <p className="text-gray-600 mb-4">How eco-friendly materials and manufacturing processes are shaping the future of medical attire.</p>
+                  <Link href="/blog/sustainable-healthcare-uniforms/" className="text-primary-600 hover:text-primary-700 font-medium">
+                    Read More →
+                  </Link>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          {/* Final CTA */}
+          <section className="text-center bg-primary-50 rounded-2xl p-12">
+            <h2 className="text-3xl font-bold mb-4">Ready to Upgrade Your Healthcare Uniforms?</h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Join hundreds of healthcare facilities across Saudi Arabia who trust Uneom for their professional medical attire needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="/quote" variant="primary" size="lg">
+                Get Healthcare Quote
+              </Button>
+              <Button href="/contact" variant="outline" size="lg">
+                Schedule Consultation
+              </Button>
+            </div>
+          </section>
         </Container>
-      </section>
-    </>
+      </main>
+    </div>
   );
-} 
+}
