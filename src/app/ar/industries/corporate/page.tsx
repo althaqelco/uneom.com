@@ -1,32 +1,31 @@
 import { Metadata } from 'next';
-import CorporateIndustryClientPage from './client';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import EnhancedCorporateClient from './EnhancedCorporateClient';
 
 export const metadata: Metadata = {
-  title: 'زي موحد للشركات | يونيوم للأزياء الموحدة',
-  description: 'زي موحد احترافي للشركات في المملكة العربية السعودية. تصميم وتنفيذ أزياء موحدة تعكس هوية علامتك التجارية بأعلى معايير الجودة.',
-  keywords: 'زي موحد للشركات، يونيفورم شركات، ملابس تنفيذية، ملابس مكتبية، بدلات رسمية، زي مؤسسي، أزياء شركات في السعودية',
+  title: 'أزياء الشركات والمكاتب المؤسسية | يونيوم السعودية - رائد الأزياء المهنية',
+  description: 'أزياء مؤسسية احترافية للشركات والمكاتب في السعودية. بدلات تنفيذية وأزياء مكتبية مخصصة تعكس هوية علامتك التجارية. خبرة 15+ سنة، 500+ شركة تثق بنا.',
+  keywords: 'أزياء مؤسسية، بدلات تنفيذية، أزياء مكتبية، زي موحد للشركات، ملابس رسمية سعودية، أزياء الاستقبال، يونيفورم الشركات، ملابس العمل الرسمية، تفصيل بدلات، شعارات الشركات',
   openGraph: {
-    title: 'زي موحد للشركات | يونيوم للأزياء الموحدة',
-    description: 'زي موحد احترافي للشركات في المملكة العربية السعودية. تصميم وتنفيذ أزياء موحدة تعكس هوية علامتك التجارية بأعلى معايير الجودة.',
-    url: 'https://uneom.com/ar/industries/corporate',
+    title: 'أزياء الشركات والمكاتب المؤسسية | يونيوم السعودية',
+    description: 'أزياء مؤسسية احترافية للشركات والمكاتب في المملكة العربية السعودية. حلول شاملة تعكس هوية علامتك التجارية مع خبرة 15+ سنة.',
+    url: 'https://uneom.com/ar/industries/corporate/',
     siteName: 'يونيوم للأزياء الموحدة',
     locale: 'ar_SA',
     type: 'website',
     images: [
       {
-        url: 'https://uneom.com/images/corporate-industry-og.jpg',
+        url: 'https://uneom.com/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
         width: 1200,
         height: 630,
-        alt: 'زي موحد للشركات من يونيوم',
+        alt: 'أزياء مؤسسية احترافية من يونيوم للشركات السعودية',
       },
     ],
   },
   alternates: {
     canonical: 'https://uneom.com/ar/industries/corporate/',
     languages: {
-      'en-SA': 'https://uneom.com/industries/corporate/',
-      'ar-SA': 'https://uneom.com/ar/industries/corporate/',
+      'en': 'https://uneom.com/industries/corporate/',
+      'ar': 'https://uneom.com/ar/industries/corporate/',
     },
   },
   robots: {
@@ -37,11 +36,12 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1
+      'max-snippet': -1,
+      'max-video-preview': -1
     }
   }
 };
 
 export default function CorporateIndustryPage() {
-  return <CorporateIndustryClientPage />;
-} 
+  return <EnhancedCorporateClient />;
+}
