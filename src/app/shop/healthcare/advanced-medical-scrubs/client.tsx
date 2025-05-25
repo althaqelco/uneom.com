@@ -52,10 +52,10 @@ export default function AdvancedMedicalScrubsClientPage() {
       { name: 'Customization', value: 'Hospital logos, name embroidery, department color coding' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Doctor wearing advanced medical scrubs during consultation' },
-      { src: '/images/default-placeholder.jpg', alt: 'Nurses in advanced medical scrubs at hospital station' },
+      { src: '/images/healthcare/full_clothes_doctor_uniform.jpg', alt: 'Doctor wearing advanced medical scrubs during consultation' },
+      { src: '/images/healthcare/nurce_uniform.jpg', alt: 'Nurses in advanced medical scrubs at hospital station' },
       { src: '/images/avatar-placeholder.jpg', alt: 'Surgical team wearing specialized medical attire in operating theater' },
-      { src: '/images/default-placeholder.jpg', alt: 'Muslim female doctor in hijab-compatible medical scrubs' }
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'Muslim female doctor in hijab-compatible medical scrubs' }
     ],
     category: 'Healthcare',
     categorySlug: 'healthcare',
@@ -71,14 +71,14 @@ export default function AdvancedMedicalScrubsClientPage() {
       { name: 'Maternity Medical Scrubs', price: 'SAR 339' }
     ],
     colors: [
-      { name: 'Royal Blue', value: '#4169e1', image: '/images/default-placeholder.jpg' },
-      { name: 'Surgical Green', value: '#2e8b57', image: '/images/default-placeholder.jpg' },
-      { name: 'Burgundy', value: '#800020', image: '/images/default-placeholder.jpg' },
-      { name: 'Navy', value: '#000080', image: '/images/default-placeholder.jpg' },
-      { name: 'Ceil Blue', value: '#92a1cf', image: '/images/default-placeholder.jpg' },
-      { name: 'Black', value: '#000000', image: '/images/default-placeholder.jpg' },
-      { name: 'Pewter', value: '#8e8e8e', image: '/images/default-placeholder.jpg' },
-      { name: 'Wine', value: '#722f37', image: '/images/default-placeholder.jpg' }
+      { name: 'Royal Blue', value: '#4169e1', image: '/images/healthcare/nurce_uniform.jpg' },
+      { name: 'Surgical Green', value: '#2e8b57', image: '/images/healthcare/full_clothes_doctor_uniform.jpg' },
+      { name: 'Burgundy', value: '#800020', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'Navy', value: '#000080', image: '/images/healthcare/nurce_uniform.jpg' },
+      { name: 'Ceil Blue', value: '#92a1cf', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'Black', value: '#000000', image: '/images/healthcare/full_clothes_doctor_uniform.jpg' },
+      { name: 'Pewter', value: '#8e8e8e', image: '/images/healthcare/nurce_uniform.jpg' },
+      { name: 'Wine', value: '#722f37', image: '/images/healthcare/medical_hijab_uniform.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -173,8 +173,8 @@ export default function AdvancedMedicalScrubsClientPage() {
             "@type": "Product",
             "name": "Advanced Medical Scrubs by UNEOM",
             "image": [
-              "https://uneom.com/images/default-placeholder.jpg",
-              "https://uneom.com/images/default-placeholder.jpg",
+              "https://uneom.com/images/healthcare/full_clothes_doctor_uniform.jpg",
+              "https://uneom.com/images/healthcare/nurce_uniform.jpg",
               "https://uneom.com/images/avatar-placeholder.jpg"
             ],
             "description": "Premium medical scrubs designed for healthcare professionals in Saudi Arabia, featuring antimicrobial technology, superior comfort, and professional appearance. Our Advanced Medical Scrubs represent the pinnacle of healthcare attire, engineered specifically for the demands of Saudi Arabian medical environments.",
@@ -435,7 +435,7 @@ export default function AdvancedMedicalScrubsClientPage() {
               </div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/default-placeholder.jpg" 
+                  src="/images/healthcare/medical_hijab_uniform.jpg"
                   alt="Healthcare professionals in customized medical attire" 
                   fill
                   className="object-cover"

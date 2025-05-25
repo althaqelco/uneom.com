@@ -9,7 +9,7 @@ export default function FabricGuidePage() {
     locale: 'en',
     title: "UNEOM - Professional Uniforms",
     subtitle: 'Understanding the materials that make quality uniforms',
-    heroImage: '/images/default-placeholder.jpg',
+    heroImage: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
     
     overview: {
       title: 'The Importance of Fabric Selection',
@@ -47,7 +47,7 @@ export default function FabricGuidePage() {
             <li><strong>Cotton-Elastane:</strong> Adds stretch and flexibility to cotton garments</li>
           </ul>
         `,
-        image: '/images/default-placeholder.jpg'
+        image: '/images/services/CottonـandـCottonـBlends.jpg'
       },
       {
         title: 'Polyester and Synthetic Fabrics',
@@ -77,7 +77,7 @@ export default function FabricGuidePage() {
             <li><strong>Poly-Spandex Blends:</strong> Adds stretch while maintaining polyester's benefits</li>
           </ul>
         `,
-        image: '/images/default-placeholder.jpg'
+        image: '/images/fabric-cotton-blends.webp'
       },
       {
         title: 'Performance and Technical Fabrics',
@@ -114,7 +114,7 @@ export default function FabricGuidePage() {
             <li>Aviation uniforms requiring maximum comfort during long shifts</li>
           </ul>
         `,
-        image: '/images/default-placeholder.jpg'
+        image: '/images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg'
       },
       {
         title: 'Sustainable and Eco-Friendly Options',
@@ -145,7 +145,7 @@ export default function FabricGuidePage() {
           
           <p class="mt-4">Our sustainable uniform options are particularly popular in corporate environments, educational institutions, and organizations with strong environmental commitments.</p>
         `,
-        image: '/images/default-placeholder.jpg'
+        image: '/images/Fabric_Guide.jpg'
       }
     ],
     
@@ -154,7 +154,7 @@ export default function FabricGuidePage() {
         id: 'cotton',
         title: 'Premium Cotton',
         description: 'Our highest quality 100% cotton fabric, ideal for comfort and breathability in moderate climates.',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/services/CottonـandـCottonـBlends.jpg',
         properties: {
           'Composition': '100% Cotton',
           'Weight': '180-220 GSM',
@@ -167,7 +167,7 @@ export default function FabricGuidePage() {
         id: 'poly-cotton',
         title: 'Poly-Cotton Blend',
         description: 'The perfect balance of comfort and durability, with enhanced wrinkle resistance.',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/fabric-cotton-blends.webp',
         properties: {
           'Composition': '65% Polyester, 35% Cotton',
           'Weight': '190-240 GSM',
@@ -180,7 +180,7 @@ export default function FabricGuidePage() {
         id: 'performance',
         title: 'Performance Fabric',
         description: 'Advanced technical fabric with moisture-wicking and antimicrobial properties.',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg',
         properties: {
           'Composition': 'Poly-Spandex Blend',
           'Weight': '160-200 GSM',

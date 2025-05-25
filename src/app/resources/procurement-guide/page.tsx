@@ -9,7 +9,7 @@ export default function ProcurementGuidePage() {
     locale: 'en',
     title: "UNEOM - Professional Uniforms",
     subtitle: 'Strategic approaches to sourcing and managing uniform programs effectively',
-    heroImage: '/images/default-placeholder.jpg',
+    heroImage: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
     overview: {
       title: 'Optimizing Your Uniform Procurement Process',
       content: `
@@ -67,7 +67,7 @@ export default function ProcurementGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/default-placeholder.jpg',
+        image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg',
       },
       {
         title: 'Supplier Selection',
@@ -116,7 +116,7 @@ export default function ProcurementGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/default-placeholder.jpg',
+        image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
       },
       {
         title: 'Program Implementation',
@@ -159,7 +159,7 @@ export default function ProcurementGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/default-placeholder.jpg',
+        image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
       }
     ],
     items: [

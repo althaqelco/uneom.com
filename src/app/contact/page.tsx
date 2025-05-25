@@ -36,7 +36,7 @@ export default function ContactPage() {
       phone: '+971 55 816 4922',
       email: 'info@uneom.com',
       googleMapsUrl: 'https://maps.app.goo.gl/YourActualGoogleMapsLink',
-      image: '/images/default-placeholder.jpg'
+      image: '/images/about/company-headquarters.jpg'
     },
     {
       id: 'jeddah',
@@ -45,7 +45,7 @@ export default function ContactPage() {
       phone: '+971 55 816 4922',
       email: 'info@uneom.com',
       googleMapsUrl: 'https://maps.app.goo.gl/YourActualGoogleMapsLink',
-      image: '/images/default-placeholder.jpg'
+      image: '/images/about/production-facility.jpg'
     },
     {
       id: 'dammam',
@@ -54,7 +54,7 @@ export default function ContactPage() {
       phone: '+971558164922',
       email: 'dammam@uneom.com',
       googleMapsUrl: 'https://maps.app.goo.gl/987654',
-      image: '/images/default-placeholder.jpg'
+      image: '/images/about/design-team.jpg'
     }
   ];
 

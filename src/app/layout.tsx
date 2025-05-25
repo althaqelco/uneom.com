@@ -94,10 +94,10 @@ export const metadata: Metadata = {
 
 // Critical images to preload
 const CRITICAL_IMAGES = [
-  '/images/default-placeholder.jpg',
+  '/images/og-image.jpg',
   '/images/banner-placeholder.jpg',
-  '/images/default-placeholder.jpg',
-  '/images/default-placeholder.jpg'
+  '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
+  '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg'
 ];
 
 export default function RootLayout({
@@ -172,7 +172,7 @@ export default function RootLayout({
               <VercelImageFixer />
               <div style={{ display: 'none' }}>
                 <EmergencyImageLoader 
-                  src="/images/default-placeholder.jpg" 
+                  src="/images/og-image.jpg"
                   alt="Preloaded Logo"
                   showDebugInfo={true}
                 />
@@ -188,7 +188,7 @@ export default function RootLayout({
             // Simple image error handling
             document.addEventListener('error', function(e) {
               if (e.target.tagName === 'IMG') {
-                e.target.src = '/images/default-placeholder.jpg';
+                e.target.src = '/images/defaults/default-placeholder.jpg';
               }
             }, true);
           `}

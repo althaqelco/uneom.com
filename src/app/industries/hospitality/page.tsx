@@ -105,25 +105,25 @@ export default function HospitalityPage() {
       {
         name: "Front of House",
         description: "Professional uniforms for guest-facing staff that embody your property's brand identity and service philosophy, featuring elegant designs with practical functionality.",
-        image: "/images/default-placeholder.jpg",
+        image: "/images/hospitality/hospitality_uniform_formal.jpg",
         productTypes: ["Reception Attire", "Concierge Uniforms", "Guest Relations Sets"]
       },
       {
         name: "Food & Beverage",
         description: "Specialized uniforms for restaurant, café, and banquet staff that balance sophisticated appearance with practical features for food service environments.",
-        image: "/images/default-placeholder.jpg",
+        image: "/images/hospitality/hospitality_uniform_department.jpg",
         productTypes: ["Restaurant Server Attire", "Barista Uniforms", "Banquet Staff Sets"]
       },
       {
         name: "Housekeeping & Facilities",
         description: "Durable, practical uniforms for behind-the-scenes operational staff with features designed for comfort during physical tasks and long shifts.",
-        image: "/images/default-placeholder.jpg",
+        image: "/images/hospitality/hospitality_uniform_concierge.jpg",
         productTypes: ["Housekeeping Uniforms", "Maintenance Staff Attire", "Laundry Team Sets"]
       },
       {
         name: "Specialty & Recreation",
         description: "Custom uniforms for specialized roles including spa therapists, fitness instructors, kids club staff, and recreation personnel.",
-        image: "/images/default-placeholder.jpg",
+        image: "/images/hospitality/hospitality_uniform_buttons.jpg",
         productTypes: ["Spa Therapist Attire", "Recreation Staff Uniforms", "Kids Club Team Sets"]
       }
     ],
@@ -219,13 +219,13 @@ export default function HospitalityPage() {
           title: "Luxury Hotel Uniform Trends in Saudi Arabia: Balancing Tradition with Modern Elegance",
           excerpt: "Explore how leading Saudi luxury properties are creating distinctive staff attire that reflects both international standards and local heritage.",
           url: "/blog/saudi-luxury-hotel-uniform-trends",
-          image: "/images/default-placeholder.jpg"
+          image: "/images/blog/hospitality-uniforms.jpg"
         },
         {
           title: "The Impact of Staff Uniforms on Guest Perception and Experience",
           excerpt: "Research insights on how hospitality attire influences guest satisfaction, perceived service quality, and overall brand impression.",
           url: "/blog/uniforms-guest-perception-hospitality",
-          image: "/images/default-placeholder.jpg"
+          image: "/images/blog/hospitality-cultural.jpg"
         },
         {
           title: "Designing Practical Uniforms for Saudi Arabia's Resort Environments",
@@ -292,7 +292,7 @@ export default function HospitalityPage() {
         "Reduced uniform replacement costs by 34% compared to industry benchmarks",
         "Successful implementation across 5 properties with over 2,500 staff members"
       ],
-      image: "/images/default-placeholder.jpg",
+      image: "/images/Luxury_Hotel Staff_Uniform.png",
       testimonial: {
         quote: "The uniform program UNEOM created has become a cornerstone of our brand identity and has significantly contributed to our recognition as a leading luxury hospitality brand in Saudi Arabia.",
         author: "Sultan Al-Saud",

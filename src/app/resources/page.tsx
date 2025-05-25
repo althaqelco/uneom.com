@@ -47,14 +47,14 @@ export default function ResourcesPage() {
           id: 'size-guide',
           name: 'Size Guide',
           description: 'Detailed sizing charts and measurement instructions to ensure perfect-fitting uniforms for all body types.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
           href: '/resources/size-guide'
         },
         {
           id: 'fit-optimization',
           name: 'Fit Optimization',
           description: 'Learn how to optimize uniform fit for maximum comfort and professional appearance across your organization.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
           href: '/resources/fit-optimization'
         }
       ]
@@ -66,14 +66,14 @@ export default function ResourcesPage() {
           id: 'procurement-guide',
           name: 'Procurement Guide',
           description: 'Best practices for efficient uniform procurement, from needs assessment to delivery and implementation.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
           href: '/resources/procurement-guide'
         },
         {
           id: 'policy-templates',
           name: 'Uniform Policy Templates',
           description: 'Customizable templates for developing comprehensive corporate uniform policies and guidelines.',
-          image: '/images/default-placeholder.jpg',
+          image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg',
           href: '/resources/policy-templates'
         }
       ]

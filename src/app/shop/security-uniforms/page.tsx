@@ -42,7 +42,7 @@ export default function SecurityUniformsPage() {
       name: 'Tactical Security Uniform',
       description: 'Tactical security uniform with reinforced construction and multiple functional pockets, designed for active security personnel in demanding environments.',
       price: 'From SAR 349',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/security/security_uniform_tactical.jpg',
       href: '/shop/security-uniforms/tactical-security-uniform',
       features: ['Durable ripstop fabric', 'Multiple pockets', 'Reinforced knees/elbows', 'Belt loops'],
       colors: ['Black', 'Navy', 'Khaki', 'Olive'],
@@ -53,7 +53,7 @@ export default function SecurityUniformsPage() {
       name: 'Hotel Security Uniform',
       description: 'Refined security uniform designed for hotel and hospitality settings, balancing professional appearance with functional security features.',
       price: 'From SAR 299',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/security/security_uniform_hotel.jpg',
       href: '/shop/security-uniforms/hotel-security-uniform',
       features: ['Formal appearance', 'Comfortable fit', 'Hotel branding option', 'Professional styling'],
       colors: ['Black', 'Navy', 'Burgundy', 'White']
@@ -73,7 +73,7 @@ export default function SecurityUniformsPage() {
       name: 'Event Security Uniform',
       description: 'High-visibility event security uniform designed for crowd management and event security services with comfort and recognition features.',
       price: 'From SAR 219',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/security/security_uniform_event.jpg',
       href: '/shop/security-uniforms/event-security-uniform',
       features: ['High-visibility option', 'Breathable fabric', 'Company branding', 'Weather-resistant'],
       colors: ['Black', 'Hi-Vis Yellow', 'Hi-Vis Orange']
@@ -83,7 +83,7 @@ export default function SecurityUniformsPage() {
       name: 'Security Winter Jacket',
       description: 'Insulated security jacket designed for cold weather conditions with security features and professional styling for outdoor surveillance.',
       price: 'From SAR 329',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/security/security_uniform_winter.jpg',
       href: '/shop/security-uniforms/security-winter-jacket',
       features: ['Thermal insulation', 'Water-resistant', 'Reflective elements', 'Badge holder'],
       colors: ['Black', 'Navy', 'Grey']
@@ -376,7 +376,7 @@ export default function SecurityUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/icons/compliance-shield.svg"
                   alt="Badge & ID Integration"
                   fill
                   className="object-cover"
@@ -410,7 +410,7 @@ export default function SecurityUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/icons/customization-icon.svg"
                   alt="Tactical Functionality"
                   fill
                   className="object-cover"
@@ -427,7 +427,7 @@ export default function SecurityUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/icons/premium-quality.svg"
                   alt="Professional Aesthetics"
                   fill
                   className="object-cover"
@@ -453,7 +453,7 @@ export default function SecurityUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/default-placeholder.jpg"
+                    src="/images/products/corporate-suit-executive.jpg"
                     alt="Corporate Workwear"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -470,7 +470,7 @@ export default function SecurityUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/default-placeholder.jpg"
+                    src="/images/hospitality/hospitality_uniform_formal.jpg"
                     alt="Hospitality Attire"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -487,7 +487,7 @@ export default function SecurityUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/default-placeholder.jpg"
+                    src="/images/products/industrial-coverall.jpg"
                     alt="Industrial Uniforms"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -524,7 +524,7 @@ export default function SecurityUniformsPage() {
             <div className="hidden lg:block">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg"
                   alt="Security Uniform Design Service"
                   fill
                   className="object-cover"

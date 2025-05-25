@@ -28,7 +28,7 @@ export default function WorkplaceUniformsPage() {
       id: 'executive-suits',
       name: 'Executive Tailored Suits',
       price: 'From SAR 1,299',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-suit-executive.jpg',
       rating: 4.9,
       reviews: 87,
       description: 'Premium tailored suits designed for corporate executives who require sophistication, comfort, and a distinguished professional appearance.',
@@ -38,7 +38,7 @@ export default function WorkplaceUniformsPage() {
       id: 'corporate-shirts',
       name: 'Corporate Premium Shirts',
       price: 'From SAR 249',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-shirts-blouses.jpg',
       rating: 4.7,
       reviews: 124,
       description: 'High-quality corporate shirts in a variety of colors, featuring moisture-wicking fabric and easy-care properties for professional daily wear.',
@@ -48,7 +48,7 @@ export default function WorkplaceUniformsPage() {
       id: 'office-blazers',
       name: 'Professional Office Blazers',
       price: 'From SAR 899',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/corporate-polo-shirts.jpg',
       rating: 4.6,
       reviews: 58,
       description: 'Elegant yet comfortable blazers for business professionals, available in various styles suitable for Saudi corporate environments.',
@@ -58,7 +58,7 @@ export default function WorkplaceUniformsPage() {
       id: 'executive-abayas',
       name: 'Executive Modest Abayas',
       price: 'From SAR 799',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
       rating: 4.8,
       reviews: 92,
       description: 'Professional abayas designed specifically for corporate settings, combining traditional modesty with contemporary business aesthetics.',
@@ -78,7 +78,7 @@ export default function WorkplaceUniformsPage() {
       id: 'corporate-skirts',
       name: 'Professional Modest Skirts',
       price: 'From SAR 349',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
       rating: 4.6,
       reviews: 64,
       description: 'Professional length skirts designed for corporate settings, maintaining modesty while offering a polished business appearance.',
@@ -268,7 +268,7 @@ export default function WorkplaceUniformsPage() {
             </div>
             <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
               <Image 
-                src="/images/default-placeholder.jpg" 
+                src="/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg"
                 alt="Corporate uniform program" 
                 fill
                 className="object-cover"

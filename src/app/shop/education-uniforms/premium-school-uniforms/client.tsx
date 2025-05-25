@@ -52,10 +52,10 @@ export default function PremiumSchoolUniformsClientPage() {
       { name: 'Customization', value: 'School logos, name embroidery, custom colors' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Saudi students wearing premium school uniforms in classroom' },
-      { src: '/images/default-placeholder.jpg', alt: 'Teacher and students in school uniforms' },
-      { src: '/images/default-placeholder.jpg', alt: 'Group of Saudi students in coordinated uniforms' },
-      { src: '/images/default-placeholder.jpg', alt: 'Saudi schoolgirl in premium uniform' }
+      { src: '/images/education/uniform_school_product-2.jpg', alt: 'Saudi students wearing premium school uniforms in classroom' },
+      { src: '/images/group-of-elementary-school-pupils-wearing-uniform-2024-10-19-12-09-06-utc.jpg', alt: 'Teacher and students in school uniforms' },
+      { src: '/images/education/uniform_school_product-4.jpg', alt: 'Group of Saudi students in coordinated uniforms' },
+      { src: '/images/education/uniform_school_product-5.jpg', alt: 'Saudi schoolgirl in premium uniform' }
     ],
     category: 'Education Uniforms',
     categorySlug: 'education-uniforms',
@@ -72,11 +72,11 @@ export default function PremiumSchoolUniformsClientPage() {
       { name: 'High School Set (Girls)', price: 'SAR 299' }
     ],
     colors: [
-      { name: 'Navy Blue', value: '#1a2942', image: '/images/default-placeholder.jpg' },
-      { name: 'White', value: '#ffffff', image: '/images/default-placeholder.jpg' },
-      { name: 'Light Blue', value: '#add8e6', image: '/images/default-placeholder.jpg' },
-      { name: 'Black', value: '#222222', image: '/images/default-placeholder.jpg' },
-      { name: 'Beige', value: '#f5f5dc', image: '/images/default-placeholder.jpg' }
+      { name: 'Navy Blue', value: '#1a2942', image: '/images/education/uniform_school_product-2.jpg' },
+      { name: 'White', value: '#ffffff', image: '/images/education/uniform_school_product-4.jpg' },
+      { name: 'Light Blue', value: '#add8e6', image: '/images/education/uniform_school_product-5.jpg' },
+      { name: 'Black', value: '#222222', image: '/images/education/uniform_school_product-6.jpg' },
+      { name: 'Beige', value: '#f5f5dc', image: '/images/education/uniform_school_product-7.jpg' }
     ],
     sizes: ['4-5', '6-7', '8-9', '10-11', '12-13', '14-15', '16-18'],
     sizeEquivalents: {

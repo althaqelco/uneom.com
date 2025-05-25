@@ -102,22 +102,22 @@ export default function IndustrialCoverallProPage() {
       { 
         name: "Company Logo Embroidery", 
         description: "Add your company logo embroidered on chest and/or back",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/icons/custom-branding.svg"
       },
       { 
         name: "Name/Department Tags", 
         description: "Add employee name or department identification",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/icons/customization-icon.svg"
       },
       { 
         name: "Reflective Striping", 
         description: "Additional reflective strips for enhanced visibility",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/icons/compliance-shield.svg"
       },
       { 
         name: "Pocket Customization", 
         description: "Modify pocket configuration based on specific needs",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/icons/customization-icon.svg"
       }
     ],
     relatedProducts: [

@@ -9,7 +9,7 @@ export default function SizeGuidePage() {
     locale: 'en',
     title: "UNEOM - Professional Uniforms",
     subtitle: 'Comprehensive measurements for the perfect fit across all uniform types',
-    heroImage: '/images/default-placeholder.jpg',
+    heroImage: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
     overview: {
       title: 'Finding the Right Fit',
       content: `
@@ -61,7 +61,7 @@ export default function SizeGuidePage() {
             <p>Measure around the base of the neck, where a collar would sit.</p>
           </div>
         `,
-        image: '/images/default-placeholder.jpg',
+        image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
       },
       {
         title: 'Standard Size Charts',
@@ -215,7 +215,7 @@ export default function SizeGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/default-placeholder.jpg',
+        image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
       }
     ],
     items: [
@@ -223,25 +223,25 @@ export default function SizeGuidePage() {
         id: "mens-sizing",
         title: "Men's Sizing Guide",
         description: "Complete measurements and size charts for all men's uniform categories.",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/products/corporate-suit-executive.jpg"
       },
       {
         id: "womens-sizing",
         title: "Women's Sizing Guide",
         description: "Detailed measurements for women's uniforms with size conversion tables.",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/healthcare/medical_hijab_uniform.jpg"
       },
       {
         id: "measurement-guide",
         title: "Measurement Guide",
         description: "Instructions for taking accurate body measurements for the perfect uniform fit.",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg"
       },
       {
         id: "size-conversion",
         title: "Size Conversion Tables",
         description: "International size conversion charts for global uniform programs.",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg"
       }
     ],
     relatedResources: [
