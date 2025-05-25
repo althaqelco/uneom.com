@@ -1,303 +1,365 @@
-"use client";
-
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
-import SEO from '@/components/SEO';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
-import CorporateImageFix from './corporate-fix';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import ProductCard from '@/components/ui/ProductCard';
+import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+
+export const metadata: Metadata = {
+  title: 'Corporate Uniforms & Business Attire | Professional Office Wear | Uneom',
+  description: 'Premium corporate uniforms and business attire for Saudi Arabian companies. Professional designs that enhance brand image, promote team unity, and ensure comfort in corporate environments.',
+  keywords: 'corporate uniforms, business attire, office uniforms, executive suits, corporate wear, professional clothing, business suits Saudi Arabia, corporate dress code, office wear',
+  openGraph: {
+    title: 'Corporate Uniforms & Business Attire | Professional Office Wear | Uneom',
+    description: 'Premium corporate uniforms and business attire for Saudi Arabian companies.',
+    url: 'https://uneom.com/industries/corporate/',
+    siteName: 'Uneom',
+    images: [
+      {
+        url: 'https://uneom.com/images/industries/corporate/hero-corporate-uniforms.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Corporate Uniforms by Uneom'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://uneom.com/industries/corporate/',
+    languages: {
+      'en-SA': 'https://uneom.com/industries/corporate/',
+      'ar-SA': 'https://uneom.com/ar/industries/corporate/',
+      'x-default': 'https://uneom.com/industries/corporate/'
+    }
+  }
+};
+
+export const dynamic = 'force-static';
+
+// Featured corporate products
+const featuredProducts = [
+  {
+    id: '1',
+    name: 'Executive Business Suits',
+    image: '/images/products/corporate-suit-executive.jpg',
+    price: 'Request Quote',
+    href: '/shop/corporate/executive-suits/',
+    category: 'Executive Wear'
+  },
+  {
+    id: '2',
+    name: 'Professional Shirts & Blouses',
+    image: '/images/products/corporate-shirts-blouses.jpg',
+    price: 'Request Quote',
+    href: '/shop/corporate/business-shirts/',
+    category: 'Business Shirts'
+  },
+  {
+    id: '3',
+    name: 'Corporate Polo Shirts',
+    image: '/images/products/corporate-polo-shirts.jpg',
+    price: 'Request Quote',
+    href: '/shop/corporate/casual-polo/',
+    category: 'Casual Corporate'
+  }
+];
+
+// Corporate benefits
+const corporateBenefits = [
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    ),
+    title: 'Brand Consistency',
+    description: 'Unified corporate image that reinforces your brand identity and values across all departments and locations.'
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+    title: 'Professional Image',
+    description: 'Elevate your company\'s professional appearance and create positive first impressions with clients and partners.'
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    title: 'Employee Satisfaction',
+    description: 'Comfortable, well-fitted uniforms that boost employee confidence and satisfaction in the workplace.'
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+      </svg>
+    ),
+    title: 'Cost Efficiency',
+    description: 'Streamlined procurement process and bulk ordering advantages that reduce overall uniform costs.'
+  }
+];
+
+// Corporate sectors
+const corporateSectors = [
+  {
+    name: 'Banking & Finance',
+    description: 'Professional attire that conveys trust, reliability, and expertise in financial services',
+    image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
+    features: ['Executive suits', 'Conservative styling', 'Premium fabrics', 'Professional appearance']
+  },
+  {
+    name: 'Technology Companies',
+    description: 'Modern corporate wear that balances professionalism with contemporary workplace culture',
+    image: '/images/diverse-business-meeting-manager-brainstorming-with-meeting-participants-in-office-conf-SBI-391494217.jpg',
+    features: ['Smart casual options', 'Flexible dress codes', 'Comfortable fits', 'Modern designs']
+  },
+  {
+    name: 'Government Offices',
+    description: 'Formal corporate uniforms that reflect the dignity and authority of public service',
+    image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
+    features: ['Formal styling', 'Cultural appropriateness', 'Durable construction', 'Professional standards']
+  }
+];
 
 export default function CorporateIndustryPage() {
-  const locale = 'en';
-  
-  // Content for the English version
-  const content = {
-    meta: {
-      title: 'Premium Corporate Uniforms & Business Attire in KSA | UNEOM',
-      description: 'Elevate your brand image with UNEOM\'s custom corporate uniforms, professional business attire, and executive wear. Tailored for companies in Riyadh, Jeddah, and across Saudi Arabia.',
-    },
-    hero: {
-      headline: 'Dress Your Team for Success: Sophisticated Corporate Uniforms by UNEOM',
-      subheadline: 'Custom-designed business attire, executive wear, and branded apparel that project professionalism and reinforce your corporate identity. Serving leading KSA enterprises.',
-      cta: 'Enquire About Corporate Attire',
-      ctaLink: '/quote?industry=corporate',
-      image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg', // Placeholder image
-    },
-    intro: {
-      title: 'Defining Professional Presence Across Saudi Arabia',
-      paragraphs: [
-        'UNEOM specializes in creating distinguished corporate uniforms and business attire that reflect the prestige and values of your organization. From tailored suits for executives to smart, cohesive uniforms for your entire staff, we deliver quality and style that makes a lasting impression.',
-        'We partner with businesses across Saudi Arabia, including in key commercial hubs like Riyadh, Jeddah, and Dammam, to provide workwear solutions that enhance brand image, foster team unity, and ensure your employees look and feel their best.',
-      ],
-    },
-    keyBenefits: {
-      title: 'The UNEOM Advantage for Your Corporate Wear',
-    benefits: [
-      {
-          name: 'Enhanced Brand Image',
-          description: 'Consistent, high-quality uniforms that create a powerful and professional brand statement.',
-          icon: '/images/icons/brand-image.svg', // Placeholder
-        },
-        {
-          name: 'Improved Team Cohesion',
-          description: 'Foster a sense of unity and belonging among employees with smart, standardized attire.',
-          icon: '/images/icons/team-cohesion.svg', // Placeholder
-        },
-        {
-          name: 'Professionalism & Credibility',
-          description: 'Instill confidence in clients and stakeholders with a team that looks polished and professional.',
-          icon: '/images/icons/professionalism-alt.svg', // Placeholder
-        },
-        {
-          name: 'Customization & Tailoring',
-          description: 'Bespoke designs, quality fabrics, and expert tailoring to meet your exact specifications.',
-          icon: '/images/icons/custom-tailoring.svg', // Placeholder
-        },
-      ],
-    },
-    featuredProducts: {
-      title: 'Our Corporate Attire Collection',
-    products: [
-      {
-          name: 'Executive Suiting Collection',
-          description: 'Impeccably tailored suits for men and women, crafted from premium fabrics for a distinguished look.',
-          image: '/images/Corporate_Uniforms_Business.png', // Placeholder
-          link: '/shop/corporate/executive-suits',
-        },
-        {
-          name: 'Professional Business Shirts & Blouses',
-          description: 'A range of high-quality shirts and blouses, customizable with your company logo and colors.',
-          image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg', // Placeholder
-          link: '/shop/corporate/business-shirts',
-        },
-        {
-          name: 'Branded Polo Shirts & Casual Wear',
-          description: 'Comfortable and stylish options for a more casual corporate look, perfect for events and everyday wear.',
-          image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg', // Placeholder
-          link: '/shop/corporate/casual-polo',
-        },
-      ],
-    },
-    customizationOptions: {
-      title: 'Tailored Branding & Customization',
-      description: 'UNEOM offers extensive customization options, including precise color matching, logo embroidery, and unique design elements to perfectly align your corporate wear with your brand identity. Our experts work with you to create truly bespoke uniform solutions.',
-      image: '/images/industries/corporate/customization-corporate.jpg', // Placeholder
-    },
-    testimonials: {
-      title: 'What Our Corporate Clients Say',
-      items: [
-        {
-          quote: "UNEOM transformed our company\'s image with their exceptional corporate uniforms. The quality and service were outstanding.",
-          author: 'Ahmed Al-Harbi',
-          position: 'CEO, KSA FutureTech Solutions',
-        },
-      ],
-    },
-    relatedBlogs: {
-      title: 'Corporate Uniform Insights',
-      posts: [
-        {
-          title: 'The Impact of Corporate Uniforms on Brand Perception',
-          link: '/blog/corporate-uniforms-brand-perception', // Placeholder
-          image: '/images/blog/placeholder-corporate1.jpg',
-        },
-        {
-          title: 'Choosing the Right Fabrics for Professional Attire',
-          link: '/blog/fabrics-professional-attire', // Placeholder
-          image: '/images/blog/placeholder-corporate2.jpg',
-        },
-      ],
-    },
-    finalCta: {
-      title: 'Elevate Your Corporate Image with UNEOM',
-      description: 'Partner with us to design and deliver corporate attire that speaks volumes about your brand. Contact our specialists in Saudi Arabia today.',
-      cta: 'Request a Corporate Consultation',
-      ctaLink: '/quote?industry=corporate&focused=true',
-    },
-  };
-
   return (
-    <>
-      <CorporateImageFix />
-      
-      {/* Enhanced SEO for Google May 2025 Standards */}
-      <EnhancedSEO2025
-        title={content.meta.title}
-        description={content.meta.description}
-        keywords={[
-          'corporate uniforms Saudi Arabia',
-          'business attire KSA',
-          'executive wear Riyadh',
-          'professional uniforms Jeddah',
-          'company uniforms Dammam',
-          'branded corporate clothing',
-          'office uniforms Saudi',
-          'business dress code',
-          'corporate identity uniforms'
-        ]}
-        author="UNEOM Corporate Division"
-        expertise="Corporate Uniform Design & Manufacturing"
-        contentType="service"
-        trustSignals={[
-          'Trusted by Fortune 500 companies',
-          'Premium fabric sourcing',
-          'Custom branding solutions',
-          'Saudi corporate market leader'
-        ]}
+    <div>
+      <EnhancedSEO2025 
+        title="Corporate Uniforms & Business Attire | Professional Office Wear | Uneom"
+        description="Premium corporate uniforms and business attire for Saudi Arabian companies. Professional designs that enhance brand image, promote team unity, and ensure comfort."
         canonicalUrl="https://uneom.com/industries/corporate/"
         locale="en"
       />
-      
-      {/* Legacy SEO component for compatibility */}
-      <SEO
-        title={content.meta.title}
-        description={content.meta.description}
-        canonicalUrl="https://uneom.com/industries/corporate/"
-      />
 
-        {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-slate-700 to-neutral-800 text-white py-20 md:py-32">
-        <div className="absolute inset-0">
-            <Image
-            src={content.hero.image}
-            alt={content.hero.headline}
-              fill
-            className="object-cover opacity-30"
-              priority
-            />
-          </div>
-        <Container className="relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            {content.hero.headline}
-          </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
-            {content.hero.subheadline}
-          </p>
-          <Button href={content.hero.ctaLink} size="lg" variant="primary">
-            {content.hero.cta}
-          </Button>
-        </Container>
-      </section>
-
-      {/* Intro Section */}
-      <section className="py-16 md:py-24 bg-white">
-          <Container>
-          <SectionHeading className="text-center mb-12">{content.intro.title}</SectionHeading>
-          <div className="max-w-3xl mx-auto space-y-6 text-lg text-neutral-700">
-            {content.intro.paragraphs.map((p, i) => (<p key={i}>{p}</p>))}
-          </div>
-          </Container>
-        </section>
-
-      {/* Key Benefits Section */}
-      <section className="py-16 md:py-24 bg-neutral-50">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-primary-800 to-primary-700 text-white py-20">
+        <div className="absolute inset-0 opacity-30">
+          <Image
+            src="/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg"
+            alt="Corporate Uniforms by Uneom"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        
         <Container>
-          <SectionHeading className="text-center mb-16">{content.keyBenefits.title}</SectionHeading>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {content.keyBenefits.benefits.map((benefit) => (
-              <div key={benefit.name} className="bg-white p-6 rounded-lg shadow-lg text-center">
-                {/* Placeholder for icon - Consider using a generic icon or a theme-specific one */}
-                <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {/* SVG Icon would go here, e.g., <Image src={benefit.icon} alt="" width={24} height={24} /> */}
-                </div>
-                <h3 className="text-xl font-semibold text-neutral-800 mb-2">{benefit.name}</h3>
-                <p className="text-neutral-600 text-sm">{benefit.description}</p>
-              </div>
-            ))}
+          <Breadcrumbs
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Industries', href: '/industries' },
+              { label: 'Corporate', href: '/industries/corporate' }
+            ]}
+            className="text-white/80 mb-6 relative z-10"
+          />
+          
+          <div className="relative z-10 max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Corporate Uniforms & Business Attire</h1>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl">
+              Professional corporate uniforms designed to enhance your brand image and promote team unity. Perfect for businesses across Saudi Arabia seeking to establish a consistent, professional appearance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                href="/quote"
+                variant="secondary" 
+                size="lg"
+              >
+                Request Corporate Quote
+              </Button>
+              <Button 
+                href="#featured-products"
+                variant="outline" 
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-primary-700"
+              >
+                View Collection
+              </Button>
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* Featured Products Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <main className="py-16">
         <Container>
-          <SectionHeading className="text-center mb-16">{content.featuredProducts.title}</SectionHeading>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {content.featuredProducts.products.map((product) => (
-              <div key={product.name} className="border rounded-lg overflow-hidden shadow-lg group">
-                <Link href={product.link} className="block">
-                  <div className="relative w-full h-72 bg-neutral-100"> {/* Increased height for better product display */}
-                    <Image src={product.image} alt={product.name} fill className="object-contain group-hover:scale-105 transition-transform duration-300 p-4" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-neutral-800 mb-2">{product.name}</h3>
-                    <p className="text-neutral-600 text-sm mb-4">{product.description}</p>
-                    <span className="text-primary-600 hover:text-primary-700 font-medium">
-                      View Collection &rarr;
-                    </span>
-                  </div>
-                </Link>
+          {/* Introduction */}
+          <section className="mb-16">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <SectionHeading subtitle="Professional Corporate Attire">
+                  Building Your Brand Through Uniforms
+                </SectionHeading>
+                <p className="text-lg text-gray-600 mb-6">
+                  Your corporate uniform is more than just clothing—it's a powerful tool for brand building and team unity. Our corporate uniform collection combines professional aesthetics with practical functionality to create attire that represents your company's values and standards.
+                </p>
+                <p className="text-gray-600 mb-8">
+                  From executive boardrooms to customer-facing roles, our uniforms are designed to make a lasting impression while ensuring comfort and confidence for your team.
+                </p>
+                <Button href="/contact" variant="primary" size="lg">
+                  Discuss Your Corporate Needs
+                </Button>
               </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+              <div className="relative aspect-square rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg"
+                  alt="Professional Corporate Attire"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </section>
 
-      {/* Customization Options Section */}
-      <section className="py-16 md:py-24 bg-neutral-800 text-white">
-        <Container className="md:flex items-center gap-12">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <Image src={content.customizationOptions.image} alt={content.customizationOptions.title} width={600} height={450} className="rounded-lg shadow-xl object-cover" />
-          </div>
-          <div className="md:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">{content.customizationOptions.title}</h2>
-            <p className="text-lg text-neutral-300 leading-relaxed">{content.customizationOptions.description}</p>
-          </div>
-        </Container>
-      </section>
-
-      {/* Testimonials Section - Minimalistic Placeholder */}
-      {content.testimonials && content.testimonials.items.length > 0 && (
-        <section className="py-16 md:py-24 bg-neutral-50">
-          <Container>
-            <SectionHeading className="text-center mb-12">{content.testimonials.title}</SectionHeading>
-            <div className="max-w-2xl mx-auto">
-              {content.testimonials.items.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-lg shadow-lg mb-8">
-                  <p className="text-lg text-neutral-700 italic mb-4">"{testimonial.quote}"</p>
-                  <p className="text-right font-semibold text-neutral-800">&mdash; {testimonial.author}, {testimonial.position}</p>
+          {/* Key Benefits */}
+          <section className="mb-16">
+            <SectionHeading subtitle="Why Choose Uneom Corporate Uniforms" centered>
+              Excellence in Corporate Branding
+            </SectionHeading>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+              {corporateBenefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center text-primary-600">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
                 </div>
               ))}
             </div>
-          </Container>
-        </section>
-      )}
+          </section>
 
-      {/* Related Blogs Section - Placeholder */}
-      {content.relatedBlogs && content.relatedBlogs.posts.length > 0 && (
-        <section className="py-16 md:py-24 bg-white">
-        <Container>
-            <SectionHeading className="text-center mb-16">{content.relatedBlogs.title}</SectionHeading>
-            <div className="grid md:grid-cols-2 gap-8">
-              {content.relatedBlogs.posts.map((post) => (
-                <Link key={post.title} href={post.link} className="block group border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="relative w-full h-56 bg-neutral-100"> {/* Adjusted height */}
-                    <Image src={post.image} alt={post.title} fill className="object-cover" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-neutral-800 mb-2 group-hover:text-primary-600 transition-colors">{post.title}</h3>
-                    <span className="text-primary-600 font-medium">Read More &rarr;</span>
-                  </div>
-            </Link>
+          {/* Featured Products */}
+          <section id="featured-products" className="mb-16">
+            <SectionHeading subtitle="Our Corporate Collection" centered>
+              Featured Corporate Uniforms
+            </SectionHeading>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {featuredProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
               ))}
             </div>
-          </Container>
-        </section>
-      )}
+            
+            <div className="text-center mt-12">
+              <Button href="/shop/corporate/" variant="primary" size="lg">
+                View All Corporate Products
+              </Button>
+            </div>
+          </section>
 
-      {/* Final CTA Section */}
-      <section className="py-20 md:py-32 bg-primary-700 text-white"> {/* Slightly different primary color for variety */}
-        <Container className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">{content.finalCta.title}</h2>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">{content.finalCta.description}</p>
-          <Button href={content.finalCta.ctaLink} size="lg" variant="secondary">
-            {content.finalCta.cta}
-          </Button>
+          {/* Corporate Sectors */}
+          <section className="mb-16">
+            <SectionHeading subtitle="Industry-Specific Solutions" centered>
+              Uniforms for Every Corporate Sector
+            </SectionHeading>
+            
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              {corporateSectors.map((sector, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="relative aspect-video">
+                    <Image
+                      src={sector.image}
+                      alt={sector.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">{sector.name}</h3>
+                    <p className="text-gray-600 mb-4">{sector.description}</p>
+                    <ul className="space-y-2">
+                      {sector.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm">
+                          <svg className="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Customization Options */}
+          <section className="mb-16 bg-gray-50 rounded-2xl p-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative aspect-square rounded-xl overflow-hidden">
+                <Image
+                  src="/images/diverse-business-meeting-manager-brainstorming-with-meeting-participants-in-office-conf-SBI-391494217.jpg"
+                  alt="Custom Corporate Uniforms"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <SectionHeading subtitle="Brand-Aligned Solutions">
+                  Custom Corporate Uniforms
+                </SectionHeading>
+                <p className="text-lg text-gray-600 mb-6">
+                  Every company has a unique culture and brand identity. Our customization services ensure your corporate uniforms perfectly align with your brand guidelines and company values.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Custom logo embroidery and branding
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Brand color coordination
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Department-specific variations
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Executive and staff level distinctions
+                  </li>
+                </ul>
+                <Button href="/services/custom-design/" variant="primary" size="lg">
+                  Explore Customization
+                </Button>
+              </div>
+            </div>
+          </section>
+
+          {/* Final CTA */}
+          <section className="text-center bg-primary-50 rounded-2xl p-12">
+            <h2 className="text-3xl font-bold mb-4">Ready to Elevate Your Corporate Image?</h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Join leading companies across Saudi Arabia who trust Uneom for their professional corporate uniform needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="/quote" variant="primary" size="lg">
+                Get Corporate Quote
+              </Button>
+              <Button href="/contact" variant="outline" size="lg">
+                Schedule Brand Consultation
+              </Button>
+            </div>
+          </section>
         </Container>
-      </section>
-    </>
+      </main>
+    </div>
   );
-} 
+}
