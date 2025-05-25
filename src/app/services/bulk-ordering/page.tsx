@@ -18,12 +18,12 @@ export default function BulkOrderingServicePage() {
     
     steps: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/consultation-icon.svg',
         title: 'Requirements Assessment',
         description: 'We begin by conducting a thorough assessment of your uniform requirements, including quantities, styles, sizes, customization needs, and delivery timelines. This detailed understanding forms the foundation for an optimized procurement plan.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/customization-icon.svg',
         title: 'Proposal & Optimization',
         description: 'Our team develops a comprehensive proposal with volume-based pricing tiers and identifies opportunities for cost optimization without compromising quality. We work with you to refine the proposal until it perfectly aligns with your needs and budget.'
       },
@@ -33,7 +33,7 @@ export default function BulkOrderingServicePage() {
         description: 'Once approved, we coordinate the production process with rigorous quality control standards at every stage. Our dedicated teams ensure consistent sizing, correct customization, and adherence to all specifications across your entire order.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/timely-delivery.svg',
         title: 'Logistics & Delivery',
         description: 'We manage all aspects of order fulfillment, including inventory management, packaging, shipping, and delivery coordination. For multi-location orders, we ensure each site receives the correct items on schedule.'
       }
@@ -41,32 +41,32 @@ export default function BulkOrderingServicePage() {
     
     benefits: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/saudi-expertise.svg',
         title: 'Cost Efficiency',
         description: 'Benefit from significant volume discounts, optimized production processes, and efficient logistics management that can reduce overall uniform costs by 15-30%.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/premium-quality.svg',
         title: 'Consistent Quality',
         description: 'Our stringent quality control protocols ensure uniform consistency across your entire order, regardless of quantity or complexity.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/timely-delivery.svg',
         title: 'Time Savings',
         description: 'Eliminate the administrative burden of managing multiple vendors or orders with our single-source solution for all uniform requirements.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/comprehensive-support.svg',
         title: 'Flexible Ordering Options',
         description: 'Choose from one-time bulk procurement, scheduled recurring orders, or on-demand ordering systems based on your operational needs.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/brand-aligned.svg',
         title: 'Simplified Logistics',
         description: 'Our sophisticated logistics management handles complex distribution requirements, ensuring the right uniforms reach the right locations at the right time.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/customization-icon.svg',
         title: 'Detailed Reporting',
         description: 'Receive comprehensive order tracking, inventory reports, and cost analysis to maintain complete visibility throughout the procurement process.'
       }

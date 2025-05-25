@@ -23,12 +23,12 @@ export default function CustomDesignServicePage() {
         description: 'We begin with a comprehensive discovery phase to understand your brand values, identity elements, and design preferences. Our team analyzes your existing visual identity, target audience, and industry positioning to establish clear design objectives.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/custom-branding.svg',
         title: 'Concept Development',
         description: 'Our design team creates initial concepts that blend aesthetic appeal with functional requirements. We present multiple design directions with mood boards, color palettes, and preliminary sketches to visualize different approaches.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/customization-icon.svg',
         title: 'Refinement & Prototyping',
         description: 'Based on your feedback, we refine selected concepts and develop detailed designs. Prototypes are created for key uniform pieces, allowing for fit testing, material evaluation, and further design adjustments.'
       },
@@ -41,32 +41,32 @@ export default function CustomDesignServicePage() {
     
     benefits: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/brand-aligned.svg',
         title: 'Strengthened Brand Identity',
         description: 'Custom uniforms reinforce your visual identity and create immediate brand recognition both internally and with customers or clients.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/premium-quality.svg',
         title: 'Competitive Differentiation',
         description: 'Stand out from competitors with distinctive uniforms that communicate your unique positioning and values in the marketplace.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/culturally-appropriate.svg',
         title: 'Enhanced Company Culture',
         description: 'Well-designed uniforms foster a sense of belonging and pride among employees, strengthening your organizational culture.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/comprehensive-support.svg',
         title: 'Visual Consistency',
         description: 'Ensure consistent brand presentation across all locations, departments, and customer touchpoints.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/consultation-icon.svg',
         title: 'Optimized Functionality',
         description: 'Custom designs allow for industry-specific features and adaptations that improve comfort and performance for your specific work environment.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/timely-delivery.svg',
         title: 'Elevated Customer Perception',
         description: 'Professional, branded uniforms elevate customer perception of your service quality and organizational professionalism.'
       }
@@ -78,14 +78,14 @@ export default function CustomDesignServicePage() {
         title: 'Luxury Hotel Brand Transformation',
         description: 'Creating a distinctive uniform collection for a new luxury hotel brand launching in Saudi Arabia that needed to blend contemporary elegance with subtle cultural elements.',
         result: '92% of guests surveyed mentioned the distinctive staff appearance as a memorable element of their stay, and the designs were featured in Hospitality Design magazine.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/products/hotel-uniform.jpg'
       },
       {
         id: "banking-refresh",
         title: 'Corporate Banking Identity Refresh',
         description: 'Modernizing an outdated corporate uniform program for a leading financial institution with 1,200+ customer-facing employees while maintaining professionalism and brand heritage.',
         result: '86% increase in employee satisfaction with uniform program and customer perception metrics for "professionalism" increased by 18%.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/products/corporate-suit-executive.jpg'
       }
     ],
     

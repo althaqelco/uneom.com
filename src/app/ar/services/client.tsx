@@ -26,7 +26,7 @@ export default function ServicesClientPage() {
       id: 'program-management',
       name: 'إدارة برامج الزي الموحد',
       description: 'حلول شاملة لإدارة برنامج الزي الموحد الخاص بمؤسستك من البداية إلى النهاية.',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
       href: '/ar/services/program-management',
       benefits: [
         'تحليل احتياجات المؤسسة والموظفين',
@@ -40,7 +40,7 @@ export default function ServicesClientPage() {
       id: 'custom-design',
       name: 'تصميم الزي الموحد حسب الطلب',
       description: 'تصميمات فريدة تعكس هوية علامتك التجارية وتعزز صورتك المؤسسية.',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
       href: '/ar/services/custom-design',
       benefits: [
         'مصممون محترفون بخبرة في الزي المؤسسي',
@@ -54,7 +54,7 @@ export default function ServicesClientPage() {
       id: 'bulk-ordering',
       name: 'طلبات الشراء بالجملة',
       description: 'حلول فعالة من حيث التكلفة لطلبات الزي الموحد بكميات كبيرة مع ضمان الجودة.',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
       href: '/ar/services/bulk-ordering',
       benefits: [
         'أسعار تنافسية للطلبات الكبيرة',
@@ -68,7 +68,7 @@ export default function ServicesClientPage() {
       id: 'measuring-services',
       name: 'خدمات القياس',
       description: 'نضمن ملاءمة مثالية لجميع الموظفين من خلال خدمات القياس الاحترافية.',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg',
       href: '/ar/services/measuring-services',
       benefits: [
         'فرق قياس متخصصة للرجال والنساء',

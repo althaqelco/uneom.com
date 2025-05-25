@@ -42,7 +42,7 @@ export default function IndustrialUniformsPage() {
       name: 'High-Visibility Safety Vest',
       description: 'High-visibility safety vest with reflective strips designed for construction sites and industrial environments requiring visibility.',
       price: 'From SAR 79',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial/safety-1.jpg',
       href: '/shop/industrial-uniforms/safety-vest',
       features: ['High-visibility material', 'Reflective strips', 'Adjustable fit', 'Pocket design'],
       colors: ['Hi-Vis Yellow', 'Hi-Vis Orange'],
@@ -53,7 +53,7 @@ export default function IndustrialUniformsPage() {
       name: 'Factory Workwear Set',
       description: 'Complete workwear set designed for factory workers, with durable construction and comfort features for production environments.',
       price: 'From SAR 259',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial/factory-1.jpg',
       href: '/shop/industrial-uniforms/factory-workwear',
       features: ['Durable fabric', 'Stain-resistant', 'Multiple pockets', 'Comfort design'],
       colors: ['Navy', 'Grey', 'Black', 'Khaki']
@@ -73,7 +73,7 @@ export default function IndustrialUniformsPage() {
       name: 'Industrial Safety Jacket',
       description: 'Heavy-duty safety jacket for industrial environments with weather protection and high-visibility features.',
       price: 'From SAR 299',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial/jacket-1.jpg',
       href: '/shop/industrial-uniforms/industrial-jacket',
       features: ['Weather-resistant', 'Safety reflectors', 'Durable construction', 'Multiple pockets'],
       colors: ['Yellow/Navy', 'Orange/Navy', 'Black/Hi-Vis']
@@ -83,7 +83,7 @@ export default function IndustrialUniformsPage() {
       name: 'Maintenance Uniform',
       description: 'Practical maintenance uniform designed for technical staff with functional features for tools and equipment.',
       price: 'From SAR 189',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/industrial/mechanic-1.jpg',
       href: '/shop/industrial-uniforms/maintenance-uniform',
       features: ['Durable fabric', 'Multiple tool pockets', 'Reinforced knees', 'Stain-resistant'],
       colors: ['Grey', 'Navy', 'Black', 'Royal Blue']
@@ -376,7 +376,7 @@ export default function IndustrialUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg"
                   alt="Ripstop Fabric"
                   fill
                   className="object-cover"
@@ -393,7 +393,7 @@ export default function IndustrialUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg"
                   alt="WeatherShield Technology"
                   fill
                   className="object-cover"
@@ -410,7 +410,7 @@ export default function IndustrialUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/services/CottonـandـCottonـBlends.jpg"
                   alt="DuraTwill Fabric"
                   fill
                   className="object-cover"
@@ -427,7 +427,7 @@ export default function IndustrialUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/products/industrial-coverall.jpg"
                   alt="ReinforceTech"
                   fill
                   className="object-cover"
@@ -470,7 +470,7 @@ export default function IndustrialUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/default-placeholder.jpg"
+                    src="/images/products/corporate-suit-executive.jpg"
                     alt="Corporate Workwear"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -487,7 +487,7 @@ export default function IndustrialUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/default-placeholder.jpg"
+                    src="/images/products/scrubs-set.jpg"
                     alt="Medical Scrubs"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -524,7 +524,7 @@ export default function IndustrialUniformsPage() {
             <div className="hidden lg:block">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/products/industrial/factory-2.jpg"
                   alt="Industrial Uniform Design Service"
                   fill
                   className="object-cover"

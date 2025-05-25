@@ -17,21 +17,21 @@ export default function ShopPage() {
       id: 'medical-scrubs',
       name: 'Healthcare Apparel',
       description: 'Professional medical scrubs, lab coats, and healthcare uniforms designed for comfort and functionality.',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/scrubs-set.jpg',
       href: '/shop/medical-scrubs',
     },
     {
       id: 'aviation-uniforms',
       name: 'Aviation Uniforms',
       description: 'Professional uniforms for pilots, flight attendants, and ground staff with elegant designs.',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/products/aviation/airline-1.jpg',
       href: '/shop/aviation-uniforms',
     },
     {
       id: 'culinary-uniforms',
       name: 'Culinary Uniforms',
       description: 'Chef coats, kitchen uniforms, and culinary apparel for restaurants and food service.',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/categories/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg',
       href: '/shop/culinary-uniforms',
     },
     {
@@ -59,7 +59,7 @@ export default function ShopPage() {
       id: 'security-uniforms',
       name: 'Security Uniforms',
       description: 'Professional uniforms for security personnel with a commanding and authoritative appearance.',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/categories/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
       href: '/shop/security-uniforms',
     },
   ];

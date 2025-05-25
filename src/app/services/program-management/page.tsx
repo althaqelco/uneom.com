@@ -18,22 +18,22 @@ export default function ProgramManagementServicePage() {
     
     steps: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/consultation-icon.svg',
         title: 'Assessment & Planning',
         description: 'We begin with a thorough assessment of your current uniform program, identifying pain points, inefficiencies, and opportunities for improvement. Our team then develops a customized program management plan aligned with your organizational goals and budget.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/custom-branding.svg',
         title: 'Design & Development',
         description: 'Our design team works closely with you to develop uniform solutions that meet your functional requirements while reinforcing your brand identity. We consider factors such as industry regulations, work environment, and employee preferences.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/timely-delivery.svg',
         title: 'Implementation & Rollout',
         description: 'We handle all aspects of program implementation, from procurement and inventory setup to employee fitting sessions and distribution. Our phased rollout approach ensures a smooth transition with minimal disruption to your operations.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/comprehensive-support.svg',
         title: 'Ongoing Management',
         description: 'Once your program is live, we provide continuous management services including inventory tracking, employee allocation, replacement handling, and regular program reviews to identify opportunities for optimization.'
       }
@@ -41,32 +41,32 @@ export default function ProgramManagementServicePage() {
     
     benefits: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/premium-quality.svg',
         title: 'Operational Efficiency',
         description: 'Reduce administrative burden and streamline processes with our centralized management system, saving valuable time and resources.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/saudi-expertise.svg',
         title: 'Cost Control',
         description: 'Optimize spending through bulk purchasing, inventory management, and controlled distribution, typically reducing uniform-related costs by 15-25%.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/brand-aligned.svg',
         title: 'Brand Consistency',
         description: 'Ensure uniform consistency across all locations and departments, strengthening your brand identity and professional image.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/culturally-appropriate.svg',
         title: 'Employee Satisfaction',
         description: 'Improve employee experience with properly fitted, high-quality uniforms and simplified replacement processes.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/compliance-shield.svg',
         title: 'Compliance Management',
         description: 'Stay up-to-date with industry regulations and standards through our compliance monitoring and updating services.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/customization-icon.svg',
         title: 'Data-Driven Insights',
         description: 'Gain valuable insights into uniform usage patterns, allowing for continuous program optimization and forecasting.'
       }
@@ -78,14 +78,14 @@ export default function ProgramManagementServicePage() {
         title: 'Healthcare Network Transformation',
         description: 'Managing uniforms for 3,000+ healthcare professionals across 12 facilities with inconsistent processes, high costs, and staff dissatisfaction.',
         result: '22% reduction in uniform-related costs and employee satisfaction rating increased from 62% to 89%.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg'
       },
       {
         id: "hospitality-overhaul",
         title: 'Hospitality Chain Program Overhaul',
         description: 'Coordinating uniforms for 1,500+ staff across 5 luxury properties with inconsistent brand presentation and high replacement rates.',
         result: '30% reduction in annual replacement costs and brand consistency score improved from 68% to 95%.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg'
       }
     ],
     

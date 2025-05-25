@@ -27,21 +27,21 @@ export default function ServicesPage() {
       id: 'program-management',
       name: 'Uniform Program Management',
       description: 'End-to-end management of your organization\'s entire uniform program, from design to distribution and inventory tracking.',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
       href: '/services/program-management'
     },
     {
       id: 'custom-design',
       name: 'Custom Design & Branding',
       description: 'Professional uniform design services that incorporate your brand identity and meet the specific requirements of your industry.',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
       href: '/services/custom-design'
     },
     {
       id: 'bulk-ordering',
       name: 'Bulk Ordering',
       description: 'Streamlined procurement process for large-scale uniform orders with optimized pricing, quality control, and delivery logistics.',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
       href: '/services/bulk-ordering'
     }
   ];
@@ -51,7 +51,7 @@ export default function ServicesPage() {
       id: 'measurement-services',
       name: 'Measurement Services',
       description: 'On-site professional measurement services to ensure perfect fit for all employees across your organization.',
-      image: '/images/default-placeholder.jpg',
+      image: '/images/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg',
       href: '/services/measurement-services'
     },
     {
@@ -131,7 +131,7 @@ export default function ServicesPage() {
             <div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg"
                   alt="UNEOM Service Expertise"
                   width={600}
                   height={400}

@@ -18,22 +18,22 @@ export default function MeasurementServicesPage() {
     
     steps: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/consultation-icon.svg',
         title: 'Measurement Planning',
         description: 'We begin by developing a customized measurement plan based on your organizational structure, locations, and scheduling requirements. This includes determining the most appropriate measurement methods and technologies for your specific needs.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/comprehensive-support.svg',
         title: 'Employee Communication',
         description: 'We provide comprehensive communication materials to prepare your team for the measurement process, including scheduling information, what to expect, and preparation guidelines to ensure efficient and accurate measurements.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/premium-quality.svg',
         title: 'Professional Measurement',
         description: 'Our trained fitting specialists conduct measurements using standardized techniques and digital tools to ensure accuracy and consistency. We create individual fit profiles for each employee with comprehensive measurement data.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/customization-icon.svg',
         title: 'Data Management & Analysis',
         description: 'All measurement data is securely stored in our system and analyzed to create size distribution reports, identify trends, and optimize inventory planning. This data becomes a valuable reference for future uniform orders.'
       }
@@ -41,32 +41,32 @@ export default function MeasurementServicesPage() {
     
     benefits: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/premium-quality.svg',
         title: 'Superior Fit Accuracy',
         description: 'Professional measurements result in significantly higher fit accuracy than self-measurement, reducing exchanges and alterations by up to 85%.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/timely-delivery.svg',
         title: 'Time Efficiency',
         description: 'Our streamlined process can measure up to 40 employees per hour, minimizing workplace disruption while maximizing accuracy.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/brand-aligned.svg',
         title: 'Consistent Sizing',
         description: 'Standardized measurement techniques ensure uniform sizing consistency across departments and locations.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/culturally-appropriate.svg',
         title: 'Enhanced Comfort',
         description: 'Precisely fitted uniforms improve comfort, mobility, and function, increasing daily wear satisfaction.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/saudi-expertise.svg',
         title: 'Professional Appearance',
         description: "Properly fitted uniforms create a more polished, cohesive appearance that enhances your organization's image."
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/comprehensive-support.svg',
         title: 'Valuable Sizing Data',
         description: 'Comprehensive measurement data provides insights for future uniform programs and inventory optimization.'
       }
@@ -78,14 +78,14 @@ export default function MeasurementServicesPage() {
         title: 'Hospitality Chain Measurement Program',
         description: 'Measuring 1,200+ staff across 4 properties with diverse uniform requirements, limited time windows, and previous issues with inconsistent fitting that affected professional appearance.',
         result: 'Reduced exchange rate from 32% to just 4% and improved uniform appearance ratings in guest feedback by 27%.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/products/hotel-uniform.jpg'
       },
       {
         id: "healthcare-measurement",
         title: 'Healthcare Network Measurement Solution',
         description: 'Coordinating measurements for 3,500 healthcare professionals across 12 facilities with 24/7 operations, strict hygiene protocols, and minimal disruption to patient care.',
         result: 'Measured 100% of staff with zero impact on patient care and improved functional fit ratings from 68% to 94%.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/healthcare/healthcare_medical_uniform.jpg'
       }
     ],
     

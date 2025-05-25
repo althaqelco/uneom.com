@@ -18,22 +18,22 @@ export default function UniformPoliciesPage() {
     
     steps: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/consultation-icon.svg',
         title: 'Needs Assessment',
         description: 'We begin with a thorough assessment of your organizational structure, culture, industry requirements, and existing uniform-related procedures to identify policy needs and objectives.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/customization-icon.svg',
         title: 'Policy Development',
         description: 'Our specialists draft comprehensive uniform policies addressing all aspects of your program, from design standards and wearing guidelines to procurement procedures and compliance measures.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/comprehensive-support.svg',
         title: 'Stakeholder Review',
         description: 'We facilitate collaborative review sessions with key stakeholders to gather feedback, address concerns, and refine policy elements to ensure organizational alignment and practical implementation.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/timely-delivery.svg',
         title: 'Implementation Planning',
         description: 'We develop detailed implementation strategies, communication plans, training materials, and administrative procedures to ensure successful policy adoption throughout your organization.'
       }
@@ -41,32 +41,32 @@ export default function UniformPoliciesPage() {
     
     benefits: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/compliance-shield.svg',
         title: 'Clear Governance',
         description: 'Establish transparent, well-defined guidelines that eliminate confusion and inconsistency in uniform program management.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/saudi-expertise.svg',
         title: 'Regulatory Compliance',
         description: 'Ensure your uniform program adheres to industry regulations, safety standards, and relevant labor laws.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/brand-aligned.svg',
         title: 'Brand Consistency',
         description: 'Maintain uniform standards that accurately and consistently represent your brand identity across all locations and departments.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/premium-quality.svg',
         title: 'Administrative Efficiency',
         description: 'Streamline decision-making processes and reduce administrative burden with clear protocols for all uniform-related matters.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/culturally-appropriate.svg',
         title: 'Conflict Resolution',
         description: 'Provide clear frameworks for addressing uniform-related issues, accommodations, and special circumstances.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/comprehensive-support.svg',
         title: 'Operational Integration',
         description: 'Align uniform policies with other organizational systems including onboarding, HR processes, and corporate governance.'
       }
@@ -78,14 +78,14 @@ export default function UniformPoliciesPage() {
         title: 'Banking Network Policy Standardization',
         description: 'Unifying inconsistent uniform practices across 75+ branches with varying interpretations of dress codes, leading to brand inconsistency and enforcement challenges.',
         result: 'Achieved 94% policy compliance within 3 months and reduced uniform-related HR incidents by 78%.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg'
       },
       {
         id: "industrial-safety",
         title: 'Industrial Safety Uniform Policy',
         description: 'Balancing safety compliance, cultural considerations, and practical functionality in a multi-facility operation with diverse workforce demographics and varying hazard levels.',
         result: 'Achieved full regulatory compliance across all facilities and reduced uniform-related safety incidents by 64%.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/products/industrial-coverall.jpg'
       }
     ],
     

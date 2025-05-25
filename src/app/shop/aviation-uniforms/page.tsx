@@ -145,7 +145,7 @@ export default function AviationUniformsPage() {
       <section className="relative pt-16 pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/default-placeholder.jpg"
+            src="/images/products/aviation/airline-1.jpg"
             alt="Aviation Uniforms"
             fill
             className="object-cover object-center"
@@ -334,7 +334,7 @@ export default function AviationUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/default-placeholder.jpg"
+                    src="/images/products/corporate-suit-executive.jpg"
                     alt="Corporate Workwear"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -405,7 +405,7 @@ export default function AviationUniformsPage() {
             <div className="hidden lg:block">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/default-placeholder.jpg"
+                  src="/images/products/aviation/airline-2.jpg"
                   alt="Aviation Uniform Design Service"
                   fill
                   className="object-cover"
