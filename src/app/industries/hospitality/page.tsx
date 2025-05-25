@@ -1,314 +1,365 @@
-'use client';
-
-import React from 'react';
-import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Metadata } from 'next';
+import Container from '@/components/ui/Container';
+import SectionHeading from '@/components/ui/SectionHeading';
+import Button from '@/components/ui/Button';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import ProductCard from '@/components/ui/ProductCard';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
-export default function HospitalityPage() {
-  // Define locale for language support
-  const locale = 'en';
-  
-  const hospitalityData = {
-    locale: locale,
-    title: 'Premium Hospitality Uniforms & Hotel Staff Attire in Saudi Arabia',
-    subtitle: 'Elegant, durable uniforms for hotels, resorts, restaurants, and hospitality venues across the Kingdom',
-    heroImage: '/images/industries/hospitality.jpg',
-    
-    // SEO metadata
-    metaDescription: 'UNEOM provides premium hospitality uniforms for Saudi hotels, resorts, and restaurants, combining elegant design with practical durability and Islamic dress options.',
-    keywords: ['hospitality uniforms Saudi Arabia', 'hotel staff uniforms', 'restaurant uniforms', 'Saudi hotel attire', 'luxury resort uniforms', 'Islamic hospitality uniforms'],
-    canonicalUrl: 'https://uneom.com/industries/hospitality',
-    
-    introduction: [
-      "In Saudi Arabia's rapidly expanding hospitality sector, professional uniforms play a vital role in establishing brand identity, enhancing guest experience, and reflecting the Kingdom's commitment to world-class service. UNEOM's comprehensive hospitality uniform solutions are specifically designed to meet the unique requirements of Saudi hotels, resorts, restaurants, and hospitality venues.",
-      
-      "From front desk and concierge staff to housekeeping, food service, and management personnel, we provide premium-quality uniforms that combine sophisticated style, practical functionality, and cultural sensitivity. Our hospitality collections incorporate advanced fabric technologies that withstand the rigorous demands of the industry while offering options that respect Islamic dress codes and reflect Saudi hospitality traditions.",
-      
-      "As a trusted partner to leading Saudi hospitality brands, international hotel chains operating in the Kingdom, and independent luxury properties, we understand the critical importance of uniform programs that enhance your brand identity while meeting the practical needs of diverse staff roles in the Saudi hospitality environment."
-    ],
-    
-    benefits: [
+export const metadata: Metadata = {
+  title: 'Hospitality Uniforms & Hotel Staff Attire | Professional Service Uniforms | Uneom',
+  description: 'Premium hospitality uniforms for hotels, restaurants, and service industries in Saudi Arabia. Professional designs that enhance brand image while ensuring comfort and durability for hospitality staff.',
+  keywords: 'hospitality uniforms, hotel uniforms, restaurant uniforms, chef uniforms, housekeeping uniforms, concierge uniforms, hospitality attire Saudi Arabia, service industry uniforms',
+  openGraph: {
+    title: 'Hospitality Uniforms & Hotel Staff Attire | Professional Service Uniforms | Uneom',
+    description: 'Premium hospitality uniforms for hotels, restaurants, and service industries in Saudi Arabia.',
+    url: 'https://uneom.com/industries/hospitality/',
+    siteName: 'Uneom',
+    images: [
       {
-        title: "Saudi Hospitality Expertise",
-        description: "Our design team possesses specialized knowledge of Saudi Arabia's hospitality sector requirements, including cultural considerations and service standards.",
-        icon: "/images/icons/saudi-expertise.svg"
-      },
-      {
-        title: "Brand-Aligned Design",
-        description: "Custom uniform programs that perfectly reflect your property's unique identity, service philosophy, and design aesthetic.",
-        icon: "/images/icons/brand-aligned.svg"
-      },
-      {
-        title: "Practical Durability",
-        description: "High-performance fabrics and construction techniques that maintain appearance despite frequent laundering and the demands of hospitality environments.",
-        icon: "/icons/durability.svg"
-      },
-      {
-        title: "Staff Comfort Focus",
-        description: "Ergonomic designs and climate-appropriate fabrics that ensure staff comfort during long shifts in various hotel environments.",
-        icon: "/icons/comfort.svg"
-      },
-      {
-        title: "Cultural Sensitivity",
-        description: "Thoughtful uniform options that respect Islamic dress requirements while maintaining professional hospitality standards.",
-        icon: "/icons/cultural-sensitivity.svg"
+        url: 'https://uneom.com/images/Luxury_Hotel Staff_Uniform.png',
+        width: 1200,
+        height: 630,
+        alt: 'Hospitality Uniforms by Uneom'
       }
     ],
-    
-    products: [
-      {
-        id: "front-office-uniforms",
-        name: "Front Office & Reception Uniforms",
-        description: "Sophisticated, brand-aligned attire for front desk, concierge, and guest relations staff who create crucial first impressions.",
-        image: "/images/products/hotel-uniform.jpg",
-        href: "/shop/hospitality/front-office-uniforms"
-      },
-      {
-        id: "food-beverage-attire",
-        name: "Food & Beverage Service Attire",
-        description: "Practical, elegant uniforms for restaurant, café, and banquet staff that balance style with functionality for food service environments.",
-        image: "/images/product-placeholder.jpg",
-        href: "/shop/hospitality/food-beverage-attire"
-      },
-      {
-        id: "housekeeping-uniforms",
-        name: "Housekeeping & Facilities Uniforms",
-        description: "Durable, comfortable uniforms for housekeeping, maintenance, and facilities staff with practical features for operational efficiency.",
-        image: "/images/product-placeholder.jpg",
-        href: "/shop/hospitality/housekeeping-uniforms"
-      },
-      {
-        id: "executive-management-attire",
-        name: "Executive & Management Attire",
-        description: "Distinguished uniforms for management personnel that convey authority while maintaining brand consistency with other staff attire.",
-        image: "/images/product-placeholder.jpg",
-        href: "/shop/hospitality/executive-management-attire"
-      },
-      {
-        id: "spa-wellness-uniforms",
-        name: "Spa & Wellness Uniforms",
-        description: "Serene, comfortable attire for spa therapists and wellness staff that enhances the relaxation experience for guests.",
-        image: "/images/product-placeholder.jpg",
-        href: "/shop/hospitality/spa-wellness-uniforms"
-      },
-      {
-        id: "valet-doorstaff-uniforms",
-        name: "Valet & Door Staff Uniforms",
-        description: "Distinctive, weather-appropriate uniforms for door staff, valets, and bellhops who create first and last impressions.",
-        image: "/images/product-placeholder.jpg",
-        href: "/shop/hospitality/valet-doorstaff-uniforms"
-      }
-    ],
-    
-    // Hospitality department roles with specialized products
-    departments: [
-      {
-        name: "Front of House",
-        description: "Professional uniforms for guest-facing staff that embody your property's brand identity and service philosophy, featuring elegant designs with practical functionality.",
-        image: "/images/hospitality/hospitality_uniform_formal.jpg",
-        productTypes: ["Reception Attire", "Concierge Uniforms", "Guest Relations Sets"]
-      },
-      {
-        name: "Food & Beverage",
-        description: "Specialized uniforms for restaurant, café, and banquet staff that balance sophisticated appearance with practical features for food service environments.",
-        image: "/images/hospitality/hospitality_uniform_department.jpg",
-        productTypes: ["Restaurant Server Attire", "Barista Uniforms", "Banquet Staff Sets"]
-      },
-      {
-        name: "Housekeeping & Facilities",
-        description: "Durable, practical uniforms for behind-the-scenes operational staff with features designed for comfort during physical tasks and long shifts.",
-        image: "/images/hospitality/hospitality_uniform_concierge.jpg",
-        productTypes: ["Housekeeping Uniforms", "Maintenance Staff Attire", "Laundry Team Sets"]
-      },
-      {
-        name: "Specialty & Recreation",
-        description: "Custom uniforms for specialized roles including spa therapists, fitness instructors, kids club staff, and recreation personnel.",
-        image: "/images/hospitality/hospitality_uniform_buttons.jpg",
-        productTypes: ["Spa Therapist Attire", "Recreation Staff Uniforms", "Kids Club Team Sets"]
-      }
-    ],
-    
-    fabricTechnologies: [
-      {
-        name: "LuxDurable Premium Fabrics",
-        description: "Luxury-grade fabrics with exceptional durability that maintain appearance despite frequent laundering and constant use in demanding hospitality environments.",
-        icon: "/icons/luxdurable.svg"
-      },
-      {
-        name: "ComfortFlex Movement System",
-        description: "Innovative stretch technology providing exceptional range of motion for staff who need to maintain elegant appearance while performing physical tasks.",
-        icon: "/icons/comfortflex.svg"
-      },
-      {
-        name: "StainShield Protection",
-        description: "Advanced fabric treatment that repels liquids and resists staining, particularly valuable for food service and housekeeping staff uniforms.",
-        icon: "/icons/stainshield.svg"
-      },
-      {
-        name: "ClimateControl Technology",
-        description: "Adaptive fabric technology that helps maintain comfort across varying environments from air-conditioned lobbies to outdoor settings and kitchen areas.",
-        icon: "/icons/climatecontrol.svg"
-      }
-    ],
-    
-    customizationOptions: [
-      {
-        name: "Brand Identity Integration",
-        description: "Precision incorporation of your property's visual identity elements, including exact color matching, logo placement, and distinctive design features.",
-        icon: "/icons/brand-identity.svg"
-      },
-      {
-        name: "Department Distinction",
-        description: "Thoughtful design variations that clearly identify different staff departments while maintaining overall brand cohesion across your property.",
-        icon: "/icons/department-distinction.svg"
-      },
-      {
-        name: "Cultural Design Elements",
-        description: "Incorporation of Saudi heritage elements and cultural motifs into uniform designs for properties seeking to highlight authentic local hospitality.",
-        icon: "/icons/cultural-elements.svg"
-      },
-      {
-        name: "Modesty Adaptations",
-        description: "Specialized modifications to standard hospitality uniform designs that respect Islamic dress codes while maintaining professional standards.",
-        icon: "/icons/modesty-adaptations.svg"
-      }
-    ],
-    
-    testimonials: [
-      {
-        id: "testimonial-1",
-        quote: "UNEOM transformed our hotel's visual identity with uniforms that perfectly balance luxury with practical functionality. Their understanding of Saudi hospitality standards and attention to our brand details has significantly enhanced both our guest experience and staff satisfaction. The durability of the uniforms has also provided excellent value over time.",
-        author: "Mohammed Al-Qahtani",
-        position: "General Manager",
-        company: "Royal Oasis Riyadh Hotel"
-      },
-      {
-        id: "testimonial-2",
-        quote: "The modest uniform options UNEOM designed for our female staff have received overwhelmingly positive feedback. The uniforms beautifully represent our luxury positioning while respecting cultural considerations. Their fabric technology has proven exceptional in our demanding environment, with uniforms maintaining appearance despite intensive use and frequent laundering.",
-        author: "Layla Al-Otaibi",
-        position: "Director of Human Resources",
-        company: "Jeddah Luxury Collection"
-      }
-    ],
-    
-    // FAQ section for SEO enhancement
-    faq: [
-      {
-        question: "How do UNEOM's hospitality uniforms address the specific needs of Saudi hotels and resorts?",
-        answer: "Our hospitality uniforms are specifically designed for Saudi properties, featuring modest options for female staff that conform to Islamic dress codes while maintaining luxury appearance, incorporating Saudi heritage elements for properties seeking authentic local character, using fabrics selected for Saudi climate conditions, and ensuring designs that respect local cultural sensitivities while meeting international hospitality standards."
-      },
-      {
-        question: "Can you create different uniform styles for various hotel departments while maintaining brand consistency?",
-        answer: "Yes, we specialize in developing comprehensive hospitality uniform programs that clearly distinguish between different departments (front office, F&B, housekeeping, management) while maintaining overall brand coherence through consistent color palettes, design elements, and branding applications. This approach helps guests identify staff functions while presenting a unified property identity."
-      },
-      {
-        question: "What makes your fabrics suitable for the demanding hospitality environment?",
-        answer: "Our hospitality uniform fabrics feature several specialized technologies: LuxDurable construction that withstands frequent industrial laundering without fading or deterioration, StainShield treatments that protect against food and beverage spills, stretch components that allow comfortable movement during physical tasks, and climate-adaptive properties that ensure staff comfort across various hotel environments from kitchens to outdoor areas."
-      },
-      {
-        question: "How do you handle uniform implementation for large hotels with diverse staff roles?",
-        answer: "We offer comprehensive implementation programs for properties of all sizes, including on-site measurement sessions, detailed sizing systems with Arabia-specific measurements, phased rollout planning to ensure operational continuity, staff training on uniform care and presentation, and ongoing support for new hires and replacements to maintain consistent appearance across the entire property."
-      }
-    ],
-    
-    // Related blog posts for increased internal linking and SEO value
-    relatedContent: {
-      title: "Hospitality Uniform Resources",
-      blogPosts: [
-        {
-          title: "Luxury Hotel Uniform Trends in Saudi Arabia: Balancing Tradition with Modern Elegance",
-          excerpt: "Explore how leading Saudi luxury properties are creating distinctive staff attire that reflects both international standards and local heritage.",
-          url: "/blog/saudi-luxury-hotel-uniform-trends",
-          image: "/images/blog/hospitality-uniforms.jpg"
-        },
-        {
-          title: "The Impact of Staff Uniforms on Guest Perception and Experience",
-          excerpt: "Research insights on how hospitality attire influences guest satisfaction, perceived service quality, and overall brand impression.",
-          url: "/blog/uniforms-guest-perception-hospitality",
-          image: "/images/blog/hospitality-cultural.jpg"
-        },
-        {
-          title: "Designing Practical Uniforms for Saudi Arabia's Resort Environments",
-          excerpt: "Best practices for developing hospitality uniforms that balance luxury appearance with practical functionality in Saudi resort settings.",
-          url: "/blog/saudi-resort-uniform-design",
-          image: "/images/product-placeholder.jpg"
-        }
-      ],
-      resources: [
-        {
-          title: "Hospitality Fabric Performance Guide",
-          description: "Technical specifications for fabrics that meet luxury hospitality requirements",
-          url: "/resources/fabric-guide/hospitality",
-          icon: "/icons/fabric-guide.svg"
-        },
-        {
-          title: "Hotel Staff Uniform Size Guide",
-          description: "Detailed sizing information for hospitality personnel uniforms",
-          url: "/resources/size-guide/hospitality",
-          icon: "/icons/size-guide.svg"
-        },
-        {
-          title: "Hotel Uniform Program Management Guide",
-          description: "Comprehensive guide to implementing property-wide uniform programs",
-          url: "/resources/management-guide/hotel-uniform-program",
-          icon: "/icons/management-guide.svg"
-        }
-      ]
-    },
-    
-    // Statistical information for credibility and SEO enhancement
-    statistics: [
-      {
-        value: "45+",
-        label: "Saudi Hotels & Resorts Supplied",
-        icon: "/icons/hotels.svg"
-      },
-      {
-        value: "18,000+",
-        label: "Hospitality Staff Wearing UNEOM Uniforms",
-        icon: "/icons/hospitality-staff.svg"
-      },
-      {
-        value: "12+",
-        label: "International Hotel Brands Served in KSA",
-        icon: "/icons/hotel-brands.svg"
-      },
-      {
-        value: "97%",
-        label: "Client Retention Rate in Hospitality Sector",
-        icon: "/icons/retention.svg"
-      }
-    ],
-    
-    // Case study for social proof and credibility
-    caseStudy: {
-      title: "Comprehensive Uniform Program for Luxury Saudi Hotel Chain",
-      client: "Royal Oasis Hotel Collection",
-      challenge: "Creating a distinctive uniform program for a new luxury hotel chain launching multiple properties across Saudi Arabia, requiring a cohesive brand identity while accommodating diverse staff roles and cultural considerations.",
-      solution: "Developed a comprehensive uniform system with coordinated designs across all hotel departments, featuring distinctive Saudi-inspired elements, practical role-specific adaptations, and both international and modest options for female staff.",
-      results: [
-        "Guest satisfaction scores 23% higher than industry average for staff appearance",
-        "Staff satisfaction rating of 92% with uniform comfort and functionality",
-        "Reduced uniform replacement costs by 34% compared to industry benchmarks",
-        "Successful implementation across 5 properties with over 2,500 staff members"
-      ],
-      image: "/images/Luxury_Hotel Staff_Uniform.png",
-      testimonial: {
-        quote: "The uniform program UNEOM created has become a cornerstone of our brand identity and has significantly contributed to our recognition as a leading luxury hospitality brand in Saudi Arabia.",
-        author: "Sultan Al-Saud",
-        position: "CEO",
-        company: "Royal Oasis Hotel Collection"
-      }
-    },
-    
-    // Call to action section
-    cta: {
-      title: "Elevate Your Property's Image with Professional Uniform Solutions",
-      description: "Contact our hospitality uniform specialists to discuss your property's specific requirements and discover how our comprehensive uniform solutions can enhance your brand identity, staff professionalism, and guest experience.",
-      buttonText: "Request Hospitality Uniform Consultation",
-      buttonUrl: "/contact?industry=hospitality"
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://uneom.com/industries/hospitality/',
+    languages: {
+      'en-SA': 'https://uneom.com/industries/hospitality/',
+      'ar-SA': 'https://uneom.com/ar/industries/hospitality/',
+      'x-default': 'https://uneom.com/industries/hospitality/'
     }
-  };
-  
-  return <IndustryPageLayout locale={locale} industryData={hospitalityData} skipMainLayout={true} />;
-} 
+  }
+};
+
+export const dynamic = 'force-static';
+
+// Featured hospitality products
+const featuredProducts = [
+  {
+    id: '1',
+    name: 'Luxury Hotel Staff Uniform',
+    image: '/images/Luxury_Hotel Staff_Uniform.png',
+    price: 'Request Quote',
+    href: '/shop/hospitality-attire/luxury-hotel-uniform/',
+    category: 'Hotel Uniforms'
+  },
+  {
+    id: '2',
+    name: 'Professional Chef Uniform',
+    image: '/images/cook-flavoring-his-best-meal-2024-11-29-22-42-39-utc.jpg',
+    price: 'Request Quote',
+    href: '/shop/hospitality-attire/chef-uniform/',
+    category: 'Chef Uniforms'
+  },
+  {
+    id: '3',
+    name: 'Concierge Service Uniform',
+    image: '/images/hospitality/hospitality_uniform_concierge.jpg',
+    price: 'Request Quote',
+    href: '/shop/hospitality-attire/concierge-uniform/',
+    category: 'Service Uniforms'
+  }
+];
+
+// Hospitality benefits
+const hospitalityBenefits = [
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+      </svg>
+    ),
+    title: 'Brand Enhancement',
+    description: 'Professional uniforms that elevate your brand image and create memorable guest experiences in the hospitality industry.'
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    title: 'All-Day Comfort',
+    description: 'Ergonomic designs and breathable fabrics ensure staff comfort during long shifts in demanding hospitality environments.'
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    title: 'Easy Maintenance',
+    description: 'Stain-resistant and easy-care fabrics that maintain professional appearance with minimal maintenance requirements.'
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+    title: 'Team Unity',
+    description: 'Cohesive uniform designs that promote team identity and professional standards across all hospitality departments.'
+  }
+];
+
+// Hospitality sectors
+const hospitalitySectors = [
+  {
+    name: 'Luxury Hotels',
+    description: 'Elegant uniforms that reflect the sophistication and service excellence of luxury hospitality',
+    image: '/images/hospitality/hospitality_uniform_hotel.jpg',
+    features: ['Premium fabrics', 'Custom embroidery', 'Elegant designs', 'Comfort fit']
+  },
+  {
+    name: 'Restaurants & Dining',
+    description: 'Professional chef and service uniforms designed for kitchen and dining room environments',
+    image: '/images/cook-flavoring-his-best-meal-2024-11-29-22-42-39-utc.jpg',
+    features: ['Heat resistant', 'Stain protection', 'Functional pockets', 'Easy cleaning']
+  },
+  {
+    name: 'Resort & Spa',
+    description: 'Comfortable and stylish uniforms for resort staff and spa professionals',
+    image: '/images/hospitality/hospitality_uniform_formal.jpg',
+    features: ['Breathable fabrics', 'Moisture wicking', 'Flexible designs', 'Professional appearance']
+  }
+];
+
+export default function HospitalityIndustryPage() {
+  return (
+    <div>
+      <EnhancedSEO2025 
+        title="Hospitality Uniforms & Hotel Staff Attire | Professional Service Uniforms | Uneom"
+        description="Premium hospitality uniforms for hotels, restaurants, and service industries in Saudi Arabia. Professional designs that enhance brand image while ensuring comfort and durability."
+        canonicalUrl="https://uneom.com/industries/hospitality/"
+        locale="en"
+      />
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-primary-800 to-primary-700 text-white py-20">
+        <div className="absolute inset-0 opacity-30">
+          <Image
+            src="/images/Luxury_Hotel Staff_Uniform.png"
+            alt="Hospitality Uniforms by Uneom"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        
+        <Container>
+          <Breadcrumbs
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Industries', href: '/industries' },
+              { label: 'Hospitality', href: '/industries/hospitality' }
+            ]}
+            className="text-white/80 mb-6 relative z-10"
+          />
+          
+          <div className="relative z-10 max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Hospitality Uniforms & Hotel Staff Attire</h1>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl">
+              Professional hospitality uniforms designed to enhance your brand image while ensuring staff comfort and durability. Perfect for hotels, restaurants, and service industries across Saudi Arabia.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                href="/quote"
+                variant="secondary" 
+                size="lg"
+              >
+                Request Hospitality Quote
+              </Button>
+              <Button 
+                href="#featured-products"
+                variant="outline" 
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-primary-700"
+              >
+                View Collection
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <main className="py-16">
+        <Container>
+          {/* Introduction */}
+          <section className="mb-16">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <SectionHeading subtitle="Professional Hospitality Attire">
+                  Elevating Service Excellence
+                </SectionHeading>
+                <p className="text-lg text-gray-600 mb-6">
+                  In the hospitality industry, first impressions matter. Our hospitality uniform collection combines professional aesthetics with practical functionality to create attire that enhances your brand image while ensuring staff comfort throughout their service.
+                </p>
+                <p className="text-gray-600 mb-8">
+                  From luxury hotel lobbies to bustling restaurant kitchens, our uniforms are designed to meet the diverse needs of Saudi Arabia's thriving hospitality sector.
+                </p>
+                <Button href="/contact" variant="primary" size="lg">
+                  Discuss Your Brand Vision
+                </Button>
+              </div>
+              <div className="relative aspect-square rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/hospitality/hospitality_uniform_hotel.jpg"
+                  alt="Professional Hotel Uniforms"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Key Benefits */}
+          <section className="mb-16">
+            <SectionHeading subtitle="Why Choose Uneom Hospitality Uniforms" centered>
+              Excellence in Every Detail
+            </SectionHeading>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+              {hospitalityBenefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center text-primary-600">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Featured Products */}
+          <section id="featured-products" className="mb-16">
+            <SectionHeading subtitle="Our Hospitality Collection" centered>
+              Featured Hospitality Uniforms
+            </SectionHeading>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {featuredProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+            
+            <div className="text-center mt-12">
+              <Button href="/shop/hospitality-attire/" variant="primary" size="lg">
+                View All Hospitality Products
+              </Button>
+            </div>
+          </section>
+
+          {/* Hospitality Sectors */}
+          <section className="mb-16">
+            <SectionHeading subtitle="Specialized Solutions" centered>
+              Uniforms for Every Hospitality Sector
+            </SectionHeading>
+            
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              {hospitalitySectors.map((sector, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="relative aspect-video">
+                    <Image
+                      src={sector.image}
+                      alt={sector.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-3">{sector.name}</h3>
+                    <p className="text-gray-600 mb-4">{sector.description}</p>
+                    <ul className="space-y-2">
+                      {sector.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm">
+                          <svg className="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Customization Options */}
+          <section className="mb-16 bg-gray-50 rounded-2xl p-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative aspect-square rounded-xl overflow-hidden">
+                <Image
+                  src="/images/hospitality/hospitality_uniform_custom_logo.jpg"
+                  alt="Custom Hospitality Uniforms"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <SectionHeading subtitle="Brand-Aligned Solutions">
+                  Custom Hospitality Uniforms
+                </SectionHeading>
+                <p className="text-lg text-gray-600 mb-6">
+                  Your hospitality uniforms should reflect your brand's unique identity. Our customization services ensure every detail aligns with your brand standards and operational requirements.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Custom logo embroidery and branding
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Department-specific color schemes
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Functional design modifications
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Premium fabric selections
+                  </li>
+                </ul>
+                <Button href="/services/custom-design/" variant="primary" size="lg">
+                  Explore Customization
+                </Button>
+              </div>
+            </div>
+          </section>
+
+          {/* Final CTA */}
+          <section className="text-center bg-primary-50 rounded-2xl p-12">
+            <h2 className="text-3xl font-bold mb-4">Ready to Elevate Your Hospitality Brand?</h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Join leading hotels, restaurants, and service establishments across Saudi Arabia who trust Uneom for their professional hospitality uniforms.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="/quote" variant="primary" size="lg">
+                Get Hospitality Quote
+              </Button>
+              <Button href="/contact" variant="outline" size="lg">
+                Schedule Brand Consultation
+              </Button>
+            </div>
+          </section>
+        </Container>
+      </main>
+    </div>
+  );
+}
