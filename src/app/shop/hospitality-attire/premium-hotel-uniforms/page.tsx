@@ -50,10 +50,10 @@ export default function PremiumHotelUniformsPage() {
       { name: 'Customization', value: 'Hotel logos, staff names, department color coding' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Hotel reception staff in premium uniforms' },
-      { src: '/images/default-placeholder.jpg', alt: 'Concierge in premium hotel uniform' },
-      { src: '/images/default-placeholder.jpg', alt: 'Housekeeping staff in professional uniforms' },
-      { src: '/images/default-placeholder.jpg', alt: 'Hotel manager in executive uniform greeting guests' }
+      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'Hotel reception staff in premium uniforms' },
+      { src: '/images/hospitality/hospitality_uniform_concierge.jpg', alt: 'Concierge in premium hotel uniform' },
+      { src: '/images/hospitality/hospitality_uniform_department.jpg', alt: 'Housekeeping staff in professional uniforms' },
+      { src: '/images/products/hotel-uniform.jpg', alt: 'Hotel manager in executive uniform greeting guests' }
     ],
     category: 'Hospitality Attire',
     categorySlug: 'hospitality-attire',
@@ -68,11 +68,11 @@ export default function PremiumHotelUniformsPage() {
       { name: 'Management Executive Uniform', price: 'SAR 1,199' }
     ],
     colors: [
-      { name: 'Rich Burgundy', value: '#800020', image: '/images/default-placeholder.jpg' },
-      { name: 'Royal Gold', value: '#caa548', image: '/images/default-placeholder.jpg' },
-      { name: 'Deep Navy', value: '#1a2942', image: '/images/default-placeholder.jpg' },
-      { name: 'Emerald Green', value: '#2e5d4b', image: '/images/default-placeholder.jpg' },
-      { name: 'Classic Black', value: '#232323', image: '/images/default-placeholder.jpg' }
+      { name: 'Rich Burgundy', value: '#800020', image: '/images/hospitality/hospitality_uniform_formal.jpg' },
+      { name: 'Royal Gold', value: '#caa548', image: '/images/hospitality/hospitality_uniform_concierge.jpg' },
+      { name: 'Deep Navy', value: '#1a2942', image: '/images/products/hotel-uniform.jpg' },
+      { name: 'Emerald Green', value: '#2e5d4b', image: '/images/hospitality/hospitality_uniform_department.jpg' },
+      { name: 'Classic Black', value: '#232323', image: '/images/hospitality/hospitality_uniform_buttons.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -377,7 +377,7 @@ export default function PremiumHotelUniformsPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/default-placeholder.jpg" 
+                src="/images/hospitality/hospitality_uniform_formal.jpg"
                 alt="Luxury hotel staff in coordinated customized uniforms" 
                 fill
                 className="object-cover"

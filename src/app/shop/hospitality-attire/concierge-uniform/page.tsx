@@ -209,7 +209,7 @@ export default function ConciergeUniformPage() {
     images: [
       { src: '/images/product-placeholder.jpg', alt: 'Premium concierge staff in distinguished uniform assisting guest at luxury Saudi hotel' },
       { src: '/images/product-placeholder.jpg', alt: 'Professional concierge in tailored uniform welcoming guests at five-star property entrance' },
-      { src: '/images/default-placeholder.jpg', alt: 'Concierge team in coordinated premium uniforms at prestigious hotel lobby in Saudi Arabia' },
+      { src: '/images/hospitality/hospitality_uniform_concierge.jpg', alt: 'Concierge team in coordinated premium uniforms at prestigious hotel lobby in Saudi Arabia' },
       { src: '/images/product-placeholder.jpg', alt: 'Close-up detail of premium concierge uniform showing quality tailoring and Saudi-inspired accents' }
     ],
     category: 'Hospitality Attire',

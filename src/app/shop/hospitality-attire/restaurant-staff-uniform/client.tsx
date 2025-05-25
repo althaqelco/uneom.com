@@ -190,9 +190,9 @@ export function RestaurantStaffUniformClientPage() {
     customization: true,
     images: [
       { src: '/images/product-placeholder.jpg', alt: 'Restaurant staff uniform for hospitality' },
-      { src: '/images/default-placeholder.jpg', alt: 'Restaurant staff in professional uniforms' },
-      { src: '/images/default-placeholder.jpg', alt: 'Food service professional in restaurant attire' },
-      { src: '/images/default-placeholder.jpg', alt: 'Chef in professional kitchen uniform' }
+      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'Restaurant staff in professional uniforms' },
+      { src: '/images/hospitality/hospitality_uniform_department.jpg', alt: 'Food service professional in restaurant attire' },
+      { src: '/images/products/chef-uniform.jpg', alt: 'Chef in professional kitchen uniform' }
     ],
     colors: [
       { name: 'Black', value: '#000000' },
@@ -268,7 +268,7 @@ export function RestaurantStaffUniformClientPage() {
             "name": "Restaurant Staff Uniform by UNEOM",
             "image": [
               "https://uneom.com/images/product-placeholder.jpg",
-              "https://uneom.com/images/default-placeholder.jpg"
+              "https://uneom.com/images/hospitality/hospitality_uniform_formal.jpg"
             ],
             "description": "Premium restaurant staff uniforms designed for Saudi Arabian hospitality establishments, combining style, comfort and practicality for food service professionals.",
             "sku": "UNEOM-RSU-100",

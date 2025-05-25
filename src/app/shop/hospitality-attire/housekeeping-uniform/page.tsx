@@ -209,7 +209,7 @@ export default function HousekeepingUniformPage() {
       { src: '/images/product-placeholder.jpg', alt: 'Professional housekeeping staff in durable uniform maintaining luxury hotel room' },
       { src: '/images/product-placeholder.jpg', alt: 'Female housekeeper in modest uniform with ergonomic design features at Saudi luxury hotel' },
       { src: '/images/avatar-placeholder.jpg', alt: 'Hotel housekeeping team in coordinated professional uniforms maintaining property standards' },
-      { src: '/images/default-placeholder.jpg', alt: 'Saudi housekeeping staff in culturally appropriate professional uniforms at five-star property' }
+      { src: '/images/hospitality/hospitality_uniform_department.jpg', alt: 'Saudi housekeeping staff in culturally appropriate professional uniforms at five-star property' }
     ],
     category: 'Hospitality Attire',
     categorySlug: 'hospitality-attire',

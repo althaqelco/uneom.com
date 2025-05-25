@@ -187,10 +187,10 @@ export default function ResortStaffAttirePage() {
     leadTime: '14-20 days',
     customization: true,
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Resort staff in professional attire greeting guests' },
-      { src: '/images/default-placeholder.jpg', alt: 'Resort team members in coordinated uniforms' },
-      { src: '/images/default-placeholder.jpg', alt: 'Resort staff in lightweight professional clothing' },
-      { src: '/images/default-placeholder.jpg', alt: 'Guest services staff in resort uniform' }
+      { src: '/images/products/hotel-uniform.jpg', alt: 'Resort staff in professional attire greeting guests' },
+      { src: '/images/hospitality/hospitality_uniform_concierge.jpg', alt: 'Resort team members in coordinated uniforms' },
+      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'Resort staff in lightweight professional clothing' },
+      { src: '/images/hospitality/hospitality_uniform_department.jpg', alt: 'Guest services staff in resort uniform' }
     ],
     colors: [
       { name: 'Beige', value: '#F5F5DC' },

@@ -207,9 +207,9 @@ export default function ReceptionStaffUniformPage() {
     customization: true,
     images: [
       { src: '/images/product-placeholder.jpg', alt: 'Professional reception staff uniform for hospitality' },
-      { src: '/images/default-placeholder.jpg', alt: 'Hotel reception staff in professional uniforms' },
-      { src: '/images/default-placeholder.jpg', alt: 'Hospitality professionals in reception attire' },
-      { src: '/images/default-placeholder.jpg', alt: 'Front desk professional in reception uniform' }
+      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'Hotel reception staff in professional uniforms' },
+      { src: '/images/hospitality/hospitality_uniform_concierge.jpg', alt: 'Hospitality professionals in reception attire' },
+      { src: '/images/products/hotel-uniform.jpg', alt: 'Front desk professional in reception uniform' }
     ],
     colors: [
       { name: 'Navy Blue', value: '#000080' },
