@@ -115,25 +115,25 @@ export default function AboutPageArabic() {
       id: 'quality',
       title: "UNEOM - Professional Uniforms",
       description: 'نستخدم فقط أفضل المواد والحرفية في صناعة الزي الموحد لضمان المتانة والراحة والمظهر المهني.',
-      icon: '/images/default-placeholder.jpg',
+      icon: '/images/icons/premium-quality.svg',
     },
     {
       id: 'innovation',
       title: 'الابتكار',
       description: 'نسعى باستمرار لتحسين منتجاتنا من خلال دمج تقنيات الأقمشة الجديدة والتصميمات العصرية والحلول المبتكرة.',
-      icon: '/images/default-placeholder.jpg',
+      icon: '/images/icons/customization-icon.svg',
     },
     {
       id: 'integrity',
       title: 'النزاهة',
       description: 'نتعامل مع عملائنا وموظفينا وشركائنا بأعلى مستويات الصدق والأخلاق والاحترام.',
-      icon: '/images/default-placeholder.jpg',
+      icon: '/images/icons/compliance-shield.svg',
     },
     {
       id: 'culture',
       title: 'الاحترام الثقافي',
       description: 'نصمم منتجاتنا مع مراعاة خصوصيات المجتمع السعودي والثقافة الإسلامية، ونحترم العادات والتقاليد المحلية.',
-      icon: '/images/default-placeholder.jpg',
+      icon: '/images/icons/culturally-appropriate.svg',
     },
   ];
   

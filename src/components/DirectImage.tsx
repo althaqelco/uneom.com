@@ -74,7 +74,7 @@ const DirectImage: React.FC<DirectImageProps> = ({
   const handleError = () => {
     if (attempts >= 5) {
       // بعد 5 محاولات، استخدم الصورة الاحتياطية
-      setCurrentSrc('/images/default-placeholder.jpg');
+      setCurrentSrc('/images/defaults/default-placeholder.jpg');
       setError(true);
       if (onError) onError();
       return;
@@ -141,7 +141,7 @@ const DirectImage: React.FC<DirectImageProps> = ({
       
       case 5:
         // محاولة 5: استخدام الصورة الاحتياطية
-        setCurrentSrc('/images/default-placeholder.jpg');
+        setCurrentSrc('/images/defaults/default-placeholder.jpg');
         break;
       
       default:

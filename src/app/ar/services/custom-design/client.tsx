@@ -23,12 +23,12 @@ export default function CustomDesignServiceClientPage() {
         description: 'نبدأ بمرحلة اكتشاف شاملة لفهم قيم علامتك التجارية وعناصر الهوية وتفضيلات التصميم. يحلل فريقنا هويتك البصرية الحالية والجمهور المستهدف وموقع الصناعة لتحديد أهداف تصميم واضحة.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/custom-branding.svg',
         title: 'تطوير المفهوم',
         description: 'يقوم فريق التصميم لدينا بإنشاء مفاهيم أولية تجمع بين الجاذبية الجمالية والمتطلبات الوظيفية. نقدم اتجاهات تصميم متعددة مع لوحات الأفكار وألواح الألوان والرسومات الأولية لتصور الأساليب المختلفة.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/customization-icon.svg',
         title: 'التحسين وإنشاء النماذج الأولية',
         description: 'بناءً على ملاحظاتك، نقوم بتحسين المفاهيم المختارة وتطوير تصاميم مفصلة. يتم إنشاء نماذج أولية لقطع الزي الموحد الرئيسية، مما يسمح باختبار المقاس وتقييم المواد وإجراء تعديلات إضافية على التصميم.'
       },
@@ -41,32 +41,32 @@ export default function CustomDesignServiceClientPage() {
     
     benefits: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/brand-aligned.svg',
         title: 'تعزيز هوية العلامة التجارية',
         description: 'تعزز الأزياء الموحدة المخصصة هويتك البصرية وتخلق اعترافًا فوريًا بالعلامة التجارية داخليًا ومع العملاء.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/premium-quality.svg',
         title: 'التمييز التنافسي',
         description: 'تميز عن المنافسين بأزياء موحدة مميزة توصل موقعك الفريد وقيمك في السوق.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/culturally-appropriate.svg',
         title: 'تعزيز ثقافة الشركة',
         description: 'تعزز الأزياء الموحدة المصممة جيدًا الشعور بالانتماء والفخر بين الموظفين، مما يقوي ثقافة مؤسستك.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/brand-aligned.svg',
         title: 'الاتساق البصري',
         description: 'ضمان عرض متسق للعلامة التجارية عبر جميع المواقع والأقسام ونقاط اتصال العملاء.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/customization-icon.svg',
         title: 'تحسين الوظائف',
         description: 'تتيح التصاميم المخصصة ميزات وتكييفات خاصة بالصناعة تحسن الراحة والأداء لبيئة عملك المحددة.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/consultation-icon.svg',
         title: 'تحسين إدراك العملاء',
         description: 'ترفع الأزياء الموحدة المهنية والتي تحمل العلامة التجارية من تصور العملاء لجودة الخدمة والاحترافية التنظيمية.'
       }
@@ -78,14 +78,14 @@ export default function CustomDesignServiceClientPage() {
         title: 'تحول العلامة التجارية للفندق الفاخر',
         description: 'إنشاء مجموعة أزياء موحدة مميزة لعلامة فندقية فاخرة جديدة تطلق في المملكة العربية السعودية. تطوير نظام تصميم زي موحد شامل يضم 12 قطعة ملابس فريدة عبر 5 أقسام مع تطوير أقمشة مخصصة.',
         result: 'ذكر 92٪ من الضيوف مظهر الموظفين المميز كعنصر لا ينسى، وتم عرضه في معرض التصميم السنوي، وتم تقييم رضا الموظفين بـ 4.8/5.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/Luxury_Hotel Staff_Uniform.png'
       },
       {
         id: "banking-identity",
         title: 'تجديد هوية الخدمات المصرفية للشركات',
         description: 'تحديث برنامج زي موحد قديم لمؤسسة مالية رائدة تضم أكثر من 1200 موظف. إنشاء مجموعة أزياء موحدة محدثة تحافظ على لوحة ألوان التراث مع إدخال صور ظلية معاصرة وأقمشة متميزة.',
         result: 'زيادة بنسبة 86٪ في رضا الموظفين، وتقليل تكاليف الصيانة بنسبة 25٪، وزيادة مقاييس تصور العملاء للاحترافية بنسبة 18٪.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/aviation/aviation_uniform_main.jpg'
       }
     ],
     

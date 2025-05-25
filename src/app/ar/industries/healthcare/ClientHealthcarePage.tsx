@@ -40,32 +40,32 @@ export default function ClientHealthcarePage() {
   // Key benefits of UNEOM healthcare uniforms
   const benefits = [
     {
-      icon: '/images/default-placeholder.jpg',
+      icon: '/images/icons/premium-quality.svg',
       title: 'جودة فائقة',
       description: 'أقمشة ممتازة تتحمل الاستخدام المتكرر والغسيل الصناعي، مما يضمن مظهرًا مهنيًا دائمًا.'
     },
     {
-      icon: '/images/default-placeholder.jpg',
+      icon: '/images/icons/saudi-expertise.svg',
       title: 'متوافق مع المعايير السعودية',
       description: 'جميع منتجاتنا تتوافق مع معايير السلامة والجودة السعودية وتلبي متطلبات وزارة الصحة.'
     },
     {
-      icon: '/images/default-placeholder.jpg',
+      icon: '/images/icons/modest-design-saudi.svg',
       title: 'خيارات الزي الإسلامي',
       description: 'تصميمات محتشمة تحترم القيم الإسلامية والمتطلبات الثقافية المحلية.'
     },
     {
-      icon: '/images/default-placeholder.jpg',
+      icon: '/images/icons/culturally-appropriate.svg',
       title: 'راحة فائقة',
       description: 'أقمشة قابلة للتنفس ومريحة مصممة خصيصًا للمناخ السعودي ولساعات العمل الطويلة.'
     },
     {
-      icon: '/images/default-placeholder.jpg',
+      icon: '/images/icons/custom-branding.svg',
       title: 'تصميم مخصص',
       description: 'خيارات تخصيص كاملة بما في ذلك التطريز بالشعارات وألوان العلامة التجارية والقياسات المخصصة.'
     },
     {
-      icon: '/images/default-placeholder.jpg',
+      icon: '/images/icons/timely-delivery.svg',
       title: 'توصيل سريع',
       description: 'خدمة توصيل فعالة في جميع أنحاء المملكة بما في ذلك كميات كبيرة للمستشفيات والعيادات.'
     }
@@ -113,22 +113,22 @@ export default function ClientHealthcarePage() {
     {
       name: 'غرفة العمليات',
       description: 'أزياء متخصصة لفرق الجراحة تتميز بالمتانة والراحة والامتثال للمعايير الطبية.',
-      image: '/images/default-placeholder.jpg'
+      image: '/images/healthcare/medical_hijab_uniform.jpg'
     },
     {
       name: 'التمريض',
       description: 'أزياء تمريض راقية مصممة للاستخدام اليومي، مع مراعاة خاصة للحركة والراحة.',
-      image: '/images/default-placeholder.jpg'
+      image: '/images/healthcare/nurce_uniform.jpg'
     },
     {
       name: 'المختبر',
       description: 'معاطف مختبر عالية الجودة توفر الحماية اللازمة وتعزز الصورة المهنية.',
-      image: '/images/default-placeholder.jpg'
+      image: '/images/products/lab-coat.jpg'
     },
     {
       name: 'الأطباء والمسؤولين',
       description: 'أزياء رسمية تناسب المديرين الطبيين والأطباء، متوفرة بتصاميم تعكس المكانة المهنية.',
-      image: '/images/default-placeholder.jpg'
+      image: '/images/healthcare/full_clothes_doctor_uniform.jpg'
     }
   ];
   
@@ -140,7 +140,7 @@ export default function ClientHealthcarePage() {
       role: 'المدير الطبي',
       company: 'مستشفى المملكة الرياض',
       image: '/images/avatar-placeholder.jpg',
-      logo: '/images/default-placeholder.jpg',
+      logo: '/images/about/Saudi_Hospitals_Association.png',
       quote: 'ملابس يونيوم الطبية تجمع بين الجودة العالية والراحة في الاستخدام اليومي. نلاحظ تحسنًا كبيرًا في مظهر فريقنا وثقتهم بأنفسهم.'
     },
     {
@@ -149,7 +149,7 @@ export default function ClientHealthcarePage() {
       role: 'مديرة التمريض',
       company: 'مستشفى الدكتور سليمان الحبيب',
       image: '/images/avatar-placeholder.jpg',
-      logo: '/images/default-placeholder.jpg',
+      logo: '/images/about/Saudi_Hospitals_Association.png',
       quote: 'منذ انتقالنا إلى أزياء يونيوم، لاحظنا مقاومة أفضل للتآكل وثبات الألوان حتى بعد التعقيم والغسيل المتكرر.'
     },
     {
@@ -158,7 +158,7 @@ export default function ClientHealthcarePage() {
       role: 'استشاري جراحة',
       company: 'المركز السعودي للجراحة المتقدمة',
       image: '/images/avatar-placeholder.jpg',
-      logo: '/images/default-placeholder.jpg',
+      logo: '/images/about/Saudi_Hospitals_Association.png',
       quote: 'الأقمشة المقاومة للسوائل والمستخدمة في أردية يونيوم الجراحية أثبتت فعاليتها في توفير الحماية والراحة طوال العمليات الطويلة.'
     }
   ];
@@ -168,22 +168,22 @@ export default function ClientHealthcarePage() {
     {
       name: 'مقاومة للسوائل',
       description: 'تحمي من تناثر السوائل والبقع في بيئة الرعاية الصحية',
-      icon: '/images/default-placeholder.jpg'
+      icon: '/images/icons/fabric-tech-performance.svg'
     },
     {
       name: 'مضادة للميكروبات',
       description: 'تقنية مضادة للبكتيريا تعزز السلامة والصحة',
-      icon: '/images/default-placeholder.jpg'
+      icon: '/images/icons/compliance-shield.svg'
     },
     {
       name: 'سهلة العناية',
       description: 'تتحمل الغسيل المتكرر والتعقيم دون التأثير على المظهر',
-      icon: '/images/default-placeholder.jpg'
+      icon: '/images/icons/premium-quality.svg'
     },
     {
       name: 'قابلة للتنفس',
       description: 'تسمح بتبادل الهواء للحفاظ على البرودة خلال المناوبات الطويلة',
-      icon: '/images/default-placeholder.jpg'
+      icon: '/images/icons/culturally-appropriate.svg'
     }
   ];
   
@@ -281,7 +281,7 @@ export default function ClientHealthcarePage() {
             >
               <div className="relative h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src={getLocalizedImagePath('/images/default-placeholder.jpg', 'ar')}
+                  src={getLocalizedImagePath('/images/healthcare/medical_hijab_uniform.jpg', 'ar')}
                   alt="أزياء الرعاية الصحية من يونيوم"
                   fill
                   className="object-cover"
@@ -485,7 +485,7 @@ export default function ClientHealthcarePage() {
             >
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src={getLocalizedImagePath('/images/default-placeholder.jpg', 'ar')}
+                  src={getLocalizedImagePath('/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg', 'ar')}
                   alt="تقنيات الأقمشة المتطورة في منتجات يونيوم"
                   fill
                   className="object-cover"

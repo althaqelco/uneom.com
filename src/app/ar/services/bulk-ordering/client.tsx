@@ -18,12 +18,12 @@ export default function BulkOrderingServiceClientPage() {
     
     steps: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/consultation-icon.svg',
         title: 'تحديد المتطلبات',
         description: 'نعمل معك لفهم متطلبات الكميات الكبيرة الخاصة بك، بما في ذلك التصميم، والمواصفات الفنية، والموعد النهائي للتسليم، واعتبارات الميزانية. يقوم فريقنا بتوثيق متطلباتك بالتفصيل لضمان تلبية جميع احتياجاتك.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/custom-branding.svg',
         title: 'تطوير العرض',
         description: 'بناءً على متطلباتك، نقوم بإنشاء عرض شامل يتضمن خيارات التصميم والأقمشة، ومواصفات المنتج، والتسعير التفصيلي، وجداول التسليم. نقدم عينات حسب الحاجة للتحقق من الجودة والمقاس قبل التصنيع بكميات كبيرة.'
       },
@@ -33,7 +33,7 @@ export default function BulkOrderingServiceClientPage() {
         description: 'بمجرد الموافقة على العرض، نبدأ دورة الإنتاج مع ضوابط صارمة لمراقبة الجودة في كل مرحلة. نقدم تحديثات منتظمة حول التقدم المحرز، ونتعامل بشكل استباقي مع أي مشكلات قد تنشأ أثناء عملية التصنيع.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/timely-delivery.svg',
         title: 'الشحن والتسليم',
         description: 'نتولى جميع جوانب الشحن والخدمات اللوجستية، بما في ذلك التخليص الجمركي، عند الاقتضاء، لضمان وصول طلبك إلى وجهته في الوقت المحدد وبحالة ممتازة. نوفر خدمات التوزيع والتخزين للطلبات المستمرة.'
       }
@@ -41,32 +41,32 @@ export default function BulkOrderingServiceClientPage() {
     
     benefits: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/premium-quality.svg',
         title: 'وفورات ملموسة',
         description: 'وفر ما يصل إلى 25٪ على الطلبات الكبيرة مقارنة بالمشتريات الفردية، مع معدلات تخفيض تصاعدية للكميات الأكبر.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/premium-quality.svg',
         title: 'جودة متفوقة',
         description: 'فحوصات مراقبة الجودة المتعددة خلال عملية الإنتاج تضمن أعلى معايير المنتجات النهائية.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/timely-delivery.svg',
         title: 'توفير الوقت',
         description: 'عملية طلب مبسطة مع مدير حساب مخصص يتعامل مع جميع التفاصيل، مما يوفر وقت موظفيك.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/customization-icon.svg',
         title: 'خيارات مرنة',
         description: 'حلول تصميم مخصصة ومتطلبات العلامة التجارية وبرنامج طلب مستمر متاح للمؤسسات الكبيرة.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/comprehensive-support.svg',
         title: 'دعم لوجستي',
         description: 'إدارة مخزون متكاملة وحلول تخزين وتوزيع لضمان توفر الأزياء الموحدة عند الحاجة.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/consultation-icon.svg',
         title: 'تتبع وتقارير',
         description: 'تحليلات المشتريات المفصلة والإبلاغ لمساعدتك في مراقبة الإنفاق وتحسين ميزانيات الزي الموحد المستقبلية.'
       }
@@ -85,7 +85,7 @@ export default function BulkOrderingServiceClientPage() {
         title: "برنامج الزي الموحد للحرم الجامعي المتعدد",
         description: "تدير مؤسسة الفيصل 12 مدرسة في جميع أنحاء المملكة العربية السعودية، حيث يحتاج أكثر من 15000 طالب إلى زي مدرسي موحد. قمنا بإنشاء خط إنتاج مخصص للزي المدرسي مع مراقبة صارمة للجودة وشبكة لوجستية متقدمة.",
         result: "تحقيق دقة مخزون بنسبة 99.8٪ وتسليم جميع الأزياء المدرسية قبل أسبوعين من بداية الفصل الدراسي وتقليل معدل العائد بنسبة 64٪.",
-        image: '/images/default-placeholder.jpg'
+        image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg'
       }
     ],
     

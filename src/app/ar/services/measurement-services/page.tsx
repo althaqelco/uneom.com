@@ -18,17 +18,17 @@ export default function MeasurementServicesPageArabic() {
     
     steps: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/consultation-icon.svg',
         title: 'التخطيط والتحليل',
         description: 'نبدأ بفهم احتياجات مؤسستك المحددة ومتطلبات الزي الموحد. يحلل فريقنا أفضل نهج للقياس بناءً على عدد الموظفين والمواقع واللوجستيات.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/customization-icon.svg',
         title: 'التنفيذ والقياس',
         description: 'ينشر فريق القياس المدرب لدينا في موقعك (أو مواقعك) لإجراء قياسات دقيقة لكل موظف. نستخدم طرق القياس القياسية الصناعية ونوثق بيانات المقاس بنظام آمن.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/comprehensive-support.svg',
         title: 'إدارة البيانات وإعداد التقارير',
         description: 'نقوم بمعالجة وتنظيم بيانات القياس في تقارير تفصيلية، مما يوفر نظرة عامة واضحة على متطلبات المقاسات لبرنامج الزي الموحد الخاص بك. يتم مشاركة هذه البيانات معك بتنسيق سهل الاستخدام للتخطيط والطلب.'
       }
@@ -36,32 +36,32 @@ export default function MeasurementServicesPageArabic() {
     
     benefits: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/premium-quality.svg',
         title: 'دقة محسنة',
         description: 'منع مشاكل المقاسات والعائدات من خلال الحصول على قياسات دقيقة من البداية.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/timely-delivery.svg',
         title: 'كفاءة محسنة',
         description: 'توفير الوقت والموارد من خلال تبسيط عملية قياس الموظفين.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/brand-aligned.svg',
         title: 'اتساق في المقاسات',
         description: 'ضمان قياسات موحدة لجميع الموظفين بغض النظر عن الموقع.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/culturally-appropriate.svg',
         title: 'راحة محسنة للموظفين',
         description: 'ضمان أن جميع الموظفين يرتدون أزياء موحدة مقاسة بشكل صحيح تعزز الراحة والأداء.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/consultation-icon.svg',
         title: 'مظهر احترافي',
         description: 'تعزيز صورة علامتك التجارية من خلال زي موحد مناسب تمامًا لكل موظف.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/comprehensive-support.svg',
         title: 'إدارة بيانات شاملة',
         description: 'الاستفادة من البيانات المنظمة للمقاسات للتخطيط المستقبلي واستبدال الزي الموحد.'
       }
@@ -73,14 +73,14 @@ export default function MeasurementServicesPageArabic() {
         title: 'برنامج قياس سلسلة الضيافة',
         description: 'قياس أكثر من 1200 موظف عبر 4 عقارات مع متطلبات زي موحد متنوعة. تنفيذ برنامج قياس شامل مع محطات قياس متنقلة، وتكنولوجيا قياس رقمية، ونظام جدولة المواعيد.',
         result: 'تقليل معدل التبادل من 32٪ إلى 4٪ فقط، وإكمال جميع القياسات خلال فترة 5 أيام، وتحسين تقييمات مظهر الزي الموحد بنسبة 27٪.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg'
       },
       {
         id: "healthcare-measurement",
         title: 'حل قياس شبكة الرعاية الصحية',
         description: 'تنسيق قياسات لـ 3500 متخصص في الرعاية الصحية عبر 12 منشأة مع عمليات على مدار 24/7. تطوير برنامج قياس متخصص للرعاية الصحية يتميز بمحطات قياس معقمة وجدولة على مدار 24 ساعة.',
         result: 'قياس 100٪ من الموظفين بدون أي تأثير على رعاية المرضى، وتقليل الشكاوى المتعلقة بالزي الموحد بنسبة 92٪، وتحسين تقييمات المقاس الوظيفي من 68٪ إلى 94٪.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/healthcare/medical_hijab_uniform.jpg'
       }
     ],
     

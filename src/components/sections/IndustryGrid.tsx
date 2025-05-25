@@ -84,14 +84,14 @@ const IndustryGrid: React.FC<IndustryGridProps> = ({ locale = 'en', items }) => 
           id: "aviation",
           title: "أزياء الطيران",
           description: "أزياء مهنية للطيارين ومضيفي الطيران للخطوط الجوية",
-          image: "/images/default-placeholder.jpg",
+          image: "/images/aviation/aviation_uniform_main.jpg",
           link: "/ar/industries/aviation"
         },
         {
           id: "hospitality",
           title: "أزياء الضيافة",
           description: "أزياء أنيقة لموظفي الفنادق والمطاعم لجميع المناصب",
-          image: "/images/default-placeholder.jpg",
+          image: "/images/hospitality/hospitality_uniform_formal.jpg",
           link: "/ar/industries/hospitality"
         },
         {

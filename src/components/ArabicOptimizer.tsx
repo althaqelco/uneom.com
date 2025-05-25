@@ -6,12 +6,12 @@ import { initArabicOptimizations } from '@/lib/utils/arabicOptimization';
 // Critical images for Arabic version
 const CRITICAL_IMAGES = [
   '/images/avatar-placeholder.jpg',
-  '/images/default-placeholder.jpg',
-  '/images/default-placeholder.jpg',
-  '/images/default-placeholder.jpg',
-  '/images/default-placeholder.jpg',
+  '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
+  '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
+  '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
+  '/images/healthcare/medical_hijab_uniform.jpg',
   '/images/banner-placeholder.jpg',
-  '/images/default-placeholder.jpg'
+  '/images/products/corporate-suit-executive.jpg'
 ];
 
 /**

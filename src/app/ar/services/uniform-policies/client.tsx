@@ -18,22 +18,22 @@ export default function UniformPoliciesServiceClientPage() {
     
     steps: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/consultation-icon.svg',
         title: 'تقييم الاحتياجات',
         description: 'نبدأ بتقييم شامل لهيكل مؤسستك وثقافتها ومتطلبات الصناعة والإجراءات الحالية المتعلقة بالزي الموحد لتحديد احتياجات وأهداف السياسة.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/custom-branding.svg',
         title: 'تطوير السياسة',
         description: 'يقوم متخصصونا بصياغة سياسات شاملة للزي الموحد تتناول جميع جوانب برنامجك، من معايير التصميم وإرشادات الارتداء إلى إجراءات الشراء وتدابير الامتثال.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/comprehensive-support.svg',
         title: 'مراجعة أصحاب المصلحة',
         description: 'نقوم بتسهيل جلسات مراجعة تعاونية مع أصحاب المصلحة الرئيسيين لجمع التعليقات ومعالجة المخاوف وتحسين عناصر السياسة لضمان المواءمة التنظيمية والتنفيذ العملي.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/timely-delivery.svg',
         title: 'تخطيط التنفيذ',
         description: 'نقوم بتطوير استراتيجيات تنفيذ مفصلة وخطط اتصال ومواد تدريبية وإجراءات إدارية لضمان اعتماد السياسة بنجاح في جميع أنحاء مؤسستك.'
       }
@@ -41,32 +41,32 @@ export default function UniformPoliciesServiceClientPage() {
     
     benefits: [
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/compliance-shield.svg',
         title: 'حوكمة واضحة',
         description: 'وضع إرشادات شفافة ومحددة بوضوح تزيل الارتباك وعدم الاتساق في إدارة برنامج الزي الموحد.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/compliance-shield.svg',
         title: 'الامتثال التنظيمي',
         description: 'ضمان امتثال برنامج الزي الموحد الخاص بك للوائح الصناعة ومعايير السلامة وقوانين العمل ذات الصلة.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/brand-aligned.svg',
         title: 'اتساق العلامة التجارية',
         description: 'الحفاظ على معايير موحدة تمثل هوية علامتك التجارية بدقة واتساق عبر جميع المواقع والأقسام.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/timely-delivery.svg',
         title: 'الكفاءة الإدارية',
         description: 'تبسيط عمليات صنع القرار وتقليل العبء الإداري من خلال بروتوكولات واضحة لجميع المسائل المتعلقة بالزي الموحد.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/comprehensive-support.svg',
         title: 'حل النزاعات',
         description: 'توفير أطر واضحة لمعالجة القضايا المتعلقة بالزي الموحد والتسهيلات والظروف الخاصة.'
       },
       {
-        icon: '/images/default-placeholder.jpg',
+        icon: '/images/icons/consultation-icon.svg',
         title: 'التكامل التشغيلي',
         description: 'مواءمة سياسات الزي الموحد مع الأنظمة التنظيمية الأخرى بما في ذلك التوظيف وعمليات الموارد البشرية وحوكمة الشركات.'
       }
@@ -78,14 +78,14 @@ export default function UniformPoliciesServiceClientPage() {
         title: 'توحيد سياسات شبكة مصرفية',
         description: 'توحيد ممارسات الزي الموحد غير المتسقة عبر أكثر من 75 فرعًا. تطوير إطار شامل لسياسة الزي الموحد مع إرشادات متدرجة لمختلف الأدوار ومعايير بصرية واضحة.',
         result: 'تحقيق امتثال للسياسة بنسبة 94% خلال 3 أشهر، وتقليل حوادث الموارد البشرية المتعلقة بالزي الموحد بنسبة 78%، وتحسين تقييمات اتساق العلامة التجارية.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg'
       },
       {
         id: "industrial-safety",
         title: 'سياسة الزي الموحد للسلامة الصناعية',
         description: 'تحقيق التوازن بين الامتثال للسلامة والاعتبارات الثقافية في عملية متعددة المرافق. إنشاء إطار سياسة نمطي للزي الموحد يتناول متطلبات السلامة والتسهيلات الدينية.',
         result: 'تحقيق امتثال تنظيمي كامل، وتقليل حوادث السلامة المتعلقة بالزي الموحد بنسبة 64%، وزيادة رضا الموظفين عن الزي الموحد بنسبة 47%.',
-        image: '/images/default-placeholder.jpg'
+        image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg'
       }
     ],
     

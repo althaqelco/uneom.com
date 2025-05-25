@@ -17,7 +17,7 @@ const ImageResolver: React.FC = () => {
     if (typeof window === 'undefined') return;
     
     // Default fallback image
-    const DEFAULT_FALLBACK = '/images/default-placeholder.jpg';
+    const DEFAULT_FALLBACK = '/images/defaults/default-placeholder.jpg';
     
     // Track processed images to avoid duplicate processing
     const processedImages = new Set<HTMLImageElement>();

@@ -72,7 +72,7 @@ const services = [
   {
     title: 'تصميم الزي الموحد',
     description: 'تصميمات مبتكرة تعكس هوية علامتك التجارية وتلبي المتطلبات العملية لموظفيك.',
-    icon: '/images/default-placeholder.jpg',
+    icon: '/images/icons/custom-branding.svg',
     link: '/ar/services/custom-design',
   },
   {
@@ -84,13 +84,13 @@ const services = [
   {
     title: 'إدارة برامج الزي الموحد',
     description: 'حلول متكاملة لإدارة برنامج الزي الموحد الخاص بمؤسستك من البداية إلى النهاية.',
-    icon: '/images/default-placeholder.jpg',
+    icon: '/images/icons/comprehensive-support.svg',
     link: '/ar/services/program-management',
   },
   {
     title: 'خدمات القياس',
     description: 'خدمات قياس احترافية تضمن ملاءمة مثالية لجميع موظفيك مهما اختلفت أحجامهم.',
-    icon: '/images/default-placeholder.jpg',
+    icon: '/images/icons/customization-icon.svg',
     link: '/ar/services/measurement-services',
   },
 ];
@@ -100,32 +100,32 @@ const features = [
   {
     title: 'تصميم مخصص',
     description: 'نصمم الزي الموحد خصيصًا ليعكس هوية علامتك التجارية ويلبي احتياجات موظفيك.',
-    icon: '/images/default-placeholder.jpg',
+    icon: '/images/icons/custom-branding.svg',
   },
   {
     title: 'مواد عالية الجودة',
     description: 'نستخدم فقط أفضل الأقمشة والمواد لضمان الراحة والمتانة والمظهر المهني.',
-    icon: '/images/default-placeholder.jpg',
+    icon: '/images/icons/premium-quality.svg',
   },
   {
     title: 'توافق مع المعايير السعودية',
     description: 'جميع منتجاتنا متوافقة مع المعايير السعودية ومناسبة للبيئة المحلية.',
-    icon: '/images/default-placeholder.jpg',
+    icon: '/images/icons/saudi-expertise.svg',
   },
   {
     title: 'التسليم السريع',
     description: 'نلتزم بجداول التسليم المحددة لنضمن وصول طلبك في الوقت المناسب.',
-    icon: '/images/default-placeholder.jpg',
+    icon: '/images/icons/timely-delivery.svg',
   },
   {
     title: 'دعم مستمر',
     description: 'فريق دعم متخصص جاهز لمساعدتك في أي استفسارات أو متطلبات إضافية.',
-    icon: '/images/default-placeholder.jpg',
+    icon: '/images/icons/comprehensive-support.svg',
   },
   {
     title: 'أسعار تنافسية',
     description: 'نقدم أسعارًا تنافسية مع الحفاظ على أعلى معايير الجودة لجميع منتجاتنا.',
-    icon: '/images/default-placeholder.jpg',
+    icon: '/images/icons/premium-quality.svg',
   },
 ];
 
@@ -198,7 +198,7 @@ export default function HomePage() {
     {
       title: "الزي الموحد المميز للمؤسسات السعودية",
       subtitle: "حلول متكاملة تجمع بين الهوية الوطنية والمعايير العالمية",
-      image: "/images/default-placeholder.jpg",
+      image: "/images/products/corporate-suit-executive.jpg",
       cta: "اطلب عرض سعر"
     },
     {
@@ -210,37 +210,37 @@ export default function HomePage() {
     {
       title: "خدمات التوصيل والشحن بزي موحد احترافي",
       subtitle: "أزياء عملية ومتينة لفرق التوصيل والخدمات اللوجستية",
-      image: "/images/default-placeholder.jpg",
+      image: "/images/a-young-handsome-mailman-smiles-at-the-camera-green-screen-studio-SBI-351078959.jpg",
       cta: "استكشف خدماتنا"
     },
     {
       title: "أزياء مدرسية عالية الجودة",
       subtitle: "تصاميم مريحة وعملية للطلاب في جميع المراحل التعليمية",
-      image: "/images/default-placeholder.jpg",
+      image: "/images/education/uniform_school_product-2.jpg",
       cta: "اكتشف الأزياء المدرسية"
     },
     {
       title: "أناقة وتميز لطاقم الطيران",
       subtitle: "أزياء تعكس رقي وفخامة شركات الطيران السعودية",
-      image: "/images/default-placeholder.jpg",
+      image: "/images/aviation/aviation_uniform_main.jpg",
       cta: "اكتشف مجموعة الطيران"
     },
     {
       title: "أزياء مهنية لمختلف القطاعات",
       subtitle: "نلبي احتياجات كافة المهن والتخصصات بتصاميم مبتكرة",
-      image: "/images/default-placeholder.jpg",
+      image: "/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg",
       cta: "استكشف القطاعات"
     },
     {
       title: "أزياء المطاعم والضيافة",
       subtitle: "تصاميم أنيقة وعملية لفرق الطهي وخدمة العملاء",
-      image: "/images/default-placeholder.jpg",
+      image: "/images/hospitality/hospitality_uniform_formal.jpg",
       cta: "اكتشف أزياء الضيافة"
     },
     {
       title: "مجموعة متكاملة من الأزياء المهنية",
       subtitle: "حلول متخصصة لكل مهنة ولكل قطاع",
-      image: "/images/default-placeholder.jpg",
+      image: "/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg",
       cta: "تصفح منتجاتنا"
     }
   ];
@@ -670,7 +670,7 @@ export default function HomePage() {
             <div className="relative h-[600px] rounded-xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-900/80 to-primary-600/50 mix-blend-multiply z-10"></div>
               <Image
-                src="/images/default-placeholder.jpg"
+                src="/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg"
                 alt="تقنيات الأقمشة المتطورة"
                 fill
                 className="object-cover"
@@ -785,7 +785,7 @@ export default function HomePage() {
                   author: "د. سارة الفايز",
                   position: "مديرة الخدمات الطبية",
                   company: "مستشفى الأمل",
-                  image: "/images/default-placeholder.jpg",
+                  image: "/images/healthcare/medical_hijab_uniform.jpg",
                   industry: "الرعاية الصحية"
                 },
                 {
@@ -793,7 +793,7 @@ export default function HomePage() {
                   author: "كابتن خالد الشمري",
                   position: "مدير العمليات",
                   company: "الخليج للطيران",
-                  image: "/images/default-placeholder.jpg",
+                  image: "/images/aviation/aviation_uniform_airline.jpg",
                   industry: "الطيران"
                 },
                 {
@@ -801,7 +801,7 @@ export default function HomePage() {
                   author: "أحمد العتيبي",
                   position: "مدير المشتريات",
                   company: "فنادق القمة",
-                  image: "/images/default-placeholder.jpg",
+                  image: "/images/hospitality/hospitality_uniform_concierge.jpg",
                   industry: "الضيافة"
                 }
               ].map((testimonial, index) => (
@@ -978,7 +978,7 @@ export default function HomePage() {
                 excerpt: "كيف تتبنى الشركات السعودية ممارسات الاستدامة في الزي الموحد وتأثير ذلك على البيئة والاقتصاد.",
                 slug: "sustainable-uniforms",
                 date: "14 يونيو 2023",
-                image: "/images/default-placeholder.jpg",
+                image: "/images/blog/sustainable-uniforms.jpg",
                 author: "سارة الأحمد",
                 category: "الاستدامة"
               },

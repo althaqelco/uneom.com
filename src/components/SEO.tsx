@@ -118,7 +118,7 @@ export default function SEO({
   const canonicalUrl = customCanonicalUrl || `${baseUrl}${pathForCanonical}`;
   
   // Construct OG Image URL (use custom or default)
-  const ogImage = customOgImage || 'https://uneom.com/images/default-placeholder.jpg';
+  const ogImage = customOgImage || 'https://uneom.com/images/og-image.jpg';
   
   // Generate alternate URLs for different languages
   // The hreflang implementation specifically uses en-SA and ar-SA for Saudi Arabia targeting
