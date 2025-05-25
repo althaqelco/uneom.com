@@ -117,43 +117,43 @@ const nextConfig = {
     };
     
     // Add support for image file types
-    config.module.rules.push({
-      test: /\.(png|jpe?g|gif|svg|webp|avif)$/i,
-      use: [
-        {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[hash].[ext]',
-            outputPath: 'static/images/',
-            publicPath: '/_next/static/images/'
-          }
-        },
-        // Add image optimization
-        {
-          loader: 'image-webpack-loader',
-          options: {
-            disable: process.env.NODE_ENV === 'development',
-            mozjpeg: {
-              progressive: true,
-              quality: 65
-            },
-            optipng: {
-              enabled: false,
-            },
-            pngquant: {
-              quality: [0.65, 0.90],
-              speed: 4
-            },
-            gifsicle: {
-              interlaced: false,
-            },
-            webp: {
-              quality: 75
-            }
-          }
-        }
-      ]
-    });
+    // config.module.rules.push({
+    //   test: /\.(png|jpe?g|gif|svg|webp|avif)$/i,
+    //   use: [
+    //     {
+    //       loader: 'file-loader',
+    //       options: {
+    //         name: '[name].[hash].[ext]',
+    //         outputPath: 'static/images/',
+    //         publicPath: '/_next/static/images/'
+    //       }
+    //     },
+    //     // Add image optimization
+    //     {
+    //       loader: 'image-webpack-loader',
+    //       options: {
+    //         disable: process.env.NODE_ENV === 'development',
+    //         mozjpeg: {
+    //           progressive: true,
+    //           quality: 65
+    //         },
+    //         optipng: {
+    //           enabled: false,
+    //         },
+    //         pngquant: {
+    //           quality: [0.65, 0.90],
+    //           speed: 4
+    //         },
+    //         gifsicle: {
+    //           interlaced: false,
+    //         },
+    //         webp: {
+    //           quality: 75
+    //         }
+    //       }
+    //     }
+    //   ]
+    // });
     
     return config;
   },

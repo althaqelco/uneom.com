@@ -1,371 +1,236 @@
-"use client";
+'use client';
 
-import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import Container from '@/components/ui/Container';
+import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
-import { getProductById } from '@/lib/data/products';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import ProductCard from '@/components/ui/ProductCard'; // For related products
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import IconsComponent from '@/components/ui/Icons';
 
-// Get product data from the English version and adapt it for Arabic
-const englishProduct = getProductById('ground-crew-uniform');
+export const dynamic = 'force-static';
 
-// Product data for Arabic version
-const productData = {
-  id: 'ground-crew-uniform',
-  name: 'زي طاقم الأرض للمطارات',
-  price: 'ريال سعودي 299',
-  rating: 4.7,
-  reviews: 45,
-  description: 'زي طاقم الأرض المتين والعملي مصمم خصيصًا لموظفي مناولة الأمتعة وفريق الصيانة وموظفي المطارات، مناسب للظروف القاسية مع الحفاظ على الراحة طوال اليوم.',
-  longDescription: 'تمنح أزياء طاقم الأرض لدينا الموظفين السعوديين في المطارات القدرة على العمل بكفاءة وأمان في جميع المناطق الوظيفية. مصممة خصيصًا للمناخات الحارة مع تقنيات تبريد متطورة، ومصنوعة من أقمشة متينة مقاومة للماء والتآكل والبقع، مع ألوان عالية الوضوح وعناصر عاكسة للسلامة القصوى. توفر هذه الأزياء مستويات احترافية بينما تتحمل ضغوط العمل اليومي في مناطق المطار المزدحمة.',
-  features: [
-    'نسيج خارجي متين وعالي التحمل',
-    'خيارات ألوان عالية الوضوح للسلامة',
-    'أشرطة عاكسة للرؤية في الظلام',
-    'جيوب متعددة وعملية',
-    'قماش مقاوم للماء والبقع',
-    'تقنية تبريد للعمل في المناخات الحارة',
-    'خيارات تخصيص مع شعار المطار',
-    'خيارات أقمشة خفيفة الوزن للعمل في أجواء المملكة العربية السعودية'
-  ],
-  specifications: [
-    { name: 'المادة', value: 'قطن مقوى 65%، بوليستر 35%' },
-    { name: 'وزن القماش', value: '280 غرام/متر مربع' },
-    { name: 'الميزات الخاصة', value: 'مقاوم للماء، مقاوم للتمزق، عاكس للضوء' },
-    { name: 'التركيبة', value: 'سترة، بنطلون، قميص، سترة للطقس البارد' },
-    { name: 'خيارات التخصيص', value: 'طباعة شعار المطار، إضافة اسم الموظف، بطاقات الأسماء المدمجة' },
-    { name: 'بلد التصنيع', value: 'المملكة العربية السعودية' }
-  ],
-  images: englishProduct ? englishProduct.images : [
-    { src: '/images/aviation/aviation_uniform_airline.jpg', alt: 'زي طاقم الأرض للمطارات السعودية' },
-    { src: '/images/products/aviation/ground-1.jpg', alt: 'زي طاقم الأرض مع العناصر العاكسة' },
-    { src: '/images/products/aviation/ground-2.jpg', alt: 'تفاصيل زي طاقم الأرض' }
-  ],
-  colors: [
-    { name: 'أصفر عالي الوضوح', value: '#f6e58d', image: '/images/products/aviation/ground-yellow.jpg' },
-    { name: 'برتقالي عالي الوضوح', value: '#ffbe76', image: '/images/products/aviation/ground-orange.jpg' },
-    { name: 'أزرق داكن', value: '#0a3d62', image: '/images/products/aviation/ground-navy.jpg' }
-  ],
-  sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
-  category: 'أزياء الطيران',
-  categorySlug: 'aviation-uniforms',
-  inStock: true,
-  minOrderQuantity: 10,
-  bulkPricing: [
-    { quantity: '10-24', price: 'ريال سعودي 299' },
-    { quantity: '25-49', price: 'ريال سعودي 279' },
-    { quantity: '50-99', price: 'ريال سعودي 259' },
-    { quantity: '100+', price: 'ريال سعودي 239' }
-  ],
-  customizationOptions: [
-    'طباعة شعار المطار',
-    'إضافة اسم الموظف',
-    'خيارات تصميم مخصصة للألوان',
-    'بطاقات الأسماء المدمجة',
-    'أحزمة مخصصة بشعار المطار'
-  ],
-  relatedProducts: [
-    {
-      id: 'airline-crew-uniform',
-      name: 'زي طاقم الطيران',
-      price: 'ريال سعودي 599',
-      images: [{ src: '/images/aviation/aviation_uniform_airline_main_image.jpg', alt: 'زي طاقم الطيران للنساء والرجال' }],
-      category: 'أزياء الطيران',
-      categorySlug: 'aviation-uniforms'
-    },
-    {
-      id: 'pilot-uniform-set',
-      name: 'طقم زي الطيار المحترف',
-      price: 'ريال سعودي 1,799',
-      images: [{ src: '/images/aviation/aviation_captin_uniform.jpg', alt: 'زي طيار محترف للخطوط الجوية السعودية' }],
-      category: 'أزياء الطيران',
-      categorySlug: 'aviation-uniforms'
-    }
-  ],
-  tags: ['زي طاقم أرضي', 'زي موظفي المطار', 'ملابس المطار', 'زي مناولة الأمتعة', 'زي عمال المطار']
-};
+const relatedProducts = [
+  {
+    id: 'pilot-uniform-ar',
+    name: 'زي الطيارين الاحترافي',
+    image: '/images/products/aviation/airline-1.jpg', // Placeholder
+    price: 'اطلب عرض سعر',
+    href: '/ar/shop/aviation-uniforms/pilot-uniform/',
+    category: 'طيارين',
+  },
+  {
+    id: 'flight-attendant-dress-ar',
+    name: 'زي طاقم الضيافة الجوية الأنيق',
+    image: '/images/products/aviation/airline-2.jpg', // Placeholder
+    price: 'اطلب عرض سعر',
+    href: '/ar/shop/aviation-uniforms/flight-attendant-dress/',
+    category: 'طاقم الضيافة',
+  },
+];
 
 export default function GroundCrewUniformPageAr() {
-  const [selectedColor, setSelectedColor] = React.useState(productData.colors[0].value);
-  const [selectedSize, setSelectedSize] = React.useState(productData.sizes[2]); // Default to size L
-  const [selectedImage, setSelectedImage] = React.useState(0);
-  const [selectedQuantity, setSelectedQuantity] = React.useState(productData.minOrderQuantity || 1);
-
   return (
-    <div dir="rtl" className="bg-neutral-50">
-      <Container>
-        {/* Product Display */}
-        <div className="py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Product Images */}
-            <div className="space-y-4">
-              <div className="aspect-square relative border border-neutral-200 rounded-lg overflow-hidden bg-white">
+    <div dir="rtl" className="font-arabic">
+      <EnhancedSEO2025
+        title="زي الطاقم الأرضي | ملابس عمل متينة وعالية الوضوح لخدمات المطارات | يونيوم"
+        description="اكتشف مجموعتنا من زي الطاقم الأرضي المتين والعملي في المملكة العربية السعودية. ملابس عالية الوضوح، مقاومة للعوامل الجوية، ومصممة لسلامة وكفاءة موظفي الخدمات الأرضية."
+        canonicalUrl="https://uneom.com/ar/shop/aviation-uniforms/ground-crew-uniform/"
+        locale="ar"
+        image="/images/products/aviation/ground-crew-uniform-main.jpg" // Main product image
+      />
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-orange-600 to-yellow-500 text-white py-20">
+        <div className="absolute inset-0 opacity-25">
+          <Image
+            src="/images/products/aviation/ground-crew-hero-bg.jpg" // Placeholder
+            alt="خلفية زي الطاقم الأرضي"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        
+        <Container>
+          <Breadcrumbs
+            items={[
+              { label: 'الرئيسية', href: '/ar' },
+              { label: 'المتجر', href: '/ar/shop' },
+              { label: 'أزياء الطيران', href: '/ar/shop/aviation-uniforms' },
+              { label: 'زي الطاقم الأرضي', href: '/ar/shop/aviation-uniforms/ground-crew-uniform' },
+            ]}
+            className="text-white/80 mb-6 relative z-10"
+          />
+          
+          <div className="relative z-10 max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">زي الطاقم الأرضي المتين والعملي</h1>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl">
+              ملابس عمل مصممة خصيصاً لفرق الخدمات الأرضية في المطارات. تجمع بين المتانة العالية، وميزات السلامة، والراحة لضمان أداء فعال في جميع الظروف الجوية والتشغيلية.
+            </p>
+            <Button 
+              href="/ar/quote?product=ground-crew-uniform"
+              variant="secondary" 
+              size="lg"
+              className="bg-white text-orange-700 hover:bg-gray-100"
+            >
+              اطلب عرض سعر لزي الطاقم الأرضي
+            </Button>
+          </div>
+        </Container>
+      </section>
+
+      <main className="py-16">
+        <Container>
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            {/* Product Image Gallery */}
+            <div className="relative">
+              <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src={productData.images[selectedImage].src}
-                  alt={productData.images[selectedImage].alt}
-                  className="object-contain"
+                  src="/images/products/aviation/ground-crew-uniform-main.jpg" // Main Product Image
+                  alt="زي طاقم أرضي متين من يونيوم"
                   fill
-                  priority
+                  className="object-cover"
                 />
               </div>
-              <div className="flex space-x-4 rtl:space-x-reverse">
-                {productData.images.map((image, index) => (
-                  <button
-                    key={index}
-                    className={`w-20 h-20 border rounded-md overflow-hidden ${selectedImage === index ? 'border-primary-500 ring-2 ring-primary-200' : 'border-neutral-200'}`}
-                    onClick={() => setSelectedImage(index)}
-                  >
-                    <div className="relative h-full w-full">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        className="object-cover"
-                        fill
-                      />
-                    </div>
-                  </button>
+               {/* Thumbnails */}
+              <div className="grid grid-cols-4 gap-2 mt-4">
+                {['/images/products/aviation/ground-crew-thumb1.jpg', 
+                  '/images/products/aviation/ground-crew-thumb2.jpg', 
+                  '/images/products/aviation/ground-crew-thumb3.jpg', 
+                  '/images/products/aviation/ground-crew-thumb4.jpg'].map((thumb, idx) => (
+                  <div key={idx} className="aspect-w-1 aspect-h-1 rounded overflow-hidden border border-gray-200">
+                    <Image src={thumb} alt={`صورة مصغرة لزي الطاقم الأرضي ${idx+1}`} fill className="object-cover hover:opacity-75 transition-opacity" />
+                  </div>
                 ))}
               </div>
             </div>
 
-            {/* Product Information */}
+            {/* Product Details */}
             <div>
-              <div className="mb-6">
-                <Link href={`/ar/shop/${productData.categorySlug}`} className="text-sm text-primary-600 hover:underline">
-                  {productData.category}
-                </Link>
-              </div>
+              <SectionHeading subtitle="السلامة والكفاءة على الأرض">
+                زي مصمم لمتطلبات العمل الأرضي
+              </SectionHeading>
+              <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+                يلعب الطاقم الأرضي دوراً حيوياً في ضمان سلاسة عمليات الطيران. زي الطاقم الأرضي من يونيوم مصمم خصيصاً لتوفير الحماية والراحة والرؤية العالية في بيئة المطار المزدحمة والمتغيرة.
+              </p>
               
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">{productData.name}</h1>
-              
-              <div className="flex items-center mb-4">
-                <div className="flex items-center">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" 
-                      className={`w-5 h-5 ${i < Math.floor(productData.rating) ? 'text-yellow-400' : 'text-neutral-300'}`}
-                    >
-                      <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
-                    </svg>
-                  ))}
+              <h3 className="text-xl font-semibold mb-3 text-primary-700">مكونات الزي الأساسية:</h3>
+              <ul className="list-disc pr-5 space-y-2 text-gray-600 mb-6">
+                <li>سترات عمل عالية الوضوح (Hi-Vis) مع شرائط عاكسة.</li>
+                <li>بناطيل عمل متينة ومقاومة للتآكل مع جيوب متعددة.</li>
+                <li>قمصان بولو أو قمصان عمل مريحة.</li>
+                <li>أغطية رأس واقية (قبعات، خوذات حسب الحاجة).</li>
+                <li>ملابس واقية من العوامل الجوية (سترات مطر، ملابس شتوية).</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold mb-3 text-primary-700">المميزات الرئيسية:</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                <div className="flex items-start">
+                  <IconsComponent name="check" className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                  <p className="text-gray-600 text-sm">أقمشة متينة مقاومة للتمزق والاهتراء والزيوت.</p>
                 </div>
-                <span className="text-sm text-neutral-600 mr-2 rtl:mr-0 rtl:ml-2">{productData.rating} ({productData.reviews} تقييم)</span>
-              </div>
-              
-              <p className="text-2xl font-semibold text-neutral-900 mb-6">{productData.price}</p>
-              
-              <div className="mb-8">
-                <p className="text-neutral-700">{productData.description}</p>
-              </div>
-              
-              {/* Quantity Selector */}
-              <div className="mb-6">
-                <label className="block text-neutral-800 mb-2">
-                  الكمية (الحد الأدنى: {productData.minOrderQuantity})
-                </label>
-                <div className="flex">
-                  <button 
-                    className="bg-neutral-100 border border-neutral-300 px-3 py-2 rounded-r-md"
-                    onClick={() => setSelectedQuantity(Math.max(productData.minOrderQuantity, selectedQuantity - 1))}
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15" />
-                    </svg>
-                  </button>
-                  <input 
-                    type="number" 
-                    min={productData.minOrderQuantity}
-                    value={selectedQuantity} 
-                    onChange={(e) => setSelectedQuantity(Math.max(productData.minOrderQuantity, parseInt(e.target.value) || productData.minOrderQuantity))}
-                    className="border-y border-neutral-300 w-16 py-2 text-center"
-                  />
-                  <button 
-                    className="bg-neutral-100 border border-neutral-300 px-3 py-2 rounded-l-md"
-                    onClick={() => setSelectedQuantity(selectedQuantity + 1)}
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                    </svg>
-                  </button>
+                <div className="flex items-start">
+                  <IconsComponent name="check" className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                  <p className="text-gray-600 text-sm">مطابقة لمعايير السلامة الدولية للملابس عالية الوضوح.</p>
+                </div>
+                <div className="flex items-start">
+                  <IconsComponent name="check" className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                  <p className="text-gray-600 text-sm">تصاميم مريحة تسمح بحرية الحركة أثناء العمل البدني.</p>
+                </div>
+                <div className="flex items-start">
+                  <IconsComponent name="check" className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                  <p className="text-gray-600 text-sm">مقاومة للعوامل الجوية (الماء، الرياح، البرودة).</p>
+                </div>
+                <div className="flex items-start">
+                  <IconsComponent name="check" className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                  <p className="text-gray-600 text-sm">جيوب عملية متعددة لحمل الأدوات وأجهزة الاتصال.</p>
+                </div>
+                <div className="flex items-start">
+                  <IconsComponent name="check" className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                  <p className="text-gray-600 text-sm">خيارات تخصيص مع شعار شركة الطيران أو مزود الخدمة.</p>
                 </div>
               </div>
-              
-              {/* Color Selection */}
-              <div className="mb-6">
-                <label className="block text-neutral-800 mb-2">اللون</label>
-                <div className="flex space-x-4 rtl:space-x-reverse">
-                  {productData.colors.map((color) => (
-                    <button
-                      key={color.value}
-                      className={`w-10 h-10 rounded-full ${selectedColor === color.value ? 'ring-2 ring-primary-400 ring-offset-2' : ''}`}
-                      style={{ backgroundColor: color.value }}
-                      onClick={() => setSelectedColor(color.value)}
-                      aria-label={`اختر اللون ${color.name}`}
-                    />
-                  ))}
-                </div>
-              </div>
-              
-              {/* Size Selection */}
-              <div className="mb-8">
-                <label className="block text-neutral-800 mb-2">المقاس</label>
-                <div className="flex flex-wrap gap-2">
-                  {productData.sizes.map((size) => (
-                    <button
-                      key={size}
-                      className={`px-4 py-2 border ${selectedSize === size ? 'border-primary-500 bg-primary-50 text-primary-700' : 'border-neutral-300 bg-white text-neutral-800'} rounded-md`}
-                      onClick={() => setSelectedSize(size)}
-                    >
-                      {size}
-                    </button>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-md"
-                >
-                  أضف إلى طلب العرض
+
+              <div className="flex gap-4">
+                <Button href="/ar/quote?product=ground-crew-uniform" variant="primary" size="lg">
+                  اطلب عرض سعر الآن
                 </Button>
-                <Button
-                  className="border border-primary-600 bg-white text-primary-600 hover:bg-primary-50 px-6 py-3 rounded-md"
-                >
-                  اتصل بنا للاستفسار
+                <Button href="/ar/contact" variant="outline" size="lg">
+                  استفسر عن المواصفات
                 </Button>
-              </div>
-              
-              {/* Key Features Preview */}
-              <div className="mt-8 p-4 bg-white rounded-lg border border-neutral-200">
-                <h3 className="font-semibold text-lg mb-4">المميزات الرئيسية</h3>
-                <ul className="space-y-2">
-                  {productData.features.slice(0, 4).map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <svg className="mt-1 ml-2 w-4 h-4 text-primary-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                      </svg>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              {/* Bulk Pricing Preview */}
-              <div className="mt-4 p-4 bg-white rounded-lg border border-neutral-200">
-                <h3 className="font-semibold text-lg mb-4">خصومات الكميات</h3>
-                <ul className="space-y-2">
-                  {productData.bulkPricing.slice(0, 2).map((pricing, index) => (
-                    <li key={index} className="flex items-start">
-                      <svg className="mt-1 ml-2 w-4 h-4 text-primary-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                      </svg>
-                      <span>{pricing.quantity} قطعة: {pricing.price}</span>
-                    </li>
-                  ))}
-                  <li className="text-sm text-primary-600 hover:underline cursor-pointer mt-2">عرض جميع خيارات الأسعار</li>
-                </ul>
               </div>
             </div>
           </div>
+
+          {/* Detailed Description / Tabs Section */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-semibold mb-6 text-center text-primary-800">مصمم للأداء في أصعب الظروف</h2>
+            <div className="bg-gray-50 p-8 rounded-lg shadow">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-3 text-secondary-700">المتانة والمقاومة:</h3>
+                  <p className="text-gray-600 mb-4">
+                    يتم تصنيع زي الطاقم الأرضي من أقمشة مختارة بعناية لتحمل ظروف العمل القاسية في المطارات:
+                  </p>
+                  <ul className="list-disc pr-5 space-y-1 text-gray-600">
+                    <li>أقمشة كانفاس أو دينيم معززة لمقاومة التمزق.</li>
+                    <li>معالجات خاصة لمقاومة الماء والزيوت والمواد الكيميائية.</li>
+                    <li>خياطة مزدوجة ومعززة في مناطق الضغط العالي.</li>
+                    <li>ألوان ثابتة لا تبهت مع الغسيل المتكرر والتعرض للشمس.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-3 text-secondary-700">السلامة والرؤية:</h3>
+                  <p className="text-gray-600 mb-4">
+                    تعتبر سلامة الطاقم الأرضي أولوية قصوى في تصميم أزيائنا:
+                  </p>
+                  <ul className="list-disc pr-5 space-y-1 text-gray-600">
+                    <li>ألوان فلورية زاهية (برتقالي، أصفر، أخضر ليموني) للرؤية النهارية.</li>
+                    <li>شرائط عاكسة عالية الجودة (3M Scotchlite™ أو ما يعادلها) للرؤية الليلية.</li>
+                    <li>تصاميم مطابقة لمعايير EN ISO 20471 للملابس عالية الوضوح.</li>
+                    <li>إمكانية إضافة ميزات حماية إضافية مثل مقاومة اللهب أو الحماية من الكهرباء الساكنة.</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-8 text-center">
+                <Button href="/ar/services/technical-finishes" variant="outline" size="md">
+                  تعرف على المعالجات التقنية للأقمشة
+                </Button>
+              </div>
+            </div>
+          </section>
           
-          {/* Product Details Tab Section */}
-          <div className="mt-16">
-            <div className="border-b border-neutral-200">
-              <nav className="flex space-x-8 rtl:space-x-reverse">
-                <button className="border-b-2 border-primary-500 py-4 px-1 text-primary-600 font-medium">
-                  تفاصيل المنتج
-                </button>
-                <button className="py-4 px-1 text-neutral-500 font-medium">
-                  المواصفات
-                </button>
-                <button className="py-4 px-1 text-neutral-500 font-medium">
-                  خيارات التخصيص
-                </button>
-                <button className="py-4 px-1 text-neutral-500 font-medium">
-                  الأسعار والخصومات
-                </button>
-              </nav>
+          {/* Related Products Section */}
+          <section className="mb-16">
+            <SectionHeading subtitle="منتجات ذات صلة" centered>
+              استكمل تجهيزات فريق الطيران الخاص بك
+            </SectionHeading>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {relatedProducts.map((product) => (
+                <ProductCard key={product.id} product={product} showAddToQuote={true} />
+              ))}
             </div>
-            
-            {/* Product Details Content */}
-            <div className="py-8">
-              <p className="text-lg mb-6">{productData.longDescription}</p>
-              
-              <h3 className="text-xl font-semibold mb-4">الميزات</h3>
-              <ul className="space-y-3 mb-8">
-                {productData.features.map((feature, index) => (
-                  <li key={index} className="flex items-start">
-                    <svg className="mt-1 ml-3 w-5 h-5 text-primary-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                    </svg>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              {/* Specifications */}
-              <h3 className="text-xl font-semibold mb-4">المواصفات</h3>
-              <div className="bg-white rounded-lg border border-neutral-200 mb-8">
-                <table className="min-w-full divide-y divide-neutral-200">
-                  <tbody className="divide-y divide-neutral-200">
-                    {productData.specifications.map((spec, index) => (
-                      <tr key={index}>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-neutral-800 bg-neutral-50 w-1/3">{spec.name}</td>
-                        <td className="px-6 py-4 whitespace-normal text-sm text-neutral-700">{spec.value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              
-              {/* Custom Options Section */}
-              <h3 className="text-xl font-semibold mb-4">خيارات التخصيص</h3>
-              <ul className="space-y-3 mb-8">
-                {productData.customizationOptions.map((option, index) => (
-                  <li key={index} className="flex items-start">
-                    <svg className="mt-1 ml-3 w-5 h-5 text-primary-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                    </svg>
-                    <span>{option}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              {/* Related Products */}
-              <h3 className="text-xl font-semibold mb-6 mt-12">منتجات ذات صلة</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {productData.relatedProducts.map((product) => (
-                  <Link href={`/ar/shop/${product.categorySlug}/${product.id}`} key={product.id} className="group">
-                    <div className="bg-white rounded-lg border border-neutral-200 overflow-hidden transition-all group-hover:shadow-md">
-                      <div className="aspect-square relative">
-                        <Image
-                          src={product.images[0].src}
-                          alt={product.images[0].alt}
-                          className="object-cover group-hover:scale-105 transition-transform"
-                          fill
-                        />
-                      </div>
-                      <div className="p-4">
-                        <h4 className="font-medium text-lg mb-2 group-hover:text-primary-600 transition-colors">{product.name}</h4>
-                        <p className="text-neutral-900 font-semibold">{product.price}</p>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-              
-              {/* SEO Meta Tags */}
-              <div className="hidden">
-                <h1>زي طاقم الأرض للمطارات - ملابس عملية وآمنة لموظفي المطارات السعودية</h1>
-                <meta name="description" content="زي طاقم أرضي متين ومريح لموظفي المطارات السعودية، مصمم للعمل في الظروف القاسية مع ميزات سلامة عالية وراحة مثالية للعمل في المناخ الحار." />
-                <meta name="keywords" content="زي طاقم أرض، ملابس مطار، يونيفورم موظفي المطار، ملابس مناولة الأمتعة، زي عمال المطار" />
-              </div>
+          </section>
+
+          {/* Call to Action Section */}
+          <section className="text-center bg-yellow-50 rounded-2xl p-12">
+            <h2 className="text-3xl font-bold mb-4 text-yellow-800">هل تبحث عن زي طاقم أرضي يجمع بين الأمان والكفاءة؟</h2>
+            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+              تواصل معنا اليوم لمناقشة متطلباتك الخاصة بزي الطاقم الأرضي، ودعنا نقدم لك حلولاً مصممة خصيصاً لتعزيز سلامة وإنتاجية فريقك.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="/ar/quote?product=ground-crew-uniform" variant="primary" size="lg" className="bg-orange-600 hover:bg-orange-700">
+                اطلب عرض سعر لزي الطاقم الأرضي
+              </Button>
+              <Button href="/ar/contact" variant="outline" size="lg" className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
+                اتصل بنا للاستشارة الفنية
+              </Button>
             </div>
-          </div>
-        </div>
-      </Container>
+          </section>
+        </Container>
+      </main>
     </div>
   );
-} 
+}

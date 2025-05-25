@@ -1,6 +1,7 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -8,38 +9,13 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { getAllBlogPosts, getAllTags } from '@/lib/data/blogPosts.server';
 import { formatDate } from '@/lib/utils';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import { motion } from 'framer-motion';
 
-export const metadata: Metadata = {
-  title: 'المدونة | يونيوم - الأزياء المهنية وملابس العمل',
-  description: 'استكشف مدونتنا للحصول على رؤى ونصائح واتجاهات في الأزياء المهنية وملابس العمل في المملكة العربية السعودية',
-  keywords: 'مدونة يونيوم، الأزياء المهنية، ملابس العمل، اتجاهات الموضة، نصائح الزي الموحد، المملكة العربية السعودية',
-  openGraph: {
-    title: 'المدونة | يونيوم - الأزياء المهنية وملابس العمل',
-    description: 'استكشف مدونتنا للحصول على رؤى ونصائح واتجاهات في الأزياء المهنية وملابس العمل',
-    url: 'https://uneom.com/ar/blog/',
-    siteName: 'يونيوم',
-    images: [
-      {
-        url: 'https://uneom.com/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'مدونة يونيوم'
-      }
-    ],
-    locale: 'ar_SA',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://uneom.com/ar/blog/',
-    languages: {
-      'en-SA': 'https://uneom.com/blog/',
-      'ar-SA': 'https://uneom.com/ar/blog/',
-      'x-default': 'https://uneom.com/blog/'
-    }
-  }
+// Define a simple fadeIn animation variant
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
-
-export const dynamic = 'force-static';
 
 export default function BlogPage() {
   const allPosts = getAllBlogPosts('ar');
@@ -319,7 +295,7 @@ export default function BlogPage() {
                         اشترك الآن
                       </button>
                     </form>
-                  </div>
+                  </motion.div>
                   
                   {/* Popular Topics */}
                   <motion.div 

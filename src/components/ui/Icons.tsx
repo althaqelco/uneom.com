@@ -89,6 +89,65 @@ const Icons: React.FC<IconProps> = ({ name, className = '', size = 24 }) => {
         return <ListIcon size={size} className={className} />;
       case 'filter':
         return <FilterIcon size={size} className={className} />;
+      case 'compliance-shield':
+        return (
+          <svg width={size} height={size} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <circle cx="32" cy="32" r="30" fill="#1a365d" stroke="#2d5a87" strokeWidth="2"/>
+            <path d="M32 8L48 16V32C48 44 32 56 32 56C32 56 16 44 16 32V16L32 8Z" fill="#ffd700"/>
+            <path d="M24 30L30 36L40 26" stroke="#1a365d" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        );
+      case 'brand-identity-aviation':
+        return (
+          <svg width={size} height={size} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <circle cx="32" cy="32" r="30" fill="#0ea5e9" stroke="#0284c7" strokeWidth="2"/>
+            <path d="M32 12L48 28H40V44H24V28H16L32 12Z" fill="#fff"/>
+            <circle cx="32" cy="32" r="3" fill="#0ea5e9"/>
+            <path d="M20 48h24M28 52h8" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        );
+      case 'modest-design-saudi':
+        return (
+          <svg width={size} height={size} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <circle cx="32" cy="32" r="30" fill="#1a365d" stroke="#2d5a87" strokeWidth="2"/>
+            <path d="M32 8C40 8 48 16 48 24V40C48 48 40 56 32 56C24 56 16 48 16 40V24C16 16 24 8 32 8Z" fill="#ffd700"/>
+            <path d="M24 20h16v8H24zM20 32h24v4H20z" fill="#1a365d"/>
+            <circle cx="28" cy="24" r="2" fill="#1a365d"/>
+            <circle cx="36" cy="24" r="2" fill="#1a365d"/>
+          </svg>
+        );
+      case 'fabric-tech-performance':
+        return (
+          <svg width={size} height={size} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <circle cx="32" cy="32" r="30" fill="#1a365d" stroke="#2d5a87" strokeWidth="2"/>
+            <rect x="16" y="16" width="32" height="32" rx="4" fill="#ffd700"/>
+            <path d="M20 20h24v24H20z" fill="#1a365d" opacity="0.1"/>
+            <path d="M24 28h16M24 32h16M24 36h12" stroke="#1a365d" strokeWidth="2" strokeLinecap="round"/>
+            <circle cx="48" cy="16" r="6" fill="#ffd700"/>
+            <path d="M45 16h6M48 13v6" stroke="#1a365d" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        );
+      case 'saudi-expertise':
+        return (
+          <svg width={size} height={size} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <rect width="64" height="64" rx="12" fill="#0f5132"/>
+            <rect x="12" y="16" width="40" height="24" fill="#198754"/>
+            <path d="M20 28c0-2.2 1.8-4 4-4h16c2.2 0 4 1.8 4 4v8c0 2.2-1.8 4-4 4H24c-2.2 0-4-1.8-4-4v-8z" fill="#ffffff"/>
+            <path d="M28 30l2 2 4-4" stroke="#198754" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <rect x="16" y="44" width="32" height="4" fill="#ffffff"/>
+            <circle cx="48" cy="12" r="6" fill="#ffd700"/>
+            <path d="M48 8l1.5 3h3.5l-2.5 2 1 3-3-2-3 2 1-3-2.5-2h3.5z" fill="#0f5132"/>
+          </svg>
+        );
+      case 'brand-aligned':
+        return (
+          <svg width={size} height={size} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <circle cx="32" cy="32" r="30" fill="#1a365d" stroke="#2d5a87" strokeWidth="2"/>
+            <rect x="16" y="16" width="32" height="32" rx="8" fill="#ffd700"/>
+            <circle cx="32" cy="32" r="12" fill="#1a365d"/>
+            <path d="M28 28L32 32L36 28M28 36L32 32L36 36" stroke="#ffd700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        );
       default:
         return (
           <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
