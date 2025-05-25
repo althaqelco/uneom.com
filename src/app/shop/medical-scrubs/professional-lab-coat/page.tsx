@@ -51,10 +51,10 @@ export default function ProfessionalLabCoatPage() {
       { name: 'Customization Options', value: 'Institutional embroidery, credential embroidery, professional piping, custom pocket configurations' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Medical consultant wearing premium professional lab coat during patient consultation' },
-      { src: '/images/default-placeholder.jpg', alt: 'Female healthcare executive in tailored professional lab coat at medical center' },
-      { src: '/images/default-placeholder.jpg', alt: 'Hospital directors in professional lab coats during executive medical meeting' },
-      { src: '/images/default-placeholder.jpg', alt: 'Saudi specialist physician in premium professional lab coat with medical team' }
+      { src: '/images/products/lab-coat.jpg', alt: 'Medical consultant wearing premium professional lab coat during patient consultation' },
+      { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'Female healthcare executive in tailored professional lab coat at medical center' },
+      { src: '/images/healthcare/full_clothes_doctor_uniform.jpg', alt: 'Hospital directors in professional lab coats during executive medical meeting' },
+      { src: '/images/healthcare/healthcare_medical_doctor_uniform.jpg', alt: 'Saudi specialist physician in premium professional lab coat with medical team' }
     ],
     category: 'Medical Scrubs',
     categorySlug: 'medical-scrubs',
@@ -70,11 +70,11 @@ export default function ProfessionalLabCoatPage() {
       { name: 'Department Chairman Attire', price: 'SAR 450' }
     ],
     colors: [
-      { name: 'Classic White', value: '#FFFFFF', image: '/images/default-placeholder.jpg' },
-      { name: 'Ivory White', value: '#FFFFF0', image: '/images/default-placeholder.jpg' },
-      { name: 'Executive Navy', value: '#000080', image: '/images/default-placeholder.jpg' },
-      { name: 'Prestigious Black', value: '#000000', image: '/images/default-placeholder.jpg' },
-      { name: 'Silver Grey', value: '#C0C0C0', image: '/images/default-placeholder.jpg' }
+      { name: 'Classic White', value: '#FFFFFF', image: '/images/products/lab-coat.jpg' },
+      { name: 'Ivory White', value: '#FFFFF0', image: '/images/healthcare/healthcare_medical_doctor_uniform.jpg' },
+      { name: 'Executive Navy', value: '#000080', image: '/images/healthcare/full_clothes_doctor_uniform.jpg' },
+      { name: 'Prestigious Black', value: '#000000', image: '/images/healthcare/healthcare_hijab_doctor.jpg' },
+      { name: 'Silver Grey', value: '#C0C0C0', image: '/images/healthcare/healthcare_medical_uniform.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL', '5XL'],
     sizeEquivalents: {
@@ -349,7 +349,7 @@ export default function ProfessionalLabCoatPage() {
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/default-placeholder.jpg" 
+                  src="/images/healthcare/full_clothes_doctor_uniform.jpg"
                   alt="Hospital executives in professional lab coats during leadership meeting" 
                   fill
                   className="object-cover"

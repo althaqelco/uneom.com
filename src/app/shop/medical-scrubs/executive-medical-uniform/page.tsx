@@ -205,10 +205,10 @@ export default function ExecutiveMedicalUniformPage() {
     leadTime: '14-18 days',
     customization: true,
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Executive medical professionals in premium healthcare uniforms' },
-      { src: '/images/avatar-placeholder.jpg', alt: 'Medical administration team in executive uniforms' },
-      { src: '/images/default-placeholder.jpg', alt: 'Healthcare executive in professional medical attire' },
-      { src: '/images/default-placeholder.jpg', alt: 'Medical director in executive uniform' }
+      { src: '/images/healthcare/healthcare_medical_doctor_uniform.jpg', alt: 'Executive medical professionals in premium healthcare uniforms' },
+      { src: '/images/healthcare/full_clothes_doctor_uniform.jpg', alt: 'Medical administration team in executive uniforms' },
+      { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'Healthcare executive in professional medical attire' },
+      { src: '/images/products/lab-coat.jpg', alt: 'Medical director in executive uniform' }
     ],
     colors: [
       { name: 'Navy Blue', value: '#000080' },

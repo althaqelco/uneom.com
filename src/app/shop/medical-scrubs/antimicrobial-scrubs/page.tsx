@@ -37,9 +37,9 @@ const productData = {
   ],
   images: [
     { src: '/images/products/scrubs-set.jpg', alt: 'Antimicrobial Scrubs Front View' },
-    { src: '/images/default-placeholder.jpg', alt: 'Medical professionals wearing Antimicrobial Scrubs' },
-    { src: '/images/default-placeholder.jpg', alt: 'Antimicrobial Fabric Close-up' },
-    { src: '/images/default-placeholder.jpg', alt: 'Fluid-resistant Fabric Demonstration' }
+    { src: '/images/healthcare/healthcare_medical_uniform.jpg', alt: 'Medical professionals wearing Antimicrobial Scrubs' },
+    { src: '/images/healthcare/healthcare_nurce_uniform.jpg', alt: 'Antimicrobial Fabric Close-up' },
+    { src: '/images/healthcare/healthcare_medical_doctor_uniform.jpg', alt: 'Fluid-resistant Fabric Demonstration' }
   ],
   category: 'Medical Scrubs',
   categorySlug: 'medical-scrubs',

@@ -51,9 +51,9 @@ export default function PremiumSurgicalGownsPage() {
     ],
     images: [
       { src: '/images/avatar-placeholder.jpg', alt: 'Surgical team wearing premium gowns' },
-      { src: '/images/default-placeholder.jpg', alt: 'Surgeons in premium gowns during operation' },
-      { src: '/images/default-placeholder.jpg', alt: 'Close-up of premium surgical gown fabric and details' },
-      { src: '/images/default-placeholder.jpg', alt: 'Healthcare professional in premium surgical attire' }
+      { src: '/images/healthcare/healthcare_medical_doctor_uniform.jpg', alt: 'Surgeons in premium gowns during operation' },
+      { src: '/images/healthcare/full_clothes_doctor_uniform.jpg', alt: 'Close-up of premium surgical gown fabric and details' },
+      { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'Healthcare professional in premium surgical attire' }
     ],
     category: 'Healthcare Apparel',
     categorySlug: 'medical-scrubs',
@@ -68,9 +68,9 @@ export default function PremiumSurgicalGownsPage() {
       { name: 'Custom Hospital Logo Gown', price: 'SAR 469' }
     ],
     colors: [
-      { name: 'Surgical Green', value: '#2d8659', image: '/images/default-placeholder.jpg' },
-      { name: 'Royal Blue', value: '#1e4d8c', image: '/images/default-placeholder.jpg' },
-      { name: 'Navy', value: '#0a1e3c', image: '/images/default-placeholder.jpg' }
+      { name: 'Surgical Green', value: '#2d8659', image: '/images/healthcare/healthcare_medical_uniform.jpg' },
+      { name: 'Royal Blue', value: '#1e4d8c', image: '/images/healthcare/healthcare_medical_doctor_uniform.jpg' },
+      { name: 'Navy', value: '#0a1e3c', image: '/images/healthcare/full_clothes_doctor_uniform.jpg' }
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     sizeEquivalents: {

@@ -184,10 +184,10 @@ export default function MedicalLabCoatPage() {
     leadTime: '10-12 days',
     customization: true,
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Medical professional wearing lab coat' },
-      { src: '/images/default-placeholder.jpg', alt: 'Diverse healthcare professionals in medical attire' },
-      { src: '/images/avatar-placeholder.jpg', alt: 'Medical team in hospital corridor' },
-      { src: '/images/default-placeholder.jpg', alt: 'Doctor smiling in lab coat' }
+      { src: '/images/products/lab-coat.jpg', alt: 'Medical professional wearing lab coat' },
+      { src: '/images/healthcare/healthcare_medical_doctor_uniform.jpg', alt: 'Diverse healthcare professionals in medical attire' },
+      { src: '/images/healthcare/full_clothes_doctor_uniform.jpg', alt: 'Medical team in hospital corridor' },
+      { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'Doctor smiling in lab coat' }
     ],
     colors: [
       { name: 'Pure White', value: '#FFFFFF' },

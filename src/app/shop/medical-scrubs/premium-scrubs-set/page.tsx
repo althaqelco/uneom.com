@@ -40,9 +40,9 @@ export default function PremiumScrubsSetPage() {
       { name: 'Custom Options', value: 'Embroidery, custom sizing, color matching' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Premium Scrubs Set Front View' },
-      { src: '/images/default-placeholder.jpg', alt: 'Premium Scrubs Set Worn by Medical Professionals' },
-      { src: '/images/default-placeholder.jpg', alt: 'Premium Scrubs Set in Use' },
+      { src: '/images/products/scrubs-set.jpg', alt: 'Premium Scrubs Set Front View' },
+      { src: '/images/healthcare/healthcare_medical_uniform.jpg', alt: 'Premium Scrubs Set Worn by Medical Professionals' },
+      { src: '/images/healthcare/healthcare_nurce_uniform.jpg', alt: 'Premium Scrubs Set in Use' },
       { src: '/images/avatar-placeholder.jpg', alt: 'Medical Team Wearing Scrubs' }
     ],
     category: 'Healthcare Apparel',
@@ -66,21 +66,21 @@ export default function PremiumScrubsSetPage() {
       {
         id: 'antimicrobial-scrubs',
         name: 'Antimicrobial Scrubs',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/healthcare/healthcare_medical_uniform.jpg',
         price: 'From SAR 279',
         href: '/shop/medical-scrubs/antimicrobial-scrubs'
       },
       {
         id: 'nursing-scrubs',
         name: 'Nursing Scrubs Set',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/healthcare/healthcare_nurce_uniform.jpg',
         price: 'From SAR 229',
         href: '/shop/medical-scrubs/nursing-scrubs'
       },
       {
         id: 'surgical-scrubs',
         name: 'Surgical Scrubs',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/healthcare/healthcare_medical_doctor_uniform.jpg',
         price: 'From SAR 269',
         href: '/shop/medical-scrubs/surgical-scrubs'
       }
