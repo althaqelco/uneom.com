@@ -51,10 +51,10 @@ export default function MedicalLabCoatsPage() {
       { name: 'Customization Options', value: 'Hospital logos, name/credential embroidery, department color coding' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Doctor wearing premium white lab coat with stethoscope' },
-      { src: '/images/default-placeholder.jpg', alt: 'Female physician in professional lab coat in hospital setting' },
-      { src: '/images/default-placeholder.jpg', alt: 'Medical professionals in lab coats during consultation' },
-      { src: '/images/default-placeholder.jpg', alt: 'Saudi healthcare professional in tailored lab coat' }
+      { src: '/images/products/lab-coat.jpg', alt: 'Doctor wearing premium white lab coat with stethoscope' },
+      { src: '/images/healthcare/full_clothes_doctor_uniform.jpg', alt: 'Female physician in professional lab coat in hospital setting' },
+      { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'Medical professionals in lab coats during consultation' },
+      { src: '/images/healthcare/healthcare_medical_doctor_uniform.jpg', alt: 'Saudi healthcare professional in tailored lab coat' }
     ],
     category: 'Medical Scrubs',
     categorySlug: 'medical-scrubs',
@@ -70,11 +70,11 @@ export default function MedicalLabCoatsPage() {
       { name: 'Enhanced Modesty Design', price: 'SAR 315' }
     ],
     colors: [
-      { name: 'White', value: '#FFFFFF', image: '/images/default-placeholder.jpg' },
-      { name: 'Light Blue', value: '#ADD8E6', image: '/images/default-placeholder.jpg' },
-      { name: 'Navy', value: '#000080', image: '/images/default-placeholder.jpg' },
-      { name: 'Black', value: '#000000', image: '/images/default-placeholder.jpg' },
-      { name: 'Grey', value: '#808080', image: '/images/default-placeholder.jpg' }
+      { name: 'White', value: '#FFFFFF', image: '/images/products/lab-coat.jpg' },
+      { name: 'Light Blue', value: '#ADD8E6', image: '/images/healthcare/healthcare_medical_doctor_uniform.jpg' },
+      { name: 'Navy', value: '#000080', image: '/images/healthcare/full_clothes_doctor_uniform.jpg' },
+      { name: 'Black', value: '#000000', image: '/images/healthcare/healthcare_hijab_doctor.jpg' },
+      { name: 'Grey', value: '#808080', image: '/images/healthcare/healthcare_medical_uniform.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL', '5XL'],
     sizeEquivalents: {
@@ -349,7 +349,7 @@ export default function MedicalLabCoatsPage() {
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/default-placeholder.jpg" 
+                  src="/images/healthcare/full_clothes_doctor_uniform.jpg"
                   alt="Medical professionals in customized lab coats" 
                   fill
                   className="object-cover"

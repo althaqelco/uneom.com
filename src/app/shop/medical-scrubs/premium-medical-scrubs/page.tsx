@@ -29,7 +29,7 @@ export default function PremiumMedicalScrubsPage() {
     longDescription: "Our Premium Medical Scrubs provide healthcare professionals with exceptional comfort, durability, and professional appearance. Designed specifically for the Saudi Arabian healthcare environment, these scrubs feature antimicrobial properties, moisture-wicking fabric, and practical pocket configurations for all medical staff needs.",
     price: "SAR 179",
     minOrder: 20,
-    mainImage: "/images/default-placeholder.jpg",
+    mainImage: "/images/products/scrubs-set.jpg",
     additionalImages: [
       "/images/product-placeholder.jpg",
       "/images/product-placeholder.jpg",
@@ -86,22 +86,22 @@ export default function PremiumMedicalScrubsPage() {
       { 
         name: "Hospital/Clinic Logo", 
         description: "Add your institution's logo embroidered on chest or sleeve",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_uniform.jpg"
       },
       { 
         name: "Name Embroidery", 
         description: "Personnel name and credentials embroidered for identification",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/healthcare/healthcare_nurce_uniform.jpg"
       },
       { 
         name: "Department Color Coding", 
         description: "Color options to designate different departments or roles",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/healthcare/medical_hijab_uniform.jpg"
       },
       { 
         name: "Custom Pocket Configuration", 
         description: "Modify pocket placement based on specific department needs",
-        image: "/images/default-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor_uniform.jpg"
       }
     ],
     relatedProducts: [

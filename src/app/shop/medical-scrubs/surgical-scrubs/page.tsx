@@ -52,9 +52,9 @@ export default function SurgicalScrubsPage() {
     ],
     images: [
       { src: '/images/avatar-placeholder.jpg', alt: 'Surgical team wearing advanced scrubs in operating room' },
-      { src: '/images/default-placeholder.jpg', alt: 'Surgeon and nurse in high-performance surgical attire preparing for procedure' },
+      { src: '/images/healthcare/healthcare_medical_doctor_uniform.jpg', alt: 'Surgeon and nurse in high-performance surgical attire preparing for procedure' },
       { src: '/images/avatar-placeholder.jpg', alt: 'Medical professionals in matching surgical scrubs during operation' },
-      { src: '/images/default-placeholder.jpg', alt: 'Saudi surgeon in specialized surgical scrubs with team' }
+      { src: '/images/healthcare/full_clothes_doctor_uniform.jpg', alt: 'Saudi surgeon in specialized surgical scrubs with team' }
     ],
     category: 'Medical Scrubs',
     categorySlug: 'medical-scrubs',
@@ -70,11 +70,11 @@ export default function SurgicalScrubsPage() {
       { name: 'Modest Design Surgical Set', price: 'SAR 285' }
     ],
     colors: [
-      { name: 'Surgical Green', value: '#5cb85c', image: '/images/default-placeholder.jpg' },
-      { name: 'Caribbean Blue', value: '#0086cb', image: '/images/default-placeholder.jpg' },
-      { name: 'Ceil Blue', value: '#92a1cf', image: '/images/default-placeholder.jpg' },
-      { name: 'Navy', value: '#000080', image: '/images/default-placeholder.jpg' },
-      { name: 'Royal Blue', value: '#4169e1', image: '/images/default-placeholder.jpg' }
+      { name: 'Surgical Green', value: '#5cb85c', image: '/images/healthcare/healthcare_medical_uniform.jpg' },
+      { name: 'Caribbean Blue', value: '#0086cb', image: '/images/healthcare/healthcare_medical_doctor_uniform.jpg' },
+      { name: 'Ceil Blue', value: '#92a1cf', image: '/images/healthcare/full_clothes_doctor_uniform.jpg' },
+      { name: 'Navy', value: '#000080', image: '/images/healthcare/healthcare_hijab_doctor.jpg' },
+      { name: 'Royal Blue', value: '#4169e1', image: '/images/products/scrubs-set.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {

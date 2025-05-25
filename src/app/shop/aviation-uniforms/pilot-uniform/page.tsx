@@ -45,10 +45,10 @@ export default function PilotUniformPage() {
       { name: 'Customization', value: 'Airline logo embroidery, rank stripes, name badges' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Professional Pilot Uniform - Front View' },
-      { src: '/images/default-placeholder.jpg', alt: 'Professional Pilot Uniform - Side View' },
-      { src: '/images/default-placeholder.jpg', alt: 'Pilot Uniform Accessories' },
-      { src: '/images/default-placeholder.jpg', alt: 'Complete Pilot Uniform Set' }
+      { src: '/images/products/aviation/airline-1.jpg', alt: 'Professional Pilot Uniform - Front View' },
+      { src: '/images/products/aviation/airline-2.jpg', alt: 'Professional Pilot Uniform - Side View' },
+      { src: '/images/products/aviation/airline-3.jpg', alt: 'Pilot Uniform Accessories' },
+      { src: '/images/aviation/aviation_uniform_main.jpg', alt: 'Complete Pilot Uniform Set' }
     ],
     category: 'Aviation Uniforms',
     categorySlug: 'aviation-uniforms',
@@ -77,21 +77,21 @@ export default function PilotUniformPage() {
       {
         id: 'airline-crew-uniform',
         name: 'Airline Crew Uniform',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/products/aviation/airline-2.jpg',
         price: 'From SAR 1,299',
         href: '/shop/aviation-uniforms/airline-crew-uniform'
       },
       {
         id: 'ground-staff-uniform',
         name: 'Ground Staff Uniform',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/aviation/aviation_uniform_airline.jpg',
         price: 'From SAR 899',
         href: '/shop/aviation-uniforms/ground-staff-uniform'
       },
       {
         id: 'aviation-accessories',
         name: 'Aviation Accessories Pack',
-        image: '/images/default-placeholder.jpg',
+        image: '/images/products/aviation/airline-3.jpg',
         price: 'From SAR 349',
         href: '/shop/aviation-uniforms/aviation-accessories'
       }

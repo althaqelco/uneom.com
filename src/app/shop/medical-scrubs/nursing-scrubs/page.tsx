@@ -50,10 +50,10 @@ export default function NursingScrubsPage() {
       { name: 'Customization Options', value: 'Hospital logos, name embroidery, department color coding' }
     ],
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Nursing staff wearing premium scrubs at hospital station' },
-      { src: '/images/default-placeholder.jpg', alt: 'Nurse and doctor in premium medical attire during consultation' },
-      { src: '/images/default-placeholder.jpg', alt: 'Nurse wearing comfortable scrubs checking patient record' },
-      { src: '/images/default-placeholder.jpg', alt: 'Hijabi nurse wearing culturally appropriate nursing scrubs' }
+      { src: '/images/products/nursing-uniform.jpg', alt: 'Nursing staff wearing premium scrubs at hospital station' },
+      { src: '/images/healthcare/healthcare_nurce_uniform.jpg', alt: 'Nurse and doctor in premium medical attire during consultation' },
+      { src: '/images/healthcare/2_pices_nurce_uniform.jpg', alt: 'Nurse wearing comfortable scrubs checking patient record' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'Hijabi nurse wearing culturally appropriate nursing scrubs' }
     ],
     category: 'Medical Scrubs',
     categorySlug: 'medical-scrubs',
@@ -69,16 +69,16 @@ export default function NursingScrubsPage() {
       { name: 'Maternity Nursing Scrubs', price: 'SAR 305' }
     ],
     colors: [
-      { name: 'Ceil Blue', value: '#92a1cf', image: '/images/default-placeholder.jpg' },
-      { name: 'Navy', value: '#000080', image: '/images/default-placeholder.jpg' },
-      { name: 'Caribbean Blue', value: '#0086cb', image: '/images/default-placeholder.jpg' },
-      { name: 'Wine', value: '#722f37', image: '/images/default-placeholder.jpg' },
-      { name: 'Pewter', value: '#8e8e8e', image: '/images/default-placeholder.jpg' },
-      { name: 'Hunter Green', value: '#355e3b', image: '/images/default-placeholder.jpg' },
-      { name: 'Royal Blue', value: '#4169e1', image: '/images/default-placeholder.jpg' },
-      { name: 'Black', value: '#000000', image: '/images/default-placeholder.jpg' },
-      { name: 'Eggplant', value: '#614051', image: '/images/default-placeholder.jpg' },
-      { name: 'Rose Pink', value: '#e8909c', image: '/images/default-placeholder.jpg' }
+      { name: 'Ceil Blue', value: '#92a1cf', image: '/images/healthcare/healthcare_nurce_uniform.jpg' },
+      { name: 'Navy', value: '#000080', image: '/images/healthcare/healthcare_medical_uniform.jpg' },
+      { name: 'Caribbean Blue', value: '#0086cb', image: '/images/products/nursing-uniform.jpg' },
+      { name: 'Wine', value: '#722f37', image: '/images/healthcare/2_pices_nurce_uniform.jpg' },
+      { name: 'Pewter', value: '#8e8e8e', image: '/images/healthcare/healthcare_medical_doctor_uniform.jpg' },
+      { name: 'Hunter Green', value: '#355e3b', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'Royal Blue', value: '#4169e1', image: '/images/healthcare/healthcare_nurce_uniform.jpg' },
+      { name: 'Black', value: '#000000', image: '/images/healthcare/healthcare_medical_uniform.jpg' },
+      { name: 'Eggplant', value: '#614051', image: '/images/products/nursing-uniform.jpg' },
+      { name: 'Rose Pink', value: '#e8909c', image: '/images/healthcare/2_pices_nurce_uniform.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -352,7 +352,7 @@ export default function NursingScrubsPage() {
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/default-placeholder.jpg" 
+                  src="/images/healthcare/healthcare_nurce_uniform.jpg"
                   alt="Nursing staff in customized scrubs" 
                   fill
                   className="object-cover"
