@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/resources/procurement-guide/header-image.jpg',
+        url: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
         width: 1200,
         height: 630,
         alt: 'دليل مشتريات الزي الموحد للمؤسسات في السعودية',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'دليل مشتريات الزي الموحد | إرشادات للمؤسسات | يونيوم السعودية',
     description: 'دليل شامل لشراء الزي الموحد للمؤسسات في السعودية.',
-    images: ['/images/resources/procurement-guide/header-image.jpg'],
+    images: ['/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg'],
   },
   robots: {
     index: true,

@@ -10,7 +10,7 @@ export default function ProcurementGuideClientPageArabic() {
       id: 'assess-needs',
       title: 'تقييم الاحتياجات',
       description: 'تحديد المتطلبات المحددة لمختلف الأقسام والأدوار في مؤسستك',
-      image: '/images/resources/procurement-guide/needs-assessment.jpg',
+      image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
       details: {
         'الكمية': 'تحديد عدد القطع المطلوبة لكل موظف',
         'الجودة': 'تحديد معايير الجودة المناسبة لبيئة العمل',
@@ -21,7 +21,7 @@ export default function ProcurementGuideClientPageArabic() {
       id: 'budget-planning',
       title: 'تخطيط الميزانية',
       description: 'وضع ميزانية واقعية تأخذ في الاعتبار التكلفة الإجمالية للملكية',
-      image: '/images/resources/procurement-guide/budget-planning.jpg',
+      image: '/images/arabic-businessman-in-the-middle-east-SBI-300984430.jpg',
       details: {
         'الاستثمار الأولي': 'تكلفة الشراء الأولي للزي الموحد',
         'الاستبدال': 'معدل الاستبدال المتوقع والتكاليف المستقبلية',
@@ -32,7 +32,7 @@ export default function ProcurementGuideClientPageArabic() {
       id: 'vendor-selection',
       title: 'اختيار المورد',
       description: 'تقييم واختيار شريك موثوق للزي الموحد مع سجل حافل',
-      image: '/images/resources/procurement-guide/vendor-selection.jpg',
+      image: '/images/men-shaking-hands-over-business-meeting-2025-01-25-05-47-49-utc.jpg',
       details: {
         'الخبرة': 'تاريخ المورد في صناعتك المحددة',
         'القدرات': 'قدرات التخصيص والتصنيع والتسليم',
@@ -43,7 +43,7 @@ export default function ProcurementGuideClientPageArabic() {
       id: 'trial-testing',
       title: 'الاختبار التجريبي',
       description: 'اختبار عينات في بيئات العمل الحقيقية قبل الطلب الكامل',
-      image: '/images/resources/procurement-guide/trial-testing.jpg',
+      image: '/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg',
       details: {
         'المتانة': 'اختبار تحمل الملابس للاستخدام اليومي',
         'الراحة': 'تقييم ملاحظات الموظفين حول الراحة',
@@ -54,7 +54,7 @@ export default function ProcurementGuideClientPageArabic() {
       id: 'rollout-planning',
       title: 'خطة التنفيذ',
       description: 'تطوير استراتيجية فعالة للتوزيع والتنفيذ',
-      image: '/images/resources/procurement-guide/rollout-planning.jpg',
+      image: '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg',
       details: {
         'الجدول الزمني': 'وضع جدول زمني واقعي للتنفيذ',
         'التوزيع': 'خطة لضمان التسليم السلس لجميع المواقع',
@@ -67,7 +67,7 @@ export default function ProcurementGuideClientPageArabic() {
     locale: 'ar',
     title: 'دليل مشتريات الزي الموحد للمؤسسات',
     subtitle: 'خطوة بخطوة لشراء زي موحد عالي الجودة وفعال من حيث التكلفة للمؤسسات في المملكة العربية السعودية',
-    heroImage: '/images/resources/procurement-guide/header-image.jpg',
+    heroImage: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
     overview: {
       title: 'الشراء الاستراتيجي للزي الموحد',
       content: `
@@ -125,7 +125,7 @@ export default function ProcurementGuideClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/resources/procurement-guide/strategic-benefits.jpg',
+        image: '/images/arabic-businessman-in-the-middle-east-SBI-300984430.jpg',
       },
       {
         title: 'تطوير مواصفات الزي الموحد',

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     locale: 'ar_SA',
     images: [
       {
-        url: '/images/resources/policy-templates-og.jpg', // تأكد من وجود هذه الصورة
+        url: '/images/arabic-businessman-in-the-middle-east-SBI-300984430.jpg',
         width: 1200,
         height: 630,
         alt: 'قوالب سياسة الزي الموحد من يونيوم',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'قوالب سياسة الزي الموحد | يونيوم السعودية',
     description: 'نماذج سياسات زي موحد قابلة للتخصيص للمؤسسات في السعودية.',
-    images: ['/images/resources/policy-templates-og.jpg'], // تأكد من وجود هذه الصورة
+    images: ['/images/arabic-businessman-in-the-middle-east-SBI-300984430.jpg'],
   },
   alternates: {
     canonical: 'https://uneom.com/ar/resources/policy-templates',

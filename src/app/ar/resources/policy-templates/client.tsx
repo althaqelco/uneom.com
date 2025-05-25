@@ -9,7 +9,7 @@ export default function PolicyTemplatesClientPageArabic() {
     locale: 'ar',
     title: 'قوالب سياسة الزي الموحد',
     subtitle: 'أطر قابلة للتخصيص لتطوير إرشادات واضحة وشاملة للزي الموحد',
-    heroImage: '/images/icons/premium-quality.svg',
+    heroImage: '/images/arabic-businessman-in-the-middle-east-SBI-300984430.jpg',
     overview: {
       title: 'إنشاء سياسات فعالة للزي الموحد',
       content: `
@@ -76,7 +76,7 @@ export default function PolicyTemplatesClientPageArabic() {
             الامتثال لقوانين العمل المحلية واللوائح.
           </p>
         `,
-        image: '/images/product-placeholder.jpg',
+        image: '/images/arabic-businessman-in-the-middle-east-SBI-300984430.jpg',
       },
       {
         title: 'قوالب سياسة خاصة بالصناعة',

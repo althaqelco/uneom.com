@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/resources/size-guide/size-guide-header.jpg',
+        url: '/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg',
         width: 1200,
         height: 630,
         alt: 'دليل مقاسات وجداول قياسات الزي الموحد من يونيوم',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'دليل مقاسات الزي الموحد | جداول القياسات | يونيوم السعودية',
     description: 'جداول شاملة لمقاسات الزي الموحد وأدلة القياسات للشركات والرعاية الصحية والضيافة وملابس العمل الصناعية.',
-    images: ['/images/resources/size-guide/size-guide-header.jpg'],
+    images: ['/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg'],
   },
   robots: {
     index: true,

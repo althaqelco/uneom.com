@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/resources/fabric-guide/fabric-guide-header.jpg',
+        url: '/images/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
         width: 1200,
         height: 630,
         alt: 'دليل الأقمشة والمواد للزي الموحد من يونيوم',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'دليل الأقمشة للزي الموحد | خصائص المواد | يونيوم السعودية',
     description: 'دليل شامل لأقمشة ومواد الزي الموحد. تعرف على خصائص وفوائد مختلف المواد.',
-    images: ['/images/resources/fabric-guide/fabric-guide-header.jpg'],
+    images: ['/images/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg'],
   },
   robots: {
     index: true,

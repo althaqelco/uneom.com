@@ -10,7 +10,7 @@ export default function FabricGuideClientPageArabic() {
       id: 'cotton',
       title: 'القطن',
       description: 'قماش طبيعي ناعم وتنفسي، مريح للارتداء طوال اليوم. مثالي للمناخات الحارة والبيئات الداخلية.',
-      image: '/images/resources/fabric-guide/cotton.jpg',
+      image: '/images/fabric-cotton-blends.webp',
       properties: {
         'المتانة': '3/5',
         'الراحة': '5/5',
@@ -22,7 +22,7 @@ export default function FabricGuideClientPageArabic() {
       id: 'polyester',
       title: 'البوليستر',
       description: 'نسيج اصطناعي خفيف الوزن ومقاوم للتجاعيد. يحتفظ بشكله جيدًا ويبقى على مظهره الجديد لفترة أطول من الأقمشة الطبيعية.',
-      image: '/images/resources/fabric-guide/polyester.jpg',
+      image: '/images/fabric-material-2024-12-06-03-35-02-utc.jpg',
       properties: {
         'المتانة': '4/5',
         'الراحة': '3/5',
@@ -34,7 +34,7 @@ export default function FabricGuideClientPageArabic() {
       id: 'polycotton',
       title: 'مزيج البوليستر والقطن',
       description: 'مزيج من القطن والبوليستر يجمع بين راحة القطن ومتانة البوليستر. يعتبر خيارًا شائعًا للعديد من تطبيقات الزي الموحد.',
-      image: '/images/resources/fabric-guide/polycotton.jpg',
+      image: '/images/fabric-cotton-blends.webp',
       properties: {
         'المتانة': '4/5',
         'الراحة': '4/5',
@@ -46,7 +46,7 @@ export default function FabricGuideClientPageArabic() {
       id: 'performance',
       title: 'أقمشة الأداء',
       description: 'أنسجة اصطناعية متقدمة مصممة خصيصًا للظروف الصعبة. توفر خصائص فنية متقدمة مثل مقاومة الماء أو تنظيم درجة الحرارة.',
-      image: '/images/resources/fabric-guide/performance.jpg',
+      image: '/images/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg',
       properties: {
         'المتانة': '5/5',
         'الراحة': '4/5',
@@ -58,7 +58,7 @@ export default function FabricGuideClientPageArabic() {
       id: 'sustainable',
       title: 'الأقمشة المستدامة',
       description: 'أنسجة صديقة للبيئة مصنوعة من مواد معاد تدويرها أو مصادر مستدامة. اختيار مثالي للمؤسسات الملتزمة بالاستدامة البيئية.',
-      image: '/images/resources/fabric-guide/sustainable.jpg',
+      image: '/images/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
       properties: {
         'المتانة': '3/5',
         'الراحة': '4/5',
@@ -72,7 +72,7 @@ export default function FabricGuideClientPageArabic() {
     locale: 'ar',
     title: 'دليل الأقمشة للزي الموحد',
     subtitle: 'تعرف على خصائص وفوائد مختلف الأقمشة للأزياء المهنية',
-    heroImage: '/images/resources/fabric-guide/fabric-guide-header.jpg',
+    heroImage: '/images/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
     overview: {
       title: 'اختيار النسيج المناسب لمؤسستك',
       content: `
@@ -121,7 +121,7 @@ export default function FabricGuideClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/resources/fabric-guide/fabric-types.jpg',
+        image: '/images/fabric-cotton-blends.webp',
       },
       {
         title: 'اعتبارات المناخ السعودي',
@@ -150,7 +150,7 @@ export default function FabricGuideClientPageArabic() {
             <li class="mb-2">أقمشة الأداء المتخصصة للعمل الخارجي والبيئات الصناعية</li>
           </ol>
         `,
-        image: '/images/resources/fabric-guide/saudi-climate.jpg',
+        image: '/images/saudi-uniform-map.jpg',
       },
       {
         title: 'الأقمشة لصناعات محددة',
@@ -183,7 +183,7 @@ export default function FabricGuideClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/resources/fabric-guide/industry-specific.jpg',
+        image: '/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg',
       }
     ],
     items: fabricTypes,

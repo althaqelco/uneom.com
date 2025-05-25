@@ -9,7 +9,7 @@ export default function SizeGuideClientPageArabic() {
     locale: 'ar',
     title: 'دليل المقاسات للزي الموحد',
     subtitle: 'قياسات شاملة للحصول على تناسب مثالي لجميع أنواع الزي الموحد',
-    heroImage: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
+    heroImage: '/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg',
     overview: {
       title: 'العثور على المقاس المناسب',
       content: `
@@ -61,7 +61,7 @@ export default function SizeGuideClientPageArabic() {
             <p>قم بالقياس حول قاعدة الرقبة، حيث سيستقر الياقة.</p>
           </div>
         `,
-        image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
+        image: '/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg',
       },
       {
         title: 'مخططات المقاسات القياسية',
