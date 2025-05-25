@@ -187,10 +187,10 @@ export default function FlightAttendantDressPage() {
     leadTime: '18-21 days',
     customization: true,
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Female flight attendant in professional dress uniform' },
-      { src: '/images/default-placeholder.jpg', alt: 'Flight attendant in elegant cabin crew dress' },
-      { src: '/images/default-placeholder.jpg', alt: 'Saudi airline flight attendant in professional uniform' },
-      { src: '/images/default-placeholder.jpg', alt: 'Group of flight attendants in coordinated uniform dresses' }
+      { src: '/images/aviation/aviation_uniform_airline.jpg', alt: 'Female flight attendant in professional dress uniform' },
+      { src: '/images/products/aviation/airline-3.jpg', alt: 'Flight attendant in elegant cabin crew dress' },
+      { src: '/images/aviation/aviation_uniform_main.jpg', alt: 'Saudi airline flight attendant in professional uniform' },
+      { src: '/images/products/aviation/airline-1.jpg', alt: 'Group of flight attendants in coordinated uniform dresses' }
     ],
     colors: [
       { name: 'Navy Blue', value: '#000080' },

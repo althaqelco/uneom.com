@@ -187,9 +187,9 @@ export default function AirlineServiceVestPage() {
     leadTime: '14-18 days',
     customization: true,
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Airline staff in professional service vests' },
-      { src: '/images/default-placeholder.jpg', alt: 'Cabin crew members wearing service vests' },
-      { src: '/images/default-placeholder.jpg', alt: 'Service personnel in professional vest' },
+      { src: '/images/aviation/aviation_uniform_airline.jpg', alt: 'Airline staff in professional service vests' },
+      { src: '/images/products/aviation/airline-2.jpg', alt: 'Cabin crew members wearing service vests' },
+      { src: '/images/aviation/aviation_uniform_main.jpg', alt: 'Service personnel in professional vest' },
       { src: '/images/product-placeholder.jpg', alt: 'Staff member in airline service vest' }
     ],
     colors: [

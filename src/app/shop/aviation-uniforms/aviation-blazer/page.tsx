@@ -186,10 +186,10 @@ export default function AviationBlazerPage() {
     leadTime: '21-25 days',
     customization: true,
     images: [
-      { src: '/images/default-placeholder.jpg', alt: 'Aviation professionals in premium blazers' },
-      { src: '/images/default-placeholder.jpg', alt: 'Pilot wearing professional aviation blazer' },
-      { src: '/images/default-placeholder.jpg', alt: 'Aviation staff in coordinated uniform blazers' },
-      { src: '/images/default-placeholder.jpg', alt: 'Airline staff member in professional aviation blazer' }
+      { src: '/images/products/aviation/airline-1.jpg', alt: 'Aviation professionals in premium blazers' },
+      { src: '/images/products/aviation/airline-2.jpg', alt: 'Pilot wearing professional aviation blazer' },
+      { src: '/images/aviation/aviation_uniform_main.jpg', alt: 'Aviation staff in coordinated uniform blazers' },
+      { src: '/images/aviation/aviation_uniform_airline.jpg', alt: 'Airline staff member in professional aviation blazer' }
     ],
     colors: [
       { name: 'Navy Blue', value: '#000080' },
