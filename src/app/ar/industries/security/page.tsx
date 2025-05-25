@@ -1,179 +1,47 @@
-'use client';
+import { Metadata } from 'next';
+import EnhancedSecurityClient from './EnhancedSecurityClient';
 
-import React from 'react';
-import IndustryPageLayout from '@/components/layout/IndustryPageLayout';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
-
-export default function SecurityPageArabic() {
-  // Set locale to Arabic
-  const locale = 'ar';
-  
-  // All content for this industry page in Arabic
-  const securityIndustryData = {
-    title: "أزياء وملابس الأمن والحراسة",
-    subtitle: "توفر يونيوم أزياء احترافية لقطاع الأمن والحراسة مصممة بأعلى معايير الجودة والمتانة، لتلبية متطلبات شركات الأمن الخاصة والمؤسسات الأمنية في المملكة العربية السعودية.",
-    heroImage: "/images/security-guard-standing-in-entrance-SBI-301741682.webp",
-    
-    introduction: [
-      "تقدم يونيوم مجموعة متكاملة من أزياء وملابس الأمن والحراسة المصممة خصيصًا لتلبية احتياجات المؤسسات الأمنية وشركات الحراسة في المملكة العربية السعودية، مع التركيز على الاحترافية والوظائف العملية والسلامة.",
-      
-      "تتميز منتجاتنا الأمنية بالجمع بين المظهر الاحترافي المهيب ووظائف الحماية العملية. كل قطعة مصممة لتوفير الراحة خلال ساعات العمل الطويلة مع مقاومة استثنائية للظروف القاسية والاستخدام المكثف.",
-      
-      "نستخدم أفضل المواد عالية المتانة ونطبق أحدث تقنيات الخياطة والتقوية لضمان طول عمر المنتج. كما نوفر خدمة التخصيص الكاملة للأزياء بما يناسب هوية وشعار كل مؤسسة أمنية، مع الالتزام بالمعايير المحلية والدولية لقطاع الأمن."
+export const metadata: Metadata = {
+  title: 'أزياء قطاع الأمن | يونيوم السعودية - ملابس أمنية وحراسات مهنية',
+  description: 'أزياء موحدة متخصصة لقطاع الأمن في السعودية. ملابس أمنية، حراسات، أمن خاص. 670+ شركة أمنية، 93% رضا، تصاميم مهنية، 18+ سنة خبرة، هيبة واحترام، رؤية عالية، أزياء تكتيكية.',
+  keywords: 'أزياء أمنية، ملابس أمن، زي أمني، أزياء حراسات، ملابس حراس، زي موحد أمني، أزياء أمن خاص، ملابس حماية، زي تكتيكي، أزياء أمن سعودية، ملابس أمن مطارات، أزياء حراسة شخصية، زي أمن صناعي',
+  openGraph: {
+    title: 'أزياء قطاع الأمن | يونيوم السعودية',
+    description: 'أزياء موحدة متخصصة لقطاع الأمن في السعودية. ملابس أمنية وحراسات مهنية تعزز الهيبة والاحترام وكفاءة الأداء الأمني.',
+    url: 'https://uneom.com/ar/industries/security/',
+    siteName: 'يونيوم للأزياء الموحدة',
+    locale: 'ar_SA',
+    type: 'website',
+    images: [
+      {
+        url: 'https://uneom.com/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'أزياء قطاع الأمن من يونيوم - ملابس أمنية وحراسات مهنية',
+      },
     ],
-    
-    benefits: [
-      {
-        title: "متانة عالية",
-        description: "مصنوعة من أقمشة فائقة المتانة تتحمل الاستخدام المكثف والظروف القاسية",
-        icon: "/icons/durability.svg"
-      },
-      {
-        title: "مظهر احترافي مهيب",
-        description: "تصاميم تمنح رجال الأمن مظهراً احترافياً يبعث على الاحترام والثقة",
-        icon: "/icons/professional.svg"
-      },
-      {
-        title: "راحة وحرية حركة",
-        description: "تصميم يراعي الراحة وحرية الحركة خلال نوبات العمل الطويلة",
-        icon: "/icons/comfort.svg"
-      },
-      {
-        title: "مقاومة للطقس",
-        description: "معالجة خاصة لمقاومة الحرارة والرطوبة ومختلف الظروف الجوية",
-        icon: "/icons/weather-resistant.svg"
-      },
-      {
-        title: "معايير السلامة",
-        description: "تلبي معايير السلامة المحلية والعالمية لقطاع الأمن والحراسة",
-        icon: "/icons/safety-standards.svg"
-      },
-      {
-        title: "تخصيص للهوية المؤسسية",
-        description: "إمكانية تخصيص كاملة وفقًا لهوية وشعار المؤسسة الأمنية",
-        icon: "/icons/customize.svg"
-      }
-    ],
-    
-    products: [
-      {
-        id: "formal-security-uniform",
-        name: "زي أمني رسمي",
-        description: "بدلة أمنية رسمية كاملة للمناسبات الرسمية وكبار المسؤولين الأمنيين",
-        price: "١٦٥٠ ر.س",
-        image: "/images/portrait-of-security-officer-standing-with-arms-crossed-SBI-304106752.webp",
-        href: "/ar/shop/security-uniforms/formal-security-uniform",
-        features: ["قماش فاخر مقاوم للتجعد", "تفاصيل دقيقة", "أزرار وشارات معدنية"],
-      },
-      {
-        id: "tactical-security-uniform",
-        name: "زي أمني تكتيكي",
-        description: "بدلة تكتيكية عملية للمهام الميدانية ودوريات الحراسة المتحركة",
-        price: "١٢٥٠ ر.س",
-        image: "/images/security-guard-SBI-301741571.webp",
-        href: "/ar/shop/security-uniforms/tactical-security-uniform",
-        features: ["متانة عالية", "خامات خفيفة", "جيوب متعددة"],
-      },
-      {
-        id: "event-security-uniform",
-        name: "زي أمني للفعاليات",
-        description: "ملابس احترافية لحراس الأمن في الفعاليات والمناسبات العامة",
-        price: "٩٥٠ ر.س",
-        image: "/images/security-screening-at-stadium-entrance-SBI-300864078.webp",
-        href: "/ar/shop/security-uniforms/event-security-uniform",
-        features: ["ملابس مريحة", "شارات عاكسة", "تخصيص الشعارات"],
-      }
-    ],
-    
-    customizationOptions: [
-      {
-        name: "شارات وعلامات الرتبة",
-        description: "شارات وعلامات للرتب المختلفة داخل الهيكل الأمني للمؤسسة",
-        icon: "/icons/badge.svg"
-      },
-      {
-        name: "تطريز الشعارات",
-        description: "تطريز عالي الجودة لشعارات المؤسسة الأمنية على الملابس والقبعات",
-        icon: "/icons/embroidery.svg"
-      },
-      {
-        name: "ألوان مخصصة",
-        description: "مجموعة واسعة من الألوان لتناسب هوية المؤسسة وطبيعة عملها",
-        icon: "/icons/color-palette.svg"
-      },
-      {
-        name: "إكسسوارات تكميلية",
-        description: "توفير مستلزمات تكميلية مثل حزام الخصر والقبعات وحامل البطاقة",
-        icon: "/icons/accessories.svg"
-      }
-    ],
-    
-    fabricTechnologies: [
-      {
-        name: "نسيج ريب-ستوب",
-        description: "نسيج خاص بتقنية تمنع انتشار التمزق وتزيد من متانة القماش",
-        icon: "/icons/ripstop.svg"
-      },
-      {
-        name: "ألياف مقواة",
-        description: "إضافة ألياف مقواة في مناطق الضغط العالي لزيادة المتانة",
-        icon: "/icons/reinforced.svg"
-      },
-      {
-        name: "معالجة مقاومة الماء",
-        description: "معالجة الأقمشة بمواد طاردة للماء تحافظ على جفاف الملابس",
-        icon: "/icons/water-resistant.svg"
-      },
-      {
-        name: "أقمشة تنفسية",
-        description: "تقنية تسمح بمرور الهواء وتنظيم درجة حرارة الجسم للراحة",
-        icon: "/icons/breathable.svg"
-      }
-    ],
-    
-    testimonials: [
-      {
-        id: "1",
-        quote: "أزياء الأمن من يونيوم نقلت صورة شركتنا الأمنية لمستوى احترافي جديد. جودة الخامات والتصميم العملي ساهم في تحسين أداء فريقنا وزيادة رضاهم. خدمة العملاء وسرعة الاستجابة للطلبات كانت ممتازة طوال فترة تعاملنا معهم.",
-        author: "خالد العمري",
-        position: "مدير العمليات",
-        company: "شركة الحماية للخدمات الأمنية"
-      }
-    ],
-    
-    specifications: [
-      { name: "تركيبة الأقمشة", value: "65% بوليستر، 35% قطن (ريب-ستوب)" },
-      { name: "مقاومة التمزق", value: "قوة مقاومة تمزق تتجاوز 50 نيوتن (اختبار بندول إلمندورف)" },
-      { name: "مقاومة الماء", value: "طبقة طاردة للماء بتقنية DWR" },
-      { name: "قوة الخياطة", value: "خياطة مقواة 3 خطوط في المناطق الحرجة" },
-      { name: "ثبات اللون", value: "درجة 4-5 على مقياس الثبات اللوني (من 5)" },
-      { name: "معايير الامتثال", value: "ANSI/ISEA 107, ISO 9001, SAS معايير الهيئة السعودية للأمن" }
-    ],
-    
-    faq: [
-      {
-        question: "كيف يمكنني طلب أزياء أمنية مخصصة لشركتي؟",
-        answer: "يمكنك البدء بالتواصل معنا من خلال نموذج طلب عرض السعر في موقعنا، أو الاتصال مباشرة بفريق المبيعات. سنقوم بتنظيم اجتماع استشاري لفهم احتياجاتك بالتفصيل، ومن ثم نقدم عينات وتصاميم مقترحة تناسب متطلباتك. بعد الموافقة على التصميم والعينات، نبدأ في عملية الإنتاج مع الالتزام بمواعيد التسليم المتفق عليها."
-      },
-      {
-        question: "هل توفرون خدمة تصميم شارات وعلامات الرتب؟",
-        answer: "نعم، نقدم خدمة متكاملة لتصميم وإنتاج شارات وعلامات الرتب بمختلف المستويات. يعمل فريق التصميم لدينا معك لإنشاء نظام شارات يعكس هيكل الرتب في مؤسستك الأمنية، مع إمكانية استخدام تقنيات مختلفة مثل التطريز، الطباعة الحرارية، أو الشارات المعدنية. نضمن جودة عالية وتناسق في جميع الشارات والعلامات."
-      },
-      {
-        question: "ما هي خيارات الدفع والتوصيل المتاحة للطلبات الكبيرة؟",
-        answer: "نوفر خيارات دفع مرنة للطلبات الكبيرة، بما في ذلك الدفع على مراحل والدفع الآجل للعملاء المعتمدين. بالنسبة للتوصيل، نقدم خدمة توصيل مجانية للطلبات الكبيرة إلى جميع مناطق المملكة، مع إمكانية تقسيم الشحنات حسب جدول زمني يناسب احتياجاتك. نوفر أيضًا خدمة التتبع المباشر للشحنات وتقارير حالة الطلب."
-      }
-    ],
-    
-    cta: {
-      title: "ارتقِ بصورة فريقك الأمني",
-      description: "تواصل مع خبرائنا اليوم للحصول على استشارة مجانية حول أزياء الأمن المناسبة لمؤسستك.",
-      buttonText: "طلب عرض سعر",
-      buttonUrl: "/ar/quote?industry=security"
+  },
+  alternates: {
+    canonical: 'https://uneom.com/ar/industries/security/',
+    languages: {
+      'en': 'https://uneom.com/industries/security/',
+      'ar': 'https://uneom.com/ar/industries/security/',
     },
-    
-    seoKeywords: "أزياء أمنية، ملابس حراس الأمن، زي شركات الحراسة، يونيفورم أمني، بدلة حارس أمن، ملابس الأمن والسلامة، زي تكتيكي، ملابس الحراسات الخاصة، أزياء أمن المنشآت، تصنيع زي أمني"
-  };
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1
+    }
+  }
+};
 
-  return <IndustryPageLayout locale={locale} industryData={securityIndustryData} skipMainLayout={true} />;
-} 
+export default function SecurityIndustryPage() {
+  return <EnhancedSecurityClient />;
+}

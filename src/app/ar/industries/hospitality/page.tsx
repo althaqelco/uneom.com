@@ -1,43 +1,32 @@
-import { Metadata } from "next";
-import HospitalityClientPage from "./client";
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import { Metadata } from 'next';
+import EnhancedHospitalityClient from './EnhancedHospitalityClient';
 
 export const metadata: Metadata = {
-  title: "يونيفورم احترافي للضيافة والفنادق والمطاعم | الزي الموحد الأمثل للقطاع الفندقي",
-  description: "تشكيلة واسعة من يونيفورم الضيافة بأعلى معايير الجودة العالمية تناسب الفنادق والمنتجعات والمطاعم في المملكة العربية السعودية",
-  keywords: [
-    "يونيفورم الضيافة",
-    "يونيفورم الفنادق",
-    "يونيفورم المطاعم",
-    "ملابس الضيافة",
-    "زي موحد للفنادق",
-    "زي موحد للمطاعم",
-    "يونيفورم شيف",
-    "يونيفورم استقبال الفنادق",
-    "يونيفورم خدمة الغرف",
-    "يونيفورم المنتجعات",
-    "يونيفورم كونسيرج",
-    "يونيفورم سبا",
-    "ملابس عمل فندقية",
-    "موردي يونيفورم الضيافة",
-    "تصنيع يونيفورم الفنادق",
-    "يونيفورم ضيافة السعودية"
-  ],
+  title: 'أزياء قطاع الضيافة | يونيوم السعودية - ملابس فنادق ومطاعم فاخرة',
+  description: 'أزياء موحدة متخصصة لقطاع الضيافة في السعودية. ملابس فنادق، مطاعم، منتجعات. 550+ منشأة ضيافة، 94% رضا، تصاميم فاخرة، 20+ سنة خبرة، مطابقة للثقافة السعودية، أزياء استقبال وخدمة.',
+  keywords: 'أزياء ضيافة، ملابس فنادق، زي فندقي، أزياء مطاعم، ملابس خدمة، زي موحد فندقي، أزياء منتجعات، ملابس كونسيرج، زي استقبال، أزياء ضيافة سعودية، ملابس طهاة، أزياء فاخرة، زي خدمة طعام',
   openGraph: {
-    title: "يونيفورم احترافي للضيافة والفنادق والمطاعم | يونيوم السعودية",
-    description: "تشكيلة واسعة من يونيفورم الضيافة بأعلى معايير الجودة تناسب الفنادق والمطاعم في المملكة العربية السعودية",
-    url: "https://uneom.com/ar/industries/hospitality",
-    siteName: "يونيوم | الزي الموحد الاحترافي",
+    title: 'أزياء قطاع الضيافة | يونيوم السعودية',
+    description: 'أزياء موحدة متخصصة لقطاع الضيافة في السعودية. ملابس فنادق ومطاعم فاخرة تعزز تجربة الضيوف وتعكس مستوى الخدمة المتميز.',
+    url: 'https://uneom.com/ar/industries/hospitality/',
+    siteName: 'يونيوم للأزياء الموحدة',
+    locale: 'ar_SA',
+    type: 'website',
     images: [
       {
-        url: "/images/hero/group-of-chefs-standing-with-arms-crossed-in-kitch-2023-11-27-05-01-36-utc.jpg",
+        url: 'https://uneom.com/images/hospitality/hospitality_uniform_formal.jpg',
         width: 1200,
         height: 630,
-        alt: "يونيفورم احترافي للضيافة والفنادق والمطاعم",
+        alt: 'أزياء قطاع الضيافة من يونيوم - ملابس فنادق ومطاعم فاخرة',
       },
     ],
-    locale: "ar_SA",
-    type: "website",
+  },
+  alternates: {
+    canonical: 'https://uneom.com/ar/industries/hospitality/',
+    languages: {
+      'en': 'https://uneom.com/industries/hospitality/',
+      'ar': 'https://uneom.com/ar/industries/hospitality/',
+    },
   },
   robots: {
     index: true,
@@ -48,17 +37,11 @@ export const metadata: Metadata = {
       follow: true,
       'max-image-preview': 'large',
       'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: "https://uneom.com/ar/industries/hospitality",
-    languages: {
-      'en': 'https://uneom.com/industries/hospitality',
-      'ar': 'https://uneom.com/ar/industries/hospitality',
-    },
-  },
+      'max-video-preview': -1
+    }
+  }
 };
 
-export default function HospitalityPage() {
-  return <HospitalityClientPage />;
-} 
+export default function HospitalityIndustryPage() {
+  return <EnhancedHospitalityClient />;
+}
