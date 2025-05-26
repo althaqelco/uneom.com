@@ -2,91 +2,100 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { 
-  CheckCircleIcon,
-  StarIcon,
+  AcademicCapIcon,
+  UserGroupIcon,
   ShieldCheckIcon,
   SparklesIcon,
-  UserGroupIcon,
-  AcademicCapIcon,
-  BuildingLibraryIcon
+  ArrowRightIcon,
+  CheckCircleIcon,
+  BuildingLibraryIcon,
+  BookOpenIcon,
+  ClipboardDocumentListIcon,
+  ComputerDesktopIcon
 } from '@heroicons/react/24/outline'
 import { StarIcon as StarSolidIcon } from '@heroicons/react/24/solid'
 
 export const metadata: Metadata = {
   title: 'University Staff Uniforms | Professional Academic Attire | UNEOM',
-  description: 'Premium university staff uniforms for academic institutions in Saudi Arabia. Professional, comfortable, and dignified uniforms for university administrative staff.',
-  keywords: 'university staff uniforms Saudi Arabia, academic staff clothing, university administrative uniforms, professional education attire',
+  description: 'Discover UNEOM\'s university staff uniforms collection. Professional academic attire designed specifically for university staff and educational institutions in Saudi Arabia. High quality and elegant design reflecting distinguished academic identity.',
+  keywords: 'university staff uniforms, professional academic attire, Saudi university uniforms, higher education staff clothing, university administrative attire, UNEOM academic wear, educational institution uniforms',
   openGraph: {
-    title: 'University Staff Uniforms | Professional Academic Attire | UNEOM',
-    description: 'Professional uniforms designed specifically for university staff, combining academic dignity with modern comfort.',
-    images: ['/images/products/corporate-suit-executive.jpg'],
+    title: 'University Staff Uniforms | UNEOM',
+    description: 'Professional academic attire designed specifically for university staff and educational institutions in Saudi Arabia.',
+    images: ['/images/products/education/university-staff-uniform-main.jpg'],
   },
 }
 
-const uniformFeatures = [
+const productFeatures = [
   {
     icon: AcademicCapIcon,
-    title: 'Academic Professional',
-    description: 'Designed to reflect the dignity and professionalism of academic institutions while maintaining comfort for daily wear.'
-  },
-  {
-    icon: ShieldCheckIcon,
-    title: 'Durable Construction',
-    description: 'High-quality materials and construction ensure uniforms maintain their appearance through frequent use and washing.'
+    title: 'Distinguished Academic Design',
+    description: 'Elegant and professional designs that reflect the distinguished academic character and enhance the institutional identity of universities and educational institutions.'
   },
   {
     icon: UserGroupIcon,
-    title: 'Versatile Styles',
-    description: 'Multiple style options to accommodate different staff roles and departmental requirements.'
+    title: 'Suitable for All Departments',
+    description: 'Diverse designs suitable for administrative staff, libraries, student services, and various academic departments.'
   },
   {
-    icon: BuildingLibraryIcon,
-    title: 'Institution Ready',
-    description: 'Perfect for administrative offices, student services, library staff, and other university departments.'
+    icon: ShieldCheckIcon,
+    title: 'Superior Quality and Comfort',
+    description: 'High-quality fabrics comfortable for daily use, wrinkle-resistant and easy to care for and maintain.'
+  },
+  {
+    icon: SparklesIcon,
+    title: 'Customization Options',
+    description: 'Various customization options including university logo, institutional colors, and specific details for each department or college.'
   }
 ]
 
-const staffCategories = [
+const specifications = [
+  { label: 'Fabric Composition', value: 'High-quality cotton blend, wrinkle-resistant polyester, breathable fabrics' },
+  { label: 'Uniform Types', value: 'Formal shirts, elegant blouses, administrative suits, academic jackets, professional dresses' },
+  { label: 'Design Options', value: 'Classic design, modern, conservative, suitable for Saudi culture' },
+  { label: 'Size Range', value: 'All sizes for men and women from XS to 4XL' },
+  { label: 'Color Options', value: 'Official university colors, academic blue, gray, white, custom colors' },
+  { label: 'Distinguished Details', value: 'Embroidered university logo, custom buttons, functional pockets, academic details' },
+  { label: 'Care and Maintenance', value: 'Machine washable, stain-resistant, easy to iron' }
+]
+
+const includedItems = [
+  'Complete University Staff Uniform (Shirt/Blouse + Trousers/Skirt)',
+  'Academic Jacket (according to position)',
+  'Embroidered University Badge',
+  'Official Dress Code Guide',
+  'Custom Storage Bag',
+  'Care and Maintenance Guide',
+  'One-Year Quality Guarantee'
+]
+
+const universityDepartments = [
+  { name: 'Academic Administration', icon: BuildingLibraryIcon },
+  { name: 'University Libraries', icon: BookOpenIcon },
+  { name: 'Student Services', icon: UserGroupIcon },
+  { name: 'Information Technology', icon: ComputerDesktopIcon },
+  { name: 'Administrative Affairs', icon: ClipboardDocumentListIcon }
+]
+
+const relatedProducts = [
   {
-    title: 'Administrative Staff',
-    description: 'Professional business attire for office staff, registrars, and administrative personnel',
-    features: ['Business suits', 'Dress shirts', 'Professional blouses', 'Coordinated accessories'],
-    image: '/images/products/corporate-suit-executive.jpg'
+    name: 'University Graduate Attire',
+    image: '/images/products/education/graduate-attire-main.jpg',
+    href: '/shop/education/university-attire/graduate-attire/',
+    price: 'From SAR 400'
   },
   {
-    title: 'Student Services',
-    description: 'Approachable yet professional uniforms for student-facing staff and counselors',
-    features: ['Smart casual options', 'Comfortable fabrics', 'Welcoming appearance', 'Easy identification'],
-    image: '/images/products/corporate-shirts-blouses.jpg'
+    name: 'Teacher Uniforms',
+    image: '/images/products/education/teacher-uniform-main.jpg',
+    href: '/shop/education/staff-uniforms/teacher-uniform/',
+    price: 'From SAR 250'
   },
   {
-    title: 'Library Staff',
-    description: 'Comfortable and practical uniforms for library personnel and information services',
-    features: ['Comfortable fits', 'Practical pockets', 'Professional appearance', 'Easy movement'],
-    image: '/images/products/corporate-polo-shirts.jpg'
-  },
-  {
-    title: 'Support Services',
-    description: 'Durable and functional uniforms for maintenance, security, and support staff',
-    features: ['Durable materials', 'Functional design', 'Safety features', 'Easy care'],
-    image: '/images/products/corporate-polo-shirts.jpg'
+    name: 'Educational Administrative Suits',
+    image: '/images/products/education/admin-suit-main.jpg',
+    href: '/shop/education/staff-uniforms/admin-suit/',
+    price: 'From SAR 600'
   }
-]
-
-const colorSchemes = [
-  { name: 'Navy & White', primary: '#1e3a8a', secondary: '#ffffff', description: 'Classic academic colors' },
-  { name: 'Burgundy & Gray', primary: '#7c2d12', secondary: '#6b7280', description: 'Traditional university palette' },
-  { name: 'Forest Green & Cream', primary: '#166534', secondary: '#fef3c7', description: 'Natural academic tones' },
-  { name: 'Charcoal & Light Blue', primary: '#374151', secondary: '#93c5fd', description: 'Modern professional look' }
-]
-
-const customizationOptions = [
-  'University logo embroidery',
-  'Department identification badges',
-  'Name tags and titles',
-  'Custom color combinations',
-  'Seasonal variations',
-  'Special occasion attire'
 ]
 
 export default function UniversityStaffUniformPage() {
@@ -100,7 +109,7 @@ export default function UniversityStaffUniformPage() {
             <span>/</span>
             <Link href="/shop/" className="hover:text-blue-600">Shop</Link>
             <span>/</span>
-            <Link href="/shop/education/" className="hover:text-blue-600">Education</Link>
+            <Link href="/shop/education/" className="hover:text-blue-600">Educational Attire</Link>
             <span>/</span>
             <Link href="/shop/education/university-attire/" className="hover:text-blue-600">University Attire</Link>
             <span>/</span>
@@ -110,237 +119,276 @@ export default function UniversityStaffUniformPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-24 bg-gradient-to-r from-blue-800 to-indigo-900">
-        <div className="absolute inset-0 opacity-20">
-          <Image
-            src="/images/products/corporate-suit-executive.jpg"
-            alt="University staff uniforms background"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex justify-center mb-4">
-            {[...Array(5)].map((_, i) => (
-              <StarSolidIcon key={i} className="h-8 w-8 text-yellow-400" />
-            ))}
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            University Staff Uniforms
-          </h1>
-          <p className="text-xl text-blue-200 mb-10 max-w-3xl mx-auto">
-            Professional uniforms that reflect the dignity and excellence of academic institutions. Designed for comfort, durability, and professional appearance across all university departments.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/quote/?category=university-staff-uniform"
-              className="bg-white text-blue-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
-            >
-              Request Quote
-            </Link>
-            <Link
-              href="/contact/?subject=University Staff Uniform Inquiry"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-800 transition-colors text-lg"
-            >
-              Contact Specialist
-            </Link>
+      <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-800 to-blue-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <div className="flex items-center mb-4">
+                <div className="flex items-center">
+                  {[...Array(5)].map((_, i) => <StarSolidIcon key={i} className="h-6 w-6 text-purple-400" />)}
+                </div>
+                <span className="ml-3 text-purple-400 font-medium">First Choice for Saudi Universities</span>
+              </div>
+              
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                Professional University
+                <span className="text-purple-400 block">Staff Uniforms</span>
+              </h1>
+              
+              <p className="text-xl text-purple-100 mb-8 leading-relaxed">
+                Discover our distinguished academic attire collection designed specifically for university staff and educational institutions. Elegant and professional designs that reflect the distinguished academic identity in Saudi Arabia.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/quote?product=university-staff-uniform"
+                  className="bg-purple-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-purple-400 transition-colors text-center"
+                >
+                  Get University Quote
+                </Link>
+                <Link
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors text-center"
+                >
+                  Free Academic Consultation
+                </Link>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/products/education/university-staff-uniform-hero.jpg"
+                  alt="Professional University Staff Uniforms"
+                  width={600}
+                  height={750}
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-purple-500 text-white p-4 rounded-lg shadow-lg">
+                <div className="text-center">
+                  <div className="text-2xl font-bold">50+</div>
+                  <div className="text-sm">Universities & Institutions</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-16 bg-gray-50">
+      {/* Features Section */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Academic Excellence in Every Detail
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Academic Attire?
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our university staff uniforms combine professional appearance with practical functionality.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Distinguished professional designs that reflect the academic character and enhance the institutional identity of universities
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {uniformFeatures.map((feature) => (
-              <div key={feature.title} className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="flex justify-center mb-4">
-                  <feature.icon className="h-12 w-12 text-blue-600" />
+            {productFeatures.map((feature, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <feature.icon className="h-8 w-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Staff Categories */}
-      <section className="py-16">
+      {/* Product Gallery */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Uniforms for Every Department
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Specialized uniform solutions designed for different university staff roles and departments.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {staffCategories.map((category, index) => (
-              <div key={category.title} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="relative h-48">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">
+            Academic Attire Gallery
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div key={i} className="group relative overflow-hidden rounded-xl shadow-lg">
+                <div className="aspect-w-3 aspect-h-4">
                   <Image
-                    src={category.image}
-                    alt={category.title}
+                    src={`/images/products/education/university-staff-uniform-${i}.jpg`}
+                    alt={`University staff uniform ${i}`}
+                    width={400}
+                    height={500}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* University Departments */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">
+            Suitable for All University Departments
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+            {universityDepartments.map((department, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <department.icon className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+                <h4 className="text-lg font-semibold text-gray-800">{department.name}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Specifications */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="bg-white p-10 rounded-xl shadow-lg">
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">Academic Attire Specifications</h3>
+              <div className="space-y-6">
+                {specifications.map((spec, index) => (
+                  <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0">
+                    <div className="flex justify-between items-start">
+                      <span className="font-semibold text-gray-800 text-lg">{spec.label}:</span>
+                      <span className="text-gray-600 text-right max-w-md">{spec.value}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="bg-purple-50 p-10 rounded-xl border border-purple-200">
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">Academic Package Includes</h3>
+              <ul className="space-y-4">
+                {includedItems.map((item, index) => (
+                  <li key={index} className="flex items-center">
+                    <CheckCircleIcon className="h-6 w-6 text-purple-600 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700 text-lg">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <div className="mt-10 p-6 bg-purple-100 rounded-lg border border-purple-300">
+                <h4 className="text-xl font-bold text-purple-800 mb-3">Academic Quality Guarantee</h4>
+                <p className="text-purple-700">
+                  We guarantee high quality and durability for one full year, with free maintenance service and alteration options as needed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-20 bg-purple-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-8">
+            Competitive Prices for Educational Institutions
+          </h2>
+          <div className="bg-white rounded-xl p-10 shadow-2xl">
+            <div className="text-center mb-8">
+              <div className="text-5xl font-bold text-gray-900 mb-2">From SAR 320</div>
+              <div className="text-xl text-gray-600">per uniform including customization</div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-600 mb-2">Administrative Uniform</div>
+                <div className="text-lg text-gray-600">SAR 320 - 450</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-600 mb-2">Academic Uniform</div>
+                <div className="text-lg text-gray-600">SAR 380 - 520</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-600 mb-2">Executive Uniform</div>
+                <div className="text-lg text-gray-600">SAR 450 - 600</div>
+              </div>
+            </div>
+            
+            <div className="bg-purple-50 p-6 rounded-lg mb-8">
+              <h4 className="text-lg font-bold text-purple-800 mb-2">Special University Discounts</h4>
+              <p className="text-purple-700">15% discount for orders over 50 pieces | 25% discount for orders over 100 pieces</p>
+            </div>
+            
+            <Link
+              href="/quote?product=university-staff-uniform"
+              className="bg-purple-600 text-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-purple-700 transition-colors inline-block"
+            >
+              Get University Quote
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Products */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">
+            Complete Your Academic Identity
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {relatedProducts.map((product, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                <div className="relative h-64 w-full">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{category.title}</h3>
-                  <p className="text-gray-600 mb-4">{category.description}</p>
-                  <ul className="space-y-2">
-                    {category.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <CheckCircleIcon className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600">{product.name}</h3>
+                  <p className="text-purple-600 font-bold text-lg mb-4">{product.price}</p>
+                  <Link
+                    href={product.href}
+                    className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-flex items-center justify-center w-full"
+                  >
+                    View Product
+                    <ArrowRightIcon className="ml-2 h-4 w-4" />
+                  </Link>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Color Schemes */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Professional Color Schemes
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose from our carefully selected color combinations that reflect academic tradition and professionalism.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {colorSchemes.map((scheme) => (
-              <div key={scheme.name} className="bg-white rounded-lg p-6 shadow-md text-center">
-                <div className="flex justify-center space-x-2 mb-4">
-                  <div 
-                    className="w-12 h-12 rounded-full border-2 border-gray-300"
-                    style={{ backgroundColor: scheme.primary }}
-                  ></div>
-                  <div 
-                    className="w-12 h-12 rounded-full border-2 border-gray-300"
-                    style={{ backgroundColor: scheme.secondary }}
-                  ></div>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{scheme.name}</h3>
-                <p className="text-sm text-gray-600">{scheme.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Customization Options */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Customization Options
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Personalize your university staff uniforms to reflect your institution's identity and values.
-            </p>
-          </div>
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {customizationOptions.map((option, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">{option}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 bg-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Why Choose Our University Staff Uniforms?
-              </h2>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <CheckCircleIcon className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Professional Image</h3>
-                    <p className="text-gray-600">Enhance your institution's professional appearance and staff identification</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircleIcon className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Comfort & Durability</h3>
-                    <p className="text-gray-600">High-quality materials ensure comfort throughout long working days</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircleIcon className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Custom Branding</h3>
-                    <p className="text-gray-600">Incorporate your university's logo and colors for brand consistency</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircleIcon className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Easy Maintenance</h3>
-                    <p className="text-gray-600">Designed for easy care and maintenance to reduce operational costs</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
-              <Image
-                src="/images/products/corporate-suit-executive.jpg"
-                alt="University staff in professional uniforms"
-                fill
-                className="object-cover"
-              />
-            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Elevate Your University's Professional Image
+      <section className="py-20 bg-purple-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Enhance Your University's Academic Identity
           </h2>
-          <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-            Contact our education uniform specialists to discuss your university staff uniform needs and receive a customized solution.
+          <p className="text-xl text-purple-100 mb-10 max-w-2xl mx-auto">
+            Contact our experts for a free consultation and design custom academic attire that reflects your university's distinguished identity
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/quote/?category=university-staff-uniform"
-              className="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+              href="/contact?subject=University+Staff+Uniform+Consultation"
+              className="bg-white text-purple-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
             >
-              Get University Quote
+              Free Academic Consultation
             </Link>
             <Link
-              href="/shop/education/university-attire/"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-800 transition-colors text-lg"
+              href="/shop/education/"
+              className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
             >
-              View All University Attire
+              Browse Educational Attire
             </Link>
           </div>
         </div>

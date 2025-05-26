@@ -2,252 +2,176 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { 
-  StarIcon, 
-  CheckCircleIcon, 
   ShieldCheckIcon,
-  SparklesIcon,
-  UserGroupIcon,
+  StarIcon,
   CogIcon,
+  SparklesIcon,
+  ArrowRightIcon,
+  CheckCircleIcon,
+  UserGroupIcon,
   BuildingOfficeIcon,
-  HeartIcon,
-  ArrowRightIcon
+  ClockIcon,
+  FireIcon
 } from '@heroicons/react/24/outline'
+import { StarIcon as StarSolidIcon } from '@heroicons/react/24/solid'
 
 export const metadata: Metadata = {
-  title: 'Premium Business Executive Suits | Corporate Attire | UNEOM',
-  description: 'Discover our premium business executive suit collection. Luxury corporate attire for executives and senior management in Saudi Arabia. Custom tailoring available.',
-  keywords: 'premium business suits, executive suits, corporate attire, luxury business wear, executive clothing, Saudi business suits, custom tailoring',
+  title: 'Premium Business Executive Suits | Luxury Corporate Attire | UNEOM',
+  description: 'Discover UNEOM\'s premium business executive suits collection. Luxury corporate attire designed specifically for executive leaders in Saudi Arabia. Exceptional quality and contemporary design reflecting distinguished professional identity.',
+  keywords: 'premium executive suits, luxury corporate attire, Saudi business suits, professional executive clothing, executive manager suits, UNEOM corporate wear, luxury business suits Riyadh',
   openGraph: {
-    title: 'Premium Business Executive Suits | Corporate Attire',
-    description: 'Luxury executive suits for business leaders',
-    images: ['/images/products/corporate/premium-business-suits.jpg'],
+    title: 'Premium Business Executive Suits | UNEOM',
+    description: 'Premium executive suits designed specifically for executive leaders in Saudi Arabia. Exceptional quality and contemporary design.',
+    images: ['/images/products/corporate/premium-business-suits-main.jpg'],
   },
 }
 
 const productFeatures = [
   {
     icon: SparklesIcon,
-    title: 'Luxury Fabrics',
-    description: 'Premium wool and silk blends for superior comfort'
+    title: 'Exclusive Luxury Design',
+    description: 'Exclusive designs inspired by the latest global fashion trends, specifically crafted for distinguished executive leaders in the Kingdom.'
+  },
+  {
+    icon: ShieldCheckIcon,
+    title: 'Exceptional Quality',
+    description: 'Luxury fabrics imported from the finest global mills, with precise hand-tailoring ensuring durability and elegance for years to come.'
   },
   {
     icon: CogIcon,
     title: 'Custom Tailoring',
-    description: 'Perfect fit with professional tailoring services'
+    description: 'Personal tailoring service ensuring perfect fit for each client, with complete customization options for colors and details.'
   },
   {
-    icon: ShieldCheckIcon,
-    title: 'Wrinkle Resistant',
-    description: 'Advanced fabric treatment for lasting appearance'
-  },
-  {
-    icon: BuildingOfficeIcon,
-    title: 'Executive Styling',
-    description: 'Sophisticated designs for business leaders'
-  }
-]
-
-const executiveSuits = [
-  {
-    id: 'charcoal-executive',
-    name: 'Charcoal Executive Premium',
-    price: 2899,
-    originalPrice: 3499,
-    image: '/images/products/corporate/charcoal-executive-suit.jpg',
-    features: [
-      'Premium charcoal wool blend',
-      'Executive cut design',
-      'Silk-lined interior',
-      'Custom monogramming',
-      'Professional tailoring included'
-    ],
-    sizes: ['38', '40', '42', '44', '46', '48', '50'],
-    colors: ['Charcoal Gray', 'Deep Navy', 'Midnight Black'],
-    fabric: 'Super 120s Wool'
-  },
-  {
-    id: 'navy-luxury',
-    name: 'Navy Luxury Collection',
-    price: 3299,
-    originalPrice: 3899,
-    image: '/images/products/corporate/navy-luxury-suit.jpg',
-    features: [
-      'Navy blue luxury wool',
-      'Peak lapel styling',
-      'Hand-finished details',
-      'Premium buttons',
-      'Exclusive fabric blend'
-    ],
-    sizes: ['38', '40', '42', '44', '46', '48', '50'],
-    colors: ['Navy Blue', 'Royal Blue', 'Midnight Navy'],
-    fabric: 'Super 150s Wool'
-  },
-  {
-    id: 'black-prestige',
-    name: 'Black Prestige Series',
-    price: 3699,
-    originalPrice: 4299,
-    image: '/images/products/corporate/black-prestige-suit.jpg',
-    features: [
-      'Premium black wool blend',
-      'Prestige styling',
-      'Gold-tone hardware',
-      'Luxury packaging',
-      'Lifetime alterations'
-    ],
-    sizes: ['38', '40', '42', '44', '46', '48', '50'],
-    colors: ['Deep Black', 'Charcoal Black', 'Jet Black'],
-    fabric: 'Super 180s Wool'
-  }
-]
-
-const accessories = [
-  {
-    name: 'Silk Ties Collection',
-    price: 299,
-    image: '/images/products/corporate/silk-ties.jpg',
-    description: 'Premium silk ties in coordinating colors'
-  },
-  {
-    name: 'Leather Dress Shoes',
-    price: 899,
-    image: '/images/products/corporate/dress-shoes.jpg',
-    description: 'Italian leather shoes for executive wear'
-  },
-  {
-    name: 'Cufflinks & Accessories',
-    price: 399,
-    image: '/images/products/corporate/cufflinks.jpg',
-    description: 'Gold and silver executive accessories'
-  },
-  {
-    name: 'Dress Shirts',
-    price: 449,
-    image: '/images/products/corporate/dress-shirts.jpg',
-    description: 'Premium cotton dress shirts'
+    icon: UserGroupIcon,
+    title: 'Distinguished Corporate Identity',
+    description: 'Designs that reflect corporate identity and enhance the professional presence of executives in all formal occasions.'
   }
 ]
 
 const specifications = [
-  { label: 'Fabric Composition', value: '100% Premium Wool' },
-  { label: 'Weight', value: '280-320 GSM' },
-  { label: 'Construction', value: 'Half-canvas or Full-canvas' },
-  { label: 'Care Instructions', value: 'Dry clean only' },
-  { label: 'Customization', value: 'Full tailoring and monogramming' },
-  { label: 'Delivery Time', value: '14-21 business days' }
+  { label: 'Fabric Composition', value: '100% luxury wool or wool-cashmere blend, imported Italian and English fabrics' },
+  { label: 'Suit Types', value: 'Two-piece suit, three-piece suit, executive tuxedo, formal evening suit' },
+  { label: 'Tailoring Options', value: 'Complete custom tailoring, precise alterations, personal measurements' },
+  { label: 'Size Range', value: 'All sizes from S to 5XL with custom tailoring service' },
+  { label: 'Color Options', value: 'Classic black, dark navy, charcoal gray, chocolate brown, custom colors' },
+  { label: 'Luxury Details', value: 'Luxury metal buttons, silk lining, hidden pockets, logo embroidery' },
+  { label: 'Accessories', value: 'Silk tie, luxury cufflinks, pocket square, Italian leather belt' }
 ]
 
-const businessBenefits = [
+const includedItems = [
+  'Premium Executive Suit (Jacket + Trousers)',
+  'Luxury Vest (for three-piece suit)',
+  'Matching Silk Tie',
+  'Elegant Pocket Square',
+  'Luxury Cufflinks',
+  'Premium Storage Bag',
+  'Care and Maintenance Guide',
+  'Two-Year Quality Guarantee'
+]
+
+const idealForOccasions = [
+  { name: 'Executive Meetings', icon: BuildingOfficeIcon },
+  { name: 'International Conferences', icon: UserGroupIcon },
+  { name: 'Formal Events', icon: StarIcon },
+  { name: 'Formal Dinners', icon: ClockIcon },
+  { name: 'Award Ceremonies', icon: FireIcon }
+]
+
+const relatedProducts = [
   {
-    title: 'Executive Presence',
-    description: 'Command respect with premium business attire',
-    icon: StarIcon
+    name: 'Classic Executive Suits',
+    image: '/images/products/corporate/classic-executive-suits-main.jpg',
+    href: '/shop/corporate/executive-suits/classic/',
+    price: 'From SAR 1,200'
   },
   {
-    title: 'Professional Image',
-    description: 'Enhance your corporate brand and reputation',
-    icon: BuildingOfficeIcon
+    name: 'Premium Executive Shirts',
+    image: '/images/products/corporate/premium-executive-shirts-main.jpg',
+    href: '/shop/corporate/executive-shirts/premium/',
+    price: 'From SAR 350'
   },
   {
-    title: 'Comfort & Confidence',
-    description: 'Feel confident in perfectly fitted luxury suits',
-    icon: HeartIcon
-  },
-  {
-    title: 'Investment Quality',
-    description: 'Long-lasting suits that maintain their appearance',
-    icon: ShieldCheckIcon
+    name: 'Executive Accessories',
+    image: '/images/products/corporate/executive-accessories-main.jpg',
+    href: '/shop/corporate/executive-accessories/',
+    price: 'From SAR 150'
   }
 ]
 
-const testimonials = [
-  {
-    name: 'Khalid Al-Mansouri',
-    position: 'CEO, Riyadh Financial Group',
-    content: 'The quality and craftsmanship of these suits are exceptional. They\'ve become an essential part of my executive wardrobe.',
-    rating: 5
-  },
-  {
-    name: 'Ahmed Al-Rashid',
-    position: 'Managing Director, Jeddah Holdings',
-    content: 'Perfect fit and premium quality. The custom tailoring service is outstanding and the suits always look impeccable.',
-    rating: 5
-  }
-]
-
-const sizingGuide = [
-  { size: '38', chest: '38"', waist: '32"', jacket: 'Regular' },
-  { size: '40', chest: '40"', waist: '34"', jacket: 'Regular' },
-  { size: '42', chest: '42"', waist: '36"', jacket: 'Regular' },
-  { size: '44', chest: '44"', waist: '38"', jacket: 'Regular' },
-  { size: '46', chest: '46"', waist: '40"', jacket: 'Regular' },
-  { size: '48', chest: '48"', waist: '42"', jacket: 'Regular' },
-  { size: '50', chest: '50"', waist: '44"', jacket: 'Regular' }
-]
-
-export default function PremiumBusinessSuitPage() {
+export default function PremiumBusinessSuitsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-white">
+      {/* Breadcrumb */}
+      <nav className="bg-gray-50 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center space-x-2 text-sm text-gray-600">
+            <Link href="/" className="hover:text-blue-600">Home</Link>
+            <span>/</span>
+            <Link href="/shop/" className="hover:text-blue-600">Shop</Link>
+            <span>/</span>
+            <Link href="/shop/corporate/" className="hover:text-blue-600">Corporate Attire</Link>
+            <span>/</span>
+            <Link href="/shop/corporate/executive-suits/" className="hover:text-blue-600">Executive Suits</Link>
+            <span>/</span>
+            <span className="text-gray-900">Premium Business</span>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/10 to-blue-900/10" />
-        <div className="container mx-auto px-4 relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                Premium Business
-                <span className="text-blue-600 block">Executive Suits</span>
-              </h1>
-              
-              <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Elevate your executive presence with our premium business suit collection. 
-                Crafted from the finest fabrics with meticulous attention to detail, 
-                these suits are designed for Saudi Arabia's business leaders.
-              </p>
-              
-              <div className="flex flex-wrap gap-4 mb-8">
-                <div className="flex items-center space-x-2 text-green-600">
-                  <CheckCircleIcon className="h-5 w-5" />
-                  <span className="text-sm font-medium">Premium Wool</span>
+      <section className="py-16 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <div className="flex items-center mb-4">
+                <div className="flex items-center">
+                  {[...Array(5)].map((_, i) => <StarSolidIcon key={i} className="h-6 w-6 text-yellow-400" />)}
                 </div>
-                <div className="flex items-center space-x-2 text-green-600">
-                  <CheckCircleIcon className="h-5 w-5" />
-                  <span className="text-sm font-medium">Custom Tailoring</span>
-                </div>
-                <div className="flex items-center space-x-2 text-green-600">
-                  <CheckCircleIcon className="h-5 w-5" />
-                  <span className="text-sm font-medium">Executive Styling</span>
-                </div>
+                <span className="ml-3 text-yellow-400 font-medium">Excellent Customer Rating</span>
               </div>
               
-              <div className="flex flex-wrap gap-4">
-                <Link 
-                  href="#suits"
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                Premium Business
+                <span className="text-yellow-400 block">Executive Suits</span>
+              </h1>
+              
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Discover our premium executive suits collection designed specifically for distinguished leaders. Exceptional quality and contemporary design reflecting sophisticated professional identity in Saudi Arabia.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/quote?product=premium-business-suits"
+                  className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-bold hover:bg-yellow-400 transition-colors text-center"
                 >
-                  View Collection
+                  Get Free Consultation
                 </Link>
-                <Link 
-                  href="/quote"
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
+                <Link
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors text-center"
                 >
-                  Custom Consultation
+                  Contact Tailoring Expert
                 </Link>
               </div>
             </div>
             
             <div className="relative">
-              <div className="aspect-square relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/products/corporate/premium-business-suits.jpg"
+                  src="/images/products/corporate/premium-business-suits-hero.jpg"
                   alt="Premium Business Executive Suits"
-                  fill
-                  className="object-cover"
+                  width={600}
+                  height={750}
+                  className="w-full h-full object-cover"
+                  priority
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-4 rounded-xl shadow-lg">
-                <div className="text-2xl font-bold">Executive</div>
-                <div className="text-sm">Premium</div>
+              <div className="absolute -bottom-6 -left-6 bg-yellow-500 text-black p-4 rounded-lg shadow-lg">
+                <div className="text-center">
+                  <div className="text-2xl font-bold">500+</div>
+                  <div className="text-sm">Satisfied Clients</div>
+                </div>
               </div>
             </div>
           </div>
@@ -255,282 +179,184 @@ export default function PremiumBusinessSuitPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Premium Features
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Premium Executive Suits?
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Every detail crafted for executive excellence.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We offer the finest executive suits carefully designed to meet the needs of distinguished leaders
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {productFeatures.map((feature, index) => (
-              <div key={index} className="text-center group">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors duration-300">
-                  <feature.icon className="h-8 w-8 text-blue-600" />
+              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <feature.icon className="h-8 w-8 text-yellow-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  {feature.description}
-                </p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Executive Suits Section */}
-      <section id="suits" className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Executive Suit Collection
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Premium suits for business leaders and executives.
-            </p>
-          </div>
+      {/* Product Gallery */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">
+            Premium Executive Suits Gallery
+          </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {executiveSuits.map((suit) => (
-              <div key={suit.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="aspect-square relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div key={i} className="group relative overflow-hidden rounded-xl shadow-lg">
+                <div className="aspect-w-3 aspect-h-4">
                   <Image
-                    src={suit.image}
-                    alt={suit.name}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded text-sm font-medium">
-                    Save {Math.round(((suit.originalPrice - suit.price) / suit.originalPrice) * 100)}%
-                  </div>
-                  <div className="absolute top-4 left-4 bg-gold-500 text-white px-2 py-1 rounded text-sm font-medium">
-                    {suit.fabric}
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {suit.name}
-                  </h3>
-                  
-                  <div className="flex items-center space-x-2 mb-4">
-                    <span className="text-2xl font-bold text-blue-600">
-                      {suit.price.toLocaleString()} SAR
-                    </span>
-                    <span className="text-lg text-gray-500 line-through">
-                      {suit.originalPrice.toLocaleString()} SAR
-                    </span>
-                  </div>
-                  
-                  <ul className="space-y-2 mb-6">
-                    {suit.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start text-sm text-gray-600">
-                        <CheckCircleIcon className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <div className="space-y-3 mb-6">
-                    <div>
-                      <p className="text-sm font-medium text-gray-700 mb-2">Available Sizes:</p>
-                      <div className="flex flex-wrap gap-2">
-                        {suit.sizes.map((size) => (
-                          <span key={size} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                            {size}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <p className="text-sm font-medium text-gray-700 mb-2">Available Colors:</p>
-                      <div className="flex flex-wrap gap-2">
-                        {suit.colors.map((color) => (
-                          <span key={color} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                            {color}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
-                    Schedule Fitting
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Business Benefits */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Executive Benefits
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Why premium business suits matter for executives.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {businessBenefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Accessories Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Executive Accessories
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Complete your executive look with premium accessories.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {accessories.map((accessory, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
-                <div className="aspect-square relative rounded-lg overflow-hidden mb-4">
-                  <Image
-                    src={accessory.image}
-                    alt={accessory.name}
-                    fill
-                    className="object-cover"
+                    src={`/images/products/corporate/premium-business-suit-${i}.jpg`}
+                    alt={`Premium executive suit ${i}`}
+                    width={400}
+                    height={500}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {accessory.name}
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  {accessory.description}
-                </p>
-                <div className="text-xl font-bold text-blue-600 mb-4">
-                  {accessory.price} SAR
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold">
+                      View Details
+                    </button>
+                  </div>
                 </div>
-                <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300">
-                  Add to Quote
-                </button>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Sizing Guide */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Executive Sizing Guide
-              </h2>
-              <p className="text-gray-600">
-                Find your perfect executive fit with our detailed sizing chart.
-              </p>
-            </div>
-            
-            <div className="bg-gray-50 rounded-xl p-8 overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Size</th>
-                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Chest</th>
-                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Waist</th>
-                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Jacket Length</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {sizingGuide.map((size, index) => (
-                    <tr key={index} className="border-b border-gray-100">
-                      <td className="py-3 px-4 font-medium text-gray-900">{size.size}</td>
-                      <td className="py-3 px-4 text-gray-600">{size.chest}</td>
-                      <td className="py-3 px-4 text-gray-600">{size.waist}</td>
-                      <td className="py-3 px-4 text-gray-600">{size.jacket}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+      {/* Ideal For Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">
+            Perfect for Formal and Executive Occasions
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+            {idealForOccasions.map((occasion, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <occasion.icon className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
+                <h4 className="text-lg font-semibold text-gray-800">{occasion.name}</h4>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Specifications */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Product Specifications
-              </h2>
-            </div>
-            
-            <div className="bg-white rounded-xl p-8">
-              <div className="grid md:grid-cols-2 gap-6">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="bg-white p-10 rounded-xl shadow-lg">
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">Premium Suit Specifications</h3>
+              <div className="space-y-6">
                 {specifications.map((spec, index) => (
-                  <div key={index} className="flex justify-between items-center py-3 border-b border-gray-200 last:border-b-0">
-                    <span className="font-medium text-gray-700">{spec.label}:</span>
-                    <span className="text-gray-900">{spec.value}</span>
+                  <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0">
+                    <div className="flex justify-between items-start">
+                      <span className="font-semibold text-gray-800 text-lg">{spec.label}:</span>
+                      <span className="text-gray-600 text-right max-w-md">{spec.value}</span>
+                    </div>
                   </div>
                 ))}
+              </div>
+            </div>
+            
+            <div className="bg-yellow-50 p-10 rounded-xl border border-yellow-200">
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">Premium Package Includes</h3>
+              <ul className="space-y-4">
+                {includedItems.map((item, index) => (
+                  <li key={index} className="flex items-center">
+                    <CheckCircleIcon className="h-6 w-6 text-yellow-600 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700 text-lg">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <div className="mt-10 p-6 bg-yellow-100 rounded-lg border border-yellow-300">
+                <h4 className="text-xl font-bold text-yellow-800 mb-3">Premium Quality Guarantee</h4>
+                <p className="text-yellow-700">
+                  We guarantee exceptional quality for two full years, with free maintenance service and alteration options as needed.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Executive Testimonials
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Hear from business leaders who trust UNEOM for their executive attire.
-            </p>
+      {/* Pricing */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-8">
+            Invest in Your Distinguished Professional Appearance
+          </h2>
+          <div className="bg-white rounded-xl p-10 shadow-2xl">
+            <div className="text-center mb-8">
+              <div className="text-5xl font-bold text-gray-900 mb-2">From SAR 1,800</div>
+              <div className="text-xl text-gray-600">per suit with custom tailoring</div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-600 mb-2">Two-Piece Suit</div>
+                <div className="text-lg text-gray-600">SAR 1,800 - 2,500</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-600 mb-2">Three-Piece Suit</div>
+                <div className="text-lg text-gray-600">SAR 2,200 - 3,000</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-600 mb-2">Luxury Tuxedo</div>
+                <div className="text-lg text-gray-600">SAR 2,800 - 4,000</div>
+              </div>
+            </div>
+            
+            <Link
+              href="/quote?product=premium-business-suits"
+              className="bg-yellow-500 text-black px-10 py-4 rounded-lg font-bold text-xl hover:bg-yellow-400 transition-colors inline-block"
+            >
+              Book Free Consultation Now
+            </Link>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl shadow-lg p-6">
-                <div className="flex items-center space-x-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <StarIcon key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
+        </div>
+      </section>
+
+      {/* Related Products */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">
+            Complete Your Executive Look
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {relatedProducts.map((product, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                <div className="relative h-64 w-full">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <p className="text-gray-600 mb-4 italic">
-                  "{testimonial.content}"
-                </p>
-                <div>
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">{testimonial.position}</p>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-yellow-600">{product.name}</h3>
+                  <p className="text-yellow-600 font-bold text-lg mb-4">{product.price}</p>
+                  <Link
+                    href={product.href}
+                    className="bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors inline-flex items-center justify-center w-full"
+                  >
+                    View Product
+                    <ArrowRightIcon className="ml-2 h-4 w-4" />
+                  </Link>
                 </div>
               </div>
             ))}
@@ -539,99 +365,26 @@ export default function PremiumBusinessSuitPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-gray-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Elevate Your Executive Presence
+      <section className="py-20 bg-yellow-500">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-black mb-6">
+            Begin Your Journey to Professional Excellence
           </h2>
-          <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            Transform your professional image with premium business suits that command 
-            respect and confidence. Schedule a consultation with our expert tailors.
+          <p className="text-xl text-gray-800 mb-10 max-w-2xl mx-auto">
+            Book a free consultation with our tailoring experts and discover how our premium suits can enhance your professional presence
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/quote"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center"
+              href="/contact?subject=Premium+Business+Suits+Consultation"
+              className="bg-black text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-colors"
             >
-              Schedule Consultation
-              <ArrowRightIcon className="h-5 w-5 ml-2" />
+              Book Free Consultation
             </Link>
             <Link
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+              href="/shop/corporate/"
+              className="border-2 border-black text-black px-10 py-4 rounded-lg font-bold text-lg hover:bg-black hover:text-white transition-colors"
             >
-              Contact Executive Team
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Products */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Related Products
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Link href="/shop/corporate/executive-suits/classic" className="group">
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/images/products/corporate/classic-executive-suits.jpg"
-                    alt="Classic Executive Suits"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    Classic Executive Suits
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Timeless executive suits for traditional business settings.
-                  </p>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href="/shop/corporate/business-shirts/premium-dress" className="group">
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/images/products/corporate/premium-dress-shirts.jpg"
-                    alt="Premium Dress Shirts"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    Premium Dress Shirts
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    High-quality dress shirts to complement your suits.
-                  </p>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href="/shop/corporate" className="group">
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="aspect-video relative bg-gradient-to-br from-blue-100 to-gray-100 flex items-center justify-center">
-                  <BuildingOfficeIcon className="h-16 w-16 text-blue-600" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    All Corporate Attire
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Explore our complete corporate uniform collection.
-                  </p>
-                </div>
-              </div>
+              Browse All Products
             </Link>
           </div>
         </div>
