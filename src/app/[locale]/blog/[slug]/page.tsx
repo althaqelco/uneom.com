@@ -67,6 +67,20 @@ export async function generateStaticParams() {
     'sustainable-uniforms-2024-trends',
     'hospital-uniform-safety-standards',
     'airline-uniform-design-cultural-identity',
+    'corporate-uniforms-brand-perception',
+    'fabrics-professional-attire',
+    'future-aviation-uniforms-gcc',
+    'material-innovations-aviation-attire',
+    'security-uniform-safety-standards',
+    'industrial-protective-clothing-advances',
+    'retail-uniform-selection-guide',
+    // Placeholder posts
+    'placeholder1',
+    'placeholder2',
+    'placeholder-corporate1',
+    'placeholder-corporate2',
+    'placeholder-aviation1',
+    'placeholder-aviation2',
   ];
 
   // Create English and Arabic versions for each slug

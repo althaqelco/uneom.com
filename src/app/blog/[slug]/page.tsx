@@ -74,6 +74,15 @@ export async function generateStaticParams() {
     { slug: 'corporate-uniform-employee-satisfaction' },
     { slug: 'industrial-protective-clothing-advances' },
     { slug: 'sustainable-uniforms-2024-trends' },
+    { slug: 'school-uniforms-academic-performance' },
+    { slug: 'sustainable-school-uniforms-saudi' },
+    { slug: 'hospital-uniform-safety-standards' },
+    { slug: 'airline-uniform-design-cultural-identity' },
+    { slug: 'corporate-uniforms-brand-perception' },
+    { slug: 'fabrics-professional-attire' },
+    { slug: 'future-aviation-uniforms-gcc' },
+    { slug: 'material-innovations-aviation-attire' },
+    { slug: 'security-uniform-safety-standards' },
     // Add the missing blog slugs that caused the errors
     { slug: 'evolving-trends-gulf-airline-uniforms' },
     { slug: 'uniforms-airline-brand-identity' },
@@ -82,11 +91,14 @@ export async function generateStaticParams() {
     { slug: 'sustainable-uniform-solutions' },
     { slug: 'advanced-fabrics-healthcare-uniforms' },
     { slug: 'cultural-identity-saudi-school-uniforms' },
-    { slug: 'school-uniforms-academic-performance' },
-    { slug: 'sustainable-school-uniforms-saudi' },
     { slug: 'industrial-safety-compliance-guide' },
-    { slug: 'hospital-uniform-safety-standards' },
-    { slug: 'airline-uniform-design-cultural-identity' },
+    // Placeholder posts
+    { slug: 'placeholder1' },
+    { slug: 'placeholder2' },
+    { slug: 'placeholder-corporate1' },
+    { slug: 'placeholder-corporate2' },
+    { slug: 'placeholder-aviation1' },
+    { slug: 'placeholder-aviation2' },
   ];
 }
 

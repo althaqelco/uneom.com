@@ -76,6 +76,21 @@ export async function generateStaticParams() {
     { slug: 'sustainable-school-uniforms-saudi' },
     { slug: 'retail-uniform-selection-guide' },
     { slug: 'restaurant-uniform-trends' },
+    { slug: 'hospital-uniform-safety-standards' },
+    { slug: 'industrial-protective-clothing-advances' },
+    { slug: 'security-uniform-safety-standards' },
+    { slug: 'corporate-uniforms-brand-perception' },
+    { slug: 'fabrics-professional-attire' },
+    { slug: 'future-aviation-uniforms-gcc' },
+    { slug: 'material-innovations-aviation-attire' },
+    { slug: 'airline-uniform-design-cultural-identity' },
+    // Placeholder posts
+    { slug: 'placeholder1' },
+    { slug: 'placeholder2' },
+    { slug: 'placeholder-corporate1' },
+    { slug: 'placeholder-corporate2' },
+    { slug: 'placeholder-aviation1' },
+    { slug: 'placeholder-aviation2' },
     // Add any other Arabic blog post slugs here
   ];
 }
