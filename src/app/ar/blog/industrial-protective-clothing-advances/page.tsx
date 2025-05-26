@@ -1,23 +1,25 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { 
-  ShieldCheckIcon, 
-  CogIcon, 
-  BeakerIcon,
+import {
+  ShieldCheckIcon,
+  CogIcon,
   FireIcon,
-  BoltIcon,
-  EyeIcon
+  BeakerIcon,
+  ChartBarIcon,
+  ArrowTrendingUpIcon,
+  CheckCircleIcon,
+  ExclamationTriangleIcon
 } from '@heroicons/react/24/outline'
 
 export const metadata: Metadata = {
-  title: 'أحدث التطورات في ملابس الحماية الصناعية | يونيوم',
-  description: 'اكتشف أحدث الابتكارات والتقنيات المتطورة في ملابس الحماية الصناعية التي تضمن سلامة العمال في البيئات الصناعية الخطرة بالمملكة العربية السعودية',
-  keywords: 'ملابس الحماية الصناعية، معدات السلامة، الابتكارات الصناعية، حماية العمال، السلامة المهنية، التقنيات المتطورة، المملكة العربية السعودية',
+  title: 'التطورات الحديثة في الملابس الواقية الصناعية | يونيوم للزي الموحد',
+  description: 'اكتشف أحدث التطورات والابتكارات في مجال الملابس الواقية الصناعية في المملكة العربية السعودية. تقنيات متقدمة لحماية العمال في البيئات الصناعية الخطرة.',
+  keywords: 'الملابس الواقية الصناعية, تطورات الأمان الصناعي, معدات الحماية الشخصية, السلامة المهنية السعودية, الابتكار في الملابس الواقية, تقنيات الحماية المتقدمة',
   openGraph: {
-    title: 'أحدث التطورات في ملابس الحماية الصناعية | يونيوم',
-    description: 'اكتشف أحدث الابتكارات والتقنيات المتطورة في ملابس الحماية الصناعية',
-    images: ['/images/blog/industrial-protective-clothing-advances-ar.jpg'],
+    title: 'التطورات الحديثة في الملابس الواقية الصناعية | يونيوم',
+    description: 'أحدث الابتكارات في مجال الملابس الواقية الصناعية لضمان أقصى درجات الأمان للعمال',
+    images: ['/images/blog/industrial-protective-advances.jpg'],
     locale: 'ar_SA',
     type: 'article',
   },
@@ -30,42 +32,38 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = {
+const articleJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'أحدث التطورات في ملابس الحماية الصناعية',
-  description: 'اكتشف أحدث الابتكارات والتقنيات المتطورة في ملابس الحماية الصناعية التي تضمن سلامة العمال في البيئات الصناعية الخطرة',
-  image: 'https://uneom.com/images/blog/industrial-protective-clothing-advances-ar.jpg',
+  headline: 'التطورات الحديثة في الملابس الواقية الصناعية',
+  description: 'دليل شامل حول أحدث التطورات والابتكارات في مجال الملابس الواقية الصناعية في المملكة العربية السعودية',
+  image: [
+    'https://uneom.com/images/blog/industrial-protective-advances.jpg',
+    'https://uneom.com/images/categories/Industrial_Manufacturing_Uniforms.png',
+    'https://uneom.com/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg'
+  ],
   author: {
-    '@type': 'Organization',
-    name: 'يونيوم',
-    url: 'https://uneom.com/ar/',
+    '@type': 'Person',
+    name: 'د. أحمد الصناعي',
+    url: 'https://uneom.com/ar/authors/ahmed-industrial'
   },
   publisher: {
     '@type': 'Organization',
-    name: 'يونيوم',
+    name: 'يونيوم للزي الموحد',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://uneom.com/images/logo.png',
-    },
+      url: 'https://uneom.com/images/logos/ar/uneom-logo.png'
+    }
   },
   datePublished: '2025-05-26',
   dateModified: '2025-05-26',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://uneom.com/ar/blog/industrial-protective-clothing-advances/',
+    '@id': 'https://uneom.com/ar/blog/industrial-protective-clothing-advances/'
   },
-  inLanguage: 'ar-SA',
-  about: [
-    {
-      '@type': 'Thing',
-      name: 'ملابس الحماية الصناعية',
-    },
-    {
-      '@type': 'Thing', 
-      name: 'السلامة المهنية',
-    },
-  ],
+  articleSection: 'الصناعة والتصنيع',
+  keywords: ['الملابس الواقية الصناعية', 'السلامة المهنية', 'الابتكار الصناعي', 'معدات الحماية الشخصية'],
+  inLanguage: 'ar-SA'
 }
 
 export default function IndustrialProtectiveClothingAdvancesAr() {
@@ -73,364 +71,258 @@ export default function IndustrialProtectiveClothingAdvancesAr() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
       
       <article className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50" dir="rtl">
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-slate-900/90"></div>
-          <Image
-            src="/images/industries/manufacturing/industrial-safety-hero.jpg"
-            alt="أحدث التطورات في ملابس الحماية الصناعية"
-            fill
-            className="object-cover -z-10"
-            priority
-          />
-          
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                أحدث التطورات في
-                <span className="block text-blue-400">ملابس الحماية الصناعية</span>
+        <section className="relative py-20 bg-gradient-to-l from-blue-900 via-slate-800 to-gray-900 text-white overflow-hidden">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="flex justify-center mb-6">
+                <div className="p-4 bg-blue-600/20 rounded-full backdrop-blur-sm">
+                  <ShieldCheckIcon className="w-16 h-16 text-blue-300" />
+                </div>
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                التطورات الحديثة في
+                <span className="text-blue-300 block">الملابس الواقية الصناعية</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                اكتشف الابتكارات الثورية والتقنيات المتطورة التي تعيد تشكيل مستقبل السلامة المهنية في البيئات الصناعية
+              <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+                استكشف أحدث الابتكارات والتقنيات المتطورة في مجال الحماية الصناعية التي تضمن أقصى درجات الأمان للعمال في البيئات الخطرة
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
-                <span className="bg-blue-600/20 px-4 py-2 rounded-full border border-blue-400/30">
-                  تقنيات متطورة
-                </span>
-                <span className="bg-green-600/20 px-4 py-2 rounded-full border border-green-400/30">
-                  سلامة محسّنة
-                </span>
-                <span className="bg-purple-600/20 px-4 py-2 rounded-full border border-purple-400/30">
-                  ابتكارات 2025
-                </span>
+                <span className="px-4 py-2 bg-blue-600/30 rounded-full backdrop-blur-sm">السلامة المهنية</span>
+                <span className="px-4 py-2 bg-green-600/30 rounded-full backdrop-blur-sm">الابتكار التقني</span>
+                <span className="px-4 py-2 bg-purple-600/30 rounded-full backdrop-blur-sm">الحماية المتقدمة</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Introduction */}
-        <section className="py-16 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="prose prose-lg max-w-none">
-              <p className="text-xl leading-relaxed text-gray-700 mb-8">
-                تشهد صناعة ملابس الحماية الصناعية تطوراً مستمراً وابتكارات ثورية تهدف إلى توفير أقصى درجات الحماية والراحة للعمال في البيئات الصناعية الخطرة. مع التقدم التكنولوجي المتسارع، تظهر حلول جديدة تجمع بين الحماية الفائقة والراحة العملية، مما يساهم في تحسين الإنتاجية وضمان سلامة القوى العاملة.
-              </p>
+        {/* Main Content */}
+        <section className="py-16">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
               
-              <div className="bg-blue-50 p-6 rounded-xl border-r-4 border-blue-500 mb-8">
-                <h3 className="text-lg font-semibold text-blue-900 mb-3">
-                  لماذا تعتبر ملابس الحماية المتطورة ضرورية؟
-                </h3>
-                <p className="text-blue-800">
-                  في ظل المعايير الصارمة للسلامة المهنية في المملكة العربية السعودية ورؤية 2030، تلعب ملابس الحماية المتطورة دوراً محورياً في ضمان بيئة عمل آمنة ومنتجة.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Innovations */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                الابتكارات الرئيسية في ملابس الحماية
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                تعرف على أحدث التقنيات والمواد المبتكرة التي تعيد تعريف معايير الحماية الصناعية
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Smart Fabrics */}
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-200 transition-colors">
-                  <CogIcon className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">الأقمشة الذكية</h3>
-                <p className="text-gray-600 mb-4">
-                  أقمشة متطورة تتفاعل مع البيئة المحيطة وتوفر حماية تكيفية حسب مستوى الخطر
-                </p>
-                <ul className="text-sm text-gray-500 space-y-2">
-                  <li>• استشعار درجة الحرارة</li>
-                  <li>• مقاومة كيميائية متغيرة</li>
-                  <li>• تنظيم الرطوبة التلقائي</li>
-                </ul>
-              </div>
-
-              {/* Nanotechnology */}
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-200 transition-colors">
-                  <BeakerIcon className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">تقنية النانو</h3>
-                <p className="text-gray-600 mb-4">
-                  استخدام جزيئات النانو لتعزيز خصائص الحماية دون التأثير على الراحة والمرونة
-                </p>
-                <ul className="text-sm text-gray-500 space-y-2">
-                  <li>• طلاء مضاد للبكتيريا</li>
-                  <li>• مقاومة فائقة للتآكل</li>
-                  <li>• خفة الوزن المتطرفة</li>
-                </ul>
-              </div>
-
-              {/* Fire Resistance */}
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-200 transition-colors">
-                  <FireIcon className="w-8 h-8 text-red-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">مقاومة الحريق المتطورة</h3>
-                <p className="text-gray-600 mb-4">
-                  مواد جديدة توفر حماية فائقة من الحرائق والحرارة العالية مع الحفاظ على التهوية
-                </p>
-                <ul className="text-sm text-gray-500 space-y-2">
-                  <li>• مقاومة حرارة تصل إلى 1000°م</li>
-                  <li>• عدم انتشار اللهب</li>
-                  <li>• تبديد الحرارة السريع</li>
-                </ul>
-              </div>
-
-              {/* Electrical Protection */}
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div className="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-200 transition-colors">
-                  <BoltIcon className="w-8 h-8 text-yellow-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">الحماية الكهربائية</h3>
-                <p className="text-gray-600 mb-4">
-                  تقنيات متقدمة للحماية من الصدمات الكهربائية والتفريغ الكهروستاتيكي
-                </p>
-                <ul className="text-sm text-gray-500 space-y-2">
-                  <li>• عزل كهربائي فائق</li>
-                  <li>• تبديد الشحنات الساكنة</li>
-                  <li>• مقاومة القوس الكهربائي</li>
-                </ul>
-              </div>
-
-              {/* Visibility Enhancement */}
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-200 transition-colors">
-                  <EyeIcon className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">تعزيز الرؤية</h3>
-                <p className="text-gray-600 mb-4">
-                  تقنيات الإضاءة المدمجة والمواد العاكسة المتطورة لضمان الرؤية في جميع الظروف
-                </p>
-                <ul className="text-sm text-gray-500 space-y-2">
-                  <li>• إضاءة LED مدمجة</li>
-                  <li>• عكس ضوئي ثلاثي الأبعاد</li>
-                  <li>• ألوان فلورية متطورة</li>
-                </ul>
-              </div>
-
-              {/* Comfort Technology */}
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div className="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-200 transition-colors">
-                  <ShieldCheckIcon className="w-8 h-8 text-indigo-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">تقنيات الراحة</h3>
-                <p className="text-gray-600 mb-4">
-                  ابتكارات تجمع بين أقصى درجات الحماية والراحة للاستخدام طويل المدى
-                </p>
-                <ul className="text-sm text-gray-500 space-y-2">
-                  <li>• تهوية ذكية</li>
-                  <li>• مرونة محسّنة</li>
-                  <li>• تقليل الوزن بنسبة 40%</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Industry Applications */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                التطبيقات الصناعية المتخصصة
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                حلول مخصصة لكل قطاع صناعي بما يتناسب مع متطلبات السلامة الخاصة
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <Image
-                  src="/images/industries/manufacturing/advanced-protective-gear.jpg"
-                  alt="معدات الحماية المتطورة في الصناعة"
-                  width={600}
-                  height={400}
-                  className="rounded-xl shadow-lg"
-                />
-              </div>
-              
-              <div className="space-y-6">
-                <div className="border-r-4 border-blue-500 pr-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">الصناعات البتروكيماوية</h3>
-                  <p className="text-gray-600">
-                    ملابس حماية متخصصة مقاومة للمواد الكيميائية الخطرة والغازات السامة مع تقنيات التنفس المساعد
+              {/* Introduction */}
+              <div className="prose prose-lg max-w-none mb-12">
+                <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                    <CogIcon className="w-8 h-8 text-blue-600 ml-3" />
+                    مقدمة حول التطورات الصناعية
+                  </h2>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    تشهد صناعة الملابس الواقية في المملكة العربية السعودية تطوراً مستمراً ومتسارعاً، خاصة مع تزايد الاستثمارات في القطاعات الصناعية الثقيلة مثل البتروكيماويات والتعدين والطاقة. هذه التطورات لا تقتصر على تحسين مستويات الحماية فحسب، بل تشمل أيضاً تعزيز الراحة والكفاءة التشغيلية للعمال.
                   </p>
-                </div>
-                
-                <div className="border-r-4 border-green-500 pr-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">صناعة المعادن والتعدين</h3>
-                  <p className="text-gray-600">
-                    حماية فائقة من الحرارة العالية والشرر مع مقاومة التآكل والخدوش في بيئات التعدين القاسية
-                  </p>
-                </div>
-                
-                <div className="border-r-4 border-purple-500 pr-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">الصناعات الكهربائية</h3>
-                  <p className="text-gray-600">
-                    عزل كهربائي متطور مع حماية من القوس الكهربائي وتقنيات تبديد الشحنات الساكنة
+                  <p className="text-gray-700 leading-relaxed">
+                    في إطار رؤية المملكة 2030 والتوجه نحو التنويع الاقتصادي، تلعب الملابس الواقية المتطورة دوراً محورياً في ضمان استدامة العمليات الصناعية وحماية الثروة البشرية، مما يساهم في تحقيق أهداف التنمية المستدامة.
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Future Trends */}
-        <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                اتجاهات المستقبل في ملابس الحماية
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                نظرة على التطورات المستقبلية التي ستشكل صناعة ملابس الحماية الصناعية
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-white font-bold text-2xl">AI</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">الذكاء الاصطناعي</h3>
-                <p className="text-gray-600">
-                  دمج أنظمة الذكاء الاصطناعي لمراقبة الحالة الصحية للعامل وتقييم مستوى الخطر في الوقت الفعلي
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-white font-bold text-2xl">IoT</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">إنترنت الأشياء</h3>
-                <p className="text-gray-600">
-                  ملابس حماية متصلة تنقل البيانات الحيوية وتنبه إلى المخاطر المحتملة عبر الشبكة
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-white font-bold text-lg">3D</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">الطباعة ثلاثية الأبعاد</h3>
-                <p className="text-gray-600">
-                  تصنيع ملابس حماية مخصصة بدقة عالية تتناسب مع القياسات الفردية لكل عامل
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              استثمر في مستقبل السلامة المهنية
-            </h2>
-            <p className="text-xl mb-8 opacity-90">
-              احصل على أحدث حلول ملابس الحماية الصناعية المتطورة من يونيوم
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/ar/quote/"
-                className="bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
-              >
-                احصل على عرض سعر مخصص
-              </Link>
-              <Link
-                href="/ar/shop/industrial-uniforms/"
-                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-900 transition-colors inline-flex items-center justify-center"
-              >
-                تصفح منتجاتنا
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Articles */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              مقالات ذات صلة
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <Link href="/ar/blog/industrial-safety-compliance/" className="group">
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                  <Image
-                    src="/images/blog/industrial-safety-compliance.jpg"
-                    alt="معايير السلامة الصناعية"
-                    width={400}
-                    height={250}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                      معايير السلامة الصناعية في المملكة
-                    </h3>
-                    <p className="text-gray-600">
-                      دليل شامل لمعايير السلامة المهنية المطلوبة في القطاعات الصناعية السعودية
+              {/* Key Innovations */}
+              <div className="mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+                  الابتكارات الرئيسية في الملابس الواقية
+                </h2>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div className="flex items-center mb-4">
+                      <FireIcon className="w-8 h-8 text-red-600 ml-3" />
+                      <h3 className="text-xl font-bold text-gray-900">المقاومة الحرارية المتقدمة</h3>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
+                      تطوير أقمشة جديدة قادرة على تحمل درجات حرارة تصل إلى 1200 درجة مئوية، مع الحفاظ على مرونة الحركة والتهوية الطبيعية للجسم.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div className="flex items-center mb-4">
+                      <BeakerIcon className="w-8 h-8 text-green-600 ml-3" />
+                      <h3 className="text-xl font-bold text-gray-900">المقاومة الكيميائية الشاملة</h3>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
+                      ابتكار طبقات حماية متعددة تقاوم أكثر من 200 مادة كيميائية مختلفة، مع تقنيات التنظيف الذاتي والمضادة للبكتيريا.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div className="flex items-center mb-4">
+                      <ChartBarIcon className="w-8 h-8 text-blue-600 ml-3" />
+                      <h3 className="text-xl font-bold text-gray-900">أنظمة المراقبة الذكية</h3>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
+                      دمج أجهزة استشعار ذكية لمراقبة العلامات الحيوية والتعرض للمخاطر في الوقت الفعلي، مع إرسال تنبيهات فورية للإدارة.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div className="flex items-center mb-4">
+                      <ArrowTrendingUpIcon className="w-8 h-8 text-purple-600 ml-3" />
+                      <h3 className="text-xl font-bold text-gray-900">التحسين المستمر</h3>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
+                      استخدام الذكاء الاصطناعي لتحليل بيانات الاستخدام وتطوير تحسينات مستمرة في التصميم والوظائف الحمائية.
                     </p>
                   </div>
                 </div>
-              </Link>
+              </div>
 
-              <Link href="/ar/blog/workplace-safety-innovations/" className="group">
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              {/* Featured Image */}
+              <div className="mb-12">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/blog/workplace-safety-innovations.jpg"
-                    alt="ابتكارات السلامة المهنية"
-                    width={400}
-                    height={250}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    src="/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg"
+                    alt="عامل يرتدي ملابس واقية متطورة في بيئة صناعية"
+                    width={800}
+                    height={500}
+                    className="w-full h-96 object-cover"
+                    priority
                   />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                      ابتكارات السلامة في بيئة العمل
-                    </h3>
-                    <p className="text-gray-600">
-                      أحدث التقنيات والحلول المبتكرة لضمان بيئة عمل آمنة ومنتجة
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute bottom-6 right-6 text-white">
+                    <p className="text-sm font-medium">عامل يستخدم أحدث تقنيات الحماية الصناعية</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Saudi Market Focus */}
+              <div className="bg-gradient-to-l from-green-50 to-blue-50 rounded-2xl p-8 mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+                  التطبيقات في السوق السعودي
+                </h2>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <CogIcon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">القطاع البتروكيماوي</h3>
+                    <p className="text-gray-700 text-sm">
+                      حماية متقدمة ضد المواد الكيميائية الخطرة والغازات السامة في مصافي أرامكو والشركات التابعة
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <FireIcon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">صناعة المعادن</h3>
+                    <p className="text-gray-700 text-sm">
+                      ملابس مقاومة للحرارة العالية والشرر المعدني في مصانع الحديد والصلب والألمنيوم
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <ShieldCheckIcon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">مشاريع نيوم</h3>
+                    <p className="text-gray-700 text-sm">
+                      تقنيات حماية مستقبلية للعمال في مشاريع المدن الذكية والطاقة المتجددة
                     </p>
                   </div>
                 </div>
-              </Link>
+              </div>
 
-              <Link href="/ar/blog/protective-equipment-maintenance/" className="group">
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                  <Image
-                    src="/images/blog/protective-equipment-maintenance.jpg"
-                    alt="صيانة معدات الحماية"
-                    width={400}
-                    height={250}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                      صيانة وإدارة معدات الحماية
-                    </h3>
-                    <p className="text-gray-600">
-                      أفضل الممارسات للحفاظ على فعالية معدات الحماية الشخصية
-                    </p>
+              {/* Safety Standards */}
+              <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <ExclamationTriangleIcon className="w-8 h-8 text-yellow-600 ml-3" />
+                  معايير السلامة والجودة
+                </h2>
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <CheckCircleIcon className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-bold text-gray-900 mb-1">معايير SASO السعودية</h3>
+                      <p className="text-gray-700">الامتثال الكامل لمعايير الهيئة السعودية للمواصفات والمقاييس والجودة</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <CheckCircleIcon className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-bold text-gray-900 mb-1">شهادات ISO الدولية</h3>
+                      <p className="text-gray-700">حاصلة على شهادات ISO 45001 لإدارة السلامة والصحة المهنية</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <CheckCircleIcon className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-bold text-gray-900 mb-1">اختبارات الجودة المتقدمة</h3>
+                      <p className="text-gray-700">فحوصات شاملة في مختبرات معتمدة لضمان أعلى مستويات الحماية والمتانة</p>
+                    </div>
                   </div>
                 </div>
-              </Link>
+              </div>
+
+              {/* Future Trends */}
+              <div className="bg-gradient-to-l from-blue-900 to-purple-900 text-white rounded-2xl p-8 mb-12">
+                <h2 className="text-3xl font-bold mb-6 text-center">اتجاهات المستقبل</h2>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-bold mb-4">التقنيات الناشئة</h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-center">
+                        <ArrowTrendingUpIcon className="w-5 h-5 text-blue-300 ml-2" />
+                        النانو تكنولوجي في الأقمشة الواقية
+                      </li>
+                      <li className="flex items-center">
+                        <ArrowTrendingUpIcon className="w-5 h-5 text-blue-300 ml-2" />
+                        الذكاء الاصطناعي في أنظمة الإنذار المبكر
+                      </li>
+                      <li className="flex items-center">
+                        <ArrowTrendingUpIcon className="w-5 h-5 text-blue-300 ml-2" />
+                        المواد الذكية ذاتية الإصلاح
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-bold mb-4">التطبيقات المستقبلية</h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-center">
+                        <ArrowTrendingUpIcon className="w-5 h-5 text-green-300 ml-2" />
+                        الواقع المعزز في التدريب على السلامة
+                      </li>
+                      <li className="flex items-center">
+                        <ArrowTrendingUpIcon className="w-5 h-5 text-green-300 ml-2" />
+                        أنظمة التبريد الذكية المدمجة
+                      </li>
+                      <li className="flex items-center">
+                        <ArrowTrendingUpIcon className="w-5 h-5 text-green-300 ml-2" />
+                        التخصيص الشخصي باستخدام البيانات الحيوية
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Call to Action */}
+              <div className="bg-gradient-to-l from-blue-600 to-purple-600 text-white rounded-2xl p-8 text-center">
+                <h2 className="text-3xl font-bold mb-4">احصل على أحدث حلول الحماية الصناعية</h2>
+                <p className="text-xl mb-6 opacity-90">
+                  تواصل مع خبرائنا لاستكشاف أفضل الحلول الواقية لمنشأتك الصناعية
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    href="/ar/quote"
+                    className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                  >
+                    احصل على عرض سعر
+                  </Link>
+                  <Link
+                    href="/ar/contact"
+                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors"
+                  >
+                    تواصل معنا
+                  </Link>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
