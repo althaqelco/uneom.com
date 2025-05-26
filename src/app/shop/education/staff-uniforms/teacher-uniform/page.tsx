@@ -14,13 +14,20 @@ import {
 import { StarIcon as StarSolidIcon } from '@heroicons/react/24/solid'
 
 export const metadata: Metadata = {
-  title: 'Teacher Uniforms | Professional Educational Attire | UNEOM',
-  description: 'Premium teacher uniforms for schools in Saudi Arabia. Comfortable, professional, and durable uniforms designed specifically for educators.',
-  keywords: 'teacher uniforms Saudi Arabia, school teacher clothing, educator uniforms, professional teaching attire',
+  title: 'Teacher Uniforms | Professional Educational Attire | UNEOM KSA',
+  description: 'Discover premium teacher uniforms in Saudi Arabia by UNEOM. Comfortable, professional, and durable attire designed for educators at all school levels. Request a quote today!',
+  keywords: 'teacher uniforms Saudi Arabia, school teacher clothing KSA, educator uniforms Riyadh, professional teaching attire Jeddah, school staff uniforms Dammam',
   openGraph: {
-    title: 'Teacher Uniforms | Professional Educational Attire | UNEOM',
-    description: 'Professional uniforms designed specifically for teachers, combining comfort with educational authority.',
-    images: ['/images/products/corporate-shirts-blouses.jpg'],
+    title: 'UNEOM Teacher Uniforms | Inspiring Professionalism in Saudi Education',
+    description: 'Elevate your teaching staff with UNEOM\'s specialized teacher uniforms. Quality, comfort, and professional designs for schools across KSA.',
+    images: ['/images/education/teacher-uniforms-og.jpg'], // Updated OG Image
+  },
+  alternates: {
+    canonical: '/shop/education/staff-uniforms/teacher-uniform/',
+    languages: {
+      'en-US': '/shop/education/staff-uniforms/teacher-uniform/',
+      'ar-SA': '/ar/shop/education/staff-uniforms/teacher-uniform/',
+    },
   },
 }
 
@@ -51,30 +58,30 @@ const teacherStyles = [
   {
     title: 'Elementary Teachers',
     description: 'Comfortable and approachable uniforms for primary school educators',
-    features: ['Soft, comfortable fabrics', 'Easy-care materials', 'Practical pockets', 'Child-friendly colors'],
-    image: '/images/products/corporate-shirts-blouses.jpg',
-    colors: ['Soft blue', 'Light green', 'Warm gray', 'Cream']
+    features: ['Soft, breathable fabrics for active engagement', 'Easy-care & stain-resistant materials', 'Ample, reinforced pocket space', 'Warm, inviting, and child-friendly color palettes'],
+    image: '/images/education/teacher-elementary.jpg', // Updated Image
+    colors: ['Pastel Blue', 'Mint Green', 'Light Peach', 'Cream']
   },
   {
     title: 'Middle School Teachers',
-    description: 'Professional yet approachable attire for intermediate education',
-    features: ['Smart casual styling', 'Versatile pieces', 'Professional appearance', 'Comfortable fit'],
-    image: '/images/products/corporate-polo-shirts.jpg',
-    colors: ['Navy blue', 'Burgundy', 'Forest green', 'Charcoal']
+    description: 'Professional yet approachable attire for intermediate education, fostering respect and engagement.',
+    features: ['Smart-casual, contemporary styling', 'Durable, wrinkle-resistant fabrics', 'Versatile layering options', 'Age-appropriate professional colors'],
+    image: '/images/education/teacher-middle-school.jpg', // Updated Image
+    colors: ['Classic Navy', 'Deep Burgundy', 'Olive Green', 'Charcoal Grey']
   },
   {
     title: 'High School Teachers',
-    description: 'Sophisticated uniforms that command respect and authority',
-    features: ['Professional styling', 'Authoritative appearance', 'Quality materials', 'Formal options'],
-    image: '/images/products/corporate-suit-executive.jpg',
-    colors: ['Black', 'Navy', 'Dark gray', 'Deep blue']
+    description: 'Sophisticated and authoritative uniforms that command respect and reflect academic leadership.',
+    features: ['Tailored, professional silhouettes', 'Premium, lasting quality materials', 'Formal and semi-formal options', 'Colors that convey expertise'],
+    image: '/images/education/teacher-high-school.jpg', // Updated Image
+    colors: ['Jet Black', 'Deep Navy', 'Graphite Grey', 'Rich Sapphire']
   },
   {
-    title: 'Subject Specialists',
-    description: 'Specialized uniforms for different teaching subjects and activities',
-    features: ['Subject-appropriate styling', 'Functional design', 'Safety considerations', 'Activity-specific'],
-    image: '/images/products/corporate-shirts-blouses.jpg',
-    colors: ['Department colors', 'Subject-specific', 'Safety colors']
+    title: 'Subject Specialists (e.g., Lab, Arts, Sports)',
+    description: 'Functional and specialized uniforms tailored to the unique demands of different teaching subjects and activities.',
+    features: ['Subject-appropriate design (e.g., lab coats, aprons, athletic wear)', 'Enhanced functionality and safety features', 'Durable materials for specific environments', 'Optional department-specific branding'],
+    image: '/images/education/teacher-specialist.jpg', // Updated Image
+    colors: ['Clinical White (Lab)', 'Creative Hues (Arts)', 'Sporty Team Colors (PE)']
   }
 ]
 
@@ -114,19 +121,19 @@ export default function TeacherUniformPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
-      <nav className="bg-gray-50 py-4">
+      <nav aria-label="Breadcrumb" className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-blue-600">Home</Link>
-            <span>/</span>
-            <Link href="/shop/" className="hover:text-blue-600">Shop</Link>
-            <span>/</span>
-            <Link href="/shop/education/" className="hover:text-blue-600">Education</Link>
-            <span>/</span>
-            <Link href="/shop/education/staff-uniforms/" className="hover:text-blue-600">Staff Uniforms</Link>
-            <span>/</span>
-            <span className="text-gray-900">Teacher Uniform</span>
-          </div>
+          <ol className="flex items-center space-x-2 text-sm text-gray-600">
+            <li><Link href="/" className="hover:text-blue-600">Home</Link></li>
+            <li><span aria-hidden="true">/</span></li>
+            <li><Link href="/shop/" className="hover:text-blue-600">Shop</Link></li>
+            <li><span aria-hidden="true">/</span></li>
+            <li><Link href="/shop/education/" className="hover:text-blue-600">Education Uniforms</Link></li>
+            <li><span aria-hidden="true">/</span></li>
+            <li><Link href="/shop/education/staff-uniforms/" className="hover:text-blue-600">Staff Uniforms</Link></li>
+            <li><span aria-hidden="true">/</span></li>
+            <li><span className="text-gray-900" aria-current="page">Teacher Uniforms</span></li>
+          </ol>
         </div>
       </nav>
 
@@ -134,9 +141,10 @@ export default function TeacherUniformPage() {
       <section className="relative py-16 sm:py-24 bg-gradient-to-r from-green-600 to-blue-700">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="/images/products/corporate-shirts-blouses.jpg"
-            alt="Teacher uniforms background"
+            src="/images/education/teacher-hero-background.jpg" // Updated Image
+            alt="Professional teacher uniforms for schools in Saudi Arabia" // Improved Alt Text
             fill
+            priority // Added Priority for LCP
             className="object-cover"
           />
         </div>
@@ -211,7 +219,7 @@ export default function TeacherUniformPage() {
                 <div className="relative h-48">
                   <Image
                     src={style.image}
-                    alt={style.title}
+                    alt={`Professional uniform style for ${style.title}`} // Improved Alt Text
                     fill
                     className="object-cover"
                   />
@@ -342,8 +350,8 @@ export default function TeacherUniformPage() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/products/corporate-polo-shirts.jpg"
-                alt="Teachers in professional uniforms"
+                src="/images/education/teacher-benefits-showcase.jpg" // Updated Image
+                alt="UNEOM teacher uniforms showcasing benefits like comfort and professionalism" // Improved Alt Text
                 fill
                 className="object-cover"
               />
@@ -352,31 +360,121 @@ export default function TeacherUniformPage() {
         </div>
       </section>
 
+      {/* Testimonials Section Placeholder */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Voices from the Classroom</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Hear what educators in Saudi Arabia are saying about UNEOM Teacher Uniforms.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="bg-gray-50 p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <Image src="/images/authors/avatar-placeholder.jpg" alt={`Testimonial author ${i}`} width={48} height={48} className="rounded-full mr-4" />
+                  <div>
+                    <p className="font-semibold text-gray-900">Educator Name {i}</p>
+                    <p className="text-sm text-gray-500">School Name, City</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 italic">"[Placeholder: Positive testimonial about the comfort, professionalism, and durability of UNEOM teacher uniforms. Specific to Saudi context if possible.]"</p>
+                <div className="flex mt-3">
+                  {[...Array(5)].map((_, starIndex) => (
+                    <StarSolidIcon key={starIndex} className="h-5 w-5 text-yellow-400" />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Articles Section Placeholder */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Further Reading for Educators</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Explore insights and tips on professional attire in education.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { title: "The Impact of Teacher Attire on Student Perception", slug: "teacher-attire-student-perception", image: "/images/blog/placeholder1.jpg" },
+              { title: "Choosing Durable and Comfortable Fabrics for Daily Teaching", slug: "fabrics-for-teaching", image: "/images/blog/placeholder2.jpg" },
+              { title: "Maintaining a Professional Image in Saudi Schools", slug: "professional-image-saudi-schools", image: "/images/blog/placeholder-corporate1.jpg" },
+            ].map((article) => (
+              <div key={article.slug} className="bg-white rounded-lg shadow-md overflow-hidden">
+                <Link href={`/blog/${article.slug}/`} className="block">
+                  <div className="relative h-40">
+                    <Image src={article.image} alt={article.title} fill className="object-cover" />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-semibold text-gray-900 hover:text-green-600">{article.title}</h3>
+                    <p className="text-sm text-gray-500 mt-1">Read more &rarr;</p>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-green-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Empower Your Educators
+            Empower Your Educators with UNEOM
           </h2>
           <p className="text-xl text-green-200 mb-8 max-w-2xl mx-auto">
-            Contact our education uniform specialists to discuss your teacher uniform needs and create a professional learning environment.
+            Contact our education uniform specialists today to discuss your school's specific teacher uniform needs and create an inspiring, professional learning environment in Saudi Arabia.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/quote/?category=teacher-uniform"
+              href="/quote/?category=teacher-uniforms"
               className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
             >
-              Get Teacher Uniform Quote
+              Request Teacher Uniform Quote
             </Link>
             <Link
               href="/shop/education/staff-uniforms/"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-lg"
             >
-              View All Staff Uniforms
+              Explore All Education Staff Uniforms
             </Link>
           </div>
         </div>
       </section>
+
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Professional Teacher Uniforms | UNEOM Saudi Arabia",
+          "description": "Explore UNEOM's collection of professional teacher uniforms, designed for comfort, durability, and a commanding presence in Saudi Arabian schools.",
+          "url": "https://uneom.com/shop/education/staff-uniforms/teacher-uniform/",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "UNEOM",
+            "url": "https://uneom.com"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://uneom.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Shop", "item": "https://uneom.com/shop/" },
+              { "@type": "ListItem", "position": 3, "name": "Education Uniforms", "item": "https://uneom.com/shop/education/" },
+              { "@type": "ListItem", "position": 4, "name": "Staff Uniforms", "item": "https://uneom.com/shop/education/staff-uniforms/" },
+              { "@type": "ListItem", "position": 5, "name": "Teacher Uniforms", "item": "https://uneom.com/shop/education/staff-uniforms/teacher-uniform/" }
+            ]
+          },
+          // Add mainEntity or hasPart if listing individual uniform styles as products
+        }) }}
+      />
     </div>
   )
 }

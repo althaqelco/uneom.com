@@ -14,13 +14,20 @@ import {
 import { StarIcon as StarSolidIcon } from '@heroicons/react/24/solid'
 
 export const metadata: Metadata = {
-  title: 'Administrative Suits | Executive Education Attire | UNEOM',
-  description: 'Premium administrative suits for school and university administrators in Saudi Arabia. Professional executive attire for educational leadership.',
-  keywords: 'administrative suits Saudi Arabia, school administrator clothing, education executive attire, professional education suits',
+  title: 'Education Admin Suits | Executive Attire for School Leadership | UNEOM KSA',
+  description: 'UNEOM offers premium administrative suits for school principals, vice-principals, and university executives in Saudi Arabia. Command respect with our professional attire.',
+  keywords: 'education admin suits Saudi Arabia, school leadership attire KSA, principal suits Riyadh, university executive clothing Jeddah, school administrator uniforms Dammam',
   openGraph: {
-    title: 'Administrative Suits | Executive Education Attire | UNEOM',
-    description: 'Executive-level suits designed for educational administrators and leadership positions.',
-    images: ['/images/products/corporate-suit-executive.jpg'],
+    title: 'UNEOM Education Admin Suits | Professional Leadership Attire in KSA',
+    description: 'Discover executive suits tailored for educational administrators by UNEOM. Perfect for principals, department heads, and university leadership in Saudi Arabia.',
+    images: ['/images/education/admin-suit-og.jpg'], // Updated OG Image
+  },
+  alternates: {
+    canonical: '/shop/education/staff-uniforms/admin-suit/',
+    languages: {
+      'en-US': '/shop/education/staff-uniforms/admin-suit/',
+      'ar-SA': '/ar/shop/education/staff-uniforms/admin-suit/',
+    },
   },
 }
 
@@ -51,30 +58,30 @@ const administrativeRoles = [
   {
     title: 'School Principals',
     description: 'Distinguished suits for school leadership and administrative excellence',
-    features: ['Executive styling', 'Authority presence', 'Formal occasions', 'Daily leadership'],
-    image: '/images/products/corporate-suit-executive.jpg',
-    occasions: ['Board meetings', 'Parent conferences', 'Ceremonies', 'Official events']
+    features: ['Impeccable executive styling', 'Projects clear authority and vision', 'Suitable for all formal school occasions', 'Comfortable for daily leadership tasks'],
+    image: '/images/education/admin-suit-classic.jpg', // Updated Image
+    occasions: ['Board meetings', 'Parent-teacher conferences', 'School assemblies', 'Official ceremonies & events']
   },
   {
-    title: 'Vice Principals',
-    description: 'Professional attire for assistant administrators and department heads',
-    features: ['Professional appearance', 'Approachable authority', 'Versatile styling', 'Comfortable fit'],
-    image: '/images/products/corporate-shirts-blouses.jpg',
-    occasions: ['Staff meetings', 'Student interactions', 'Administrative duties', 'School events']
+    title: 'Vice Principals & Deans',
+    description: 'Professional and approachable attire for assistant administrators, deans, and key academic staff.',
+    features: ['Sharp, professional appearance', 'Maintains approachable authority', 'Versatile for diverse responsibilities', 'All-day comfort and fit'],
+    image: '/images/education/admin-suit-modern.jpg', // Updated Image
+    occasions: ['Staff coordination meetings', 'Student disciplinary hearings', 'Departmental oversight', 'School functions']
   },
   {
-    title: 'Department Heads',
-    description: 'Academic leadership attire for department chairs and coordinators',
-    features: ['Academic professionalism', 'Leadership presence', 'Scholarly appearance', 'Meeting-ready'],
-    image: '/images/products/corporate-suit-executive.jpg',
-    occasions: ['Faculty meetings', 'Academic conferences', 'Curriculum planning', 'Student advisement']
+    title: 'Department Heads & Coordinators',
+    description: 'Smart, academic leadership attire for department chairs, curriculum coordinators, and program leaders.',
+    features: ['Reflects academic professionalism', 'Strong leadership presence', 'Polished and scholarly appearance', 'Always meeting-ready and presentable'],
+    image: '/images/education/admin-suit-modern.jpg', // Updated Image
+    occasions: ['Faculty meetings & workshops', 'Academic planning sessions', 'Curriculum development', 'Student academic advisement']
   },
   {
-    title: 'University Executives',
-    description: 'Premium executive suits for university administration and leadership',
-    features: ['Prestigious appearance', 'Executive quality', 'Formal styling', 'Distinguished presence'],
-    image: '/images/products/corporate-suit-executive.jpg',
-    occasions: ['Board presentations', 'Donor meetings', 'Graduation ceremonies', 'Official functions']
+    title: 'University & College Executives',
+    description: 'Premium, prestigious executive suits designed for higher education administration and institutional leadership.',
+    features: ['Unmistakably prestigious appearance', 'Crafted with executive-quality materials', 'Formal and sophisticated styling', 'Creates a distinguished leadership presence'],
+    image: '/images/education/admin-suit-classic.jpg', // Updated Image
+    occasions: ['University board presentations', 'Donor and stakeholder meetings', 'Graduation & convocation ceremonies', 'High-profile official functions']
   }
 ]
 
@@ -138,19 +145,19 @@ export default function AdminSuitPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
-      <nav className="bg-gray-50 py-4">
+      <nav aria-label="Breadcrumb" className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-blue-600">Home</Link>
-            <span>/</span>
-            <Link href="/shop/" className="hover:text-blue-600">Shop</Link>
-            <span>/</span>
-            <Link href="/shop/education/" className="hover:text-blue-600">Education</Link>
-            <span>/</span>
-            <Link href="/shop/education/staff-uniforms/" className="hover:text-blue-600">Staff Uniforms</Link>
-            <span>/</span>
-            <span className="text-gray-900">Admin Suit</span>
-          </div>
+          <ol className="flex items-center space-x-2 text-sm text-gray-600">
+            <li><Link href="/" className="hover:text-blue-600">Home</Link></li>
+            <li><span aria-hidden="true">/</span></li>
+            <li><Link href="/shop/" className="hover:text-blue-600">Shop</Link></li>
+            <li><span aria-hidden="true">/</span></li>
+            <li><Link href="/shop/education/" className="hover:text-blue-600">Education Uniforms</Link></li>
+            <li><span aria-hidden="true">/</span></li>
+            <li><Link href="/shop/education/staff-uniforms/" className="hover:text-blue-600">Staff Uniforms</Link></li>
+            <li><span aria-hidden="true">/</span></li>
+            <li><span className="text-gray-900" aria-current="page">Admin Suits</span></li>
+          </ol>
         </div>
       </nav>
 
@@ -158,9 +165,10 @@ export default function AdminSuitPage() {
       <section className="relative py-16 sm:py-24 bg-gradient-to-r from-gray-800 to-blue-900">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="/images/products/corporate-suit-executive.jpg"
-            alt="Administrative suits background"
+            src="/images/education/admin-suit-hero.jpg" // Updated Image
+            alt="Executive administrative suits for educational leadership in Saudi Arabia" // Improved Alt Text
             fill
+            priority // Added Priority for LCP
             className="object-cover"
           />
         </div>
@@ -235,7 +243,7 @@ export default function AdminSuitPage() {
                 <div className="relative h-48">
                   <Image
                     src={role.image}
-                    alt={role.title}
+                    alt={`Professional admin suit for ${role.title}`} // Improved Alt Text
                     fill
                     className="object-cover"
                   />
@@ -409,8 +417,8 @@ export default function AdminSuitPage() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/products/corporate-suit-executive.jpg"
-                alt="Educational administrator in executive suit"
+                src="/images/education/admin-suit-benefits.jpg" // Updated Image
+                alt="UNEOM education admin suits highlighting quality and professionalism" // Improved Alt Text
                 fill
                 className="object-cover"
               />
@@ -419,31 +427,94 @@ export default function AdminSuitPage() {
         </div>
       </section>
 
+      {/* Testimonials Section Placeholder */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Trusted by Educational Leaders</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Hear from school administrators in Saudi Arabia who chose UNEOM for their executive attire.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              { name: "Mr. Abdullah Al-Fahad", school: "Riyadh International School", quote: "[Placeholder: Testimonial about the quality, fit, and professional image projected by UNEOM admin suits.]" },
+              { name: "Ms. Fatima Al-Zahrani", school: "Jeddah Academy for Girls", quote: "[Placeholder: Testimonial highlighting the comfort and durability for long administrative days, and the positive impression on staff and parents.]" },
+            ].map((testimonial, i) => (
+              <div key={i} className="bg-gray-50 p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <Image src="/images/authors/avatar-placeholder.jpg" alt={`Testimonial from ${testimonial.name}`} width={48} height={48} className="rounded-full mr-4" />
+                  <div>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500">{testimonial.school}</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 italic">"{testimonial.quote}"</p>
+                <div className="flex mt-3">
+                  {[...Array(5)].map((_, starIndex) => (
+                    <StarSolidIcon key={starIndex} className="h-5 w-5 text-yellow-400" />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
       {/* CTA Section */}
       <section className="py-16 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Lead with Distinguished Style
+            Lead with Distinguished Style & Confidence
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Contact our executive attire specialists to discuss your administrative suit needs and project the leadership excellence your role deserves.
+            Equip your educational leadership team with UNEOM's executive administrative suits. Contact our specialists to tailor a solution for your institution in Saudi Arabia.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/quote/?category=admin-suit"
+              href="/quote/?category=admin-suits-education"
               className="bg-white text-gray-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
             >
-              Get Executive Quote
+              Request Admin Suit Quote
             </Link>
             <Link
               href="/shop/education/staff-uniforms/"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors text-lg"
             >
-              View All Staff Uniforms
+              Explore All Education Staff Uniforms
             </Link>
           </div>
         </div>
       </section>
+
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage", // Or Product if this page focuses on ONE specific admin suit model
+          "name": "Executive Admin Suits for Education | UNEOM Saudi Arabia",
+          "description": "UNEOM provides high-quality administrative suits for school and university leadership in Saudi Arabia, ensuring a professional and authoritative appearance.",
+          "url": "https://uneom.com/shop/education/staff-uniforms/admin-suit/",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "UNEOM",
+            "url": "https://uneom.com"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://uneom.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Shop", "item": "https://uneom.com/shop/" },
+              { "@type": "ListItem", "position": 3, "name": "Education Uniforms", "item": "https://uneom.com/shop/education/" },
+              { "@type": "ListItem", "position": 4, "name": "Staff Uniforms", "item": "https://uneom.com/shop/education/staff-uniforms/" },
+              { "@type": "ListItem", "position": 5, "name": "Admin Suits", "item": "https://uneom.com/shop/education/staff-uniforms/admin-suit/" }
+            ]
+          }
+          // If treated as a Product page, add specific product details here
+          // If CollectionPage, could list items or types of admin suits offered.
+        }) }}
+      />
     </div>
   )
 }

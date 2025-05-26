@@ -13,13 +13,23 @@ import {
 } from '@heroicons/react/24/outline'
 
 export const metadata: Metadata = {
-  title: 'The Role of Uniforms in Modern Education: Building Identity and Excellence | UNEOM Blog',
-  description: 'Explore how modern school uniforms contribute to educational excellence, student identity, and academic achievement in Saudi Arabian schools.',
-  keywords: 'school uniforms modern education, educational uniforms Saudi Arabia, student identity uniforms, academic excellence uniforms',
+  title: 'Uniforms in Modern Education: Identity & Excellence in KSA | UNEOM Blog',
+  description: 'Deep dive into how modern school uniforms in Saudi Arabia foster student identity, promote equality, and contribute to academic excellence. UNEOM explores the latest trends.',
+  keywords: 'school uniforms modern education, educational uniforms Saudi Arabia, student identity KSA, academic excellence uniforms Riyadh, sustainable school uniforms Jeddah, future of education attire',
   openGraph: {
-    title: 'The Role of Uniforms in Modern Education: Building Identity and Excellence',
-    description: 'Discover how contemporary school uniforms enhance learning environments and student success.',
-    images: ['/images/blog/placeholder1.jpg'],
+    title: 'The Evolving Role of Uniforms in Modern Saudi Education | UNEOM Insights',
+    description: 'How contemporary school uniforms are shaping student success, fostering identity, and aligning with Vision 2030 educational goals in Saudi Arabia.',
+    images: ['/images/blog/uniforms-modern-education-og.jpg'], // Updated OG Image
+    type: 'article',
+    publishedTime: '2024-12-15T08:00:00Z', // Example publish time
+    authors: ['UNEOM Education Team'],
+  },
+  alternates: {
+    canonical: '/blog/uniforms-modern-education/',
+    languages: {
+      'en-US': '/blog/uniforms-modern-education/',
+      'ar-SA': '/ar/blog/uniforms-modern-education/',
+    },
   },
 }
 
@@ -89,9 +99,10 @@ export default function UniformsModernEducationBlog() {
         <header className="mb-12">
           <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden mb-8">
             <Image
-              src="/images/blog/placeholder1.jpg"
-              alt="Modern school uniforms in educational setting"
+              src="/images/blog/uniforms-modern-education-featured.jpg" // Updated Image
+              alt="Students in modern, well-designed school uniforms in a Saudi Arabian educational context" // Improved Alt Text
               fill
+              priority // Added for LCP
               className="object-cover"
             />
           </div>
@@ -237,8 +248,17 @@ export default function UniformsModernEducationBlog() {
           <section id="modern-designs" className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Modern Uniform Designs and Comfort</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Today's school uniforms have evolved far beyond traditional designs, incorporating modern features that prioritize student comfort and functionality:
+              Today's school uniforms have evolved far beyond traditional designs, incorporating modern features that prioritize student comfort and functionality. UNEOM is at the forefront of these innovations:
             </p>
+            <div className="my-8">
+              <Image
+                src="/images/blog/modern-uniform-design-showcase.jpg"
+                alt="Showcase of modern school uniform designs with smart fabrics and ergonomic fits"
+                width={700}
+                height={400}
+                className="rounded-lg shadow-md mx-auto"
+              />
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               {modernFeatures.map((feature, index) => (
                 <div key={index} className="bg-gray-50 rounded-lg p-6">
@@ -259,6 +279,15 @@ export default function UniformsModernEducationBlog() {
 
           <section id="technology-integration" className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Technology Integration in Uniforms</h2>
+            <div className="my-8 float-right ml-6 mb-4 sm:w-1/3">
+              <Image
+                src="/images/blog/uniforms-modern-education-tech.jpg"
+                alt="Concept of technology integrated into school uniforms, like smart fabrics or RFID tags"
+                width={400}
+                height={250}
+                className="rounded-lg shadow-md"
+              />
+            </div>
             <p className="text-gray-700 leading-relaxed mb-6">
               The integration of technology into school uniforms represents an exciting frontier in educational innovation. Modern uniforms can incorporate:
             </p>
@@ -275,23 +304,32 @@ export default function UniformsModernEducationBlog() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Environmental consciousness is increasingly important in uniform design and procurement. Sustainable practices include:
             </p>
+            <div className="my-8">
+              <Image
+                src="/images/general/sustainable-fabric-example.jpg"
+                alt="Example of sustainable and eco-friendly fabric used in modern school uniforms"
+                width={700}
+                height={400}
+                className="rounded-lg shadow-md mx-auto"
+              />
+            </div>
             <div className="bg-green-50 rounded-lg p-6 mb-6">
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <AcademicCapIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Use of recycled and organic materials</span>
+                  <span className="text-gray-700">Use of recycled and organic materials like BCI cotton or recycled polyester.</span>
                 </li>
                 <li className="flex items-start">
                   <AcademicCapIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Durable construction for longer lifespan</span>
+                  <span className="text-gray-700">Durable construction and high-quality stitching for a longer lifespan, reducing waste.</span>
                 </li>
                 <li className="flex items-start">
                   <AcademicCapIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Uniform exchange and donation programs</span>
+                  <span className="text-gray-700">Partnerships for uniform exchange and donation programs within Saudi communities.</span>
                 </li>
                 <li className="flex items-start">
                   <AcademicCapIcon className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Local manufacturing to reduce carbon footprint</span>
+                  <span className="text-gray-700">Emphasis on local and ethical manufacturing to reduce carbon footprint and support KSA's economy.</span>
                 </li>
               </ul>
             </div>
@@ -393,6 +431,50 @@ export default function UniformsModernEducationBlog() {
           </div>
         </div>
       </article>
+
+      {/* JSON-LD Schema for Article */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting", // Or Article
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://uneom.com/blog/uniforms-modern-education/"
+          },
+          "headline": "The Role of Uniforms in Modern Education: Building Identity and Excellence in KSA",
+          "description": "Deep dive into how modern school uniforms in Saudi Arabia foster student identity, promote equality, and contribute to academic excellence. UNEOM explores the latest trends.",
+          "image": "https://uneom.com/images/blog/uniforms-modern-education-og.jpg",
+          "author": {
+            "@type": "Organization", // Or Person if specific author
+            "name": "UNEOM Education Team",
+            "url": "https://uneom.com/about/" // Link to an 'About Us' or team page
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "UNEOM",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://uneom.com/images/logos/uneom-logo.png" // Replace with actual logo URL
+            }
+          },
+          "datePublished": "2024-12-15T08:00:00Z", // Match with metadata
+          "dateModified": "2024-12-15T08:00:00Z", // Update if article is modified
+          // "articleBody": "A summary or the full text of the article can go here." // Optional
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://uneom.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://uneom.com/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "The Role of Uniforms in Modern Education: Building Identity and Excellence in KSA" }
+          ]
+        }) }}
+      />
     </div>
   )
 }

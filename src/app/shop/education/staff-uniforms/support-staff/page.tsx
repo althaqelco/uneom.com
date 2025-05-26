@@ -14,13 +14,20 @@ import {
 import { StarIcon as StarSolidIcon } from '@heroicons/react/24/solid'
 
 export const metadata: Metadata = {
-  title: 'Support Staff Uniforms | Educational Support Attire | UNEOM',
-  description: 'Professional uniforms for educational support staff in Saudi Arabia. Durable, comfortable, and functional uniforms for maintenance, security, and support personnel.',
-  keywords: 'support staff uniforms Saudi Arabia, school maintenance uniforms, educational support clothing, institutional support attire',
+  title: 'Education Support Staff Uniforms | Durable & Professional | UNEOM KSA',
+  description: 'UNEOM provides high-quality uniforms for school support staff in Saudi Arabia, including maintenance, security, custodial, and food service teams. Request a quote!',
+  keywords: 'education support staff uniforms Saudi Arabia, school maintenance uniforms KSA, school security uniforms Riyadh, custodial staff attire Jeddah, food service uniforms Dammam',
   openGraph: {
-    title: 'Support Staff Uniforms | Educational Support Attire | UNEOM',
-    description: 'Functional and professional uniforms designed for educational support staff and maintenance personnel.',
-    images: ['/images/products/corporate-polo-shirts.jpg'],
+    title: 'UNEOM Education Support Staff Uniforms | Reliable & Professional',
+    description: 'Equip your school\'s support teams with durable, functional, and professional uniforms from UNEOM. Serving educational institutions across Saudi Arabia.',
+    images: ['/images/education/support-staff-og.jpg'], // Updated OG Image
+  },
+  alternates: {
+    canonical: '/shop/education/staff-uniforms/support-staff/',
+    languages: {
+      'en-US': '/shop/education/staff-uniforms/support-staff/',
+      'ar-SA': '/ar/shop/education/staff-uniforms/support-staff/',
+    },
   },
 }
 
@@ -51,50 +58,50 @@ const supportRoles = [
   {
     title: 'Maintenance Staff',
     description: 'Durable uniforms for facility maintenance and repair personnel',
-    features: ['Heavy-duty fabrics', 'Multiple tool pockets', 'Reinforced knees', 'Stain-resistant'],
-    image: '/images/products/corporate-polo-shirts.jpg',
-    workAreas: ['Facility maintenance', 'Electrical work', 'Plumbing', 'General repairs'],
-    colors: ['Navy blue', 'Gray', 'Khaki', 'Dark green']
+    features: ['Robust, heavy-duty fabrics', 'Multiple reinforced tool pockets & loops', 'Double-stitched seams & reinforced knees', 'Oil and stain-resistant finishes'],
+    image: '/images/education/support-staff-maintenance.jpg', // Updated Image
+    workAreas: ['School facility maintenance', 'Electrical & HVAC repairs', 'Plumbing solutions', 'General building repairs & upkeep'],
+    colors: ['Utility Navy', 'Workshop Grey', 'Durable Khaki', 'Forest Green']
   },
   {
     title: 'Security Personnel',
-    description: 'Professional security uniforms for campus safety and protection',
-    features: ['Professional appearance', 'Badge attachments', 'Radio loops', 'Comfortable fit'],
-    image: '/images/products/corporate-shirts-blouses.jpg',
-    workAreas: ['Campus security', 'Access control', 'Emergency response', 'Patrol duties'],
-    colors: ['Navy blue', 'Black', 'Dark gray', 'Security blue']
+    description: 'Authoritative and professional security uniforms for ensuring campus safety and student protection.',
+    features: ['Clear professional appearance', 'Secure badge and ID attachments', 'Integrated radio loops and utility belts', 'Comfortable for extended patrols'],
+    image: '/images/education/support-staff-security.jpg', // Updated Image
+    workAreas: ['Campus-wide security patrols', 'Access control & visitor management', 'Emergency response coordination', 'Event security & crowd control'],
+    colors: ['Security Navy', 'Tactical Black', 'Command Grey', 'High-Visibility Blue accents']
   },
   {
-    title: 'Custodial Staff',
-    description: 'Practical uniforms for cleaning and custodial services',
-    features: ['Easy-care fabrics', 'Stain resistance', 'Comfortable movement', 'Professional look'],
-    image: '/images/products/corporate-polo-shirts.jpg',
-    workAreas: ['Classroom cleaning', 'Facility sanitation', 'Waste management', 'Floor care'],
-    colors: ['Light blue', 'Gray', 'Green', 'Khaki']
+    title: 'Custodial & Janitorial Staff',
+    description: 'Practical, hygienic, and easy-to-maintain uniforms for cleaning and custodial services.',
+    features: ['Easy-care, bleach-resistant fabrics', 'Excellent stain and soil release properties', 'Designed for comfortable movement', 'Maintains a clean, professional look'],
+    image: '/images/education/support-staff-custodial.jpg', // Updated Image
+    workAreas: ['Classroom & hallway cleaning', 'Facility sanitation & hygiene', 'Waste management & recycling', 'Floor care & maintenance'],
+    colors: ['Sanitary Light Blue', 'Clean Grey', 'Service Green', 'Practical Khaki']
   },
   {
-    title: 'Food Service',
-    description: 'Hygienic uniforms for cafeteria and food service personnel',
-    features: ['Food-safe materials', 'Easy washing', 'Stain resistant', 'Hygienic design'],
-    image: '/images/products/corporate-shirts-blouses.jpg',
-    workAreas: ['Kitchen operations', 'Food preparation', 'Serving', 'Cleaning'],
-    colors: ['White', 'Light blue', 'Gray', 'Food service colors']
+    title: 'Food Service & Cafeteria Staff',
+    description: 'Hygienic and professional uniforms for school cafeteria, kitchen, and food service personnel.',
+    features: ['Food-grade safe materials', 'Easy to launder at high temperatures', 'Superior stain and grease resistance', 'Neat, hygienic, and professional design'],
+    image: '/images/education/support-staff-food-service.jpg', // Updated Image
+    workAreas: ['School kitchen operations', 'Student meal preparation', 'Cafeteria serving lines', 'Kitchen cleaning & sanitation'],
+    colors: ['Classic White', 'Hygienic Light Blue', 'Service Grey', 'Optional aprons in school colors']
   },
   {
-    title: 'Transportation',
-    description: 'Professional uniforms for bus drivers and transportation staff',
-    features: ['Comfortable seating', 'Professional appearance', 'Weather protection', 'Easy movement'],
-    image: '/images/products/corporate-polo-shirts.jpg',
-    workAreas: ['Student transportation', 'Vehicle maintenance', 'Route management', 'Safety protocols'],
-    colors: ['Navy blue', 'Transportation colors', 'Safety yellow', 'Reflective options']
+    title: 'Transportation Staff (Bus Drivers)',
+    description: 'Comfortable and professional uniforms for school bus drivers and transportation coordinators.',
+    features: ['Designed for comfortable seating during long routes', 'Clear professional identification', 'Optional weather protection elements', 'Allows for easy movement and safety checks'],
+    image: '/images/education/support-staff-transport.jpg', // Updated Image
+    workAreas: ['Student transportation routes', 'School vehicle maintenance checks', 'Route planning & coordination', 'Ensuring student safety protocols'],
+    colors: ['Transport Navy', 'Driver Blue', 'Safety Yellow accents', 'Optional reflective strips']
   },
   {
-    title: 'Groundskeeping',
-    description: 'Outdoor work uniforms for landscaping and grounds maintenance',
-    features: ['Weather resistant', 'UV protection', 'Durable materials', 'Practical pockets'],
-    image: '/images/products/corporate-polo-shirts.jpg',
-    workAreas: ['Landscaping', 'Sports field maintenance', 'Outdoor facilities', 'Seasonal work'],
-    colors: ['Forest green', 'Khaki', 'Brown', 'Outdoor colors']
+    title: 'Groundskeeping & Landscaping Staff',
+    description: 'Durable outdoor work uniforms designed for school landscaping and grounds maintenance tasks.',
+    features: ['Weather-resistant and UV protective fabrics', 'Highly durable materials for outdoor work', 'Practical pockets for tools and essentials', 'Comfortable for physical labor'],
+    image: '/images/education/support-staff-grounds.jpg', // Updated Image
+    workAreas: ['School grounds landscaping', 'Sports field maintenance & preparation', 'Outdoor facility upkeep', 'Seasonal planting and grounds work'],
+    colors: ['Groundskeep Green', 'Earth Khaki', 'Workwear Brown', 'Outdoor Utility Blue']
   }
 ]
 
@@ -134,19 +141,19 @@ export default function SupportStaffPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
-      <nav className="bg-gray-50 py-4">
+      <nav aria-label="Breadcrumb" className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-blue-600">Home</Link>
-            <span>/</span>
-            <Link href="/shop/" className="hover:text-blue-600">Shop</Link>
-            <span>/</span>
-            <Link href="/shop/education/" className="hover:text-blue-600">Education</Link>
-            <span>/</span>
-            <Link href="/shop/education/staff-uniforms/" className="hover:text-blue-600">Staff Uniforms</Link>
-            <span>/</span>
-            <span className="text-gray-900">Support Staff</span>
-          </div>
+          <ol className="flex items-center space-x-2 text-sm text-gray-600">
+            <li><Link href="/" className="hover:text-blue-600">Home</Link></li>
+            <li><span aria-hidden="true">/</span></li>
+            <li><Link href="/shop/" className="hover:text-blue-600">Shop</Link></li>
+            <li><span aria-hidden="true">/</span></li>
+            <li><Link href="/shop/education/" className="hover:text-blue-600">Education Uniforms</Link></li>
+            <li><span aria-hidden="true">/</span></li>
+            <li><Link href="/shop/education/staff-uniforms/" className="hover:text-blue-600">Staff Uniforms</Link></li>
+            <li><span aria-hidden="true">/</span></li>
+            <li><span className="text-gray-900" aria-current="page">Support Staff Uniforms</span></li>
+          </ol>
         </div>
       </nav>
 
@@ -154,9 +161,10 @@ export default function SupportStaffPage() {
       <section className="relative py-16 sm:py-24 bg-gradient-to-r from-orange-600 to-red-700">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="/images/products/corporate-polo-shirts.jpg"
-            alt="Support staff uniforms background"
+            src="/images/education/support-staff-hero.jpg" // Updated Image
+            alt="Professional uniforms for education support staff in Saudi Arabia" // Improved Alt Text
             fill
+            priority // Added Priority for LCP
             className="object-cover"
           />
         </div>
@@ -231,7 +239,7 @@ export default function SupportStaffPage() {
                 <div className="relative h-48">
                   <Image
                     src={role.image}
-                    alt={role.title}
+                    alt={`Professional uniform for ${role.title} in educational institutions`} // Improved Alt Text
                     fill
                     className="object-cover"
                   />
@@ -372,12 +380,46 @@ export default function SupportStaffPage() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/products/corporate-shirts-blouses.jpg"
-                alt="Support staff in professional uniforms"
+                src="/images/education/support-staff-benefits.jpg" // Updated Image
+                alt="UNEOM education support staff uniforms demonstrating durability and comfort" // Improved Alt Text
                 fill
                 className="object-cover"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section Placeholder */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Valued by School Operations Teams</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              See why educational institutions in Saudi Arabia trust UNEOM for their support staff uniforms.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              { name: "Mr. Ibrahim Al-Harbi", school: "King Fahd Model School, Riyadh", quote: "[Placeholder: Testimonial on the durability and functionality of maintenance and security uniforms provided by UNEOM.]" },
+              { name: "Ms. Aisha Al-Ghamdi", school: "Jeddah International Preparatory School", quote: "[Placeholder: Testimonial focusing on the professional appearance and comfort of custodial and food service staff uniforms.]" },
+            ].map((testimonial, i) => (
+              <div key={i} className="bg-gray-50 p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <Image src="/images/authors/avatar-placeholder.jpg" alt={`Testimonial from ${testimonial.name}`} width={48} height={48} className="rounded-full mr-4" />
+                  <div>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500">{testimonial.school}</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 italic">"{testimonial.quote}"</p>
+                <div className="flex mt-3">
+                  {[...Array(5)].map((_, starIndex) => (
+                    <StarSolidIcon key={starIndex} className="h-5 w-5 text-yellow-400" />
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -387,27 +429,27 @@ export default function SupportStaffPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Safety and Compliance
+              Prioritizing Safety and Institutional Standards
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our uniforms meet safety standards and compliance requirements for educational institutions.
+              Our support staff uniforms are designed to meet rigorous safety standards and uphold the professional image of your educational institution in Saudi Arabia.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-6 shadow-md text-center">
               <ShieldCheckIcon className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Safety Standards</h3>
-              <p className="text-gray-600">Compliant with workplace safety regulations and standards</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Adherence to Safety Standards</h3>
+              <p className="text-gray-600">Uniforms compliant with relevant KSA workplace safety regulations for various support roles.</p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md text-center">
               <ClipboardDocumentListIcon className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Quality Assurance</h3>
-              <p className="text-gray-600">Rigorous quality control and testing procedures</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Assured Quality & Durability</h3>
+              <p className="text-gray-600">Subjected to rigorous quality control and testing to ensure long-lasting performance.</p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-md text-center">
               <SparklesIcon className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Professional Standards</h3>
-              <p className="text-gray-600">Maintains institutional image and professional appearance</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Upholding Professional Image</h3>
+              <p className="text-gray-600">Contributes to a consistent and professional institutional image across all staff levels.</p>
             </div>
           </div>
         </div>
@@ -417,27 +459,54 @@ export default function SupportStaffPage() {
       <section className="py-16 bg-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Equip Your Support Team
+            Equip Your Essential Support Team with UNEOM
           </h2>
           <p className="text-xl text-orange-200 mb-8 max-w-2xl mx-auto">
-            Contact our uniform specialists to discuss your support staff uniform needs and ensure your team has the professional, functional attire they deserve.
+            Ensure your educational institution's support staff in Saudi Arabia are equipped with professional, durable, and functional uniforms. Contact UNEOM's specialists today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/quote/?category=support-staff-uniform"
+              href="/quote/?category=education-support-staff"
               className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
             >
-              Get Support Staff Quote
+              Get Support Staff Uniform Quote
             </Link>
             <Link
               href="/shop/education/staff-uniforms/"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors text-lg"
             >
-              View All Staff Uniforms
+              View All Education Staff Uniforms
             </Link>
           </div>
         </div>
       </section>
+
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Education Support Staff Uniforms | UNEOM Saudi Arabia",
+          "description": "UNEOM offers a comprehensive range of durable and professional uniforms for education support staff in Saudi Arabia, including maintenance, security, custodial, and food service teams.",
+          "url": "https://uneom.com/shop/education/staff-uniforms/support-staff/",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "UNEOM",
+            "url": "https://uneom.com"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://uneom.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Shop", "item": "https://uneom.com/shop/" },
+              { "@type": "ListItem", "position": 3, "name": "Education Uniforms", "item": "https://uneom.com/shop/education/" },
+              { "@type": "ListItem", "position": 4, "name": "Staff Uniforms", "item": "https://uneom.com/shop/education/staff-uniforms/" },
+              { "@type": "ListItem", "position": 5, "name": "Support Staff Uniforms", "item": "https://uneom.com/shop/education/staff-uniforms/support-staff/" }
+            ]
+          }
+        }) }}
+      />
     </div>
   )
 }
