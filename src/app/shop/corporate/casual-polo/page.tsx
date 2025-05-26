@@ -1,269 +1,240 @@
-'use client';
+import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import { 
+  CheckCircleIcon,
+  ArrowRightIcon,
+  SparklesIcon,
+  ShieldCheckIcon,
+  UserGroupIcon, // For team/casual corporate
+  SunIcon // For comfort/breathability
+} from '@heroicons/react/24/outline'
 
-import Image from 'next/image';
-import Container from '@/components/ui/Container';
-import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
-import Breadcrumbs from '@/components/ui/Breadcrumbs';
-import ProductCard from '@/components/ui/ProductCard';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+export const metadata: Metadata = {
+  title: 'Corporate Casual Polo Shirts | Premium & Performance Polos | UNEOM',
+  description: 'Discover our range of corporate casual polo shirts. Comfortable, stylish, and customizable polos perfect for a smart casual corporate look, team events, and promotional wear in Saudi Arabia.',
+  keywords: 'corporate polo shirts, casual polo KSA, performance polo shirts, premium corporate polos, team polo shirts, embroidered polos Saudi Arabia',
+  openGraph: {
+    title: 'Corporate Casual Polo Shirts | Premium & Performance Polos | UNEOM',
+    description: 'Stylish and comfortable corporate casual polo shirts. Ideal for smart casual work environments and team branding.',
+    images: ['/images/products/corporate/casual-polo-collection.jpg'],
+  },
+}
 
-export const dynamic = 'force-static';
-
-const featuredPolos = [
+const poloCategories = [
   {
-    id: '1',
-    name: 'Premium Corporate Polo Shirt',
-    image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
-    price: 'Request Quote',
-    href: '/shop/corporate/casual-polo/premium-corporate/',
-    category: 'Premium',
-    isNew: true
+    name: 'Classic Corporate Polos',
+    description: 'Timeless polo designs with durable fabrics, perfect for everyday smart casual wear.',
+    image: '/images/products/corporate/classic-polo-shirts.jpg',
+    href: '/shop/corporate/casual-polo/classic/',
+    features: ['Pique cotton blends', 'Traditional collar & placket', 'Wide color range']
   },
   {
-    id: '2',
-    name: 'Classic Business Polo',
-    image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
-    price: 'Request Quote',
-    href: '/shop/corporate/casual-polo/classic-business/',
-    category: 'Classic',
-    isFeatured: true
-  },
-  {
-    id: '3',
-    name: 'Performance Polo Shirt',
-    image: '/images/woman-in-business-casual-attire-smiling-SBI-300979979.jpg',
-    price: 'Request Quote',
+    name: 'Performance Polo Shirts',
+    description: 'Engineered with moisture-wicking and breathable fabrics for active professionals.',
+    image: '/images/products/corporate/performance-polo-shirts.jpg',
     href: '/shop/corporate/casual-polo/performance/',
-    category: 'Performance'
+    features: ['Moisture-wicking technology', 'UV protection options', 'Lightweight & breathable']
+  },
+  {
+    name: 'Premium Corporate Polos',
+    description: 'Luxurious materials and refined details for an elevated smart casual statement.',
+    image: '/images/products/corporate/premium-corporate-polos.jpg',
+    href: '/shop/corporate/casual-polo/premium-corporate/',
+    features: ['Mercerized cotton or fine blends', 'Sophisticated detailing', 'Enhanced durability & feel']
   }
-];
+]
+
+const whyChooseUneomPolos = [
+  {
+    icon: SparklesIcon,
+    title: 'Versatile Styles',
+    description: 'A wide selection of polo shirts, from classic to performance-oriented, to suit various corporate needs and preferences.'
+  },
+  {
+    icon: ShieldCheckIcon,
+    title: 'Quality & Durability',
+    description: 'Constructed with high-quality materials and techniques to ensure longevity and maintain a professional appearance.'
+  },
+  {
+    icon: SunIcon,
+    title: 'Comfort & Wearability',
+    description: 'Designed for all-day comfort, with options for breathability, moisture-wicking, and stretch for active roles.'
+  },
+  {
+    icon: UserGroupIcon,
+    title: 'Excellent for Branding',
+    description: 'Ideal canvas for embroidery or printing, making them perfect for team uniforms and promotional activities.'
+  }
+]
 
 export default function CasualPoloPage() {
   return (
-    <div>
-      <EnhancedSEO2025 
-        title="Corporate Casual Polo Shirts | Business Casual Attire | Uneom"
-        description="Premium corporate polo shirts for business casual environments. Professional polo shirts designed for modern workplaces and corporate teams in Saudi Arabia."
-        canonicalUrl="https://uneom.com/shop/corporate/casual-polo/"
-        locale="en"
-      />
+    <div className="min-h-screen bg-white">
+      {/* Breadcrumb */}
+      <nav className="bg-gray-50 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center space-x-2 text-sm text-gray-600">
+            <Link href="/" className="hover:text-blue-600">Home</Link>
+            <span>/</span>
+            <Link href="/shop/" className="hover:text-blue-600">Shop</Link>
+            <span>/</span>
+            <Link href="/shop/corporate/" className="hover:text-blue-600">Corporate</Link>
+            <span>/</span>
+            <span className="text-gray-900">Casual Polo Shirts</span>
+          </div>
+        </div>
+      </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-800 to-primary-700 text-white py-20">
-        <div className="absolute inset-0 opacity-30">
+      <section className="relative py-16 sm:py-24 bg-gradient-to-r from-teal-500 to-cyan-600">
+        <div className="absolute inset-0 opacity-20">
           <Image
-            src="/images/woman-in-business-casual-attire-smiling-SBI-300979979.jpg"
-            alt="Corporate Casual Polo Shirts"
+            src="/images/banners/polo-shirts-banner.jpg" 
+            alt="Casual polo shirts background"
             fill
             className="object-cover"
-            priority
           />
         </div>
-        
-        <Container>
-          <Breadcrumbs
-            items={[
-              { label: 'Home', href: '/' },
-              { label: 'Shop', href: '/shop' },
-              { label: 'Corporate', href: '/shop/corporate' },
-              { label: 'Casual Polo', href: '/shop/corporate/casual-polo' }
-            ]}
-            className="text-white/80 mb-6 relative z-10"
-          />
-          
-          <div className="relative z-10 max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Corporate Casual Polo Shirts</h1>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl">
-              Premium corporate polo shirts designed for business casual environments. Combining professional appearance with comfort and versatility for the modern workplace.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                href="/quote"
-                variant="secondary" 
-                size="lg"
-              >
-                Request Polo Quote
-              </Button>
-              <Button 
-                href="#featured-polos"
-                variant="outline" 
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-primary-700"
-              >
-                View Collection
-              </Button>
-            </div>
-          </div>
-        </Container>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Corporate Casual Polo Shirts
+          </h1>
+          <p className="text-xl text-teal-50 mb-10 max-w-3xl mx-auto">
+            Achieve a smart, relaxed, and professional look with our versatile collection of corporate casual polo shirts. Perfect for team branding, events, or everyday comfort in Saudi Arabia.
+          </p>
+          <Link
+            href="/quote/?category=polo-shirts"
+            className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+          >
+            Get a Quote for Your Team
+          </Link>
+        </div>
       </section>
 
-      <main className="py-16">
-        <Container>
-          {/* Introduction */}
-          <section className="mb-16">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <SectionHeading subtitle="Business Casual Excellence">
-                  Professional Comfort Redefined
-                </SectionHeading>
-                <p className="text-lg text-gray-600 mb-6">
-                  Our corporate polo shirt collection bridges the gap between formal business attire and casual comfort. Each polo is designed to maintain professional standards while providing the flexibility and comfort needed in today's dynamic work environment.
-                </p>
-                <p className="text-gray-600 mb-8">
-                  Perfect for business casual offices, team events, and client meetings where a relaxed yet professional appearance is desired. Our polos ensure you look polished while feeling comfortable throughout your workday.
-                </p>
-                <Button href="/contact" variant="primary" size="lg">
-                  Discuss Polo Requirements
-                </Button>
-              </div>
-              <div className="relative aspect-square rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg"
-                  alt="Business Casual Professional"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </section>
-
-          {/* Featured Polos */}
-          <section id="featured-polos" className="mb-16">
-            <SectionHeading subtitle="Corporate Polo Collection" centered>
-              Business Casual Excellence
-            </SectionHeading>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              {featuredPolos.map((polo) => (
-                <ProductCard key={polo.id} product={polo} showAddToQuote={true} />
-              ))}
-            </div>
-            
-            <div className="text-center mt-12">
-              <Button href="/shop/corporate/" variant="primary" size="lg">
-                View All Corporate Attire
-              </Button>
-            </div>
-          </section>
-
-          {/* Polo Features */}
-          <section className="mb-16 bg-gray-50 rounded-2xl p-8">
-            <SectionHeading subtitle="Corporate Polo Features" centered>
-              Professional Comfort Technology
-            </SectionHeading>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Moisture Wicking</h3>
-                <p className="text-gray-600 text-sm">Advanced fabric technology keeps you cool and dry</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.414-4.414a2 2 0 00-2.828 0L12 9.172 9.414 6.586a2 2 0 00-2.828 0l-4 4a2 2 0 000 2.828l4 4a2 2 0 002.828 0L12 14.828l2.586 2.586a2 2 0 002.828 0l4-4a2 2 0 000-2.828l-4-4z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Professional Fit</h3>
-                <p className="text-gray-600 text-sm">Tailored cut that maintains professional silhouette</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Premium Materials</h3>
-                <p className="text-gray-600 text-sm">High-quality cotton blends for durability and comfort</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Custom Branding</h3>
-                <p className="text-gray-600 text-sm">Company logo embroidery and customization options</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Business Casual Benefits */}
-          <section className="mb-16">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="relative aspect-square rounded-xl overflow-hidden">
-                <Image
-                  src="/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg"
-                  alt="Business Casual Benefits"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <SectionHeading subtitle="Business Casual Benefits">
-                  Modern Workplace Advantages
-                </SectionHeading>
-                <p className="text-lg text-gray-600 mb-6">
-                  Corporate polo shirts offer the perfect balance between professionalism and comfort, making them ideal for today's flexible work environments.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Versatile for various business settings
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Comfortable for all-day wear
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Easy care and maintenance
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Cost-effective professional wardrobe solution
-                  </li>
-                </ul>
-                <Button href="/services/custom-design/" variant="primary" size="lg">
-                  Customize Corporate Polos
-                </Button>
-              </div>
-            </div>
-          </section>
-
-          {/* Final CTA */}
-          <section className="text-center bg-primary-50 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold mb-4">Ready to Embrace Business Casual Excellence?</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Upgrade your corporate wardrobe with premium polo shirts that combine professional appearance with modern comfort for today's dynamic workplace.
+      {/* Polo Categories Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Explore Our Polo Shirt Collections
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              From classic comfort to high-performance wear, find the ideal polo for your corporate needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/quote" variant="primary" size="lg">
-                Get Corporate Polo Quote
-              </Button>
-              <Button href="/contact" variant="outline" size="lg">
-                Schedule Team Consultation
-              </Button>
-            </div>
-          </section>
-        </Container>
-      </main>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {poloCategories.map((category) => (
+              <div key={category.name} className="bg-gray-50 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <div className="relative h-64 w-full">
+                  <Image
+                    src={category.image}
+                    alt={category.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">{category.name}</h3>
+                  <p className="text-gray-600 mb-4 flex-grow">{category.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {category.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-700">
+                        <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href={category.href}
+                    className="mt-auto bg-teal-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors inline-flex items-center justify-center"
+                  >
+                    Discover {category.name}
+                    <ArrowRightIcon className="ml-2 h-5 w-5" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Uneom Polos Section */}
+      <section className="py-16 bg-cyan-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              The UNEOM Advantage for Corporate Polos
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We provide polo shirts that combine style, comfort, and practicality, perfectly suited for the modern corporate environment.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyChooseUneomPolos.map((reason) => (
+              <div key={reason.title} className="bg-white p-6 rounded-lg shadow-md text-center">
+                <div className="flex justify-center mb-4">
+                  <reason.icon className="h-12 w-12 text-cyan-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{reason.title}</h3>
+                <p className="text-gray-600">{reason.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Customization CTA Section */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+           <Image 
+            src="/images/icons/embroidery-machine.svg" 
+            alt="Embroidery Icon" 
+            width={80} 
+            height={80} 
+            className="mx-auto mb-6"
+          />
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Brand Your Polos: Custom Embroidery & Printing
+          </h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Make your mark with custom-branded polo shirts. We offer high-quality embroidery and printing services to showcase your company logo, team name, or event branding with precision and style.
+          </p>
+          <Link
+            href="/services/custom-design/#embroidery-printing"
+            className="bg-cyan-700 text-white px-10 py-3 rounded-lg font-semibold hover:bg-cyan-800 transition-colors text-lg inline-flex items-center"
+          >
+            Explore Branding Options
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Contact Us Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Find the Perfect Polo Solution for Your Business
+          </h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Whether for daily wear, corporate events, or promotional activities, our team can help you select or create the ideal polo shirts.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact/"
+              className="bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors text-lg"
+            >
+              Discuss Your Polo Needs
+            </Link>
+            <Link
+              href="/industries/corporate/"
+              className="border-2 border-teal-600 text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors text-lg"
+            >
+              View Corporate Solutions
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
-  );
+  )
 }

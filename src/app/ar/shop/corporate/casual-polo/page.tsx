@@ -1,238 +1,240 @@
-'use client';
+import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import { 
+  CheckCircleIcon,
+  ArrowRightIcon,
+  SparklesIcon,
+  ShieldCheckIcon,
+  UserGroupIcon, 
+  SunIcon 
+} from '@heroicons/react/24/outline'
 
-import Image from 'next/image';
-import Container from '@/components/ui/Container';
-import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
-import Breadcrumbs from '@/components/ui/Breadcrumbs';
-import ProductCard from '@/components/ui/ProductCard';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
-import IconsComponent from '@/components/ui/Icons';
+export const metadata: Metadata = {
+  title: 'قمصان بولو كاجوال للشركات | بولو فاخر وعالي الأداء | يونيوم',
+  description: 'اكتشف مجموعتنا من قمصان البولو الكاجوال للشركات. قمصان بولو مريحة وأنيقة وقابلة للتخصيص، مثالية لمظهر شركات كاجوال أنيق، وفعاليات الفرق، والملابس الترويجية في المملكة العربية السعودية.',
+  keywords: 'قمصان بولو شركات, بولو كاجوال السعودية, قمصان بولو عالية الأداء, بولو شركات فاخر, قمصان بولو للفرق, بولو مطرز السعودية',
+  openGraph: {
+    title: 'قمصان بولو كاجوال للشركات | بولو فاخر وعالي الأداء | يونيوم',
+    description: 'قمصان بولو كاجوال أنيقة ومريحة للشركات. مثالية لبيئات العمل الكاجوال الأنيقة وعلامات الفرق التجارية.',
+    images: ['/images/products/corporate/casual-polo-collection.jpg'],
+  },
+}
 
-export const dynamic = 'force-static';
-
-const relatedProducts = [
+const poloCategories = [
   {
-    id: 'business-shirts-ar',
-    name: 'قمصان العمل الرسمية الأنيقة',
-    image: '/images/products/corporate/business-shirt-featured.jpg', // Placeholder
-    price: 'اطلب عرض سعر',
-    href: '/ar/shop/corporate/business-shirts/',
-    category: 'قمصان رسمية',
+    name: 'بولو شركات كلاسيكي',
+    description: 'تصاميم بولو خالدة مع أقمشة متينة، مثالية للملابس الكاجوال الأنيقة اليومية.',
+    image: '/images/products/corporate/classic-polo-shirts.jpg',
+    href: '/ar/shop/corporate/casual-polo/classic/',
+    features: ['مزيج قطن بيكيه', 'ياقة وأزرار تقليدية', 'مجموعة ألوان واسعة']
   },
   {
-    id: 'executive-office-attire-ar',
-    name: 'ملابس المكتب التنفيذية',
-    image: '/images/products/corporate/office-attire-featured.jpg', // Placeholder
-    price: 'اطلب عرض سعر',
-    href: '/ar/shop/corporate/executive-office-attire/',
-    category: 'ملابس مكتبية',
+    name: 'قمصان بولو عالية الأداء',
+    description: 'مصممة بأقمشة تمتص الرطوبة وتسمح بالتهوية للمهنيين النشطين.',
+    image: '/images/products/corporate/performance-polo-shirts.jpg',
+    href: '/ar/shop/corporate/casual-polo/performance/',
+    features: ['تقنية امتصاص الرطوبة', 'خيارات حماية من الأشعة فوق البنفسجية', 'خفيفة الوزن وتسمح بالتهوية']
   },
-];
+  {
+    name: 'بولو شركات فاخر',
+    description: 'مواد فاخرة وتفاصيل مصقولة لإطلالة كاجوال أنيقة وراقية.',
+    image: '/images/products/corporate/premium-corporate-polos.jpg',
+    href: '/ar/shop/corporate/casual-polo/premium-corporate/',
+    features: ['قطن مرسيري أو مزيج فاخر', 'تفاصيل أنيقة', 'متانة وشعور معزز']
+  }
+]
 
-export default function CasualPoloPageAr() {
+const whyChooseUneomPolos = [
+  {
+    icon: SparklesIcon,
+    title: 'أنماط متعددة الاستخدامات',
+    description: 'مجموعة واسعة من قمصان البولو، من الكلاسيكية إلى الموجهة نحو الأداء، لتناسب مختلف احتياجات وتفضيلات الشركات.'
+  },
+  {
+    icon: ShieldCheckIcon,
+    title: 'جودة ومتانة',
+    description: 'مصنوعة من مواد وتقنيات عالية الجودة لضمان طول العمر والحفاظ على مظهر احترافي.'
+  },
+  {
+    icon: SunIcon,
+    title: 'راحة وقابلية للارتداء',
+    description: 'مصممة للراحة طوال اليوم، مع خيارات للتهوية وامتصاص الرطوبة والتمدد للأدوار النشطة.'
+  },
+  {
+    icon: UserGroupIcon,
+    title: 'ممتازة للعلامات التجارية',
+    description: 'قماش مثالي للتطريز أو الطباعة، مما يجعلها مثالية لأزياء الفرق والأنشطة الترويجية.'
+  }
+]
+
+export default function CasualPoloPageAR() {
   return (
-    <div dir="rtl" className="font-arabic">
-      <EnhancedSEO2025
-        title="قمصان بولو للشركات | قمصان بولو مريحة وأنيقة بشعار شركتك | يونيوم"
-        description="مجموعة متنوعة من قمصان بولو المريحة والأنيقة للشركات والمؤسسات في المملكة العربية السعودية. خيارات تخصيص واسعة لتضمين شعار شركتك وألوان هويتك."
-        canonicalUrl="https://uneom.com/ar/shop/corporate/casual-polo/"
-        locale="ar"
-        image="/images/products/corporate/polo-shirt-main.jpg" 
-      />
+    <div className="min-h-screen bg-white" dir="rtl">
+      {/* Breadcrumb */}
+      <nav className="bg-gray-50 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center space-x-2 space-x-reverse text-sm text-gray-600">
+            <Link href="/ar/" className="hover:text-blue-600">الرئيسية</Link>
+            <span>/</span>
+            <Link href="/ar/shop/" className="hover:text-blue-600">المتجر</Link>
+            <span>/</span>
+            <Link href="/ar/shop/corporate/" className="hover:text-blue-600">ملابس الشركات</Link>
+            <span>/</span>
+            <span className="text-gray-900">قمصان بولو كاجوال</span>
+          </div>
+        </div>
+      </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-teal-600 to-green-500 text-white py-20">
-        <div className="absolute inset-0 opacity-25">
+      <section className="relative py-16 sm:py-24 bg-gradient-to-r from-teal-500 to-cyan-600">
+        <div className="absolute inset-0 opacity-20">
           <Image
-            src="/images/products/corporate/polo-shirts-hero-bg.jpg" // Placeholder
-            alt="خلفية قمصان بولو للشركات"
+            src="/images/banners/polo-shirts-banner.jpg" 
+            alt="خلفية قمصان بولو كاجوال"
             fill
             className="object-cover"
-            priority
           />
         </div>
-        
-        <Container>
-          <Breadcrumbs
-            items={[
-              { label: 'الرئيسية', href: '/ar' },
-              { label: 'المتجر', href: '/ar/shop' },
-              { label: 'أزياء الشركات', href: '/ar/shop/corporate' },
-              { label: 'قمصان بولو كاجوال', href: '/ar/shop/corporate/casual-polo' },
-            ]}
-            className="text-white/80 mb-6 relative z-10"
-          />
-          
-          <div className="relative z-10 max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">قمصان بولو مريحة وأنيقة للشركات</h1>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl">
-              اكتشف مجموعتنا من قمصان البولو عالية الجودة، الخيار المثالي للملابس الكاجوال الأنيقة في بيئة العمل، الفعاليات المؤسسية، أو كجزء من الهدايا الترويجية.
-            </p>
-            <Button 
-              href="/ar/quote?product=casual-polo"
-              variant="secondary" 
-              size="lg"
-              className="bg-white text-teal-700 hover:bg-gray-100"
-            >
-              اطلب عرض سعر لقمصان البولو
-            </Button>
-          </div>
-        </Container>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            قمصان بولو كاجوال للشركات
+          </h1>
+          <p className="text-xl text-teal-50 mb-10 max-w-3xl mx-auto">
+            احصل على مظهر أنيق ومريح واحترافي مع مجموعتنا المتنوعة من قمصان البولو الكاجوال للشركات. مثالية لعلامات الفرق التجارية والفعاليات أو الراحة اليومية في المملكة العربية السعودية.
+          </p>
+          <Link
+            href="/ar/quote/?category=polo-shirts"
+            className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+          >
+            احصل على عرض أسعار لفريقك
+          </Link>
+        </div>
       </section>
 
-      <main className="py-16">
-        <Container>
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            {/* Product Image Gallery */}
-            <div className="relative">
-              <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden shadow-xl">
-                <Image
-                  src="/images/products/corporate/polo-shirt-main.jpg" 
-                  alt="قميص بولو أزرق بشعار شركة من يونيوم"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              {/* Thumbnails */}
-              <div className="grid grid-cols-4 gap-2 mt-4">
-                {['/images/products/corporate/polo-thumb1.jpg', 
-                  '/images/products/corporate/polo-thumb2.jpg', 
-                  '/images/products/corporate/polo-thumb3.jpg', 
-                  '/images/products/corporate/polo-thumb4.jpg'].map((thumb, idx) => (
-                  <div key={idx} className="aspect-w-1 aspect-h-1 rounded overflow-hidden border border-gray-200">
-                    <Image src={thumb} alt={`قميص بولو - صورة مصغرة ${idx+1}`} fill className="object-cover hover:opacity-75 transition-opacity" />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Product Details */}
-            <div>
-              <SectionHeading subtitle="أناقة عملية لكل يوم">
-                قمصان بولو تعزز هوية فريقك
-              </SectionHeading>
-              <p className="text-gray-700 mb-6 text-lg leading-relaxed">
-                تعتبر قمصان البولو خياراً مثالياً للشركات التي تبحث عن زي موحد يجمع بين المظهر الاحترافي والراحة اليومية. نقدم في يونيوم تشكيلة واسعة من قمصان البولو المصنوعة من أجود الخامات، مع خيارات تخصيص لتعزيز علامتك التجارية.
-              </p>
-              
-              <h3 className="text-xl font-semibold mb-3 text-primary-700">لماذا تختار قمصان البولو من يونيوم؟</h3>
-              <ul className="list-disc pr-5 space-y-2 text-gray-600 mb-6">
-                <li>أقمشة عالية الجودة (قطن بيكيه، خلطات قطن وبوليستر، أقمشة تقنية).</li>
-                <li>تصاميم مريحة تسمح بحرية الحركة ومناسبة للاستخدام اليومي.</li>
-                <li>مجموعة واسعة من الألوان لتناسب هوية شركتك.</li>
-                <li>خيارات تطريز أو طباعة شعار الشركة بدقة عالية.</li>
-                <li>متانة عالية لتحمل الغسيل المتكرر والاستخدام المكثف.</li>
-                <li>مثالية للموظفين، الفعاليات، الفرق الرياضية، والهدايا الترويجية.</li>
-              </ul>
-
-              <h3 className="text-xl font-semibold mb-3 text-primary-700">المميزات الرئيسية:</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-start">
-                  <IconsComponent name="check" className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                  <p className="text-gray-600 text-sm">أقمشة قابلة للتنفس توفر راحة طوال اليوم.</p>
-                </div>
-                <div className="flex items-start">
-                  <IconsComponent name="check" className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                  <p className="text-gray-600 text-sm">مقاومة للانكماش وبهتان الألوان.</p>
-                </div>
-                <div className="flex items-start">
-                  <IconsComponent name="check" className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                  <p className="text-gray-600 text-sm">قصات عصرية تناسب الرجال والنساء.</p>
-                </div>
-                <div className="flex items-start">
-                  <IconsComponent name="check" className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                  <p className="text-gray-600 text-sm">ياقات وأساور محبوكة لمزيد من المتانة والأناقة.</p>
-                </div>
-                <div className="flex items-start">
-                  <IconsComponent name="check" className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                  <p className="text-gray-600 text-sm">إمكانية إضافة تفاصيل مخصصة مثل أشرطة ملونة أو أزرار خاصة.</p>
-                </div>
-                <div className="flex items-start">
-                  <IconsComponent name="check" className="h-5 w-5 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                  <p className="text-gray-600 text-sm">متوفرة بكميات كبيرة للشركات والمؤسسات.</p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <Button href="/ar/quote?product=casual-polo" variant="primary" size="lg">
-                  اطلب عرض سعر الآن
-                </Button>
-                <Button href="/ar/contact" variant="outline" size="lg">
-                  تحدث إلى متخصص
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Detailed Description / Tabs Section */}
-          <section className="mb-16">
-            <h2 className="text-2xl font-semibold mb-6 text-center text-primary-800">جودة وراحة تعزز أداء فريقك</h2>
-            <div className="bg-gray-50 p-8 rounded-lg shadow">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-secondary-700">أنواع الأقمشة:</h3>
-                  <p className="text-gray-600 mb-4">
-                    نقدم مجموعة متنوعة من الأقمشة لتلبية مختلف الاحتياجات والميزانيات:
-                  </p>
-                  <ul className="list-disc pr-5 space-y-1 text-gray-600">
-                    <li><strong>قطن بيكيه (Piqué Cotton):</strong> المظهر الكلاسيكي لقمصان البولو، يوفر تهوية جيدة وملمساً مميزاً.</li>
-                    <li><strong>قطن جيرسي (Jersey Cotton):</strong> ناعم ومريح، مثالي للاستخدام اليومي.</li>
-                    <li><strong>خلطات القطن والبوليستر:</strong> تجمع بين نعومة القطن ومتانة البوليستر ومقاومته للتجاعيد.</li>
-                    <li><strong>أقمشة تقنية (Performance Fabrics):</strong> طاردة للرطوبة، سريعة الجفاف، ومناسبة للأنشطة الخارجية أو البيئات الحارة.</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-secondary-700">التخصيص والعلامة التجارية:</h3>
-                  <p className="text-gray-600 mb-4">
-                    اجعل قمصان البولو جزءاً من هوية علامتك التجارية:
-                  </p>
-                  <ul className="list-disc pr-5 space-y-1 text-gray-600">
-                    <li>تطريز شعار الشركة بدقة عالية على الصدر، الكم، أو الياقة.</li>
-                    <li>طباعة حريرية أو رقمية للشعارات والتصاميم المعقدة.</li>
-                    <li>اختيار ألوان القمصان والأزرار والخيوط لتتناسب مع ألوان هويتك.</li>
-                    <li>إضافة بطاقات عنق مخصصة أو ملصقات جانبية.</li>
-                    <li>تصاميم خاصة للرجال والنساء والأطفال.</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="mt-8 text-center">
-                <Button href="/ar/services/custom-design" variant="outline" size="md">
-                  اكتشف خيارات التخصيص الكاملة
-                </Button>
-              </div>
-            </div>
-          </section>
-          
-          {/* Related Products Section */}
-          <section className="mb-16">
-            <SectionHeading subtitle="منتجات ذات صلة" centered>
-              استكمل مظهر فريقك الموحد
-            </SectionHeading>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              {relatedProducts.map((product) => (
-                <ProductCard key={product.id} product={product} showAddToQuote={true} />
-              ))}
-            </div>
-          </section>
-
-          {/* Call to Action Section */}
-          <section className="text-center bg-teal-50 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold mb-4 text-teal-800">هل تبحث عن قمصان بولو عالية الجودة لشركتك؟</h2>
-            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-              تواصل معنا اليوم لمناقشة احتياجاتك من قمصان البولو، ودعنا نساعدك في اختيار أو تصميم القمصان المثالية التي تعزز من صورة فريقك وراحتهم.
+      {/* Polo Categories Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              اكتشف مجموعات قمصان البولو لدينا
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              من الراحة الكلاسيكية إلى ملابس الأداء العالي، اعثر على البولو المثالي لاحتياجات شركتك.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/ar/quote?product=casual-polo" variant="primary" size="lg" className="bg-teal-700 hover:bg-teal-800">
-                اطلب عرض سعر لقمصان البولو
-              </Button>
-              <Button href="/ar/contact" variant="outline" size="lg" className="border-teal-700 text-teal-700 hover:bg-teal-700 hover:text-white">
-                اتصل بنا للاستشارة
-              </Button>
-            </div>
-          </section>
-        </Container>
-      </main>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {poloCategories.map((category) => (
+              <div key={category.name} className="bg-gray-50 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <div className="relative h-64 w-full">
+                  <Image
+                    src={category.image}
+                    alt={category.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">{category.name}</h3>
+                  <p className="text-gray-600 mb-4 flex-grow">{category.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {category.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-700">
+                        <CheckCircleIcon className="h-5 w-5 text-green-500 ml-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href={category.href}
+                    className="mt-auto bg-teal-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors inline-flex items-center justify-center"
+                  >
+                    اكتشف {category.name}
+                    <ArrowRightIcon className="mr-2 h-5 w-5 rotate-180" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Uneom Polos Section */}
+      <section className="py-16 bg-cyan-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              ميزة يونيوم لقمصان البولو للشركات
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              نحن نقدم قمصان بولو تجمع بين الأناقة والراحة والتطبيق العملي، وهي مناسبة تمامًا لبيئة الشركات الحديثة.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyChooseUneomPolos.map((reason) => (
+              <div key={reason.title} className="bg-white p-6 rounded-lg shadow-md text-center">
+                <div className="flex justify-center mb-4">
+                  <reason.icon className="h-12 w-12 text-cyan-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{reason.title}</h3>
+                <p className="text-gray-600">{reason.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Customization CTA Section */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+           <Image 
+            src="/images/icons/embroidery-machine.svg" 
+            alt="أيقونة التطريز" 
+            width={80} 
+            height={80} 
+            className="mx-auto mb-6"
+          />
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            ضع علامتك التجارية على قمصان البولو: تطريز وطباعة مخصصة
+          </h2>
+          <p className="text-lg text-gray-600 mb-8">
+            اترك بصمتك مع قمصان بولو مخصصة تحمل علامتك التجارية. نقدم خدمات تطريز وطباعة عالية الجودة لعرض شعار شركتك أو اسم فريقك أو علامة فعاليتك التجارية بدقة وأناقة.
+          </p>
+          <Link
+            href="/ar/services/custom-design/#embroidery-printing"
+            className="bg-cyan-700 text-white px-10 py-3 rounded-lg font-semibold hover:bg-cyan-800 transition-colors text-lg inline-flex items-center"
+          >
+            اكتشف خيارات العلامات التجارية
+            <ArrowRightIcon className="mr-2 h-5 w-5 rotate-180" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Contact Us Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            اعثر على حل البولو المثالي لعملك
+          </h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            سواء للملابس اليومية أو فعاليات الشركات أو الأنشطة الترويجية، يمكن لفريقنا مساعدتك في اختيار أو إنشاء قمصان البولو المثالية.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/ar/contact/"
+              className="bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors text-lg"
+            >
+              ناقش احتياجات البولو الخاصة بك
+            </Link>
+            <Link
+              href="/ar/industries/corporate/"
+              className="border-2 border-teal-600 text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-teal-50 transition-colors text-lg"
+            >
+              عرض حلول الشركات
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
-  );
+  )
 }

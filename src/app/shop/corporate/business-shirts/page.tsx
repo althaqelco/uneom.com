@@ -1,266 +1,240 @@
-'use client';
+import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import { 
+  CheckCircleIcon,
+  ArrowRightIcon,
+  SparklesIcon,
+  ShieldCheckIcon,
+  UserIcon,
+  TagIcon
+} from '@heroicons/react/24/outline'
 
-import Image from 'next/image';
-import Container from '@/components/ui/Container';
-import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
-import Breadcrumbs from '@/components/ui/Breadcrumbs';
-import ProductCard from '@/components/ui/ProductCard';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
-
-export const dynamic = 'force-static';
-
-const featuredShirts = [
-  {
-    id: '1',
-    name: 'Premium Business Dress Shirt',
-    image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
-    price: 'Request Quote',
-    href: '/shop/corporate/business-shirts/premium-dress/',
-    category: 'Dress Shirts',
-    isNew: true
+export const metadata: Metadata = {
+  title: 'Corporate Business Shirts | Executive Dress Shirts | UNEOM',
+  description: 'Explore our collection of corporate business shirts. Premium quality, comfortable, and stylish dress shirts for executives and professionals in Saudi Arabia. Available in various fits and fabrics.',
+  keywords: 'corporate business shirts, executive dress shirts, professional shirts KSA, mens business shirts, womens business shirts, corporate attire Saudi Arabia',
+  openGraph: {
+    title: 'Corporate Business Shirts | Executive Dress Shirts | UNEOM',
+    description: 'Premium quality corporate business shirts for professionals. Stylish and comfortable options available.',
+    images: ['/images/products/corporate/business-shirts-collection.jpg'],
   },
+}
+
+const shirtCategories = [
   {
-    id: '2',
-    name: 'Classic Business Shirt',
-    image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
-    price: 'Request Quote',
+    name: 'Classic Fit Shirts',
+    description: 'Timeless elegance and comfort for traditional corporate environments.',
+    image: '/images/products/corporate/classic-fit-shirts.jpg',
     href: '/shop/corporate/business-shirts/classic/',
-    category: 'Classic',
-    isFeatured: true
+    features: ['Generous cut', 'Traditional collar styles', 'Durable fabrics']
   },
   {
-    id: '3',
-    name: 'Modern Fit Business Shirt',
-    image: '/images/businessman-checking-documents-and-using-laptop-w-2024-11-01-23-29-12-utc.jpg',
-    price: 'Request Quote',
+    name: 'Modern Fit Shirts',
+    description: 'Contemporary styling with a tailored silhouette for a sharp, professional look.',
+    image: '/images/products/corporate/modern-fit-shirts.jpg',
     href: '/shop/corporate/business-shirts/modern-fit/',
-    category: 'Modern Fit'
+    features: ['Slightly tapered body', 'Modern collar options', 'Stretch fabrics for mobility']
+  },
+  {
+    name: 'Premium Dress Shirts',
+    description: 'Luxurious fabrics and exquisite craftsmanship for discerning executives.',
+    image: '/images/products/corporate/premium-dress-shirts.jpg',
+    href: '/shop/corporate/business-shirts/premium-dress/',
+    features: ['High-thread-count cotton', 'Mother-of-pearl buttons', 'Superior tailoring']
   }
-];
+]
+
+const whyChooseUneomShirts = [
+  {
+    icon: SparklesIcon,
+    title: 'Premium Quality Fabrics',
+    description: 'We source high-quality cotton, blends, and performance fabrics for maximum comfort and durability.'
+  },
+  {
+    icon: UserIcon,
+    title: 'Variety of Fits & Styles',
+    description: 'From classic to modern slim-fit, find the perfect shirt to match your corporate image and personal preference.'
+  },
+  {
+    icon: ShieldCheckIcon,
+    title: 'Durability & Easy Care',
+    description: 'Our shirts are designed to withstand daily wear and frequent washing, many with easy-care or wrinkle-resistant properties.'
+  },
+  {
+    icon: TagIcon,
+    title: 'Customization Options',
+    description: 'Personalize your corporate shirts with logo embroidery, monograms, and specific color choices.'
+  }
+]
 
 export default function BusinessShirtsPage() {
   return (
-    <div>
-      <EnhancedSEO2025 
-        title="Business Shirts | Professional Corporate Dress Shirts | Uneom"
-        description="Premium business shirts for corporate professionals. High-quality dress shirts designed for executives, managers, and business professionals in Saudi Arabia."
-        canonicalUrl="https://uneom.com/shop/corporate/business-shirts/"
-        locale="en"
-      />
+    <div className="min-h-screen bg-white">
+      {/* Breadcrumb */}
+      <nav className="bg-gray-50 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center space-x-2 text-sm text-gray-600">
+            <Link href="/" className="hover:text-blue-600">Home</Link>
+            <span>/</span>
+            <Link href="/shop/" className="hover:text-blue-600">Shop</Link>
+            <span>/</span>
+            <Link href="/shop/corporate/" className="hover:text-blue-600">Corporate</Link>
+            <span>/</span>
+            <span className="text-gray-900">Business Shirts</span>
+          </div>
+        </div>
+      </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-800 to-primary-700 text-white py-20">
-        <div className="absolute inset-0 opacity-30">
+      <section className="relative py-16 sm:py-24 bg-gradient-to-r from-blue-600 to-indigo-700">
+        <div className="absolute inset-0 opacity-20">
           <Image
-            src="/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg"
-            alt="Business Shirts"
+            src="/images/banners/corporate-attire-banner.jpg" 
+            alt="Corporate attire background"
             fill
             className="object-cover"
-            priority
           />
         </div>
-        
-        <Container>
-          <Breadcrumbs
-            items={[
-              { label: 'Home', href: '/' },
-              { label: 'Shop', href: '/shop' },
-              { label: 'Corporate', href: '/shop/corporate' },
-              { label: 'Business Shirts', href: '/shop/corporate/business-shirts' }
-            ]}
-            className="text-white/80 mb-6 relative z-10"
-          />
-          
-          <div className="relative z-10 max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Business Shirts</h1>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl">
-              Premium business shirts designed for corporate professionals. Combining classic elegance with modern functionality for the contemporary business environment.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                href="/quote"
-                variant="secondary" 
-                size="lg"
-              >
-                Request Shirt Quote
-              </Button>
-              <Button 
-                href="#featured-shirts"
-                variant="outline" 
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-primary-700"
-              >
-                View Collection
-              </Button>
-            </div>
-          </div>
-        </Container>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Corporate Business Shirts
+          </h1>
+          <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+            Elevate your professional image with our premium collection of corporate business shirts. Designed for comfort, style, and durability, our shirts are perfect for today's dynamic business environment in Saudi Arabia.
+          </p>
+          <Link
+            href="/quote/"
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+          >
+            Request a Bulk Quote
+          </Link>
+        </div>
       </section>
 
-      <main className="py-16">
-        <Container>
-          {/* Introduction */}
-          <section className="mb-16">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <SectionHeading subtitle="Professional Excellence">
-                  Shirts That Define Success
-                </SectionHeading>
-                <p className="text-lg text-gray-600 mb-6">
-                  Our business shirt collection is crafted for professionals who understand that attention to detail makes all the difference. Each shirt combines superior fabrics with expert tailoring for a polished professional appearance.
-                </p>
-                <p className="text-gray-600 mb-8">
-                  From daily office wear to important presentations, our business shirts ensure you maintain a crisp, professional image that reflects your commitment to excellence.
-                </p>
-                <Button href="/contact" variant="primary" size="lg">
-                  Discuss Shirt Requirements
-                </Button>
-              </div>
-              <div className="relative aspect-square rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg"
-                  alt="Business Professional"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </section>
-
-          {/* Featured Shirts */}
-          <section id="featured-shirts" className="mb-16">
-            <SectionHeading subtitle="Business Shirt Collection" centered>
-              Professional Corporate Attire
-            </SectionHeading>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              {featuredShirts.map((shirt) => (
-                <ProductCard key={shirt.id} product={shirt} showAddToQuote={true} />
-              ))}
-            </div>
-            
-            <div className="text-center mt-12">
-              <Button href="/shop/corporate/" variant="primary" size="lg">
-                View All Corporate Attire
-              </Button>
-            </div>
-          </section>
-
-          {/* Shirt Features */}
-          <section className="mb-16 bg-gray-50 rounded-2xl p-8">
-            <SectionHeading subtitle="Business Shirt Features" centered>
-              Crafted for Professional Excellence
-            </SectionHeading>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Premium Cotton</h3>
-                <p className="text-gray-600 text-sm">High-quality cotton fabrics for comfort and durability</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.414-4.414a2 2 0 00-2.828 0L12 9.172 9.414 6.586a2 2 0 00-2.828 0l-4 4a2 2 0 000 2.828l4 4a2 2 0 002.828 0L12 14.828l2.586 2.586a2 2 0 002.828 0l4-4a2 2 0 000-2.828l-4-4z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Wrinkle Resistant</h3>
-                <p className="text-gray-600 text-sm">Advanced fabric treatment for all-day crisp appearance</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Comfort Fit</h3>
-                <p className="text-gray-600 text-sm">Tailored for comfort and professional silhouette</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM7 3V1m0 18v2m8-10h2m-2 4h2m-2-8h2m-2-4h2" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Easy Care</h3>
-                <p className="text-gray-600 text-sm">Machine washable with minimal ironing required</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Shirt Styles */}
-          <section className="mb-16">
-            <SectionHeading subtitle="Available Styles" centered>
-              Professional Options for Every Occasion
-            </SectionHeading>
-            
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                  <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Dress Shirts</h3>
-                <p className="text-gray-600 mb-4">Formal dress shirts for executive meetings and formal occasions.</p>
-                <Button href="/shop/corporate/business-shirts/dress/" variant="outline" size="sm">
-                  View Dress Shirts
-                </Button>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
-                  <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Business Casual</h3>
-                <p className="text-gray-600 mb-4">Versatile shirts for daily office wear and business casual environments.</p>
-                <Button href="/shop/corporate/business-shirts/casual/" variant="outline" size="sm">
-                  View Casual Shirts
-                </Button>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
-                  <svg className="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Performance Shirts</h3>
-                <p className="text-gray-600 mb-4">Moisture-wicking shirts for active professionals and warm climates.</p>
-                <Button href="/shop/corporate/business-shirts/performance/" variant="outline" size="sm">
-                  View Performance Shirts
-                </Button>
-              </div>
-            </div>
-          </section>
-
-          {/* Final CTA */}
-          <section className="text-center bg-primary-50 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold mb-4">Ready to Upgrade Your Professional Wardrobe?</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Invest in premium business shirts that reflect your professionalism and attention to detail. Make a lasting impression with every interaction.
+      {/* Shirt Categories Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Discover Our Business Shirt Collections
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Find the perfect style to suit your company's image and your team's needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/quote" variant="primary" size="lg">
-                Get Business Shirt Quote
-              </Button>
-              <Button href="/contact" variant="outline" size="lg">
-                Schedule Fitting Consultation
-              </Button>
-            </div>
-          </section>
-        </Container>
-      </main>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {shirtCategories.map((category) => (
+              <div key={category.name} className="bg-gray-50 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <div className="relative h-64 w-full">
+                  <Image
+                    src={category.image}
+                    alt={category.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">{category.name}</h3>
+                  <p className="text-gray-600 mb-4 flex-grow">{category.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {category.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-700">
+                        <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href={category.href}
+                    className="mt-auto bg-blue-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
+                  >
+                    Explore {category.name}
+                    <ArrowRightIcon className="ml-2 h-5 w-5" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Uneom Shirts Section */}
+      <section className="py-16 bg-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Why Choose UNEOM for Your Corporate Shirts?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We are committed to providing high-quality, stylish, and comfortable business shirts that meet the demands of modern professionals.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyChooseUneomShirts.map((reason) => (
+              <div key={reason.title} className="bg-white p-6 rounded-lg shadow-md text-center">
+                <div className="flex justify-center mb-4">
+                  <reason.icon className="h-12 w-12 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{reason.title}</h3>
+                <p className="text-gray-600">{reason.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Customization CTA Section */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Image 
+            src="/images/icons/customization-icon.svg" 
+            alt="Customization Icon" 
+            width={80} 
+            height={80} 
+            className="mx-auto mb-6"
+          />
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Tailored to Your Brand: Custom Business Shirts
+          </h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Reinforce your corporate identity with custom business shirts. We offer logo embroidery, monogramming, specific color matching, and unique design details to create shirts that perfectly represent your brand.
+          </p>
+          <Link
+            href="/services/custom-design/"
+            className="bg-indigo-600 text-white px-10 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-lg inline-flex items-center"
+          >
+            Learn About Customization
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Contact Us Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Ready to Outfit Your Team?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Our specialists are ready to help you select the perfect business shirts for your organization. Contact us today for a consultation or a personalized quote.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact/"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
+            >
+              Contact Our Team
+            </Link>
+            <Link
+              href="/faq/"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-lg"
+            >
+              View FAQs
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
-  );
+  )
 }

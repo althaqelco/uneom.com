@@ -1,296 +1,580 @@
-'use client';
+import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import {
+  DocumentTextIcon,
+  ArrowDownTrayIcon as DownloadIcon,
+  CheckCircleIcon,
+  BuildingOfficeIcon,
+  HeartIcon,
+  CogIcon,
+  UserGroupIcon,
+  ShieldCheckIcon,
+  ClipboardDocumentListIcon,
+  ArrowRightIcon
+} from '@heroicons/react/24/outline'
 
-import React from 'react';
-import ResourcePageLayout from '@/components/layout/ResourcePageLayout';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+export const metadata: Metadata = {
+  title: 'Uniform Policy Templates | Free Downloads | UNEOM Resources',
+  description: 'Download free uniform policy templates for healthcare, corporate, hospitality, and industrial sectors. Comprehensive guidelines and implementation checklists for Saudi Arabian organizations.',
+  keywords: 'uniform policy templates, healthcare uniform policy, corporate dress code, hospitality uniform guidelines, industrial uniform policy, Saudi Arabia uniform standards',
+  openGraph: {
+    title: 'Free Uniform Policy Templates | UNEOM Resources',
+    description: 'Download comprehensive uniform policy templates for your organization',
+    images: ['/images/resources/policy-templates-preview.jpg'],
+  },
+}
+
+const policyTemplates = [
+  {
+    id: 'healthcare',
+    title: 'Healthcare Uniform Policy',
+    description: 'Comprehensive policy template for hospitals, clinics, and medical facilities',
+    icon: HeartIcon,
+    features: [
+      'Infection control guidelines',
+      'Color coding systems',
+      'Antimicrobial requirements',
+      'Maintenance protocols',
+      'Compliance standards'
+    ],
+    fileSize: '2.3 MB',
+    pages: 24,
+    downloadUrl: '/downloads/policy-templates/healthcare-uniform-policy.pdf',
+    previewImage: '/images/resources/healthcare-policy-preview.jpg'
+  },
+  {
+    id: 'corporate',
+    title: 'Corporate Office Policy',
+    description: 'Professional dress code guidelines for corporate environments',
+    icon: BuildingOfficeIcon,
+    features: [
+      'Business attire standards',
+      'Seasonal guidelines',
+      'Cultural considerations',
+      'Brand representation',
+      'Remote work policies'
+    ],
+    fileSize: '1.8 MB',
+    pages: 18,
+    downloadUrl: '/downloads/policy-templates/corporate-office-policy.pdf',
+    previewImage: '/images/resources/corporate-policy-preview.jpg'
+  },
+  {
+    id: 'hospitality',
+    title: 'Hospitality Uniform Policy',
+    description: 'Guidelines for hotels, restaurants, and service industries',
+    icon: UserGroupIcon,
+    features: [
+      'Department-specific uniforms',
+      'Guest interaction standards',
+      'Hygiene requirements',
+      'Seasonal variations',
+      'Brand consistency'
+    ],
+    fileSize: '2.1 MB',
+    pages: 20,
+    downloadUrl: '/downloads/policy-templates/hospitality-uniform-policy.pdf',
+    previewImage: '/images/resources/hospitality-policy-preview.jpg'
+  },
+  {
+    id: 'industrial',
+    title: 'Industrial Manufacturing Policy',
+    description: 'Safety-focused uniform policies for manufacturing and industrial settings',
+    icon: CogIcon,
+    features: [
+      'Safety requirements',
+      'PPE integration',
+      'Hazard-specific guidelines',
+      'Maintenance schedules',
+      'Compliance tracking'
+    ],
+    fileSize: '2.7 MB',
+    pages: 28,
+    downloadUrl: '/downloads/policy-templates/industrial-manufacturing-policy.pdf',
+    previewImage: '/images/resources/industrial-policy-preview.jpg'
+  }
+]
+
+const implementationResources = [
+  {
+    title: 'Implementation Checklist',
+    description: 'Step-by-step guide to implementing uniform policies',
+    downloadUrl: '/downloads/policy-templates/uniform-policy-implementation-checklist.pdf',
+    fileSize: '1.2 MB',
+    icon: ClipboardDocumentListIcon
+  },
+  {
+    title: 'General Policy Template',
+    description: 'Customizable template for any organization type',
+    downloadUrl: '/downloads/policy-templates/general-uniform-policy-template.pdf',
+    fileSize: '1.5 MB',
+    icon: DocumentTextIcon
+  }
+]
+
+const benefits = [
+  {
+    title: 'Legal Compliance',
+    description: 'Ensure your policies meet Saudi labor law requirements and international standards',
+    icon: ShieldCheckIcon
+  },
+  {
+    title: 'Professional Standards',
+    description: 'Maintain consistent professional appearance across your organization',
+    icon: CheckCircleIcon
+  },
+  {
+    title: 'Cost Management',
+    description: 'Clear guidelines help control uniform costs and replacement schedules',
+    icon: CogIcon
+  },
+  {
+    title: 'Employee Clarity',
+    description: 'Eliminate confusion with clear, comprehensive uniform guidelines',
+    icon: UserGroupIcon
+  }
+]
+
+const customizationTips = [
+  {
+    step: '1',
+    title: 'Review Your Industry Requirements',
+    description: 'Consider specific regulations and standards for your sector'
+  },
+  {
+    step: '2',
+    title: 'Adapt to Local Culture',
+    description: 'Ensure policies respect Saudi cultural norms and preferences'
+  },
+  {
+    step: '3',
+    title: 'Include Your Branding',
+    description: 'Incorporate your company logo, colors, and brand guidelines'
+  },
+  {
+    step: '4',
+    title: 'Set Clear Consequences',
+    description: 'Define enforcement procedures and consequences for non-compliance'
+  },
+  {
+    step: '5',
+    title: 'Plan for Updates',
+    description: 'Establish a review schedule to keep policies current'
+  }
+]
 
 export default function PolicyTemplatesPage() {
-  const resourceData = {
-    locale: 'en',
-    title: "Uniform Policy Templates - UNEOM",
-    subtitle: 'Professional policy frameworks by United Uniform Manufacturing Company',
-    heroImage: '/images/resources/policy-templates-hero.jpg',
-    overview: {
-      title: 'Creating Effective Uniform Policies',
-      content: `
-        <p class="mb-4">
-          Well-crafted uniform policies are essential for maintaining consistent appearance standards, 
-          ensuring compliance with industry regulations, and reinforcing organizational identity. 
-          These policies serve as a reference for both employees and management, clearly outlining 
-          expectations and requirements.
-        </p>
-        <p class="mb-4">
-          UNEOM (United Uniform Manufacturing Company) provides customizable policy templates as part of our
-          comprehensive uniform solutions. Based in Saudi Arabia, we understand the unique requirements of
-          Middle Eastern businesses and have developed these templates to address both international standards
-          and local cultural considerations.
-        </p>
-        <p class="mb-4">
-          Download and customize these templates to create clear, effective uniform policies for your organization.
-        </p>
-      `
-    },
-    sections: [
-      {
-        title: 'General Uniform Policy Template',
-        content: `
-          <p class="mb-4">
-            Our comprehensive General Uniform Policy Template provides a framework suitable for most industries 
-            and organizational types. This template covers all essential elements of a robust uniform policy:
-          </p>
-          
-          <div class="mb-6 bg-neutral-50 p-5 rounded-lg">
-            <h4 class="font-bold text-lg mb-3">Template Contents</h4>
-            <ul class="list-disc pl-5 mb-3">
-              <li>Policy purpose and scope</li>
-              <li>General appearance standards</li>
-              <li>Standard uniform components by job role</li>
-              <li>Procedures for obtaining uniform items</li>
-              <li>Care and maintenance responsibilities</li>
-              <li>Enforcement guidelines and consequences for non-compliance</li>
-              <li>Religious and medical accommodation procedures</li>
-              <li>Uniform return procedures upon employment termination</li>
-            </ul>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10" />
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              Free Uniform Policy
+              <span className="text-blue-600 block">Templates</span>
+            </h1>
+            
+            <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+              Download comprehensive, ready-to-use uniform policy templates designed specifically 
+              for Saudi Arabian organizations. Save time and ensure compliance with professional, 
+              legally-sound policies.
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link 
+                href="#templates"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Browse Templates
+              </Link>
+              <Link 
+                href="/contact"
+                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
+              >
+                Custom Policy Service
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Why Use Professional Policy Templates?
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Well-crafted uniform policies protect your organization and create clear expectations.
+            </p>
           </div>
           
-          <div class="border border-primary-200 rounded-lg p-6 mb-6 bg-primary-50">
-            <h4 class="font-bold text-lg mb-3 text-primary-700">Example: Purpose Statement</h4>
-            <div class="bg-white p-4 rounded border border-gray-200 text-sm">
-              <p class="font-medium italic text-neutral-700">
-                "UNEOM requires employees to wear uniforms to present a professional and consistent
-                image to our customers and clients, promote team identity, ensure safety and practicality for job functions,
-                and comply with industry regulations. This policy outlines the standards, procedures, and responsibilities
-                related to company uniforms."
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center group">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors duration-300">
+                  <benefit.icon className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Policy Templates Section */}
+      <section id="templates" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Industry-Specific Policy Templates
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Choose from our collection of professionally crafted templates tailored 
+              to different industries and organizational needs.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {policyTemplates.map((template) => (
+              <div key={template.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="p-8">
+                  <div className="flex items-start space-x-4 mb-6">
+                    <div className="bg-blue-100 p-3 rounded-lg flex-shrink-0">
+                      <template.icon className="h-8 w-8 text-blue-600" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        {template.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        {template.description}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <p className="text-sm font-medium text-gray-700 mb-2">Key Features:</p>
+                      <ul className="space-y-1">
+                        {template.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-sm text-gray-600">
+                            <CheckCircleIcon className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="flex items-center justify-between text-sm text-gray-500">
+                      <span>{template.pages} pages</span>
+                      <span>{template.fileSize}</span>
+                    </div>
+                  </div>
+                  
+                  <Link
+                    href={template.downloadUrl}
+                    className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 text-center flex items-center justify-center"
+                    download
+                  >
+                    <DownloadIcon className="h-5 w-5 mr-2" />
+                    Download Template
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Resources */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Implementation Resources
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Additional resources to help you successfully implement your uniform policies.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {implementationResources.map((resource, index) => (
+              <div key={index} className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-100 p-3 rounded-lg flex-shrink-0">
+                    <resource.icon className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      {resource.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      {resource.description}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">{resource.fileSize}</span>
+                      <Link
+                        href={resource.downloadUrl}
+                        className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-300 flex items-center"
+                        download
+                      >
+                        <DownloadIcon className="h-4 w-4 mr-1" />
+                        Download
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Customization Guide */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              How to Customize Your Policy
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Follow these steps to adapt our templates to your organization's specific needs.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-6">
+              {customizationTips.map((tip, index) => (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg flex items-start space-x-4">
+                  <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                    {tip.step}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      {tip.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {tip.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Saudi Arabia Specific Considerations */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Saudi Arabia Specific Considerations
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Our templates include important considerations for operating in Saudi Arabia.
               </p>
             </div>
-          </div>
-          
-          <a href="/downloads/policy-templates/general-uniform-policy-template.pdf" download class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 mb-6">
-            <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-            Download General Policy Template (PDF)
-          </a>
-          
-          <p class="text-sm italic text-neutral-500 mb-4">
-            Note: This template should be reviewed by your legal department or advisor before implementation to ensure 
-            compliance with local labor laws and regulations.
-          </p>
-        `,
-        image: '/images/product-placeholder.jpg',
-      },
-      {
-        title: 'Industry-Specific Policy Templates',
-        content: `
-          <p class="mb-4">
-            Different industries have unique uniform requirements based on regulatory standards, 
-            functional needs, and customer expectations. Our industry-specific templates address 
-            these specialized considerations:
-          </p>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div class="border rounded-lg p-5 bg-white shadow-sm">
-              <h4 class="font-bold text-lg mb-3 text-primary-700">Healthcare Uniform Policy</h4>
-              <ul class="list-disc pl-5 mb-3">
-                <li>Infection control standards</li>
-                <li>Department color-coding systems</li>
-                <li>Scrub and lab coat specifications</li>
-                <li>Personal protective equipment requirements</li>
-                <li>Laundering protocols</li>
-                <li>Identification badge standards</li>
-              </ul>
-              <a href="/downloads/policy-templates/healthcare-uniform-policy.pdf" download class="inline-flex items-center px-3 py-1.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-                <svg class="-ml-1 mr-1 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-                Download
-              </a>
-            </div>
             
-            <div class="border rounded-lg p-5 bg-white shadow-sm">
-              <h4 class="font-bold text-lg mb-3 text-primary-700">Hospitality Uniform Policy</h4>
-              <ul class="list-disc pl-5 mb-3">
-                <li>Front-of-house vs. back-of-house standards</li>
-                <li>Grooming and personal hygiene requirements</li>
-                <li>Seasonal uniform variations</li>
-                <li>Food safety considerations</li>
-                <li>Branded accessories specifications</li>
-                <li>Customer-facing presentation standards</li>
-              </ul>
-              <a href="/downloads/policy-templates/hospitality-uniform-policy.pdf" download class="inline-flex items-center px-3 py-1.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-                <svg class="-ml-1 mr-1 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-                Download
-              </a>
-            </div>
-            
-            <div class="border rounded-lg p-5 bg-white shadow-sm">
-              <h4 class="font-bold text-lg mb-3 text-primary-700">Industrial/Manufacturing Policy</h4>
-              <ul class="list-disc pl-5 mb-3">
-                <li>Safety equipment integration</li>
-                <li>OSHA and industry compliance requirements</li>
-                <li>Hazardous environment considerations</li>
-                <li>High-visibility requirements</li>
-                <li>Seasonal adaptations for extreme temperatures</li>
-                <li>Prohibited accessories and materials</li>
-              </ul>
-              <a href="/downloads/policy-templates/industrial-manufacturing-policy.pdf" download class="inline-flex items-center px-3 py-1.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-                <svg class="-ml-1 mr-1 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-                Download
-              </a>
-            </div>
-            
-            <div class="border rounded-lg p-5 bg-white shadow-sm">
-              <h4 class="font-bold text-lg mb-3 text-primary-700">Corporate Office Policy</h4>
-              <ul class="list-disc pl-5 mb-3">
-                <li>Professional dress code integration</li>
-                <li>Branded apparel guidelines</li>
-                <li>Casual/formal day specifications</li>
-                <li>Client-facing vs. internal role differences</li>
-                <li>Business travel considerations</li>
-                <li>Accessory and personalization guidelines</li>
-              </ul>
-              <a href="/downloads/policy-templates/corporate-office-policy.pdf" download class="inline-flex items-center px-3 py-1.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-                <svg class="-ml-1 mr-1 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-                Download
-              </a>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    Cultural Sensitivity
+                  </h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-start">
+                      <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      Modest dress requirements
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      Gender-appropriate guidelines
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      Religious observance considerations
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    Climate Considerations
+                  </h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-start">
+                      <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      Heat-resistant materials
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      Breathable fabric requirements
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      Seasonal variations
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    Legal Compliance
+                  </h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-start">
+                      <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      Saudi Labor Law alignment
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      Ministry of Health requirements
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      Industry-specific regulations
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    Local Sourcing
+                  </h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-start">
+                      <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      Saudi supplier preferences
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      Vision 2030 alignment
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircleIcon className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      Local content requirements
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        `,
-        image: '/images/avatar-placeholder.jpg',
-      },
-      {
-        title: 'Policy Implementation Guide',
-        content: `
-          <p class="mb-4">
-            Creating a policy is just the first step. Successful implementation requires careful 
-            planning, clear communication, and consistent enforcement:
-          </p>
-          
-          <div class="mb-6 bg-neutral-50 p-5 rounded-lg">
-            <h4 class="font-bold text-lg mb-3">Implementation Steps</h4>
-            <ol class="list-decimal pl-5 mb-3 space-y-2">
-              <li>
-                <span class="font-medium">Stakeholder Input:</span> 
-                <p class="ml-1">Gather feedback from key departments (HR, operations, employee representatives) during policy development.</p>
-              </li>
-              <li>
-                <span class="font-medium">Legal Review:</span> 
-                <p class="ml-1">Ensure compliance with local labor laws, religious accommodation requirements, and industry regulations.</p>
-              </li>
-              <li>
-                <span class="font-medium">Phased Introduction:</span> 
-                <p class="ml-1">Consider a gradual rollout, especially for significant changes to existing policies.</p>
-              </li>
-              <li>
-                <span class="font-medium">Clear Communication:</span> 
-                <p class="ml-1">Provide written policies, visual guides, and in-person briefings on new uniform requirements.</p>
-              </li>
-              <li>
-                <span class="font-medium">Training for Supervisors:</span> 
-                <p class="ml-1">Ensure managers understand policy details, enforcement guidelines, and accommodation procedures.</p>
-              </li>
-              <li>
-                <span class="font-medium">Feedback Mechanism:</span> 
-                <p class="ml-1">Establish a process for employees to ask questions or report issues with uniforms.</p>
-              </li>
-              <li>
-                <span class="font-medium">Regular Review:</span> 
-                <p class="ml-1">Schedule periodic policy reviews to address emerging issues or changing requirements.</p>
-              </li>
-            </ol>
-          </div>
-          
-          <div class="border border-primary-200 rounded-lg p-6 mb-6 bg-primary-50">
-            <h4 class="font-bold text-lg mb-3 text-primary-700">Implementation Checklist</h4>
-            <p class="mb-3">Our comprehensive checklist helps you track the progress of your policy implementation:</p>
-            <a href="/downloads/policy-templates/uniform-policy-implementation-checklist.pdf" download class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-              <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-              Download Implementation Checklist (PDF)
-            </a>
-          </div>
-        `,
-        image: '/images/healthcare/medical_hijab_uniform.jpg',
-      }
-    ],
-    items: [
-      {
-        id: 'general-uniform-policy',
-        title: 'General Uniform Policy Template',
-        description: 'A comprehensive framework for establishing basic uniform standards across all departments.',
-        content: 'This template provides a structured approach to creating a uniform policy that establishes clear guidelines for professional appearance, proper uniform wear, and maintenance responsibilities. It includes sections on compliance requirements, enforcement procedures, and accommodation policies.',
-        image: '/images/healthcare/medical_hijab_uniform.jpg'
-      },
-      {
-        id: 'healthcare-uniform-policy',
-        title: 'Healthcare Uniform Policy Template',
-        description: 'Specialized guidelines addressing infection control and professional standards in healthcare settings.',
-        content: 'Designed specifically for healthcare environments, this template addresses critical aspects such as infection control, identification requirements, and appropriate attire for different clinical settings. It includes guidance on laundering procedures, PPE integration, and patient safety considerations.',
-        image: '/images/healthcare/medical_hijab_uniform.jpg'
-      },
-      {
-        id: 'hospitality-uniform-policy',
-        title: 'Hospitality Uniform Policy Template',
-        description: 'Customer-focused uniform standards for hotels, restaurants, and hospitality businesses.',
-        content: 'This template focuses on creating a cohesive brand image through uniform standards in customer-facing hospitality roles. It covers grooming standards, uniform rotation systems, and guidelines for different positions from front desk to food service.',
-        image: '/images/healthcare/medical_hijab_uniform.jpg'
-      },
-      {
-        id: 'corporate-uniform-policy',
-        title: 'Corporate Uniform Policy Template',
-        description: 'Professional dress code guidelines for office and corporate environments.',
-        content: 'Establish a professional corporate image with this template that balances formality with employee comfort. It includes sections on business casual guidelines, branded apparel standards, and special event dress codes.',
-        image: '/images/healthcare/medical_hijab_uniform.jpg'
-      },
-      {
-        id: 'industrial-uniform-policy',
-        title: 'Industrial Uniform Policy Template',
-        description: 'Safety-focused uniform requirements for manufacturing and industrial settings.',
-        content: 'Safety is the priority in this template designed for industrial environments. It includes detailed sections on PPE integration, hazard-specific clothing requirements, and compliance with industry safety standards.',
-        image: '/images/healthcare/medical_hijab_uniform.jpg'
-      },
-      {
-        id: 'security-uniform-policy',
-        title: 'Security Uniform Policy Template',
-        description: 'Guidelines for security personnel uniforms emphasizing authority and professionalism.',
-        content: 'This template helps establish a uniform policy that balances authority, recognition, and functionality for security personnel. It includes sections on insignia standards, equipment integration, and appearance requirements.',
-        image: '/images/healthcare/medical_hijab_uniform.jpg'
-      }
-    ],
-    relatedResources: [
-      {
-        title: 'Procurement Guide',
-        description: 'Strategic approaches to sourcing and managing uniform programs',
-        link: '/resources/procurement-guide',
-        icon: 'document'
-      },
-      {
-        title: 'Program Management Service',
-        description: 'Learn about our comprehensive uniform program management solutions',
-        link: '/services/program-management',
-        icon: 'service'
-      },
-      {
-        title: 'Custom Design & Branding',
-        description: 'Creating distinctive uniform solutions that elevate your brand identity',
-        link: '/services/custom-design',
-        icon: 'design'
-      }
-    ],
-    cta: {
-      title: 'Need Custom Policy Development?',
-      description: 'UNEOM (United Uniform Manufacturing Company) offers comprehensive policy development services. Our experienced consultants work with organizations across Saudi Arabia and the Middle East to create tailored uniform policies that meet industry standards, cultural requirements, and operational needs.',
-      buttonText: 'Contact Our Policy Specialists',
-      buttonUrl: '/contact'
-    }
-  };
+        </div>
+      </section>
 
-  return <ResourcePageLayout resourceData={resourceData} skipMainLayout={true} />;
-} 
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-700">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Need a Custom Policy Solution?
+          </h2>
+          <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+            Our experts can create tailored uniform policies specific to your organization's 
+            unique requirements and industry standards.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center"
+            >
+              Request Custom Policy
+              <ArrowRightIcon className="h-5 w-5 ml-2" />
+            </Link>
+            <Link
+              href="/services/corporate-programs"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+            >
+              Corporate Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Related Resources
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Link href="/blog/healthcare-compliance-guide" className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="aspect-video relative">
+                  <Image
+                    src="/images/categories/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg"
+                    alt="Healthcare compliance guide"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                    Healthcare Compliance Guide
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Essential compliance requirements for medical uniform policies.
+                  </p>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href="/resources/fabric-guide" className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="aspect-video relative bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                  <DocumentTextIcon className="h-16 w-16 text-blue-600" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                    Fabric Selection Guide
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Choose the right materials for your uniform requirements.
+                  </p>
+                </div>
+              </div>
+            </Link>
+            
+            <Link href="/services/corporate-programs" className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="aspect-video relative">
+                  <Image
+                    src="/images/doctor-SBI-300813580.jpg"
+                    alt="Corporate uniform programs"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                    Corporate Programs
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Comprehensive uniform solutions for corporate organizations.
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}

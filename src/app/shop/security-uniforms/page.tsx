@@ -31,8 +31,8 @@ export default function SecurityUniformsPage() {
       name: 'Executive Security Suit',
       description: 'Professional executive security uniform designed for premium venues and VIP protection services with refined styling and practical features.',
       price: 'From SAR 399',
-      image: '/images/product-placeholder.jpg',
-      href: '/shop/security-uniforms/executive-security-suit',
+      image: '/images/security/uniform-durability-test.jpg',
+      href: '/shop/security-uniforms/executive-protection',
       features: ['Premium fabric', 'Professional styling', 'Reinforced stitching', 'Badge holder'],
       colors: ['Black', 'Navy', 'Grey', 'White'],
       isBestseller: true
@@ -42,8 +42,8 @@ export default function SecurityUniformsPage() {
       name: 'Tactical Security Uniform',
       description: 'Tactical security uniform with reinforced construction and multiple functional pockets, designed for active security personnel in demanding environments.',
       price: 'From SAR 349',
-      image: '/images/security/security_uniform_tactical.jpg',
-      href: '/shop/security-uniforms/tactical-security-uniform',
+      image: '/images/security/stab-resistant-fabric.jpg',
+      href: '/shop/security-uniforms/tactical-security-uniforms',
       features: ['Durable ripstop fabric', 'Multiple pockets', 'Reinforced knees/elbows', 'Belt loops'],
       colors: ['Black', 'Navy', 'Khaki', 'Olive'],
       isNew: true
@@ -53,7 +53,7 @@ export default function SecurityUniformsPage() {
       name: 'Hotel Security Uniform',
       description: 'Refined security uniform designed for hotel and hospitality settings, balancing professional appearance with functional security features.',
       price: 'From SAR 299',
-      image: '/images/security/security_uniform_hotel.jpg',
+      image: '/images/security/smart-fabric-technology.jpg',
       href: '/shop/security-uniforms/hotel-security-uniform',
       features: ['Formal appearance', 'Comfortable fit', 'Hotel branding option', 'Professional styling'],
       colors: ['Black', 'Navy', 'Burgundy', 'White']
@@ -63,8 +63,8 @@ export default function SecurityUniformsPage() {
       name: 'Standard Security Guard Uniform',
       description: 'Standard security guard uniform designed for commercial security services with practical features and professional appearance.',
       price: 'From SAR 249',
-      image: '/images/product-placeholder.jpg',
-      href: '/shop/security-uniforms/security-guard-uniform',
+      image: '/images/security/uniform-durability-test.jpg',
+      href: '/shop/security-uniforms/security-officer-uniform',
       features: ['Durable fabric', 'Badge holder', 'Multiple pockets', 'Name tag'],
       colors: ['Black', 'Navy', 'Khaki']
     },
@@ -73,7 +73,7 @@ export default function SecurityUniformsPage() {
       name: 'Event Security Uniform',
       description: 'High-visibility event security uniform designed for crowd management and event security services with comfort and recognition features.',
       price: 'From SAR 219',
-      image: '/images/security/security_uniform_event.jpg',
+      image: '/images/security/saudi-events-security.jpg',
       href: '/shop/security-uniforms/event-security-uniform',
       features: ['High-visibility option', 'Breathable fabric', 'Company branding', 'Weather-resistant'],
       colors: ['Black', 'Hi-Vis Yellow', 'Hi-Vis Orange']
@@ -83,7 +83,7 @@ export default function SecurityUniformsPage() {
       name: 'Security Winter Jacket',
       description: 'Insulated security jacket designed for cold weather conditions with security features and professional styling for outdoor surveillance.',
       price: 'From SAR 329',
-      image: '/images/security/security_uniform_winter.jpg',
+      image: '/images/security/advanced-fabrics-hero.jpg',
       href: '/shop/security-uniforms/security-winter-jacket',
       features: ['Thermal insulation', 'Water-resistant', 'Reflective elements', 'Badge holder'],
       colors: ['Black', 'Navy', 'Grey']
@@ -144,7 +144,7 @@ export default function SecurityUniformsPage() {
       <section className="relative pt-16 pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/product-placeholder.jpg"
+            src="/images/security/advanced-fabrics-hero.jpg"
             alt="Security Uniforms"
             fill
             className="object-cover object-center"
@@ -393,7 +393,7 @@ export default function SecurityUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/product-placeholder.jpg"
+                  src="/images/security/saudi-events-security.jpg"
                   alt="Recognition Elements"
                   fill
                   className="object-cover"
