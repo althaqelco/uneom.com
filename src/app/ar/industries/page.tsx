@@ -26,12 +26,52 @@ export default function IndustriesPageArabic() {
       name: 'الرعاية الصحية',
       description: 'أزياء طبية وملابس رعاية صحية عالية الجودة مصممة للمستشفيات والعيادات والمرافق الطبية في المملكة العربية السعودية.',
       image: '/images/healthcare/healthcare_medical_uniform.jpg',
-      href: '/ar/images/industries/products/aviation/airline-1.jpg',
-      href: '/ar/images/industries/products/hotel-uniform.jpg',
-      href: '/ar/images/industries/products/corporate-suit-executive.jpg',
-      href: '/ar/images/industries/categories/schoolgirl-with-blood-type-sticker-at-school-ukrainian-war-concept-SBI-351317058.jpg',
-      href: '/ar/images/industries/products/industrial-coverall.jpg',
-      href: '/ar/images/industries/categories/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
+      href: '/ar/industries/healthcare'
+    },
+    {
+      id: 'aviation',
+      name: 'الطيران',
+      description: 'أزياء طيران احترافية للطيارين ومضيفي الطيران وطاقم الأرض في شركات الطيران السعودية.',
+      image: '/images/aviation/aviation_uniform_main.jpg',
+      href: '/ar/industries/aviation'
+    },
+    {
+      id: 'corporate',
+      name: 'الشركات',
+      description: 'أزياء شركات أنيقة ومهنية للمكاتب والشركات في جميع أنحاء المملكة العربية السعودية.',
+      image: '/images/corporate/corporate_uniform_main.jpg',
+      href: '/ar/industries/corporate'
+    }
+  ];
+
+  // Additional industries
+  const additionalIndustries: IndustryInfo[] = [
+    {
+      id: 'hospitality',
+      name: 'الضيافة',
+      description: 'أزياء فندقية ومطاعم راقية للقطاع السياحي والضيافة.',
+      image: '/images/hospitality/hospitality_uniform_formal.jpg',
+      href: '/ar/industries/hospitality'
+    },
+    {
+      id: 'education',
+      name: 'التعليم',
+      description: 'أزياء مدرسية وجامعية عالية الجودة للطلاب والمعلمين.',
+      image: '/images/education/school-uniform-post-1.jpg',
+      href: '/ar/industries/education'
+    },
+    {
+      id: 'manufacturing',
+      name: 'التصنيع',
+      description: 'ملابس عمل وأزياء صناعية آمنة ومتينة للمصانع والمنشآت الصناعية.',
+      image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
+      href: '/ar/industries/manufacturing'
+    },
+    {
+      id: 'security',
+      name: 'الأمن',
+      description: 'أزياء أمن احترافية ومعدات حماية للحراس وأفراد الأمن.',
+      image: '/images/security/security_uniform_main.jpg',
       href: '/ar/industries/security'
     }
   ];

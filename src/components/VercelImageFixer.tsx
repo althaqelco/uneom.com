@@ -83,8 +83,8 @@ const VercelImageFixer: React.FC = () => {
           const variations = [
             // Original with and without leading slash
             originalSrc.startsWith('/') ? originalSrc.substring(1) : `/${originalSrc}`,
-            // With _next prefix
-            `/images/defaults/default-placeholder.jpg'/').pop()}`,
+            // Try in images folder
+            `/images/${originalSrc.split('/').pop()}`,
             // With absolute URL
             `${window.location.origin}${originalSrc.startsWith('/') ? '' : '/'}${originalSrc}`,
             // Fallback

@@ -22,19 +22,59 @@ export default function IndustriesPage() {
   // In a real implementation, we would get this from the URL or cookies
   const locale = 'en';
   
-  // Additional industries content beyond what's in IndustryGrid
+  // Featured industries content
   const featuredIndustries: IndustryInfo[] = [
     {
       id: 'healthcare',
       name: 'Healthcare',
       description: 'High-quality medical scrubs and healthcare uniforms designed for Saudi hospitals, clinics, and medical facilities.',
-      image: '/images/industries/healthcare.jpg',
-      href: '/images/industries/aviation/aviation_uniform_main.jpg',
-      href: '/images/industries/hospitality/hospitality_uniform.jpg',
-      href: '/images/industries/industries/corporate.jpg',
-      href: '/images/industries/education/education_uniform_main.jpg',
-      href: '/images/industries/industrial/industrial_uniform_main.jpg',
-      href: '/images/industries/security/security_uniform_main.jpg',
+      image: '/images/industries/healthcare/hero-healthcare-uniforms.jpg',
+      href: '/industries/healthcare'
+    },
+    {
+      id: 'aviation',
+      name: 'Aviation',
+      description: 'Professional aviation uniforms for pilots, flight attendants, and ground crew at Saudi airlines.',
+      image: '/images/products/aviation/airline-1.jpg',
+      href: '/industries/aviation'
+    },
+    {
+      id: 'corporate',
+      name: 'Corporate',
+      description: 'Elegant and professional corporate uniforms for offices and businesses across Saudi Arabia.',
+      image: '/images/industries/corporate/hero-corporate-uniforms.jpg',
+      href: '/industries/corporate'
+    }
+  ];
+
+  // Additional industries
+  const additionalIndustries: IndustryInfo[] = [
+    {
+      id: 'hospitality',
+      name: 'Hospitality',
+      description: 'Premium hotel and restaurant uniforms for the tourism and hospitality sector.',
+      image: '/images/hospitality/hospitality_uniform_formal.jpg',
+      href: '/industries/hospitality'
+    },
+    {
+      id: 'education',
+      name: 'Education',
+      description: 'High-quality school and university uniforms for students and staff.',
+      image: '/images/education/school-uniform-post-1.jpg',
+      href: '/industries/education'
+    },
+    {
+      id: 'manufacturing',
+      name: 'Manufacturing',
+      description: 'Safe and durable workwear and industrial uniforms for factories and industrial facilities.',
+      image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
+      href: '/industries/manufacturing'
+    },
+    {
+      id: 'security',
+      name: 'Security',
+      description: 'Professional security uniforms and protective equipment for guards and security personnel.',
+      image: '/images/security/security_uniform_main.jpg',
       href: '/industries/security'
     }
   ];
