@@ -200,7 +200,7 @@ export default function WorkwearInnovationsSaudiFactoriesPageAR() {
                     fill
                     className="object-cover"
                   />
-                   <div className={`absolute top-4 left-4 bg-${innovation.color}-500 p-3 rounded-full shadow-md`}> {/* Changed right to left for RTL */}
+                   <div className="absolute top-4 left-4 bg-blue-500 p-3 rounded-full shadow-md"> {/* Changed right to left for RTL */}
                     <innovation.icon className="h-8 w-8 text-white" />
                   </div>
                 </div>

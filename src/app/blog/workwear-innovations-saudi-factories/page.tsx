@@ -200,7 +200,7 @@ export default function WorkwearInnovationsSaudiFactoriesPage() {
                     fill
                     className="object-cover"
                   />
-                   <div className={`absolute top-4 right-4 bg-${innovation.color}-500 p-3 rounded-full shadow-md`}>
+                   <div className="absolute top-4 right-4 bg-blue-500 p-3 rounded-full shadow-md">
                     <innovation.icon className="h-8 w-8 text-white" />
                   </div>
                 </div>

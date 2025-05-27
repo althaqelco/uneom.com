@@ -265,8 +265,8 @@ export default function SafetyStandardsSaudiManufacturingPageAR() {
             {safetyStandards.map((standard, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-start space-x-4 space-x-reverse">
-                  <div className={`bg-${standard.color}-100 p-3 rounded-lg flex-shrink-0`}>
-                    <standard.icon className={`h-8 w-8 text-${standard.color}-600`} />
+                  <div className="bg-blue-100 p-3 rounded-lg flex-shrink-0">
+                    <standard.icon className="h-8 w-8 text-blue-600" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">

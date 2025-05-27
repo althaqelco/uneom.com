@@ -203,7 +203,7 @@ export default function ModernFitShirtsPageAR() {
                 <div className="flex flex-wrap gap-3">
                   {['أبيض', 'أزرق سماوي', 'كحلي', 'فحمي', 'أسود'].map(color => (
                     <button key={color} className="flex items-center space-x-2 space-x-reverse border border-gray-300 rounded-lg p-2 hover:border-blue-500">
-                      <span className={`w-5 h-5 rounded-full bg-${color === 'أبيض' ? 'white' : color === 'أزرق سماوي' ? 'sky-blue' : color === 'كحلي' ? 'navy' : color === 'فحمي' ? 'charcoal' : 'black'}-500 border`}></span>
+                      <span className="w-5 h-5 rounded-full bg-blue-500 border"></span>
                       <span>{color}</span>
                     </button>
                   ))}
