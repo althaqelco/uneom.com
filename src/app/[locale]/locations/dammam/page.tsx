@@ -7,6 +7,7 @@ import { generateMetadata as generateSEO } from '@/components/seo/ServerSEO';
 import MainLayout from '@/components/layout/MainLayout';
 import { HiOutlineMapPin, HiOutlinePhone, HiOutlineEnvelope, HiOutlineClock } from 'react-icons/hi2';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import LocalSEO from '@/components/seo/LocalSEO';
 
 // Define possible locale values for static generation
 export function generateStaticParams() {
@@ -305,8 +306,17 @@ export default function DammamLocationPage({ params }: { params: { locale: Local
   };
 
   return (
-    <main className={`min-h-screen ${isArabic ? 'rtl text-right' : 'ltr text-left'}`}>
-      {/* Hero Section */}
+    <>
+      <LocalSEO
+        location="dammam"
+        title={isArabic ? 'يونيوم الدمام | خدمات الزي الموحد الصناعي في المنطقة الشرقية' : 'UNEOM Dammam | Industrial Uniform Services in Eastern Saudi Arabia'}
+        description={isArabic ? 'زيارة فرع يونيوم في الدمام. نقدم تصميم وإنتاج وتوريد اليونيفورم الصناعي عالي الجودة للشركات والمنشآت النفطية والمصانع في المنطقة الشرقية من المملكة العربية السعودية.' : 'Visit UNEOM branch in Dammam. We provide high-quality industrial uniform design, production, and supply for oil companies, factories, and industrial facilities across Eastern Saudi Arabia.'}
+        telephone={locationData.phone}
+        email={locationData.email}
+        images={[locationData.heroImage, locationData.mapImage]}
+      />
+      <main className={`min-h-screen ${isArabic ? 'rtl text-right' : 'ltr text-left'}`}>
+        {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-gray-900 to-gray-700 py-28">
         <div className="absolute inset-0 z-0 opacity-40">
           <Image 
@@ -590,6 +600,7 @@ export default function DammamLocationPage({ params }: { params: { locale: Local
           </Link>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
-} 
+}

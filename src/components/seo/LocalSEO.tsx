@@ -1,6 +1,8 @@
+"use client";
+
 /**
  * LocalSEO Component
- * 
+ *
  * Implements location-specific SEO optimizations including:
  * - LocalBusiness Schema.org structured data
  * - City-specific meta tags

@@ -124,15 +124,18 @@ export function generateLocalBusinessSchema(
   const openingHours: OpeningHoursSchema[] | undefined = businessHours?.map(hours => {
     const [opens, closes] = hours.hours.split('-').map(time => time.trim());
     
+    // Split the days string into an array
+    const daysArray = hours.days.split(',').map(day => day.trim());
+    
     return {
       '@type': 'OpeningHoursSpecification' as const,
-      dayOfWeek: hours.days,
+      dayOfWeek: daysArray,
       opens: opens,
       closes: closes
     };
   });
 
-  return {
+  const schema: LocalBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `https://uneom.com/locations/${locationId}#business`,
@@ -140,31 +143,44 @@ export function generateLocalBusinessSchema(
     description: description || `UNEOM professional uniform provider in ${cityName}, Saudi Arabia.`,
     url: `https://uneom.com/locations/${locationId}/`,
     telephone: contactInfo.phone,
-    email: contactInfo.email,
-    image: image ? `https://uneom.com${image}` : 'https://uneom.com/images/locations/default-location.jpg',
-    priceRange: '$$',
-    currenciesAccepted: 'SAR',
-    paymentAccepted: 'Cash, Credit Card',
     address: {
       '@type': 'PostalAddress',
       streetAddress: address.street,
       addressLocality: address.city,
-      addressRegion: address.region || 'Riyadh Province',
+      addressRegion: address.region || 'Riyadh Province', // Default region if not provided
       postalCode: address.postalCode,
-      addressCountry: 'SA'
+      addressCountry: 'SA' // Assuming SA for all UNEOM locations
     },
-    geo: coordinates ? {
+    priceRange: '$$', // Example, adjust as needed
+    currenciesAccepted: 'SAR',
+    paymentAccepted: 'Cash, Credit Card',
+  };
+
+  if (contactInfo.email) {
+    schema.email = contactInfo.email;
+  }
+
+  schema.image = image ? (image.startsWith('http') ? image : `https://uneom.com${image}`) : 'https://uneom.com/images/locations/default-location.jpg';
+  
+  if (coordinates) {
+    schema.geo = {
       '@type': 'GeoCoordinates',
       latitude: coordinates.latitude,
       longitude: coordinates.longitude
-    } : undefined,
-    openingHoursSpecification: openingHours,
-    sameAs: sameAs || [
-      'https://www.facebook.com/uneom',
-      'https://www.instagram.com/uneom',
-      'https://twitter.com/uneom'
-    ]
-  };
+    };
+  }
+
+  if (openingHours && openingHours.length > 0) {
+    schema.openingHoursSpecification = openingHours;
+  }
+
+  schema.sameAs = sameAs || [
+    'https://www.facebook.com/uneom',
+    'https://www.instagram.com/uneom',
+    'https://twitter.com/uneom'
+  ];
+
+  return schema;
 }
 
 /**

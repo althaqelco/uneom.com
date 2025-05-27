@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from 'react';
 
 // Safe router hook for static export

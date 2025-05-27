@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-05-27T01:52:03.639Z",
-  "score": 88,
+  "timestamp": "2025-05-27T14:11:54.456Z",
+  "score": 100,
   "results": {
     "coreFiles": true,
     "robotsTxt": true,
@@ -8,10 +8,8 @@
     "coreWebVitals": true,
     "imagesAndIcons": true,
     "securityAndPerformance": true,
-    "arabicSupport": false,
+    "arabicSupport": true,
     "sitemaps": true
   },
-  "recommendations": [
-    "تحسين دعم اللغة العربية"
-  ]
+  "recommendations": []
 }
