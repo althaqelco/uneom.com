@@ -29,19 +29,49 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ locale = 'en', items }) => 
           id: "custom-design",
           title: "Custom Uniform Design",
           description: "Bespoke uniform design services tailored to your brand identity and specific requirements",
-          image: "/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg",
-          link: "/images/services/services/CottonـandـCottonـBlends.jpg",
-          link: "/images/services/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg",
-          link: "/images/services/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg",
-          link: "/images/services/services/bright-raincoats-hanging-at-a-fashion-store-2024-12-16-06-50-01-utc.jpg",
-          link: "/images/services/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg",
-          link: "/images/services/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg",
-          link: "/ar/images/services/services/CottonـandـCottonـBlends.jpg",
-          link: "/ar/images/services/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg",
-          link: "/ar/images/services/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg",
-          link: "/ar/images/services/services/bright-raincoats-hanging-at-a-fashion-store-2024-12-16-06-50-01-utc.jpg",
-          link: "/ar/images/services/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg",
-          link: "/ar/services/quality-assurance"
+          image: "/images/services/custom-design.jpg",
+          link: "/services/custom-design"
+        },
+        {
+          id: "fabric-selection",
+          title: "Premium Fabric Selection",
+          description: "High-quality fabrics sourced globally to ensure durability, comfort, and professional appearance",
+          image: "/images/services/fabric-selection.jpg",
+          link: "/services/fabric-selection"
+        },
+        {
+          id: "manufacturing",
+          title: "Expert Manufacturing",
+          description: "State-of-the-art manufacturing processes ensuring consistent quality and timely delivery",
+          image: "/images/services/manufacturing.jpg",
+          link: "/services/manufacturing"
+        }
+      ]
+    },
+    ar: {
+      title: "خدماتنا المميزة",
+      subtitle: "حلول شاملة لجميع احتياجاتكم من الزي الموحد وملابس العمل",
+      services: [
+        {
+          id: "custom-design",
+          title: "تصميم الزي الموحد المخصص",
+          description: "خدمات تصميم الزي الموحد المخصصة وفقاً لهوية علامتكم التجارية ومتطلباتكم الخاصة",
+          image: "/images/services/custom-design.jpg",
+          link: "/ar/services/custom-design"
+        },
+        {
+          id: "fabric-selection",
+          title: "اختيار الأقمشة المميزة",
+          description: "أقمشة عالية الجودة مصدرها عالمي لضمان المتانة والراحة والمظهر المهني",
+          image: "/images/services/fabric-selection.jpg",
+          link: "/ar/services/fabric-selection"
+        },
+        {
+          id: "manufacturing",
+          title: "التصنيع المتخصص",
+          description: "عمليات تصنيع متطورة تضمن جودة ثابتة وتسليم في الوقت المحدد",
+          image: "/images/services/manufacturing.jpg",
+          link: "/ar/services/manufacturing"
         }
       ]
     }
