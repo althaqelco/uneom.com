@@ -224,7 +224,7 @@ export default function FabricsStudentUniformsPageAR() {
                       {fabric.description}
                     </p>
                     <div className="mb-4">
-                      <span className={`inline-block bg-${fabric.color}-100 text-${fabric.color}-800 text-sm font-medium px-3 py-1 rounded-full`}>
+                      <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
                         {fabric.percentage}
                       </span>
                     </div>
