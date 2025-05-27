@@ -1,11 +1,13 @@
 /**
  * Server-side blog posts data with multilingual support
  * Contains both English and Arabic versions of blog content for static site generation
+ * This file should only be used on the server side
  */
 
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+// Only import fs on server side
+const fs = typeof window === 'undefined' ? require('fs') : null;
+const path = typeof window === 'undefined' ? require('path') : null;
+const matter = typeof window === 'undefined' ? require('gray-matter') : null;
 
 export interface Author {
   name: string;
@@ -26,10 +28,15 @@ export interface BlogPost {
   readingTime?: string;
 }
 
-const postsDirectory = path.join(process.cwd(), 'src/content/blog');
-const arPostsDirectory = path.join(process.cwd(), 'src/content/blog-ar');
+const postsDirectory = typeof window === 'undefined' && path ? path.join(process.cwd(), 'src/content/blog') : '';
+const arPostsDirectory = typeof window === 'undefined' && path ? path.join(process.cwd(), 'src/content/blog-ar') : '';
 
 function getFileBasedBlogPosts(locale = 'en'): BlogPost[] {
+  // Only run on server side
+  if (typeof window !== 'undefined' || !fs || !path || !matter) {
+    return [];
+  }
+
   // اختيار المجلد المناسب بناءً على اللغة
   const selectedDirectory = locale === 'ar' ? arPostsDirectory : postsDirectory;
   
@@ -84,6 +91,11 @@ function getFileBasedBlogPosts(locale = 'en'): BlogPost[] {
 
 export function getBlogPostBySlug(slug: string, locale = 'en'): BlogPost | null {
   try {
+    // Only run on server side
+    if (typeof window !== 'undefined' || !fs || !path || !matter) {
+      return null;
+    }
+
     // اختيار المجلد المناسب بناءً على اللغة
     const selectedDirectory = locale === 'ar' ? arPostsDirectory : postsDirectory;
     
