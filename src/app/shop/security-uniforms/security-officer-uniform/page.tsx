@@ -79,19 +79,9 @@ export default function SecurityOfficerUniformPage() {
         name: 'Security Patrol Jacket',
         image: '/images/products/industrial-coverall.jpg',
         price: 'From SAR 389',
-        href: '/shop/security-uniforms/security-patrol-jacket'
-      },
-      {
-        id: 'tactical-security-vest',
-        name: 'Tactical Security Vest',
-        image: '/images/product-placeholder.jpg',
+        href: '/images/product-placeholder.jpg',
         price: 'From SAR 249',
-        href: '/shop/security-uniforms/tactical-security-vest'
-      },
-      {
-        id: 'security-accessories-kit',
-        name: 'Security Accessories Kit',
-        image: '/images/products/industrial-coverall.jpg',
+        href: '/images/products/industrial-coverall.jpg',
         price: 'From SAR 179',
         href: '/shop/security-uniforms/security-accessories-kit'
       }

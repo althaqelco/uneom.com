@@ -28,32 +28,32 @@ export default function CorporateIndustryClient() {
       {
         title: "تعزيز الهوية المؤسسية",
         description: "أزياء موحدة تعكس قيم وهوية علامتك التجارية بشكل احترافي",
-        icon: "/icons/identity.svg"
+        icon: "/images/icons/identity.svg"
       },
       {
         title: "جودة استثنائية",
         description: "أقمشة فاخرة وخياطة متقنة تدوم طويلاً حتى مع الاستخدام اليومي",
-        icon: "/icons/quality.svg"
+        icon: "/images/icons/quality.svg"
       },
       {
         title: "راحة وأناقة",
         description: "تصاميم تجمع بين المظهر الاحترافي والراحة العملية طوال يوم العمل",
-        icon: "/icons/comfort.svg"
+        icon: "/images/icons/comfort.svg"
       },
       {
         title: "تخصيص شامل",
         description: "خيارات تخصيص متعددة تشمل الألوان والأقمشة والشعارات والتفاصيل الدقيقة",
-        icon: "/icons/customize.svg"
+        icon: "/images/icons/customize.svg"
       },
       {
         title: "حلول متكاملة",
         description: "خدمة شاملة من التصميم إلى التوريد والتوزيع لجميع فروع الشركة",
-        icon: "/icons/solution.svg"
+        icon: "/images/icons/solution.svg"
       },
       {
         title: "دعم مستمر",
         description: "خدمة عملاء متميزة وإدارة مستمرة لبرنامج الزي الموحد",
-        icon: "/icons/support.svg"
+        icon: "/images/icons/support.svg"
       }
     ],
     
@@ -64,24 +64,8 @@ export default function CorporateIndustryClient() {
         description: "بدلات رسمية أنيقة للمدراء والتنفيذيين تعكس المستوى القيادي والاحترافية",
         price: "١٢٠٠ ر.س",
         image: "/images/executive-suit.webp",
-        href: "/ar/shop/corporate-uniforms/executive-suits",
-        features: ["أقمشة فاخرة", "خياطة متقنة", "تفاصيل أنيقة"],
-      },
-      {
-        id: "office-attire",
-        name: "أزياء مكتبية",
-        description: "ملابس رسمية أنيقة ومريحة للموظفين المكتبيين مناسبة للاستخدام اليومي",
-        price: "٦٥٠ ر.س",
-        image: "/images/office-uniform.webp",
-        href: "/ar/shop/corporate-uniforms/office-attire",
-        features: ["مقاومة للتجعد", "سهلة العناية", "مظهر احترافي"],
-      },
-      {
-        id: "corporate-accessories",
-        name: "إكسسوارات مؤسسية",
-        description: "مكملات أنيقة للزي المؤسسي تشمل ربطات العنق والأوشحة والدبابيس بشعار الشركة",
-        price: "٢٥٠ ر.س",
-        image: "/images/corporate-accessories.webp",
+        href: "/ar/images/office-uniform.webp",
+        href: "/ar/images/corporate-accessories.webp",
         href: "/ar/shop/corporate-uniforms/accessories",
         features: ["تصميم مخصص", "جودة عالية", "تعزز الهوية"],
       }
@@ -91,22 +75,22 @@ export default function CorporateIndustryClient() {
       {
         name: "تطريز الشعارات",
         description: "تطريز عالي الدقة لشعار شركتك على جميع قطع الزي الموحد",
-        icon: "/icons/embroidery.svg"
+        icon: "/images/icons/embroidery.svg"
       },
       {
         name: "ألوان مخصصة",
         description: "إمكانية اختيار ألوان تتوافق تمامًا مع هوية علامتك التجارية",
-        icon: "/icons/color-palette.svg"
+        icon: "/images/icons/color-palette.svg"
       },
       {
         name: "أقمشة متنوعة",
         description: "مجموعة واسعة من الأقمشة عالية الجودة المختارة لتناسب مختلف الوظائف والمواسم",
-        icon: "/icons/fabric.svg"
+        icon: "/images/icons/fabric.svg"
       },
       {
         name: "تفصيل حسب المقاس",
         description: "خدمة تعديل وتفصيل الملابس لتناسب مقاسات الموظفين بشكل مثالي",
-        icon: "/icons/tailor.svg"
+        icon: "/images/icons/tailor.svg"
       }
     ],
     
@@ -114,22 +98,22 @@ export default function CorporateIndustryClient() {
       {
         name: "أقمشة مقاومة للتجعد",
         description: "تقنية خاصة تضمن الحفاظ على مظهر أنيق طوال يوم العمل دون تجعد",
-        icon: "/icons/wrinkle-resistant.svg"
+        icon: "/images/icons/wrinkle-resistant.svg"
       },
       {
         name: "معالجة مضادة للبقع",
         description: "معالجة الأقمشة لمقاومة البقع والانسكابات مما يطيل عمر الزي الموحد",
-        icon: "/icons/stain-resistant.svg"
+        icon: "/images/icons/stain-resistant.svg"
       },
       {
         name: "خامات تنفسية",
         description: "أقمشة متطورة توفر تهوية ممتازة للراحة في المناخ الحار والمكاتب المكيفة",
-        icon: "/icons/breathable-fabric.svg"
+        icon: "/images/icons/breathable-fabric.svg"
       },
       {
         name: "مرونة استثنائية",
         description: "أقمشة مرنة توفر حرية الحركة مع الحفاظ على المظهر الرسمي الأنيق",
-        icon: "/icons/stretch-fabric.svg"
+        icon: "/images/icons/stretch-fabric.svg"
       }
     ],
     

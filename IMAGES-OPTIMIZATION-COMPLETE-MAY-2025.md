@@ -55,8 +55,7 @@ Service Categories:
 - Fabric Selection: /images/fabric-cotton-blends.webp
 - Manufacturing: /images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg
 - Quality Assurance: /images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg
-- Technical Finishes: /images/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg
-- Corporate Programs: /images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg
+- Technical Finishes: /images/services/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg
 ```
 
 #### **🛍️ Product Showcase Images**
@@ -81,8 +80,7 @@ Healthcare Products:
 Hotel & Restaurant:
 - Custom Branding: /images/Luxury_Hotel Staff_Uniform.png
 - Kitchen Staff: /images/cook-flavoring-his-best-meal-2024-11-29-22-42-39-utc.jpg
-- Fabric Samples: /images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg
-- Department Staff: /images/group-of-chefs-standing-with-arms-crossed-in-kitch-2023-11-27-05-01-36-utc.jpg
+- Fabric Samples: /images/services/group-of-chefs-standing-with-arms-crossed-in-kitch-2023-11-27-05-01-36-utc.jpg
 - Formal Attire: /images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg
 - Concierge: /images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg
 ```
@@ -90,21 +88,14 @@ Hotel & Restaurant:
 #### **🔧 Technical & Fabric Images**
 ```typescript
 Advanced Materials:
-- Antimicrobial Treatment: /images/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg
-- Moisture Wicking: /images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg
+- Antimicrobial Treatment: /images/services/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg
 - Cotton Blends: /images/fabric-cotton-blends.webp
-- Fabric Selection: /images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg
-```
-
-#### **🎯 Icon & SVG Assets**
-```typescript
-Feature Icons:
-- Saudi Expertise: /images/icons/saudi-expertise.svg
-- Brand Alignment: /images/icons/brand-aligned.svg
-- Compliance Shield: /images/icons/compliance-shield.svg
-- Aviation Branding: /images/icons/brand-identity-aviation.svg
-- Modest Design: /images/icons/modest-design-saudi.svg
-- Fabric Performance: /images/icons/fabric-tech-performance.svg
+- Fabric Selection: /images/services/images/icons/saudi-expertise.svg
+- Brand Alignment: /images/images/icons/brand-aligned.svg
+- Compliance Shield: /images/images/icons/compliance-shield.svg
+- Aviation Branding: /images/images/icons/brand-identity-aviation.svg
+- Modest Design: /images/images/icons/modest-design-saudi.svg
+- Fabric Performance: /images/images/icons/fabric-tech-performance.svg
 ```
 
 ---

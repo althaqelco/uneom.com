@@ -43,17 +43,7 @@ export default function ManufacturingAttirePage() {
       description: 'Full-body coverall designed for factory workers in manufacturing settings, offering protection and comfort during long shifts.',
       price: 'From SAR 259',
       image: '/images/diverse-workers-in-a-protective-workwear-SBI-300873394.jpg',
-      href: '/shop/manufacturing-attire/factory-worker-coverall',
-      features: ['Full-body protection', 'Stain-resistant', 'Comfortable fit', 'Reinforced stitching'],
-      colors: ['Navy', 'Grey', 'Khaki', 'Royal Blue'],
-      isNew: true
-    },
-    {
-      id: 'hi-vis-safety-jacket',
-      name: 'Hi-Vis Safety Jacket',
-      description: 'High-visibility safety jacket designed for manufacturing facilities and construction sites, with reflective strips and durable construction.',
-      price: 'From SAR 189',
-      image: '/images/construction-worker-or-engineer-in-safety-vest-SBI-334005989.jpg',
+      href: '/images/construction-worker-or-engineer-in-safety-vest-SBI-334005989.jpg',
       href: '/shop/manufacturing-attire/hi-vis-safety-jacket',
       features: ['High-visibility', 'Reflective strips', 'Water-resistant', 'Durable design'],
       colors: ['Orange', 'Yellow', 'Orange/Navy', 'Yellow/Navy']
@@ -64,26 +54,8 @@ export default function ManufacturingAttirePage() {
       description: 'Reinforced work pants with built-in knee pad pockets, designed for manufacturing professionals who need extra protection and durability.',
       price: 'From SAR 219',
       image: '/images/strong-female-industrial-worker-at-a-factory-examini-SBI-335602991.jpg',
-      href: '/shop/manufacturing-attire/work-pants-with-knee-pads',
-      features: ['Knee pad pockets', 'Reinforced construction', 'Multiple tool pockets', 'Comfort fit'],
-      colors: ['Navy', 'Black', 'Grey', 'Khaki']
-    },
-    {
-      id: 'chemical-resistant-uniform',
-      name: 'Chemical Resistant Uniform',
-      description: 'Specialized uniform designed for workers in chemical manufacturing environments, featuring chemical-resistant fabrics and protective features.',
-      price: 'From SAR 299',
-      image: '/images/woman-working-at-a-factory-SBI-301079358.jpg',
-      href: '/shop/manufacturing-attire/chemical-resistant-uniform',
-      features: ['Chemical-resistant', 'Splash protection', 'Breathable design', 'Safety certified'],
-      colors: ['White', 'Grey', 'Blue']
-    },
-    {
-      id: 'manufacturing-supervisor-attire',
-      name: 'Manufacturing Supervisor Attire',
-      description: 'Professional attire designed for manufacturing supervisors and managers, balancing authority with practical functionality.',
-      price: 'From SAR 279',
-      image: '/images/skilled-factory-workers-checking-product-quality-SBI-304025975.jpg',
+      href: '/images/woman-working-at-a-factory-SBI-301079358.jpg',
+      href: '/images/skilled-factory-workers-checking-product-quality-SBI-304025975.jpg',
       href: '/shop/manufacturing-attire/manufacturing-supervisor-attire',
       features: ['Professional look', 'Durable construction', 'Comfort design', 'Multiple pockets'],
       colors: ['Navy', 'Grey', 'Black', 'Khaki']

@@ -112,7 +112,7 @@ export default function IndustrialCoverallProPage() {
       { 
         name: "Reflective Striping", 
         description: "Additional reflective strips for enhanced visibility",
-        image: "/images/icons/compliance-shield.svg"
+        image: "/images/compliance-shield.svg"
       },
       { 
         name: "Pocket Customization", 
@@ -126,19 +126,9 @@ export default function IndustrialCoverallProPage() {
         name: "High-Visibility Safety Vest",
         image: "/images/product-placeholder.jpg",
         price: "SAR 89",
-        href: "/shop/industrial-uniforms/industrial-safety-vest"
-      },
-      {
-        id: "welding-apron",
-        name: "Heat-Resistant Welding Apron",
-        image: "/images/product-placeholder.jpg",
+        href: "/images/product-placeholder.jpg",
         price: "SAR 159",
-        href: "/shop/industrial-uniforms/welding-apron"
-      },
-      {
-        id: "mechanics-overalls",
-        name: "Mechanic's Premium Overalls",
-        image: "/images/product-placeholder.jpg",
+        href: "/images/product-placeholder.jpg",
         price: "SAR 269",
         href: "/shop/industrial-uniforms/mechanics-overalls"
       }

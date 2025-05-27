@@ -38,22 +38,22 @@ export default function AviationIndustryPage() {
       {
           name: "GACA Compliance & Safety",
           description: "All our designs meet Saudi General Authority of Civil Aviation (GACA) requirements while maintaining the highest standards of comfort, safety, and elegance.",
-          icon: "/images/icons/compliance-shield.svg"
+          icon: "/images/compliance-shield.svg"
         },
         {
           name: "Enhanced Brand Identity",
         description: "We integrate your airline brand identity into every uniform detail, enhancing brand recognition and creating a distinctive passenger experience.",
-          icon: "/images/icons/brand-identity-aviation.svg"
+          icon: "/images/brand-identity-aviation.svg"
       },
       {
           name: "Modest & Culturally Aware Designs",
         description: "Special designs that respect modest dress requirements for female staff while maintaining an elegant appearance aligned with international aviation standards.",
-          icon: "/images/icons/modest-design-saudi.svg"
+          icon: "/images/saudi-expertise.svg"
       },
       {
           name: "High-Performance Fabrics",
         description: "Aviation-specific textiles that offer comfort during long flights, resist wrinkles, and maintain a professional appearance throughout demanding shifts.",
-          icon: "/images/icons/fabric-tech-performance.svg"
+          icon: "/images/fabric-cotton-blends.svg"
         },
       ],
     },
@@ -63,28 +63,16 @@ export default function AviationIndustryPage() {
         {
         name: "Airline Crew Uniforms",
         description: "Premium quality flight attendant uniforms with modest Islamic-compliant options for Saudi airlines and GCC carriers.",
-      image: "/images/aviation/flightـattendantsـuniforms.jpg",
-          link: "/shop/aviation-uniforms/airline-crew-uniform"
-    },
-    {
-        name: "Professional Pilot Uniform Sets",
-        description: "Complete pilot uniform sets designed for Saudi airline captains and officers, featuring premium fabrics and traditional styling.",
-      image: "/images/aviation/aviation_captin_uniform.jpg",
-          link: "/shop/aviation-uniforms/pilot-uniform-set"
-    },
-    {
-          name: "Ground Staff & Operations Uniforms",
-          description: "Practical and professional attire for airport ground personnel, featuring durable materials and weather-appropriate designs for all Saudi climates.",
-      image: "/images/aviation/aviation_uniform_airline.jpg",
-          link: "/shop/aviation-uniforms/ground-crew-uniform"
-        }
-      ],
-    },
-    customizationOptions: {
-      title: "Tailored to Your Airline's Exact Specifications",
-      description: "UNEOM provides extensive customization, from fabric technology selection (SkyComfort™, AeroGuard™) and cultural design element integration (Saudi heritage motifs) to precise rank and position indicators, ensuring your airline's uniforms are truly unique and representative.",
-      image: "/images/aviation/aviation_uniform_main.jpg", 
-    },
+      image: "/images/aviation/flightـattendantsـuniforms.jpg", // Main image
+      link: "/shop/aviation-uniforms", // Main navigation link
+      imageGallery: [
+        "/images/aviation/aviation_captin_uniform.jpg",
+        "/images/aviation/aviation_uniform_airline.jpg",
+        "/images/aviation/aviation_uniform_main.jpg"
+      ]
+    } // Closes the "Airline Crew Uniforms" object
+  ] // Closes the "offerings" array
+}, // Closes the "featuredOfferings" object
     testimonials: {
       title: "Trusted by Leading Aviation Partners",
       items: [
@@ -99,6 +87,13 @@ export default function AviationIndustryPage() {
           position: "Cabin Services Manager, Gulf International Airways",
         }
       ],
+    },
+    customizationOptions: {
+      title: "Tailored Aviation Uniform Solutions",
+      description: "UNEOM offers extensive customization options for aviation uniforms, including logo embroidery, choice of colors, and specific design modifications to meet your airline's unique branding and operational needs. We ensure every uniform reflects your identity while adhering to safety and comfort standards.",
+      image: "/images/industries/aviation/customization-aviation-uniforms.jpg", // Placeholder image
+      cta: "Explore Customizations",
+      ctaLink: "/services/custom-design"
     },
     relatedBlogs: {
       title: "Aviation Uniform Insights",

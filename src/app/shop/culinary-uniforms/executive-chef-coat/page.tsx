@@ -80,19 +80,9 @@ export default function ExecutiveChefCoatPage() {
         name: 'Professional Chef Pants',
         image: '/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'From SAR 189',
-        href: '/shop/culinary-uniforms/chef-pants'
-      },
-      {
-        id: 'sous-chef-coat',
-        name: 'Sous Chef Coat',
-        image: '/images/hospitality/hospitality_uniform_formal.jpg',
+        href: '/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'From SAR 259',
-        href: '/shop/culinary-uniforms/sous-chef-coat'
-      },
-      {
-        id: 'chef-apron',
-        name: 'Professional Chef Apron',
-        image: '/images/hospitality/hospitality_uniform_formal.jpg',
+        href: '/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'From SAR 129',
         href: '/shop/culinary-uniforms/chef-apron'
       }

@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'en',
     images: [
       {
-        url: '/images/services/custom-uniforms-service.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'UNEOM Custom Uniform Design and Manufacturing Service',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Custom Uniforms | UNEOM Saudi Arabia',
-    description: 'Premium custom uniform design and manufacturing for Saudi organizations. Tailored workwear solutions with your brand identity.',
-    images: ['/images/services/custom-uniforms-service.jpg'],
+        url: '/images/services/services/custom-uniforms-service.jpg'],
   },
   robots: {
     index: true,

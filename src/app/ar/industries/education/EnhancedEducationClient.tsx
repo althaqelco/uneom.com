@@ -36,14 +36,14 @@ export default function EnhancedEducationClient() {
     {
       title: 'المدارس الحكومية',
       description: 'أزياء موحدة تلبي معايير وزارة التعليم السعودية',
-      image: '/images/education/school-uniform-post-1.jpg',
+      image: '/images/blog/school-uniform-post-1.jpg',
       features: ['مطابقة للمعايير الحكومية', 'أقمشة عالية الجودة', 'تصاميم محتشمة', 'أسعار تنافسية'],
       stats: '٢٠٠+ مدرسة حكومية'
     },
     {
       title: 'المدارس الأهلية والعالمية',
       description: 'تصاميم مخصصة تعكس هوية المؤسسة التعليمية',
-      image: '/images/education/sustainable-uniform.jpg',
+      image: '/images/blog/sustainable-uniform.jpg',
       features: ['تصاميم مخصصة', 'شعارات مطرزة', 'ألوان متنوعة', 'جودة فاخرة'],
       stats: '١٥٠+ مدرسة أهلية'
     },
@@ -96,13 +96,13 @@ export default function EnhancedEducationClient() {
     {
       name: 'الأزياء المدرسية الأساسية',
       description: 'مجموعة شاملة للطلاب والطالبات',
-      image: '/images/education/school-uniform-post-1.jpg',
+      image: '/images/blog/school-uniform-post-1.jpg',
       products: ['قمصان وبلوزات', 'بناطيل وتنانير', 'فساتين مدرسية', 'جاكيتات وسترات']
     },
     {
       name: 'الأزياء الرياضية',
       description: 'ملابس رياضية مريحة وعملية',
-      image: '/images/education/sustainable-uniform.jpg',
+      image: '/images/blog/sustainable-uniform.jpg',
       products: ['تيشيرتات رياضية', 'شورتات وبناطيل', 'أحذية رياضية', 'حقائب رياضية']
     },
     {
@@ -127,7 +127,7 @@ export default function EnhancedEducationClient() {
       challenge: 'تحديث الأزياء المدرسية لـ ٢٥ مدرسة مع الحفاظ على الهوية',
       solution: 'تطوير نظام أزياء متكامل يجمع بين التقاليد والحداثة',
       result: '٩٥٪ رضا من الطلاب وأولياء الأمور، تحسن ملحوظ في الانضباط المدرسي',
-      image: '/images/education/school-uniform-post-1.jpg',
+      image: '/images/blog/school-uniform-post-1.jpg',
       testimonial: 'يونيوم فهمت احتياجاتنا التعليمية وقدمت حلول عملية ومبتكرة.',
       client: 'أ. فاطمة الزهراني، مديرة المدارس'
     },
@@ -216,7 +216,7 @@ export default function EnhancedEducationClient() {
       <section className="relative bg-gradient-to-r from-green-900 to-emerald-800 text-white py-24 md:py-32">
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <Image
-            src="/images/education/school-uniform-post-1.jpg"
+            src="/images/blog/school-uniform-post-1.jpg"
             alt="أزياء القطاع التعليمي من يونيوم - ملابس مدرسية وجامعية عالية الجودة"
             fill
             className="object-cover"
@@ -317,7 +317,7 @@ export default function EnhancedEducationClient() {
             >
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/education/sustainable-uniform.jpg"
+                  src="/images/blog/sustainable-uniform.jpg"
                   alt="طلاب يرتدون الأزياء التعليمية من يونيوم"
                   fill
                   className="object-cover"

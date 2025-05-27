@@ -88,42 +88,42 @@ export default function FactoryIndustryPage() {
       {
         title: "Advanced Thermal Protection",
         description: "Specialized heat-resistant and flame-retardant fabrics that provide critical protection in high-temperature environments common in Saudi petrochemical and manufacturing operations.",
-        icon: "/icons/fire.svg",
+        icon: "/images/icons/fire.svg",
         reactIcon: "fire",
         color: "from-orange-500 to-red-600"
       },
       {
         title: "Comprehensive Safety Compliance",
         description: "All workwear meets or exceeds Saudi SASO standards, GCC specifications, and international safety certifications including ISO 11612, ISO 20471, and industry-specific requirements.",
-        icon: "/icons/shield-check.svg",
+        icon: "/images/icons/shield-check.svg",
         reactIcon: "shield",
         color: "from-teal-500 to-green-600"
       },
       {
         title: "Climate-Optimized Performance",
         description: "Innovative fabric technologies that maintain protection while providing enhanced breathability and moisture management, designed specifically for Saudi Arabia's hot climate conditions.",
-        icon: "/icons/temperature.svg",
+        icon: "/images/icons/temperature.svg",
         reactIcon: "temperature",
         color: "from-blue-500 to-blue-700"
       },
       {
         title: "Extended Durability",
         description: "Industrial-grade construction with reinforced stress points, specialized stitching techniques, and abrasion-resistant materials that withstand the demands of Saudi industrial environments.",
-        icon: "/icons/durability.svg",
+        icon: "/images/icons/durability.svg",
         reactIcon: "lock",
         color: "from-gray-600 to-gray-800"
       },
       {
         title: "Enhanced Visibility & Safety",
         description: "Strategic placement of high-visibility elements and reflective materials to maximize worker safety in low-light conditions across industrial facilities.",
-        icon: "/icons/certificate.svg",
+        icon: "/images/icons/certificate.svg",
         reactIcon: "eye",
         color: "from-amber-500 to-amber-700"
       },
       {
         title: "Streamlined Identity Management",
         description: "Customized department color-coding systems, role identification features, and integrated access control compatibility for improved facility security and management.",
-        icon: "/icons/branding.svg",
+        icon: "/images/icons/branding.svg",
         reactIcon: "badge",
         color: "from-purple-500 to-purple-700"
       }
@@ -174,52 +174,11 @@ export default function FactoryIndustryPage() {
         name: "Premium Industrial Coverall",
         description: "Our flagship industrial coverall combines advanced protection with Saudi climate optimization. Features include flame-resistant treatment, reinforced stress points, multiple tool pockets, and strategically placed ventilation zones.",
         image: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_1.webp",
-        href: "/shop/industrial-uniforms/industrial-coverall",
-        featured: true,
-        price: "SAR 349",
-        badge: "Best Seller"
-      },
-      {
-        id: "flame-resistant-workwear",
-        name: "Flame-Resistant Workwear Set",
-        description: "Specialized for high-risk environments, this FR-certified workwear set provides maximum protection in petrochemical plants and high-temperature manufacturing environments while maintaining comfort in Saudi Arabia's climate.",
-        image: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_2.webp",
-        href: "/shop/industrial-uniforms/flame-resistant-workwear",
-        price: "SAR 499",
-        badge: "Safety Certified"
-      },
-      {
-        id: "hi-vis-safety-uniform",
-        name: "High-Visibility Safety Uniform",
-        description: "Engineered for maximum visibility in low-light industrial environments, featuring Class 3 reflective elements, durable moisture-wicking fabric, and Saudi climate adaptations for all-day comfort and protection.",
-        image: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_3.webp",
-        href: "/shop/industrial-uniforms/hi-vis-safety-uniform",
-        price: "SAR 399",
-        badge: "Enhanced Visibility"
-      },
-      {
-        id: "industrial-coverall-pro",
-        name: "Industrial Coverall Pro with Cooling Technology",
-        description: "Next-generation coverall featuring integrated cooling technology designed for extreme Saudi temperatures. Includes moisture-activated cooling zones, antimicrobial treatment, and enhanced abrasion resistance for demanding industrial environments.",
-        image: "/images/industries/Factory_Industrial/industrial-coverall-pro.webp",
-        href: "/shop/industrial-uniforms/industrial-coverall-pro",
-        price: "SAR 549",
-        badge: "Cooling Technology"
-      },
-      {
-        id: "anti-static-industrial-uniform",
-        name: "Anti-Static Industrial Uniform Set",
-        description: "Specialized workwear with permanent anti-static properties for hazardous environments. Meets ATEX standards with carbon fiber grid technology, chemical splash protection, and flame resistance for petrochemical and electronics manufacturing.",
-        image: "/images/industries/Factory_Industrial/anti-static-uniform.webp",
-        href: "/shop/industrial-uniforms/anti-static-industrial-uniform",
-        price: "SAR 479",
-        badge: "Hazardous Environment"
-      },
-      {
-        id: "supervisor-industrial-uniform",
-        name: "Supervisor Industrial Uniform Package",
-        description: "Distinguished uniform set for production supervisors and team leaders featuring specialized color-coding, enhanced durability, integrated tablet pocket, and communication device compatibility while maintaining full safety compliance.",
-        image: "/images/industries/Factory_Industrial/supervisor-uniform.webp",
+        href: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_2.webp",
+        href: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_3.webp",
+        href: "/images/industries/Factory_Industrial/industrial-coverall-pro.webp",
+        href: "/images/industries/Factory_Industrial/anti-static-uniform.webp",
+        href: "/images/industries/Factory_Industrial/supervisor-uniform.webp",
         href: "/shop/industrial-uniforms/supervisor-industrial-uniform",
         price: "SAR 629",
         badge: "Management Standard"

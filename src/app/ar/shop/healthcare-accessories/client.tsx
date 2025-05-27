@@ -19,81 +19,11 @@ export default function HealthcareAccessoriesClientPage() {
       description: 'سماعات طبية عالية الجودة مصممة للاستخدام في المجال الطبي والممارسة السريرية',
       price: 'من ريال 150',
       image: '/images/products/medical-stethoscope.jpg',
-      href: '/ar/shop/healthcare-accessories/medical-stethoscope',
-      features: [
-        'دقة تسجيل صوتية عالية',
-        'مصممة للراحة أثناء الاستخدام الطويل',
-        'متوفرة بألوان متعددة وخيارات للتخصيص'
-      ],
-      isNew: true,
-      isBestseller: false
-    },
-    {
-      id: 'medical-watches',
-      name: 'ساعات طبية',
-      description: 'ساعات مصممة خصيصًا للعاملين في المجال الطبي مع ميزات ملائمة للاستخدام السريري',
-      price: 'من ريال 120',
-      image: '/images/products/medical-watch.jpg',
-      href: '/ar/shop/healthcare-accessories/medical-watches',
-      features: [
-        'مقاومة للماء والمطهرات',
-        'وظائف إضافية للاستخدام الطبي',
-        'سهلة القراءة مع عقرب ثواني واضح'
-      ],
-      isNew: false,
-      isBestseller: true
-    },
-    {
-      id: 'medical-bags',
-      name: 'حقائب طبية',
-      description: 'حقائب متينة ومنظمة مصممة لحمل المعدات والأدوات الطبية الأساسية',
-      price: 'من ريال 200',
-      image: '/images/products/medical-bag.jpg',
-      href: '/ar/shop/healthcare-accessories/medical-bags',
-      features: [
-        'تصميم متعدد الجيوب لسهولة التنظيم',
-        'مصنوعة من مواد سهلة التنظيف',
-        'خيارات مختلفة للأحجام والأنماط'
-      ],
-      isNew: false,
-      isBestseller: false
-    },
-    {
-      id: 'medical-clogs',
-      name: 'أحذية طبية مريحة',
-      description: 'أحذية مهنية مصممة للممارسين الطبيين، توفر الراحة والدعم أثناء الوقوف لفترات طويلة',
-      price: 'من ريال 180',
-      image: '/images/products/medical-clogs.jpg',
-      href: '/ar/shop/healthcare-accessories/medical-clogs',
-      features: [
-        'نعل مضاد للانزلاق',
-        'مقاومة للبقع والسوائل',
-        'تصميم خفيف الوزن لراحة طويلة المدى'
-      ],
-      isNew: false,
-      isBestseller: true
-    },
-    {
-      id: 'id-badge-holders',
-      name: 'حاملات بطاقات التعريف',
-      description: 'حاملات متينة وعملية لبطاقات التعريف والتصاريح الطبية',
-      price: 'من ريال 35',
-      image: '/images/products/id-badge-holders.jpg',
-      href: '/ar/shop/healthcare-accessories/id-badge-holders',
-      features: [
-        'متوفرة بتصاميم قابلة للسحب',
-        'متوافقة مع معظم بطاقات التعريف القياسية',
-        'خيارات تخصيص متعددة للمستشفيات والمؤسسات'
-      ],
-      isNew: true,
-      isBestseller: false
-    },
-    {
-      id: 'medical-penlight',
-      name: 'أقلام إضاءة طبية',
-      description: 'أقلام إضاءة احترافية للفحص السريري، أساسية للأطباء والممرضين',
-      price: 'من ريال 45',
-      image: '/images/products/medical-penlight.jpg',
+      href: '/ar/images/products/medical-watch.jpg',
+      href: '/ar/images/products/medical-bag.jpg',
+      href: '/ar/images/products/medical-clogs.jpg',
+      href: '/ar/images/products/id-badge-holders.jpg',
+      href: '/ar/images/products/medical-penlight.jpg',
       href: '/ar/shop/healthcare-accessories/medical-penlight',
       features: [
         'إضاءة LED عالية الجودة',

@@ -31,27 +31,27 @@ export default function SecurityPage() {
       {
         title: "Professional Authority Projection",
         description: "Meticulously designed security uniforms that instantly convey authority and establish respect across diverse Saudi operational environments.",
-        icon: "/icons/shield-check.svg"
+        icon: "/images/icons/shield-check.svg"
       },
       {
         title: "Advanced Tactical Functionality",
         description: "Specialized security features including reinforced pockets, concealed equipment attachments, and strategic seam placement for optimal operational movement.",
-        icon: "/icons/lightning-bolt.svg"
+        icon: "/images/icons/lightning-bolt.svg"
       },
       {
         title: "Saudi Climate Adaptability",
         description: "Advanced breathable, moisture-wicking performance fabrics engineered for comfort during extended security operations in Saudi Arabia's high-temperature climate.",
-        icon: "/icons/sun.svg"
+        icon: "/images/icons/sun.svg"
       },
       {
         title: "Professional Brand Identity",
         description: "Consistent, brand-aligned security uniforms that reinforce your organization's professional identity and security standards across all personnel levels.",
-        icon: "/icons/identification.svg"
+        icon: "/images/icons/identification.svg"
       },
       {
         title: "Enhanced Visibility Options",
         description: "Strategic high-visibility elements for nighttime security operations and special event management without compromising professional appearance.",
-        icon: "/icons/eye.svg"
+        icon: "/images/icons/eye.svg"
       }
     ],
     
@@ -61,34 +61,8 @@ export default function SecurityPage() {
         name: "Professional Security Officer Uniform",
         description: "Premium-grade security officer attire designed for Saudi corporate facilities, government buildings, and high-profile locations requiring authoritative presence and climate comfort.",
         image: "/images/industries/security/security-uniform-product-1.jpg",
-        href: "/shop/security-uniforms/security-officer-uniform",
-        features: [
-          "Professional command-presence design",
-          "Premium moisture-wicking fabric",
-          "Reinforced tactical pockets",
-          "Saudi climate optimization",
-          "Extended durability construction"
-        ]
-      },
-      {
-        id: "tactical-security",
-        name: "Elite Tactical Security Wear",
-        description: "Advanced tactical security uniforms with specialized functionality for active security personnel requiring enhanced mobility and equipment accommodation.",
-        image: "/images/industries/security/security-uniform-product-2.jpg",
-        href: "/shop/security-uniforms/tactical-security-uniforms",
-        features: [
-          "360° stretch fabric technology",
-          "Reinforced articulated joints",
-          "Concealed equipment attachments",
-          "Abrasion-resistant construction",
-          "Heat-management system"
-        ]
-      },
-      {
-        id: "executive-protection",
-        name: "Executive Protection Apparel",
-        description: "Sophisticated, discreet protection officer attire balancing professional appearance with tactical capability for executive security details and VIP protection.",
-        image: "/images/industries/security/security-uniform-product-3.jpg",
+        href: "/images/industries/security/security-uniform-product-2.jpg",
+        href: "/images/industries/security/security-uniform-product-3.jpg",
         href: "/shop/security-uniforms/executive-protection",
         features: [
           "Professional tailored appearance",
@@ -126,27 +100,27 @@ export default function SecurityPage() {
       {
         name: "DuraGuard™ Premium Fabric",
         description: "Military-grade woven fabric with enhanced tear and abrasion resistance specifically engineered for intensive security operations in demanding environments.",
-        icon: "/icons/shield-check.svg"
+        icon: "/images/icons/shield-check.svg"
       },
       {
         name: "ClimaCool™ Adaptive Technology",
         description: "Advanced moisture-wicking technology with temperature regulation that enhances comfort during extended security shifts in Saudi Arabia's high-temperature environments.",
-        icon: "/icons/thermometer.svg"
+        icon: "/images/icons/thermometer.svg"
       },
       {
         name: "FlexTac™ Professional Construction",
         description: "Strategic mechanical stretch panels and articulated joint construction that enhance movement during security interventions and active engagement scenarios.",
-        icon: "/icons/refresh.svg"
+        icon: "/images/icons/refresh.svg"
       },
       {
         name: "NightVis™ Safety Elements",
         description: "Reflective and phosphorescent visual elements that enhance security personnel visibility during nighttime operations without compromising professional appearance.",
-        icon: "/icons/eye.svg"
+        icon: "/images/icons/eye.svg"
       },
       {
         name: "AridCore™ Desert-Optimized Fabric",
         description: "Specialized fabric technology developed specifically for Saudi Arabia's desert climate conditions with enhanced breathing and cooling properties.",
-        icon: "/icons/sun.svg"
+        icon: "/images/icons/sun.svg"
       }
     ],
     
@@ -154,27 +128,27 @@ export default function SecurityPage() {
       {
         name: "Professional Rank & Position Indicators",
         description: "Customizable epaulets, badges, and insignia that clearly identify security personnel hierarchy and authority levels within your organization.",
-        icon: "/icons/badge-check.svg"
+        icon: "/images/icons/badge-check.svg"
       },
       {
         name: "Corporate Identity Integration",
         description: "Professionally applied logos, emblems, and corporate identity elements across all security uniform components for consistent brand representation.",
-        icon: "/icons/template.svg"
+        icon: "/images/icons/template.svg"
       },
       {
         name: "Tactical Feature Customization",
         description: "Modified pocket configurations, equipment attachments, and function-specific design elements based on your exact operational requirements and gear specifications.",
-        icon: "/icons/adjustments.svg"
+        icon: "/images/icons/adjustments.svg"
       },
       {
         name: "Saudi Cultural Adaptations",
         description: "Security uniform designs that respectfully incorporate Saudi cultural and religious requirements while maintaining professional security standards.",
-        icon: "/icons/globe.svg"
+        icon: "/images/icons/globe.svg"
       },
       {
         name: "Climate-Specific Modifications",
         description: "Customized adjustments for specific regional climate variations within Saudi Arabia, from coastal humidity to desert conditions.",
-        icon: "/icons/temperature.svg"
+        icon: "/images/icons/temperature.svg"
       }
     ],
     
@@ -233,25 +207,9 @@ export default function SecurityPage() {
         description: "Complete professional security officer uniform set with premium moisture-wicking shirt, tactical pants with reinforced knees, duty belt, and cap.",
         image: "/images/industries/security/security-uniform-product-1.jpg",
         price: "SAR 950",
-        href: "/shop/security-uniforms/security-officer-uniform",
-        badge: "Best Seller",
-        featured: true
-      },
-      {
-        id: "tactical-security-elite",
-        name: "Elite Tactical Security Uniform",
-        description: "Advanced tactical security uniform with stretch fabric technology, reinforced construction, and multiple equipment attachment points.",
-        image: "/images/industries/security/security-uniform-product-2.jpg",
+        href: "/images/industries/security/security-uniform-product-2.jpg",
         price: "SAR 1,250",
-        href: "/shop/security-uniforms/tactical-security-uniforms",
-        badge: "Professional Grade",
-        featured: true
-      },
-      {
-        id: "executive-protection-suit",
-        name: "Executive Protection Suit",
-        description: "Sophisticated protection officer attire with concealed tactical features in a professional tailored design for executive security details.",
-        image: "/images/industries/security/security-uniform-product-3.jpg",
+        href: "/images/industries/security/security-uniform-product-3.jpg",
         price: "SAR 1,850",
         href: "/shop/security-uniforms/executive-protection",
         badge: "Premium",

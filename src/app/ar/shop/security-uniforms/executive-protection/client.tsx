@@ -78,19 +78,9 @@ export default function ExecutiveProtectionClientPage() {
         name: 'زي ضابط الأمن الاحترافي',
         image: '/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'من ريال 329',
-        href: '/ar/shop/security-uniforms/security-officer-uniform'
-      },
-      {
-        id: 'tactical-security-uniforms',
-        name: 'أزياء الأمن التكتيكية',
-        image: '/images/hospitality/hospitality_uniform_formal.jpg',
+        href: '/ar/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'من ريال 549',
-        href: '/ar/shop/security-uniforms/tactical-security-uniforms'
-      },
-      {
-        id: 'hotel-security-uniform',
-        name: 'زي الأمن الفندقي',
-        image: '/images/hospitality/hospitality_uniform_formal.jpg',
+        href: '/ar/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'من ريال 399',
         href: '/ar/shop/security-uniforms/hotel-security-uniform'
       }

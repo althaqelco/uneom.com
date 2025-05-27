@@ -32,58 +32,11 @@ export default function MedicalScrubsPage() {
       description: 'High-performance medical scrubs designed for healthcare professionals who require comfort, durability, and a professional appearance.',
       price: 'From SAR 249',
       image: '/images/products/scrubs-set.jpg',
-      href: '/shop/medical-scrubs/premium-scrubs-set',
-      features: ['Antimicrobial', 'Moisture-wicking', 'Wrinkle-resistant', 'Multiple pockets'],
-      colors: ['Teal', 'Navy', 'Burgundy', 'Grey', 'Black'],
-      isBestseller: true
-    },
-    {
-      id: 'antimicrobial-scrubs',
-      name: 'Antimicrobial Scrubs',
-      description: 'Advanced medical scrubs with enhanced antimicrobial properties for healthcare environments where infection control is paramount.',
-      price: 'From SAR 279',
-      image: '/images/healthcare/healthcare_medical_uniform.jpg',
-      href: '/shop/medical-scrubs/antimicrobial-scrubs',
-      features: ['Enhanced hygiene', 'Odor control', 'Fluid-resistant', 'Durable construction'],
-      colors: ['Light Blue', 'Navy', 'White', 'Green'],
-      isNew: true
-    },
-    {
-      id: 'nursing-scrubs',
-      name: 'Nursing Scrubs Set',
-      description: 'Comfortable and practical scrubs specifically designed for nursing professionals with functional features for daily hospital tasks.',
-      price: 'From SAR 229',
-      image: '/images/products/nursing-uniform.jpg',
-      href: '/shop/medical-scrubs/nursing-scrubs',
-      features: ['Stretch fabric', 'Ergonomic design', 'Easy care', 'Stain resistant'],
-      colors: ['Ceil Blue', 'Navy', 'Pink', 'Burgundy']
-    },
-    {
-      id: 'surgical-scrubs',
-      name: 'Surgical Scrubs',
-      description: 'Specialized medical scrubs designed for the surgical environment with heightened considerations for sterility and comfort.',
-      price: 'From SAR 269',
-      image: '/images/healthcare/healthcare_medical_doctor_uniform.jpg',
-      href: '/shop/medical-scrubs/surgical-scrubs',
-      features: ['Sterile compatible', 'Specialized fabric', 'Optimal fit', 'Quick-dry material'],
-      colors: ['Light Green', 'Light Blue', 'Navy', 'Light Grey']
-    },
-    {
-      id: 'medical-lab-coat',
-      name: 'Professional Lab Coat',
-      description: 'High-quality medical lab coat with modern fit and practical features designed for healthcare and laboratory professionals.',
-      price: 'From SAR 199',
-      image: '/images/products/lab-coat.jpg',
-      href: '/shop/medical-scrubs/medical-lab-coat',
-      features: ['Professional look', 'Stain resistant', 'Durable fabric', 'Multiple pockets'],
-      colors: ['White', 'Light Blue']
-    },
-    {
-      id: 'executive-medical-uniform',
-      name: 'Executive Medical Uniform',
-      description: 'Premium medical uniform designed for healthcare executives and administrators, balancing professional appearance with comfort.',
-      price: 'From SAR 349',
-      image: '/images/avatar-placeholder.jpg',
+      href: '/images/healthcare/healthcare_medical_uniform.jpg',
+      href: '/images/products/nursing-uniform.jpg',
+      href: '/images/healthcare/healthcare_medical_doctor_uniform.jpg',
+      href: '/images/products/lab-coat.jpg',
+      href: '/images/avatar-placeholder.jpg',
       href: '/shop/medical-scrubs/executive-medical-uniform',
       features: ['Premium fabric', 'Executive styling', 'Comfortable fit', 'Professional look'],
       colors: ['Navy', 'Black', 'Grey', 'White']

@@ -35,31 +35,31 @@ export default function FactorySecurityPage() {
       {
         title: "Enhanced Safety Features",
         description: "High-visibility elements and flame-resistant materials for maximum protection.",
-        icon: "/icons/safety.svg",
+        icon: "/images/icons/safety.svg",
         gradient: "from-yellow-500 to-amber-600"
       },
       {
         title: "Professional Authority",
         description: "Commanding presence that establishes security personnel authority and credibility.",
-        icon: "/icons/authority.svg",
+        icon: "/images/icons/authority.svg",
         gradient: "from-blue-600 to-indigo-700"
       },
       {
         title: "Durability & Comfort",
         description: "Premium materials that withstand industrial conditions while ensuring all-day comfort.",
-        icon: "/icons/durability.svg",
+        icon: "/images/icons/durability.svg",
         gradient: "from-green-600 to-emerald-700"
       },
       {
         title: "Weather Adaptation",
         description: "Climate-smart designs for both indoor and outdoor security operations.",
-        icon: "/icons/weather.svg",
+        icon: "/images/icons/weather.svg",
         gradient: "from-cyan-500 to-blue-600"
       },
       {
         title: "Identification & Access",
         description: "Integrated features for badges, access cards, and communication devices.",
-        icon: "/icons/identification.svg",
+        icon: "/images/icons/identification.svg",
         gradient: "from-purple-600 to-violet-700"
       }
     ],
@@ -70,22 +70,8 @@ export default function FactorySecurityPage() {
         name: "Industrial Security Uniform Set",
         description: "Complete security uniform set designed for industrial environments, featuring high-visibility elements and durable construction.",
         image: "/images/industries/factory_industry/factory-security-uniform-1.jpg",
-        href: "/shop/security-uniforms/industrial-security-set",
-        features: ["Flame-resistant fabric", "High-visibility elements", "Multiple utility pockets"]
-      },
-      {
-        id: "factory-patrol-uniform",
-        name: "Factory Patrol Uniform",
-        description: "Specialized patrol uniform with enhanced mobility and weather protection features.",
-        image: "/images/industries/factory_industry/factory-security-uniform-2.jpg",
-        href: "/shop/security-uniforms/factory-patrol",
-        features: ["Weather-resistant", "Enhanced mobility", "Communication device integration"]
-      },
-      {
-        id: "security-supervisor-uniform",
-        name: "Security Supervisor Attire",
-        description: "Distinguished uniform set for security supervisors, combining authority with functionality.",
-        image: "/images/industries/factory_industry/factory-security-uniform-3.jpg",
+        href: "/images/industries/factory_industry/factory-security-uniform-2.jpg",
+        href: "/images/industries/factory_industry/factory-security-uniform-3.jpg",
         href: "/shop/security-uniforms/supervisor-set",
         features: ["Professional design", "Premium materials", "Supervisor insignia"]
       }
@@ -95,19 +81,19 @@ export default function FactorySecurityPage() {
       {
         name: "DuraTough™ Protection",
         description: "Advanced fabric technology providing superior durability and protection in industrial environments.",
-        icon: "/icons/protection.svg",
+        icon: "/images/icons/protection.svg",
         animation: "fade-right"
       },
       {
         name: "ClimateControl Comfort",
         description: "Innovative temperature regulation for optimal comfort in varying conditions.",
-        icon: "/icons/temperature.svg",
+        icon: "/images/icons/temperature.svg",
         animation: "fade-up"
       },
       {
         name: "SafetyFlex Technology",
         description: "Enhanced mobility features without compromising on protection and durability.",
-        icon: "/icons/flexibility.svg",
+        icon: "/images/icons/flexibility.svg",
         animation: "fade-left"
       }
     ],
@@ -116,19 +102,19 @@ export default function FactorySecurityPage() {
       {
         name: "Company Branding",
         description: "Professional logo application and color matching to align with company identity.",
-        icon: "/icons/branding.svg",
+        icon: "/images/icons/branding.svg",
         gradient: "from-blue-500 to-blue-700"
       },
       {
         name: "Rank Distinction",
         description: "Clear visual hierarchy through thoughtful design elements and insignias.",
-        icon: "/icons/rank.svg",
+        icon: "/images/icons/rank.svg",
         gradient: "from-purple-500 to-purple-700"
       },
       {
         name: "Safety Integration",
         description: "Customizable safety features based on specific facility requirements.",
-        icon: "/icons/safety-custom.svg",
+        icon: "/images/icons/safety-custom.svg",
         gradient: "from-green-500 to-green-700"
       }
     ],
@@ -157,27 +143,9 @@ export default function FactorySecurityPage() {
         name: "Premium Industrial Security Set",
         description: "Complete uniform solution with enhanced safety features",
         image: "/images/industries/factory_industry/factory-security-premium-set.jpg",
-        href: "/shop/security-uniforms/premium-industrial-set"
-      },
-      {
-        name: "All-Weather Security Patrol Kit",
-        description: "Comprehensive patrol uniform for all weather conditions",
-        image: "/images/industries/factory_industry/factory-security-patrol-kit.jpg",
-        href: "/shop/security-uniforms/all-weather-patrol"
-      },
-      {
-        name: "Security Command Uniform",
-        description: "Professional attire for security management personnel",
-        image: "/images/industries/factory_industry/factory-security-command.jpg",
-        href: "/shop/security-uniforms/command-uniform"
-      }
-    ],
-    
-    relatedBlogs: [
-      {
-        title: "Essential Features of Industrial Security Uniforms",
-        excerpt: "Understanding key elements that make security uniforms effective in industrial settings",
-        image: "/images/industries/factory_industry/factory-security-features.jpg",
+        href: "/images/industries/factory_industry/factory-security-patrol-kit.jpg",
+        href: "/images/industries/factory_industry/factory-security-command.jpg",
+        href: "/images/industries/factory_industry/factory-security-features.jpg",
         href: "/blog/industrial-security-uniform-features"
       },
       {

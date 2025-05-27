@@ -7,7 +7,7 @@ author:
   bio: 'Sustainability expert with over 10 years of experience in the textile industry'
   title: 'Sustainability Consultant'
 excerpt: 'How eco-friendly fabrics and sustainable manufacturing practices are transforming school uniforms across the Kingdom.'
-featuredImage: '/images/education/sustainable-uniform.jpg'
+featuredImage: '/images/blog/sustainable-uniform.jpg'
 tags: ['sustainability', 'school-uniforms', 'eco-friendly', 'vision-2030']
 ---
 

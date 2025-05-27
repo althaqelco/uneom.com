@@ -41,17 +41,17 @@ export default function UniformPoliciesServiceClientPage() {
     
     benefits: [
       {
-        icon: '/images/icons/compliance-shield.svg',
+        icon: '/images/compliance-shield.svg',
         title: 'حوكمة واضحة',
         description: 'وضع إرشادات شفافة ومحددة بوضوح تزيل الارتباك وعدم الاتساق في إدارة برنامج الزي الموحد.'
       },
       {
-        icon: '/images/icons/compliance-shield.svg',
+        icon: '/images/compliance-shield.svg',
         title: 'الامتثال التنظيمي',
         description: 'ضمان امتثال برنامج الزي الموحد الخاص بك للوائح الصناعة ومعايير السلامة وقوانين العمل ذات الصلة.'
       },
       {
-        icon: '/images/icons/brand-aligned.svg',
+        icon: '/images/images/icons/brand-aligned.svg',
         title: 'اتساق العلامة التجارية',
         description: 'الحفاظ على معايير موحدة تمثل هوية علامتك التجارية بدقة واتساق عبر جميع المواقع والأقسام.'
       },

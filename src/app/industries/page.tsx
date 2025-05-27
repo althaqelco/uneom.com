@@ -29,51 +29,12 @@ export default function IndustriesPage() {
       name: 'Healthcare',
       description: 'High-quality medical scrubs and healthcare uniforms designed for Saudi hospitals, clinics, and medical facilities.',
       image: '/images/industries/healthcare.jpg',
-      href: '/industries/healthcare'
-    },
-    {
-      id: 'aviation',
-      name: 'Aviation',
-      description: 'Premium pilot and cabin crew uniforms that represent your airline with distinction and comfort.',
-      image: '/images/aviation/aviation_uniform_main.jpg',
-      href: '/industries/aviation'
-    },
-    {
-      id: 'hospitality',
-      name: 'Hospitality',
-      description: 'Elegant and practical uniforms for hotels, restaurants, and hospitality services throughout Saudi Arabia.',
-      image: '/images/hospitality/hospitality_uniform.jpg',
-      href: '/industries/hospitality'
-    }
-  ];
-  
-  const additionalIndustries: IndustryInfo[] = [
-    {
-      id: 'corporate',
-      name: 'Corporate',
-      description: 'Professional corporate attire and workwear solutions tailored for Saudi business environments.',
-      image: '/images/industries/corporate.jpg',
-      href: '/industries/corporate'
-    },
-    {
-      id: 'education',
-      name: 'Education',
-      description: 'Durable and comfortable uniforms for schools, universities, and educational institutions.',
-      image: '/images/education/education_uniform_main.jpg',
-      href: '/industries/education'
-    },
-    {
-      id: 'manufacturing',
-      name: 'Manufacturing',
-      description: "Safety-compliant workwear designed for industrial environments with Saudi Arabia's climate in mind.",
-      image: '/images/industrial/industrial_uniform_main.jpg',
-      href: '/industries/manufacturing'
-    },
-    {
-      id: 'security',
-      name: 'Security',
-      description: 'Professional security uniforms that convey authority while providing comfort and functionality.',
-      image: '/images/security/security_uniform_main.jpg',
+      href: '/images/industries/aviation/aviation_uniform_main.jpg',
+      href: '/images/industries/hospitality/hospitality_uniform.jpg',
+      href: '/images/industries/industries/corporate.jpg',
+      href: '/images/industries/education/education_uniform_main.jpg',
+      href: '/images/industries/industrial/industrial_uniform_main.jpg',
+      href: '/images/industries/security/security_uniform_main.jpg',
       href: '/industries/security'
     }
   ];

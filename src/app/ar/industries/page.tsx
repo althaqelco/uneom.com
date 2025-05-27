@@ -26,51 +26,12 @@ export default function IndustriesPageArabic() {
       name: 'الرعاية الصحية',
       description: 'أزياء طبية وملابس رعاية صحية عالية الجودة مصممة للمستشفيات والعيادات والمرافق الطبية في المملكة العربية السعودية.',
       image: '/images/healthcare/healthcare_medical_uniform.jpg',
-      href: '/ar/industries/healthcare'
-    },
-    {
-      id: 'aviation',
-      name: 'الطيران',
-      description: 'أزياء فاخرة للطيارين وطاقم الضيافة تمثل شركة طيرانك بتميز وراحة.',
-      image: '/images/products/aviation/airline-1.jpg',
-      href: '/ar/industries/aviation'
-    },
-    {
-      id: 'hospitality',
-      name: 'الضيافة',
-      description: 'أزياء أنيقة وعملية للفنادق والمطاعم وخدمات الضيافة في جميع أنحاء المملكة العربية السعودية.',
-      image: '/images/products/hotel-uniform.jpg',
-      href: '/ar/industries/hospitality'
-    }
-  ];
-  
-  const additionalIndustries: IndustryInfo[] = [
-    {
-      id: 'corporate',
-      name: 'الشركات',
-      description: 'ملابس وأزياء احترافية للشركات مصممة خصيصًا لبيئات الأعمال السعودية.',
-      image: '/images/products/corporate-suit-executive.jpg',
-      href: '/ar/industries/corporate'
-    },
-    {
-      id: 'education',
-      name: 'التعليم',
-      description: 'أزياء متينة ومريحة للمدارس والجامعات والمؤسسات التعليمية.',
-      image: '/images/categories/schoolgirl-with-blood-type-sticker-at-school-ukrainian-war-concept-SBI-351317058.jpg',
-      href: '/ar/industries/education'
-    },
-    {
-      id: 'manufacturing',
-      name: 'التصنيع',
-      description: 'ملابس عمل متوافقة مع معايير السلامة ومصممة للبيئات الصناعية مع مراعاة مناخ المملكة العربية السعودية.',
-      image: '/images/products/industrial-coverall.jpg',
-      href: '/ar/industries/manufacturing'
-    },
-    {
-      id: 'security',
-      name: 'الأمن',
-      description: 'أزياء أمنية احترافية تعكس السلطة مع توفير الراحة والوظائف العملية.',
-      image: '/images/categories/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
+      href: '/ar/images/industries/products/aviation/airline-1.jpg',
+      href: '/ar/images/industries/products/hotel-uniform.jpg',
+      href: '/ar/images/industries/products/corporate-suit-executive.jpg',
+      href: '/ar/images/industries/categories/schoolgirl-with-blood-type-sticker-at-school-ukrainian-war-concept-SBI-351317058.jpg',
+      href: '/ar/images/industries/products/industrial-coverall.jpg',
+      href: '/ar/images/industries/categories/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
       href: '/ar/industries/security'
     }
   ];

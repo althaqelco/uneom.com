@@ -38,22 +38,22 @@ const locationData = {
     {
       title: "UNEOM - Professional Uniforms",
       description: 'حلول زي موحد مخصصة لقطاع الشركات في الرياض، بما في ذلك البنوك والاتصالات والمؤسسات الحكومية.',
-      icon: '/icons/corporate-design.svg'
+      icon: '/images/icons/corporate-design.svg'
     },
     {
       title: 'استشارات الزي الطبي',
       description: 'خدمات استشارية متخصصة للمستشفيات والعيادات في الرياض، مع التركيز على الأقمشة المضادة للميكروبات والتصميمات المحسنة للراحة.',
-      icon: '/icons/healthcare-consultation.svg'
+      icon: '/images/icons/healthcare-consultation.svg'
     },
     {
       title: 'برامج المؤسسات التعليمية',
       description: 'برامج زي موحد شاملة لمدارس وجامعات الرياض، تشمل التصميم والإنتاج وحلول التوزيع.',
-      icon: '/icons/education-programs.svg'
+      icon: '/images/icons/education-programs.svg'
     },
     {
       title: 'خدمات الإنتاج السريع',
       description: 'خدمات إنتاج سريعة متاحة حصرياً في مقرنا الرئيسي بالرياض لاحتياجات الزي الموحد العاجلة.',
-      icon: '/icons/rush-production.svg'
+      icon: '/images/icons/rush-production.svg'
     }
   ],
   caseStudies: [

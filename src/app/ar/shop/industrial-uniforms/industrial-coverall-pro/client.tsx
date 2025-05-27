@@ -122,19 +122,9 @@ const product = {
       name: "سترة عالية الوضوح",
       image: "/images/products/high-visibility-jacket.webp",
       price: "ريال 180",
-      href: "/ar/shop/industrial-uniforms/high-visibility-jacket"
-    },
-    {
-      id: "flame-resistant-coverall",
-      name: "أفرول مقاوم للهب",
-      image: "/images/products/flame-resistant-coverall.webp",
+      href: "/ar/images/products/flame-resistant-coverall.webp",
       price: "ريال 350",
-      href: "/ar/shop/industrial-uniforms/flame-resistant-coverall"
-    },
-    {
-      id: "industrial-cargo-pants",
-      name: "بنطلون كارجو صناعي",
-      image: "/images/products/industrial-cargo-pants.webp",
+      href: "/ar/images/products/industrial-cargo-pants.webp",
       price: "ريال 150",
       href: "/ar/shop/industrial-uniforms/industrial-cargo-pants"
     }

@@ -32,58 +32,11 @@ export default function HospitalityAttirePage() {
       description: 'Premium hospitality uniform designed for luxury hotels and resorts, featuring refined styling and exceptional comfort for front-of-house staff.',
       price: 'From SAR 399',
       image: '/images/products/hotel-uniform.jpg',
-      href: '/shop/hospitality-attire/luxury-hotel-uniform',
-      features: ['Premium fabric', 'Tailored fit', 'Professional styling', 'Breathable material'],
-      colors: ['Black', 'Navy', 'Burgundy', 'White'],
-      isBestseller: true
-    },
-    {
-      id: 'reception-staff-uniform',
-      name: 'Reception Staff Uniform',
-      description: 'Professional reception uniforms designed for hotel front desk and customer-facing staff with a polished, approachable appearance.',
-      price: 'From SAR 329',
-      image: '/images/product-placeholder.jpg',
-      href: '/shop/hospitality-attire/reception-staff-uniform',
-      features: ['Refined styling', 'Comfortable fabric', 'Easy-care material', 'Corporate branding option'],
-      colors: ['White', 'Black', 'Navy', 'Grey'],
-      isNew: true
-    },
-    {
-      id: 'housekeeping-uniform',
-      name: 'Housekeeping Uniform',
-      description: 'Practical and comfortable housekeeping uniforms designed for hotel room attendants and cleaning staff, balancing professionalism with functionality.',
-      price: 'From SAR 199',
-      image: '/images/product-placeholder.jpg',
-      href: '/shop/hospitality-attire/housekeeping-uniform',
-      features: ['Durable fabric', 'Stain-resistant', 'Multiple pockets', 'Comfortable fit'],
-      colors: ['Navy', 'Black', 'Grey', 'Light Blue']
-    },
-    {
-      id: 'concierge-uniform',
-      name: 'Concierge Uniform',
-      description: 'Distinguished concierge uniform designed for luxury hotels and high-end establishments, conveying authority and professional service.',
-      price: 'From SAR 449',
-      image: '/images/product-placeholder.jpg',
-      href: '/shop/hospitality-attire/concierge-uniform',
-      features: ['Premium tailoring', 'Distinctive styling', 'Professional details', 'Comfortable design'],
-      colors: ['Navy', 'Black', 'Burgundy', 'Forest Green']
-    },
-    {
-      id: 'resort-staff-attire',
-      name: 'Resort Staff Attire',
-      description: 'Stylish and comfortable resort uniforms designed for warm climate hospitality venues, combining professionalism with a relaxed aesthetic.',
-      price: 'From SAR 279',
-      image: '/images/product-placeholder.jpg',
-      href: '/shop/hospitality-attire/resort-staff-attire',
-      features: ['Lightweight fabric', 'Breathable design', 'Sun protection', 'Resort branding'],
-      colors: ['White', 'Light Blue', 'Beige', 'Pastel colors']
-    },
-    {
-      id: 'restaurant-staff-uniform',
-      name: 'Restaurant Staff Uniform',
-      description: 'Professional restaurant uniforms designed for fine dining establishments, balancing elegance with practical features for service staff.',
-      price: 'From SAR 259',
-      image: '/images/categories/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg',
+      href: '/images/product-placeholder.jpg',
+      href: '/images/product-placeholder.jpg',
+      href: '/images/product-placeholder.jpg',
+      href: '/images/product-placeholder.jpg',
+      href: '/images/categories/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg',
       href: '/shop/hospitality-attire/restaurant-staff-uniform',
       features: ['Stain-resistant', 'Comfortable design', 'Professional appearance', 'Easy care'],
       colors: ['Black', 'White', 'Burgundy', 'Grey']

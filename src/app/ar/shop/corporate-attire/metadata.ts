@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/shop/corporate/corporate-category.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'زي الشركات يونيوم - ملابس العمل التجارية المتميزة',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'زي الشركات | يونيوم السعودية',
-    description: 'ملابس العمل التجارية المتميزة للشركات السعودية. استكشف زي الشركات عالي الجودة من يونيوم الذي يعزز هوية العلامة التجارية المهنية.',
-    images: ['/images/shop/corporate/corporate-category.jpg'],
+        url: '/images/shop/corporate/corporate-category.jpg'],
   },
   robots: {
     index: true,

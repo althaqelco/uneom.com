@@ -44,31 +44,31 @@ export default function RetailShopsPage() {
       {
         title: "Enhanced Brand Identity",
         description: "Custom-designed uniforms that perfectly align with your brand's visual identity and elevate customer perception of your business, creating an integrated brand experience.",
-        icon: "/icons/institutional-branding.svg",
+        icon: "/images/icons/institutional-branding.svg",
         gradient: "from-blue-500 to-indigo-600"
       },
       {
         title: "Exceptional Customer Experience",
         description: "Professional staff appearance builds instant trust and creates memorable customer service interactions that drive repeat business and positive word-of-mouth.",
-        icon: "/icons/role-identification.svg",
+        icon: "/images/icons/role-identification.svg",
         gradient: "from-green-500 to-emerald-600"
       },
       {
         title: "Staff Comfort & Performance",
         description: "Ergonomically designed uniforms with premium breathable fabrics enhance staff comfort and productivity during long retail hours, reducing fatigue and improving service quality.",
-        icon: "/icons/comfortflex.svg",
+        icon: "/images/icons/comfortflex.svg",
         gradient: "from-purple-500 to-violet-600"
       },
       {
         title: "Instant Brand Recognition",
         description: "Distinctive and attractive uniforms help customers easily identify staff members, improving service accessibility and creating brand consistency across multiple locations or departments.",
-        icon: "/icons/role-identification.svg",
+        icon: "/images/icons/role-identification.svg",
         gradient: "from-pink-500 to-rose-600"
       },
       {
         title: "Superior Quality & Durability",
         description: "Premium materials and expert craftsmanship maintain professional appearance through intensive daily use in demanding retail environments, providing excellent cost-efficiency over time.",
-        icon: "/icons/duraseal.svg",
+        icon: "/images/icons/duraseal.svg",
         gradient: "from-amber-500 to-orange-600"
       }
     ],
@@ -81,26 +81,8 @@ export default function RetailShopsPage() {
         name: "Luxury Mall Staff Uniforms",
         description: "Professional and distinctive attire for reception staff, customer service representatives, and information desks that enhances the mall's commercial image and creates an atmosphere of luxury and professionalism.",
         image: "/images/industries/retail-shops/retail-shops-uniform-shop.jpg",
-        href: "/shop/retail-uniforms/mall-staff",
-        features: ["Perfect brand color integration", "All-day comfort design", "Distinctive professional appearance", "Multi-department coordination"],
-        badge: "Best Seller",
-        price: "From SAR 450"
-      },
-      {
-        id: "retail-store-uniforms",
-        name: "Custom Retail Store Uniforms",
-        description: "Tailored uniforms that powerfully reflect your store's brand identity while ensuring staff comfort and practical functionality during busy shopping periods.",
-        image: "/images/industries/retail-shops/retail-shops-uniform-brands-logo.jpg",
-        href: "/shop/retail-uniforms/store-staff",
-        features: ["Precise brand alignment", "Multiple style variations", "Premium material durability", "Seasonal adaptation options"],
-        badge: "Popular Choice",
-        price: "From SAR 350"
-      },
-      {
-        id: "beauty-salon-uniforms",
-        name: "Elegant Beauty Salon Uniforms",
-        description: "Sophisticated yet practical uniforms that perfectly balance professional aesthetics with practical functionality for beauty professionals in Saudi Arabia's growing cosmetic service sector.",
-        image: "/images/industries/retail-shops/retail-shops-uniform-2.jpg",
+        href: "/images/industries/retail-shops/retail-shops-uniform-brands-logo.jpg",
+        href: "/images/industries/retail-shops/retail-shops-uniform-2.jpg",
         href: "/shop/retail-uniforms/beauty-salon",
         features: ["Advanced stain-resistant fabric", "Contemporary design elements", "Easy maintenance", "Comfortable stretch materials"],
         badge: "Premium Quality",
@@ -114,25 +96,25 @@ export default function RetailShopsPage() {
       {
         name: "Premium Comfort Technology™",
         description: "A blend of advanced fabrics with moisture-wicking properties that provide unparalleled all-day comfort and breathability for retail staff in temperature-controlled environments.",
-        icon: "/icons/comfortflex.svg",
+        icon: "/images/icons/comfortflex.svg",
         animation: "fade-right"
       },
       {
         name: "Advanced Stain Protection™",
         description: "Revolutionary fabric treatment that effectively repels liquids, resists stains, and maintains a crisp, professional appearance throughout challenging retail shifts.",
-        icon: "/icons/duraseal.svg",
+        icon: "/images/icons/duraseal.svg",
         animation: "fade-up"
       },
       {
         name: "Climate Control Fabric™",
         description: "Specialized fabric construction with adaptive properties that actively regulate temperature in diverse retail environments, from mall concourses to individual stores.",
-        icon: "/icons/coolcore.svg",
+        icon: "/images/icons/coolcore.svg",
         animation: "fade-left"
       },
       {
         name: "EcoFlex Sustainable Fabric™",
         description: "Environmentally responsible textiles that combine durability with sustainability, helping retail brands achieve environmental responsibility goals while maintaining a distinguished appearance.",
-        icon: "/icons/biocare.svg",
+        icon: "/images/icons/biocare.svg",
         animation: "fade-up"
       }
     ],
@@ -143,25 +125,25 @@ export default function RetailShopsPage() {
       {
         name: "Precise Brand Integration",
         description: "Perfect Pantone color matching and expert logo application for seamless alignment with overall brand guidelines and marketing materials across all retail touchpoints.",
-        icon: "/icons/institutional-branding.svg",
+        icon: "/images/icons/institutional-branding.svg",
         gradient: "from-blue-400 to-blue-600"
       },
       {
         name: "Department Style Variations",
         description: "Carefully coordinated design options that precisely distinguish between different roles and departments while maintaining perfect brand consistency throughout the retail operation.",
-        icon: "/icons/department-colors.svg",
+        icon: "/images/icons/department-colors.svg",
         gradient: "from-purple-400 to-purple-600"
       },
       {
         name: "Strategic Seasonal Collections",
         description: "Forward-planning uniform programs that adapt to different seasons, special promotions, and retail campaigns while maintaining core brand identity elements.",
-        icon: "/icons/coolcore.svg",
+        icon: "/images/icons/coolcore.svg",
         gradient: "from-green-400 to-green-600"
       },
       {
         name: "Versatile Accessory Systems",
         description: "Diverse accessory components that can be added to or removed from core uniform pieces to accommodate different seasons, promotions, or retail zones while maintaining brand cohesion.",
-        icon: "/icons/modest-modifications.svg",
+        icon: "/images/icons/modest-modifications.svg",
         gradient: "from-amber-400 to-orange-500"
       }
     ],

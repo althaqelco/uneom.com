@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://uneom.com/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
+        url: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
         width: 1200,
         height: 630,
         alt: 'خدمات التصميم المخصص من يونيوم - تصاميم فريدة تعكس هوية علامتك التجارية',

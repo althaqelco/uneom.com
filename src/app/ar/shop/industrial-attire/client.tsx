@@ -32,17 +32,7 @@ export default function IndustrialAttireClientPage() {
       description: 'أفرهولات مقاومة للهب للعاملين في بيئات صناعية عالية المخاطر، مصممة للحماية القصوى مع راحة طويلة الأمد.',
       price: 'من 599 ريال',
       image: '/images/products/industrial-coverall.jpg',
-      href: '/ar/shop/industrial-attire/flame-resistant-coveralls',
-      features: ['مقاومة للهب', 'متينة', 'معتمدة حسب معايير السلامة', 'مريحة للارتداء لساعات طويلة'],
-      colors: ['برتقالي سلامة', 'أزرق داكن', 'أحمر', 'رمادي سلامة'],
-      isBestseller: true
-    },
-    {
-      id: 'high-visibility-jackets',
-      name: 'سترات عالية الرؤية',
-      description: 'سترات سلامة عالية الرؤية متوافقة مع معايير الصناعة، مصممة للاستخدام في بيئات العمل منخفضة الإضاءة.',
-      price: 'من 349 ريال',
-      image: '/images/products/industrial-coverall.jpg',
+      href: '/ar/images/products/industrial-coverall.jpg',
       href: '/ar/shop/industrial-attire/high-visibility-jackets',
       features: ['عاكسات 3M', 'مقاومة للماء', 'مضادة للرياح', 'جيوب متعددة للأدوات'],
       colors: ['أصفر ساطع', 'برتقالي ساطع', 'أصفر/أسود', 'برتقالي/أسود'],
@@ -54,26 +44,8 @@ export default function IndustrialAttireClientPage() {
       description: 'بناطيل عمل متينة مصممة لتحمل ظروف العمل الصناعية القاسية، مع ميزات سلامة وجيوب عملية.',
       price: 'من 249 ريال',
       image: '/images/products/industrial-coverall.jpg',
-      href: '/ar/shop/industrial-attire/safety-work-pants',
-      features: ['قماش متين', 'مقاوم للتمزق', 'جيوب متعددة', 'عناصر عاكسة'],
-      colors: ['أسود', 'كاكي', 'أزرق داكن', 'رمادي']
-    },
-    {
-      id: 'industrial-shirts',
-      name: 'قمصان صناعية',
-      description: 'قمصان عمل صناعية متينة مصممة للراحة مع تقنيات تبريد وعناصر سلامة مدمجة.',
-      price: 'من 199 ريال',
-      image: '/images/products/industrial-coverall.jpg',
-      href: '/ar/shop/industrial-attire/industrial-shirts',
-      features: ['تقنية تبريد', 'سهولة الحركة', 'عناصر عاكسة', 'متوافقة مع معايير السلامة'],
-      colors: ['أزرق داكن', 'رمادي', 'أخضر زيتي', 'بيج']
-    },
-    {
-      id: 'industrial-safety-sets',
-      name: 'أطقم السلامة الصناعية',
-      description: 'مجموعات كاملة من ملابس السلامة الصناعية تتضمن الجاكيت والبنطلون والقميص، مصممة للحماية المتكاملة.',
-      price: 'من 799 ريال',
-      image: '/images/products/industrial-coverall.jpg',
+      href: '/ar/images/products/industrial-coverall.jpg',
+      href: '/ar/images/products/industrial-coverall.jpg',
       href: '/ar/shop/industrial-attire/industrial-safety-sets',
       features: ['طقم متكامل', 'حماية شاملة', 'متين', 'مريح'],
       colors: ['أزرق/أسود', 'أخضر زيتي/أسود', 'رمادي/أسود', 'برتقالي/كحلي']

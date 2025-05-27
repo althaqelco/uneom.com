@@ -140,22 +140,22 @@ const locationsData = {
     {
       title: 'قرب جغرافي',
       description: 'مواقعنا الاستراتيجية تضمن سرعة الاستجابة وتقليل أوقات التسليم',
-      icon: '/icons/location.svg'
+      icon: '/images/icons/location.svg'
     },
     {
       title: 'خبرة محلية',
       description: 'فهم عميق لاحتياجات كل منطقة والخصائص الثقافية والمناخية',
-      icon: '/icons/expertise.svg'
+      icon: '/images/icons/expertise.svg'
     },
     {
       title: 'دعم مستمر',
       description: 'فرق محلية متاحة لتقديم الدعم والصيانة وخدمة ما بعد البيع',
-      icon: '/icons/support.svg'
+      icon: '/images/icons/support.svg'
     },
     {
       title: 'جودة موحدة',
       description: 'نفس معايير الجودة العالية والخدمة المهنية في جميع مواقعنا',
-      icon: '/icons/quality.svg'
+      icon: '/images/icons/quality.svg'
     }
   ]
 };

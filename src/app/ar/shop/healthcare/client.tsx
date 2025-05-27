@@ -18,6 +18,7 @@ interface Product {
   href: string;
   features?: string[];
   colors?: string[];
+  imageGallery?: string[];
   isNew?: boolean;
   isBestseller?: boolean;
 }
@@ -32,60 +33,15 @@ export default function HealthcareClientPage() {
       name: 'سكرب طبي متطور',
       description: 'سكرب طبي ممتاز مصمم للعاملين في مجال الرعاية الصحية، يتميز بنسيج مضاد للميكروبات وراحة فائقة.',
       price: 'من 249 ريال',
-      image: '/images/Healthcare_Uniforms.png',
-      href: '/ar/shop/healthcare/advanced-medical-scrubs',
-      features: ['نسيج مضاد للميكروبات', 'مقاوم للرطوبة', 'مقاوم للتجعد', 'جيوب متعددة'],
-      colors: ['كحلي', 'أزرق فاتح', 'تركواز', 'أسود', 'نبيذي'],
-      isBestseller: true
-    },
-    {
-      id: 'premium-lab-coat',
-      name: 'معطف مختبر فاخر',
-      description: 'معطف مختبر عالي الجودة مصمم للمهنيين الطبيين، يتميز بنسيج متين ومظهر احترافي.',
-      price: 'من 199 ريال',
-      image: '/images/doctor-SBI-300813580.jpg',
-      href: '/ar/shop/healthcare/premium-lab-coat',
-      features: ['مقاوم للبقع', 'نسيج متين', 'مظهر احترافي', 'جيوب متعددة'],
-      colors: ['أبيض', 'أزرق فاتح'],
-      isNew: true
-    },
-    {
-      id: 'nursing-uniform',
-      name: 'زي التمريض',
-      description: 'زي تمريض مريح وعملي مصمم للاستخدام اليومي في بيئات الرعاية الصحية.',
-      price: 'من 179 ريال',
-      image: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
-      href: '/ar/shop/healthcare/nursing-uniform',
-      features: ['تصميم مريح', 'سهل العناية', 'نسيج متين', 'مظهر احترافي'],
-      colors: ['أبيض', 'أزرق فاتح', 'وردي', 'كحلي']
-    },
-    {
-      id: 'surgical-scrubs',
-      name: 'ملابس العمليات الجراحية',
-      description: 'ملابس جراحية متخصصة مصممة لبيئات غرف العمليات، تتميز بخصائص مضادة للميكروبات.',
-      price: 'من 269 ريال',
-      image: '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg',
-      href: '/ar/shop/healthcare/surgical-scrubs',
-      features: ['مضاد للميكروبات', 'مقاوم للسوائل', 'تصميم مريح', 'ميزات خاصة بغرف العمليات'],
-      colors: ['أخضر جراحي', 'أزرق جراحي', 'كحلي']
-    },
-    {
-      id: 'medical-uniform-set',
-      name: 'طقم زي طبي متكامل',
-      description: 'طقم زي طبي كامل مصمم لمهنيي الرعاية الصحية، يشمل قميص وبنطلون ومعطف مختبر.',
-      price: 'من 349 ريال',
-      image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
-      href: '/ar/shop/healthcare/medical-uniform-set',
-      features: ['طقم كامل', 'تصميم متناسق', 'نسيج ممتاز', 'مظهر احترافي'],
-      colors: ['خيارات متعددة متاحة']
-    },
-    {
-      id: 'dental-uniform',
-      name: 'زي طب الأسنان',
-      description: 'زي متخصص مصمم لأطباء الأسنان، يتميز بخصائص مضادة للميكروبات وتصميم مريح.',
-      price: 'من 229 ريال',
-      image: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg',
-      href: '/ar/shop/healthcare/dental-uniform',
+      image: '/images/Healthcare_Uniforms.png', // Main product image
+      href: '/ar/shop/medical-scrubs/advanced-medical-scrubs', // Main product link
+      imageGallery: [
+        '/images/doctor-SBI-300813580.jpg',
+        '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
+        '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg',
+        '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+        '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg',
+      ],
       features: ['مضاد للميكروبات', 'مقاوم للبقع', 'تصميم مريح', 'مظهر احترافي'],
       colors: ['أبيض', 'أزرق فاتح', 'كحلي', 'أسود']
     }
@@ -279,21 +235,23 @@ export default function HealthcareClientPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {departments.map((dept, index) => (
-              <Link 
-                key={index} 
-                href={`/ar/shop/healthcare/${dept.id}`}
-                className="group block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              <Link
+                key={index}
+                href={`/ar/shop/healthcare?department=${dept.id}`} // Example: Construct a proper link
+                className="group block bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="relative h-48">
-                  <Image 
-                    src="/images/healthcare/medical_hijab_uniform.jpg"
+                <div className="aspect-video relative">
+                  <Image
+                    src={`/images/healthcare/dept-${dept.id}.jpg`} // Placeholder, needs actual images
                     alt={dept.name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-4 text-right">
-                  <h3 className="font-bold text-lg mb-2">{dept.name}</h3>
+                <div className="p-4 text-center">
+                  <h3 className="text-md font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    {dept.name}
+                  </h3>
                 </div>
               </Link>
             ))}

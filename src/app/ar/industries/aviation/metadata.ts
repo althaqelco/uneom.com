@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/industries/aviation.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'يونيفورم طيران احترافي من يونيوم متوافق مع معايير الهيئة العامة للطيران المدني السعودية'
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'يونيفورم الطيران | زي موحد للطيارين وطاقم الضيافة | معايير GACA',
-    description: 'يونيفورم طيران احترافي وزي موحد لشركات الطيران السعودية متوافق مع معايير GACA ومتطلبات الشريعة الإسلامية',
-    images: ['/images/industries/aviation.jpg']
+        url: '/images/industries/industries/aviation.jpg']
   },
   alternates: {
     canonical: 'https://uneom.com/ar/industries/aviation',

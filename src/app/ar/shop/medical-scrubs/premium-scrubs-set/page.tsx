@@ -89,19 +89,9 @@ export default function PremiumScrubsSetArabicPage() {
         name: 'بدلة طبية مضادة للميكروبات',
         image: '/images/healthcare/medical_hijab_uniform.jpg',
         price: 'من ريال 279',
-        href: '/ar/shop/medical-scrubs/antimicrobial-scrubs'
-      },
-      {
-        id: 'nursing-scrubs',
-        name: 'طقم بدلة التمريض',
-        image: '/images/healthcare/medical_hijab_uniform.jpg',
+        href: '/ar/images/healthcare/medical_hijab_uniform.jpg',
         price: 'من ريال 229',
-        href: '/ar/shop/medical-scrubs/nursing-scrubs'
-      },
-      {
-        id: 'surgical-scrubs',
-        name: 'بدلة الجراحة',
-        image: '/images/healthcare/medical_hijab_uniform.jpg',
+        href: '/ar/images/healthcare/medical_hijab_uniform.jpg',
         price: 'من ريال 269',
         href: '/ar/shop/medical-scrubs/surgical-scrubs'
       }

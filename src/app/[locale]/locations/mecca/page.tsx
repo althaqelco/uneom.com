@@ -87,7 +87,7 @@ const locationData = {
         en: 'Dignified, modest uniforms for staff at mosques, religious schools, and sacred sites, designed with respect for Islamic traditions and practical functionality.',
         ar: 'أزياء كريمة ومحتشمة للموظفين في المساجد والمدارس الدينية والمواقع المقدسة، مصممة باحترام للتقاليد الإسلامية والوظائف العملية.'
       },
-      icon: '/icons/religious-institution.svg'
+      icon: '/images/icons/religious-institution.svg'
     },
     {
       title: {
@@ -98,7 +98,7 @@ const locationData = {
         en: 'Specialized uniforms for pilgrim guide services, transportation providers, and assistance teams, featuring high visibility, durability, and comfort in crowded conditions.',
         ar: 'أزياء متخصصة لخدمات إرشاد الحجاج ومقدمي خدمات النقل وفرق المساعدة، تتميز برؤية عالية ومتانة وراحة في الظروف المزدحمة.'
       },
-      icon: '/icons/hajj-umrah.svg'
+      icon: '/images/icons/hajj-umrah.svg'
     },
     {
       title: {
@@ -109,7 +109,7 @@ const locationData = {
         en: 'Hotel, restaurant, and visitor service uniforms designed specifically for Mecca\'s unique environment, combining cultural sensitivity with professional presentation.',
         ar: 'أزياء الفنادق والمطاعم وخدمات الزوار المصممة خصيصًا لبيئة مكة المكرمة الفريدة، تجمع بين الحساسية الثقافية والمظهر المهني.'
       },
-      icon: '/icons/hospitality-wear.svg'
+      icon: '/images/icons/hospitality-wear.svg'
     },
     {
       title: {
@@ -120,7 +120,7 @@ const locationData = {
         en: 'High-visibility, durable uniforms for security, crowd management, and public safety personnel working during peak pilgrimage seasons.',
         ar: 'أزياء عالية الرؤية ومتينة للأمن وإدارة الحشود وموظفي السلامة العامة العاملين خلال مواسم الحج ذروتها.'
       },
-      icon: '/icons/crowd-management.svg'
+      icon: '/images/icons/crowd-management.svg'
     }
   ],
   

@@ -37,7 +37,7 @@ export default function EnhancedAviationClient() {
   // Key benefits for aviation uniforms
   const benefits = [
     {
-      icon: '/images/icons/brand-identity-aviation.svg',
+      icon: '/images/brand-identity-aviation.svg',
       title: 'هوية طيران مميزة',
       description: 'تصاميم فريدة تعكس هوية شركة الطيران وتميزها في المطارات والرحلات الجوية، مع مراعاة التراث السعودي.'
     },
@@ -47,17 +47,17 @@ export default function EnhancedAviationClient() {
       description: 'أقمشة فاخرة تلبي معايير الطيران الدولية مع مقاومة التجعد والحفاظ على المظهر الأنيق طوال الرحلة.'
     },
     {
-      icon: '/images/icons/fabric-tech-performance.svg',
+      icon: '/images/fabric-cotton-blends.svg',
       title: 'تقنيات أقمشة متطورة',
       description: 'أقمشة ذكية تنظم درجة الحرارة وتوفر الراحة في ضغط المقصورة وتغيرات المناخ أثناء السفر.'
     },
     {
-      icon: '/images/icons/modest-design-saudi.svg',
+      icon: '/images/saudi-expertise.svg',
       title: 'تصاميم محتشمة وعصرية',
       description: 'أزياء طيران تجمع بين الأناقة العالمية والاحتشام المطلوب، مناسبة للطاقم السعودي والدولي.'
     },
     {
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
       title: 'مطابقة معايير السلامة',
       description: 'جميع المنتجات تلبي معايير سلامة الطيران المدني السعودي والمعايير الدولية للطيران.'
     },
@@ -104,32 +104,13 @@ export default function EnhancedAviationClient() {
       image: '/images/cheerful-airline-workers-standing-in-airfield-unde-2024-10-20-08-49-20-utc.jpg',
       price: '١٢٠٠ ر.س',
       category: 'أزياء الطيران',
-      href: '/ar/shop/aviation-uniforms/pilot-uniform-premium',
-      isNew: true,
-      features: ['قماش صوف فاخر', 'رتب مطرزة', 'تصميم كلاسيكي']
-    },
-    {
-      id: 'cabin-crew-female',
-      name: 'زي مضيفة طيران',
-      image: '/images/cheerful-women-stewardesses-standing-on-airplane-s-2023-11-27-05-08-55-utc.jpg',
+      href: '/ar/images/cheerful-women-stewardesses-standing-on-airplane-s-2023-11-27-05-08-55-utc.jpg',
       price: '٨٥٠ ر.س',
       category: 'أزياء الطيران',
-      href: '/ar/shop/aviation-uniforms/cabin-crew-female',
-      features: ['تصميم محتشم', 'أقمشة مرنة', 'ألوان أنيقة']
-    },
-    {
-      id: 'ground-crew-uniform',
-      name: 'زي الخدمات الأرضية',
-      image: '/images/smiling-airplane-crew-members-walking-together-on-2023-11-27-05-07-27-utc.jpg',
+      href: '/ar/images/smiling-airplane-crew-members-walking-together-on-2023-11-27-05-07-27-utc.jpg',
       price: '٤٢٠ ر.س',
       category: 'أزياء الطيران',
-      href: '/ar/shop/aviation-uniforms/ground-crew-uniform',
-      features: ['مقاوم للطقس', 'رؤية عالية', 'متانة فائقة']
-    },
-    {
-      id: 'aviation-blazer',
-      name: 'بليزر طيران تنفيذي',
-      image: '/images/joyful-stewardesses-standing-near-aircraft-at-airp-2023-11-27-04-49-34-utc.jpg',
+      href: '/ar/images/joyful-stewardesses-standing-near-aircraft-at-airp-2023-11-27-04-49-34-utc.jpg',
       price: '٦٨٠ ر.س',
       category: 'أزياء الطيران',
       href: '/ar/shop/aviation-uniforms/aviation-blazer',
@@ -173,7 +154,7 @@ export default function EnhancedAviationClient() {
     {
       name: 'شعارات وهوية الشركة',
       description: 'تطريز دقيق لشعارات شركات الطيران والرموز التجارية',
-      icon: '/images/icons/brand-identity-aviation.svg'
+      icon: '/images/brand-identity-aviation.svg'
     },
     {
       name: 'رتب وشارات الطيران',

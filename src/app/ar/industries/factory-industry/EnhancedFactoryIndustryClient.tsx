@@ -66,7 +66,7 @@ export default function EnhancedFactoryIndustryClient() {
   // Factory benefits
   const factoryBenefits = [
     {
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
       title: 'أولوية السلامة المهنية',
       description: 'أزياء مصممة وفقاً لأعلى معايير السلامة لحماية العاملين من مخاطر بيئة المصنع.',
       stats: 'مطابقة ٩٩٪ لمعايير السلامة العالمية'
@@ -102,7 +102,7 @@ export default function EnhancedFactoryIndustryClient() {
     {
       name: 'المقاومة الفائقة للمواد الكيميائية',
       description: 'حماية موثوقة ضد تسرب المواد الكيميائية الخطرة والأحماض.',
-      icon: '/images/icons/compliance-shield.svg', // Placeholder
+      icon: '/images/compliance-shield.svg', // Placeholder
       applications: ['المختبرات الكيميائية', 'مصانع الكيماويات', 'وحدات معالجة المياه', 'قطاع البتروكيماويات']
     },
     {

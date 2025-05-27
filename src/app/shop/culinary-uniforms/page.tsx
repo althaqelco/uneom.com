@@ -32,58 +32,11 @@ export default function CulinaryUniformsPage() {
       description: 'Professional chef coat made with premium fabric, designed for comfort and style in the kitchen environment.',
       price: 'From SAR 189',
       image: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/shop/culinary-uniforms/premium-chef-coat',
-      features: ['Stain-resistant', 'Double-breasted design', 'Breathable fabric', 'Easy-care'],
-      colors: ['White', 'Black', 'Navy'],
-      isBestseller: true
-    },
-    {
-      id: 'executive-chef-set',
-      name: 'Executive Chef Set',
-      description: 'Complete chef uniform set including premium coat, pants, and hat for professional kitchen staff.',
-      price: 'From SAR 349',
-      image: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/shop/culinary-uniforms/executive-chef-set',
-      features: ['Full set', 'Premium materials', 'Professional look', 'Restaurant standard'],
-      colors: ['White', 'Black'],
-      isNew: true
-    },
-    {
-      id: 'kitchen-staff-uniform',
-      name: 'Kitchen Staff Uniform',
-      description: 'Practical and comfortable uniform designed for all kitchen staff, including cooks and assistants.',
-      price: 'From SAR 279',
-      image: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/shop/culinary-uniforms/kitchen-staff-uniform',
-      features: ['Durable fabric', 'Heat-resistant', 'Comfort fit', 'Easy maintenance'],
-      colors: ['White', 'Black', 'Grey']
-    },
-    {
-      id: 'professional-chef-apron',
-      name: 'Professional Chef Apron',
-      description: 'Heavy-duty professional apron with adjustable neck strap and waist ties for perfect fit in busy kitchens.',
-      price: 'From SAR 99',
-      image: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/shop/culinary-uniforms/professional-chef-apron',
-      features: ['Heavy-duty fabric', 'Multiple pockets', 'Adjustable fit', 'Stain-resistant'],
-      colors: ['Black', 'White', 'Burgundy', 'Navy']
-    },
-    {
-      id: 'kitchen-manager-uniform',
-      name: 'Kitchen Manager Uniform',
-      description: 'Distinguished uniform for kitchen managers and head chefs, designed for a professional appearance.',
-      price: 'From SAR 449',
-      image: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/shop/culinary-uniforms/kitchen-manager-uniform',
-      features: ['Premium fabric', 'Distinctive design', 'Comfortable fit', 'Professional look'],
-      colors: ['Black', 'White', 'Grey']
-    },
-    {
-      id: 'culinary-student-uniform',
-      name: 'Culinary Student Uniform',
-      description: 'Affordable yet high-quality uniform set for culinary students and training establishments.',
-      price: 'From SAR 219',
-      image: '/images/healthcare/medical_hijab_uniform.jpg',
+      href: '/images/healthcare/medical_hijab_uniform.jpg',
+      href: '/images/healthcare/medical_hijab_uniform.jpg',
+      href: '/images/healthcare/medical_hijab_uniform.jpg',
+      href: '/images/healthcare/medical_hijab_uniform.jpg',
+      href: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/culinary-uniforms/culinary-student-uniform',
       features: ['Cost-effective', 'Durable', 'Easy-care', 'Complete set'],
       colors: ['White']

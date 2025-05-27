@@ -167,7 +167,7 @@ public/images/icons/
 ├── fabric-tech-performance.svg
 └── brand-aligned.svg
 
-public/icons/
+public/images/icons/
 ├── saudi-expertise.svg
 └── brand-aligned.svg
 ```

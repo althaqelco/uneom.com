@@ -73,27 +73,6 @@ export default function HomePage() {
       description: "يونيفورم طبي عالي الجودة مصمم للراحة والوظائف العملية في بيئات الرعاية الصحية السعودية. متوافق مع اللوائح المحلية ومناسب لمناخ المملكة.",
       image: "/images/industries/healthcare.jpg",
       link: `/ar/industries/healthcare`
-    },
-    {
-      id: "aviation",
-      title: "الطيران",
-      description: "يونيفورم طيران متطور يمزج بين التراث الثقافي السعودي ومعايير الطيران الحديثة. مصمم لطاقم الطائرة وطاقم الأرض وموظفي المطار.",
-      image: "/images/industries/aviation.jpg",
-      link: `/ar/industries/aviation`
-    },
-    {
-      id: "hospitality",
-      title: "الضيافة",
-      description: "زي موحد للضيافة أنيق مصمم خصيصًا لقطاع السياحة الفاخرة المتنامي في المملكة العربية السعودية. مصمم للفنادق والمنتجعات والمطاعم والفعاليات.",
-      image: "/images/industries/hospitality.jpg",
-      link: `/ar/industries/hospitality`
-    },
-    {
-      id: "corporate",
-      title: "الشركات",
-      description: "زي موحد احترافي للشركات يعكس صورة مؤسسية متميزة. يوازن الزي الموحد للشركات لدينا بين تقاليد الأعمال السعودية والأناقة المهنية الحديثة.",
-      image: "/images/industries/corporate.jpg",
-      link: `/ar/industries/corporate`
     }
   ];
   

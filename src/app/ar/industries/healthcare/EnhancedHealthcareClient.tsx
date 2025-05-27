@@ -42,17 +42,17 @@ export default function EnhancedHealthcareClient() {
       description: 'أقمشة طبية عالية الجودة تلبي معايير وزارة الصحة السعودية والمعايير الدولية للسلامة الطبية.'
     },
     {
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
       title: 'مقاومة العدوى والميكروبات',
       description: 'تقنيات متقدمة مضادة للبكتيريا والفيروسات توفر حماية إضافية للعاملين في القطاع الصحي.'
     },
     {
-      icon: '/images/icons/modest-design-saudi.svg',
+      icon: '/images/saudi-expertise.svg',
       title: 'تصاميم محتشمة ومريحة',
       description: 'أزياء طبية تحترم القيم الإسلامية مع توفير الراحة القصوى للعمل في المناوبات الطويلة.'
     },
     {
-      icon: '/images/icons/fabric-tech-performance.svg',
+      icon: '/images/fabric-cotton-blends.svg',
       title: 'تقنيات أقمشة متطورة',
       description: 'أقمشة قابلة للتنفس ومقاومة للسوائل والبقع مع سهولة التنظيف والتعقيم.'
     },
@@ -104,32 +104,13 @@ export default function EnhancedHealthcareClient() {
       image: '/images/healthcare/healthcare_medical_uniform.jpg',
       price: '١٤٥ ر.س',
       category: 'الرعاية الصحية',
-      href: '/ar/shop/medical-scrubs/premium-medical-scrubs',
-      isNew: true,
-      features: ['قماش مضاد للبكتيريا', 'تصميم مريح', 'ألوان ثابتة']
-    },
-    {
-      id: 'hijab-medical-uniform',
-      name: 'زي طبي بالحجاب',
-      image: '/images/healthcare/medical_hijab_uniform.jpg',
+      href: '/ar/images/healthcare/medical_hijab_uniform.jpg',
       price: '١٦٨ ر.س',
       category: 'الرعاية الصحية',
-      href: '/ar/shop/medical-scrubs/hijab-medical-uniform',
-      features: ['تصميم محتشم', 'قماش قابل للتنفس', 'مقاوم للبقع']
-    },
-    {
-      id: 'surgical-gown-premium',
-      name: 'رداء جراحي فاخر',
-      image: '/images/healthcare/full_clothes_doctor_uniform.jpg',
+      href: '/ar/images/healthcare/full_clothes_doctor_uniform.jpg',
       price: '٢٢٠ ر.س',
       category: 'الرعاية الصحية',
-      href: '/ar/shop/medical-scrubs/surgical-gown-premium',
-      features: ['مقاوم للسوائل', 'تهوية متقدمة', 'راحة فائقة']
-    },
-    {
-      id: 'lab-coat-professional',
-      name: 'معطف مختبر احترافي',
-      image: '/images/products/lab-coat.jpg',
+      href: '/ar/images/products/lab-coat.jpg',
       price: '١٨٥ ر.س',
       category: 'الرعاية الصحية',
       href: '/ar/shop/medical-scrubs/lab-coat-professional',
@@ -173,12 +154,12 @@ export default function EnhancedHealthcareClient() {
     {
       name: 'تقنية مضادة للميكروبات',
       description: 'معالجة خاصة للأقمشة تمنع نمو البكتيريا والفطريات',
-      icon: '/images/icons/compliance-shield.svg'
+      icon: '/images/compliance-shield.svg'
     },
     {
       name: 'مقاومة السوائل والبقع',
       description: 'طبقة حماية تمنع تسرب السوائل والدم والمواد الطبية',
-      icon: '/images/icons/fabric-tech-performance.svg'
+      icon: '/images/fabric-cotton-blends.svg'
     },
     {
       name: 'تنظيم درجة الحرارة',

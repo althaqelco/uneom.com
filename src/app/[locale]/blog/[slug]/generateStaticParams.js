@@ -32,7 +32,7 @@ export function generateStaticParams() {
     !slug.includes('.svg') && 
     !slug.includes('.webp') &&
     !slug.includes('/images/') &&
-    !slug.includes('/icons/')
+    !slug.includes('/images/icons/')
   );
   
   return locales.flatMap(locale => 

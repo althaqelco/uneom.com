@@ -102,43 +102,9 @@ export default function SupplyManufacturingPage() {
       subtitle: "Our end-to-end manufacturing and supply capabilities deliver exceptional value through these key advantages:",
       callToAction: {
         text: "Explore our manufacturing facilities",
-        link: "/services/manufacturing-tour"
-      }
-    },
-    
-    products: [
-      {
-        id: "uniform-manufacturing-service",
-        name: "Premium Uniform Manufacturing Service",
-        description: "Full-scale production of high-quality uniforms in our Saudi facilities with advanced machinery and skilled craftsmanship for exceptional durability and finish.",
-        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-1.jpg",
-        href: "/services/manufacturing"
+        link: "/images/services/industries/supply-manufacturing/supply-manufacturing-uniform-product-1.jpg" // Reverted to 'link' as per type definition
       },
-      {
-        id: "custom-uniform-production",
-        name: "Custom Uniform Design & Production",
-        description: "End-to-end custom uniform design and manufacturing service, from concept to production, with premium materials and attention to detail.",
-        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-2.jpg",
-        href: "/services/custom-design"
-      },
-      {
-        id: "bulk-uniform-supply",
-        name: "Bulk Uniform Supply Program",
-        description: "Comprehensive bulk uniform supply solutions for large organizations, with consistent quality, timely delivery, and program management support.",
-        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-3.jpg",
-        href: "/services/bulk-ordering"
-      }
-    ],
-    
-    fabricTechnologies: {
-      title: "Advanced Manufacturing Technologies",
-      description: "Our state-of-the-art manufacturing facilities incorporate cutting-edge technologies and processes to ensure superior quality, consistency, and efficiency in uniform production.",
-      items: [
-        {
-          name: "Saudi-Made Fabric Production",
-          description: "Locally manufactured premium fabrics designed specifically for Saudi Arabia's climate and working conditions, supporting the Kingdom's economic development goals.",
-          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-mens.jpg"
-        },
+      keyAdvantages: [
         {
           name: "Precision Digital Cutting",
           description: "Computer-controlled cutting machines ensuring perfect precision and minimal waste in the manufacturing process for consistent sizing and fit.",
@@ -229,26 +195,6 @@ export default function SupplyManufacturingPage() {
         description: "Heavy-duty industrial coverall manufactured with flame-resistant fabric and reinforced seams for maximum protection and durability.",
         price: "From SAR 289",
         image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-1.jpg",
-        href: "/shop/industrial-uniforms/industrial-coverall-pro",
-        features: ["Locally manufactured", "Flame-resistant", "Reinforced seams", "Advanced protection"],
-        badge: "Best Seller"
-      },
-      {
-        id: "hi-vis-safety-uniform",
-        name: "High-Visibility Safety Uniform",
-        description: "Premium high-visibility safety uniform with reflective elements manufactured for hazardous industrial environments.",
-        price: "From SAR 249",
-        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-2.jpg",
-        href: "/shop/industrial-uniforms/hi-vis-safety-uniform",
-        features: ["Enhanced visibility", "Durable construction", "Comfort-focused design", "Multiple pockets"],
-        badge: "Premium Quality"
-      },
-      {
-        id: "supervisor-industrial-uniform",
-        name: "Supervisor Industrial Uniform",
-        description: "Professional-grade supervisor uniform designed for industrial management personnel, combining authority with functionality.",
-        price: "From SAR 349",
-        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-3.jpg",
         href: "/shop/industrial-uniforms/supervisor-industrial-uniform",
         features: ["Professional design", "Durable materials", "Management visibility", "Comfort-focused"],
         badge: "Management Quality"

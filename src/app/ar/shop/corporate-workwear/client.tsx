@@ -32,58 +32,11 @@ export default function CorporateWorkwearClientPage() {
       description: 'بدلة عمل أنيقة للمديرين التنفيذيين والمهنيين، مصممة من أقمشة فاخرة مع خيارات تخصيص متعددة.',
       price: 'من 899 ريال',
       image: '/images/corporate-workwear.jpg',
-      href: '/ar/shop/corporate-workwear/executive-suit',
-      features: ['قماش فاخر', 'قصة مثالية', 'مظهر احترافي', 'خيارات تخصيص'],
-      colors: ['كحلي', 'رمادي', 'أسود', 'أزرق داكن'],
-      isBestseller: true
-    },
-    {
-      id: 'office-attire',
-      name: 'زي مكتبي',
-      description: 'زي مكتبي عملي وأنيق للموظفين، يجمع بين الراحة والمظهر الاحترافي المناسب لبيئة العمل.',
-      price: 'من 549 ريال',
-      image: '/images/corporate-workwear.jpg',
-      href: '/ar/shop/corporate-workwear/office-attire',
-      features: ['قماش مريح', 'سهل العناية', 'مظهر أنيق', 'متوفر بعدة ألوان'],
-      colors: ['أبيض', 'أزرق فاتح', 'رمادي فاتح', 'بيج'],
-      isNew: true
-    },
-    {
-      id: 'corporate-shirts',
-      name: 'قمصان شركات',
-      description: 'قمصان رسمية عالية الجودة للشركات، متوفرة بخيارات متعددة للتطريز والطباعة لإضافة شعار الشركة.',
-      price: 'من 199 ريال',
-      image: '/images/corporate-workwear.jpg',
-      href: '/ar/shop/corporate-workwear/corporate-shirts',
-      features: ['قطن مصري', 'سهلة الكي', 'متينة', 'خيارات تطريز الشعار'],
-      colors: ['أبيض', 'أزرق سماوي', 'أزرق داكن', 'رمادي']
-    },
-    {
-      id: 'business-casual',
-      name: 'ملابس عمل غير رسمية',
-      description: 'مجموعة من الملابس غير الرسمية المناسبة لبيئات العمل ذات الطابع العصري، تجمع بين الأناقة والراحة.',
-      price: 'من 349 ريال',
-      image: '/images/corporate-workwear.jpg',
-      href: '/ar/shop/corporate-workwear/business-casual',
-      features: ['تصميم عصري', 'مريحة للارتداء طوال اليوم', 'سهلة المزج والتنسيق', 'مناسبة للعمل اليومي'],
-      colors: ['متعددة']
-    },
-    {
-      id: 'corporate-outerwear',
-      name: 'ملابس خارجية للشركات',
-      description: 'معاطف وسترات أنيقة مناسبة للاستخدام المهني، مع إمكانية إضافة شعار الشركة.',
-      price: 'من 449 ريال',
-      image: '/images/corporate-workwear.jpg',
-      href: '/ar/shop/corporate-workwear/corporate-outerwear',
-      features: ['مقاومة للماء', 'أنيقة', 'دافئة', 'مناسبة للتخصيص'],
-      colors: ['أسود', 'كحلي', 'رمادي داكن', 'بني']
-    },
-    {
-      id: 'corporate-accessories',
-      name: 'إكسسوارات الشركات',
-      description: 'مجموعة من الإكسسوارات المهنية بما في ذلك ربطات العنق والأوشحة وحاملات البطاقات التعريفية.',
-      price: 'من 99 ريال',
-      image: '/images/corporate-workwear.jpg',
+      href: '/ar/images/corporate-workwear.jpg',
+      href: '/ar/images/corporate-workwear.jpg',
+      href: '/ar/images/corporate-workwear.jpg',
+      href: '/ar/images/corporate-workwear.jpg',
+      href: '/ar/images/corporate-workwear.jpg',
       href: '/ar/shop/corporate-workwear/corporate-accessories',
       features: ['جودة عالية', 'تصميم أنيق', 'مناسبة للهدايا المؤسسية', 'خيارات تخصيص'],
       colors: ['متعددة']

@@ -159,18 +159,8 @@ export default function MallStaffUniform() {
         name: "مجموعة متاجر التجزئة الفاخرة",
         description: "يونيفورم راقي للعلامات التجارية الفاخرة ومتاجر البوتيك",
         image: "/images/industries/retail-shops/retail-shops-uniform-identity-3.jpg",
-        link: "/ar/shop/retail-uniforms/luxury-retail-collection"
-      },
-      {
-        name: "مجموعة يونيفورم أمن المولات",
-        description: "يونيفورم أمن احترافي متناسق مع تصاميم موظفي المولات",
-        image: "/images/industries/factory_industry/factory-security-uniform-1.jpg",
-        link: "/ar/shop/security-uniforms/mall-security"
-      },
-      {
-        name: "مجموعة احترافية لخدمة العملاء",
-        description: "مجموعة يونيفورم متخصصة لمراكز خدمة العملاء ومكاتب المساعدة",
-        image: "/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg",
+        link: "/ar/images/industries/factory_industry/factory-security-uniform-1.jpg",
+        link: "/ar/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg",
         link: "/ar/shop/retail-uniforms/customer-service"
       }
     ],

@@ -20,46 +20,11 @@ export default function ManufacturingAttireClientPage() {
       description: 'أفرول صناعي متين مصمم للحماية والراحة في بيئات التصنيع والصناعة الثقيلة.',
       price: 'من 249 ريال',
       image: '/images/product-placeholder.jpg',
-      href: '/ar/shop/manufacturing-attire/industrial-coveralls'
-    },
-    {
-      id: 'protective-workwear',
-      name: 'ملابس العمل الواقية',
-      description: 'ملابس عمل واقية مصممة خصيصاً لحماية العاملين في المصانع والمنشآت الصناعية.',
-      price: 'من 279 ريال',
-      image: '/images/product-placeholder.jpg',
-      href: '/ar/shop/manufacturing-attire/protective-workwear'
-    },
-    {
-      id: 'safety-vests',
-      name: 'سترات السلامة',
-      description: 'سترات سلامة عاكسة للضوء لزيادة الرؤية وضمان السلامة في بيئات العمل الصناعية.',
-      price: 'من 129 ريال',
-      image: '/images/product-placeholder.jpg',
-      href: '/ar/shop/manufacturing-attire/safety-vests'
-    },
-    {
-      id: 'industrial-jackets',
-      name: 'سترات صناعية',
-      description: 'سترات صناعية متينة ومقاومة للعوامل الخارجية مناسبة للعمل في بيئات صناعية متنوعة.',
-      price: 'من 299 ريال',
-      image: '/images/product-placeholder.jpg',
-      href: '/ar/shop/manufacturing-attire/industrial-jackets'
-    },
-    {
-      id: 'heat-resistant-workwear',
-      name: 'ملابس عمل مقاومة للحرارة',
-      description: 'ملابس عمل متخصصة مقاومة للحرارة مصممة للبيئات الصناعية ذات درجات الحرارة المرتفعة.',
-      price: 'من 399 ريال',
-      image: '/images/product-placeholder.jpg',
-      href: '/ar/shop/manufacturing-attire/heat-resistant-workwear'
-    },
-    {
-      id: 'industrial-protective-uniforms',
-      name: 'أزياء واقية صناعية',
-      description: 'أزياء واقية صناعية متكاملة توفر الحماية والراحة للعاملين في بيئات التصنيع.',
-      price: 'من 349 ريال',
-      image: '/images/product-placeholder.jpg',
+      href: '/ar/images/product-placeholder.jpg',
+      href: '/ar/images/product-placeholder.jpg',
+      href: '/ar/images/product-placeholder.jpg',
+      href: '/ar/images/product-placeholder.jpg',
+      href: '/ar/images/product-placeholder.jpg',
       href: '/ar/shop/manufacturing-attire/industrial-protective-uniforms',
       isNew: true
     }
@@ -71,24 +36,9 @@ export default function ManufacturingAttireClientPage() {
       title: 'ملابس المصانع',
       description: 'ملابس متخصصة للعاملين في المصانع',
       image: '/images/products/industrial-coverall.jpg',
-      url: '/ar/shop/manufacturing-attire/factory-workwear'
-    },
-    {
-      title: 'ملابس الورش',
-      description: 'ملابس متينة مناسبة للعمل في ورش العمل',
-      image: '/images/products/industrial-coverall.jpg',
-      url: '/ar/shop/manufacturing-attire/workshop-attire'
-    },
-    {
-      title: 'معدات السلامة',
-      description: 'معدات سلامة للعاملين في بيئات التصنيع',
-      image: '/images/products/industrial-coverall.jpg',
-      url: '/ar/shop/manufacturing-attire/safety-equipment'
-    },
-    {
-      title: 'ملابس مقاومة للحرارة',
-      description: 'ملابس متخصصة لبيئات العمل الحارة',
-      image: '/images/products/industrial-coverall.jpg',
+      url: '/ar/images/products/industrial-coverall.jpg',
+      url: '/ar/images/products/industrial-coverall.jpg',
+      url: '/ar/images/products/industrial-coverall.jpg',
       url: '/ar/shop/manufacturing-attire/heat-resistant'
     }
   ];

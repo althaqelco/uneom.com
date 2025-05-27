@@ -79,19 +79,9 @@ export default function SecurityOfficerUniformClientPage() {
         name: 'سترة دورية أمنية',
         image: '/images/products/industrial-coverall.jpg',
         price: 'من ريال 389',
-        href: '/ar/shop/security-uniforms/security-patrol-jacket'
-      },
-      {
-        id: 'tactical-security-vest',
-        name: 'سترة أمنية تكتيكية',
-        image: '/images/product-placeholder.jpg',
+        href: '/ar/images/product-placeholder.jpg',
         price: 'من ريال 249',
-        href: '/ar/shop/security-uniforms/tactical-security-vest'
-      },
-      {
-        id: 'security-accessories-kit',
-        name: 'طقم ملحقات أمنية',
-        image: '/images/products/industrial-coverall.jpg',
+        href: '/ar/images/products/industrial-coverall.jpg',
         price: 'من ريال 179',
         href: '/ar/shop/security-uniforms/security-accessories-kit'
       }

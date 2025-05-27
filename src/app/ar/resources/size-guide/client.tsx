@@ -215,27 +215,13 @@ export default function SizeGuideClientPageArabic() {
             </ul>
           </div>
         `,
-        image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
-      }
-    ],
-    items: [
-      {
-        id: 'mens-sizing',
-        title: 'دليل مقاسات الرجال',
-        description: 'جداول مقاسات مفصلة للزي الموحد للرجال مع إرشادات القياس.',
-        image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg'
+        image: '/images/services/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg'
       },
       {
         id: 'womens-sizing',
         title: 'دليل مقاسات النساء',
         description: 'جداول مقاسات مفصلة للزي الموحد للنساء مع إرشادات القياس.',
-        image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg'
-      },
-      {
-        id: 'measurement-guide',
-        title: 'دليل القياس',
-        description: 'تعليمات خطوة بخطوة لأخذ قياسات دقيقة للحصول على أفضل تناسب.',
-        image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg'
+        image: '/images/services/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg'
       },
       {
         id: 'size-conversion',

@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/services/custom-uniforms-service.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'خدمة تصميم وتصنيع الزي الموحد المخصص من يونيوم',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'الزي الموحد المخصص | يونيوم السعودية',
-    description: 'تصميم وتصنيع الزي الموحد المخصص المتميز للمؤسسات السعودية. حلول ملابس عمل مصممة خصيصاً تعكس هوية علامتك التجارية.',
-    images: ['/images/services/custom-uniforms-service.jpg'],
+        url: '/images/services/services/custom-uniforms-service.jpg'],
   },
   robots: {
     index: true,

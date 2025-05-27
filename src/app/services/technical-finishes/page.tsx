@@ -99,19 +99,7 @@ const TechnicalFinishesPage = () => {
         'Improves hygiene in critical environments'
       ],
       applications: ['Healthcare uniforms', 'Food service attire', 'Hospitality staff', 'Fitness center staff'],
-      image: '/images/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg',
-    },
-    {
-      name: 'Flame Retardant Finish',
-      description: 'Treatments that reduce fabric flammability and slow the spread of flames in case of fire exposure.',
-      benefits: [
-        'Improves safety in high-risk environments',
-        'Prevents rapid flame spread',
-        'Provides critical reaction time in emergencies',
-        'Meets safety regulations for specific industries'
-      ],
-      applications: ['Industrial workers', 'Kitchen staff', 'Oil and gas personnel', 'Electrical workers'],
-      image: '/images/a-firefighter-giving-instructions-to-her-team-SBI-301057339.jpg',
+      image: '/images/services/a-firefighter-giving-instructions-to-her-team-SBI-301057339.jpg',
     },
     {
       name: 'Moisture Wicking Finish',

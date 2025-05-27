@@ -437,22 +437,22 @@ export default function FabricsStudentUniformsPage() {
               </div>
             </Link>
             
-            <Link href="/shop/education-uniforms/premium-school-uniforms" className="group">
+            <Link href="/shop/education-uniforms" className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="aspect-video relative">
                   <Image
                     src="/images/education/premium-school-uniforms.jpg"
-                    alt="الزي المدرسي الفاخر"
+                    alt="Premium School Uniform Collection"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    مجموعة الزي المدرسي الفاخر
+                    Premium School Uniform Collection
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    اكتشف مجموعتنا المتميزة من الأزياء المدرسية عالية الجودة.
+                    Discover our distinguished collection of high-quality school uniforms.
                   </p>
                 </div>
               </div>

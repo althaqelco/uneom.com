@@ -59,9 +59,7 @@ const productData = {
     'RFID tag integration for inventory management'
   ],
   relatedProducts: [
-    { id: 'premium-scrubs-set', name: 'Premium Scrubs Set', image: '/images/products/scrubs-set.jpg', price: 'SAR 249', link: '/shop/medical-scrubs/premium-scrubs-set' },
-    { id: 'surgical-scrubs', name: 'Surgical Scrubs', image: '/images/products/scrubs-set.jpg', price: 'SAR 269', link: '/shop/medical-scrubs/surgical-scrubs' },
-    { id: 'professional-lab-coat', name: 'Professional Lab Coat', image: '/images/products/scrubs-set.jpg', price: 'SAR 199', link: '/shop/medical-scrubs/professional-lab-coat' }
+    { id: 'premium-scrubs-set', name: 'Premium Scrubs Set', image: '/images/products/scrubs-set.jpg', price: 'SAR 249', link: '/images/products/scrubs-set.jpg', price: 'SAR 269', link: '/images/products/scrubs-set.jpg', price: 'SAR 199', link: '/shop/medical-scrubs/professional-lab-coat' }
   ]
 };
 

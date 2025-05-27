@@ -32,28 +32,8 @@ export default function AviationUniformsClientPage() {
       description: 'زي طيار احترافي عالي الجودة مصمم للراحة والأناقة، يتميز بتفاصيل مميزة ونسيج فاخر.',
       price: 'من 599 ريال',
       image: '/images/Aviation_Uniforms.png',
-      href: '/ar/shop/aviation-uniforms/pilot-uniform',
-      features: ['نسيج فاخر', 'تفاصيل دقيقة', 'مظهر احترافي', 'مريح للرحلات الطويلة'],
-      colors: ['أسود', 'أزرق داكن'],
-      isBestseller: true
-    },
-    {
-      id: 'flight-attendant-uniform',
-      name: 'زي مضيف الطيران',
-      description: 'زي مضيف طيران أنيق مصمم للراحة طوال الرحلة، مع تصميم عملي يسمح بحرية الحركة أثناء الخدمة.',
-      price: 'من 449 ريال',
-      image: '/images/Portrait_of_Flight_attendant.png',
-      href: '/ar/shop/aviation-uniforms/flight-attendant-uniform',
-      features: ['مقاوم للتجعد', 'سهل العناية', 'تصميم مريح', 'مظهر احترافي'],
-      colors: ['أزرق داكن', 'أسود', 'أحمر', 'رمادي'],
-      isNew: true
-    },
-    {
-      id: 'ground-crew-uniform',
-      name: 'زي طاقم الأرض',
-      description: 'زي متين وعملي مصمم لطاقم الأرض، يجمع بين المتانة والراحة والوظائف العملية.',
-      price: 'من 349 ريال',
-      image: '/images/happy-ground-crew-worker-with-flag-at-the-airport-SBI-300817391.jpg',
+      href: '/ar/images/Portrait_of_Flight_attendant.png',
+      href: '/ar/images/happy-ground-crew-worker-with-flag-at-the-airport-SBI-300817391.jpg',
       href: '/ar/shop/aviation-uniforms/ground-crew-uniform',
       features: ['متين', 'مقاوم للطقس', 'تصميم عملي', 'جيوب متعددة'],
       colors: ['أصفر/أسود', 'برتقالي/كحلي', 'أخضر', 'أزرق']
@@ -64,26 +44,8 @@ export default function AviationUniformsClientPage() {
       description: 'زي رسمي وعملي مصمم لفرق أمن الطيران، يجمع بين المظهر السلطوي والراحة العملية.',
       price: 'من 399 ريال',
       image: '/images/african-american-security-staff-working-at-airport-SBI-338134198.jpg',
-      href: '/ar/shop/aviation-uniforms/aviation-security-uniform',
-      features: ['تصميم رسمي', 'مريح للمناوبات الطويلة', 'نسيج متين', 'جيوب وظيفية'],
-      colors: ['أسود', 'كحلي', 'رمادي داكن']
-    },
-    {
-      id: 'aircraft-maintenance-uniform',
-      name: 'زي صيانة الطائرات',
-      description: 'زي متخصص مصمم لفرق صيانة الطائرات، يوفر الحماية والراحة والوظائف العملية.',
-      price: 'من 329 ريال',
-      image: '/images/engineers-discussing-in-airplane-hangar-SBI-300973677.jpg',
-      href: '/ar/shop/aviation-uniforms/aircraft-maintenance-uniform',
-      features: ['مقاوم للزيت والوقود', 'متين', 'جيوب متعددة للأدوات', 'تصميم مريح'],
-      colors: ['أزرق داكن', 'رمادي', 'أسود']
-    },
-    {
-      id: 'airline-office-uniform',
-      name: 'زي مكتب شركة الطيران',
-      description: 'زي أنيق للعاملين في مكاتب شركات الطيران، مصمم للمحافظة على هوية العلامة التجارية مع توفير الراحة طوال اليوم.',
-      price: 'من 379 ريال',
-      image: '/images/middle-eastern-pilot-walking-at-airport-with-pilot-ca-SBI-313431393.jpg',
+      href: '/ar/images/engineers-discussing-in-airplane-hangar-SBI-300973677.jpg',
+      href: '/ar/images/middle-eastern-pilot-walking-at-airport-with-pilot-ca-SBI-313431393.jpg',
       href: '/ar/shop/aviation-uniforms/airline-office-uniform',
       features: ['تصميم أنيق', 'نسيج مريح', 'علامة تجارية موحدة', 'سهل العناية'],
       colors: ['كحلي', 'أسود', 'رمادي', 'أبيض']

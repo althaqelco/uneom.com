@@ -54,8 +54,7 @@ export const industries: Industry[] = [
     title: "Professional Medical Scrubs & Healthcare Uniforms in Saudi Arabia",
     description: "High-quality medical uniforms designed for comfort and functionality in Saudi healthcare settings. Compliant with local regulations and suitable for the Kingdom's climate.",
     descriptionAr: "يونيفورم طبي عالي الجودة مصمم للراحة والوظائف العملية في بيئات الرعاية الصحية السعودية. متوافق مع اللوائح المحلية ومناسب لمناخ المملكة.",
-    image: "/images/industries/healthcare.jpg",
-    heroImage: "/images/industries/healthcare-hero.jpg",
+    image: "/images/industries/industries/healthcare-hero.jpg",
     benefits: [
       { 
         title: "Saudi Healthcare Compliance", 
@@ -139,8 +138,7 @@ export const industries: Industry[] = [
     title: "Professional Airline & Airport Uniforms in Saudi Arabia",
     description: "Sophisticated airline uniforms that blend Saudi cultural heritage with modern aviation standards. Designed for aircrew, ground staff, and airport personnel.",
     descriptionAr: "يونيفورم طيران متطور يمزج بين التراث الثقافي السعودي ومعايير الطيران الحديثة. مصمم لطاقم الطائرة وطاقم الأرض وموظفي المطار.",
-    image: "/images/industries/aviation.jpg",
-    heroImage: "/images/industries/aviation-hero.jpg",
+    image: "/images/industries/industries/aviation-hero.jpg",
     benefits: [
       { 
         title: "Cultural Authenticity", 
@@ -213,8 +211,7 @@ export const industries: Industry[] = [
     title: "Luxury Hotel & Restaurant Uniforms in Saudi Arabia",
     description: "Elegant hospitality uniforms tailored for Saudi Arabia's growing luxury tourism sector. Designed for hotels, resorts, restaurants, and events.",
     descriptionAr: "زي موحد للضيافة أنيق مصمم خصيصًا لقطاع السياحة الفاخرة المتنامي في المملكة العربية السعودية. مصمم للفنادق والمنتجعات والمطاعم والفعاليات.",
-    image: "/images/industries/hospitality.jpg",
-    heroImage: "/images/industries/hospitality-hero.jpg",
+    image: "/images/industries/industries/hospitality-hero.jpg",
     benefits: [
       { 
         title: "Luxurious Impressions", 

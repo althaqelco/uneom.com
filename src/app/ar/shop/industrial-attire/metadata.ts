@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/shop/industrial/industrial-category.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'الزي الصناعي يونيوم - ملابس العمل الآمنة المتميزة',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'الزي الصناعي | يونيوم السعودية',
-    description: 'ملابس عمل آمنة متميزة للقطاعات الصناعية السعودية. استكشف الزي الواقي عالي الجودة من يونيوم لبيئات المصانع والبناء.',
-    images: ['/images/shop/industrial/industrial-category.jpg'],
+        url: '/images/shop/industrial/industrial-category.jpg'],
   },
   robots: {
     index: true,

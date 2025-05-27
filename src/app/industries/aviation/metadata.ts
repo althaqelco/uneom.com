@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/industries/aviation.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Professional UNEOM aviation uniforms compliant with Saudi GACA standards'
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Aviation Uniforms | Airline Crew & Pilot Attire | GACA Standards',
-    description: 'Professional aviation uniforms for Saudi airlines compliant with GACA standards and Islamic principles',
-    images: ['/images/industries/aviation.jpg']
+        url: '/images/industries/industries/aviation.jpg']
   },
   alternates: {
     canonical: 'https://uneom.com/industries/aviation',

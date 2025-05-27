@@ -95,8 +95,8 @@ export function getAllBlogPosts(): BlogPost[] {
       title: 'The Rise of Sustainable Fabrics in Uniform Design',
       date: '2023-02-20T12:00:00Z',
       excerpt: 'How sustainable fabrics are transforming the uniform industry in the Middle East.',
-      featuredImage: '/images/blog/sustainable-fabrics.jpg',
-      coverImage: '/images/blog/sustainable-fabrics.jpg',
+      featuredImage: '/images/blog/sustainable-uniforms.jpg',
+      coverImage: '/images/blog/sustainable-uniforms.jpg',
       author: {
         name: 'Fatima Al-Zahrani',
         picture: '/images/authors/fatima.jpg',

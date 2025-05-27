@@ -54,31 +54,31 @@ export default function FactorySecurityClientPageArabic() {
       {
         title: "ميزات سلامة معززة",
         description: "عناصر عالية الرؤية ومواد مقاومة للهب لأقصى درجات الحماية.",
-        icon: "/icons/safety.svg",
+        icon: "/images/icons/safety.svg",
         gradient: "from-yellow-500 to-amber-600"
       },
       {
         title: "سلطة مهنية",
         description: "مظهر مهيب يؤسس سلطة وموثوقية أفراد الأمن.",
-        icon: "/icons/authority.svg",
+        icon: "/images/icons/authority.svg",
         gradient: "from-blue-600 to-indigo-700"
       },
       {
         title: "المتانة والراحة",
         description: "مواد متميزة تتحمل الظروف الصناعية مع ضمان الراحة طوال اليوم.",
-        icon: "/icons/durability.svg",
+        icon: "/images/icons/durability.svg",
         gradient: "from-green-600 to-emerald-700"
       },
       {
         title: "تكيف مع الطقس",
         description: "تصاميم ذكية للمناخ للعمليات الأمنية الداخلية والخارجية.",
-        icon: "/icons/weather.svg",
+        icon: "/images/icons/weather.svg",
         gradient: "from-cyan-500 to-blue-600"
       },
       {
         title: "التعريف والوصول",
         description: "ميزات متكاملة للشارات وبطاقات الوصول وأجهزة الاتصال.",
-        icon: "/icons/identification.svg",
+        icon: "/images/icons/identification.svg",
         gradient: "from-purple-600 to-violet-700"
       }
     ],
@@ -89,22 +89,8 @@ export default function FactorySecurityClientPageArabic() {
         name: "طقم يونيفورم الأمن الصناعي",
         description: "طقم يونيفورم أمني كامل مصمم للبيئات الصناعية، يتميز بعناصر عالية الرؤية وبناء متين.",
         image: "/images/industries/factory_industry/factory-security-uniform-1.jpg",
-        href: "/ar/shop/security-uniforms/industrial-security-set",
-        features: ["قماش مقاوم للهب", "عناصر عالية الرؤية", "جيوب متعددة الاستخدامات"]
-      },
-      {
-        id: "factory-patrol-uniform",
-        name: "يونيفورم دوريات المصنع",
-        description: "يونيفورم دوريات متخصص مع ميزات تعزيز الحركة والحماية من الطقس.",
-        image: "/images/industries/factory_industry/factory-security-uniform-2.jpg",
-        href: "/ar/shop/security-uniforms/factory-patrol",
-        features: ["مقاوم للطقس", "حركة معززة", "دمج أجهزة الاتصال"]
-      },
-      {
-        id: "security-supervisor-uniform",
-        name: "زي مشرف الأمن",
-        description: "طقم يونيفورم مميز لمشرفي الأمن، يجمع بين السلطة والوظائف العملية.",
-        image: "/images/industries/factory_industry/factory-security-uniform-3.jpg",
+        href: "/ar/images/industries/factory_industry/factory-security-uniform-2.jpg",
+        href: "/ar/images/industries/factory_industry/factory-security-uniform-3.jpg",
         href: "/ar/shop/security-uniforms/supervisor-set",
         features: ["تصميم احترافي", "مواد متميزة", "شارات المشرف"]
       }
@@ -114,19 +100,19 @@ export default function FactorySecurityClientPageArabic() {
       {
         name: "حماية ديوراتاف™",
         description: "تقنية قماش متقدمة توفر متانة وحماية فائقة في البيئات الصناعية.",
-        icon: "/icons/protection.svg",
+        icon: "/images/icons/protection.svg",
         animation: "fade-right"
       },
       {
         name: "راحة التحكم بالمناخ",
         description: "تنظيم مبتكر لدرجة الحرارة للراحة المثلى في الظروف المتغيرة.",
-        icon: "/icons/temperature.svg",
+        icon: "/images/icons/temperature.svg",
         animation: "fade-up"
       },
       {
         name: "تقنية سيفتي فلكس",
         description: "ميزات حركة معززة دون المساس بالحماية والمتانة.",
-        icon: "/icons/flexibility.svg",
+        icon: "/images/icons/flexibility.svg",
         animation: "fade-left"
       }
     ],
@@ -135,19 +121,19 @@ export default function FactorySecurityClientPageArabic() {
       {
         name: "العلامة التجارية للشركة",
         description: "تطبيق احترافي للشعار ومطابقة الألوان لتتوافق مع هوية الشركة.",
-        icon: "/icons/branding.svg",
+        icon: "/images/icons/branding.svg",
         gradient: "from-blue-500 to-blue-700"
       },
       {
         name: "تمييز الرتب",
         description: "تسلسل هرمي بصري واضح من خلال عناصر تصميم وشارات مدروسة.",
-        icon: "/icons/rank.svg",
+        icon: "/images/icons/rank.svg",
         gradient: "from-purple-500 to-purple-700"
       },
       {
         name: "دمج السلامة",
         description: "ميزات سلامة قابلة للتخصيص بناءً على متطلبات المنشأة المحددة.",
-        icon: "/icons/safety-custom.svg",
+        icon: "/images/icons/safety-custom.svg",
         gradient: "from-green-500 to-green-700"
       }
     ],

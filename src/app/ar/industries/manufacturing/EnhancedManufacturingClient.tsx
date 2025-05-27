@@ -66,7 +66,7 @@ export default function EnhancedManufacturingClient() {
   // Manufacturing benefits
   const manufacturingBenefits = [
     {
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
       title: 'السلامة المهنية',
       description: 'أزياء تلبي أعلى معايير السلامة المهنية وتحمي العمال من مخاطر بيئة العمل الصناعي.',
       stats: '٩٩٪ مطابقة لمعايير السلامة'
@@ -102,7 +102,7 @@ export default function EnhancedManufacturingClient() {
     {
       name: 'المقاومة الكيميائية',
       description: 'حماية من المواد الكيميائية والأحماض',
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
       applications: ['المختبرات', 'المصانع الكيميائية', 'معالجة المياه', 'البتروكيماويات']
     },
     {

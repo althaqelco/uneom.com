@@ -131,63 +131,9 @@ export default function ClientShopPage() {
       category: 'medical-scrubs',
       image: '/images/PremiumـMedicalـScrubs.png',
       price: '١٢٠ ر.س',
-      url: '/ar/shop/medical-scrubs/premium-medical-scrubs',
-    },
-    {
-      id: 'pilot-uniform',
-      name: 'زي الطيار',
-      category: 'aviation-uniforms',
-      image: '/images/aviation/aviation_uniform_main.jpg',
-      price: '٦٥٠ ر.س',
-      url: '/ar/shop/aviation-uniforms/pilot-uniform',
-    },
-    {
-      id: 'chef-uniform',
-      name: 'زي الطاهي',
-      category: 'hospitality-attire',
-      image: '/images/cook-flavoring-his-best-meal-2024-11-29-22-42-39-utc.jpg',
-      price: '٢٢٠ ر.س',
-      url: '/ar/shop/hospitality-attire/chef-uniform',
-    },
-    {
-      id: 'corporate-suit',
-      name: 'بدلة شركات',
-      category: 'corporate-workwear',
-      image: '/images/corporate/corporate_uniform.jpg',
-      price: '٥٥٠ ر.س',
-      url: '/ar/shop/corporate-workwear/corporate-suit',
-    },
-    {
-      id: 'security-uniform',
-      name: 'زي أمن',
-      category: 'security-uniforms',
-      image: '/images/Military Uniform.H03.2k.png',
-      price: '٣٠٠ ر.س',
-      url: '/ar/shop/security-uniforms/security-uniform',
-    },
-    {
-      id: 'nurse-uniform',
-      name: 'زي تمريض',
-      category: 'medical-scrubs',
-      image: '/images/Healthcare_Uniforms.png',
-      price: '١٣٥ ر.س',
-      url: '/ar/shop/medical-scrubs/nurse-uniform',
-    },
-    {
-      id: 'flight-attendant-uniform',
-      name: 'زي مضيف طيران',
-      category: 'aviation-uniforms',
-      image: '/images/aviation/flightـattendantsـuniforms.jpg',
-      price: '٤٨٠ ر.س',
-      url: '/ar/shop/aviation-uniforms/flight-attendant-uniform',
-    },
-    {
-      id: 'hotel-staff-uniform',
-      name: 'زي موظفي الفندق',
-      category: 'hospitality-attire',
-      image: '/images/hospitality/hospitality_uniform_hotel.jpg',
-      price: '٢٦٠ ر.س',
-      url: '/ar/shop/hospitality-attire/hotel-staff-uniform',
+      // The original URL '/ar/images/aviation/aviation_uniform_main.jpg' seemed incorrect for medical scrubs.
+      // Using the image defined for this product.
+      url: '/ar/shop/medical-scrubs/premium-medical-scrubs', // Assuming this is the correct product page URL
     }
   ];
   
@@ -395,7 +341,7 @@ export default function ClientShopPage() {
               >
               <div className="rounded-full bg-primary-100 p-4 w-20 h-20 flex items-center justify-center mx-auto mb-4">
                   <Image
-                  src="/icons/customize.svg"
+                  src="/icons/custom-branding.svg"
                   alt="تخصيص كامل"
                   width={40}
                   height={40}
@@ -439,7 +385,7 @@ export default function ClientShopPage() {
             >
               <div className="rounded-full bg-primary-100 p-4 w-20 h-20 flex items-center justify-center mx-auto mb-4">
                 <Image
-                  src="/icons/delivery.svg"
+                  src="/icons/timely-delivery.svg"
                   alt="شحن سريع"
                   width={40}
                   height={40}

@@ -46,7 +46,7 @@ export default function MeasurementServicesPageArabic() {
         description: 'توفير الوقت والموارد من خلال تبسيط عملية قياس الموظفين.'
       },
       {
-        icon: '/images/icons/brand-aligned.svg',
+        icon: '/images/images/icons/brand-aligned.svg',
         title: 'اتساق في المقاسات',
         description: 'ضمان قياسات موحدة لجميع الموظفين بغض النظر عن الموقع.'
       },

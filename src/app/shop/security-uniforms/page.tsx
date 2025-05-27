@@ -32,17 +32,6 @@ export default function SecurityUniformsPage() {
       description: 'Professional executive security uniform designed for premium venues and VIP protection services with refined styling and practical features.',
       price: 'From SAR 399',
       image: '/images/security/uniform-durability-test.jpg',
-      href: '/shop/security-uniforms/executive-protection',
-      features: ['Premium fabric', 'Professional styling', 'Reinforced stitching', 'Badge holder'],
-      colors: ['Black', 'Navy', 'Grey', 'White'],
-      isBestseller: true
-    },
-    {
-      id: 'tactical-security-uniform',
-      name: 'Tactical Security Uniform',
-      description: 'Tactical security uniform with reinforced construction and multiple functional pockets, designed for active security personnel in demanding environments.',
-      price: 'From SAR 349',
-      image: '/images/security/stab-resistant-fabric.jpg',
       href: '/shop/security-uniforms/tactical-security-uniforms',
       features: ['Durable ripstop fabric', 'Multiple pockets', 'Reinforced knees/elbows', 'Belt loops'],
       colors: ['Black', 'Navy', 'Khaki', 'Olive'],
@@ -54,36 +43,6 @@ export default function SecurityUniformsPage() {
       description: 'Refined security uniform designed for hotel and hospitality settings, balancing professional appearance with functional security features.',
       price: 'From SAR 299',
       image: '/images/security/smart-fabric-technology.jpg',
-      href: '/shop/security-uniforms/hotel-security-uniform',
-      features: ['Formal appearance', 'Comfortable fit', 'Hotel branding option', 'Professional styling'],
-      colors: ['Black', 'Navy', 'Burgundy', 'White']
-    },
-    {
-      id: 'security-guard-uniform',
-      name: 'Standard Security Guard Uniform',
-      description: 'Standard security guard uniform designed for commercial security services with practical features and professional appearance.',
-      price: 'From SAR 249',
-      image: '/images/security/uniform-durability-test.jpg',
-      href: '/shop/security-uniforms/security-officer-uniform',
-      features: ['Durable fabric', 'Badge holder', 'Multiple pockets', 'Name tag'],
-      colors: ['Black', 'Navy', 'Khaki']
-    },
-    {
-      id: 'event-security-uniform',
-      name: 'Event Security Uniform',
-      description: 'High-visibility event security uniform designed for crowd management and event security services with comfort and recognition features.',
-      price: 'From SAR 219',
-      image: '/images/security/saudi-events-security.jpg',
-      href: '/shop/security-uniforms/event-security-uniform',
-      features: ['High-visibility option', 'Breathable fabric', 'Company branding', 'Weather-resistant'],
-      colors: ['Black', 'Hi-Vis Yellow', 'Hi-Vis Orange']
-    },
-    {
-      id: 'security-winter-jacket',
-      name: 'Security Winter Jacket',
-      description: 'Insulated security jacket designed for cold weather conditions with security features and professional styling for outdoor surveillance.',
-      price: 'From SAR 329',
-      image: '/images/security/advanced-fabrics-hero.jpg',
       href: '/shop/security-uniforms/security-winter-jacket',
       features: ['Thermal insulation', 'Water-resistant', 'Reflective elements', 'Badge holder'],
       colors: ['Black', 'Navy', 'Grey']
@@ -376,7 +335,7 @@ export default function SecurityUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/icons/compliance-shield.svg"
+                  src="/images/compliance-shield.svg"
                   alt="Badge & ID Integration"
                   fill
                   className="object-cover"
@@ -410,7 +369,7 @@ export default function SecurityUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/icons/customization-icon.svg"
+                  src="/icons/custom-branding.svg"
                   alt="Tactical Functionality"
                   fill
                   className="object-cover"
@@ -427,7 +386,7 @@ export default function SecurityUniformsPage() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/icons/premium-quality.svg"
+                  src="/icons/premium-quality.svg"
                   alt="Professional Aesthetics"
                   fill
                   className="object-cover"

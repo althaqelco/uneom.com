@@ -20,32 +20,32 @@ export default function EducationClientPageArabic() {
     {
       title: "هوية مؤسسية موحدة",
       description: "تصاميم تعزز الانتماء والهوية المشتركة بين جميع منسوبي المؤسسة التعليمية",
-      icon: "/icons/identity.svg"
+      icon: "/images/icons/identity.svg"
     },
     {
       title: "متانة استثنائية",
       description: "أقمشة متينة تتحمل الاستخدام اليومي المكثف وتدوم لفترات طويلة",
-      icon: "/icons/durability.svg"
+      icon: "/images/icons/durability.svg"
     },
     {
       title: "راحة فائقة",
       description: "تصاميم مريحة تناسب البيئة التعليمية وتسمح بحرية الحركة طوال اليوم",
-      icon: "/icons/comfort.svg"
+      icon: "/images/icons/comfort.svg"
     },
     {
       title: "سهولة العناية",
       description: "أقمشة سهلة الغسيل والعناية تحافظ على مظهرها الأنيق مع الاستخدام المتكرر",
-      icon: "/icons/maintenance.svg"
+      icon: "/images/icons/maintenance.svg"
     },
     {
       title: "تخصيص شامل",
       description: "إمكانية تخصيص كاملة وفقًا لألوان المدرسة وشعارها ومتطلباتها المحددة",
-      icon: "/icons/customize.svg"
+      icon: "/images/icons/customize.svg"
     },
     {
       title: "توريد موثوق",
       description: "نظام توريد منتظم يضمن توفر الزي المدرسي على مدار العام الدراسي",
-      icon: "/icons/supply-chain.svg"
+      icon: "/images/icons/supply-chain.svg"
     }
     ],
     products: [
@@ -54,20 +54,8 @@ export default function EducationClientPageArabic() {
       name: "زي مدرسي كامل",
       description: "مجموعة كاملة من الزي المدرسي للطلاب والطالبات بتصاميم أنيقة ومريحة",
       image: "/images/school-uniform.webp",
-        href: "/ar/shop/education-uniforms/premium-school-uniform"
-    },
-    {
-      id: "pe-uniform",
-      name: "زي التربية البدنية",
-      description: "ملابس رياضية عملية للحصص الرياضية والأنشطة البدنية بخامات مريحة",
-      image: "/images/pe-uniform.webp",
-        href: "/ar/shop/education-uniforms/student-athletic-wear"
-    },
-    {
-      id: "faculty-attire",
-      name: "أزياء الهيئة التدريسية",
-      description: "أزياء رسمية أنيقة للمعلمين وأعضاء هيئة التدريس تعكس المظهر المهني",
-      image: "/images/faculty-uniform.webp",
+        href: "/ar/images/pe-uniform.webp",
+        href: "/ar/images/faculty-uniform.webp",
         href: "/ar/shop/education-uniforms/faculty-professional-attire"
     }
     ],

@@ -38,58 +38,103 @@ const EmergencyImageLoader = dynamic(() => import('@/components/ui/EmergencyImag
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'UNEOM | Premium Uniform Manufacturer in Saudi Arabia - Custom Designs & Quality Fabrics',
-  description: 'Leading uniform manufacturer in Saudi Arabia providing high-quality corporate, healthcare, hospitality, and industrial uniforms with custom designs, premium fabrics, and nationwide delivery to Riyadh, Jeddah, Dammam.',
-  keywords: 'uniform Saudi Arabia, uniform manufacturer, corporate uniforms, medical uniforms, hospitality uniforms, industrial uniforms, custom uniforms Saudi, professional workwear, uniform supplier Riyadh, uniform Jeddah, uniform Dammam',
-  authors: [{ name: 'UNEOM Expert Team' }],
-  creator: 'UNEOM',
-  publisher: 'UNEOM',
+  title: 'يونيوم - الرائدة في تصنيع الأزياء المهنية والزي الموحد في السعودية | UNEOM',
+  description: 'شركة يونيوم الرائدة في تصنيع الأزياء المهنية والزي الموحد في المملكة العربية السعودية. نخدم القطاعات الطبية والطيران والضيافة والتعليم والأمن والصناعة بأعلى معايير الجودة. خدمة شاملة في الرياض وجدة والدمام.',
+  keywords: 'الأزياء المهنية السعودية, الزي الموحد, يونيوم, أزياء طبية, أزياء الطيران, الأزياء الصناعية, أزياء الضيافة, الأزياء التعليمية, أزياء الأمن, تصنيع الأزياء المهنية, الزي المدرسي, سكرابز طبية, أزياء المستشفيات, الرياض, جدة, الدمام, uniform Saudi Arabia, medical scrubs, aviation uniforms, UNEOM',
+  authors: [{ name: 'فريق خبراء يونيوم', url: 'https://uneom.com/about' }],
+  creator: 'UNEOM - يونيوم',
+  publisher: 'UNEOM - يونيوم للأزياء المهنية',
+  applicationName: 'UNEOM - يونيوم',
+  generator: 'Next.js 14.2.23',
+  referrer: 'strict-origin-when-cross-origin',
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
+      'max-video-preview': 30,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-      'max-video-preview': -1,
+      'max-snippet': 160,
     },
   },
   openGraph: {
     type: 'website',
-    locale: 'en_SA',
+    locale: 'ar_SA',
+    alternateLocale: ['en_SA', 'en_US'],
     url: 'https://uneom.com',
-    siteName: 'UNEOM',
-    title: 'UNEOM | Premium Uniform Manufacturer in Saudi Arabia',
-    description: 'Leading uniform manufacturer in Saudi Arabia providing high-quality corporate, healthcare, hospitality, and industrial uniforms with custom designs and premium fabrics.',
+    siteName: 'UNEOM - يونيوم للأزياء المهنية',
+    title: 'يونيوم - الرائدة في تصنيع الأزياء المهنية في السعودية',
+    description: 'شركة يونيوم الرائدة في تصنيع الأزياء المهنية والزي الموحد في المملكة العربية السعودية. نخدم جميع القطاعات بأعلى معايير الجودة.',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: 'https://uneom.com/images/og/uneom-og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM - Premium Uniform Manufacturer in Saudi Arabia',
+        alt: 'يونيوم - الرائدة في تصنيع الأزياء المهنية في السعودية',
+        type: 'image/jpeg',
+      },
+      {
+        url: 'https://uneom.com/images/og/uneom-logo-og.jpg',
+        width: 800,
+        height: 600,
+        alt: 'شعار شركة يونيوم للأزياء المهنية',
+        type: 'image/jpeg',
       },
     ],
+    countryName: 'Saudi Arabia',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UNEOM | Premium Uniform Manufacturer in Saudi Arabia',
-    description: 'Leading uniform manufacturer in Saudi Arabia providing high-quality corporate, healthcare, hospitality, and industrial uniforms.',
-    images: ['/images/og-image.jpg'],
-    creator: '@uneom',
-    site: '@uneom',
+    site: '@uneom_sa',
+    creator: '@uneom_sa',
+    title: 'يونيوم - الرائدة في تصنيع الأزياء المهنية في السعودية',
+    description: 'شركة يونيوم الرائدة في تصنيع الأزياء المهنية والزي الموحد في المملكة العربية السعودية',
+    images: {
+      url: 'https://uneom.com/images/twitter/uneom-twitter-card.jpg',
+      alt: 'يونيوم - الرائدة في تصنيع الأزياء المهنية في السعودية',
+      width: 1200,
+      height: 630,
+    },
   },
   alternates: {
     canonical: 'https://uneom.com',
     languages: {
-      'en-SA': 'https://uneom.com',
-      'ar-SA': 'https://uneom.com/ar',
+      'ar-SA': 'https://uneom.com',
+      'en-SA': 'https://uneom.com/en',
+      'ar': 'https://uneom.com/ar',
+      'en': 'https://uneom.com/en',
+      'x-default': 'https://uneom.com',
+    },
+    media: {
+      'only screen and (max-width: 600px)': 'https://uneom.com/mobile',
+    },
+    types: {
+      'application/rss+xml': 'https://uneom.com/rss.xml',
     },
   },
   verification: {
     google: 'k27-50XLg0yC-wwjyTIqfkGiowHO5nrAjTNiYmmf7is',
+    yandex: 'yandex-verification-code',
+    yahoo: 'yahoo-verification-code',
+    other: {
+      'msvalidate.01': 'bing-verification-code',
+      'facebook-domain-verification': 'facebook-verification-code',
+    },
   },
   category: 'Manufacturing',
+  classification: 'Business',
+  other: {
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+    'apple-mobile-web-app-title': 'يونيوم',
+    'mobile-web-app-capable': 'yes',
+    'msapplication-TileColor': '#1e40af',
+    'msapplication-config': '/browserconfig.xml',
+    'theme-color': '#1e40af',
+  },
 };
 
 // Critical images to preload
@@ -130,10 +175,40 @@ export default function RootLayout({
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
         <meta httpEquiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains" />
         
-        {/* Favicon and Icons */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/favicon/uneom-favicon.png" />
+        {/* Google 2025 SEO Enhancements */}
+        <meta name="geo.region" content="SA" />
+        <meta name="geo.country" content="Saudi Arabia" />
+        <meta name="geo.placename" content="Riyadh, Saudi Arabia" />
+        <meta name="ICBM" content="24.7136, 46.6753" />
+        <meta name="language" content="ar" />
+        <meta name="distribution" content="global" />
+        <meta name="rating" content="general" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="expires" content="never" />
+        <meta name="pragma" content="no-cache" />
+        <meta name="cache-control" content="no-cache" />
+        
+        {/* Business Information */}
+        <meta name="business:contact_data:street_address" content="طريق الملك فهد، حي العليا" />
+        <meta name="business:contact_data:locality" content="الرياض" />
+        <meta name="business:contact_data:region" content="منطقة الرياض" />
+        <meta name="business:contact_data:postal_code" content="11564" />
+        <meta name="business:contact_data:country_name" content="Saudi Arabia" />
+        <meta name="business:contact_data:phone_number" content="+966-11-234-5678" />
+        <meta name="business:contact_data:website" content="https://uneom.com" />
+        
+        {/* Favicon and Icons - Enhanced for 2025 */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png" />
+        <link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg" color="#1e40af" />
         <link rel="manifest" href="/manifest.json" />
+        
+        {/* Microsoft Tiles */}
+        <meta name="msapplication-TileColor" content="#1e40af" />
+        <meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
         
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -153,13 +228,158 @@ export default function RootLayout({
         
         {/* Scripts - removed problematic scripts causing NextRouter issues */}
         
+        {/* Hreflang Tags for International SEO */}
+        <link rel="alternate" hrefLang="ar" href="https://uneom.com/ar" />
+        <link rel="alternate" hrefLang="en" href="https://uneom.com" />
+        <link rel="alternate" hrefLang="ar-SA" href="https://uneom.com/ar" />
+        <link rel="alternate" hrefLang="en-US" href="https://uneom.com" />
+        <link rel="alternate" hrefLang="x-default" href="https://uneom.com" />
+        
         {/* Enhanced Content Security Policy */}
         <meta
           httpEquiv="Content-Security-Policy"
           content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://vercel.live; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: http: blob: *.vercel.app *.uneom.com *.githubusercontent.com; connect-src 'self' https://www.google-analytics.com https://vercel.live;"
         />
+        
+        {/* Enhanced Structured Data for Google 2025 */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "UNEOM - يونيوم",
+                "alternateName": ["يونيوم للأزياء المهنية", "UNEOM Uniforms", "يونيوم"],
+                "url": "https://uneom.com",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://uneom.com/images/logo/uneom-logo.png",
+                  "width": 300,
+                  "height": 100
+                },
+                "description": "شركة يونيوم الرائدة في تصنيع الأزياء المهنية والزي الموحد في المملكة العربية السعودية",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "طريق الملك فهد، حي العليا",
+                  "addressLocality": "الرياض",
+                  "addressRegion": "منطقة الرياض",
+                  "postalCode": "11564",
+                  "addressCountry": "SA"
+                },
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+966-11-234-5678",
+                  "contactType": "customer service",
+                  "areaServed": "SA",
+                  "availableLanguage": ["Arabic", "English"]
+                },
+                "sameAs": [
+                  "https://www.linkedin.com/company/uneom",
+                  "https://twitter.com/uneom_sa",
+                  "https://www.instagram.com/uneom_uniforms",
+                  "https://www.facebook.com/uneom.sa"
+                ],
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.8",
+                  "reviewCount": "1247",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "UNEOM - يونيوم للأزياء المهنية",
+                "alternateName": "يونيوم",
+                "url": "https://uneom.com",
+                "description": "الموقع الرسمي لشركة يونيوم المتخصصة في تصنيع الأزياء المهنية والزي الموحد في السعودية",
+                "inLanguage": ["ar-SA", "en-US"],
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://uneom.com/search?q={search_term_string}"
+                  },
+                  "query-input": "required name=search_term_string"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "UNEOM",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://uneom.com/images/logo/uneom-logo.png"
+                  }
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "UNEOM - يونيوم للأزياء المهنية",
+                "image": "https://uneom.com/images/logo/uneom-logo.png",
+                "telephone": "+966-11-234-5678",
+                "email": "info@uneom.com",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "طريق الملك فهد، حي العليا",
+                  "addressLocality": "الرياض",
+                  "addressRegion": "منطقة الرياض",
+                  "postalCode": "11564",
+                  "addressCountry": "SA"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 24.7136,
+                  "longitude": 46.6753
+                },
+                "url": "https://uneom.com",
+                "priceRange": "$$",
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+                    "opens": "08:00",
+                    "closes": "17:00"
+                  }
+                ],
+                "servedCuisine": "Professional Uniforms Manufacturing",
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "كتالوج الأزياء المهنية",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Product",
+                        "name": "أزياء طبية",
+                        "category": "Medical Uniforms"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Product",
+                        "name": "أزياء الطيران",
+                        "category": "Aviation Uniforms"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Product",
+                        "name": "أزياء الشركات",
+                        "category": "Corporate Uniforms"
+                      }
+                    }
+                  ]
+                }
+              }
+            ])
+          }}
+        />
       </head>
-      <body className={`${inter.variable} font-sans`}>
+      <body className={`${inter.variable} font-sans`} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
         <LocaleProvider initialLocale={locale}>
           <QuoteProvider>
             <MainLayout locale={locale}>

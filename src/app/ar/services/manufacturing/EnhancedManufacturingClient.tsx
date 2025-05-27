@@ -42,7 +42,7 @@ export default function EnhancedManufacturingClient() {
     {
       title: 'مراقبة الجودة الشاملة',
       description: 'نظام صارم لضمان الجودة في كل مرحلة من مراحل الإنتاج',
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
       features: ['فحص المواد الخام', 'مراقبة الإنتاج', 'اختبار المنتج النهائي', 'شهادات جودة']
     },
     {

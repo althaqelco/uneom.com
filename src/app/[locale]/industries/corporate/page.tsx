@@ -34,9 +34,8 @@ export function generateMetadata({
     title,
     description,
     keywords,
-    path: `/industries/corporate`,
-    locale: locale as 'en' | 'ar',
-    imageUrl: '/images/corporate/corporate-uniforms-og.webp'
+    path: `/images/industries/corporate/corporate-uniforms-og.webp`,
+    locale: locale as 'ar' | 'en'
   });
 }
 

@@ -95,8 +95,8 @@ const ImageResolver: React.FC = () => {
       }
       
       // Try in _next/static/images folder
-      variations.push('/_next/static/images/' + filename);
-      variations.push(baseUrl + '/_next/static/images/' + filename);
+      variations.push('/images/' + filename);
+      variations.push(baseUrl + '/images/' + filename);
       
       // Try in public/images folder
       variations.push('/images/' + filename);

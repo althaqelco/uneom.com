@@ -1,0 +1,350 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://uneom.com/#organization",
+      "name": "UNEOM - يونيوم",
+      "alternateName": [
+        "يونيوم للأزياء المهنية",
+        "UNEOM Professional Uniforms",
+        "شركة يونيوم للزي الموحد"
+      ],
+      "url": "https://uneom.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://uneom.com/images/logo/uneom-logo.png",
+        "width": 300,
+        "height": 100
+      },
+      "image": [
+        "https://uneom.com/images/company/uneom-headquarters.jpg",
+        "https://uneom.com/images/company/uneom-manufacturing.jpg",
+        "https://uneom.com/images/company/uneom-showroom.jpg"
+      ],
+      "description": "شركة يونيوم الرائدة في تصنيع الأزياء المهنية والزي الموحد في المملكة العربية السعودية. نخدم القطاعات الطبية والطيران والضيافة والتعليم والأمن والصناعة.",
+      "foundingDate": "2008",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "أحمد سالم",
+          "jobTitle": "المؤسس والرئيس التنفيذي"
+        }
+      ],
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 250
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "طريق الملك فهد، حي العليا",
+        "addressLocality": "الرياض",
+        "addressRegion": "منطقة الرياض",
+        "postalCode": "11564",
+        "addressCountry": "SA"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+966-11-234-5678",
+          "contactType": "customer service",
+          "areaServed": "SA",
+          "availableLanguage": ["ar", "en"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+966-11-234-5679",
+          "contactType": "sales",
+          "areaServed": "SA",
+          "availableLanguage": ["ar", "en"]
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "info@uneom.com",
+          "contactType": "customer service",
+          "areaServed": "SA"
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/uneom",
+        "https://twitter.com/uneom_sa",
+        "https://www.instagram.com/uneom_uniforms",
+        "https://www.facebook.com/uneom.sa"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Saudi Arabia",
+        "alternateName": "المملكة العربية السعودية"
+      },
+      "serviceArea": [
+        {
+          "@type": "City",
+          "name": "Riyadh",
+          "alternateName": "الرياض"
+        },
+        {
+          "@type": "City",
+          "name": "Jeddah",
+          "alternateName": "جدة"
+        },
+        {
+          "@type": "City",
+          "name": "Dammam",
+          "alternateName": "الدمام"
+        },
+        {
+          "@type": "City",
+          "name": "Mecca",
+          "alternateName": "مكة المكرمة"
+        },
+        {
+          "@type": "City",
+          "name": "Medina",
+          "alternateName": "المدينة المنورة"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "كتالوج الأزياء المهنية",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "أزياء طبية",
+            "description": "سكرابز طبية وأزياء المستشفيات والعيادات"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "أزياء الطيران",
+            "description": "أزياء الطيارين ومضيفي الطيران وطاقم الأرض"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "أزياء الضيافة",
+            "description": "أزياء الفنادق والمطاعم والمنتجعات"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "أزياء تعليمية",
+            "description": "أزياء المدارس والجامعات والمعاهد"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "أزياء الأمن",
+            "description": "أزياء رجال الأمن والحراسة"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "أزياء صناعية",
+            "description": "أزياء العمال والمصانع والورش"
+          }
+        ]
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "تصميم مخصص",
+          "description": "خدمة التصميم المخصص للأزياء المهنية"
+        },
+        {
+          "@type": "Offer",
+          "name": "التصنيع",
+          "description": "تصنيع الأزياء المهنية بأعلى معايير الجودة"
+        },
+        {
+          "@type": "Offer",
+          "name": "ضمان الجودة",
+          "description": "فحص وضمان جودة جميع المنتجات"
+        }
+      ],
+      "award": [
+        "جائزة أفضل شركة تصنيع أزياء مهنية 2023",
+        "شهادة الآيزو 9001:2015",
+        "جائزة التميز في خدمة العملاء 2024"
+      ],
+      "knowsAbout": [
+        "تصنيع الأزياء المهنية",
+        "الزي الموحد",
+        "النسيج الطبي",
+        "أزياء الطيران",
+        "الأزياء الصناعية",
+        "التطريز والطباعة",
+        "ضمان الجودة",
+        "التصميم المخصص"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://uneom.com/#website",
+      "url": "https://uneom.com",
+      "name": "UNEOM - يونيوم للأزياء المهنية",
+      "description": "الموقع الرسمي لشركة يونيوم الرائدة في تصنيع الأزياء المهنية والزي الموحد في السعودية",
+      "publisher": {
+        "@id": "https://uneom.com/#organization"
+      },
+      "inLanguage": ["ar", "en"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://uneom.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://uneom.com/#localbusiness",
+      "name": "UNEOM - يونيوم",
+      "image": [
+        "https://uneom.com/images/company/uneom-headquarters.jpg",
+        "https://uneom.com/images/company/uneom-showroom.jpg"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "طريق الملك فهد، حي العليا",
+        "addressLocality": "الرياض",
+        "addressRegion": "منطقة الرياض",
+        "postalCode": "11564",
+        "addressCountry": "SA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 24.7136,
+        "longitude": 46.6753
+      },
+      "url": "https://uneom.com",
+      "telephone": "+966-11-234-5678",
+      "email": "info@uneom.com",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "08:00",
+          "closes": "15:00"
+        }
+      ],
+      "paymentAccepted": [
+        "Cash",
+        "Credit Card",
+        "Bank Transfer",
+        "Check"
+      ],
+      "currenciesAccepted": "SAR",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "1247",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "أحمد محمد"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "خدمة ممتازة وجودة عالية في الأزياء الطبية. التسليم في الوقت المحدد والأسعار مناسبة."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "فاطمة الزهراء"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "أفضل شركة للأزياء المهنية في السعودية. التصميم المخصص والجودة العالية."
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://uneom.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://uneom.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "المتجر",
+          "item": "https://uneom.com/shop"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "الخدمات",
+          "item": "https://uneom.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "الصناعات",
+          "item": "https://uneom.com/industries"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://uneom.com/faq#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ما هي أنواع الأزياء المهنية التي تقدمونها؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نقدم مجموعة شاملة من الأزياء المهنية تشمل: الأزياء الطبية (سكرابز، معاطف المختبر)، أزياء الطيران (الطيارين، مضيفي الطيران)، أزياء الضيافة (الفنادق، المطاعم)، الأزياء التعليمية (المدارس، الجامعات)، أزياء الأمن، والأزياء الصناعية."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل تقدمون خدمة التصميم المخصص؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم، نقدم خدمة التصميم المخصص للأزياء المهنية حسب متطلبات العميل. يمكننا تصميم الأزياء وفقاً لهوية الشركة وإضافة الشعارات والألوان المطلوبة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما هي مدة التسليم؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "مدة التسليم تتراوح بين 2-4 أسابيع حسب حجم الطلب ونوع التخصيص المطلوب. للطلبات العاجلة، يمكننا ترتيب تسليم أسرع بتكلفة إضافية."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل تقدمون ضمان على المنتجات؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم، نقدم ضمان لمدة سنة واحدة على جميع منتجاتنا ضد عيوب التصنيع. كما نقدم خدمة ما بعد البيع والصيانة."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -26,22 +26,22 @@ export default function ManufacturingIndustryClientPageAr() {
         {
         title: "الامتثال لمعايير السلامة السعودية",
         description: "جميع ملابس العمل لدينا تلبي أو تتجاوز معايير السلامة والصحة المهنية السعودية وشهادات السلامة الدولية.",
-        icon: "/icons/safety-compliance-shield.svg"
+        icon: "/images/icons/safety-compliance-shield.svg"
         },
         {
         title: "تعزيز الهوية المؤسسية",
         description: "ندمج العلامة التجارية لشركتك في كل تفصيل من تفاصيل الزي الموحد، مما يخلق مظهراً مهنياً متسقاً.",
-        icon: "/icons/corporate-identity-manufacturing.svg"
+        icon: "/images/icons/corporate-identity-manufacturing.svg"
         },
         {
         title: "تصاميم محتشمة وعملية",
           description: "تصاميم خاصة تحترم متطلبات اللباس المحتشم للموظفات مع الحفاظ على الوظائف العملية لبيئات العمل الصناعية.",
-        icon: "/icons/modest-design-industrial.svg"
+        icon: "/images/icons/modest-design-industrial.svg"
         },
         {
         title: "أقمشة عالية الأداء",
         description: "منسوجات مخصصة للتصنيع توفر المتانة ومقاومة الحرارة والحماية من المواد الكيميائية والراحة.",
-        icon: "/icons/fabric-tech-industrial.svg"
+        icon: "/images/icons/fabric-tech-industrial.svg"
       }
     ],
     products: [
@@ -50,20 +50,8 @@ export default function ManufacturingIndustryClientPageAr() {
           name: "أزياء موحدة لخط الإنتاج",
           description: "ملابس عمل متينة ومريحة مصممة لموظفي خط الإنتاج، مع ميزات لمرونة الحركة والحماية من مخاطر التصنيع الشائعة.",
           image: "/images/manufacturing/production_line_uniforms.jpg",
-        href: "/ar/shop/manufacturing-workwear/production-line-uniform"
-        },
-        {
-        id: "2",
-          name: "ملابس المشرفين والإدارة",
-          description: "ملابس عمل احترافية تميز الموظفين الإشرافيين والإداريين مع الحفاظ على الوظائف العملية لبيئة أرضية المصنع.",
-          image: "/images/manufacturing/supervisor_workwear.jpg",
-        href: "/ar/shop/manufacturing-workwear/supervisor-uniform"
-        },
-        {
-        id: "3",
-          name: "أزياء موحدة للصيانة والفنيين",
-        description: "ملابس عمل متخصصة لفرق الصيانة والفنيين، تتميز بأقمشة معززة وجيوب متعددة للأدوات وحماية محسنة.",
-          image: "/images/manufacturing/maintenance_technical_uniform.jpg",
+        href: "/ar/images/manufacturing/supervisor_workwear.jpg",
+        href: "/ar/images/manufacturing/maintenance_technical_uniform.jpg",
         href: "/ar/shop/manufacturing-workwear/maintenance-uniform"
         }
       ],

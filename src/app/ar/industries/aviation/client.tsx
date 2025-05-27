@@ -26,22 +26,22 @@ export default function AviationClientPageArabic() {
       {
         title: "أقمشة متطورة",
         description: "نستخدم أقمشة متطورة توفر الراحة والمتانة وخصائص مقاومة للتجعد حتى خلال الرحلات الطويلة",
-        icon: "/icons/advanced-fabric.svg"
+        icon: "/images/icons/advanced-fabric.svg"
       },
       {
         title: "تصميم مميز",
         description: "تصاميم مميزة تعكس هوية شركة الطيران وتميز موظفيها بمظهر احترافي يتماشى مع أرقى المعايير العالمية",
-        icon: "/icons/distinctive-design.svg"
+        icon: "/images/icons/distinctive-design.svg"
       },
       {
         title: "راحة فائقة",
         description: "يونيفورم مصمم للراحة خلال ساعات العمل الطويلة، مع مراعاة الحركة والأداء الوظيفي المتميز",
-        icon: "/icons/comfort.svg"
+        icon: "/images/icons/comfort.svg"
       },
       {
         title: "تخصيص كامل",
         description: "تخصيص كامل للألوان والشعارات والتفاصيل لتعكس هوية العلامة التجارية الخاصة بشركة الطيران",
-        icon: "/icons/customization.svg"
+        icon: "/images/icons/customization.svg"
       }
     ],
     
@@ -51,20 +51,8 @@ export default function AviationClientPageArabic() {
         name: "أزياء الطيارين",
         description: "يونيفورم رسمي وأنيق للطيارين وطاقم قيادة الطائرة، يعكس السلطة والمهنية العالية",
         image: "/images/aviation/pilot-uniform.jpg",
-        href: "/ar/shop/aviation-uniforms/pilot-collection"
-      },
-      {
-        id: "cabin-crew",
-        name: "أزياء طاقم الضيافة",
-        description: "تشكيلة راقية ومريحة لطاقم الضيافة الجوية، تجمع بين الأناقة والوظائف العملية",
-        image: "/images/aviation/cabin-crew-uniform.jpg",
-        href: "/ar/shop/aviation-uniforms/cabin-crew-collection"
-      },
-      {
-        id: "ground-staff",
-        name: "أزياء الخدمات الأرضية",
-        description: "يونيفورم احترافي لموظفي المطار والخدمات الأرضية مصمم للعمل في بيئة المطار الديناميكية",
-        image: "/images/aviation/ground-staff-uniform.jpg",
+        href: "/ar/images/aviation/cabin-crew-uniform.jpg",
+        href: "/ar/images/aviation/ground-staff-uniform.jpg",
         href: "/ar/shop/aviation-uniforms/ground-staff-collection"
       }
     ],
@@ -73,22 +61,22 @@ export default function AviationClientPageArabic() {
       {
         name: "تطريز الشعارات",
         description: "تطريز عالي الدقة لشعارات شركات الطيران والرتب والشارات الخاصة",
-        icon: "/icons/embroidery.svg"
+        icon: "/images/icons/embroidery.svg"
       },
       {
         name: "ألوان مخصصة",
         description: "إمكانية اختيار ألوان تتوافق مع الهوية البصرية لشركة الطيران",
-        icon: "/icons/color-palette.svg"
+        icon: "/images/icons/color-palette.svg"
       },
       {
         name: "تعديلات للملاءمة",
         description: "خدمة تفصيل وتعديل المقاسات لضمان ملاءمة مثالية لكل موظف",
-        icon: "/icons/tailor.svg"
+        icon: "/images/icons/tailor.svg"
       },
       {
         name: "إكسسوارات تكميلية",
         description: "توفير إكسسوارات مكملة للزي مثل ربطات العنق والأوشحة والقبعات والحقائب",
-        icon: "/icons/accessories.svg"
+        icon: "/images/icons/accessories.svg"
       }
     ],
     
@@ -96,22 +84,22 @@ export default function AviationClientPageArabic() {
       {
         name: "أقمشة بتقنية المرونة",
         description: "أقمشة مرنة في اتجاهين تتيح حرية الحركة المطلقة مع الحفاظ على الشكل الأنيق",
-        icon: "/icons/stretch-fabric.svg"
+        icon: "/images/icons/stretch-fabric.svg"
       },
       {
         name: "معالجة مضادة للتجعد",
         description: "تقنية خاصة تحافظ على مظهر الملابس بدون تجعد حتى بعد ساعات طويلة من الاستخدام",
-        icon: "/icons/wrinkle-resistant.svg"
+        icon: "/images/icons/wrinkle-resistant.svg"
       },
       {
         name: "تقنية تنظيم الحرارة",
         description: "أقمشة ذكية تساعد على تنظيم درجة حرارة الجسم للراحة في مختلف الظروف",
-        icon: "/icons/temperature-control.svg"
+        icon: "/images/icons/temperature-control.svg"
       },
       {
         name: "معالجة مضادة للبقع",
         description: "معالجة الأقمشة بتقنية طاردة للسوائل والبقع لسهولة التنظيف والعناية",
-        icon: "/icons/stain-resistant.svg"
+        icon: "/images/icons/stain-resistant.svg"
       }
     ],
     

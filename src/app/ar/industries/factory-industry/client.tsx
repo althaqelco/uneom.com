@@ -21,22 +21,22 @@ export default function FactoryIndustryClientPageArabic() {
     {
         title: "معايير سلامة عالمية",
         description: "ملابس مصممة وفقًا لمعايير السلامة الدولية والسعودية، مع خيارات متعددة للحماية من المخاطر المختلفة",
-        icon: "/icons/safety-standards.svg"
+        icon: "/images/icons/safety-standards.svg"
     },
     {
       title: "متانة استثنائية",
         description: "أقمشة صناعية متينة تتحمل ظروف العمل القاسية والاستخدام المتكرر والغسيل الصناعي",
-      icon: "/icons/durability.svg"
+      icon: "/images/icons/durability.svg"
     },
     {
         title: "راحة وظيفية",
         description: "تصميم يراعي الراحة والقدرة على الحركة بحرية أثناء تأدية المهام المختلفة في البيئات الصناعية",
-      icon: "/icons/comfort.svg"
+      icon: "/images/icons/comfort.svg"
     },
     {
         title: "تخصيص حسب المنشأة",
         description: "إمكانية تخصيص الأزياء الموحدة بألوان وشعارات المنشأة مع مراعاة متطلبات السلامة الخاصة بكل مصنع",
-        icon: "/icons/customization.svg"
+        icon: "/images/icons/customization.svg"
     }
     ],
     products: [
@@ -45,20 +45,8 @@ export default function FactoryIndustryClientPageArabic() {
         name: "أزياء خط الإنتاج",
         description: "ملابس متينة ومقاومة للمخاطر لعمال خطوط الإنتاج، مصممة للحماية والراحة أثناء العمل",
         image: "/images/factory/production-line-uniforms.jpg",
-        href: "/ar/shop/factory-workwear/production-line"
-    },
-    {
-        id: "engineering-uniforms",
-        name: "أزياء المهندسين والفنيين",
-        description: "ملابس احترافية للمهندسين والفنيين تجمع بين المظهر المهني والوظائف العملية للعمل في المصانع",
-        image: "/images/factory/engineering-uniforms.jpg",
-        href: "/ar/shop/factory-workwear/engineering-collection"
-    },
-    {
-        id: "safety-workwear",
-        name: "ملابس السلامة الصناعية",
-        description: "ملابس وقائية متخصصة مقاومة للحرارة والاشتعال والمواد الكيميائية ومختلف المخاطر الصناعية",
-        image: "/images/factory/safety-workwear.jpg",
+        href: "/ar/images/factory/engineering-uniforms.jpg",
+        href: "/ar/images/factory/safety-workwear.jpg",
         href: "/ar/shop/factory-workwear/safety-collection"
     }
     ],

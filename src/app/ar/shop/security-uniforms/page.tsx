@@ -31,17 +31,6 @@ export default function SecurityUniformsPageAR() {
       description: 'زي أمن تنفيذي احترافي مصمم للأماكن الفاخرة وخدمات حماية كبار الشخصيات بتصميم أنيق وميزات عملية.',
       price: 'من 399 ريال سعودي',
       image: '/images/security/uniform-durability-test.jpg', // Updated image
-      href: '/ar/shop/security-uniforms/executive-protection',
-      features: ['قماش فاخر', 'تصميم احترافي', 'خياطة معززة', 'حامل شارة'],
-      colors: ['أسود', 'كحلي', 'رمادي', 'أبيض'],
-      isBestseller: true
-    },
-    {
-      id: 'tactical-security-uniform',
-      name: 'زي أمن تكتيكي',
-      description: 'زي أمن تكتيكي بهيكل معزز وجيوب وظيفية متعددة، مصمم لأفراد الأمن النشطين في البيئات الصعبة.',
-      price: 'من 349 ريال سعودي',
-      image: '/images/security/stab-resistant-fabric.jpg', // Updated image
       href: '/ar/shop/security-uniforms/tactical-security-uniforms',
       features: ['قماش ريبستوب متين', 'جيوب متعددة', 'ركب/أكواع معززة', 'حلقات حزام'],
       colors: ['أسود', 'كحلي', 'كاكي', 'زيتي'],
@@ -53,36 +42,6 @@ export default function SecurityUniformsPageAR() {
       description: 'زي أمن أنيق مصمم لقطاع الفنادق والضيافة، يوازن بين المظهر الاحترافي وميزات الأمن الوظيفية.',
       price: 'من 299 ريال سعودي',
       image: '/images/security/smart-fabric-technology.jpg', // Updated image
-      href: '/ar/shop/security-uniforms/hotel-security-uniform',
-      features: ['مظهر رسمي', 'مقاس مريح', 'خيار علامة الفندق التجارية', 'تصميم احترافي'],
-      colors: ['أسود', 'كحلي', 'عنابي', 'أبيض']
-    },
-    {
-      id: 'security-guard-uniform',
-      name: 'زي حارس أمن قياسي',
-      description: 'زي حارس أمن قياسي مصمم لخدمات الأمن التجارية بميزات عملية ومظهر احترافي.',
-      price: 'من 249 ريال سعودي',
-      image: '/images/security/uniform-durability-test.jpg', // Updated image (re-used)
-      href: '/ar/shop/security-uniforms/security-officer-uniform',
-      features: ['قماش متين', 'حامل شارة', 'جيوب متعددة', 'بطاقة اسم'],
-      colors: ['أسود', 'كحلي', 'كاكي']
-    },
-    {
-      id: 'event-security-uniform',
-      name: 'زي أمن الفعاليات',
-      description: 'زي أمن فعاليات عالي الوضوح مصمم لإدارة الحشود وخدمات أمن الفعاليات بميزات الراحة والتمييز.',
-      price: 'من 219 ريال سعودي',
-      image: '/images/security/saudi-events-security.jpg', // Updated image
-      href: '/ar/shop/security-uniforms/event-security-uniform',
-      features: ['خيار عالي الوضوح', 'قماش يسمح بالتهوية', 'علامة الشركة التجارية', 'مقاوم للطقس'],
-      colors: ['أسود', 'أصفر عالي الوضوح', 'برتقالي عالي الوضوح']
-    },
-    {
-      id: 'security-winter-jacket',
-      name: 'جاكيت أمن شتوي',
-      description: 'جاكيت أمن معزول مصمم لظروف الطقس البارد بميزات أمنية وتصميم احترافي للمراقبة الخارجية.',
-      price: 'من 329 ريال سعودي',
-      image: '/images/security/advanced-fabrics-hero.jpg', // Updated image
       href: '/ar/shop/security-uniforms/security-winter-jacket',
       features: ['عزل حراري', 'مقاوم للماء', 'عناصر عاكسة', 'حامل شارة'],
       colors: ['أسود', 'كحلي', 'رمادي']
@@ -364,7 +323,7 @@ export default function SecurityUniformsPageAR() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/icons/compliance-shield.svg"
+                  src="/images/compliance-shield.svg"
                   alt="تكامل الشارات والهويات"
                   fill
                   className="object-cover"
@@ -398,7 +357,7 @@ export default function SecurityUniformsPageAR() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/icons/customization-icon.svg" 
+                  src="/icons/custom-branding.svg" 
                   alt="الوظائف التكتيكية"
                   fill
                   className="object-cover"
@@ -415,7 +374,7 @@ export default function SecurityUniformsPageAR() {
             <div className="flex gap-6">
               <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/icons/premium-quality.svg"
+                  src="/icons/premium-quality.svg"
                   alt="جماليات احترافية"
                   fill
                   className="object-cover"

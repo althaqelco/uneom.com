@@ -84,7 +84,7 @@ export default function EnhancedProgramManagementClient() {
       stats: 'رضا عن الجودة بنسبة ٩٨٪'
     },
     {
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
       title: 'شراكة استراتيجية موثوقة',
       description: 'نعمل كشريك استراتيجي لضمان تحقيق أهداف برنامج الأزياء الموحدة الخاص بك.',
       stats: 'علاقات شراكة تمتد لـ ١٠+ سنوات'
@@ -115,7 +115,7 @@ export default function EnhancedProgramManagementClient() {
       step: '٤',
       title: 'المتابعة والتحسين',
       description: 'مراقبة الأداء وتقديم تقارير وتحسينات مستمرة.',
-      icon: '/images/icons/compliance-shield.svg'
+      icon: '/images/compliance-shield.svg'
     }
   ];
   

@@ -76,14 +76,14 @@ export default function GuidesClientPageArabic() {
         'الصفحات': '15+',
         'اللغات': 'العربية، الإنجليزية'
       },
-      url: '/ar/services/customization'
+      url: '/ar/images/services/resources/guides/guides-header.jpg'
     }
   ];
 
   const resourceData = {
-    locale: 'ar',
-    title: 'أدلة ومراجع الزي الموحد',
-    subtitle: 'موارد شاملة للمساعدة في إدارة برامج الزي الموحد للمؤسسات في المملكة العربية السعودية',
+    locale: 'ar' as const,
+    title: 'أدلة الزي الموحد',
+    subtitle: 'موارد شاملة لبرامج الزي الموحد الناجحة',
     heroImage: '/images/resources/guides/guides-header.jpg',
     overview: {
       title: 'معرفة متخصصة لبرامج الزي الموحد الناجحة',
@@ -238,7 +238,7 @@ export default function GuidesClientPageArabic() {
       description: 'تواصل مع فريق الخبراء لدينا للحصول على استشارة مخصصة لمساعدتك في تطوير وتحسين برنامج الزي الموحد لمؤسستك.',
       buttonText: 'تحدث مع أحد الخبراء',
       buttonUrl: '/ar/contact?inquiry=uniform-guides'
-    }
+    },
   };
 
   return <ResourcePageLayout resourceData={resourceData} skipMainLayout={true} />;

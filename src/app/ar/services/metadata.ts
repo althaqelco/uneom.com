@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'ar_SA',
     images: [
       {
-        url: '/images/services/services-header.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'خدمات الزي الموحد المهنية من يونيوم في السعودية',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'خدمات الزي الموحد المهنية | يونيوم السعودية',
-    description: 'حلول متكاملة للزي الموحد تشمل التصميم المخصص، التصنيع، التطريز، التوصيل، والصيانة للشركات السعودية.',
-    images: ['/images/services/services-header.jpg'],
+        url: '/images/services/services/services-header.jpg'],
   },
   robots: {
     index: true,

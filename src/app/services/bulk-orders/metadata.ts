@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'en',
     images: [
       {
-        url: '/images/services/bulk-orders-service.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'UNEOM Corporate Bulk Uniform Orders - Volume Discount Workwear Solutions',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Corporate Bulk Uniform Orders | UNEOM Saudi Arabia',
-    description: 'Volume discounts on premium uniforms for large Saudi organizations. Streamlined procurement and consistent quality.',
-    images: ['/images/services/bulk-orders-service.jpg'],
+        url: '/images/services/services/bulk-orders-service.jpg'],
   },
   robots: {
     index: true,

@@ -15,10 +15,7 @@
 - ✅ `public/images/industries/healthcare/hero-healthcare-uniforms.svg`
 - ✅ `public/images/industries/aviation/customization-aviation-uniforms.svg`
 - ✅ `public/images/industries/healthcare/fabric-tech-healthcare.svg`
-- ✅ `public/images/industries/customization-options.svg`
-
-### 3. إنشاء صور المنتجات
-- ✅ `public/images/products/aviation/airline-1.svg`
+- ✅ `public/images/industries/products/aviation/airline-1.svg`
 - ✅ `public/images/products/aviation/airline-2.svg`
 - ✅ `public/images/products/aviation/airline-3.svg`
 - ✅ `public/images/products/corporate-suit-executive.svg`
@@ -47,13 +44,13 @@
 - ✅ `public/images/blog/placeholder-aviation2.svg`
 
 ### 6. إنشاء الأيقونات المطلوبة
-- ✅ `public/images/icons/compliance-shield.svg`
-- ✅ `public/images/icons/brand-identity-aviation.svg`
-- ✅ `public/images/icons/modest-design-saudi.svg`
-- ✅ `public/images/icons/fabric-tech-performance.svg`
+- ✅ `public/images/images/icons/compliance-shield.svg`
+- ✅ `public/images/images/icons/brand-identity-aviation.svg`
+- ✅ `public/images/images/icons/modest-design-saudi.svg`
+- ✅ `public/images/images/icons/fabric-tech-performance.svg`
+- ✅ `public/images/images/icons/brand-aligned.svg`
+- ✅ `public/images/icons/saudi-expertise.svg`
 - ✅ `public/images/icons/brand-aligned.svg`
-- ✅ `public/icons/saudi-expertise.svg`
-- ✅ `public/icons/brand-aligned.svg`
 
 ### 7. إنشاء صور الخدمات والتقنيات
 - ✅ `public/images/service-overview.svg`

@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'en',
     images: [
       {
-        url: '/images/industries/hospitality.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Professional Hospitality Uniforms Collection by UNEOM',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Hospitality Uniforms & Hotel Staff Attire | UNEOM Saudi Arabia',
-    description: 'Premium hospitality uniforms designed for Saudi hotels and restaurants. Luxury meets functionality with cultural sensitivity considerations.',
-    images: ['/images/industries/hospitality.jpg'],
+        url: '/images/industries/industries/hospitality.jpg'],
   },
   robots: {
     index: true,

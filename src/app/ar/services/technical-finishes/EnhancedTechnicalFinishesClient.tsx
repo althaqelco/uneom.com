@@ -87,7 +87,7 @@ export default function EnhancedTechnicalFinishesClient() {
       step: '٤',
       title: 'الاختبار والضمان',
       description: 'اختبارات شاملة لضمان فعالية المعالجة',
-      icon: '/images/icons/compliance-shield.svg'
+      icon: '/images/compliance-shield.svg'
     }
   ];
 
@@ -106,7 +106,7 @@ export default function EnhancedTechnicalFinishesClient() {
       stats: '٩٢٪ رضا المستخدمين'
     },
     {
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
       title: 'متانة وطول العمر',
       description: 'زيادة عمر الأزياء وتقليل تكاليف الاستبدال.',
       stats: '٤٠٪ زيادة في العمر الافتراضي'

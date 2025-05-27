@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/shop/hospitality/hospitality-category.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'زي الضيافة يونيوم - ملابس عمل الفنادق والمطاعم المتميزة',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'زي الضيافة | يونيوم السعودية',
-    description: 'زي الفنادق والمطاعم المتميز في المملكة العربية السعودية. استكشف ملابس عمل الضيافة عالية الجودة من يونيوم لجميع أدوار الموظفين.',
-    images: ['/images/shop/hospitality/hospitality-category.jpg'],
+        url: '/images/shop/hospitality/hospitality-category.jpg'],
   },
   robots: {
     index: true,

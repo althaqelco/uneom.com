@@ -30,7 +30,7 @@ cp logo.png public/favicon.ico
 ### 3. إصلاح الأيقونات SVG المفقودة
 ```bash
 # إنشاء الأيقونات الأساسية في:
-public/icons/
+public/images/icons/
 ├── saudi-expertise.svg
 ├── brand-aligned.svg  
 ├── compliance-shield.svg

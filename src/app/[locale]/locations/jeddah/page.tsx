@@ -122,7 +122,7 @@ const locationData = {
         en: 'Custom uniform solutions for Jeddah\'s luxury hotels, resorts, and restaurants, featuring breathable fabrics suitable for the coastal climate.',
         ar: 'حلول مخصصة للزي الموحد للفنادق والمنتجعات والمطاعم الفاخرة في جدة، تتميز بأقمشة تسمح بمرور الهواء مناسبة للمناخ الساحلي.'
       },
-      icon: '/icons/hospitality-design.svg'
+      icon: '/images/icons/hospitality-design.svg'
     },
     {
       title: {
@@ -133,7 +133,7 @@ const locationData = {
         en: 'Professional uniform programs for airlines and airport services operating in Jeddah\'s King Abdulaziz International Airport.',
         ar: 'برامج الزي المهني لشركات الطيران وخدمات المطارات العاملة في مطار الملك عبد العزيز الدولي بجدة.'
       },
-      icon: '/icons/aviation-solutions.svg'
+      icon: '/images/icons/aviation-solutions.svg'
     },
     {
       title: {
@@ -144,7 +144,7 @@ const locationData = {
         en: 'Specialized workwear for Jeddah\'s maritime industry, including port services, shipping companies, and marine logistics operators.',
         ar: 'ملابس عمل متخصصة لصناعة الملاحة البحرية في جدة، بما في ذلك خدمات الموانئ وشركات الشحن ومشغلي الخدمات اللوجستية البحرية.'
       },
-      icon: '/icons/marine-workwear.svg'
+      icon: '/images/icons/marine-workwear.svg'
     },
     {
       title: {
@@ -155,7 +155,7 @@ const locationData = {
         en: 'Consultation services on fabric selection for Jeddah\'s humid coastal climate, focusing on moisture-wicking, quick-drying materials.',
         ar: 'خدمات استشارية حول اختيار الأقمشة لمناخ جدة الساحلي الرطب، مع التركيز على المواد الماصة للرطوبة وسريعة الجفاف.'
       },
-      icon: '/icons/climate-fabrics.svg'
+      icon: '/images/icons/climate-fabrics.svg'
     }
   ],
   

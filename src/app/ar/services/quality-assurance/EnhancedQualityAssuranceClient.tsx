@@ -44,7 +44,7 @@ export default function EnhancedQualityAssuranceClient() {
       stage: '02',
       title: 'مراقبة الإنتاج',
       description: 'مراقبة مستمرة لجميع مراحل التصنيع والخياطة',
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
       tests: ['فحص الخياطة', 'مراجعة القياسات', 'اختبار التجميع', 'مراقبة العمليات']
     },
     {

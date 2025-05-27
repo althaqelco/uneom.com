@@ -26,25 +26,9 @@ export default function AviationTestPage() {
       description: "Premium flight attendant uniforms with Islamic-compliant options for Saudi airlines",
       image: "/images/aviation/flightـattendantsـuniforms.jpg",
       price: "SAR 1,299",
-      href: "/shop/aviation-uniforms/airline-crew-uniform",
-      featured: true,
-      badge: "Best Seller"
-    },
-    {
-      id: "pilot-uniform-set",
-      name: "Professional Pilot Uniform Set",
-      description: "Complete pilot uniform sets designed for Saudi airline captains and officers",
-      image: "/images/aviation/aviation_captin_uniform.jpg",
+      href: "/images/aviation/aviation_captin_uniform.jpg",
       price: "SAR 1,799",
-      href: "/shop/aviation-uniforms/pilot-uniform-set",
-      featured: true,
-      badge: "Premium"
-    },
-    {
-      id: "ground-crew-uniform",
-      name: "Ground Staff Uniforms",
-      description: "Practical and professional attire for airport ground personnel in Saudi aviation",
-      image: "/images/aviation/aviation_uniform_airline.jpg",
+      href: "/images/aviation/aviation_uniform_airline.jpg",
       price: "SAR 999",
       href: "/shop/aviation-uniforms/ground-crew-uniform",
       featured: true,

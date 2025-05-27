@@ -1,3 +1,4 @@
+import React from 'react'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -667,7 +668,7 @@ export default function FabricGuidePage() {
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="aspect-video relative">
                   <Image
-                    src="/images/doctor-SBI-300813580.jpg"
+                    src="/images/services/doctor-SBI-300813580.jpg"
                     alt="Fabric selection service"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"

@@ -32,58 +32,11 @@ export default function CorporatePage() {
       description: 'Premium tailored attire for corporate executives and management personnel, featuring sophisticated design and premium fabric.',
       price: 'From SAR 599',
       image: '/images/Corporate_Uniforms_Business.png',
-      href: '/shop/corporate/executive-office-attire',
-      features: ['Premium fabric', 'Tailored fit', 'Professional look', 'Wrinkle-resistant'],
-      colors: ['Navy', 'Charcoal', 'Black'],
-      isBestseller: true
-    },
-    {
-      id: 'corporate-business-suit',
-      name: 'Corporate Business Suit',
-      description: 'High-quality business suit designed for professional office environments, featuring easy-care fabric and modern fit.',
-      price: 'From SAR 449',
-      image: '/images/confident-man-in-uniform-2025-02-12-01-27-59-utc.jpg',
-      href: '/shop/corporate/corporate-business-suit',
-      features: ['Easy care', 'Moisture-wicking', 'Comfort stretch', 'Professional look'],
-      colors: ['Navy', 'Charcoal', 'Black', 'Grey'],
-      isNew: true
-    },
-    {
-      id: 'office-uniform-set',
-      name: 'Office Uniform Set',
-      description: 'Professional uniform set designed for daily office wear with comfortable fit and durable fabric for extended use.',
-      price: 'From SAR 379',
-      image: '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg',
-      href: '/shop/corporate/office-uniform-set',
-      features: ['Stain-resistant', 'Comfort design', 'Multiple options', 'Professional look'],
-      colors: ['Multiple options available']
-    },
-    {
-      id: 'corporate-reception-uniform',
-      name: 'Reception Uniform Set',
-      description: 'Complete front desk uniform set designed for receptionist and customer-facing staff in corporate environments.',
-      price: 'From SAR 299',
-      image: '/images/modern-arabic-businessman-SBI-300984397.jpg',
-      href: '/shop/corporate/corporate-reception-uniform',
-      features: ['Complete set', 'Professional appearance', 'Comfort design', 'Brand customization'],
-      colors: ['Multiple options available']
-    },
-    {
-      id: 'delivery-staff-uniform',
-      name: 'Delivery Staff Uniform',
-      description: 'Professional uniform designed for delivery personnel, featuring durable materials and brand customization options.',
-      price: 'From SAR 259',
-      image: '/images/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg',
-      href: '/shop/corporate/delivery-staff-uniform',
-      features: ['Durable materials', 'Weather-resistant', 'Brand customization', 'Comfortable fit'],
-      colors: ['Navy', 'Black', 'Grey', 'Custom colors available']
-    },
-    {
-      id: 'corporate-event-attire',
-      name: 'Corporate Event Attire',
-      description: 'Elegant attire designed for corporate events and special occasions, featuring premium materials and sophisticated design.',
-      price: 'From SAR 499',
-      image: '/images/arabian-businessman-wearing-traditional-clothes-while-using-smartphone-at-home-SBI-350765162.jpg',
+      href: '/images/confident-man-in-uniform-2025-02-12-01-27-59-utc.jpg',
+      href: '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg',
+      href: '/images/modern-arabic-businessman-SBI-300984397.jpg',
+      href: '/images/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg',
+      href: '/images/arabian-businessman-wearing-traditional-clothes-while-using-smartphone-at-home-SBI-350765162.jpg',
       href: '/shop/corporate/corporate-event-attire',
       features: ['Premium materials', 'Elegant design', 'Professional look', 'Custom sizing'],
       colors: ['Navy', 'Black', 'Burgundy', 'Custom colors available']

@@ -18,9 +18,7 @@ export const metadata: Metadata = generateMetadata({
     'ملابس حماية من الحريق',
     'يونيوم السعودية'
   ],
-  path: '/shop/industrial-uniforms/flame-resistant-workwear',
-  locale: 'ar',
-  imageUrl: '/images/products/flame-resistant-workwear.webp',
+  path: '/images/products/flame-resistant-workwear.webp',
 });
 
 export default function FlameResistantWorkwearPage() {

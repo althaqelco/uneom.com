@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/industries/hospitality.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Premium UNEOM Hospitality Uniforms for Saudi Hotels and Restaurants'
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Premium Hospitality Uniforms & Staff Attire | UNEOM Saudi Arabia',
-    description: 'Elegant hospitality uniforms for Saudi hotels, resorts, and restaurants',
-    images: ['/images/industries/hospitality.jpg']
+        url: '/images/industries/industries/hospitality.jpg']
   },
   alternates: {
     canonical: 'https://uneom.com/industries/hospitality',

@@ -32,58 +32,11 @@ export default function HealthcarePage() {
       description: 'Premium medical scrubs designed for healthcare professionals, featuring antimicrobial fabric and superior comfort.',
       price: 'From SAR 249',
       image: '/images/Healthcare_Uniforms.png',
-      href: '/shop/healthcare/advanced-medical-scrubs',
-      features: ['Antimicrobial fabric', 'Moisture-wicking', 'Wrinkle-resistant', 'Multiple pockets'],
-      colors: ['Navy', 'Ceil Blue', 'Teal', 'Black', 'Wine'],
-      isBestseller: true
-    },
-    {
-      id: 'premium-lab-coat',
-      name: 'Premium Lab Coat',
-      description: 'High-quality lab coat designed for medical professionals, featuring durable fabric and professional appearance.',
-      price: 'From SAR 199',
-      image: '/images/doctor-SBI-300813580.jpg',
-      href: '/shop/healthcare/premium-lab-coat',
-      features: ['Stain-resistant', 'Durable fabric', 'Professional look', 'Multiple pockets'],
-      colors: ['White', 'Light Blue'],
-      isNew: true
-    },
-    {
-      id: 'nursing-uniform',
-      name: 'Nursing Uniform',
-      description: 'Comfortable and practical nursing uniform designed for daily use in healthcare settings.',
-      price: 'From SAR 179',
-      image: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
-      href: '/shop/healthcare/nursing-uniform',
-      features: ['Comfort fit', 'Easy care', 'Durable fabric', 'Professional look'],
-      colors: ['White', 'Light Blue', 'Pink', 'Navy']
-    },
-    {
-      id: 'surgical-scrubs',
-      name: 'Surgical Scrubs',
-      description: 'Specialized surgical scrubs designed for operating room environments, featuring antimicrobial properties.',
-      price: 'From SAR 269',
-      image: '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg',
-      href: '/shop/healthcare/surgical-scrubs',
-      features: ['Antimicrobial', 'Fluid-resistant', 'Comfort design', 'OR-specific features'],
-      colors: ['Surgical Green', 'Surgical Blue', 'Navy']
-    },
-    {
-      id: 'medical-uniform-set',
-      name: 'Medical Uniform Set',
-      description: 'Complete medical uniform set designed for healthcare professionals, including top, pants, and lab coat.',
-      price: 'From SAR 349',
-      image: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
-      href: '/shop/healthcare/medical-uniform-set',
-      features: ['Complete set', 'Coordinated design', 'Premium fabric', 'Professional look'],
-      colors: ['Multiple options available']
-    },
-    {
-      id: 'dental-uniform',
-      name: 'Dental Uniform',
-      description: 'Specialized uniform designed for dental professionals, featuring antimicrobial properties and comfortable fit.',
-      price: 'From SAR 229',
-      image: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg',
+      href: '/images/doctor-SBI-300813580.jpg',
+      href: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
+      href: '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg',
+      href: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
+      href: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg',
       href: '/shop/healthcare/dental-uniform',
       features: ['Antimicrobial', 'Stain-resistant', 'Comfort fit', 'Professional look'],
       colors: ['White', 'Light Blue', 'Navy', 'Black']

@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/services/custom-design.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'UNEOM Custom Uniform Design Services'
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Custom Uniform Design & Branding Services | UNEOM Saudi Arabia',
-    description: 'Professional uniform design services for Saudi organizations',
-    images: ['/images/services/custom-design.jpg']
+        url: '/images/services/services/custom-design.jpg']
   },
   alternates: {
     canonical: 'https://uneom.com/services/custom-design',

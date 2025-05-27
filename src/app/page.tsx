@@ -35,28 +35,12 @@ export default function HomePage() {
       title: "UNEOM | Leading Uniform Manufacturer in Saudi Arabia",
       description: "High-quality medical uniforms designed for comfort and functionality in Saudi healthcare settings. Compliant with local regulations and suitable for the Kingdom's climate.",
       image: "/images/industries/healthcare.jpg",
-      link: `/industries/healthcare`
-    },
-    {
-      id: "aviation",
-      title: "Aviation Uniforms",
-      description: "Sophisticated airline uniforms that blend Saudi cultural heritage with modern aviation standards. Designed for aircrew, ground staff, and airport personnel.",
-      image: "/images/industries/aviation.jpg",
-      link: `/industries/aviation`
-    },
-    {
-      id: "hospitality",
-      title: "Hospitality Uniforms",
-      description: "Elegant hospitality uniforms tailored for Saudi Arabia's growing luxury tourism sector. Designed for hotels, resorts, restaurants, and events.",
-      image: "/images/industries/hospitality.jpg",
-      link: `/industries/hospitality`
-    },
-    {
-      id: "corporate",
-      title: "Corporate Uniforms",
-      description: "Professional corporate uniforms that project a polished company image. Our corporate wear balances Saudi business traditions with modern professional styling.",
-      image: "/images/industries/corporate/corporate-square.jpg",
-      link: `/industries/corporate`
+      link: "/industries/healthcare",
+      imageGallery: [
+        "/images/industries/aviation.jpg",
+        "/images/industries/hospitality.jpg",
+        "/images/industries/corporate/corporate-square.jpg"
+      ]
     }
   ];
   
@@ -189,10 +173,10 @@ export default function HomePage() {
       id: "luxury-hotel-uniform",
       category: "hospitality-attire",
       categoryName: "Hospitality Uniforms",
-      name: "Luxury Hotel Uniform Collection",
-      shortDescription: "Elegant hospitality uniforms with design accents for luxury hotels and resorts in Riyadh, Jeddah and tourist destinations",
-      price: "SAR 449",
-      minOrder: 8,
+      name: "Luxury Hotel Staff Uniform",
+      shortDescription: "Elegant hotel staff uniforms for premium hospitality establishments",
+      price: "SAR 349",
+      minOrder: 10,
       image: "/images/new-products/luxury_hotel_staff_uniform.png",
       colors: [
         { name: "Black", value: "#000000" },
@@ -205,10 +189,10 @@ export default function HomePage() {
       id: "airline-crew-uniform",
       category: "aviation-uniforms",
       categoryName: "Aviation Uniforms",
-      name: "Saudi Airline Crew Uniform",
-      shortDescription: "Professional airline uniform collection with customizable logo for aviation staff based in Saudi Arabian airports",
-      price: "SAR 399",
-      minOrder: 10,
+      name: "Airline Crew Uniform",
+      shortDescription: "Professional airline crew uniforms meeting international aviation standards",
+      price: "SAR 459",
+      minOrder: 8,
       image: "/images/new-products/airline_crew_uniform.png",
       colors: [
         { name: "Navy", value: "#1c2841" },
@@ -220,11 +204,11 @@ export default function HomePage() {
     {
       id: "premium-medical-scrubs",
       category: "medical-scrubs",
-      categoryName: "Healthcare Uniforms",
-      name: "Premium Medical Uniform Scrubs",
-      shortDescription: "High-quality medical uniform scrubs for healthcare professionals in hospitals and clinics across all Saudi cities",
-      price: "SAR 179",
-      minOrder: 20,
+      categoryName: "Medical Scrubs",
+      name: "Premium Medical Scrubs",
+      shortDescription: "High-quality medical scrubs for healthcare professionals",
+      price: "SAR 199",
+      minOrder: 12,
       image: "/images/new-products/premiummedicalscrubs.png",
       colors: [
         { name: "Sky Blue", value: "#87CEEB" },

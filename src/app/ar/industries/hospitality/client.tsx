@@ -15,70 +15,14 @@ export default function HospitalityClientPageArabic() {
       name: 'يونيفورم استقبال الفنادق الفاخر',
       description: 'يونيفورم احترافي مصمم خصيصًا لموظفي الاستقبال في الفنادق الفاخرة، يجمع بين الأناقة والعملية ويعكس فخامة المنشأة السياحية. مناسب للفنادق من فئة الخمس نجوم والمنتجعات الراقية.',
       image: '/images/hospitality/hospitality_uniform_receiption_hotel.jpg',
-      href: '/ar/shop/hospitality-attire/reception-staff-uniform',
-      features: ['قماش مقاوم للتجاعيد', 'تناسب مريح', 'متوفر بألوان متعددة', 'مقاوم للبقع', 'تطريز شعار الفندق', 'استايل عصري', 'خيارات أزرار ذهبية أو فضية']
-    },
-    {
-      id: '2',
-      name: 'يونيفورم الشيف التنفيذي الفاخر',
-      description: 'تصميم احترافي عالي الجودة للشيفات والطهاة التنفيذيين في المطاعم والفنادق الفاخرة. مصنوع من أفضل أنواع القطن المقاوم للحرارة والبقع، ويتميز بالراحة خلال ساعات العمل الطويلة.',
-      image: '/images/hospitality/hospitality_uniform_chef.jpg',
-      href: '/ar/shop/culinary-uniforms/executive-chef-coat',
-      features: ['قطن مصري عالي الجودة', 'أزرار مزدوجة للأمان', 'مقاوم للحرارة والبقع', 'تهوية ممتازة', 'سهل التنظيف', 'متوفر بعدة ألوان', 'تطريز اسم الشيف']
-    },
-    {
-      id: '3',
-      name: 'يونيفورم خدمة الغرف الاحترافي',
-      description: 'يونيفورم مريح وعملي لفريق خدمة الغرف، يعكس مستوى الخدمة الراقية مع مراعاة سهولة الحركة. مصمم لتحمل طبيعة العمل الشاقة مع الحفاظ على المظهر الأنيق طوال اليوم العملي.',
-      image: '/images/hospitality/housekeeping-uniform.jpg',
-      href: '/ar/shop/hospitality-attire/housekeeping-uniform',
-      features: ['سهل التنظيف', 'متين ويدوم طويلًا', 'جيوب عملية', 'مريح للحركة', 'مقاوم للبقع', 'أقمشة متنفسة', 'تصميم ممتاز للراحة أثناء العمل']
-    },
-    {
-      id: '4',
-      name: 'يونيفورم المطاعم والمقاهي الأنيق',
-      description: 'تشكيلة متكاملة من يونيفورم الخدمة للمطاعم والمقاهي بتصاميم عصرية وخامات عالية الجودة. يشمل يونيفورم النادل، المضيف، والباريستا بتصاميم تناسب مختلف أنواع المطاعم.',
-      image: '/images/hospitality/hospitality_uniform.jpg',
-      href: '/ar/shop/hospitality-attire/restaurant-staff-uniform',
-      features: ['مقاوم للبقع', 'سهل العناية', 'تصميم أنيق', 'خيارات متنوعة', 'مريول احترافي', 'قمصان وبناطيل متناسقة', 'ربطات عنق وأوشحة']
-    },
-    {
-      id: '5',
-      name: 'يونيفورم الطهاة والمطبخ المتكامل',
-      description: 'يونيفورم احترافي للطهاة وطاقم المطبخ مصمم وفق أعلى معايير السلامة والجودة العالمية. يشمل جاكيت الشيف، بنطلون، غطاء الرأس، والمريول بخامات تتحمل بيئة المطبخ الحارة.',
-      image: '/images/hospitality/chef-uniform.jpg',
-      href: '/ar/shop/culinary-uniforms/executive-chef-coat',
-      features: ['مقاوم للحرارة', 'قطن 100%', 'سهل التنظيف', 'متوفر بمقاسات متعددة', 'مقاومة للزيوت', 'تصميم مريح للحركة', 'أزرار مزدوجة للأمان']
-    },
-    {
-      id: '6',
-      name: 'يونيفورم النوادي الصحية والسبا الفاخر',
-      description: 'يونيفورم مصمم خصيصًا للنوادي الصحية والسبا، يجمع بين الراحة والأناقة مع خامات صديقة للبشرة. مثالي للمعالجين وموظفي الاستقبال والمدربين في المنتجعات الصحية الراقية.',
-      image: '/images/hospitality/spa-uniform.jpg',
-      href: '/ar/shop/hospitality-attire/luxury-hotel-uniform',
-      features: ['قطن عضوي', 'مريح للبشرة', 'سهل الحركة', 'عصري وأنيق', 'أقمشة ناعمة', 'ألوان هادئة', 'مقاوم للزيوت العطرية']
-    },
-    {
-      id: '7',
-      name: 'يونيفورم المنتجعات السياحية المميز',
-      description: 'تشكيلة خاصة من يونيفورم المنتجعات السياحية بتصاميم تعكس الطابع الترفيهي مع الحفاظ على المهنية. خيارات متنوعة تناسب العاملين في مناطق البحر والمسابح والمرافق الترفيهية.',
-      image: '/images/hospitality/resort-uniform.jpg',
-      href: '/ar/shop/hospitality-attire/resort-staff-attire',
-      features: ['مقاوم للماء', 'خامات طبيعية', 'ألوان زاهية', 'سهل التنظيف', 'حماية من أشعة الشمس', 'تجفيف سريع', 'خفيف الوزن للبيئات الحارة']
-    },
-    {
-      id: '8',
-      name: 'يونيفورم موظفي الكونسيرج الرسمي',
-      description: 'يونيفورم أنيق ورسمي لموظفي الكونسيرج والخدمات في الفنادق الفاخرة، مصمم ليعكس رقي وتميز الخدمة المقدمة للنزلاء. تصميم كلاسيكي فاخر بلمسات عصرية.',
-      image: '/images/hospitality/concierge-uniform.jpg',
-      href: '/ar/shop/hospitality-attire/concierge-uniform',
-      features: ['قماش فاخر', 'بدلة رسمية كاملة', 'شارات مخصصة', 'ألوان كلاسيكية', 'قبعة تقليدية', 'أزرار معدنية', 'جودة عالية للاستخدام اليومي']
-    },
-    {
-      id: '9',
-      name: 'يونيفورم قاعات المؤتمرات والاحتفالات',
-      description: 'يونيفورم خاص بطاقم قاعات المؤتمرات والاحتفالات والمناسبات في الفنادق والمنتجعات، بتصميم أنيق ورسمي يناسب طبيعة الفعاليات الرسمية والاحتفالات الكبرى.',
-      image: '/images/hospitality/event-staff-uniform.jpg',
+      href: '/ar/images/hospitality/hospitality_uniform_chef.jpg',
+      href: '/ar/images/hospitality/housekeeping-uniform.jpg',
+      href: '/ar/images/hospitality/hospitality_uniform.jpg',
+      href: '/ar/images/hospitality/chef-uniform.jpg',
+      href: '/ar/images/hospitality/spa-uniform.jpg',
+      href: '/ar/images/hospitality/resort-uniform.jpg',
+      href: '/ar/images/hospitality/concierge-uniform.jpg',
+      href: '/ar/images/hospitality/event-staff-uniform.jpg',
       href: '/ar/shop/hospitality-attire/premium-hotel-uniforms',
       features: ['مظهر احترافي', 'سهولة الحركة', 'أقمشة مريحة', 'تناسق مع ديكور القاعات', 'متوفر بلونين', 'مقاومة للاتساخ', 'خيارات للجنسين']
     }
@@ -140,52 +84,52 @@ export default function HospitalityClientPageArabic() {
       {
         title: "جودة عالمية",
         description: "نستخدم أفضل أنواع الأقمشة والخامات العالمية لضمان يونيفورم عالي الجودة يدوم طويلًا حتى مع الاستخدام اليومي المكثف والغسيل المتكرر في بيئات الضيافة.",
-        icon: "/icons/quality.svg"
+        icon: "/images/icons/quality.svg"
       },
       {
         title: "تصميم مخصص",
         description: "تصميم يونيفورم خاص بمؤسستك يعكس هويتك التجارية ويحقق متطلباتك الفريدة، مع فريق متخصص من المصممين لتقديم تجربة تصميم احترافية متكاملة.",
-        icon: "/icons/branding.svg"
+        icon: "/images/icons/branding.svg"
       },
       {
         title: "توصيل سريع",
         description: "نلتزم بمواعيد التسليم المحددة مع خدمة شحن سريعة لجميع مناطق المملكة، ونوفر خيارات تسليم عاجلة للطلبات ذات الأولوية العالية.",
-        icon: "/icons/performance.svg"
+        icon: "/images/icons/performance.svg"
       },
       {
         title: "تشكيلة متنوعة",
         description: "مجموعة واسعة من التصاميم والقصات والألوان تناسب كافة الأذواق والاحتياجات، مع تحديث مستمر لمواكبة أحدث اتجاهات الموضة في قطاع الضيافة.",
-        icon: "/icons/role-identification.svg"
+        icon: "/images/icons/role-identification.svg"
       },
       {
         title: "خدمة متكاملة",
         description: "من التصميم إلى التصنيع والتسليم، نقدم حلول يونيفورم متكاملة بسهولة، مع فريق دعم فني متخصص لمساعدتك في كل خطوة من عملية الطلب والتوريد.",
-        icon: "/icons/shield-check.svg"
+        icon: "/images/icons/shield-check.svg"
       },
       {
         title: "دعم ما بعد البيع",
         description: "خدمة عملاء احترافية وضمان جودة شامل مع إمكانية التعديل والصيانة، ونظام متابعة دقيق لضمان رضاكم التام عن المنتجات والخدمات المقدمة.",
-        icon: "/icons/compliance.svg"
+        icon: "/images/icons/compliance.svg"
       },
       {
         title: "مقاومة التآكل",
         description: "أقمشة خاصة مقاومة للتآكل والبلى تضمن عمرًا أطول لليونيفورم حتى مع الاستخدام اليومي المكثف في بيئات العمل المختلفة في قطاع الضيافة.",
-        icon: "/icons/durability.svg"
+        icon: "/images/icons/durability.svg"
       },
       {
         title: "مقاومة البقع",
         description: "تقنيات متطورة في معالجة الأقمشة لجعلها مقاومة للبقع والسوائل، مما يجعلها مثالية لبيئات المطاعم والفنادق وأماكن تقديم الطعام.",
-        icon: "/icons/antimicrobial.svg"
+        icon: "/images/icons/antimicrobial.svg"
       },
       {
         title: "الراحة والمرونة",
         description: "تصاميم مدروسة تراعي راحة الموظف خلال ساعات العمل الطويلة، مع أقمشة مرنة تسمح بحرية الحركة وتقلل من الإجهاد البدني.",
-        icon: "/icons/comfort.svg"
+        icon: "/images/icons/comfort.svg"
       },
       {
         title: "حلول موسمية",
         description: "مجموعات متخصصة لمختلف المواسم والمناسبات، سواء للصيف أو الشتاء أو للمهرجانات والفعاليات الخاصة التي تتطلب يونيفورم مميز.",
-        icon: "/icons/climate.svg"
+        icon: "/images/icons/climate.svg"
       }
     ],
     // Correctly formatted arrays for the IndustryPageLayout component

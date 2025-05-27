@@ -73,24 +73,9 @@ const services = [
     title: 'تصميم الزي الموحد',
     description: 'تصميمات مبتكرة تعكس هوية علامتك التجارية وتلبي المتطلبات العملية لموظفيك.',
     icon: '/images/icons/custom-branding.svg',
-    link: '/ar/services/custom-design',
-  },
-  {
-    title: 'إنتاج وتوريد الزي الموحد',
-    description: 'خدمات إنتاج عالية الجودة بأسعار تنافسية، مع مراعاة الاستدامة والراحة.',
-    icon: '/images/product-placeholder.jpg',
-    link: '/ar/services/bulk-ordering',
-  },
-  {
-    title: 'إدارة برامج الزي الموحد',
-    description: 'حلول متكاملة لإدارة برنامج الزي الموحد الخاص بمؤسستك من البداية إلى النهاية.',
-    icon: '/images/icons/comprehensive-support.svg',
-    link: '/ar/services/program-management',
-  },
-  {
-    title: 'خدمات القياس',
-    description: 'خدمات قياس احترافية تضمن ملاءمة مثالية لجميع موظفيك مهما اختلفت أحجامهم.',
-    icon: '/images/icons/customization-icon.svg',
+    link: '/ar/images/services/product-placeholder.jpg',
+    link: '/ar/images/services/images/icons/comprehensive-support.svg',
+    link: '/ar/images/services/images/icons/customization-icon.svg',
     link: '/ar/services/measurement-services',
   },
 ];
@@ -110,7 +95,7 @@ const features = [
   {
     title: 'توافق مع المعايير السعودية',
     description: 'جميع منتجاتنا متوافقة مع المعايير السعودية ومناسبة للبيئة المحلية.',
-    icon: '/images/icons/saudi-expertise.svg',
+    icon: '/images/images/icons/saudi-expertise.svg',
   },
   {
     title: 'التسليم السريع',

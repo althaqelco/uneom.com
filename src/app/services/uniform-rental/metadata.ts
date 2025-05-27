@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'en',
     images: [
       {
-        url: '/images/services/uniform-rental-service.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'UNEOM Uniform Rental Service - Cost-Effective Workwear Solutions',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Uniform Rental Services | UNEOM Saudi Arabia',
-    description: 'Cost-effective professional uniform rental with maintenance and replacement services across Saudi Arabia.',
-    images: ['/images/services/uniform-rental-service.jpg'],
+        url: '/images/services/services/uniform-rental-service.jpg'],
   },
   robots: {
     index: true,

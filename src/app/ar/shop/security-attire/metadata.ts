@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/shop/security/security-category.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'زي الأمن يونيوم - ملابس عمل الحراس المهنية',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'زي الأمن | يونيوم السعودية',
-    description: 'ملابس عمل حراس الأمن المتميزة لخدمات الحماية السعودية. استكشف زي الأمن المهني عالي الجودة من يونيوم.',
-    images: ['/images/shop/security/security-category.jpg'],
+        url: '/images/shop/security/security-category.jpg'],
   },
   robots: {
     index: true,

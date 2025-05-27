@@ -102,43 +102,10 @@ export default function SupplyManufacturingPageArabic() {
       subtitle: "توفر قدراتنا المتكاملة في التصنيع والتوريد قيمة استثنائية من خلال هذه المزايا الرئيسية:",
       callToAction: {
         text: "استكشف منشآت التصنيع لدينا",
-        link: "/ar/services/manufacturing-tour"
-      }
-    },
-    
-    products: [
-      {
-        id: "uniform-manufacturing-service",
-        name: "خدمة تصنيع الزي الموحد المتميزة",
-        description: "إنتاج شامل للأزياء الموحدة عالية الجودة في منشآتنا السعودية بآلات متطورة وحرفية ماهرة لمتانة وتشطيب استثنائيين.",
-        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-1.jpg",
-        href: "/ar/services/manufacturing"
+        link: "/ar/industries/supply-manufacturing",
+        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-1.jpg"
       },
-      {
-        id: "custom-uniform-production",
-        name: "تصميم وإنتاج الزي الموحد المخصص",
-        description: "خدمة متكاملة لتصميم وتصنيع الزي الموحد المخصص، من الفكرة إلى الإنتاج، باستخدام مواد متميزة واهتمام بالتفاصيل.",
-        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-2.jpg",
-        href: "/ar/services/custom-design"
-      },
-      {
-        id: "bulk-uniform-supply",
-        name: "برنامج توريد الزي الموحد بالجملة",
-        description: "حلول شاملة لتوريد الزي الموحد بالجملة للمؤسسات الكبيرة، مع جودة متسقة وتسليم في الوقت المحدد ودعم إدارة البرنامج.",
-        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-3.jpg",
-        href: "/ar/services/bulk-ordering"
-      }
-    ],
-    
-    fabricTechnologies: {
-      title: "تقنيات التصنيع المتقدمة",
-      description: "تتضمن منشآت التصنيع المتطورة لدينا تقنيات وعمليات حديثة لضمان جودة فائقة واتساق وكفاءة في إنتاج الزي الموحد.",
-      items: [
-        {
-          name: "إنتاج الأقمشة السعودية",
-          description: "أقمشة متميزة مصنعة محلياً ومصممة خصيصاً لمناخ وظروف العمل في المملكة العربية السعودية، مما يدعم أهداف التنمية الاقتصادية للمملكة.",
-          image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-mens.jpg"
-        },
+      features: [
         {
           name: "القص الرقمي الدقيق",
           description: "آلات قص تعمل بالكمبيوتر تضمن دقة مثالية وحد أدنى من النفايات في عملية التصنيع للحصول على مقاسات ومناسبة متسقة.",
@@ -229,26 +196,6 @@ export default function SupplyManufacturingPageArabic() {
         description: "غطاء جسم صناعي متين مصنع من قماش مقاوم للهب وخياطات معززة لأقصى درجات الحماية والمتانة.",
         price: "من ٢٨٩ ريال سعودي",
         image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-1.jpg",
-        href: "/ar/shop/industrial-uniforms/industrial-coverall-pro",
-        features: ["مصنّع محلياً", "مقاوم للهب", "خياطات معززة", "حماية متقدمة"],
-        badge: "الأكثر مبيعاً"
-      },
-      {
-        id: "hi-vis-safety-uniform",
-        name: "زي الأمان عالي الوضوح",
-        description: "زي أمان متميز عالي الوضوح مع عناصر عاكسة مصنع للبيئات الصناعية الخطرة.",
-        price: "من ٢٤٩ ريال سعودي",
-        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-2.jpg",
-        href: "/ar/shop/industrial-uniforms/hi-vis-safety-uniform",
-        features: ["وضوح محسّن", "بناء متين", "تصميم يركز على الراحة", "جيوب متعددة"],
-        badge: "جودة متميزة"
-      },
-      {
-        id: "supervisor-industrial-uniform",
-        name: "زي المشرف الصناعي",
-        description: "زي مشرف احترافي مصمم للموظفين الإداريين الصناعيين، يجمع بين السلطة والوظائف العملية.",
-        price: "من ٣٤٩ ريال سعودي",
-        image: "/images/industries/supply-manufacturing/supply-manufacturing-uniform-product-3.jpg",
         href: "/ar/shop/industrial-uniforms/supervisor-industrial-uniform",
         features: ["تصميم احترافي", "مواد متينة", "وضوح للإدارة", "تركيز على الراحة"],
         badge: "جودة إدارية"

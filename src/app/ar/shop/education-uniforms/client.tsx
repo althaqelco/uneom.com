@@ -32,48 +32,10 @@ export default function EducationUniformsClientPage() {
       description: 'زي مدرسي عالي الجودة مصمم للراحة والمتانة والمظهر الاحترافي، مثالي للمدارس والمؤسسات التعليمية.',
       price: 'من 249 ريال',
       image: '/images/Education_Uniform_School.png',
-      href: '/ar/shop/education-uniforms/premium-school-uniform',
-      features: ['نسيج متين', 'سهل العناية', 'مظهر احترافي', 'تصميم مريح'],
-      colors: ['كحلي', 'أبيض', 'رمادي', 'نبيذي'],
-      isBestseller: true
-    },
-    {
-      id: 'university-attire',
-      name: 'زي جامعي',
-      description: 'زي جامعي احترافي مصمم للموظفين وأعضاء هيئة التدريس والإداريين في مؤسسات التعليم العالي.',
-      price: 'من 329 ريال',
-      image: '/images/businessman-in-blue-shirt-SBI-300830140.jpg',
-      href: '/ar/shop/education-uniforms/university-attire',
-      features: ['تصميم احترافي', 'نسيج قابل للتنفس', 'علامة مؤسسية', 'خيارات مخصصة'],
-      colors: ['كحلي', 'أسود', 'رمادي', 'عنابي'],
-      isNew: true
-    },
-    {
-      id: 'student-sports-kit',
-      name: 'طقم رياضي للطلاب',
-      description: 'طقم رياضي كامل مصمم لبرامج الرياضة المدرسية والجامعية، يتميز بأقمشة عالية الأداء وخيارات تحمل شعار المدرسة.',
-      price: 'من 199 ريال',
-      image: '/images/portrait-of-university-students-SBI-301018431.jpg',
-      href: '/ar/shop/education-uniforms/student-sports-kit',
-      features: ['نسيج عالي الأداء', 'مقاوم للرطوبة', 'علامة تجارية مخصصة', 'خيارات للفرق'],
-      colors: ['خيارات متعددة متاحة']
-    },
-    {
-      id: 'faculty-uniform',
-      name: 'زي أعضاء هيئة التدريس',
-      description: 'زي احترافي مصمم للمعلمين وأعضاء هيئة التدريس، يوازن بين الراحة والمظهر الاحترافي.',
-      price: 'من 289 ريال',
-      image: '/images/portrait-happy-male-teacher-SBI-301036659.jpg',
-      href: '/ar/shop/education-uniforms/faculty-uniform',
-      features: ['تصميم احترافي', 'راحة طوال اليوم', 'سهل العناية', 'علامة مؤسسية'],
-      colors: ['كحلي', 'رمادي', 'أسود', 'أبيض']
-    },
-    {
-      id: 'primary-school-uniform',
-      name: 'زي المدرسة الابتدائية',
-      description: 'زي متين وعملي مصمم خصيصًا لطلاب المدارس الابتدائية، يتميز بتصميم ومواد مناسبة للأطفال.',
-      price: 'من 169 ريال',
-      image: '/images/group-of-diverse-students-SBI-305078344.jpg',
+      href: '/ar/images/businessman-in-blue-shirt-SBI-300830140.jpg',
+      href: '/ar/images/portrait-of-university-students-SBI-301018431.jpg',
+      href: '/ar/images/portrait-happy-male-teacher-SBI-301036659.jpg',
+      href: '/ar/images/group-of-diverse-students-SBI-305078344.jpg',
       href: '/ar/shop/education-uniforms/primary-school-uniform',
       features: ['مناسب للأطفال', 'ركب مقواة', 'سهل العناية', 'تصميم مريح'],
       colors: ['كحلي', 'أخضر', 'نبيذي', 'رمادي/أحمر']

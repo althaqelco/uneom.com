@@ -188,7 +188,7 @@ export default function CasualPoloPage() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
            <Image 
-            src="/images/icons/embroidery-machine.svg" 
+            src="/icons/embroidery-machine.svg" 
             alt="Embroidery Icon" 
             width={80} 
             height={80} 

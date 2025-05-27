@@ -1,3 +1,4 @@
+import React from 'react'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -345,14 +346,21 @@ export default function WorkwearInnovationsSaudiFactoriesPageAR() {
                 <span className="text-blue-600 font-semibold hover:underline">اقرأ المزيد &larr;</span> {/* Changed arrow for RTL */}
               </div>
             </Link>
-            <Link href="/ar/shop/industrial-uniforms/heavy-duty-coverall" className="group block bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-              <div className="relative h-56">
-                <Image src="/images/products/industrial/heavy-duty-coverall-featured.jpg" alt="أفرول صناعي شديد التحمل" fill className="object-cover"/>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">أفرول صناعي شديد التحمل</h3>
-                <p className="text-gray-700 text-sm mb-4">استكشف مجموعتنا من الأفرولات المتينة والواقية للبيئات الصعبة.</p>
-                <span className="text-blue-600 font-semibold hover:underline">عرض المنتج &larr;</span> {/* Changed arrow for RTL */}
+            <Link href="/ar/shop/industrial-uniforms" className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="aspect-video relative">
+                  <Image
+                    src="/images/products/industrial/heavy-duty-coverall-featured.jpg"
+                    alt="أفرول صناعي شديد التحمل"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">أفرول صناعي شديد التحمل</h3>
+                  <p className="text-gray-700 text-sm mb-4">استكشف مجموعتنا من الأفرولات المتينة والواقية للبيئات الصعبة.</p>
+                  <span className="text-blue-600 font-semibold hover:underline">عرض المنتج &larr;</span>
+                </div>
               </div>
             </Link>
           </div>

@@ -45,12 +45,12 @@ export default function ClientHealthcarePage() {
       description: 'أقمشة ممتازة تتحمل الاستخدام المتكرر والغسيل الصناعي، مما يضمن مظهرًا مهنيًا دائمًا.'
     },
     {
-      icon: '/images/icons/saudi-expertise.svg',
+      icon: '/images/images/icons/saudi-expertise.svg',
       title: 'متوافق مع المعايير السعودية',
       description: 'جميع منتجاتنا تتوافق مع معايير السلامة والجودة السعودية وتلبي متطلبات وزارة الصحة.'
     },
     {
-      icon: '/images/icons/modest-design-saudi.svg',
+      icon: '/images/saudi-expertise.svg',
       title: 'خيارات الزي الإسلامي',
       description: 'تصميمات محتشمة تحترم القيم الإسلامية والمتطلبات الثقافية المحلية.'
     },
@@ -79,29 +79,13 @@ export default function ClientHealthcarePage() {
       image: '/images/product-placeholder.jpg',
       price: '١٢٠ ر.س',
       category: 'الرعاية الصحية',
-      href: '/ar/shop/medical-scrubs/premium-medical-scrubs',
-      isNew: true
-    },
-    {
-      id: 'medical-lab-coat',
-      name: 'معطف مختبر طبي',
-      image: '/images/product-placeholder.jpg',
+      href: '/ar/images/product-placeholder.jpg',
       price: '١٥٠ ر.س',
       category: 'الرعاية الصحية',
-      href: '/ar/shop/medical-scrubs/medical-lab-coat'
-    },
-    {
-      id: 'surgical-gown',
-      name: 'رداء جراحي',
-      image: '/images/product-placeholder.jpg',
+      href: '/ar/images/product-placeholder.jpg',
       price: '١٨٠ ر.س',
       category: 'الرعاية الصحية',
-      href: '/ar/shop/medical-scrubs/surgical-gown'
-    },
-    {
-      id: 'nurse-uniform',
-      name: 'زي تمريض',
-      image: '/images/product-placeholder.jpg',
+      href: '/ar/images/product-placeholder.jpg',
       price: '١٣٥ ر.س',
       category: 'الرعاية الصحية',
       href: '/ar/shop/medical-scrubs/nurse-uniform'
@@ -168,12 +152,12 @@ export default function ClientHealthcarePage() {
     {
       name: 'مقاومة للسوائل',
       description: 'تحمي من تناثر السوائل والبقع في بيئة الرعاية الصحية',
-      icon: '/images/icons/fabric-tech-performance.svg'
+      icon: '/images/fabric-cotton-blends.svg'
     },
     {
       name: 'مضادة للميكروبات',
       description: 'تقنية مضادة للبكتيريا تعزز السلامة والصحة',
-      icon: '/images/icons/compliance-shield.svg'
+      icon: '/images/compliance-shield.svg'
     },
     {
       name: 'سهلة العناية',

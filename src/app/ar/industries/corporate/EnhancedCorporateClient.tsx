@@ -42,7 +42,7 @@ export default function EnhancedCorporateClient() {
       description: 'تعزز الأزياء الموحدة من يونيوم الصورة المهنية لشركتك وتخلق انطباعاً إيجابياً لدى العملاء والشركاء.'
     },
     {
-      icon: '/images/icons/brand-aligned.svg',
+      icon: '/images/images/icons/brand-aligned.svg',
       title: 'تعزيز الهوية التجارية',
       description: 'تخصيص كامل للألوان والشعارات والتصاميم لتعكس هوية علامتك التجارية وتميزها في السوق السعودي.'
     },
@@ -104,32 +104,13 @@ export default function EnhancedCorporateClient() {
       image: '/images/products/corporate-suit-executive.jpg',
       price: '٨٥٠ ر.س',
       category: 'الأزياء المؤسسية',
-      href: '/ar/shop/corporate-attire/executive-suit-premium',
-      isNew: true,
-      features: ['قماش صوف إيطالي', 'تفصيل حسب المقاس', 'تطريز الشعار']
-    },
-    {
-      id: 'office-shirt-collection',
-      name: 'مجموعة القمصان المكتبية',
-      image: '/images/products/corporate-shirts-blouses.jpg',
+      href: '/ar/images/products/corporate-shirts-blouses.jpg',
       price: '١٢٠ ر.س',
       category: 'الأزياء المؤسسية',
-      href: '/ar/shop/corporate-attire/office-shirts',
-      features: ['قطن مصري فاخر', 'مقاوم للتجعد', 'ألوان متعددة']
-    },
-    {
-      id: 'reception-uniform',
-      name: 'زي الاستقبال الأنيق',
-      image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg',
+      href: '/ar/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg',
       price: '٢٨٠ ر.س',
       category: 'الأزياء المؤسسية',
-      href: '/ar/shop/corporate-attire/reception-uniform',
-      features: ['تصميم عصري', 'راحة فائقة', 'سهولة العناية']
-    },
-    {
-      id: 'polo-corporate',
-      name: 'بولو الشركات المتميز',
-      image: '/images/products/corporate-polo-shirts.jpg',
+      href: '/ar/images/products/corporate-polo-shirts.jpg',
       price: '٩٥ ر.س',
       category: 'الأزياء المؤسسية',
       href: '/ar/shop/corporate-attire/corporate-polo',
@@ -178,7 +159,7 @@ export default function EnhancedCorporateClient() {
     {
       name: 'ألوان مخصصة',
       description: 'مطابقة دقيقة لألوان الهوية البصرية للشركة',
-      icon: '/images/icons/brand-aligned.svg'
+      icon: '/images/images/icons/brand-aligned.svg'
     },
     {
       name: 'قياسات فردية',

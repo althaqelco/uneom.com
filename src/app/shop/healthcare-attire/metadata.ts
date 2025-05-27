@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'en',
     images: [
       {
-        url: '/images/shop/healthcare/healthcare-category.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'UNEOM Healthcare Uniforms - Premium Medical Workwear',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Healthcare Uniforms | UNEOM Saudi Arabia',
-    description: 'Premium medical workwear for healthcare professionals in Saudi Arabia. Explore UNEOM\'s high-quality scrubs, lab coats and nursing uniforms.',
-    images: ['/images/shop/healthcare/healthcare-category.jpg'],
+        url: '/images/shop/healthcare/healthcare-category.jpg'],
   },
   robots: {
     index: true,

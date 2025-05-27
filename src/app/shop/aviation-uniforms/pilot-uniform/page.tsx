@@ -79,19 +79,9 @@ export default function PilotUniformPage() {
         name: 'Airline Crew Uniform',
         image: '/images/products/aviation/airline-2.jpg',
         price: 'From SAR 1,299',
-        href: '/shop/aviation-uniforms/airline-crew-uniform'
-      },
-      {
-        id: 'ground-staff-uniform',
-        name: 'Ground Staff Uniform',
-        image: '/images/aviation/aviation_uniform_airline.jpg',
+        href: '/images/aviation/aviation_uniform_airline.jpg',
         price: 'From SAR 899',
-        href: '/shop/aviation-uniforms/ground-staff-uniform'
-      },
-      {
-        id: 'aviation-accessories',
-        name: 'Aviation Accessories Pack',
-        image: '/images/products/aviation/airline-3.jpg',
+        href: '/images/products/aviation/airline-3.jpg',
         price: 'From SAR 349',
         href: '/shop/aviation-uniforms/aviation-accessories'
       }

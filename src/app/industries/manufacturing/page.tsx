@@ -94,23 +94,11 @@ export default function ManufacturingIndustryPage() {
       id: "industrial-coverall-pro",
       name: "Industrial Coverall Pro",
       description: "Advanced full-body protection engineered for Saudi Arabia's most demanding industrial environments with multi-hazard protection featuring heat-resistant, flame-retardant, and chemical-resistant technologies.",
-      image: "/images/industries/manufacturing/manufacturing_uniform_product1.jpg",
-      href: "/shop/industrial-uniforms/industrial-coverall-pro",
-      features: [
-        "FR Rating: NFPA 2112 & NFPA 70E",
-        "Temperature Tolerance: -30°C to +60°C",
-        "Anti-Static Properties: EN 1149-5",
-        "Chemical Splash Protection: EN 13034"
+      image: "/images/industries/manufacturing/manufacturing_uniform_product1.jpg", // Main product image
+      imageGallery: [
+        "/images/industries/manufacturing/manufacturing_uniform_product2.jpg"
       ],
-      price: "SAR 389 - 529",
-      badge: "Bestseller"
-    },
-    {
-      id: "flame-resistant-workwear",
-      name: "Premium FR Workwear Set",
-      description: "Industry-leading flame-resistant clothing system meeting NFPA 2112 standards, designed specifically for Saudi oil & gas, petrochemical, and electrical industries.",
-      image: "/images/industries/manufacturing/manufacturing_uniform_product2.jpg",
-      href: "/shop/industrial-uniforms/flame-resistant-workwear",
+      href: "/shop/industrial-uniforms/flame-resistant-workwear", // Main navigation link
       features: [
         "Arc Rating: ATPV 12+ cal/cm²",
         "Flash Fire Protection: NFPA 2112 Certified",
@@ -335,28 +323,16 @@ export default function ManufacturingIndustryPage() {
         {
           name: "Production Line Uniforms",
           description: "Durable and comfortable workwear designed for production line personnel, with features for movement flexibility and protection against common manufacturing hazards.",
-          image: "/images/manufacturing/production_line_uniforms.jpg",
-          link: "/shop/manufacturing-workwear/production-line-uniform"
-        },
-        {
-          name: "Supervisor & Management Workwear",
-          description: "Professional workwear that distinguishes supervisory and management staff while maintaining practical functionality for the factory floor environment.",
-          image: "/images/manufacturing/supervisor_workwear.jpg",
-          link: "/shop/manufacturing-workwear/supervisor-uniform"
-        },
-        {
-          name: "Maintenance & Technical Uniforms",
-          description: "Specialized workwear for maintenance and technical teams, featuring reinforced fabrics, multiple tool pockets, and enhanced protection against mechanical and electrical hazards.",
-          image: "/images/manufacturing/maintenance_technical_uniform.jpg",
-          link: "/shop/manufacturing-workwear/maintenance-uniform"
-        }
-      ],
-    },
-    customizationOptions: {
-      title: "Tailored to Your Manufacturing Requirements",
-      description: "UNEOM provides extensive customization for different manufacturing environments, from fabric technology selection (DuraTech™, ChemGuard™, HeatShield™) to department color-coding and hazard-specific protective features, ensuring your workwear meets the exact requirements of your industrial operation.",
-      image: "/images/industries/manufacturing/customization-manufacturing-workwear.jpg", 
-    },
+          image: "/images/manufacturing/production_line_uniforms.jpg", // Main image
+          link: "/shop/industrial-uniforms", // Main navigation link
+          imageGallery: [
+            "/images/manufacturing/supervisor_workwear.jpg",
+            "/images/manufacturing/maintenance_technical_uniform.jpg",
+            "/images/industries/manufacturing/customization-manufacturing-workwear.jpg"
+          ]
+        } // Closes the "Production Line Uniforms" object
+      ] // Closes the "offerings" array
+    }, // Closes the "featuredOfferings" object
     testimonials: {
       title: "Trusted by Leading Saudi Manufacturers",
       items: [
@@ -371,6 +347,13 @@ export default function ManufacturingIndustryPage() {
           position: "HR Manager, Riyadh Manufacturing Complex",
         }
       ],
+    },
+    customizationOptions: {
+      title: "Custom Workwear for Manufacturing Needs",
+      description: "UNEOM provides fully customizable workwear solutions for the manufacturing sector, including options for high-visibility, flame resistance, and specific industry requirements. Enhance safety and brand identity with our tailored uniform programs.",
+      image: "/images/industries/manufacturing/customization-manufacturing-workwear.jpg", // Placeholder image
+      cta: "Discuss Your Requirements",
+      ctaLink: "/services/custom-design"
     },
     relatedBlogs: {
       title: "Manufacturing Workwear Insights",

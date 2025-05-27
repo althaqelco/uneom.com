@@ -159,18 +159,8 @@ export default function MallStaffUniform() {
         name: "Luxury Retail Store Collection",
         description: "High-end uniforms for luxury retail brands and boutique stores",
         image: "/images/industries/retail-shops/retail-shops-uniform-identity-3.jpg",
-        link: "/shop/retail-uniforms/luxury-retail-collection"
-      },
-      {
-        name: "Mall Security Uniform Set",
-        description: "Professional security uniforms coordinated with mall staff designs",
-        image: "/images/industries/factory_industry/factory-security-uniform-1.jpg",
-        link: "/shop/security-uniforms/mall-security"
-      },
-      {
-        name: "Customer Service Professional Set",
-        description: "Specialized uniform collection for customer service centers and help desks",
-        image: "/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg",
+        link: "/images/industries/factory_industry/factory-security-uniform-1.jpg",
+        link: "/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg",
         link: "/shop/retail-uniforms/customer-service"
       }
     ],

@@ -110,19 +110,9 @@ export default function PremiumMedicalScrubsPage() {
         name: "Surgical Scrubs Set",
         image: "/images/product-placeholder.jpg",
         price: "SAR 199",
-        href: "/shop/medical-scrubs/surgical-scrubs"
-      },
-      {
-        id: "lab-coats",
-        name: "Professional Lab Coat",
-        image: "/images/product-placeholder.jpg",
+        href: "/images/product-placeholder.jpg",
         price: "SAR 229",
-        href: "/shop/medical-scrubs/lab-coats"
-      },
-      {
-        id: "nurse-uniform",
-        name: "Premium Nurse Uniform",
-        image: "/images/product-placeholder.jpg",
+        href: "/images/product-placeholder.jpg",
         price: "SAR 189",
         href: "/shop/medical-scrubs/nurse-uniform"
       }

@@ -32,58 +32,11 @@ export default function CorporateAttireClientPage() {
       description: 'بدلات رسمية فاخرة للشركات مصنوعة من أجود أنواع الأقمشة، مناسبة للمدراء والتنفيذيين.',
       price: 'من 899 ريال',
       image: '/images/products/corporate-suit-executive.jpg',
-      href: '/ar/shop/corporate-attire/business-suits',
-      features: ['أقمشة ممتازة', 'تفصيل دقيق', 'راحة فائقة', 'تصاميم عصرية'],
-      colors: ['كحلي', 'أسود', 'رمادي', 'أزرق'],
-      isBestseller: true
-    },
-    {
-      id: 'office-uniforms',
-      name: 'أزياء مكتبية',
-      description: 'أزياء مكتبية أنيقة ومريحة مناسبة لبيئة العمل الاحترافية في الشركات والمؤسسات السعودية.',
-      price: 'من 499 ريال',
-      image: '/images/products/corporate-suit-executive.jpg',
-      href: '/ar/shop/corporate-attire/office-uniforms',
-      features: ['راحة طوال اليوم', 'سهولة العناية', 'مظهر احترافي', 'خيارات متنوعة'],
-      colors: ['أبيض', 'أزرق فاتح', 'رمادي', 'بيج'],
-      isNew: true
-    },
-    {
-      id: 'corporate-shirts',
-      name: 'قمصان الشركات',
-      description: 'قمصان رسمية عالية الجودة مناسبة لبيئة الشركات، متوفرة بخيارات مختلفة من الألوان والتصاميم.',
-      price: 'من 199 ريال',
-      image: '/images/products/corporate-suit-executive.jpg',
-      href: '/ar/shop/corporate-attire/corporate-shirts',
-      features: ['قطن مصري', 'سهولة الكي', 'تناسب مثالي', 'ألوان ثابتة'],
-      colors: ['أبيض', 'أزرق سماوي', 'وردي فاتح', 'أزرق داكن']
-    },
-    {
-      id: 'executive-wear',
-      name: 'أزياء تنفيذية',
-      description: 'ملابس فاخرة مصممة خصيصًا للمدراء التنفيذيين، تعكس المكانة المهنية وتوفر الراحة والأناقة.',
-      price: 'من 1299 ريال',
-      image: '/images/products/corporate-suit-executive.jpg',
-      href: '/ar/shop/corporate-attire/executive-wear',
-      features: ['أقمشة فاخرة', 'تفصيل متقن', 'تصاميم حصرية', 'خيارات تخصيص'],
-      colors: ['أسود', 'كحلي', 'رمادي داكن', 'بني']
-    },
-    {
-      id: 'women-corporate-wear',
-      name: 'أزياء نسائية للشركات',
-      description: 'تشكيلة متكاملة من الأزياء النسائية الرسمية المناسبة لبيئة الشركات، بتصاميم أنيقة وعصرية.',
-      price: 'من 599 ريال',
-      image: '/images/products/corporate-suit-executive.jpg',
-      href: '/ar/shop/corporate-attire/women-corporate-wear',
-      features: ['أناقة عصرية', 'راحة فائقة', 'مظهر احترافي', 'خيارات متعددة'],
-      colors: ['أسود', 'كحلي', 'رمادي', 'بيج']
-    },
-    {
-      id: 'corporate-accessories',
-      name: 'إكسسوارات الشركات',
-      description: 'إكسسوارات رسمية تكمل المظهر الاحترافي، تشمل ربطات العنق، الإيشاربات، أزرار الأكمام وغيرها.',
-      price: 'من 99 ريال',
-      image: '/images/products/corporate-suit-executive.jpg',
+      href: '/ar/images/products/corporate-suit-executive.jpg',
+      href: '/ar/images/products/corporate-suit-executive.jpg',
+      href: '/ar/images/products/corporate-suit-executive.jpg',
+      href: '/ar/images/products/corporate-suit-executive.jpg',
+      href: '/ar/images/products/corporate-suit-executive.jpg',
       href: '/ar/shop/corporate-attire/corporate-accessories',
       features: ['تصاميم أنيقة', 'جودة عالية', 'خيارات متنوعة', 'تكمل الزي الرسمي'],
       colors: ['متعددة']

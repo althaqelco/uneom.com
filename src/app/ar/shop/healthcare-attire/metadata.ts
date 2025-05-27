@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/shop/healthcare/healthcare-category.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'زي الرعاية الصحية يونيوم - ملابس العمل الطبية المتميزة',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'زي الرعاية الصحية | يونيوم السعودية',
-    description: 'ملابس العمل الطبية المتميزة لمحترفي الرعاية الصحية في المملكة العربية السعودية. استكشف سكراب، معاطف مختبر وزي التمريض عالي الجودة من يونيوم.',
-    images: ['/images/shop/healthcare/healthcare-category.jpg'],
+        url: '/images/shop/healthcare/healthcare-category.jpg'],
   },
   robots: {
     index: true,

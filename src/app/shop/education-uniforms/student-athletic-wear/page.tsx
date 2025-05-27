@@ -505,20 +505,8 @@ export default function StudentAthleticWearPage() {
                   name: 'Premium School Uniform Collection',
                   price: 'From SAR 299',
                   image: '/images/industries/education/school-uniform-02.webp',
-                  link: '/shop/education-uniforms/premium-school-uniform'
-                },
-                {
-                  id: 'faculty-professional-attire',
-                  name: 'Faculty Professional Attire',
-                  price: 'From SAR 349',
-                  image: '/images/industries/education/teachers/school-uniform-teacher-01.webp',
-                  link: '/shop/education-uniforms/faculty-professional-attire'
-                },
-                {
-                  id: 'school-accessories',
-                  name: 'School Uniform Accessories',
-                  price: 'From SAR 49',
-                  image: '/images/industries/education/school-uniform-01.webp',
+                  link: '/images/industries/education/teachers/school-uniform-teacher-01.webp',
+                  link: '/images/industries/education/school-uniform-01.webp',
                   link: '/shop/education-uniforms/school-accessories'
                 }
               ].map((relatedProduct) => (

@@ -84,7 +84,7 @@ export default function EnhancedCorporateProgramsClient() {
       stats: '١٠٠٪ تخصيص حسب الحاجة'
     },
     {
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
       title: 'ضمان الجودة والالتزام',
       description: 'التزام كامل بالمواعيد والمعايير مع ضمانات شاملة على الجودة.',
       stats: '٩٨٪ التزام بالمواعيد'

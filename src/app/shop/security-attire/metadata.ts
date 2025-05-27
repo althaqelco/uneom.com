@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'en',
     images: [
       {
-        url: '/images/shop/security/security-category.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'UNEOM Security Uniforms - Professional Guard Workwear',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Security Uniforms | UNEOM Saudi Arabia',
-    description: 'Premium security guard workwear for Saudi protection services. Explore UNEOM\'s high-quality, professional security uniforms.',
-    images: ['/images/shop/security/security-category.jpg'],
+        url: '/images/shop/security/security-category.jpg'],
   },
   robots: {
     index: true,

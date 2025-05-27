@@ -36,14 +36,7 @@ export default function EnhancedFabricSelectionClient() {
     {
       name: 'الأقمشة الطبيعية الفاخرة',
       description: 'قطن مصري، صوف إيطالي، كتان أوروبي عالي الجودة',
-      image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
-      features: ['قابلية تنفس عالية', 'راحة طبيعية', 'مقاومة التجعد', 'صديق للبيئة'],
-      applications: ['الأزياء التنفيذية', 'الملابس الرسمية', 'أزياء الضيافة الفاخرة']
-    },
-    {
-      name: 'الأقمشة التقنية المتطورة',
-      description: 'أقمشة ذكية مع خصائص الأداء المتقدمة',
-      image: '/images/uneom_moisture_wicking.webp',
+      image: '/images/services/uneom_moisture_wicking.webp',
       features: ['مقاومة الرطوبة', 'تنظيم الحرارة', 'مضادة للبكتيريا', 'سهولة العناية'],
       applications: ['الأزياء الطبية', 'ملابس الطيران', 'الأزياء الرياضية']
     },
@@ -96,13 +89,13 @@ export default function EnhancedFabricSelectionClient() {
     {
       name: 'تقنية مقاومة الرطوبة',
       description: 'أقمشة تطرد الرطوبة وتحافظ على الجفاف',
-      icon: '/images/icons/fabric-tech-performance.svg',
+      icon: '/images/fabric-cotton-blends.svg',
       benefits: ['راحة طوال اليوم', 'تجفيف سريع', 'منع الروائح', 'مناسب للمناخ الحار']
     },
     {
       name: 'المعالجة المضادة للميكروبات',
       description: 'حماية طبيعية ضد البكتيريا والفطريات',
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
       benefits: ['نظافة صحية', 'حماية إضافية', 'تقليل الغسيل', 'مناسب للقطاع الطبي']
     },
     {

@@ -46,12 +46,12 @@ export default function ProgramManagementServicePage() {
         description: 'Reduce administrative burden and streamline processes with our centralized management system, saving valuable time and resources.'
       },
       {
-        icon: '/images/icons/saudi-expertise.svg',
+        icon: '/images/images/icons/saudi-expertise.svg',
         title: 'Cost Control',
         description: 'Optimize spending through bulk purchasing, inventory management, and controlled distribution, typically reducing uniform-related costs by 15-25%.'
       },
       {
-        icon: '/images/icons/brand-aligned.svg',
+        icon: '/images/images/icons/brand-aligned.svg',
         title: 'Brand Consistency',
         description: 'Ensure uniform consistency across all locations and departments, strengthening your brand identity and professional image.'
       },
@@ -61,7 +61,7 @@ export default function ProgramManagementServicePage() {
         description: 'Improve employee experience with properly fitted, high-quality uniforms and simplified replacement processes.'
       },
       {
-        icon: '/images/icons/compliance-shield.svg',
+        icon: '/images/compliance-shield.svg',
         title: 'Compliance Management',
         description: 'Stay up-to-date with industry regulations and standards through our compliance monitoring and updating services.'
       },

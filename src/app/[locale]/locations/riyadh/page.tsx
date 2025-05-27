@@ -122,7 +122,7 @@ const locationData = {
         en: 'Tailored uniform solutions for Riyadh\'s corporate sector, including banks, telecommunications, and government institutions.',
         ar: 'حلول مخصصة للزي الموحد لقطاع الشركات في الرياض، بما في ذلك البنوك والاتصالات والمؤسسات الحكومية.'
       },
-      icon: '/icons/corporate-design.svg'
+      icon: '/images/icons/corporate-design.svg'
     },
     {
       title: {
@@ -133,7 +133,7 @@ const locationData = {
         en: 'Specialized consultation services for hospitals and clinics in Riyadh, focusing on antimicrobial fabrics and comfort-optimized designs.',
         ar: 'خدمات استشارية متخصصة للمستشفيات والعيادات في الرياض، مع التركيز على الأقمشة المضادة للميكروبات والتصاميم المحسنة للراحة.'
       },
-      icon: '/icons/healthcare-consultation.svg'
+      icon: '/images/icons/healthcare-consultation.svg'
     },
     {
       title: {
@@ -144,7 +144,7 @@ const locationData = {
         en: 'Comprehensive uniform programs for Riyadh\'s schools and universities, including design, production, and distribution solutions.',
         ar: 'برامج شاملة للزي الموحد لمدارس وجامعات الرياض، بما في ذلك حلول التصميم والإنتاج والتوزيع.'
       },
-      icon: '/icons/education-programs.svg'
+      icon: '/images/icons/education-programs.svg'
     },
     {
       title: {
@@ -155,7 +155,7 @@ const locationData = {
         en: 'Fast-track production services available exclusively at our Riyadh headquarters for urgent uniform needs.',
         ar: 'خدمات الإنتاج السريع متاحة حصريًا في مقرنا الرئيسي بالرياض لتلبية احتياجات الزي الموحد العاجلة.'
       },
-      icon: '/icons/rush-production.svg'
+      icon: '/images/icons/rush-production.svg'
     }
   ],
   

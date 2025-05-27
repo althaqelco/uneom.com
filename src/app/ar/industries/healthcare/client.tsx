@@ -20,32 +20,32 @@ const HealthcareIndustryClientPage = () => {
     {
       title: 'الهوية المهنية',
       description: 'تساعد الأزياء المميزة على التعرف الفوري على دور ومسؤوليات كل فرد في فريق الرعاية الصحية',
-        icon: '/icons/role-identification.svg'
+        icon: '/images/icons/role-identification.svg'
     },
     {
       title: 'الوقاية والسلامة',
       description: 'توفر الحماية من التعرض للمواد الحيوية والسوائل والمواد الكيميائية المحتملة في بيئة الرعاية الصحية',
-        icon: '/icons/safety.svg'
+        icon: '/images/icons/safety.svg'
     },
     {
       title: 'راحة المريض',
       description: 'يساعد الزي الموحد المهني على طمأنة المرضى وتعزيز الثقة في مقدمي الرعاية الصحية',
-        icon: '/icons/patient-comfort.svg'
+        icon: '/images/icons/patient-comfort.svg'
     },
     {
       title: 'العملية والراحة',
       description: 'مصممة للتحرك بحرية والراحة خلال المناوبات الطويلة والحركة المستمرة',
-        icon: '/icons/comfort.svg'
+        icon: '/images/icons/comfort.svg'
     },
     {
       title: 'سهولة التنظيف',
       description: 'مصنوعة من أقمشة قابلة للغسل بسهولة وتتحمل التعقيم المتكرر والتطهير القوي',
-        icon: '/icons/cleaning.svg'
+        icon: '/images/icons/cleaning.svg'
     },
     {
       title: 'تعزيز المعنويات',
       description: 'تساهم الأزياء العصرية والمناسبة في تحسين الروح المعنوية للموظفين والجو العام في المنشأة',
-        icon: '/icons/morale.svg'
+        icon: '/images/icons/morale.svg'
       }
     ],
     products: [
@@ -54,20 +54,8 @@ const HealthcareIndustryClientPage = () => {
         name: 'أزياء التمريض',
         description: 'أزياء حديثة ومريحة للتمريض بتصاميم مصممة خصيصًا للرعاية المباشرة للمرضى',
         image: '/images/healthcare/nurse-uniforms.jpg',
-        href: '/ar/shop/medical-scrubs/nursing-scrubs'
-      },
-      {
-        id: '2',
-        name: 'معاطف المختبر الطبية',
-        description: 'معاطف مختبر عالية الجودة للأطباء والصيادلة وموظفي المختبرات',
-        image: '/images/healthcare/lab-coats.jpg',
-        href: '/ar/shop/medical-scrubs/medical-lab-coats'
-      },
-      {
-        id: '3',
-        name: 'أزياء العمليات الجراحية',
-        description: 'ملابس معقمة للاستخدام في غرف العمليات، مصممة للراحة خلال الإجراءات الطويلة',
-        image: '/images/healthcare/surgical-scrubs.jpg',
+        href: '/ar/images/healthcare/lab-coats.jpg',
+        href: '/ar/images/healthcare/surgical-scrubs.jpg',
         href: '/ar/shop/medical-scrubs/surgical-scrubs'
       }
     ],

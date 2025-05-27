@@ -41,7 +41,7 @@ export default function BulkOrderingServicePage() {
     
     benefits: [
       {
-        icon: '/images/icons/saudi-expertise.svg',
+        icon: '/images/images/icons/saudi-expertise.svg',
         title: 'Cost Efficiency',
         description: 'Benefit from significant volume discounts, optimized production processes, and efficient logistics management that can reduce overall uniform costs by 15-30%.'
       },
@@ -61,7 +61,7 @@ export default function BulkOrderingServicePage() {
         description: 'Choose from one-time bulk procurement, scheduled recurring orders, or on-demand ordering systems based on your operational needs.'
       },
       {
-        icon: '/images/icons/brand-aligned.svg',
+        icon: '/images/images/icons/brand-aligned.svg',
         title: 'Simplified Logistics',
         description: 'Our sophisticated logistics management handles complex distribution requirements, ensuring the right uniforms reach the right locations at the right time.'
       },

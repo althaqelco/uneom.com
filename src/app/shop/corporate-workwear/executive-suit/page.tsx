@@ -89,19 +89,9 @@ export default function ExecutiveSuitPage() {
         name: 'Premium Corporate Shirt',
         image: '/images/products/corporate-suit-executive.jpg',
         price: 'From SAR 249',
-        href: '/shop/corporate-workwear/executive-shirt'
-      },
-      {
-        id: 'corporate-blazer',
-        name: 'Women\'s Corporate Blazer',
-        image: '/images/avatar-placeholder.jpg',
+        href: '/images/avatar-placeholder.jpg',
         price: 'From SAR 599',
-        href: '/shop/corporate-workwear/corporate-blazer'
-      },
-      {
-        id: 'formal-trousers',
-        name: 'Premium Formal Trousers',
-        image: '/images/products/corporate-suit-executive.jpg',
+        href: '/images/products/corporate-suit-executive.jpg',
         price: 'From SAR 349',
         href: '/shop/corporate-workwear/formal-trousers'
       }

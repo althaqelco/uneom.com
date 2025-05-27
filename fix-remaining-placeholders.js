@@ -18,8 +18,7 @@ const imageReplacements = {
     'chef': '/images/products/chef-uniform.jpg',
     'business': '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
     'tailor': '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
-    'fabric': '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
-    'default': '/images/defaults/default-placeholder.jpg'
+    'fabric': '/images/services/defaults/default-placeholder.jpg'
   }
 };
 

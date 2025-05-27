@@ -87,7 +87,7 @@ const locationData = {
         en: 'Dignified, comfortable uniforms for staff at the Prophet\'s Mosque and other sacred sites in Medina, designed with reverence and attention to practical needs.',
         ar: 'أزياء موحدة كريمة ومريحة للموظفين في المسجد النبوي والمواقع المقدسة الأخرى في المدينة المنورة، مصممة باحترام واهتمام بالاحتياجات العملية.'
       },
-      icon: '/icons/sacred-site-apparel.svg'
+      icon: '/images/icons/sacred-site-apparel.svg'
     },
     {
       title: {
@@ -98,7 +98,7 @@ const locationData = {
         en: 'Complete uniform programs for Medina\'s Islamic universities, schools, and educational centers, featuring modest, practical designs for students and staff.',
         ar: 'برامج كاملة للزي الموحد للجامعات الإسلامية والمدارس والمراكز التعليمية في المدينة المنورة، تتميز بتصاميم متواضعة وعملية للطلاب والموظفين.'
       },
-      icon: '/icons/educational-uniforms.svg'
+      icon: '/images/icons/educational-uniforms.svg'
     },
     {
       title: {
@@ -109,7 +109,7 @@ const locationData = {
         en: 'Specialized uniforms for transportation services, visitor guidance centers, and assistance organizations serving pilgrims visiting the Prophet\'s City.',
         ar: 'أزياء متخصصة لخدمات النقل ومراكز إرشاد الزوار ومنظمات المساعدة التي تخدم الحجاج الذين يزورون مدينة الرسول.'
       },
-      icon: '/icons/pilgrim-service.svg'
+      icon: '/images/icons/pilgrim-service.svg'
     },
     {
       title: {
@@ -120,7 +120,7 @@ const locationData = {
         en: 'Culturally sensitive uniform solutions for hotels, restaurants, and visitor services in Medina\'s historical districts, blending tradition with comfort.',
         ar: 'حلول زي موحد حساسة ثقافياً للفنادق والمطاعم وخدمات الزوار في الأحياء التاريخية بالمدينة المنورة، تمزج بين التقاليد والراحة.'
       },
-      icon: '/icons/historical-hospitality.svg'
+      icon: '/images/icons/historical-hospitality.svg'
     }
   ],
   

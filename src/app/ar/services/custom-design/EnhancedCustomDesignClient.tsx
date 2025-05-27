@@ -37,7 +37,7 @@ export default function EnhancedCustomDesignClient() {
       number: '01',
       title: 'اكتشاف العلامة التجارية',
       description: 'نبدأ بدراسة شاملة لهوية علامتك التجارية وقيمها وأهدافها لفهم رؤيتك بشكل كامل.',
-      icon: '/images/icons/brand-aligned.svg',
+      icon: '/images/images/icons/brand-aligned.svg',
       duration: '١-٢ أسبوع'
     },
     {
@@ -66,7 +66,7 @@ export default function EnhancedCustomDesignClient() {
   // Key benefits
   const benefits = [
     {
-      icon: '/images/icons/brand-aligned.svg',
+      icon: '/images/images/icons/brand-aligned.svg',
       title: 'تعزيز الهوية التجارية',
       description: 'تصاميم فريدة تعكس شخصية علامتك التجارية وتميزها في السوق السعودي.',
       stats: '٩٢٪ زيادة في التعرف على العلامة التجارية'

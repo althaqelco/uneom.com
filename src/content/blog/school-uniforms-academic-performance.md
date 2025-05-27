@@ -7,7 +7,7 @@ author:
   bio: 'Educational researcher and consultant with expertise in educational psychology and student performance metrics'
   title: 'Educational Psychology Professor'
 excerpt: 'Research findings on how well-designed school uniforms may contribute to improved academic performance and classroom behavior among Saudi students.'
-featuredImage: '/images/education/school-uniform-post-1.jpg'
+featuredImage: '/images/blog/school-uniform-post-1.jpg'
 tags: ['education', 'academic-performance', 'school-uniforms', 'saudi-education']
 ---
 

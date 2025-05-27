@@ -32,58 +32,11 @@ export default function HospitalityAttireClientPage() {
       description: 'زي فندقي فاخر مصمم للفنادق ذات الخمس نجوم، يتميز بنسيج فاخر وتفاصيل راقية وتصميم أنيق.',
       price: 'من 499 ريال',
       image: '/images/Hospitality_Uniforms.png',
-      href: '/ar/shop/hospitality-attire/luxury-hotel-uniform',
-      features: ['نسيج فاخر', 'تفاصيل راقية', 'مظهر احترافي', 'مريح للارتداء'],
-      colors: ['أسود', 'رمادي داكن', 'نبيذي', 'أزرق داكن'],
-      isBestseller: true
-    },
-    {
-      id: 'restaurant-staff-uniform',
-      name: 'زي طاقم المطعم',
-      description: 'زي احترافي مصمم للمطاعم ومؤسسات تقديم الطعام، يجمع بين الأناقة والعملية.',
-      price: 'من 349 ريال',
-      image: '/images/staff-of-modern-restaurant-in-uniforms-SBI-301172246.jpg',
-      href: '/ar/shop/hospitality-attire/restaurant-staff-uniform',
-      features: ['مقاوم للبقع', 'سهل العناية', 'تصميم مريح', 'مظهر احترافي'],
-      colors: ['أسود', 'أبيض', 'بورجوندي', 'أزرق'],
-      isNew: true
-    },
-    {
-      id: 'chef-uniform',
-      name: 'زي الشيف',
-      description: 'زي شيف احترافي مصمم للمطابخ، يوفر الراحة والحماية مع الحفاظ على المظهر الاحترافي.',
-      price: 'من 379 ريال',
-      image: '/images/female-arabic-chef-standing-in-a-kitchen-SBI-301212559.jpg',
-      href: '/ar/shop/hospitality-attire/chef-uniform',
-      features: ['قماش متين', 'مقاوم للحرارة', 'مريح', 'تصميم عملي'],
-      colors: ['أبيض', 'أسود', 'رمادي']
-    },
-    {
-      id: 'concierge-uniform',
-      name: 'زي الكونسيرج',
-      description: 'زي كونسيرج أنيق مصمم للفنادق الراقية، يتميز بتفاصيل دقيقة وتصميم فاخر.',
-      price: 'من 449 ريال',
-      image: '/images/Arab-concierge-SBI-301173096.jpg',
-      href: '/ar/shop/hospitality-attire/concierge-uniform',
-      features: ['تصميم أنيق', 'تفاصيل دقيقة', 'نسيج فاخر', 'مظهر احترافي'],
-      colors: ['أحمر', 'أزرق داكن', 'أخضر داكن', 'أسود']
-    },
-    {
-      id: 'housekeeping-uniform',
-      name: 'زي التدبير المنزلي',
-      description: 'زي عملي مصمم لفريق التدبير المنزلي في الفنادق، يجمع بين الوظائف العملية والمظهر المهني.',
-      price: 'من 299 ريال',
-      image: '/images/young-woman-walking-at-hotel-corridor-SBI-306282723.jpg',
-      href: '/ar/shop/hospitality-attire/housekeeping-uniform',
-      features: ['قماش متين', 'سهل العناية', 'جيوب متعددة', 'مريح للحركة'],
-      colors: ['أزرق فاتح', 'رمادي', 'أخضر فاتح']
-    },
-    {
-      id: 'resort-staff-uniform',
-      name: 'زي طاقم المنتجع',
-      description: 'زي مصمم لطاقم المنتجعات وأماكن الترفيه، يتميز بألوان زاهية ونسيج مريح.',
-      price: 'من 329 ريال',
-      image: '/images/hotel-manager-welcoming-couple-SBI-305098732.jpg',
+      href: '/ar/images/staff-of-modern-restaurant-in-uniforms-SBI-301172246.jpg',
+      href: '/ar/images/female-arabic-chef-standing-in-a-kitchen-SBI-301212559.jpg',
+      href: '/ar/images/Arab-concierge-SBI-301173096.jpg',
+      href: '/ar/images/young-woman-walking-at-hotel-corridor-SBI-306282723.jpg',
+      href: '/ar/images/hotel-manager-welcoming-couple-SBI-305098732.jpg',
       href: '/ar/shop/hospitality-attire/resort-staff-uniform',
       features: ['نسيج قابل للتنفس', 'سهل العناية', 'تصميم عصري', 'مريح للمناخ الحار'],
       colors: ['أبيض/أزرق', 'بيج/خاكي', 'تركواز/أبيض']

@@ -657,8 +657,7 @@ import SEO from '@/components/SEO';
 <SEO
   title="UNEOM - Professional Uniforms"
   description="Professional uniform solutions by UNEOM"
-  canonicalUrl="https://uneom.comar/industries/"
-  ogImage="/images/og-default.jpg"
+  canonicalUrl="https://uneom.comar/images/industries/og-default.jpg"
 />
 ```
 

@@ -32,38 +32,9 @@ export default function EducationUniformsPage() {
       description: 'High-quality school uniform designed for comfort, durability, and professional appearance, perfect for schools and educational institutions.',
       price: 'From SAR 249',
       image: '/images/education/uniform_school_product-1.jpg',
-      href: '/shop/education-uniforms/premium-school-uniform',
-      features: ['Durable fabric', 'Easy care', 'Professional look', 'Comfortable fit'],
-      colors: ['Navy', 'White', 'Grey', 'Burgundy'],
-      isBestseller: true
-    },
-    {
-      id: 'university-attire',
-      name: 'University Attire',
-      description: 'Professional university attire designed for staff, faculty, and administrators in higher education institutions.',
-      price: 'From SAR 329',
-      image: '/images/education/uniform_school_product-2.jpg',
-      href: '/shop/education-uniforms/university-attire',
-      features: ['Professional design', 'Breathable fabric', 'Institutional branding', 'Custom options'],
-      colors: ['Navy', 'Black', 'Grey', 'Maroon'],
-      isNew: true
-    },
-    {
-      id: 'student-sports-kit',
-      name: 'Student Sports Kit',
-      description: 'Complete sports kit designed for school and university athletic programs, featuring performance fabrics and school branding options.',
-      price: 'From SAR 199',
-      image: '/images/education/uniform_school_product-4.jpg',
-      href: '/shop/education-uniforms/student-sports-kit',
-      features: ['Performance fabric', 'Moisture-wicking', 'Custom branding', 'Team options'],
-      colors: ['Multiple options available']
-    },
-    {
-      id: 'faculty-uniform',
-      name: 'Faculty Uniform',
-      description: 'Professional attire designed for teachers and faculty members, balancing comfort with a professional appearance.',
-      price: 'From SAR 289',
-      image: '/images/education/uniform_school_product-5.jpg',
+      href: '/images/education/uniform_school_product-2.jpg',
+      href: '/images/education/uniform_school_product-4.jpg',
+      href: '/images/education/uniform_school_product-5.jpg',
       href: '/shop/education-uniforms/faculty-uniform',
       features: ['Professional design', 'All-day comfort', 'Easy care', 'Institutional branding'],
       colors: ['Navy', 'Grey', 'Black', 'White']

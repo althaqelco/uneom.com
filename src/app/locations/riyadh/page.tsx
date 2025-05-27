@@ -35,22 +35,22 @@ const locationData = {
     {
       title: "UNEOM - Professional Uniforms",
       description: 'Tailored uniform solutions for Riyadh\'s corporate sector, including banks, telecommunications, and government institutions.',
-      icon: '/icons/corporate-design.svg'
+      icon: '/images/icons/corporate-design.svg'
     },
     {
       title: 'Healthcare Uniform Consultation',
       description: 'Specialized consultation services for hospitals and clinics in Riyadh, focusing on antimicrobial fabrics and comfort-optimized designs.',
-      icon: '/icons/healthcare-consultation.svg'
+      icon: '/images/icons/healthcare-consultation.svg'
     },
     {
       title: 'Educational Institution Programs',
       description: 'Comprehensive uniform programs for Riyadh\'s schools and universities, including design, production, and distribution solutions.',
-      icon: '/icons/education-programs.svg'
+      icon: '/images/icons/education-programs.svg'
     },
     {
       title: 'Rush Production Services',
       description: 'Fast-track production services available exclusively at our Riyadh headquarters for urgent uniform needs.',
-      icon: '/icons/rush-production.svg'
+      icon: '/images/icons/rush-production.svg'
     }
   ],
   caseStudies: [

@@ -32,38 +32,9 @@ export default function IndustrialUniformsPage() {
       description: 'Durable full-body coverall designed for industrial environments with safety features and comfort for all-day wear.',
       price: 'From SAR 199',
       image: '/images/products/industrial-coverall.jpg',
-      href: '/shop/industrial-uniforms/industrial-coverall',
-      features: ['Heavy-duty fabric', 'Multiple pockets', 'Reinforced seams', 'Safety reflectors'],
-      colors: ['Navy', 'Royal Blue', 'Grey', 'Black'],
-      isBestseller: true
-    },
-    {
-      id: 'safety-vest',
-      name: 'High-Visibility Safety Vest',
-      description: 'High-visibility safety vest with reflective strips designed for construction sites and industrial environments requiring visibility.',
-      price: 'From SAR 79',
-      image: '/images/products/industrial/safety-1.jpg',
-      href: '/shop/industrial-uniforms/safety-vest',
-      features: ['High-visibility material', 'Reflective strips', 'Adjustable fit', 'Pocket design'],
-      colors: ['Hi-Vis Yellow', 'Hi-Vis Orange'],
-      isNew: true
-    },
-    {
-      id: 'factory-workwear',
-      name: 'Factory Workwear Set',
-      description: 'Complete workwear set designed for factory workers, with durable construction and comfort features for production environments.',
-      price: 'From SAR 259',
-      image: '/images/products/industrial/factory-1.jpg',
-      href: '/shop/industrial-uniforms/factory-workwear',
-      features: ['Durable fabric', 'Stain-resistant', 'Multiple pockets', 'Comfort design'],
-      colors: ['Navy', 'Grey', 'Black', 'Khaki']
-    },
-    {
-      id: 'construction-uniform',
-      name: 'Construction Uniform',
-      description: 'Heavy-duty construction uniform designed for durability and safety in building sites and construction environments.',
-      price: 'From SAR 219',
-      image: '/images/product-placeholder.jpg',
+      href: '/images/products/industrial/safety-1.jpg',
+      href: '/images/products/industrial/factory-1.jpg',
+      href: '/images/product-placeholder.jpg',
       href: '/shop/industrial-uniforms/construction-uniform',
       features: ['Reinforced construction', 'Safety elements', 'Weather-resistant', 'Tool pockets'],
       colors: ['High-Vis combinations', 'Grey/Black', 'Navy/Orange']

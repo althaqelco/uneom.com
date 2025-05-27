@@ -26,32 +26,32 @@ export default function FirefightingPageArabic() {
       {
         title: "مقاومة عالية للحرارة",
         description: "مصممة للعمل في درجات حرارة تصل إلى 1000 درجة مئوية مع عزل حراري فائق",
-        icon: "/icons/fire.svg"
+        icon: "/images/icons/fire.svg"
       },
       {
         title: "معالجة مضادة للهب",
         description: "أقمشة مطورة بتقنية 'فاير-جارد' المانعة لانتشار اللهب وتأخير الاشتعال",
-        icon: "/icons/shield-check.svg"
+        icon: "/images/icons/shield-check.svg"
       },
       {
         title: "مقاومة للماء والسوائل",
         description: "طبقة خارجية مقاومة للماء والزيوت والمواد الكيميائية السائلة",
-        icon: "/icons/water-drop.svg"
+        icon: "/images/icons/water-drop.svg"
       },
       {
         title: "جيوب متخصصة للمعدات",
         description: "تصميم عملي مع جيوب مقواة لحمل معدات الإنقاذ والاتصالات",
-        icon: "/icons/toolbox.svg"
+        icon: "/images/icons/toolbox.svg"
       },
       {
         title: "شرائط عاكسة للضوء",
         description: "شرائط عاكسة عالية الوضوح في الظروف المظلمة والدخان الكثيف",
-        icon: "/icons/visibility.svg"
+        icon: "/images/icons/visibility.svg"
       },
       {
         title: "مطابقة للمعايير الدولية",
         description: "تلبي معايير NFPA 1971 وEN 469 ومعايير الهيئة السعودية للمواصفات والمقاييس",
-        icon: "/icons/certificate.svg"
+        icon: "/images/icons/certificate.svg"
       }
     ],
     
@@ -62,24 +62,8 @@ export default function FirefightingPageArabic() {
         description: "بدلة كاملة مقاومة للحريق مع طبقات متعددة للحماية القصوى",
         price: "٢٨٥٠ ر.س",
         image: "/images/a-firefighter-giving-instructions-to-her-team-SBI-301057339.jpg",
-        href: "/ar/shop/safety-protection/firefighter-suit-pro",
-        features: ["مقاومة للحرارة القصوى", "طبقة عازلة حرارية", "مقاومة للماء والزيوت"],
-      },
-      {
-        id: "fire-resistant-gloves",
-        name: "قفازات مقاومة للحريق",
-        description: "قفازات متينة توفر حماية فائقة مع الحفاظ على المرونة والتحكم",
-        price: "٤٥٠ ر.س",
-        image: "/images/firefighters-fight-the-fire-flame-to-control-fire-not-to-spreading-out-firefighter-ind-SBI-349465280.jpg",
-        href: "/ar/shop/safety-protection/fire-resistant-gloves",
-        features: ["نسيج مقاوم للحرارة", "تصميم مريح", "سطح مانع للانزلاق"],
-      },
-      {
-        id: "fire-resistant-hood",
-        name: "غطاء رأس مقاوم للحريق",
-        description: "غطاء متطور لحماية الرأس والرقبة من الحرارة واللهب",
-        price: "٣٢٠ ر.س",
-        image: "/images/uneom_dirt_fire_resistant_fabric.webp",
+        href: "/ar/images/firefighters-fight-the-fire-flame-to-control-fire-not-to-spreading-out-firefighter-ind-SBI-349465280.jpg",
+        href: "/ar/images/uneom_dirt_fire_resistant_fabric.webp",
         href: "/ar/shop/safety-protection/fire-resistant-hood",
         features: ["نسيج مزدوج الطبقة", "مقاومة للحرارة", "قابل للغسل المتكرر"],
       }
@@ -89,22 +73,22 @@ export default function FirefightingPageArabic() {
       {
         name: "شعارات الفرق والإدارات",
         description: "إضافة شعارات وعلامات خاصة بالإدارات ووحدات الإطفاء المختلفة",
-        icon: "/icons/badge.svg"
+        icon: "/images/icons/badge.svg"
       },
       {
         name: "ألوان وترميز مخصص",
         description: "خيارات تلوين مختلفة للتمييز بين الفرق والرتب المختلفة",
-        icon: "/icons/color-palette.svg"
+        icon: "/images/icons/color-palette.svg"
       },
       {
         name: "تعديلات للملاءمة",
         description: "تعديلات في التصميم لتناسب احتياجات وقياسات مختلف المستخدمين",
-        icon: "/icons/ruler.svg"
+        icon: "/images/icons/ruler.svg"
       },
       {
         name: "متطلبات خاصة",
         description: "حلول مخصصة للتعامل مع بيئات الحرائق المتخصصة مثل المواد الكيميائية أو النفط والغاز",
-        icon: "/icons/settings.svg"
+        icon: "/images/icons/settings.svg"
       }
     ],
     
@@ -112,22 +96,22 @@ export default function FirefightingPageArabic() {
       {
         name: "تقنية نوميكس/كيفلار",
         description: "مزيج متقدم من الألياف المقاومة للحرارة واللهب للطبقة الخارجية",
-        icon: "/icons/fabric.svg"
+        icon: "/images/icons/fabric.svg"
       },
       {
         name: "غشاء مقاوم للماء",
         description: "طبقة متوسطة مقاومة للماء مع خصائص مضادة للبكتيريا",
-        icon: "/icons/water-resistant.svg"
+        icon: "/images/icons/water-resistant.svg"
       },
       {
         name: "عزل حراري متعدد الطبقات",
         description: "نظام بطانة داخلية متعدد الطبقات يوفر عزلاً حراريًا فائقًا",
-        icon: "/icons/thermal.svg"
+        icon: "/images/icons/thermal.svg"
       },
       {
         name: "معالجة مضادة للهب",
         description: "معالجة كيميائية خاصة تمنع انتشار اللهب وتؤخر الاشتعال",
-        icon: "/icons/flame-retardant.svg"
+        icon: "/images/icons/flame-retardant.svg"
       }
     ],
     

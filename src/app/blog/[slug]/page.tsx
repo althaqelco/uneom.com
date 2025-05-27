@@ -60,56 +60,11 @@ export const revalidate = 3600; // revalidate every hour
 // Generate static params for all blog posts
 export async function generateStaticParams() {
   // Define all possible blog post slugs for the English version
+  // Only include slugs for which data exists in blogPosts.server.ts
   return [
     { slug: 'uniform-trends-2023' },
     { slug: 'sustainable-fabrics' },
     { slug: 'healthcare-uniforms-innovation' },
-    { slug: 'corporate-identity-uniforms' },
-    { slug: 'uniform-maintenance-tips' },
-    { slug: 'aviation-uniform-design' },
-    { slug: 'hotel-staff-uniforms' },
-    { slug: 'security-uniform-standards' },
-    { slug: 'uniform-customization' },
-    { slug: 'medical-scrubs-evolution' },
-    { slug: 'corporate-uniform-employee-satisfaction' },
-    { slug: 'industrial-protective-clothing-advances' },
-    { slug: 'sustainable-uniforms-2024-trends' },
-    { slug: 'school-uniforms-academic-performance' },
-    { slug: 'sustainable-school-uniforms-saudi' },
-    { slug: 'hospital-uniform-safety-standards' },
-    { slug: 'airline-uniform-design-cultural-identity' },
-    { slug: 'corporate-uniforms-brand-perception' },
-    { slug: 'healthcare-compliance-guide' },
-    { slug: 'medical-textile-innovation' },
-    { slug: 'sustainable-healthcare-uniforms' },
-    { slug: 'industrial-electrostatic-protection' },
-    { slug: 'safety-standards-saudi-manufacturing' },
-    { slug: 'workwear-innovations-saudi-factories' },
-    { slug: 'security-uniform-psychology' },
-    { slug: 'advanced-fabrics-security-uniforms' },
-    { slug: 'corporate-security-branding' },
-    { slug: 'fabrics-student-uniforms' },
-    { slug: 'uniforms-modern-education' },
-    { slug: 'fabrics-professional-attire' },
-    { slug: 'future-aviation-uniforms-gcc' },
-    { slug: 'material-innovations-aviation-attire' },
-    { slug: 'security-uniform-safety-standards' },
-    // Add the missing blog slugs that caused the errors
-    { slug: 'evolving-trends-gulf-airline-uniforms' },
-    { slug: 'uniforms-airline-brand-identity' },
-    { slug: 'islamic-compliant-aviation-attire' },
-    { slug: 'vision-2030-reshaping-dress-codes' },
-    { slug: 'sustainable-uniform-solutions' },
-    { slug: 'advanced-fabrics-healthcare-uniforms' },
-    { slug: 'cultural-identity-saudi-school-uniforms' },
-    { slug: 'industrial-safety-compliance-guide' },
-    // Placeholder posts
-    { slug: 'placeholder1' },
-    { slug: 'placeholder2' },
-    { slug: 'placeholder-corporate1' },
-    { slug: 'placeholder-corporate2' },
-    { slug: 'placeholder-aviation1' },
-    { slug: 'placeholder-aviation2' },
   ];
 }
 

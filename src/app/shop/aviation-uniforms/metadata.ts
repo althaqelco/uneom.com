@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'en',
     images: [
       {
-        url: '/images/industries/aviation.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Professional Aviation Uniforms Collection by UNEOM',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Aviation Uniforms & Airline Staff Attire | UNEOM Saudi Arabia',
-    description: 'Premium aviation uniforms designed for Saudi airlines. Professional appearance meets comfort with Islamic principles consideration.',
-    images: ['/images/industries/aviation.jpg'],
+        url: '/images/industries/industries/aviation.jpg'],
   },
   robots: {
     index: true,

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- الصفحة الرئيسية -->
+  <url>
+    <loc>https://uneom.com/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/hero/uneom-hero-banner.jpg</image:loc>
+      <image:title>يونيوم - الرائدة في تصنيع الأزياء المهنية في السعودية</image:title>
+      <image:caption>شركة يونيوم الرائدة في تصنيع الأزياء المهنية والزي الموحد</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/company/uneom-manufacturing.jpg</image:loc>
+      <image:title>مصنع يونيوم للأزياء المهنية</image:title>
+      <image:caption>مصنع متطور لتصنيع الأزياء المهنية بأعلى معايير الجودة</image:caption>
+    </image:image>
+  </url>
+
+  <!-- صفحة المتجر الرئيسية -->
+  <url>
+    <loc>https://uneom.com/shop/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/shop/shop-hero.jpg</image:loc>
+      <image:title>متجر الأزياء المهنية - يونيوم</image:title>
+      <image:caption>أكبر تشكيلة أزياء مهنية في السعودية</image:caption>
+    </image:image>
+  </url>
+
+  <!-- الأزياء الطبية -->
+  <url>
+    <loc>https://uneom.com/shop/medical-scrubs/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/medical/premium-medical-scrubs.jpg</image:loc>
+      <image:title>سكرابز طبية فاخرة</image:title>
+      <image:caption>سكرابز طبية عالية الجودة للمستشفيات والعيادات</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/medical/antimicrobial-scrubs.jpg</image:loc>
+      <image:title>سكرابز مضادة للبكتيريا</image:title>
+      <image:caption>سكرابز طبية مضادة للبكتيريا والميكروبات</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/medical/nursing-uniforms.jpg</image:loc>
+      <image:title>أزياء التمريض</image:title>
+      <image:caption>أزياء مريحة وعملية للممرضات والممرضين</image:caption>
+    </image:image>
+  </url>
+
+  <!-- أزياء الطيران -->
+  <url>
+    <loc>https://uneom.com/shop/aviation-uniforms/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/aviation/airline-crew-uniform.jpg</image:loc>
+      <image:title>أزياء طاقم الطيران</image:title>
+      <image:caption>أزياء أنيقة ومهنية لطاقم الطيران</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/aviation/pilot-uniform.jpg</image:loc>
+      <image:title>أزياء الطيارين</image:title>
+      <image:caption>أزياء رسمية للطيارين بأعلى معايير الجودة</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/aviation/flight-attendant-dress.jpg</image:loc>
+      <image:title>فساتين مضيفات الطيران</image:title>
+      <image:caption>فساتين أنيقة ومريحة لمضيفات الطيران</image:caption>
+    </image:image>
+  </url>
+
+  <!-- أزياء الضيافة -->
+  <url>
+    <loc>https://uneom.com/shop/hospitality-attire/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/hospitality/luxury-hotel-uniform.jpg</image:loc>
+      <image:title>أزياء الفنادق الفاخرة</image:title>
+      <image:caption>أزياء راقية لموظفي الفنادق والمنتجعات</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/hospitality/restaurant-uniform.jpg</image:loc>
+      <image:title>أزياء المطاعم</image:title>
+      <image:caption>أزياء عملية وأنيقة لموظفي المطاعم</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/hospitality/chef-uniform.jpg</image:loc>
+      <image:title>أزياء الطهاة</image:title>
+      <image:caption>أزياء مهنية للطهاة والعاملين في المطابخ</image:caption>
+    </image:image>
+  </url>
+
+  <!-- الأزياء الصناعية -->
+  <url>
+    <loc>https://uneom.com/shop/industrial-uniforms/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/industrial/industrial-coverall.jpg</image:loc>
+      <image:title>بدلة العمل الصناعية</image:title>
+      <image:caption>بدلة عمل متينة للعمال والفنيين</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/industrial/safety-vest.jpg</image:loc>
+      <image:title>سترة الأمان</image:title>
+      <image:caption>سترة أمان عاكسة للعمل في المواقع الخطرة</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/industrial/welding-uniform.jpg</image:loc>
+      <image:title>أزياء اللحام</image:title>
+      <image:caption>أزياء مقاومة للحرارة لعمال اللحام</image:caption>
+    </image:image>
+  </url>
+
+  <!-- الأزياء التعليمية -->
+  <url>
+    <loc>https://uneom.com/shop/education-uniforms/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/education/school-uniform-boys.jpg</image:loc>
+      <image:title>الزي المدرسي للبنين</image:title>
+      <image:caption>زي مدرسي مريح وأنيق للطلاب</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/education/school-uniform-girls.jpg</image:loc>
+      <image:title>الزي المدرسي للبنات</image:title>
+      <image:caption>زي مدرسي محتشم ومريح للطالبات</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/education/university-attire.jpg</image:loc>
+      <image:title>الأزياء الجامعية</image:title>
+      <image:caption>أزياء أكاديمية لأعضاء هيئة التدريس والموظفين</image:caption>
+    </image:image>
+  </url>
+
+  <!-- أزياء الأمن -->
+  <url>
+    <loc>https://uneom.com/shop/security-uniforms/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/security/security-officer-uniform.jpg</image:loc>
+      <image:title>أزياء ضباط الأمن</image:title>
+      <image:caption>أزياء رسمية لضباط الأمن والحراسة</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/security/tactical-uniform.jpg</image:loc>
+      <image:title>الأزياء التكتيكية</image:title>
+      <image:caption>أزياء تكتيكية للعمليات الأمنية الخاصة</image:caption>
+    </image:image>
+  </url>
+
+  <!-- الأزياء الشركات -->
+  <url>
+    <loc>https://uneom.com/shop/corporate/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/corporate/executive-suit.jpg</image:loc>
+      <image:title>البدلة التنفيذية</image:title>
+      <image:caption>بدلة رسمية للمدراء والتنفيذيين</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/products/corporate/business-shirt.jpg</image:loc>
+      <image:title>قميص العمل</image:title>
+      <image:caption>قميص أنيق للعمل في الشركات</image:caption>
+    </image:image>
+  </url>
+
+  <!-- صفحات الصناعات -->
+  <url>
+    <loc>https://uneom.com/industries/healthcare/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/industries/healthcare/healthcare-hero.jpg</image:loc>
+      <image:title>الأزياء الطبية والصحية</image:title>
+      <image:caption>حلول شاملة للأزياء الطبية في القطاع الصحي</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://uneom.com/industries/aviation/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/industries/aviation/aviation-hero.jpg</image:loc>
+      <image:title>أزياء قطاع الطيران</image:title>
+      <image:caption>أزياء مهنية لجميع العاملين في قطاع الطيران</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://uneom.com/industries/hospitality/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/industries/hospitality/hospitality-hero.jpg</image:loc>
+      <image:title>أزياء قطاع الضيافة</image:title>
+      <image:caption>أزياء راقية لقطاع الفنادق والمطاعم</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://uneom.com/industries/education/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/industries/education/education-hero.jpg</image:loc>
+      <image:title>أزياء القطاع التعليمي</image:title>
+      <image:caption>حلول الأزياء للمدارس والجامعات</image:caption>
+    </image:image>
+  </url>
+
+  <!-- صفحات الخدمات -->
+  <url>
+    <loc>https://uneom.com/services/custom-design/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/services/custom-design.jpg</image:loc>
+      <image:title>خدمة التصميم المخصص</image:title>
+      <image:caption>تصميم أزياء مهنية مخصصة حسب احتياجات العميل</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://uneom.com/services/manufacturing/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/services/manufacturing.jpg</image:loc>
+      <image:title>خدمات التصنيع</image:title>
+      <image:caption>تصنيع الأزياء المهنية بأحدث التقنيات</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://uneom.com/services/quality-assurance/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/services/quality-assurance.jpg</image:loc>
+      <image:title>ضمان الجودة</image:title>
+      <image:caption>فحص وضمان جودة جميع المنتجات</image:caption>
+    </image:image>
+  </url>
+
+  <!-- صفحات المدونة -->
+  <url>
+    <loc>https://uneom.com/blog/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/blog/blog-hero.jpg</image:loc>
+      <image:title>مدونة يونيوم</image:title>
+      <image:caption>آخر الأخبار والمقالات في عالم الأزياء المهنية</image:caption>
+    </image:image>
+  </url>
+
+  <!-- مقالات المدونة -->
+  <url>
+    <loc>https://uneom.com/blog/sustainable-uniforms-2024-trends/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/blog/sustainable-uniforms.jpg</image:loc>
+      <image:title>اتجاهات الأزياء المستدامة 2024</image:title>
+      <image:caption>أحدث اتجاهات الأزياء المهنية المستدامة</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://uneom.com/blog/school-uniforms-academic-performance/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/blog/school-uniforms-performance.jpg</image:loc>
+      <image:title>تأثير الزي المدرسي على الأداء الأكاديمي</image:title>
+      <image:caption>دراسة حول تأثير الزي المدرسي على تحصيل الطلاب</image:caption>
+    </image:image>
+  </url>
+
+  <!-- صفحات المواقع -->
+  <url>
+    <loc>https://uneom.com/locations/riyadh/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/locations/riyadh-office.jpg</image:loc>
+      <image:title>مكتب يونيوم في الرياض</image:title>
+      <image:caption>مكتب ومعرض يونيوم في العاصمة الرياض</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://uneom.com/locations/jeddah/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/locations/jeddah-office.jpg</image:loc>
+      <image:title>مكتب يونيوم في جدة</image:title>
+      <image:caption>فرع يونيوم في مدينة جدة</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://uneom.com/locations/dammam/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/locations/dammam-office.jpg</image:loc>
+      <image:title>مكتب يونيوم في الدمام</image:title>
+      <image:caption>فرع يونيوم في المنطقة الشرقية - الدمام</image:caption>
+    </image:image>
+  </url>
+
+  <!-- صفحة الاتصال -->
+  <url>
+    <loc>https://uneom.com/contact/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/contact/contact-hero.jpg</image:loc>
+      <image:title>تواصل مع يونيوم</image:title>
+      <image:caption>تواصل مع فريق خدمة العملاء في يونيوم</image:caption>
+    </image:image>
+  </url>
+
+  <!-- صفحة عن الشركة -->
+  <url>
+    <loc>https://uneom.com/about/</loc>
+    <image:image>
+      <image:loc>https://uneom.com/images/about/company-history.jpg</image:loc>
+      <image:title>تاريخ شركة يونيوم</image:title>
+      <image:caption>رحلة يونيوم في عالم تصنيع الأزياء المهنية</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://uneom.com/images/about/team-photo.jpg</image:loc>
+      <image:title>فريق عمل يونيوم</image:title>
+      <image:caption>فريق محترف من الخبراء في تصنيع الأزياء</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

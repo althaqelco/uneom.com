@@ -28,45 +28,16 @@ export default function ServicesPage() {
       name: 'Uniform Program Management',
       description: 'End-to-end management of your organization\'s entire uniform program, from design to distribution and inventory tracking.',
       image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
-      href: '/services/program-management'
-    },
-    {
-      id: 'custom-design',
-      name: 'Custom Design & Branding',
-      description: 'Professional uniform design services that incorporate your brand identity and meet the specific requirements of your industry.',
-      image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
-      href: '/services/custom-design'
-    },
-    {
-      id: 'bulk-ordering',
-      name: 'Bulk Ordering',
-      description: 'Streamlined procurement process for large-scale uniform orders with optimized pricing, quality control, and delivery logistics.',
-      image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
-      href: '/services/bulk-ordering'
+      href: '/services/uniform-policies' // Corrected to point to the service page
     }
   ];
-  
-  const additionalServices: ServiceInfo[] = [
-    {
-      id: 'measurement-services',
-      name: 'Measurement Services',
-      description: 'On-site professional measurement services to ensure perfect fit for all employees across your organization.',
-      image: '/images/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg',
-      href: '/services/measurement-services'
-    },
-    {
-      id: 'uniform-policies',
-      name: 'Corporate Uniform Policies',
-      description: 'Expert consulting to develop comprehensive uniform policies that align with your organizational goals and industry standards.',
-      image: '/images/product-placeholder.jpg',
-      href: '/services/uniform-policies'
-    }
-  ];
-  
+
+  const additionalServices: ServiceInfo[] = []; // Correctly placed definition
+
   return (
     <>
       {/* Enhanced SEO for Google May 2025 Standards */}
-      <EnhancedSEO2025 
+      <EnhancedSEO2025
         title="UNEOM - Professional Uniforms Saudi Arabia"
         description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
         keywords={["uniform services","custom uniform design","uniform manufacturing"]}

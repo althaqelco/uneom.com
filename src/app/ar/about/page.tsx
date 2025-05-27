@@ -127,7 +127,7 @@ export default function AboutPageArabic() {
       id: 'integrity',
       title: 'النزاهة',
       description: 'نتعامل مع عملائنا وموظفينا وشركائنا بأعلى مستويات الصدق والأخلاق والاحترام.',
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
     },
     {
       id: 'culture',

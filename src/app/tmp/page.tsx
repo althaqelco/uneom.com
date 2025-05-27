@@ -73,24 +73,9 @@ const services = [
     title: "UNEOM - Professional Uniforms",
     description: 'تصميمات مبتكرة تعكس هوية علامتك التجارية وتلبي المتطلبات العملية لموظفيك.',
     icon: '/images/healthcare/medical_hijab_uniform.jpg',
-    link: '/ar/services/custom-design',
-  },
-  {
-    title: 'إنتاج وتوريد الزي الموحد',
-    description: 'خدمات إنتاج عالية الجودة بأسعار تنافسية، مع مراعاة الاستدامة والراحة.',
-    icon: '/images/product-placeholder.jpg',
-    link: '/ar/services/bulk-ordering',
-  },
-  {
-    title: 'إدارة برامج الزي الموحد',
-    description: 'حلول متكاملة لإدارة برنامج الزي الموحد الخاص بمؤسستك من البداية إلى النهاية.',
-    icon: '/images/healthcare/medical_hijab_uniform.jpg',
-    link: '/ar/services/program-management',
-  },
-  {
-    title: 'خدمات القياس',
-    description: 'خدمات قياس احترافية تضمن ملاءمة مثالية لجميع موظفيك مهما اختلفت أحجامهم.',
-    icon: '/images/healthcare/medical_hijab_uniform.jpg',
+    link: '/ar/images/services/product-placeholder.jpg',
+    link: '/ar/images/services/healthcare/medical_hijab_uniform.jpg',
+    link: '/ar/images/services/healthcare/medical_hijab_uniform.jpg',
     link: '/ar/services/measurement-services',
   },
 ];

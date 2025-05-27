@@ -32,53 +32,23 @@ export default function WorkplaceUniformsPage() {
       rating: 4.9,
       reviews: 87,
       description: 'Premium tailored suits designed for corporate executives who require sophistication, comfort, and a distinguished professional appearance.',
-      href: '/shop/workplace-uniforms/executive-suits'
-    },
-    {
-      id: 'corporate-shirts',
-      name: 'Corporate Premium Shirts',
-      price: 'From SAR 249',
-      image: '/images/products/corporate-shirts-blouses.jpg',
+      href: '/images/products/corporate-shirts-blouses.jpg',
       rating: 4.7,
       reviews: 124,
       description: 'High-quality corporate shirts in a variety of colors, featuring moisture-wicking fabric and easy-care properties for professional daily wear.',
-      href: '/shop/workplace-uniforms/corporate-shirts'
-    },
-    {
-      id: 'office-blazers',
-      name: 'Professional Office Blazers',
-      price: 'From SAR 899',
-      image: '/images/products/corporate-polo-shirts.jpg',
+      href: '/images/products/corporate-polo-shirts.jpg',
       rating: 4.6,
       reviews: 58,
       description: 'Elegant yet comfortable blazers for business professionals, available in various styles suitable for Saudi corporate environments.',
-      href: '/shop/workplace-uniforms/office-blazers'
-    },
-    {
-      id: 'executive-abayas',
-      name: 'Executive Modest Abayas',
-      price: 'From SAR 799',
-      image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
+      href: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
       rating: 4.8,
       reviews: 92,
       description: 'Professional abayas designed specifically for corporate settings, combining traditional modesty with contemporary business aesthetics.',
-      href: '/shop/workplace-uniforms/executive-abayas'
-    },
-    {
-      id: 'formal-trousers',
-      name: 'Corporate Formal Trousers',
-      price: 'From SAR 399',
-      image: '/images/avatar-placeholder.jpg',
+      href: '/images/avatar-placeholder.jpg',
       rating: 4.5,
       reviews: 77,
       description: 'Durable formal trousers with comfortable stretch fabric, designed for long days in the office environment.',
-      href: '/shop/workplace-uniforms/formal-trousers'
-    },
-    {
-      id: 'corporate-skirts',
-      name: 'Professional Modest Skirts',
-      price: 'From SAR 349',
-      image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
+      href: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
       rating: 4.6,
       reviews: 64,
       description: 'Professional length skirts designed for corporate settings, maintaining modesty while offering a polished business appearance.',

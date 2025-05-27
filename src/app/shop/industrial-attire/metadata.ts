@@ -11,18 +11,7 @@ export const metadata: Metadata = {
     locale: 'en',
     images: [
       {
-        url: '/images/shop/industrial/industrial-category.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'UNEOM Industrial Uniforms - Premium Safety Workwear',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Industrial Uniforms | UNEOM Saudi Arabia',
-    description: 'Premium safety workwear for Saudi industrial sectors. Explore UNEOM\'s high-quality protective uniforms for factory and construction environments.',
-    images: ['/images/shop/industrial/industrial-category.jpg'],
+        url: '/images/shop/industrial/industrial-category.jpg'],
   },
   robots: {
     index: true,

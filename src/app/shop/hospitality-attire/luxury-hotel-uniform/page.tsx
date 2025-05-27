@@ -123,12 +123,7 @@ export default function LuxuryHotelUniformPage() {
       { 
         name: "Specialty Fabric Upgrades", 
         description: "Ultra-premium fabric options including performance wool blends - SAR 120 per uniform",
-        image: "/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg"
-      },
-      { 
-        name: "Department-Specific Design Elements", 
-        description: "Customized design elements for different hotel departments - SAR 45 per uniform",
-        image: "/images/group-of-chefs-standing-with-arms-crossed-in-kitch-2023-11-27-05-01-36-utc.jpg"
+        image: "/images/services/group-of-chefs-standing-with-arms-crossed-in-kitch-2023-11-27-05-01-36-utc.jpg"
       }
     ],
     relatedProducts: [
@@ -137,19 +132,9 @@ export default function LuxuryHotelUniformPage() {
         name: 'Executive Hospitality Suit',
         image: '/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg',
         price: 'From SAR 499',
-        href: '/shop/hospitality-attire/executive-hospitality-suit'
-      },
-      {
-        id: 'premium-chef-uniform',
-        name: 'Premium Chef Uniform Collection',
-        image: '/images/hospitality/hospitality_uniform_chef.jpg',
+        href: '/images/hospitality/hospitality_uniform_chef.jpg',
         price: 'From SAR 289',
-        href: '/shop/hospitality-attire/premium-chef-uniform'
-      },
-      {
-        id: 'concierge-uniform-set',
-        name: 'Luxury Concierge Uniform Set',
-        image: '/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg',
+        href: '/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg',
         price: 'From SAR 399',
         href: '/shop/hospitality-attire/concierge-uniform-set'
       }

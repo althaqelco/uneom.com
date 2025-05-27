@@ -1,143 +1,112 @@
-# Robots.txt for UNEOM - Optimized for Google May 2025 Standards
-# https://uneom.com/robots.txt
-# Last Updated: May 2025
+# Robots.txt for UNEOM - Professional Uniform Manufacturing
+# Updated for Google May 2025 Standards
+# https://uneom.com
 
-# Default rule for all crawlers
 User-agent: *
 Allow: /
-Crawl-delay: 1
 
-# Google Search Engine - Highest Priority
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0.5
-Request-rate: 1/1s
-
-User-agent: Googlebot-Image
-Allow: /images/
-Allow: /public/images/
-Crawl-delay: 1
-
-User-agent: Googlebot-Video
-Allow: /videos/
-Crawl-delay: 2
-
-User-agent: Googlebot-News
+# High Priority Pages - Allow All Crawlers
+Allow: /shop/
+Allow: /ar/shop/
+Allow: /services/
+Allow: /ar/services/
+Allow: /industries/
+Allow: /ar/industries/
 Allow: /blog/
 Allow: /ar/blog/
+Allow: /contact
+Allow: /ar/contact
+Allow: /quote
+Allow: /ar/quote
+
+# Static Assets
+Allow: /images/
+Allow: /icons/
+Allow: /_next/static/
+Allow: /favicon.ico
+
+# Block Admin and Development Pages
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /tmp/
+Disallow: /scripts/
+Disallow: /disabled/
+Disallow: /fixed-files/
+Disallow: /pages_backup/
+Disallow: /pages_temp/
+Disallow: /tmp_branch_files/
+Disallow: /tmp_edits/
+
+# Block Search and Filter Parameters
+Disallow: /*?search=*
+Disallow: /*?filter=*
+Disallow: /*?sort=*
+Disallow: /*?page=*
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+Disallow: /*?fbclid=*
+Disallow: /*?gclid=*
+
+# Block Duplicate Content
+Disallow: /*?lang=*
+Disallow: /*/amp/
+Disallow: /print/
+
+# Block Test Pages
+Disallow: /test*
+Disallow: /demo*
+Disallow: /staging*
+
+# Special Crawlers Configuration
+
+# Google Bot - Full Access
+User-agent: Googlebot
+Allow: /
 Crawl-delay: 1
 
-# Microsoft Bing
+# Bing Bot - Full Access
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
-Request-rate: 1/2s
-
-User-agent: BingPreview
-Allow: /
 Crawl-delay: 2
 
-# Yahoo Search
-User-agent: Slurp
-Allow: /
-Crawl-delay: 1
-
-# DuckDuckGo
-User-agent: DuckDuckBot
-Allow: /
-Crawl-delay: 1
-
-# Baidu (Chinese market)
-User-agent: Baiduspider
-Allow: /
-Crawl-delay: 2
-
-# Yandex (Russian market)
+# Yandex Bot - Full Access
 User-agent: YandexBot
 Allow: /
 Crawl-delay: 2
 
-# Social Media Crawlers - Allow for sharing
+# Facebook Bot - Social Media Content
 User-agent: facebookexternalhit
 Allow: /
-Crawl-delay: 1
+Allow: /images/
+Allow: /blog/
+Allow: /ar/blog/
 
+# Twitter Bot - Social Media Content
 User-agent: Twitterbot
 Allow: /
-Crawl-delay: 1
+Allow: /images/
+Allow: /blog/
+Allow: /ar/blog/
 
+# LinkedIn Bot - Professional Content
 User-agent: LinkedInBot
 Allow: /
-Crawl-delay: 1
+Allow: /images/
+Allow: /blog/
+Allow: /ar/blog/
+Allow: /industries/
+Allow: /ar/industries/
 
+# WhatsApp Bot - Messaging Preview
 User-agent: WhatsApp
 Allow: /
-Crawl-delay: 1
+Allow: /images/
+Allow: /shop/
+Allow: /ar/shop/
 
-User-agent: TelegramBot
-Allow: /
-Crawl-delay: 1
-
-User-agent: SkypeUriPreview
-Allow: /
-Crawl-delay: 2
-
-# Pinterest
-User-agent: Pinterest
-Allow: /
-Crawl-delay: 2
-
-# Block AI Training Crawlers (May 2025 Requirement)
-User-agent: GPTBot
-Disallow: /
-
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Claude-Web
-Disallow: /
-
-User-agent: PerplexityBot
-Disallow: /
-
-User-agent: YouBot
-Disallow: /
-
-User-agent: Meta-ExternalAgent
-Disallow: /
-
-User-agent: Meta-ExternalFetcher
-Disallow: /
-
-User-agent: FacebookBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: Bard
-Disallow: /
-
-User-agent: OpenAI-SearchBot
-Disallow: /
-
-User-agent: AI2Bot
-Disallow: /
-
-User-agent: Applebot-Extended
-Disallow: /
-
-# Block aggressive scrapers and spam bots
+# Block Aggressive Crawlers
 User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
 Disallow: /
 
 User-agent: MJ12bot
@@ -146,121 +115,19 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-User-agent: BLEXBot
-Disallow: /
+User-agent: SemrushBot
+Crawl-delay: 10
 
-User-agent: DataForSeoBot
-Disallow: /
+User-agent: MajesticSEO
+Crawl-delay: 10
 
-User-agent: PetalBot
-Disallow: /
-
-User-agent: MegaIndex
-Disallow: /
-
-User-agent: SeznamBot
-Disallow: /
-
-User-agent: Mail.RU_Bot
-Disallow: /
-
-# Block development and system files
-Disallow: /_next/
-Disallow: /api/
-Disallow: /admin/
-Disallow: /.well-known/
-Disallow: /css/
-Disallow: /js/
-Disallow: /scripts/
-Disallow: /tmp_*
-Disallow: /disabled/
-Disallow: /docs/
-Disallow: /fixed-files/
-Disallow: /netlify-forms-pr/
-Disallow: /pages_backup/
-Disallow: /pages_temp/
-Disallow: /src/
-Disallow: /lib/
-Disallow: /components/
-Disallow: /node_modules/
-Disallow: /.git/
-Disallow: /.next/
-Disallow: /out/
-
-# Block specific file types that shouldn't be indexed
-Disallow: /*.json$
-Disallow: /*.log$
-Disallow: /*.txt$
-Disallow: /*.md$
-Disallow: /*.sh$
-Disallow: /*.js$
-Disallow: /*.css$
-Disallow: /*.map$
-Disallow: /*.ts$
-Disallow: /*.tsx$
-Disallow: /*.jsx$
-Disallow: /*.scss$
-Disallow: /*.sass$
-Disallow: /*.less$
-
-# Block query parameters that create duplicate content
-Disallow: /*?*utm_*
-Disallow: /*?*ref=*
-Disallow: /*?*source=*
-Disallow: /*?*campaign=*
-Disallow: /*?*fbclid=*
-Disallow: /*?*gclid=*
-Disallow: /*?*sort=*
-Disallow: /*?*filter=*
-
-# Allow important files and directories
-Allow: /manifest.json
-Allow: /sitemap.xml
-Allow: /sitemap-*.xml
-Allow: /favicon.ico
-Allow: /robots.txt
-Allow: /images/
-Allow: /public/images/
-Allow: /*.webp$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.png$
-Allow: /*.svg$
-Allow: /*.gif$
-Allow: /*.ico$
-Allow: /*.pdf$
-
-# Allow structured data files
-Allow: /*schema.json
-Allow: /*structured-data.json
-
-# Sitemap locations (Google May 2025 Standard)
+# Sitemap Locations
 Sitemap: https://uneom.com/sitemap.xml
-Sitemap: https://uneom.com/sitemap-en.xml
-Sitemap: https://uneom.com/sitemap-ar.xml
-Sitemap: https://uneom.com/sitemap-products.xml
-Sitemap: https://uneom.com/sitemap-blog.xml
-Sitemap: https://uneom.com/sitemap-locations.xml
+Sitemap: https://uneom.com/sitemap-images.xml
+Sitemap: https://uneom.com/sitemap-news.xml
 
-# Host directive (preferred domain)
+# Host Declaration for Google
 Host: https://uneom.com
 
-# Clean-param directive for duplicate content prevention
-Clean-param: utm_source
-Clean-param: utm_medium
-Clean-param: utm_campaign
-Clean-param: utm_term
-Clean-param: utm_content
-Clean-param: fbclid
-Clean-param: gclid
-Clean-param: ref
-Clean-param: source
-Clean-param: campaign
-
-# Request-rate for major search engines (May 2025 optimization)
-Request-rate: 1/1s 0800-2000
-Request-rate: 1/2s 2000-0800
-
-# Crawl-delay optimization for different times
-# Peak hours (8 AM - 8 PM Saudi time): Slower crawling
-# Off-peak hours (8 PM - 8 AM Saudi time): Faster crawling
+# Clean URLs - No trailing slashes preference
+# This helps with canonicalization

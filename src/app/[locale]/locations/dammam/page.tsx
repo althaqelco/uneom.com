@@ -122,7 +122,7 @@ const locationData = {
         en: 'FR-rated workwear meeting international safety standards for petrochemical facilities, refineries, and offshore platforms across the Eastern Province.',
         ar: 'ملابس عمل مصنفة مقاومة للحريق تلبي معايير السلامة الدولية للمنشآت البتروكيماوية والمصافي والمنصات البحرية في جميع أنحاء المنطقة الشرقية.'
       },
-      icon: '/icons/oil-gas-workwear.svg'
+      icon: '/images/icons/oil-gas-workwear.svg'
     },
     {
       title: {
@@ -133,7 +133,7 @@ const locationData = {
         en: 'Durable, functional workwear for manufacturing environments with ergonomic design features that enhance mobility and comfort during long shifts.',
         ar: 'ملابس عمل متينة وعملية لبيئات التصنيع مع ميزات تصميم مريحة تعزز الحركة والراحة أثناء المناوبات الطويلة.'
       },
-      icon: '/icons/manufacturing-uniforms.svg'
+      icon: '/images/icons/manufacturing-uniforms.svg'
     },
     {
       title: {
@@ -144,7 +144,7 @@ const locationData = {
         en: 'Specialized workwear for maritime professionals operating in Dammam\'s port facilities, featuring water-resistant fabrics and high-visibility elements.',
         ar: 'ملابس عمل متخصصة للمحترفين البحريين العاملين في مرافق ميناء الدمام، تتميز بأقمشة مقاومة للماء وعناصر عالية الرؤية.'
       },
-      icon: '/icons/marine-attire.svg'
+      icon: '/images/icons/marine-attire.svg'
     },
     {
       title: {
@@ -155,7 +155,7 @@ const locationData = {
         en: 'Professional office attire designed for energy sector headquarters that meets safety requirements for facility visits while maintaining executive appearance.',
         ar: 'ملابس مكتبية احترافية مصممة لمقرات قطاع الطاقة تلبي متطلبات السلامة لزيارات المنشآت مع الحفاظ على المظهر التنفيذي.'
       },
-      icon: '/icons/safety-corporate.svg'
+      icon: '/images/icons/safety-corporate.svg'
     }
   ],
   

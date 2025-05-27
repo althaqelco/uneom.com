@@ -32,58 +32,11 @@ export default function CorporateWorkwearPage() {
       description: 'Premium tailored blazer for corporate executives and management personnel, featuring sophisticated design and premium fabric.',
       price: 'From SAR 359',
       image: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/shop/corporate-workwear/executive-blazer',
-      features: ['Premium fabric', 'Tailored fit', 'Professional look', 'Wrinkle-resistant'],
-      colors: ['Navy', 'Charcoal', 'Black'],
-      isBestseller: true
-    },
-    {
-      id: 'corporate-shirt',
-      name: 'Corporate Shirt',
-      description: 'High-quality business shirt designed for professional office environments, featuring easy-care fabric and modern fit.',
-      price: 'From SAR 149',
-      image: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/shop/corporate-workwear/corporate-shirt',
-      features: ['Easy care', 'Moisture-wicking', 'Comfort stretch', 'Professional look'],
-      colors: ['White', 'Light Blue', 'Pink', 'Light Grey'],
-      isNew: true
-    },
-    {
-      id: 'office-trouser',
-      name: 'Office Trousers',
-      description: 'Professional trousers designed for daily office wear with comfortable fit and durable fabric for extended use.',
-      price: 'From SAR 179',
-      image: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/shop/corporate-workwear/office-trouser',
-      features: ['Stain-resistant', 'Comfort waistband', 'Multiple pockets', 'Classic fit'],
-      colors: ['Navy', 'Charcoal', 'Black', 'Khaki']
-    },
-    {
-      id: 'reception-uniform',
-      name: 'Reception Uniform Set',
-      description: 'Complete front desk uniform set designed for receptionist and customer-facing staff in corporate environments.',
-      price: 'From SAR 299',
-      image: '/images/avatar-placeholder.jpg',
-      href: '/shop/corporate-workwear/reception-uniform',
-      features: ['Complete set', 'Professional appearance', 'Comfort design', 'Brand customization'],
-      colors: ['Multiple options available']
-    },
-    {
-      id: 'corporate-skirt',
-      name: 'Corporate Skirt',
-      description: 'Professional skirt designed for women in corporate environments, featuring comfortable fit and elegant appearance.',
-      price: 'From SAR 159',
-      image: '/images/product-placeholder.jpg',
-      href: '/shop/corporate-workwear/corporate-skirt',
-      features: ['Tailored fit', 'High-quality fabric', 'Easy care', 'Professional look'],
-      colors: ['Navy', 'Black', 'Charcoal', 'Light Grey']
-    },
-    {
-      id: 'business-formal-set',
-      name: 'Business Formal Set',
-      description: 'Complete business formal attire set for professional environments that demand a higher level of presentation.',
-      price: 'From SAR 499',
-      image: '/images/healthcare/medical_hijab_uniform.jpg',
+      href: '/images/healthcare/medical_hijab_uniform.jpg',
+      href: '/images/healthcare/medical_hijab_uniform.jpg',
+      href: '/images/avatar-placeholder.jpg',
+      href: '/images/product-placeholder.jpg',
+      href: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/corporate-workwear/business-formal-set',
       features: ['Premium materials', 'Coordinated set', 'Professional design', 'Custom sizing'],
       colors: ['Navy', 'Black', 'Charcoal']

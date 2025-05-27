@@ -53,7 +53,7 @@
 
 #### الأيقونات المطلوبة:
 ```
-/public/icons/
+/public/images/icons/
 ├── saudi-expertise.svg ✅ (مطلوب)
 ├── brand-aligned.svg ✅ (مطلوب)
 ├── compliance-shield.svg ✅ (مطلوب)
@@ -75,9 +75,9 @@
 **الحالة:** تم تحديد 100+ صورة مفقودة في السجلات
 
 #### الصور المفقودة الأساسية:
-- `/images/sustainable-trends.jpg` ❌
-- `/images/school-uniform-post-1.jpg` ❌
-- `/images/sustainable-uniform.jpg` ❌
+- `/images/blog/sustainable-trends.jpg` ❌
+- `/images/blog/school-uniform-post-1.jpg` ❌
+- `/images/blog/sustainable-uniform.jpg` ❌
 - `/images/service-overview.jpg` ❌
 - `/images/fabric-cotton-blends.webp` ❌
 

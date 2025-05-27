@@ -30,89 +30,17 @@ const IndustryGrid: React.FC<IndustryGridProps> = ({ locale = 'en', items }) => 
           title: "Healthcare Uniforms",
           description: "Medical scrubs and healthcare attire with antimicrobial fabrics",
           image: "/images/categories/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg",
-          link: "/industries/healthcare"
-        },
-        {
-          id: "aviation",
-          title: "Aviation Uniforms",
-          description: "Professional pilot and flight attendant uniforms for airlines",
-          image: "/images/categories/two-beautiful-stewardesses-and-an-airman-staring-a-2024-10-21-02-06-10-utc.jpg",
-          link: "/industries/aviation"
-        },
-        {
-          id: "hospitality",
-          title: "Hospitality & Culinary Uniforms",
-          description: "Elegant chef, hotel staff and restaurant uniforms for all positions",
-          image: "/images/categories/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg",
-          link: "/industries/hospitality"
-        },
-        {
-          id: "corporate",
-          title: "Corporate & Delivery Uniforms",
-          description: "Professional corporate workwear and delivery service attire",
-          image: "/images/categories/a-delivery-person-dressed-in-a-red-polo-and-cap-shows-approval-with-a-thumbs-up-while--SBI-350024443.jpg",
-          link: "/industries/corporate"
-        },
-        {
-          id: "education",
-          title: "Education Uniforms",
-          description: "School uniforms and staff attire for educational institutions",
-          image: "/images/categories/schoolgirl-with-blood-type-sticker-at-school-ukrainian-war-concept-SBI-351317058.jpg",
-          link: "/industries/education"
-        },
-        {
-          id: "manufacturing",
-          title: "Manufacturing & Industrial Uniforms",
-          description: "Durable industrial uniforms with safety features",
-          image: "/images/categories/ Industrial_Manufacturing_Uniforms .png",
-          link: "/industries/manufacturing"
-        }
-      ]
-    },
-    ar: {
-      title: "حلول زي موحد متخصصة لكل صناعة",
-      subtitle: "ملابس عمل مصممة خصيصًا لتلبية الاحتياجات الفريدة لقطاعك",
-      industries: [
-        {
-          id: "healthcare",
-          title: "أزياء الرعاية الصحية",
-          description: "ملابس طبية وأزياء رعاية صحية بأقمشة مضادة للميكروبات",
-          image: "/images/product-placeholder.jpg",
-          link: "/ar/industries/healthcare"
-        },
-        {
-          id: "aviation",
-          title: "أزياء الطيران",
-          description: "أزياء مهنية للطيارين ومضيفي الطيران للخطوط الجوية",
-          image: "/images/aviation/aviation_uniform_main.jpg",
-          link: "/ar/industries/aviation"
-        },
-        {
-          id: "hospitality",
-          title: "أزياء الضيافة",
-          description: "أزياء أنيقة لموظفي الفنادق والمطاعم لجميع المناصب",
-          image: "/images/hospitality/hospitality_uniform_formal.jpg",
-          link: "/ar/industries/hospitality"
-        },
-        {
-          id: "corporate",
-          title: "أزياء الشركات",
-          description: "ملابس عمل احترافية للشركات في بيئات المكاتب",
-          image: "/images/product-placeholder.jpg",
-          link: "/ar/industries/corporate"
-        },
-        {
-          id: "education",
-          title: "أزياء التعليم",
-          description: "زي مدرسي وملابس للموظفين للمؤسسات التعليمية",
-          image: "/images/product-placeholder.jpg",
-          link: "/ar/industries/education"
-        },
-        {
-          id: "manufacturing",
-          title: "أزياء التصنيع",
-          description: "أزياء صناعية متينة مع ميزات السلامة",
-          image: "/images/ Industrial_Manufacturing_Uniforms .png",
+          link: "/images/industries/categories/two-beautiful-stewardesses-and-an-airman-staring-a-2024-10-21-02-06-10-utc.jpg",
+          link: "/images/industries/categories/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg",
+          link: "/images/industries/categories/a-delivery-person-dressed-in-a-red-polo-and-cap-shows-approval-with-a-thumbs-up-while--SBI-350024443.jpg",
+          link: "/images/industries/categories/schoolgirl-with-blood-type-sticker-at-school-ukrainian-war-concept-SBI-351317058.jpg",
+          link: "/images/industries/categories/ Industrial_Manufacturing_Uniforms .png",
+          link: "/images/industries/product-placeholder.jpg",
+          link: "/ar/images/industries/aviation/aviation_uniform_main.jpg",
+          link: "/ar/images/industries/hospitality/hospitality_uniform_formal.jpg",
+          link: "/ar/images/industries/product-placeholder.jpg",
+          link: "/ar/images/industries/product-placeholder.jpg",
+          link: "/ar/images/industries/ Industrial_Manufacturing_Uniforms .png",
           link: "/ar/industries/manufacturing"
         }
       ]

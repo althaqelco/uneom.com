@@ -16,29 +16,25 @@ export default function IndustrialUniformsClientPage() {
     {
       id: 'industrial-coverall',
       name: 'بدلة العمل الصناعية',
-      href: '/ar/shop/industrial-uniforms/industrial-coverall',
-      image: '/images/products/industrial-coverall.jpg',
+      href: '/ar/images/products/industrial-coverall.jpg',
       description: 'بدلات عمل صناعية عالية المتانة مصممة للبيئات الصناعية الشاقة، مع مميزات للسلامة والراحة طوال فترات العمل الطويلة.'
     },
     {
       id: 'safety-vest',
       name: 'سترة السلامة عالية الوضوح',
-      href: '/ar/shop/industrial-uniforms/safety-vest',
-      image: '/images/products/industrial-coverall.jpg',
+      href: '/ar/images/products/industrial-coverall.jpg',
       description: 'سترات سلامة بألوان عاكسة مصممة للاستخدام في بيئات العمل منخفضة الإضاءة، مع أشرطة عاكسة وميزات سلامة متطورة.'
     },
     {
       id: 'work-pants',
       name: 'بنطلون العمل الصناعي',
-      href: '/ar/shop/industrial-uniforms/work-pants',
-      image: '/images/products/industrial-coverall.jpg',
+      href: '/ar/images/products/industrial-coverall.jpg',
       description: 'بناطيل عمل قوية مصنوعة من نسيج متين ومقاوم للتمزق، مع جيوب متعددة الاستخدامات لتخزين المعدات والأدوات.'
     },
     {
       id: 'industrial-jacket',
       name: 'جاكيت العمل الصناعي',
-      href: '/ar/shop/industrial-uniforms/industrial-jacket',
-      image: '/images/products/industrial-coverall.jpg',
+      href: '/ar/images/products/industrial-coverall.jpg',
       description: 'جاكيت عمل شتوي مبطن مصمم لتوفير الدفء والحماية في البيئات الصناعية الباردة، مع ميزات مقاومة للماء والرياح.'
     }
   ];

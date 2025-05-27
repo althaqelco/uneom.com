@@ -1,3 +1,4 @@
+import React from 'react'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -536,7 +537,7 @@ export default function PremiumChefUniformPage() {
               </div>
             </Link>
             
-            <Link href="/shop/hospitality-attire/concierge-uniform-set" className="group">
+            <Link href="/shop/hospitality-attire/concierge-uniform" className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="aspect-video relative">
                   <Image

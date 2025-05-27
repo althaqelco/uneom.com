@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-05-27T01:52:03.639Z",
+  "score": 88,
+  "results": {
+    "coreFiles": true,
+    "robotsTxt": true,
+    "structuredData": true,
+    "coreWebVitals": true,
+    "imagesAndIcons": true,
+    "securityAndPerformance": true,
+    "arabicSupport": false,
+    "sitemaps": true
+  },
+  "recommendations": [
+    "تحسين دعم اللغة العربية"
+  ]
+}

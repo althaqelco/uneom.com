@@ -30,89 +30,17 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ locale = 'en', items }) => 
           title: "Custom Uniform Design",
           description: "Bespoke uniform design services tailored to your brand identity and specific requirements",
           image: "/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg",
-          link: "/services/custom-design"
-        },
-        {
-          id: "fabric-selection",
-          title: "Premium Fabric Selection",
-          description: "High-quality fabric options including cotton blends, performance materials, and specialized textiles",
-          image: "/images/services/CottonـandـCottonـBlends.jpg",
-          link: "/services/fabric-selection"
-        },
-        {
-          id: "manufacturing",
-          title: "Precision Manufacturing",
-          description: "State-of-the-art production facilities ensuring consistent quality and timely delivery",
-          image: "/images/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg",
-          link: "/services/manufacturing"
-        },
-        {
-          id: "waterproof",
-          title: "Technical Finishes",
-          description: "Specialized fabric treatments including waterproofing, fire resistance, and antimicrobial protection",
-          image: "/images/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg",
-          link: "/services/technical-finishes"
-        },
-        {
-          id: "corporate-programs",
-          title: "Corporate Uniform Programs",
-          description: "Comprehensive uniform management solutions for businesses of all sizes",
-          image: "/images/services/bright-raincoats-hanging-at-a-fashion-store-2024-12-16-06-50-01-utc.jpg",
-          link: "/services/corporate-programs"
-        },
-        {
-          id: "quality-assurance",
-          title: "Quality Assurance",
-          description: "Rigorous testing and quality control measures to ensure durability and performance",
-          image: "/images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg",
-          link: "/services/quality-assurance"
-        }
-      ]
-    },
-    ar: {
-      title: "خدماتنا المميزة",
-      subtitle: "حلول شاملة لجميع احتياجاتكم من الزي الموحد وملابس العمل",
-      services: [
-        {
-          id: "custom-design",
-          title: "تصميم زي موحد مخصص",
-          description: "خدمات تصميم زي موحد مخصصة تناسب هوية علامتك التجارية ومتطلباتك الخاصة",
-          image: "/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg",
-          link: "/ar/services/custom-design"
-        },
-        {
-          id: "fabric-selection",
-          title: "اختيار الأقمشة الفاخرة",
-          description: "خيارات أقمشة عالية الجودة تشمل مزيج القطن والمواد ذات الأداء العالي والأقمشة المتخصصة",
-          image: "/images/services/CottonـandـCottonـBlends.jpg",
-          link: "/ar/services/fabric-selection"
-        },
-        {
-          id: "manufacturing",
-          title: "التصنيع الدقيق",
-          description: "مرافق إنتاج متطورة تضمن جودة متسقة وتسليم في الوقت المناسب",
-          image: "/images/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg",
-          link: "/ar/services/manufacturing"
-        },
-        {
-          id: "waterproof",
-          title: "المعالجات الفنية",
-          description: "معالجات متخصصة للأقمشة تشمل مقاومة الماء ومقاومة الحريق والحماية من الميكروبات",
-          image: "/images/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg",
-          link: "/ar/services/technical-finishes"
-        },
-        {
-          id: "corporate-programs",
-          title: "برامج الزي الموحد للشركات",
-          description: "حلول شاملة لإدارة الزي الموحد للشركات بجميع أحجامها",
-          image: "/images/services/bright-raincoats-hanging-at-a-fashion-store-2024-12-16-06-50-01-utc.jpg",
-          link: "/ar/services/corporate-programs"
-        },
-        {
-          id: "quality-assurance",
-          title: "ضمان الجودة",
-          description: "اختبارات صارمة وتدابير مراقبة الجودة لضمان المتانة والأداء",
-          image: "/images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg",
+          link: "/images/services/services/CottonـandـCottonـBlends.jpg",
+          link: "/images/services/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg",
+          link: "/images/services/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg",
+          link: "/images/services/services/bright-raincoats-hanging-at-a-fashion-store-2024-12-16-06-50-01-utc.jpg",
+          link: "/images/services/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg",
+          link: "/images/services/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg",
+          link: "/ar/images/services/services/CottonـandـCottonـBlends.jpg",
+          link: "/ar/images/services/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg",
+          link: "/ar/images/services/services/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg",
+          link: "/ar/images/services/services/bright-raincoats-hanging-at-a-fashion-store-2024-12-16-06-50-01-utc.jpg",
+          link: "/ar/images/services/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg",
           link: "/ar/services/quality-assurance"
         }
       ]

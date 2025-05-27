@@ -41,7 +41,7 @@ export default function CustomDesignServiceClientPage() {
     
     benefits: [
       {
-        icon: '/images/icons/brand-aligned.svg',
+        icon: '/images/images/icons/brand-aligned.svg',
         title: 'تعزيز هوية العلامة التجارية',
         description: 'تعزز الأزياء الموحدة المخصصة هويتك البصرية وتخلق اعترافًا فوريًا بالعلامة التجارية داخليًا ومع العملاء.'
       },
@@ -56,7 +56,7 @@ export default function CustomDesignServiceClientPage() {
         description: 'تعزز الأزياء الموحدة المصممة جيدًا الشعور بالانتماء والفخر بين الموظفين، مما يقوي ثقافة مؤسستك.'
       },
       {
-        icon: '/images/icons/brand-aligned.svg',
+        icon: '/images/images/icons/brand-aligned.svg',
         title: 'الاتساق البصري',
         description: 'ضمان عرض متسق للعلامة التجارية عبر جميع المواقع والأقسام ونقاط اتصال العملاء.'
       },

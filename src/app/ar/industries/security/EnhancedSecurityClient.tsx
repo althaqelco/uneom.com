@@ -66,7 +66,7 @@ export default function EnhancedSecurityClient() {
   // Security benefits
   const securityBenefits = [
     {
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
       title: 'الهيبة والاحترام',
       description: 'أزياء تعزز الهيبة المهنية وتكسب احترام الجمهور وثقتهم في رجال الأمن.',
       stats: '٩٠٪ تحسن في التفاعل مع الجمهور'
@@ -108,7 +108,7 @@ export default function EnhancedSecurityClient() {
     {
       name: 'المقاومة والمتانة',
       description: 'مواد قوية تتحمل الاستخدام المكثف',
-      icon: '/images/icons/compliance-shield.svg',
+      icon: '/images/compliance-shield.svg',
       applications: ['العمل الميداني', 'الحراسة الليلية', 'الدوريات', 'المهام الخاصة']
     },
     {

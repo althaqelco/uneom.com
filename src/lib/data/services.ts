@@ -7,8 +7,7 @@ export const services = [
     name: "Uniform Program Management",
     title: "End-to-End Uniform Program Management for Saudi Corporations",
     description: "Our comprehensive uniform program management service handles every aspect of your corporate uniform needs, from initial concept design to ongoing maintenance and replacement. We provide a streamlined solution tailored specifically for Saudi organizations looking to establish or refresh their corporate image.",
-    image: "/images/services/program-management.jpg",
-    heroImage: "/images/services/program-management-hero.jpg",
+    image: "/images/services/services/program-management-hero.jpg",
     shortDescription: "Comprehensive management of your organization's uniform program from design to fulfillment",
     components: [
       {
@@ -125,8 +124,7 @@ export const services = [
     name: "Custom Design & Branding",
     title: "Bespoke Uniform Design and Branding for Saudi Organizations",
     description: "Our custom design service creates unique, brand-aligned uniforms that set your organization apart. We specialize in incorporating Saudi cultural elements alongside your brand identity to create distinctive uniforms that resonate with both employees and customers.",
-    image: "/images/services/custom-design.jpg",
-    heroImage: "/images/services/custom-design-hero.jpg",
+    image: "/images/services/services/custom-design-hero.jpg",
     shortDescription: "Distinctive uniform designs that strengthen your brand identity while respecting Saudi culture",
     components: [
       {
@@ -233,8 +231,7 @@ export const services = [
     name: "Bulk Ordering",
     title: "Efficient Bulk Uniform Ordering for Saudi Organizations",
     description: "Our streamlined bulk ordering service is designed for organizations that need large quantities of high-quality uniforms delivered efficiently throughout Saudi Arabia. We offer volume discounts, consistent quality control, and reliable delivery schedules tailored to your organization's needs.",
-    image: "/images/services/bulk-ordering.jpg",
-    heroImage: "/images/services/bulk-ordering-hero.jpg",
+    image: "/images/services/services/bulk-ordering-hero.jpg",
     shortDescription: "Cost-effective uniform procurement for large organizations with volume discounts and quality assurance",
     components: [
       {
@@ -341,8 +338,7 @@ export const services = [
     name: "Measurement Services",
     title: "Professional Uniform Measurement Services Throughout Saudi Arabia",
     description: "Our comprehensive measurement services ensure perfect-fitting uniforms for your entire team. We offer on-site measurement sessions, digital measurement tools, and size verification processes to eliminate sizing issues and minimize exchanges.",
-    image: "/images/services/measurement-services.jpg",
-    heroImage: "/images/services/measurement-services-hero.jpg",
+    image: "/images/services/services/measurement-services-hero.jpg",
     shortDescription: "Professional measurement services to ensure perfect-fitting uniforms for all employees",
     components: [
       {
@@ -449,8 +445,7 @@ export const services = [
     name: "Corporate Uniform Policies",
     title: "Developing Effective Uniform Policies for Saudi Organizations",
     description: "Our uniform policy development service helps Saudi organizations create clear, comprehensive guidelines that align with corporate objectives, cultural values, and practical considerations. We provide customized policy documentation, implementation strategies, and training resources.",
-    image: "/images/services/uniform-policies.jpg",
-    heroImage: "/images/services/uniform-policies-hero.jpg",
+    image: "/images/services/services/uniform-policies-hero.jpg",
     shortDescription: "Comprehensive guidance for developing and implementing effective uniform policies",
     components: [
       {

@@ -24,32 +24,32 @@ export default function ProgramManagementClientPageArabic() {
       {
         title: "تحليل الاحتياجات",
         description: "دراسة متعمقة لاحتياجات المؤسسة وبنية القوى العاملة وطبيعة العمل والثقافة المؤسسية",
-        icon: "/icons/analysis.svg"
+        icon: "/images/icons/analysis.svg"
       },
       {
         title: "وضع استراتيجية",
         description: "تطوير استراتيجية شاملة لبرنامج الزي الموحد تشمل التصميم والتوريد والتوزيع والميزانية",
-        icon: "/icons/strategy.svg"
+        icon: "/images/icons/strategy.svg"
       },
       {
         title: "صياغة السياسات",
         description: "وضع سياسات واضحة للزي الموحد تتوافق مع متطلبات المؤسسة والمعايير الصناعية",
-        icon: "/icons/policy.svg"
+        icon: "/images/icons/policy.svg"
       },
       {
         title: "إدارة المخزون",
         description: "تطبيق نظام متكامل لإدارة المخزون يضمن توفر جميع المقاسات والقطع في الوقت المناسب",
-        icon: "/icons/inventory.svg"
+        icon: "/images/icons/inventory.svg"
       },
       {
         title: "نظام التوزيع",
         description: "تصميم آلية فعالة لتوزيع الزي الموحد على الموظفين والفروع وفق جداول زمنية محددة",
-        icon: "/icons/distribution.svg"
+        icon: "/images/icons/distribution.svg"
       },
       {
         title: "المتابعة والتقييم",
         description: "مراقبة مستمرة لأداء البرنامج وتقديم تقارير دورية واقتراحات للتحسين المستمر",
-        icon: "/icons/monitoring.svg"
+        icon: "/images/icons/monitoring.svg"
       }
     ],
     
@@ -57,32 +57,32 @@ export default function ProgramManagementClientPageArabic() {
       {
         title: "إدارة مركزية فعالة",
         description: "إدارة موحدة لبرنامج الزي المؤسسي عبر جميع الفروع والإدارات لضمان الاتساق والجودة",
-        icon: "/icons/centralized.svg"
+        icon: "/images/icons/centralized.svg"
       },
       {
         title: "توفير التكاليف",
         description: "تحسين عمليات الشراء والتوريد وإدارة المخزون لخفض التكاليف الإجمالية للبرنامج",
-        icon: "/icons/cost-saving.svg"
+        icon: "/images/icons/cost-saving.svg"
       },
       {
         title: "ضمان الامتثال",
         description: "التأكد من التزام جميع الموظفين بسياسات الزي الموحد عبر المؤسسة بشكل موحد",
-        icon: "/icons/compliance.svg"
+        icon: "/images/icons/compliance.svg"
       },
       {
         title: "تبسيط العمليات",
         description: "أتمتة وتبسيط عمليات طلب وتوزيع واستبدال الزي الموحد لزيادة الكفاءة التشغيلية",
-        icon: "/icons/simplification.svg"
+        icon: "/images/icons/simplification.svg"
       },
       {
         title: "تقارير تحليلية",
         description: "توفير تقارير وتحليلات دقيقة عن أداء البرنامج واستهلاك الزي وتكاليفه المؤسسية",
-        icon: "/icons/analytics.svg"
+        icon: "/images/icons/analytics.svg"
       },
       {
         title: "استجابة سريعة",
         description: "آلية سريعة للاستجابة للتغييرات في احتياجات المؤسسة أو تحديات التوريد الطارئة",
-        icon: "/icons/responsiveness.svg"
+        icon: "/images/icons/responsiveness.svg"
       }
     ],
     
@@ -90,22 +90,22 @@ export default function ProgramManagementClientPageArabic() {
       {
         name: "تقارير أداء دورية",
         description: "تقارير شهرية وربع سنوية مفصلة عن أداء برنامج الزي الموحد والتكاليف والاستهلاك",
-        icon: "/icons/reports.svg"
+        icon: "/images/icons/reports.svg"
       },
       {
         name: "منصة إدارة إلكترونية",
         description: "منصة متكاملة لإدارة برنامج الزي من طلبات الشراء وحتى التوزيع ومتابعة المخزون",
-        icon: "/icons/platform.svg"
+        icon: "/images/icons/platform.svg"
       },
       {
         name: "فريق إداري متخصص",
         description: "فريق من المتخصصين المدربين على إدارة برامج الزي المؤسسي بكفاءة واحترافية",
-        icon: "/icons/team.svg"
+        icon: "/images/icons/team.svg"
       },
       {
         name: "خطط استراتيجية",
         description: "تطوير خطط استراتيجية لبرنامج الزي على المدى القصير والمتوسط والطويل",
-        icon: "/icons/planning.svg"
+        icon: "/images/icons/planning.svg"
       }
     ],
     
@@ -135,19 +135,19 @@ export default function ProgramManagementClientPageArabic() {
       {
         name: "سياسات الزي الموحد",
         description: "تطوير سياسات واضحة وشاملة للزي الموحد تناسب احتياجات مؤسستك",
-        icon: "/icons/policy-document.svg",
+        icon: "/images/icons/policy-document.svg",
         url: "/ar/services/uniform-policies"
       },
       {
         name: "طلبات الكميات الكبيرة",
         description: "خدمات متخصصة لتوريد الزي الموحد بكميات كبيرة للمؤسسات والشركات",
-        icon: "/icons/bulk-order.svg",
+        icon: "/images/icons/bulk-order.svg",
         url: "/ar/services/bulk-ordering"
       },
       {
         name: "التصميم المخصص",
         description: "تصميم أزياء موحدة فريدة ومخصصة تعكس هوية مؤسستك وتلبي احتياجاتها",
-        icon: "/icons/custom-design.svg",
+        icon: "/images/icons/custom-design.svg",
         url: "/ar/services/custom-design"
       }
     ],

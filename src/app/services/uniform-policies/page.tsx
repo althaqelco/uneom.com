@@ -41,17 +41,17 @@ export default function UniformPoliciesPage() {
     
     benefits: [
       {
-        icon: '/images/icons/compliance-shield.svg',
+        icon: '/images/compliance-shield.svg',
         title: 'Clear Governance',
         description: 'Establish transparent, well-defined guidelines that eliminate confusion and inconsistency in uniform program management.'
       },
       {
-        icon: '/images/icons/saudi-expertise.svg',
+        icon: '/images/images/icons/saudi-expertise.svg',
         title: 'Regulatory Compliance',
         description: 'Ensure your uniform program adheres to industry regulations, safety standards, and relevant labor laws.'
       },
       {
-        icon: '/images/icons/brand-aligned.svg',
+        icon: '/images/images/icons/brand-aligned.svg',
         title: 'Brand Consistency',
         description: 'Maintain uniform standards that accurately and consistently represent your brand identity across all locations and departments.'
       },

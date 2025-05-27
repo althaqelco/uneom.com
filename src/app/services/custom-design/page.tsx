@@ -41,7 +41,7 @@ export default function CustomDesignServicePage() {
     
     benefits: [
       {
-        icon: '/images/icons/brand-aligned.svg',
+        icon: '/images/images/icons/brand-aligned.svg',
         title: 'Strengthened Brand Identity',
         description: 'Custom uniforms reinforce your visual identity and create immediate brand recognition both internally and with customers or clients.'
       },

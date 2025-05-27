@@ -32,48 +32,10 @@ export default function RetailUniformsClientPage() {
       description: 'زي احترافي وأنيق لموظفي المولات والمراكز التجارية، مصمم للراحة خلال ساعات العمل الطويلة.',
       price: 'من 299 ريال',
       image: '/images/education/uniform_school_product-2.jpg',
-      href: '/ar/shop/retail-uniforms/mall-staff',
-      features: ['مريح', 'أنيق', 'سهل العناية', 'متين'],
-      colors: ['أسود', 'أزرق داكن', 'رمادي'],
-      isBestseller: true
-    },
-    {
-      id: 'store-associates',
-      name: 'زي موظفي المتاجر',
-      description: 'زي عملي وأنيق لموظفي المتاجر، يمكن تخصيصه بشعار وألوان العلامة التجارية.',
-      price: 'من 249 ريال',
-      image: '/images/education/uniform_school_product-2.jpg',
-      href: '/ar/shop/retail-uniforms/related-product-1',
-      features: ['قابل للتخصيص', 'عملي', 'مظهر احترافي', 'متنوع'],
-      colors: ['أبيض', 'أسود', 'أزرق', 'أحمر'],
-      isNew: true
-    },
-    {
-      id: 'cashier-uniform',
-      name: 'زي أمناء الصندوق',
-      description: 'زي مريح ومميز لأمناء الصندوق في المتاجر والمراكز التجارية.',
-      price: 'من 219 ريال',
-      image: '/images/education/uniform_school_product-2.jpg',
-      href: '/ar/shop/retail-uniforms/related-product-2',
-      features: ['مريح للجلوس', 'جيوب عملية', 'سهل التنظيف', 'أنيق'],
-      colors: ['أسود', 'أزرق داكن', 'بيج']
-    },
-    {
-      id: 'retail-manager',
-      name: 'زي مدراء المتاجر',
-      description: 'زي أنيق ورسمي لمدراء المتاجر والمشرفين، يعكس المكانة القيادية.',
-      price: 'من 399 ريال',
-      image: '/images/education/uniform_school_product-2.jpg',
-      href: '/ar/shop/retail-uniforms/related-product-3',
-      features: ['أنيق', 'فاخر', 'مظهر قيادي', 'راحة طوال اليوم'],
-      colors: ['أسود', 'كحلي', 'رمادي داكن']
-    },
-    {
-      id: 'brand-ambassador',
-      name: 'زي سفراء العلامة التجارية',
-      description: 'زي مميز لسفراء العلامة التجارية ومندوبي المبيعات، يمكن تخصيصه بالكامل.',
-      price: 'من 329 ريال',
-      image: '/images/education/uniform_school_product-2.jpg',
+      href: '/ar/images/education/uniform_school_product-2.jpg',
+      href: '/ar/images/education/uniform_school_product-2.jpg',
+      href: '/ar/images/education/uniform_school_product-2.jpg',
+      href: '/ar/images/education/uniform_school_product-2.jpg',
       href: '/ar/shop/retail-uniforms/related-product-4',
       features: ['تصميم مميز', 'قابل للتخصيص بالكامل', 'عصري', 'عالي الجودة'],
       colors: ['متعدد الألوان', 'حسب الطلب']

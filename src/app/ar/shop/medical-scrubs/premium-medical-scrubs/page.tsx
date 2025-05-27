@@ -114,19 +114,9 @@ export default function PremiumMedicalScrubsArabicPage() {
         name: "طقم سكروب جراحي",
         image: "/images/product-placeholder.jpg",
         price: "ريال 199",
-        href: "/ar/shop/medical-scrubs/surgical-scrubs"
-      },
-      {
-        id: "lab-coats",
-        name: "معطف مختبر احترافي",
-        image: "/images/product-placeholder.jpg",
+        href: "/ar/images/product-placeholder.jpg",
         price: "ريال 229",
-        href: "/ar/shop/medical-scrubs/lab-coats"
-      },
-      {
-        id: "nurse-uniform",
-        name: "زي تمريض ممتاز",
-        image: "/images/product-placeholder.jpg",
+        href: "/ar/images/product-placeholder.jpg",
         price: "ريال 189",
         href: "/ar/shop/medical-scrubs/nurse-uniform"
       }

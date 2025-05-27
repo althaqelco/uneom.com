@@ -51,7 +51,7 @@ export default function MeasurementServicesPage() {
         description: 'Our streamlined process can measure up to 40 employees per hour, minimizing workplace disruption while maximizing accuracy.'
       },
       {
-        icon: '/images/icons/brand-aligned.svg',
+        icon: '/images/images/icons/brand-aligned.svg',
         title: 'Consistent Sizing',
         description: 'Standardized measurement techniques ensure uniform sizing consistency across departments and locations.'
       },
@@ -61,7 +61,7 @@ export default function MeasurementServicesPage() {
         description: 'Precisely fitted uniforms improve comfort, mobility, and function, increasing daily wear satisfaction.'
       },
       {
-        icon: '/images/icons/saudi-expertise.svg',
+        icon: '/images/images/icons/saudi-expertise.svg',
         title: 'Professional Appearance',
         description: "Properly fitted uniforms create a more polished, cohesive appearance that enhances your organization's image."
       },

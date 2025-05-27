@@ -27,63 +27,7 @@ export default function ServicesClientPage() {
       name: 'إدارة برامج الزي الموحد',
       description: 'حلول شاملة لإدارة برنامج الزي الموحد الخاص بمؤسستك من البداية إلى النهاية.',
       image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
-      href: '/ar/services/program-management',
-      benefits: [
-        'تحليل احتياجات المؤسسة والموظفين',
-        'إنشاء أنظمة وسياسات الزي الموحد',
-        'إدارة المخزون والتوزيع',
-        'تتبع وتحليل البيانات',
-        'خدمة الدعم المستمر للموظفين',
-      ]
-    },
-    {
-      id: 'custom-design',
-      name: 'تصميم الزي الموحد حسب الطلب',
-      description: 'تصميمات فريدة تعكس هوية علامتك التجارية وتعزز صورتك المؤسسية.',
-      image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
-      href: '/ar/services/custom-design',
-      benefits: [
-        'مصممون محترفون بخبرة في الزي المؤسسي',
-        'تصميمات تناسب ثقافة وقيم المملكة',
-        'خيارات متعددة للأقمشة والألوان',
-        'اهتمام بالتفاصيل والجودة العالية',
-        'تصميمات عملية تناسب بيئة العمل',
-      ]
-    },
-    {
-      id: 'bulk-ordering',
-      name: 'طلبات الشراء بالجملة',
-      description: 'حلول فعالة من حيث التكلفة لطلبات الزي الموحد بكميات كبيرة مع ضمان الجودة.',
-      image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
-      href: '/ar/services/bulk-ordering',
-      benefits: [
-        'أسعار تنافسية للطلبات الكبيرة',
-        'خيارات متعددة للشخصنة والتطريز',
-        'عمليات إنتاج سريعة وفعالة',
-        'جدولة مرنة للتسليم',
-        'خدمة متابعة ما بعد البيع',
-      ]
-    },
-    {
-      id: 'measuring-services',
-      name: 'خدمات القياس',
-      description: 'نضمن ملاءمة مثالية لجميع الموظفين من خلال خدمات القياس الاحترافية.',
-      image: '/images/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg',
-      href: '/ar/services/measuring-services',
-      benefits: [
-        'فرق قياس متخصصة للرجال والنساء',
-        'معدات قياس عالية الدقة',
-        'جلسات قياس جماعية في موقع العمل',
-        'نظام تتبع المقاسات الإلكتروني',
-        'خدمة التعديل والضبط',
-      ]
-    },
-    {
-      id: 'uniform-policy',
-      name: 'سياسات الزي الموحد',
-      description: 'نساعدك في تطوير وتنفيذ سياسات زي موحد فعالة تتوافق مع أهداف مؤسستك.',
-      image: '/images/product-placeholder.jpg',
-      href: '/ar/services/uniform-policy',
+      href: '/ar/services/uniform-policy', // Corrected to point to the service page
       benefits: [
         'تحليل احتياجات المؤسسة والصناعة',
         'صياغة سياسات شاملة وواضحة',
