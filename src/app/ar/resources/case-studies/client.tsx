@@ -280,5 +280,5 @@ export default function CaseStudiesClientPageArabic() {
     }
   };
 
-  return <ResourcePageLayout resourceData={resourceData} skipMainLayout={true} />;
+  return <ResourcePageLayout resourceData={resourceData} />;
 } 

@@ -147,6 +147,6 @@ export default function AviationClientPageArabic() {
     seoKeywords: "أزياء طيران، زي طيارين، يونيفورم مضيفات طيران، ملابس عاملين مطار، أزياء شركات طيران سعودية، ملابس طاقم الضيافة الجوية، يونيفورم الخطوط الجوية، أزياء مخصصة للطيران، بدلة طيار، ملابس طاقم أرضي"
   };
 
-  // استخدام IndustryPageLayout مباشرة مع skipMainLayout=true
-  return <IndustryPageLayout locale={locale} industryData={aviationIndustryData} skipMainLayout={true} />;
+  // Now using IndustryPageLayout without skipMainLayout since Arabic layout no longer wraps in MainLayout
+  return <IndustryPageLayout locale={locale} industryData={aviationIndustryData} />;
 } 

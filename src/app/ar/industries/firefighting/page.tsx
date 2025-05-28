@@ -159,5 +159,5 @@ export default function FirefightingPageArabic() {
     seoKeywords: "بدلات مكافحة الحرائق، معدات إطفاء، بدلة إطفاء مقاومة للهب، ملابس الدفاع المدني السعودية، قفازات مقاومة للحريق، أزياء واقية من الحرائق، معدات السلامة من الحرائق، بدلات إطفاء احترافية، معدات NFPA، بدلات مقاومة للحرارة"
   };
 
-  return <IndustryPageLayout locale={locale} industryData={firefightingIndustryData} skipMainLayout={true} />;
+  return <IndustryPageLayout locale={locale} industryData={firefightingIndustryData} />;
 } 

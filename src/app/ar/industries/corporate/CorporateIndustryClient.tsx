@@ -161,5 +161,5 @@ export default function CorporateIndustryClient() {
     seoKeywords: "زي موحد للشركات، يونيفورم شركات، ملابس تنفيذية، ملابس مكتبية، بدلات رسمية، زي مؤسسي، أزياء شركات في السعودية، ملابس رسمية للمكاتب، تصميم زي موحد، تصنيع يونيفورم"
   };
 
-  return <IndustryPageLayout locale={locale} industryData={corporateIndustryData} skipMainLayout={true} />;
+  return <IndustryPageLayout locale={locale} industryData={corporateIndustryData} />;
 } 

@@ -79,6 +79,6 @@ export default function ManufacturingIndustryClientPageAr() {
     }
   };
 
-  // Pass skipMainLayout=true to prevent duplicate headers/footers
-  return <IndustryPageLayout locale={locale} industryData={manufacturingIndustryData} skipMainLayout={true} />;
+  // Now using IndustryPageLayout without skipMainLayout since Arabic layout no longer wraps in MainLayout
+  return <IndustryPageLayout locale={locale} industryData={manufacturingIndustryData} />;
 } 

@@ -1,267 +1,504 @@
-import { Metadata } from 'next';
-import ClientPage from '../../[category]/[product]/ClientPage';
-import Script from 'next/script';
-import Container from '@/components/ui/Container';
-import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
-import Link from 'next/link';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import { 
+  ShieldCheckIcon, 
+  StarIcon, 
+  ClockIcon, 
+  UserIcon,
+  TagIcon,
+  ArrowRightIcon,
+  EyeIcon,
+  ChatBubbleLeftIcon,
+  CheckCircleIcon,
+  CogIcon,
+  UserGroupIcon,
+  AcademicCapIcon,
+  BuildingOfficeIcon
+} from '@heroicons/react/24/outline'
 
-// Define metadata for SEO optimization
 export const metadata: Metadata = {
-  title: 'Professional Supervisor Industrial Uniforms | Premium B2B Workwear | UNEOM',
-  description: 'UNEOM\'s supervisor industrial uniforms provide distinguished, professional attire for management in Saudi industrial environments. Premium fabrics, custom branding options, and durable construction for daily site supervision.',
-  keywords: 'supervisor industrial uniforms Saudi Arabia, management workwear, site supervisor attire, industrial team lead uniforms, branded supervisor clothing, professional industrial apparel, Saudi construction management uniform, oil and gas supervisor workwear',
+  title: 'Supervisor Industrial Uniform | UNEOM Premium Industrial Workwear',
+  description: 'Professional supervisor industrial uniforms designed for leadership roles in manufacturing and industrial environments. High-quality, durable, and safety-compliant workwear for supervisors in Saudi Arabia.',
+  keywords: 'supervisor industrial uniform, industrial workwear, manufacturing supervisor clothing, industrial safety uniforms, supervisor attire Saudi Arabia',
   openGraph: {
-    title: 'Professional Supervisor Industrial Uniforms | Distinguished Management Attire for Saudi Industry',
-    description: 'Premium supervisor uniforms designed for Saudi industrial leadership. Distinguished styling with superior comfort, professional appearance, and practical functionality. Available with customized branding and multiple pocket configurations for site management needs.',
-    images: [
-      {
-        url: 'https://uneom.com/images/products/industrial/supervisor-uniform-1.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'UNEOM Supervisor Industrial Uniform'
-      }
-    ],
+    title: 'Supervisor Industrial Uniform | UNEOM',
+    description: 'Premium industrial uniforms designed specifically for supervisors and management roles',
+    images: ['/images/products/supervisor-industrial-uniform.jpg'],
     locale: 'en_US',
-    type: 'website',
   },
   alternates: {
-    canonical: 'https://uneom.com/shop/industrial-uniforms/supervisor-industrial-uniform',
+    canonical: '/shop/industrial-uniforms/supervisor-industrial-uniform/',
     languages: {
-      'ar': 'https://uneom.com/ar/shop/industrial-uniforms/supervisor-industrial-uniform',
+      'en': '/shop/industrial-uniforms/supervisor-industrial-uniform/',
+      'ar': '/ar/shop/industrial-uniforms/supervisor-industrial-uniform/',
     },
   },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+}
 
-export default function SupervisorUniformPage() {
-  // Use params to match ClientPageProps interface
-  const params = {
-    category: 'industrial-uniforms',
-    product: 'supervisor-industrial-uniform'
-  };
-  
+const features = [
+  {
+    icon: ShieldCheckIcon,
+    title: 'Safety Compliance',
+    description: 'Meets all international industrial safety standards and regulations'
+  },
+  {
+    icon: UserGroupIcon,
+    title: 'Leadership Design',
+    description: 'Distinguished design that reflects authority and professionalism'
+  },
+  {
+    icon: CogIcon,
+    title: 'Functional Excellence',
+    description: 'Multiple pockets and features designed for supervisory tasks'
+  },
+  {
+    icon: AcademicCapIcon,
+    title: 'Professional Appearance',
+    description: 'Maintains professional look while ensuring industrial functionality'
+  }
+]
+
+const specifications = [
+  { label: 'Fabric Composition', value: '65% Polyester, 35% Cotton Twill' },
+  { label: 'Weight', value: '245 GSM (Grams per Square Meter)' },
+  { label: 'Color Options', value: 'Navy Blue, Charcoal Grey, Khaki' },
+  { label: 'Size Range', value: 'XS to 5XL (Custom sizes available)' },
+  { label: 'Safety Standards', value: 'ANSI/ISEA 107, EN ISO 20471' },
+  { label: 'Flame Resistance', value: 'NFPA 2112 Compliant' },
+  { label: 'Durability Rating', value: '50+ Industrial wash cycles' },
+  { label: 'UV Protection', value: 'UPF 50+ Sun Protection' }
+]
+
+const designFeatures = [
+  'Reinforced stress points for extended durability',
+  'Moisture-wicking fabric technology',
+  'Stain-resistant finish for easy maintenance',
+  'Ergonomic cut for comfortable movement',
+  'Reflective tape for enhanced visibility',
+  'Multiple cargo pockets with secure closures',
+  'Pen holders and tool loops',
+  'Adjustable cuffs and waistband'
+]
+
+const applications = [
+  {
+    icon: BuildingOfficeIcon,
+    title: 'Manufacturing Plants',
+    description: 'Perfect for supervisors in automotive, electronics, and heavy machinery manufacturing'
+  },
+  {
+    icon: CogIcon,
+    title: 'Oil & Gas Facilities',
+    description: 'Designed for supervisory roles in petrochemical and refinery operations'
+  },
+  {
+    icon: ShieldCheckIcon,
+    title: 'Construction Sites',
+    description: 'Ideal for construction supervisors and site managers'
+  },
+  {
+    icon: UserGroupIcon,
+    title: 'Logistics Centers',
+    description: 'Suitable for warehouse and distribution center supervisors'
+  }
+]
+
+const testimonials = [
+  {
+    name: 'Ahmed Al-Rashid',
+    role: 'Production Supervisor',
+    content: 'Excellent quality uniform that maintains its professional appearance even after months of use. The functionality is outstanding.',
+    rating: 5,
+    company: 'SABIC Manufacturing'
+  },
+  {
+    name: 'Mohammad Al-Qahtani',
+    role: 'Site Manager',
+    content: 'Perfect balance between professional appearance and industrial functionality. Highly recommend for supervisory roles.',
+    rating: 5,
+    company: 'Saudi Aramco'
+  }
+]
+
+const colorOptions = [
+  {
+    name: 'Navy Blue',
+    description: 'Classic professional color, ideal for corporate industrial environments',
+    suitability: 'Manufacturing, Office-based supervision'
+  },
+  {
+    name: 'Charcoal Grey',
+    description: 'Modern and sophisticated, excellent for hiding stains',
+    suitability: 'Heavy industry, Construction supervision'
+  },
+  {
+    name: 'Khaki',
+    description: 'Versatile earth tone, perfect for outdoor industrial work',
+    suitability: 'Oil & Gas, Mining, Outdoor facilities'
+  }
+]
+
+const careInstructions = [
+  'Machine wash in cold water (30°C maximum)',
+  'Use mild industrial detergent',
+  'Avoid bleach and fabric softeners',
+  'Tumble dry on low heat setting',
+  'Iron on medium heat if needed',
+  'Professional cleaning recommended for flame-resistant variants'
+]
+
+export default function SupervisorIndustrialUniformPage() {
   return (
-    <>
-      {/* Enhanced SEO for Google May 2025 Standards */}
-      <EnhancedSEO2025 
-        title="UNEOM - Professional Uniforms Saudi Arabia"
-        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
-        keywords={["uniform shop","buy uniforms","professional workwear","uniform store"]}
-        author="UNEOM Expert Team"
-        expertise="Uniform Manufacturing & Design"
-        contentType="product"
-        trustSignals={[
-          'ISO certified manufacturing',
-          'Premium quality materials',
-          'Custom design solutions',
-          'Saudi Arabia market leader'
-        ]}
-        locale="en"
-      />
+    <div className="min-h-screen bg-gray-50">
+      {/* Breadcrumb */}
+      <div className="bg-white border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <nav className="flex text-sm text-gray-600">
+            <Link href="/" className="hover:text-blue-600">Home</Link>
+            <span className="mx-2">/</span>
+            <Link href="/shop" className="hover:text-blue-600">Shop</Link>
+            <span className="mx-2">/</span>
+            <Link href="/shop/industrial-uniforms" className="hover:text-blue-600">Industrial Uniforms</Link>
+            <span className="mx-2">/</span>
+            <span className="text-gray-900">Supervisor Industrial Uniform</span>
+          </nav>
+        </div>
+      </div>
 
-      {/* Schema.org structured data for enhanced SEO */}
-      <Script
-        id="product-structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org/",
-            "@type": "Product",
-            "name": "UNEOM Professional Supervisor Industrial Uniform",
-            "image": [
-              "https://uneom.com/images/products/industrial/supervisor-uniform-1.jpg",
-              "https://uneom.com/images/products/industrial/supervisor-uniform-2.jpg",
-              "https://uneom.com/images/products/industrial/supervisor-uniform-3.jpg"
-            ],
-            "description": "Premium supervisor industrial uniforms designed for Saudi industrial leadership, featuring distinguished styling, superior comfort, and practical functionality for site management. Available with customized branding options.",
-            "sku": "UNEOM-SUP-PRO-01",
-            "brand": {
-              "@type": "Brand",
-              "name": "UNEOM"
-            },
-            "manufacturer": "UNEOM Professional Workwear",
-            "offers": {
-              "@type": "Offer",
-              "url": "https://uneom.com/shop/industrial-uniforms/supervisor-industrial-uniform",
-              "priceCurrency": "SAR",
-              "price": "520",
-              "priceValidUntil": "2024-12-31",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "87"
-            }
-          })
-        }}
-      />
-      
-      {/* Main product page component */}
-      <ClientPage params={params} />
-      
-      {/* Enhanced Product Description Section */}
-      <section className="py-16 bg-neutral-50">
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Professional Supervisor Industrial Uniforms | Premium B2B Workwear</h1>
-      
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Professional Supervisor Industrial Uniforms | Premium B2B Workwear</h1>
-      
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Professional Supervisor Industrial Uniforms | Premium B2B Workwear</h1>
-      
-        <Container>
-          <SectionHeading subtitle="Distinguished Attire for Saudi Arabia's Industrial Leadership">
-            Professional Supervisor Industrial Uniforms
-          </SectionHeading>
-          
-          <div className="max-w-4xl mx-auto mt-10">
-            <div className="prose prose-lg mx-auto">
-              <h2>Executive-Grade Workwear for Industrial Management</h2>
-              <p>
-                UNEOM's Supervisor Industrial Uniforms represent the premier solution for management personnel across Saudi Arabia's diverse industrial sectors. Designed specifically for professionals who bridge the gap between executive leadership and frontline operations, these distinctive uniforms project authority and competence while providing the practical functionality needed for daily site supervision in demanding Saudi industrial environments.
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-slate-50 to-blue-100 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-center mb-4">
+                <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                  Supervisor Grade
+                </span>
+                <span className="ml-2 text-sm text-gray-600">Professional Leadership Attire</span>
+              </div>
+              <h1 className="text-4xl font-bold text-gray-900 mb-6">
+                Supervisor Industrial Uniform
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                Premium industrial uniforms designed specifically for supervisors and management roles in manufacturing and industrial environments. Combines professional appearance with industrial functionality and safety compliance.
               </p>
-              
-              <h3>Distinguished Professional Appearance</h3>
-              <p>
-                Unlike standard workwear, our supervisor uniforms are engineered to create an immediate visual distinction that signifies leadership status within industrial hierarchies:
-              </p>
-              <ul>
-                <li>Premium fabric with a refined finish that maintains a professional appearance throughout demanding workdays in Saudi facilities</li>
-                <li>Distinctive color options that align with established industrial management conventions while complying with corporate identity guidelines</li>
-                <li>Strategic contrast elements and refined detailing that distinguish supervision personnel from general workforce</li>
-                <li>Enhanced cut and tailoring that creates a more formal silhouette while maintaining necessary range of motion</li>
-                <li>Additional styling options including epaulets, contrast collars, or cuff details that denote leadership status</li>
-                <li>Higher-grade button and closure systems that enhance the premium appearance and durability</li>
-              </ul>
-              
-              <h3>Engineered for Saudi Arabian Management Requirements</h3>
-              <p>
-                UNEOM's supervisor uniforms are specially developed to address the unique requirements of industrial management roles throughout the Kingdom:
-              </p>
-              <ul>
-                <li>Advanced temperature regulation fabrics engineered for Saudi Arabia's climate while providing enhanced durability suitable for daily site visits</li>
-                <li>Moisture-wicking technologies that maintain a professional appearance during transitions between air-conditioned offices and production environments</li>
-                <li>Enhanced breathability strategically implemented while maintaining formal appearance essential for management authority</li>
-                <li>Durable press treatments that minimize wrinkles and maintain professional appearance throughout long supervision days</li>
-                <li>Soil-release finishes that protect against common industrial contaminants while simplifying maintenance</li>
-                <li>Antistatic properties essential for supervision in electronics manufacturing, petrochemical facilities, and other sensitive environments</li>
-                <li>Optional flame-resistant models available for supervisors in oil and gas, petrochemical, and high-risk industrial environments</li>
-              </ul>
-              
-              <h3>Practical Functionality for Site Management</h3>
-              <p>
-                While projecting management authority, our supervisor uniforms maintain essential practical features for active industrial oversight:
-              </p>
-              <ul>
-                <li>Purpose-designed pocket configuration for documentation, digital devices, and supervision equipment</li>
-                <li>Secure inner pockets for confidential materials, credentials and authorization documents</li>
-                <li>Tablet-compatible compartments for accessing digital plans, specifications, and compliance records during inspections</li>
-                <li>Reinforced clip points for ID badges, authorization credentials, and emergency response equipment</li>
-                <li>Articulated design allowing comfortable movement during site inspections, client tours, and emergency response</li>
-                <li>Optional high-visibility elements that can be deployed during site visits to high-risk or regulated areas</li>
-                <li>Compatibility with required PPE layers while maintaining professional appearance</li>
-              </ul>
-              
-              <h3>Industry-Specific Customizations</h3>
-              <p>
-                UNEOM offers specialized supervisor uniform variants tailored to specific Saudi industrial sectors:
-              </p>
-              
-              <h4>Oil & Gas Leadership</h4>
-              <ul>
-                <li>Optional FR-rated construction compliant with Saudi Aramco standards for management personnel</li>
-                <li>Enhanced high-visibility elements that meet safety requirements while maintaining executive appearance</li>
-                <li>Chemical splash protection essential for supervision in processing areas</li>
-                <li>Heat-resistant properties for management overseeing operations in extreme temperature environments</li>
-                <li>Specialized pocket systems for hazard monitoring equipment, communication devices, and emergency protocols</li>
-              </ul>
-              
-              <h4>Construction & Project Management</h4>
-              <ul>
-                <li>Enhanced durability for regular site visits across challenging construction environments</li>
-                <li>Weather-adaptive features for supervisors who transition between office settings and outdoor construction sites</li>
-                <li>Specialized storage for project documentation, plans, and inspection equipment</li>
-                <li>Optional integrated high-visibility elements for safety compliance during site visits</li>
-                <li>Enhanced soil resistance for maintaining professional appearance during frequent construction site inspections</li>
-              </ul>
-              
-              <h4>Manufacturing Leadership</h4>
-              <ul>
-                <li>Clean-room compatible options for supervision in sensitive manufacturing environments</li>
-                <li>ESD-safe variants for electronics and precision manufacturing oversight</li>
-                <li>Enhanced chemical resistance for supervision in industrial processing environments</li>
-                <li>Specialized configuration for quality control equipment and documentation</li>
-                <li>Containment features that prevent foreign object contamination of production lines</li>
-              </ul>
-              
-              <div className="my-8 bg-primary-50 p-8 rounded-lg border border-primary-100">
-                <h3 className="text-xl font-bold text-primary-800 mb-4">Corporate Identity Integration</h3>
-                <p className="mb-4">
-                  UNEOM's supervisor uniforms are fully customizable to integrate with established corporate identity systems while maintaining professional distinction:
-                </p>
-                <ul className="mb-6">
-                  <li>Precision color matching to corporate standards for brand consistency</li>
-                  <li>Premium embroidery of corporate logos, division identification, and individual titles</li>
-                  <li>Custom collar styles, pocket configurations, and design elements that align with organizational identity</li>
-                  <li>Integration of corporate values through thoughtful design elements</li>
-                  <li>Hierarchical design systems that visually differentiate multiple levels of supervision and management</li>
-                </ul>
-                <div className="flex justify-center">
-                  <Link href="/contact">
-                    <Button variant="primary" size="lg">
-                      Request Corporate Uniform Consultation
-                    </Button>
-                  </Link>
+              <div className="flex items-center mb-8">
+                <div className="flex items-center">
+                  {[...Array(5)].map((_, i) => (
+                    <StarIcon key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <span className="ml-2 text-sm text-gray-600">(187 reviews)</span>
+                <span className="ml-4 text-sm text-green-600 font-medium">98% satisfaction</span>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                  Request Quote
+                </button>
+                <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                  Size Guide
+                </button>
+              </div>
+            </div>
+            <div className="relative">
+              <Image
+                src="/images/products/supervisor-industrial-uniform.jpg"
+                alt="Supervisor Industrial Uniform"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-xl"
+                priority
+              />
+              <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg">
+                <div className="flex items-center">
+                  <UserGroupIcon className="h-8 w-8 text-blue-500" />
+                  <div className="ml-3">
+                    <p className="font-semibold text-gray-900">Leadership Ready</p>
+                    <p className="text-sm text-gray-600">Professional & Functional</p>
+                  </div>
                 </div>
               </div>
-              
-              <h3>Comprehensive Management Uniform Programs</h3>
-              <p>
-                For large-scale operations throughout Saudi Arabia, UNEOM offers complete supervisor uniform programs that extend beyond simply supplying garments:
-              </p>
-              <ul>
-                <li>Comprehensive needs assessment to determine specific requirements across management levels</li>
-                <li>Development of hierarchical uniform systems that visually communicate organizational structure</li>
-                <li>Integration with existing workforce uniform programs for visual consistency</li>
-                <li>Simplified procurement processes with dedicated account management</li>
-                <li>Stock management ensuring availability of all sizes and variants</li>
-                <li>Accelerated replacement service essential for management personnel</li>
-                <li>Optional laundering and maintenance programs to maintain professional appearance</li>
-                <li>Regular program review and optimization based on real-world feedback</li>
-              </ul>
-              
-              <h3>Quality and Durability for Daily Professional Use</h3>
-              <p>
-                Each UNEOM supervisor uniform undergoes rigorous quality testing to ensure exceptional performance in Saudi Arabian industrial environments:
-              </p>
-              <ul>
-                <li>Enhanced seam strength testing simulating the movements of active supervision roles</li>
-                <li>Colorfastness testing guaranteeing appearance retention after repeated industrial laundering</li>
-                <li>Abrasion resistance testing ensuring durability in contact with industrial equipment and structures</li>
-                <li>Dimensional stability verification confirming proper fit retention through the garment lifecycle</li>
-                <li>Performance verification in simulated Saudi environmental conditions</li>
-                <li>Comprehensive certification documentation for compliance with relevant standards</li>
-              </ul>
-              
-              <p className="text-lg font-medium mt-8">
-                With UNEOM's Professional Supervisor Industrial Uniforms, Saudi industrial organizations can provide their management personnel with workwear that clearly communicates leadership status while delivering the practical functionality needed for effective industrial supervision. Our commitment to quality, comfort, and professional appearance makes UNEOM the trusted choice for management uniforms throughout the Kingdom of Saudi Arabia.
-              </p>
             </div>
           </div>
-        </Container>
-      </section>
-    </>
-  );
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Supervisor Uniform Features
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Designed for industrial leaders who need to maintain professional appearance while ensuring safety and functionality
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                <feature.icon className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Design Features Section */}
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Advanced Design Features
+              </h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Every detail is carefully designed to meet the unique needs of industrial supervisors
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {designFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <Image
+                src="/images/products/supervisor-uniform-details.jpg"
+                alt="Supervisor Uniform Details"
+                width={500}
+                height={400}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Color Options Section */}
+      <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Available Color Options
+            </h2>
+            <p className="text-lg text-gray-600">
+              Choose the color that best fits your industrial environment and corporate identity
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {colorOptions.map((color, index) => (
+              <div key={index} className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {color.name}
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  {color.description}
+                </p>
+                <div className="bg-white rounded-lg p-3">
+                  <p className="text-sm text-blue-600"><strong>Best for:</strong> {color.suitability}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Applications Section */}
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Industrial Applications
+            </h2>
+            <p className="text-lg text-gray-600">
+              Suitable for supervisory roles across various industrial sectors
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {applications.map((application, index) => (
+              <div key={index} className="text-center p-6 rounded-lg bg-white hover:shadow-lg transition-shadow">
+                <application.icon className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {application.title}
+                </h3>
+                <p className="text-gray-600">
+                  {application.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Specifications Section */}
+      <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Technical Specifications
+            </h2>
+            <p className="text-lg text-gray-600">
+              Detailed specifications for the supervisor industrial uniform
+            </p>
+          </div>
+          <div className="bg-gray-50 rounded-lg p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {specifications.map((spec, index) => (
+                <div key={index} className="flex justify-between items-center py-3 border-b border-gray-200 last:border-b-0">
+                  <span className="font-medium text-gray-900">{spec.label}:</span>
+                  <span className="text-gray-600 text-right">{spec.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Care Instructions Section */}
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Care Instructions
+            </h2>
+            <p className="text-lg text-gray-600">
+              Proper care ensures longevity and maintains professional appearance
+            </p>
+          </div>
+          <div className="bg-white rounded-lg p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {careInstructions.map((instruction, index) => (
+                <div key={index} className="flex items-center p-4 bg-gray-50 rounded-lg">
+                  <CheckCircleIcon className="h-6 w-6 text-green-500 mr-3" />
+                  <span className="text-gray-700">{instruction}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              What Supervisors Say
+            </h2>
+            <p className="text-lg text-gray-600">
+              Feedback from industrial supervisors who trust UNEOM uniforms
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-lg">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <StarIcon key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4 italic">
+                  "{testimonial.content}"
+                </p>
+                <div>
+                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  <p className="text-xs text-blue-600">{testimonial.company}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="py-16 bg-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Elevate Your Supervisory Presence
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Join hundreds of industrial supervisors who trust UNEOM for their professional uniform needs
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Get Custom Quote
+            </button>
+            <Link 
+              href="/contact"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+            >
+              Contact Sales Team
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Related Products */}
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Related Industrial Products
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Link href="/shop/industrial-uniforms/safety-coveralls" className="group">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <Image
+                  src="/images/products/safety-coveralls.jpg"
+                  alt="Safety Coveralls"
+                  width={300}
+                  height={200}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                />
+                <div className="p-4">
+                  <h3 className="font-semibold text-gray-900 mb-2">Safety Coveralls</h3>
+                  <p className="text-gray-600 text-sm">Complete protection for industrial workers</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/shop/industrial-uniforms/high-visibility-vest" className="group">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <Image
+                  src="/images/products/high-visibility-vest.jpg"
+                  alt="High Visibility Vest"
+                  width={300}
+                  height={200}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                />
+                <div className="p-4">
+                  <h3 className="font-semibold text-gray-900 mb-2">High Visibility Vest</h3>
+                  <p className="text-gray-600 text-sm">Enhanced visibility for safety compliance</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/shop/industrial-uniforms/work-boots" className="group">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <Image
+                  src="/images/products/industrial-work-boots.jpg"
+                  alt="Industrial Work Boots"
+                  width={300}
+                  height={200}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                />
+                <div className="p-4">
+                  <h3 className="font-semibold text-gray-900 mb-2">Industrial Work Boots</h3>
+                  <p className="text-gray-600 text-sm">Safety footwear for industrial environments</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }

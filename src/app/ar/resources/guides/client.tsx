@@ -241,5 +241,5 @@ export default function GuidesClientPageArabic() {
     },
   };
 
-  return <ResourcePageLayout resourceData={resourceData} skipMainLayout={true} />;
+  return <ResourcePageLayout resourceData={resourceData} />;
 } 

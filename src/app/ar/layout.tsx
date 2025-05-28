@@ -1,19 +1,30 @@
-'use client';
-
-import { generateMetadata } from '@/lib/metadata';
 import LinkPreloader from '@/components/LinkPreloader';
-// import ArabicOptimizer from '@/components/ArabicOptimizer'; // Commented out
+import MainLayout from '@/components/layout/MainLayout';
 import '@/app/globals.css';
 import Script from 'next/script';
+import { Metadata } from 'next';
 
-// جلب البيانات الوصفية ولكن عدم تصديرها هنا (ستكون في metadata.ts)
-const baseMetadata = generateMetadata({
-  locale: 'ar',
-  page: 'home'
-});
+export const metadata: Metadata = {
+  title: 'يونيوم - الزي الموحد المهني في السعودية',
+  description: 'يونيوم هي الشركة الرائدة في تصنيع وتوريد الزي الموحد واليونيفورم المهني في المملكة العربية السعودية.',
+  keywords: ['يونيفورم', 'الزي الموحد', 'السعودية', 'الرعاية الصحية', 'الشركات'],
+  openGraph: {
+    title: 'يونيوم - الزي الموحد المهني في السعودية',
+    description: 'يونيوم هي الشركة الرائدة في تصنيع وتوريد الزي الموحد واليونيفورم المهني في المملكة العربية السعودية.',
+    locale: 'ar_SA',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://uneom.com/ar',
+    languages: {
+      'en': 'https://uneom.com',
+      'ar': 'https://uneom.com/ar',
+    },
+  },
+};
 
 // إضافة StructuredData للصفحة العربية
-export const ArabicStructuredData = () => {
+const ArabicStructuredData = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -91,9 +102,6 @@ export default function ArabicLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // ملاحظة مهمة:
-  // لا نستخدم MainLayout هنا لأن الـ root layout يستخدمه بالفعل
-  // هذا يمنع تكرار الهيدر والفوتر
   return (
     <>
       <ArabicStructuredData />

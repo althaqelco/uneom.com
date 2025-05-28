@@ -14,6 +14,7 @@ import { Amiri, Cairo, Tajawal } from 'next/font/google';
 import SEO from '@/components/SEO';
 import type { Metadata } from 'next';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import MainLayout from '@/components/layout/MainLayout';
 
 export const metadata: Metadata = {
   title: 'يونيوم - المزود الرائد للأزياء المهنية في المملكة العربية السعودية',
@@ -56,11 +57,6 @@ const amiriFont = Amiri({
   weight: ['400', '700'],
   variable: '--font-amiri',
 });
-
-// إضافة خاصية لتجنب التكرار في الهيدر والفوتر
-export const layoutOptions = {
-  hideHeaderFooter: true
-};
 
 export default function HomePage() {
   const locale = 'ar';
@@ -134,18 +130,19 @@ export default function HomePage() {
   const seoDescription = "توفر يونيوم حلول أزياء موحدة متكاملة مصممة خصيصًا للشركات في جميع أنحاء المملكة العربية السعودية والشرق الأوسط. خدمات مخصصة لقطاعات الرعاية الصحية والطيران والضيافة والشركات.";
 
   return (
-    <div dir="rtl" className={`${cairoFont.variable} ${tajawalFont.variable} ${amiriFont.variable}`}>
-      {/* Add explicit SEO component for proper metadata */}
-      <SEO 
-        title={seoTitle}
-        description={seoDescription}
-        canonicalUrl="https://uneom.com/ar/"
-        ogImage="/images/uneom-og-image.jpg"
-        ogType="website"
-      />
-    
-      {/* Hero Section */}
-      <HeroSection locale={locale} />
+    <MainLayout locale="ar">
+      <div dir="rtl" className={`${cairoFont.variable} ${tajawalFont.variable} ${amiriFont.variable}`}>
+        {/* Add explicit SEO component for proper metadata */}
+        <SEO
+          title={seoTitle}
+          description={seoDescription}
+          canonicalUrl="https://uneom.com/ar/"
+          ogImage="/images/uneom-og-image.jpg"
+          ogType="website"
+        />
+      
+        {/* Hero Section */}
+        <HeroSection locale={locale} />
 
       {/* Explicit H1 tag that will be present in the HTML */}
       <h1 className="sr-only">يونيوم - المزود الرائد للأزياء المهنية في المملكة العربية السعودية</h1>
@@ -441,6 +438,7 @@ export default function HomePage() {
                   </Link>
         </Container>
       </section>
-          </div>
+      </div>
+    </MainLayout>
   );
-} 
+}

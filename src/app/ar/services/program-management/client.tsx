@@ -182,5 +182,5 @@ export default function ProgramManagementClientPageArabic() {
     ]
   };
 
-  return <ServicePageLayout locale={locale} serviceData={serviceData} skipMainLayout={true} />;
+  return <ServicePageLayout locale={locale} serviceData={serviceData} />;
 }
