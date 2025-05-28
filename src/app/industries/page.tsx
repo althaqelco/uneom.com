@@ -1,379 +1,282 @@
-'use client';
+import { Metadata } from 'next'
+import Container from '@/components/ui/Container'
+import Card from '@/components/ui/Card'
+import { 
+  BuildingOfficeIcon, 
+  HeartIcon, 
+  ShieldCheckIcon, 
+  WrenchScrewdriverIcon,
+  AcademicCapIcon,
+  BuildingStorefrontIcon,
+  PaperAirplaneIcon,
+  HomeModernIcon
+} from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import Container from '@/components/ui/Container';
-import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
-import IndustryGrid from '@/components/sections/IndustryGrid';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
-
-interface IndustryInfo {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
-  href: string;
+export const metadata: Metadata = {
+  title: 'Industries We Serve | Professional Uniforms for Every Sector | UNEOM',
+  description: 'Discover specialized uniform solutions for healthcare, corporate, security, manufacturing, education, hospitality, aviation, and retail sectors across Saudi Arabia.',
+  keywords: 'professional uniforms by industry, healthcare uniforms, corporate attire, security uniforms, manufacturing workwear, school uniforms Saudi Arabia',
+  openGraph: {
+    title: 'Industries We Serve | Professional Uniforms | UNEOM',
+    description: 'Specialized uniform solutions tailored for every industry sector across Saudi Arabia.',
+    url: 'https://uneom.com/industries/',
+    siteName: 'UNEOM',
+    images: [
+      {
+        url: 'https://uneom.com/images/og/industries-overview.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'UNEOM Industries Overview'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industries We Serve | Professional Uniforms | UNEOM',
+    description: 'Specialized uniform solutions for every industry sector across Saudi Arabia.',
+    images: ['https://uneom.com/images/og/industries-overview.jpg']
+  },
+  alternates: {
+    canonical: 'https://uneom.com/industries/',
+    languages: {
+      'ar-SA': 'https://uneom.com/ar/industries/',
+      'en-US': 'https://uneom.com/industries/'
+    }
+  }
 }
 
-export default function IndustriesPage() {
-  // For now, we'll just use English as the default locale
-  // In a real implementation, we would get this from the URL or cookies
-  const locale = 'en';
-  
-  // Featured industries content
-  const featuredIndustries: IndustryInfo[] = [
-    {
-      id: 'healthcare',
-      name: 'Healthcare',
-      description: 'High-quality medical scrubs and healthcare uniforms designed for Saudi hospitals, clinics, and medical facilities.',
-      image: '/images/industries/healthcare/hero-healthcare-uniforms.jpg',
-      href: '/industries/healthcare'
-    },
-    {
-      id: 'aviation',
-      name: 'Aviation',
-      description: 'Professional aviation uniforms for pilots, flight attendants, and ground crew at Saudi airlines.',
-      image: '/images/products/aviation/airline-1.jpg',
-      href: '/industries/aviation'
-    },
-    {
-      id: 'corporate',
-      name: 'Corporate',
-      description: 'Elegant and professional corporate uniforms for offices and businesses across Saudi Arabia.',
-      image: '/images/industries/corporate/hero-corporate-uniforms.jpg',
-      href: '/industries/corporate'
-    }
-  ];
+const industries = [
+  {
+    name: 'Healthcare',
+    href: '/industries/healthcare/',
+    icon: HeartIcon,
+    description: 'Medical scrubs, lab coats, and healthcare uniforms designed for comfort and hygiene.',
+    features: ['Antimicrobial fabrics', 'Easy-care materials', 'Professional appearance'],
+    color: 'bg-red-50 hover:bg-red-100 border-red-200',
+    iconColor: 'text-red-600'
+  },
+  {
+    name: 'Corporate',
+    href: '/industries/corporate/',
+    icon: BuildingOfficeIcon,
+    description: 'Professional business attire that reflects your company\'s brand and values.',
+    features: ['Custom branding', 'Premium fabrics', 'Tailored fit'],
+    color: 'bg-blue-50 hover:bg-blue-100 border-blue-200',
+    iconColor: 'text-blue-600'
+  },
+  {
+    name: 'Security',
+    href: '/industries/security/',
+    icon: ShieldCheckIcon,
+    description: 'Durable security uniforms built for protection and professional appearance.',
+    features: ['High-visibility options', 'Tactical features', 'Weather resistance'],
+    color: 'bg-gray-50 hover:bg-gray-100 border-gray-200',
+    iconColor: 'text-gray-600'
+  },
+  {
+    name: 'Manufacturing',
+    href: '/industries/manufacturing/',
+    icon: WrenchScrewdriverIcon,
+    description: 'Industrial workwear designed for safety, durability, and comfort.',
+    features: ['Safety compliance', 'Flame resistance', 'Heavy-duty construction'],
+    color: 'bg-orange-50 hover:bg-orange-100 border-orange-200',
+    iconColor: 'text-orange-600'
+  },
+  {
+    name: 'Education',
+    href: '/industries/education/',
+    icon: AcademicCapIcon,
+    description: 'School uniforms and educational staff attire promoting unity and professionalism.',
+    features: ['Age-appropriate designs', 'Durable materials', 'Easy maintenance'],
+    color: 'bg-green-50 hover:bg-green-100 border-green-200',
+    iconColor: 'text-green-600'
+  },
+  {
+    name: 'Hospitality',
+    href: '/industries/hospitality/',
+    icon: HomeModernIcon,
+    description: 'Elegant hospitality uniforms for hotels, restaurants, and service industries.',
+    features: ['Elegant designs', 'Stain resistance', 'Comfort fit'],
+    color: 'bg-purple-50 hover:bg-purple-100 border-purple-200',
+    iconColor: 'text-purple-600'
+  },
+  {
+    name: 'Aviation',
+    href: '/industries/aviation/',
+    icon: PaperAirplaneIcon,
+    description: 'Professional aviation uniforms meeting international standards and regulations.',
+    features: ['Regulation compliance', 'Professional appearance', 'Comfort at altitude'],
+    color: 'bg-indigo-50 hover:bg-indigo-100 border-indigo-200',
+    iconColor: 'text-indigo-600'
+  },
+  {
+    name: 'Retail',
+    href: '/industries/retail-shops/',
+    icon: BuildingStorefrontIcon,
+    description: 'Retail uniforms that enhance brand identity and customer experience.',
+    features: ['Brand customization', 'Customer-facing design', 'Versatile styles'],
+    color: 'bg-pink-50 hover:bg-pink-100 border-pink-200',
+    iconColor: 'text-pink-600'
+  }
+]
 
-  // Additional industries
-  const additionalIndustries: IndustryInfo[] = [
-    {
-      id: 'hospitality',
-      name: 'Hospitality',
-      description: 'Premium hotel and restaurant uniforms for the tourism and hospitality sector.',
-      image: '/images/hospitality/hospitality_uniform_formal.jpg',
-      href: '/industries/hospitality'
-    },
-    {
-      id: 'education',
-      name: 'Education',
-      description: 'High-quality school and university uniforms for students and staff.',
-      image: '/images/education/school-uniform-post-1.jpg',
-      href: '/industries/education'
-    },
-    {
-      id: 'manufacturing',
-      name: 'Manufacturing',
-      description: 'Safe and durable workwear and industrial uniforms for factories and industrial facilities.',
-      image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
-      href: '/industries/manufacturing'
-    },
-    {
-      id: 'security',
-      name: 'Security',
-      description: 'Professional security uniforms and protective equipment for guards and security personnel.',
-      image: '/images/security/security_uniform_main.jpg',
-      href: '/industries/security'
-    }
-  ];
-  
+const stats = [
+  { number: '15+', label: 'Years of Experience' },
+  { number: '500+', label: 'Companies Served' },
+  { number: '8', label: 'Industry Sectors' },
+  { number: '50,000+', label: 'Uniforms Delivered' }
+]
+
+export default function IndustriesPage() {
   return (
-    <div className="bg-white">
-    
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-neutral-900 to-neutral-800 text-white py-20">
-        <div className="absolute inset-0 overflow-hidden opacity-25">
-          <Image
-            src="/images/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg"
-            alt="UNEOM Industries"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
         <Container>
-          <div className="relative z-10 max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Industries We Serve</h1>
-            <p className="text-xl opacity-90 mb-8">
-              Specialized uniform solutions tailored to the unique needs of various industries across Saudi Arabia
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Industries We Serve
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 mb-8">
+              Specialized uniform solutions tailored for every industry sector across Saudi Arabia
             </p>
-            <Button
-              href="/contact"
-              variant="primary"
-              size="lg"
-            >
-              Request Industry Consultation
-            </Button>
-          </div>
-        </Container>
-      </section>
-      
-      {/* Introduction */}
-      <section className="py-16 bg-white">
-        <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <SectionHeading
-                subtitle="Designed for Saudi workplaces and climate"
-                className="text-left"
-              >
-                Industry-Specific Uniform Solutions
-              </SectionHeading>
-              <div className="prose max-w-none">
-                <p className="mb-4">
-                  At UNEOM, we understand that different industries have unique uniform requirements. That's why we've developed specialized collections for each sector we serve, taking into consideration not only professional standards but also the specific needs of Saudi Arabia's workplaces and climate conditions.
-                </p>
-                <p>
-                  Our team has extensive experience working with organizations across healthcare, aviation, hospitality, corporate, education, manufacturing, and security sectors. We combine global best practices with local expertise to deliver uniform solutions that are perfectly tailored to your industry's requirements.
-                </p>
-              </div>
-            </div>
-            <div>
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg"
-                  alt="UNEOM Industry Expertise"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-      
-      {/* Featured Industries */}
-      <section className="py-16 bg-neutral-50">
-        <Container>
-          <SectionHeading
-            subtitle="Our specialized uniform collections for key sectors"
-            centered
-          >
-            Featured Industries
-          </SectionHeading>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            {featuredIndustries.map((industry) => (
-              <div 
-                key={industry.id}
-                className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
-              >
-                <Link href={industry.href} className="block relative">
-                  <div className="relative h-64 w-full overflow-hidden">
-                    <Image 
-                      src={industry.image}
-                      alt={industry.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                    {stat.number}
                   </div>
-                </Link>
-                
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold text-neutral-900 mb-2">
-                    <Link 
-                      href={industry.href}
-                      className="hover:text-primary-600 transition-colors duration-300"
-                    >
-                      {industry.name}
-                    </Link>
-                  </h3>
-                  <p className="text-neutral-600 mb-4 flex-grow">{industry.description}</p>
-                  <Link 
-                    href={industry.href}
-                    className="text-primary-600 font-medium hover:text-primary-700 inline-flex items-center"
-                  >
-                    Explore Solutions
-                    <svg 
-                      className="ml-2 h-5 w-5"
-                      xmlns="http://www.w3.org/2000/svg" 
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path 
-                        fillRule="evenodd"
-                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </Link>
+                  <div className="text-blue-200 text-sm md:text-base">
+                    {stat.label}
+                  </div>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Industries Grid */}
+      <section className="py-20">
+        <Container>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Professional Uniforms for Every Sector
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              From healthcare to hospitality, we understand the unique requirements of each industry 
+              and deliver uniforms that meet the highest standards of quality, comfort, and professionalism.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {industries.map((industry, index) => (
+              <Link key={index} href={industry.href}>
+                <Card className={`p-8 h-full transition-all duration-300 border-2 ${industry.color} group cursor-pointer`}>
+                  <div className="flex items-start space-x-4">
+                    <div className={`p-3 rounded-lg bg-white shadow-sm group-hover:shadow-md transition-shadow`}>
+                      <industry.icon className={`h-8 w-8 ${industry.iconColor}`} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                        {industry.name}
+                      </h3>
+                      <p className="text-gray-600 mb-4 leading-relaxed">
+                        {industry.description}
+                      </p>
+                      <ul className="space-y-2">
+                        {industry.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-500">
+                            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-6 flex items-center text-blue-600 font-medium group-hover:text-blue-700">
+                        Learn More
+                        <svg className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </Link>
             ))}
           </div>
         </Container>
       </section>
-      
-      {/* All Industries Grid */}
-      <section className="py-16 bg-white">
+
+      {/* Why Choose UNEOM Section */}
+      <section className="py-20 bg-white">
         <Container>
-          <SectionHeading
-            subtitle="Comprehensive uniform solutions for every sector"
-            centered
-          >
-            More Industries We Serve
-          </SectionHeading>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            {additionalIndustries.map((industry) => (
-              <div 
-                key={industry.id}
-                className="group bg-neutral-50 rounded-lg overflow-hidden hover:bg-neutral-100 transition-colors duration-300 flex flex-col h-full"
-              >
-                <Link href={industry.href} className="block relative">
-                  <div className="relative h-48 w-full overflow-hidden">
-                    <Image 
-                      src={industry.image}
-                      alt={industry.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </Link>
-                
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-neutral-900 mb-2">
-                    <Link 
-                      href={industry.href}
-                      className="hover:text-primary-600 transition-colors duration-300"
-                    >
-                      {industry.name}
-                    </Link>
-                  </h3>
-                  <p className="text-neutral-600 mb-4 flex-grow">{industry.description}</p>
-                  <Link 
-                    href={industry.href}
-                    className="text-primary-600 font-medium hover:text-primary-700 inline-flex items-center"
-                  >
-                    View Details
-                    <svg 
-                      className="ml-2 h-5 w-5"
-                      xmlns="http://www.w3.org/2000/svg" 
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path 
-                        fillRule="evenodd"
-                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </Link>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+              Why Choose UNEOM for Your Industry?
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <ShieldCheckIcon className="h-8 w-8 text-blue-600" />
                 </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Industry Expertise</h3>
+                <p className="text-gray-600">
+                  Deep understanding of each industry's unique requirements and regulations.
+                </p>
               </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-      
-      {/* Industry Comparison */}
-      <section className="py-16 bg-neutral-50">
-        <Container>
-          <SectionHeading
-            subtitle="Find the best uniform program for your specific sector"
-            centered
-          >
-            Compare Industry Solutions
-          </SectionHeading>
-          
-          <div className="overflow-hidden shadow-lg rounded-lg mt-12">
-            <div className="overflow-x-auto">
-              <table className="min-w-full bg-white">
-                <thead>
-                  <tr className="bg-primary-600 text-white">
-                    <th className="py-4 px-6 text-left">Industry</th>
-                    <th className="py-4 px-6 text-left">Key Features</th>
-                    <th className="py-4 px-6 text-left">Materials</th>
-                    <th className="py-4 px-6 text-left">Customization</th>
-                    <th className="py-4 px-6 text-left">Details</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-neutral-200">
-                  <tr>
-                    <td className="py-4 px-6 font-medium">Healthcare</td>
-                    <td className="py-4 px-6">Antimicrobial, fluid-resistant, comfort focus</td>
-                    <td className="py-4 px-6">Medical-grade polyester blends, cotton</td>
-                    <td className="py-4 px-6">Department color coding, embroidered logos</td>
-                    <td className="py-4 px-6">
-                      <Link 
-                        href="/industries/healthcare"
-                        className="text-primary-600 hover:text-primary-700"
-                      >
-                        View
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr className="bg-neutral-50">
-                    <td className="py-4 px-6 font-medium">Aviation</td>
-                    <td className="py-4 px-6">Professional appearance, wrinkle-resistant</td>
-                    <td className="py-4 px-6">Premium wool blends, polyester</td>
-                    <td className="py-4 px-6">Airline branding, rank insignias</td>
-                    <td className="py-4 px-6">
-                      <Link 
-                        href="/industries/aviation"
-                        className="text-primary-600 hover:text-primary-700"
-                      >
-                        View
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="py-4 px-6 font-medium">Hospitality</td>
-                    <td className="py-4 px-6">Elegant, stain-resistant, easy care</td>
-                    <td className="py-4 px-6">Comfort-stretch fabrics, luxury blends</td>
-                    <td className="py-4 px-6">Brand color matching, custom accessories</td>
-                    <td className="py-4 px-6">
-                      <Link 
-                        href="/industries/hospitality"
-                        className="text-primary-600 hover:text-primary-700"
-                      >
-                        View
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr className="bg-neutral-50">
-                    <td className="py-4 px-6 font-medium">Corporate</td>
-                    <td className="py-4 px-6">Professional, breathable, office-appropriate</td>
-                    <td className="py-4 px-6">Business-grade cotton blends, performance fabrics</td>
-                    <td className="py-4 px-6">Corporate identity integration, executive styling</td>
-                    <td className="py-4 px-6">
-                      <Link 
-                        href="/industries/corporate"
-                        className="text-primary-600 hover:text-primary-700"
-                      >
-                        View
-                      </Link>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <WrenchScrewdriverIcon className="h-8 w-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Custom Solutions</h3>
+                <p className="text-gray-600">
+                  Tailored uniform programs designed specifically for your business needs.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <HeartIcon className="h-8 w-8 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Quality Assurance</h3>
+                <p className="text-gray-600">
+                  ISO certified manufacturing ensuring consistent quality and durability.
+                </p>
+              </div>
             </div>
           </div>
         </Container>
       </section>
-      
-      {/* Call to Action */}
-      <section className="py-16 bg-primary-600 text-white">
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">Can't Find Your Industry?</h2>
-            <p className="text-lg mb-8 opacity-90">
-              We develop custom uniform solutions for all types of businesses in Saudi Arabia. Contact our team to discuss your specific industry requirements.
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Team's Appearance?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Get a custom quote for your industry-specific uniform requirements
             </p>
-            <Button
-              href="/contact"
-              variant="secondary"
-              size="lg"
-            >
-              Request Custom Industry Solution
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/quote/"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              >
+                Request Quote
+              </Link>
+              <Link
+                href="/contact/"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
-    
-      </div>
-  );
-} 
+    </div>
+  )
+}

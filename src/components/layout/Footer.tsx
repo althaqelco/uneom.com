@@ -53,7 +53,7 @@ const Footer: React.FC<FooterProps> = ({ locale = 'en' }) => {
   // روابط وسائل التواصل الاجتماعي
   const socialLinks = {
     facebook: "https://www.facebook.com/uneomuniforms/",
-    twitter: "https://x.com/uneomcom",
+    twitter: "https://www.linkedin.com/company/uneom",
     instagram: "https://www.instagram.com/uneomuniforms/",
     tiktok: "https://www.tiktok.com/@uneomcom",
     pinterest: "https://www.pinterest.com/uneomcompany/",
