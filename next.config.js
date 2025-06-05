@@ -365,6 +365,233 @@ const nextConfig = {
         destination: '/ar/blog/',
         permanent: true,
       },
+
+      // Shop product pages redirects - medical scrubs and healthcare accessories
+      {
+        source: '/shop/medical-scrubs/clinical-uniform-set/',
+        destination: '/shop/medical-scrubs/',
+        permanent: true,
+      },
+      {
+        source: '/shop/healthcare-uniforms',
+        destination: '/shop/healthcare/',
+        permanent: true,
+      },
+      {
+        source: '/shop/healthcare-accessories/safety-protection/',
+        destination: '/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      {
+        source: '/shop/healthcare-accessories/safety-protection',
+        destination: '/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      {
+        source: '/shop/healthcare-accessories/storage-case/',
+        destination: '/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      {
+        source: '/shop/healthcare-accessories/storage-case',
+        destination: '/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      {
+        source: '/shop/healthcare-accessories/digital-stethoscope/',
+        destination: '/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      {
+        source: '/shop/healthcare-accessories/digital-stethoscope',
+        destination: '/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      {
+        source: '/shop/healthcare-accessories/diagnostic-equipment/',
+        destination: '/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      {
+        source: '/shop/healthcare-accessories/diagnostic-equipment',
+        destination: '/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      {
+        source: '/shop/healthcare-accessories/storage-solutions/',
+        destination: '/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      {
+        source: '/shop/healthcare-accessories/storage-solutions',
+        destination: '/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      
+      // Arabic healthcare accessories redirects
+      {
+        source: '/ar/shop/healthcare-accessories/digital-stethoscope/',
+        destination: '/ar/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/healthcare-accessories/storage-solutions/',
+        destination: '/ar/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/healthcare-accessories/diagnostic-equipment/',
+        destination: '/ar/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/healthcare-accessories/safety-protection/',
+        destination: '/ar/shop/healthcare-accessories/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/medical-accessories/',
+        destination: '/ar/shop/medical-scrubs/',
+        permanent: true,
+      },
+
+      // Education uniforms redirects
+      {
+        source: '/ar/shop/education-uniforms/primary-school-uniform/',
+        destination: '/ar/shop/education-uniforms/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/education-uniforms/university-attire/',
+        destination: '/ar/shop/education-uniforms/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/education-uniforms/graduation-attire/',
+        destination: '/ar/shop/education-uniforms/',
+        permanent: true,
+      },
+
+      // Hospitality uniforms redirects
+      {
+        source: '/ar/shop/hospitality-attire/restaurant-staff-uniform/',
+        destination: '/ar/shop/hospitality-attire/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/hospitality-attire/resort-staff-uniform',
+        destination: '/ar/shop/hospitality-attire/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/hospitality-attire/hotel-bellboy-uniform/',
+        destination: '/ar/shop/hospitality-attire/',
+        permanent: true,
+      },
+
+      // Industrial uniforms redirects
+      {
+        source: '/shop/industrial-uniforms/construction-uniform',
+        destination: '/shop/industrial-uniforms/',
+        permanent: true,
+      },
+      {
+        source: '/shop/industrial-uniforms/industrial-coverall/',
+        destination: '/shop/industrial-uniforms/',
+        permanent: true,
+      },
+      {
+        source: '/shop/industrial-uniforms/maintenance-uniform',
+        destination: '/shop/industrial-uniforms/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/ppe/',
+        destination: '/ar/shop/industrial-uniforms/',
+        permanent: true,
+      },
+
+      // Retail uniforms redirects
+      {
+        source: '/shop/retail-uniforms/accessories',
+        destination: '/shop/retail-uniforms/',
+        permanent: true,
+      },
+      {
+        source: '/shop/retail-uniforms/spa-uniforms',
+        destination: '/shop/retail-uniforms/',
+        permanent: true,
+      },
+
+      // Corporate uniforms redirects
+      {
+        source: '/ar/shop/corporate-workwear/corporate-accessories/',
+        destination: '/ar/shop/corporate-workwear/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/corporate-workwear/corporate-accessories',
+        destination: '/ar/shop/corporate-workwear/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/corporate/performance-wear/',
+        destination: '/ar/shop/corporate/',
+        permanent: true,
+      },
+
+      // Aviation uniforms related products redirects
+      {
+        source: '/ar/shop/aviation-uniforms/related-product-1/',
+        destination: '/ar/shop/aviation-uniforms/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/aviation-uniforms/related-product-2/',
+        destination: '/ar/shop/aviation-uniforms/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/aviation-uniforms/related-product-3/',
+        destination: '/ar/shop/aviation-uniforms/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/aviation-uniforms/related-product-4/',
+        destination: '/ar/shop/aviation-uniforms/',
+        permanent: true,
+      },
+      {
+        source: '/ar/shop/aviation-uniforms/aviation-blazer/',
+        destination: '/ar/shop/aviation-uniforms/',
+        permanent: true,
+      },
+
+      // Retail uniforms related products redirects
+      {
+        source: '/ar/shop/retail-uniforms/related-product-4/',
+        destination: '/ar/shop/retail-uniforms/',
+        permanent: true,
+      },
+
+      // Shop all products redirect
+      {
+        source: '/shop/all-products/',
+        destination: '/shop/',
+        permanent: true,
+      },
+
+      // Case studies and portfolio redirects
+      {
+        source: '/ar/case-studies',
+        destination: '/ar/about/',
+        permanent: true,
+      },
+      {
+        source: '/ar/portfolio',
+        destination: '/ar/about/',
+        permanent: true,
+      },
     ]
   },
   async headers() {
