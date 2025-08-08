@@ -24,8 +24,7 @@ const locationData: Record<string, {
   region: {en: string, ar: string},
   coordinates: {latitude: number, longitude: number},
   postalCode: string,
-  areaServed: {en: string, ar: string}[],
-}> = {
+  areaServed: {en: string, ar: string}[]}> = {
   riyadh: {
     name: {en: 'Riyadh', ar: 'الرياض'},
     region: {en: 'Riyadh Province', ar: 'منطقة الرياض'},
@@ -213,7 +212,7 @@ const LocalSEO: React.FC<LocalSEOProps> = ({
   );
   
   return (
-    <>
+    <React.Fragment>
       {/* Add structured data for LocalBusiness */}
       <StructuredData
         type="LocalBusiness"
@@ -262,7 +261,7 @@ const LocalSEO: React.FC<LocalSEOProps> = ({
           ></iframe>
         </div>
       )}
-    </>
+    </React.Fragment>
   );
 };
 

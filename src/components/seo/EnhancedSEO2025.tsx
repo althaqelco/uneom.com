@@ -117,7 +117,7 @@ const EnhancedSEO2025: React.FC<EnhancedSEO2025Props> = ({
   };
 
   return (
-    <>
+    <React.Fragment>
       {/* Enhanced Structured Data for May 2025 */}
       <script
         type="application/ld+json"
@@ -145,8 +145,7 @@ const EnhancedSEO2025: React.FC<EnhancedSEO2025Props> = ({
                 event_category: 'Web Vitals',
                 event_label: metric.id,
                 value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-                non_interaction: true,
-              });
+                non_interaction: true});
             }
           }
           
@@ -192,13 +191,12 @@ const EnhancedSEO2025: React.FC<EnhancedSEO2025Props> = ({
                 event_category: 'Engagement',
                 time_on_page: Math.round(timeOnPage / 1000),
                 max_scroll_depth: maxScrollDepth,
-                non_interaction: true,
-              });
+                non_interaction: true});
             }
           });
         `}
       </Script>
-    </>
+    </React.Fragment>
   );
 };
 

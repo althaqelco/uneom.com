@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,9 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'بدلات تنفيذية عصرية | ملابس عمل معاصرة | بدلات شركات بقصة ضيقة | يونيوم',
     description: 'بدلات تنفيذية عصرية بتصميم معاصر وقصة ضيقة. مثالية لقادة الأعمال التقدميين وبيئات الشركات الحديثة.',
-    images: ['/images/products/corporate/modern-executive-suits.jpg'],
-  },
-}
+    images: ['/images/products/corporate/modern-executive-suits.jpg']}}
 
 const productFeatures = [
   {

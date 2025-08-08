@@ -14,19 +14,13 @@ export const metadata: Metadata = {
         url: '/images/products/medical-lab-coat.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Medical Lab Coat by UNEOM',
-      }
-    ],
-  },
+        alt: 'Professional Medical Lab Coat by UNEOM'}
+    ]},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/medical-scrubs/medical-lab-coat',
     languages: {
       'en': 'https://uneom.com/shop/medical-scrubs/medical-lab-coat',
-      'ar': 'https://uneom.com/ar/shop/medical-scrubs/medical-lab-coat',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/medical-scrubs/medical-lab-coat'}}}; 

@@ -8,13 +8,9 @@ export const metadata: Metadata = {
     title: 'Advanced Fabric Technologies | UNEOM Resources',
     description: 'Comprehensive guide to the latest fabric technologies used in professional uniform manufacturing',
     type: 'article',
-    locale: 'en_US',
-  },
+    locale: 'en_US'},
   alternates: {
     canonical: '/resources/fabric-technology/',
     languages: {
       'en': '/resources/fabric-technology/',
-      'ar': '/ar/resources/fabric-technology/',
-    },
-  },
-}
+      'ar': '/ar/resources/fabric-technology/'}}}

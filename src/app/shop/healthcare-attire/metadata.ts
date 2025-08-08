@@ -11,17 +11,13 @@ export const metadata: Metadata = {
     locale: 'en',
     images: [
       {
-        url: '/images/shop/healthcare/healthcare-category.jpg'],
-  },
+        url: '/images/shop/healthcare/healthcare-category.jpg'}
+    ]},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/healthcare-attire',
     languages: {
       'en': 'https://uneom.com/shop/healthcare-attire',
-      'ar': 'https://uneom.com/ar/shop/healthcare-attire',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/healthcare-attire'}}}; 

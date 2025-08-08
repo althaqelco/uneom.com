@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/surgical-scrubs.jpg',
         width: 1200,
         height: 630,
-        alt: 'ملابس جراحية احترافية من يونيوم',
-      }
-    ],
-  },
+        alt: 'ملابس جراحية احترافية من يونيوم'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'ملابس جراحية | يونيفورم طبي بمستوى المستشفيات | يونيوم السعودية',
     description: 'ملابس جراحية متميزة مصممة لبيئات الرعاية الصحية في المملكة العربية السعودية.',
-    images: ['/images/products/surgical-scrubs.jpg'],
-  },
+    images: ['/images/products/surgical-scrubs.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/medical-scrubs/surgical-scrubs',
     languages: {
       'en': 'https://uneom.com/shop/medical-scrubs/surgical-scrubs',
-      'ar': 'https://uneom.com/ar/shop/medical-scrubs/surgical-scrubs',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/medical-scrubs/surgical-scrubs'}}}; 

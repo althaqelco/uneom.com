@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,16 +22,12 @@ export const metadata: Metadata = {
     description: 'Latest innovations in industrial protective clothing ensuring maximum worker safety',
     images: ['/images/blog/industrial-protective-advances.jpg'],
     locale: 'en_US',
-    type: 'article',
-  },
+    type: 'article'},
   alternates: {
     canonical: 'https://uneom.com/blog/industrial-protective-clothing-advances/',
     languages: {
       'en': 'https://uneom.com/blog/industrial-protective-clothing-advances/',
-      'ar': 'https://uneom.com/ar/blog/industrial-protective-clothing-advances/',
-    },
-  },
-}
+      'ar': 'https://uneom.com/ar/blog/industrial-protective-clothing-advances/'}}}
 
 const articleJsonLd = {
   '@context': 'https://schema.org',

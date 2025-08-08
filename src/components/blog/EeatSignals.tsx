@@ -30,32 +30,28 @@ const EeatSignals: React.FC<EeatSignalsProps> = ({ postSlug, minimal = false }) 
       active: signals.expertise,
       description: isArabic
         ? 'محتوى من خبير متخصص في المجال'
-        : 'Content from a domain expert',
-    },
+        : 'Content from a domain expert'},
     {
       name: isArabic ? 'خبرة عملية' : 'Experience',
       icon: <FaBriefcase className="h-4 w-4" />,
       active: signals.experience,
       description: isArabic
         ? 'مؤلف ذو خبرة عملية واسعة'
-        : 'Author with substantial practical experience',
-    },
+        : 'Author with substantial practical experience'},
     {
       name: isArabic ? 'موثوقية' : 'Authoritativeness',
       icon: <FaAward className="h-4 w-4" />,
       active: signals.authoritativeness,
       description: isArabic
         ? 'محتوى مدعوم بمصادر موثوقة'
-        : 'Content backed by authoritative sources',
-    },
+        : 'Content backed by authoritative sources'},
     {
       name: isArabic ? 'مصداقية' : 'Trustworthiness',
       icon: <FaShieldAlt className="h-4 w-4" />,
       active: signals.trustworthiness,
       description: isArabic
         ? 'معلومات دقيقة وموثوقة'
-        : 'Accurate and reliable information',
-    },
+        : 'Accurate and reliable information'},
   ];
 
   // Minimal view for mobile or compact displays

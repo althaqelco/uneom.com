@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/locations/dammam-office.jpg',
         width: 1200,
         height: 630,
-        alt: 'مكتب يونيوم الدمام - حلول الزي الموحد المتميزة',
-      }
-    ],
-  },
+        alt: 'مكتب يونيوم الدمام - حلول الزي الموحد المتميزة'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'مورد الزي الموحد في الدمام | يونيوم السعودية',
     description: 'حلول الزي الموحد المتميزة في الدمام مع خدمات المقاسات المحلية، التوصيل السريع، وملابس العمل المخصصة لجميع القطاعات المهنية.',
-    images: ['/images/locations/dammam-office.jpg'],
-  },
+    images: ['/images/locations/dammam-office.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/locations/dammam',
     languages: {
       'en': 'https://uneom.com/locations/dammam',
-      'ar': 'https://uneom.com/ar/locations/dammam',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/locations/dammam'}}}; 

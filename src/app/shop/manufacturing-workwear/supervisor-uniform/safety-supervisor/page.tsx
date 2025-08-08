@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,9 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Safety Supervisor Uniforms for Manufacturing | UNEOM',
     description: 'Ensure visibility and authority with specialized uniforms for safety supervisors in industrial settings.',
-    images: ['/images/products/industrial/safety-supervisor-uniform-main.jpg'],
-  },
-}
+    images: ['/images/products/industrial/safety-supervisor-uniform-main.jpg']}}
 
 const productFeatures = [
   {
@@ -95,7 +94,6 @@ const relatedProducts = [
 ]
 // Ensure UserGroupIcon is imported if used in idealForResponsibilities
 import { UserGroupIcon } from '@heroicons/react/24/outline';
-
 
 export default function SafetySupervisorUniformPage() {
   return (

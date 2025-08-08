@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Professional Nurse Uniforms | UNEOM',
     description: 'Complete nursing uniform sets designed for comfort, functionality, and professional appearance in Saudi healthcare facilities.',
-    images: ['/images/products/medical/nurse-uniform-main.jpg'],
-  },
-}
+    images: ['/images/products/medical/nurse-uniform-main.jpg']}}
 
 const productFeatures = [
   {

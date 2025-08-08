@@ -104,7 +104,7 @@ export default function ServicePageLayout({ locale, serviceData, skipMainLayout 
     }
     
     return (
-      <>
+      <React.Fragment>
         {/* Hero Section */}
         <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-24 pt-32">
           <div className="absolute inset-0 overflow-hidden opacity-30">
@@ -468,7 +468,7 @@ export default function ServicePageLayout({ locale, serviceData, skipMainLayout 
             </motion.div>
           </Container>
         </section>
-      </>
+      </React.Fragment>
     );
   };
   

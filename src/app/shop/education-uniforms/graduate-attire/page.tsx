@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,7 +13,6 @@ import {
 } from '@heroicons/react/24/outline'
 import { StarIcon as StarSolidIcon } from '@heroicons/react/24/solid'
 
-
 export const metadata: Metadata = {
   title: 'Graduate Attire | Graduation Gowns, Caps & Hoods | UNEOM',
   description: 'High-quality graduation attire including gowns, caps, tassels, and hoods for universities, colleges, and schools in Saudi Arabia. Celebrate achievements with distinguished academic regalia.',
@@ -20,9 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Graduate Attire | Graduation Gowns, Caps & Hoods | UNEOM',
     description: 'Celebrate academic milestones with our premium graduation attire. Gowns, caps, hoods, and accessories available.',
-    images: ['/images/products/education/graduate-attire-main.jpg'],
-  },
-}
+    images: ['/images/products/education/graduate-attire-main.jpg']}}
 
 const attireComponents = [
   {

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,8 +9,7 @@ import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 export const metadata: Metadata = {
   title: 'دراسة حالة عيادة المستشفى التجميلية | أزياء طبية تجميلية | UNEOM المملكة العربية السعودية',
   description: 'كيف ساعدت UNEOM مستشفى متميز في جدة على رفع مستوى خدمات عياداته التجميلية من خلال أزياء موحدة طبية متطورة تجمع بين المعايير الطبية والأناقة',
-  keywords: 'أزياء طبية تجميلية, أزياء موحدة لعيادات التجميل, أزياء مستشفيات سعودية, ملابس موحدة للرعاية الصحية السعودية, أزياء أطباء التجميل, أزياء طبية متوافقة مع الحجاب',
-};
+  keywords: 'أزياء طبية تجميلية, أزياء موحدة لعيادات التجميل, أزياء مستشفيات سعودية, ملابس موحدة للرعاية الصحية السعودية, أزياء أطباء التجميل, أزياء طبية متوافقة مع الحجاب'};
 
 export default function HospitalAestheticClinicCaseStudyArabic() {
   return (

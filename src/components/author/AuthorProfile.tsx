@@ -65,7 +65,7 @@ const AuthorProfile: React.FC<AuthorProfileProps> = ({ author, compact = false }
           </div>
           
           {!compact && (
-            <>
+            <React.Fragment>
               {/* Credentials */}
               <div className="mb-5">
                 <h3 className="text-sm font-semibold text-neutral-500 uppercase mb-2">
@@ -127,7 +127,7 @@ const AuthorProfile: React.FC<AuthorProfileProps> = ({ author, compact = false }
                   </ul>
                 </div>
               )}
-            </>
+            </React.Fragment>
           )}
           
           {/* Social & Profile Link */}

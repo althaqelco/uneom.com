@@ -54,8 +54,6 @@ const HealthcareIndustryClientPage = () => {
         name: 'أزياء التمريض',
         description: 'أزياء حديثة ومريحة للتمريض بتصاميم مصممة خصيصًا للرعاية المباشرة للمرضى',
         image: '/images/healthcare/nurse-uniforms.jpg',
-        href: '/ar/images/healthcare/lab-coats.jpg',
-        href: '/ar/images/healthcare/surgical-scrubs.jpg',
         href: '/ar/shop/medical-scrubs/surgical-scrubs'
       }
     ],

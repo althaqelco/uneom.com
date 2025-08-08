@@ -11,17 +11,13 @@ export const metadata: Metadata = {
     locale: 'en',
     images: [
       {
-        url: '/images/industries/industries/aviation.jpg'],
-  },
+        url: '/images/industries/industries/aviation.jpg'}
+    ]},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/aviation-uniforms',
     languages: {
       'en': 'https://uneom.com/shop/aviation-uniforms',
-      'ar': 'https://uneom.com/ar/shop/aviation-uniforms',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/aviation-uniforms'}}}; 

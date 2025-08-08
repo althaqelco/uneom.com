@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -18,9 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'البدلة التنفيذية للضيافة | ملابس إدارية فاخرة للفنادق | يونيوم',
     description: 'بدلات تنفيذية راقية مصممة للإدارة العليا في قطاع الضيافة مع أعلى معايير الجودة والأناقة.',
-    images: ['/images/hospitality/executive-hospitality-suit.jpg'],
-  },
-}
+    images: ['/images/hospitality/executive-hospitality-suit.jpg']}}
 
 const executiveFeatures = [
   {

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import ManufacturingAttireClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -14,21 +15,16 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/categories/manufacturing-attire.webp',
         width: 1200,
         height: 630,
-        alt: 'ملابس التصنيع من يونيوم',
-      },
+        alt: 'ملابس التصنيع من يونيوم'},
     ],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   robots: {
     index: true,
     follow: true,
     nocache: true,
     googleBot: {
       index: true,
-      follow: true,
-    },
-  },
-};
+      follow: true}}};
 
 export default function ManufacturingAttirePage() {
   return <ManufacturingAttireClientPage />;

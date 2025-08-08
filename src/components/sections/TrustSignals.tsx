@@ -92,12 +92,10 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
   const content = {
     en: {
       title: "Trusted by Leading Organizations Across Saudi Arabia",
-      subtitle: "Providing high-quality professional uniforms for diverse industries throughout the Kingdom",
-    },
+      subtitle: "Providing high-quality professional uniforms for diverse industries throughout the Kingdom"},
     ar: {
       title: "موثوق به من قبل المؤسسات الرائدة في المملكة العربية السعودية",
-      subtitle: "نوفر زيًا موحدًا مهنيًا عالي الجودة لصناعات متنوعة في جميع أنحاء المملكة",
-    }
+      subtitle: "نوفر زيًا موحدًا مهنيًا عالي الجودة لصناعات متنوعة في جميع أنحاء المملكة"}
   };
   
   const statsRef = useRef(null);
@@ -170,16 +168,14 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
   // Random animation for background elements
   const randomFloatVariants = {
     initial: {
-      y: 0,
-    },
+      y: 0},
     animate: {
       y: [0, -10, 0, 10, 0],
       transition: {
         duration: 10,
         ease: "easeInOut",
         repeat: Infinity,
-        repeatType: "reverse" as const,
-      }
+        repeatType: "reverse" as const}
     }
   };
   
@@ -271,8 +267,7 @@ const TrustSignals: React.FC<TrustSignalsProps> = ({
                 className={`absolute top-0 right-0 w-32 h-32 rounded-full bg-gradient-to-br ${stat.color} opacity-20 -mt-12 -mr-12 z-0`}
                 animate={{
                   scale: hoveredStatIndex === index ? 1.2 : 1,
-                  opacity: hoveredStatIndex === index ? 0.3 : 0.2,
-                }}
+                  opacity: hoveredStatIndex === index ? 0.3 : 0.2}}
                 transition={{ duration: 0.5 }}
               ></motion.div>
               

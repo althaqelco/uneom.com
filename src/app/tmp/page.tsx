@@ -73,11 +73,7 @@ const services = [
     title: "UNEOM - Professional Uniforms",
     description: 'تصميمات مبتكرة تعكس هوية علامتك التجارية وتلبي المتطلبات العملية لموظفيك.',
     icon: '/images/healthcare/medical_hijab_uniform.jpg',
-    link: '/ar/images/services/product-placeholder.jpg',
-    link: '/ar/images/services/healthcare/medical_hijab_uniform.jpg',
-    link: '/ar/images/services/healthcare/medical_hijab_uniform.jpg',
-    link: '/ar/services/measurement-services',
-  },
+    link: '/ar/services/measurement-services'},
 ];
 
 // بيانات المميزات
@@ -85,33 +81,27 @@ const features = [
   {
     title: 'تصميم مخصص',
     description: 'نصمم الزي الموحد خصيصًا ليعكس هوية علامتك التجارية ويلبي احتياجات موظفيك.',
-    icon: '/images/healthcare/medical_hijab_uniform.jpg',
-  },
+    icon: '/images/healthcare/medical_hijab_uniform.jpg'},
   {
     title: 'مواد عالية الجودة',
     description: 'نستخدم فقط أفضل الأقمشة والمواد لضمان الراحة والمتانة والمظهر المهني.',
-    icon: '/images/healthcare/medical_hijab_uniform.jpg',
-  },
+    icon: '/images/healthcare/medical_hijab_uniform.jpg'},
   {
     title: 'توافق مع المعايير السعودية',
     description: 'جميع منتجاتنا متوافقة مع المعايير السعودية ومناسبة للبيئة المحلية.',
-    icon: '/images/healthcare/medical_hijab_uniform.jpg',
-  },
+    icon: '/images/healthcare/medical_hijab_uniform.jpg'},
   {
     title: 'التسليم السريع',
     description: 'نلتزم بجداول التسليم المحددة لنضمن وصول طلبك في الوقت المناسب.',
-    icon: '/images/healthcare/medical_hijab_uniform.jpg',
-  },
+    icon: '/images/healthcare/medical_hijab_uniform.jpg'},
   {
     title: 'دعم مستمر',
     description: 'فريق دعم متخصص جاهز لمساعدتك في أي استفسارات أو متطلبات إضافية.',
-    icon: '/images/healthcare/medical_hijab_uniform.jpg',
-  },
+    icon: '/images/healthcare/medical_hijab_uniform.jpg'},
   {
     title: 'أسعار تنافسية',
     description: 'نقدم أسعارًا تنافسية مع الحفاظ على أعلى معايير الجودة لجميع منتجاتنا.',
-    icon: '/images/healthcare/medical_hijab_uniform.jpg',
-  },
+    icon: '/images/healthcare/medical_hijab_uniform.jpg'},
 ];
 
 // تصنيفات المنتجات المميزة
@@ -502,7 +492,7 @@ export default function HomePage() {
             </button>
             <div className="relative" style={{padding: '56.25% 0 0 0'}}>
               <iframe 
-                src="https://player.vimeo.com/video/1063939680?h=d186c87f02&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1" 
+                src="https://player.vimeo.com/video/1063939680?h=d186c87f02&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1" 
                 frameBorder="0" 
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
                 style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}

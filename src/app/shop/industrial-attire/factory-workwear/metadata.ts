@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/factory-workwear.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Factory Workwear Collection by UNEOM',
-      }
-    ],
-  },
+        alt: 'Professional Factory Workwear Collection by UNEOM'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Factory Workwear | UNEOM Saudi Arabia',
     description: 'Premium factory workwear designed for Saudi Arabia\'s industrial sector. Safety meets durability with superior comfort.',
-    images: ['/images/products/factory-workwear.jpg'],
-  },
+    images: ['/images/products/factory-workwear.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/industrial-attire/factory-workwear',
     languages: {
       'en': 'https://uneom.com/shop/industrial-attire/factory-workwear',
-      'ar': 'https://uneom.com/ar/shop/industrial-attire/factory-workwear',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/industrial-attire/factory-workwear'}}}; 

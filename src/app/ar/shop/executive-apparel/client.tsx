@@ -32,12 +32,7 @@ export default function ExecutiveApparelClientPage() {
       description: 'بدلات رجالية أنيقة مصممة من أفخم الأقمشة، بقصات عصرية تناسب المدراء التنفيذيين والمناسبات الرسمية.',
       price: 'من 1,599 ريال',
       image: '/images/products/corporate-suit-executive.jpg',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
-      href: '/ar/shop/executive-apparel/business-casual',
+      href: '/ar/shop/executive-apparel/business-suits',
       features: ['أنيقة وعملية', 'خامات عالية الجودة', 'مريحة', 'مناسبة للعمل والمناسبات الاجتماعية'],
       colors: ['متنوعة']
     }

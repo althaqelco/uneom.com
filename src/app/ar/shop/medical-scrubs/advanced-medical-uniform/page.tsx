@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,16 +25,12 @@ export const metadata: Metadata = {
     description: 'زي طبي متقدم مصمم خصيصاً للمهنيين الطبيين، يجمع بين الراحة والحماية والأناقة المهنية',
     images: ['/images/products/medical/advanced-medical-uniform-ar.jpg'],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/medical-scrubs/advanced-medical-uniform/',
     languages: {
       'en': 'https://uneom.com/shop/medical-scrubs/advanced-medical-uniform/',
-      'ar': 'https://uneom.com/ar/shop/medical-scrubs/advanced-medical-uniform/',
-    },
-  },
-}
+      'ar': 'https://uneom.com/ar/shop/medical-scrubs/advanced-medical-uniform/'}}}
 
 const productJsonLd = {
   '@context': 'https://schema.org',

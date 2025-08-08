@@ -15,8 +15,7 @@ interface RTLWrapperProps {
 const RTLWrapper: React.FC<RTLWrapperProps> = ({
   children,
   locale,
-  className = '',
-}) => {
+  className = ''}) => {
   const isRtl = locale === 'ar';
   const dir = isRtl ? 'rtl' : 'ltr';
   const textAlignment = isRtl ? 'text-right' : 'text-left';

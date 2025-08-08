@@ -54,8 +54,6 @@ export default function EducationClientPageArabic() {
       name: "زي مدرسي كامل",
       description: "مجموعة كاملة من الزي المدرسي للطلاب والطالبات بتصاميم أنيقة ومريحة",
       image: "/images/school-uniform.webp",
-        href: "/ar/images/pe-uniform.webp",
-        href: "/ar/images/faculty-uniform.webp",
         href: "/ar/shop/education-uniforms/faculty-professional-attire"
     }
     ],

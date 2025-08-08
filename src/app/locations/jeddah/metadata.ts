@@ -1,38 +1,40 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Uniform Supplier in Jeddah | Professional Workwear | UNEOM Saudi Arabia',
-  description: 'Premium uniform supplier in Jeddah, providing custom workwear solutions for healthcare, corporate, hospitality and industrial sectors with local fitting and delivery.',
-  keywords: 'uniform supplier Jeddah, professional workwear Jeddah, custom uniforms Red Sea city, corporate uniform supplier, healthcare uniforms Jeddah, hospitality workwear, industrial uniforms, Jeddah uniform delivery, uniform fitting service, Saudi workwear provider',
+  title: 'يونيوم جدة | حلول الأزياء المهنية في المنطقة الغربية | UNEOM Jeddah',
+  description:
+    'قم بزيارة فرع يونيوم في جدة لحلول الأزياء المهنية المتقدمة. متخصصون في أزياء الضيافة والسياحة والحج والعمرة والقطاع البحري مع خدمات التصميم السريع.',
+  keywords: [
+    'أزياء جدة',
+    'يونيفورم ضيافة جدة',
+    'أزياء الحج والعمرة',
+    'أزياء بحرية جدة',
+    'أزياء سياحية',
+    'يونيوم جدة',
+    'المنطقة الغربية أزياء',
+    'فنادق جدة أزياء',
+  ],
+  alternates: {
+    canonical: 'https://uneom.com/locations/jeddah/',
+    languages: {
+      en: 'https://uneom.com/locations/jeddah/',
+      ar: 'https://uneom.com/ar/locations/jeddah/',
+    },
+  },
   openGraph: {
-    title: 'Premium Uniform Solutions in Jeddah | UNEOM Saudi Arabia',
-    description: 'UNEOM provides comprehensive uniform solutions in Jeddah with local fitting services, fast delivery, and custom workwear for all professional sectors across the Red Sea gateway.',
-    type: 'website',
-    locale: 'en',
+    title: 'يونيوم جدة | حلول الأزياء المهنية في المنطقة الغربية',
+    description:
+      'قم بزيارة فرع يونيوم في جدة لحلول الأزياء المهنية المتقدمة والمتخصصة في الضيافة والسياحة.',
+    url: 'https://uneom.com/locations/jeddah/',
+    siteName: 'UNEOM - يونيوم',
     images: [
       {
-        url: '/images/locations/jeddah-office.jpg',
+        url: 'https://uneom.com/images/locations/jeddah-cityscape.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Jeddah Office - Premium Uniform Solutions',
-      }
+        alt: 'فرع يونيوم في جدة',
+      },
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Uniform Supplier in Jeddah | UNEOM Saudi Arabia',
-    description: 'Premium uniform solutions in Jeddah with local fitting, fast delivery, and custom workwear for all professional sectors.',
-    images: ['/images/locations/jeddah-office.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: 'https://uneom.com/locations/jeddah',
-    languages: {
-      'en': 'https://uneom.com/locations/jeddah',
-      'ar': 'https://uneom.com/ar/locations/jeddah',
-    },
+    locale: 'ar_SA',
   },
 }; 

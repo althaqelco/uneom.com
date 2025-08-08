@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,16 +23,12 @@ export const metadata: Metadata = {
     description: 'احم عمالك الكهربائيين بقفازات السلامة المعتمدة من يونيم. تلبي المعايير الدولية للحماية الكهربائية في المملكة العربية السعودية.',
     images: ['/images/ppe/electrical-gloves-og.jpg'],
     locale: 'ar_SA',
-    siteName: 'UNEOM',
-  },
+    siteName: 'UNEOM'},
   alternates: {
     canonical: '/ar/shop/ppe/electrical-gloves/',
     languages: {
       'ar-SA': '/ar/shop/ppe/electrical-gloves/',
-      'en-US': '/shop/ppe/electrical-gloves/',
-    },
-  },
-}
+      'en-US': '/shop/ppe/electrical-gloves/'}}}
 
 const safetyFeaturesAr = [
   {

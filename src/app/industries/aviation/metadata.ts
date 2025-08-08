@@ -11,7 +11,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/industries/industries/aviation.jpg']
+        url: '/images/industries/industries/aviation.jpg'
+      }
+    ]
   },
   alternates: {
     canonical: 'https://uneom.com/industries/aviation',

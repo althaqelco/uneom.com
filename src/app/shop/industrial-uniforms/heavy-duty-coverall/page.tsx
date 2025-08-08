@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,16 +23,12 @@ export const metadata: Metadata = {
     description: 'High-quality heavy duty industrial coverall resistant to heat and chemicals',
     images: ['/images/products/industrial/heavy-duty-coverall-en.jpg'],
     locale: 'en_US',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/shop/industrial-uniforms/heavy-duty-coverall/',
     languages: {
       'en': 'https://uneom.com/shop/industrial-uniforms/heavy-duty-coverall/',
-      'ar': 'https://uneom.com/ar/shop/industrial-uniforms/heavy-duty-coverall/',
-    },
-  },
-}
+      'ar': 'https://uneom.com/ar/shop/industrial-uniforms/heavy-duty-coverall/'}}}
 
 const productJsonLd = {
   '@context': 'https://schema.org',

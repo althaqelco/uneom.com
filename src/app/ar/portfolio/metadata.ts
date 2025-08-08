@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/portfolio/portfolio-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'معرض أعمال الزي الموحد يونيوم - مشاريع ملابس العمل المخصصة',
-      }
-    ],
-  },
+        alt: 'معرض أعمال الزي الموحد يونيوم - مشاريع ملابس العمل المخصصة'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'معرض أعمال الزي الموحد | يونيوم السعودية',
     description: 'استكشف معرض أعمالنا لمشاريع الزي الموحد المخصص للمؤسسات الرائدة السعودية عبر قطاعات متعددة.',
-    images: ['/images/portfolio/portfolio-header.jpg'],
-  },
+    images: ['/images/portfolio/portfolio-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/portfolio',
     languages: {
       'en': 'https://uneom.com/portfolio',
-      'ar': 'https://uneom.com/ar/portfolio',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/portfolio'}}}; 

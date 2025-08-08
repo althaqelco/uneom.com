@@ -12,8 +12,7 @@ interface SearchBarProps {
 const SearchBar: React.FC<SearchBarProps> = ({
   placeholder = 'Search products...',
   locale = 'en',
-  className = '',
-}) => {
+  className = ''}) => {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState('');
 

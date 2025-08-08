@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import ClientPage from '../../[category]/[product]/ClientPage';
 import Script from 'next/script';
@@ -24,14 +25,11 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/shop/industrial-uniforms/industrial-safety-vest',
     languages: {
-      'ar': 'https://uneom.com/ar/shop/industrial-uniforms/industrial-safety-vest',
-    },
-  },
+      'ar': 'https://uneom.com/ar/shop/industrial-uniforms/industrial-safety-vest'}},
   robots: {
     index: true,
     follow: true,
@@ -40,10 +38,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function IndustrialSafetyVestPage() {
   // Use params to get product data

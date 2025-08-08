@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/restaurant-uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'مجموعة يونيفورم موظفي المطاعم الاحترافية من يونيوم',
-      }
-    ],
-  },
+        alt: 'مجموعة يونيفورم موظفي المطاعم الاحترافية من يونيوم'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'يونيفورم المطاعم | يونيوم السعودية',
     description: 'يونيفورم مطاعم متميز مصمم لمنشآت تقديم الطعام في السعودية. الأناقة تلتقي بالوظائف العملية مع راحة ومتانة فائقة.',
-    images: ['/images/products/restaurant-uniform.jpg'],
-  },
+    images: ['/images/products/restaurant-uniform.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/hospitality-attire/restaurant-uniform',
     languages: {
       'en': 'https://uneom.com/shop/hospitality-attire/restaurant-uniform',
-      'ar': 'https://uneom.com/ar/shop/hospitality-attire/restaurant-uniform',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/hospitality-attire/restaurant-uniform'}}}; 

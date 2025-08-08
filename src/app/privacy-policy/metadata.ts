@@ -18,22 +18,16 @@ export const metadata: Metadata = {
         height: 630,
         alt: 'UNEOM - Professional Uniform Solutions'
       }
-    ],
-  },
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Privacy Policy | UNEOM B2B Uniform Supplier',
     description: 'Learn how UNEOM collects, protects, and processes your information. Our commitment to data security and transparency for our B2B clients.',
-    images: ['https://uneom.com/images/twitter-image.jpg'],
-  },
+    images: ['https://uneom.com/images/twitter-image.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/privacy-policy',
     languages: {
-      'ar': 'https://uneom.com/ar/privacy-policy',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/privacy-policy'}}}; 

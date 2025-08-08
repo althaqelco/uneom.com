@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,9 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Sports Uniform Set | Athletic School Wear | Performance PE Kit | UNEOM',
     description: 'High-performance sports uniform set for school athletics. Moisture-wicking, breathable fabrics perfect for PE classes and sports activities.',
-    images: ['/images/products/education/sports-uniform-set.jpg'],
-  },
-}
+    images: ['/images/products/education/sports-uniform-set.jpg']}}
 
 const productFeatures = [
   {

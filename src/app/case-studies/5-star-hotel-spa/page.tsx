@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,8 +9,7 @@ import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 export const metadata: Metadata = {
   title: '5-Star Hotel Spa Uniform Case Study | Luxury Spa Workwear | UNEOM Saudi Arabia',
   description: 'How UNEOM transformed a prestigious 5-star hotel spa in Riyadh with custom luxury uniforms that elevated staff confidence, guest experiences, and brand identity',
-  keywords: 'luxury spa uniforms, 5-star hotel spa workwear, Saudi Arabia hotel uniforms, spa staff uniforms Riyadh, luxury hospitality uniforms, wellness center staff clothing, hotel spa branding',
-};
+  keywords: 'luxury spa uniforms, 5-star hotel spa workwear, Saudi Arabia hotel uniforms, spa staff uniforms Riyadh, luxury hospitality uniforms, wellness center staff clothing, hotel spa branding'};
 
 export default function FiveStarHotelSpaCaseStudy() {
   return (

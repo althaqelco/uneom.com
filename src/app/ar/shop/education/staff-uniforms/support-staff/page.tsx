@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,16 +23,12 @@ export const metadata: Metadata = {
     description: 'جهز فرق الدعم في مدرستك بأزياء متينة وعملية واحترافية من يونيم. نخدم المؤسسات التعليمية في جميع أنحاء المملكة العربية السعودية.',
     images: ['/images/education/support-staff-og.jpg'],
     locale: 'ar_SA',
-    siteName: 'UNEOM',
-  },
+    siteName: 'UNEOM'},
   alternates: {
     canonical: '/ar/shop/education/staff-uniforms/support-staff/',
     languages: {
       'ar-SA': '/ar/shop/education/staff-uniforms/support-staff/',
-      'en-US': '/shop/education/staff-uniforms/support-staff/',
-    },
-  },
-}
+      'en-US': '/shop/education/staff-uniforms/support-staff/'}}}
 
 const uniformFeaturesAr = [
   {

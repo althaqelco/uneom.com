@@ -110,11 +110,9 @@ export default function HealthcareClientPage() {
       priceCurrency: 'SAR',
       price: '179',
       priceValidUntil: '2024-12-31',
-      availability: 'https://schema.org/InStock',
-    },
+      availability: 'https://schema.org/InStock'},
     brand: {
-      name: 'يونيوم',
-    },
+      name: 'يونيوم'},
     mainEntityOfPage: 'https://uneom.com/ar/shop/healthcare/'
   };
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -18,9 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Premium Boys School Uniform Set | High-Quality Student Attire | UNEOM',
     description: 'Premium quality school uniform sets designed specifically for boys, combining comfort, durability, and style.',
-    images: ['/images/education/premium-boys-uniform.jpg'],
-  },
-}
+    images: ['/images/education/premium-boys-uniform.jpg']}}
 
 const uniformFeatures = [
   {

@@ -72,7 +72,7 @@ const Header: React.FC<HeaderProps> = ({ locale = 'en' }) => {
             {/* Buttons for desktop */}
             <div className={`hidden lg:flex items-center ${isRTL ? 'space-x-reverse space-x-6' : 'space-x-6'}`}>
               {isRTL ? (
-                <>
+                <React.Fragment>
                   <Link
                     href="/ar/quote"
                     className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md font-medium transition duration-300 shadow-sm hover:shadow-md flex items-center flex-row-reverse"
@@ -81,9 +81,9 @@ const Header: React.FC<HeaderProps> = ({ locale = 'en' }) => {
                     طلب عرض سعر
                   </Link>
                   <LanguageSwitcher currentLocale={locale} />
-                </>
+                </React.Fragment>
               ) : (
-                <>
+                <React.Fragment>
                   <Link
                     href="/quote"
                     className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md font-medium transition duration-300 shadow-sm hover:shadow-md flex items-center"
@@ -92,7 +92,7 @@ const Header: React.FC<HeaderProps> = ({ locale = 'en' }) => {
                     Request Quote
                   </Link>
                   <LanguageSwitcher currentLocale={locale} />
-                </>
+                </React.Fragment>
               )}
             </div>
             

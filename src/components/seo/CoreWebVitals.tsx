@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Core Web Vitals Component
  * Implements Google's May 2025 Core Web Vitals requirements
@@ -26,7 +27,7 @@ const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ reportWebVitals }) => {
   }, [reportWebVitals]);
 
   return (
-    <>
+    <React.Fragment>
       {/* Google Analytics 4 with Core Web Vitals */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
@@ -51,8 +52,7 @@ const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ reportWebVitals }) => {
               event_category: 'Web Vitals',
               event_label: id,
               value: Math.round(name === 'CLS' ? delta * 1000 : delta),
-              non_interaction: true,
-            });
+              non_interaction: true});
           }
           
           // Store the function globally for use by web-vitals
@@ -94,7 +94,7 @@ const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ reportWebVitals }) => {
           }
         `}
       </Script>
-    </>
+    </React.Fragment>
   );
 };
 

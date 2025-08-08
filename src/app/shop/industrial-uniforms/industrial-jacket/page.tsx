@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import ClientPage from '../../[category]/[product]/ClientPage';
 import { products } from '@/lib/data/products';
@@ -21,16 +22,12 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/products/industrial-safety-jacket-main.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Industrial Safety Jacket',
-      }
-    ],
-  },
+        alt: 'UNEOM Industrial Safety Jacket'}
+    ]},
   alternates: {
     canonical: 'https://uneom.com/shop/industrial-uniforms/industrial-jacket',
     languages: {
-      'ar': 'https://uneom.com/ar/shop/industrial-uniforms/industrial-jacket',
-    },
-  },
+      'ar': 'https://uneom.com/ar/shop/industrial-uniforms/industrial-jacket'}},
   robots: {
     index: true,
     follow: true,
@@ -39,10 +36,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function ProductPage() {
   // Use metadata from params to filter products and get specific product data

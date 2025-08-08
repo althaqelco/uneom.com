@@ -172,7 +172,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   );
   
   return (
-    <>
+    <React.Fragment>
       <Head>
         {/* Primary Meta Tags */}
         <title>{pageTitle}</title>
@@ -216,7 +216,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       
       {/* Add hreflang tags */}
       {includeLanguageTags && <HreflangTags path={router.asPath} />}
-    </>
+    </React.Fragment>
   );
 };
 

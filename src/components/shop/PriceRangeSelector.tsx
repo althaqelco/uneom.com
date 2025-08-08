@@ -20,8 +20,7 @@ const PriceRangeSelector: React.FC<PriceRangeSelectorProps> = ({
   onChange,
   currency = 'ريال',
   isRTL = false,
-  className = '',
-}) => {
+  className = ''}) => {
   return (
     <div className={className}>
       <h3 className={`text-sm font-medium text-neutral-900 ${isRTL ? 'text-right' : 'text-left'} mb-2`}>

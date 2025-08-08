@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,16 +23,12 @@ export const metadata: Metadata = {
     description: 'ارتقِ بهيئة التدريس مع أزياء المعلمين المتخصصة من يونيم. جودة وراحة وتصاميم احترافية للمدارس في جميع أنحاء المملكة.',
     images: ['/images/education/teacher-uniforms-og.jpg'], 
     locale: 'ar_SA',
-    siteName: 'UNEOM',
-  },
+    siteName: 'UNEOM'},
   alternates: {
     canonical: '/ar/shop/education/staff-uniforms/teacher-uniform/',
     languages: {
       'ar-SA': '/ar/shop/education/staff-uniforms/teacher-uniform/',
-      'en-US': '/shop/education/staff-uniforms/teacher-uniform/',
-    },
-  },
-}
+      'en-US': '/shop/education/staff-uniforms/teacher-uniform/'}}}
 
 const uniformFeaturesAr = [
   {

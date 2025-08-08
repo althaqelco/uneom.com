@@ -15,14 +15,12 @@ import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 const cairoFont = Cairo({ 
   subsets: ['arabic'],
   weight: ['600', '700'],
-  variable: '--font-cairo',
-});
+  variable: '--font-cairo'});
 
 const tajawalFont = Tajawal({
   subsets: ['arabic'],
   weight: ['400', '500', '700'],
-  variable: '--font-tajawal',
-});
+  variable: '--font-tajawal'});
 
 export default function FactorySecurityClientPageArabic() {
   const locale = 'ar';
@@ -89,8 +87,6 @@ export default function FactorySecurityClientPageArabic() {
         name: "طقم يونيفورم الأمن الصناعي",
         description: "طقم يونيفورم أمني كامل مصمم للبيئات الصناعية، يتميز بعناصر عالية الرؤية وبناء متين.",
         image: "/images/industries/factory_industry/factory-security-uniform-1.jpg",
-        href: "/ar/images/industries/factory_industry/factory-security-uniform-2.jpg",
-        href: "/ar/images/industries/factory_industry/factory-security-uniform-3.jpg",
         href: "/ar/shop/security-uniforms/supervisor-set",
         features: ["تصميم احترافي", "مواد متميزة", "شارات المشرف"]
       }

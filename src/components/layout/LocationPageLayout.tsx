@@ -10,8 +10,7 @@ import VercelImageFixer from '../ui/VercelImageFixer';
 
 // Dynamically import FloatingWhatsApp with no SSR
 const FloatingWhatsApp = dynamic(() => import('../ui/FloatingWhatsApp'), {
-  ssr: false,
-});
+  ssr: false});
 
 interface LocationPageLayoutProps {
   children: React.ReactNode;

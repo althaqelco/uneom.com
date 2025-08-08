@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/resort-staff-uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Resort Staff Uniform Collection by UNEOM',
-      }
-    ],
-  },
+        alt: 'Professional Resort Staff Uniform Collection by UNEOM'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Resort Staff Uniforms | UNEOM Saudi Arabia',
     description: 'Premium resort uniforms designed for Saudi Arabia\'s leisure destinations. Style meets functionality with climate-adapted comfort.',
-    images: ['/images/products/resort-staff-uniform.jpg'],
-  },
+    images: ['/images/products/resort-staff-uniform.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/hospitality-attire/resort-staff-attire',
     languages: {
       'en': 'https://uneom.com/shop/hospitality-attire/resort-staff-attire',
-      'ar': 'https://uneom.com/ar/shop/hospitality-attire/resort-staff-attire',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/hospitality-attire/resort-staff-attire'}}}; 

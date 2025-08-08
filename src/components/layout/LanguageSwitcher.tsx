@@ -17,8 +17,7 @@ interface LanguageSwitcherProps {
  */
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   className = '',
-  currentLocale,
-}) => {
+  currentLocale}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const router = useRouter();

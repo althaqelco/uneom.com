@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,10 +27,7 @@ export const metadata: Metadata = {
     canonical: '/shop/education/staff-uniforms/support-staff/',
     languages: {
       'en-US': '/shop/education/staff-uniforms/support-staff/',
-      'ar-SA': '/ar/shop/education/staff-uniforms/support-staff/',
-    },
-  },
-}
+      'ar-SA': '/ar/shop/education/staff-uniforms/support-staff/'}}}
 
 const uniformFeatures = [
   {

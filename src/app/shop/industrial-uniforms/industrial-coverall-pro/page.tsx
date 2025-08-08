@@ -125,10 +125,6 @@ export default function IndustrialCoverallProPage() {
         id: "industrial-safety-vest",
         name: "High-Visibility Safety Vest",
         image: "/images/product-placeholder.jpg",
-        price: "SAR 89",
-        href: "/images/product-placeholder.jpg",
-        price: "SAR 159",
-        href: "/images/product-placeholder.jpg",
         price: "SAR 269",
         href: "/shop/industrial-uniforms/mechanics-overalls"
       }
@@ -397,7 +393,7 @@ export default function IndustrialCoverallProPage() {
         {/* Product Features */}
         <div className="mt-16 bg-neutral-50 rounded-2xl p-8">
           <SectionHeading as="h2" className="text-center mb-12">
-            Key Features &amp; Benefits
+            Key Features & Benefits
           </SectionHeading>
           <FeaturesGrid features={product.features} columns={3} />
         </div>

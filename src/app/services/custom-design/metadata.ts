@@ -11,7 +11,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/services/services/custom-design.jpg']
+        url: '/images/services/services/custom-design.jpg'
+      }
+    ]
   },
   alternates: {
     canonical: 'https://uneom.com/services/custom-design',

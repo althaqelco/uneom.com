@@ -1,5 +1,4 @@
-'use client';
-
+import React from 'react';
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -374,13 +373,13 @@ export default function CorporateUniformEmployeeSatisfactionPage() {
                         <td className="border border-gray-300 px-4 py-2">Feedback Volume</td>
                         <td className="border border-gray-300 px-4 py-2">Complaints and suggestions</td>
                         <td className="border border-gray-300 px-4 py-2">Feedback tracking systems</td>
-                        <td className="border border-gray-300 px-4 py-2">&lt;5% complaint rate</td>
+                        <td className="border border-gray-300 px-4 py-2">{`<5% complaint rate`}</td>
                       </tr>
                       <tr className="bg-gray-50">
                         <td className="border border-gray-300 px-4 py-2">Retention Impact</td>
                         <td className="border border-gray-300 px-4 py-2">Uniform-related turnover</td>
                         <td className="border border-gray-300 px-4 py-2">Exit interview analysis</td>
-                        <td className="border border-gray-300 px-4 py-2">&lt;2% attribution</td>
+                        <td className="border border-gray-300 px-4 py-2">{`<2% attribution`}</td>
                       </tr>
                     </tbody>
                   </table>

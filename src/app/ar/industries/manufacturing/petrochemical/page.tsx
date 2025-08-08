@@ -15,8 +15,7 @@ const pageData = {
   hero: {
     title: "UNEOM - Professional Uniforms",
     subtitle: "ملابس السلامة المتقدمة لقطاع البتروكيماويات في المملكة العربية السعودية",
-    image: "/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg",
-  },
+    image: "/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg"},
   stats: [
     { value: "ISO 11612", label: "حماية من الحريق" },
     { value: "NFPA 2112", label: "معايير مقاومة اللهب" },

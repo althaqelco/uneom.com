@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/about/about-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'About UNEOM - Premium Uniform Provider in Saudi Arabia',
-      }
-    ],
-  },
+        alt: 'About UNEOM - Premium Uniform Provider in Saudi Arabia'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'About UNEOM | Saudi Arabia',
     description: 'UNEOM\'s journey to becoming Saudi Arabia\'s premier uniform provider with our commitment to quality, innovation, and customer satisfaction.',
-    images: ['/images/about/about-header.jpg'],
-  },
+    images: ['/images/about/about-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/about',
     languages: {
       'en': 'https://uneom.com/about',
-      'ar': 'https://uneom.com/ar/about',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/about'}}}; 

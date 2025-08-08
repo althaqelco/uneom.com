@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,8 +24,7 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  }
+    type: 'website'}
 };
 
 export const dynamic = 'force-static';

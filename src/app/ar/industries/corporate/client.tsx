@@ -44,9 +44,7 @@ export default function CorporateClientPageArabic() {
         name: "البدلات التنفيذية",
         description: "بدلات أنيقة للمدراء التنفيذيين والمناصب القيادية بتصاميم عصرية وخامات فاخرة",
         image: "/images/corporate/executive-suits.jpg",
-        href: "/ar/images/corporate/office-attire.jpg",
-        href: "/ar/images/corporate/reception-uniforms.jpg",
-        href: "/ar/shop/corporate-wear/reception-collection"
+        href: "/ar/shop/corporate-wear/executive-collection"
       }
     ],
     testimonials: [

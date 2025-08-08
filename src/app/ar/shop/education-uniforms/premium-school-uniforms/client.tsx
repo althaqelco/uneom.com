@@ -368,7 +368,18 @@ export default function PremiumSchoolUniformsClientPage() {
               </div>
               
               <div className="flex flex-col space-y-3">
-                <AddToQuoteButton onClick={handleAddToQuote} disabled={!selectedColor || !selectedSize} />
+                <AddToQuoteButton
+                  product={{
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: '/images/products/premium-school-uniforms.webp'
+                  }}
+                  color={selectedColor || ''}
+                  size={selectedSize || ''}
+                  quantity={quantity}
+                  className="w-full"
+                />
                 
                 <button
                   type="button"
@@ -445,13 +456,15 @@ export default function PremiumSchoolUniformsClientPage() {
           <h2 className="text-2xl font-bold mb-8 text-center">ماذا يقول عملاؤنا</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {product.testimonials.map((testimonial, index) => (
-              <TestimonialCard 
+              <TestimonialCard
                 key={index}
+                id={index}
                 quote={testimonial.quote}
-                author={testimonial.author}
-                position={testimonial.position}
+                name={testimonial.author}
+                role={testimonial.position}
                 company={testimonial.company}
                 image={testimonial.image}
+                locale={locale}
               />
             ))}
           </div>

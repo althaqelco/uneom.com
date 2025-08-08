@@ -32,9 +32,7 @@ export default function AviationUniformsClientPage() {
       description: 'زي طيار احترافي عالي الجودة مصمم للراحة والأناقة، يتميز بتفاصيل مميزة ونسيج فاخر.',
       price: 'من 599 ريال',
       image: '/images/Aviation_Uniforms.png',
-      href: '/ar/images/Portrait_of_Flight_attendant.png',
-      href: '/ar/images/happy-ground-crew-worker-with-flag-at-the-airport-SBI-300817391.jpg',
-      href: '/ar/shop/aviation-uniforms/ground-crew-uniform',
+      href: '/ar/shop/aviation-uniforms/pilot-uniform',
       features: ['متين', 'مقاوم للطقس', 'تصميم عملي', 'جيوب متعددة'],
       colors: ['أصفر/أسود', 'برتقالي/كحلي', 'أخضر', 'أزرق']
     },
@@ -44,9 +42,7 @@ export default function AviationUniformsClientPage() {
       description: 'زي رسمي وعملي مصمم لفرق أمن الطيران، يجمع بين المظهر السلطوي والراحة العملية.',
       price: 'من 399 ريال',
       image: '/images/african-american-security-staff-working-at-airport-SBI-338134198.jpg',
-      href: '/ar/images/engineers-discussing-in-airplane-hangar-SBI-300973677.jpg',
-      href: '/ar/images/middle-eastern-pilot-walking-at-airport-with-pilot-ca-SBI-313431393.jpg',
-      href: '/ar/shop/aviation-uniforms/airline-office-uniform',
+      href: '/ar/shop/aviation-uniforms/aviation-security-uniform',
       features: ['تصميم أنيق', 'نسيج مريح', 'علامة تجارية موحدة', 'سهل العناية'],
       colors: ['كحلي', 'أسود', 'رمادي', 'أبيض']
     }

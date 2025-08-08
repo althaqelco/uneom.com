@@ -226,7 +226,7 @@ const EnhancedBreadcrumbs: React.FC<EnhancedBreadcrumbsProps> = ({
   const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbSchemaItems);
   
   return (
-    <>
+    <React.Fragment>
       {includeSchema && (
         <StructuredData
           type="BreadcrumbList"
@@ -270,7 +270,7 @@ const EnhancedBreadcrumbs: React.FC<EnhancedBreadcrumbsProps> = ({
           ))}
         </ol>
       </nav>
-    </>
+    </React.Fragment>
   );
 };
 

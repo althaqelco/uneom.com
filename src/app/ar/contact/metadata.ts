@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/contact/contact-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'معلومات الاتصال بيونيوم - تواصل مع متخصصي الزي الموحد',
-      }
-    ],
-  },
+        alt: 'معلومات الاتصال بيونيوم - تواصل مع متخصصي الزي الموحد'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'اتصل بيونيوم | مزود الزي الموحد في السعودية',
     description: 'تواصل مع متخصصي الزي الموحد في يونيوم في الرياض، جدة، والدمام للحصول على عروض الأسعار، الدعم، أو الاستفسارات.',
-    images: ['/images/contact/contact-header.jpg'],
-  },
+    images: ['/images/contact/contact-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/contact',
     languages: {
       'en': 'https://uneom.com/contact',
-      'ar': 'https://uneom.com/ar/contact',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/contact'}}}; 

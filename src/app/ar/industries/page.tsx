@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Container from '@/components/ui/Container'
 import Card from '@/components/ui/Card'

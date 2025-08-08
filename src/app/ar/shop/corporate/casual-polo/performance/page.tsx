@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,9 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'قمصان بولو عالية الأداء | بولو شركات يمتص الرطوبة | يونيوم',
     description: 'حافظ على برودتك وجفافك واحترافك مع قمصان البولو عالية الأداء، المصممة لبيئات الشركات النشطة.',
-    images: ['/images/products/corporate/performance-polo-main.jpg'],
-  },
-}
+    images: ['/images/products/corporate/performance-polo-main.jpg']}}
 
 const productFeatures = [
   {

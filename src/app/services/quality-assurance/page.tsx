@@ -11,20 +11,21 @@ import { motion } from 'framer-motion';
 import { Poppins, Inter } from 'next/font/google';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
+
 // Define the fonts
-const poppinsFont = Poppins({ 
+const poppinsFont = Poppins({
   subsets: ['latin'],
   weight: ['600', '700'],
-  variable: '--font-poppins',
-});
+  variable: '--font-poppins'});
 
 const interFont = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
-  variable: '--font-inter',
-});
+  variable: '--font-inter'});
 
-const QualityAssurancePage = () => {
+export default function QualityAssurancePage() {
+
+
   const locale = 'en';
   
   // Quality Assurance Processes
@@ -32,33 +33,27 @@ const QualityAssurancePage = () => {
     {
       title: "UNEOM - Professional Uniforms",
       description: 'Rigorous testing of all fabrics and materials before production to ensure they meet our quality standards',
-      icon: '🧵',
-    },
+      icon: '🧵'},
     {
       title: 'Production Monitoring',
       description: 'Continuous oversight of the manufacturing process with quality checks at each production stage',
-      icon: '👁️',
-    },
+      icon: '👁️'},
     {
       title: 'Sampling & Testing',
       description: 'Regular random sampling and comprehensive testing of uniform components throughout production',
-      icon: '🔍',
-    },
+      icon: '🔍'},
     {
       title: 'Final Inspection',
       description: 'Thorough examination of completed uniforms for defects, consistency, and adherence to specifications',
-      icon: '✅',
-    },
+      icon: '✅'},
     {
       title: 'Performance Verification',
       description: 'Testing of finished uniforms under simulated real-world conditions to ensure they meet performance requirements',
-      icon: '⚡',
-    },
+      icon: '⚡'},
     {
       title: 'Customer Feedback Integration',
       description: 'Systematic incorporation of customer feedback into our quality improvement processes',
-      icon: '💬',
-    },
+      icon: '💬'},
   ];
   
   // Quality Standards
@@ -73,8 +68,7 @@ const QualityAssurancePage = () => {
         'Product realization',
         'Measurement, analysis, and improvement'
       ],
-      image: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg',
-    },
+      image: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg'},
     {
       name: 'OEKO-TEX® Standard 100',
       description: 'Certification system for raw, semi-finished, and finished textile products, ensuring they are free from harmful substances.',
@@ -85,8 +79,7 @@ const QualityAssurancePage = () => {
         'Human-ecological requirements',
         'Ongoing verification'
       ],
-      image: '/images/a-brunette-man-with-a-beard-in-a-white-protective-uniform-and-an-orange-vest-presses-c-SBI-351495165.jpg',
-    },
+      image: '/images/a-brunette-man-with-a-beard-in-a-white-protective-uniform-and-an-orange-vest-presses-c-SBI-351495165.jpg'},
     {
       name: 'SASO Quality Mark',
       description: 'Saudi quality certification demonstrating compliance with the Kingdom\'s stringent quality and safety requirements.',
@@ -97,8 +90,7 @@ const QualityAssurancePage = () => {
         'Performance criteria',
         'Consumer protection'
       ],
-      image: '/images/arabic-businessman-in-the-middle-east-SBI-300984430.jpg',
-    },
+      image: '/images/arabic-businessman-in-the-middle-east-SBI-300984430.jpg'},
   ];
   
   // Testing Methods
@@ -106,33 +98,27 @@ const QualityAssurancePage = () => {
     {
       name: 'Colorfastness Testing',
       description: 'Evaluation of color retention after washing, exposure to light, perspiration, and rubbing',
-      icon: '🎨',
-    },
+      icon: '🎨'},
     {
       name: 'Fabric Durability Testing',
       description: 'Assessment of tensile strength, tear resistance, abrasion resistance, and pilling performance',
-      icon: '💪',
-    },
+      icon: '💪'},
     {
       name: 'Dimensional Stability Testing',
       description: 'Measurement of shrinkage and shape retention after washing and drying cycles',
-      icon: '📏',
-    },
+      icon: '📏'},
     {
       name: 'Climate Performance Testing',
       description: 'Evaluation of fabric performance in Saudi Arabia\'s unique climate conditions, including heat resistance and moisture management',
-      icon: '🌡️',
-    },
+      icon: '🌡️'},
     {
       name: 'Seam Strength Testing',
       description: 'Assessment of seam integrity and strength under various stress conditions',
-      icon: '🧷',
-    },
+      icon: '🧷'},
     {
       name: 'Functional Testing',
       description: 'Verification of specialized features like water resistance, flame retardancy, and antimicrobial properties',
-      icon: '🛡️',
-    },
+      icon: '🛡️'},
   ];
   
   // Program Benefits
@@ -140,23 +126,19 @@ const QualityAssurancePage = () => {
     {
       title: 'Consistent Quality',
       description: 'Reliable, high-quality uniforms that maintain their appearance and performance throughout their lifecycle',
-      icon: '⭐',
-    },
+      icon: '⭐'},
     {
       title: 'Extended Uniform Lifespan',
       description: 'Longer-lasting garments that reduce replacement frequency and total ownership costs',
-      icon: '⏱️',
-    },
+      icon: '⏱️'},
     {
       title: 'Enhanced Professional Image',
       description: 'Impeccable uniforms that present a consistently professional appearance for your organization',
-      icon: '👔',
-    },
+      icon: '👔'},
     {
       title: 'Improved Employee Satisfaction',
       description: 'Comfortable, well-fitting uniforms that enhance employee morale and productivity',
-      icon: '😊',
-    },
+      icon: '😊'},
   ];
 
   return (
@@ -610,6 +592,5 @@ const QualityAssurancePage = () => {
       </section>
     </div>
   );
-};
 
-export default QualityAssurancePage; 
+}

@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/locations/riyadh-office.jpg',
         width: 1200,
         height: 630,
-        alt: 'مكتب يونيوم الرياض - حلول الزي الموحد المتميزة',
-      }
-    ],
-  },
+        alt: 'مكتب يونيوم الرياض - حلول الزي الموحد المتميزة'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'مورد الزي الموحد في الرياض | يونيوم السعودية',
     description: 'حلول الزي الموحد المتميزة في الرياض مع خدمات المقاسات المحلية، التوصيل السريع، وملابس العمل المخصصة لجميع القطاعات المهنية.',
-    images: ['/images/locations/riyadh-office.jpg'],
-  },
+    images: ['/images/locations/riyadh-office.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/locations/riyadh',
     languages: {
       'en': 'https://uneom.com/locations/riyadh',
-      'ar': 'https://uneom.com/ar/locations/riyadh',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/locations/riyadh'}}}; 

@@ -14,9 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://uneom.com/ar/services/fabric-selection',
     languages: {
-      'en': 'https://uneom.com/services/fabric-selection',
-    },
-  },
+      'en': 'https://uneom.com/services/fabric-selection'}},
   openGraph: {
     title: 'خدمة اختيار الأقمشة الاحترافية | يونيوم - المملكة العربية السعودية',
     description: 'استشارات متخصصة في اختيار الأقمشة للأزياء الموحدة المهنية مصممة خصيصًا لمناخ المملكة العربية السعودية. تحديد المواد المثالية للراحة والمتانة والأداء في مجال عملك.',

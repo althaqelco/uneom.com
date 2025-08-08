@@ -32,12 +32,7 @@ export default function CorporateWorkwearClientPage() {
       description: 'بدلة عمل أنيقة للمديرين التنفيذيين والمهنيين، مصممة من أقمشة فاخرة مع خيارات تخصيص متعددة.',
       price: 'من 899 ريال',
       image: '/images/corporate-workwear.jpg',
-      href: '/ar/images/corporate-workwear.jpg',
-      href: '/ar/images/corporate-workwear.jpg',
-      href: '/ar/images/corporate-workwear.jpg',
-      href: '/ar/images/corporate-workwear.jpg',
-      href: '/ar/images/corporate-workwear.jpg',
-      href: '/ar/shop/corporate-workwear/corporate-accessories',
+      href: '/ar/shop/corporate-workwear/executive-suit',
       features: ['جودة عالية', 'تصميم أنيق', 'مناسبة للهدايا المؤسسية', 'خيارات تخصيص'],
       colors: ['متعددة']
     }

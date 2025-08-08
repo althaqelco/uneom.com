@@ -50,8 +50,6 @@ export default function ManufacturingIndustryClientPageAr() {
           name: "أزياء موحدة لخط الإنتاج",
           description: "ملابس عمل متينة ومريحة مصممة لموظفي خط الإنتاج، مع ميزات لمرونة الحركة والحماية من مخاطر التصنيع الشائعة.",
           image: "/images/manufacturing/production_line_uniforms.jpg",
-        href: "/ar/images/manufacturing/supervisor_workwear.jpg",
-        href: "/ar/images/manufacturing/maintenance_technical_uniform.jpg",
         href: "/ar/shop/manufacturing-workwear/maintenance-uniform"
         }
       ],

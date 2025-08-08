@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import RestaurantStaffUniformClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -16,23 +17,17 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/products/restaurant-staff-uniform.webp',
         width: 1200,
         height: 630,
-        alt: 'أزياء طاقم المطعم الفاخرة من يونيوم',
-      },
+        alt: 'أزياء طاقم المطعم الفاخرة من يونيوم'},
     ],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/hospitality-attire/restaurant-staff-uniform',
     languages: {
-      'en': 'https://uneom.com/shop/hospitality-attire/restaurant-staff-uniform',
-    },
-  },
-};
+      'en': 'https://uneom.com/shop/hospitality-attire/restaurant-staff-uniform'}}};
 
 export default function RestaurantStaffUniformPage() {
   return <RestaurantStaffUniformClientPage />;

@@ -11,20 +11,19 @@ import { motion } from 'framer-motion';
 import { Poppins, Inter } from 'next/font/google';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
+
 // Define the fonts
 const poppinsFont = Poppins({
   subsets: ['latin'],
   weight: ['600', '700'],
-  variable: '--font-poppins',
-});
+  variable: '--font-poppins'});
 
 const interFont = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
-  variable: '--font-inter',
-});
+  variable: '--font-inter'});
 
-const ManufacturingPage = () => {
+export default function ManufacturingPage() {
   const locale = 'en';
   
   // Manufacturing Capabilities
@@ -32,33 +31,27 @@ const ManufacturingPage = () => {
     {
       title: "UNEOM - Professional Uniforms",
       description: 'Computer-controlled cutting systems that ensure accuracy and consistency across all uniform pieces',
-      icon: '✂️',
-    },
+      icon: '✂️'},
     {
       title: 'Advanced Sewing',
       description: 'High-performance sewing technologies for superior seam strength and durability',
-      icon: '🧵',
-    },
+      icon: '🧵'},
     {
       title: 'Embroidery & Branding',
       description: 'State-of-the-art embroidery machines for precise logo application and personalization',
-      icon: '🧶',
-    },
+      icon: '🧶'},
     {
       title: 'Screen Printing',
       description: 'Industrial printing systems for vibrant, long-lasting graphics and identifiers on uniforms',
-      icon: '🖌️',
-    },
+      icon: '🖌️'},
     {
       title: 'Finishing Processes',
       description: 'Advanced finishing treatments to enhance comfort, durability, and appearance',
-      icon: '✨',
-    },
+      icon: '✨'},
     {
       title: 'Quality Control',
       description: 'Rigorous inspection processes at every stage to ensure consistent quality',
-      icon: '✓',
-    },
+      icon: '✓'},
   ];
   
   // Manufacturing Process
@@ -73,8 +66,7 @@ const ManufacturingPage = () => {
         'Sample pattern testing and adjustment',
         'Production-ready pattern preparation'
       ],
-      image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
-    },
+      image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg'},
     {
       name: 'Material Preparation',
       description: 'Preparing fabrics and materials for the cutting process, ensuring quality and consistency.',
@@ -85,8 +77,7 @@ const ManufacturingPage = () => {
         'Spreading and layering for cutting',
         'Material alignment and verification'
       ],
-      image: '/images/fabric-material-2024-12-06-03-35-02-utc.jpg',
-    },
+      image: '/images/fabric-material-2024-12-06-03-35-02-utc.jpg'},
     {
       name: 'Precision Cutting',
       description: 'Cutting fabrics with precision to ensure consistent sizing and optimal material utilization.',
@@ -97,8 +88,7 @@ const ManufacturingPage = () => {
         'Cut quality inspection',
         'Sorting and preparation for sewing'
       ],
-      image: '/images/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg',
-    },
+      image: '/images/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg'},
     {
       name: 'Expert Assembly',
       description: 'Skilled craftspeople assembling uniform components with precision and attention to detail.',
@@ -109,8 +99,7 @@ const ManufacturingPage = () => {
         'In-line quality checks',
         'Structural integrity verification'
       ],
-      image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
-    },
+      image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg'},
     {
       name: 'Branding & Detailing',
       description: 'Adding logos, insignias, and specific details that complete the uniform\'s identity.',
@@ -121,8 +110,7 @@ const ManufacturingPage = () => {
         'Detail finishing and reinforcement',
         'Branding quality verification'
       ],
-      image: '/images/a-brunette-man-with-a-beard-in-a-white-protective-uniform-and-an-orange-vest-presses-c-SBI-351495165.jpg',
-    },
+      image: '/images/a-brunette-man-with-a-beard-in-a-white-protective-uniform-and-an-orange-vest-presses-c-SBI-351495165.jpg'},
     {
       name: 'Finishing & Quality Control',
       description: 'Final touches and comprehensive quality checks to ensure all uniforms meet our exacting standards.',
@@ -133,8 +121,7 @@ const ManufacturingPage = () => {
         'Measurement verification',
         'Packaging and preparation for delivery'
       ],
-      image: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg',
-    },
+      image: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg'},
   ];
   
   // Production Options
@@ -149,8 +136,7 @@ const ManufacturingPage = () => {
         'Regular quality control checkpoints',
         'Standard packaging and delivery options'
       ],
-      suitableFor: 'Medium to large organizations with consistent uniform requirements',
-    },
+      suitableFor: 'Medium to large organizations with consistent uniform requirements'},
     {
       title: 'Fast-Track Production',
       description: 'Accelerated manufacturing process for time-sensitive uniform requirements without compromising quality.',
@@ -162,8 +148,7 @@ const ManufacturingPage = () => {
         'Expedited quality control process',
         'Rush delivery coordination'
       ],
-      suitableFor: 'Organizations with urgent uniform needs or tight deadlines',
-    },
+      suitableFor: 'Organizations with urgent uniform needs or tight deadlines'},
     {
       title: 'Small Batch Production',
       description: 'Specialized manufacturing service for smaller organizations or specific department needs.',
@@ -174,8 +159,7 @@ const ManufacturingPage = () => {
         'Cost-optimized for smaller quantities',
         'Ability to test designs before larger orders'
       ],
-      suitableFor: 'Small businesses, startups, or departments requiring limited quantities',
-    },
+      suitableFor: 'Small businesses, startups, or departments requiring limited quantities'},
     {
       title: 'Custom Development',
       description: 'End-to-end manufacturing service for organizations requiring unique, custom-designed uniforms.',
@@ -187,8 +171,7 @@ const ManufacturingPage = () => {
         'Full production following approval',
         'Detailed documentation for future production'
       ],
-      suitableFor: 'Organizations requiring unique uniform designs tailored to specific requirements',
-    },
+      suitableFor: 'Organizations requiring unique uniform designs tailored to specific requirements'},
   ];
   
   // Manufacturing Benefits
@@ -196,23 +179,19 @@ const ManufacturingPage = () => {
     {
       title: 'Superior Quality Control',
       description: 'Our in-house manufacturing ensures rigorous quality standards at every production stage',
-      icon: '🛠️',
-    },
+      icon: '🛠️'},
     {
       title: 'Faster Turnaround Times',
       description: 'Direct control over production scheduling allows for more efficient delivery timelines',
-      icon: '⏱️',
-    },
+      icon: '⏱️'},
     {
       title: 'Production Flexibility',
       description: 'Ability to accommodate both large-scale orders and smaller specialized batches',
-      icon: '🔄',
-    },
+      icon: '🔄'},
     {
       title: 'Cost Efficiency',
       description: 'Streamlined production processes and material optimization reduce overall costs',
-      icon: '💰',
-    },
+      icon: '💰'},
   ];
 
   return (
@@ -750,6 +729,4 @@ const ManufacturingPage = () => {
       </section>
     </div>
   );
-};
-
-export default ManufacturingPage; 
+}

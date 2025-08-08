@@ -15,8 +15,7 @@ const pageData = {
   hero: {
     title: "Heavy Industry Uniform Solutions",
     subtitle: "Advanced Safety Workwear for Saudi Arabia's Industrial Sector",
-    image: "/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg",
-  },
+    image: "/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg"},
   stats: [
     { value: "ISO 20471", label: "High Visibility" },
     { value: "EN 388", label: "Impact Protection" },

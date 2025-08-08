@@ -24,8 +24,7 @@ const ArabicFooter: React.FC = () => {
     contactUsLink: 'تواصل معنا',
     followUs: 'تابعنا',
     copyright: '© 2025 يونيوم. جميع الحقوق محفوظة.',
-    certifications: 'شهادات الجودة',
-  };
+    certifications: 'شهادات الجودة'};
   
   // روابط وسائل التواصل الاجتماعي
   const socialLinks = {
@@ -42,20 +41,16 @@ const ArabicFooter: React.FC = () => {
   const certificates = [
     {
       name: 'ISO 9001:2015',
-      logo: '/images/certificate/ISO_90012015.png',
-    },
+      logo: '/images/certificate/ISO_90012015.png'},
     {
       name: 'OEKO-TEX® Standard 100',
-      logo: '/images/certificate/OEKO-TEX.png',
-    },
+      logo: '/images/certificate/OEKO-TEX.png'},
     {
       name: 'Saudi Quality Mark',
-      logo: '/images/certificate/Saudi_Quality_Mark.png',
-    },
+      logo: '/images/certificate/Saudi_Quality_Mark.png'},
     {
       name: 'GOTS Certified',
-      logo: '/images/certificate/GOTS_Certified.png',
-    }
+      logo: '/images/certificate/GOTS_Certified.png'}
   ];
   
   return (

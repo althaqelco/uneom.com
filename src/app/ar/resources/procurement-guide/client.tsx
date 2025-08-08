@@ -125,8 +125,7 @@ export default function ProcurementGuideClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/arabic-businessman-in-the-middle-east-SBI-300984430.jpg',
-      },
+        image: '/images/arabic-businessman-in-the-middle-east-SBI-300984430.jpg'},
       {
         title: 'تطوير مواصفات الزي الموحد',
         content: `
@@ -188,8 +187,7 @@ export default function ProcurementGuideClientPageArabic() {
             </p>
           </div>
         `,
-        image: '/images/resources/procurement-guide/specifications-development.jpg',
-      },
+        image: '/images/resources/procurement-guide/specifications-development.jpg'},
       {
         title: 'اعتبارات خاصة لشراء الزي الموحد في السعودية',
         content: `
@@ -250,8 +248,7 @@ export default function ProcurementGuideClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/resources/procurement-guide/saudi-considerations.jpg',
-      }
+        image: '/images/resources/procurement-guide/saudi-considerations.jpg'}
     ],
     items: steps,
     relatedResources: [

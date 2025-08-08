@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -19,9 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'الحماية من الكهرباء الساكنة في البيئات الصناعية | يونيوم',
     description: 'دليل شامل للحماية من الكهرباء الساكنة في البيئات الصناعية السعودية',
-    images: ['/images/blog/industrial-electrostatic-protection.jpg'],
-  },
-}
+    images: ['/images/blog/industrial-electrostatic-protection.jpg']}}
 
 export default function IndustrialElectrostaticProtectionPage() {
   return (

@@ -43,7 +43,6 @@ export default function ManufacturingAttirePage() {
       description: 'Full-body coverall designed for factory workers in manufacturing settings, offering protection and comfort during long shifts.',
       price: 'From SAR 259',
       image: '/images/diverse-workers-in-a-protective-workwear-SBI-300873394.jpg',
-      href: '/images/construction-worker-or-engineer-in-safety-vest-SBI-334005989.jpg',
       href: '/shop/manufacturing-attire/hi-vis-safety-jacket',
       features: ['High-visibility', 'Reflective strips', 'Water-resistant', 'Durable design'],
       colors: ['Orange', 'Yellow', 'Orange/Navy', 'Yellow/Navy']
@@ -54,8 +53,6 @@ export default function ManufacturingAttirePage() {
       description: 'Reinforced work pants with built-in knee pad pockets, designed for manufacturing professionals who need extra protection and durability.',
       price: 'From SAR 219',
       image: '/images/strong-female-industrial-worker-at-a-factory-examini-SBI-335602991.jpg',
-      href: '/images/woman-working-at-a-factory-SBI-301079358.jpg',
-      href: '/images/skilled-factory-workers-checking-product-quality-SBI-304025975.jpg',
       href: '/shop/manufacturing-attire/manufacturing-supervisor-attire',
       features: ['Professional look', 'Durable construction', 'Comfort design', 'Multiple pockets'],
       colors: ['Navy', 'Grey', 'Black', 'Khaki']

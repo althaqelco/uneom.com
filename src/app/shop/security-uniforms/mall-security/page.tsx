@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,17 +12,13 @@ export const metadata: Metadata = {
     description: 'UNEOM\'s Mall Security Uniforms combine professional authority with approachable design for Saudi retail environments. Durable, functional uniforms with customization options.',
     images: ['/images/industries/Security/security-uniform-1.jpg'],
     url: 'https://uneom.com/shop/security-uniforms/mall-security',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/shop/security-uniforms/mall-security',
     languages: {
       'en': 'https://uneom.com/shop/security-uniforms/mall-security',
-      'ar': 'https://uneom.com/ar/shop/security-uniforms/mall-security',
-    },
-  },
-  keywords: 'mall security uniforms Saudi Arabia, retail security staff attire KSA, professional security uniforms Riyadh, shopping center security clothing, Saudi mall security apparel, retail protection uniforms, professional security staff uniforms Jeddah',
-};
+      'ar': 'https://uneom.com/ar/shop/security-uniforms/mall-security'}},
+  keywords: 'mall security uniforms Saudi Arabia, retail security staff attire KSA, professional security uniforms Riyadh, shopping center security clothing, Saudi mall security apparel, retail protection uniforms, professional security staff uniforms Jeddah'};
 
 export default function MallSecurityPage() {
   // Hardcoded product data instead of fetching from products.ts

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,16 +25,12 @@ export const metadata: Metadata = {
     description: 'طقم أمني محترف شامل يضم جميع المعدات والإكسسوارات الضرورية لرجال الأمن والحراسة',
     images: ['/images/products/security/professional-security-kit-ar.jpg'],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/security-accessories/professional-kit/',
     languages: {
       'en': 'https://uneom.com/shop/security-accessories/professional-kit/',
-      'ar': 'https://uneom.com/ar/shop/security-accessories/professional-kit/',
-    },
-  },
-}
+      'ar': 'https://uneom.com/ar/shop/security-accessories/professional-kit/'}}}
 
 const productJsonLd = {
   '@context': 'https://schema.org',

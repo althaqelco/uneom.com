@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/shop/shop-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Professional Uniform Shop - Premium Workwear Solutions',
-      }
-    ],
-  },
+        alt: 'UNEOM Professional Uniform Shop - Premium Workwear Solutions'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Professional Uniforms Shop | UNEOM Saudi Arabia',
     description: 'Shop premium quality uniforms for healthcare, corporate, hospitality, industrial and security sectors. Nationwide delivery across Saudi Arabia.',
-    images: ['/images/shop/shop-header.jpg'],
-  },
+    images: ['/images/shop/shop-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop',
     languages: {
       'en': 'https://uneom.com/shop',
-      'ar': 'https://uneom.com/ar/shop',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop'}}}; 

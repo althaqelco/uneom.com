@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -49,8 +50,7 @@ export function generateMetadata({ params }: Props): Metadata {
         }
       ],
       locale: 'ar_SA',
-      type: 'website',
-    },
+      type: 'website'},
     alternates: {
       canonical: `https://uneom.com/ar/blog/tag/${params.tag}/`,
       languages: {
@@ -65,8 +65,7 @@ export function generateMetadata({ params }: Props): Metadata {
 export function generateStaticParams() {
   const tags = getAllTags('ar');
   return tags.map(tag => ({
-    tag: tag,
-  }));
+    tag: tag}));
 }
 
 export const dynamic = 'force-static';

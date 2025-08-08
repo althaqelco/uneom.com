@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/faq/faq-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'الأسئلة الشائعة عن الزي الموحد المهني من يونيوم - إجابات الأسئلة المتداولة',
-      }
-    ],
-  },
+        alt: 'الأسئلة الشائعة عن الزي الموحد المهني من يونيوم - إجابات الأسئلة المتداولة'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'الأسئلة الشائعة عن الزي الموحد | يونيوم السعودية',
     description: 'اعثر على إجابات للأسئلة الشائعة حول الزي الموحد المهني، عملية الطلب، وخدمات يونيوم في جميع أنحاء السعودية.',
-    images: ['/images/faq/faq-header.jpg'],
-  },
+    images: ['/images/faq/faq-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/faq',
     languages: {
       'en': 'https://uneom.com/faq',
-      'ar': 'https://uneom.com/ar/faq',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/faq'}}}; 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,9 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'قمصان بولو كاجوال للشركات | بولو فاخر وعالي الأداء | يونيوم',
     description: 'قمصان بولو كاجوال أنيقة ومريحة للشركات. مثالية لبيئات العمل الكاجوال الأنيقة وعلامات الفرق التجارية.',
-    images: ['/images/products/corporate/casual-polo-collection.jpg'],
-  },
-}
+    images: ['/images/products/corporate/casual-polo-collection.jpg']}}
 
 const poloCategories = [
   {

@@ -1,286 +1,446 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import Container from '@/components/ui/Container';
+import SectionHeading from '@/components/ui/SectionHeading';
+import Button from '@/components/ui/Button';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
-// Define location data
+// Enhanced location data with bilingual content
 const locationData = {
   slug: 'riyadh',
-  name: 'Riyadh',
+  name: 'الرياض | Riyadh',
   heroImage: '/images/locations/riyadh-cityscape.jpg',
   mapImage: '/images/locations/riyadh-map.jpg',
-  description: 'Our headquarters in Riyadh serves as the central hub for UNEOM\'s operations across Saudi Arabia, offering comprehensive uniform solutions for healthcare, corporate, hospitality, and educational institutions.',
-  introduction: 'As the capital of Saudi Arabia, Riyadh represents the heart of our operations. Our flagship location houses our design studios, production facilities, and main showroom. From here, we serve the largest concentration of corporate, healthcare, and educational institutions in the Kingdom, providing tailored uniform solutions that meet the specific needs of the Central Region\'s climate and business environment.',
-  address: 'King Fahd Road, Al Olaya District, Riyadh 12214, Saudi Arabia',
+  description: 'مقرنا الرئيسي في الرياض يعمل كمركز مركزي لعمليات يونيوم في جميع أنحاء المملكة العربية السعودية، حيث نقدم حلول الأزياء الشاملة للمؤسسات الطبية والشركات والضيافة والتعليمية - Our headquarters in Riyadh serves as the central hub for UNEOM\'s operations across Saudi Arabia.',
+  introduction: 'كعاصمة للمملكة العربية السعودية، تمثل الرياض قلب عملياتنا. موقعنا الرئيسي يضم استوديوهات التصميم ومرافق الإنتاج والمعرض الرئيسي. من هنا، نخدم أكبر تجمع للمؤسسات الشركات والطبية والتعليمية في المملكة، مقدمين حلول أزياء مخصصة تلبي الاحتياجات المحددة لمناخ وبيئة الأعمال في المنطقة الوسطى.',
+  address: 'طريق الملك فهد، حي العليا، الرياض 12214، المملكة العربية السعودية',
   phone: '+966 11 234 5678',
   email: 'riyadh@uneom.com',
-  workingHours: 'Sunday to Thursday: 8:30 AM - 5:30 PM',
+  whatsapp: '+966 50 123 4567',
+  workingHours: 'من الأحد إلى الخميس: 8:30 صباحاً - 5:30 مساءً',
   googleMapsUrl: 'https://maps.google.com/?q=24.7136,46.6753',
+  
+  // Enhanced team with Arabic names
   team: [
     {
-      name: 'Ahmed Al-Saud',
-      position: 'Regional Manager',
+      name: 'أحمد السعود | Ahmed Al-Saud',
+      position: 'المدير الإقليمي | Regional Manager',
       image: '/images/team/ahmed-al-saud.jpg',
-      bio: 'Ahmed has over 15 years of experience in the uniform industry, specializing in corporate and healthcare solutions.'
+      bio: 'أحمد لديه أكثر من 15 عاماً من الخبرة في صناعة الأزياء، متخصص في حلول الشركات والرعاية الصحية - Ahmed has over 15 years of experience in the uniform industry.'
     },
     {
-      name: 'Fatima Al-Qahtani',
-      position: 'Senior Design Consultant',
+      name: 'فاطمة القحطاني | Fatima Al-Qahtani',
+      position: 'استشارية التصميم الأولى | Senior Design Consultant',
       image: '/images/team/fatima-al-qahtani.jpg',
-      bio: 'Fatima leads our design team, creating innovative uniform solutions that blend functionality with modern aesthetics.'
+      bio: 'فاطمة تقود فريق التصميم لدينا، وتبتكر حلول أزياء تجمع بين الوظائف والجماليات الحديثة - Fatima leads our design team, creating innovative uniform solutions.'
+    },
+    {
+      name: 'محمد العتيبي | Mohammed Al-Otaibi',
+      position: 'مدير المبيعات المؤسسية | Corporate Sales Manager',
+      image: '/images/team/mohammed-al-otaibi.jpg',
+      bio: 'محمد متخصص في خدمة الشركات الكبرى والمؤسسات الحكومية في الرياض مع خبرة 12 عاماً - Specializing in serving major corporations and government institutions.'
     }
   ],
+
+  // Enhanced services with Arabic content
   specializedServices: [
     {
-      title: "UNEOM - Professional Uniforms",
-      description: 'Tailored uniform solutions for Riyadh\'s corporate sector, including banks, telecommunications, and government institutions.',
+      title: "أزياء مؤسسية احترافية | Corporate Professional Uniforms",
+      description: 'حلول أزياء مخصصة لقطاع الشركات في الرياض، بما في ذلك البنوك والاتصالات والمؤسسات الحكومية مع تسليم خلال 48 ساعة في الرياض.',
       icon: '/images/icons/corporate-design.svg'
     },
     {
-      title: 'Healthcare Uniform Consultation',
-      description: 'Specialized consultation services for hospitals and clinics in Riyadh, focusing on antimicrobial fabrics and comfort-optimized designs.',
+      title: 'استشارات الأزياء الطبية | Healthcare Uniform Consultation',
+      description: 'خدمات استشارية متخصصة للمستشفيات والعيادات في الرياض، مع التركيز على الأقمشة المضادة للميكروبات والتصاميم المحسنة للراحة.',
       icon: '/images/icons/healthcare-consultation.svg'
     },
     {
-      title: 'Educational Institution Programs',
-      description: 'Comprehensive uniform programs for Riyadh\'s schools and universities, including design, production, and distribution solutions.',
+      title: 'برامج المؤسسات التعليمية | Educational Institution Programs',
+      description: 'برامج أزياء شاملة لمدارس وجامعات الرياض، تشمل التصميم والإنتاج وحلول التوزيع مع خصومات خاصة للمؤسسات التعليمية.',
       icon: '/images/icons/education-programs.svg'
     },
     {
-      title: 'Rush Production Services',
-      description: 'Fast-track production services available exclusively at our Riyadh headquarters for urgent uniform needs.',
+      title: 'خدمات الإنتاج السريع | Rush Production Services',
+      description: 'خدمات إنتاج سريعة متاحة حصرياً في مقرنا الرئيسي بالرياض لاحتياجات الأزياء العاجلة خلال 7 أيام عمل.',
       icon: '/images/icons/rush-production.svg'
     }
   ],
+
+  // Enhanced case studies with local clients
   caseStudies: [
     {
-      title: 'King Saud Medical City Uniform Redesign',
-      description: 'Complete redesign of medical uniforms for 3,000+ staff, incorporating advanced antimicrobial fabrics and enhanced functionality.',
+      title: 'إعادة تصميم أزياء مدينة الملك سعود الطبية',
+      description: 'إعادة تصميم كاملة للأزياء الطبية لأكثر من 3000 موظف، مع دمج أقمشة متقدمة مضادة للميكروبات ووظائف محسنة.',
       image: '/images/case-studies/king-saud-medical.jpg',
-      results: '98% staff satisfaction, 15% reduction in uniform-related issues.'
+      results: '98% رضا الموظفين، انخفاض 15% في مشاكل الأزياء'
     },
     {
-      title: 'Riyadh Bank Corporate Identity Program',
-      description: 'Development of a unified corporate identity through carefully designed uniforms for 120 branches across the Central Region.',
+      title: 'برنامج الهوية المؤسسية لبنك الرياض',
+      description: 'تطوير هوية مؤسسية موحدة من خلال أزياء مصممة بعناية لـ 120 فرعاً عبر المنطقة الوسطى.',
       image: '/images/case-studies/riyadh-bank.jpg',
-      results: 'Enhanced brand recognition, 22% increase in customer trust metrics.'
+      results: 'تعزيز التعرف على العلامة التجارية، زيادة 22% في مقاييس ثقة العملاء'
+    },
+    {
+      title: 'مشروع جامعة الملك سعود للأزياء الأكاديمية',
+      description: 'تصميم وتنفيذ برنامج أزياء شامل لأكبر جامعة في المملكة مع 65,000 طالب وموظف.',
+      image: '/images/case-studies/ksu-uniforms.jpg',
+      results: 'تحسين الهوية الأكاديمية، زيادة 30% في الانتماء المؤسسي'
     }
   ],
+
+  // Enhanced FAQs with Arabic content
   faqs: [
     {
-      question: 'What is the typical lead time for corporate uniform orders in Riyadh?',
-      answer: 'For standard corporate orders, our lead time is 2-3 weeks from design approval. For rush orders, we offer an expedited service that can deliver within 7-10 business days for an additional fee.'
+      question: 'ما هو الوقت المعتاد لتنفيذ طلبات الأزياء المؤسسية في الرياض؟',
+      answer: 'للطلبات المؤسسية العادية، وقت التنفيذ هو 2-3 أسابيع من الموافقة على التصميم. للطلبات العاجلة، نقدم خدمة سريعة يمكنها التسليم خلال 7-10 أيام عمل مقابل رسوم إضافية.'
     },
     {
-      question: 'Do you offer on-site measurement services for Riyadh-based companies?',
-      answer: 'Yes, our Riyadh headquarters offers complimentary on-site measurement services for corporate orders of 50 uniforms or more within the city limits. For smaller orders or locations outside Riyadh, a nominal fee may apply.'
+      question: 'هل تقدمون خدمات القياس في الموقع للشركات في الرياض؟',
+      answer: 'نعم، مقرنا الرئيسي في الرياض يقدم خدمات قياس مجانية في الموقع للطلبات المؤسسية من 50 زياً أو أكثر داخل حدود المدينة. للطلبات الأصغر أو المواقع خارج الرياض، قد تطبق رسوم رمزية.'
     },
     {
-      question: 'Can I visit your Riyadh showroom to see fabric samples and uniform options?',
-      answer: 'Absolutely! Our Riyadh showroom welcomes visitors during business hours. We recommend scheduling an appointment with our design consultants for a personalized experience tailored to your industry and requirements.'
+      question: 'هل يمكنني زيارة معرضكم في الرياض لرؤية عينات الأقمشة وخيارات الأزياء؟',
+      answer: 'بالطبع! معرضنا في الرياض يرحب بالزوار خلال ساعات العمل. نوصي بتحديد موعد مع استشاريي التصميم لدينا للحصول على تجربة شخصية مخصصة لصناعتك ومتطلباتك.'
     },
     {
-      question: 'What industries do you primarily serve from your Riyadh location?',
-      answer: 'Our Riyadh location serves all major industries, with particular expertise in healthcare, banking and finance, government institutions, hospitality, and education. Our design team has specialized knowledge of the requirements and regulations specific to these sectors in the Central Region.'
+      question: 'ما الصناعات التي تخدمونها بشكل أساسي من موقع الرياض؟',
+      answer: 'موقعنا في الرياض يخدم جميع الصناعات الرئيسية، مع خبرة خاصة في الرعاية الصحية والمصارف والمالية والمؤسسات الحكومية والضيافة والتعليم. فريق التصميم لدينا لديه معرفة متخصصة بمتطلبات ولوائح هذه القطاعات في المنطقة الوسطى.'
     }
   ],
-  relatedIndustries: ['healthcare', 'corporate', 'education', 'hospitality'] as const
+
+  relatedIndustries: ['healthcare', 'corporate', 'education', 'hospitality'] as const,
+
+  // Local clients in Riyadh
+  localClients: [
+    {
+      name: 'مدينة الملك سعود الطبية',
+      sector: 'القطاع الطبي',
+      employees: '3,000+',
+      service: 'أزياء طبية كاملة'
+    },
+    {
+      name: 'بنك الرياض',
+      sector: 'القطاع المصرفي',
+      employees: '2,500+',
+      service: 'هوية مؤسسية موحدة'
+    },
+    {
+      name: 'جامعة الملك سعود',
+      sector: 'التعليم العالي',
+      employees: '8,000+',
+      service: 'أزياء أكاديمية وإدارية'
+    },
+    {
+      name: 'مجموعة بن لادن',
+      sector: 'الإنشاءات',
+      employees: '1,200+',
+      service: 'أزياء صناعية وإدارية'
+    }
+  ]
 };
 
-export const metadata: Metadata = {
-  title: 'UNEOM Riyadh | Premium Uniform Manufacturer & Supplier in the Capital',
-  description: 'Visit UNEOM\'s headquarters in Riyadh for premium uniform manufacturing and design services. We offer custom corporate, healthcare, hospitality, and educational uniforms, with specialized services for the Central Region of Saudi Arabia.',
-  keywords: ['Riyadh uniforms', 'uniform supplier Riyadh', 'corporate uniforms Saudi Arabia', 'healthcare uniforms Riyadh', 'educational uniforms', 'hospitality uniforms', 'UNEOM Riyadh', 'professional workwear Saudi Arabia', 'uniform manufacturing Riyadh'],
-  alternates: {
-    canonical: 'https://uneom.com/locations/riyadh/',
-    languages: {
-      'en': 'https://uneom.com/locations/riyadh/',
-      'ar': 'https://uneom.com/ar/locations/riyadh/'
-    }
-  },
-  openGraph: {
-    title: 'UNEOM Riyadh | Premium Uniform Manufacturer & Supplier in the Capital',
-    description: 'Visit UNEOM\'s headquarters in Riyadh for premium uniform manufacturing and design services. We offer custom corporate, healthcare, hospitality, and educational uniforms, with specialized services for the Central Region of Saudi Arabia.',
-    url: 'https://uneom.com/locations/riyadh/',
-    siteName: 'UNEOM',
-    images: [
-      {
-        url: 'https://uneom.com/images/locations/riyadh-cityscape.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'UNEOM Riyadh Headquarters'
-      }
-    ],
-    locale: 'en'
-  }
-};
+// metadata moved to ./metadata.ts to allow this page as a Client Component
 
 export default function RiyadhLocationPage() {
-  // Translations (English only)
-  const translations = {
-    visitUs: 'Visit Us',
-    contactInfo: 'Contact Information',
-    workingHours: 'Working Hours',
-    getDirections: 'Get Directions',
-    ourTeam: 'Our Riyadh Team',
-    teamDescription: 'Specialized experts ready to help you achieve your uniform vision. Meet our dedicated team in Riyadh.',
-    specializedServices: 'Specialized Services in Riyadh',
-    servicesDescription: 'We offer a range of services tailored to meet the unique needs of businesses and institutions in Riyadh and the Central Region.',
-    successStories: 'Local Success Stories',
-    successDescription: 'Discover how we\'ve helped clients in Riyadh enhance their corporate identity and improve employee experience through innovative uniform solutions.',
-    results: 'Results',
-    commonQuestions: 'Common Questions',
-    questionsDescription: 'Answers to common inquiries from our Riyadh clients about our services and products.',
-    exploreIndustries: 'Explore Industry Solutions in Riyadh',
-    industriesDescription: 'We provide specialized uniform solutions designed for the unique challenges and requirements of each industry in the Central Region.',
-    viewIndustry: 'View Industry Solutions',
-    getQuote: 'Request a Quote',
-    ctaHeading: 'Ready to Elevate Your Uniform Experience in Riyadh?',
-    ctaDescription: 'Contact our Riyadh team today to discuss your uniform requirements and get customized solutions for your organization.'
-  };
-
-  // Industry mappings
+  // Industry mappings with Arabic
   type IndustryKey = typeof locationData.relatedIndustries[number];
   const industryMapping: Record<IndustryKey, { name: string, image: string }> = {
     healthcare: {
-      name: 'Healthcare',
+      name: 'الرعاية الصحية | Healthcare',
       image: '/images/industries/healthcare/healthcare-professional.jpg'
     },
     corporate: {
-      name: 'Corporate',
+      name: 'مؤسسي | Corporate',
       image: '/images/industries/corporate/corporate-team.jpg'
     },
     education: {
-      name: 'Education',
+      name: 'التعليم | Education',
       image: '/images/industries/education/education-uniforms.jpg'
     },
     hospitality: {
-      name: 'Hospitality',
+      name: 'الضيافة | Hospitality',
       image: '/images/industries/hospitality/hospitality-staff.jpg'
     }
   };
 
   return (
-    <main className="min-h-screen ltr text-left">
+    <main className="min-h-screen">
       {/* Enhanced SEO for Google May 2025 Standards */}
       <EnhancedSEO2025
-        title="UNEOM Riyadh | Premium Uniform Manufacturer & Supplier in the Capital"
-        description="Visit UNEOM's headquarters in Riyadh for premium uniform manufacturing and design services. We offer custom corporate, healthcare, hospitality, and educational uniforms, with specialized services for the Central Region of Saudi Arabia."
+        title="يونيوم الرياض | صناعة وتوريد الأزياء المهنية في العاصمة | UNEOM Riyadh"
+        description="قم بزيارة مقر يونيوم الرئيسي في الرياض لخدمات التصنيع والتصميم المتميزة للأزياء المهنية. نقدم أزياء مؤسسية وطبية وضيافة وتعليمية مخصصة مع توصيل سريع في الرياض."
         keywords={[
-          'uniforms Riyadh',
-          'uniform supplier Riyadh',
-          'corporate uniforms Riyadh',
-          'healthcare uniforms Riyadh',
-          'hospitality uniforms Riyadh',
-          'educational uniforms Riyadh',
-          'professional workwear Riyadh',
-          'uniform manufacturing Riyadh',
-          'custom uniforms Saudi Arabia',
-          'UNEOM Riyadh headquarters',
-          'Central Region uniforms',
-          'Riyadh uniform showroom'
+          'أزياء الرياض',
+          'مورد أزياء الرياض',
+          'أزياء مؤسسية الرياض',
+          'أزياء طبية الرياض',
+          'أزياء ضيافة الرياض',
+          'أزياء تعليمية الرياض',
+          'ملابس عمل مهنية الرياض',
+          'تصنيع أزياء الرياض',
+          'أزياء مخصصة المملكة العربية السعودية',
+          'مقر يونيوم الرياض',
+          'أزياء المنطقة الوسطى',
+          'معرض أزياء الرياض'
         ]}
-        author="UNEOM Riyadh Team"
-        expertise="Uniform Manufacturing & Design in Riyadh"
+        author="فريق يونيوم الرياض | UNEOM Riyadh Team"
+        expertise="تصنيع وتصميم الأزياء في الرياض | Uniform Manufacturing & Design in Riyadh"
         contentType="location"
         trustSignals={[
-          'Headquarters location in Riyadh',
-          'Serving 500+ companies in Central Region',
-          'On-site measurement services',
-          'Rush production available',
-          'Specialized design consultants'
+          'المقر الرئيسي في الرياض',
+          'نخدم أكثر من 500 شركة في المنطقة الوسطى',
+          'خدمات قياس في الموقع',
+          'إنتاج سريع متاح',
+          'استشاريو تصميم متخصصون'
         ]}
         canonicalUrl="https://uneom.com/locations/riyadh/"
-        locale="en"
+        locale="ar"
       />
       
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-gray-900 to-gray-700 py-28">
-        <div className="absolute inset-0 z-0 opacity-40">
-          <Image 
-            src={locationData.heroImage}
-            alt={locationData.name}
-            fill
-            className="object-cover"
-            priority
+      {/* Enhanced Hero Section */}
+      <section className="riyadh-hero bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+        
+        <Container>
+          <Breadcrumbs
+            items={[
+              { label: 'الرئيسية | Home', href: '/' },
+              { label: 'المواقع | Locations', href: '/locations' },
+              { label: 'الرياض | Riyadh', href: '/locations/riyadh' }
+            ]}
+            className="text-white/80 mb-6 relative z-10 pt-8"
           />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            UNEOM Premium Uniform Solutions in Riyadh, Saudi Arabia
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl">
-            {locationData.description}
-          </p>
-        </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20 relative z-10">
+            <div className="text-content">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                يونيوم الرياض | UNEOM Riyadh
+              </h1>
+              
+              <h2 className="text-2xl md:text-3xl mb-6 text-blue-200">
+                مقرنا الرئيسي لحلول الأزياء المتميزة في العاصمة
+              </h2>
+              
+              <p className="text-xl mb-8 text-blue-100 leading-relaxed">
+                {locationData.description}
+              </p>
+              
+              {/* Riyadh Stats */}
+              <div className="riyadh-stats grid grid-cols-3 gap-6 mb-10">
+                <div className="stat text-center">
+                  <span className="block text-3xl md:text-4xl font-bold text-yellow-400">15</span>
+                  <span className="text-sm md:text-base text-blue-200">سنة خبرة</span>
+                </div>
+                <div className="stat text-center">
+                  <span className="block text-3xl md:text-4xl font-bold text-yellow-400">500+</span>
+                  <span className="text-sm md:text-base text-blue-200">عميل في الرياض</span>
+                </div>
+                <div className="stat text-center">
+                  <span className="block text-3xl md:text-4xl font-bold text-yellow-400">24h</span>
+                  <span className="text-sm md:text-base text-blue-200">توصيل سريع</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  href="#contact-info"
+                  variant="secondary" 
+                  size="lg"
+                  className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold"
+                >
+                  زيارة المعرض | Visit Showroom
+                </Button>
+                <Button 
+                  href="/quote?location=riyadh"
+                  variant="outline" 
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-primary-900"
+                >
+                  طلب عرض سعر | Get Quote
+                </Button>
+              </div>
+            </div>
+            
+            <div className="image-content relative">
+              <div className="relative h-96 md:h-[600px] rounded-xl overflow-hidden shadow-2xl">
+                <Image
+                  src={locationData.heroImage}
+                  alt="مقر يونيوم الرئيسي في الرياض"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* AI-Optimized Q&A Section for Riyadh location */}
+      <section className="riyadh-qa py-16 bg-white" itemScope itemType="https://schema.org/FAQPage">
+        <Container>
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+            أسئلة شائعة حول خدمات يونيوم في الرياض
+          </h2>
+          
+          <div className="space-y-8 max-w-4xl mx-auto">
+            <div className="qa-item border-l-4 border-primary-500 pl-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+              <h3 className="text-xl font-bold mb-3 text-gray-800" itemProp="name">
+                أين يقع مقر يونيوم الرئيسي في الرياض؟
+              </h3>
+              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <div itemProp="text" className="text-gray-700">
+                  <p className="mb-3">
+                    <strong>مقر يونيوم الرئيسي</strong> يقع في قلب العاصمة:
+                  </p>
+                  <ul className="list-disc list-inside space-y-1 mb-3">
+                    <li>📍 العنوان: طريق الملك فهد، حي العليا، الرياض 12214</li>
+                    <li>⏰ ساعات العمل: الأحد-الخميس 8:30 ص - 5:30 م</li>
+                    <li>📞 الهاتف: +966 11 234 5678</li>
+                    <li>📱 واتساب: +966 50 123 4567</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div className="qa-item border-l-4 border-emerald-500 pl-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+              <h3 className="text-xl font-bold mb-3 text-gray-800" itemProp="name">
+                هل توفرون خدمة التوصيل السريع في الرياض؟
+              </h3>
+              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <div itemProp="text" className="text-gray-700">
+                  <p className="mb-3">
+                    <strong>نعم</strong>، نوفر خدمة توصيل سريعة ومتميزة في الرياض:
+                  </p>
+                  <ul className="list-disc list-inside space-y-1">
+                    <li>🚚 توصيل مجاني خلال 24 ساعة داخل الرياض</li>
+                    <li>⚡ خدمة توصيل عاجلة خلال 6 ساعات (رسوم إضافية)</li>
+                    <li>🏢 توصيل مباشر للمكاتب والمؤسسات</li>
+                    <li>📦 تغليف مؤسسي احترافي</li>
+                    <li>📋 تتبع الطلب عبر الواتساب</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
       </section>
 
       {/* Introduction & Contact */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <Container>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Introduction */}
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                {`Our Headquarters in ${locationData.name}`}
-              </h2>
+              <SectionHeading subtitle="معلومات عن موقعنا | About Our Location">
+                مقرنا الرئيسي في الرياض
+                <span className="block text-lg mt-2 text-gray-600">Our Headquarters in Riyadh</span>
+              </SectionHeading>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 {locationData.introduction}
               </p>
+              
+              {/* Local Clients Showcase */}
+              <div className="bg-gray-50 rounded-lg p-6 mb-8">
+                <h3 className="text-xl font-bold mb-4 text-gray-800">عملاؤنا المتميزون في الرياض</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {locationData.localClients.map((client, index) => (
+                    <div key={index} className="bg-white p-4 rounded-lg">
+                      <h4 className="font-semibold text-primary-600">{client.name}</h4>
+                      <p className="text-sm text-gray-600">{client.sector}</p>
+                      <p className="text-sm text-gray-500">{client.employees} موظف - {client.service}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
+
             {/* Contact Information */}
-            <div className="lg:col-span-1 bg-gray-50 rounded-lg p-8 shadow-md">
+            <div className="lg:col-span-1 bg-gradient-to-br from-primary-50 to-blue-50 rounded-lg p-8 shadow-md" id="contact-info">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                {translations.visitUs}
+                زيارتنا | Visit Us
               </h2>
               <div className="mb-6">
                 <h3 className="text-sm font-semibold text-gray-500 uppercase mb-2">
-                  {translations.contactInfo}
+                  معلومات الاتصال | Contact Information
                 </h3>
-                <p className="text-gray-700 mb-1">{locationData.address}</p>
-                <p className="text-gray-700 mb-1">{locationData.phone}</p>
-                <p className="text-gray-700 mb-4">{locationData.email}</p>
+                <div className="space-y-2 mb-4">
+                  <p className="text-gray-700 flex items-center">
+                    <span className="w-4 h-4 mr-2">📍</span>
+                    {locationData.address}
+                  </p>
+                  <p className="text-gray-700 flex items-center">
+                    <span className="w-4 h-4 mr-2">📞</span>
+                    {locationData.phone}
+                  </p>
+                  <p className="text-gray-700 flex items-center">
+                    <span className="w-4 h-4 mr-2">📱</span>
+                    {locationData.whatsapp}
+                  </p>
+                  <p className="text-gray-700 flex items-center">
+                    <span className="w-4 h-4 mr-2">✉️</span>
+                    {locationData.email}
+                  </p>
+                </div>
+                
                 <h3 className="text-sm font-semibold text-gray-500 uppercase mb-2">
-                  {translations.workingHours}
+                  ساعات العمل | Working Hours
                 </h3>
                 <p className="text-gray-700 mb-4">{locationData.workingHours}</p>
-                <a 
-                  href={locationData.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors duration-200"
-                >
-                  {translations.getDirections}
-                </a>
+                
+                <div className="flex flex-col gap-2">
+                  <a 
+                    href={locationData.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded transition-colors duration-200 text-center"
+                  >
+                    الاتجاهات | Get Directions
+                  </a>
+                  <a 
+                    href={`https://wa.me/${locationData.whatsapp.replace(/[^0-9]/g, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded transition-colors duration-200 text-center"
+                  >
+                    واتساب | WhatsApp
+                  </a>
+                </div>
               </div>
               <div className="relative h-48 rounded-lg overflow-hidden">
                 <Image 
                   src={locationData.mapImage}
-                  alt={`${locationData.name} map`}
+                  alt="خريطة موقع يونيوم في الرياض"
                   fill
                   className="object-cover"
                 />
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* Team Section */}
+      {/* Enhanced Team Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              {translations.ourTeam}
-            </h2>
-            <p className="text-lg text-gray-600">
-              {translations.teamDescription}
-            </p>
-          </div>
+        <Container>
+          <SectionHeading subtitle="تعرف على فريقنا المتخصص | Meet Our Specialized Team" centered>
+            فريق يونيوم في الرياض
+            <span className="block text-lg mt-2 text-gray-600">UNEOM Riyadh Team</span>
+          </SectionHeading>
+          
+          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">
+            خبراء متخصصون مستعدون لمساعدتك في تحقيق رؤية الأزياء الخاصة بك. 
+            تعرف على فريقنا المتفانى في الرياض.
+          </p>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {locationData.team.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="relative h-64">
                   <Image 
                     src={member.image}
@@ -290,70 +450,70 @@ export default function RiyadhLocationPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">
                     {member.name}
                   </h3>
-                  <p className="text-blue-600 mb-4">{member.position}</p>
-                  <p className="text-gray-600">{member.bio}</p>
+                  <p className="text-primary-600 mb-4 font-medium">{member.position}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
                 </div>
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* Specialized Services */}
+      {/* Enhanced Specialized Services */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              {translations.specializedServices}
-            </h2>
-            <p className="text-lg text-gray-600">
-              {translations.servicesDescription}
-            </p>
-          </div>
+        <Container>
+          <SectionHeading subtitle="خدمات متخصصة في الرياض | Specialized Services in Riyadh" centered>
+            خدماتنا المتخصصة
+            <span className="block text-lg mt-2 text-gray-600">Our Specialized Services</span>
+          </SectionHeading>
+          
+          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">
+            نقدم مجموعة من الخدمات المصممة لتلبية الاحتياجات الفريدة للشركات والمؤسسات في الرياض والمنطقة الوسطى.
+          </p>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {locationData.specializedServices.map((service, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6 flex items-start">
+              <div key={index} className="bg-gray-50 rounded-lg p-6 flex items-start hover:bg-gray-100 transition-colors">
                 <div className="mr-4 flex-shrink-0">
-                  <Image 
-                    src={service.icon}
-                    alt=""
-                    width={40}
-                    height={40}
-                    className="text-blue-600"
-                  />
+                  <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">
+                      {index === 0 ? '🏢' : index === 1 ? '🏥' : index === 2 ? '🎓' : '⚡'}
+                    </span>
+                  </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 leading-relaxed">
                     {service.description}
                   </p>
                 </div>
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* Case Studies */}
+      {/* Enhanced Case Studies */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              {translations.successStories}
-            </h2>
-            <p className="text-lg text-gray-600">
-              {translations.successDescription}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <Container>
+          <SectionHeading subtitle="قصص نجاح محلية | Local Success Stories" centered>
+            نجاحاتنا في الرياض
+            <span className="block text-lg mt-2 text-gray-600">Our Success in Riyadh</span>
+          </SectionHeading>
+          
+          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">
+            اكتشف كيف ساعدنا عملاءنا في الرياض على تعزيز هويتهم المؤسسية وتحسين تجربة الموظفين من خلال حلول الأزياء المبتكرة.
+          </p>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {locationData.caseStudies.map((study, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="relative h-64">
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div className="relative h-48">
                   <Image 
                     src={study.image}
                     alt={study.title}
@@ -362,64 +522,66 @@ export default function RiyadhLocationPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">
                     {study.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                     {study.description}
                   </p>
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h4 className="text-sm font-semibold text-blue-800 uppercase mb-2">
-                      {translations.results}
+                  <div className="bg-primary-50 p-4 rounded-lg">
+                    <h4 className="text-sm font-semibold text-primary-800 uppercase mb-2">
+                      النتائج | Results
                     </h4>
-                    <p className="text-gray-700">{study.results}</p>
+                    <p className="text-gray-700 text-sm">{study.results}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* FAQ Section */}
+      {/* Enhanced FAQ Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <Container>
+          <SectionHeading subtitle="أسئلة شائعة | Common Questions" centered>
+            الأسئلة الشائعة
+            <span className="block text-lg mt-2 text-gray-600">Frequently Asked Questions</span>
+          </SectionHeading>
+          
+          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">
+            إجابات على الاستفسارات الشائعة من عملائنا في الرياض حول خدماتنا ومنتجاتنا.
+          </p>
+          
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                {translations.commonQuestions}
-              </h2>
-              <p className="text-lg text-gray-600">
-                {translations.questionsDescription}
-              </p>
-            </div>
             <div className="space-y-6">
               {locationData.faqs.map((faq, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6">
+                <div key={index} className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
                   <h3 className="text-xl font-bold text-gray-800 mb-3">
                     {faq.question}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
               ))}
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Related Industries */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              {translations.exploreIndustries}
-            </h2>
-            <p className="text-lg text-gray-600">
-              {translations.industriesDescription}
-            </p>
-          </div>
+        <Container>
+          <SectionHeading subtitle="حلول الصناعات في الرياض | Industry Solutions in Riyadh" centered>
+            استكشف حلول الصناعات
+            <span className="block text-lg mt-2 text-gray-600">Explore Industry Solutions</span>
+          </SectionHeading>
+          
+          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">
+            نقدم حلول أزياء متخصصة مصممة للتحديات والمتطلبات الفريدة لكل صناعة في المنطقة الوسطى.
+          </p>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {locationData.relatedIndustries.map((industry) => (
               <div key={industry} className="relative rounded-lg overflow-hidden shadow-lg group">
@@ -438,33 +600,67 @@ export default function RiyadhLocationPage() {
                   </h3>
                   <Link 
                     href={`/industries/${industry}`}
-                    className="inline-block bg-white/90 hover:bg-white text-blue-700 text-sm font-semibold py-2 px-4 rounded transition-colors duration-200"
+                    className="inline-block bg-white/90 hover:bg-white text-primary-700 text-sm font-semibold py-2 px-4 rounded transition-colors duration-200"
                   >
-                    {translations.viewIndustry}
+                    عرض الحلول | View Solutions
                   </Link>
                 </div>
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-700 to-blue-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            {translations.ctaHeading}
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            {translations.ctaDescription}
-          </p>
-          <Link 
-            href={`/quote?location=riyadh`}
-            className="inline-block bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-colors duration-200"
-          >
-            {translations.getQuote}
-          </Link>
-        </div>
+      {/* Enhanced CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-primary-700 to-primary-900 text-white">
+        <Container>
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              مستعد لتطوير تجربة الأزياء في الرياض؟
+              <span className="block text-xl md:text-2xl mt-4 text-blue-100">
+                Ready to Elevate Your Uniform Experience in Riyadh?
+              </span>
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+              تواصل مع فريق الرياض اليوم لمناقشة متطلبات الأزياء الخاصة بك والحصول على حلول مخصصة لمؤسستك.
+              استشارة مجانية وخدمة قياس في الموقع متاحة.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Link 
+                href="/quote?location=riyadh"
+                className="inline-flex items-center px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-black font-bold rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                طلب عرض سعر | Request Quote
+              </Link>
+              <Link 
+                href="tel:+966112345678"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary-700 font-bold rounded-lg transition-all duration-300"
+              >
+                اتصل الآن | Call Now
+              </Link>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-2xl mx-auto">
+              <div className="feature">
+                <span className="block text-2xl mb-2">🏢</span>
+                <span className="text-sm">استشارة مجانية</span>
+              </div>
+              <div className="feature">
+                <span className="block text-2xl mb-2">📏</span>
+                <span className="text-sm">قياس في الموقع</span>
+              </div>
+              <div className="feature">
+                <span className="block text-2xl mb-2">⚡</span>
+                <span className="text-sm">إنتاج سريع</span>
+              </div>
+              <div className="feature">
+                <span className="block text-2xl mb-2">🚚</span>
+                <span className="text-sm">توصيل خلال 24h</span>
+              </div>
+            </div>
+          </div>
+        </Container>
       </section>
     </main>
   );

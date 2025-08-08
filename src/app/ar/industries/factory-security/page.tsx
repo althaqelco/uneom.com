@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import FactorySecurityClientPageAr from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -10,8 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'يونيفورم الأمن للمصانع والمنشآت الصناعية في السعودية | يونيوم',
     description: 'يونيفورم أمني متميز للمنشآت الصناعية والمصانع في المملكة العربية السعودية. ملابس مهنية متينة مصممة لتوفير أقصى درجات الحماية والراحة.',
-    images: ['/images/industries/factory_industry/factory-security-uniform-main.jpg'],
-  }
+    images: ['/images/industries/factory_industry/factory-security-uniform-main.jpg']}
 };
 
 export default function FactorySecurityPageAr() {

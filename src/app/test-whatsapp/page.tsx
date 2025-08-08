@@ -1,4 +1,5 @@
 import React from 'react';
+import { Metadata } from 'next';
 import LocationPageLayout from '@/components/layout/LocationPageLayout';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
@@ -22,7 +23,6 @@ export const metadata: Metadata = {
     locale: 'en_US'
   }
 };
-
 
 export default function TestWhatsAppPage() {
   return (

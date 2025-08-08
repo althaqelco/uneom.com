@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,8 +9,7 @@ import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 export const metadata: Metadata = {
   title: 'Beauty Chain Standardization Case Study | UNEOM Salon Uniforms | Saudi Arabia',
   description: 'How UNEOM helped a leading Saudi beauty salon chain standardize staff uniforms across 25+ locations, improving brand consistency and professional appearance while accommodating Saudi cultural requirements.',
-  keywords: 'beauty salon uniforms Saudi, salon staff standardization, beauty chain branding, aesthetic clinic uniforms Riyadh, Saudi salon staff attire, beauty professional uniforms, salon brand consistency',
-};
+  keywords: 'beauty salon uniforms Saudi, salon staff standardization, beauty chain branding, aesthetic clinic uniforms Riyadh, Saudi salon staff attire, beauty professional uniforms, salon brand consistency'};
 
 export default function BeautyChainStandardizationCaseStudy() {
   return (

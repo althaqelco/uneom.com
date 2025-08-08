@@ -18,22 +18,16 @@ export const metadata: Metadata = {
         height: 630,
         alt: 'يونيوم - حلول الزي الموحد المهنية'
       }
-    ],
-  },
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'سياسة الخصوصية | يونيوم - مورد الزي الموحد للشركات',
     description: 'تعرف على كيفية جمع يونيوم وحماية ومعالجة معلوماتك. التزامنا بأمن البيانات والشفافية لعملائنا من الشركات.',
-    images: ['https://uneom.com/images/twitter-image-ar.jpg'],
-  },
+    images: ['https://uneom.com/images/twitter-image-ar.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/privacy-policy',
     languages: {
-      'en': 'https://uneom.com/privacy-policy',
-    },
-  },
-}; 
+      'en': 'https://uneom.com/privacy-policy'}}}; 

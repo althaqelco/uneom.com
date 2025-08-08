@@ -22,18 +22,14 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/team/experts-banner.jpg',
         width: 1200,
         height: 630,
-        alt: 'خبراء صناعة الأزياء الموحدة لدى UNEOM',
-      }
+        alt: 'خبراء صناعة الأزياء الموحدة لدى UNEOM'}
     ],
-    type: 'website',
-  },
+    type: 'website'},
   twitter: {
     card: 'summary_large_image',
     title: 'خبراء صناعة الأزياء الموحدة | UNEOM',
     description: 'تعرّف على فريق خبرائنا المتخصصين في صناعة الأزياء الموحدة مع معرفة متخصصة عبر قطاعات متعددة.',
-    images: ['https://uneom.com/images/team/experts-banner.jpg'],
-  },
-};
+    images: ['https://uneom.com/images/team/experts-banner.jpg']}};
 
 // Industry categories for experts
 const industryCategories = [
@@ -71,9 +67,7 @@ export default function AuthorsPage() {
       "sameAs": [
         author.linkedin,
         author.twitter,
-      ].filter(Boolean),
-    })),
-  };
+      ].filter(Boolean)}))};
 
   return (
     <>

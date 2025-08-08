@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/medical-scrubs.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Medical Scrubs Collection by UNEOM',
-      }
-    ],
-  },
+        alt: 'Professional Medical Scrubs Collection by UNEOM'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Medical Scrubs | UNEOM Saudi Arabia',
     description: 'Premium medical scrubs designed for Saudi Arabia\'s healthcare professionals. Comfort meets functionality with antimicrobial protection.',
-    images: ['/images/products/medical-scrubs.jpg'],
-  },
+    images: ['/images/products/medical-scrubs.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/healthcare-attire/medical-scrubs',
     languages: {
       'en': 'https://uneom.com/shop/healthcare-attire/medical-scrubs',
-      'ar': 'https://uneom.com/ar/shop/healthcare-attire/medical-scrubs',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/healthcare-attire/medical-scrubs'}}}; 

@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/checkout/secure-checkout.jpg',
         width: 1200,
         height: 630,
-        alt: 'الدفع الآمن يونيوم - أكمل طلب الزي الموحد الخاص بك',
-      }
-    ],
-  },
+        alt: 'الدفع الآمن يونيوم - أكمل طلب الزي الموحد الخاص بك'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'الدفع الآمن | يونيوم السعودية',
     description: 'أكمل طلب الزي الموحد المهني الخاص بك مع خيارات دفع آمنة وتوصيل موثوق في جميع أنحاء المملكة العربية السعودية.',
-    images: ['/images/checkout/secure-checkout.jpg'],
-  },
+    images: ['/images/checkout/secure-checkout.jpg']},
   robots: {
     index: false,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/checkout',
     languages: {
       'en': 'https://uneom.com/checkout',
-      'ar': 'https://uneom.com/ar/checkout',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/checkout'}}}; 

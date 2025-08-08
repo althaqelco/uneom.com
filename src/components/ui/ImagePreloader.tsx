@@ -78,12 +78,12 @@ const ImagePreloader: React.FC<ImagePreloaderProps> = ({
 
   // Always render children in production, only show loading in development if enabled
   if (process.env.NODE_ENV !== 'development' || !showLoadingIndicator) {
-    return <>{children}</>;
+    return <React.Fragment>{children}</React.Fragment>;
   }
 
   // In development with loading indicator enabled
   return (
-    <>
+    <React.Fragment>
       {!imagesLoaded && showLoadingIndicator ? (
         <div style={{
           position: 'fixed',
@@ -91,14 +91,12 @@ const ImagePreloader: React.FC<ImagePreloaderProps> = ({
           left: 0,
           width: '100%',
           height: '3px',
-          zIndex: 9999,
-        }}>
+          zIndex: 9999}}>
           <div style={{
             height: '100%',
             width: `${progress}%`,
             backgroundColor: '#4caf50',
-            transition: 'width 0.3s ease-in-out',
-          }} />
+            transition: 'width 0.3s ease-in-out'}} />
           <div style={{
             position: 'fixed',
             top: '10px',
@@ -108,14 +106,13 @@ const ImagePreloader: React.FC<ImagePreloaderProps> = ({
             padding: '5px 10px',
             borderRadius: '3px',
             fontSize: '12px',
-            zIndex: 9999,
-          }}>
+            zIndex: 9999}}>
             Loading images: {progress}%
           </div>
         </div>
       ) : null}
       {children}
-    </>
+    </React.Fragment>
   );
 };
 

@@ -26,8 +26,7 @@ export default function Logo({
   height = 52,
   className = 'h-10 w-auto',
   linkClassName = 'flex items-center',
-  withLink = true,
-}: LogoProps) {
+  withLink = true}: LogoProps) {
   const isArabic = locale === 'ar';
   
   // Select logo file based on locale and inverted option

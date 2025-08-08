@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import EnhancedTechnicalFinishesClient from './EnhancedTechnicalFinishesClient';
 
@@ -17,17 +18,13 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/uneom_antimicrobial_treatment.webp',
         width: 1200,
         height: 630,
-        alt: 'خدمات المعالجات التقنية من يونيوم - تقنيات متقدمة للأقمشة والأزياء',
-      },
-    ],
-  },
+        alt: 'خدمات المعالجات التقنية من يونيوم - تقنيات متقدمة للأقمشة والأزياء'},
+    ]},
   alternates: {
     canonical: 'https://uneom.com/ar/services/technical-finishes/',
     languages: {
       'en': 'https://uneom.com/services/technical-finishes/',
-      'ar': 'https://uneom.com/ar/services/technical-finishes/',
-    },
-  },
+      'ar': 'https://uneom.com/ar/services/technical-finishes/'}},
   robots: {
     index: true,
     follow: true,

@@ -76,8 +76,7 @@ export default function PolicyTemplatesClientPageArabic() {
             الامتثال لقوانين العمل المحلية واللوائح.
           </p>
         `,
-        image: '/images/arabic-businessman-in-the-middle-east-SBI-300984430.jpg',
-      },
+        image: '/images/arabic-businessman-in-the-middle-east-SBI-300984430.jpg'},
       {
         title: 'قوالب سياسة خاصة بالصناعة',
         content: `
@@ -161,8 +160,7 @@ export default function PolicyTemplatesClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/avatar-placeholder.jpg',
-      },
+        image: '/images/avatar-placeholder.jpg'},
       {
         title: 'دليل تنفيذ السياسة',
         content: `
@@ -211,8 +209,7 @@ export default function PolicyTemplatesClientPageArabic() {
             </svg>
             تنزيل نموذج دليل التنفيذ (PDF)
           </a>
-        `,
-      }
+        `}
     ],
     relatedResources: [
       {

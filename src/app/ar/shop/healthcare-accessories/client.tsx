@@ -19,12 +19,7 @@ export default function HealthcareAccessoriesClientPage() {
       description: 'سماعات طبية عالية الجودة مصممة للاستخدام في المجال الطبي والممارسة السريرية',
       price: 'من ريال 150',
       image: '/images/products/medical-stethoscope.jpg',
-      href: '/ar/images/products/medical-watch.jpg',
-      href: '/ar/images/products/medical-bag.jpg',
-      href: '/ar/images/products/medical-clogs.jpg',
-      href: '/ar/images/products/id-badge-holders.jpg',
-      href: '/ar/images/products/medical-penlight.jpg',
-      href: '/ar/shop/healthcare-accessories/medical-penlight',
+      href: '/ar/shop/healthcare-accessories/medical-stethoscope',
       features: [
         'إضاءة LED عالية الجودة',
         'خفيف الوزن وسهل الحمل',

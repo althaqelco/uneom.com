@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import EnhancedProgramManagementClient from './EnhancedProgramManagementClient';
 
@@ -17,17 +18,13 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/service-overview.jpg', // Replace with a relevant image for program management
         width: 1200,
         height: 630,
-        alt: 'إدارة برامج الأزياء الموحدة من يونيوم السعودية',
-      },
-    ],
-  },
+        alt: 'إدارة برامج الأزياء الموحدة من يونيوم السعودية'},
+    ]},
   alternates: {
     canonical: 'https://uneom.com/ar/services/program-management/',
     languages: {
       'en': 'https://uneom.com/services/program-management/', // Assuming English version exists or will exist
-      'ar': 'https://uneom.com/ar/services/program-management/',
-    },
-  },
+      'ar': 'https://uneom.com/ar/services/program-management/'}},
   robots: {
     index: true,
     follow: true,

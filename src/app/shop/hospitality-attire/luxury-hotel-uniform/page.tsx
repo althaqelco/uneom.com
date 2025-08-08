@@ -22,7 +22,7 @@ import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 export default function LuxuryHotelUniformPage() {
   const locale = 'en';
   const [selectedColor, setSelectedColor] = useState<string | null>('Dark Gray');
-  const [selectedSize, setSelectedSize] = useState<string | null>('M');
+  const [selectedSize, setSelectedSize] = useState<string>('M');
   const [activeTab, setActiveTab] = useState('description');
   const [showRequestForm, setShowRequestForm] = useState(false);
   const [quantity, setQuantity] = useState(30);
@@ -131,10 +131,6 @@ export default function LuxuryHotelUniformPage() {
         id: 'executive-hospitality-suit',
         name: 'Executive Hospitality Suit',
         image: '/images/judge-chef-and-courier-isolated-on-white-2024-11-17-23-15-00-utc.jpg',
-        price: 'From SAR 499',
-        href: '/images/hospitality/hospitality_uniform_chef.jpg',
-        price: 'From SAR 289',
-        href: '/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg',
         price: 'From SAR 399',
         href: '/shop/hospitality-attire/concierge-uniform-set'
       }
@@ -582,7 +578,6 @@ export default function LuxuryHotelUniformPage() {
                   <RequestInfoForm
                     productId={product.id}
                     productName={product.name}
-                    onSuccess={() => setShowRequestForm(false)}
                   />
                   </div>
               </div>

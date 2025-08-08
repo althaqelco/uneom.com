@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/industries/security/security-uniform-1.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Security Uniforms Collection by UNEOM',
-      }
-    ],
-  },
+        alt: 'Professional Security Uniforms Collection by UNEOM'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Security Uniforms & Guard Attire | UNEOM Saudi Arabia',
     description: 'Premium security uniforms designed for Saudi security professionals. Authority meets functionality with climate-adaptive features.',
-    images: ['/images/industries/security/security-uniform-1.jpg'],
-  },
+    images: ['/images/industries/security/security-uniform-1.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/security-uniforms',
     languages: {
       'en': 'https://uneom.com/shop/security-uniforms',
-      'ar': 'https://uneom.com/ar/shop/security-uniforms',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/security-uniforms'}}}; 

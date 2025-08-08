@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import RetailUniformsClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -37,9 +38,7 @@ export const metadata: Metadata = {
     canonical: 'https://uneom.com/ar/shop/retail-uniforms/',
     languages: {
       'en-SA': 'https://uneom.com/shop/retail-uniforms/',
-      'ar-SA': 'https://uneom.com/ar/shop/retail-uniforms/',
-    },
-  },
+      'ar-SA': 'https://uneom.com/ar/shop/retail-uniforms/'}},
   robots: {
     index: true,
     follow: true,

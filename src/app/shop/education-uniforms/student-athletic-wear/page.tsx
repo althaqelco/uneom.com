@@ -505,8 +505,6 @@ export default function StudentAthleticWearPage() {
                   name: 'Premium School Uniform Collection',
                   price: 'From SAR 299',
                   image: '/images/industries/education/school-uniform-02.webp',
-                  link: '/images/industries/education/teachers/school-uniform-teacher-01.webp',
-                  link: '/images/industries/education/school-uniform-01.webp',
                   link: '/shop/education-uniforms/school-accessories'
                 }
               ].map((relatedProduct) => (

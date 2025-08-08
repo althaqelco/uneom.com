@@ -29,8 +29,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   product,
   locale = 'en',
   showAddToQuote = false,
-  className = '',
-}) => {
+  className = ''}) => {
   const {
     name,
     image,
@@ -39,8 +38,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     href,
     discountPercentage,
     isNew,
-    isFeatured,
-  } = product;
+    isFeatured} = product;
   
   const rtl = locale === 'ar';
   const localizedImage = getLocalizedImagePath(image, locale as 'en' | 'ar');

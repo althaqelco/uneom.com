@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/concierge-uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Concierge Uniform Collection by UNEOM',
-      }
-    ],
-  },
+        alt: 'Professional Concierge Uniform Collection by UNEOM'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Concierge Uniforms | UNEOM Saudi Arabia',
     description: 'Premium concierge uniforms designed for Saudi Arabia\'s luxury hotels. Sophistication meets professionalism with superior comfort and style.',
-    images: ['/images/products/concierge-uniform.jpg'],
-  },
+    images: ['/images/products/concierge-uniform.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/hospitality-attire/concierge-uniform',
     languages: {
       'en': 'https://uneom.com/shop/hospitality-attire/concierge-uniform',
-      'ar': 'https://uneom.com/ar/shop/hospitality-attire/concierge-uniform',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/hospitality-attire/concierge-uniform'}}}; 

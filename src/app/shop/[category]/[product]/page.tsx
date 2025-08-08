@@ -1,3 +1,4 @@
+import React from 'react';
 import ClientPage from './ClientPage';import { Metadata } from 'next';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
@@ -45,7 +46,6 @@ export async function generateMetadata(
     }
   };
 }
-
 
 interface PageProps {
   params: {

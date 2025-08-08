@@ -11,17 +11,13 @@ export const metadata: Metadata = {
     locale: 'en',
     images: [
       {
-        url: '/images/shop/security/security-category.jpg'],
-  },
+        url: '/images/shop/security/security-category.jpg'}
+    ]},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/security-attire',
     languages: {
       'en': 'https://uneom.com/shop/security-attire',
-      'ar': 'https://uneom.com/ar/shop/security-attire',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/security-attire'}}}; 

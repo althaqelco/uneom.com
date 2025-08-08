@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,16 +27,12 @@ export const metadata: Metadata = {
     title: 'Executive Protection Uniforms | UNEOM',
     description: 'Professional executive protection uniforms for VIP security and corporate protection',
     images: ['/images/products/executive-protection-uniform.jpg'],
-    locale: 'en_US',
-  },
+    locale: 'en_US'},
   alternates: {
     canonical: '/shop/security-uniforms/executive-protection/',
     languages: {
       'en': '/shop/security-uniforms/executive-protection/',
-      'ar': '/ar/shop/security-uniforms/executive-protection/',
-    },
-  },
-}
+      'ar': '/ar/shop/security-uniforms/executive-protection/'}}}
 
 const features = [
   {

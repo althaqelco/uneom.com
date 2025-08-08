@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,9 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'قمصان عمل بقصة عصرية | قمصان شركات معاصرة | يونيوم',
     description: 'احصل على مظهر احترافي حاد مع قمصان العمل ذات القصة العصرية. مصممة للمديرين التنفيذيين التقدميين اليوم.',
-    images: ['/images/products/corporate/modern-fit-shirts-main.jpg'],
-  },
-}
+    images: ['/images/products/corporate/modern-fit-shirts-main.jpg']}}
 
 const productFeatures = [
   {

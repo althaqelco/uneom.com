@@ -12,14 +12,10 @@ export const metadata: Metadata = {
         url: '/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Petrochemical Industry Workwear',
-      },
-    ],
-  },
+        alt: 'UNEOM Petrochemical Industry Workwear'},
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Petrochemical Industry Uniforms & Safety Workwear | UNEOM',
     description: 'Industry-leading petrochemical workwear and safety uniforms designed for Saudi Arabia\'s petrochemical sector.',
-    images: ['/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg'],
-  },
-}; 
+    images: ['/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg']}}; 

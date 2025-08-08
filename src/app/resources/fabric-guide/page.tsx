@@ -22,9 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Complete Fabric Guide for Professional Uniforms',
     description: 'Everything you need to know about choosing the right fabrics for your uniforms',
-    images: ['/images/resources/fabric-guide-preview.jpg'],
-  },
-}
+    images: ['/images/resources/fabric-guide-preview.jpg']}}
 
 const fabricTypes = [
   {

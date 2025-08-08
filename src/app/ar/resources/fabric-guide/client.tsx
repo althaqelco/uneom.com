@@ -15,8 +15,7 @@ export default function FabricGuideClientPageArabic() {
         'المتانة': '3/5',
         'الراحة': '5/5',
         'سهولة العناية': '4/5',
-        'الاستدامة': '4/5',
-      }
+        'الاستدامة': '4/5'}
     },
     {
       id: 'polyester',
@@ -27,8 +26,7 @@ export default function FabricGuideClientPageArabic() {
         'المتانة': '4/5',
         'الراحة': '3/5',
         'سهولة العناية': '5/5',
-        'الاستدامة': '2/5',
-      }
+        'الاستدامة': '2/5'}
     },
     {
       id: 'polycotton',
@@ -39,8 +37,7 @@ export default function FabricGuideClientPageArabic() {
         'المتانة': '4/5',
         'الراحة': '4/5',
         'سهولة العناية': '4/5',
-        'الاستدامة': '3/5',
-      }
+        'الاستدامة': '3/5'}
     },
     {
       id: 'performance',
@@ -51,8 +48,7 @@ export default function FabricGuideClientPageArabic() {
         'المتانة': '5/5',
         'الراحة': '4/5',
         'سهولة العناية': '4/5',
-        'الاستدامة': '3/5',
-      }
+        'الاستدامة': '3/5'}
     },
     {
       id: 'sustainable',
@@ -63,8 +59,7 @@ export default function FabricGuideClientPageArabic() {
         'المتانة': '3/5',
         'الراحة': '4/5',
         'سهولة العناية': '3/5',
-        'الاستدامة': '5/5',
-      }
+        'الاستدامة': '5/5'}
     },
   ];
 
@@ -121,8 +116,7 @@ export default function FabricGuideClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/fabric-cotton-blends.webp',
-      },
+        image: '/images/fabric-cotton-blends.webp'},
       {
         title: 'اعتبارات المناخ السعودي',
         content: `
@@ -150,8 +144,7 @@ export default function FabricGuideClientPageArabic() {
             <li class="mb-2">أقمشة الأداء المتخصصة للعمل الخارجي والبيئات الصناعية</li>
           </ol>
         `,
-        image: '/images/saudi-uniform-map.jpg',
-      },
+        image: '/images/saudi-uniform-map.jpg'},
       {
         title: 'الأقمشة لصناعات محددة',
         content: `
@@ -183,8 +176,7 @@ export default function FabricGuideClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg',
-      }
+        image: '/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg'}
     ],
     items: fabricTypes,
     relatedResources: [

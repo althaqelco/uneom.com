@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,9 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'طقم مدرسي كلاسيكي للبنات | أزياء طالبات محتشمة ومريحة | يونيوم',
     description: 'طقم زي مدرسي كلاسيكي للبنات يتميز بتصاميم محتشمة وأقمشة قابلة للتنفس ومناسبة ثقافياً. مثالي للمدارس السعودية.',
-    images: ['/images/products/education/classic-girls-school-set.jpg'],
-  },
-}
+    images: ['/images/products/education/classic-girls-school-set.jpg']}}
 
 const productFeatures = [
   {

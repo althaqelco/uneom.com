@@ -62,11 +62,8 @@ export default function FirefightingPageArabic() {
         description: "بدلة كاملة مقاومة للحريق مع طبقات متعددة للحماية القصوى",
         price: "٢٨٥٠ ر.س",
         image: "/images/a-firefighter-giving-instructions-to-her-team-SBI-301057339.jpg",
-        href: "/ar/images/firefighters-fight-the-fire-flame-to-control-fire-not-to-spreading-out-firefighter-ind-SBI-349465280.jpg",
-        href: "/ar/images/uneom_dirt_fire_resistant_fabric.webp",
         href: "/ar/shop/safety-protection/fire-resistant-hood",
-        features: ["نسيج مزدوج الطبقة", "مقاومة للحرارة", "قابل للغسل المتكرر"],
-      }
+        features: ["نسيج مزدوج الطبقة", "مقاومة للحرارة", "قابل للغسل المتكرر"]}
     ],
     
     customizationOptions: [

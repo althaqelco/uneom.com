@@ -1,3 +1,4 @@
+import React from 'react';
 ;import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -19,9 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'دليل تحسين المقاسات للأزياء المهنية | موارد يونيوم',
     description: 'دليل شامل لتحسين مقاسات الأزياء المهنية في المؤسسات السعودية',
-    images: ['/images/resources/fit-optimization-hero.jpg'],
-  },
-}
+    images: ['/images/resources/fit-optimization-hero.jpg']}}
 
 export default function FitOptimizationPage() {
   return (

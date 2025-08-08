@@ -32,11 +32,6 @@ export default function HospitalityAttireClientPage() {
       description: 'زي فندقي فاخر مصمم للفنادق ذات الخمس نجوم، يتميز بنسيج فاخر وتفاصيل راقية وتصميم أنيق.',
       price: 'من 499 ريال',
       image: '/images/Hospitality_Uniforms.png',
-      href: '/ar/images/staff-of-modern-restaurant-in-uniforms-SBI-301172246.jpg',
-      href: '/ar/images/female-arabic-chef-standing-in-a-kitchen-SBI-301212559.jpg',
-      href: '/ar/images/Arab-concierge-SBI-301173096.jpg',
-      href: '/ar/images/young-woman-walking-at-hotel-corridor-SBI-306282723.jpg',
-      href: '/ar/images/hotel-manager-welcoming-couple-SBI-305098732.jpg',
       href: '/ar/shop/hospitality-attire/resort-staff-uniform',
       features: ['نسيج قابل للتنفس', 'سهل العناية', 'تصميم عصري', 'مريح للمناخ الحار'],
       colors: ['أبيض/أزرق', 'بيج/خاكي', 'تركواز/أبيض']

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import { generateMetadata } from '@/components/seo/ServerSEO';
 import FlameResistantWorkwearClientPage from './client';
@@ -19,6 +20,7 @@ export const metadata: Metadata = generateMetadata({
     'يونيوم السعودية'
   ],
   path: '/images/products/flame-resistant-workwear.webp',
+  locale: 'ar'
 });
 
 export default function FlameResistantWorkwearPage() {

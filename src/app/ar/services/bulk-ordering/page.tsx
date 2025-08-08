@@ -10,9 +10,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://uneom.com/ar/services/bulk-ordering/',
     languages: {
-      'en': 'https://uneom.com/services/bulk-ordering/',
-    },
-  },
+      'en': 'https://uneom.com/services/bulk-ordering/'}},
   openGraph: {
     title: 'طلبات الشراء بالجملة | يونيوم',
     description: 'خدمات طلبات الزي الموحد بالجملة من يونيوم، توفر حلول فعالة من حيث التكلفة للشركات والمؤسسات في المملكة العربية السعودية.',

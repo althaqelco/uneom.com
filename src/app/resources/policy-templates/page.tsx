@@ -22,9 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Free Uniform Policy Templates | UNEOM Resources',
     description: 'Download comprehensive uniform policy templates for your organization',
-    images: ['/images/resources/policy-templates-preview.jpg'],
-  },
-}
+    images: ['/images/resources/policy-templates-preview.jpg']}}
 
 const policyTemplates = [
   {

@@ -135,8 +135,7 @@ export default function ResourcesClientPageArabic() {
             `).join('')}
           </div>
         `,
-        image: '/images/blog/sustainable-uniforms.jpg',
-      },
+        image: '/images/blog/sustainable-uniforms.jpg'},
       {
         title: 'دلائل المقاسات والتناسب',
         content: `
@@ -161,8 +160,7 @@ export default function ResourcesClientPageArabic() {
             `).join('')}
           </div>
         `,
-        image: '/images/healthcare/medical_hijab_uniform.jpg',
-      },
+        image: '/images/healthcare/medical_hijab_uniform.jpg'},
       {
         title: 'الموارد التعليمية',
         content: `
@@ -187,8 +185,7 @@ export default function ResourcesClientPageArabic() {
             `).join('')}
           </div>
         `,
-        image: '/images/blog/healthcare-uniforms.jpg',
-      }
+        image: '/images/blog/healthcare-uniforms.jpg'}
     ],
     items: [...resourceCategories.flatMap(cat => cat.resources), ...educationalResources].map(resource => ({
       id: resource.id,

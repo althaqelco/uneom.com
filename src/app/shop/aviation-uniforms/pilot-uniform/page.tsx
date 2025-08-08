@@ -78,10 +78,6 @@ export default function PilotUniformPage() {
         id: 'airline-crew-uniform',
         name: 'Airline Crew Uniform',
         image: '/images/products/aviation/airline-2.jpg',
-        price: 'From SAR 1,299',
-        href: '/images/aviation/aviation_uniform_airline.jpg',
-        price: 'From SAR 899',
-        href: '/images/products/aviation/airline-3.jpg',
         price: 'From SAR 349',
         href: '/shop/aviation-uniforms/aviation-accessories'
       }

@@ -59,7 +59,7 @@ const productData = {
     'دمج تقنية RFID لإدارة المخزون'
   ],
   relatedProducts: [
-    { id: 'premium-scrubs-set', name: 'طقم ملابس طبية فاخرة', image: '/images/products/scrubs-set.jpg', price: 'ريال سعودي 249', link: '/ar/images/products/scrubs-set.jpg', price: 'ريال سعودي 269', link: '/ar/images/products/scrubs-set.jpg', price: 'ريال سعودي 199', link: '/ar/shop/medical-scrubs/professional-lab-coat' }
+    { id: 'premium-scrubs-set', name: 'طقم ملابس طبية فاخرة', image: '/images/products/scrubs-set.jpg', price: 'ريال سعودي 249', link: '/ar/shop/medical-scrubs/premium-scrubs-set' }
   ]
 };
 

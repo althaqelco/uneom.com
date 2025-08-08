@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import ClientPage from '@/app/ar/shop/[category]/[product]/ClientPage';
 import Script from 'next/script';
@@ -24,14 +25,11 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/industrial-uniforms/safety-helmet-pro',
     languages: {
-      'en': 'https://uneom.com/shop/industrial-uniforms/safety-helmet-pro',
-    },
-  },
+      'en': 'https://uneom.com/shop/industrial-uniforms/safety-helmet-pro'}},
   robots: {
     index: true,
     follow: true,
@@ -40,10 +38,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function SafetyHelmetProPageArabic() {
   // Create product data for the Arabic version

@@ -29,30 +29,10 @@ export default function WorkplaceUniformsPage() {
       name: 'Executive Tailored Suits',
       price: 'From SAR 1,299',
       image: '/images/products/corporate-suit-executive.jpg',
-      rating: 4.9,
-      reviews: 87,
-      description: 'Premium tailored suits designed for corporate executives who require sophistication, comfort, and a distinguished professional appearance.',
-      href: '/images/products/corporate-shirts-blouses.jpg',
-      rating: 4.7,
-      reviews: 124,
-      description: 'High-quality corporate shirts in a variety of colors, featuring moisture-wicking fabric and easy-care properties for professional daily wear.',
-      href: '/images/products/corporate-polo-shirts.jpg',
-      rating: 4.6,
-      reviews: 58,
-      description: 'Elegant yet comfortable blazers for business professionals, available in various styles suitable for Saudi corporate environments.',
-      href: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
-      rating: 4.8,
-      reviews: 92,
-      description: 'Professional abayas designed specifically for corporate settings, combining traditional modesty with contemporary business aesthetics.',
-      href: '/images/avatar-placeholder.jpg',
-      rating: 4.5,
-      reviews: 77,
-      description: 'Durable formal trousers with comfortable stretch fabric, designed for long days in the office environment.',
-      href: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
       rating: 4.6,
       reviews: 64,
-      description: 'Professional length skirts designed for corporate settings, maintaining modesty while offering a polished business appearance.',
-      href: '/shop/workplace-uniforms/corporate-skirts'
+      description: 'Premium executive suits offering comfort and a distinguished professional appearance, featuring moisture-wicking fabric and easy-care properties for professional daily wear.',
+      href: '/shop/workplace-uniforms/executive-suits'
     }
   ];
 

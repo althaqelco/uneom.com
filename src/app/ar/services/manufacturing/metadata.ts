@@ -18,9 +18,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://uneom.com/ar/services/manufacturing',
     languages: {
-      'en': 'https://uneom.com/services/manufacturing',
-    },
-  },
+      'en': 'https://uneom.com/services/manufacturing'}},
   openGraph: {
     title: 'خدمات تصنيع الأزياء الموحدة الاحترافية | يونيوم - المملكة العربية السعودية',
     description: 'خدمات تصنيع عالية الجودة للأزياء الموحدة مع حرفية دقيقة وتكنولوجيا متطورة. يضمن إنتاجنا الداخلي جودة متفوقة وأوقات تسليم أسرع وأداء أمثل لمناخ المملكة العربية السعودية.',

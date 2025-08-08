@@ -24,8 +24,7 @@ export function generateMetadata({
   path = "/",
   locale,
   imageUrl = '/images/og-image.jpg',
-  noIndex = false,
-}: ServerSEOProps): Metadata {
+  noIndex = false}: ServerSEOProps): Metadata {
   // Ensure path starts with a / but doesn't end with one
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
   
@@ -47,9 +46,7 @@ export function generateMetadata({
       languages: {
         'en-SA': enUrl,
         'ar-SA': arUrl,
-        'x-default': enUrl,
-      },
-    },
+        'x-default': enUrl}},
     openGraph: {
       title,
       description,
@@ -60,26 +57,20 @@ export function generateMetadata({
           url: imageUrl.startsWith('http') ? imageUrl : `${baseUrl}${imageUrl}`,
           width: 1200,
           height: 630,
-          alt: title,
-        },
+          alt: title},
       ],
-      locale: locale === 'ar' ? 'ar_SA' : 'en_SA',
-    },
+      locale: locale === 'ar' ? 'ar_SA' : 'en_SA'},
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [imageUrl.startsWith('http') ? imageUrl : `${baseUrl}${imageUrl}`],
-    },
+      images: [imageUrl.startsWith('http') ? imageUrl : `${baseUrl}${imageUrl}`]},
     robots: {
       index: !noIndex,
       follow: !noIndex,
       googleBot: {
         index: !noIndex,
-        follow: !noIndex,
-      },
-    },
-  };
+        follow: !noIndex}}};
 }
 
 /**
@@ -92,8 +83,5 @@ export function generateNoIndexMetadata(): Metadata {
       follow: false,
       googleBot: {
         index: false,
-        follow: false,
-      },
-    },
-  };
+        follow: false}}};
 } 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,9 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'طقم زي كونسيرج فاخر | أزياء موظفي الفنادق الراقية | ملابس ضيافة تنفيذية | يونيوم',
     description: 'طقم زي كونسيرج فاخر للفنادق الراقية وأماكن الضيافة المتميزة. تصميم أنيق مع لمسات ذهبية لموظفي الضيافة المتميزة.',
-    images: ['/images/products/hospitality/luxury-concierge-uniform-set.jpg'],
-  },
-}
+    images: ['/images/products/hospitality/luxury-concierge-uniform-set.jpg']}}
 
 const productFeatures = [
   {

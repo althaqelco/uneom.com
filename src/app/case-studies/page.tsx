@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,8 +8,7 @@ import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 export const metadata: Metadata = {
   title: 'UNEOM Case Studies | Premium Uniform Solutions for Saudi Beauty Salons',
   description: 'Explore how UNEOM transformed beauty salon operations with premium uniform solutions across Saudi Arabia. Read our detailed case studies on salon chain standardization and luxury spa transformations.',
-  keywords: 'beauty salon uniforms Saudi Arabia, salon staff case studies, premium spa uniform implementation, Saudi beauty salon branding, luxury salon staff attire, beauty business transformation',
-};
+  keywords: 'beauty salon uniforms Saudi Arabia, salon staff case studies, premium spa uniform implementation, Saudi beauty salon branding, luxury salon staff attire, beauty business transformation'};
 
 export default function CaseStudiesIndex() {
   return (

@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Container from '@/components/ui/Container';
@@ -14,14 +15,12 @@ import { motion } from 'framer-motion';
 // Define a simple fadeIn animation variant
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }};
 
 export default function BlogPage() {
   const allPosts = getAllBlogPosts('ar');
   const allTags = getAllTags('ar');
-  
-  
+
   return (
     <div dir="rtl">
       <EnhancedSEO2025

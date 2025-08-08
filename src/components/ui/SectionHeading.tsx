@@ -17,8 +17,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
   centered = false,
   className = '',
   as = 'h2',
-  decoration = true,
-}) => {
+  decoration = true}) => {
   const textAlign = centered ? 'text-center' : 'text-left';
   
   const baseClasses = 'font-heading font-bold text-neutral-900';
@@ -26,8 +25,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
     h1: 'text-4xl sm:text-5xl lg:text-6xl',
     h2: 'text-3xl sm:text-4xl',
     h3: 'text-2xl sm:text-3xl',
-    h4: 'text-xl sm:text-2xl',
-  };
+    h4: 'text-xl sm:text-2xl'};
   
   const HeadingTag = as;
   

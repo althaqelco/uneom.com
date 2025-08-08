@@ -30,18 +30,7 @@ const IndustryGrid: React.FC<IndustryGridProps> = ({ locale = 'en', items }) => 
           title: "Healthcare Uniforms",
           description: "Medical scrubs and healthcare attire with antimicrobial fabrics",
           image: "/images/categories/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg",
-          link: "/images/industries/categories/two-beautiful-stewardesses-and-an-airman-staring-a-2024-10-21-02-06-10-utc.jpg",
-          link: "/images/industries/categories/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg",
-          link: "/images/industries/categories/a-delivery-person-dressed-in-a-red-polo-and-cap-shows-approval-with-a-thumbs-up-while--SBI-350024443.jpg",
-          link: "/images/industries/categories/schoolgirl-with-blood-type-sticker-at-school-ukrainian-war-concept-SBI-351317058.jpg",
-          link: "/images/industries/categories/ Industrial_Manufacturing_Uniforms .png",
-          link: "/images/industries/product-placeholder.jpg",
-          link: "/ar/images/industries/aviation/aviation_uniform_main.jpg",
-          link: "/ar/images/industries/hospitality/hospitality_uniform_formal.jpg",
-          link: "/ar/images/industries/product-placeholder.jpg",
-          link: "/ar/images/industries/product-placeholder.jpg",
-          link: "/ar/images/industries/ Industrial_Manufacturing_Uniforms .png",
-          link: "/ar/industries/manufacturing"
+          link: "/industries/healthcare"
         }
       ]
     }

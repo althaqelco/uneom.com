@@ -109,10 +109,6 @@ export default function PremiumMedicalScrubsPage() {
         id: "surgical-scrubs",
         name: "Surgical Scrubs Set",
         image: "/images/product-placeholder.jpg",
-        price: "SAR 199",
-        href: "/images/product-placeholder.jpg",
-        price: "SAR 229",
-        href: "/images/product-placeholder.jpg",
         price: "SAR 189",
         href: "/shop/medical-scrubs/nurse-uniform"
       }
@@ -470,7 +466,7 @@ export default function PremiumMedicalScrubsPage() {
         {/* Product Features */}
         <div className="mt-16 bg-neutral-50 rounded-2xl p-8">
           <SectionHeading as="h2" className="text-center mb-12">
-            Key Features &amp; Benefits
+            Key Features & Benefits
           </SectionHeading>
           <FeaturesGrid features={product.features} columns={3} />
         </div>

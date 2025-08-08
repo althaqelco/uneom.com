@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import SecurityOfficerUniformClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -16,19 +17,15 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/security-officer-uniform.webp',
         width: 1200,
         height: 630,
-        alt: 'زي ضابط الأمن من يونيوم',
-      },
+        alt: 'زي ضابط الأمن من يونيوم'},
     ],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/security-uniforms/security-officer-uniform/',
     languages: {
       'en-SA': 'https://uneom.com/shop/security-uniforms/security-officer-uniform/',
-      'ar-SA': 'https://uneom.com/ar/shop/security-uniforms/security-officer-uniform/',
-    },
-  },
+      'ar-SA': 'https://uneom.com/ar/shop/security-uniforms/security-officer-uniform/'}},
   robots: {
     index: true,
     follow: true,
@@ -37,10 +34,7 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function SecurityOfficerUniformPage() {
   return <SecurityOfficerUniformClientPage />;

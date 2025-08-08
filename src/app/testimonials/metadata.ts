@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/testimonials/testimonials-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Client Testimonials - Success Stories from Satisfied Customers',
-      }
-    ],
-  },
+        alt: 'UNEOM Client Testimonials - Success Stories from Satisfied Customers'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Client Testimonials | UNEOM Saudi Arabia',
     description: 'Read authentic reviews from satisfied clients about UNEOM\'s premium uniform services across Saudi Arabia.',
-    images: ['/images/testimonials/testimonials-header.jpg'],
-  },
+    images: ['/images/testimonials/testimonials-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/testimonials',
     languages: {
       'en': 'https://uneom.com/testimonials',
-      'ar': 'https://uneom.com/ar/testimonials',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/testimonials'}}}; 

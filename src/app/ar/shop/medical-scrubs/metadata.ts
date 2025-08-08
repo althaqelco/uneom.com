@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/categories/medical-scrubs-category.jpg',
         width: 1200,
         height: 630,
-        alt: 'مجموعة ملابس طبية احترافية من يونيوم',
-      }
-    ],
-  },
+        alt: 'مجموعة ملابس طبية احترافية من يونيوم'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'ملابس طبية ويونيفورم الرعاية الصحية | يونيوم السعودية',
     description: 'يونيفورم طبي متميز مصمم للمتخصصين في الرعاية الصحية السعودية. الراحة تلتقي بالوظائف العملية مع الحماية المضادة للميكروبات.',
-    images: ['/images/categories/medical-scrubs-category.jpg'],
-  },
+    images: ['/images/categories/medical-scrubs-category.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/medical-scrubs',
     languages: {
       'en': 'https://uneom.com/shop/medical-scrubs',
-      'ar': 'https://uneom.com/ar/shop/medical-scrubs',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/medical-scrubs'}}}; 

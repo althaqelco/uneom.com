@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,9 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'قمصان بولو شركات فاخرة | بولو كاجوال فاخر | يونيوم',
     description: 'جرب الجودة الفائقة والأناقة المصقولة مع قمصان البولو الفاخرة للشركات، المصممة لمظهر كاجوال مميز.',
-    images: ['/images/products/corporate/premium-polo-main.jpg'],
-  },
-}
+    images: ['/images/products/corporate/premium-polo-main.jpg']}}
 
 const productFeatures = [
   {

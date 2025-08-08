@@ -11,17 +11,13 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/shop/corporate/corporate-category.jpg'],
-  },
+        url: '/images/shop/corporate/corporate-category.jpg'}
+    ]},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/corporate-attire',
     languages: {
       'en': 'https://uneom.com/shop/corporate-attire',
-      'ar': 'https://uneom.com/ar/shop/corporate-attire',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/corporate-attire'}}}; 

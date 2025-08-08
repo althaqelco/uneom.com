@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,16 +26,12 @@ export const metadata: Metadata = {
     title: 'Industrial Uniform Color Coding: Safety Standards and Best Practices',
     description: 'Complete guide to industrial uniform color coding for enhanced workplace safety',
     images: ['/images/blog/industrial-color-coding.jpg'],
-    locale: 'en_US',
-  },
+    locale: 'en_US'},
   alternates: {
     canonical: '/blog/industrial-uniform-color-coding/',
     languages: {
       'en': '/blog/industrial-uniform-color-coding/',
-      'ar': '/ar/blog/industrial-uniform-color-coding/',
-    },
-  },
-}
+      'ar': '/ar/blog/industrial-uniform-color-coding/'}}}
 
 const tableOfContents = [
   { id: 'introduction', title: 'Introduction to Color Coding' },

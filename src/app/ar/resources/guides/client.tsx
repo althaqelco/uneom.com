@@ -162,8 +162,7 @@ export default function GuidesClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/resources/guides/using-guides.jpg',
-      },
+        image: '/images/resources/guides/using-guides.jpg'},
       {
         title: 'إنشاء سياسة الزي الموحد',
         content: `
@@ -209,8 +208,7 @@ export default function GuidesClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/resources/guides/policy-creation.jpg',
-      }
+        image: '/images/resources/guides/policy-creation.jpg'}
     ],
     items: guides,
     relatedResources: [
@@ -238,8 +236,7 @@ export default function GuidesClientPageArabic() {
       description: 'تواصل مع فريق الخبراء لدينا للحصول على استشارة مخصصة لمساعدتك في تطوير وتحسين برنامج الزي الموحد لمؤسستك.',
       buttonText: 'تحدث مع أحد الخبراء',
       buttonUrl: '/ar/contact?inquiry=uniform-guides'
-    },
-  };
+    }};
 
   return <ResourcePageLayout resourceData={resourceData} />;
 } 

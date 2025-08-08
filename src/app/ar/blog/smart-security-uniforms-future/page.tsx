@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,16 +25,12 @@ export const metadata: Metadata = {
     title: 'مستقبل الأزياء الأمنية الذكية: تقنيات متطورة للحماية والأمان',
     description: 'استكشف التقنيات المتطورة في الأزياء الأمنية الذكية ومستقبل الحماية',
     images: ['/images/blog/smart-security-uniforms.jpg'],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   alternates: {
     canonical: '/ar/blog/smart-security-uniforms-future/',
     languages: {
       'en': '/blog/smart-security-uniforms-future/',
-      'ar': '/ar/blog/smart-security-uniforms-future/',
-    },
-  },
-}
+      'ar': '/ar/blog/smart-security-uniforms-future/'}}}
 
 const tableOfContents = [
   { id: 'introduction', title: 'مقدمة عن الأزياء الأمنية الذكية' },

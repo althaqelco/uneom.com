@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -18,9 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ملابس العمل الصناعية | أزياء المصانع وملابس الأمان | يونيوم',
     description: 'حلول ملابس عمل صناعية شاملة مصممة للأمان والمتانة والراحة في البيئات الصناعية.',
-    images: ['/images/manufacturing/hero-manufacturing-workwear.jpg'],
-  },
-}
+    images: ['/images/manufacturing/hero-manufacturing-workwear.jpg']}}
 
 const workwearCategories = [
   {

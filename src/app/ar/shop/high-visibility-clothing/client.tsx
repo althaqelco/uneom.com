@@ -25,8 +25,7 @@ export default function HighVisibilityClothingClientPage() {
       description: 'سترة سلامة عالية الرؤية متوافقة مع معيار ANSI/ISEA 107، مناسبة لمواقع العمل والإنشاءات والصناعة.',
       price: 'من 199 ريال',
       image: '/images/products/industrial-coverall.jpg',
-      href: '/ar/images/products/industrial-coverall.jpg',
-      href: '/ar/shop/high-visibility-clothing/reflective-jackets'
+      href: '/ar/shop/high-visibility-clothing/industrial-safety-vest'
     }
   ];
   

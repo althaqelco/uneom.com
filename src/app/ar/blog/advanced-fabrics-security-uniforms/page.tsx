@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,9 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'الأقمشة المتطورة في الأزياء الأمنية: ثورة في الحماية والراحة',
     description: 'اكتشف أحدث التطورات في تقنيات الأقمشة المتطورة للأزياء الأمنية وكيف تُحسن من الحماية والراحة للمهنيين الأمنيين.',
-    images: ['/images/blog/advanced-fabrics-security-uniforms.jpg'],
-  },
-}
+    images: ['/images/blog/advanced-fabrics-security-uniforms.jpg']}}
 
 const blogPost = {
   title: 'الأقمشة المتطورة في الأزياء الأمنية: ثورة في الحماية والراحة',

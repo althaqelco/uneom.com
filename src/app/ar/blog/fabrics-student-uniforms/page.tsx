@@ -24,9 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best Student Uniform Fabrics: Complete Selection Guide',
     description: 'Expert guide to choosing the best student uniform fabrics that combine comfort and durability',
-    images: ['/images/education/school-uniform-fabric-guide.jpg'],
-  },
-}
+    images: ['/images/education/school-uniform-fabric-guide.jpg']}}
 
 const fabricTypes = [
   {

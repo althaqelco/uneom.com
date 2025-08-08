@@ -61,8 +61,6 @@ export default function SecurityPage() {
         name: "Professional Security Officer Uniform",
         description: "Premium-grade security officer attire designed for Saudi corporate facilities, government buildings, and high-profile locations requiring authoritative presence and climate comfort.",
         image: "/images/industries/security/security-uniform-product-1.jpg",
-        href: "/images/industries/security/security-uniform-product-2.jpg",
-        href: "/images/industries/security/security-uniform-product-3.jpg",
         href: "/shop/security-uniforms/executive-protection",
         features: [
           "Professional tailored appearance",
@@ -207,12 +205,28 @@ export default function SecurityPage() {
         description: "Complete professional security officer uniform set with premium moisture-wicking shirt, tactical pants with reinforced knees, duty belt, and cap.",
         image: "/images/industries/security/security-uniform-product-1.jpg",
         price: "SAR 950",
-        href: "/images/industries/security/security-uniform-product-2.jpg",
-        price: "SAR 1,250",
-        href: "/images/industries/security/security-uniform-product-3.jpg",
-        price: "SAR 1,850",
-        href: "/shop/security-uniforms/executive-protection",
+        href: "/shop/security-uniforms/security-officer-premium",
         badge: "Premium",
+        featured: true
+      },
+      {
+        id: "executive-protection",
+        name: "Executive Protection Suit",
+        description: "High-end security uniform for executive protection services. Professional appearance with concealed tactical features.",
+        image: "/images/industries/security/security-uniform-product-2.jpg",
+        price: "SAR 1,250",
+        href: "/shop/security-uniforms/executive-protection",
+        badge: "Executive",
+        featured: true
+      },
+      {
+        id: "tactical-security-set",
+        name: "Tactical Security Complete Set",
+        description: "Advanced tactical security uniform with body armor compatibility, multiple utility pockets, and weather-resistant materials.",
+        image: "/images/industries/security/security-uniform-product-3.jpg",
+        price: "SAR 1,850",
+        href: "/shop/security-uniforms/tactical-security-set",
+        badge: "Tactical",
         featured: true
       }
     ]

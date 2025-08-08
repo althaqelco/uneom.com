@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,9 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'قمصان رسمية فاخرة | قمصان شركات فاخرة | يونيوم',
     description: 'جرب جودة وأناقة لا مثيل لهما مع قمصاننا الرسمية الفاخرة، المصممة للحضور التنفيذي.',
-    images: ['/images/products/corporate/premium-dress-shirts-main.jpg'],
-  },
-}
+    images: ['/images/products/corporate/premium-dress-shirts-main.jpg']}}
 
 const productFeatures = [
   {

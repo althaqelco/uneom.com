@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/corporate/corporate_uniform_formal.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Corporate Workwear Collection by UNEOM',
-      }
-    ],
-  },
+        alt: 'Professional Corporate Workwear Collection by UNEOM'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Corporate Workwear & Business Attire | UNEOM Saudi Arabia',
     description: 'Premium corporate uniforms designed for Saudi business environments. Professionalism meets comfort with cultural sensitivity considerations.',
-    images: ['/images/corporate/corporate_uniform_formal.jpg'],
-  },
+    images: ['/images/corporate/corporate_uniform_formal.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/corporate-workwear',
     languages: {
       'en': 'https://uneom.com/shop/corporate-workwear',
-      'ar': 'https://uneom.com/ar/shop/corporate-workwear',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/corporate-workwear'}}}; 

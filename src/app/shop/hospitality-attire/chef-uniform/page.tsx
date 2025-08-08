@@ -21,9 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Chef Uniform Collection | Professional Kitchen Attire',
     description: 'Complete chef uniform solutions for professional kitchens',
-    images: ['/images/products/hospitality/chef-uniform-collection.jpg'],
-  },
-}
+    images: ['/images/products/hospitality/chef-uniform-collection.jpg']}}
 
 const productFeatures = [
   {

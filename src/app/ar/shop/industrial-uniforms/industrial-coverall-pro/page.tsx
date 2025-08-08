@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import IndustrialCoverallProClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -19,14 +20,11 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall-pro',
     languages: {
-      'en': 'https://uneom.com/shop/industrial-uniforms/industrial-coverall-pro',
-    },
-  },
+      'en': 'https://uneom.com/shop/industrial-uniforms/industrial-coverall-pro'}},
   robots: {
     index: true,
     follow: true,
@@ -35,10 +33,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function IndustrialCoverallProPage() {
   return <IndustrialCoverallProClientPage />;

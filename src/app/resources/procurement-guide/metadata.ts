@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/resources/procurement-guide/procurement-guide-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Uniform Procurement Guide and Purchasing Best Practices',
-      },
-    ],
-  },
+        alt: 'UNEOM Uniform Procurement Guide and Purchasing Best Practices'},
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Uniform Procurement Guide | Purchasing Best Practices | UNEOM Saudi Arabia',
     description: 'Expert guide to uniform procurement for Saudi organizations. Learn best practices for budgeting, ordering, and supplier selection.',
-    images: ['/images/resources/procurement-guide/procurement-guide-header.jpg'],
-  },
+    images: ['/images/resources/procurement-guide/procurement-guide-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/resources/procurement-guide',
     languages: {
       'en': 'https://uneom.com/resources/procurement-guide',
-      'ar': 'https://uneom.com/ar/resources/procurement-guide',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/resources/procurement-guide'}}}; 

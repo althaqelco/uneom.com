@@ -73,11 +73,7 @@ const services = [
     title: 'تصميم الزي الموحد',
     description: 'تصميمات مبتكرة تعكس هوية علامتك التجارية وتلبي المتطلبات العملية لموظفيك.',
     icon: '/images/icons/custom-branding.svg',
-    link: '/ar/images/services/product-placeholder.jpg',
-    link: '/ar/images/services/images/icons/comprehensive-support.svg',
-    link: '/ar/images/services/images/icons/customization-icon.svg',
-    link: '/ar/services/measurement-services',
-  },
+    link: '/ar/services/measurement-services'},
 ];
 
 // بيانات المميزات
@@ -85,33 +81,27 @@ const features = [
   {
     title: 'تصميم مخصص',
     description: 'نصمم الزي الموحد خصيصًا ليعكس هوية علامتك التجارية ويلبي احتياجات موظفيك.',
-    icon: '/images/icons/custom-branding.svg',
-  },
+    icon: '/images/icons/custom-branding.svg'},
   {
     title: 'مواد عالية الجودة',
     description: 'نستخدم فقط أفضل الأقمشة والمواد لضمان الراحة والمتانة والمظهر المهني.',
-    icon: '/images/icons/premium-quality.svg',
-  },
+    icon: '/images/icons/premium-quality.svg'},
   {
     title: 'توافق مع المعايير السعودية',
     description: 'جميع منتجاتنا متوافقة مع المعايير السعودية ومناسبة للبيئة المحلية.',
-    icon: '/images/images/icons/saudi-expertise.svg',
-  },
+    icon: '/images/images/icons/saudi-expertise.svg'},
   {
     title: 'التسليم السريع',
     description: 'نلتزم بجداول التسليم المحددة لنضمن وصول طلبك في الوقت المناسب.',
-    icon: '/images/icons/timely-delivery.svg',
-  },
+    icon: '/images/icons/timely-delivery.svg'},
   {
     title: 'دعم مستمر',
     description: 'فريق دعم متخصص جاهز لمساعدتك في أي استفسارات أو متطلبات إضافية.',
-    icon: '/images/icons/comprehensive-support.svg',
-  },
+    icon: '/images/icons/comprehensive-support.svg'},
   {
     title: 'أسعار تنافسية',
     description: 'نقدم أسعارًا تنافسية مع الحفاظ على أعلى معايير الجودة لجميع منتجاتنا.',
-    icon: '/images/icons/premium-quality.svg',
-  },
+    icon: '/images/icons/premium-quality.svg'},
 ];
 
 // تصنيفات المنتجات المميزة
@@ -502,7 +492,7 @@ export default function HomePage() {
             </button>
             <div className="relative" style={{padding: '56.25% 0 0 0'}}>
               <iframe 
-                src="https://player.vimeo.com/video/1063939680?h=d186c87f02&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1" 
+                src="https://player.vimeo.com/video/1063939680?h=d186c87f02&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1" 
                 frameBorder="0" 
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
                 style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}

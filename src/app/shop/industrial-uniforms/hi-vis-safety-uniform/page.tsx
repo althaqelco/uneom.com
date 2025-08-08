@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import ClientPage from '../../[category]/[product]/ClientPage';
 import Script from 'next/script';
@@ -20,14 +21,11 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/shop/industrial-uniforms/hi-vis-safety-uniform',
     languages: {
-      'ar': 'https://uneom.com/ar/shop/industrial-uniforms/hi-vis-safety-uniform',
-    },
-  },
+      'ar': 'https://uneom.com/ar/shop/industrial-uniforms/hi-vis-safety-uniform'}},
   robots: {
     index: true,
     follow: true,
@@ -36,10 +34,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function HiVisUniformPage() {
   // Use metadata from params to filter products and get specific product data

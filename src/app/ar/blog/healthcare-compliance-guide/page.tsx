@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,9 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'دليل الامتثال للرعاية الصحية: معايير الأزياء الطبية في السعودية',
     description: 'متطلبات الامتثال الأساسية للأزياء الطبية في المرافق الصحية السعودية',
-    images: ['/images/categories/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg'],
-  },
-}
+    images: ['/images/categories/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg']}}
 
 const complianceAreas = [
   {

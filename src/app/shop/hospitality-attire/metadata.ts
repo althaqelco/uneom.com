@@ -11,17 +11,13 @@ export const metadata: Metadata = {
     locale: 'en',
     images: [
       {
-        url: '/images/industries/industries/hospitality.jpg'],
-  },
+        url: '/images/industries/industries/hospitality.jpg'}
+    ]},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/hospitality-attire',
     languages: {
       'en': 'https://uneom.com/shop/hospitality-attire',
-      'ar': 'https://uneom.com/ar/shop/hospitality-attire',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/hospitality-attire'}}}; 

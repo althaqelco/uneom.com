@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,8 +9,7 @@ import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 export const metadata: Metadata = {
   title: 'Hospital Aesthetic Clinic Case Study | Medical Uniforms | UNEOM Saudi Arabia',
   description: 'How UNEOM designed premium medical uniforms for a leading Jeddah hospital aesthetic clinic, enhancing patient trust and staff professionalism while meeting Saudi healthcare standards.',
-  keywords: 'hospital aesthetic clinic uniforms, medical spa staff attire Saudi, healthcare uniform solutions Jeddah, medical aesthetics clinic uniforms, Saudi healthcare staff appearance, premium medical uniforms',
-};
+  keywords: 'hospital aesthetic clinic uniforms, medical spa staff attire Saudi, healthcare uniform solutions Jeddah, medical aesthetics clinic uniforms, Saudi healthcare staff appearance, premium medical uniforms'};
 
 export default function HospitalAestheticClinicCaseStudy() {
   return (

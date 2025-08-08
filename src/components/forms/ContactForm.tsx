@@ -27,8 +27,7 @@ export default function ContactForm({ locale = 'en' }: ContactFormProps) {
     company: '',
     subject: '',
     message: '',
-    privacy: false,
-  });
+    privacy: false});
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -39,8 +38,7 @@ export default function ContactForm({ locale = 'en' }: ContactFormProps) {
     
     setFormData((prev) => ({
       ...prev,
-      [name]: val,
-    }));
+      [name]: val}));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -148,8 +146,7 @@ Submitted: ${now.toLocaleString()}
           company: '',
           subject: '',
           message: '',
-          privacy: false,
-        });
+          privacy: false});
         
         // Reset status after delay
         setTimeout(() => {
@@ -169,8 +166,7 @@ Submitted: ${now.toLocaleString()}
           company: '',
           subject: '',
           message: '',
-          privacy: false,
-        });
+          privacy: false});
         
         // Reset status after delay
         setTimeout(() => {

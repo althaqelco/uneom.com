@@ -10,9 +10,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://uneom.com/ar/services/uniform-policies/',
     languages: {
-      'en': 'https://uneom.com/services/uniform-policies/',
-    },
-  },
+      'en': 'https://uneom.com/services/uniform-policies/'}},
   openGraph: {
     title: 'سياسات الزي الموحد للشركات | يونيوم',
     description: 'خدمات تطوير سياسات الزي الموحد الشاملة المصممة لتعزيز حوكمة فعالة وامتثال تنظيمي لبرامج الزي الموحد المؤسسي.',

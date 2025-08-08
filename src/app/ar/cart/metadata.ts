@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/cart/cart-page.jpg',
         width: 1200,
         height: 630,
-        alt: 'سلة تسوق يونيوم - راجع طلب الزي الموحد الخاص بك',
-      }
-    ],
-  },
+        alt: 'سلة تسوق يونيوم - راجع طلب الزي الموحد الخاص بك'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'سلة التسوق | يونيوم السعودية',
     description: 'راجع اختياراتك من الزي الموحد قبل الدفع. ملابس عمل متميزة مع التوصيل في جميع أنحاء السعودية.',
-    images: ['/images/cart/cart-page.jpg'],
-  },
+    images: ['/images/cart/cart-page.jpg']},
   robots: {
     index: false,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/cart',
     languages: {
       'en': 'https://uneom.com/cart',
-      'ar': 'https://uneom.com/ar/cart',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/cart'}}}; 

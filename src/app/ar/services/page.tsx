@@ -10,9 +10,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://uneom.com/ar/services/',
     languages: {
-      'en': 'https://uneom.com/services/',
-    },
-  },
+      'en': 'https://uneom.com/services/'}},
   openGraph: {
     title: 'خدماتنا | يونيوم - حلول الزي الموحد المبتكرة',
     description: 'نقدم حلول شاملة للزي الموحد للشركات والمؤسسات في المملكة العربية السعودية. تعرف على خدماتنا المتميزة في التصميم والإنتاج والتوريد.',

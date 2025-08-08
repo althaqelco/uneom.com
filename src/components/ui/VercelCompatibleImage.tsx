@@ -102,8 +102,7 @@ const VercelCompatibleImage: React.FC<VercelCompatibleImageProps> = ({
           alt={alt as string}
           className={cn('transition-opacity', className, {
             'opacity-0': loading,
-            'opacity-100': !loading,
-          })}
+            'opacity-100': !loading})}
           onLoadingComplete={handleLoad}
           onError={handleError}
           unoptimized={Boolean(isVercel)} // Disable Next.js image optimization on Vercel

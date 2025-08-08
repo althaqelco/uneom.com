@@ -15,11 +15,8 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/healthcare/healthcare_medical_uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'Healthcare professionals in properly fitted medical uniforms in Saudi Arabia',
-      },
-    ],
-  },
-};
+        alt: 'Healthcare professionals in properly fitted medical uniforms in Saudi Arabia'},
+    ]}};
 
 export default function MedicalSizeGuidePage() {
   const resourceData = {

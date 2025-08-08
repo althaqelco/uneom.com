@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import EnhancedManufacturingClient from './EnhancedManufacturingClient';
 
@@ -17,17 +18,13 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
         width: 1200,
         height: 630,
-        alt: 'أزياء القطاع الصناعي من يونيوم - ملابس سلامة وحماية صناعية',
-      },
-    ],
-  },
+        alt: 'أزياء القطاع الصناعي من يونيوم - ملابس سلامة وحماية صناعية'},
+    ]},
   alternates: {
     canonical: 'https://uneom.com/ar/industries/manufacturing/',
     languages: {
       'en': 'https://uneom.com/industries/manufacturing/',
-      'ar': 'https://uneom.com/ar/industries/manufacturing/',
-    },
-  },
+      'ar': 'https://uneom.com/ar/industries/manufacturing/'}},
   robots: {
     index: true,
     follow: true,

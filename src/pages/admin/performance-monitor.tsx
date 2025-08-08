@@ -273,7 +273,6 @@ export const getStaticProps = async ({ locale }) => {
   return {
     props: {
       // Any props needed for the page
-    }
   };
 };
 

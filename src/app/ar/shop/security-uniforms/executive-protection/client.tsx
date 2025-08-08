@@ -78,10 +78,6 @@ export default function ExecutiveProtectionClientPage() {
         name: 'زي ضابط الأمن الاحترافي',
         image: '/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'من ريال 329',
-        href: '/ar/images/hospitality/hospitality_uniform_formal.jpg',
-        price: 'من ريال 549',
-        href: '/ar/images/hospitality/hospitality_uniform_formal.jpg',
-        price: 'من ريال 399',
         href: '/ar/shop/security-uniforms/hotel-security-uniform'
       }
     ]

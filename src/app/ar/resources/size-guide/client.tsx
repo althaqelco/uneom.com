@@ -61,8 +61,7 @@ export default function SizeGuideClientPageArabic() {
             <p>قم بالقياس حول قاعدة الرقبة، حيث سيستقر الياقة.</p>
           </div>
         `,
-        image: '/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg',
-      },
+        image: '/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg'},
       {
         title: 'مخططات المقاسات القياسية',
         content: `
@@ -175,8 +174,7 @@ export default function SizeGuideClientPageArabic() {
             </table>
           </div>
         `,
-        image: '/images/product-placeholder.jpg',
-      },
+        image: '/images/product-placeholder.jpg'},
       {
         title: 'المقاسات الخاصة بالصناعات',
         content: `
@@ -220,13 +218,13 @@ export default function SizeGuideClientPageArabic() {
       {
         id: 'womens-sizing',
         title: 'دليل مقاسات النساء',
-        description: 'جداول مقاسات مفصلة للزي الموحد للنساء مع إرشادات القياس.',
+        content: 'جداول مقاسات مفصلة للزي الموحد للنساء مع إرشادات القياس.',
         image: '/images/services/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg'
       },
       {
         id: 'size-conversion',
         title: 'جدول تحويل المقاسات',
-        description: 'جداول تحويل المقاسات بين المعايير الدولية المختلفة.',
+        content: 'جداول تحويل المقاسات بين المعايير الدولية المختلفة.',
         image: '/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg'
       }
     ],

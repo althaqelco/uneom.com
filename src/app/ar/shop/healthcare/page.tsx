@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import { generateMetadata } from '@/components/seo/ServerSEO';
 import HealthcareClientPage from './client';
@@ -9,8 +10,7 @@ export const metadata: Metadata = generateMetadata({
   keywords: ['ملابس طبية', 'معاطف مختبر', 'زي تمريض', 'أزياء مستشفيات', 'ملابس صحية', 'ملابس مضادة للبكتيريا', 'يونيوم', 'المملكة العربية السعودية'],
   path: '/shop/healthcare',
   locale: 'ar',
-  imageUrl: '/images/categories/healthcare.webp',
-});
+  imageUrl: '/images/categories/healthcare.webp'});
 
 export default function HealthcarePage() {
   return <HealthcareClientPage />;

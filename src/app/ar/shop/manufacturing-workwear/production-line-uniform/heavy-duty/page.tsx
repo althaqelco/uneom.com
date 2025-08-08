@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -23,9 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'زي خطوط الإنتاج شديد التحمل | UNEOM',
     description: 'زي قوي وموثوق لمهام خطوط الإنتاج الصعبة في المصانع السعودية.',
-    images: ['/images/products/industrial/heavy-duty-production-line-uniform-main.jpg'],
-  },
-}
+    images: ['/images/products/industrial/heavy-duty-production-line-uniform-main.jpg']}}
 
 // Placeholder for CogIcon and BuildingOffice2Icon if not directly available
 const CogIcon = WrenchScrewdriverIcon; 

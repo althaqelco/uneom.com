@@ -32,11 +32,6 @@ export default function CulinaryUniformsPage() {
       description: 'Professional chef coat made with premium fabric, designed for comfort and style in the kitchen environment.',
       price: 'From SAR 189',
       image: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/culinary-uniforms/culinary-student-uniform',
       features: ['Cost-effective', 'Durable', 'Easy-care', 'Complete set'],
       colors: ['White']

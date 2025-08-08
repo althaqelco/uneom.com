@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import ClientPage from '@/app/shop/[category]/[product]/ClientPage';
 import Script from 'next/script';
@@ -20,14 +21,11 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/retail-uniforms/related-product-4',
     languages: {
-      'en': 'https://uneom.com/shop/retail-uniforms/related-product-4',
-    },
-  },
+      'en': 'https://uneom.com/shop/retail-uniforms/related-product-4'}},
   robots: {
     index: true,
     follow: true,
@@ -36,10 +34,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function CasualRetailTeamUniformPageArabic() {
   // Create params object to match ClientPageProps interface

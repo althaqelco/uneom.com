@@ -15,8 +15,7 @@ const pageData = {
   hero: {
     title: "UNEOM - Professional Uniforms",
     subtitle: "ملابس السلامة المتقدمة لقطاع الصناعات الثقيلة في المملكة العربية السعودية",
-    image: "/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg",
-  },
+    image: "/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg"},
   stats: [
     { value: "ISO 20471", label: "وضوح عالي" },
     { value: "EN 388", label: "حماية من الصدمات" },

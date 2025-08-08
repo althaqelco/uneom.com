@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import QuoteForm from '@/components/forms/QuoteForm'
 import Container from '@/components/ui/Container'

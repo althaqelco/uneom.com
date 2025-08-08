@@ -22,18 +22,14 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/team/experts-banner.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Uniform Industry Experts',
-      }
+        alt: 'UNEOM Uniform Industry Experts'}
     ],
-    type: 'website',
-  },
+    type: 'website'},
   twitter: {
     card: 'summary_large_image',
     title: 'Uniform Industry Experts | UNEOM',
     description: 'Meet our expert team of uniform industry professionals with specialized knowledge across multiple sectors.',
-    images: ['https://uneom.com/images/team/experts-banner.jpg'],
-  },
-};
+    images: ['https://uneom.com/images/team/experts-banner.jpg']}};
 
 // Industry categories for experts
 const industryCategories = [
@@ -71,9 +67,7 @@ export default function AuthorsPage() {
       "sameAs": [
         author.linkedin,
         author.twitter,
-      ].filter(Boolean),
-    })),
-  };
+      ].filter(Boolean)}))};
 
   return (
     <>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,9 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Floor Supervisor Uniforms for Manufacturing | UNEOM',
     description: 'Functional and durable uniforms for active floor supervisors in manufacturing settings.',
-    images: ['/images/products/industrial/floor-supervisor-uniform-main.jpg'],
-  },
-}
+    images: ['/images/products/industrial/floor-supervisor-uniform-main.jpg']}}
 
 const productFeatures = [
   {
@@ -93,7 +92,6 @@ const relatedProducts = [
     price: 'From SAR 180'
   }
 ]
-
 
 export default function FloorSupervisorUniformPage() {
   return (

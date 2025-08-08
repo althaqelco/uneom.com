@@ -22,8 +22,7 @@ const SizeRangeSelector: React.FC<SizeRangeSelectorProps> = ({
   unit = '',
   sizeLabels = [],
   isRTL = false,
-  className = '',
-}) => {
+  className = ''}) => {
   // استخدام الفهرس المناسب للقيمة الحالية من مصفوفة التسميات إن وجدت
   const getSizeLabel = (val: number) => {
     if (sizeLabels.length > 0) {
@@ -52,15 +51,15 @@ const SizeRangeSelector: React.FC<SizeRangeSelectorProps> = ({
       
       <div className="flex justify-between mt-1 text-xs text-gray-500">
         {isRTL ? (
-          <>
+          <React.Fragment>
             <span>{getSizeLabel(minSize)}{unit}</span>
             <span>{getSizeLabel(maxSize)}{unit}</span>
-          </>
+          </React.Fragment>
         ) : (
-          <>
+          <React.Fragment>
             <span>{getSizeLabel(minSize)}{unit}</span>
             <span>{getSizeLabel(maxSize)}{unit}</span>
-          </>
+          </React.Fragment>
         )}
       </div>
     </div>

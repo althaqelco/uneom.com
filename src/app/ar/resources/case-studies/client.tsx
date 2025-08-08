@@ -153,8 +153,7 @@ export default function CaseStudiesClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/hospitality/hospitality_hotel_staff.jpg',
-      },
+        image: '/images/hospitality/hospitality_hotel_staff.jpg'},
       {
         title: 'قطاع الرعاية الصحية',
         content: `
@@ -196,8 +195,7 @@ export default function CaseStudiesClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/healthcare/healthcare_doctor_consultation.jpg',
-      },
+        image: '/images/healthcare/healthcare_doctor_consultation.jpg'},
       {
         title: 'قطاع التعليم',
         content: `
@@ -239,8 +237,7 @@ export default function CaseStudiesClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/education/education_students.jpg',
-      }
+        image: '/images/education/education_students.jpg'}
     ],
     items: caseStudies.map(study => ({
       id: study.id,

@@ -22,9 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'دليل الأقمشة الشامل للأزياء المهنية',
     description: 'كل ما تحتاج لمعرفته حول اختيار الأقمشة المناسبة لأزيائك',
-    images: ['/images/resources/fabric-guide-preview.jpg'],
-  },
-}
+    images: ['/images/resources/fabric-guide-preview.jpg']}}
 
 const fabricTypes = [
   {

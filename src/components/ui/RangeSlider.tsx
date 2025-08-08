@@ -27,8 +27,7 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
   valuePrefix = '',
   valueSuffix = '',
   isRTL = false,
-  className = '',
-}) => {
+  className = ''}) => {
   // استخدام القيمة المتحكم بها إن وجدت، وإلا استخدام القيمة الافتراضية
   const [internalValue, setInternalValue] = useState<number>(
     value !== undefined ? value : defaultValue !== undefined ? defaultValue : min

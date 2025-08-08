@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,16 +25,12 @@ export const metadata: Metadata = {
     title: 'The Impact of Retail Uniforms on Business Success',
     description: 'How retail uniforms drive customer trust, employee performance, and business growth',
     images: ['/images/blog/retail-uniform-impact.jpg'],
-    locale: 'en_US',
-  },
+    locale: 'en_US'},
   alternates: {
     canonical: '/blog/retail-uniform-impact/',
     languages: {
       'en': '/blog/retail-uniform-impact/',
-      'ar': '/ar/blog/retail-uniform-impact/',
-    },
-  },
-}
+      'ar': '/ar/blog/retail-uniform-impact/'}}}
 
 const tableOfContents = [
   { id: 'introduction', title: 'Introduction to Retail Uniform Impact' },

@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/housekeeping-uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Housekeeping Uniform Collection by UNEOM',
-      }
-    ],
-  },
+        alt: 'Professional Housekeeping Uniform Collection by UNEOM'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Housekeeping Uniforms | UNEOM Saudi Arabia',
     description: 'Premium housekeeping uniforms designed for Saudi Arabia\'s hospitality sector. Practicality meets durability with superior comfort.',
-    images: ['/images/products/housekeeping-uniform.jpg'],
-  },
+    images: ['/images/products/housekeeping-uniform.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/hospitality-attire/housekeeping-uniform',
     languages: {
       'en': 'https://uneom.com/shop/hospitality-attire/housekeeping-uniform',
-      'ar': 'https://uneom.com/ar/shop/hospitality-attire/housekeeping-uniform',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/hospitality-attire/housekeeping-uniform'}}}; 

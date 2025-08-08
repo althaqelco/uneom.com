@@ -30,8 +30,7 @@ export default function DirectImage({
   priority = false,
   fallbackSrc = '/images/defaults/default-placeholder.jpg',
   onClick,
-  onLoad,
-}: DirectImageProps) {
+  onLoad}: DirectImageProps) {
   const [imageSrc, setImageSrc] = useState<string>(src);
   const [hasError, setHasError] = useState<boolean>(false);
   const [triedFallback, setTriedFallback] = useState<boolean>(false);
@@ -98,8 +97,7 @@ export default function DirectImage({
     width: width ? `${width}px` : 'auto',
     height: height ? `${height}px` : 'auto',
     opacity: isLoaded ? 1 : 0.1,
-    transition: 'opacity 0.3s ease',
-  };
+    transition: 'opacity 0.3s ease'};
 
   return (
     <img

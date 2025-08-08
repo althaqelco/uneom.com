@@ -64,11 +64,8 @@ export default function CorporateIndustryClient() {
         description: "بدلات رسمية أنيقة للمدراء والتنفيذيين تعكس المستوى القيادي والاحترافية",
         price: "١٢٠٠ ر.س",
         image: "/images/executive-suit.webp",
-        href: "/ar/images/office-uniform.webp",
-        href: "/ar/images/corporate-accessories.webp",
         href: "/ar/shop/corporate-uniforms/accessories",
-        features: ["تصميم مخصص", "جودة عالية", "تعزز الهوية"],
-      }
+        features: ["تصميم مخصص", "جودة عالية", "تعزز الهوية"]}
     ],
     
     customizationOptions: [

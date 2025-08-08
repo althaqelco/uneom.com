@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Industrial Uniforms Collection by UNEOM',
-      }
-    ],
-  },
+        alt: 'Professional Industrial Uniforms Collection by UNEOM'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Industrial Uniforms & Manufacturing Workwear | UNEOM Saudi Arabia',
     description: 'Premium industrial uniforms designed for Saudi manufacturing facilities. Safety compliance meets durability with climate-adaptive features.',
-    images: ['/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg'],
-  },
+    images: ['/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/industrial-uniforms',
     languages: {
       'en': 'https://uneom.com/shop/industrial-uniforms',
-      'ar': 'https://uneom.com/ar/shop/industrial-uniforms',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/industrial-uniforms'}}}; 

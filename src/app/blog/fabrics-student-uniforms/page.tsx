@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -23,9 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'أفضل أقمشة الزي المدرسي: دليل شامل للاختيار الصحيح',
     description: 'دليل متخصص لاختيار أفضل أقمشة الزي المدرسي التي تجمع بين الراحة والمتانة',
-    images: ['/images/education/school-uniform-fabric-guide.jpg'],
-  },
-}
+    images: ['/images/education/school-uniform-fabric-guide.jpg']}}
 
 const fabricTypes = [
   {

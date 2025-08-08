@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Metadata } from 'next';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export const metadata: Metadata = {
@@ -23,7 +24,6 @@ export const metadata: Metadata = {
     locale: 'ar'
   }
 };
-
 
 export default function TermsOfServicePage() {
   return (

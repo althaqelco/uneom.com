@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,9 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'بولو الأعمال الكلاسيكي | قمصان بولو شركاتية أنيقة | يونيوم',
     description: 'قمصان بولو كلاسيكية مصممة للبيئة المهنية مع الحفاظ على الأناقة والراحة.',
-    images: ['/images/products/corporate-polo-shirts.jpg'],
-  },
-}
+    images: ['/images/products/corporate-polo-shirts.jpg']}}
 
 const classicFeatures = [
   {

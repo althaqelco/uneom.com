@@ -45,8 +45,6 @@ export default function FactoryIndustryClientPageArabic() {
         name: "أزياء خط الإنتاج",
         description: "ملابس متينة ومقاومة للمخاطر لعمال خطوط الإنتاج، مصممة للحماية والراحة أثناء العمل",
         image: "/images/factory/production-line-uniforms.jpg",
-        href: "/ar/images/factory/engineering-uniforms.jpg",
-        href: "/ar/images/factory/safety-workwear.jpg",
         href: "/ar/shop/factory-workwear/safety-collection"
     }
     ],

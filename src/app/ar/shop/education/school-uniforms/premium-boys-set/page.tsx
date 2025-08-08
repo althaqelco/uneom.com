@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -18,9 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'طقم الزي المدرسي الفاخر للأولاد | ملابس طلابية عالية الجودة | يونيوم',
     description: 'أطقم زي مدرسي عالية الجودة مصممة خصيصًا للأولاد، تجمع بين الراحة والمتانة والأناقة.',
-    images: ['/images/education/premium-boys-uniform.jpg'],
-  },
-}
+    images: ['/images/education/premium-boys-uniform.jpg']}}
 
 const uniformFeatures = [
   {

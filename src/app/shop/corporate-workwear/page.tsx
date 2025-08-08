@@ -32,11 +32,6 @@ export default function CorporateWorkwearPage() {
       description: 'Premium tailored blazer for corporate executives and management personnel, featuring sophisticated design and premium fabric.',
       price: 'From SAR 359',
       image: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/images/avatar-placeholder.jpg',
-      href: '/images/product-placeholder.jpg',
-      href: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/shop/corporate-workwear/business-formal-set',
       features: ['Premium materials', 'Coordinated set', 'Professional design', 'Custom sizing'],
       colors: ['Navy', 'Black', 'Charcoal']

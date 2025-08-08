@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'أفرول صيانة شديد التحمل | UNEOM',
     description: 'حماية ومتانة قصوى لمتخصصي الصيانة الصناعية في المملكة العربية السعودية.',
-    images: ['/images/products/industrial/heavy-duty-maintenance-coverall-main.jpg'],
-  },
-}
+    images: ['/images/products/industrial/heavy-duty-maintenance-coverall-main.jpg']}}
 
 const productFeatures = [
   {

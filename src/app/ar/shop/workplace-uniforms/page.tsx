@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import WorkplaceUniformsClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -39,9 +40,7 @@ export const metadata: Metadata = {
     canonical: 'https://uneom.com/ar/shop/workplace-uniforms/',
     languages: {
       'en-SA': 'https://uneom.com/shop/workplace-uniforms/',
-      'ar-SA': 'https://uneom.com/ar/shop/workplace-uniforms/',
-    },
-  },
+      'ar-SA': 'https://uneom.com/ar/shop/workplace-uniforms/'}},
   robots: {
     index: true,
     follow: true,

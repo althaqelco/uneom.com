@@ -39,8 +39,7 @@ const AddToQuoteButton: React.FC<AddToQuoteButtonProps> = ({
   color, 
   size,
   className = '',
-  redirectToQuote = false,
-}) => {
+  redirectToQuote = false}) => {
   const router = useRouter();
 
   const handleAddToQuote = () => {
@@ -56,8 +55,7 @@ const AddToQuoteButton: React.FC<AddToQuoteButtonProps> = ({
       image: product.image,
       category: product.category,
       color,
-      size,
-    };
+      size};
     
     // Get existing quote from localStorage
     const existingQuoteString = localStorage.getItem('quoteItems');

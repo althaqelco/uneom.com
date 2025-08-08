@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -19,9 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'أزياء الموظفين التعليمية | الزي المهني للمؤسسات التعليمية | يونيوم',
     description: 'أزياء مهنية عالية الجودة للموظفين في المؤسسات التعليمية السعودية',
-    images: ['/images/products/education-staff-uniforms.jpg'],
-  },
-}
+    images: ['/images/products/education-staff-uniforms.jpg']}}
 
 const staffProducts = [
   {

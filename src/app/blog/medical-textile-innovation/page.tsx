@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -18,9 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Medical Textile Innovation: Revolutionizing Healthcare Uniforms',
     description: 'Discover how cutting-edge textile innovations are transforming healthcare uniforms in Saudi Arabia medical facilities.',
-    images: ['/images/blog/medical-textile-innovation-hero.jpg'],
-  },
-}
+    images: ['/images/blog/medical-textile-innovation-hero.jpg']}}
 
 const innovations = [
   {

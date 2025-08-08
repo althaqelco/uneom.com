@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,7 +13,6 @@ import {
 } from '@heroicons/react/24/outline'
 import { StarIcon as StarSolidIcon } from '@heroicons/react/24/solid'
 
-
 export const metadata: Metadata = {
   title: 'ملابس التخرج | أرواب وقبعات وأوشحة التخرج | يونيوم',
   description: 'ملابس تخرج عالية الجودة تشمل الأرواب والقبعات والشراشيب والأوشحة للجامعات والكليات والمدارس في المملكة العربية السعودية. احتفل بالإنجازات بزي أكاديمي مميز.',
@@ -20,9 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ملابس التخرج | أرواب وقبعات وأوشحة التخرج | يونيوم',
     description: 'احتفل بالمعالم الأكاديمية مع ملابس التخرج الفاخرة لدينا. تتوفر الأرواب والقبعات والأوشحة والإكسسوارات.',
-    images: ['/images/products/education/graduate-attire-main.jpg'],
-  },
-}
+    images: ['/images/products/education/graduate-attire-main.jpg']}}
 
 const attireComponents = [
   {

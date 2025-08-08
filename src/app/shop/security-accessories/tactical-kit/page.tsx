@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,16 +25,12 @@ export const metadata: Metadata = {
     description: 'Advanced tactical kit for special security operations and tactical units',
     images: ['/images/products/security/tactical-kit-en.jpg'],
     locale: 'en_US',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/shop/security-accessories/tactical-kit/',
     languages: {
       'en': 'https://uneom.com/shop/security-accessories/tactical-kit/',
-      'ar': 'https://uneom.com/ar/shop/security-accessories/tactical-kit/',
-    },
-  },
-}
+      'ar': 'https://uneom.com/ar/shop/security-accessories/tactical-kit/'}}}
 
 const productJsonLd = {
   '@context': 'https://schema.org',

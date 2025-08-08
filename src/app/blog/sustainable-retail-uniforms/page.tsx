@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,16 +26,12 @@ export const metadata: Metadata = {
     title: 'Sustainable Retail Uniforms: Eco-Friendly Solutions for Modern Businesses',
     description: 'How sustainable uniforms benefit your business and the environment',
     images: ['/images/blog/sustainable-retail-uniforms.jpg'],
-    locale: 'en_US',
-  },
+    locale: 'en_US'},
   alternates: {
     canonical: '/blog/sustainable-retail-uniforms/',
     languages: {
       'en': '/blog/sustainable-retail-uniforms/',
-      'ar': '/ar/blog/sustainable-retail-uniforms/',
-    },
-  },
-}
+      'ar': '/ar/blog/sustainable-retail-uniforms/'}}}
 
 const tableOfContents = [
   { id: 'introduction', title: 'Introduction to Sustainable Uniforms' },

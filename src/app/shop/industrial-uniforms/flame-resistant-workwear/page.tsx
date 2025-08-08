@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import { generateMetadata } from '@/components/seo/ServerSEO';
 import FlameResistantWorkwearClientPage from './client';
@@ -8,6 +9,7 @@ export const metadata: Metadata = generateMetadata({
   description: 'Professional-grade flame-resistant workwear for oil, gas, and petrochemical industries in Saudi Arabia. NFPA 2112 compliant with inherent FR protection that withstands repeated washing.',
   keywords: ['flame-resistant workwear Saudi Arabia', 'FR clothing oil gas industry', 'NFPA 2112 compliant workwear KSA', 'fire resistant uniform Riyadh', 'petrochemical protective clothing', 'inherent FR fabric', 'Saudi Aramco approved FR'],
   path: '/images/products/flame-resistant-workwear.webp',
+  locale: 'en'
 });
 
 export default function FlameResistantWorkwearPage() {

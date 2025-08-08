@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -18,8 +19,7 @@ const featuredCorporateUniforms = [
     price: 'اطلب عرض سعر',
     href: '/ar/shop/corporate/executive-suits/',
     category: 'بدل تنفيذية',
-    isNew: true,
-  },
+    isNew: true},
   {
     id: 'business-shirts-ar',
     name: 'قمصان العمل الرسمية الأنيقة',
@@ -27,16 +27,14 @@ const featuredCorporateUniforms = [
     price: 'اطلب عرض سعر',
     href: '/ar/shop/corporate/business-shirts/',
     category: 'قمصان رسمية',
-    isFeatured: true,
-  },
+    isFeatured: true},
   {
     id: 'casual-polo-ar',
     name: 'قمصان بولو مريحة للشركات',
     image: '/images/products/corporate/polo-shirt-featured.jpg', // Placeholder
     price: 'اطلب عرض سعر',
     href: '/ar/shop/corporate/casual-polo/',
-    category: 'قمصان بولو',
-  },
+    category: 'قمصان بولو'},
 ];
 
 export default function CorporateUniformsPageAr() {

@@ -15,43 +15,18 @@ import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 const poppinsFont = Poppins({ 
   subsets: ['latin'],
   weight: ['600', '700'],
-  variable: '--font-poppins',
-});
+  variable: '--font-poppins'});
 
 const interFont = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
-  variable: '--font-inter',
-});
+  variable: '--font-inter'});
 
-const TechnicalFinishesPage = () => {
+
   const locale = 'en';
   
   // Technical Finishes Categories
-  const finishCategories = [
-    {
-      title: "UNEOM - Professional Uniforms",
-      description: 'Specialized treatments that enhance the protective qualities of uniform fabrics',
-      icon: '🛡️',
-    },
-    {
-      title: 'Performance Finishes',
-      description: 'Treatments that improve the functional performance of fabrics in various conditions',
-      icon: '⚡',
-    },
-    {
-      title: 'Comfort Finishes',
-      description: 'Applications that enhance wearer comfort and fabric feel',
-      icon: '😊',
-    },
-    {
-      title: 'Aesthetic Finishes',
-      description: 'Treatments that improve fabric appearance and visual appeal',
-      icon: '✨',
-    },
-  ];
-  
-  // Technical Finish Types
+    // Technical Finish Types
   const finishTypes = [
     {
       name: 'Water Repellent Finish',
@@ -63,8 +38,7 @@ const TechnicalFinishesPage = () => {
         'Reduces staining and extends garment life'
       ],
       applications: ['Outdoor uniforms', 'Security personnel', 'Delivery staff', 'Healthcare uniforms'],
-      image: '/images/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg',
-    },
+      image: '/images/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg'},
     {
       name: 'Stain Resistant Finish',
       description: 'Specialized treatments that prevent stains from setting into fabric fibers, making cleaning easier and maintaining uniform appearance.',
@@ -75,8 +49,7 @@ const TechnicalFinishesPage = () => {
         'Reduces replacement frequency'
       ],
       applications: ['Food service uniforms', 'Hospitality staff', 'Healthcare garments', 'Office attire'],
-      image: '/images/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg',
-    },
+      image: '/images/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg'},
     {
       name: 'UV Protection Finish',
       description: 'Treatments that block harmful ultraviolet rays, protecting both the wearer and preventing fabric degradation.',
@@ -87,8 +60,7 @@ const TechnicalFinishesPage = () => {
         'Extends uniform lifespan'
       ],
       applications: ['Outdoor workwear', 'Security personnel', 'Landscaping uniforms', 'Construction attire'],
-      image: '/images/zipper-on-clothes-2025-02-22-02-05-22-utc.jpg',
-    },
+      image: '/images/zipper-on-clothes-2025-02-22-02-05-22-utc.jpg'},
     {
       name: 'Antimicrobial Finish',
       description: 'Specialized treatments that inhibit the growth of bacteria, fungi, and other microorganisms on fabric surfaces.',
@@ -99,8 +71,7 @@ const TechnicalFinishesPage = () => {
         'Improves hygiene in critical environments'
       ],
       applications: ['Healthcare uniforms', 'Food service attire', 'Hospitality staff', 'Fitness center staff'],
-      image: '/images/services/a-firefighter-giving-instructions-to-her-team-SBI-301057339.jpg',
-    },
+      image: '/images/services/a-firefighter-giving-instructions-to-her-team-SBI-301057339.jpg'},
     {
       name: 'Moisture Wicking Finish',
       description: 'Treatments that enhance the fabric\'s ability to move moisture away from the body, keeping the wearer dry and comfortable.',
@@ -111,8 +82,7 @@ const TechnicalFinishesPage = () => {
         'Enhances overall uniform comfort'
       ],
       applications: ['Physical security uniforms', 'Kitchen staff', 'Outdoor workers', 'Fitness staff'],
-      image: '/images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg',
-    },
+      image: '/images/services/stack-of-rolled-jeans-and-cotton-flowers-on-light-2025-01-29-01-45-01-utc.jpg'},
   ];
   
   // Special Treatments
@@ -120,57 +90,69 @@ const TechnicalFinishesPage = () => {
     {
       name: 'Easy Care Finish',
       description: 'Treatments that reduce wrinkles, make garments easier to clean, and reduce ironing needs',
-      icon: '👕',
-    },
+      icon: '👕'},
     {
       name: 'Soft Touch Finish',
       description: 'Enhances fabric hand-feel, making uniforms more comfortable to wear for extended periods',
-      icon: '🧸',
-    },
+      icon: '🧸'},
     {
       name: 'Static Control Finish',
       description: 'Reduces static electricity buildup in fabrics, particularly important in electronic environments',
-      icon: '⚡',
-    },
+      icon: '⚡'},
     {
       name: 'Temperature Regulating Finish',
       description: 'Advanced treatments that help regulate body temperature in varying environmental conditions',
-      icon: '🌡️',
-    },
+      icon: '🌡️'},
     {
       name: 'Sustainable Eco-Finishes',
       description: 'Environmentally friendly treatments that achieve desired performance with reduced environmental impact',
-      icon: '🌿',
-    },
+      icon: '🌿'},
     {
       name: 'Custom Combination Finishes',
       description: 'Specialized multi-function treatments tailored for specific uniform requirements and conditions',
-      icon: '🧩',
-    },
+      icon: '🧩'},
   ];
   
+
+export default function TechnicalFinishesPage() {
+  const finishCategories = [
+    {
+      title: "UNEOM - Professional Uniforms",
+      description: 'Specialized treatments that enhance the protective qualities of uniform fabrics',
+      icon: '🛡️'},
+    {
+      title: 'Performance Finishes',
+      description: 'Treatments that improve the functional performance of fabrics in various conditions',
+      icon: '⚡'},
+    {
+      title: 'Comfort Finishes',
+      description: 'Applications that enhance wearer comfort and fabric feel',
+      icon: '😊'},
+    {
+      title: 'Aesthetic Finishes',
+      description: 'Treatments that improve fabric appearance and visual appeal',
+      icon: '✨'},
+  ];
+  
+
   // Benefits of Technical Finishes
   const finishBenefits = [
     {
       title: 'Enhanced Uniform Performance',
       description: 'Technical finishes significantly improve how uniforms perform in specific work environments',
-      icon: '⚡',
-    },
+      icon: '⚡'},
     {
       title: 'Extended Garment Lifespan',
       description: 'Protective finishes help uniforms last longer, reducing replacement frequency and costs',
-      icon: '⏱️',
-    },
+      icon: '⏱️'},
     {
       title: 'Improved Employee Comfort',
       description: 'Performance-enhancing treatments make uniforms more comfortable to wear throughout long shifts',
-      icon: '😊',
-    },
+      icon: '😊'},
     {
       title: 'Specialized Protection',
       description: 'Technical finishes provide specific protections against workplace hazards and environmental conditions',
-      icon: '🛡️',
-    },
+      icon: '🛡️'},
   ];
 
   return (
@@ -629,6 +611,5 @@ const TechnicalFinishesPage = () => {
       </div>
     </>
   );
-};
 
-export default TechnicalFinishesPage; 
+}

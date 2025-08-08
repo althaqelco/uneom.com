@@ -21,23 +21,20 @@ export default function RetailShopsPage() {
   const content = {
     meta: {
       title: "Premium Retail & Shopping Mall Uniforms in Saudi Arabia | UNEOM",
-      description: "Elevate your brand with professional retail uniforms that enhance customer engagement and drive sales in Saudi Arabia's shopping malls, stores, and beauty salons.",
-    },
+      description: "Elevate your brand with professional retail uniforms that enhance customer engagement and drive sales in Saudi Arabia's shopping malls, stores, and beauty salons."},
     hero: {
       headline: "Premium Retail & Shopping Mall Uniforms in Saudi Arabia",
       subheadline: "Elevate your brand with professional uniforms that enhance customer engagement and drive sales",
       image: "/images/industries/retail-shops/retail-shops-uniform-identity.jpg",
       cta: "Request Consultation",
-      ctaLink: "/contact?industry=retail-shops",
-    },
+      ctaLink: "/contact?industry=retail-shops"},
     intro: {
       title: "Transform Your Retail Brand Presence",
       paragraphs: [
       "In Saudi Arabia's competitive retail landscape, your staff's appearance is a crucial element in brand differentiation and customer experience excellence. Uneom provides premium retail uniforms that combine contemporary design with practical functionality, helping your brand create a memorable shopping environment that enhances customer loyalty and sales.",
       "Our comprehensive uniform solutions are meticulously tailored for diverse retail environments—from luxury shopping malls and flagship stores to specialized boutiques and beauty centers in Riyadh, Jeddah, and all major Saudi cities. Each uniform is professionally designed to reflect your unique brand identity while ensuring staff comfort during extended customer interaction periods.",
       "With our deep understanding of Saudi retail sector requirements and Vision 2030 growth objectives, we offer innovative customization options that perfectly balance modern aesthetics with cultural sensitivity. Transform your retail brand presence with uniforms that embody professionalism, build customer confidence, and contribute to a cohesive shopping experience that drives business success."
-    ],
-    },
+    ]},
     keyBenefits: {
       title: "Benefits for Your Retail Business",
     benefits: [
@@ -71,8 +68,7 @@ export default function RetailShopsPage() {
         icon: "/images/icons/duraseal.svg",
         gradient: "from-amber-500 to-orange-600"
       }
-    ],
-    },
+    ]},
     featuredOfferings: {
       title: "Premium Retail Uniform Collections",
       offerings: [
@@ -81,15 +77,12 @@ export default function RetailShopsPage() {
         name: "Luxury Mall Staff Uniforms",
         description: "Professional and distinctive attire for reception staff, customer service representatives, and information desks that enhances the mall's commercial image and creates an atmosphere of luxury and professionalism.",
         image: "/images/industries/retail-shops/retail-shops-uniform-shop.jpg",
-        href: "/images/industries/retail-shops/retail-shops-uniform-brands-logo.jpg",
-        href: "/images/industries/retail-shops/retail-shops-uniform-2.jpg",
         href: "/shop/retail-uniforms/beauty-salon",
         features: ["Advanced stain-resistant fabric", "Contemporary design elements", "Easy maintenance", "Comfortable stretch materials"],
         badge: "Premium Quality",
         price: "From SAR 400"
       }
-    ],
-    },
+    ]},
     fabricTechnologies: {
       title: "Advanced Fabric Technologies",
       technologies: [
@@ -117,8 +110,7 @@ export default function RetailShopsPage() {
         icon: "/images/icons/biocare.svg",
         animation: "fade-up"
       }
-    ],
-    },
+    ]},
     customizationOptions: {
       title: "Tailored to Your Retail Brand",
       options: [
@@ -146,8 +138,7 @@ export default function RetailShopsPage() {
         icon: "/images/icons/modest-modifications.svg",
         gradient: "from-amber-400 to-orange-500"
       }
-    ],
-    },
+    ]},
     testimonials: {
       title: "What Our Retail Clients Say",
       items: [
@@ -163,8 +154,7 @@ export default function RetailShopsPage() {
           position: "Operations Manager",
           company: "Premium Mall Jeddah"
         }
-      ],
-    },
+      ]},
     stats: {
       title: "Retail Uniform Excellence",
       items: [
@@ -188,8 +178,7 @@ export default function RetailShopsPage() {
         label: "Uniforms Supplied",
         description: "Annually to retail staff across Saudi Arabia, ensuring consistent brand representation."
       }
-    ],
-    },
+    ]},
     relatedBlogs: {
       title: "Retail Uniform Insights",
       posts: [
@@ -211,8 +200,7 @@ export default function RetailShopsPage() {
         image: "/images/industries/retail-shops/retail-shops-uniform-shop-factory.jpg",
         link: "/blog/sustainable-retail-uniforms"
       }
-    ],
-      },
+    ]},
     faq: {
       title: "Frequently Asked Questions",
       questions: [
@@ -236,8 +224,7 @@ export default function RetailShopsPage() {
         question: "How do your retail uniforms address Saudi Arabian climate conditions?",
         answer: "Our retail uniforms feature fabrics and construction techniques specifically selected and optimized for Saudi Arabia's climate. We utilize breathable, moisture-wicking materials that maintain comfort in air-conditioned environments while providing appropriate coverage and professional appearance aligned with local cultural expectations."
       }
-    ],
-    },
+    ]},
     finalCta: {
       title: "Elevate Your Brand with Premium Uniform Solutions",
       description: "Transform your retail brand presence with expertly designed and custom-tailored uniforms that enhance brand identity, boost staff confidence, and create exceptional customer experiences that drive sales and loyalty.",
@@ -245,8 +232,7 @@ export default function RetailShopsPage() {
       ctaLink: "/contact?industry=retail-shops",
       secondaryCta: "Explore Retail Catalog",
       secondaryCtaLink: "/shop/retail-uniforms"
-    },
-  };
+    }};
 
   return (
     <>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,9 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'طقم زي رياضي | ملابس رياضية مدرسية | طقم تربية بدنية عالي الأداء | يونيوم',
     description: 'طقم زي رياضي عالي الأداء للأنشطة الرياضية المدرسية. أقمشة ماصة للرطوبة وقابلة للتنفس مثالية لحصص التربية البدنية.',
-    images: ['/images/products/education/sports-uniform-set.jpg'],
-  },
-}
+    images: ['/images/products/education/sports-uniform-set.jpg']}}
 
 const productFeatures = [
   {

@@ -219,7 +219,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
           <div>
             <h3 className="text-lg font-semibold text-gray-900">Features</h3>
             <ul className="mt-2 space-y-1">
-              {fabricDetails?.features.map((feature, index) => (
+              {fabricDetails?.features?.map((feature, index) => (
                 <li key={index} className="text-gray-600">{feature}</li>
               ))}
             </ul>

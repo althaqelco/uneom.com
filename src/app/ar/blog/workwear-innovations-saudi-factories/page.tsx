@@ -23,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ابتكارات ملابس العمل للمصانع السعودية | UNEOM',
     description: 'اكتشف كيف تُحدث ملابس العمل المتقدمة ثورة في السلامة والإنتاجية بالمصانع السعودية.',
-    images: ['/images/manufacturing/workwear-innovations-saudi-factories.jpg'],
-  },
-}
+    images: ['/images/manufacturing/workwear-innovations-saudi-factories.jpg']}}
 
 const innovations = [
   {

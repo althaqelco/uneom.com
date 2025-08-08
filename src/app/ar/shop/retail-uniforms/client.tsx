@@ -32,10 +32,6 @@ export default function RetailUniformsClientPage() {
       description: 'زي احترافي وأنيق لموظفي المولات والمراكز التجارية، مصمم للراحة خلال ساعات العمل الطويلة.',
       price: 'من 299 ريال',
       image: '/images/education/uniform_school_product-2.jpg',
-      href: '/ar/images/education/uniform_school_product-2.jpg',
-      href: '/ar/images/education/uniform_school_product-2.jpg',
-      href: '/ar/images/education/uniform_school_product-2.jpg',
-      href: '/ar/images/education/uniform_school_product-2.jpg',
       href: '/ar/shop/retail-uniforms/related-product-4',
       features: ['تصميم مميز', 'قابل للتخصيص بالكامل', 'عصري', 'عالي الجودة'],
       colors: ['متعدد الألوان', 'حسب الطلب']

@@ -11,17 +11,13 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/services/services/uniform-rental-service.jpg'],
-  },
+        url: '/images/services/services/uniform-rental-service.jpg'}
+    ]},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/services/uniform-rental',
     languages: {
       'en': 'https://uneom.com/services/uniform-rental',
-      'ar': 'https://uneom.com/ar/services/uniform-rental',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/services/uniform-rental'}}}; 

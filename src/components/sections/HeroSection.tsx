@@ -220,8 +220,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     enter: (direction: number) => ({
       x: direction > 0 ? '100%' : '-100%',
       opacity: 0,
-      scale: 0.95,
-    }),
+      scale: 0.95}),
     center: {
       x: 0,
       opacity: 1,
@@ -420,16 +419,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           }}
           whileHover={{ 
             scale: 1.2,
-            boxShadow: "0 0 30px rgba(255, 255, 255, 0.5)",
-          }}
+            boxShadow: "0 0 30px rgba(255, 255, 255, 0.5)"}}
         >
           {/* Enhanced play icon with multiple layers */}
           <div className="relative">
             {/* Main play icon */}
             <motion.div
               animate={{ 
-                rotate: [0, 360],
-              }}
+                rotate: [0, 360]}}
               transition={{ 
                 repeat: Infinity, 
                 duration: 20,
@@ -594,8 +591,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="relative" style={{padding: '56.25% 0 0 0'}}>
                 <iframe 
                   src={isRTL 
-                    ? "https://player.vimeo.com/video/1065895823?h=4c0ee40f09&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1"
-                    : "https://player.vimeo.com/video/1064010724?h=285e655a92&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1"
+                    ? "https://player.vimeo.com/video/1065895823?h=4c0ee40f09&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
+                    : "https://player.vimeo.com/video/1064010724?h=285e655a92&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
                   } 
                   frameBorder="0" 
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 

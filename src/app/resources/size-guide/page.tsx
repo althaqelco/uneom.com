@@ -61,8 +61,7 @@ export default function SizeGuidePage() {
             <p>Measure around the base of the neck, where a collar would sit.</p>
           </div>
         `,
-        image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
-      },
+        image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg'},
       {
         title: 'Standard Size Charts',
         content: `
@@ -175,8 +174,7 @@ export default function SizeGuidePage() {
             </table>
           </div>
         `,
-        image: '/images/product-placeholder.jpg',
-      },
+        image: '/images/product-placeholder.jpg'},
       {
         title: 'Industry-Specific Sizing',
         content: `
@@ -215,8 +213,7 @@ export default function SizeGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
-      }
+        image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg'}
     ],
     items: [
       {

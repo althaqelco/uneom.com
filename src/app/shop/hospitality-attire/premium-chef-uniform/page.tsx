@@ -21,9 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Premium Chef Uniform | Professional Kitchen Attire',
     description: 'Professional chef uniforms for culinary excellence',
-    images: ['/images/products/hospitality/premium-chef-uniform.jpg'],
-  },
-}
+    images: ['/images/products/hospitality/premium-chef-uniform.jpg']}}
 
 const productFeatures = [
   {

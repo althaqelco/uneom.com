@@ -1,3 +1,4 @@
+import React from 'react';
 // This is now a server component that handles metadata
 import { Metadata } from 'next';
 import PremiumSchoolUniformsClientPage from './client';
@@ -20,14 +21,11 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/shop/education-uniforms/premium-school-uniforms',
     languages: {
-      'ar': 'https://uneom.com/ar/shop/education-uniforms/premium-school-uniforms',
-    },
-  },
+      'ar': 'https://uneom.com/ar/shop/education-uniforms/premium-school-uniforms'}},
   robots: {
     index: true,
     follow: true,
@@ -36,10 +34,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function PremiumSchoolUniformsPage() {
   // Server component that renders the client component

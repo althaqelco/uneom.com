@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'زي ممرضات احترافي | UNEOM',
     description: 'أطقم زي تمريض كاملة مصممة للراحة والوظائف العملية والمظهر الاحترافي في المرافق الصحية السعودية.',
-    images: ['/images/products/medical/nurse-uniform-main.jpg'],
-  },
-}
+    images: ['/images/products/medical/nurse-uniform-main.jpg']}}
 
 const productFeatures = [
   {

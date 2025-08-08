@@ -25,23 +25,13 @@ const getProductData = (category: string, productSlug: string, locale?: string) 
     .slice(0, 3)
     .map(p => ({
       id: p.id,
-      name: locale === 'ar' && p.ar ? p.ar.name : p.name,
+      name: p.name,
       image: p.images[0].src,
       price: p.price,
       href: locale === 'ar' ? `/ar/shop/${p.category}/${p.id}` : `/shop/${p.category}/${p.id}`
     }));
 
-  // If locale is Arabic and we have Arabic data, use it for name, description and features
-  if (locale === 'ar' && product.ar) {
-    return {
-      ...product,
-      name: product.ar.name,
-      description: product.ar.description,
-      features: product.ar.features,
-      relatedProducts
-    };
-  }
-
+  // Return the product with related products
   return {
     ...product,
     relatedProducts

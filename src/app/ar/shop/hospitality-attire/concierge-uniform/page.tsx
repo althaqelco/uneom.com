@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,16 +27,12 @@ export const metadata: Metadata = {
     title: 'زي البواب (الكونسيرج) | يونيوم',
     description: 'زي بواب فاخر وأنيق للفنادق والمنتجعات الراقية',
     images: ['/images/products/concierge-uniform.jpg'],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   alternates: {
     canonical: '/ar/shop/hospitality-attire/concierge-uniform/',
     languages: {
       'en': '/shop/hospitality-attire/concierge-uniform/',
-      'ar': '/ar/shop/hospitality-attire/concierge-uniform/',
-    },
-  },
-}
+      'ar': '/ar/shop/hospitality-attire/concierge-uniform/'}}}
 
 const features = [
   {

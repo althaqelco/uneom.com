@@ -11,8 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Industrial & Factory Security Uniforms in Saudi Arabia | UNEOM',
     description: 'Premium security uniforms for industrial facilities and factories in Saudi Arabia. Professional, durable workwear designed for maximum protection and comfort.',
-    images: ['/images/industries/factory_industry/factory-security-uniform-main.jpg'],
-  }
+    images: ['/images/industries/factory_industry/factory-security-uniform-main.jpg']}
 };
 
 export default function FactorySecurityPage() {
@@ -70,8 +69,6 @@ export default function FactorySecurityPage() {
         name: "Industrial Security Uniform Set",
         description: "Complete security uniform set designed for industrial environments, featuring high-visibility elements and durable construction.",
         image: "/images/industries/factory_industry/factory-security-uniform-1.jpg",
-        href: "/images/industries/factory_industry/factory-security-uniform-2.jpg",
-        href: "/images/industries/factory_industry/factory-security-uniform-3.jpg",
         href: "/shop/security-uniforms/supervisor-set",
         features: ["Professional design", "Premium materials", "Supervisor insignia"]
       }
@@ -143,10 +140,7 @@ export default function FactorySecurityPage() {
         name: "Premium Industrial Security Set",
         description: "Complete uniform solution with enhanced safety features",
         image: "/images/industries/factory_industry/factory-security-premium-set.jpg",
-        href: "/images/industries/factory_industry/factory-security-patrol-kit.jpg",
-        href: "/images/industries/factory_industry/factory-security-command.jpg",
-        href: "/images/industries/factory_industry/factory-security-features.jpg",
-        href: "/blog/industrial-security-uniform-features"
+        href: "/shop/security-uniforms/premium-industrial-set"
       },
       {
         title: "Enhancing Security Operations Through Professional Uniforms",

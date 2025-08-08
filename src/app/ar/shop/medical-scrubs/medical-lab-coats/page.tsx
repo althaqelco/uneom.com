@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import MedicalLabCoatsClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -16,12 +17,10 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/products/medical-lab-coats.webp',
         width: 1200,
         height: 630,
-        alt: 'معاطف المختبرات الطبية الفاخرة من يونيوم',
-      },
+        alt: 'معاطف المختبرات الطبية الفاخرة من يونيوم'},
     ],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   robots: {
     index: true,
     follow: true,
@@ -31,10 +30,7 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function MedicalLabCoatsPage() {
   return <MedicalLabCoatsClientPage />;

@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/luxury-hotel-uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'Premium Luxury Hotel Uniform Collection by UNEOM',
-      }
-    ],
-  },
+        alt: 'Premium Luxury Hotel Uniform Collection by UNEOM'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Luxury Hotel Uniforms | UNEOM Saudi Arabia',
     description: 'Premium luxury hotel uniforms designed for Saudi Arabia\'s elite establishments. Elegance meets excellence with superior quality and style.',
-    images: ['/images/products/luxury-hotel-uniform.jpg'],
-  },
+    images: ['/images/products/luxury-hotel-uniform.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/hospitality-attire/luxury-hotel-uniform',
     languages: {
       'en': 'https://uneom.com/shop/hospitality-attire/luxury-hotel-uniform',
-      'ar': 'https://uneom.com/ar/shop/hospitality-attire/luxury-hotel-uniform',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/hospitality-attire/luxury-hotel-uniform'}}}; 

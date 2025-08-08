@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/housekeeping-uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'مجموعة يونيفورم التدبير المنزلي المهنية من يونيوم',
-      }
-    ],
-  },
+        alt: 'مجموعة يونيفورم التدبير المنزلي المهنية من يونيوم'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'يونيفورم التدبير المنزلي | يونيوم السعودية',
     description: 'يونيفورم تدبير منزلي متميز مصمم لقطاع الضيافة في السعودية. العملية تلتقي بالمتانة مع راحة فائقة.',
-    images: ['/images/products/housekeeping-uniform.jpg'],
-  },
+    images: ['/images/products/housekeeping-uniform.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/hospitality-attire/housekeeping-uniform',
     languages: {
       'en': 'https://uneom.com/shop/hospitality-attire/housekeeping-uniform',
-      'ar': 'https://uneom.com/ar/shop/hospitality-attire/housekeeping-uniform',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/hospitality-attire/housekeeping-uniform'}}}; 

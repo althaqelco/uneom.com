@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -23,9 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'معايير السلامة في التصنيع السعودي: دليل الامتثال الشامل',
     description: 'دليل متخصص لمعايير السلامة والجودة في قطاع التصنيع السعودي',
-    images: ['/images/manufacturing/saudi-safety-standards.jpg'],
-  },
-}
+    images: ['/images/manufacturing/saudi-safety-standards.jpg']}}
 
 const safetyStandards = [
   {

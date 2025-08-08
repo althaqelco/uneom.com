@@ -32,11 +32,7 @@ export default function EducationUniformsClientPage() {
       description: 'زي مدرسي عالي الجودة مصمم للراحة والمتانة والمظهر الاحترافي، مثالي للمدارس والمؤسسات التعليمية.',
       price: 'من 249 ريال',
       image: '/images/Education_Uniform_School.png',
-      href: '/ar/images/businessman-in-blue-shirt-SBI-300830140.jpg',
-      href: '/ar/images/portrait-of-university-students-SBI-301018431.jpg',
-      href: '/ar/images/portrait-happy-male-teacher-SBI-301036659.jpg',
-      href: '/ar/images/group-of-diverse-students-SBI-305078344.jpg',
-      href: '/ar/shop/education-uniforms/primary-school-uniform',
+      href: '/ar/shop/education-uniforms/premium-school-uniform',
       features: ['مناسب للأطفال', 'ركب مقواة', 'سهل العناية', 'تصميم مريح'],
       colors: ['كحلي', 'أخضر', 'نبيذي', 'رمادي/أحمر']
     },

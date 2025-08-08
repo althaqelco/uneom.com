@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,9 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Modern Fit Business Shirts | Contemporary Corporate Shirts | UNEOM',
     description: 'Achieve a sharp, professional look with our modern fit business shirts. Tailored for today\'s progressive executives.',
-    images: ['/images/products/corporate/modern-fit-shirts-main.jpg'],
-  },
-}
+    images: ['/images/products/corporate/modern-fit-shirts-main.jpg']}}
 
 const productFeatures = [
   {

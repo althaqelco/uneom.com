@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -18,9 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'زي الطباخ الفاخر | ملابس مطبخ راقية | يونيوم',
     description: 'أزياء طباخين فاخرة بخامات عالية الجودة وتصميم أنيق للمطاعم الراقية والفنادق الفخمة.',
-    images: ['/images/hospitality/premium-chef-uniform.jpg'],
-  },
-}
+    images: ['/images/hospitality/premium-chef-uniform.jpg']}}
 
 const premiumFeatures = [
   {

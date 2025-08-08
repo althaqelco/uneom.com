@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { useEffect, useState } from 'react';
 import Script from 'next/script';
 import { useParams } from 'next/navigation';
@@ -121,7 +122,7 @@ export function MultiSchemaMarkup({
   }>;
 }) {
   return (
-    <>
+    <React.Fragment>
       {schemas.map((schema, index) => (
         <SchemaMarkup
           key={`schema-${schema.type}-${index}`}
@@ -130,6 +131,6 @@ export function MultiSchemaMarkup({
           pageUrl={schema.pageUrl}
         />
       ))}
-    </>
+    </React.Fragment>
   );
 } 

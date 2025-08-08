@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -23,16 +24,12 @@ export const metadata: Metadata = {
     description: 'Professional weather-resistant patrol pants designed for all-weather security operations',
     images: ['/images/products/security/weather-resistant-patrol-pants-main.svg'],
     locale: 'en_US',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/shop/security-uniforms/security-patrol-pants/weather-resistant/',
     languages: {
       'en': 'https://uneom.com/shop/security-uniforms/security-patrol-pants/weather-resistant/',
-      'ar': 'https://uneom.com/ar/shop/security-uniforms/security-patrol-pants/weather-resistant/',
-    },
-  },
-}
+      'ar': 'https://uneom.com/ar/shop/security-uniforms/security-patrol-pants/weather-resistant/'}}}
 
 const productJsonLd = {
   '@context': 'https://schema.org',

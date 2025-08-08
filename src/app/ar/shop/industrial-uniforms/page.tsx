@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import IndustrialUniformsClientPage from './client';
 import { generateMetadata } from '@/components/seo/ServerSEO';
@@ -9,8 +10,7 @@ export const metadata: Metadata = generateMetadata({
   keywords: ['ملابس صناعية', 'زي موحد صناعي', 'بدلات عمل', 'سترات سلامة', 'ملابس مقاومة للحرارة', 'يونيفورم صناعي سعودي', 'زي موحد للمصانع', 'ملابس قطاع النفط'],
   path: '/shop/industrial-uniforms',
   locale: 'ar',
-  imageUrl: '/images/industrial-uniforms.webp',
-});
+  imageUrl: '/images/industrial-uniforms.webp'});
 
 export default function IndustrialUniformsPage() {
   return <IndustrialUniformsClientPage />;

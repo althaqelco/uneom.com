@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,16 +26,12 @@ export const metadata: Metadata = {
     title: 'Beauty Salon Uniforms | UNEOM',
     description: 'Stylish and functional uniforms designed specifically for beauty salon professionals',
     images: ['/images/products/beauty-salon-uniforms.jpg'],
-    locale: 'en_US',
-  },
+    locale: 'en_US'},
   alternates: {
     canonical: '/shop/retail-uniforms/beauty-salon/',
     languages: {
       'en': '/shop/retail-uniforms/beauty-salon/',
-      'ar': '/ar/shop/retail-uniforms/beauty-salon/',
-    },
-  },
-}
+      'ar': '/ar/shop/retail-uniforms/beauty-salon/'}}}
 
 const features = [
   {

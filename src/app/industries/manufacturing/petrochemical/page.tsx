@@ -15,8 +15,7 @@ const pageData = {
   hero: {
     title: "Petrochemical Industry Solutions",
     subtitle: "Advanced Safety Workwear for Saudi Arabia's Petrochemical Sector",
-    image: "/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg",
-  },
+    image: "/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg"},
   stats: [
     { value: "ISO 11612", label: "Fire Protection" },
     { value: "NFPA 2112", label: "FR Standards" },

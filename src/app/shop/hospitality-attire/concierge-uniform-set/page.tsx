@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,9 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Luxury Concierge Uniform Set | Premium Hotel Staff Attire | Executive Hospitality Wear | UNEOM',
     description: 'Premium concierge uniform set for luxury hotels and hospitality venues. Sophisticated design with gold accents for VIP hospitality staff.',
-    images: ['/images/products/hospitality/luxury-concierge-uniform-set.jpg'],
-  },
-}
+    images: ['/images/products/hospitality/luxury-concierge-uniform-set.jpg']}}
 
 const productFeatures = [
   {

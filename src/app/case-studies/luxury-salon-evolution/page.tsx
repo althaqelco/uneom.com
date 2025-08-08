@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,8 +9,7 @@ import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 export const metadata: Metadata = {
   title: 'Luxury Salon Evolution Case Study | Premium Spa Uniforms | UNEOM Saudi Arabia',
   description: 'How UNEOM helped transform a high-end Riyadh salon with bespoke staff uniforms that elevated brand perception and staff professionalism while maintaining Saudi cultural standards.',
-  keywords: 'luxury beauty salon uniforms, premium spa staff attire Saudi, high-end salon branding Riyadh, custom beauty uniforms Saudi Arabia, salon staff professional appearance, luxury aesthetics clinic uniforms',
-};
+  keywords: 'luxury beauty salon uniforms, premium spa staff attire Saudi, high-end salon branding Riyadh, custom beauty uniforms Saudi Arabia, salon staff professional appearance, luxury aesthetics clinic uniforms'};
 
 export default function LuxurySalonEvolutionCaseStudy() {
   return (

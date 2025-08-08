@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import IndustrialCoverallClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -16,21 +17,16 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/industries/Factory_Industrial/Industrial_Coverall_1.webp',
         width: 1200,
         height: 630,
-        alt: 'بدلة العمل الصناعية المقاومة للهب من يونيوم',
-      },
+        alt: 'بدلة العمل الصناعية المقاومة للهب من يونيوم'},
     ],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   robots: {
     index: true,
     follow: true,
     nocache: false,
     googleBot: {
       index: true,
-      follow: true,
-    },
-  },
-};
+      follow: true}}};
 
 export default function IndustrialCoverallPage() {
   return <IndustrialCoverallClientPage />;

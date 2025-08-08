@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,16 +23,12 @@ export const metadata: Metadata = {
     images: ['/images/blog/uniforms-modern-education-og.jpg'], // Updated OG Image
     type: 'article',
     publishedTime: '2024-12-15T08:00:00Z', // Example publish time
-    authors: ['UNEOM Education Team'],
-  },
+    authors: ['UNEOM Education Team']},
   alternates: {
     canonical: '/blog/uniforms-modern-education/',
     languages: {
       'en-US': '/blog/uniforms-modern-education/',
-      'ar-SA': '/ar/blog/uniforms-modern-education/',
-    },
-  },
-}
+      'ar-SA': '/ar/blog/uniforms-modern-education/'}}}
 
 const tableOfContents = [
   { id: 'introduction', title: 'Introduction: Uniforms in the Digital Age' },

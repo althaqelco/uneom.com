@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/testimonials/testimonials-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'آراء عملاء يونيوم - قصص نجاح من العملاء الراضين',
-      }
-    ],
-  },
+        alt: 'آراء عملاء يونيوم - قصص نجاح من العملاء الراضين'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'آراء العملاء | يونيوم السعودية',
     description: 'اقرأ التقييمات الحقيقية من العملاء الراضين عن خدمات الزي الموحد المتميزة من يونيوم في جميع أنحاء السعودية.',
-    images: ['/images/testimonials/testimonials-header.jpg'],
-  },
+    images: ['/images/testimonials/testimonials-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/testimonials',
     languages: {
       'en': 'https://uneom.com/testimonials',
-      'ar': 'https://uneom.com/ar/testimonials',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/testimonials'}}}; 

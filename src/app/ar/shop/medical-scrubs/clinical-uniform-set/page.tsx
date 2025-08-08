@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,16 +26,12 @@ export const metadata: Metadata = {
     title: 'طقم الزي الطبي الإكلينيكي | يونيوم',
     description: 'طقم زي طبي إكلينيكي متكامل للمهنيين الطبيين',
     images: ['/images/products/clinical-uniform-set.jpg'],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   alternates: {
     canonical: '/ar/shop/medical-scrubs/clinical-uniform-set/',
     languages: {
       'en': '/shop/medical-scrubs/clinical-uniform-set/',
-      'ar': '/ar/shop/medical-scrubs/clinical-uniform-set/',
-    },
-  },
-}
+      'ar': '/ar/shop/medical-scrubs/clinical-uniform-set/'}}}
 
 const features = [
   {

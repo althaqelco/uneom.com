@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Mechanical Maintenance Uniform Set | UNEOM',
     description: 'Professional uniform sets designed specifically for mechanical maintenance technicians in Saudi industrial facilities.',
-    images: ['/images/products/industrial/mechanical-maintenance-set-main.jpg'],
-  },
-}
+    images: ['/images/products/industrial/mechanical-maintenance-set-main.jpg']}}
 
 const productFeatures = [
   {

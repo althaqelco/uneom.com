@@ -19,52 +19,44 @@ const useCases = [
     title: "UNEOM - Professional Uniforms",
     icon: <FaSlidersH className="text-amber-500" size={24} />,
     description: 'تمكين العملاء من تخصيص عمليات البحث عن المنتجات بسهولة عبر مرشحات متعددة مثل السعر، المقاس، أو الوزن.',
-    image: '/images/education/uniform_school_product-2.jpg',
-  },
+    image: '/images/education/uniform_school_product-2.jpg'},
   {
     id: 'size-selection',
     title: 'اختيار المقاسات',
     icon: <FaRuler className="text-blue-500" size={24} />,
     description: 'تحسين تجربة اختيار المقاسات للملابس المهنية والزي الموحد بطريقة بصرية واضحة.',
-    image: '/images/education/uniform_school_product-2.jpg',
-  },
+    image: '/images/education/uniform_school_product-2.jpg'},
   {
     id: 'quantity-selection',
     title: 'تحديد الكميات',
     icon: <FaWeightHanging className="text-emerald-500" size={24} />,
     description: 'تسهيل اختيار الكميات في طلبات الجملة والمؤسسات بشكل مرئي سلس ودقيق.',
-    image: '/images/education/uniform_school_product-2.jpg',
-  },
+    image: '/images/education/uniform_school_product-2.jpg'},
   {
     id: 'customization',
     title: 'تخصيص المنتجات',
     icon: <FaMoneyBillWave className="text-violet-500" size={24} />,
     description: 'السماح للعملاء بتخصيص خيارات المنتجات المتقدمة مثل نسبة المواد أو درجات الألوان.',
-    image: '/images/education/uniform_school_product-2.jpg',
-  },
+    image: '/images/education/uniform_school_product-2.jpg'},
 ];
 
 const benefits = [
   {
     title: 'تجربة مستخدم مميزة',
     description: 'واجهة مستخدم بديهية وسلسة تعزز رضا العملاء وتقلل من معدلات المغادرة.',
-    icon: <MdOutlineSpeed size={28} className="text-primary-600" />,
-  },
+    icon: <MdOutlineSpeed size={28} className="text-primary-600" />},
   {
     title: 'توافق كامل مع RTL',
     description: 'دعم متميز للغة العربية واتجاه RTL يضمن تجربة مثالية للمستخدمين العرب.',
-    icon: <MdLanguage size={28} className="text-primary-600" />,
-  },
+    icon: <MdLanguage size={28} className="text-primary-600" />},
   {
     title: 'متوافق مع جميع الأجهزة',
     description: 'تصميم متجاوب يعمل بسلاسة على الهواتف المحمولة والأجهزة اللوحية وأجهزة سطح المكتب.',
-    icon: <MdDevices size={28} className="text-primary-600" />,
-  },
+    icon: <MdDevices size={28} className="text-primary-600" />},
   {
     title: 'سهولة الوصول',
     description: 'تلتزم المكونات بمعايير WCAG للوصول، مما يضمن تجربة شاملة لجميع المستخدمين.',
-    icon: <MdAccessibility size={28} className="text-primary-600" />,
-  },
+    icon: <MdAccessibility size={28} className="text-primary-600" />},
 ];
 
 // تأثيرات الحركة للعناصر
@@ -88,7 +80,7 @@ const containerVariants = {
   }
 };
 
-export default function ProductSlidersExamplePage() {
+export default function ProductSlidersPage() {
   // حالة قيم شريط التمرير
   const [weight, setWeight] = useState<number>(75);
   const [size, setSize] = useState<number>(42);

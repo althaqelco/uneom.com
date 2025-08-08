@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,16 +25,12 @@ export const metadata: Metadata = {
     title: 'دليل الامتثال للسلامة الصناعية: معايير وإجراءات شاملة',
     description: 'دليل شامل للامتثال لمعايير السلامة الصناعية والمهنية في السعودية',
     images: ['/images/blog/industrial-safety-compliance.jpg'],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   alternates: {
     canonical: '/ar/blog/industrial-safety-compliance-guide/',
     languages: {
       'en': '/blog/industrial-safety-compliance-guide/',
-      'ar': '/ar/blog/industrial-safety-compliance-guide/',
-    },
-  },
-}
+      'ar': '/ar/blog/industrial-safety-compliance-guide/'}}}
 
 const tableOfContents = [
   { id: 'introduction', title: 'مقدمة عن السلامة الصناعية' },

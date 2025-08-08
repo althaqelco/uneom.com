@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import ExecutiveProtectionClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -16,12 +17,10 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/security/advanced-fabrics-hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'زي الحماية التنفيذية للأفراد الأمنيين المحترفين',
-      },
+        alt: 'زي الحماية التنفيذية للأفراد الأمنيين المحترفين'},
     ],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   robots: {
     index: true,
     follow: true,
@@ -31,10 +30,7 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function ExecutiveProtectionPage() {
   return <ExecutiveProtectionClientPage />;

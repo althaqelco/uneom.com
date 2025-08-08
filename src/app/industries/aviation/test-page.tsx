@@ -26,11 +26,7 @@ export default function AviationTestPage() {
       description: "Premium flight attendant uniforms with Islamic-compliant options for Saudi airlines",
       image: "/images/aviation/flightـattendantsـuniforms.jpg",
       price: "SAR 1,299",
-      href: "/images/aviation/aviation_captin_uniform.jpg",
-      price: "SAR 1,799",
-      href: "/images/aviation/aviation_uniform_airline.jpg",
-      price: "SAR 999",
-      href: "/shop/aviation-uniforms/ground-crew-uniform",
+      href: "/shop/aviation-uniforms/airline-crew-uniform",
       featured: true,
       badge: "Popular"
     }

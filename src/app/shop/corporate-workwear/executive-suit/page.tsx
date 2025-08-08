@@ -88,10 +88,6 @@ export default function ExecutiveSuitPage() {
         id: 'executive-shirt',
         name: 'Premium Corporate Shirt',
         image: '/images/products/corporate-suit-executive.jpg',
-        price: 'From SAR 249',
-        href: '/images/avatar-placeholder.jpg',
-        price: 'From SAR 599',
-        href: '/images/products/corporate-suit-executive.jpg',
         price: 'From SAR 349',
         href: '/shop/corporate-workwear/formal-trousers'
       }

@@ -15,11 +15,8 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/healthcare/healthcare_medical_uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'Healthcare professionals in Saudi Arabia wearing uniforms made with advanced medical-grade fabrics',
-      },
-    ],
-  },
-};
+        alt: 'Healthcare professionals in Saudi Arabia wearing uniforms made with advanced medical-grade fabrics'},
+    ]}};
 
 export default function HealthcareFabricGuidePage() {
   const resourceData = {

@@ -140,20 +140,17 @@ const historicalTrafficData = {
       label: 'Riyadh',
       data: [830, 920, 1050, 1120, 1180, 1250],
       borderColor: 'rgba(53, 162, 235, 0.8)',
-      backgroundColor: 'rgba(53, 162, 235, 0.2)',
-    },
+      backgroundColor: 'rgba(53, 162, 235, 0.2)'},
     {
       label: 'Jeddah',
       data: [720, 750, 810, 870, 920, 980],
       borderColor: 'rgba(75, 192, 192, 0.8)',
-      backgroundColor: 'rgba(75, 192, 192, 0.2)',
-    },
+      backgroundColor: 'rgba(75, 192, 192, 0.2)'},
     {
       label: 'Dammam',
       data: [380, 420, 510, 550, 590, 640],
       borderColor: 'rgba(255, 159, 64, 0.8)',
-      backgroundColor: 'rgba(255, 159, 64, 0.2)',
-    }
+      backgroundColor: 'rgba(255, 159, 64, 0.2)'}
   ]
 };
 
@@ -210,28 +207,20 @@ const LocalSEODashboard: React.FC = () => {
     responsive: true,
     plugins: {
       legend: {
-        position: 'top' as const,
-      },
+        position: 'top' as const},
       title: {
         display: true,
-        text: isArabic ? 'مقاييس جوجل للأعمال' : 'Google Business Metrics',
-      },
-    },
-  };
+        text: isArabic ? 'مقاييس جوجل للأعمال' : 'Google Business Metrics'}}};
   
   // Options for the line chart
   const lineChartOptions = {
     responsive: true,
     plugins: {
       legend: {
-        position: 'top' as const,
-      },
+        position: 'top' as const},
       title: {
         display: true,
-        text: isArabic ? 'اتجاهات حركة المرور العضوية' : 'Organic Traffic Trends',
-      },
-    },
-  };
+        text: isArabic ? 'اتجاهات حركة المرور العضوية' : 'Organic Traffic Trends'}}};
   
   return (
     <div className={styles.dashboardContainer} dir={isArabic ? 'rtl' : 'ltr'}>

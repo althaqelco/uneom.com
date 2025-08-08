@@ -1,3 +1,4 @@
+import React from 'react';
 import { products, getProductById, getProductsByCategory } from '@/lib/data/products';
 import ClientPage from './ClientPage';
 import { notFound } from 'next/navigation';import { Metadata } from 'next';
@@ -47,7 +48,6 @@ export async function generateMetadata(
     }
   };
 }
-
 
 interface PageProps {
   params: {

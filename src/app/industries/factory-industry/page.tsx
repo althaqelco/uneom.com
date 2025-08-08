@@ -174,17 +174,11 @@ export default function FactoryIndustryPage() {
         name: "Premium Industrial Coverall",
         description: "Our flagship industrial coverall combines advanced protection with Saudi climate optimization. Features include flame-resistant treatment, reinforced stress points, multiple tool pockets, and strategically placed ventilation zones.",
         image: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_1.webp",
-        href: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_2.webp",
-        href: "/images/industries/Factory_Industrial/Factory_Industrial_Workwear_product_3.webp",
-        href: "/images/industries/Factory_Industrial/industrial-coverall-pro.webp",
-        href: "/images/industries/Factory_Industrial/anti-static-uniform.webp",
-        href: "/images/industries/Factory_Industrial/supervisor-uniform.webp",
-        href: "/shop/industrial-uniforms/supervisor-industrial-uniform",
+        href: "/shop/industrial-uniforms/industrial-coverall",
         price: "SAR 629",
         badge: "Management Standard"
       }
-    ],
-  };
+    ]};
 
   // Function to get the appropriate icon component
   const getBenefitIcon = (iconType: string) => {

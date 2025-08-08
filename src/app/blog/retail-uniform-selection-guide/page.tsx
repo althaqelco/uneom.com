@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,16 +26,12 @@ export const metadata: Metadata = {
     title: 'Retail Uniform Selection Guide: How to Choose the Perfect Workwear',
     description: 'Expert guide to selecting retail uniforms that enhance your brand and employee satisfaction',
     images: ['/images/blog/retail-uniform-selection.jpg'],
-    locale: 'en_US',
-  },
+    locale: 'en_US'},
   alternates: {
     canonical: '/blog/retail-uniform-selection-guide/',
     languages: {
       'en': '/blog/retail-uniform-selection-guide/',
-      'ar': '/ar/blog/retail-uniform-selection-guide/',
-    },
-  },
-}
+      'ar': '/ar/blog/retail-uniform-selection-guide/'}}}
 
 const tableOfContents = [
   { id: 'introduction', title: 'Introduction to Uniform Selection' },

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,8 +9,7 @@ import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 export const metadata: Metadata = {
   title: 'دراسة حالة سبا فندق خمس نجوم | أزياء سبا فاخرة | UNEOM المملكة العربية السعودية',
   description: 'كيف قامت UNEOM بتحويل سبا مرموق في فندق خمس نجوم بالرياض بأزياء موحدة فاخرة مخصصة رفعت من ثقة الموظفين، وتجارب الضيوف، وهوية العلامة التجارية',
-  keywords: 'أزياء سبا فاخرة، ملابس سبا فندق خمس نجوم، أزياء موحدة للفنادق السعودية، ملابس موظفي السبا الرياض، أزياء فاخرة للضيافة، ملابس مراكز العافية، علامة تجارية لسبا الفندق',
-};
+  keywords: 'أزياء سبا فاخرة، ملابس سبا فندق خمس نجوم، أزياء موحدة للفنادق السعودية، ملابس موظفي السبا الرياض، أزياء فاخرة للضيافة، ملابس مراكز العافية، علامة تجارية لسبا الفندق'};
 
 export default function FiveStarHotelSpaCaseStudyArabic() {
   return (

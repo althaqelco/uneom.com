@@ -16,8 +16,7 @@ export default function sitemapIndex(): MetadataRoute.Sitemap {
   const sitemaps = [
     {
       url: `${baseUrl}/sitemap.xml`,
-      lastModified,
-    },
+      lastModified},
     // Examples for future expansion:
     // { url: `${baseUrl}/sitemaps/products-sitemap.xml`, lastModified },
     // { url: `${baseUrl}/sitemaps/blog-sitemap.xml`, lastModified },

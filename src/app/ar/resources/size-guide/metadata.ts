@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/resources/size-guide/size-guide-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'دليل مقاسات وجداول قياسات الزي الموحد من يونيوم',
-      },
-    ],
-  },
+        alt: 'دليل مقاسات وجداول قياسات الزي الموحد من يونيوم'},
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'دليل مقاسات الزي الموحد | جداول القياسات | يونيوم السعودية',
     description: 'جداول شاملة لمقاسات الزي الموحد وأدلة القياسات للشركات والرعاية الصحية والضيافة وملابس العمل الصناعية.',
-    images: ['/images/resources/size-guide/size-guide-header.jpg'],
-  },
+    images: ['/images/resources/size-guide/size-guide-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/resources/size-guide',
     languages: {
       'en': 'https://uneom.com/resources/size-guide',
-      'ar': 'https://uneom.com/ar/resources/size-guide',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/resources/size-guide'}}}; 

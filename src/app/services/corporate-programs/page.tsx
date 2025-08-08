@@ -11,20 +11,19 @@ import { motion } from 'framer-motion';
 import { Poppins, Inter } from 'next/font/google';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
+
 // Define the fonts
 const poppinsFont = Poppins({
   subsets: ['latin'],
   weight: ['600', '700'],
-  variable: '--font-poppins',
-});
+  variable: '--font-poppins'});
 
 const interFont = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
-  variable: '--font-inter',
-});
+  variable: '--font-inter'});
 
-const CorporateProgramsPage = () => {
+export default function CorporateProgramsPage() {
   const locale = 'en';
   
   // Program Benefits
@@ -32,33 +31,27 @@ const CorporateProgramsPage = () => {
     {
       title: "UNEOM - Professional Uniforms",
       description: 'Establish a unified and consistent brand image across all departments and locations',
-      icon: '🏢',
-    },
+      icon: '🏢'},
     {
       title: 'Simplified Management',
       description: 'Streamlined ordering, inventory control, and distribution processes',
-      icon: '⚙️',
-    },
+      icon: '⚙️'},
     {
       title: 'Cost Efficiency',
       description: 'Volume discounts, optimized inventory, and reduced administrative overhead',
-      icon: '💰',
-    },
+      icon: '💰'},
     {
       title: 'Quality Consistency',
       description: 'Standardized quality across all uniform items, ensuring all employees look equally professional',
-      icon: '✓',
-    },
+      icon: '✓'},
     {
       title: 'Employee Satisfaction',
       description: 'Comfortable, functional, and professional uniforms that enhance employee pride and performance',
-      icon: '😊',
-    },
+      icon: '😊'},
     {
       title: 'Compliance Assurance',
       description: 'Ensure all uniforms meet industry regulations and Saudi Arabian standards',
-      icon: '📜',
-    },
+      icon: '📜'},
   ];
   
   // Program Components
@@ -73,8 +66,7 @@ const CorporateProgramsPage = () => {
         'Budget planning assistance',
         'Timeline development'
       ],
-      image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg',
-    },
+      image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg'},
     {
       title: 'Custom Design & Development',
       description: 'Creation of uniform designs that reflect your brand while meeting functional requirements',
@@ -85,8 +77,7 @@ const CorporateProgramsPage = () => {
         'Mockup creation and revision process',
         'Prototype development and testing'
       ],
-      image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg',
-    },
+      image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg'},
     {
       title: 'Implementation Strategy',
       description: 'Structured rollout plan tailored to your organization\'s size and requirements',
@@ -97,8 +88,7 @@ const CorporateProgramsPage = () => {
         'Distribution logistics',
         'Training for uniform policy compliance'
       ],
-      image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg',
-    },
+      image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg'},
     {
       title: 'Ongoing Management',
       description: 'Continuous support for your uniform program with regular evaluations and updates',
@@ -109,8 +99,7 @@ const CorporateProgramsPage = () => {
         'Periodic quality assessment',
         'Program optimization recommendations'
       ],
-      image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
-    },
+      image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg'},
   ];
 
   // Program Process Steps
@@ -118,38 +107,31 @@ const CorporateProgramsPage = () => {
     {
       title: 'Initial Consultation',
       description: 'We meet with your key stakeholders to understand your organization\'s structure, culture, and uniform needs',
-      icon: '🤝',
-    },
+      icon: '🤝'},
     {
       title: 'Needs Analysis',
       description: 'Our team conducts a thorough analysis of department-specific requirements, work environments, and branding guidelines',
-      icon: '🔍',
-    },
+      icon: '🔍'},
     {
       title: 'Program Design',
       description: 'We create a comprehensive uniform program with style guides, procurement processes, and management protocols',
-      icon: '✏️',
-    },
+      icon: '✏️'},
     {
       title: 'Sample Development',
       description: 'Prototype uniform items are created for approval, ensuring quality, fit, and alignment with your brand',
-      icon: '👔',
-    },
+      icon: '👔'},
     {
       title: 'Implementation Plan',
       description: 'A detailed rollout strategy is developed, including measurement sessions, distribution logistics, and employee communication',
-      icon: '📋',
-    },
+      icon: '📋'},
     {
       title: 'Program Launch',
       description: 'Coordinated distribution of uniforms with employee orientation and guidelines for care and usage',
-      icon: '🚀',
-    },
+      icon: '🚀'},
     {
       title: 'Ongoing Support',
       description: 'Continuous management of your uniform program with regular evaluations and updates as needed',
-      icon: '⚙️',
-    },
+      icon: '⚙️'},
   ];
   
   // Case Studies
@@ -163,8 +145,7 @@ const CorporateProgramsPage = () => {
         '30% cost reduction from previous program',
         '94% employee satisfaction rating'
       ],
-      image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
-    },
+      image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg'},
     {
       title: 'Luxury Hospitality Chain Refresh',
       description: 'Redesigned and implemented new uniform program for a luxury hotel chain with 12 properties, creating a cohesive brand image while accommodating position-specific functionality.',
@@ -174,8 +155,7 @@ const CorporateProgramsPage = () => {
         '40% improvement in uniform longevity',
         'Significant increase in guest satisfaction scores'
       ],
-      image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
-    },
+      image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg'},
   ];
 
   return (
@@ -664,6 +644,4 @@ const CorporateProgramsPage = () => {
       </section>
     </div>
   );
-};
-
-export default CorporateProgramsPage; 
+}

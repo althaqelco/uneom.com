@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,7 +13,6 @@ import {
 } from '@heroicons/react/24/outline'
 import { StarIcon as StarSolidIcon } from '@heroicons/react/24/solid'
 
-
 export const metadata: Metadata = {
   title: 'ملابس عمل تصنيع عامة | أزياء مصانع متينة | يونيوم',
   description: 'ملابس عمل متينة وعملية لبيئات التصنيع العامة. تشمل قمصان العمل والسراويل والأفرهولات الخفيفة المصممة للراحة والسلامة وطول العمر في المملكة العربية السعودية.',
@@ -20,9 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ملابس عمل تصنيع عامة | أزياء مصانع متينة | يونيوم',
     description: 'جهز القوى العاملة في التصنيع لديك بملابس عمل متينة ومريحة وعملية مصممة للاستخدام الصناعي اليومي.',
-    images: ['/images/products/manufacturing/general-workwear-main.jpg'],
-  },
-}
+    images: ['/images/products/manufacturing/general-workwear-main.jpg']}}
 
 const workwearTypes = [
   {

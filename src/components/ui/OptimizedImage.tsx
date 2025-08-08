@@ -145,8 +145,7 @@ export default function OptimizedImage({
       maxWidth: '100%',
       height: height ? `${height}px` : 'auto',
       width: width ? `${width}px` : '100%',
-      objectFit: objectFit || 'cover',
-    };
+      objectFit: objectFit || 'cover'};
     
     return (
       <img

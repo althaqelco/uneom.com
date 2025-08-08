@@ -26,8 +26,7 @@ const VercelSafeImage: React.FC<VercelSafeImageProps> = ({
   className = '',
   priority = false,
   unoptimized = true,
-  style,
-}) => {
+  style}) => {
   const [imageSrc, setImageSrc] = useState(src);
   const [loadError, setLoadError] = useState(false);
   const [useNativeImg, setUseNativeImg] = useState(false);
@@ -82,8 +81,7 @@ const VercelSafeImage: React.FC<VercelSafeImageProps> = ({
   // Opciones adicionales para Next.js Image
   const imageOptions = {
     unoptimized: unoptimized || isVercel, // Deshabilitar optimización en Vercel
-    loading: priority ? 'eager' : 'lazy' as 'eager' | 'lazy',
-  };
+    loading: priority ? 'eager' : 'lazy' as 'eager' | 'lazy'};
 
   // Si estamos usando un tag nativo como fallback
   if (useNativeImg) {
@@ -97,8 +95,7 @@ const VercelSafeImage: React.FC<VercelSafeImageProps> = ({
         style={{
           maxWidth: '100%',
           objectFit: 'contain',
-          ...style,
-        }}
+          ...style}}
         loading={priority ? 'eager' : 'lazy'}
         onError={() => {
           if (imageSrc !== '/images/products/chef-uniform.jpg') {

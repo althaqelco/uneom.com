@@ -11,17 +11,13 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/shop/industrial/industrial-category.jpg'],
-  },
+        url: '/images/shop/industrial/industrial-category.jpg'}
+    ]},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/industrial-attire',
     languages: {
       'en': 'https://uneom.com/shop/industrial-attire',
-      'ar': 'https://uneom.com/ar/shop/industrial-attire',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/industrial-attire'}}}; 

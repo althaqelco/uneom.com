@@ -20,8 +20,7 @@ export function generateMetadata({ params }: AuthorPageProps): Metadata {
   if (!author) {
     return {
       title: "UNEOM - Professional Uniforms",
-      description: 'لم يتم العثور على ملف الخبير المطلوب.',
-    };
+      description: 'لم يتم العثور على ملف الخبير المطلوب.'};
   }
   
   return {
@@ -36,24 +35,19 @@ export function generateMetadata({ params }: AuthorPageProps): Metadata {
           url: author.avatar,
           width: 800,
           height: 600,
-          alt: author.name,
-        }
+          alt: author.name}
       ],
-      type: 'profile',
-    },
+      type: 'profile'},
     twitter: {
       card: 'summary_large_image',
       title: `${author.name} - ${author.title}`,
       description: author.shortBio,
-      images: [author.avatar],
-    },
-  };
+      images: [author.avatar]}};
 }
 
 export function generateStaticParams() {
   return authors.map((author) => ({
-    slug: author.id,
-  }));
+    slug: author.id}));
 }
 
 export default function AuthorPage({ params }: AuthorPageProps) {
@@ -80,8 +74,7 @@ export default function AuthorPage({ params }: AuthorPageProps) {
       "@type": "Organization",
       "name": "UNEOM",
       "url": "https://www.uneom.com"
-    },
-  };
+    }};
 
   return (
     <>

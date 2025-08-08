@@ -24,8 +24,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon/uneom-favicon.png',
     shortcut: '/favicon/uneom-favicon.png',
-    apple: '/favicon/uneom-favicon.png',
-  },
+    apple: '/favicon/uneom-favicon.png'},
   openGraph: {
     title: 'UNEOM | Premium Uniform Supplier in Saudi Arabia - Custom Designs & Quality Fabrics',
     description: 'Saudi Arabia\'s leading uniform manufacturer for all industries. Premium custom-designed uniforms delivered to Riyadh, Jeddah, Dammam and all Saudi cities.',
@@ -36,16 +35,13 @@ export const metadata: Metadata = {
         url: '/images/uneom-social-share.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM - Saudi Arabia\'s #1 Uniform Supplier',
-      }
-    ],
-  },
+        alt: 'UNEOM - Saudi Arabia\'s #1 Uniform Supplier'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'UNEOM | Premium Uniform Supplier in Saudi Arabia',
     description: 'Custom-designed professional uniforms manufactured with premium fabrics for all sectors across Riyadh, Jeddah, Dammam and all Saudi cities.',
-    images: ['/images/uneom-social-share.jpg'],
-  },
+    images: ['/images/uneom-social-share.jpg']},
   robots: {
     index: true,
     follow: true,
@@ -53,20 +49,13 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+      'max-snippet': -1}},
   alternates: {
     canonical: 'https://uneom.com',
     languages: {
       'en': 'https://uneom.com',
-      'ar': 'https://uneom.com/ar',
-    },
-  },
+      'ar': 'https://uneom.com/ar'}},
   verification: {
-    google: 'google-site-verification-code-here',
-  },
+    google: 'google-site-verification-code-here'},
   other: {
-    'baidu-site-verification': 'baidu-verification-code-here',
-  },
-}; 
+    'baidu-site-verification': 'baidu-verification-code-here'}}; 

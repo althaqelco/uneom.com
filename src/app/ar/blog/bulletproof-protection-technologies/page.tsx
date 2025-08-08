@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,16 +21,12 @@ export const metadata: Metadata = {
     title: 'تقنيات الحماية المضادة للرصاص: دليل شامل للأمن المتقدم',
     description: 'دليل شامل عن أحدث تقنيات الحماية المضادة للرصاص والدروع الواقية',
     images: ['/images/blog/bulletproof-protection-technologies.jpg'],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   alternates: {
     canonical: '/ar/blog/bulletproof-protection-technologies/',
     languages: {
       'en': '/blog/bulletproof-protection-technologies/',
-      'ar': '/ar/blog/bulletproof-protection-technologies/',
-    },
-  },
-}
+      'ar': '/ar/blog/bulletproof-protection-technologies/'}}}
 
 const tableOfContents = [
   { id: 'introduction', title: 'مقدمة عن تقنيات الحماية المضادة للرصاص' },

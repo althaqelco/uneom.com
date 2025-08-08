@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/resources/resources-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'موارد وأدلة الزي الموحد من يونيوم',
-      },
-    ],
-  },
+        alt: 'موارد وأدلة الزي الموحد من يونيوم'},
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'موارد وأدلة الزي الموحد | يونيوم السعودية',
     description: 'استفد من مواردنا الشاملة للزي الموحد بما في ذلك أدلة المقاسات، معلومات الأقمشة، نصائح المشتريات، وقوالب سياسات الزي الموحد.',
-    images: ['/images/resources/resources-header.jpg'],
-  },
+    images: ['/images/resources/resources-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/resources',
     languages: {
       'en': 'https://uneom.com/resources',
-      'ar': 'https://uneom.com/ar/resources',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/resources'}}}; 

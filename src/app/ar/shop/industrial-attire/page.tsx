@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import IndustrialAttireClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -15,20 +16,15 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/og-industrial-attire-ar.jpg',
         width: 1200,
         height: 630,
-        alt: 'الملابس الصناعية وأزياء العمل | يونيوم المملكة العربية السعودية',
-      },
+        alt: 'الملابس الصناعية وأزياء العمل | يونيوم المملكة العربية السعودية'},
     ],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
-      follow: true,
-    },
-  },
-};
+      follow: true}}};
 
 export default function IndustrialAttirePage() {
   return <IndustrialAttireClientPage />;

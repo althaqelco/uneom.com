@@ -51,8 +51,7 @@ const AnimatedBenefitsSection: React.FC<AnimatedBenefitsSectionProps> = ({
     animationEnabled: true,
     style: 'standard',
     title: locale === 'ar' ? 'المزايا والفوائد' : 'Benefits & Advantages',
-    subtitle: locale === 'ar' ? 'اكتشف ما يميزنا' : 'Discover what sets us apart',
-  };
+    subtitle: locale === 'ar' ? 'اكتشف ما يميزنا' : 'Discover what sets us apart'};
 
   // Determine if RTL should be applied based on locale
   const isRTL = locale === 'ar';

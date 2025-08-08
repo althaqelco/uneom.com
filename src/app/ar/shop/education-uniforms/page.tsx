@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import EducationUniformsClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -16,19 +17,15 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/education-uniforms.webp',
         width: 1200,
         height: 630,
-        alt: 'الأزياء التعليمية من يونيوم',
-      },
+        alt: 'الأزياء التعليمية من يونيوم'},
     ],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/education-uniforms/',
     languages: {
       'en-SA': 'https://uneom.com/shop/education-uniforms/',
-      'ar-SA': 'https://uneom.com/ar/shop/education-uniforms/',
-    },
-  },
+      'ar-SA': 'https://uneom.com/ar/shop/education-uniforms/'}},
   robots: {
     index: true,
     follow: true,
@@ -38,10 +35,7 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function EducationUniformsPage() {
   return <EducationUniformsClientPage />;

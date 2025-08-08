@@ -23,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Workwear Innovations for Saudi Factories | UNEOM',
     description: 'Discover how advanced workwear is revolutionizing safety and productivity in Saudi Arabian factories.',
-    images: ['/images/manufacturing/workwear-innovations-saudi-factories.jpg'],
-  },
-}
+    images: ['/images/manufacturing/workwear-innovations-saudi-factories.jpg']}}
 
 const innovations = [
   {

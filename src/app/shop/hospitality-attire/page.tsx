@@ -32,11 +32,6 @@ export default function HospitalityAttirePage() {
       description: 'Premium hospitality uniform designed for luxury hotels and resorts, featuring refined styling and exceptional comfort for front-of-house staff.',
       price: 'From SAR 399',
       image: '/images/products/hotel-uniform.jpg',
-      href: '/images/product-placeholder.jpg',
-      href: '/images/product-placeholder.jpg',
-      href: '/images/product-placeholder.jpg',
-      href: '/images/product-placeholder.jpg',
-      href: '/images/categories/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg',
       href: '/shop/hospitality-attire/restaurant-staff-uniform',
       features: ['Stain-resistant', 'Comfortable design', 'Professional appearance', 'Easy care'],
       colors: ['Black', 'White', 'Burgundy', 'Grey']

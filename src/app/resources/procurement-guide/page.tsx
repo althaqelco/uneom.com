@@ -67,8 +67,7 @@ export default function ProcurementGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg',
-      },
+        image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg'},
       {
         title: 'Supplier Selection',
         content: `
@@ -116,8 +115,7 @@ export default function ProcurementGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
-      },
+        image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg'},
       {
         title: 'Program Implementation',
         content: `
@@ -159,8 +157,7 @@ export default function ProcurementGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
-      }
+        image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg'}
     ],
     items: [
       {

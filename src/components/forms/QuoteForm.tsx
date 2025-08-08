@@ -156,8 +156,7 @@ export default function QuoteForm({ locale = 'en' }: QuoteFormProps) {
         sending: 'Sending...',
         success: 'Your quote request has been submitted successfully. We will contact you shortly.',
         error: 'There was an error submitting your request. Please try again.'
-      },
-    },
+      }},
     ar: {
       title: 'طلب عرض سعر سريع',
       subtitle: 'املأ النموذج أدناه، وسنرد عليك خلال 24 ساعة',
@@ -220,8 +219,7 @@ export default function QuoteForm({ locale = 'en' }: QuoteFormProps) {
         sending: 'جارٍ الإرسال...',
         success: 'تم تقديم طلب عرض السعر بنجاح. سنتصل بك قريبًا.',
         error: 'حدث خطأ أثناء تقديم طلبك. يرجى المحاولة مرة أخرى.'
-      },
-    }
+      }}
   };
 
   const onSubmit = async (values: FormData) => {
@@ -403,7 +401,7 @@ Submitted: ${now.toLocaleString()}
               {...register('email', { 
                 required: content[localeKey].fields.email.required,
                 pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}$/i,
                   message: content[localeKey].fields.email.pattern
                 }
               })}

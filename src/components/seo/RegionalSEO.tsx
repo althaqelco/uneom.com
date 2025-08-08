@@ -141,7 +141,7 @@ const RegionalSEO: React.FC<RegionalSEOProps> = ({
   const schemas = generateRegionalSchemas();
   
   return (
-    <>
+    <React.Fragment>
       {schemas.map((schema, index) => (
         <script
           key={`regional-schema-${index}`}
@@ -149,7 +149,7 @@ const RegionalSEO: React.FC<RegionalSEOProps> = ({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       ))}
-    </>
+    </React.Fragment>
   );
 };
 

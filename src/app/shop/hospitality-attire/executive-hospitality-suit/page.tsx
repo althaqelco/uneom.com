@@ -21,9 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Executive Hospitality Suit | Premium Hotel Management Uniforms',
     description: 'Premium executive suits for hospitality industry leaders',
-    images: ['/images/products/hospitality/executive-hospitality-suit.jpg'],
-  },
-}
+    images: ['/images/products/hospitality/executive-hospitality-suit.jpg']}}
 
 const productFeatures = [
   {

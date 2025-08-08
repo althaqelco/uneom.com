@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/services/quality-assurance/quality-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Uniform Quality Assurance and Testing Services',
-      },
-    ],
-  },
+        alt: 'UNEOM Uniform Quality Assurance and Testing Services'},
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Uniform Quality Assurance & Testing | UNEOM Saudi Arabia',
     description: 'Comprehensive uniform quality control and testing services for Saudi organizations.',
-    images: ['/images/services/quality-assurance/quality-header.jpg'],
-  },
+    images: ['/images/services/quality-assurance/quality-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/services/quality-assurance',
     languages: {
       'en': 'https://uneom.com/services/quality-assurance',
-      'ar': 'https://uneom.com/ar/services/quality-assurance',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/services/quality-assurance'}}}; 

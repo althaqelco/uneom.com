@@ -5,6 +5,81 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
+  
+  /* UNEOM 2025 Color System - Saudi Heritage Inspired */
+  /* Primary Colors - Royal Blues */
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #1e40af;
+  --color-primary-600: #1e3a8a;
+  --color-primary-700: #1e293b;
+  --color-primary-800: #0f172a;
+  --color-primary-900: #0c0a09;
+  
+  /* Secondary Colors - Gold/Orange */
+  --color-secondary-50: #fef7ed;
+  --color-secondary-100: #fef3e2;
+  --color-secondary-200: #fde3c2;
+  --color-secondary-300: #fcca8b;
+  --color-secondary-400: #f9a352;
+  --color-secondary-500: #f97706;
+  --color-secondary-600: #d97706;
+  --color-secondary-700: #ea580c;
+  --color-secondary-800: #c2410c;
+  --color-secondary-900: #9a3412;
+  
+  /* Accent Colors */
+  --color-accent-emerald: #059669;
+  --color-accent-teal: #0d9488;
+  --color-accent-purple: #7c3aed;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-500) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary-600) 0%, var(--color-secondary-700) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-primary-600) 50%, var(--color-primary-500) 100%);
+  
+  /* Enhanced Typography Variables */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+  
+  /* Spacing Variables */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Border Radius */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.375rem;
+  --border-radius-lg: 0.5rem;
+  --border-radius-xl: 0.75rem;
+  --border-radius-2xl: 1rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Animation Durations */
+  --duration-fast: 0.15s;
+  --duration-normal: 0.3s;
+  --duration-slow: 0.5s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,9 +93,177 @@ body {
   color: rgb(var(--foreground-rgb));
   background: var(--background);
   min-height: 100vh;
+  font-feature-settings: "rlig" 1, "calt" 1;
 }
 
-/* RTL Support */
+/* Enhanced Arabic Typography */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+/* UNEOM 2025 Enhanced Styles */
+@layer components {
+  /* Hero Section Styles */
+  .hero-section {
+    background: var(--gradient-hero);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(30, 64, 175, 0.6) 100%);
+    z-index: 1;
+  }
+  
+  .hero-section .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Trust Signals */
+  .trust-signals {
+    background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  }
+  
+  .trust-item {
+    transition: transform var(--duration-normal) ease, box-shadow var(--duration-normal) ease;
+  }
+  
+  .trust-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Medical Section Styles */
+  .medical-hero {
+    background: linear-gradient(135deg, #1e40af 0%, #0891b2 50%, #059669 100%);
+  }
+  
+  .medical-features .feature {
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all var(--duration-normal) ease;
+  }
+  
+  .medical-features .feature:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  /* Q&A Section Styles */
+  .qa-format {
+    background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  }
+  
+  .qa-item {
+    transition: all var(--duration-normal) ease;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    background: white;
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .qa-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+  
+  /* Button Enhancements */
+  .btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    font-weight: 600;
+    transition: all var(--duration-normal) ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .btn-secondary {
+    background: var(--gradient-secondary);
+    color: var(--color-primary-800);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    font-weight: 600;
+    transition: all var(--duration-normal) ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-secondary:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Card Enhancements */
+  .card {
+    background: white;
+    border-radius: var(--border-radius-xl);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--duration-normal) ease;
+  }
+  
+  .card:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-4px);
+  }
+  
+  /* Industry Grid Enhancements */
+  .industry-card {
+    border-radius: var(--border-radius-xl);
+    overflow: hidden;
+    transition: all var(--duration-normal) ease;
+    background: white;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .industry-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: var(--shadow-2xl);
+  }
+  
+  /* Testimonial Enhancements */
+  .testimonial {
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
+    border-left: 4px solid var(--color-primary-600);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    transition: all var(--duration-normal) ease;
+  }
+  
+  .testimonial:hover {
+    border-left-color: var(--color-secondary-600);
+    box-shadow: var(--shadow-lg);
+    transform: translateX(4px);
+  }
+  
+  /* Arabic Font Optimizations */
+  .arabic-text {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0;
+  }
+  
+  .arabic-heading {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+}
+
+/* RTL Support Enhanced */
 .rtl {
   direction: rtl;
   text-align: right;
@@ -35,6 +278,7 @@ body {
 html[dir="rtl"] body,
 .rtl {
   font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1, "ss03" 1;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
 }
 
 /* Mirror some specific elements in RTL mode */

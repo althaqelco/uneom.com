@@ -266,11 +266,11 @@ export default function PremiumSchoolUniformClientPage() {
                     id: product.id,
                     name: product.name,
                     price: product.price,
-                    color: selectedColor,
-                    size: selectedSize,
-                    quantity: 1,
                     image: '/images/products/premium-school-uniform.webp'
                   }}
+                  color={selectedColor}
+                  size={selectedSize}
+                  quantity={1}
                   className="flex-1"
                 />
               </div>

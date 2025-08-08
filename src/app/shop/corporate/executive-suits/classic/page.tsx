@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Classic Executive Suits | UNEOM',
     description: 'Classic executive suits that are elegant and practical for professionals and leaders in Saudi Arabia.',
-    images: ['/images/products/corporate/classic-executive-suits-main.jpg'],
-  },
-}
+    images: ['/images/products/corporate/classic-executive-suits-main.jpg']}}
 
 const productFeatures = [
   {

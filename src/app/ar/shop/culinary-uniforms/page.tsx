@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import CulinaryUniformsClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -38,9 +39,7 @@ export const metadata: Metadata = {
     canonical: 'https://uneom.com/ar/shop/culinary-uniforms/',
     languages: {
       'en-SA': 'https://uneom.com/shop/culinary-uniforms/',
-      'ar-SA': 'https://uneom.com/ar/shop/culinary-uniforms/',
-    },
-  },
+      'ar-SA': 'https://uneom.com/ar/shop/culinary-uniforms/'}},
   robots: {
     index: true,
     follow: true,

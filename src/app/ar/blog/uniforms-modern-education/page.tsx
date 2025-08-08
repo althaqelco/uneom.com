@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,16 +25,12 @@ export const metadata: Metadata = {
     publishedTime: '2024-12-15T08:00:00Z', // Example publish time
     authors: ['فريق يونيم التعليمي'], // UNEOM Education Team in Arabic
     locale: 'ar_SA',
-    siteName: 'UNEOM',
-  },
+    siteName: 'UNEOM'},
   alternates: {
     canonical: '/ar/blog/uniforms-modern-education/',
     languages: {
       'ar-SA': '/ar/blog/uniforms-modern-education/',
-      'en-US': '/blog/uniforms-modern-education/',
-    },
-  },
-}
+      'en-US': '/blog/uniforms-modern-education/'}}}
 
 const tableOfContentsAr = [
   { id: 'introduction', title: 'مقدمة: الزي المدرسي في العصر الرقمي' },

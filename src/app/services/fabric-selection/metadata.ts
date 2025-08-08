@@ -8,6 +8,4 @@ export const metadata: Metadata = {
     title: 'Professional Fabric Selection Service | UNEOM - Saudi Arabia',
     description: 'Expert fabric consultation for professional uniforms tailored to Saudi Arabia\'s climate. Identify optimal materials for comfort, durability, and performance in your industry.',
     type: 'website',
-    locale: 'en',
-  },
-}; 
+    locale: 'en'}}; 

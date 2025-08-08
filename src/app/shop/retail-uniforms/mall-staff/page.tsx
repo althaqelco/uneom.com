@@ -14,8 +14,7 @@ export const metadata: Metadata = {
     description: "Enhance your shopping center's professional image with customized, high-quality uniforms for all customer-facing staff positions.",
     images: ['/images/industries/retail-shops/retail-shops-uniform.jpg'],
     type: 'website',
-    locale: 'en',
-  }
+    locale: 'en'}
 };
 
 export default function MallStaffUniform() {
@@ -159,8 +158,6 @@ export default function MallStaffUniform() {
         name: "Luxury Retail Store Collection",
         description: "High-end uniforms for luxury retail brands and boutique stores",
         image: "/images/industries/retail-shops/retail-shops-uniform-identity-3.jpg",
-        link: "/images/industries/factory_industry/factory-security-uniform-1.jpg",
-        link: "/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg",
         link: "/shop/retail-uniforms/customer-service"
       }
     ],

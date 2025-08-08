@@ -32,12 +32,7 @@ export default function CorporateAttireClientPage() {
       description: 'بدلات رسمية فاخرة للشركات مصنوعة من أجود أنواع الأقمشة، مناسبة للمدراء والتنفيذيين.',
       price: 'من 899 ريال',
       image: '/images/products/corporate-suit-executive.jpg',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
-      href: '/ar/shop/corporate-attire/corporate-accessories',
+      href: '/ar/shop/corporate-attire/business-suits',
       features: ['تصاميم أنيقة', 'جودة عالية', 'خيارات متنوعة', 'تكمل الزي الرسمي'],
       colors: ['متعددة']
     }

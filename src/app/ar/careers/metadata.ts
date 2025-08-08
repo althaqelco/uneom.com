@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/careers/careers-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'الوظائف في يونيوم - مزود الزي الموحد المتميز في السعودية',
-      }
-    ],
-  },
+        alt: 'الوظائف في يونيوم - مزود الزي الموحد المتميز في السعودية'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'الوظائف في يونيوم | السعودية',
     description: 'انضم إلى فريقنا من محترفي الزي الموحد. استكشف فرص العمل المميزة في التصميم، التصنيع، المبيعات، وخدمة العملاء.',
-    images: ['/images/careers/careers-header.jpg'],
-  },
+    images: ['/images/careers/careers-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/careers',
     languages: {
       'en': 'https://uneom.com/careers',
-      'ar': 'https://uneom.com/ar/careers',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/careers'}}}; 

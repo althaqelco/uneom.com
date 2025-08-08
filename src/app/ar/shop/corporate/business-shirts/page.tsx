@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,9 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'قمصان عمل شركات | قمصان رسمية تنفيذية | يونيوم',
     description: 'قمصان عمل شركات عالية الجودة للمهنيين. خيارات أنيقة ومريحة متاحة.',
-    images: ['/images/products/corporate/business-shirts-collection.jpg'],
-  },
-}
+    images: ['/images/products/corporate/business-shirts-collection.jpg']}}
 
 const shirtCategories = [
   {

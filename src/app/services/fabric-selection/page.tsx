@@ -11,20 +11,21 @@ import { motion } from 'framer-motion';
 import { Poppins, Inter } from 'next/font/google';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
+
 // Define the fonts
 const poppinsFont = Poppins({
   subsets: ['latin'],
   weight: ['600', '700'],
-  variable: '--font-poppins',
-});
+  variable: '--font-poppins'});
 
 const interFont = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
-  variable: '--font-inter',
-});
+  variable: '--font-inter'});
 
-const FabricSelectionPage = () => {
+export default function FabricSelectionPage() {
+
+
   const locale = 'en';
   
   // Process Steps
@@ -32,28 +33,23 @@ const FabricSelectionPage = () => {
     {
       title: "UNEOM - Professional Uniforms",
       description: 'We meet with your team to understand your specific needs, industry requirements, and brand identity',
-      icon: '🤝',
-    },
+      icon: '🤝'},
     {
       title: 'Needs Analysis',
       description: 'Our fabric experts analyze your specific requirements, including climate adaptation, functional needs, and compliance standards',
-      icon: '🔍',
-    },
+      icon: '🔍'},
     {
       title: 'Sample Selection',
       description: 'Based on your requirements, we present a curated selection of appropriate fabric samples for evaluation',
-      icon: '👕',
-    },
+      icon: '👕'},
     {
       title: 'Fabric Testing',
       description: 'Selected fabrics undergo rigorous testing to ensure they meet performance standards in real-world conditions',
-      icon: '⚗️',
-    },
+      icon: '⚗️'},
     {
       title: 'Final Recommendations',
       description: 'We provide detailed recommendations along with comprehensive fabric specifications and care instructions',
-      icon: '📋',
-    },
+      icon: '📋'},
   ];
   
   // Fabric Types
@@ -69,8 +65,7 @@ const FabricSelectionPage = () => {
         'Good drape and appearance'
       ],
       applications: ['Corporate office uniforms', 'Hospitality staff attire', 'Healthcare uniforms', 'School uniforms'],
-      image: '/images/fabric-cotton-blends.webp',
-    },
+      image: '/images/fabric-cotton-blends.webp'},
     {
       name: 'Polyester Performance Fabrics',
       description: 'Engineered synthetic fabrics that deliver exceptional durability, wrinkle resistance, and color retention.',
@@ -82,8 +77,7 @@ const FabricSelectionPage = () => {
         'Shape retention'
       ],
       applications: ['Formal business attire', 'Front desk staff', 'Security uniforms', 'Airline staff uniforms'],
-      image: '/images/zipper-on-clothes-2025-02-22-02-05-22-utc.jpg',
-    },
+      image: '/images/zipper-on-clothes-2025-02-22-02-05-22-utc.jpg'},
     {
       name: 'Waterproof & Weather-Resistant Fabrics',
       description: 'Specialized fabrics designed to protect against rain, wind, and harsh weather conditions while maintaining comfort.',
@@ -95,8 +89,7 @@ const FabricSelectionPage = () => {
         'Adaptable to weather changes'
       ],
       applications: ['Outdoor security personnel', 'Delivery staff', 'Facilities management', 'Landscaping teams'],
-      image: '/images/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg',
-    },
+      image: '/images/large-water-drop-on-red-waterproof-fabric-2024-12-02-06-46-07-utc.jpg'},
     {
       name: 'Fire-Resistant & Protective Fabrics',
       description: 'Specialized fabrics engineered to protect wearers in hazardous environments, meeting rigorous safety standards.',
@@ -108,8 +101,7 @@ const FabricSelectionPage = () => {
         'Balanced protection and comfort'
       ],
       applications: ['Industrial settings', 'Oil and gas personnel', 'Kitchen staff', 'Electrical workers'],
-      image: '/images/a-firefighter-giving-instructions-to-her-team-SBI-301057339.jpg',
-    },
+      image: '/images/a-firefighter-giving-instructions-to-her-team-SBI-301057339.jpg'},
   ];
   
   // Fabric Technologies
@@ -117,33 +109,27 @@ const FabricSelectionPage = () => {
     {
       name: 'UV Protection',
       description: 'Fabrics with built-in UPF (Ultraviolet Protection Factor) that blocks harmful UV rays',
-      icon: '☀️',
-    },
+      icon: '☀️'},
     {
       name: 'Antimicrobial Treatment',
       description: 'Technology that inhibits the growth of bacteria and microorganisms on fabric surfaces',
-      icon: '🛡️',
-    },
+      icon: '🛡️'},
     {
       name: 'Stain Resistance',
       description: 'Treatments that repel liquids and prevent stains from setting into fabric fibers',
-      icon: '💧',
-    },
+      icon: '💧'},
     {
       name: 'Stretch Technology',
       description: 'Fabrics engineered with elastane or mechanical stretch for improved mobility and comfort',
-      icon: '🔄',
-    },
+      icon: '🔄'},
     {
       name: 'Temperature Control',
       description: 'Advanced fabrics that help regulate body temperature in varying environmental conditions',
-      icon: '🌡️',
-    },
+      icon: '🌡️'},
     {
       name: 'Quick-Dry Treatment',
       description: 'Fabrics designed to wick moisture away from the body and dry rapidly',
-      icon: '💨',
-    },
+      icon: '💨'},
   ];
   
   // Service Features
@@ -151,23 +137,19 @@ const FabricSelectionPage = () => {
     {
       title: 'Specialized Expertise',
       description: 'Access to fabric specialists with extensive knowledge of textile properties, performance characteristics, and industry applications',
-      icon: '👔',
-    },
+      icon: '👔'},
     {
       title: 'Saudi Climate Understanding',
       description: 'Expert knowledge of how different fabrics perform in Saudi Arabia\'s unique climate conditions, from intense heat to coastal humidity',
-      icon: '☀️',
-    },
+      icon: '☀️'},
     {
       title: 'Quality Testing',
       description: 'Comprehensive fabric testing for durability, comfort, and performance under real-world conditions before final selection',
-      icon: '🔍',
-    },
+      icon: '🔍'},
     {
       title: 'Budget Compliance',
       description: 'Fabric recommendations that balance performance requirements with cost considerations to meet your budget objectives',
-      icon: '💰',
-    },
+      icon: '💰'},
   ];
 
   return (
@@ -586,6 +568,5 @@ const FabricSelectionPage = () => {
       </section>
     </div>
   );
-};
 
-export default FabricSelectionPage; 
+}

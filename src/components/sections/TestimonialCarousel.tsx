@@ -25,12 +25,10 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
   const content = {
     en: {
       title: 'What Our Clients Say',
-      subtitle: 'Trusted by leading institutions across various industries in Saudi Arabia',
-    },
+      subtitle: 'Trusted by leading institutions across various industries in Saudi Arabia'},
     ar: {
       title: 'ماذا يقول عملاؤنا',
-      subtitle: 'موثوق به من قبل المؤسسات الرائدة في مختلف الصناعات في المملكة العربية السعودية',
-    }
+      subtitle: 'موثوق به من قبل المؤسسات الرائدة في مختلف الصناعات في المملكة العربية السعودية'}
   };
 
   // Sample testimonials data - Enhanced with diverse, professional testimonials
@@ -223,8 +221,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ locale, testi
     enter: (direction: number) => ({
       x: direction > 0 ? 800 : -800,
       opacity: 0,
-      scale: 0.9,
-    }),
+      scale: 0.9}),
     center: {
       x: 0,
       opacity: 1,

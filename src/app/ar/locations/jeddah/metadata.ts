@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/locations/jeddah-office.jpg',
         width: 1200,
         height: 630,
-        alt: 'مكتب يونيوم جدة - حلول الزي الموحد المتميزة',
-      }
-    ],
-  },
+        alt: 'مكتب يونيوم جدة - حلول الزي الموحد المتميزة'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'مورد الزي الموحد في جدة | يونيوم السعودية',
     description: 'حلول الزي الموحد المتميزة في جدة مع خدمات المقاسات المحلية، التوصيل السريع، وملابس العمل المخصصة لجميع القطاعات المهنية.',
-    images: ['/images/locations/jeddah-office.jpg'],
-  },
+    images: ['/images/locations/jeddah-office.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/locations/jeddah',
     languages: {
       'en': 'https://uneom.com/locations/jeddah',
-      'ar': 'https://uneom.com/ar/locations/jeddah',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/locations/jeddah'}}}; 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,16 +22,12 @@ export const metadata: Metadata = {
     description: 'بنطلون دورية تنفيذي احترافي لرجال الأمن بمميزات متقدمة ومتانة فائقة',
     images: ['/images/products/security/executive-patrol-pants-main.svg'],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/security-uniforms/security-patrol-pants/executive/',
     languages: {
       'en': 'https://uneom.com/shop/security-uniforms/security-patrol-pants/executive/',
-      'ar': 'https://uneom.com/ar/shop/security-uniforms/security-patrol-pants/executive/',
-    },
-  },
-}
+      'ar': 'https://uneom.com/ar/shop/security-uniforms/security-patrol-pants/executive/'}}}
 
 const productJsonLd = {
   '@context': 'https://schema.org',

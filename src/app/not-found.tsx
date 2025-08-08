@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from "next/link";
 import { Metadata } from "next";
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -8,9 +9,7 @@ export const metadata: Metadata = {
   description: "Sorry, the page you are looking for does not exist.",
   robots: {
     index: false,
-    follow: false,
-  },
-};
+    follow: false}};
 
 export default function NotFound() {
   return (

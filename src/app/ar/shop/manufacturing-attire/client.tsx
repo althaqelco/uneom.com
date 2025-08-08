@@ -20,11 +20,6 @@ export default function ManufacturingAttireClientPage() {
       description: 'أفرول صناعي متين مصمم للحماية والراحة في بيئات التصنيع والصناعة الثقيلة.',
       price: 'من 249 ريال',
       image: '/images/product-placeholder.jpg',
-      href: '/ar/images/product-placeholder.jpg',
-      href: '/ar/images/product-placeholder.jpg',
-      href: '/ar/images/product-placeholder.jpg',
-      href: '/ar/images/product-placeholder.jpg',
-      href: '/ar/images/product-placeholder.jpg',
       href: '/ar/shop/manufacturing-attire/industrial-protective-uniforms',
       isNew: true
     }
@@ -36,9 +31,6 @@ export default function ManufacturingAttireClientPage() {
       title: 'ملابس المصانع',
       description: 'ملابس متخصصة للعاملين في المصانع',
       image: '/images/products/industrial-coverall.jpg',
-      url: '/ar/images/products/industrial-coverall.jpg',
-      url: '/ar/images/products/industrial-coverall.jpg',
-      url: '/ar/images/products/industrial-coverall.jpg',
       url: '/ar/shop/manufacturing-attire/heat-resistant'
     }
   ];
@@ -96,11 +88,9 @@ export default function ManufacturingAttireClientPage() {
       priceCurrency: 'SAR',
       price: '129',
       priceValidUntil: '2024-12-31',
-      availability: 'https://schema.org/InStock',
-    },
+      availability: 'https://schema.org/InStock'},
     brand: {
-      name: 'يونيوم',
-    },
+      name: 'يونيوم'},
     mainEntityOfPage: 'https://uneom.com/ar/shop/manufacturing-attire/'
   };
 

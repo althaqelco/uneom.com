@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,16 +21,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'UNEOM Electrical Safety Gloves | Professional PPE Protection',
     description: 'Protect your electrical workers with certified safety gloves from UNEOM. Meeting international standards for electrical protection in Saudi Arabia.',
-    images: ['/images/ppe/electrical-gloves-og.jpg'],
-  },
+    images: ['/images/ppe/electrical-gloves-og.jpg']},
   alternates: {
     canonical: '/shop/ppe/electrical-gloves/',
     languages: {
       'en-US': '/shop/ppe/electrical-gloves/',
-      'ar-SA': '/ar/shop/ppe/electrical-gloves/',
-    },
-  },
-}
+      'ar-SA': '/ar/shop/ppe/electrical-gloves/'}}}
 
 const safetyFeatures = [
   {

@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/front-desk-uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'مجموعة يونيفورم مكتب الاستقبال الاحترافية من يونيوم',
-      }
-    ],
-  },
+        alt: 'مجموعة يونيفورم مكتب الاستقبال الاحترافية من يونيوم'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'يونيفورم مكتب الاستقبال | يونيوم السعودية',
     description: 'يونيفورم مكتب استقبال متميز مصمم لفنادق السعودية. الأناقة تلتقي بالاحترافية مع راحة وأناقة فائقة.',
-    images: ['/images/products/front-desk-uniform.jpg'],
-  },
+    images: ['/images/products/front-desk-uniform.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/hospitality-attire/front-desk-uniform',
     languages: {
       'en': 'https://uneom.com/shop/hospitality-attire/front-desk-uniform',
-      'ar': 'https://uneom.com/ar/shop/hospitality-attire/front-desk-uniform',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/hospitality-attire/front-desk-uniform'}}}; 

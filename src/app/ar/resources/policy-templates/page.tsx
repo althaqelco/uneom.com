@@ -22,9 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'قوالب سياسات الأزياء الموحدة المجانية | موارد يونيوم',
     description: 'حمل قوالب سياسات الأزياء الموحدة الشاملة لمؤسستك',
-    images: ['/images/resources/policy-templates-preview.jpg'],
-  },
-}
+    images: ['/images/resources/policy-templates-preview.jpg']}}
 
 const policyTemplates = [
   {

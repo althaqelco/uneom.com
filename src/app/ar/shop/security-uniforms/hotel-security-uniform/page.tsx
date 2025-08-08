@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,9 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'زي أمن الفنادق | ملابس أمن ضيافة احترافية | يونيوم',
     description: 'أزياء أمن أنيقة مصممة خصيصًا لبيئات الفنادق والضيافة، تضمن المظهر الاحترافي مع الحفاظ على سلطة الأمن.',
-    images: ['/images/security/smart-fabric-technology.jpg'],
-  },
-}
+    images: ['/images/security/smart-fabric-technology.jpg']}}
 
 const uniformFeatures = [
   {

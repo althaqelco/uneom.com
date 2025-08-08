@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,16 +23,12 @@ export const metadata: Metadata = {
     title: 'معطف المختبر المهني | يونيوم',
     description: 'معطف مختبر طبي عالي الجودة مصمم خصيصاً للمهنيين الصحيين',
     images: ['/images/products/professional-lab-coat.jpg'],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   alternates: {
     canonical: '/ar/shop/medical-scrubs/professional-lab-coat/',
     languages: {
       'en': '/shop/medical-scrubs/professional-lab-coat/',
-      'ar': '/ar/shop/medical-scrubs/professional-lab-coat/',
-    },
-  },
-}
+      'ar': '/ar/shop/medical-scrubs/professional-lab-coat/'}}}
 
 const features = [
   {

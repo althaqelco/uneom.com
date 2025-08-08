@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/resources/resources-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Uniform Resources and Guides',
-      },
-    ],
-  },
+        alt: 'UNEOM Uniform Resources and Guides'},
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Uniform Resources & Guides | UNEOM Saudi Arabia',
     description: 'Access our comprehensive uniform resources including size guides, fabric information, procurement tips, and uniform policy templates.',
-    images: ['/images/resources/resources-header.jpg'],
-  },
+    images: ['/images/resources/resources-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/resources',
     languages: {
       'en': 'https://uneom.com/resources',
-      'ar': 'https://uneom.com/ar/resources',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/resources'}}}; 

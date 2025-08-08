@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/business-suits.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Business Suits Collection by UNEOM',
-      }
-    ],
-  },
+        alt: 'Professional Business Suits Collection by UNEOM'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Business Suits | UNEOM Saudi Arabia',
     description: 'Premium business suits designed for Saudi Arabia\'s corporate professionals. Sophistication meets comfort with modern tailoring.',
-    images: ['/images/products/business-suits.jpg'],
-  },
+    images: ['/images/products/business-suits.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/corporate-attire/business-suits',
     languages: {
       'en': 'https://uneom.com/shop/corporate-attire/business-suits',
-      'ar': 'https://uneom.com/ar/shop/corporate-attire/business-suits',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/corporate-attire/business-suits'}}}; 

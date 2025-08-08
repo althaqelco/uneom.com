@@ -8,6 +8,4 @@ export const metadata: Metadata = {
     title: 'Corporate Uniform Programs | UNEOM - Saudi Arabia',
     description: 'Comprehensive uniform program management for Saudi organizations. From design to ongoing maintenance, streamline your uniform management while enhancing brand consistency.',
     type: 'website',
-    locale: 'en',
-  },
-}; 
+    locale: 'en'}}; 

@@ -11,17 +11,13 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/services/services/custom-uniforms-service.jpg'],
-  },
+        url: '/images/services/services/custom-uniforms-service.jpg'}
+    ]},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/services/custom-uniforms',
     languages: {
       'en': 'https://uneom.com/services/custom-uniforms',
-      'ar': 'https://uneom.com/ar/services/custom-uniforms',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/services/custom-uniforms'}}}; 

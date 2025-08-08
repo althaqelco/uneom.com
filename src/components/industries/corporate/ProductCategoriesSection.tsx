@@ -32,8 +32,7 @@ const ProductCategory: React.FC<ProductCategoryProps> = ({
   // Use intersection observer for animation and lazy loading
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1,
-  });
+    threshold: 0.1});
 
   return (
     <div 

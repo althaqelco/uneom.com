@@ -32,11 +32,6 @@ export default function CorporatePage() {
       description: 'Premium tailored attire for corporate executives and management personnel, featuring sophisticated design and premium fabric.',
       price: 'From SAR 599',
       image: '/images/Corporate_Uniforms_Business.png',
-      href: '/images/confident-man-in-uniform-2025-02-12-01-27-59-utc.jpg',
-      href: '/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg',
-      href: '/images/modern-arabic-businessman-SBI-300984397.jpg',
-      href: '/images/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg',
-      href: '/images/arabian-businessman-wearing-traditional-clothes-while-using-smartphone-at-home-SBI-350765162.jpg',
       href: '/shop/corporate/corporate-event-attire',
       features: ['Premium materials', 'Elegant design', 'Professional look', 'Custom sizing'],
       colors: ['Navy', 'Black', 'Burgundy', 'Custom colors available']

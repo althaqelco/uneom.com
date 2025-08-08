@@ -96,7 +96,7 @@ const HeadingManager: React.FC<HeadingManagerProps> = ({
     };
   }, [router, onDuplicateH1, disableWarnings]);
   return (
-    <>
+    <React.Fragment>
       {/* Render the primary H1 tag */}
       <h1 className={className}>{displayTitle}</h1>
       
@@ -114,7 +114,7 @@ const HeadingManager: React.FC<HeadingManagerProps> = ({
           </p>
         </div>
       )}
-    </>
+    </React.Fragment>
   );
 };
 

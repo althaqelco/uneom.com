@@ -30,8 +30,7 @@ export async function POST(request: Request) {
       industry,
       employeeCount,
       message,
-      timestamp: new Date().toISOString(),
-    });
+      timestamp: new Date().toISOString()});
     
     // Return success response
     return NextResponse.json(

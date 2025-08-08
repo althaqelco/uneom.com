@@ -11,17 +11,13 @@ export const metadata: Metadata = {
     locale: 'ar',
     images: [
       {
-        url: '/images/services/services/bulk-orders-service.jpg'],
-  },
+        url: '/images/services/services/bulk-orders-service.jpg'}
+    ]},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/services/bulk-orders',
     languages: {
       'en': 'https://uneom.com/services/bulk-orders',
-      'ar': 'https://uneom.com/ar/services/bulk-orders',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/services/bulk-orders'}}}; 

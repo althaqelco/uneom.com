@@ -112,8 +112,7 @@ export default function ConciergeUniformPage() {
         quote: "The Premium Concierge Uniforms from Uneom have significantly elevated our property's first impression. The sophisticated design perfectly balances traditional Saudi elements with contemporary luxury, while the superior construction maintains an impeccable appearance even during the busiest periods. Our concierge staff report exceptional comfort throughout extended shifts, and the distinguished appearance has become an integral part of our property's prestigious image.",
         author: "Fahad Al-Rashidi",
         position: "Front Office Manager",
-        company: "Royal Oasis Hotel & Residence",
-      },
+        company: "Royal Oasis Hotel & Residence"},
       sizeChart: "Size Chart",
       colors: "Colors",
       quantity: "Quantity",
@@ -283,8 +282,7 @@ export default function ConciergeUniformPage() {
     if (selectedColor && selectedSize) {
       addItem({
         id: product.id,
-        name: product.name[locale],
-        description: product.description[locale],
+        name: content[locale].title,
         color: selectedColor,
         size: selectedSize,
         quantity: quantity,

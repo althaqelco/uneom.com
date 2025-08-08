@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import EnhancedRetailClient from './EnhancedRetailClient';
 
@@ -17,17 +18,13 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/woman-in-business-casual-attire-smiling-SBI-300979979.jpg',
         width: 1200,
         height: 630,
-        alt: 'أزياء قطاع التجارة والمتاجر من يونيوم - ملابس موظفي المبيعات والخدمة',
-      },
-    ],
-  },
+        alt: 'أزياء قطاع التجارة والمتاجر من يونيوم - ملابس موظفي المبيعات والخدمة'},
+    ]},
   alternates: {
     canonical: 'https://uneom.com/ar/industries/retail-shops/',
     languages: {
       'en': 'https://uneom.com/industries/retail-shops/',
-      'ar': 'https://uneom.com/ar/industries/retail-shops/',
-    },
-  },
+      'ar': 'https://uneom.com/ar/industries/retail-shops/'}},
   robots: {
     index: true,
     follow: true,

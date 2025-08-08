@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,17 +12,13 @@ export const metadata: Metadata = {
     description: 'Professional customer service uniforms designed for Saudi retail environments. Practical, polished attire that represents your brand with distinction.',
     images: ['/images/industries/retail-shops/retail-shops-uniform-shop.jpg'],
     url: 'https://uneom.com/shop/retail-uniforms/customer-service',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/shop/retail-uniforms/customer-service',
     languages: {
       'en': 'https://uneom.com/shop/retail-uniforms/customer-service',
-      'ar': 'https://uneom.com/ar/shop/retail-uniforms/customer-service',
-    },
-  },
-  keywords: 'customer service uniforms Saudi Arabia, retail staff attire KSA, professional customer service clothing Riyadh, retail employee uniforms, Saudi retail brand uniforms, customer-facing staff clothing, mall employee uniforms Jeddah',
-};
+      'ar': 'https://uneom.com/ar/shop/retail-uniforms/customer-service'}},
+  keywords: 'customer service uniforms Saudi Arabia, retail staff attire KSA, professional customer service clothing Riyadh, retail employee uniforms, Saudi retail brand uniforms, customer-facing staff clothing, mall employee uniforms Jeddah'};
 
 export default function CustomerServicePage() {
   // Hardcoded product data instead of fetching from products.ts

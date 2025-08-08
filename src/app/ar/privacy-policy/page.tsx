@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
@@ -23,7 +24,6 @@ export const metadata: Metadata = {
     locale: 'ar'
   }
 };
-
 
 export default function PrivacyPolicyPageArabic() {
   return (

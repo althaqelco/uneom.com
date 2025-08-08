@@ -173,7 +173,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   }));
   
   return (
-    <>
+    <React.Fragment>
       {/* Schema.org structured data for breadcrumbs */}
       {showSchema && (
         <StructuredData
@@ -214,7 +214,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
           })}
         </ol>
       </nav>
-    </>
+    </React.Fragment>
   );
 };
 

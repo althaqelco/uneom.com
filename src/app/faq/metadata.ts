@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/faq/faq-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Professional Uniform FAQs - Common Questions Answered',
-      }
-    ],
-  },
+        alt: 'UNEOM Professional Uniform FAQs - Common Questions Answered'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Uniform FAQs | UNEOM Saudi Arabia',
     description: 'Find answers to common questions about professional uniforms, ordering process, and UNEOM\'s services across Saudi Arabia.',
-    images: ['/images/faq/faq-header.jpg'],
-  },
+    images: ['/images/faq/faq-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/faq',
     languages: {
       'en': 'https://uneom.com/faq',
-      'ar': 'https://uneom.com/ar/faq',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/faq'}}}; 

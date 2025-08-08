@@ -14,8 +14,7 @@ export const metadata: Metadata = {
     description: 'عزز الصورة المهنية لمركز التسوق الخاص بك من خلال يونيفورم مخصص عالي الجودة لجميع موظفي الواجهة.',
     images: ['/images/industries/retail-shops/retail-shops-uniform.jpg'],
     type: 'website',
-    locale: 'ar',
-  }
+    locale: 'ar'}
 };
 
 export default function MallStaffUniform() {
@@ -159,8 +158,6 @@ export default function MallStaffUniform() {
         name: "مجموعة متاجر التجزئة الفاخرة",
         description: "يونيفورم راقي للعلامات التجارية الفاخرة ومتاجر البوتيك",
         image: "/images/industries/retail-shops/retail-shops-uniform-identity-3.jpg",
-        link: "/ar/images/industries/factory_industry/factory-security-uniform-1.jpg",
-        link: "/ar/images/industries/retail-shops/retail-shops-uniform-identity-2.jpg",
         link: "/ar/shop/retail-uniforms/customer-service"
       }
     ],

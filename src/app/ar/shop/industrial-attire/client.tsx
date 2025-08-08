@@ -32,7 +32,6 @@ export default function IndustrialAttireClientPage() {
       description: 'أفرهولات مقاومة للهب للعاملين في بيئات صناعية عالية المخاطر، مصممة للحماية القصوى مع راحة طويلة الأمد.',
       price: 'من 599 ريال',
       image: '/images/products/industrial-coverall.jpg',
-      href: '/ar/images/products/industrial-coverall.jpg',
       href: '/ar/shop/industrial-attire/high-visibility-jackets',
       features: ['عاكسات 3M', 'مقاومة للماء', 'مضادة للرياح', 'جيوب متعددة للأدوات'],
       colors: ['أصفر ساطع', 'برتقالي ساطع', 'أصفر/أسود', 'برتقالي/أسود'],
@@ -44,8 +43,6 @@ export default function IndustrialAttireClientPage() {
       description: 'بناطيل عمل متينة مصممة لتحمل ظروف العمل الصناعية القاسية، مع ميزات سلامة وجيوب عملية.',
       price: 'من 249 ريال',
       image: '/images/products/industrial-coverall.jpg',
-      href: '/ar/images/products/industrial-coverall.jpg',
-      href: '/ar/images/products/industrial-coverall.jpg',
       href: '/ar/shop/industrial-attire/industrial-safety-sets',
       features: ['طقم متكامل', 'حماية شاملة', 'متين', 'مريح'],
       colors: ['أزرق/أسود', 'أخضر زيتي/أسود', 'رمادي/أسود', 'برتقالي/كحلي']

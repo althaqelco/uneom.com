@@ -114,10 +114,6 @@ export default function PremiumMedicalScrubsArabicPage() {
         name: "طقم سكروب جراحي",
         image: "/images/product-placeholder.jpg",
         price: "ريال 199",
-        href: "/ar/images/product-placeholder.jpg",
-        price: "ريال 229",
-        href: "/ar/images/product-placeholder.jpg",
-        price: "ريال 189",
         href: "/ar/shop/medical-scrubs/nurse-uniform"
       }
     ],

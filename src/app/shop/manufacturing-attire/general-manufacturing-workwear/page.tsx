@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,7 +13,6 @@ import {
 } from '@heroicons/react/24/outline'
 import { StarIcon as StarSolidIcon } from '@heroicons/react/24/solid'
 
-
 export const metadata: Metadata = {
   title: 'General Manufacturing Workwear | Durable Factory Uniforms | UNEOM',
   description: 'Durable and functional workwear for general manufacturing environments. Including work shirts, pants, and light coveralls designed for comfort, safety, and longevity in Saudi Arabia.',
@@ -20,9 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'General Manufacturing Workwear | Durable Factory Uniforms | UNEOM',
     description: 'Equip your manufacturing workforce with durable, comfortable, and functional workwear designed for daily industrial use.',
-    images: ['/images/products/manufacturing/general-workwear-main.jpg'],
-  },
-}
+    images: ['/images/products/manufacturing/general-workwear-main.jpg']}}
 
 const workwearTypes = [
   {

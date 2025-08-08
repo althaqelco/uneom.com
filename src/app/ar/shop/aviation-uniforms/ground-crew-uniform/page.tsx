@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -18,16 +19,14 @@ const relatedProducts = [
     image: '/images/products/aviation/airline-1.jpg', // Placeholder
     price: 'اطلب عرض سعر',
     href: '/ar/shop/aviation-uniforms/pilot-uniform/',
-    category: 'طيارين',
-  },
+    category: 'طيارين'},
   {
     id: 'flight-attendant-dress-ar',
     name: 'زي طاقم الضيافة الجوية الأنيق',
     image: '/images/products/aviation/airline-2.jpg', // Placeholder
     price: 'اطلب عرض سعر',
     href: '/ar/shop/aviation-uniforms/flight-attendant-dress/',
-    category: 'طاقم الضيافة',
-  },
+    category: 'طاقم الضيافة'},
 ];
 
 export default function GroundCrewUniformPageAr() {

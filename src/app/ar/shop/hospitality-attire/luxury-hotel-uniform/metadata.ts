@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/luxury-hotel-uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'مجموعة يونيفورم الفنادق الفاخرة المتميزة من يونيوم',
-      }
-    ],
-  },
+        alt: 'مجموعة يونيفورم الفنادق الفاخرة المتميزة من يونيوم'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'يونيفورم الفنادق الفاخرة | يونيوم السعودية',
     description: 'يونيفورم فنادق فاخر متميز مصمم للمنشآت النخبوية في السعودية. الأناقة تلتقي بالتميز مع جودة وأناقة فائقة.',
-    images: ['/images/products/luxury-hotel-uniform.jpg'],
-  },
+    images: ['/images/products/luxury-hotel-uniform.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/hospitality-attire/luxury-hotel-uniform',
     languages: {
       'en': 'https://uneom.com/shop/hospitality-attire/luxury-hotel-uniform',
-      'ar': 'https://uneom.com/ar/shop/hospitality-attire/luxury-hotel-uniform',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/hospitality-attire/luxury-hotel-uniform'}}}; 

@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/front-desk-uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Front Desk Uniform Collection by UNEOM',
-      }
-    ],
-  },
+        alt: 'Professional Front Desk Uniform Collection by UNEOM'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Hotel Front Desk Uniforms | UNEOM Saudi Arabia',
     description: 'Premium front desk uniforms designed for Saudi Arabia\'s hotels. Elegance meets professionalism with superior comfort and style.',
-    images: ['/images/products/front-desk-uniform.jpg'],
-  },
+    images: ['/images/products/front-desk-uniform.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/hospitality-attire/front-desk-uniform',
     languages: {
       'en': 'https://uneom.com/shop/hospitality-attire/front-desk-uniform',
-      'ar': 'https://uneom.com/ar/shop/hospitality-attire/front-desk-uniform',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/hospitality-attire/front-desk-uniform'}}}; 

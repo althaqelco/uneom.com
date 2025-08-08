@@ -85,7 +85,7 @@ const FAQSection: React.FC = () => {
       },
       {
         question: 'How long does it take to fulfill a corporate uniform order?',
-        answer: 'The timeline depends on the order size, customization requirements, and current production schedule. Typically, standard orders are fulfilled within 3-4 weeks. Custom designs or large volume orders may take 5-6 weeks. Rush orders can be accommodated in some cases with an additional fee. We'll provide a specific timeframe when you place your order.'
+        answer: 'The timeline depends on the order size, customization requirements, and current production schedule. Typically, standard orders are fulfilled within 3-4 weeks. Custom designs or large volume orders may take 5-6 weeks. Rush orders can be accommodated in some cases with an additional fee. We\'ll provide a specific timeframe when you place your order.'
       },
       {
         question: 'Do you offer uniform maintenance or replacement programs?',

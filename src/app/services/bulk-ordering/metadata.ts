@@ -11,7 +11,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/services/services/bulk-ordering.jpg']
+        url: '/images/services/services/bulk-ordering.jpg'
+      }
+    ]
   },
   alternates: {
     canonical: 'https://uneom.com/services/bulk-ordering',
@@ -24,4 +26,4 @@ export const metadata: Metadata = {
     index: true,
     follow: true
   }
-}; 
+};

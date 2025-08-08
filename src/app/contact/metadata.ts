@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/contact/contact-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Contact Information - Reach Our Uniform Specialists',
-      }
-    ],
-  },
+        alt: 'UNEOM Contact Information - Reach Our Uniform Specialists'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Contact UNEOM | Uniform Provider in Saudi Arabia',
     description: 'Reach UNEOM\'s uniform specialists in Riyadh, Jeddah, and Dammam for quotes, support, or inquiries.',
-    images: ['/images/contact/contact-header.jpg'],
-  },
+    images: ['/images/contact/contact-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/contact',
     languages: {
       'en': 'https://uneom.com/contact',
-      'ar': 'https://uneom.com/ar/contact',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/contact'}}}; 

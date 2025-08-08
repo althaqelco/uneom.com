@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,9 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Corporate Casual Polo Shirts | Premium & Performance Polos | UNEOM',
     description: 'Stylish and comfortable corporate casual polo shirts. Ideal for smart casual work environments and team branding.',
-    images: ['/images/products/corporate/casual-polo-collection.jpg'],
-  },
-}
+    images: ['/images/products/corporate/casual-polo-collection.jpg']}}
 
 const poloCategories = [
   {

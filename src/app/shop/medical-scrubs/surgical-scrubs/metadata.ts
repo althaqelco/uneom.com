@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/surgical-scrubs.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Surgical Scrubs by UNEOM',
-      }
-    ],
-  },
+        alt: 'Professional Surgical Scrubs by UNEOM'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Surgical Scrubs | Hospital-Grade Medical Uniforms | UNEOM Saudi Arabia',
     description: 'Premium surgical scrubs designed for Saudi Arabian healthcare environments.',
-    images: ['/images/products/surgical-scrubs.jpg'],
-  },
+    images: ['/images/products/surgical-scrubs.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/medical-scrubs/surgical-scrubs',
     languages: {
       'en': 'https://uneom.com/shop/medical-scrubs/surgical-scrubs',
-      'ar': 'https://uneom.com/ar/shop/medical-scrubs/surgical-scrubs',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/medical-scrubs/surgical-scrubs'}}}; 

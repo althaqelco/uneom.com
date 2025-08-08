@@ -154,8 +154,7 @@ const EnhancedImage: React.FC<EnhancedImageProps> = ({
           alt={alt as string}
           className={cn('transition-opacity', className, {
             'opacity-0': loading || error,
-            'opacity-100': !loading && !error,
-          })}
+            'opacity-100': !loading && !error})}
           onLoadingComplete={handleLoad}
           onError={handleError}
           {...props}

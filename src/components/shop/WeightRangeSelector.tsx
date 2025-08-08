@@ -20,8 +20,7 @@ const WeightRangeSelector: React.FC<WeightRangeSelectorProps> = ({
   onChange,
   unit = 'كجم',
   isRTL = false,
-  className = '',
-}) => {
+  className = ''}) => {
   return (
     <div className={className}>
       <h3 className={`text-sm font-medium text-neutral-900 ${isRTL ? 'text-right' : 'text-left'} mb-2`}>

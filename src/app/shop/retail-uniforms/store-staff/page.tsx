@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import ProductDetail from '@/components/product/ProductDetail';
 import { getProductById } from '@/lib/data/products';
@@ -12,17 +13,13 @@ export const metadata: Metadata = {
     description: 'Professional store staff uniforms designed for Saudi retail environments. Comfortable, brand-appropriate attire for retail employees across KSA.',
     images: ['/images/industries/retail-shops/retail-shops-uniform-2.jpg'],
     url: 'https://uneom.com/shop/retail-uniforms/store-staff',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/shop/retail-uniforms/store-staff',
     languages: {
       'en': 'https://uneom.com/shop/retail-uniforms/store-staff',
-      'ar': 'https://uneom.com/ar/shop/retail-uniforms/store-staff',
-    },
-  },
-  keywords: 'store staff uniforms Saudi Arabia, retail employee attire KSA, professional store uniforms Riyadh, retail sales staff clothing, Saudi retail brand uniforms, shop employee uniforms, mall retail staff clothing Jeddah',
-};
+      'ar': 'https://uneom.com/ar/shop/retail-uniforms/store-staff'}},
+  keywords: 'store staff uniforms Saudi Arabia, retail employee attire KSA, professional store uniforms Riyadh, retail sales staff clothing, Saudi retail brand uniforms, shop employee uniforms, mall retail staff clothing Jeddah'};
 
 export default function StoreStaffPage() {
   const product = getProductById('store-staff');

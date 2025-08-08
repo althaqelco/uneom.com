@@ -27,8 +27,7 @@ const SmartHeading: React.FC<SmartHeadingProps> = ({
     3: 'text-xl md:text-2xl font-bold mb-4',
     4: 'text-lg md:text-xl font-bold mb-3',
     5: 'text-base md:text-lg font-bold mb-2',
-    6: 'text-sm md:text-base font-bold mb-2',
-  };
+    6: 'text-sm md:text-base font-bold mb-2'};
   
   return (
     <Tag 

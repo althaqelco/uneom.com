@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,16 +22,12 @@ export const metadata: Metadata = {
     description: 'Professional-grade tactical patrol pants for security personnel with advanced features and superior durability',
     images: ['/images/products/security/tactical-patrol-pants-main.svg'],
     locale: 'en_US',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/shop/security-uniforms/security-patrol-pants/tactical/',
     languages: {
       'en': 'https://uneom.com/shop/security-uniforms/security-patrol-pants/tactical/',
-      'ar': 'https://uneom.com/ar/shop/security-uniforms/security-patrol-pants/tactical/',
-    },
-  },
-}
+      'ar': 'https://uneom.com/ar/shop/security-uniforms/security-patrol-pants/tactical/'}}}
 
 const productJsonLd = {
   '@context': 'https://schema.org',

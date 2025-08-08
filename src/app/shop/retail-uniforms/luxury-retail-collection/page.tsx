@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,17 +12,13 @@ export const metadata: Metadata = {
     description: 'Elevate your retail brand with UNEOM\'s premium Luxury Retail Collection uniforms. Sophisticated, Saudi-appropriate designs with premium fabrics and customization options.',
     images: ['/images/industries/retail-shops/retail-shops-uniform-brand.jpg'],
     url: 'https://uneom.com/shop/retail-uniforms/luxury-retail-collection',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/shop/retail-uniforms/luxury-retail-collection',
     languages: {
       'en': 'https://uneom.com/shop/retail-uniforms/luxury-retail-collection',
-      'ar': 'https://uneom.com/ar/shop/retail-uniforms/luxury-retail-collection',
-    },
-  },
-  keywords: 'luxury retail uniforms Saudi Arabia, premium store staff attire KSA, high-end retail uniforms Riyadh, luxury boutique uniforms, Saudi retail brand uniforms, designer retail staff clothing, premium mall staff uniforms Jeddah',
-};
+      'ar': 'https://uneom.com/ar/shop/retail-uniforms/luxury-retail-collection'}},
+  keywords: 'luxury retail uniforms Saudi Arabia, premium store staff attire KSA, high-end retail uniforms Riyadh, luxury boutique uniforms, Saudi retail brand uniforms, designer retail staff clothing, premium mall staff uniforms Jeddah'};
 
 export default function LuxuryRetailCollectionPage() {
   // Hardcoded product data instead of fetching from products.ts

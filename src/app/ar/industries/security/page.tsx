@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import EnhancedSecurityClient from './EnhancedSecurityClient';
 
@@ -17,17 +18,13 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
         width: 1200,
         height: 630,
-        alt: 'أزياء قطاع الأمن من يونيوم - ملابس أمنية وحراسات مهنية',
-      },
-    ],
-  },
+        alt: 'أزياء قطاع الأمن من يونيوم - ملابس أمنية وحراسات مهنية'},
+    ]},
   alternates: {
     canonical: 'https://uneom.com/ar/industries/security/',
     languages: {
       'en': 'https://uneom.com/industries/security/',
-      'ar': 'https://uneom.com/ar/industries/security/',
-    },
-  },
+      'ar': 'https://uneom.com/ar/industries/security/'}},
   robots: {
     index: true,
     follow: true,

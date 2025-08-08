@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -23,16 +24,12 @@ export const metadata: Metadata = {
     title: 'Healthcare Accessories | UNEOM',
     description: 'Comprehensive collection of high-quality healthcare accessories for medical professionals',
     images: ['/images/products/healthcare-accessories.jpg'],
-    locale: 'en_US',
-  },
+    locale: 'en_US'},
   alternates: {
     canonical: '/shop/healthcare-accessories/',
     languages: {
       'en': '/shop/healthcare-accessories/',
-      'ar': '/ar/shop/healthcare-accessories/',
-    },
-  },
-}
+      'ar': '/ar/shop/healthcare-accessories/'}}}
 
 const categories = [
   {

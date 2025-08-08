@@ -86,8 +86,7 @@ const ImageSEOWrapper: React.FC<ImageSEOWrapperProps> = ({ pageName, children })
         const newChildren = processChildrenForImages(child.props.children);
         return React.cloneElement(child, {
           ...child.props,
-          children: newChildren,
-        });
+          children: newChildren});
       }
       
       // Return unchanged if no conditions match
@@ -126,7 +125,7 @@ const ImageSEOWrapper: React.FC<ImageSEOWrapperProps> = ({ pageName, children })
   const processedChildren = processChildrenForImages(children);
   
   return (
-    <>
+    <React.Fragment>
       {generateImageStructuredData()}
       {processedChildren}
       
@@ -136,7 +135,7 @@ const ImageSEOWrapper: React.FC<ImageSEOWrapperProps> = ({ pageName, children })
           <div id="image-seo-debug" data-total={imageIssues.total} data-missing={imageIssues.missing} data-fixed={imageIssues.fixed}></div>
         </div>
       )}
-    </>
+    </React.Fragment>
   );
 };
 

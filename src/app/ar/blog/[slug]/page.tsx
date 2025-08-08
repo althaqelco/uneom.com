@@ -51,8 +51,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       type: 'article',
       publishedTime: post.date,
       authors: [authorName],
-      tags: post.tags,
-    },
+      tags: post.tags},
     alternates: {
       canonical: `https://uneom.com/ar/blog/${post.slug}/`,
       languages: {

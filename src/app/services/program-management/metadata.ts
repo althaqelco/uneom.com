@@ -11,7 +11,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/services/services/program-management.jpg']
+        url: '/images/services/services/program-management.jpg'
+      }
+    ]
   },
   alternates: {
     canonical: 'https://uneom.com/services/program-management',

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,9 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Classic Corporate Polo Shirts | Traditional Pique Polos | UNEOM',
     description: 'Durable and comfortable classic pique polo shirts, perfect for a timeless corporate smart casual look.',
-    images: ['/images/products/corporate/classic-polo-main.jpg'],
-  },
-}
+    images: ['/images/products/corporate/classic-polo-main.jpg']}}
 
 const productFeatures = [
   {

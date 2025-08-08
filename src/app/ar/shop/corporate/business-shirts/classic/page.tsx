@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,9 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'قمصان عمل بقصة كلاسيكية | قمصان شركات تقليدية | يونيوم',
     description: 'أناقة خالدة وراحة مع قمصان العمل ذات القصة الكلاسيكية. مثالية لبيئات الشركات التقليدية.',
-    images: ['/images/products/corporate/classic-fit-shirts-main.jpg'],
-  },
-}
+    images: ['/images/products/corporate/classic-fit-shirts-main.jpg']}}
 
 const productFeatures = [
   {

@@ -95,7 +95,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   };
   
   return (
-    <>
+    <React.Fragment>
       <nav 
         aria-label={locale === 'ar' ? 'مسار التنقل' : 'Breadcrumb'} 
         className={`text-sm ${className}`}
@@ -141,7 +141,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
-    </>
+    </React.Fragment>
   );
 };
 

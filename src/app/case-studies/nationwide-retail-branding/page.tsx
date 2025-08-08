@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,16 +22,12 @@ export const metadata: Metadata = {
     description: 'Strategic uniform branding transformation achieving 40% increase in brand recognition',
     images: ['/images/case-studies/nationwide-retail-branding.jpg'],
     locale: 'en_US',
-    type: 'article',
-  },
+    type: 'article'},
   alternates: {
     canonical: 'https://uneom.com/case-studies/nationwide-retail-branding/',
     languages: {
       'en': 'https://uneom.com/case-studies/nationwide-retail-branding/',
-      'ar': 'https://uneom.com/ar/case-studies/nationwide-retail-branding/',
-    },
-  },
-}
+      'ar': 'https://uneom.com/ar/case-studies/nationwide-retail-branding/'}}}
 
 const caseStudyJsonLd = {
   '@context': 'https://schema.org',

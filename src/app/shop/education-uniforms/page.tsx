@@ -32,9 +32,6 @@ export default function EducationUniformsPage() {
       description: 'High-quality school uniform designed for comfort, durability, and professional appearance, perfect for schools and educational institutions.',
       price: 'From SAR 249',
       image: '/images/education/uniform_school_product-1.jpg',
-      href: '/images/education/uniform_school_product-2.jpg',
-      href: '/images/education/uniform_school_product-4.jpg',
-      href: '/images/education/uniform_school_product-5.jpg',
       href: '/shop/education-uniforms/faculty-uniform',
       features: ['Professional design', 'All-day comfort', 'Easy care', 'Institutional branding'],
       colors: ['Navy', 'Grey', 'Black', 'White']

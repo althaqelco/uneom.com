@@ -18,9 +18,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://uneom.com/services/manufacturing',
     languages: {
-      'ar': 'https://uneom.com/ar/services/manufacturing',
-    },
-  },
+      'ar': 'https://uneom.com/ar/services/manufacturing'}},
   openGraph: {
     title: 'Professional Uniform Manufacturing | UNEOM - Saudi Arabia\'s Leading Uniform Supplier',
     description: 'High-quality uniform production with precision craftsmanship and attention to detail. From design to delivery, we ensure excellence at every step of the manufacturing process.',

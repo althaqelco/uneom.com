@@ -12,14 +12,10 @@ export const metadata: Metadata = {
         url: '/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg',
         width: 1200,
         height: 630,
-        alt: 'ملابس العمل في صناعة البتروكيماويات من UNEOM',
-      },
-    ],
-  },
+        alt: 'ملابس العمل في صناعة البتروكيماويات من UNEOM'},
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'زي وملابس السلامة لصناعة البتروكيماويات | UNEOM',
     description: 'ملابس عمل وأزياء سلامة رائدة في الصناعة مصممة لقطاع البتروكيماويات السعودي.',
-    images: ['/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg'],
-  },
-}; 
+    images: ['/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg']}}; 

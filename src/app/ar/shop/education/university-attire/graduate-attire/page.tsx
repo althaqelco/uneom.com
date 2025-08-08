@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'أزياء الخريجين الجامعية | UNEOM',
     description: 'ملابس التخرج الأكاديمية الفاخرة للاحتفالات الجامعية في المملكة العربية السعودية.',
-    images: ['/images/products/education/graduate-attire-main.jpg'],
-  },
-}
+    images: ['/images/products/education/graduate-attire-main.jpg']}}
 
 const productFeatures = [
   {

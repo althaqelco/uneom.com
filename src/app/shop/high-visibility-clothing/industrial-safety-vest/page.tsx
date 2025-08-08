@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import { IndustrialSafetyVestClientPage } from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -14,18 +15,14 @@ export const metadata = {
         url: 'https://uneom.com/images/products/industrial-safety-vest.webp',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Industrial Safety Vest',
-      }
+        alt: 'UNEOM Industrial Safety Vest'}
     ],
     locale: 'en_US',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/shop/high-visibility-clothing/industrial-safety-vest',
     languages: {
-      'ar': 'https://uneom.com/ar/shop/high-visibility-clothing/industrial-safety-vest',
-    },
-  },
+      'ar': 'https://uneom.com/ar/shop/high-visibility-clothing/industrial-safety-vest'}},
   robots: {
     index: true,
     follow: true,
@@ -34,10 +31,7 @@ export const metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
+      'max-snippet': -1}}}
 
 export default function IndustrialSafetyVestPage() {
   return <IndustrialSafetyVestClientPage />;

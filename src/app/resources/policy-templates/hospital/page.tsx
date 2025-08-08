@@ -15,11 +15,8 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/healthcare/healthcare_medical_uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'Saudi hospital uniform policy templates and medical dress code guidelines',
-      },
-    ],
-  },
-};
+        alt: 'Saudi hospital uniform policy templates and medical dress code guidelines'},
+    ]}};
 
 export default function HospitalPolicyTemplatesPage() {
   const resourceData = {

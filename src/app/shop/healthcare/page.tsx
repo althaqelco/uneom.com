@@ -32,11 +32,6 @@ export default function HealthcarePage() {
       description: 'Premium medical scrubs designed for healthcare professionals, featuring antimicrobial fabric and superior comfort.',
       price: 'From SAR 249',
       image: '/images/Healthcare_Uniforms.png',
-      href: '/images/doctor-SBI-300813580.jpg',
-      href: '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',
-      href: '/images/three-surgeons-busy-with-a-patient-SBI-300908245.jpg',
-      href: '/images/portrait-of-diverse-female-and-male-surgeons-wearing-face-masks-and-scrubs-in-hospital-SBI-351294776.jpg',
-      href: '/images/happy-doctor-smiling-at-the-camera-on-a-green-screen-chroma-key-SBI-349602091.jpg',
       href: '/shop/healthcare/dental-uniform',
       features: ['Antimicrobial', 'Stain-resistant', 'Comfort fit', 'Professional look'],
       colors: ['White', 'Light Blue', 'Navy', 'Black']

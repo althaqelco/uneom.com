@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import EnhancedQualityAssuranceClient from './EnhancedQualityAssuranceClient';
 
@@ -17,17 +18,13 @@ export const metadata: Metadata = {
         url: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg',
         width: 1200,
         height: 630,
-        alt: 'خدمات ضمان الجودة من يونيوم - معايير عالمية ومراقبة شاملة',
-      },
-    ],
-  },
+        alt: 'خدمات ضمان الجودة من يونيوم - معايير عالمية ومراقبة شاملة'},
+    ]},
   alternates: {
     canonical: 'https://uneom.com/ar/services/quality-assurance/',
     languages: {
       'en': 'https://uneom.com/services/quality-assurance/',
-      'ar': 'https://uneom.com/ar/services/quality-assurance/',
-    },
-  },
+      'ar': 'https://uneom.com/ar/services/quality-assurance/'}},
   robots: {
     index: true,
     follow: true,

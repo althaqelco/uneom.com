@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import EnhancedFactoryIndustryClient from './EnhancedFactoryIndustryClient';
 
@@ -17,17 +18,13 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg', // Main hero image for factory industry
         width: 1200,
         height: 630,
-        alt: 'أزياء المصانع والصناعات التحويلية من يونيوم السعودية',
-      },
-    ],
-  },
+        alt: 'أزياء المصانع والصناعات التحويلية من يونيوم السعودية'},
+    ]},
   alternates: {
     canonical: 'https://uneom.com/ar/industries/factory-industry/',
     languages: {
       'en': 'https://uneom.com/industries/factory-industry/', // Assuming English version exists or will exist
-      'ar': 'https://uneom.com/ar/industries/factory-industry/',
-    },
-  },
+      'ar': 'https://uneom.com/ar/industries/factory-industry/'}},
   robots: {
     index: true,
     follow: true,

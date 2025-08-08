@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'جاكيت دورية أمنية مقاوم للطقس | UNEOM',
     description: 'جاكيت دورية أمنية متطور مقاوم للطقس مصمم للحماية من جميع الأحوال الجوية في عمليات الدورية الأمنية في المملكة العربية السعودية.',
-    images: ['/images/products/security/weather-resistant-jacket-main.jpg'],
-  },
-}
+    images: ['/images/products/security/weather-resistant-jacket-main.jpg']}}
 
 const productFeatures = [
   {

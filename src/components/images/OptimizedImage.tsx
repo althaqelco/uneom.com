@@ -70,8 +70,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   fallbackSrc = '/images/placeholder.jpg',
   onClick,
   onLoad,
-  onError,
-}) => {
+  onError}) => {
   const { locale } = useSafeLocale();
   
   // State to track image loading errors
@@ -107,8 +106,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           loading={loading}
           style={{
             objectFit,
-            objectPosition,
-          }}
+            objectPosition}}
           onError={handleError}
           onLoad={onLoad}
         />
@@ -129,8 +127,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         loading={loading}
         style={{
           objectFit,
-          objectPosition,
-        }}
+          objectPosition}}
         onError={handleError}
         onLoad={onLoad}
       />

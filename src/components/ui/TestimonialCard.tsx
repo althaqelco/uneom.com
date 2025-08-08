@@ -25,8 +25,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
   quote,
   image,
   logo,
-  locale = 'en',
-}) => {
+  locale = 'en'}) => {
   const rtl = locale === 'ar';
   const localizedImage = getLocalizedImagePath(image, locale as 'en' | 'ar');
   const localizedLogo = logo ? getLocalizedImagePath(logo, locale as 'en' | 'ar') : null;

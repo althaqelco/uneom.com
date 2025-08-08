@@ -30,30 +30,26 @@ const Card = ({
   const variantClasses = {
     default: 'bg-white border border-neutral-200',
     outline: 'bg-white border border-neutral-300',
-    filled: 'bg-neutral-50 border border-neutral-100',
-  };
+    filled: 'bg-neutral-50 border border-neutral-100'};
   
   const paddingClasses = {
     none: 'p-0',
     small: 'p-3',
     medium: 'p-5',
-    large: 'p-7',
-  };
+    large: 'p-7'};
   
   const shadowClasses = {
     none: 'shadow-none',
     sm: 'shadow-sm',
     md: 'shadow',
-    lg: 'shadow-lg',
-  };
+    lg: 'shadow-lg'};
   
   const roundedClasses = {
     none: 'rounded-none',
     sm: 'rounded-sm',
     md: 'rounded-lg',
     lg: 'rounded-xl',
-    full: 'rounded-full',
-  };
+    full: 'rounded-full'};
   
   return (
     <div

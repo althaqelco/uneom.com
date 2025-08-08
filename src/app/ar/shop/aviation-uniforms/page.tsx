@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -18,8 +19,7 @@ const featuredAviationUniforms = [
     price: 'اطلب عرض سعر',
     href: '/ar/shop/aviation-uniforms/pilot-uniform/',
     category: 'طيارين',
-    isNew: true,
-  },
+    isNew: true},
   {
     id: '2',
     name: 'زي طاقم الضيافة الجوية الأنيق',
@@ -27,16 +27,14 @@ const featuredAviationUniforms = [
     price: 'اطلب عرض سعر',
     href: '/ar/shop/aviation-uniforms/flight-attendant-dress/',
     category: 'طاقم الضيافة',
-    isFeatured: true,
-  },
+    isFeatured: true},
   {
     id: '3',
     name: 'زي الطاقم الأرضي المتين',
     image: '/images/products/aviation/airline-3.jpg', // Placeholder - replace with actual image
     price: 'اطلب عرض سعر',
     href: '/ar/shop/aviation-uniforms/ground-crew-uniform/',
-    category: 'طاقم أرضي',
-  },
+    category: 'طاقم أرضي'},
 ];
 
 export default function AviationUniformsPageAr() {

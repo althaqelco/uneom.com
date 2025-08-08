@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/resources/events/events-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Uniform Industry Events and Exhibitions',
-      },
-    ],
-  },
+        alt: 'UNEOM Uniform Industry Events and Exhibitions'},
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Uniform Industry Events & Exhibitions | UNEOM Saudi Arabia',
     description: 'Stay updated on uniform industry events, exhibitions, and trade shows in Saudi Arabia.',
-    images: ['/images/resources/events/events-header.jpg'],
-  },
+    images: ['/images/resources/events/events-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/resources/events',
     languages: {
       'en': 'https://uneom.com/resources/events',
-      'ar': 'https://uneom.com/ar/resources/events',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/resources/events'}}}; 

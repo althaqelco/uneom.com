@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/portfolio/portfolio-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Uniform Portfolio - Custom Workwear Projects',
-      }
-    ],
-  },
+        alt: 'UNEOM Uniform Portfolio - Custom Workwear Projects'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Uniform Portfolio | UNEOM Saudi Arabia',
     description: 'Explore our showcase of custom uniform projects for leading Saudi organizations across multiple sectors.',
-    images: ['/images/portfolio/portfolio-header.jpg'],
-  },
+    images: ['/images/portfolio/portfolio-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/portfolio',
     languages: {
       'en': 'https://uneom.com/portfolio',
-      'ar': 'https://uneom.com/ar/portfolio',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/portfolio'}}}; 

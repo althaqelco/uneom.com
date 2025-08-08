@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/products/concierge-uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'مجموعة يونيفورم الكونسيرج الاحترافية من يونيوم',
-      }
-    ],
-  },
+        alt: 'مجموعة يونيفورم الكونسيرج الاحترافية من يونيوم'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'يونيفورم الكونسيرج | يونيوم السعودية',
     description: 'يونيفورم كونسيرج متميز مصمم للفنادق الفاخرة في السعودية. الرقي يلتقي بالاحترافية مع راحة وأناقة فائقة.',
-    images: ['/images/products/concierge-uniform.jpg'],
-  },
+    images: ['/images/products/concierge-uniform.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/hospitality-attire/concierge-uniform',
     languages: {
       'en': 'https://uneom.com/shop/hospitality-attire/concierge-uniform',
-      'ar': 'https://uneom.com/ar/shop/hospitality-attire/concierge-uniform',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/hospitality-attire/concierge-uniform'}}}; 

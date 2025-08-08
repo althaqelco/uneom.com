@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,16 +23,12 @@ export const metadata: Metadata = {
     description: 'اكتشف بدلات تنفيذية مصممة خصيصًا للإداريين في قطاع التعليم من يونيم. مثالية للمديرين ورؤساء الأقسام وقيادات الجامعات في السعودية.',
     images: ['/images/education/admin-suit-og.jpg'],
     locale: 'ar_SA',
-    siteName: 'UNEOM',
-  },
+    siteName: 'UNEOM'},
   alternates: {
     canonical: '/ar/shop/education/staff-uniforms/admin-suit/',
     languages: {
       'ar-SA': '/ar/shop/education/staff-uniforms/admin-suit/',
-      'en-US': '/shop/education/staff-uniforms/admin-suit/',
-    },
-  },
-}
+      'en-US': '/shop/education/staff-uniforms/admin-suit/'}}}
 
 const suitFeaturesAr = [
   {

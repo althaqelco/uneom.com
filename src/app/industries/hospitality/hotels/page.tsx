@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { FaCheck, FaTshirt, FaUsers, FaShippingFast, FaStar } from 'react-icons/fa';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
@@ -24,7 +25,6 @@ export const metadata: Metadata = {
     locale: 'en_US'
   }
 };
-
 
 export default function HotelsPage() {
   return (

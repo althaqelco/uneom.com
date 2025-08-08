@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,16 +26,12 @@ export const metadata: Metadata = {
     title: 'Supervisor Industrial Uniform | UNEOM',
     description: 'Premium industrial uniforms designed specifically for supervisors and management roles',
     images: ['/images/products/supervisor-industrial-uniform.jpg'],
-    locale: 'en_US',
-  },
+    locale: 'en_US'},
   alternates: {
     canonical: '/shop/industrial-uniforms/supervisor-industrial-uniform/',
     languages: {
       'en': '/shop/industrial-uniforms/supervisor-industrial-uniform/',
-      'ar': '/ar/shop/industrial-uniforms/supervisor-industrial-uniform/',
-    },
-  },
-}
+      'ar': '/ar/shop/industrial-uniforms/supervisor-industrial-uniform/'}}}
 
 const features = [
   {

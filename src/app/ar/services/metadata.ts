@@ -11,17 +11,13 @@ export const metadata: Metadata = {
     locale: 'ar_SA',
     images: [
       {
-        url: '/images/services/services/services-header.jpg'],
-  },
+        url: '/images/services/services/services-header.jpg'}
+    ]},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/services/',
     languages: {
       'en': 'https://uneom.com/services/',
-      'ar': 'https://uneom.com/ar/services/',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/services/'}}}; 

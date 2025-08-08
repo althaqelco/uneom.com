@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'سترة أمنية تكتيكية احترافية | UNEOM',
     description: 'سترة أمنية تكتيكية متطورة مصممة للعمليات الأمنية المهنية في قطاع الأمن السعودي.',
-    images: ['/images/products/security/professional-tactical-vest-main.jpg'],
-  },
-}
+    images: ['/images/products/security/professional-tactical-vest-main.jpg']}}
 
 const productFeatures = [
   {

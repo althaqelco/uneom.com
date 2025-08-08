@@ -15,15 +15,7 @@ export default function HospitalityClientPageArabic() {
       name: 'يونيفورم استقبال الفنادق الفاخر',
       description: 'يونيفورم احترافي مصمم خصيصًا لموظفي الاستقبال في الفنادق الفاخرة، يجمع بين الأناقة والعملية ويعكس فخامة المنشأة السياحية. مناسب للفنادق من فئة الخمس نجوم والمنتجعات الراقية.',
       image: '/images/hospitality/hospitality_uniform_receiption_hotel.jpg',
-      href: '/ar/images/hospitality/hospitality_uniform_chef.jpg',
-      href: '/ar/images/hospitality/housekeeping-uniform.jpg',
-      href: '/ar/images/hospitality/hospitality_uniform.jpg',
-      href: '/ar/images/hospitality/chef-uniform.jpg',
-      href: '/ar/images/hospitality/spa-uniform.jpg',
-      href: '/ar/images/hospitality/resort-uniform.jpg',
-      href: '/ar/images/hospitality/concierge-uniform.jpg',
-      href: '/ar/images/hospitality/event-staff-uniform.jpg',
-      href: '/ar/shop/hospitality-attire/premium-hotel-uniforms',
+      href: '/ar/shop/hospitality-uniforms/reception-collection',
       features: ['مظهر احترافي', 'سهولة الحركة', 'أقمشة مريحة', 'تناسق مع ديكور القاعات', 'متوفر بلونين', 'مقاومة للاتساخ', 'خيارات للجنسين']
     }
   ];

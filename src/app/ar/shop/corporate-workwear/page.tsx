@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import CorporateWorkwearClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -37,9 +38,7 @@ export const metadata: Metadata = {
     canonical: 'https://uneom.com/ar/shop/corporate-workwear/',
     languages: {
       'en-SA': 'https://uneom.com/shop/corporate-workwear/',
-      'ar-SA': 'https://uneom.com/ar/shop/corporate-workwear/',
-    },
-  },
+      'ar-SA': 'https://uneom.com/ar/shop/corporate-workwear/'}},
   robots: {
     index: true,
     follow: true,

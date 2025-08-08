@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,9 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'بليزر أكاديمي للأساتذة | زي أعضاء هيئة التدريس | أزياء جامعية | يونيوم',
     description: 'بليزر فاخر لأساتذة الجامعات وأعضاء هيئة التدريس الأكاديمية. تصميم راقي مع خليط صوف فاخر، مثالي للفعاليات الأكاديمية.',
-    images: ['/images/products/education/faculty-professional-blazer.jpg'],
-  },
-}
+    images: ['/images/products/education/faculty-professional-blazer.jpg']}}
 
 const productFeatures = [
   {

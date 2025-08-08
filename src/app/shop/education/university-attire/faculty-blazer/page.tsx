@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,9 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Faculty Professional Blazer | Academic Staff Uniform | University Attire | UNEOM',
     description: 'Premium faculty blazer for university professors and academic staff. Sophisticated design with luxury wool blend, perfect for academic events.',
-    images: ['/images/products/education/faculty-professional-blazer.jpg'],
-  },
-}
+    images: ['/images/products/education/faculty-professional-blazer.jpg']}}
 
 const productFeatures = [
   {

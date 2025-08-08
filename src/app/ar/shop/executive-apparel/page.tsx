@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import ExecutiveApparelClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -15,11 +16,9 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/og-executive-apparel-ar.jpg',
         width: 1200,
         height: 630,
-        alt: 'الأزياء التنفيذية الفاخرة | يونيوم المملكة العربية السعودية',
-      },
+        alt: 'الأزياء التنفيذية الفاخرة | يونيوم المملكة العربية السعودية'},
     ],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   robots: {
     index: true,
     follow: true,
@@ -28,10 +27,7 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function ExecutiveApparelPage() {
   return <ExecutiveApparelClientPage />;

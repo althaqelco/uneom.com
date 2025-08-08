@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/order/order-confirmation.jpg',
         width: 1200,
         height: 630,
-        alt: 'تأكيد طلب يونيوم - شكراً لشرائك',
-      }
-    ],
-  },
+        alt: 'تأكيد طلب يونيوم - شكراً لشرائك'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'تأكيد الطلب | يونيوم السعودية',
     description: 'تم تأكيد طلب الزي الموحد المهني الخاص بك. تتبع التوصيل واعرض تفاصيل طلب شراء ملابس العمل من يونيوم.',
-    images: ['/images/order/order-confirmation.jpg'],
-  },
+    images: ['/images/order/order-confirmation.jpg']},
   robots: {
     index: false,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/order-confirmation',
     languages: {
       'en': 'https://uneom.com/order-confirmation',
-      'ar': 'https://uneom.com/ar/order-confirmation',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/order-confirmation'}}}; 

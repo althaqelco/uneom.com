@@ -275,23 +275,20 @@ export default function ManufacturingIndustryPage() {
   const content = {
     meta: {
       title: "Manufacturing Uniforms & Workwear in Saudi Arabia | UNEOM",
-      description: "Premium industrial workwear and manufacturing uniforms tailored for Saudi factories, ensuring safety, durability, and compliance with Saudi industrial standards.",
-    },
+      description: "Premium industrial workwear and manufacturing uniforms tailored for Saudi factories, ensuring safety, durability, and compliance with Saudi industrial standards."},
     hero: {
       headline: "Manufacturing Uniforms & Industrial Workwear in Saudi Arabia",
       subheadline: "Premium workwear for production facilities, factories, and industrial operations in the Kingdom, combining safety compliance, durability, and professional identity.",
       cta: "Request Manufacturing Workwear Quote",
       ctaLink: '/quote?industry=manufacturing',
-      image: "/images/manufacturing/manufacturing_facility_workers_main.jpg", 
-    },
+      image: "/images/manufacturing/manufacturing_facility_workers_main.jpg"},
     intro: {
       title: "Industrial Excellence Through Professional Workwear",
       paragraphs: [
         "In Saudi Arabia's rapidly growing manufacturing sector, professional workwear plays a crucial role in workplace safety, operational efficiency, and projecting a modern industrial identity. UNEOM's comprehensive manufacturing uniform solutions are specifically designed to meet the unique requirements of Saudi factories and industrial facilities.",
         "From production line personnel and machine operators to supervisors, quality control teams, and maintenance staff, we provide premium-quality workwear that combines practical functionality, maximum protection, and professional appearance. Our manufacturing collections incorporate advanced fabric technologies that withstand the rigorous demands of industrial environments while offering design options that respect Islamic dress codes and reflect Saudi industrial standards.",
         "As Saudi manufacturing continues its remarkable growth under Vision 2030, we partner with factories and industrial operations to develop uniform programs that enhance workplace safety, boost employee morale, and create a professional corporate identity that showcases Saudi Arabia's industrial capabilities."
-      ],
-    },
+      ]},
     keyBenefits: {
       title: "The UNEOM Advantage in Manufacturing Workwear",
       benefits: [
@@ -315,8 +312,7 @@ export default function ManufacturingIndustryPage() {
           description: "Manufacturing-specific textiles that offer durability, heat resistance, chemical protection, and comfort during long shifts in challenging industrial environments.",
           icon: "/images/icons/fabric-tech-industrial.svg"
         },
-      ],
-    },
+      ]},
     featuredOfferings: {
       title: "Comprehensive Manufacturing Workwear Collections",
       offerings: [
@@ -339,15 +335,12 @@ export default function ManufacturingIndustryPage() {
         {
           quote: "UNEOM's manufacturing workwear has significantly improved our workplace safety metrics and streamlined our uniform management process. Their attention to safety standards while maintaining comfort is exceptional.",
           author: "Mohammed Al-Harbi",
-          position: "Operations Director, Saudi Advanced Industries",
-        },
+          position: "Operations Director, Saudi Advanced Industries"},
         {
           quote: "The durability and practicality of UNEOM's workwear has been impressive. Our employees appreciate the comfort during long shifts, and the modest options for our female engineers have been perfectly designed for industrial environments.",
           author: "Fatima Al-Otaibi",
-          position: "HR Manager, Riyadh Manufacturing Complex",
-        }
-      ],
-    },
+          position: "HR Manager, Riyadh Manufacturing Complex"}
+      ]},
     customizationOptions: {
       title: "Custom Workwear for Manufacturing Needs",
       description: "UNEOM provides fully customizable workwear solutions for the manufacturing sector, including options for high-visibility, flame resistance, and specific industry requirements. Enhance safety and brand identity with our tailored uniform programs.",
@@ -361,22 +354,17 @@ export default function ManufacturingIndustryPage() {
         {
           title: "Safety Standards for Saudi Manufacturing Facilities",
           link: "/blog/safety-standards-saudi-manufacturing",
-          image: "/images/blog/placeholder-manufacturing1.jpg",
-        },
+          image: "/images/blog/placeholder-manufacturing1.jpg"},
         {
           title: "Workwear Innovations for Modern Saudi Factories",
           link: "/blog/workwear-innovations-saudi-factories",
-          image: "/images/blog/placeholder-manufacturing2.jpg",
-        }
-      ],
-    },
+          image: "/images/blog/placeholder-manufacturing2.jpg"}
+      ]},
     finalCta: {
       title: "Elevate Your Manufacturing Operation with UNEOM",
       description: "Partner with UNEOM to design and deliver manufacturing workwear that prioritizes safety, durability, and professional identity. Contact our specialists today.",
       cta: "Get a Manufacturing Workwear Quote",
-      ctaLink: '/quote?industry=manufacturing&focused=true',
-    },
-  };
+      ctaLink: '/quote?industry=manufacturing&focused=true'}};
 
   return (
     <>

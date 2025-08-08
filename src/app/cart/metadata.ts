@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/cart/cart-page.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Shopping Cart - Review Your Uniform Order',
-      }
-    ],
-  },
+        alt: 'UNEOM Shopping Cart - Review Your Uniform Order'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Shopping Cart | UNEOM Saudi Arabia',
     description: 'Review your uniform selections before checkout. Premium workwear with delivery across Saudi Arabia.',
-    images: ['/images/cart/cart-page.jpg'],
-  },
+    images: ['/images/cart/cart-page.jpg']},
   robots: {
     index: false,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/cart',
     languages: {
       'en': 'https://uneom.com/cart',
-      'ar': 'https://uneom.com/ar/cart',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/cart'}}}; 

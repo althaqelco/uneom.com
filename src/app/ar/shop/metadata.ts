@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/shop/shop-header.jpg',
         width: 1200,
         height: 630,
-        alt: 'متجر الزي الموحد المهني يونيوم - حلول ملابس العمل المتميزة',
-      }
-    ],
-  },
+        alt: 'متجر الزي الموحد المهني يونيوم - حلول ملابس العمل المتميزة'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'متجر الزي الموحد المهني | يونيوم السعودية',
     description: 'تسوق زي موحد عالي الجودة لقطاعات الرعاية الصحية، الشركات، الضيافة، الصناعة والأمن. توصيل في جميع أنحاء المملكة العربية السعودية.',
-    images: ['/images/shop/shop-header.jpg'],
-  },
+    images: ['/images/shop/shop-header.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/shop',
     languages: {
       'en': 'https://uneom.com/shop',
-      'ar': 'https://uneom.com/ar/shop',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop'}}}; 

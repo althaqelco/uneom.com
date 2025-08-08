@@ -14,8 +14,7 @@ const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({
   phoneNumber,
   message = '',
   position = 'right',
-  locale = 'en',
-}) => {
+  locale = 'en'}) => {
   const [isMounted, setIsMounted] = useState(false);
   const isRTL = locale === 'ar';
   

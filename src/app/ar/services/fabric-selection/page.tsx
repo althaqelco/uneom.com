@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import EnhancedFabricSelectionClient from './EnhancedFabricSelectionClient';
 
@@ -17,17 +18,13 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg',
         width: 1200,
         height: 630,
-        alt: 'خدمات اختيار الأقمشة من يونيوم - خبراء الأقمشة التقنية والطبيعية',
-      },
-    ],
-  },
+        alt: 'خدمات اختيار الأقمشة من يونيوم - خبراء الأقمشة التقنية والطبيعية'},
+    ]},
   alternates: {
     canonical: 'https://uneom.com/ar/services/fabric-selection/',
     languages: {
       'en': 'https://uneom.com/services/fabric-selection/',
-      'ar': 'https://uneom.com/ar/services/fabric-selection/',
-    },
-  },
+      'ar': 'https://uneom.com/ar/services/fabric-selection/'}},
   robots: {
     index: true,
     follow: true,

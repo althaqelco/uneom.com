@@ -32,8 +32,6 @@ export default function SecurityUniformsClientPage() {
       description: 'زي أمني احترافي عالي الجودة مصمم لحراس الأمن، يتميز بمتانة فائقة ومظهر سلطوي.',
       price: 'من 349 ريال',
       image: '/images/Security_Uniforms.png',
-      href: '/ar/images/security-guard-standing-in-front-of-entrance-SBI-301173096.jpg',
-      href: '/ar/images/security-guard-standing-in-front-of-entrance-SBI-301173096.jpg',
       href: '/ar/shop/security-uniforms/event-security-uniform',
       features: ['عاكس للضوء', 'سهل التمييز', 'مريح للارتداء لفترات طويلة', 'مقاوم للبقع'],
       colors: ['أسود/أصفر', 'كحلي/أصفر', 'أسود/برتقالي']
@@ -44,8 +42,6 @@ export default function SecurityUniformsClientPage() {
       description: 'زي أمني أنيق مصمم للشركات والمؤسسات، يوفر مظهرًا احترافيًا مع الحفاظ على الوظائف الأمنية.',
       price: 'من 379 ريال',
       image: '/images/security-guard-standing-in-front-of-entrance-SBI-301173096.jpg',
-      href: '/ar/images/security-guard-standing-in-front-of-entrance-SBI-301173096.jpg',
-      href: '/ar/images/security-guard-standing-in-front-of-entrance-SBI-301173096.jpg',
       href: '/ar/shop/security-uniforms/security-outerwear',
       features: ['مقاوم للماء', 'عازل للحرارة', 'متين', 'مظهر احترافي'],
       colors: ['أسود', 'كحلي', 'رمادي داكن']

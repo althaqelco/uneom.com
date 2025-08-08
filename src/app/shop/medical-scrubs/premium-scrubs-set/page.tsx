@@ -67,10 +67,6 @@ export default function PremiumScrubsSetPage() {
         id: 'antimicrobial-scrubs',
         name: 'Antimicrobial Scrubs',
         image: '/images/healthcare/healthcare_medical_uniform.jpg',
-        price: 'From SAR 279',
-        href: '/images/healthcare/healthcare_nurce_uniform.jpg',
-        price: 'From SAR 229',
-        href: '/images/healthcare/healthcare_medical_doctor_uniform.jpg',
         price: 'From SAR 269',
         href: '/shop/medical-scrubs/surgical-scrubs'
       }

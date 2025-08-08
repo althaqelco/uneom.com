@@ -94,7 +94,7 @@ Submitted: ${now.toLocaleString()}
           <p className="mt-1">We've received your request about {productName}. Our team will contact you shortly.</p>
         </div>
       ) : (
-        <>
+        <React.Fragment>
           <p className="text-neutral-700">
             Please fill out the form below to request more information about {productName}. Our team will get back to you shortly.
           </p>
@@ -197,7 +197,7 @@ Submitted: ${now.toLocaleString()}
               </Button>
             </div>
           </form>
-        </>
+        </React.Fragment>
       )}
     </div>
   );

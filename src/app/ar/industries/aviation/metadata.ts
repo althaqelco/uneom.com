@@ -11,7 +11,12 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/industries/industries/aviation.jpg']
+        url: '/images/industries/aviation.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'صناعة الطيران - يونيوم'
+      }
+    ]
   },
   alternates: {
     canonical: 'https://uneom.com/ar/industries/aviation',

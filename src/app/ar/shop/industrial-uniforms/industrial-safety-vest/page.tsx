@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import IndustrialSafetyVestClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'زي مشرفي السلامة للتصنيع | UNEOM',
     description: 'اضمن الوضوح والسلطة مع زي متخصص لمشرفي السلامة في البيئات الصناعية.',
-    images: ['/images/products/industrial/safety-supervisor-uniform-main.jpg'],
-  },
-}
+    images: ['/images/products/industrial/safety-supervisor-uniform-main.jpg']}}
 
 const productFeatures = [
   {

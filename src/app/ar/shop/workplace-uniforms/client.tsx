@@ -30,23 +30,53 @@ export default function WorkplaceUniformsClientPage() {
       rating: 4.9,
       reviews: 87,
       description: 'بدلات مصممة فاخرة للمدراء التنفيذيين الذين يتطلبون الأناقة والراحة والمظهر المهني المتميز.',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
+      href: '/ar/shop/workplace-uniforms/executive-suits'
+    },
+    {
+      id: 'corporate-shirts',
+      name: 'قمصان مؤسسية',
+      price: 'من ١٩٩ ريال',
+      image: '/images/products/corporate-shirt.jpg',
       rating: 4.7,
       reviews: 124,
       description: 'قمصان مؤسسية عالية الجودة بمجموعة متنوعة من الألوان، تتميز بقماش يمتص الرطوبة وخصائص سهلة العناية للارتداء المهني اليومي.',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
+      href: '/ar/shop/workplace-uniforms/corporate-shirts'
+    },
+    {
+      id: 'business-blazers',
+      name: 'سترات أعمال',
+      price: 'من ٧٩٩ ريال',
+      image: '/images/products/business-blazer.jpg',
       rating: 4.6,
       reviews: 58,
       description: 'سترات أنيقة ومريحة للمهنيين في مجال الأعمال، متوفرة بأنماط متنوعة مناسبة للبيئات المؤسسية السعودية.',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
+      href: '/ar/shop/workplace-uniforms/business-blazers'
+    },
+    {
+      id: 'professional-abayas',
+      name: 'عباءات مهنية',
+      price: 'من ٦٩٩ ريال',
+      image: '/images/products/professional-abaya.jpg',
       rating: 4.8,
       reviews: 92,
       description: 'عباءات مهنية مصممة خصيصًا للبيئات المؤسسية، تجمع بين الحشمة التقليدية وجماليات الأعمال المعاصرة.',
-      href: '/ar/images/avatar-placeholder.jpg',
+      href: '/ar/shop/workplace-uniforms/professional-abayas'
+    },
+    {
+      id: 'formal-pants',
+      name: 'بناطيل رسمية',
+      price: 'من ٢٩٩ ريال',
+      image: '/images/products/formal-pants.jpg',
       rating: 4.5,
       reviews: 77,
       description: 'بناطيل رسمية متينة مع قماش مرن مريح، مصممة لأيام طويلة في بيئة المكتب.',
-      href: '/ar/images/products/corporate-suit-executive.jpg',
+      href: '/ar/shop/workplace-uniforms/formal-pants'
+    },
+    {
+      id: 'corporate-skirts',
+      name: 'تنانير مؤسسية',
+      price: 'من ٣٩٩ ريال',
+      image: '/images/products/corporate-skirts.jpg',
       rating: 4.6,
       reviews: 64,
       description: 'تنانير بطول مهني مصممة للبيئات المؤسسية، تحافظ على الحشمة مع توفير مظهر أنيق للأعمال.',

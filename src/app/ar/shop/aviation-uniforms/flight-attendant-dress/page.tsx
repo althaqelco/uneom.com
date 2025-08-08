@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -18,16 +19,14 @@ const relatedProducts = [
     image: '/images/products/aviation/airline-1.jpg', // Placeholder
     price: 'اطلب عرض سعر',
     href: '/ar/shop/aviation-uniforms/pilot-uniform/',
-    category: 'طيارين',
-  },
+    category: 'طيارين'},
   {
     id: 'ground-crew-uniform-ar',
     name: 'زي الطاقم الأرضي المتين',
     image: '/images/products/aviation/airline-3.jpg', // Placeholder
     price: 'اطلب عرض سعر',
     href: '/ar/shop/aviation-uniforms/ground-crew-uniform/',
-    category: 'طاقم أرضي',
-  },
+    category: 'طاقم أرضي'},
 ];
 
 export default function FlightAttendantDressPageAr() {

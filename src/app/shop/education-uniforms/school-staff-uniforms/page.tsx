@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,9 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'School Staff Uniforms | Admin & Support Staff Attire | UNEOM',
     description: 'Outfit your entire school team with professional and comfortable uniforms. Options for admin, support, and faculty.',
-    images: ['/images/products/education/school-staff-uniforms-main.jpg'],
-  },
-}
+    images: ['/images/products/education/school-staff-uniforms-main.jpg']}}
 
 const staffUniformTypes = [
   {

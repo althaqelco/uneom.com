@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import { IndustrialCoverallClientPage } from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -17,17 +18,12 @@ export const metadata = {
         url: 'https://uneom.com/images/industries/Factory_Industrial/Industrial_Coverall_1.webp',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Fire-Resistant Industrial Coveralls',
-      },
-    ],
-  },
+        alt: 'UNEOM Fire-Resistant Industrial Coveralls'},
+    ]},
   alternates: {
     canonical: 'https://uneom.com/shop/industrial-uniforms/industrial-coverall',
     languages: {
-      'ar': 'https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall',
-    },
-  },
-}
+      'ar': 'https://uneom.com/ar/shop/industrial-uniforms/industrial-coverall'}}}
 
 export default function IndustrialCoverallPage() {
   return <IndustrialCoverallClientPage />;

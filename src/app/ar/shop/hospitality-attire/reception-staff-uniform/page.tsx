@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,16 +25,12 @@ export const metadata: Metadata = {
     title: 'زي موظفي الاستقبال | يونيوم',
     description: 'زي استقبال أنيق ومهني للفنادق والمنتجعات والمكاتب',
     images: ['/images/products/reception-staff-uniform.jpg'],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   alternates: {
     canonical: '/ar/shop/hospitality-attire/reception-staff-uniform/',
     languages: {
       'en': '/shop/hospitality-attire/reception-staff-uniform/',
-      'ar': '/ar/shop/hospitality-attire/reception-staff-uniform/',
-    },
-  },
-}
+      'ar': '/ar/shop/hospitality-attire/reception-staff-uniform/'}}}
 
 const features = [
   {

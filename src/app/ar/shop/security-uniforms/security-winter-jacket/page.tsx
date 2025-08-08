@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,9 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'جاكيت أمن شتوي | ملابس أمن خارجية معزولة | يونيوم',
     description: 'جاكيتات أمن معزولة مصممة لظروف الطقس البارد مع ميزات أمنية وتصميم احترافي للمراقبة الخارجية.',
-    images: ['/images/security/advanced-fabrics-hero.jpg'],
-  },
-}
+    images: ['/images/security/advanced-fabrics-hero.jpg']}}
 
 const jacketFeatures = [
   {

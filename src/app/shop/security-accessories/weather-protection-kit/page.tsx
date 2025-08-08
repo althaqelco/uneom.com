@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -23,16 +24,12 @@ export const metadata: Metadata = {
     description: 'Complete all-weather protection kit for security personnel with advanced weatherproof technology',
     images: ['/images/products/security/weather-protection-kit-main.svg'],
     locale: 'en_US',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/shop/security-accessories/weather-protection-kit/',
     languages: {
       'en': 'https://uneom.com/shop/security-accessories/weather-protection-kit/',
-      'ar': 'https://uneom.com/ar/shop/security-accessories/weather-protection-kit/',
-    },
-  },
-}
+      'ar': 'https://uneom.com/ar/shop/security-accessories/weather-protection-kit/'}}}
 
 const productJsonLd = {
   '@context': 'https://schema.org',

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import { generateMetadata as generateSEO } from '@/components/seo/ServerSEO';
 import SurgicalScrubsClient from './client';
@@ -14,7 +15,8 @@ export const metadata: Metadata = generateSEO({
     'ملابس طبية مقاومة للسوائل',
     'يونيوم المملكة العربية السعودية'
   ],
-  path: '/ar/images/products/surgical-scrubs.jpg'
+  path: '/ar/images/products/surgical-scrubs.jpg',
+  locale: 'ar'
 });
 
 export default function SurgicalScrubsPage() {

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -32,16 +33,14 @@ export function generateMetadata({ params }: Props): Metadata {
         }
       ],
       locale: 'en_US',
-      type: 'website',
-    }
+      type: 'website'}
   };
 }
 
 export function generateStaticParams() {
   const tags = getAllTags();
   return tags.map(tag => ({
-    tag,
-  }));
+    tag}));
 }
 
 export const dynamic = 'force-static';

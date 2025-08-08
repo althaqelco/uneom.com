@@ -27,8 +27,7 @@ const DirectImage: React.FC<DirectImageProps> = ({
   priority = false,
   style = {},
   onLoad,
-  onError,
-}) => {
+  onError}) => {
   const [currentSrc, setCurrentSrc] = useState<string>(src);
   const [attempts, setAttempts] = useState<number>(0);
   const [loaded, setLoaded] = useState<boolean>(false);
@@ -181,8 +180,7 @@ const DirectImage: React.FC<DirectImageProps> = ({
         ...style,
         // إضافة أنماط للتأكد من عدم ظهور رمز الصورة المكسورة
         minHeight: '1px',
-        minWidth: '1px',
-      }}
+        minWidth: '1px'}}
       loading={priority ? 'eager' : 'lazy'}
       fetchPriority={priority ? 'high' : 'auto'}
       onError={handleError}

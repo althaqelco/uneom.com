@@ -32,12 +32,7 @@ export default function CulinaryUniformsClientPage() {
       description: 'سترة شيف احترافية مصنوعة من قماش فاخر، مصممة للراحة والأناقة في بيئة المطبخ.',
       price: 'من 189 ريال',
       image: '/images/products/industrial-coverall.jpg',
-      href: '/ar/images/products/industrial-coverall.jpg',
-      href: '/ar/images/products/industrial-coverall.jpg',
-      href: '/ar/images/products/industrial-coverall.jpg',
-      href: '/ar/images/products/industrial-coverall.jpg',
-      href: '/ar/images/products/industrial-coverall.jpg',
-      href: '/ar/shop/culinary-uniforms/culinary-student-uniform',
+      href: '/ar/shop/culinary-uniforms/premium-chef-coat',
       features: ['فعال من حيث التكلفة', 'متين', 'سهل العناية', 'طقم كامل'],
       colors: ['أبيض']
     }

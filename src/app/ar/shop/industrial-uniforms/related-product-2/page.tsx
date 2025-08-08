@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import ClientPage from '@/app/ar/shop/[category]/[product]/ClientPage';
 import Script from 'next/script';
@@ -20,14 +21,11 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/industrial-uniforms/related-product-2',
     languages: {
-      'en': 'https://uneom.com/shop/industrial-uniforms/related-product-2',
-    },
-  },
+      'en': 'https://uneom.com/shop/industrial-uniforms/related-product-2'}},
   robots: {
     index: true,
     follow: true,
@@ -36,10 +34,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function SafetyGogglesPageArabic() {
   // Create product data for the Arabic version

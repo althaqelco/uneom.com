@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,16 +27,12 @@ export const metadata: Metadata = {
     description: 'طقم شامل للحماية من الطقس مصمم لرجال الأمن والحراسة في جميع الظروف الجوية',
     images: ['/images/products/security/weather-protection-kit-ar.jpg'],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/security-accessories/weather-protection-kit/',
     languages: {
       'en': 'https://uneom.com/shop/security-accessories/weather-protection-kit/',
-      'ar': 'https://uneom.com/ar/shop/security-accessories/weather-protection-kit/',
-    },
-  },
-}
+      'ar': 'https://uneom.com/ar/shop/security-accessories/weather-protection-kit/'}}}
 
 const productJsonLd = {
   '@context': 'https://schema.org',

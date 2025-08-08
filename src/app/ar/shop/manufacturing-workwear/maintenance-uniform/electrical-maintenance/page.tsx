@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -23,9 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'زي صيانة كهربائية مع حماية من القوس الكهربائي | UNEOM',
     description: 'زي واقٍ متخصص للكهربائيين وموظفي الصيانة العاملين مع معدات الجهد العالي في المملكة العربية السعودية.',
-    images: ['/images/products/industrial/electrical-maintenance-uniform-main.jpg'],
-  },
-}
+    images: ['/images/products/industrial/electrical-maintenance-uniform-main.jpg']}}
 
 const productFeatures = [
   {

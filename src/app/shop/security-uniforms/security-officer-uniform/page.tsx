@@ -78,10 +78,6 @@ export default function SecurityOfficerUniformPage() {
         id: 'security-patrol-jacket',
         name: 'Security Patrol Jacket',
         image: '/images/products/industrial-coverall.jpg',
-        price: 'From SAR 389',
-        href: '/images/product-placeholder.jpg',
-        price: 'From SAR 249',
-        href: '/images/products/industrial-coverall.jpg',
         price: 'From SAR 179',
         href: '/shop/security-uniforms/security-accessories-kit'
       }

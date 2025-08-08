@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from "next";
 import ProcurementGuideClientPageArabic from "./client";
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -16,28 +17,21 @@ export const metadata: Metadata = {
         url: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
         width: 1200,
         height: 630,
-        alt: 'دليل مشتريات الزي الموحد للمؤسسات في السعودية',
-      },
-    ],
-  },
+        alt: 'دليل مشتريات الزي الموحد للمؤسسات في السعودية'},
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'دليل مشتريات الزي الموحد | إرشادات للمؤسسات | يونيوم السعودية',
     description: 'دليل شامل لشراء الزي الموحد للمؤسسات في السعودية.',
-    images: ['/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg'],
-  },
+    images: ['/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/ar/resources/procurement-guide',
     languages: {
       'en': 'https://uneom.com/resources/procurement-guide',
-      'ar': 'https://uneom.com/ar/resources/procurement-guide',
-    },
-  },
-};
+      'ar': 'https://uneom.com/ar/resources/procurement-guide'}}};
 
 export default function ProcurementGuidePage() {
   return <ProcurementGuideClientPageArabic />;

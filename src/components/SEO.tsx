@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { usePathname } from 'next/navigation';
 import Head from 'next/head';
 import { useLocale } from '@/lib/i18n/client';
@@ -152,7 +153,7 @@ export default function SEO({
   }
   
   return (
-    <>
+    <React.Fragment>
       <Head>
         {/* Basic Meta Tags */}
         <title>{formattedTitle}</title>
@@ -205,6 +206,6 @@ export default function SEO({
           strategy="afterInteractive"
         />
       ))}
-    </>
+    </React.Fragment>
   );
 } 

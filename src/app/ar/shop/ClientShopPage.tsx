@@ -84,43 +84,37 @@ export default function ClientShopPage() {
       title: 'الأزياء الطبية',
       description: 'ملابس طبية مريحة وعملية لجميع متخصصي الرعاية الصحية',
       image: '/images/PremiumـMedicalـScrubs.png',
-      url: '/ar/shop/medical-scrubs',
-    },
+      url: '/ar/shop/medical-scrubs'},
     {
       id: 'aviation-uniforms',
       title: 'أزياء الطيران',
       description: 'أزياء أنيقة لطاقم الطائرة والطيارين وموظفي المطار',
       image: '/images/Airline_Crew_Uniform.png',
-      url: '/ar/shop/aviation-uniforms',
-    },
+      url: '/ar/shop/aviation-uniforms'},
     {
       id: 'hospitality-attire',
       title: 'أزياء الضيافة',
       description: 'ملابس احترافية للعاملين في الفنادق والمطاعم',
       image: '/images/Luxury_Hotel Staff_Uniform.png',
-      url: '/ar/shop/hospitality-attire',
-    },
+      url: '/ar/shop/hospitality-attire'},
     {
       id: 'corporate-workwear',
       title: 'أزياء الشركات',
       description: 'ملابس أنيقة وعملية للمكاتب والشركات',
       image: '/images/corporate/corporate_business_uniform.jpg',
-      url: '/ar/shop/corporate-workwear',
-    },
+      url: '/ar/shop/corporate-workwear'},
     {
       id: 'security-uniforms',
       title: 'أزياء الأمن',
       description: 'أزياء متينة للأمن والحراسة وفرق الاستجابة',
       image: '/images/Military Uniform.H03.2k.png',
-      url: '/ar/shop/security-uniforms',
-    },
+      url: '/ar/shop/security-uniforms'},
     {
       id: 'education-uniforms',
       title: 'أزياء التعليم',
       description: 'أزياء مدرسية وجامعية للطلاب والمعلمين',
       image: '/images/group-of-elementary-school-pupils-wearing-uniform-2024-10-19-12-09-06-utc.jpg',
-      url: '/ar/shop/education-uniforms',
-    }
+      url: '/ar/shop/education-uniforms'}
   ];
   
   // Popular products

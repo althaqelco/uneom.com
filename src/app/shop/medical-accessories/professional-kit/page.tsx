@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,16 +25,12 @@ export const metadata: Metadata = {
     title: 'Professional Medical Kit | UNEOM',
     description: 'Comprehensive professional medical kit for healthcare professionals',
     images: ['/images/products/medical-professional-kit.jpg'],
-    locale: 'en_US',
-  },
+    locale: 'en_US'},
   alternates: {
     canonical: '/shop/medical-accessories/professional-kit/',
     languages: {
       'en': '/shop/medical-accessories/professional-kit/',
-      'ar': '/ar/shop/medical-accessories/professional-kit/',
-    },
-  },
-}
+      'ar': '/ar/shop/medical-accessories/professional-kit/'}}}
 
 const features = [
   {

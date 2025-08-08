@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,9 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'زي مشرفي أرضيات المصانع للتصنيع | UNEOM',
     description: 'زي عملي ومتين لمشرفي الأرضيات النشطين في بيئات التصنيع.',
-    images: ['/images/products/industrial/floor-supervisor-uniform-main.jpg'],
-  },
-}
+    images: ['/images/products/industrial/floor-supervisor-uniform-main.jpg']}}
 
 const productFeatures = [
   {
@@ -93,7 +92,6 @@ const relatedProducts = [
     price: 'ابتداءً من 180 ر.س'
   }
 ]
-
 
 export default function FloorSupervisorUniformPageAR() {
   return (

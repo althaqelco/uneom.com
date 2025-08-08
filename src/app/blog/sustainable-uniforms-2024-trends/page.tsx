@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,16 +27,12 @@ export const metadata: Metadata = {
     title: 'Sustainable Uniforms 2024 Trends: The Future of Eco-Friendly Workwear',
     description: 'Latest trends and innovations in sustainable uniform design and manufacturing',
     images: ['/images/blog/sustainable-uniforms-2024.jpg'],
-    locale: 'en_US',
-  },
+    locale: 'en_US'},
   alternates: {
     canonical: '/blog/sustainable-uniforms-2024-trends/',
     languages: {
       'en': '/blog/sustainable-uniforms-2024-trends/',
-      'ar': '/ar/blog/sustainable-uniforms-2024-trends/',
-    },
-  },
-}
+      'ar': '/ar/blog/sustainable-uniforms-2024-trends/'}}}
 
 const tableOfContents = [
   { id: 'introduction', title: 'Introduction to 2024 Sustainability Trends' },

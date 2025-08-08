@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/order/order-confirmation.jpg',
         width: 1200,
         height: 630,
-        alt: 'UNEOM Order Confirmation - Thank You for Your Purchase',
-      }
-    ],
-  },
+        alt: 'UNEOM Order Confirmation - Thank You for Your Purchase'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Order Confirmation | UNEOM Saudi Arabia',
     description: 'Your professional uniform order is confirmed. Track your delivery and view order details for your UNEOM workwear purchase.',
-    images: ['/images/order/order-confirmation.jpg'],
-  },
+    images: ['/images/order/order-confirmation.jpg']},
   robots: {
     index: false,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/order-confirmation',
     languages: {
       'en': 'https://uneom.com/order-confirmation',
-      'ar': 'https://uneom.com/ar/order-confirmation',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/order-confirmation'}}}; 

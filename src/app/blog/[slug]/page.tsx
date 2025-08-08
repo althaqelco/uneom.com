@@ -49,8 +49,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       type: 'article',
       publishedTime: post.date,
       authors: [authorName],
-      tags: post.tags,
-    }
+      tags: post.tags}
   };
 }
 

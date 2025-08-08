@@ -14,25 +14,18 @@ export const metadata: Metadata = {
         url: '/images/categories/medical-scrubs-category.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Medical Scrubs Collection by UNEOM',
-      }
-    ],
-  },
+        alt: 'Professional Medical Scrubs Collection by UNEOM'}
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'Medical Scrubs & Healthcare Uniforms | UNEOM Saudi Arabia',
     description: 'Premium medical uniforms designed for Saudi healthcare professionals. Comfort meets functionality with antimicrobial protection.',
-    images: ['/images/categories/medical-scrubs-category.jpg'],
-  },
+    images: ['/images/categories/medical-scrubs-category.jpg']},
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true},
   alternates: {
     canonical: 'https://uneom.com/shop/medical-scrubs',
     languages: {
       'en': 'https://uneom.com/shop/medical-scrubs',
-      'ar': 'https://uneom.com/ar/shop/medical-scrubs',
-    },
-  },
-}; 
+      'ar': 'https://uneom.com/ar/shop/medical-scrubs'}}}; 

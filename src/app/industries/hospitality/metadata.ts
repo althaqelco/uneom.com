@@ -11,7 +11,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/industries/industries/hospitality.jpg']
+        url: '/images/industries/industries/hospitality.jpg'
+      }
+    ]
   },
   alternates: {
     canonical: 'https://uneom.com/industries/hospitality',

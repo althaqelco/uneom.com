@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -18,16 +19,14 @@ const relatedProducts = [
     image: '/images/products/corporate/business-shirt-featured.jpg', // Placeholder
     price: 'اطلب عرض سعر',
     href: '/ar/shop/corporate/business-shirts/',
-    category: 'قمصان رسمية',
-  },
+    category: 'قمصان رسمية'},
   {
     id: 'executive-office-attire-ar',
     name: 'ملابس المكتب التنفيذية',
     image: '/images/products/corporate/office-attire-featured.jpg', // Placeholder
     price: 'اطلب عرض سعر',
     href: '/ar/shop/corporate/executive-office-attire/',
-    category: 'ملابس مكتبية',
-  },
+    category: 'ملابس مكتبية'},
 ];
 
 export default function ExecutiveSuitsPageAr() {

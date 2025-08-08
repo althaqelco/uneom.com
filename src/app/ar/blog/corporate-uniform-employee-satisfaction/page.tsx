@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,16 +26,12 @@ export const metadata: Metadata = {
     title: 'الأزياء المؤسسية ورضا الموظفين: تأثير الزي الموحد على الإنتاجية',
     description: 'دراسة شاملة عن تأثير الأزياء المؤسسية على رضا الموظفين والإنتاجية',
     images: ['/images/blog/corporate-uniform-satisfaction.jpg'],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   alternates: {
     canonical: '/ar/blog/corporate-uniform-employee-satisfaction/',
     languages: {
       'en': '/blog/corporate-uniform-employee-satisfaction/',
-      'ar': '/ar/blog/corporate-uniform-employee-satisfaction/',
-    },
-  },
-}
+      'ar': '/ar/blog/corporate-uniform-employee-satisfaction/'}}}
 
 const tableOfContents = [
   { id: 'introduction', title: 'مقدمة عن الأزياء المؤسسية' },

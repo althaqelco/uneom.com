@@ -1,3 +1,4 @@
+import React from 'react';
 // Server Component
 import { Metadata } from 'next';
 import ClientShopPage from './ClientShopPage';
@@ -18,8 +19,7 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/shop-page-banner.webp',
         width: 1200,
         height: 630,
-        alt: 'متجر الزي المهني من يونيوم',
-      },
+        alt: 'متجر الزي المهني من يونيوم'},
     ],
     locale: 'ar_SA',
     type: 'website'
@@ -29,9 +29,7 @@ export const metadata: Metadata = {
     canonical: 'https://uneom.com/ar/shop/',
     languages: {
       'en-SA': 'https://uneom.com/shop/',
-      'ar-SA': 'https://uneom.com/ar/shop/',
-    },
-  },
+      'ar-SA': 'https://uneom.com/ar/shop/'}},
   robots: {
     index: true,
     follow: true,
@@ -40,10 +38,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function ShopPage() {
   return <ClientShopPage />;

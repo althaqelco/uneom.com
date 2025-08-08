@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,16 +13,12 @@ export const metadata: Metadata = {
     title: 'تقنيات الأقمشة المتقدمة | موارد يونيوم',
     description: 'دليل شامل لأحدث تقنيات الأقمشة المستخدمة في صناعة الزي الموحد المهني',
     type: 'article',
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   alternates: {
     canonical: '/ar/resources/fabric-technology/',
     languages: {
       'en': '/resources/fabric-technology/',
-      'ar': '/ar/resources/fabric-technology/',
-    },
-  },
-}
+      'ar': '/ar/resources/fabric-technology/'}}}
 
 const fabricTechnologies = [
   {

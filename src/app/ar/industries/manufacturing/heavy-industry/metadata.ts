@@ -12,14 +12,10 @@ export const metadata: Metadata = {
         url: '/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg',
         width: 1200,
         height: 630,
-        alt: 'ملابس العمل في الصناعات الثقيلة من UNEOM',
-      },
-    ],
-  },
+        alt: 'ملابس العمل في الصناعات الثقيلة من UNEOM'},
+    ]},
   twitter: {
     card: 'summary_large_image',
     title: 'زي وملابس السلامة للصناعات الثقيلة | UNEOM',
     description: 'ملابس عمل وأزياء سلامة رائدة في الصناعة مصممة لقطاع الصناعات الثقيلة السعودي.',
-    images: ['/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg'],
-  },
-}; 
+    images: ['/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg']}}; 

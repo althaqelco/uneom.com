@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,16 +23,12 @@ export const metadata: Metadata = {
     title: 'معايير السلامة في الأزياء الأمنية: دليل شامل للجودة والحماية',
     description: 'دليل شامل عن معايير السلامة والجودة في تصنيع الأزياء الأمنية',
     images: ['/images/blog/security-uniform-standards.jpg'],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   alternates: {
     canonical: '/ar/blog/security-uniform-safety-standards/',
     languages: {
       'en': '/blog/security-uniform-safety-standards/',
-      'ar': '/ar/blog/security-uniform-safety-standards/',
-    },
-  },
-}
+      'ar': '/ar/blog/security-uniform-safety-standards/'}}}
 
 const tableOfContents = [
   { id: 'introduction', title: 'أهمية معايير السلامة في الأزياء الأمنية' },

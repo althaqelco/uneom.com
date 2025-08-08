@@ -187,7 +187,7 @@ const Navigation: React.FC<NavigationProps> = ({ locale = 'en' }) => {
             ref={item.dropdown ? dropdownRefs.current[dropdownKey] : undefined}
           >
             {item.dropdown ? (
-              <>
+              <React.Fragment>
                 <button
                   className={`inline-flex items-center px-1 py-2 text-base font-medium transition-colors duration-200 ${
                     isActive(item.href) || isDropdownHovered(dropdownKey)
@@ -237,7 +237,7 @@ const Navigation: React.FC<NavigationProps> = ({ locale = 'en' }) => {
                     ))}
                   </div>
                 </div>
-              </>
+              </React.Fragment>
             ) : (
               <Link
                 href={item.href}

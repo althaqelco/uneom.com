@@ -79,10 +79,6 @@ export default function SecurityOfficerUniformClientPage() {
         name: 'سترة دورية أمنية',
         image: '/images/products/industrial-coverall.jpg',
         price: 'من ريال 389',
-        href: '/ar/images/product-placeholder.jpg',
-        price: 'من ريال 249',
-        href: '/ar/images/products/industrial-coverall.jpg',
-        price: 'من ريال 179',
         href: '/ar/shop/security-uniforms/security-accessories-kit'
       }
     ]

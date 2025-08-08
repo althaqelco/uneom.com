@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,16 +21,12 @@ export const metadata: Metadata = {
     title: 'طقم الأدوات الطبية المهنية | يونيوم',
     description: 'طقم شامل من الأدوات الطبية المهنية عالية الجودة للمهنيين الصحيين',
     images: ['/images/products/medical-professional-kit.jpg'],
-    locale: 'ar_SA',
-  },
+    locale: 'ar_SA'},
   alternates: {
     canonical: '/ar/shop/medical-accessories/professional-kit/',
     languages: {
       'en': '/shop/medical-accessories/professional-kit/',
-      'ar': '/ar/shop/medical-accessories/professional-kit/',
-    },
-  },
-}
+      'ar': '/ar/shop/medical-accessories/professional-kit/'}}}
 
 const features = [
   {

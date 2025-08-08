@@ -19,15 +19,11 @@ export const metadata: Metadata = {
     canonical: 'https://uneom.com/ar/services/corporate-programs',
     languages: {
       'en': 'https://uneom.com/services/corporate-programs',
-      'ar': 'https://uneom.com/ar/services/corporate-programs',
-    },
-  },
+      'ar': 'https://uneom.com/ar/services/corporate-programs'}},
   openGraph: {
     title: 'برامج الأزياء الموحدة للشركات | يونيوم - المملكة العربية السعودية',
     description: 'برامج متكاملة لإدارة الأزياء الموحدة للمؤسسات السعودية. حلول مخصصة تشمل التصميم والتطوير والتنفيذ وإدارة المخزون لضمان اتساق هوية العلامة التجارية وتحسين كفاءة التكاليف.',
     url: 'https://uneom.com/ar/services/corporate-programs',
     siteName: 'UNEOM - يونيوم',
     locale: 'ar_SA',
-    type: 'website',
-  },
-}; 
+    type: 'website'}}; 

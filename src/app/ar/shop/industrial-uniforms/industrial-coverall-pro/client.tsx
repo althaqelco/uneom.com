@@ -122,11 +122,7 @@ const product = {
       name: "سترة عالية الوضوح",
       image: "/images/products/high-visibility-jacket.webp",
       price: "ريال 180",
-      href: "/ar/images/products/flame-resistant-coverall.webp",
-      price: "ريال 350",
-      href: "/ar/images/products/industrial-cargo-pants.webp",
-      price: "ريال 150",
-      href: "/ar/shop/industrial-uniforms/industrial-cargo-pants"
+      href: "/ar/shop/industrial-uniforms/high-visibility-jacket"
     }
   ],
   industries: ["صناعة النفط والغاز", "البناء والتشييد", "التصنيع", "الصيانة الصناعية", "المستودعات والخدمات اللوجستية"]
@@ -329,7 +325,6 @@ export default function IndustrialCoverallProClientPage() {
               <ColorSwatch
                 colors={product.colors}
                 selectedColor={selectedColor}
-                onSelectColor={setSelectedColor}
               />
             </div>
 
@@ -339,7 +334,7 @@ export default function IndustrialCoverallProClientPage() {
               <SizeSelector
                 sizes={product.sizes}
                 selectedSize={selectedSize}
-                onSelectSize={setSelectedSize}
+                onChange={setSelectedSize}
               />
             </div>
 
@@ -349,11 +344,7 @@ export default function IndustrialCoverallProClientPage() {
                 product={{
                   id: product.id,
                   name: product.name,
-                  price: product.price,
-                  color: selectedColor,
-                  size: selectedSize,
-                }}
-                fullWidth
+                  price: product.price}}
               />
               <Button 
                 onClick={whatsappProduct}
@@ -480,7 +471,7 @@ export default function IndustrialCoverallProClientPage() {
       {/* Product Features */}
       <section className="bg-neutral-50 py-16">
         <Container>
-          <SectionHeading subtitle="مزايا وخصائص فريدة" alignment="right">
+          <SectionHeading subtitle="مزايا وخصائص فريدة">
             مميزات الأفرول الصناعي بروفيشنال
           </SectionHeading>
           
@@ -489,12 +480,12 @@ export default function IndustrialCoverallProClientPage() {
       </section>
       
       {/* Order Requirements */}
-      <OrderRequirements locale={locale} />
+      <OrderRequirements minOrder={20} />
       
       {/* Related Products */}
       <section className="bg-white py-16">
         <Container>
-          <SectionHeading subtitle="استكشف منتجات مشابهة من تشكيلة الملابس الصناعية" alignment="right">
+          <SectionHeading subtitle="استكشف منتجات مشابهة من تشكيلة الملابس الصناعية">
             منتجات ذات صلة
           </SectionHeading>
           

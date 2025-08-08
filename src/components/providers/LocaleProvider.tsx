@@ -29,8 +29,7 @@ interface LocaleContextType {
 const LocaleContext = createContext<LocaleContextType>({
   locale: DEFAULT_LANGUAGE,
   isRTL: false,
-  dir: 'ltr',
-});
+  dir: 'ltr'});
 
 // Create a custom hook to use our locale context
 export const useLocale = () => useContext(LocaleContext);
@@ -59,7 +58,7 @@ export default function LocaleProvider({
   // تحديث اللغة على جانب العميل فقط
   useEffect(() => {
     setIsMounted(true);
-    const detectedLocale = getLanguageFromPath(pathname);
+    const detectedLocale = getLanguageFromPath(pathname || '/');
     setLocale(detectedLocale);
   }, [pathname]);
   
@@ -70,8 +69,7 @@ export default function LocaleProvider({
   const contextValue: LocaleContextType = {
     locale: isMounted ? locale : initialLocale,
     isRTL: rtl,
-    dir: rtl ? 'rtl' : 'ltr',
-  };
+    dir: rtl ? 'rtl' : 'ltr'};
   
   // استخدام نمط شامل لتجنب مشاكل hydration
   return (

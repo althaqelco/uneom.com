@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import AdvancedMedicalScrubsClientPage from './client';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
@@ -15,18 +16,14 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/healthcare/medical_hijab_uniform.jpg',
         width: 1200,
         height: 630,
-        alt: 'الأزياء الطبية المتطورة من يونيوم للكوادر الصحية',
-      },
+        alt: 'الأزياء الطبية المتطورة من يونيوم للكوادر الصحية'},
     ],
     locale: 'ar_SA',
-    type: 'website',
-  },
+    type: 'website'},
   alternates: {
     canonical: 'https://uneom.com/ar/shop/healthcare/advanced-medical-scrubs',
     languages: {
-      'en': 'https://uneom.com/shop/healthcare/advanced-medical-scrubs',
-    },
-  },
+      'en': 'https://uneom.com/shop/healthcare/advanced-medical-scrubs'}},
   robots: {
     index: true,
     follow: true,
@@ -35,10 +32,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function AdvancedMedicalScrubsPage() {
   // Server component that renders the client component

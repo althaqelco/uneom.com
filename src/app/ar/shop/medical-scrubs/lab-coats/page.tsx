@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'معاطف مختبر احترافية للمتخصصين الطبيين | UNEOM',
     description: 'معاطف مختبر فاخرة مصممة للمتخصصين الطبيين وفنيي المختبرات في المرافق الصحية السعودية.',
-    images: ['/images/products/medical/lab-coats-main.jpg'],
-  },
-}
+    images: ['/images/products/medical/lab-coats-main.jpg']}}
 
 const productFeatures = [
   {

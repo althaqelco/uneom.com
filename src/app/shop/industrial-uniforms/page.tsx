@@ -32,9 +32,6 @@ export default function IndustrialUniformsPage() {
       description: 'Durable full-body coverall designed for industrial environments with safety features and comfort for all-day wear.',
       price: 'From SAR 199',
       image: '/images/products/industrial-coverall.jpg',
-      href: '/images/products/industrial/safety-1.jpg',
-      href: '/images/products/industrial/factory-1.jpg',
-      href: '/images/product-placeholder.jpg',
       href: '/shop/industrial-uniforms/construction-uniform',
       features: ['Reinforced construction', 'Safety elements', 'Weather-resistant', 'Tool pockets'],
       colors: ['High-Vis combinations', 'Grey/Black', 'Navy/Orange']

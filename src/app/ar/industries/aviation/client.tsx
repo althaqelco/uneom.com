@@ -51,9 +51,7 @@ export default function AviationClientPageArabic() {
         name: "أزياء الطيارين",
         description: "يونيفورم رسمي وأنيق للطيارين وطاقم قيادة الطائرة، يعكس السلطة والمهنية العالية",
         image: "/images/aviation/pilot-uniform.jpg",
-        href: "/ar/images/aviation/cabin-crew-uniform.jpg",
-        href: "/ar/images/aviation/ground-staff-uniform.jpg",
-        href: "/ar/shop/aviation-uniforms/ground-staff-collection"
+        href: "/ar/shop/aviation-uniforms/pilot-collection"
       }
     ],
     

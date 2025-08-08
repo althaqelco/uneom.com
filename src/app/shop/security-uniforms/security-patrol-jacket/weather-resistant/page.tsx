@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Weather-Resistant Security Patrol Jacket | UNEOM',
     description: 'Advanced weather-resistant security patrol jacket designed for all-weather protection in security patrol operations across Saudi Arabia.',
-    images: ['/images/products/security/weather-resistant-jacket-main.jpg'],
-  },
-}
+    images: ['/images/products/security/weather-resistant-jacket-main.jpg']}}
 
 const productFeatures = [
   {

@@ -203,8 +203,7 @@ export default function MedicalLabCoatPage() {
       'L': 'Large (12-14)',
       'XL': 'Extra Large (16-18)',
       '2XL': 'Double XL (20-22)',
-      '3XL': 'Triple XL (24-26)',
-    },
+      '3XL': 'Triple XL (24-26)'},
     relatedProducts: [
       { id: 'professional-lab-coat', name: 'Professional Lab Coat', href: '/shop/medical-scrubs/professional-lab-coat' },
       { id: 'executive-medical-uniform', name: 'Executive Medical Uniform', href: '/shop/medical-scrubs/executive-medical-uniform' },

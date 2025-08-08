@@ -445,9 +445,9 @@ export default function IndustryPageLayout({
             {
               href: industryData.cta.buttonUrl,
               variant: "primary",
-              size: "lg"
-            },
-            industryData.cta.buttonText
+              size: "lg",
+              children: industryData.cta.buttonText
+            }
           )
         )
       )
@@ -471,25 +471,26 @@ export default function IndustryPageLayout({
               viewport: { once: true },
               variants: fadeIn
             },
-            React.createElement(
-              SectionHeading,
-              {
+            React.createElement(SectionHeading, {
                 centered: false,
                 subtitle: isRtl ? "فهم احتياجات الزي الخاص بك" : "Understanding your uniform needs"
-              },
-              isRtl ? "نظرة عامة" : "Overview"
-            ),
+              , children: isRtl ? "نظرة عامة" : "Overview"}),
             React.createElement(
               "div",
               { className: "prose max-w-none" },
               /* Handle case where introduction is an array of strings */
               Array.isArray(industryData.introduction) ? (
                 industryData.introduction.map((paragraph, index) => (
-                  React.createElement(
-                    "p",
-                    { key: index, className: index < (Array.isArray(industryData.introduction) ? industryData.introduction.length - 1 : 0) ? "mb-4" : "" },
-                    paragraph
-                  )
+                  <motion.p 
+                    key={index} 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="text-lg text-neutral-700 mb-6"
+                  >
+                    {paragraph}
+                  </motion.p>
                 ))
               ) : typeof industryData.introduction === 'string' ? (
                 /* Handle case where introduction is a simple string */
@@ -1094,11 +1095,7 @@ export default function IndustryPageLayout({
               viewport: { once: true },
               variants: fadeIn
             },
-            React.createElement(
-              SectionHeading,
-              { centered: true },
-              isRtl ? "لماذا تختار يونيوم" : "Why Choose UNEOM"
-            ),
+            React.createElement(SectionHeading, { centered: true , children: isRtl ? "لماذا تختار يونيوم" : "Why Choose UNEOM"}),
             React.createElement(
               "div",
               { className: "grid grid-cols-1 md:grid-cols-2 gap-8 mt-12" },
@@ -1166,11 +1163,7 @@ export default function IndustryPageLayout({
               viewport: { once: true },
               variants: fadeIn
             },
-            React.createElement(
-              SectionHeading,
-              { centered: true },
-              isRtl ? "الأسئلة الشائعة" : "Frequently Asked Questions"
-            ),
+            React.createElement(SectionHeading, { centered: true , children: isRtl ? "الأسئلة الشائعة" : "Frequently Asked Questions"}),
             React.createElement(
               "div",
               { className: "mt-12 max-w-3xl mx-auto space-y-6" },
@@ -1295,7 +1288,7 @@ export default function IndustryPageLayout({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Button href="/quote" variant="primary" size="xl">
+              <Button href="/quote" variant="primary" size="lg">
                 {isRtl ? "اطلب عرض أسعار" : "Request a Quote"}
               </Button>
             </motion.div>
@@ -1327,7 +1320,15 @@ export default function IndustryPageLayout({
                 transition={{ duration: 0.5 }}
                 className="text-lg text-neutral-700"
               >
-                {industryData.introduction}
+                {(() => {
+                  const intro = industryData.introduction;
+                  if (typeof intro === 'string') {
+                    return intro;
+                  } else if (intro && typeof intro === 'object' && 'content' in intro) {
+                    return intro.content || '';
+                  }
+                  return '';
+                })()}
               </motion.p>
             }
           </div>

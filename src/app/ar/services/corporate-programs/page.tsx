@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import EnhancedCorporateProgramsClient from './EnhancedCorporateProgramsClient';
 
@@ -17,17 +18,13 @@ export const metadata: Metadata = {
         url: 'https://uneom.com/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg',
         width: 1200,
         height: 630,
-        alt: 'البرامج المؤسسية للشركات من يونيوم - حلول شاملة للأزياء الموحدة',
-      },
-    ],
-  },
+        alt: 'البرامج المؤسسية للشركات من يونيوم - حلول شاملة للأزياء الموحدة'},
+    ]},
   alternates: {
     canonical: 'https://uneom.com/ar/services/corporate-programs/',
     languages: {
       'en': 'https://uneom.com/services/corporate-programs/',
-      'ar': 'https://uneom.com/ar/services/corporate-programs/',
-    },
-  },
+      'ar': 'https://uneom.com/ar/services/corporate-programs/'}},
   robots: {
     index: true,
     follow: true,
