@@ -1,5 +1,6 @@
 # Robots.txt for UNEOM - Professional Uniform Manufacturing
-# Updated for Google May 2025 Standards
+# Updated for AI Search Optimization 2024-2026
+# Compatible with: Google SGE, Bing Copilot, ChatGPT Browse, Perplexity AI, Claude AI
 # https://uneom.com
 
 User-agent: *
@@ -105,6 +106,72 @@ Allow: /images/
 Allow: /shop/
 Allow: /ar/shop/
 
+# ========================================
+# AI Search Engine Crawlers (2024-2026)
+# ========================================
+
+# GPTBot - ChatGPT Browse with Bing
+User-agent: GPTBot
+Allow: /
+Allow: /shop/
+Allow: /ar/shop/
+Allow: /industries/
+Allow: /ar/industries/
+Allow: /services/
+Allow: /ar/services/
+Allow: /blog/
+Allow: /ar/blog/
+Allow: /about/
+Allow: /ar/about/
+Allow: /contact/
+Allow: /ar/contact/
+Allow: /images/
+Crawl-delay: 2
+
+# ChatGPT-User - OpenAI ChatGPT browsing
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 2
+
+# Google-Extended - Google Bard/Gemini AI Training
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 2
+
+# Anthropic Claude AI Crawler
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 2
+
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 2
+
+# Perplexity AI Crawler
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 2
+
+# CCBot - Common Crawl (used by many AI systems)
+User-agent: CCBot
+Allow: /
+Crawl-delay: 5
+
+# Cohere AI Crawler
+User-agent: cohere-ai
+Allow: /
+Crawl-delay: 2
+
+# Meta AI Crawler
+User-agent: Meta-ExternalAgent
+Allow: /
+Crawl-delay: 2
+
+# ========================================
 # Block Aggressive Crawlers
 User-agent: AhrefsBot
 Disallow: /

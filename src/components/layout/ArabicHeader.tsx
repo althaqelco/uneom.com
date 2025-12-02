@@ -66,7 +66,7 @@ const ArabicHeader: React.FC = () => {
             {/* Buttons for desktop */}
             <div className="hidden lg:flex items-center space-x-reverse space-x-6">
               <Link
-                href="/ar/quote"
+                href="/ar/quote/"
                 className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md font-medium transition duration-300 shadow-sm hover:shadow-md flex items-center flex-row-reverse"
               >
                 <FaQuoteRight className="ml-2 h-4 w-4" />

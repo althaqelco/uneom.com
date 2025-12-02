@@ -1,7 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
-import MainLayout from '@/components/layout/MainLayout';
 
 export const metadata: Metadata = {
   title: '🇸🇦 الرائدة في تصنيع الأزياء المهنية والزي الموحد في السعودية | يونيوم',
@@ -75,7 +74,7 @@ export default function ArabicHomePage() {
   };
 
   return (
-    <MainLayout locale={locale}>
+    <>
       <EnhancedSEO2025 {...seoData} />
       
       {/* Hero Section */}
@@ -259,6 +258,6 @@ export default function ArabicHomePage() {
           </a>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 } 

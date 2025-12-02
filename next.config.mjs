@@ -336,17 +336,7 @@ const nextConfig = {
         destination: '/ar/contact/',
         permanent: true,
       },
-      // Redirects for Quote page
-      {
-        source: '/quote',
-        destination: '/quote/',
-        permanent: true,
-      },
-      {
-        source: '/ar/quote',
-        destination: '/ar/quote/',
-        permanent: true,
-      },
+      // Redirects for Quote page - trailingSlash:true handles /quote -> /quote/
       {
         source: '/request-a-quote',
         destination: '/quote/',
@@ -357,20 +347,10 @@ const nextConfig = {
         destination: '/quote/',
         permanent: true,
       },
-      // Redirects for FAQ page
-      {
-        source: '/faq',
-        destination: '/faq/',
-        permanent: true,
-      },
+      // Redirects for FAQ page - trailingSlash:true handles /faq -> /faq/
       {
         source: '/faqs',
         destination: '/faq/',
-        permanent: true,
-      },
-      {
-        source: '/ar/faq',
-        destination: '/ar/faq/',
         permanent: true,
       },
       // Redirects for Industry Pages aliases/consolidations
@@ -394,16 +374,8 @@ const nextConfig = {
         destination: '/ar/industries/manufacturing/',
         permanent: true,
       },
-      {
-        source: '/industries',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/ar/industries',
-        destination: '/ar/',
-        permanent: true,
-      },
+      // NOTE: Industries landing page trailing slash redirects removed
+      // trailingSlash: true in config handles this automatically
       // Redirects for Service Pages
       {
         source: '/services-page',

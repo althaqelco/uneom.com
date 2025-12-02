@@ -20,88 +20,88 @@ const Navigation: React.FC<NavigationProps> = ({ locale = 'en' }) => {
     en: [
       {
         name: "Industries",
-        href: "/industries",
+        href: "/industries/",
         dropdown: [
-          { name: "Healthcare", href: "/industries/healthcare" },
-          { name: "Aviation", href: "/industries/aviation" },
-          { name: "Hospitality", href: "/industries/hospitality" },
-          { name: "Corporate", href: "/industries/corporate" },
-          { name: "Education", href: "/industries/education" },
-          { name: "Manufacturing", href: "/industries/manufacturing" },
-          { name: "Security", href: "/industries/security" },
-          { name: "Factory Industry", href: "/industries/factory-industry" },
-          { name: "Retail Shops", href: "/industries/retail-shops" },
-          { name: "Supply Manufacturing", href: "/industries/supply-manufacturing" }
+          { name: "Healthcare", href: "/industries/healthcare/" },
+          { name: "Aviation", href: "/industries/aviation/" },
+          { name: "Hospitality", href: "/industries/hospitality/" },
+          { name: "Corporate", href: "/industries/corporate/" },
+          { name: "Education", href: "/industries/education/" },
+          { name: "Manufacturing", href: "/industries/manufacturing/" },
+          { name: "Security", href: "/industries/security/" },
+          { name: "Factory Industry", href: "/industries/factory-industry/" },
+          { name: "Retail Shops", href: "/industries/retail-shops/" },
+          { name: "Supply Manufacturing", href: "/industries/supply-manufacturing/" }
         ]
       },
       {
         name: "Services",
-        href: "/services",
+        href: "/services/",
         dropdown: [
-          { name: "Uniform Program Management", href: "/services/program-management" },
-          { name: "Custom Design & Branding", href: "/services/custom-design" },
-          { name: "Bulk Ordering", href: "/services/bulk-ordering" },
-          { name: "Measurement Services", href: "/services/measurement-services" },
-          { name: "Corporate Uniform Policies", href: "/services/uniform-policies" }
+          { name: "Uniform Program Management", href: "/services/program-management/" },
+          { name: "Custom Design & Branding", href: "/services/custom-design/" },
+          { name: "Bulk Ordering", href: "/services/bulk-ordering/" },
+          { name: "Measurement Services", href: "/services/measurement-services/" },
+          { name: "Corporate Uniform Policies", href: "/services/uniform-policies/" }
         ]
       },
       {
         name: "Resources",
-        href: "/resources",
+        href: "/resources/",
         dropdown: [
-          { name: "Fabric Guide", href: "/resources/fabric-guide" },
-          { name: "Size Guide", href: "/resources/size-guide" },
-          { name: "Procurement Guide", href: "/resources/procurement-guide" },
-          { name: "Uniform Policy Templates", href: "/resources/policy-templates" },
-          { name: "Blog", href: "/blog" }
+          { name: "Fabric Guide", href: "/resources/fabric-guide/" },
+          { name: "Size Guide", href: "/resources/size-guide/" },
+          { name: "Procurement Guide", href: "/resources/procurement-guide/" },
+          { name: "Uniform Policy Templates", href: "/resources/policy-templates/" },
+          { name: "Blog", href: "/blog/" }
         ]
       },
-      { name: "About Us", href: "/about" },
-      { name: "Contact", href: "/contact" },
-      { name: "Shop", href: "/shop" }
+      { name: "About Us", href: "/about/" },
+      { name: "Contact", href: "/contact/" },
+      { name: "Shop", href: "/shop/" }
     ],
     ar: [
       {
         name: "الصناعات",
-        href: "/ar/industries",
+        href: "/ar/industries/",
         dropdown: [
-          { name: "الرعاية الصحية", href: "/ar/industries/healthcare" },
-          { name: "الطيران", href: "/ar/industries/aviation" },
-          { name: "الضيافة", href: "/ar/industries/hospitality" },
-          { name: "الشركات", href: "/ar/industries/corporate" },
-          { name: "التعليم", href: "/ar/industries/education" },
-          { name: "التصنيع", href: "/ar/industries/manufacturing" },
-          { name: "الأمن", href: "/ar/industries/security" },
-          { name: "الصناعة المصنعية", href: "/ar/industries/factory-industry" },
-          { name: "المحلات التجارية", href: "/ar/industries/retail-shops" },
-          { name: "تصنيع التوريدات", href: "/ar/industries/supply-manufacturing" }
+          { name: "الرعاية الصحية", href: "/ar/industries/healthcare/" },
+          { name: "الطيران", href: "/ar/industries/aviation/" },
+          { name: "الضيافة", href: "/ar/industries/hospitality/" },
+          { name: "الشركات", href: "/ar/industries/corporate/" },
+          { name: "التعليم", href: "/ar/industries/education/" },
+          { name: "التصنيع", href: "/ar/industries/manufacturing/" },
+          { name: "الأمن", href: "/ar/industries/security/" },
+          { name: "الصناعة المصنعية", href: "/ar/industries/factory-industry/" },
+          { name: "المحلات التجارية", href: "/ar/industries/retail-shops/" },
+          { name: "تصنيع التوريدات", href: "/ar/industries/supply-manufacturing/" }
         ]
       },
       {
         name: "الخدمات",
-        href: "/ar/services",
+        href: "/ar/services/",
         dropdown: [
-          { name: "إدارة برامج الزي الموحد", href: "/ar/services/program-management" },
-          { name: "تصميم مخصص وعلامات تجارية", href: "/ar/services/custom-design" },
-          { name: "طلبات بالجملة", href: "/ar/services/bulk-ordering" },
-          { name: "خدمات القياس", href: "/ar/services/measurement-services" },
-          { name: "سياسات الزي الرسمي للشركات", href: "/ar/services/uniform-policies" }
+          { name: "إدارة برامج الزي الموحد", href: "/ar/services/program-management/" },
+          { name: "تصميم مخصص وعلامات تجارية", href: "/ar/services/custom-design/" },
+          { name: "طلبات بالجملة", href: "/ar/services/bulk-ordering/" },
+          { name: "خدمات القياس", href: "/ar/services/measurement-services/" },
+          { name: "سياسات الزي الرسمي للشركات", href: "/ar/services/uniform-policies/" }
         ]
       },
       {
         name: "الموارد",
-        href: "/ar/resources",
+        href: "/ar/resources/",
         dropdown: [
-          { name: "دليل الأقمشة", href: "/ar/resources/fabric-guide" },
-          { name: "دليل المقاسات", href: "/ar/resources/size-guide" },
-          { name: "دليل المشتريات", href: "/ar/resources/procurement-guide" },
-          { name: "نماذج سياسة الزي الموحد", href: "/ar/resources/policy-templates" },
-          { name: "المدونة", href: "/ar/blog" }
+          { name: "دليل الأقمشة", href: "/ar/resources/fabric-guide/" },
+          { name: "دليل المقاسات", href: "/ar/resources/size-guide/" },
+          { name: "دليل المشتريات", href: "/ar/resources/procurement-guide/" },
+          { name: "نماذج سياسة الزي الموحد", href: "/ar/resources/policy-templates/" },
+          { name: "المدونة", href: "/ar/blog/" }
         ]
       },
-      { name: "من نحن", href: "/ar/about" },
-      { name: "اتصل بنا", href: "/ar/contact" },
-      { name: "المتجر", href: "/ar/shop" }
+      { name: "من نحن", href: "/ar/about/" },
+      { name: "اتصل بنا", href: "/ar/contact/" },
+      { name: "المتجر", href: "/ar/shop/" }
     ]
   };
   

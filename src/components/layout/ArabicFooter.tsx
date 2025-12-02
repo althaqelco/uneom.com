@@ -114,37 +114,37 @@ const ArabicFooter: React.FC = () => {
             <h3 className="font-heading text-xl font-bold mb-4">{content.quickLinks}</h3>
             <ul className="space-y-2 text-neutral-300">
               <li>
-                <Link href="/ar/industries" className="hover:text-primary-400 transition duration-300">
+                <Link href="/ar/industries/" className="hover:text-primary-400 transition duration-300">
                   {content.industries}
                 </Link>
               </li>
               <li>
-                <Link href="/ar/shop" className="hover:text-primary-400 transition duration-300">
+                <Link href="/ar/shop/" className="hover:text-primary-400 transition duration-300">
                   {content.products}
                 </Link>
               </li>
               <li>
-                <Link href="/ar/services" className="hover:text-primary-400 transition duration-300">
+                <Link href="/ar/services/" className="hover:text-primary-400 transition duration-300">
                   {content.services}
                 </Link>
               </li>
               <li>
-                <Link href="/ar/resources" className="hover:text-primary-400 transition duration-300">
+                <Link href="/ar/resources/" className="hover:text-primary-400 transition duration-300">
                   {content.resources}
                 </Link>
               </li>
               <li>
-                <Link href="/ar/blog" className="hover:text-primary-400 transition duration-300">
+                <Link href="/ar/blog/" className="hover:text-primary-400 transition duration-300">
                   {content.blog}
                 </Link>
               </li>
               <li>
-                <Link href="/ar/about" className="hover:text-primary-400 transition duration-300">
+                <Link href="/ar/about/" className="hover:text-primary-400 transition duration-300">
                   {content.aboutUs}
                 </Link>
               </li>
               <li>
-                <Link href="/ar/contact" className="hover:text-primary-400 transition duration-300">
+                <Link href="/ar/contact/" className="hover:text-primary-400 transition duration-300">
                   {content.contactUsLink}
                 </Link>
               </li>
@@ -180,7 +180,7 @@ const ArabicFooter: React.FC = () => {
             
             <div className="mt-6">
               <Link 
-                href="/ar/quote"
+                href="/ar/quote/"
                 className="inline-flex items-center flex-row-reverse px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-md font-medium transition duration-300"
               >
                 طلب عرض سعر

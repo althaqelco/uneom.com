@@ -4,7 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import MainLayout from './MainLayout';
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import Button from '../ui/Button';
@@ -159,28 +158,16 @@ export default function IndustryPageLayout({
   
   // Safety check if industryData is not provided
   if (!industryData) {
-    return skipMainLayout ? (
+    return (
       <Container>
         <div className="py-20 text-center">
-                      <MainHeading className="text-3xl font-bold mb-6">Industry Information Not Available</MainHeading>
+          <MainHeading className="text-3xl font-bold mb-6">Industry Information Not Available</MainHeading>
           <p className="mb-8">The requested industry information could not be found.</p>
           <Link href={locale === 'ar' ? '/ar/industries' : '/industries'} className="inline-block bg-primary-600 text-white px-4 py-2 rounded">
             {locale === 'ar' ? 'العودة إلى صفحة القطاعات' : 'Go back to Industries'}
           </Link>
         </div>
       </Container>
-    ) : (
-      <MainLayout locale={locale}>
-        <Container>
-          <div className="py-20 text-center">
-            <MainHeading className="text-3xl font-bold mb-6">Industry Information Not Available</MainHeading>
-            <p className="mb-8">The requested industry information could not be found.</p>
-            <Link href={locale === 'ar' ? '/ar/industries' : '/industries'} className="inline-block bg-primary-600 text-white px-4 py-2 rounded">
-              {locale === 'ar' ? 'العودة إلى صفحة القطاعات' : 'Go back to Industries'}
-            </Link>
-          </div>
-        </Container>
-      </MainLayout>
     );
   }
   
@@ -1383,11 +1370,6 @@ export default function IndustryPageLayout({
     </>
   );
   
-  return skipMainLayout ? (
-    pageContent
-  ) : (
-    <MainLayout locale={locale}>
-      {pageContent}
-    </MainLayout>
-  );
+  // Always return content without MainLayout wrapper since root layouts now handle Header/Footer
+  return pageContent;
 } 

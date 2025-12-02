@@ -3,15 +3,11 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { QuoteProvider } from '@/contexts/QuoteContext';
-import LinkPreloader from '@/components/LinkPreloader';
-import LocaleProvider from '@/components/providers/LocaleProvider';
-import MainLayout from '@/components/layout/MainLayout';
+import LayoutWrapper from '@/components/layout/LayoutWrapper';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { headers } from 'next/headers';
-import { redirect } from 'next/navigation';
 // Removed Vercel Analytics for Netlify deployment
 // import { SpeedInsights } from '@vercel/speed-insights/next';
 // import { Analytics } from '@vercel/analytics/react';
@@ -142,7 +138,11 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -187,7 +187,9 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} min-h-screen flex flex-col antialiased`}>
         <QuoteProvider>
-          {children}
+          <LayoutWrapper>
+            {children}
+          </LayoutWrapper>
         </QuoteProvider>
         <SpeedInsights />
         <Analytics />

@@ -1,199 +1,295 @@
-"use client";
+/**
+ * OptimizedImage Component
+ * مكون صور محسن للأداء والتوافق
+ * 
+ * Features:
+ * - Lazy loading with Intersection Observer
+ * - Responsive srcset generation
+ * - WebP/AVIF format support
+ * - Blur placeholder
+ * - Schema.org ImageObject markup
+ * - Alt text optimization for accessibility and SEO
+ * - Mobile-first responsive sizes
+ */
 
-import React, { useState, useEffect } from 'react';
-import Image, { ImageProps } from 'next/image';
-import { 
-  generateBlurPlaceholder, 
-  getLoadingStrategy,
-  customImageLoader,
-  vercelImageLoader
-} from '@/lib/utils/imageOptimization';
-import DirectImage from '@/components/DirectImage';
+'use client';
 
-interface OptimizedImageProps extends Omit<ImageProps, 'onError'> {
-  fallbackSrc?: string;
-  defaultAlt?: string;
-  isCritical?: boolean;
-  blurColor?: string;
-  locale?: string;
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import Script from 'next/script';
+
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  fill?: boolean;
+  priority?: boolean;
+  className?: string;
+  
+  // SEO & Accessibility
+  title?: string;
+  caption?: string;
+  credit?: string;
+  
+  // Schema.org
+  includeSchema?: boolean;
+  schemaType?: 'ImageObject' | 'Photograph' | 'Product';
+  
+  // Responsive
+  sizes?: string;
+  quality?: number;
+  
+  // Styling
+  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
+  objectPosition?: string;
+  rounded?: boolean | 'sm' | 'md' | 'lg' | 'xl' | 'full';
+  
+  // Effects
+  hover?: 'zoom' | 'brighten' | 'darken' | 'grayscale' | 'none';
+  
+  // Loading
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
+  
+  // Events
+  onLoad?: () => void;
+  onError?: () => void;
 }
 
-const defaultFallbackImage = '/images/defaults/default-placeholder.jpg';
+// Pre-defined responsive sizes for different use cases
+const RESPONSIVE_SIZES = {
+  hero: '100vw',
+  fullWidth: '100vw',
+  halfWidth: '(max-width: 768px) 100vw, 50vw',
+  thirdWidth: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+  quarterWidth: '(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw',
+  card: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px',
+  thumbnail: '(max-width: 640px) 50vw, 200px',
+  avatar: '100px',
+  icon: '48px'
+};
 
-/**
- * OptimizedImage component that handles image loading errors gracefully
- * by providing fallback images when the main image fails to load.
- * Enhanced with performance optimizations like blur placeholders and
- * priority loading for critical images.
- */
-export default function OptimizedImage({
+// Generate blur data URL for placeholder
+const shimmer = (w: number, h: number) => `
+<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="g">
+      <stop stop-color="#e2e8f0" offset="20%" />
+      <stop stop-color="#f1f5f9" offset="50%" />
+      <stop stop-color="#e2e8f0" offset="70%" />
+    </linearGradient>
+  </defs>
+  <rect width="${w}" height="${h}" fill="#e2e8f0" />
+  <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+</svg>`;
+
+const toBase64 = (str: string) =>
+  typeof window === 'undefined'
+    ? Buffer.from(str).toString('base64')
+    : window.btoa(str);
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
-  fallbackSrc = defaultFallbackImage,
-  defaultAlt = 'Image',
-  isCritical = false,
-  blurColor,
-  priority,
-  loading,
-  placeholder,
+  width,
+  height,
+  fill = false,
+  priority = false,
+  className = '',
+  title,
+  caption,
+  credit,
+  includeSchema = false,
+  schemaType = 'ImageObject',
+  sizes = RESPONSIVE_SIZES.card,
+  quality = 85,
+  objectFit = 'cover',
+  objectPosition = 'center',
+  rounded = false,
+  hover = 'none',
+  placeholder = 'blur',
   blurDataURL,
-  locale,
-  ...rest
-}: OptimizedImageProps) {
-  const [imgSrc, setImgSrc] = useState(src);
-  const [imgAlt, setImgAlt] = useState(alt || defaultAlt);
+  onLoad,
+  onError
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [errorRetryCount, setErrorRetryCount] = useState(0);
-  const [useRegularImgTag, setUseRegularImgTag] = useState(false);
-  const [isVercel, setIsVercel] = useState<boolean>(false);
-  const [isClient, setIsClient] = useState<boolean>(false);
-
-  // Update imgSrc if src prop changes
-  useEffect(() => {
-    setImgSrc(src);
-    setHasError(false);
-    setErrorRetryCount(0);
-    setUseRegularImgTag(false);
-  }, [src]);
-
-  useEffect(() => {
-    setIsClient(true);
-    
-    // Check if we're in Vercel environment
-    if (typeof window !== 'undefined') {
-      const hostname = window.location.hostname;
-      setIsVercel(
-        hostname.includes('vercel.app') || 
-        hostname === 'uneom.com' || 
-        hostname.endsWith('.uneom.com')
-      );
-    }
-  }, []);
-
-  // Handle image loading errors
-  const handleError = () => {
-    if (errorRetryCount >= 3) {
-      // After 3 retries, use fallback image with a regular <img> tag
-      console.warn(`Image failed to load after maximum retries: ${imgSrc}`);
-      setImgSrc(fallbackSrc);
-      if (!alt) {
-        setImgAlt('Image not available');
-      }
-      setHasError(true);
-      setUseRegularImgTag(true);
-      return;
-    }
-    
-    console.warn(`Image failed to load: ${imgSrc}, retry #${errorRetryCount + 1}`);
-    
-    // Try different approaches depending on retry count
-    if (errorRetryCount === 0) {
-      // First retry: Try without initial slash
-      if (typeof imgSrc === 'string' && imgSrc.startsWith('/') && imgSrc !== fallbackSrc) {
-        const newSrc = imgSrc.substring(1);
-        console.log(`Trying alternative image path without leading slash: ${newSrc}`);
-        setImgSrc(newSrc);
-      } else {
-        // If not a path starting with slash, try with unoptimized
-        console.log(`Trying with unoptimized image loading`);
-        const unoptimizedSrc = typeof imgSrc === 'string' && !imgSrc.includes('?') 
-          ? `${imgSrc}?unoptimized=true` 
-          : imgSrc;
-        setImgSrc(unoptimizedSrc);
-      }
-    } else if (errorRetryCount === 1) {
-      // Second retry: Try with public URL
-      if (isVercel) {
-        const basePath = window.location.origin;
-        if (typeof imgSrc === 'string' && !imgSrc.startsWith('http')) {
-          const fullPath = imgSrc.startsWith('/') 
-            ? `${basePath}${imgSrc}` 
-            : `${basePath}/${imgSrc}`;
-          console.log(`Trying with full URL path: ${fullPath}`);
-          setImgSrc(fullPath);
-        } else {
-          // Try with original path again but with different query param
-          setImgSrc(`${src}?v=${new Date().getTime()}`);
-        }
-      } else {
-        // If not on Vercel, try with cache busting
-        if (typeof imgSrc === 'string') {
-          setImgSrc(`${imgSrc}?nocache=${new Date().getTime()}`);
-        }
-      }
-    } else if (errorRetryCount === 2) {
-      // Third retry: Fallback to direct image tag
-      console.log(`Final retry: switching to regular img tag`);
-      setUseRegularImgTag(true);
-    }
-    
-    setErrorRetryCount(prev => prev + 1);
-  };
-
-  // Determine loading strategy based on whether the image is critical
-  const loadingStrategy = loading || getLoadingStrategy(priority || isCritical);
+  const [isInView, setIsInView] = useState(priority);
+  const imageRef = useRef<HTMLDivElement>(null);
   
-  // Generate blur placeholder if not provided
-  const generatedBlurDataURL = blurDataURL || 
-    (placeholder === 'blur' ? generateBlurPlaceholder(blurColor) : undefined);
-
-  // Use regular img tag as last resort
-  if (useRegularImgTag) {
-    const { width, height, layout, objectFit, ...restProps } = rest as any;
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    if (priority || isInView) return;
     
-    const styleProps: React.CSSProperties = {
-      maxWidth: '100%',
-      height: height ? `${height}px` : 'auto',
-      width: width ? `${width}px` : '100%',
-      objectFit: objectFit || 'cover'};
-    
-    return (
-      <img
-        src={imgSrc}
-        alt={imgAlt}
-        className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
-        style={styleProps}
-        loading={loadingStrategy === 'eager' ? 'eager' : 'lazy'}
-        onError={handleError}
-        {...restProps}
-      />
-    );
-  }
-
-  // Use DirectImage for Vercel environment
-  if (isClient && isVercel) {
-    return (
-      <DirectImage
-        src={typeof imgSrc === 'string' ? imgSrc : ''}
-        alt={imgAlt}
-        width={typeof rest.width === 'number' ? rest.width : undefined}
-        height={typeof rest.height === 'number' ? rest.height : undefined}
-        className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
-        priority={priority}
-        style={rest.style}
-        onError={handleError}
-      />
-    );
-  }
-
-  // Use Next.js Image component for non-Vercel environments
-  return (
-    <Image
-      {...rest}
-      src={imgSrc}
-      alt={imgAlt}
-      onError={handleError}
-      loading={loadingStrategy}
-      placeholder={placeholder || (generatedBlurDataURL ? 'blur' : undefined)}
-      blurDataURL={generatedBlurDataURL}
-      className={`${rest.className || ''} ${hasError ? 'opacity-80' : ''}`}
-      loader={(params) => {
-        if (isVercel) {
-          return vercelImageLoader(params);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
         }
-        // @ts-ignore - locale is added in our custom loader but not in the original type
-        return customImageLoader({ ...params, locale, isVercel });
-      }}
-    />
+      },
+      {
+        rootMargin: '200px', // Load images 200px before they enter viewport
+        threshold: 0.01
+      }
+    );
+    
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+    
+    return () => observer.disconnect();
+  }, [priority, isInView]);
+  
+  // Generate rounded class
+  const getRoundedClass = () => {
+    if (!rounded) return '';
+    if (rounded === true) return 'rounded-lg';
+    return `rounded-${rounded}`;
+  };
+  
+  // Generate hover effect class
+  const getHoverClass = () => {
+    switch (hover) {
+      case 'zoom': return 'transition-transform duration-300 hover:scale-105';
+      case 'brighten': return 'transition-filter duration-300 hover:brightness-110';
+      case 'darken': return 'transition-filter duration-300 hover:brightness-90';
+      case 'grayscale': return 'transition-filter duration-300 grayscale hover:grayscale-0';
+      default: return '';
+    }
+  };
+  
+  // Generate placeholder
+  const getPlaceholder = () => {
+    if (blurDataURL) return blurDataURL;
+    if (placeholder === 'blur' && width && height) {
+      return `data:image/svg+xml;base64,${toBase64(shimmer(width, height))}`;
+    }
+    return undefined;
+  };
+  
+  // Handle image load
+  const handleLoad = () => {
+    setIsLoaded(true);
+    onLoad?.();
+  };
+  
+  // Handle image error
+  const handleError = () => {
+    setHasError(true);
+    onError?.();
+  };
+  
+  // Generate schema.org markup
+  const generateImageSchema = () => {
+    if (!includeSchema) return null;
+    
+    const imageUrl = src.startsWith('http') ? src : `https://uneom.com${src}`;
+    
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': schemaType,
+      contentUrl: imageUrl,
+      url: imageUrl,
+      name: title || alt,
+      description: alt,
+      ...(caption && { caption }),
+      ...(credit && { 
+        author: { 
+          '@type': 'Person', 
+          name: credit 
+        } 
+      }),
+      ...(width && height && {
+        width: { '@type': 'QuantitativeValue', value: width },
+        height: { '@type': 'QuantitativeValue', value: height }
+      }),
+      encodingFormat: src.endsWith('.webp') ? 'image/webp' : 
+                      src.endsWith('.png') ? 'image/png' : 
+                      src.endsWith('.svg') ? 'image/svg+xml' : 'image/jpeg'
+    };
+    
+    return (
+      <Script
+        id={`image-schema-${src.replace(/[^a-zA-Z0-9]/g, '-')}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+    );
+  };
+  
+  // Fallback image for errors
+  const fallbackSrc = '/images/default-placeholder.jpg';
+  
+  // Container classes
+  const containerClasses = [
+    'relative overflow-hidden',
+    getRoundedClass(),
+    className
+  ].filter(Boolean).join(' ');
+  
+  // Image classes
+  const imageClasses = [
+    getHoverClass(),
+    `object-${objectFit}`,
+    isLoaded ? 'opacity-100' : 'opacity-0',
+    'transition-opacity duration-300'
+  ].filter(Boolean).join(' ');
+
+  return (
+    <>
+      <div 
+        ref={imageRef} 
+        className={containerClasses}
+        style={fill ? undefined : { width, height }}
+      >
+        {isInView && (
+          <Image
+            src={hasError ? fallbackSrc : src}
+            alt={alt}
+            title={title || alt}
+            width={fill ? undefined : width}
+            height={fill ? undefined : height}
+            fill={fill}
+            priority={priority}
+            quality={quality}
+            sizes={sizes}
+            className={imageClasses}
+            style={{ objectPosition }}
+            placeholder={placeholder}
+            blurDataURL={getPlaceholder()}
+            onLoad={handleLoad}
+            onError={handleError}
+            loading={priority ? 'eager' : 'lazy'}
+            decoding="async"
+          />
+        )}
+        
+        {/* Loading skeleton */}
+        {!isLoaded && !hasError && (
+          <div 
+            className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-pulse"
+            aria-hidden="true"
+          />
+        )}
+        
+        {/* Caption */}
+        {caption && isLoaded && (
+          <figcaption className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-sm p-2 text-center">
+            {caption}
+            {credit && <span className="text-xs opacity-75"> — {credit}</span>}
+          </figcaption>
+        )}
+      </div>
+      
+      {/* Schema.org markup */}
+      {generateImageSchema()}
+    </>
   );
-} 
+};
+
+// Named exports for convenience
+export { RESPONSIVE_SIZES };
+export default OptimizedImage;

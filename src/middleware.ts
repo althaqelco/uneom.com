@@ -239,10 +239,15 @@ export function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
-// تكوين المطابقة: جميع المسارات ما عدا الاستثناءات
+// تكوين المطابقة: فقط المسارات القديمة التي تحتاج إعادة توجيه
 export const config = {
   matcher: [
-    // تجاهل مسارات المدونة العربية، ومسارات _next، وغيرها من المسارات الخاصة
-    '/((?!_next/|api/|favicon.ico|robots.txt|sitemap.xml|images/|assets/|ar/blog|ar/services).*)'
+    // Only match old paths that need redirecting - exclude normal pages
+    '/en/:path*',
+    '/sectors/:path*',
+    '/location/:path*',
+    '/category/:path*',
+    '/ar/sectors/:path*',
+    '/ar/location/:path*',
   ],
 };

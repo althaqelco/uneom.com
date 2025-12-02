@@ -137,37 +137,37 @@ const Footer: React.FC<FooterProps> = ({ locale = 'en' }) => {
             <h3 className="font-heading text-xl font-bold mb-4">{content.quickLinks}</h3>
             <ul className="space-y-2 text-neutral-300">
               <li>
-                <Link href={locale === 'en' ? '/industries' : '/ar/industries'} className="hover:text-primary-400 transition duration-300">
+                <Link href={locale === 'en' ? '/industries/' : '/ar/industries/'} className="hover:text-primary-400 transition duration-300">
                   {content.industries}
                 </Link>
               </li>
               <li>
-                <Link href={locale === 'en' ? '/shop' : '/ar/shop'} className="hover:text-primary-400 transition duration-300">
+                <Link href={locale === 'en' ? '/shop/' : '/ar/shop/'} className="hover:text-primary-400 transition duration-300">
                   {content.products}
                 </Link>
               </li>
               <li>
-                <Link href={locale === 'en' ? '/services' : '/ar/services'} className="hover:text-primary-400 transition duration-300">
+                <Link href={locale === 'en' ? '/services/' : '/ar/services/'} className="hover:text-primary-400 transition duration-300">
                   {content.services}
                 </Link>
               </li>
               <li>
-                <Link href={locale === 'en' ? '/resources' : '/ar/resources'} className="hover:text-primary-400 transition duration-300">
+                <Link href={locale === 'en' ? '/resources/' : '/ar/resources/'} className="hover:text-primary-400 transition duration-300">
                   {content.resources}
                 </Link>
               </li>
               <li>
-                <Link href={locale === 'en' ? '/blog' : '/ar/blog'} className="hover:text-primary-400 transition duration-300">
+                <Link href={locale === 'en' ? '/blog/' : '/ar/blog/'} className="hover:text-primary-400 transition duration-300">
                   {content.blog}
                 </Link>
               </li>
               <li>
-                <Link href={locale === 'en' ? '/about' : '/ar/about'} className="hover:text-primary-400 transition duration-300">
+                <Link href={locale === 'en' ? '/about/' : '/ar/about/'} className="hover:text-primary-400 transition duration-300">
                   {content.aboutUs}
                 </Link>
               </li>
               <li>
-                <Link href={locale === 'en' ? '/contact' : '/ar/contact'} className="hover:text-primary-400 transition duration-300">
+                <Link href={locale === 'en' ? '/contact/' : '/ar/contact/'} className="hover:text-primary-400 transition duration-300">
                   {content.contactUsLink}
                 </Link>
               </li>
@@ -233,7 +233,7 @@ const Footer: React.FC<FooterProps> = ({ locale = 'en' }) => {
             </div>
             <div className="mt-6">
               <Link 
-                href={locale === 'en' ? '/quote' : '/ar/quote'}
+                href={locale === 'en' ? '/quote/' : '/ar/quote/'}
                 className={`inline-flex items-center ${isRTL ? 'flex-row-reverse' : ''} px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-md font-medium transition duration-300`}
               >
                 {locale === 'en' ? 'Request a Quote' : 'طلب عرض سعر'}

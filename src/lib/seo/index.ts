@@ -6,6 +6,12 @@
  * 
  * By using this module, developers can easily implement SEO best practices
  * and ensure all pages adhere to the SEO standards required by the project.
+ * 
+ * Updated for AI Search Optimization 2024-2026:
+ * - Google SGE (Search Generative Experience)
+ * - Bing Copilot compatibility
+ * - ChatGPT Browse optimization
+ * - Perplexity AI / Claude AI search
  */
 
 // SEO Utilities
@@ -14,6 +20,46 @@ export { getPageTitle, getPageDescription, generateH1 } from './title-descriptio
 export { getPageKeywords } from './keyword-optimizer';
 export { default as contentAnalyzer } from './content-analyzer';
 export { default as seoVerifier } from './verify-seo';
+
+// AI Search Optimization (2024-2026)
+export {
+  generateAIOptimizedContent,
+  generateSpeakableSchema,
+  generateHowToSchema,
+  generateItemListSchema,
+  optimizeTitleForAI,
+  optimizeDescriptionForAI,
+  AI_OPTIMIZED_FAQS,
+  AI_SEARCH_KEYWORDS
+} from './ai-search-optimization-2025';
+
+// Google 2025 Optimization
+export {
+  PRIMARY_KEYWORDS,
+  SEO_TEMPLATES,
+  generateStructuredData,
+  generateOpenGraphTags,
+  generateTwitterTags,
+  generateRobotsTags,
+  generateHreflangTags,
+  optimizeTitle,
+  optimizeDescription,
+  generateCanonicalUrl,
+  generateOptimizedKeywords,
+  analyzeKeywordDensity,
+  generateProductSchema,
+  generateArticleSchema,
+  DEFAULT_SEO_CONFIG
+} from './google-2025-optimization';
+
+// Schema.org Generators
+export {
+  generateLocalBusinessSchema,
+  generateBreadcrumbSchema,
+  generateFAQSchema,
+  generateWebPageSchema,
+  generateServiceSchema
+} from './schema-generator';
 
 // Image SEO utilities
 export { generateAltTag, generateSpecificAltTag } from '../images/alt-tag-generator';
@@ -79,5 +125,14 @@ export async function checkSEOCompliance() {
 export default {
   formatUrl,
   setupPageSEO,
-  checkSEOCompliance
+  checkSEOCompliance,
+  // AI Search 2024-2026
+  optimizeTitleForAI,
+  optimizeDescriptionForAI,
+  // Schema generators
+  generateAIOptimizedContent,
+  generateSpeakableSchema,
+  generateHowToSchema,
+  generateFAQSchema,
+  generateBreadcrumbSchema
 };
