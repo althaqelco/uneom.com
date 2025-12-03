@@ -181,3 +181,9 @@ cat /tmp/images_used.txt 2>/dev/null | sed 's/^"//' | while read img; do
 done | wc -l
 
 
+
+
+
+
+
+
