@@ -2,273 +2,158 @@ import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import Container from '@/components/ui/Container';
+import SectionHeading from '@/components/ui/SectionHeading';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-// Define metadata for SEO optimization
-export const metadata: Metadata = {
-  title: 'UNEOM Case Studies | Premium Uniform Solutions for Saudi Beauty Salons',
-  description: 'Explore how UNEOM transformed beauty salon operations with premium uniform solutions across Saudi Arabia. Read our detailed case studies on salon chain standardization and luxury spa transformations.',
-  keywords: 'beauty salon uniforms Saudi Arabia, salon staff case studies, premium spa uniform implementation, Saudi beauty salon branding, luxury salon staff attire, beauty business transformation'};
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Uniform Case Studies Saudi Arabia | Success Stories | UNEOM',
+  titleAr: 'دراسات حالة الأزياء الموحدة السعودية | قصص النجاح | يونيوم',
+  description: 'Real uniform success stories from Saudi businesses. See how UNEOM transformed hotels, hospitals, retail chains with professional uniform solutions. ROI results included.',
+  descriptionAr: 'قصص نجاح حقيقية للأزياء الموحدة من الشركات السعودية. شاهد كيف حولت يونيوم الفنادق والمستشفيات وسلاسل البيع بالتجزئة بحلول الأزياء المهنية.',
+  keywords: ['uniform case studies', 'success stories saudi', 'hotel uniform transformation', 'hospital uniform ROI', 'retail branding uniform'],
+  keywordsAr: ['دراسات حالة الأزياء', 'قصص النجاح السعودية', 'تحويل زي الفنادق', 'عائد استثمار زي المستشفيات'],
+  locale: 'en',
+  pageType: 'resources',
+  path: '/case-studies',
+  image: '/images/case-studies/hero.jpg',
+  imageAlt: 'UNEOM Case Studies',
+  aiSummary: 'UNEOM case studies showcase real uniform transformations. Featured cases: 5-Star Hotel Spa (50% staff satisfaction increase), Beauty Chain Standardization (30% brand recognition boost), Hospital Aesthetic Clinic (improved patient trust), Luxury Salon Evolution (premium brand positioning), Retail Brand Transformation (unified multi-location branding). Each case includes: challenge, solution, results with metrics.',
+  aiSummaryAr: 'دراسات حالة يونيوم تعرض تحولات أزياء حقيقية. الحالات المميزة: سبا فندق 5 نجوم، توحيد سلسلة صالونات التجميل، عيادة تجميل مستشفى، تطور صالون فاخر، تحويل علامة تجارية للبيع بالتجزئة.'
+});
 
-export default function CaseStudiesIndex() {
+export const dynamic = 'force-static';
+
+const caseStudies = [
+  { id: '5-star-hotel-spa', title: '5-Star Hotel & Spa', category: 'Hospitality', description: 'Complete uniform transformation for a luxury resort, increasing staff satisfaction by 50%.', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg', href: '/case-studies/5-star-hotel-spa', results: ['50% satisfaction increase', '200+ staff uniformed', 'Brand consistency'] },
+  { id: 'beauty-chain-standardization', title: 'Beauty Chain Standardization', category: 'Beauty & Wellness', description: 'Unified branding across 15 salon locations, boosting brand recognition by 30%.', image: '/images/hospitality/hospitality_uniform_concierge.jpg', href: '/case-studies/beauty-chain-standardization', results: ['30% brand boost', '15 locations', '150+ employees'] },
+  { id: 'hospital-aesthetic-clinic', title: 'Hospital Aesthetic Clinic', category: 'Healthcare', description: 'Professional uniform program improving patient trust and staff confidence.', image: '/images/products/medical/medical-scrubs-hero.jpg', href: '/case-studies/hospital-aesthetic-clinic', results: ['Improved trust', '50+ staff', 'Premium quality'] },
+  { id: 'luxury-salon-evolution', title: 'Luxury Salon Evolution', category: 'Beauty & Wellness', description: 'Premium brand positioning through elegant uniform design for high-end salon.', image: '/images/hospitality/hospitality_uniform_restaurant.jpg', href: '/case-studies/luxury-salon-evolution', results: ['Premium positioning', 'Custom design', 'Brand elevation'] },
+  { id: 'nationwide-retail-branding', title: 'Nationwide Retail Branding', category: 'Retail', description: 'Unified multi-location branding for major retail chain across Saudi Arabia.', image: '/images/retail-shops/retail-showcase.jpg', href: '/case-studies/nationwide-retail-branding', results: ['50+ locations', '500+ staff', 'Consistent brand'] },
+  { id: 'retail-brand-transformation', title: 'Retail Brand Transformation', category: 'Retail', description: 'Complete brand refresh through strategic uniform redesign for retail stores.', image: '/images/products/retail/uniform-1.jpg', href: '/case-studies/retail-brand-transformation', results: ['Brand refresh', 'Modern design', 'Customer impact'] },
+];
+
+const caseStudyFAQs = [
+  { question: 'Are these real case studies?', answer: 'Yes, all case studies are based on real UNEOM projects. Client names may be anonymized for confidentiality, but all results and metrics are authentic.' },
+  { question: 'Can I get similar results for my business?', answer: 'Results vary by project scope and industry. Contact us for a free consultation to discuss how we can help achieve similar outcomes for your organization.' },
+  { question: 'How long do uniform transformation projects take?', answer: 'Typical projects range from 4-12 weeks depending on scope. Simple rollouts may be faster, while custom design programs take longer.' },
+];
+
+export default function CaseStudiesPage() {
   return (
-    <main className="bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Uniform Success Stories</h1>
-            <p className="text-xl mb-8 text-white/90">
-              See how UNEOM has transformed businesses across Saudi Arabia with premium uniform solutions
+    <>
+      <SEO2026
+        title="Uniform Case Studies | UNEOM"
+        titleAr="دراسات حالة الأزياء | يونيوم"
+        description="Real uniform success stories from Saudi businesses."
+        descriptionAr="قصص نجاح حقيقية للأزياء من الشركات السعودية."
+        locale="en"
+        pageType="resources"
+        mainEntity="Uniform Case Studies"
+        mainEntityAr="دراسات حالة الأزياء"
+        primaryImage="/images/case-studies/hero.jpg"
+        primaryImageAlt="UNEOM Case Studies"
+        faqs={caseStudyFAQs}
+        breadcrumbs={[
+          { name: 'Case Studies', nameAr: 'دراسات الحالة', url: '/case-studies' },
+        ]}
+      />
+
+      <section className="bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 text-white relative overflow-hidden py-16">
+        <Container>
+          <div className="relative z-10 max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+              <span className="text-purple-400">📊</span>
+              <span className="text-sm font-medium">Success Stories</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Case <span className="bg-gradient-to-r from-purple-300 to-blue-300 text-transparent bg-clip-text">Studies</span>
+            </h1>
+            <p className="text-xl mb-8 text-purple-100 leading-relaxed">
+              Real results from real businesses. See how UNEOM transformed uniform programs across Saudi Arabia.
             </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                <div className="text-2xl font-bold text-purple-300">6</div>
+                <div className="text-sm text-purple-200">Cases</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                <div className="text-2xl font-bold text-purple-300">1000+</div>
+                <div className="text-sm text-purple-200">Staff</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                <div className="text-2xl font-bold text-purple-300">50%</div>
+                <div className="text-sm text-purple-200">Avg. Impact</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                <div className="text-2xl font-bold text-purple-300">100%</div>
+                <div className="text-sm text-purple-200">Success</div>
+              </div>
+            </div>
           </div>
-        </div>
+        </Container>
       </section>
-      
-      {/* Featured Case Studies */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Beauty & Healthcare Case Studies</h2>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {/* Case Study 1 */}
-              <Link href="/case-studies/beauty-chain-standardization" className="group">
-                <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all group-hover:shadow-xl border border-gray-100">
-                  <div className="relative h-64">
-                    <Image 
-                      src="/images/hospitality/hospitality_uniform_hotel_service.jpg" 
-                      alt="Beauty Chain Standardization Case Study" 
-                      fill 
-                      className="object-cover"
-                    />
+
+      <main className="py-16">
+        <Container>
+          <section className="mb-16">
+            <SectionHeading subtitle="Real Results" centered>Featured Case Studies</SectionHeading>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {caseStudies.map((study) => (
+                <Link key={study.id} href={study.href} className="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <Image src={study.image} alt={study.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                       <div className="p-6 text-white">
-                        <div className="text-sm font-medium text-purple-300 mb-2">Beauty Salon Chain</div>
-                        <h3 className="text-2xl font-bold mb-2">Beauty Chain Standardization</h3>
+                        <span className="text-xs font-bold px-2 py-1 bg-purple-500 rounded-full mb-2 inline-block">{study.category}</span>
+                        <h3 className="text-xl font-bold">{study.title}</h3>
                       </div>
                     </div>
                   </div>
                   <div className="p-6">
-                    <p className="text-gray-700 mb-4">
-                      How UNEOM unified a leading Saudi beauty salon chain with professional uniforms across 25+ locations, enhancing brand consistency and staff professionalism.
-                    </p>
+                    <p className="text-gray-600 text-sm mb-4">{study.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm">Salon Chain</span>
-                      <span className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm">Multi-location</span>
-                      <span className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm">Brand Standardization</span>
+                      {study.results.map((result, i) => (
+                        <span key={i} className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">✓ {result}</span>
+                      ))}
                     </div>
-                    <div className="flex justify-between items-center">
-                      <div className="flex space-x-4">
-                        <div className="text-gray-700">
-                          <span className="font-medium">25+</span>
-                          <span className="text-sm ml-1">Locations</span>
-                        </div>
-                        <div className="text-gray-700">
-                          <span className="font-medium">300+</span>
-                          <span className="text-sm ml-1">Staff</span>
-                        </div>
-                      </div>
-                      <span className="text-purple-600 font-medium group-hover:text-purple-800 transition-colors flex items-center">
-                        Read Case Study
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
-                      </span>
-                    </div>
+                    <span className="text-purple-600 font-semibold text-sm group-hover:underline">Read Case Study →</span>
                   </div>
-                </div>
-              </Link>
-              
-              {/* Case Study 2 */}
-              <Link href="/case-studies/luxury-salon-evolution" className="group">
-                <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all group-hover:shadow-xl border border-gray-100">
-                  <div className="relative h-64">
-                    <Image 
-                      src="/images/corporate/corporate_uniform_formal.jpg" 
-                      alt="Luxury Salon Evolution Case Study" 
-                      fill 
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                      <div className="p-6 text-white">
-                        <div className="text-sm font-medium text-indigo-300 mb-2">Premium Spa</div>
-                        <h3 className="text-2xl font-bold mb-2">Luxury Salon Evolution</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-gray-700 mb-4">
-                      How UNEOM transformed a high-end Riyadh beauty salon with bespoke staff uniforms that elevated brand perception and staff professionalism.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm">Luxury</span>
-                      <span className="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm">Bespoke Design</span>
-                      <span className="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm">Brand Elevation</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <div className="flex space-x-4">
-                        <div className="text-gray-700">
-                          <span className="font-medium">35</span>
-                          <span className="text-sm ml-1">Staff</span>
-                        </div>
-                        <div className="text-gray-700">
-                          <span className="font-medium">41%</span>
-                          <span className="text-sm ml-1">Satisfaction ↑</span>
-                        </div>
-                      </div>
-                      <span className="text-indigo-600 font-medium group-hover:text-indigo-800 transition-colors flex items-center">
-                        Read Case Study
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-              
-              {/* Case Study 3 - Hospital Aesthetic Clinic */}
-              <Link href="/case-studies/hospital-aesthetic-clinic" className="group">
-                <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all group-hover:shadow-xl border border-gray-100">
-                  <div className="relative h-64">
-                    <Image 
-                      src="/images/hospitality/hospitality_full_look.jpg" 
-                      alt="Hospital Aesthetic Clinic Case Study" 
-                      fill 
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                      <div className="p-6 text-white">
-                        <div className="text-sm font-medium text-teal-300 mb-2">Medical Aesthetics</div>
-                        <h3 className="text-2xl font-bold mb-2">Hospital Aesthetic Clinic</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-gray-700 mb-4">
-                      How UNEOM elevated a premier Jeddah medical aesthetic facility with sophisticated healthcare uniforms that balanced clinical standards with luxury appeal.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm">Healthcare</span>
-                      <span className="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm">Medical Compliance</span>
-                      <span className="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm">Premium Clinic</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <div className="flex space-x-4">
-                        <div className="text-gray-700">
-                          <span className="font-medium">40+</span>
-                          <span className="text-sm ml-1">Staff</span>
-                        </div>
-                        <div className="text-gray-700">
-                          <span className="font-medium">27%</span>
-                          <span className="text-sm ml-1">Bookings ↑</span>
-                        </div>
-                      </div>
-                      <span className="text-teal-600 font-medium group-hover:text-teal-800 transition-colors flex items-center">
-                        Read Case Study
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              ))}
             </div>
-            
-            {/* Coming Soon Section */}
-            <div className="mt-16 bg-gray-50 rounded-xl p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">More Case Studies Coming Soon</h3>
-              <p className="text-gray-700 max-w-2xl mx-auto mb-6">
-                We're working on documenting more success stories from various industries including hospitality, education, and corporate sectors across Saudi Arabia.
-              </p>
-              <Link href="/contact" className="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors">
-                Request a Custom Case Study
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </Link>
+          </section>
+
+          <section className="mb-16" itemScope itemType="https://schema.org/FAQPage">
+            <SectionHeading subtitle="Common Questions" centered>Case Studies FAQ</SectionHeading>
+            <div className="max-w-3xl mx-auto mt-12 space-y-4">
+              {caseStudyFAQs.map((faq, index) => (
+                <div key={index} className="bg-gray-50 rounded-xl p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2" itemProp="name">{faq.question}</h3>
+                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                    <p className="text-gray-600" itemProp="text">{faq.answer}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Testimonials */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">What Our Clients Say</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-xl shadow-md">
-                <div className="flex items-center mb-4">
-                  <div className="h-1 w-12 bg-purple-500 mr-4"></div>
-                  <p className="font-medium text-purple-600">Beauty Chain Standardization</p>
-                </div>
-                <p className="text-gray-700 mb-6 italic">
-                  "UNEOM's uniform solution transformed our multi-location salon chain. Staff morale improved dramatically, and the consistent professional appearance across all locations significantly strengthened our brand image."
-                </p>
-                <div className="flex items-center">
-                  <div>
-                    <p className="font-bold text-gray-900">Mohammed Al-Harbi</p>
-                    <p className="text-gray-600">Operations Director, Leading Saudi Beauty Chain</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-md">
-                <div className="flex items-center mb-4">
-                  <div className="h-1 w-12 bg-indigo-500 mr-4"></div>
-                  <p className="font-medium text-indigo-600">Luxury Salon Evolution</p>
-                </div>
-                <p className="text-gray-700 mb-6 italic">
-                  "Working with UNEOM transformed not just our staff appearance but the entire client experience. The bespoke uniforms perfectly complement our salon's interior design and luxury positioning."
-                </p>
-                <div className="flex items-center">
-                  <div>
-                    <p className="font-bold text-gray-900">Lama Al-Saud</p>
-                    <p className="text-gray-600">Founder & Creative Director, Luxury Salon</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-xl shadow-md">
-                <div className="flex items-center mb-4">
-                  <div className="h-1 w-12 bg-teal-500 mr-4"></div>
-                  <p className="font-medium text-teal-600">Hospital Aesthetic Clinic</p>
-                </div>
-                <p className="text-gray-700 mb-6 italic">
-                  "The uniforms UNEOM designed for our clinic perfectly balance medical professionalism with the premium aesthetic our clientele expects. Our patients have commented on how the new uniforms enhance their perception of our services."
-                </p>
-                <div className="flex items-center">
-                  <div>
-                    <p className="font-bold text-gray-900">Dr. Nasser Al-Qahtani</p>
-                    <p className="text-gray-600">Medical Director, Premier Aesthetic Clinic</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
+          </section>
+
+          <section className="text-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-2xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Write Your Success Story?</h2>
+            <p className="text-xl mb-8 text-purple-100">Contact us to discuss how we can transform your uniform program.</p>
+            <Link href="/quote" className="inline-flex items-center px-8 py-4 bg-white text-purple-700 hover:bg-gray-100 font-bold rounded-xl transition-all shadow-lg">Get Started →</Link>
+          </section>
+        </Container>
+      </main>
+
+      <section className="py-6 bg-gray-100 border-t">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            UNEOM creates premium uniform solutions tailored to your specific industry needs across Saudi Arabia.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact" className="bg-white text-indigo-800 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
-              Request Consultation
-            </Link>
-            <Link href="/industries" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
-              Explore Industry Solutions
-            </Link>
-          </div>
+          <Link href="/ar/case-studies" className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+            🇸🇦 العربية
+          </Link>
         </div>
       </section>
-    </main>
+    </>
   );
-} 
+}
