@@ -1,542 +1,195 @@
 import React from 'react';
-import { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
-import { 
-  ShieldCheckIcon, 
-  DocumentCheckIcon, 
-  ClipboardDocumentListIcon,
-  ExclamationTriangleIcon,
-  CheckCircleIcon,
-  StarIcon,
-  CalendarIcon,
-  UserIcon,
-  ArrowRightIcon
-} from '@heroicons/react/24/outline'
+import { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import Container from '@/components/ui/Container';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-export const metadata: Metadata = {
-  title: 'Healthcare Compliance Guide: Medical Uniform Standards in Saudi Arabia | UNEOM',
-  description: 'Complete guide to healthcare compliance and medical uniform standards in Saudi Arabia. Learn about regulations, quality requirements, and best practices for healthcare facilities.',
-  keywords: 'healthcare compliance, medical uniform standards, Saudi Arabia healthcare regulations, medical attire compliance, healthcare quality standards, medical uniform guidelines',
-  openGraph: {
-    title: 'Healthcare Compliance Guide: Medical Uniform Standards in Saudi Arabia',
-    description: 'Essential compliance requirements for medical uniforms in Saudi healthcare facilities',
-    images: ['/images/categories/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg']}}
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Healthcare Uniform Compliance Guide Saudi Arabia | UNEOM',
+  titleAr: 'دليل الامتثال لأزياء الرعاية الصحية السعودية | يونيوم',
+  description: 'Complete guide to healthcare uniform compliance in Saudi Arabia. MOH regulations, infection control standards, CBAHI requirements. Essential for hospitals and clinics.',
+  descriptionAr: 'دليل شامل لامتثال أزياء الرعاية الصحية في السعودية. لوائح وزارة الصحة، معايير مكافحة العدوى، متطلبات CBAHI. أساسي للمستشفيات والعيادات.',
+  keywords: ['healthcare uniform compliance', 'MOH uniform regulations', 'hospital dress code saudi', 'CBAHI uniform standards', 'infection control uniforms'],
+  keywordsAr: ['امتثال أزياء الرعاية الصحية', 'لوائح وزارة الصحة للأزياء', 'قواعد لباس المستشفى السعودية'],
+  locale: 'en',
+  pageType: 'blog',
+  path: '/blog/healthcare-compliance-guide',
+  image: '/images/blog/healthcare-uniforms.jpg',
+  imageAlt: 'Healthcare Uniform Compliance Guide',
+  publishedTime: '2024-11-20T08:00:00Z',
+  author: 'UNEOM Healthcare Team',
+  aiSummary: 'Healthcare uniform compliance guide for Saudi Arabia. Covers: MOH regulations (color coding, fabric standards), CBAHI accreditation requirements, infection control protocols, department-specific guidelines. Key requirements: antimicrobial fabrics, daily laundering, proper storage, PPE integration. Applies to: hospitals, clinics, laboratories, pharmacies. Updated for 2024 standards.',
+  aiSummaryAr: 'دليل امتثال أزياء الرعاية الصحية للسعودية. يغطي: لوائح وزارة الصحة، متطلبات اعتماد CBAHI، بروتوكولات مكافحة العدوى، إرشادات خاصة بالأقسام.'
+});
 
-const complianceAreas = [
-  {
-    icon: ShieldCheckIcon,
-    title: 'Infection Control Standards',
-    description: 'Antimicrobial treatments, fabric specifications, and contamination prevention protocols',
-    requirements: [
-      'Antimicrobial fabric treatment certification',
-      'Fluid-resistant material specifications',
-      'Color-coding for different departments',
-      'Regular testing and validation protocols'
-    ]
-  },
-  {
-    icon: DocumentCheckIcon,
-    title: 'Quality Certifications',
-    description: 'International and local quality standards for medical textiles and manufacturing',
-    requirements: [
-      'ISO 13485 Medical Device Quality Management',
-      'OEKO-TEX Standard 100 certification',
-      'Saudi Standards Organization (SASO) compliance',
-      'CE marking for medical devices'
-    ]
-  },
-  {
-    icon: ClipboardDocumentListIcon,
-    title: 'Documentation Requirements',
-    description: 'Proper documentation and traceability for compliance audits',
-    requirements: [
-      'Material composition certificates',
-      'Manufacturing process documentation',
-      'Quality control test results',
-      'Supplier qualification records'
-    ]
-  },
-  {
-    icon: ExclamationTriangleIcon,
-    title: 'Safety Protocols',
-    description: 'Worker safety and patient protection standards',
-    requirements: [
-      'Chemical safety data sheets',
-      'Allergen-free material certification',
-      'Fire retardant specifications',
-      'Ergonomic design validation'
-    ]
-  }
-]
+export const dynamic = 'force-static';
 
-const regulatoryBodies = [
-  {
-    name: 'Ministry of Health (MOH)',
-    role: 'Primary healthcare regulator',
-    requirements: 'Healthcare facility licensing and operational standards',
-    contact: 'www.moh.gov.sa'
-  },
-  {
-    name: 'Saudi Food and Drug Authority (SFDA)',
-    role: 'Medical device regulation',
-    requirements: 'Medical textile classification and approval',
-    contact: 'www.sfda.gov.sa'
-  },
-  {
-    name: 'Saudi Standards Organization (SASO)',
-    role: 'National standards development',
-    requirements: 'Quality standards and conformity assessment',
-    contact: 'www.saso.gov.sa'
-  },
-  {
-    name: 'Central Board for Accreditation of Healthcare Institutions (CBAHI)',
-    role: 'Healthcare accreditation',
-    requirements: 'Quality and safety standards for healthcare facilities',
-    contact: 'www.cbahi.gov.sa'
-  }
-]
+const complianceFAQs = [
+  { question: 'What are MOH uniform requirements for hospitals?', answer: 'MOH requires healthcare uniforms to meet specific standards including antimicrobial fabric treatment, color-coding by department, daily laundering protocols, and proper storage procedures. Scrubs must be facility-laundered, not home-washed.' },
+  { question: 'Is CBAHI uniform compliance mandatory?', answer: 'Yes, for accredited facilities. CBAHI (Central Board for Accreditation of Healthcare Institutions) requires documented uniform policies, infection control compliance, and regular audits of uniform management practices.' },
+  { question: 'What fabric standards apply to medical uniforms?', answer: 'Medical uniforms should be made from fluid-resistant, antimicrobial-treated fabrics with at least 60% cotton content. They must withstand high-temperature industrial laundering (above 60°C) and maintain integrity after repeated washing.' },
+];
 
-const complianceChecklist = [
-  {
-    category: 'Material Specifications',
-    items: [
-      'Antimicrobial treatment certification',
-      'Fabric composition documentation',
-      'Colorfastness test results',
-      'Shrinkage and durability testing',
-      'Chemical safety compliance'
-    ]
-  },
-  {
-    category: 'Manufacturing Standards',
-    items: [
-      'ISO 13485 certification',
-      'Good Manufacturing Practices (GMP)',
-      'Quality control procedures',
-      'Traceability systems',
-      'Supplier qualification'
-    ]
-  },
-  {
-    category: 'Design Requirements',
-    items: [
-      'Ergonomic design validation',
-      'Functional pocket placement',
-      'Appropriate coverage standards',
-      'Cultural sensitivity compliance',
-      'Size range adequacy'
-    ]
-  },
-  {
-    category: 'Testing and Validation',
-    items: [
-      'Antimicrobial efficacy testing',
-      'Fluid resistance testing',
-      'Comfort and breathability assessment',
-      'Durability and wash testing',
-      'User acceptance validation'
-    ]
-  }
-]
-
-const bestPractices = [
-  {
-    title: 'Regular Compliance Audits',
-    description: 'Conduct quarterly compliance reviews to ensure ongoing adherence to standards',
-    implementation: 'Schedule regular internal audits and third-party assessments'
-  },
-  {
-    title: 'Staff Training Programs',
-    description: 'Educate healthcare staff on proper uniform usage and compliance requirements',
-    implementation: 'Develop comprehensive training modules and certification programs'
-  },
-  {
-    title: 'Supplier Qualification',
-    description: 'Maintain rigorous supplier qualification and monitoring processes',
-    implementation: 'Establish supplier scorecards and regular performance reviews'
-  },
-  {
-    title: 'Documentation Management',
-    description: 'Implement robust documentation systems for compliance tracking',
-    implementation: 'Use digital systems for document control and audit trails'
-  }
-]
+const requirements = [
+  { icon: '🏥', title: 'MOH Regulations', items: ['Color-coded by department', 'Antimicrobial treatment', 'Facility laundering only', 'Proper storage protocols'] },
+  { icon: '✅', title: 'CBAHI Standards', items: ['Documented policies', 'Regular audits', 'Staff training records', 'Compliance monitoring'] },
+  { icon: '🦠', title: 'Infection Control', items: ['Fluid-resistant fabrics', 'Daily change requirements', 'PPE integration', 'Contamination protocols'] },
+  { icon: '👔', title: 'Professional Standards', items: ['Proper fit guidelines', 'Name badge requirements', 'Grooming standards', 'Footwear specifications'] },
+];
 
 export default function HealthcareComplianceGuidePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-white">
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/10 to-blue-600/10" />
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center space-x-2 text-green-600 mb-4">
-              <CalendarIcon className="h-5 w-5" />
-              <span className="text-sm font-medium">May 25, 2025</span>
-              <span className="text-gray-400">•</span>
-              <UserIcon className="h-5 w-5" />
-              <span className="text-sm font-medium">UNEOM Compliance Team</span>
-            </div>
-            
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Healthcare Compliance Guide:
-              <span className="text-green-600 block">Medical Uniform Standards</span>
-            </h1>
-            
-            <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
-              Navigate the complex landscape of healthcare compliance in Saudi Arabia. 
-              Your comprehensive guide to medical uniform standards, regulations, and best practices.
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                href="/quote"
-                className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Get Compliant Uniforms
-              </Link>
-              <Link 
-                href="/contact"
-                className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-300"
-              >
-                Compliance Consultation
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+    <>
+      <SEO2026
+        title="Healthcare Uniform Compliance Guide | UNEOM"
+        titleAr="دليل امتثال أزياء الرعاية الصحية | يونيوم"
+        description="Complete healthcare uniform compliance guide."
+        locale="en"
+        pageType="blog"
+        mainEntity="Healthcare Uniform Compliance"
+        primaryImage="/images/blog/healthcare-uniforms.jpg"
+        primaryImageAlt="Healthcare Compliance"
+        faqs={complianceFAQs}
+        breadcrumbs={[
+          { name: 'Blog', url: '/blog' },
+          { name: 'Healthcare Compliance Guide', url: '/blog/healthcare-compliance-guide' },
+        ]}
+        publishedDate="2024-11-20T08:00:00Z"
+        author={{ name: 'UNEOM Healthcare Team', title: 'Healthcare Specialists' }}
+        industry="Healthcare"
+      />
 
-      {/* Introduction */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Why Compliance Matters
-                </h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                  Healthcare compliance isn't just about meeting regulations—it's about ensuring 
-                  patient safety, staff protection, and operational excellence. In Saudi Arabia's 
-                  evolving healthcare landscape, compliance with medical uniform standards is 
-                  critical for maintaining accreditation and delivering quality care.
-                </p>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  This comprehensive guide covers everything healthcare administrators need to know 
-                  about medical uniform compliance, from regulatory requirements to implementation 
-                  best practices.
-                </p>
+      <article>
+        <header className="bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-800 text-white relative overflow-hidden py-16">
+          <Container>
+            <div className="relative z-10 max-w-4xl">
+              <div className="flex items-center gap-4 mb-6 text-sm">
+                <span className="bg-emerald-500 px-3 py-1 rounded-full">Healthcare Guide</span>
+                <span>November 20, 2024</span>
+                <span>•</span>
+                <span>15 min read</span>
               </div>
-              <div className="relative">
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/images/categories/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg"
-                    alt="Healthcare professional in compliant medical uniform"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Healthcare Uniform <span className="text-emerald-300">Compliance Guide</span> Saudi Arabia
+              </h1>
+              <p className="text-xl text-emerald-100 mb-8">
+                Essential guide to MOH regulations, CBAHI standards, and infection control requirements for medical uniforms in Saudi healthcare facilities.
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
+          </Container>
+        </header>
 
-      {/* Compliance Areas */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Key Compliance Areas
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Understanding the four pillars of healthcare uniform compliance in Saudi Arabia.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {complianceAreas.map((area, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="bg-green-100 p-3 rounded-lg flex-shrink-0">
-                    <area.icon className="h-8 w-8 text-green-600" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {area.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      {area.description}
-                    </p>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-sm font-medium text-gray-700">Key Requirements:</p>
-                  <ul className="space-y-2">
-                    {area.requirements.map((requirement, idx) => (
-                      <li key={idx} className="flex items-start text-sm text-gray-600">
-                        <CheckCircleIcon className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                        {requirement}
-                      </li>
+        <main className="py-16">
+          <Container>
+            <div className="max-w-4xl mx-auto">
+              <div className="relative aspect-video rounded-2xl overflow-hidden mb-12">
+                <Image src="/images/blog/healthcare-uniforms.jpg" alt="Healthcare Uniform Compliance" fill className="object-cover" />
+              </div>
+
+              <div className="prose prose-lg max-w-none">
+                <h2 className="text-3xl font-bold mb-6">Introduction</h2>
+                <p className="text-gray-600 mb-8 text-lg">
+                  Healthcare uniform compliance in Saudi Arabia is governed by multiple regulatory bodies including the Ministry of Health (MOH) and CBAHI. This comprehensive guide covers all requirements healthcare facilities must meet to ensure patient safety and regulatory compliance.
+                </p>
+
+                <section className="mb-12">
+                  <h2 className="text-3xl font-bold mb-6">Key Compliance Requirements</h2>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {requirements.map((req, index) => (
+                      <div key={index} className="bg-emerald-50 rounded-xl p-6">
+                        <div className="text-4xl mb-4">{req.icon}</div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-4">{req.title}</h3>
+                        <ul className="space-y-2">
+                          {req.items.map((item, i) => (
+                            <li key={i} className="flex items-center gap-2 text-gray-600">
+                              <span className="text-emerald-500">✓</span> {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     ))}
+                  </div>
+                </section>
+
+                <section className="mb-12">
+                  <h2 className="text-3xl font-bold mb-6">MOH Uniform Regulations</h2>
+                  <p className="text-gray-600 mb-4">
+                    The Saudi Ministry of Health mandates specific uniform standards for all healthcare workers:
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-600 space-y-2">
+                    <li><strong>Color Coding:</strong> Different departments must use designated colors (e.g., surgical green, nursing blue).</li>
+                    <li><strong>Fabric Standards:</strong> Uniforms must be made from approved antimicrobial materials.</li>
+                    <li><strong>Laundering:</strong> All uniforms must be facility-laundered at temperatures above 60°C.</li>
+                    <li><strong>Storage:</strong> Clean uniforms must be stored in designated areas away from patient areas.</li>
+                    <li><strong>Change Frequency:</strong> Daily changes required; immediate change if contaminated.</li>
                   </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                </section>
 
-      {/* Regulatory Bodies */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Key Regulatory Bodies
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Understanding the regulatory landscape in Saudi Arabia's healthcare sector.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            {regulatoryBodies.map((body, index) => (
-              <div key={index} className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 border border-green-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {body.name}
-                </h3>
-                <p className="text-sm text-green-600 font-medium mb-2">
-                  {body.role}
-                </p>
-                <p className="text-gray-600 text-sm mb-3">
-                  {body.requirements}
-                </p>
-                <p className="text-xs text-blue-600">
-                  {body.contact}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                <section className="mb-12">
+                  <h2 className="text-3xl font-bold mb-6">CBAHI Accreditation Requirements</h2>
+                  <p className="text-gray-600 mb-4">
+                    For CBAHI-accredited facilities, additional documentation and processes are required:
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-600 space-y-2">
+                    <li>Written uniform policy approved by administration</li>
+                    <li>Staff training documentation on uniform protocols</li>
+                    <li>Regular compliance audits with documented results</li>
+                    <li>Corrective action procedures for non-compliance</li>
+                    <li>Annual policy review and updates</li>
+                  </ul>
+                </section>
 
-      {/* Compliance Checklist */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Compliance Checklist
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Use this comprehensive checklist to ensure your medical uniforms meet all requirements.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {complianceChecklist.map((category, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  {category.category}
-                </h3>
-                <ul className="space-y-3">
-                  {category.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <input 
-                        type="checkbox" 
-                        className="mt-1 mr-3 h-4 w-4 text-green-600 rounded border-gray-300 focus:ring-green-500"
-                      />
-                      <span className="text-sm text-gray-700">{item}</span>
-                    </li>
+                <section className="mb-12">
+                  <h2 className="text-3xl font-bold mb-6">Department-Specific Guidelines</h2>
+                  
+                  <h3 className="text-2xl font-bold mb-4 text-emerald-600">Surgery & OR</h3>
+                  <p className="text-gray-600 mb-4">Surgical scrubs must be sterile, changed between procedures, and disposed of or laundered according to infection control protocols.</p>
+
+                  <h3 className="text-2xl font-bold mb-4 text-blue-600">Emergency Department</h3>
+                  <p className="text-gray-600 mb-4">High-risk exposure area requiring fluid-resistant uniforms with easy change access and immediate contamination protocols.</p>
+
+                  <h3 className="text-2xl font-bold mb-4 text-purple-600">Laboratory</h3>
+                  <p className="text-gray-600 mb-4">Lab coats must meet chemical resistance standards and be removed before leaving the laboratory area.</p>
+                </section>
+              </div>
+
+              <section className="mt-12" itemScope itemType="https://schema.org/FAQPage">
+                <h2 className="text-2xl font-bold mb-8">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {complianceFAQs.map((faq, index) => (
+                    <div key={index} className="bg-gray-50 rounded-xl p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                      <h3 className="text-lg font-bold text-gray-900 mb-2" itemProp="name">{faq.question}</h3>
+                      <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                        <p className="text-gray-600" itemProp="text">{faq.answer}</p>
+                      </div>
+                    </div>
                   ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                </div>
+              </section>
 
-      {/* Best Practices */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Implementation Best Practices
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Proven strategies for successful compliance implementation.
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto space-y-6">
-            {bestPractices.map((practice, index) => (
-              <div key={index} className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 border-l-4 border-green-500">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {practice.title}
-                </h3>
-                <p className="text-gray-600 mb-3">
-                  {practice.description}
+              <section className="mt-12 bg-emerald-50 rounded-2xl p-8">
+                <h2 className="text-2xl font-bold mb-4">Need Compliant Healthcare Uniforms?</h2>
+                <p className="text-gray-600 mb-6">
+                  UNEOM provides MOH and CBAHI-compliant healthcare uniforms for Saudi hospitals and clinics.
                 </p>
-                <p className="text-sm text-green-700 font-medium">
-                  Implementation: {practice.implementation}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* UNEOM Compliance Support */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              UNEOM Compliance Support
-            </h2>
-            <p className="text-gray-600 text-lg mb-8">
-              We understand the complexity of healthcare compliance. That's why UNEOM provides 
-              comprehensive support to ensure your medical uniforms meet all regulatory requirements.
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <DocumentCheckIcon className="h-8 w-8 text-green-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Documentation Support
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Complete documentation packages including certificates, test results, and compliance reports.
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <ShieldCheckIcon className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Quality Assurance
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Rigorous quality control processes ensuring every uniform meets compliance standards.
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <ClipboardDocumentListIcon className="h-8 w-8 text-purple-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Ongoing Monitoring
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Continuous monitoring of regulatory changes and proactive compliance updates.
-                </p>
-              </div>
+                <Link href="/quote?category=healthcare" className="inline-flex items-center px-6 py-3 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-700 transition-colors">
+                  Get Healthcare Quote →
+                </Link>
+              </section>
             </div>
-          </div>
-        </div>
-      </section>
+          </Container>
+        </main>
+      </article>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-green-700">
+      <section className="py-6 bg-gray-100 border-t">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ensure Your Compliance Today
-          </h2>
-          <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
-            Don't risk non-compliance. Partner with UNEOM for medical uniforms that meet 
-            all Saudi healthcare standards and regulations.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/quote"
-              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center"
-            >
-              Get Compliance Quote
-              <ArrowRightIcon className="h-5 w-5 ml-2" />
-            </Link>
-            <Link
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300"
-            >
-              Schedule Consultation
-            </Link>
-          </div>
+          <Link href="/ar/blog/healthcare-compliance-guide" className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+            🇸🇦 العربية
+          </Link>
         </div>
       </section>
-
-      {/* Related Resources */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Related Resources
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Link href="/blog/medical-textile-innovation" className="group">
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/images/categories/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg"
-                    alt="Medical textile innovation"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                    Medical Textile Innovation
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Discover the latest innovations in medical textiles and compliance standards.
-                  </p>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href="/resources/policy-templates" className="group">
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="aspect-video relative bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
-                  <DocumentCheckIcon className="h-16 w-16 text-green-600" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                    Policy Templates
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Download ready-to-use compliance policy templates for your facility.
-                  </p>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href="/shop/medical-scrubs" className="group">
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/images/doctor-SBI-300813580.jpg"
-                    alt="Compliant medical scrubs"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                    Compliant Medical Scrubs
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Explore our collection of fully compliant medical uniforms.
-                  </p>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
+    </>
+  );
 }
