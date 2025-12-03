@@ -5,217 +5,170 @@ import Link from 'next/link';
 import { getAllBlogPosts, getAllTags } from '../../lib/data/blogPosts.server';
 import Container from '@/components/ui/Container';
 import { formatDate } from '@/lib/utils';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-export const metadata: Metadata = {
-  title: 'Blog | Uneom - Professional Uniforms & Workwear',
-  description: 'Explore our blog for insights, tips, and trends in professional uniforms, workwear, and corporate attire across various industries.',
-  openGraph: {
-    title: 'Blog | Uneom - Professional Uniforms & Workwear',
-    description: 'Explore our blog for insights, tips, and trends in professional uniforms, workwear, and corporate attire across various industries.',
-    url: 'https://uneom.com/blog',
-    siteName: 'Uneom',
-    images: [
-      {
-        url: 'https://uneom.com/images/og-blog.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Uneom Blog'
-      }
-    ],
-    locale: 'en_US',
-    type: 'website'}
-};
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Uniform Industry Blog Saudi Arabia | Expert Insights & Trends | UNEOM',
+  titleAr: 'مدونة صناعة الأزياء الموحدة السعودية | رؤى الخبراء والاتجاهات | يونيوم',
+  description: 'Expert blog on professional uniforms in Saudi Arabia. Latest trends, fabric innovations, industry guides for healthcare, hospitality, corporate, education uniforms. Updated weekly!',
+  descriptionAr: 'مدونة متخصصة في الأزياء المهنية في السعودية. أحدث الاتجاهات، ابتكارات الأقمشة، أدلة الصناعات للرعاية الصحية، الضيافة، الشركات، التعليم. تحديث أسبوعي!',
+  keywords: ['uniform blog saudi arabia', 'workwear trends', 'healthcare uniform guide', 'corporate attire tips', 'hospitality uniform trends', 'industrial safety workwear', 'school uniform saudi'],
+  keywordsAr: ['مدونة الأزياء الموحدة السعودية', 'اتجاهات ملابس العمل', 'دليل الزي الطبي', 'نصائح الملابس الرسمية', 'اتجاهات زي الضيافة'],
+  locale: 'en',
+  pageType: 'blog',
+  path: '/blog',
+  image: '/images/blog/uniform-trends-2025.jpg',
+  imageAlt: 'UNEOM Uniform Industry Blog',
+  aiSummary: 'UNEOM blog covers professional uniforms and workwear in Saudi Arabia. Topics include: Healthcare uniforms (scrubs, lab coats), Corporate attire (suits, polo shirts), Hospitality uniforms (hotel, restaurant), Industrial safety wear (FR clothing, coveralls), School uniforms, Security uniforms. Weekly articles on fabric technology, sustainability, Saudi market trends, and uniform management.',
+  aiSummaryAr: 'مدونة يونيوم تغطي الأزياء المهنية وملابس العمل في السعودية. المواضيع تشمل: أزياء الرعاية الصحية، الملابس الرسمية، أزياء الضيافة، ملابس السلامة الصناعية، الزي المدرسي، أزياء الأمن.'
+});
 
 export const dynamic = 'force-static';
+
+const blogFAQs = [
+  { question: 'How often is the UNEOM blog updated?', questionAr: 'كم مرة يتم تحديث مدونة يونيوم؟', answer: 'We publish new articles weekly, covering the latest trends, industry insights, and practical guides for uniform management in Saudi Arabia.', answerAr: 'ننشر مقالات جديدة أسبوعياً، تغطي أحدث الاتجاهات ورؤى الصناعة والأدلة العملية لإدارة الأزياء الموحدة في السعودية.' },
+  { question: 'What topics does the blog cover?', questionAr: 'ما المواضيع التي تغطيها المدونة؟', answer: 'Our blog covers healthcare uniforms, corporate attire, hospitality uniforms, industrial safety wear, school uniforms, security uniforms, fabric technology, sustainability, and Saudi market trends.', answerAr: 'مدونتنا تغطي أزياء الرعاية الصحية، الملابس الرسمية، أزياء الضيافة، ملابس السلامة الصناعية، الزي المدرسي، أزياء الأمن، تقنية الأقمشة، الاستدامة، واتجاهات السوق السعودي.' },
+  { question: 'Can I subscribe to the blog?', questionAr: 'هل يمكنني الاشتراك في المدونة؟', answer: 'Yes! Subscribe to our newsletter at the bottom of any page to receive the latest articles directly in your inbox.', answerAr: 'نعم! اشترك في نشرتنا الإخبارية في أسفل أي صفحة لتلقي أحدث المقالات مباشرة في بريدك الإلكتروني.' },
+];
 
 export default function BlogPage() {
   const allPosts = getAllBlogPosts();
   const allTags = getAllTags();
   
   return (
-    <main className="py-10">
-      <Container>
-        <div className="max-w-7xl mx-auto">
-          <header className="mb-12 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Uneom Blog</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Insights, trends, and expertise in professional uniforms and workwear across various industries
-            </p>
-          </header>
-          
-          {/* Featured Post */}
-          {allPosts.length > 0 && (
-            <div className="mb-16">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                {allPosts[0].featuredImage && (
+    <>
+      <SEO2026
+        title="Uniform Industry Blog | UNEOM"
+        titleAr="مدونة صناعة الأزياء الموحدة | يونيوم"
+        description="Expert blog on professional uniforms in Saudi Arabia."
+        descriptionAr="مدونة متخصصة في الأزياء المهنية في السعودية."
+        locale="en"
+        pageType="blog"
+        mainEntity="Uniform Industry Blog"
+        mainEntityAr="مدونة صناعة الأزياء الموحدة"
+        primaryImage="/images/blog/uniform-trends-2025.jpg"
+        primaryImageAlt="UNEOM Blog"
+        faqs={blogFAQs}
+        breadcrumbs={[
+          { name: 'Blog', nameAr: 'المدونة', url: '/blog' },
+        ]}
+      />
+
+      <main className="py-10">
+        <Container>
+          <div className="max-w-7xl mx-auto">
+            <header className="mb-12 text-center">
+              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-4">
+                <span>📚</span>
+                <span className="text-sm font-medium">Industry Insights</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">UNEOM <span className="text-blue-600">Blog</span></h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Expert insights, trends, and guides on professional uniforms and workwear in Saudi Arabia
+              </p>
+            </header>
+            
+            {/* Featured Post */}
+            {allPosts.length > 0 && (
+              <div className="mb-16">
+                <div className="grid md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
                   <div className="relative aspect-video rounded-xl overflow-hidden">
                     <Image
-                      src={allPosts[0].featuredImage}
+                      src={allPosts[0].featuredImage || '/images/blog/placeholder.jpg'}
                       alt={allPosts[0].title}
                       fill
                       className="object-cover"
-                      priority
                     />
+                    <span className="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">Featured</span>
                   </div>
-                )}
-                
-                <div className={allPosts[0].featuredImage ? "" : "md:col-span-2"}>
-                  <div className="mb-2 text-sm text-gray-500">
-                    {formatDate(allPosts[0].date)} • 
-                    {typeof allPosts[0].author === 'string' 
-                      ? ` By ${allPosts[0].author}` 
-                      : ` By ${allPosts[0].author.name}`}
-                  </div>
-                  
-                  <h2 className="text-3xl font-bold mb-4">
-                    <Link href={`/blog/${allPosts[0].slug}`} className="hover:text-blue-600 transition-colors">
-                      {allPosts[0].title}
-                    </Link>
-                  </h2>
-                  
-                  <p className="text-lg text-gray-600 mb-6">{allPosts[0].excerpt}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {allPosts[0].tags && allPosts[0].tags.map(tag => (
-                      <Link 
-                        key={tag}
-                        href={`/blog/tag/${tag}`}
-                        className="text-xs px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full"
-                      >
-                        #{tag}
-                      </Link>
-                    ))}
-                  </div>
-                  
-                  <Link 
-                    href={`/blog/${allPosts[0].slug}`}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-                  >
-                    Read Full Article
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          )}
-          
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-            {/* Main Content - Blog Posts */}
-            <div className="lg:col-span-3">
-              <h2 className="text-2xl font-bold mb-8">Latest Articles</h2>
-              
-              <div className="grid gap-10">
-                {allPosts.slice(1).map(post => {
-                  const authorName = typeof post.author === 'string' ? post.author : post.author.name;
-                  
-                  return (
-                    <article key={post.slug} className="border-b border-gray-200 pb-10 last:border-0">
-                      <div className="grid md:grid-cols-3 gap-6">
-                        {post.featuredImage && (
-                          <div className="md:col-span-1">
-                            <Link href={`/blog/${post.slug}`} className="block relative aspect-video overflow-hidden rounded-lg">
-                              <Image
-                                src={post.featuredImage}
-                                alt={post.title}
-                                fill
-                                className="object-cover transition-transform hover:scale-105 duration-300"
-                              />
-                            </Link>
-                          </div>
-                        )}
-                        
-                        <div className={post.featuredImage ? "md:col-span-2" : "md:col-span-3"}>
-                          <div className="mb-2 text-sm text-gray-500">
-                            {formatDate(post.date)} • By {authorName}
-                          </div>
-                          
-                          <h3 className="text-xl font-bold mb-2 hover:text-blue-600 transition-colors">
-                            <Link href={`/blog/${post.slug}`}>
-                              {post.title}
-                            </Link>
-                          </h3>
-                          
-                          <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                          
-                          <div className="flex items-center justify-between">
-                            <div className="flex flex-wrap gap-2">
-                              {post.tags && post.tags.slice(0, 3).map(tag => (
-                                <Link 
-                                  key={tag}
-                                  href={`/blog/tag/${tag}`}
-                                  className="text-xs px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200"
-                                >
-                                  #{tag}
-                                </Link>
-                              ))}
-                            </div>
-                            
-                            <Link 
-                              href={`/blog/${post.slug}`}
-                              className="text-blue-600 hover:text-blue-800 font-medium text-sm inline-flex items-center"
-                            >
-                              Read More
-                              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                              </svg>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  );
-                })}
-              </div>
-            </div>
-            
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-24">
-                <div className="bg-gray-50 p-6 rounded-xl mb-8">
-                  <h3 className="text-lg font-bold mb-4">Categories</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {allTags.map(tag => (
-                      <Link 
-                        key={tag}
-                        href={`/blog/tag/${tag}`}
-                        className="text-sm px-3 py-1 bg-white border border-gray-200 hover:bg-gray-100 rounded-full mb-2 inline-block"
-                      >
-                        {tag}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="bg-blue-50 p-6 rounded-xl">
-                  <h3 className="text-lg font-bold mb-3">Subscribe to Our Newsletter</h3>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Stay updated with the latest trends and insights in professional uniforms
-                  </p>
-                  <form className="space-y-3">
-                    <div>
-                      <input 
-                        type="email" 
-                        placeholder="Your email address" 
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
-                        required
-                      />
+                  <div>
+                    <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                      <span>{formatDate(allPosts[0].date)}</span>
+                      <span>•</span>
+                      <span>{allPosts[0].readTime}</span>
                     </div>
-                    <button 
-                      type="submit" 
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
-                    >
-                      Subscribe
-                    </button>
-                  </form>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4 hover:text-blue-600 transition-colors">
+                      <Link href={`/blog/${allPosts[0].slug}`}>{allPosts[0].title}</Link>
+                    </h2>
+                    <p className="text-gray-600 mb-4">{allPosts[0].excerpt}</p>
+                    <Link href={`/blog/${allPosts[0].slug}`} className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800">
+                      Read Article →
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            
+            {/* Tags */}
+            {allTags.length > 0 && (
+              <div className="mb-12">
+                <h2 className="text-lg font-semibold mb-4">Browse by Topic</h2>
+                <div className="flex flex-wrap gap-2">
+                  {allTags.slice(0, 12).map((tag) => (
+                    <Link key={tag} href={`/blog/tag/${tag}`} className="px-4 py-2 bg-gray-100 hover:bg-blue-100 text-gray-700 hover:text-blue-700 rounded-full text-sm transition-colors">
+                      {tag}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+            
+            {/* All Posts */}
+            <section>
+              <h2 className="text-2xl font-bold mb-8">Latest Articles</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {allPosts.slice(1).map((post) => (
+                  <article key={post.slug} className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden border border-gray-100">
+                    <Link href={`/blog/${post.slug}`}>
+                      <div className="relative aspect-video overflow-hidden">
+                        <Image
+                          src={post.featuredImage || '/images/blog/placeholder.jpg'}
+                          alt={post.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
+                          <span>{formatDate(post.date)}</span>
+                          <span>•</span>
+                          <span>{post.readTime}</span>
+                        </div>
+                        <h3 className="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">{post.title}</h3>
+                        <p className="text-gray-600 text-sm line-clamp-2">{post.excerpt}</p>
+                      </div>
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="mt-16" itemScope itemType="https://schema.org/FAQPage">
+              <h2 className="text-2xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+              <div className="max-w-3xl mx-auto space-y-4">
+                {blogFAQs.map((faq, index) => (
+                  <div key={index} className="bg-gray-50 rounded-xl p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2" itemProp="name">{faq.question}</h3>
+                    <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                      <p className="text-gray-600" itemProp="text">{faq.answer}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
           </div>
+        </Container>
+      </main>
+
+      <section className="py-6 bg-gray-100 border-t">
+        <div className="container mx-auto px-4 text-center">
+          <Link href="/ar/blog" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+            🇸🇦 العربية
+          </Link>
         </div>
-      </Container>
-    </main>
+      </section>
+    </>
   );
-} 
+}

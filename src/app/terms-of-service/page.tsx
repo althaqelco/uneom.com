@@ -1,213 +1,172 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import Container from '@/components/ui/Container';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-export const metadata: Metadata = {
-  title: 'Terms Of Service | UNEOM Saudi Arabia',
-  description: 'High-quality professional uniforms and workwear solutions tailored for Saudi Arabian businesses and institutions.',
-  keywords: ['uniform', 'workwear', 'Saudi Arabia', 'terms of service'],
-  openGraph: {
-    title: 'Terms Of Service | UNEOM Saudi Arabia',
-    description: 'High-quality professional uniforms and workwear solutions tailored for Saudi Arabian businesses and institutions.',
-    url: 'https://uneom.com/terms-of-service/',
-    siteName: 'UNEOM',
-    images: [
-      {
-        url: 'https://uneom.com/images/og-image.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Terms Of Service - UNEOM Saudi Arabia'
-      }
-    ],
-    locale: 'en_US'
-  }
-};
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Terms of Service | UNEOM - Terms & Conditions',
+  titleAr: 'شروط الخدمة | يونيوم - الشروط والأحكام',
+  description: 'UNEOM Terms of Service. Read our terms and conditions for ordering uniforms, payments, shipping, returns, and warranty. Saudi Arabia business terms.',
+  descriptionAr: 'شروط خدمة يونيوم. اقرأ شروطنا وأحكامنا لطلب الأزياء الموحدة، المدفوعات، الشحن، الإرجاع، والضمان. شروط الأعمال السعودية.',
+  keywords: ['terms of service', 'terms and conditions', 'uniform ordering terms', 'return policy'],
+  keywordsAr: ['شروط الخدمة', 'الشروط والأحكام', 'شروط طلب الأزياء', 'سياسة الإرجاع'],
+  locale: 'en',
+  pageType: 'resources',
+  path: '/terms-of-service',
+  noindex: false,
+  aiSummary: 'UNEOM Terms of Service covers: Ordering process, Payment terms (50% deposit, balance before shipping), Shipping (10-15 business days standard), Returns (14 days for stock items, custom orders non-refundable), Warranty (90 days manufacturing defects), Cancellation policy. Governing law: Saudi Arabia.',
+  aiSummaryAr: 'شروط خدمة يونيوم تغطي: عملية الطلب، شروط الدفع، الشحن، الإرجاع، الضمان، سياسة الإلغاء. القانون الحاكم: المملكة العربية السعودية.'
+});
+
+export const dynamic = 'force-static';
 
 export default function TermsOfServicePage() {
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="bg-blue-900 text-white py-16">
-        <div className="container mx-auto px-4">
+    <>
+      <SEO2026
+        title="Terms of Service | UNEOM"
+        titleAr="شروط الخدمة | يونيوم"
+        description="UNEOM Terms of Service."
+        descriptionAr="شروط خدمة يونيوم."
+        locale="en"
+        pageType="resources"
+        mainEntity="Terms of Service"
+        mainEntityAr="شروط الخدمة"
+        breadcrumbs={[
+          { name: 'Terms of Service', nameAr: 'شروط الخدمة', url: '/terms-of-service' },
+        ]}
+      />
+
+      <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16">
+        <Container>
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl font-bold mb-6">Terms of Service</h1>
-            <p className="text-lg md:text-xl">
-              The following terms and conditions govern your use of UNEOM's products and services
-            </p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Terms of Service</h1>
+            <p className="text-xl text-gray-300">Last updated: December 2024</p>
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* Terms Content */}
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none">
-              <div className="mb-12">
-                <p className="text-gray-600 mb-6">
-                  Last Updated: June 15, 2023
-                </p>
-                <p>
-                  Welcome to UNEOM ("Company", "we", "our", "us"). These Terms of Service ("Terms") govern your access to and use of UNEOM's website, products, and services. Please read these Terms carefully before using our services.
-                </p>
-              </div>
+      <main className="py-16">
+        <Container>
+          <article className="max-w-4xl mx-auto prose prose-lg">
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">1. Acceptance of Terms</h2>
+              <p className="text-gray-600 mb-4">
+                By accessing or using UNEOM&apos;s website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
+              </p>
+            </section>
 
-              <div className="mb-12">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">1. Acceptance of Terms</h2>
-                <p>
-                  By accessing or using our services, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not access or use our services.
-                </p>
-              </div>
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">2. Ordering Process</h2>
+              <ul className="list-disc pl-6 text-gray-600 mb-4">
+                <li>All orders are subject to acceptance and availability</li>
+                <li>Prices are quoted in Saudi Riyals (SAR) unless otherwise specified</li>
+                <li>Minimum order quantities may apply for certain products</li>
+                <li>Custom orders require written approval of design before production</li>
+                <li>Order confirmation will be sent via email within 24 business hours</li>
+              </ul>
+            </section>
 
-              <div className="mb-12">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">2. Services Description</h2>
-                <p>
-                  UNEOM is a B2B uniform supplier providing professional uniforms and scrubs to businesses across Saudi Arabia. Our services include:
-                </p>
-                <ul className="list-disc pl-6 mt-3 space-y-2">
-                  <li>Custom uniform design and manufacturing</li>
-                  <li>Bulk uniform orders for businesses</li>
-                  <li>Uniform program management</li>
-                  <li>Corporate uniform consultancy</li>
-                  <li>Delivery and distribution services within Saudi Arabia</li>
-                </ul>
-              </div>
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">3. Payment Terms</h2>
+              <ul className="list-disc pl-6 text-gray-600 mb-4">
+                <li><strong>Stock Orders:</strong> Full payment required before shipping</li>
+                <li><strong>Custom Orders:</strong> 50% deposit required to begin production, balance due before shipping</li>
+                <li><strong>Corporate Accounts:</strong> NET 30 terms available upon approval</li>
+                <li>We accept bank transfers, credit cards, and approved purchase orders</li>
+              </ul>
+            </section>
 
-              <div className="mb-12">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">3. Account Registration</h2>
-                <p>
-                  To access certain features of our services, you may need to register for an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.
-                </p>
-                <p className="mt-3">
-                  You are responsible for safeguarding your password and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.
-                </p>
-              </div>
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">4. Shipping & Delivery</h2>
+              <ul className="list-disc pl-6 text-gray-600 mb-4">
+                <li><strong>Standard Delivery:</strong> 10-15 business days from order confirmation</li>
+                <li><strong>Rush Delivery:</strong> 5-7 business days (additional fees apply)</li>
+                <li>Shipping costs calculated at checkout based on destination and weight</li>
+                <li>Free shipping on orders over SAR 5,000 within Saudi Arabia</li>
+                <li>International shipping available to GCC countries</li>
+              </ul>
+            </section>
 
-              <div className="mb-12">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">4. Order and Payment Terms</h2>
-                <p>
-                  All orders are subject to acceptance by UNEOM. We reserve the right to refuse any order for any reason.
-                </p>
-                <p className="mt-3">
-                  Prices for our products and services are subject to change without notice. We reserve the right to modify or discontinue any product or service without notice at any time.
-                </p>
-                <p className="mt-3">
-                  Payment terms are as follows:
-                </p>
-                <ul className="list-disc pl-6 mt-3 space-y-2">
-                  <li>For standard orders: 50% advance payment upon order confirmation, remaining 50% before shipment</li>
-                  <li>For custom designs: Design fee may apply and is non-refundable</li>
-                  <li>For bulk orders: Payment terms may be negotiated on a case-by-case basis</li>
-                  <li>For recurring orders: Payment terms will be specified in a separate agreement</li>
-                </ul>
-              </div>
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">5. Returns & Exchanges</h2>
+              <h3 className="text-xl font-semibold mb-3">Stock Items</h3>
+              <ul className="list-disc pl-6 text-gray-600 mb-4">
+                <li>Returns accepted within 14 days of delivery</li>
+                <li>Items must be unworn, unwashed, with original tags</li>
+                <li>Return shipping costs are customer&apos;s responsibility</li>
+                <li>Refunds processed within 7-10 business days</li>
+              </ul>
+              <h3 className="text-xl font-semibold mb-3">Custom Orders</h3>
+              <ul className="list-disc pl-6 text-gray-600 mb-4">
+                <li>Custom orders are non-refundable once production begins</li>
+                <li>Defects in custom orders will be replaced at no charge</li>
+                <li>Size exchanges available within 14 days</li>
+              </ul>
+            </section>
 
-              <div className="mb-12">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">5. Delivery and Shipping</h2>
-                <p>
-                  UNEOM will make every effort to deliver products according to the estimated delivery times, but we cannot guarantee specific delivery dates. Shipping and delivery timeframes are estimates only.
-                </p>
-                <p className="mt-3">
-                  Risk of loss and title for products purchased from UNEOM pass to you upon delivery of the products to the shipping carrier.
-                </p>
-                <p className="mt-3">
-                  For deliveries within Saudi Arabia, we use reputable shipping partners. International shipping may be available upon request and subject to additional fees and customs requirements.
-                </p>
-              </div>
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">6. Warranty</h2>
+              <p className="text-gray-600 mb-4">
+                UNEOM provides a 90-day warranty against manufacturing defects:
+              </p>
+              <ul className="list-disc pl-6 text-gray-600 mb-4">
+                <li>Stitching defects</li>
+                <li>Fabric flaws present at time of purchase</li>
+                <li>Color fading within normal wash guidelines</li>
+                <li>Hardware failures (buttons, zippers)</li>
+              </ul>
+              <p className="text-gray-600 mb-4">
+                Warranty does not cover normal wear and tear, misuse, or improper care.
+              </p>
+            </section>
 
-              <div className="mb-12">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">6. Returns and Refunds</h2>
-                <p>
-                  Due to the custom nature of many of our products, returns are limited and subject to the following conditions:
-                </p>
-                <ul className="list-disc pl-6 mt-3 space-y-2">
-                  <li>Stock items: May be returned within 14 days of receipt if unused, in original packaging, and with tags attached</li>
-                  <li>Custom items: Cannot be returned unless there is a manufacturing defect</li>
-                  <li>Defective products: Must be reported within 7 days of receipt with photographic evidence</li>
-                </ul>
-                <p className="mt-3">
-                  All returns must be authorized by UNEOM before shipping. Unauthorized returns will not be accepted.
-                </p>
-              </div>
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">7. Cancellation Policy</h2>
+              <ul className="list-disc pl-6 text-gray-600 mb-4">
+                <li><strong>Stock Orders:</strong> Can be cancelled within 24 hours of placement for full refund</li>
+                <li><strong>Custom Orders:</strong> Can be cancelled before production begins with refund minus design fees</li>
+                <li>Once production begins, custom orders cannot be cancelled</li>
+              </ul>
+            </section>
 
-              <div className="mb-12">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">7. Intellectual Property</h2>
-                <p>
-                  All content on our website, including text, graphics, logos, images, and software, is the property of UNEOM or its content suppliers and is protected by Saudi Arabian and international copyright laws.
-                </p>
-                <p className="mt-3">
-                  For custom designs: Unless otherwise agreed in writing, UNEOM retains ownership of all designs, patterns, and artwork created for clients. Clients are granted a non-exclusive license to use the designs on the products purchased from UNEOM.
-                </p>
-              </div>
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">8. Intellectual Property</h2>
+              <p className="text-gray-600 mb-4">
+                All designs, logos, and content on uneom.com are property of UNEOM. Customer logos and branding submitted for customization remain customer property.
+              </p>
+            </section>
 
-              <div className="mb-12">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">8. Limitation of Liability</h2>
-                <p>
-                  UNEOM shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the services; (ii) any conduct or content of any third party on the services; (iii) any content obtained from the services; and (iv) unauthorized access, use, or alteration of your transmissions or content.
-                </p>
-              </div>
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">9. Governing Law</h2>
+              <p className="text-gray-600 mb-4">
+                These terms are governed by the laws of the Kingdom of Saudi Arabia. Any disputes will be resolved in the courts of Riyadh, Saudi Arabia.
+              </p>
+            </section>
 
-              <div className="mb-12">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">9. Governing Law</h2>
-                <p>
-                  These Terms shall be governed and construed in accordance with the laws of the Kingdom of Saudi Arabia, without regard to its conflict of law provisions.
-                </p>
-                <p className="mt-3">
-                  Any dispute arising out of or relating to these Terms shall be subject to the exclusive jurisdiction of the courts of Saudi Arabia.
-                </p>
-              </div>
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4">10. Contact</h2>
+              <p className="text-gray-600 mb-4">
+                For questions about these Terms of Service:
+              </p>
+              <ul className="list-none text-gray-600 mb-4">
+                <li><strong>Email:</strong> legal@uneom.com</li>
+                <li><strong>Phone:</strong> +971 55 816 4922</li>
+              </ul>
+            </section>
+          </article>
+        </Container>
+      </main>
 
-              <div className="mb-12">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">10. Changes to Terms</h2>
-                <p>
-                  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
-                </p>
-              </div>
-
-              <div className="mb-12">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">11. Contact Us</h2>
-                <p>
-                  If you have any questions about these Terms, please contact us at:
-                </p>
-                <div className="mt-3">
-                  <p>UNEOM Saudi Arabia</p>
-                  <p>Email: legal@uneom.com</p>
-                  <p>Phone: +966 13 XXX XXXX</p>
-                  <p>Address: Business Gate, Riyadh, Saudi Arabia</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <section className="py-6 bg-gray-100 border-t">
+        <div className="container mx-auto px-4 text-center">
+          <Link href="/ar/terms-of-service" className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+            🇸🇦 العربية
+          </Link>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="bg-blue-50 py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Have Questions About Our Terms?</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Our customer service team is ready to assist you with any inquiries regarding our terms of service.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                href="/contact" 
-                className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition duration-300"
-              >
-                Contact Us
-              </Link>
-              <Link 
-                href="/privacy-policy" 
-                className="bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-3 px-6 rounded-md transition duration-300"
-              >
-                View Privacy Policy
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    </>
   );
-} 
+}

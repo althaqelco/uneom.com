@@ -1,473 +1,94 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025'; // Assuming this component handles locale
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: string;
-  image: string;
-  href: string;
-  features?: string[];
-  colors?: string[];
-  isNew?: boolean;
-  isBestseller?: boolean;
-}
+export const metadata: Metadata = generateMetadata2026({
+  title: 'أزياء الأمن السعودية | زي الحراسة | يونيوم',
+  titleAr: 'أزياء الأمن السعودية | زي الحراسة | يونيوم',
+  description: 'Security uniforms in Saudi Arabia.',
+  descriptionAr: 'أزياء أمن فاخرة في السعودية. زي حراسة أمنية، ملابس تكتيكية، جاكيت دوريات لشركات الأمن. من 199 ريال. علامة تجارية مخصصة!',
+  keywords: ['أزياء الأمن السعودية', 'زي الحراسة'],
+  keywordsAr: ['أزياء الأمن السعودية', 'زي الحراسة', 'ملابس تكتيكية', 'جاكيت دوريات', 'زي شركات الأمن'],
+  locale: 'ar',
+  pageType: 'category',
+  path: '/ar/shop/security-uniforms',
+  image: '/images/products/security-officer-uniform.jpg',
+  imageAlt: 'أزياء الأمن السعودية',
+  aiSummary: 'UNEOM security uniforms for Saudi security companies.',
+  aiSummaryAr: 'أزياء الأمن من يونيوم لشركات الأمن السعودية. المنتجات: زي ضابط أمن (من 199 ريال)، سترات أمنية تكتيكية (من 149 ريال)، جاكيت دوريات (من 229 ريال)، إكسسوارات أمنية (من 49 ريال). نخدم شركات الأمن الخاصة، أمن المولات، أمن الفنادق، وأمن الفعاليات.'
+});
 
-export default function SecurityUniformsPageAR() {
-  const locale = 'ar'; // Set locale to Arabic
-  
-  const products: Product[] = [
-    {
-      id: 'executive-security-suit',
-      name: 'بدلة أمن تنفيذية',
-      description: 'زي أمن تنفيذي احترافي مصمم للأماكن الفاخرة وخدمات حماية كبار الشخصيات بتصميم أنيق وميزات عملية.',
-      price: 'من 399 ريال سعودي',
-      image: '/images/security/uniform-durability-test.jpg', // Updated image
-      href: '/ar/shop/security-uniforms/tactical-security-uniforms',
-      features: ['قماش ريبستوب متين', 'جيوب متعددة', 'ركب/أكواع معززة', 'حلقات حزام'],
-      colors: ['أسود', 'كحلي', 'كاكي', 'زيتي'],
-      isNew: true
-    },
-    {
-      id: 'hotel-security-uniform',
-      name: 'زي أمن الفنادق',
-      description: 'زي أمن أنيق مصمم لقطاع الفنادق والضيافة، يوازن بين المظهر الاحترافي وميزات الأمن الوظيفية.',
-      price: 'من 299 ريال سعودي',
-      image: '/images/security/smart-fabric-technology.jpg', // Updated image
-      href: '/ar/shop/security-uniforms/security-winter-jacket',
-      features: ['عزل حراري', 'مقاوم للماء', 'عناصر عاكسة', 'حامل شارة'],
-      colors: ['أسود', 'كحلي', 'رمادي']
-    }
-  ];
-  
-  const departments = [
-    { id: 'all', name: 'جميع الأقسام' },
-    { id: 'corporate', name: 'أمن الشركات' },
-    { id: 'hotel', name: 'الفنادق والضيافة' },
-    { id: 'event', name: 'أمن الفعاليات' },
-    { id: 'tactical', name: 'الأمن التكتيكي' }
-  ];
-  
-  const featureFilters = [
-    { id: 'professional-look', name: 'مظهر احترافي' },
-    { id: 'high-visibility', name: 'رؤية عالية' },
-    { id: 'tactical-features', name: 'ميزات تكتيكية' },
-    { id: 'badge-holder', name: 'حامل شارة' },
-    { id: 'weather-resistant', name: 'مقاوم للطقس' }
-  ];
-  
+export const dynamic = 'force-static';
+
+const securityFAQsAr = [
+  { question: 'هل توردون لشركات الأمن؟', questionAr: 'هل توردون لشركات الأمن؟', answer: 'Yes.', answerAr: 'نعم، يونيوم تورد أزياء الأمن لشركات الأمن الخاصة، المرافق الحكومية، المولات، الفنادق، وفرق الأمن المؤسسية في جميع أنحاء السعودية.' },
+  { question: 'هل يمكنكم إضافة شعارات شركات الأمن؟', questionAr: 'هل يمكنكم إضافة شعارات شركات الأمن؟', answer: 'Yes.', answerAr: 'نعم، نقدم تطريز احترافي وتثبيت شارات لشعارات شركات الأمن، شارات الرتب، وشارات الأسماء.' },
+  { question: 'هل تقدمون إكسسوارات تكتيكية؟', questionAr: 'هل تقدمون إكسسوارات تكتيكية؟', answer: 'Yes.', answerAr: 'نعم، نورد إكسسوارات أمنية تشمل أحزمة متعددة الاستخدامات، حوامل الراديو، حاملات الهوية، وأحذية تكتيكية لتكملة مجموعة أزيائنا.' },
+];
+
+const products = [
+  { id: 'security-officer-uniform', name: 'زي ضابط الأمن', description: 'زي احترافي لضباط الأمن', price: 'من 199 ريال', image: '/images/products/security-officer-uniform.jpg', href: '/ar/shop/security-uniforms/security-officer-uniform', features: ['احترافي', 'متين', 'مريح'] },
+  { id: 'tactical-security-vest', name: 'سترة أمنية تكتيكية', description: 'سترة متعددة الاستخدامات لأفراد الأمن', price: 'من 149 ريال', image: '/images/products/tactical-vest.jpg', href: '/ar/shop/security-uniforms/tactical-security-vest', features: ['متعددة الجيوب', 'متينة', 'قابلة للتعديل'] },
+  { id: 'security-patrol-jacket', name: 'جاكيت دوريات الأمن', description: 'جاكيت مقاوم للطقس للدوريات', price: 'من 229 ريال', image: '/images/products/security-jacket.jpg', href: '/ar/shop/security-uniforms/security-patrol-jacket', features: ['مقاوم للماء', 'عاكس', 'دافئ'] },
+  { id: 'security-accessories', name: 'طقم إكسسوارات الأمن', description: 'حزمة إكسسوارات أمنية كاملة', price: 'من 49 ريال', image: '/images/products/security-accessories.jpg', href: '/ar/shop/security-uniforms/security-accessories-kit', features: ['حزام متعدد الاستخدامات', 'حامل هوية', 'حامل راديو'] },
+];
+
+export default function SecurityUniformsPageAr() {
   return (
-    <div className="bg-white" dir="rtl">
-    
-      {/* Breadcrumb */}
-      <div className="bg-gray-100 py-4">
+    <div dir="rtl">
+      <SEO2026 title="أزياء الأمن السعودية | يونيوم" titleAr="أزياء الأمن السعودية | يونيوم" description="Security uniforms." descriptionAr="أزياء أمن فاخرة للسعودية." locale="ar" pageType="category" mainEntity="Security Uniforms" mainEntityAr="أزياء الأمن" primaryImage="/images/products/security-officer-uniform.jpg" primaryImageAlt="أزياء الأمن" faqs={securityFAQsAr} breadcrumbs={[{ name: 'Shop', nameAr: 'المتجر', url: '/ar/shop' }, { name: 'Security', nameAr: 'الأمن', url: '/ar/shop/security-uniforms' }]} industry="الأمن" />
+
+      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden py-16">
         <Container>
-          <nav className="flex" aria-label="Breadcrumb">
-            <ol className="inline-flex items-center space-x-1 md:space-x-3 space-x-reverse">
-              <li className="inline-flex items-center">
-                <Link href="/ar/" className="text-sm text-gray-700 hover:text-primary-600">الرئيسية</Link>
-              </li>
-              <li>
-                <div className="flex items-center">
-                  <svg className="w-3 h-3 text-gray-400 mx-1 transform scale-x-[-1]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
-                  </svg>
-                  <Link href="/ar/shop" className="text-sm text-gray-700 hover:text-primary-600 mr-1 md:mr-2">المتجر</Link>
-                </div>
-              </li>
-              <li aria-current="page">
-                <div className="flex items-center">
-                  <svg className="w-3 h-3 text-gray-400 mx-1 transform scale-x-[-1]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
-                  </svg>
-                  <span className="text-sm text-gray-500 mr-1 md:mr-2">أزياء الأمن</span>
-                </div>
-              </li>
-            </ol>
-          </nav>
-        </Container>
-      </div>
-      
-      {/* Category Hero */}
-      <section className="relative pt-16 pb-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/security/advanced-fabrics-hero.jpg" // Updated hero image
-            alt="أزياء الأمن"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        </div>
-        
-        <Container className="relative z-10">
-          <div className="max-w-2xl text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">أزياء الأمن</h1>
-            <p className="text-xl mb-8">
-              ملابس أمن احترافية مصممة للسلطة والتمييز والوظائف. توفر أزياء الأمن من يونيوم التوازن المثالي بين المظهر الاحترافي والميزات العملية لأفراد الأمن.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button variant="primary" href="#products">
-                عرض المجموعة
-              </Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900" href="/ar/contact?subject=Security%20Uniforms">
-                طلب تصميم مخصص
-              </Button>
-            </div>
+          <Breadcrumbs items={[{ label: 'الرئيسية', href: '/ar' }, { label: 'المتجر', href: '/ar/shop' }, { label: 'أزياء الأمن', href: '/ar/shop/security-uniforms' }]} className="text-white/80 mb-6" />
+          <div className="relative z-10 max-w-4xl">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"><span className="text-gray-400">🛡️</span><span className="text-sm font-medium">صناعة الأمن</span></div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">أزياء <span className="bg-gradient-to-r from-gray-300 to-white text-transparent bg-clip-text">الأمن</span></h1>
+            <p className="text-xl mb-8 text-gray-300 leading-relaxed">أزياء أمن احترافية وملابس تكتيكية لشركات الأمن السعودية.</p>
           </div>
         </Container>
       </section>
-      
-      {/* Shop Section */}
-      <section className="py-16" id="products">
+
+      <main className="py-16">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {/* Filters Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="bg-white border rounded-lg p-6 sticky top-24">
-                <h2 className="text-lg font-bold mb-4">الفلاتر</h2>
-                
-                <div className="mb-6">
-                  <h3 className="font-medium mb-2">القسم</h3>
-                  <div className="space-y-2">
-                    {departments.map((department) => (
-                      <div key={department.id} className="flex items-center">
-                        <input
-                          type="checkbox"
-                          id={`department-ar-${department.id}`}
-                          className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
-                        />
-                        <label htmlFor={`department-ar-${department.id}`} className="mr-2 text-sm text-gray-700">
-                          {department.name}
-                        </label>
-                      </div>
-                    ))}
+          <section className="mb-16">
+            <SectionHeading subtitle="تسوق أزياء الأمن" centered>مجموعة أزياء الأمن</SectionHeading>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+              {products.map((product) => (
+                <Link key={product.id} href={product.href} className="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <div className="relative aspect-[4/3] overflow-hidden"><Image src={product.image} alt={product.name} fill className="object-cover group-hover:scale-105 transition-transform duration-300" /></div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-gray-600 transition-colors">{product.name}</h3>
+                    <p className="text-gray-600 text-sm mb-3">{product.description}</p>
+                    <div className="flex items-center gap-2 mb-3 flex-wrap">{product.features?.map((f, i) => (<span key={i} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">{f}</span>))}</div>
+                    <div className="flex justify-between items-center"><span className="text-lg font-bold text-gray-800">{product.price}</span><span className="text-gray-400 group-hover:text-gray-600">←</span></div>
                   </div>
-                </div>
-                
-                <div className="mb-6">
-                  <h3 className="font-medium mb-2">الميزات</h3>
-                  <div className="space-y-2">
-                    {featureFilters.map((feature) => (
-                      <div key={feature.id} className="flex items-center">
-                        <input
-                          type="checkbox"
-                          id={`feature-ar-${feature.id}`}
-                          className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
-                        />
-                        <label htmlFor={`feature-ar-${feature.id}`} className="mr-2 text-sm text-gray-700">
-                          {feature.name}
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <h3 className="font-medium mb-2">نطاق السعر</h3>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div>
-                      <label htmlFor="min-price-ar" className="sr-only">السعر الأدنى</label>
-                      <input
-                        type="number"
-                        id="min-price-ar"
-                        placeholder="الأدنى"
-                        className="w-full border border-gray-300 rounded py-1.5 px-3 text-sm"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="max-price-ar" className="sr-only">السعر الأعلى</label>
-                      <input
-                        type="number"
-                        id="max-price-ar"
-                        placeholder="الأعلى"
-                        className="w-full border border-gray-300 rounded py-1.5 px-3 text-sm"
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <button className="w-full bg-primary-600 text-white rounded py-2 text-sm font-medium hover:bg-primary-700 transition">
-                  تطبيق الفلاتر
-                </button>
-              </div>
+                </Link>
+              ))}
             </div>
-            
-            {/* Products Grid */}
-            <div className="lg:col-span-3">
-              <div className="flex flex-wrap items-center justify-between mb-6">
-                <h2 className="text-xl font-bold">أزياء الأمن ({products.length})</h2>
-                
-                <div className="flex items-center space-x-4 space-x-reverse">
-                  <label htmlFor="sort-ar" className="text-sm text-gray-700">الترتيب حسب:</label>
-                  <select
-                    id="sort-ar"
-                    className="border-gray-300 rounded-md text-sm focus:ring-primary-500 focus:border-primary-500"
-                  >
-                    <option>الأكثر شيوعًا</option>
-                    <option>السعر: من الأقل إلى الأعلى</option>
-                    <option>السعر: من الأعلى إلى الأقل</option>
-                    <option>الأحدث</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {products.map((product) => (
-                  <Link key={product.id} href={product.href} className="group">
-                    <div className="bg-white border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
-                      <div className="relative h-64 overflow-hidden bg-gray-200">
-                        <Image
-                          src={product.image}
-                          alt={product.name}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        {product.isNew && (
-                          <div className="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
-                            جديد
-                          </div>
-                        )}
-                        {product.isBestseller && (
-                          <div className="absolute top-2 right-2 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded">
-                            الأكثر مبيعًا
-                          </div>
-                        )}
-                      </div>
-                      <div className="p-4">
-                        <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors duration-200">
-                          {product.name}
-                        </h3>
-                        <p className="text-sm text-gray-600 mt-1 mb-2 line-clamp-2">{product.description}</p>
-                        <div className="flex items-center justify-between mt-2">
-                          <span className="font-medium text-gray-900">{product.price}</span>
-                          <span className="text-primary-600 text-sm font-medium group-hover:underline">عرض التفاصيل</span>
-                        </div>
-                        {product.features && (
-                          <div className="mt-3 flex flex-wrap gap-1">
-                            {product.features.slice(0, 2).map((feature, index) => (
-                              <span key={index} className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                                {feature}
-                              </span>
-                            ))}
-                            {product.features.length > 2 && (
-                              <span className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                                +{product.features.length - 2} إضافية
-                              </span>
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
+          </section>
+
+          <section className="mb-16" itemScope itemType="https://schema.org/FAQPage">
+            <SectionHeading subtitle="أسئلة شائعة" centered>الأسئلة الشائعة عن أزياء الأمن</SectionHeading>
+            <div className="max-w-4xl mx-auto mt-12 space-y-4">
+              {securityFAQsAr.map((faq, index) => (<div key={index} className="bg-white rounded-xl shadow-sm p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question"><h3 className="text-lg font-bold text-gray-900 mb-3" itemProp="name">{faq.questionAr}</h3><div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"><p className="text-gray-600" itemProp="text">{faq.answerAr}</p></div></div>))}
             </div>
-          </div>
+          </section>
+
+          <section className="text-center bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-2xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">تحتاج برنامج أزياء أمن؟</h2>
+            <p className="text-xl mb-8 text-gray-300">تواصل معنا لحلول أزياء شركات الأمن مع علامة تجارية مخصصة.</p>
+            <Link href="/ar/quote?category=security" className="inline-flex items-center px-8 py-4 bg-white text-gray-800 hover:bg-gray-100 font-bold rounded-xl transition-all shadow-lg">احصل على عرض سعر الأمن ←</Link>
+          </section>
         </Container>
-      </section>
-      
-      <section className="py-16 bg-gray-50">
-        <Container>
-          <SectionHeading centered>لماذا تختار أزياء الأمن من يونيوم</SectionHeading>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                {/* Placeholder for Professional Authority Icon */}
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6-4l-6 6-6-6"></path></svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">سلطة احترافية</h3>
-              <p className="text-gray-600">
-                تم تصميم أزياء الأمن لدينا لنقل السلطة والاحترافية، مما يضمن أن يترك أفراد الأمن لديك الانطباع الصحيح.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                 {/* Placeholder for Functional Features Icon */}
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">ميزات وظيفية</h3>
-              <p className="text-gray-600">
-                من حاملي الشارات إلى الجيوب التكتيكية، تتضمن أزياء الأمن لدينا ميزات وظيفية مصممة خصيصًا لمحترفي الأمن.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                {/* Placeholder for Brand Integration Icon */}
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" /></svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">تكامل العلامة التجارية</h3>
-              <p className="text-gray-600">
-                ندمج علامة شركتك التجارية في أزياء الأمن لدينا، مما يساعد على تأسيس هوية علامة تجارية متماسكة عبر فريق الأمن لديك.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-      
-      <section className="py-16">
-        <Container>
-          <SectionHeading centered>عناصر تصميم الأمن</SectionHeading>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-            <div className="flex gap-6">
-              <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/compliance-shield.svg"
-                  alt="تكامل الشارات والهويات"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">تكامل الشارات والهويات</h3>
-                <p className="text-gray-600">
-                  تتميز أزياء الأمن لدينا بحاملي شارات احترافيين، وفتحات لبطاقات الهوية، وكتافيات تسمح لأفراد الأمن بعرض أوراق اعتمادهم بشكل مناسب، مما يعزز التمييز والسلطة.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex gap-6">
-              <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/security/saudi-events-security.jpg" // Updated image
-                  alt="عناصر التمييز"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">عناصر التمييز</h3>
-                <p className="text-gray-600">
-                  تتضمن أزياء الأمن عناصر عالية الوضوح وميزات تصميم مميزة لضمان سهولة التعرف على الأفراد من قبل الجمهور، مما يؤسس وجودًا أمنيًا واضحًا.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex gap-6">
-              <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                <Image
-                  src="/icons/custom-branding.svg" 
-                  alt="الوظائف التكتيكية"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">الوظائف التكتيكية</h3>
-                <p className="text-gray-600">
-                  تتضمن أزياء الأمن التكتيكية لدينا هيكلًا معززًا، ووضع جيوب استراتيجي، ونقاط ربط للمعدات، وحرية الحركة - كلها ضرورية لعمل الأمن النشط.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex gap-6">
-              <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                <Image
-                  src="/icons/premium-quality.svg"
-                  alt="جماليات احترافية"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">جماليات احترافية</h3>
-                <p className="text-gray-600">
-                  تم تصميم الخطوط النظيفة، والمقاس الدقيق، والتفاصيل المعمارية لأزياء الأمن لدينا لنقل الاحترافية مع الحفاظ على الراحة أثناء المناوبات الطويلة.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-      
-      <section className="py-16 bg-gray-50">
-        <Container>
-          <SectionHeading centered>فئات ذات صلة</SectionHeading>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            <Link href="/ar/shop/corporate-workwear" className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/products/corporate-suit-executive.jpg"
-                    alt="ملابس عمل شركات"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold group-hover:text-primary-600 transition-colors duration-200">
-                    ملابس عمل شركات
-                  </h3>
-                </div>
-              </div>
-            </Link>
-            <Link href="/ar/shop/hospitality-attire" className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/hospitality/hospitality_uniform_formal.jpg"
-                    alt="أزياء الضيافة"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold group-hover:text-primary-600 transition-colors duration-200">
-                    أزياء الضيافة
-                  </h3>
-                </div>
-              </div>
-            </Link>
-            <Link href="/ar/shop/industrial-uniforms" className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/products/industrial-coverall.jpg"
-                    alt="أزياء صناعية"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold group-hover:text-primary-600 transition-colors duration-200">
-                    أزياء صناعية
-                  </h3>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </Container>
-      </section>
-      
-      <section className="py-16 bg-primary-600 text-white">
-        <Container>
-          <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4">هل أنت مستعد لتعزيز أمنك؟</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              تواصل مع متخصصي أزياء الأمن لدينا اليوم لمناقشة احتياجاتك الخاصة والحصول على عرض أسعار مخصص.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button variant="secondary" href="/ar/contact?subject=Security%20Uniforms%20Inquiry">
-                اتصل بنا الآن
-              </Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary-600" href="/ar/quote?category=security-uniforms">
-                طلب عرض أسعار
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </section>
+      </main>
+      <section className="py-6 bg-gray-100 border-t"><div className="container mx-auto px-4 text-center"><Link href="/shop/security-uniforms" className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded-lg text-sm">🇬🇧 English</Link></div></section>
     </div>
   );
 }
