@@ -1,488 +1,97 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: string;
-  image: string;
-  href: string;
-  features?: string[];
-  colors?: string[];
-  isNew?: boolean;
-  isBestseller?: boolean;
-}
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Hospitality Uniforms Saudi Arabia | Hotel & Restaurant Attire | UNEOM',
+  titleAr: 'أزياء الضيافة السعودية | زي الفنادق والمطاعم | يونيوم',
+  description: 'Premium hospitality uniforms in Saudi Arabia. Hotel staff, restaurant, chef uniforms for hotels and hospitality industry. From SAR 249. Custom branding, fast delivery!',
+  descriptionAr: 'أزياء ضيافة فاخرة في السعودية. زي موظفي الفنادق، المطاعم، الطهاة. من 249 ريال. علامة تجارية مخصصة، توصيل سريع!',
+  keywords: ['hospitality uniforms saudi arabia', 'hotel uniforms ksa', 'restaurant uniforms', 'chef uniforms saudi', 'waiter uniforms', 'concierge attire'],
+  keywordsAr: ['أزياء الضيافة السعودية', 'زي الفنادق', 'زي المطاعم', 'زي الطهاة', 'زي النادل'],
+  locale: 'en',
+  pageType: 'category',
+  path: '/shop/hospitality-attire',
+  image: '/images/hospitality_uniform_concierge.jpg',
+  imageAlt: 'Hospitality Uniforms Saudi Arabia - Hotel and Restaurant Staff',
+  aiSummary: 'UNEOM hospitality uniforms for Saudi hotels and restaurants. Products: Luxury Hotel Uniforms (from SAR 399), Restaurant Staff Uniforms (from SAR 249), Chef Uniforms (from SAR 299), Concierge Attire (from SAR 349). Serving 5-star hotels, luxury resorts, and fine dining restaurants.',
+  aiSummaryAr: 'أزياء الضيافة من يونيوم للفنادق والمطاعم السعودية. المنتجات: زي الفنادق الفاخرة (من 399 ريال)، زي موظفي المطاعم (من 249 ريال)، زي الطهاة (من 299 ريال)، زي الكونسيرج (من 349 ريال).'
+});
+
+export const dynamic = 'force-static';
+
+const hospitalityFAQs = [
+  { question: 'Do you supply uniforms to 5-star hotels?', answer: 'Yes, UNEOM supplies hospitality uniforms to numerous 5-star hotels and luxury resorts across Saudi Arabia. We provide complete uniform programs from front desk to housekeeping.' },
+  { question: 'Can you match our hotel brand colors?', answer: 'Absolutely! We can match exact brand colors using Pantone references and incorporate your hotel logo through embroidery or printing.' },
+  { question: 'What is included in a hotel uniform program?', answer: 'Our hotel uniform programs cover all staff: Front desk, concierge, bellhops, housekeeping, F&B service, kitchen staff, spa, and management. We provide design, production, and ongoing supply.' },
+  { question: 'How quickly can you deliver for a new hotel opening?', answer: 'For new hotel openings, we recommend 8-12 weeks lead time. Rush orders of 4-6 weeks are available for priority projects.' },
+];
+
+const products = [
+  { id: 'luxury-hotel-uniform', name: 'Luxury Hotel Uniform', description: 'Premium uniforms for 5-star hotels', price: 'From SAR 399', image: '/images/products/hotel-uniform.jpg', href: '/shop/hospitality-attire/luxury-hotel-uniform', features: ['Elegant design', 'Stain-resistant', 'Breathable'] },
+  { id: 'restaurant-staff-uniform', name: 'Restaurant Staff Uniform', description: 'Professional waiter and service attire', price: 'From SAR 249', image: '/images/products/restaurant-uniform.jpg', href: '/shop/hospitality-attire/restaurant-staff-uniform', features: ['Easy care', 'Durable', 'Comfortable'] },
+  { id: 'chef-uniform', name: 'Chef Uniform', description: 'Professional chef coats and kitchen attire', price: 'From SAR 299', image: '/images/products/chef-coat-white.jpg', href: '/shop/hospitality-attire/chef-uniform', features: ['Heat-resistant', 'Stain-resistant', 'Breathable'] },
+  { id: 'concierge-attire', name: 'Concierge Attire', description: 'Sophisticated uniforms for guest services', price: 'From SAR 349', image: '/images/hospitality_uniform_concierge.jpg', href: '/shop/hospitality-attire/concierge-attire', features: ['Premium fabric', 'Tailored fit', 'Professional'] },
+  { id: 'housekeeping-uniform', name: 'Housekeeping Uniform', description: 'Practical uniforms for housekeeping staff', price: 'From SAR 199', image: '/images/products/housekeeping-uniform.jpg', href: '/shop/hospitality-attire/housekeeping-uniform', features: ['Durable', 'Easy wash', 'Comfortable'] },
+  { id: 'spa-uniform', name: 'Spa & Wellness Uniform', description: 'Relaxed uniforms for spa therapists', price: 'From SAR 229', image: '/images/products/spa-uniform.jpg', href: '/shop/hospitality-attire/spa-uniform', features: ['Soft fabric', 'Relaxed fit', 'Professional'] },
+];
 
 export default function HospitalityAttirePage() {
-  const locale = 'en';
-  
-  // Hospitality attire products
-  const products: Product[] = [
-    {
-      id: 'luxury-hotel-uniform',
-      name: 'Luxury Hotel Uniform',
-      description: 'Premium hospitality uniform designed for luxury hotels and resorts, featuring refined styling and exceptional comfort for front-of-house staff.',
-      price: 'From SAR 399',
-      image: '/images/products/hotel-uniform.jpg',
-      href: '/shop/hospitality-attire/restaurant-staff-uniform',
-      features: ['Stain-resistant', 'Comfortable design', 'Professional appearance', 'Easy care'],
-      colors: ['Black', 'White', 'Burgundy', 'Grey']
-    }
-  ];
-  
-  // Department filters
-  const departments = [
-    { id: 'all', name: 'All Departments' },
-    { id: 'hotel', name: 'Hotel & Resort' },
-    { id: 'restaurant', name: 'Restaurant & Dining' },
-    { id: 'housekeeping', name: 'Housekeeping' },
-    { id: 'reception', name: 'Reception & Front Desk' }
-  ];
-  
-  // Features filters
-  const featureFilters = [
-    { id: 'premium-fabric', name: 'Premium Fabric' },
-    { id: 'professional-look', name: 'Professional Look' },
-    { id: 'comfort-design', name: 'Comfort Design' },
-    { id: 'stain-resistant', name: 'Stain Resistant' },
-    { id: 'breathable', name: 'Breathable Material' }
-  ];
-  
   return (
-    <div className="bg-white">
-    
-      {/* Breadcrumb */}
-      <div className="bg-gray-100 py-4">
+    <>
+      <SEO2026 title="Hospitality Uniforms Saudi Arabia | UNEOM" titleAr="أزياء الضيافة السعودية | يونيوم" description="Premium hospitality uniforms." descriptionAr="أزياء ضيافة فاخرة." locale="en" pageType="category" mainEntity="Hospitality Uniforms" primaryImage="/images/hospitality_uniform_concierge.jpg" primaryImageAlt="Hospitality Uniforms" faqs={hospitalityFAQs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Hospitality Attire', url: '/shop/hospitality-attire' }]} industry="Hospitality" />
+
+      <section className="bg-gradient-to-br from-amber-900 via-orange-800 to-red-800 text-white relative overflow-hidden py-16">
         <Container>
-          <nav className="flex" aria-label="Breadcrumb">
-            <ol className="inline-flex items-center space-x-1 md:space-x-3">
-              <li className="inline-flex items-center">
-                <Link href="/" className="text-sm text-gray-700 hover:text-primary-600">Home</Link>
-              </li>
-              <li>
-                <div className="flex items-center">
-                  <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
-                  </svg>
-                  <Link href="/shop" className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">Shop</Link>
-                </div>
-              </li>
-              <li aria-current="page">
-                <div className="flex items-center">
-                  <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
-                  </svg>
-                  <span className="text-sm text-gray-500 ml-1 md:ml-2">Hospitality Attire</span>
-                </div>
-              </li>
-            </ol>
-          </nav>
-        </Container>
-      </div>
-      
-      {/* Category Hero */}
-      <section className="relative pt-16 pb-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/products/hotel-uniform.jpg"
-            alt="Hospitality Attire"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        </div>
-        
-        <Container className="relative z-10">
-          <div className="max-w-2xl text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Hospitality Attire</h1>
-            <p className="text-xl mb-8">
-              Elegant and professional uniforms designed for the hospitality industry. UNEOM provides premium quality attire for hotels, restaurants, and resorts that balances style with comfort and functionality.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button variant="primary" href="#products">
-                View Collection
-              </Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900" href="/contact?subject=Hospitality%20Attire">
-                Request Custom Design
-              </Button>
-            </div>
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Shop', href: '/shop' }, { label: 'Hospitality Attire', href: '/shop/hospitality-attire' }]} className="text-white/80 mb-6 relative z-10" />
+          <div className="relative z-10 max-w-4xl">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"><span className="text-amber-400">🏨</span><span className="text-sm font-medium">Hospitality Industry</span></div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Hospitality <span className="bg-gradient-to-r from-amber-300 to-orange-300 text-transparent bg-clip-text">Uniforms</span></h1>
+            <p className="text-xl mb-8 text-amber-100 leading-relaxed">Premium uniforms for hotels, restaurants, and hospitality services in Saudi Arabia.</p>
           </div>
         </Container>
       </section>
-      
-      {/* Shop Section */}
-      <section className="py-16" id="products">
+
+      <main className="py-16">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {/* Filters Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="bg-white border rounded-lg p-6 sticky top-24">
-                <h2 className="text-lg font-bold mb-4">Filters</h2>
-                
-                {/* Department Filter */}
-                <div className="mb-6">
-                  <h3 className="font-medium mb-2">Department</h3>
-                  <div className="space-y-2">
-                    {departments.map((department) => (
-                      <div key={department.id} className="flex items-center">
-                        <input
-                          type="checkbox"
-                          id={`department-${department.id}`}
-                          className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
-                        />
-                        <label htmlFor={`department-${department.id}`} className="ml-2 text-sm text-gray-700">
-                          {department.name}
-                        </label>
-                      </div>
-                    ))}
+          <section className="mb-16">
+            <SectionHeading subtitle="Shop Hospitality Attire" centered>Hospitality Uniforms Collection</SectionHeading>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+              {products.map((product) => (
+                <Link key={product.id} href={product.href} className="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <div className="relative aspect-[4/3] overflow-hidden"><Image src={product.image} alt={product.name} fill className="object-cover group-hover:scale-105 transition-transform duration-300" /></div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">{product.name}</h3>
+                    <p className="text-gray-600 text-sm mb-3">{product.description}</p>
+                    <div className="flex items-center gap-2 mb-3 flex-wrap">{product.features?.map((f, i) => (<span key={i} className="text-xs bg-amber-50 text-amber-700 px-2 py-1 rounded">{f}</span>))}</div>
+                    <div className="flex justify-between items-center"><span className="text-lg font-bold text-amber-600">{product.price}</span><span className="text-gray-400 group-hover:text-amber-600">→</span></div>
                   </div>
-                </div>
-                
-                {/* Features Filter */}
-                <div className="mb-6">
-                  <h3 className="font-medium mb-2">Features</h3>
-                  <div className="space-y-2">
-                    {featureFilters.map((feature) => (
-                      <div key={feature.id} className="flex items-center">
-                        <input
-                          type="checkbox"
-                          id={`feature-${feature.id}`}
-                          className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
-                        />
-                        <label htmlFor={`feature-${feature.id}`} className="ml-2 text-sm text-gray-700">
-                          {feature.name}
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Price Range */}
-                <div className="mb-6">
-                  <h3 className="font-medium mb-2">Price Range</h3>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div>
-                      <label htmlFor="min-price" className="sr-only">Minimum Price</label>
-                      <input
-                        type="number"
-                        id="min-price"
-                        placeholder="Min"
-                        className="w-full border border-gray-300 rounded py-1.5 px-3 text-sm"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="max-price" className="sr-only">Maximum Price</label>
-                      <input
-                        type="number"
-                        id="max-price"
-                        placeholder="Max"
-                        className="w-full border border-gray-300 rounded py-1.5 px-3 text-sm"
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <button className="w-full bg-primary-600 text-white rounded py-2 text-sm font-medium hover:bg-primary-700 transition">
-                  Apply Filters
-                </button>
-              </div>
+                </Link>
+              ))}
             </div>
-            
-            {/* Products Grid */}
-            <div className="lg:col-span-3">
-              <div className="flex flex-wrap items-center justify-between mb-6">
-                <h2 className="text-xl font-bold">Hospitality Attire ({products.length})</h2>
-                
-                <div className="flex items-center space-x-4">
-                  <label htmlFor="sort" className="text-sm text-gray-700">Sort by:</label>
-                  <select
-                    id="sort"
-                    className="border-gray-300 rounded-md text-sm focus:ring-primary-500 focus:border-primary-500"
-                  >
-                    <option>Most Popular</option>
-                    <option>Price: Low to High</option>
-                    <option>Price: High to Low</option>
-                    <option>Newest</option>
-                  </select>
-                </div>
-              </div>
-              
-              {/* Products */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {products.map((product) => (
-                  <Link key={product.id} href={product.href} className="group">
-                    <div className="bg-white border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
-                      <div className="relative h-64 overflow-hidden bg-gray-200">
-                        <Image
-                          src={product.image}
-                          alt={product.name}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        {product.isNew && (
-                          <div className="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
-                            NEW
-                          </div>
-                        )}
-                        {product.isBestseller && (
-                          <div className="absolute top-2 left-2 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded">
-                            BESTSELLER
-                          </div>
-                        )}
-                      </div>
-                      <div className="p-4">
-                        <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors duration-200">
-                          {product.name}
-                        </h3>
-                        <p className="text-sm text-gray-600 mt-1 mb-2 line-clamp-2">{product.description}</p>
-                        <div className="flex items-center justify-between mt-2">
-                          <span className="font-medium text-gray-900">{product.price}</span>
-                          <span className="text-primary-600 text-sm font-medium group-hover:underline">View Details</span>
-                        </div>
-                        {product.features && (
-                          <div className="mt-3 flex flex-wrap gap-1">
-                            {product.features.slice(0, 2).map((feature, index) => (
-                              <span key={index} className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                                {feature}
-                              </span>
-                            ))}
-                            {product.features.length > 2 && (
-                              <span className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                                +{product.features.length - 2} more
-                              </span>
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
+          </section>
+
+          <section className="mb-16" itemScope itemType="https://schema.org/FAQPage">
+            <SectionHeading subtitle="Common Questions" centered>Hospitality Uniforms FAQ</SectionHeading>
+            <div className="max-w-4xl mx-auto mt-12 space-y-4">
+              {hospitalityFAQs.map((faq, index) => (<div key={index} className="bg-white rounded-xl shadow-sm p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question"><h3 className="text-lg font-bold text-gray-900 mb-3" itemProp="name">{faq.question}</h3><div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"><p className="text-gray-600" itemProp="text">{faq.answer}</p></div></div>))}
             </div>
-          </div>
+          </section>
+
+          <section className="text-center bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-2xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Custom Hotel Uniforms?</h2>
+            <p className="text-xl mb-8 text-amber-100">Contact us for hotel-specific uniform programs with custom branding.</p>
+            <Link href="/quote?category=hospitality" className="inline-flex items-center px-8 py-4 bg-white text-amber-700 hover:bg-gray-100 font-bold rounded-xl transition-all shadow-lg">Get Hotel Quote →</Link>
+          </section>
         </Container>
-      </section>
-      
-      {/* Features Section */}
-      <section className="py-16 bg-gray-50">
-        <Container>
-          <SectionHeading centered>Why Choose UNEOM Hospitality Uniforms</SectionHeading>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Premium Quality</h3>
-              <p className="text-gray-600">
-                Our hospitality uniforms are crafted from premium fabrics that maintain their appearance through daily wear and frequent washings.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Comfort-Focused</h3>
-              <p className="text-gray-600">
-                We design with all-day comfort in mind, ensuring your staff can perform at their best throughout their shift without discomfort.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Brand Integration</h3>
-              <p className="text-gray-600">
-                Our designs incorporate your brand identity seamlessly, creating a cohesive look that reinforces your establishment's unique character.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-      
-      {/* Design Elements Section */}
-      <section className="py-16">
-        <Container>
-          <SectionHeading centered>Hospitality Design Elements</SectionHeading>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-            <div className="flex gap-6">
-              <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/services/colorful-samples-of-upholstery-fabrics-for-upholst-2025-01-08-10-15-26-utc.jpg"
-                  alt="Premium Fabrics"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Premium Fabrics</h3>
-                <p className="text-gray-600">
-                  Our hospitality uniforms use high-grade fabrics that maintain an elegant appearance while providing comfort during long shifts. Each material is selected for its durability, easy-care properties, and professional presentation.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex gap-6">
-              <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg"
-                  alt="Expert Tailoring"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Expert Tailoring</h3>
-                <p className="text-gray-600">
-                  Each hospitality uniform features precision tailoring that creates a refined silhouette while allowing comfortable movement. Our attention to fit ensures your staff presents a consistently professional appearance.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex gap-6">
-              <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/services/sewing-machines-nobody-dressmaker-equipment-2024-12-04-15-11-57-utc.jpg"
-                  alt="Brand Customization"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Brand Customization</h3>
-                <p className="text-gray-600">
-                  Our hospitality attire incorporates your brand identity through color matching, logo embroidery, and design elements that align with your establishment's aesthetic, creating a cohesive visual experience for your guests.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex gap-6">
-              <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/products/hotel-uniform.jpg"
-                  alt="Practical Performance"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Practical Performance</h3>
-                <p className="text-gray-600">
-                  We integrate practical features like stain-resistant treatments, strategic pocket placement, and breathable panels to enhance functionality while maintaining a sophisticated appearance suitable for customer-facing roles.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-      
-      {/* Related Categories */}
-      <section className="py-16 bg-gray-50">
-        <Container>
-          <SectionHeading centered>Related Categories</SectionHeading>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            <Link href="/shop/corporate-workwear" className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/products/corporate-suit-executive.jpg"
-                    alt="Corporate Workwear"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold group-hover:text-primary-600 transition-colors duration-200">
-                    Corporate Workwear
-                  </h3>
-                </div>
-              </div>
-            </Link>
-            <Link href="/shop/culinary-uniforms" className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/categories/smiling-handsome-african-american-chef-squeezing-l-2024-11-18-08-59-30-utc.jpg"
-                    alt="Culinary Uniforms"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold group-hover:text-primary-600 transition-colors duration-200">
-                    Culinary Uniforms
-                  </h3>
-                </div>
-              </div>
-            </Link>
-            <Link href="/shop/security-uniforms" className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/product-placeholder.jpg"
-                    alt="Security Uniforms"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold group-hover:text-primary-600 transition-colors duration-200">
-                    Security Uniforms
-                  </h3>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </Container>
-      </section>
-      
-      {/* CTA Section */}
-      <section className="py-16 bg-primary-600 text-white">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Need Custom Hospitality Uniforms?</h2>
-              <p className="text-lg mb-6">
-                UNEOM specializes in creating custom hospitality uniform programs tailored to your establishment's unique brand and requirements. From luxury hotels to fine dining restaurants, we can design and produce hospitality attire that elevates your staff's appearance.
-              </p>
-              <Button
-                variant="outline"
-                href="/contact?subject=Custom%20Hospitality%20Uniforms"
-                className="inline-block bg-white text-primary-600 hover:bg-gray-100"
-              >
-                Request Consultation
-              </Button>
-            </div>
-            <div className="hidden lg:block">
-              <div className="relative h-80 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/product-placeholder.jpg"
-                  alt="Hospitality Uniform Design Service"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-    
-      </div>
+      </main>
+      <section className="py-6 bg-gray-100 border-t"><div className="container mx-auto px-4 text-center"><Link href="/ar/shop/hospitality-attire" className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 px-4 rounded-lg text-sm">🇸🇦 العربية</Link></div></section>
+    </>
   );
-} 
+}

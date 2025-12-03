@@ -1,499 +1,95 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: string;
-  image: string;
-  href: string;
-  features?: string[];
-  colors?: string[];
-  isNew?: boolean;
-  isBestseller?: boolean;
-}
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Security Uniforms Saudi Arabia | Guard Attire | UNEOM',
+  titleAr: 'أزياء الأمن السعودية | زي الحراسة | يونيوم',
+  description: 'Premium security uniforms in Saudi Arabia. Security guard uniforms, tactical wear, patrol jackets for security companies. From SAR 199. Custom branding!',
+  descriptionAr: 'أزياء أمن فاخرة في السعودية. زي حراسة أمنية، ملابس تكتيكية، جاكيت دوريات لشركات الأمن. من 199 ريال. علامة تجارية مخصصة!',
+  keywords: ['security uniforms saudi arabia', 'guard uniforms ksa', 'tactical wear', 'patrol jackets', 'security company uniforms'],
+  keywordsAr: ['أزياء الأمن السعودية', 'زي الحراسة', 'ملابس تكتيكية', 'جاكيت دوريات', 'زي شركات الأمن'],
+  locale: 'en',
+  pageType: 'category',
+  path: '/shop/security-uniforms',
+  image: '/images/products/security-officer-uniform.jpg',
+  imageAlt: 'Security Uniforms Saudi Arabia',
+  aiSummary: 'UNEOM security uniforms for Saudi security companies. Products: Security Officer Uniforms (from SAR 199), Tactical Security Vests (from SAR 149), Patrol Jackets (from SAR 229), Security Accessories (from SAR 49). Serving private security companies, mall security, hotel security, and event security.',
+  aiSummaryAr: 'أزياء الأمن من يونيوم لشركات الأمن السعودية. المنتجات: زي ضابط أمن (من 199 ريال)، سترات أمنية تكتيكية (من 149 ريال)، جاكيت دوريات (من 229 ريال).'
+});
+
+export const dynamic = 'force-static';
+
+const securityFAQs = [
+  { question: 'Do you supply to security companies?', answer: 'Yes, UNEOM supplies security uniforms to private security companies, government facilities, malls, hotels, and corporate security teams across Saudi Arabia.' },
+  { question: 'Can you add security company logos?', answer: 'Yes, we provide professional embroidery and badge attachment for security company logos, rank insignia, and name badges.' },
+  { question: 'Do you offer tactical accessories?', answer: 'Yes, we supply security accessories including utility belts, radio pouches, ID holders, and tactical boots to complement our uniform range.' },
+  { question: 'What is the durability of security uniforms?', answer: 'Our security uniforms are made from heavy-duty fabrics designed for daily wear and harsh conditions. They maintain appearance through 100+ wash cycles.' },
+];
+
+const products = [
+  { id: 'security-officer-uniform', name: 'Security Officer Uniform', description: 'Professional uniform for security officers', price: 'From SAR 199', image: '/images/products/security-officer-uniform.jpg', href: '/shop/security-uniforms/security-officer-uniform', features: ['Professional', 'Durable', 'Comfortable'] },
+  { id: 'tactical-security-vest', name: 'Tactical Security Vest', description: 'Utility vest for security personnel', price: 'From SAR 149', image: '/images/products/tactical-vest.jpg', href: '/shop/security-uniforms/tactical-security-vest', features: ['Multi-pocket', 'Durable', 'Adjustable'] },
+  { id: 'security-patrol-jacket', name: 'Security Patrol Jacket', description: 'Weather-resistant patrol jacket', price: 'From SAR 229', image: '/images/products/security-jacket.jpg', href: '/shop/security-uniforms/security-patrol-jacket', features: ['Waterproof', 'Reflective', 'Warm'] },
+  { id: 'security-accessories', name: 'Security Accessories Kit', description: 'Complete security accessories package', price: 'From SAR 49', image: '/images/products/security-accessories.jpg', href: '/shop/security-uniforms/security-accessories-kit', features: ['Utility belt', 'ID holder', 'Radio pouch'] },
+];
 
 export default function SecurityUniformsPage() {
-  const locale = 'en';
-  
-  // Security uniforms products
-  const products: Product[] = [
-    {
-      id: 'executive-security-suit',
-      name: 'Executive Security Suit',
-      description: 'Professional executive security uniform designed for premium venues and VIP protection services with refined styling and practical features.',
-      price: 'From SAR 399',
-      image: '/images/security/uniform-durability-test.jpg',
-      href: '/shop/security-uniforms/tactical-security-uniforms',
-      features: ['Durable ripstop fabric', 'Multiple pockets', 'Reinforced knees/elbows', 'Belt loops'],
-      colors: ['Black', 'Navy', 'Khaki', 'Olive'],
-      isNew: true
-    },
-    {
-      id: 'hotel-security-uniform',
-      name: 'Hotel Security Uniform',
-      description: 'Refined security uniform designed for hotel and hospitality settings, balancing professional appearance with functional security features.',
-      price: 'From SAR 299',
-      image: '/images/security/smart-fabric-technology.jpg',
-      href: '/shop/security-uniforms/security-winter-jacket',
-      features: ['Thermal insulation', 'Water-resistant', 'Reflective elements', 'Badge holder'],
-      colors: ['Black', 'Navy', 'Grey']
-    }
-  ];
-  
-  // Department filters
-  const departments = [
-    { id: 'all', name: 'All Departments' },
-    { id: 'corporate', name: 'Corporate Security' },
-    { id: 'hotel', name: 'Hotel & Hospitality' },
-    { id: 'event', name: 'Event Security' },
-    { id: 'tactical', name: 'Tactical Security' }
-  ];
-  
-  // Features filters
-  const featureFilters = [
-    { id: 'professional-look', name: 'Professional Look' },
-    { id: 'high-visibility', name: 'High Visibility' },
-    { id: 'tactical-features', name: 'Tactical Features' },
-    { id: 'badge-holder', name: 'Badge Holder' },
-    { id: 'weather-resistant', name: 'Weather Resistant' }
-  ];
-  
   return (
-    <div className="bg-white">
-    
-      {/* Breadcrumb */}
-      <div className="bg-gray-100 py-4">
+    <>
+      <SEO2026 title="Security Uniforms Saudi Arabia | UNEOM" titleAr="أزياء الأمن السعودية | يونيوم" description="Security uniforms for Saudi Arabia." locale="en" pageType="category" mainEntity="Security Uniforms" primaryImage="/images/products/security-officer-uniform.jpg" primaryImageAlt="Security Uniforms" faqs={securityFAQs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Security Uniforms', url: '/shop/security-uniforms' }]} industry="Security" />
+
+      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden py-16">
         <Container>
-          <nav className="flex" aria-label="Breadcrumb">
-            <ol className="inline-flex items-center space-x-1 md:space-x-3">
-              <li className="inline-flex items-center">
-                <Link href="/" className="text-sm text-gray-700 hover:text-primary-600">Home</Link>
-              </li>
-              <li>
-                <div className="flex items-center">
-                  <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
-                  </svg>
-                  <Link href="/shop" className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">Shop</Link>
-                </div>
-              </li>
-              <li aria-current="page">
-                <div className="flex items-center">
-                  <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
-                  </svg>
-                  <span className="text-sm text-gray-500 ml-1 md:ml-2">Security Uniforms</span>
-                </div>
-              </li>
-            </ol>
-          </nav>
-        </Container>
-      </div>
-      
-      {/* Category Hero */}
-      <section className="relative pt-16 pb-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/security/advanced-fabrics-hero.jpg"
-            alt="Security Uniforms"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        </div>
-        
-        <Container className="relative z-10">
-          <div className="max-w-2xl text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Security Uniforms</h1>
-            <p className="text-xl mb-8">
-              Professional security apparel designed for authority, recognition, and functionality. UNEOM security uniforms provide the perfect balance of professional appearance and practical features for security personnel.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button variant="primary" href="#products">
-                View Collection
-              </Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900" href="/contact?subject=Security%20Uniforms">
-                Request Custom Design
-              </Button>
-            </div>
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Shop', href: '/shop' }, { label: 'Security Uniforms', href: '/shop/security-uniforms' }]} className="text-white/80 mb-6 relative z-10" />
+          <div className="relative z-10 max-w-4xl">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"><span className="text-gray-400">🛡️</span><span className="text-sm font-medium">Security Industry</span></div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Security <span className="bg-gradient-to-r from-gray-300 to-white text-transparent bg-clip-text">Uniforms</span></h1>
+            <p className="text-xl mb-8 text-gray-300 leading-relaxed">Professional security uniforms and tactical wear for Saudi security companies.</p>
           </div>
         </Container>
       </section>
-      
-      {/* Shop Section */}
-      <section className="py-16" id="products">
+
+      <main className="py-16">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {/* Filters Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="bg-white border rounded-lg p-6 sticky top-24">
-                <h2 className="text-lg font-bold mb-4">Filters</h2>
-                
-                {/* Department Filter */}
-                <div className="mb-6">
-                  <h3 className="font-medium mb-2">Department</h3>
-                  <div className="space-y-2">
-                    {departments.map((department) => (
-                      <div key={department.id} className="flex items-center">
-                        <input
-                          type="checkbox"
-                          id={`department-${department.id}`}
-                          className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
-                        />
-                        <label htmlFor={`department-${department.id}`} className="ml-2 text-sm text-gray-700">
-                          {department.name}
-                        </label>
-                      </div>
-                    ))}
+          <section className="mb-16">
+            <SectionHeading subtitle="Shop Security Attire" centered>Security Uniforms Collection</SectionHeading>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+              {products.map((product) => (
+                <Link key={product.id} href={product.href} className="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <div className="relative aspect-[4/3] overflow-hidden"><Image src={product.image} alt={product.name} fill className="object-cover group-hover:scale-105 transition-transform duration-300" /></div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-gray-600 transition-colors">{product.name}</h3>
+                    <p className="text-gray-600 text-sm mb-3">{product.description}</p>
+                    <div className="flex items-center gap-2 mb-3 flex-wrap">{product.features?.map((f, i) => (<span key={i} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">{f}</span>))}</div>
+                    <div className="flex justify-between items-center"><span className="text-lg font-bold text-gray-800">{product.price}</span><span className="text-gray-400 group-hover:text-gray-600">→</span></div>
                   </div>
-                </div>
-                
-                {/* Features Filter */}
-                <div className="mb-6">
-                  <h3 className="font-medium mb-2">Features</h3>
-                  <div className="space-y-2">
-                    {featureFilters.map((feature) => (
-                      <div key={feature.id} className="flex items-center">
-                        <input
-                          type="checkbox"
-                          id={`feature-${feature.id}`}
-                          className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
-                        />
-                        <label htmlFor={`feature-${feature.id}`} className="ml-2 text-sm text-gray-700">
-                          {feature.name}
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Price Range */}
-                <div className="mb-6">
-                  <h3 className="font-medium mb-2">Price Range</h3>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div>
-                      <label htmlFor="min-price" className="sr-only">Minimum Price</label>
-                      <input
-                        type="number"
-                        id="min-price"
-                        placeholder="Min"
-                        className="w-full border border-gray-300 rounded py-1.5 px-3 text-sm"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="max-price" className="sr-only">Maximum Price</label>
-                      <input
-                        type="number"
-                        id="max-price"
-                        placeholder="Max"
-                        className="w-full border border-gray-300 rounded py-1.5 px-3 text-sm"
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <button className="w-full bg-primary-600 text-white rounded py-2 text-sm font-medium hover:bg-primary-700 transition">
-                  Apply Filters
-                </button>
-              </div>
+                </Link>
+              ))}
             </div>
-            
-            {/* Products Grid */}
-            <div className="lg:col-span-3">
-              <div className="flex flex-wrap items-center justify-between mb-6">
-                <h2 className="text-xl font-bold">Security Uniforms ({products.length})</h2>
-                
-                <div className="flex items-center space-x-4">
-                  <label htmlFor="sort" className="text-sm text-gray-700">Sort by:</label>
-                  <select
-                    id="sort"
-                    className="border-gray-300 rounded-md text-sm focus:ring-primary-500 focus:border-primary-500"
-                  >
-                    <option>Most Popular</option>
-                    <option>Price: Low to High</option>
-                    <option>Price: High to Low</option>
-                    <option>Newest</option>
-                  </select>
-                </div>
-              </div>
-              
-              {/* Products */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {products.map((product) => (
-                  <Link key={product.id} href={product.href} className="group">
-                    <div className="bg-white border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
-                      <div className="relative h-64 overflow-hidden bg-gray-200">
-                        <Image
-                          src={product.image}
-                          alt={product.name}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        {product.isNew && (
-                          <div className="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
-                            NEW
-                          </div>
-                        )}
-                        {product.isBestseller && (
-                          <div className="absolute top-2 left-2 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded">
-                            BESTSELLER
-                          </div>
-                        )}
-                      </div>
-                      <div className="p-4">
-                        <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors duration-200">
-                          {product.name}
-                        </h3>
-                        <p className="text-sm text-gray-600 mt-1 mb-2 line-clamp-2">{product.description}</p>
-                        <div className="flex items-center justify-between mt-2">
-                          <span className="font-medium text-gray-900">{product.price}</span>
-                          <span className="text-primary-600 text-sm font-medium group-hover:underline">View Details</span>
-                        </div>
-                        {product.features && (
-                          <div className="mt-3 flex flex-wrap gap-1">
-                            {product.features.slice(0, 2).map((feature, index) => (
-                              <span key={index} className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                                {feature}
-                              </span>
-                            ))}
-                            {product.features.length > 2 && (
-                              <span className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                                +{product.features.length - 2} more
-                              </span>
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
+          </section>
+
+          <section className="mb-16" itemScope itemType="https://schema.org/FAQPage">
+            <SectionHeading subtitle="Common Questions" centered>Security Uniforms FAQ</SectionHeading>
+            <div className="max-w-4xl mx-auto mt-12 space-y-4">
+              {securityFAQs.map((faq, index) => (<div key={index} className="bg-white rounded-xl shadow-sm p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question"><h3 className="text-lg font-bold text-gray-900 mb-3" itemProp="name">{faq.question}</h3><div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"><p className="text-gray-600" itemProp="text">{faq.answer}</p></div></div>))}
             </div>
-          </div>
+          </section>
+
+          <section className="text-center bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-2xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Security Uniform Program?</h2>
+            <p className="text-xl mb-8 text-gray-300">Contact us for security company uniform solutions with custom branding.</p>
+            <Link href="/quote?category=security" className="inline-flex items-center px-8 py-4 bg-white text-gray-800 hover:bg-gray-100 font-bold rounded-xl transition-all shadow-lg">Get Security Quote →</Link>
+          </section>
         </Container>
-      </section>
-      
-      {/* Features Section */}
-      <section className="py-16 bg-gray-50">
-        <Container>
-          <SectionHeading centered>Why Choose UNEOM Security Uniforms</SectionHeading>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Professional Authority</h3>
-              <p className="text-gray-600">
-                Our security uniforms are designed to convey authority and professionalism, ensuring your security personnel make the right impression.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Functional Features</h3>
-              <p className="text-gray-600">
-                From badge holders to tactical pockets, our security uniforms include functional features designed specifically for security professionals.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Brand Integration</h3>
-              <p className="text-gray-600">
-                We incorporate your company branding into our security uniforms, helping to establish a cohesive brand identity across your security team.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-      
-      {/* Design Elements Section */}
-      <section className="py-16">
-        <Container>
-          <SectionHeading centered>Security Design Elements</SectionHeading>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-            <div className="flex gap-6">
-              <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/compliance-shield.svg"
-                  alt="Badge & ID Integration"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Badge & ID Integration</h3>
-                <p className="text-gray-600">
-                  Our security uniforms feature professional badge holders, ID card slots, and epaulettes that allow security personnel to display credentials appropriately, enhancing recognition and authority.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex gap-6">
-              <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/security/saudi-events-security.jpg"
-                  alt="Recognition Elements"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Recognition Elements</h3>
-                <p className="text-gray-600">
-                  Security uniforms include high-visibility elements and distinct design features to ensure personnel are easily recognizable to the public, establishing a clear security presence.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex gap-6">
-              <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                <Image
-                  src="/icons/custom-branding.svg"
-                  alt="Tactical Functionality"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Tactical Functionality</h3>
-                <p className="text-gray-600">
-                  Our tactical security uniforms include reinforced construction, strategic pocket placement, gear attachment points, and freedom of movement - all essential for active security work.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex gap-6">
-              <div className="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                <Image
-                  src="/icons/premium-quality.svg"
-                  alt="Professional Aesthetics"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Professional Aesthetics</h3>
-                <p className="text-gray-600">
-                  The clean lines, precise fitting, and architectural details of our security uniforms are designed to convey professionalism while maintaining comfort during long shifts.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-      
-      {/* Related Categories */}
-      <section className="py-16 bg-gray-50">
-        <Container>
-          <SectionHeading centered>Related Categories</SectionHeading>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            <Link href="/shop/corporate-workwear" className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/products/corporate-suit-executive.jpg"
-                    alt="Corporate Workwear"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold group-hover:text-primary-600 transition-colors duration-200">
-                    Corporate Workwear
-                  </h3>
-                </div>
-              </div>
-            </Link>
-            <Link href="/shop/hospitality-attire" className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/hospitality/hospitality_uniform_formal.jpg"
-                    alt="Hospitality Attire"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold group-hover:text-primary-600 transition-colors duration-200">
-                    Hospitality Attire
-                  </h3>
-                </div>
-              </div>
-            </Link>
-            <Link href="/shop/industrial-uniforms" className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/products/industrial-coverall.jpg"
-                    alt="Industrial Uniforms"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold group-hover:text-primary-600 transition-colors duration-200">
-                    Industrial Uniforms
-                  </h3>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </Container>
-      </section>
-      
-      {/* CTA Section */}
-      <section className="py-16 bg-primary-600 text-white">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Need Custom Security Uniforms?</h2>
-              <p className="text-lg mb-6">
-                UNEOM specializes in creating custom security uniform programs tailored to your specific security requirements. From corporate security to event management, we can design and produce security apparel that meets your needs.
-              </p>
-              <Button
-                variant="outline"
-                href="/contact?subject=Custom%20Security%20Uniforms"
-                className="inline-block bg-white text-primary-600 hover:bg-gray-100"
-              >
-                Request Consultation
-              </Button>
-            </div>
-            <div className="hidden lg:block">
-              <div className="relative h-80 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg"
-                  alt="Security Uniform Design Service"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-    
-      </div>
+      </main>
+      <section className="py-6 bg-gray-100 border-t"><div className="container mx-auto px-4 text-center"><Link href="/ar/shop/security-uniforms" className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded-lg text-sm">🇸🇦 العربية</Link></div></section>
+    </>
   );
-} 
+}

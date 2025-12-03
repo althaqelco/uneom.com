@@ -1,534 +1,414 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  FaHardHat, FaShieldAlt, FaTemperatureHigh, FaTshirt, 
-  FaTools, FaUserShield, FaCertificate, FaGlobeAsia, 
-  FaIndustry, FaChartLine, FaTruck, FaHandshake, 
-  FaArrowRight, FaWhatsapp, FaFire, FaCheckCircle, 
-  FaLock, FaUserCog, FaTachometerAlt, FaRegLightbulb, 
-  FaAward, FaStar, FaAngleRight
-} from 'react-icons/fa';
+import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
-import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
+import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
-import ProductCard from '@/components/ui/ProductCard';
-import TestimonialCarousel from '@/components/sections/TestimonialCarousel';
-import SEO from '@/components/SEO';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
+// ============================================
+// SEO 2026 OPTIMIZED METADATA
+// ============================================
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Industrial Uniforms & Safety Workwear Saudi Arabia | Factory Clothing - UNEOM',
+  titleAr: 'الأزياء الصناعية وملابس السلامة في السعودية | ملابس المصانع - يونيوم',
+  description: 'Premium industrial uniforms & safety workwear in Saudi Arabia. Flame resistant, high-visibility, protective clothing for factories, oil & gas, construction in Riyadh, Jeddah, Dammam. SASO compliant!',
+  descriptionAr: 'أفضل أزياء صناعية وملابس سلامة في السعودية. ملابس مقاومة للحريق، عاكسة، واقية للمصانع والنفط والغاز والبناء. متوافقة مع SASO!',
+  keywords: [
+    'industrial uniforms saudi arabia',
+    'safety workwear riyadh',
+    'factory uniforms ksa',
+    'flame resistant clothing saudi',
+    'high visibility workwear',
+    'construction uniforms jeddah',
+    'oil gas uniforms saudi arabia',
+    'protective clothing ksa',
+    'coveralls saudi arabia',
+    'SASO approved workwear',
+    'UNEOM industrial uniforms',
+  ],
+  keywordsAr: [
+    'أزياء صناعية السعودية',
+    'ملابس سلامة الرياض',
+    'زي مصانع السعودية',
+    'ملابس مقاومة للحريق',
+    'ملابس عاكسة',
+    'أفرول السعودية',
+  ],
+  locale: 'en',
+  pageType: 'industry',
+  path: '/industries/manufacturing',
+  image: '/images/industries/industrial-uniforms-saudi.jpg',
+  imageAlt: 'Industrial Uniforms and Safety Workwear in Saudi Arabia - UNEOM',
+  aiSummary: 'UNEOM provides premium industrial uniforms and safety workwear in Saudi Arabia. Our products include flame resistant coveralls, high visibility vests, construction uniforms, oil & gas workwear, factory uniforms, and protective clothing. SASO compliant, meeting Saudi safety regulations. Serving factories, refineries, construction sites in Riyadh, Jeddah, Dammam. Bulk orders welcome.',
+  aiSummaryAr: 'توفر يونيوم أفضل أزياء صناعية وملابس سلامة في السعودية. تشمل منتجاتنا أفرول مقاوم للحريق، سترات عاكسة، زي بناء، ملابس النفط والغاز. متوافقة مع SASO.'
+});
+
+export const dynamic = 'force-static';
+
+// ============================================
+// FAQ DATA
+// ============================================
+const manufacturingFAQs = [
+  {
+    question: 'What types of industrial uniforms does UNEOM offer in Saudi Arabia?',
+    questionAr: 'ما أنواع الأزياء الصناعية التي تقدمها يونيوم في السعودية؟',
+    answer: 'UNEOM offers comprehensive industrial uniforms in Saudi Arabia including: Flame Resistant Coveralls (for oil & gas, welding), High Visibility Workwear (vests, jackets, trousers), Construction Uniforms (durable workwear for sites), Factory Uniforms (comfortable daily wear), Protective Clothing (chemical resistant, anti-static), Safety Accessories (helmets, gloves, boots), and Custom Industrial Uniforms. All products meet SASO standards and international safety regulations.',
+    answerAr: 'تقدم يونيوم أزياء صناعية شاملة في السعودية تشمل: أفرول مقاوم للحريق للنفط والغاز واللحام، ملابس عاكسة عالية الوضوح، زي البناء، زي المصانع، ملابس واقية، إكسسوارات السلامة، وأزياء صناعية مخصصة. جميع المنتجات تلبي معايير SASO واللوائح الدولية للسلامة.'
+  },
+  {
+    question: 'Are UNEOM industrial uniforms SASO compliant?',
+    questionAr: 'هل أزياء يونيوم الصناعية متوافقة مع SASO؟',
+    answer: 'Yes, all UNEOM industrial uniforms meet SASO (Saudi Standards, Metrology and Quality Organization) requirements. We are also ISO 9001:2015 certified. Our flame resistant clothing meets international standards for thermal protection. High visibility wear meets EN ISO 20471 standards. We provide certification documentation for all safety-rated products.',
+    answerAr: 'نعم، جميع أزياء يونيوم الصناعية تلبي متطلبات SASO. نحن أيضاً معتمدون ISO 9001:2015. ملابسنا المقاومة للحريق تلبي المعايير الدولية للحماية الحرارية. الملابس العاكسة تلبي معايير EN ISO 20471. نقدم وثائق الشهادات لجميع المنتجات المصنفة للسلامة.'
+  },
+  {
+    question: 'What is the price of industrial coveralls in Saudi Arabia?',
+    questionAr: 'ما سعر الأفرول الصناعي في السعودية؟',
+    answer: 'UNEOM industrial uniform pricing varies by product type. Basic work coveralls start from SAR 149. Flame resistant coveralls start from SAR 299. High visibility workwear starts from SAR 99. Construction uniforms start from SAR 179. For bulk orders (50+ pieces), we offer discounts up to 25%. Contact us for custom quotes.',
+    answerAr: 'تختلف أسعار الأزياء الصناعية من يونيوم حسب نوع المنتج. الأفرول الأساسي يبدأ من 149 ريال. الأفرول المقاوم للحريق من 299 ريال. الملابس العاكسة من 99 ريال. زي البناء من 179 ريال. للطلبات بالجملة (50+ قطعة) نقدم خصومات تصل إلى 25%.'
+  },
+  {
+    question: 'Does UNEOM supply uniforms to oil and gas companies?',
+    questionAr: 'هل توفر يونيوم الأزياء لشركات النفط والغاز؟',
+    answer: 'Yes, UNEOM is a trusted supplier for oil and gas companies in Saudi Arabia. We provide flame resistant coveralls, anti-static clothing, high visibility workwear, and specialized PPE. Our products meet the strict safety requirements of the petroleum industry and are used by major oil & gas companies.',
+    answerAr: 'نعم، يونيوم مورد موثوق لشركات النفط والغاز في السعودية. نقدم أفرول مقاوم للحريق، ملابس مضادة للكهرباء الساكنة، ملابس عاكسة، ومعدات حماية شخصية متخصصة. منتجاتنا تلبي متطلبات السلامة الصارمة لصناعة البترول.'
+  },
+  {
+    question: 'Can UNEOM add company logos to industrial uniforms?',
+    questionAr: 'هل يمكن ليونيوم إضافة شعارات الشركات على الأزياء الصناعية؟',
+    answer: 'Yes! We offer custom branding on industrial uniforms including heat transfer logos for flame resistant clothing, embroidery for regular workwear, reflective logo printing for high visibility wear, and name badges and ID patches. All branding maintains safety ratings and durability.',
+    answerAr: 'نعم! نقدم التصميم المخصص على الأزياء الصناعية تشمل نقل حراري للشعارات على الملابس المقاومة للحريق، تطريز للملابس العادية، طباعة شعار عاكسة للملابس عالية الوضوح، وشارات الأسماء. جميع العلامات تحافظ على تصنيفات السلامة والمتانة.'
+  },
+  {
+    question: 'How fast can UNEOM deliver industrial uniforms?',
+    questionAr: 'كم تستغرق يونيوم في توصيل الأزياء الصناعية؟',
+    answer: 'UNEOM offers competitive delivery for industrial uniforms. Stock items are available within 5-7 business days. Custom branded uniforms take 10-15 business days. Large industrial orders require 15-21 business days. Rush service available for urgent plant needs. Delivery nationwide including industrial areas.',
+    answerAr: 'تقدم يونيوم توصيل تنافسي للأزياء الصناعية. المنتجات المتوفرة خلال 5-7 أيام عمل. الأزياء المخصصة تستغرق 10-15 يوم عمل. الطلبات الكبيرة تتطلب 15-21 يوم عمل. الخدمة السريعة متاحة للاحتياجات العاجلة. التوصيل لجميع أنحاء المملكة بما فيها المناطق الصناعية.'
+  },
+];
+
+const featuredProducts = [
+  {
+    id: '1',
+    name: 'Flame Resistant Coveralls',
+    description: 'FR coveralls for oil & gas, welding, and high-heat environments. NFPA compliant.',
+    image: '/images/products/fr-coverall.jpg',
+    price: 'From SAR 299',
+    href: '/shop/industrial-uniforms/fr-coveralls/',
+    category: 'FR Workwear',
+    features: ['Flame resistant', 'Arc rated', 'NFPA compliant']
+  },
+  {
+    id: '2',
+    name: 'High Visibility Workwear',
+    description: 'Class 3 high-vis vests, jackets, and trousers for construction and roadwork.',
+    image: '/images/products/hi-vis-vest.jpg',
+    price: 'From SAR 99',
+    href: '/shop/industrial-uniforms/hi-vis-workwear/',
+    category: 'Hi-Vis',
+    features: ['EN ISO 20471', 'Reflective strips', 'Breathable']
+  },
+  {
+    id: '3',
+    name: 'Industrial Coveralls',
+    description: 'Durable work coveralls for factories and manufacturing environments.',
+    image: '/images/products/industrial-coverall.jpg',
+    price: 'From SAR 149',
+    href: '/shop/industrial-uniforms/coveralls/',
+    category: 'Coveralls',
+    features: ['Heavy duty', 'Multiple pockets', 'Easy access']
+  },
+  {
+    id: '4',
+    name: 'Construction Uniforms',
+    description: 'Tough workwear for construction sites. Built to last.',
+    image: '/images/products/construction-uniform.jpg',
+    price: 'From SAR 179',
+    href: '/shop/industrial-uniforms/construction/',
+    category: 'Construction',
+    features: ['Reinforced knees', 'Tool loops', 'Durable fabric']
+  },
+  {
+    id: '5',
+    name: 'Anti-Static Workwear',
+    description: 'ESD safe clothing for electronics manufacturing and sensitive environments.',
+    image: '/images/products/anti-static-uniform.jpg',
+    price: 'From SAR 199',
+    href: '/shop/industrial-uniforms/anti-static/',
+    category: 'ESD Safe',
+    features: ['Static dissipative', 'Grounding strap', 'Cleanroom rated']
+  },
+  {
+    id: '6',
+    name: 'Chemical Resistant Suits',
+    description: 'Protective suits for chemical handling and hazardous materials.',
+    image: '/images/products/chemical-suit.jpg',
+    price: 'From SAR 349',
+    href: '/shop/industrial-uniforms/chemical-resistant/',
+    category: 'Chemical Protection',
+    features: ['Chemical resistant', 'Sealed seams', 'Full protection']
+  },
+];
+
+const manufacturingBenefits = [
+  {
+    icon: '🔥',
+    title: 'Fire & Heat Protection',
+    description: 'Flame resistant and heat-protective workwear meeting international safety standards for high-risk environments.',
+  },
+  {
+    icon: '👁️',
+    title: 'High Visibility',
+    description: 'EN ISO 20471 compliant high-vis workwear ensuring worker visibility in all conditions.',
+  },
+  {
+    icon: '🛡️',
+    title: 'SASO Compliant',
+    description: 'All products meet Saudi SASO standards and international safety regulations.',
+  },
+  {
+    icon: '💪',
+    title: 'Durability',
+    description: 'Heavy-duty construction designed to withstand demanding industrial environments.',
+  },
+];
+
+// ============================================
+// MANUFACTURING PAGE COMPONENT
+// ============================================
 export default function ManufacturingIndustryPage() {
-  const locale = 'en';
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
-  
-  // Animation variants
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.7, ease: "easeOut" }
-    }
-  };
-
-  const fadeInLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { 
-      opacity: 1, 
-      x: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  };
-
-  const fadeInRight = {
-    hidden: { opacity: 0, x: 50 },
-    visible: { 
-      opacity: 1, 
-      x: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15
-      }
-    }
-  };
-
-  const scaleIn = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { 
-      opacity: 1, 
-      scale: 1,
-      transition: { duration: 0.5 }
-    }
-  };
-
-  // Function to handle WhatsApp contact
-  const handleWhatsAppInquiry = () => {
-    const message = "Hello UNEOM, I'm interested in industrial uniforms for our manufacturing facility in Saudi Arabia. Could you provide more information?";
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/971558164922?text=${encodedMessage}`;
-    window.open(whatsappUrl, '_blank');
-  };
-
-  // Function to handle product inquiry
-  const handleProductInquiry = (productName: string) => {
-    const message = `Hello UNEOM, I'm interested in the ${productName} for our industrial facility in Saudi Arabia. Could you send me more details and pricing?`;
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/971558164922?text=${encodedMessage}`;
-    window.open(whatsappUrl, '_blank');
-  };
-  
-  // Products data
-  const products = [
-    {
-      id: "industrial-coverall-pro",
-      name: "Industrial Coverall Pro",
-      description: "Advanced full-body protection engineered for Saudi Arabia's most demanding industrial environments with multi-hazard protection featuring heat-resistant, flame-retardant, and chemical-resistant technologies.",
-      image: "/images/industries/manufacturing/manufacturing_uniform_product1.jpg", // Main product image
-      imageGallery: [
-        "/images/industries/manufacturing/manufacturing_uniform_product2.jpg"
-      ],
-      href: "/shop/industrial-uniforms/flame-resistant-workwear", // Main navigation link
-      features: [
-        "Arc Rating: ATPV 12+ cal/cm²",
-        "Flash Fire Protection: NFPA 2112 Certified",
-        "Heat Transfer Index: HTI₂₄ > 16 seconds",
-        "Self-Extinguishing: < 2 seconds"
-      ],
-      price: "SAR 549 - 749",
-      badge: "Safety Certified"
-    },
-    {
-      id: "hi-vis-safety-uniform",
-      name: "Hi-Vis Safety Uniform",
-      description: "ANSI/ISEA 107 Class 3-compliant high-visibility garments with 360° advanced reflective elements designed for Saudi construction, roadwork, and night shift industrial operations.",
-      image: "/images/industries/manufacturing/manufacturing_uniform_product3.jpg",
-      href: "/shop/industrial-uniforms/hi-vis-safety-uniform",
-      features: [
-        "Visibility Range: 300+ meters in darkness",
-        "360° Reflective Technology with 5cm+ strips",
-        "UV Protection: UPF 40+",
-        "Moisture Management Technology"
-      ],
-      price: "SAR 429 - 549",
-      badge: "Enhanced Visibility"
-    }
-  ];
-  
-  // Blog posts data
-  const blogPosts = [
-    {
-      title: "2024 Advancements in Industrial Protective Clothing for Saudi Manufacturing",
-      description: "Explore the latest cutting-edge innovations in protective workwear technology specifically engineered for Saudi Arabia's manufacturing sector.",
-      image: "/images/industries/manufacturing/manufacturing_uniform_variation.jpg",
-      link: "/blog/industrial-protective-clothing-advances",
-      readTime: "8 min read",
-      date: "May 15, 2024"
-    },
-    {
-      title: "Sustainable Manufacturing Uniforms: Meeting Saudi Vision 2030 Goals",
-      description: "How next-generation eco-friendly industrial workwear is supporting Saudi Arabia's sustainability objectives while maintaining world-class safety standards.",
-      image: "/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg",
-      link: "/blog/sustainable-uniforms-2024-trends",
-      readTime: "7 min read",
-      date: "April 22, 2024"
-    },
-    {
-      title: "Safety Standards and Compliance: Industrial Workwear in Saudi Manufacturing",
-      description: "A comprehensive guide to navigating Saudi and international safety regulations for industrial uniforms in manufacturing facilities across the Kingdom.",
-      image: "/images/industries/manufacturing/manufacturing_uniform_default.jpg",
-      link: "/blog/industrial-safety-compliance-guide",
-      readTime: "10 min read",
-      date: "March 30, 2024"
-    }
-  ];
-  
-  // Technologies data
-  const technologies = [
-    {
-      name: "ThermoRegulate™ Advanced Cooling",
-      description: "Patented multi-layer temperature regulation technology specifically engineered for Saudi Arabia's extreme climate.",
-      icon: <FaTemperatureHigh className="h-10 w-10 text-primary-600 mb-4" />
-    },
-    {
-      name: "DuraTough™ Reinforcement",
-      description: "Revolutionary triple-stitching and advanced abrasion-resistant fabric technology that extends garment life up to 3x longer.",
-      icon: <FaShieldAlt className="h-10 w-10 text-primary-600 mb-4" />
-    },
-    {
-      name: "FlexWork™ Pro Mobility System",
-      description: "Innovative ergonomic garment architecture with strategically placed 4-way stretch panels that maximize mobility.",
-      icon: <FaTools className="h-10 w-10 text-primary-600 mb-4" />
-    },
-    {
-      name: "ChemShield™ Advanced Protection",
-      description: "Industry-leading chemical-resistant fabric treatments developed specifically for Saudi petrochemical environments.",
-      icon: <FaFire className="h-10 w-10 text-primary-600 mb-4" />
-    }
-  ];
-  
-  // Testimonials data
-  const testimonials = [
-    {
-      content: "UNEOM transformed our safety program with industrial uniforms that not only exceed international standards but are also exceptionally comfortable in Saudi Arabia's high-temperature industrial environments.",
-      author: "Eng. Mohammed Al-Otaibi",
-      position: "Safety & Compliance Director",
-      company: "Jubail Industrial Development Corporation",
-      image: "/images/avatar-placeholder.jpg",
-      logo: "/images/logos/placeholder-logo.png"
-    },
-    {
-      content: "After implementing UNEOM's customized industrial uniform program, we've seen a measurable 32% decrease in heat-related incidents and a 28% increase in productivity.",
-      author: "Fahad Al-Harbi",
-      position: "Operations Manager",
-      company: "Saudi Manufacturing Industries",
-      image: "/images/avatar-placeholder.jpg",
-      logo: "/images/logos/placeholder-logo.png"
-    },
-    {
-      content: "The difference in quality and performance between UNEOM's industrial workwear and our previous supplier is remarkable. Their flame-resistant uniforms have successfully protected our workers during two significant incidents.",
-      author: "Dr. Khalid Al-Zahrani",
-      position: "HSE Department Head",
-      company: "Yanbu Petrochemical Industries",
-      image: "/images/avatar-placeholder.jpg",
-      logo: "/images/logos/placeholder-logo.png"
-    }
-  ];
-  
-  // Statistics data
-  const statistics = [
-    {
-      value: "97%",
-      label: "Saudi industries report improved safety with UNEOM workwear",
-      icon: <FaShieldAlt className="h-10 w-10 text-primary-600" />
-    },
-    {
-      value: "3x",
-      label: "Longer durability than standard industrial uniforms",
-      icon: <FaTachometerAlt className="h-10 w-10 text-primary-600" />
-    },
-    {
-      value: "35%",
-      label: "Average reduction in heat-related incidents",
-      icon: <FaTemperatureHigh className="h-10 w-10 text-primary-600" />
-    },
-    {
-      value: "24/7",
-      label: "Technical support for Saudi industrial clients",
-      icon: <FaUserCog className="h-10 w-10 text-primary-600" />
-    }
-  ];
-  
-  // Sub-Industry data
-  const subIndustries = [
-    {
-      id: "heavy-industrial",
-      title: "Uniform Solutions for Heavy Industry",
-      description: "UNEOM provides robust and highly durable workwear specifically designed for Saudi Arabia's demanding heavy industry sector, including construction, metal fabrication, and large-scale manufacturing. Our uniforms prioritize safety, resilience against wear and tear, and comfort in challenging physical environments.",
-      keyChallenges: [
-        "Extreme physical stress and abrasion",
-        "Requirement for high-visibility in complex sites",
-        "Protection against impact and potential hazards",
-        "Comfort during physically demanding tasks"
-      ],
-      relevantProducts: ["industrial-coverall-pro", "hi-vis-safety-uniform"],
-      image: "/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg"
-    },
-    {
-      id: "petrochemical",
-      title: "Specialized Uniforms for the Petrochemical Sector",
-      description: "Safety is paramount in the petrochemical industry. We offer advanced flame-resistant (FR) and chemical-resistant uniforms that meet stringent international and Saudi safety standards (like NFPA, ISO, SASO), ensuring maximum protection for workers in refineries, processing plants, and labs.",
-      keyChallenges: [
-        "Risk of flash fire and thermal hazards",
-        "Exposure to chemicals and hazardous materials",
-        "Need for anti-static properties",
-        "Compliance with strict safety regulations"
-      ],
-      relevantProducts: ["flame-resistant-workwear", "industrial-coverall-pro"],
-      image: "/images/industries/manufacturing/manufacturing_uniform_perpare.jpg"
-    },
-    {
-      id: "food-processing",
-      title: "Hygienic Uniforms for Food Processing",
-      description: "UNEOM supplies hygienic, easy-to-clean, and durable uniforms designed for Saudi Arabia's food and beverage manufacturing sector. Our workwear meets food safety standards, preventing contamination while ensuring employee comfort and professional appearance in production lines, packaging, and quality control.",
-      keyChallenges: [
-        "Maintaining strict hygiene standards",
-        "Preventing cross-contamination",
-        "Resistance to food-based stains and frequent washing",
-        "Comfort in varying temperature environments (cold storage/hot kitchens)"
-      ],
-      relevantProducts: [],
-      image: "/images/industries/manufacturing/manufacturing_uniform_basic.jpg"
-    }
-  ];
-  
-  const content = {
-    meta: {
-      title: "Manufacturing Uniforms & Workwear in Saudi Arabia | UNEOM",
-      description: "Premium industrial workwear and manufacturing uniforms tailored for Saudi factories, ensuring safety, durability, and compliance with Saudi industrial standards."},
-    hero: {
-      headline: "Manufacturing Uniforms & Industrial Workwear in Saudi Arabia",
-      subheadline: "Premium workwear for production facilities, factories, and industrial operations in the Kingdom, combining safety compliance, durability, and professional identity.",
-      cta: "Request Manufacturing Workwear Quote",
-      ctaLink: '/quote?industry=manufacturing',
-      image: "/images/manufacturing/manufacturing_facility_workers_main.jpg"},
-    intro: {
-      title: "Industrial Excellence Through Professional Workwear",
-      paragraphs: [
-        "In Saudi Arabia's rapidly growing manufacturing sector, professional workwear plays a crucial role in workplace safety, operational efficiency, and projecting a modern industrial identity. UNEOM's comprehensive manufacturing uniform solutions are specifically designed to meet the unique requirements of Saudi factories and industrial facilities.",
-        "From production line personnel and machine operators to supervisors, quality control teams, and maintenance staff, we provide premium-quality workwear that combines practical functionality, maximum protection, and professional appearance. Our manufacturing collections incorporate advanced fabric technologies that withstand the rigorous demands of industrial environments while offering design options that respect Islamic dress codes and reflect Saudi industrial standards.",
-        "As Saudi manufacturing continues its remarkable growth under Vision 2030, we partner with factories and industrial operations to develop uniform programs that enhance workplace safety, boost employee morale, and create a professional corporate identity that showcases Saudi Arabia's industrial capabilities."
-      ]},
-    keyBenefits: {
-      title: "The UNEOM Advantage in Manufacturing Workwear",
-      benefits: [
-        {
-          name: "Saudi Safety Compliance",
-          description: "All our workwear meets or exceeds Saudi Occupational Safety and Health (SOSH) standards and international safety certifications applicable to various manufacturing environments.",
-          icon: "/images/icons/safety-compliance-shield.svg"
-        },
-        {
-          name: "Enhanced Corporate Identity",
-          description: "We integrate your company branding into every uniform detail, creating a consistent professional appearance that strengthens your industrial brand identity.",
-          icon: "/images/icons/corporate-identity-manufacturing.svg"
-        },
-        {
-          name: "Modest & Practical Designs",
-          description: "Special designs that respect modest dress requirements for female staff while maintaining practical functionality for industrial work environments.",
-          icon: "/images/icons/modest-design-industrial.svg"
-        },
-        {
-          name: "High-Performance Fabrics",
-          description: "Manufacturing-specific textiles that offer durability, heat resistance, chemical protection, and comfort during long shifts in challenging industrial environments.",
-          icon: "/images/icons/fabric-tech-industrial.svg"
-        },
-      ]},
-    featuredOfferings: {
-      title: "Comprehensive Manufacturing Workwear Collections",
-      offerings: [
-        {
-          name: "Production Line Uniforms",
-          description: "Durable and comfortable workwear designed for production line personnel, with features for movement flexibility and protection against common manufacturing hazards.",
-          image: "/images/manufacturing/production_line_uniforms.jpg", // Main image
-          link: "/shop/industrial-uniforms", // Main navigation link
-          imageGallery: [
-            "/images/manufacturing/supervisor_workwear.jpg",
-            "/images/manufacturing/maintenance_technical_uniform.jpg",
-            "/images/industries/manufacturing/customization-manufacturing-workwear.jpg"
-          ]
-        } // Closes the "Production Line Uniforms" object
-      ] // Closes the "offerings" array
-    }, // Closes the "featuredOfferings" object
-    testimonials: {
-      title: "Trusted by Leading Saudi Manufacturers",
-      items: [
-        {
-          quote: "UNEOM's manufacturing workwear has significantly improved our workplace safety metrics and streamlined our uniform management process. Their attention to safety standards while maintaining comfort is exceptional.",
-          author: "Mohammed Al-Harbi",
-          position: "Operations Director, Saudi Advanced Industries"},
-        {
-          quote: "The durability and practicality of UNEOM's workwear has been impressive. Our employees appreciate the comfort during long shifts, and the modest options for our female engineers have been perfectly designed for industrial environments.",
-          author: "Fatima Al-Otaibi",
-          position: "HR Manager, Riyadh Manufacturing Complex"}
-      ]},
-    customizationOptions: {
-      title: "Custom Workwear for Manufacturing Needs",
-      description: "UNEOM provides fully customizable workwear solutions for the manufacturing sector, including options for high-visibility, flame resistance, and specific industry requirements. Enhance safety and brand identity with our tailored uniform programs.",
-      image: "/images/industries/manufacturing/customization-manufacturing-workwear.jpg", // Placeholder image
-      cta: "Discuss Your Requirements",
-      ctaLink: "/services/custom-design"
-    },
-    relatedBlogs: {
-      title: "Manufacturing Workwear Insights",
-      posts: [
-        {
-          title: "Safety Standards for Saudi Manufacturing Facilities",
-          link: "/blog/safety-standards-saudi-manufacturing",
-          image: "/images/blog/placeholder-manufacturing1.jpg"},
-        {
-          title: "Workwear Innovations for Modern Saudi Factories",
-          link: "/blog/workwear-innovations-saudi-factories",
-          image: "/images/blog/placeholder-manufacturing2.jpg"}
-      ]},
-    finalCta: {
-      title: "Elevate Your Manufacturing Operation with UNEOM",
-      description: "Partner with UNEOM to design and deliver manufacturing workwear that prioritizes safety, durability, and professional identity. Contact our specialists today.",
-      cta: "Get a Manufacturing Workwear Quote",
-      ctaLink: '/quote?industry=manufacturing&focused=true'}};
-
   return (
     <>
-      {/* Enhanced SEO for Google May 2025 Standards */}
-      <EnhancedSEO2025 
-        title="UNEOM - Professional Uniforms Saudi Arabia"
-        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
-        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
-        author="UNEOM Expert Team"
-        expertise="Uniform Manufacturing & Design"
-        contentType="service"
-        trustSignals={[
-          'ISO certified manufacturing',
-          'Premium quality materials',
-          'Custom design solutions',
-          'Saudi Arabia market leader'
-        ]}
+      <SEO2026
+        title="Industrial Uniforms & Safety Workwear Saudi Arabia"
+        titleAr="الأزياء الصناعية وملابس السلامة في السعودية"
+        description="UNEOM provides industrial uniforms and safety workwear for factories and construction in Saudi Arabia."
+        descriptionAr="توفر يونيوم أزياء صناعية وملابس سلامة للمصانع والبناء في السعودية."
         locale="en"
-      />
-
-      <SEO
-        title={content.meta.title}
-        description={content.meta.description}
-        canonicalUrl="https://uneom.com/industries/manufacturing/"
+        pageType="industry"
+        mainEntity="Industrial Uniforms and Safety Workwear"
+        mainEntityAr="الأزياء الصناعية وملابس السلامة"
+        primaryImage="/images/industries/industrial-uniforms-saudi.jpg"
+        primaryImageAlt="Industrial Uniforms in Saudi Arabia"
+        faqs={manufacturingFAQs}
+        breadcrumbs={[
+          { name: 'Industries', nameAr: 'الصناعات', url: '/industries' },
+          { name: 'Manufacturing', nameAr: 'التصنيع', url: '/industries/manufacturing' },
+        ]}
+        conversationalKeywords={[
+          'where to buy industrial uniforms Saudi Arabia',
+          'safety workwear supplier Riyadh',
+          'flame resistant coveralls near me',
+        ]}
+        voiceSearchQueries={[
+          'Find industrial uniforms in Riyadh',
+          'Order safety workwear Saudi Arabia',
+        ]}
+        certifications={['ISO 9001:2015', 'SASO Approved', 'EN ISO 20471']}
+        clientCount={300}
+        yearsInBusiness={20}
+        industry="Manufacturing"
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-800 to-gray-700 text-white py-20 md:py-32">
-        <div className="absolute inset-0">
-             <Image
-            src={content.hero.image}
-            alt={content.hero.headline}
-            fill
-            className="object-cover opacity-25"
-            priority
-          />
-        </div>
-        <Container className="relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            {content.hero.headline}
-          </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
-            {content.hero.subheadline}
-          </p>
-          <Button href={content.hero.ctaLink} size="lg" variant="primary">
-            {content.hero.cta}
-          </Button>
-        </Container>
-      </section>
-      
-      {/* Intro Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="bg-gradient-to-br from-yellow-800 via-orange-700 to-red-800 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+        
         <Container>
-          <SectionHeading className="text-center mb-12">{content.intro.title}</SectionHeading>
-          <div className="max-w-3xl mx-auto space-y-6 text-lg text-neutral-700">
-            {content.intro.paragraphs.map((p, i) => (<p key={i}>{p}</p>))}
+          <Breadcrumbs
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Industries', href: '/industries' },
+              { label: 'Manufacturing', href: '/industries/manufacturing' }
+            ]}
+            className="text-white/80 mb-6 relative z-10 pt-8"
+          />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16 lg:py-24 relative z-10">
+            <div className="text-content">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+                <span className="text-yellow-400">🏭</span>
+                <span className="text-sm font-medium">SASO Compliant Industrial Workwear</span>
+        </div>
+              
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Industrial Uniforms & Safety Workwear in{' '}
+                <span className="bg-gradient-to-r from-yellow-300 to-orange-300 text-transparent bg-clip-text">
+                  Saudi Arabia
+                </span>
+          </h1>
+              
+              <p className="text-xl mb-8 text-orange-100 leading-relaxed max-w-2xl">
+                Premium safety workwear for factories, oil & gas, and construction. 
+                Flame resistant, high visibility, SASO compliant.
+              </p>
+              
+              <div className="flex flex-wrap gap-3 mb-8">
+                <span className="bg-white/10 px-4 py-2 rounded-lg text-sm font-medium">🔥 FR Certified</span>
+                <span className="bg-white/10 px-4 py-2 rounded-lg text-sm font-medium">👁️ High Visibility</span>
+                <span className="bg-white/10 px-4 py-2 rounded-lg text-sm font-medium">🛡️ SASO Compliant</span>
+                <span className="bg-white/10 px-4 py-2 rounded-lg text-sm font-medium">💪 Heavy Duty</span>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  href="/quote?industry=manufacturing"
+                  variant="secondary" 
+                  size="lg"
+                  className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold border-0"
+                >
+                  Get Free Industrial Quote →
+                </Button>
+                <Button 
+                  href="/shop/industrial-uniforms"
+                  variant="outline" 
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-orange-900"
+                >
+                  Shop Safety Workwear
+          </Button>
+              </div>
+            </div>
+            
+            <div className="relative hidden lg:block">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/industries/manufacturing/hero-industrial.jpg"
+                  alt="Industrial workers wearing UNEOM safety uniforms in Saudi Arabia"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 text-gray-900">
+                <div className="text-3xl font-bold text-orange-600">300+</div>
+                <div className="text-sm text-gray-600">Industrial Clients</div>
+              </div>
+            </div>
                 </div>
         </Container>
       </section>
       
-      {/* Key Benefits Section */}
-      <section className="py-16 md:py-24 bg-neutral-50">
+      <main className="py-16">
         <Container>
-          <SectionHeading className="text-center mb-16">{content.keyBenefits.title}</SectionHeading>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {content.keyBenefits.benefits.map((benefit) => (
-              <div key={benefit.name} className="bg-white p-6 rounded-lg shadow-lg text-center">
-                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Image src={benefit.icon} alt={benefit.name} width={32} height={32} />
-                    </div>
-                <h3 className="text-xl font-semibold text-neutral-800 mb-2">{benefit.name}</h3>
-                <p className="text-neutral-600 text-sm">{benefit.description}</p>
+          {/* Benefits */}
+          <section className="mb-20">
+            <SectionHeading subtitle="Why Industries Choose UNEOM" centered>
+              Safety-First Industrial Workwear
+            </SectionHeading>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+              {manufacturingBenefits.map((benefit, index) => (
+                <div key={index} className="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all border border-gray-100">
+                  <div className="text-4xl mb-4">{benefit.icon}</div>
+                  <h3 className="text-lg font-bold mb-3 text-gray-900">{benefit.title}</h3>
+                  <p className="text-gray-600 text-sm">{benefit.description}</p>
                     </div>
             ))}
            </div>
-        </Container>
       </section>
       
-      {/* Featured Offerings Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <Container>
-          <SectionHeading className="text-center mb-16">{content.featuredOfferings.title}</SectionHeading>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {content.featuredOfferings.offerings.map((offering) => (
-              <div key={offering.name} className="border rounded-lg overflow-hidden shadow-lg group">
-                <Link href={offering.link} className="block">
-                  <div className="relative w-full h-72 bg-neutral-100">
-                    <Image src={offering.image} alt={offering.name} fill className="object-cover group-hover:scale-105 transition-transform duration-300 p-2" />
+          {/* Products */}
+          <section id="featured-products" className="mb-20">
+            <SectionHeading subtitle="Our Industrial Collection" centered>
+              Safety Workwear & Industrial Uniforms
+            </SectionHeading>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+              {featuredProducts.map((product) => (
+                <div key={product.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 group border border-gray-100">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={product.image}
+                      alt={`${product.name} in Saudi Arabia`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                      {product.category}
+                    </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-neutral-800 mb-2">{offering.name}</h3>
-                    <p className="text-neutral-600 text-sm mb-4">{offering.description}</p>
-                    <span className="text-blue-600 hover:text-blue-700 font-medium">
-                      View Details &rarr;
+                    <h3 className="text-xl font-bold mb-2 text-gray-900">{product.name}</h3>
+                    <p className="text-gray-600 text-sm mb-4">{product.description}</p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {product.features.map((feature, idx) => (
+                        <span key={idx} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
+                          {feature}
                     </span>
+                      ))}
+                    </div>
+                    
+                    <div className="flex justify-between items-center pt-4 border-t">
+                      <span className="text-lg font-bold text-orange-600">{product.price}</span>
+                      <Link 
+                        href={product.href} 
+                        className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm font-medium"
+                      >
+                        View Details
+                      </Link>
+                    </div>
                   </div>
-                </Link>
                 </div>
             ))}
           </div>
-        </Container>
-      </section>
-      
-      {/* Customization Options Section */}
-      <section className="py-16 md:py-24 bg-neutral-800 text-white">
-        <Container className="md:flex items-center gap-12 flex-row-reverse">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <Image src={content.customizationOptions.image} alt={content.customizationOptions.title} width={600} height={450} className="rounded-lg shadow-xl object-cover" />
-          </div>
-          <div className="md:w-1/2">
-            <SectionHeading className="text-left mb-6 !text-3xl md:!text-4xl">{content.customizationOptions.title}</SectionHeading>
-            <p className="text-lg text-neutral-300 leading-relaxed">{content.customizationOptions.description}</p>
-          </div>
-        </Container>
-      </section>
-      
-      {/* Testimonials Section */}
-      {content.testimonials && content.testimonials.items.length > 0 && (
-        <section className="py-16 md:py-24 bg-neutral-50">
-        <Container>
-            <SectionHeading className="text-center mb-12">{content.testimonials.title}</SectionHeading>
-            <div className="max-w-2xl mx-auto">
-              {content.testimonials.items.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-lg shadow-lg mb-8">
-                  <p className="text-lg text-neutral-700 italic mb-4">"{testimonial.quote}"</p>
-                  <p className="text-right font-semibold text-gray-700">&mdash; {testimonial.author}, {testimonial.position}</p>
-                 </div>
-            ))}
+            
+            <div className="text-center mt-12">
+              <Button href="/shop/industrial-uniforms" variant="primary" size="lg">
+                View All Industrial Products
+              </Button>
             </div>
-        </Container>
       </section>
-      )}
-      
-      {/* Related Blogs Section */}
-      {content.relatedBlogs && content.relatedBlogs.posts.length > 0 && (
-        <section className="py-16 md:py-24 bg-white">
-        <Container>
-            <SectionHeading className="text-center mb-16">{content.relatedBlogs.title}</SectionHeading>
-            <div className="grid md:grid-cols-2 gap-8">
-              {content.relatedBlogs.posts.map((post) => (
-                <Link key={post.title} href={post.link} className="block group border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="relative w-full h-56 bg-neutral-100">
-                    <Image src={post.image} alt={post.title} fill className="object-cover" />
+
+          {/* FAQ */}
+          <section className="mb-20" itemScope itemType="https://schema.org/FAQPage">
+            <SectionHeading subtitle="Common Questions" centered>
+              Industrial Uniforms FAQ
+            </SectionHeading>
+            
+            <div className="max-w-4xl mx-auto mt-12 space-y-4">
+              {manufacturingFAQs.slice(0, 6).map((faq, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3" itemProp="name">{faq.question}</h3>
+                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                    <p className="text-gray-600 leading-relaxed" itemProp="text">{faq.answer}</p>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-neutral-800 mb-2 group-hover:text-blue-600 transition-colors">{post.title}</h3>
-                    <span className="text-blue-600 font-medium">Read Article &rarr;</span>
                   </div>
-                </Link>
               ))}
             </div>
-          </Container>
         </section>
-      )}
 
-      {/* Final CTA Section */}
-      <section className="py-20 md:py-32 bg-gray-800 text-white">
-        <Container className="text-center">
-          <SectionHeading className="mb-6 !text-3xl md:!text-4xl">{content.finalCta.title}</SectionHeading>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">{content.finalCta.description}</p>
-          <Button href={content.finalCta.ctaLink} size="lg" variant="secondary">
-            {content.finalCta.cta}
-          </Button>
+          {/* CTA */}
+          <section className="text-center bg-gradient-to-r from-orange-700 to-red-700 text-white rounded-2xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Outfit Your Workforce?</h2>
+            <p className="text-xl mb-8 leading-relaxed max-w-3xl mx-auto text-orange-100">
+              Join 300+ industrial companies across Saudi Arabia that trust UNEOM for safety workwear.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/quote?industry=manufacturing" className="inline-flex items-center px-8 py-4 bg-white text-orange-700 hover:bg-gray-100 font-bold rounded-xl transition-all duration-300 shadow-lg">
+                Get Free Industrial Quote →
+              </Link>
+              <Link href="/contact" className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-orange-900 font-bold rounded-xl transition-all duration-300">
+                Contact Us Now
+              </Link>
+            </div>
+          </section>
         </Container>
+      </main>
+
+      <section className="py-6 bg-gray-100 border-t">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-600 mb-3 text-sm">This page is also available in Arabic</p>
+          <Link href="/ar/industries/manufacturing" className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+            🇸🇦 العربية
+          </Link>
+        </div>
       </section>
     </>
   );

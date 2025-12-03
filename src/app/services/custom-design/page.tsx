@@ -1,149 +1,92 @@
-'use client';
-
 import React from 'react';
-import ServicePageLayout from '@/components/layout/ServicePageLayout';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import Link from 'next/link';
+import { Metadata } from 'next';
+import Container from '@/components/ui/Container';
+import SectionHeading from '@/components/ui/SectionHeading';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-export default function CustomDesignServicePage() {
-  const locale = 'en';
-  const serviceData = {
-    title: "UNEOM - Professional Uniforms",
-    subtitle: 'Distinctive uniform solutions that elevate your brand identity',
-    heroImage: '/images/banner-placeholder.jpg',
-    
-    overview: [
-      "UNEOM's Custom Design & Branding service delivers unique uniform solutions that reflect your organization's distinct identity and values. Our expert design team works closely with you to create uniforms that not only meet functional requirements but also serve as powerful brand ambassadors for your organization.",
-      "From subtle brand elements to completely bespoke designs, we combine artistic creativity with practical expertise to develop uniforms that your employees will be proud to wear. Whether you're looking to refresh your current uniform program or develop entirely new designs, our comprehensive approach ensures a solution that aligns perfectly with your brand vision and operational needs."
-    ],
-    
-    steps: [
-      {
-        icon: '/images/banner-placeholder.jpg',
-        title: 'Brand Discovery',
-        description: 'We begin with a comprehensive discovery phase to understand your brand values, identity elements, and design preferences. Our team analyzes your existing visual identity, target audience, and industry positioning to establish clear design objectives.'
-      },
-      {
-        icon: '/images/icons/custom-branding.svg',
-        title: 'Concept Development',
-        description: 'Our design team creates initial concepts that blend aesthetic appeal with functional requirements. We present multiple design directions with mood boards, color palettes, and preliminary sketches to visualize different approaches.'
-      },
-      {
-        icon: '/images/icons/customization-icon.svg',
-        title: 'Refinement & Prototyping',
-        description: 'Based on your feedback, we refine selected concepts and develop detailed designs. Prototypes are created for key uniform pieces, allowing for fit testing, material evaluation, and further design adjustments.'
-      },
-      {
-        icon: '/images/product-placeholder.jpg',
-        title: 'Production & Implementation',
-        description: 'Once designs are approved, we manage the production process with rigorous quality control standards. Our team coordinates sizing, manufacturing, and delivery to ensure a smooth rollout of your custom uniform program.'
-      }
-    ],
-    
-    benefits: [
-      {
-        icon: '/images/images/icons/brand-aligned.svg',
-        title: 'Strengthened Brand Identity',
-        description: 'Custom uniforms reinforce your visual identity and create immediate brand recognition both internally and with customers or clients.'
-      },
-      {
-        icon: '/images/icons/premium-quality.svg',
-        title: 'Competitive Differentiation',
-        description: 'Stand out from competitors with distinctive uniforms that communicate your unique positioning and values in the marketplace.'
-      },
-      {
-        icon: '/images/icons/culturally-appropriate.svg',
-        title: 'Enhanced Company Culture',
-        description: 'Well-designed uniforms foster a sense of belonging and pride among employees, strengthening your organizational culture.'
-      },
-      {
-        icon: '/images/icons/comprehensive-support.svg',
-        title: 'Visual Consistency',
-        description: 'Ensure consistent brand presentation across all locations, departments, and customer touchpoints.'
-      },
-      {
-        icon: '/images/icons/consultation-icon.svg',
-        title: 'Optimized Functionality',
-        description: 'Custom designs allow for industry-specific features and adaptations that improve comfort and performance for your specific work environment.'
-      },
-      {
-        icon: '/images/icons/timely-delivery.svg',
-        title: 'Elevated Customer Perception',
-        description: 'Professional, branded uniforms elevate customer perception of your service quality and organizational professionalism.'
-      }
-    ],
-    
-    caseStudies: [
-      {
-        id: "luxury-hotel",
-        title: 'Luxury Hotel Brand Transformation',
-        description: 'Creating a distinctive uniform collection for a new luxury hotel brand launching in Saudi Arabia that needed to blend contemporary elegance with subtle cultural elements.',
-        result: '92% of guests surveyed mentioned the distinctive staff appearance as a memorable element of their stay, and the designs were featured in Hospitality Design magazine.',
-        image: '/images/products/hotel-uniform.jpg'
-      },
-      {
-        id: "banking-refresh",
-        title: 'Corporate Banking Identity Refresh',
-        description: 'Modernizing an outdated corporate uniform program for a leading financial institution with 1,200+ customer-facing employees while maintaining professionalism and brand heritage.',
-        result: '86% increase in employee satisfaction with uniform program and customer perception metrics for "professionalism" increased by 18%.',
-        image: '/images/products/corporate-suit-executive.jpg'
-      }
-    ],
-    
-    testimonials: [
-      {
-        id: "hotel-brand-director",
-        quote: "Working with UNEOM's design team transformed our staff appearance beyond our expectations. They captured the essence of our brand while creating highly functional uniforms that our team loves wearing. The custom elements they developed have become signature details that both our staff and guests immediately recognize as uniquely ours.",
-        author: 'Nora Al-Faisal',
-        position: 'Brand Director',
-        company: 'Al Mamlaka Hotels & Resorts',
-        image: '/images/avatar-placeholder.jpg'
-      },
-      {
-        id: "financial-cmo",
-        quote: "The UNEOM design process was thorough and collaborative from start to finish. They understood our need to respect our heritage while modernizing our appearance. The custom uniform program they developed strikes the perfect balance between innovation and tradition, and has significantly contributed to our brand rejuvenation efforts.",
-        author: 'Fahad Al-Otaibi',
-        position: 'Chief Marketing Officer',
-        company: 'Riyadh Financial Group',
-        image: '/images/avatar-placeholder.jpg'
-      }
-    ],
-    
-    faqs: [
-      {
-        question: 'How does the custom design process work and how long does it typically take?',
-        answer: 'Our custom design process follows a structured methodology from initial discovery through concept development, refinement, and production. A typical timeline for a comprehensive custom program is 12-16 weeks, though this can vary based on project complexity, number of uniform items, and whether custom fabric development is required. For clients with accelerated needs, we offer expedited design services that can deliver custom solutions in as little as 8 weeks.'
-      },
-      {
-        question: 'Can you incorporate our existing brand elements into custom uniform designs?',
-        answer: 'Absolutely. Our design team specializes in thoughtfully integrating your existing brand elements—from color palettes and logos to more subtle brand characteristics—into uniform designs. We take a strategic approach to brand integration, ensuring elements are incorporated in ways that are both visually appealing and practical for everyday wear. The level of brand visibility can be adjusted based on your preferences, from subtle brand cues to more prominent identity statements.'
-      },
-      {
-        question: 'Do you create completely custom garments or modify existing uniform styles?',
-        answer: 'We offer both approaches depending on your needs and budget. For many clients, we create completely custom-designed garments built from the ground up to your specifications. For others, we modify our extensive collection of base designs with custom colors, fabrics, and brand elements. Many successful programs utilize a hybrid approach, with key customer-facing positions receiving fully custom pieces while support roles leverage modified standard designs for cost efficiency.'
-      },
-      {
-        question: 'What types of customization options are available for uniforms?',
-        answer: 'Our customization options are extensive and include: custom fabric development with proprietary colors, patterns or performance features; bespoke garment designs with unique silhouettes and styling details; custom embroidery, printing, and appliqué techniques; specialized buttons, trims, and hardware with brand elements; custom labels and internal branding; specialized fit adjustments for diverse body types; and modular design systems that allow for seasonal variations or employee personalization within brand guidelines.'
-      },
-      {
-        question: 'How do you ensure custom designs are both attractive and functional for daily use?',
-        answer: 'Balancing aesthetics with functionality is central to our design philosophy. We achieve this through a collaborative process that includes input from both management and the employees who will wear the uniforms. All designs undergo wear testing in actual work environments before final approval. Our technical design team has extensive experience in creating garments that accommodate movement, climate considerations, and job-specific requirements while maintaining a polished appearance throughout the workday.'
-      }
-    ],
-    
-    cta: {
-      title: 'Ready to transform your brand through custom uniforms?',
-      description: 'Our design team can help you create distinctive uniforms that elevate your brand identity.',
-      buttonText: 'Request a Design Consultation',
-      buttonUrl: '/contact?service=custom-design'
-    },
-    
-    secondaryCta: {
-      title: 'Learn about our bulk ordering services',
-      buttonText: 'Bulk Ordering Services',
-      buttonUrl: '/services/bulk-ordering'
-    }
-  };
-  
-  return <ServicePageLayout locale={locale} serviceData={serviceData} skipMainLayout={true} />;
-} 
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Custom Uniform Design Saudi Arabia | UNEOM Design Services',
+  titleAr: 'تصميم الأزياء المخصصة السعودية | خدمات تصميم يونيوم',
+  description: 'Professional custom uniform design services in Saudi Arabia. Brand-aligned designs, fabric selection, sample creation. Minimum 25 pieces. Contact UNEOM design team!',
+  descriptionAr: 'خدمات تصميم أزياء مخصصة احترافية في السعودية. تصاميم تتماشى مع العلامة التجارية، اختيار الأقمشة، إنشاء العينات. حد أدنى 25 قطعة. تواصل مع فريق تصميم يونيوم!',
+  keywords: ['custom uniform design saudi', 'uniform design services', 'corporate uniform design', 'branded uniform design'],
+  keywordsAr: ['تصميم زي مخصص السعودية', 'خدمات تصميم الأزياء', 'تصميم زي شركات', 'تصميم زي ذو علامة تجارية'],
+  locale: 'en',
+  pageType: 'service',
+  path: '/services/custom-design',
+  image: '/images/services/custom-design.jpg',
+  imageAlt: 'Custom Uniform Design Service',
+  aiSummary: 'UNEOM custom uniform design service in Saudi Arabia. Process: 1) Brand consultation - understand your identity. 2) Design concepts - multiple options. 3) Fabric selection - 200+ options. 4) Color matching - Pantone precision. 5) Sample creation. 6) Revisions included. 7) Final production. Minimum order 25 pieces. Turnaround 15-21 days. Serving corporates, hotels, healthcare, and schools.',
+  aiSummaryAr: 'خدمة تصميم الأزياء المخصصة من يونيوم في السعودية. العملية: 1) استشارة العلامة التجارية. 2) مفاهيم التصميم. 3) اختيار الأقمشة. 4) مطابقة الألوان. 5) إنشاء العينات. 6) المراجعات مشمولة. 7) الإنتاج النهائي.'
+});
+
+export const dynamic = 'force-static';
+
+const designFAQs = [
+  { question: 'What is included in custom design service?', answer: 'Our custom design service includes: Brand consultation, multiple design concepts, fabric selection guidance, color matching, sample creation, up to 3 rounds of revisions, and final production coordination.' },
+  { question: 'How long does custom design take?', answer: 'The design phase typically takes 2-3 weeks. Sample creation adds 1-2 weeks. Full production takes 10-15 business days after approval. Rush services available.' },
+  { question: 'What is the minimum order for custom designs?', answer: 'Minimum order for fully custom designed uniforms is 25 pieces per style. For modifications to existing designs, minimum is 12 pieces.' },
+  { question: 'Can you match our exact brand colors?', answer: 'Yes, we use Pantone Matching System (PMS) to ensure exact color replication across all uniform items. We provide color samples for approval before production.' },
+];
+
+const designProcess = [
+  { step: '01', title: 'Brand Consultation', desc: 'We study your brand, industry, and requirements to understand your vision.' },
+  { step: '02', title: 'Design Concepts', desc: 'Our designers create 2-3 unique concepts aligned with your brand identity.' },
+  { step: '03', title: 'Fabric Selection', desc: 'Choose from 200+ fabrics based on durability, comfort, and climate.' },
+  { step: '04', title: 'Sample Creation', desc: 'We produce sample pieces for fitting and approval before production.' },
+  { step: '05', title: 'Revisions', desc: 'Up to 3 rounds of revisions included to perfect the design.' },
+  { step: '06', title: 'Production', desc: 'Final approved design goes into production with quality assurance.' },
+];
+
+export default function CustomDesignPage() {
+  return (
+    <>
+      <SEO2026 title="Custom Uniform Design | UNEOM" titleAr="تصميم الأزياء المخصصة | يونيوم" description="Custom uniform design services." locale="en" pageType="service" mainEntity="Custom Uniform Design Service" primaryImage="/images/services/custom-design.jpg" primaryImageAlt="Custom Uniform Design" faqs={designFAQs} breadcrumbs={[{ name: 'Services', url: '/services' }, { name: 'Custom Design', url: '/services/custom-design' }]} />
+
+      <section className="bg-gradient-to-br from-pink-900 via-purple-800 to-indigo-800 text-white relative overflow-hidden py-16">
+        <Container>
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Services', href: '/services' }, { label: 'Custom Design', href: '/services/custom-design' }]} className="text-white/80 mb-6 relative z-10" />
+          <div className="relative z-10 max-w-4xl">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"><span className="text-pink-400">🎨</span><span className="text-sm font-medium">Design Service</span></div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Custom <span className="bg-gradient-to-r from-pink-300 to-purple-300 text-transparent bg-clip-text">Design</span></h1>
+            <p className="text-xl mb-8 text-pink-100 leading-relaxed">Transform your brand vision into unique uniforms. Professional design service tailored to your identity.</p>
+          </div>
+        </Container>
+      </section>
+
+      <main className="py-16">
+        <Container>
+          <section className="mb-16">
+            <SectionHeading subtitle="How It Works" centered>Our Design Process</SectionHeading>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+              {designProcess.map((item, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
+                  <div className="text-4xl font-bold text-purple-200 mb-4">{item.step}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="mb-16" itemScope itemType="https://schema.org/FAQPage">
+            <SectionHeading subtitle="Common Questions" centered>Custom Design FAQ</SectionHeading>
+            <div className="max-w-4xl mx-auto mt-12 space-y-4">
+              {designFAQs.map((faq, index) => (<div key={index} className="bg-white rounded-xl shadow-sm p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question"><h3 className="text-lg font-bold text-gray-900 mb-3" itemProp="name">{faq.question}</h3><div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"><p className="text-gray-600" itemProp="text">{faq.answer}</p></div></div>))}
+            </div>
+          </section>
+
+          <section className="text-center bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-2xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Start Your Custom Design</h2>
+            <p className="text-xl mb-8 text-purple-100">Contact our design team for a free consultation.</p>
+            <Link href="/contact?service=custom-design" className="inline-flex items-center px-8 py-4 bg-white text-purple-700 hover:bg-gray-100 font-bold rounded-xl transition-all shadow-lg">Book Design Consultation →</Link>
+          </section>
+        </Container>
+      </main>
+      <section className="py-6 bg-gray-100 border-t"><div className="container mx-auto px-4 text-center"><Link href="/ar/services/custom-design" className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg text-sm">🇸🇦 العربية</Link></div></section>
+    </>
+  );
+}

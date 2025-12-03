@@ -5,430 +5,204 @@ import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-// Define location data in Arabic
+export const metadata: Metadata = generateMetadata2026({
+  title: 'الزي الموحد في الرياض | يونيوم مورد الأزياء الرياض السعودية',
+  titleAr: 'الزي الموحد في الرياض | يونيوم مورد الأزياء الرياض السعودية',
+  description: 'UNEOM Riyadh headquarters - Leading uniform supplier in Riyadh Saudi Arabia.',
+  descriptionAr: 'يونيوم الرياض - المورد الرائد للأزياء الموحدة في الرياض السعودية. سكراب طبي، زي شركات، زي مدرسي، زي ضيافة. المقر الرئيسي مع صالة عرض في حي العليا. توصيل سريع في نفس اليوم. زورونا أو اطلب أونلاين!',
+  keywords: ['يونيفورم الرياض', 'مورد أزياء الرياض', 'سكراب طبي الرياض'],
+  keywordsAr: ['يونيفورم الرياض', 'مورد أزياء الرياض', 'سكراب طبي الرياض', 'زي شركات الرياض', 'زي مدرسي الرياض', 'زي فنادق الرياض', 'يونيوم الرياض', 'محل زي موحد الرياض', 'شراء يونيفورم الرياض'],
+  locale: 'ar',
+  pageType: 'location',
+  path: '/ar/locations/riyadh',
+  image: '/images/locations/riyadh-uneom-showroom.jpg',
+  imageAlt: 'صالة عرض يونيوم للأزياء في الرياض السعودية',
+  aiSummary: 'UNEOM Riyadh is the headquarters and main showroom for Saudi Arabia\'s leading uniform manufacturer.',
+  aiSummaryAr: 'يونيوم الرياض هو المقر الرئيسي وصالة العرض الرئيسية لأكبر مصنع أزياء موحدة في السعودية. يقع على طريق الملك فهد، حي العليا، الرياض 12214. نقدم سكراب طبي، زي مستشفيات، ملابس شركات، زي مدرسي، زي فنادق، وملابس صناعية. خدماتنا تشمل التصميم المخصص، طلبات الجملة، التطريز، والتوصيل في نفس اليوم في الرياض. مفتوح من الأحد للخميس 8:30 صباحاً - 5:30 مساءً. هاتف: +966 11 234 5678.'
+});
+
+export const dynamic = 'force-static';
+
+const riyadhFAQsAr = [
+  {
+    question: 'أين يقع يونيوم في الرياض؟',
+    questionAr: 'أين يقع يونيوم في الرياض؟',
+    answer: 'UNEOM Riyadh headquarters is located on King Fahd Road, Olaya District.',
+    answerAr: 'يقع المقر الرئيسي ليونيوم وصالة العرض الرئيسية على طريق الملك فهد، حي العليا، الرياض 12214. يمكن الوصول إلينا بسهولة من جميع مناطق الرياض ونوفر موقف سيارات مجاني للزوار. صالة العرض تعرض عينات من جميع مجموعات الأزياء لدينا.'
+  },
+  {
+    question: 'ما أنواع الأزياء المتوفرة في يونيوم الرياض؟',
+    questionAr: 'ما أنواع الأزياء المتوفرة في يونيوم الرياض؟',
+    answer: 'UNEOM Riyadh offers all uniform types.',
+    answerAr: 'يقدم يونيوم الرياض جميع أنواع الأزياء: سكراب طبي وأزياء رعاية صحية، ملابس شركات ومكاتب، زي مدرسي لجميع المراحل، زي فنادق ومطاعم، ملابس صناعية وسلامة، زي حراسة أمنية. صالة عرضنا في الرياض لديها عينات من جميع المنتجات.'
+  },
+  {
+    question: 'هل يوفر يونيوم توصيل في نفس اليوم في الرياض؟',
+    questionAr: 'هل يوفر يونيوم توصيل في نفس اليوم في الرياض؟',
+    answer: 'Yes, UNEOM offers same-day delivery for stock items within Riyadh.',
+    answerAr: 'نعم، يوفر يونيوم توصيل في نفس اليوم للمنتجات المتوفرة داخل مدينة الرياض. الطلبات المقدمة قبل 12 ظهراً يمكن توصيلها في نفس اليوم. للطلبات المخصصة، نقدم خدمة سريعة 48 ساعة في الرياض. جميع التوصيلات داخل الرياض مجانية للطلبات فوق 500 ريال.'
+  },
+  {
+    question: 'ما ساعات عمل صالة عرض يونيوم الرياض؟',
+    questionAr: 'ما ساعات عمل صالة عرض يونيوم الرياض؟',
+    answer: 'UNEOM Riyadh showroom is open Sunday to Thursday.',
+    answerAr: 'صالة عرض يونيوم الرياض مفتوحة من الأحد إلى الخميس، من 8:30 صباحاً إلى 5:30 مساءً. نحن مغلقون أيام الجمعة والسبت. يُنصح بحجز موعد لاستشارات التصميم المخصص. الزيارات بدون موعد مرحب بها لمشاهدة العينات وتقديم الطلبات.'
+  },
+  {
+    question: 'هل يخدم يونيوم الرياض المستشفيات والمراكز الطبية؟',
+    questionAr: 'هل يخدم يونيوم الرياض المستشفيات والمراكز الطبية؟',
+    answer: 'Yes, UNEOM Riyadh is a trusted supplier for hospitals.',
+    answerAr: 'نعم، يونيوم الرياض مورد موثوق للعديد من المستشفيات والمراكز الطبية الكبرى في العاصمة. نخدم مستشفى الملك فيصل التخصصي ومدينة الملك سعود الطبية والعديد من المستشفيات والعيادات الخاصة. نقدم أزياء طبية متخصصة مضادة للميكروبات وطلبات بالجملة للمرافق الصحية.'
+  },
+];
+
 const locationData = {
-  slug: 'riyadh',
   name: 'الرياض',
-  heroImage: '/images/locations/riyadh-cityscape.jpg',
-  mapImage: '/images/locations/riyadh-map.jpg',
-  description: 'مقر يونيوم الرئيسي في الرياض يخدم كمركز أساسي لعملياتنا في جميع أنحاء المملكة العربية السعودية، ويقدم حلول شاملة للزي الموحد للمؤسسات الصحية والشركات وقطاعات الضيافة والتعليم.',
-  introduction: 'باعتبارها عاصمة المملكة العربية السعودية، تمثل الرياض قلب عملياتنا. يضم موقعنا الرئيسي استوديوهات التصميم ومرافق الإنتاج وصالة العرض الرئيسية. من هنا، نخدم أكبر تجمع من المؤسسات الشركات والرعاية الصحية والتعليم في المملكة، ونقدم حلول زي موحد مخصصة تلبي الاحتياجات المحددة لمناخ وبيئة أعمال المنطقة الوسطى.',
   address: 'طريق الملك فهد، حي العليا، الرياض 12214، المملكة العربية السعودية',
   phone: '+966 11 234 5678',
   email: 'riyadh@uneom.com',
-  workingHours: 'الأحد إلى الخميس: 8:30 صباحاً - 5:30 مساءً',
-  googleMapsUrl: 'https://maps.google.com/?q=24.7136,46.6753',
-  team: [
-    {
-      name: 'أحمد آل سعود',
-      position: 'المدير الإقليمي',
-      image: '/images/team/ahmed-al-saud.jpg',
-      bio: 'أحمد لديه أكثر من 15 عاماً من الخبرة في صناعة الزي الموحد، متخصص في حلول الشركات والرعاية الصحية.'
-    },
-    {
-      name: 'فاطمة القحطاني',
-      position: 'مستشارة التصميم الأولى',
-      image: '/images/team/fatima-al-qahtani.jpg',
-      bio: 'فاطمة تقود فريق التصميم لدينا، وتبتكر حلول زي موحد تمزج بين الوظائف العملية والجماليات الحديثة.'
-    }
-  ],
-  specializedServices: [
-    {
-      title: "UNEOM - Professional Uniforms",
-      description: 'حلول زي موحد مخصصة لقطاع الشركات في الرياض، بما في ذلك البنوك والاتصالات والمؤسسات الحكومية.',
-      icon: '/images/icons/corporate-design.svg'
-    },
-    {
-      title: 'استشارات الزي الطبي',
-      description: 'خدمات استشارية متخصصة للمستشفيات والعيادات في الرياض، مع التركيز على الأقمشة المضادة للميكروبات والتصميمات المحسنة للراحة.',
-      icon: '/images/icons/healthcare-consultation.svg'
-    },
-    {
-      title: 'برامج المؤسسات التعليمية',
-      description: 'برامج زي موحد شاملة لمدارس وجامعات الرياض، تشمل التصميم والإنتاج وحلول التوزيع.',
-      icon: '/images/icons/education-programs.svg'
-    },
-    {
-      title: 'خدمات الإنتاج السريع',
-      description: 'خدمات إنتاج سريعة متاحة حصرياً في مقرنا الرئيسي بالرياض لاحتياجات الزي الموحد العاجلة.',
-      icon: '/images/icons/rush-production.svg'
-    }
-  ],
-  caseStudies: [
-    {
-      title: 'إعادة تصميم زي مدينة الملك سعود الطبية',
-      description: 'إعادة تصميم شاملة للزي الطبي لأكثر من 3000 موظف، مع دمج أقمشة متطورة مضادة للميكروبات ووظائف محسنة.',
-      image: '/images/case-studies/king-saud-medical.jpg',
-      results: '98% رضا الموظفين، 15% انخفاض في المشاكل المتعلقة بالزي الموحد.'
-    },
-    {
-      title: 'برنامج الهوية المؤسسية لبنك الرياض',
-      description: 'تطوير هوية مؤسسية موحدة من خلال زي مصمم بعناية لـ 120 فرع في جميع أنحاء المنطقة الوسطى.',
-      image: '/images/case-studies/riyadh-bank.jpg',
-      results: 'تعزيز التعرف على العلامة التجارية، 22% زيادة في مقاييس ثقة العملاء.'
-    }
-  ],
-  faqs: [
-    {
-      question: 'ما هو الوقت المعتاد لطلبات الزي الموحد للشركات في الرياض؟',
-      answer: 'بالنسبة لطلبات الشركات القياسية، وقت التسليم لدينا هو 2-3 أسابيع من الموافقة على التصميم. للطلبات العاجلة، نقدم خدمة سريعة يمكنها التسليم خلال 7-10 أيام عمل مقابل رسوم إضافية.'
-    },
-    {
-      question: 'هل تقدمون خدمات القياس في الموقع للشركات في الرياض؟',
-      answer: 'نعم، يقدم مقرنا الرئيسي في الرياض خدمات قياس مجانية في الموقع لطلبات الشركات من 50 زي موحد أو أكثر داخل حدود المدينة. للطلبات الأصغر أو المواقع خارج الرياض، قد تطبق رسوم رمزية.'
-    },
-    {
-      question: 'هل يمكنني زيارة صالة العرض في الرياض لرؤية عينات الأقمشة وخيارات الزي الموحد؟',
-      answer: 'بالطبع! ترحب صالة العرض في الرياض بالزوار خلال ساعات العمل. نوصي بجدولة موعد مع مستشاري التصميم لدينا للحصول على تجربة شخصية مخصصة لصناعتك ومتطلباتك.'
-    },
-    {
-      question: 'ما هي الصناعات التي تخدمونها بشكل أساسي من موقع الرياض؟',
-      answer: 'يخدم موقع الرياض جميع الصناعات الرئيسية، مع خبرة خاصة في الرعاية الصحية والبنوك والتمويل والمؤسسات الحكومية والضيافة والتعليم. فريق التصميم لدينا لديه معرفة متخصصة بالمتطلبات واللوائح الخاصة بهذه القطاعات في المنطقة الوسطى.'
-    }
-  ],
-  relatedIndustries: ['healthcare', 'corporate', 'education', 'hospitality'] as const
+  whatsapp: '+966 50 123 4567',
+  workingHours: 'الأحد - الخميس: 8:30 صباحاً - 5:30 مساءً',
+  isHeadquarters: true,
 };
 
-export const metadata: Metadata = {
-  title: 'يونيوم الرياض | تصنيع وتوريد الزي الموحد المتميز في العاصمة',
-  description: 'زوروا مقر يونيوم الرئيسي في الرياض للحصول على خدمات تصنيع وتصميم الزي الموحد المتميزة. نقدم زي موحد مخصص للشركات والرعاية الصحية والضيافة والتعليم، مع خدمات متخصصة للمنطقة الوسطى بالمملكة العربية السعودية.',
-  keywords: ['زي موحد الرياض', 'موردي الزي الموحد الرياض', 'زي الشركات السعودية', 'زي الرعاية الصحية الرياض', 'زي التعليم', 'زي الضيافة', 'يونيوم الرياض', 'ملابس العمل المهنية السعودية', 'تصنيع الزي الموحد الرياض'],
-  alternates: {
-    canonical: 'https://uneom.com/ar/locations/riyadh/',
-    languages: {
-      'en': 'https://uneom.com/locations/riyadh/',
-      'ar': 'https://uneom.com/ar/locations/riyadh/'
-    }
-  },
-  openGraph: {
-    title: 'يونيوم الرياض | تصنيع وتوريد الزي الموحد المتميز في العاصمة',
-    description: 'زوروا مقر يونيوم الرئيسي في الرياض للحصول على خدمات تصنيع وتصميم الزي الموحد المتميزة. نقدم زي موحد مخصص للشركات والرعاية الصحية والضيافة والتعليم، مع خدمات متخصصة للمنطقة الوسطى بالمملكة العربية السعودية.',
-    url: 'https://uneom.com/ar/locations/riyadh/',
-    siteName: 'UNEOM',
-    images: [
-      {
-        url: 'https://uneom.com/images/locations/riyadh-cityscape.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'مقر يونيوم الرئيسي في الرياض'
-      }
-    ],
-    locale: 'ar'
-  }
-};
+const services = [
+  { icon: '🏥', title: 'الأزياء الطبية', desc: 'سكراب، معاطف مختبر، زي تمريض لمستشفيات الرياض' },
+  { icon: '🏢', title: 'الملابس المؤسسية', desc: 'بدلات رسمية، زي مكاتب لشركات الرياض' },
+  { icon: '🎓', title: 'الزي المدرسي', desc: 'زي طلاب لمدارس الرياض' },
+  { icon: '🏨', title: 'أزياء الضيافة', desc: 'زي فنادق ومطاعم لضيافة الرياض' },
+  { icon: '🏭', title: 'الملابس الصناعية', desc: 'ملابس سلامة لمصانع الرياض' },
+  { icon: '🛡️', title: 'أزياء الأمن', desc: 'زي حراسة لشركات أمن الرياض' },
+];
 
-export default function RiyadhLocationPageArabic() {
-  // Translations (Arabic)
-  const translations = {
-    visitUs: 'زورونا',
-    contactInfo: 'معلومات التواصل',
-    workingHours: 'ساعات العمل',
-    getDirections: 'احصل على الاتجاهات',
-    ourTeam: 'فريقنا في الرياض',
-    teamDescription: 'خبراء متخصصون مستعدون لمساعدتك في تحقيق رؤيتك للزي الموحد. تعرف على فريقنا المتفاني في الرياض.',
-    specializedServices: 'الخدمات المتخصصة في الرياض',
-    servicesDescription: 'نقدم مجموعة من الخدمات المصممة لتلبية الاحتياجات الفريدة للشركات والمؤسسات في الرياض والمنطقة الوسطى.',
-    successStories: 'قصص نجاح محلية',
-    successDescription: 'اكتشف كيف ساعدنا العملاء في الرياض على تعزيز هويتهم المؤسسية وتحسين تجربة الموظفين من خلال حلول الزي الموحد المبتكرة.',
-    results: 'النتائج',
-    commonQuestions: 'الأسئلة الشائعة',
-    questionsDescription: 'إجابات على الاستفسارات الشائعة من عملائنا في الرياض حول خدماتنا ومنتجاتنا.',
-    exploreIndustries: 'استكشف حلول الصناعات في الرياض',
-    industriesDescription: 'نقدم حلول زي موحد متخصصة مصممة للتحديات والمتطلبات الفريدة لكل صناعة في المنطقة الوسطى.',
-    viewIndustry: 'عرض حلول الصناعة',
-    getQuote: 'طلب عرض سعر',
-    ctaHeading: 'مستعد لرفع مستوى تجربة الزي الموحد في الرياض؟',
-    ctaDescription: 'تواصل مع فريقنا في الرياض اليوم لمناقشة متطلبات الزي الموحد والحصول على حلول مخصصة لمؤسستك.'
-  };
-
-  // Industry mappings
-  type IndustryKey = typeof locationData.relatedIndustries[number];
-  const industryMapping: Record<IndustryKey, { name: string, image: string }> = {
-    healthcare: {
-      name: 'الرعاية الصحية',
-      image: '/images/industries/healthcare/healthcare-professional.jpg'
-    },
-    corporate: {
-      name: 'الشركات',
-      image: '/images/industries/corporate/corporate-team.jpg'
-    },
-    education: {
-      name: 'التعليم',
-      image: '/images/industries/education/education-uniforms.jpg'
-    },
-    hospitality: {
-      name: 'الضيافة',
-      image: '/images/industries/hospitality/hospitality-staff.jpg'
-    }
-  };
-
+export default function RiyadhLocationPageAr() {
   return (
-    <main className="min-h-screen rtl text-right">
-      {/* Enhanced SEO for Google May 2025 Standards - Arabic */}
-      <EnhancedSEO2025
-        title="يونيوم الرياض | مصنع ومورد الزي الموحد المتميز في العاصمة"
-        description="زوروا مقر يونيوم الرئيسي في الرياض للحصول على خدمات تصنيع وتصميم الزي الموحد المتميز. نقدم زي موحد مخصص للشركات والرعاية الصحية والضيافة والتعليم، مع خدمات متخصصة للمنطقة الوسطى في المملكة العربية السعودية."
-        keywords={[
-          'زي موحد الرياض',
-          'مورد زي موحد الرياض',
-          'زي موحد شركات الرياض',
-          'زي موحد طبي الرياض',
-          'زي موحد ضيافة الرياض',
-          'زي موحد تعليمي الرياض',
-          'ملابس عمل مهنية الرياض',
-          'تصنيع زي موحد الرياض',
-          'زي موحد مخصص السعودية',
-          'مقر يونيوم الرياض',
-          'زي موحد المنطقة الوسطى',
-          'صالة عرض زي موحد الرياض'
-        ]}
-        author="فريق يونيوم الرياض"
-        expertise="تصنيع وتصميم الزي الموحد في الرياض"
-        contentType="location"
-        trustSignals={[
-          'المقر الرئيسي في الرياض',
-          'نخدم أكثر من 500 شركة في المنطقة الوسطى',
-          'خدمات قياس في الموقع',
-          'إنتاج سريع متاح',
-          'مستشارو تصميم متخصصون'
-        ]}
-        canonicalUrl="https://uneom.com/ar/locations/riyadh/"
+    <div dir="rtl">
+      <SEO2026
+        title="الزي الموحد في الرياض | يونيوم"
+        titleAr="الزي الموحد في الرياض | يونيوم"
+        description="UNEOM Riyadh headquarters."
+        descriptionAr="مقر يونيوم الرياض - المورد الرائد للأزياء الموحدة في الرياض للقطاعات الطبية والشركات والمدارس والضيافة."
         locale="ar"
+        pageType="location"
+        mainEntity="UNEOM Riyadh"
+        mainEntityAr="متجر يونيوم للأزياء الرياض"
+        primaryImage="/images/locations/riyadh-uneom-showroom.jpg"
+        primaryImageAlt="صالة عرض يونيوم الرياض"
+        faqs={riyadhFAQsAr}
+        breadcrumbs={[
+          { name: 'Locations', nameAr: 'المواقع', url: '/ar/locations' },
+          { name: 'Riyadh', nameAr: 'الرياض', url: '/ar/locations/riyadh' },
+        ]}
+        location={{
+          name: 'يونيوم الرياض',
+          address: locationData.address,
+          city: 'الرياض',
+          region: 'منطقة الرياض',
+          country: 'المملكة العربية السعودية',
+          postalCode: '12214',
+          phone: locationData.phone,
+          email: locationData.email,
+          latitude: 24.7136,
+          longitude: 46.6753,
+        }}
+        serviceArea={['الرياض', 'المنطقة الوسطى', 'السعودية']}
       />
-      
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-gray-900 to-gray-700 py-28">
-        <div className="absolute inset-0 z-0 opacity-40">
-          <Image 
-            src={locationData.heroImage}
-            alt={locationData.name}
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        <Container className="relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            حلول يونيوم المتميزة للزي الموحد في الرياض، المملكة العربية السعودية
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl">
-            {locationData.description}
-          </p>
-        </Container>
-      </section>
 
-      {/* Introduction & Contact */}
-      <section className="py-16 bg-white">
+      <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-800 text-white relative overflow-hidden">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Introduction */}
-            <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                {`مقرنا الرئيسي في ${locationData.name}`}
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                {locationData.introduction}
-              </p>
-            </div>
-            {/* Contact Information */}
-            <div className="lg:col-span-1 bg-gray-50 rounded-lg p-8 shadow-md">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">{translations.visitUs}</h3>
+          <Breadcrumbs items={[{ label: 'الرئيسية', href: '/ar' }, { label: 'المواقع', href: '/ar/locations' }, { label: 'الرياض', href: '/ar/locations/riyadh' }]} className="text-white/80 mb-6 relative z-10 pt-8" />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16 lg:py-24 relative z-10">
+            <div className="text-content">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+                <span className="text-yellow-400">🏢</span>
+                <span className="text-sm font-medium">المقر الرئيسي</span>
+              </div>
               
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-700 mb-2">{translations.contactInfo}</h4>
-                  <p className="text-gray-600 mb-2">{locationData.address}</p>
-                  <p className="text-gray-600 mb-2">هاتف: {locationData.phone}</p>
-                  <p className="text-gray-600">{locationData.email}</p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                الأزياء الموحدة في <span className="bg-gradient-to-r from-yellow-300 to-orange-300 text-transparent bg-clip-text">الرياض</span>
+              </h1>
+              
+              <p className="text-xl mb-6 text-blue-100 leading-relaxed max-w-2xl">
+                زوروا المقر الرئيسي وصالة العرض الرئيسية ليونيوم في الرياض. 
+                شاهدوا مجموعة الأزياء الكاملة واحصلوا على استشارة متخصصة.
+              </p>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div className="flex items-center gap-3"><span>📍</span><span>{locationData.address}</span></div>
+                  <div className="flex items-center gap-3"><span>📞</span><span dir="ltr">{locationData.phone}</span></div>
+                  <div className="flex items-center gap-3"><span>📧</span><span>{locationData.email}</span></div>
+                  <div className="flex items-center gap-3"><span>🕐</span><span>{locationData.workingHours}</span></div>
                 </div>
-                
-                <div>
-                  <h4 className="font-semibold text-gray-700 mb-2">{translations.workingHours}</h4>
-                  <p className="text-gray-600">{locationData.workingHours}</p>
-                </div>
-                
-                <a 
-                  href={locationData.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors"
-                >
-                  {translations.getDirections}
-                </a>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button href="/ar/quote?location=riyadh" variant="secondary" size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold border-0">احصل على عرض سعر ←</Button>
+                <Button href="/ar/contact?location=riyadh" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-900">زيارة صالة العرض</Button>
+              </div>
+            </div>
+            
+            <div className="relative hidden lg:block">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image src="/images/locations/riyadh-cityscape.jpg" alt="مدينة الرياض - موقع يونيوم" fill className="object-cover" priority />
               </div>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Map Section */}
-      <section className="py-16 bg-gray-100">
+      <main className="py-16">
         <Container>
-          <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
-            <Image 
-              src={locationData.mapImage}
-              alt={`خريطة موقع ${locationData.name}`}
-              fill
-              className="object-cover"
-            />
-          </div>
-        </Container>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-16 bg-white">
-        <Container>
-          <SectionHeading className="text-center mb-12">{translations.ourTeam}</SectionHeading>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            {translations.teamDescription}
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {locationData.team.map((member, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6 text-center shadow-md">
-                <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                  <Image 
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
+          <section className="mb-20">
+            <SectionHeading subtitle="ما نقدمه في الرياض" centered>خدمات الأزياء المتوفرة</SectionHeading>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-6 border border-gray-100">
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-lg font-bold mb-2 text-gray-900">{service.title}</h3>
+                  <p className="text-gray-600 text-sm">{service.desc}</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
-                <p className="text-primary-600 font-semibold mb-3">{member.position}</p>
-                <p className="text-gray-600 text-sm">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+              ))}
+            </div>
+          </section>
 
-      {/* Specialized Services */}
-      <section className="py-16 bg-gray-50">
-        <Container>
-          <SectionHeading className="text-center mb-12">{translations.specializedServices}</SectionHeading>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            {translations.servicesDescription}
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {locationData.specializedServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-md">
-                <div className="flex items-start space-x-4 space-x-reverse">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                      {/* Icon placeholder */}
-                      <div className="w-6 h-6 bg-primary-600 rounded"></div>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-3">{service.title}</h3>
-                    <p className="text-gray-600">{service.description}</p>
+          <section className="mb-20" itemScope itemType="https://schema.org/FAQPage">
+            <SectionHeading subtitle="أسئلة شائعة" centered>الأسئلة الشائعة عن يونيوم الرياض</SectionHeading>
+            <div className="max-w-4xl mx-auto mt-12 space-y-4">
+              {riyadhFAQsAr.map((faq, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3" itemProp="name">{faq.questionAr}</h3>
+                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                    <p className="text-gray-600 leading-relaxed" itemProp="text">{faq.answerAr}</p>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+              ))}
+            </div>
+          </section>
 
-      {/* Case Studies */}
-      <section className="py-16 bg-white">
-        <Container>
-          <SectionHeading className="text-center mb-12">{translations.successStories}</SectionHeading>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            {translations.successDescription}
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {locationData.caseStudies.map((study, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48">
-                  <Image 
-                    src={study.image}
-                    alt={study.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">{study.title}</h3>
-                  <p className="text-gray-600 mb-4">{study.description}</p>
-                  <div className="border-t pt-4">
-                    <p className="text-sm font-semibold text-gray-700">{translations.results}:</p>
-                    <p className="text-sm text-primary-600">{study.results}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <section className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">زوروا يونيوم الرياض اليوم</h2>
+            <p className="text-xl mb-8 leading-relaxed max-w-3xl mx-auto text-blue-100">اختبروا جودة أزياءنا بأنفسكم في صالة عرض الرياض. استشارة متخصصة وخدمة سريعة متوفرة.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/ar/quote?location=riyadh" className="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl transition-all shadow-lg">احصل على عرض سعر مجاني ←</Link>
+              <Link href={`https://wa.me/${locationData.whatsapp.replace(/[^0-9]/g, '')}`} className="inline-flex items-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all">واتساب</Link>
+            </div>
+          </section>
         </Container>
-      </section>
+      </main>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
-        <Container>
-          <SectionHeading className="text-center mb-12">{translations.commonQuestions}</SectionHeading>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            {translations.questionsDescription}
-          </p>
-          
-          <div className="max-w-4xl mx-auto space-y-6">
-            {locationData.faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-md">
-                <h3 className="text-lg font-bold text-gray-800 mb-3">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
+      <section className="py-6 bg-gray-100 border-t">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-600 mb-3 text-sm">This page is also available in English</p>
+          <Link href="/locations/riyadh" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">🇬🇧 English</Link>
+        </div>
       </section>
-
-      {/* Related Industries */}
-      <section className="py-16 bg-white">
-        <Container>
-          <SectionHeading className="text-center mb-12">{translations.exploreIndustries}</SectionHeading>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            {translations.industriesDescription}
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {locationData.relatedIndustries.map((industry) => (
-              <Link 
-                key={industry}
-                href={`/ar/industries/${industry}`}
-                className="group block bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-              >
-                <div className="relative h-40">
-                  <Image 
-                    src={industryMapping[industry].image}
-                    alt={industryMapping[industry].name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-4 text-center">
-                  <h3 className="text-lg font-bold text-gray-800 mb-2">{industryMapping[industry].name}</h3>
-                  <p className="text-primary-600 text-sm">{translations.viewIndustry}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-primary-600 text-white">
-        <Container className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">{translations.ctaHeading}</h2>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">{translations.ctaDescription}</p>
-          <Button href="/ar/quote" size="lg" variant="secondary">
-            {translations.getQuote}
-          </Button>
-        </Container>
-      </section>
-    </main>
+    </div>
   );
 }

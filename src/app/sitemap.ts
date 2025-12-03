@@ -1,645 +1,370 @@
 import { MetadataRoute } from 'next';
 
+/**
+ * SEO 2026 Optimized Sitemap
+ * 
+ * Priority Strategy:
+ * 1.0  - Homepage (both languages)
+ * 0.95 - Quote, Contact, Main Location (Riyadh)
+ * 0.9  - Industries, Shop Main, Services Main
+ * 0.85 - Product Categories, Individual Industries
+ * 0.8  - Products, Blog Main, About, FAQ
+ * 0.7  - Blog Posts, Resources
+ * 0.6  - Authors, Case Studies
+ * 0.3  - Legal pages
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://uneom.com';
   const currentDate = new Date().toISOString();
 
-  // Homepage - Maximum priority
+  // ============================================
+  // HOMEPAGE - Maximum Priority
+  // ============================================
   const homepage = [
     {
       url: baseUrl,
       lastModified: currentDate,
       changeFrequency: 'daily' as const,
-      priority: 1.0},
-    {
-      url: `${baseUrl}/ar/`,
-      lastModified: currentDate,
-      changeFrequency: 'daily' as const,
-      priority: 1.0},
-  ];
-
-  // Core business pages - High priority
-  const corePages = [
-    {
-      url: `${baseUrl}/quote/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95},
-    {
-      url: `${baseUrl}/ar/quote/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95},
-    {
-      url: `${baseUrl}/contact/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/ar/contact/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-  ];
-
-  // Service pages - High priority for business
-  const servicePages = [
-    {
-      url: `${baseUrl}/services/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/ar/services/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/services/custom-design/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/services/custom-design/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/services/fabric-selection/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/services/fabric-selection/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/services/manufacturing/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/services/manufacturing/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/services/quality-assurance/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/services/quality-assurance/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/services/technical-finishes/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/services/technical-finishes/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/services/corporate-programs/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/services/corporate-programs/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/services/bulk-ordering/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/ar/services/bulk-ordering/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/services/measurement-services/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/ar/services/measurement-services/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/services/program-management/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/ar/services/program-management/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/services/uniform-policies/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/ar/services/uniform-policies/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8},
-  ];
-
-  // Industry pages - High priority for targeting
-  const industryPages = [
-    {
-      url: `${baseUrl}/industries/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/ar/industries/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/industries/corporate/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/ar/industries/corporate/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/industries/healthcare/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/ar/industries/healthcare/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/industries/aviation/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/ar/industries/aviation/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/industries/hospitality/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/ar/industries/hospitality/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/industries/education/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/industries/education/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/industries/manufacturing/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/industries/manufacturing/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/industries/security/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/ar/industries/security/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/industries/retail-shops/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/ar/industries/retail-shops/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8},
-  ];
-
-  // Location pages - High priority for local SEO
-  const locationPages = [
-    {
-      url: `${baseUrl}/locations/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/ar/locations/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/locations/riyadh/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.95, // Headquarters - highest priority
+      priority: 1.0,
     },
     {
-      url: `${baseUrl}/ar/locations/riyadh/`,
+      url: `${baseUrl}/ar`,
       lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.95},
-    {
-      url: `${baseUrl}/locations/jeddah/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/ar/locations/jeddah/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/locations/dammam/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/ar/locations/dammam/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/locations/mecca/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/locations/mecca/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/locations/medina/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/locations/medina/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85},
+      changeFrequency: 'daily' as const,
+      priority: 1.0,
+    },
   ];
 
-  // Shop pages - High priority for e-commerce
+  // ============================================
+  // CORE BUSINESS PAGES - Critical for Conversions
+  // ============================================
+  const corePages = [
+    // Quote Request - Top Revenue Driver
+    { url: `${baseUrl}/quote`, priority: 0.95, freq: 'weekly' as const },
+    { url: `${baseUrl}/ar/quote`, priority: 0.95, freq: 'weekly' as const },
+    
+    // Contact - Lead Generation
+    { url: `${baseUrl}/contact`, priority: 0.95, freq: 'weekly' as const },
+    { url: `${baseUrl}/ar/contact`, priority: 0.95, freq: 'weekly' as const },
+    
+    // About - Trust & Authority
+    { url: `${baseUrl}/about`, priority: 0.85, freq: 'monthly' as const },
+    { url: `${baseUrl}/ar/about`, priority: 0.85, freq: 'monthly' as const },
+    
+    // FAQ - Customer Support & SEO
+    { url: `${baseUrl}/faq`, priority: 0.8, freq: 'weekly' as const },
+    { url: `${baseUrl}/ar/faq`, priority: 0.8, freq: 'weekly' as const },
+  ].map(page => ({
+    url: page.url,
+    lastModified: currentDate,
+    changeFrequency: page.freq,
+    priority: page.priority,
+  }));
+
+  // ============================================
+  // INDUSTRIES - High Priority for Targeting
+  // ============================================
+  const industries = [
+    'healthcare',
+    'hospitality',
+    'corporate',
+    'aviation',
+    'education',
+    'manufacturing',
+    'security',
+    'retail-shops',
+    'factory-industry',
+    'factory-security',
+    'firefighting',
+    'delivery',
+    'supply-manufacturing',
+  ];
+
+  const industryPages = [
+    // Main industries page
+    { url: `${baseUrl}/industries`, priority: 0.9, freq: 'weekly' as const },
+    { url: `${baseUrl}/ar/industries`, priority: 0.9, freq: 'weekly' as const },
+    // Individual industries
+    ...industries.flatMap(industry => [
+      { url: `${baseUrl}/industries/${industry}`, priority: 0.9, freq: 'weekly' as const },
+      { url: `${baseUrl}/ar/industries/${industry}`, priority: 0.9, freq: 'weekly' as const },
+    ]),
+  ].map(page => ({
+    url: page.url,
+    lastModified: currentDate,
+    changeFrequency: page.freq,
+    priority: page.priority,
+  }));
+
+  // ============================================
+  // LOCATIONS - Local SEO Critical
+  // ============================================
+  const locations = [
+    { city: 'riyadh', priority: 0.95 },    // Headquarters
+    { city: 'jeddah', priority: 0.9 },
+    { city: 'dammam', priority: 0.9 },
+    { city: 'mecca', priority: 0.85 },
+    { city: 'medina', priority: 0.85 },
+  ];
+
+  const locationPages = [
+    // Main locations page
+    { url: `${baseUrl}/locations`, priority: 0.9, freq: 'monthly' as const },
+    { url: `${baseUrl}/ar/locations`, priority: 0.9, freq: 'monthly' as const },
+    // Individual locations
+    ...locations.flatMap(loc => [
+      { url: `${baseUrl}/locations/${loc.city}`, priority: loc.priority, freq: 'monthly' as const },
+      { url: `${baseUrl}/ar/locations/${loc.city}`, priority: loc.priority, freq: 'monthly' as const },
+    ]),
+  ].map(page => ({
+    url: page.url,
+    lastModified: currentDate,
+    changeFrequency: page.freq,
+    priority: page.priority,
+  }));
+
+  // ============================================
+  // SERVICES
+  // ============================================
+  const services = [
+    'custom-design',
+    'fabric-selection',
+    'manufacturing',
+    'quality-assurance',
+    'technical-finishes',
+    'corporate-programs',
+    'bulk-ordering',
+    'measurement-services',
+    'program-management',
+    'uniform-policies',
+    'sustainable-uniforms',
+  ];
+
+  const servicePages = [
+    { url: `${baseUrl}/services`, priority: 0.9, freq: 'weekly' as const },
+    { url: `${baseUrl}/ar/services`, priority: 0.9, freq: 'weekly' as const },
+    ...services.flatMap(service => [
+      { url: `${baseUrl}/services/${service}`, priority: 0.85, freq: 'monthly' as const },
+      { url: `${baseUrl}/ar/services/${service}`, priority: 0.85, freq: 'monthly' as const },
+    ]),
+  ].map(page => ({
+    url: page.url,
+    lastModified: currentDate,
+    changeFrequency: page.freq,
+    priority: page.priority,
+  }));
+
+  // ============================================
+  // SHOP - E-commerce Pages
+  // ============================================
+  const shopCategories = [
+    'medical-scrubs',
+    'aviation-uniforms',
+    'hospitality-attire',
+    'industrial-uniforms',
+    'education-uniforms',
+    'corporate-workwear',
+    'security-uniforms',
+    'healthcare-accessories',
+    'chef-wear',
+    'lab-coats',
+    'nursing-scrubs',
+    'doctors-coats',
+  ];
+
   const shopPages = [
-    {
-      url: `${baseUrl}/shop/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    {
-      url: `${baseUrl}/ar/shop/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9},
-    // Medical Scrubs Category
-    {
-      url: `${baseUrl}/shop/medical-scrubs/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/shop/medical-scrubs/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85},
-    // Aviation Uniforms Category
-    {
-      url: `${baseUrl}/shop/aviation-uniforms/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/shop/aviation-uniforms/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85},
-    // Hospitality Attire Category
-    {
-      url: `${baseUrl}/shop/hospitality-attire/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/shop/hospitality-attire/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85},
-    // Industrial Uniforms Category
-    {
-      url: `${baseUrl}/shop/industrial-uniforms/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85},
-    {
-      url: `${baseUrl}/ar/shop/industrial-uniforms/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85},
-    // Education Uniforms Category
-    {
-      url: `${baseUrl}/shop/education-uniforms/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/ar/shop/education-uniforms/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8},
-    // Corporate Workwear Category
-    {
-      url: `${baseUrl}/shop/corporate-workwear/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/ar/shop/corporate-workwear/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8},
-    // Security Uniforms Category
-    {
-      url: `${baseUrl}/shop/security-uniforms/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/ar/shop/security-uniforms/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8},
+    { url: `${baseUrl}/shop`, priority: 0.9, freq: 'daily' as const },
+    { url: `${baseUrl}/ar/shop`, priority: 0.9, freq: 'daily' as const },
+    ...shopCategories.flatMap(category => [
+      { url: `${baseUrl}/shop/${category}`, priority: 0.85, freq: 'weekly' as const },
+      { url: `${baseUrl}/ar/shop/${category}`, priority: 0.85, freq: 'weekly' as const },
+    ]),
+  ].map(page => ({
+    url: page.url,
+    lastModified: currentDate,
+    changeFrequency: page.freq,
+    priority: page.priority,
+  }));
+
+  // ============================================
+  // BLOG - Content Marketing
+  // ============================================
+  const blogPosts = [
+    // Healthcare & Medical
+    'medical-scrubs-evolution-saudi',
+    'medical-textile-innovation',
+    'hospital-uniform-safety-standards',
+    'healthcare-compliance-guide',
+    'sustainable-healthcare-uniforms',
+    'medical-hijab-healthcare-standards',
+    
+    // Hospitality
+    'hospitality-uniforms-guest-experience',
+    'chef-uniform-design-guide',
+    'hajj-umrah-staff-uniforms',
+    'mall-retail-uniforms-excellence',
+    
+    // Corporate
+    'corporate-uniforms-brand-culture',
+    'corporate-uniforms-brand-perception',
+    'corporate-uniform-employee-satisfaction',
+    'national-day-corporate-uniforms',
+    
+    // Education
+    'school-uniforms-national-identity-saudi',
+    'uniforms-modern-education',
+    'fabrics-student-uniforms',
+    'teacher-uniform-professional-guide',
+    
+    // Industrial & Safety
+    'industrial-safety-workwear-saudi',
+    'industrial-safety-compliance-guide',
+    'industrial-protective-clothing-advances',
+    'industrial-uniform-color-coding',
+    'industrial-electrostatic-protection',
+    'industrial-heat-stress-management',
+    'safety-standards-saudi-manufacturing',
+    'workwear-innovations-saudi-factories',
+    
+    // Security
+    'security-uniforms-authority-trust',
+    'security-uniform-psychology',
+    'advanced-fabrics-security-uniforms',
+    'corporate-security-branding',
+    
+    // Aviation
+    'aviation-uniforms-brand-identity',
+    'airline-uniform-design-cultural-identity',
+    'future-aviation-uniforms-gcc',
+    'material-innovations-aviation-attire',
+    
+    // Retail
+    'retail-uniform-impact',
+    'retail-uniform-selection-guide',
+    'sustainable-retail-uniforms',
+    
+    // General & Trends
+    'sustainable-uniforms-2024-trends',
+    'uniform-trends-2025-saudi-market',
+    'top-10-uniform-innovations-2025',
+    'circular-economy-uniforms',
+    'uniform-budget-planning-2026',
+    'choosing-uniform-supplier-guide',
+    'fabrics-professional-attire',
   ];
 
-  // Top product pages - Key revenue drivers
-  const productPages = [
-    // Premium Medical Scrubs
-    {
-      url: `${baseUrl}/shop/medical-scrubs/premium-medical-scrubs/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/ar/shop/medical-scrubs/premium-medical-scrubs/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8},
-    // Antimicrobial Scrubs
-    {
-      url: `${baseUrl}/shop/medical-scrubs/antimicrobial-scrubs/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-    {
-      url: `${baseUrl}/ar/shop/medical-scrubs/antimicrobial-scrubs/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-    // Surgical Scrubs
-    {
-      url: `${baseUrl}/shop/medical-scrubs/surgical-scrubs/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-    {
-      url: `${baseUrl}/ar/shop/medical-scrubs/surgical-scrubs/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-    // Airline Crew Uniform
-    {
-      url: `${baseUrl}/shop/aviation-uniforms/airline-crew-uniform/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-    {
-      url: `${baseUrl}/ar/shop/aviation-uniforms/airline-crew-uniform/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-    // Pilot Uniform
-    {
-      url: `${baseUrl}/shop/aviation-uniforms/pilot-uniform/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-    {
-      url: `${baseUrl}/ar/shop/aviation-uniforms/pilot-uniform-set/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-    // Luxury Hotel Uniform
-    {
-      url: `${baseUrl}/shop/hospitality-attire/luxury-hotel-uniform/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-    {
-      url: `${baseUrl}/ar/shop/hospitality-attire/luxury-hotel-uniform/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-    // Restaurant Staff Uniform
-    {
-      url: `${baseUrl}/shop/hospitality-attire/restaurant-staff-uniform/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-    {
-      url: `${baseUrl}/ar/shop/hospitality-attire/restaurant-staff-uniform/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-    // Industrial Coverall Pro
-    {
-      url: `${baseUrl}/shop/industrial-uniforms/industrial-coverall-pro/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-    {
-      url: `${baseUrl}/ar/shop/industrial-uniforms/industrial-coverall-pro/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75},
-  ];
-
-  // Blog pages - Content marketing
   const blogPages = [
-    {
-      url: `${baseUrl}/blog/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/ar/blog/`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/blog/sustainable-uniforms-2024-trends/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7},
-    {
-      url: `${baseUrl}/ar/blog/sustainable-uniforms-2024-trends/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7},
-    {
-      url: `${baseUrl}/blog/school-uniforms-academic-performance/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7},
-    {
-      url: `${baseUrl}/ar/blog/school-uniforms-academic-performance/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7},
-    {
-      url: `${baseUrl}/blog/sustainable-school-uniforms-saudi/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7},
-    {
-      url: `${baseUrl}/ar/blog/sustainable-school-uniforms-saudi/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7},
+    { url: `${baseUrl}/blog`, priority: 0.85, freq: 'daily' as const },
+    { url: `${baseUrl}/ar/blog`, priority: 0.85, freq: 'daily' as const },
+    ...blogPosts.flatMap(post => [
+      { url: `${baseUrl}/blog/${post}`, priority: 0.7, freq: 'monthly' as const },
+      { url: `${baseUrl}/ar/blog/${post}`, priority: 0.7, freq: 'monthly' as const },
+    ]),
+  ].map(page => ({
+    url: page.url,
+    lastModified: currentDate,
+    changeFrequency: page.freq,
+    priority: page.priority,
+  }));
+
+  // ============================================
+  // RESOURCES
+  // ============================================
+  const resources = [
+    'fabric-guide',
+    'size-guide',
+    'procurement-guide',
+    'policy-templates',
+    'fabric-technology',
+    'fit-optimization',
+    'case-studies',
+    'guides',
+    'events',
   ];
 
-  // Resources and support pages
   const resourcePages = [
-    {
-      url: `${baseUrl}/resources/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7},
-    {
-      url: `${baseUrl}/ar/resources/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7},
-    {
-      url: `${baseUrl}/resources/fabric-guide/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65},
-    {
-      url: `${baseUrl}/ar/resources/fabric-guide/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65},
-    {
-      url: `${baseUrl}/resources/size-guide/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65},
-    {
-      url: `${baseUrl}/ar/resources/size-guide/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65},
-    {
-      url: `${baseUrl}/resources/procurement-guide/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65},
-    {
-      url: `${baseUrl}/ar/resources/procurement-guide/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.65},
+    { url: `${baseUrl}/resources`, priority: 0.75, freq: 'weekly' as const },
+    { url: `${baseUrl}/ar/resources`, priority: 0.75, freq: 'weekly' as const },
+    ...resources.flatMap(resource => [
+      { url: `${baseUrl}/resources/${resource}`, priority: 0.7, freq: 'monthly' as const },
+      { url: `${baseUrl}/ar/resources/${resource}`, priority: 0.7, freq: 'monthly' as const },
+    ]),
+  ].map(page => ({
+    url: page.url,
+    lastModified: currentDate,
+    changeFrequency: page.freq,
+    priority: page.priority,
+  }));
+
+  // ============================================
+  // CASE STUDIES
+  // ============================================
+  const caseStudies = [
+    '5-star-hotel-spa',
+    'beauty-chain-standardization',
+    'hospital-aesthetic-clinic',
+    'luxury-salon-evolution',
+    'nationwide-retail-branding',
+    'retail-brand-transformation',
+    'factory-safety-improvement',
   ];
 
-  // Static informational pages
-  const staticPages = [
-    {
-      url: `${baseUrl}/about/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/ar/about/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8},
-    {
-      url: `${baseUrl}/faq/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7},
-    {
-      url: `${baseUrl}/ar/faq/`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7},
-    {
-      url: `${baseUrl}/privacy-policy/`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3},
-    {
-      url: `${baseUrl}/ar/privacy-policy/`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3},
-    {
-      url: `${baseUrl}/terms-of-service/`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3},
-    {
-      url: `${baseUrl}/ar/terms-of-service/`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly' as const,
-      priority: 0.3},
-  ];
+  const caseStudyPages = caseStudies.flatMap(study => [
+    { url: `${baseUrl}/case-studies/${study}`, priority: 0.7, freq: 'monthly' as const },
+    { url: `${baseUrl}/ar/case-studies/${study}`, priority: 0.7, freq: 'monthly' as const },
+  ]).map(page => ({
+    url: page.url,
+    lastModified: currentDate,
+    changeFrequency: page.freq,
+    priority: page.priority,
+  }));
 
+  // ============================================
+  // AUTHORS
+  // ============================================
+  const authorPages = [
+    { url: `${baseUrl}/authors`, priority: 0.6, freq: 'monthly' as const },
+    { url: `${baseUrl}/ar/authors`, priority: 0.6, freq: 'monthly' as const },
+  ].map(page => ({
+    url: page.url,
+    lastModified: currentDate,
+    changeFrequency: page.freq,
+    priority: page.priority,
+  }));
+
+  // ============================================
+  // LEGAL PAGES - Low Priority
+  // ============================================
+  const legalPages = [
+    { url: `${baseUrl}/privacy-policy`, priority: 0.3, freq: 'yearly' as const },
+    { url: `${baseUrl}/ar/privacy-policy`, priority: 0.3, freq: 'yearly' as const },
+    { url: `${baseUrl}/terms-of-service`, priority: 0.3, freq: 'yearly' as const },
+    { url: `${baseUrl}/ar/terms-of-service`, priority: 0.3, freq: 'yearly' as const },
+    { url: `${baseUrl}/privacy`, priority: 0.3, freq: 'yearly' as const },
+    { url: `${baseUrl}/ar/privacy`, priority: 0.3, freq: 'yearly' as const },
+    { url: `${baseUrl}/terms`, priority: 0.3, freq: 'yearly' as const },
+    { url: `${baseUrl}/ar/terms`, priority: 0.3, freq: 'yearly' as const },
+  ].map(page => ({
+    url: page.url,
+    lastModified: currentDate,
+    changeFrequency: page.freq,
+    priority: page.priority,
+  }));
+
+  // ============================================
+  // COMBINE ALL SITEMAPS
+  // ============================================
   return [
     ...homepage,
     ...corePages,
-    ...servicePages,
     ...industryPages,
     ...locationPages,
+    ...servicePages,
     ...shopPages,
-    ...productPages,
     ...blogPages,
     ...resourcePages,
-    ...staticPages,
+    ...caseStudyPages,
+    ...authorPages,
+    ...legalPages,
   ];
 }

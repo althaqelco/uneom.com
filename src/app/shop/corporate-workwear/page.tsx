@@ -1,412 +1,95 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: string;
-  image: string;
-  href: string;
-  features?: string[];
-  colors?: string[];
-  isNew?: boolean;
-  isBestseller?: boolean;
-}
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Corporate Workwear Saudi Arabia | Business Uniforms | UNEOM',
+  titleAr: 'ملابس الشركات السعودية | أزياء العمل الرسمية | يونيوم',
+  description: 'Premium corporate workwear in Saudi Arabia. Business suits, office uniforms, corporate polo shirts for companies. From SAR 299. Custom branding, bulk discounts!',
+  descriptionAr: 'ملابس شركات فاخرة في السعودية. بدلات رسمية، زي مكاتب، بولو شركات. من 299 ريال. علامة تجارية مخصصة، خصومات بالجملة!',
+  keywords: ['corporate workwear saudi arabia', 'business uniforms ksa', 'office uniforms', 'corporate polo shirts', 'executive suits saudi'],
+  keywordsAr: ['ملابس الشركات السعودية', 'أزياء العمل الرسمية', 'زي المكاتب', 'بولو شركات', 'بدلات تنفيذية'],
+  locale: 'en',
+  pageType: 'category',
+  path: '/shop/corporate-workwear',
+  image: '/images/products/corporate-suit-executive.jpg',
+  imageAlt: 'Corporate Workwear Saudi Arabia - Business Uniforms',
+  aiSummary: 'UNEOM corporate workwear for Saudi businesses. Products: Executive Business Suits (from SAR 799), Office Uniforms (from SAR 299), Corporate Polo Shirts (from SAR 149), Dress Shirts (from SAR 129). All products available with company logo embroidery. Serving banks, corporations, and government offices.',
+  aiSummaryAr: 'ملابس الشركات من يونيوم للشركات السعودية. المنتجات: بدلات تنفيذية (من 799 ريال)، زي مكاتب (من 299 ريال)، بولو شركات (من 149 ريال)، قمصان رسمية (من 129 ريال).'
+});
+
+export const dynamic = 'force-static';
+
+const corporateFAQs = [
+  { question: 'Do you supply corporate uniforms to banks?', answer: 'Yes, UNEOM supplies corporate uniforms to major banks and financial institutions in Saudi Arabia. We provide complete uniform programs including suits, shirts, and accessories.' },
+  { question: 'Can you match our corporate brand colors?', answer: 'Absolutely! We can match exact brand colors using Pantone references and incorporate your company logo through embroidery or printing on all uniform items.' },
+  { question: 'What is included in a corporate uniform program?', answer: 'Our corporate uniform programs include: Executive suits, dress shirts, ties, polo shirts, blazers, skirts/trousers, and accessories. We handle design, sizing, production, and distribution.' },
+  { question: 'Do you offer different styles for different departments?', answer: 'Yes, we can create tiered uniform programs with distinct styles for different departments while maintaining overall brand consistency.' },
+];
+
+const products = [
+  { id: 'executive-suits', name: 'Executive Business Suits', description: 'Premium suits for executives and management', price: 'From SAR 799', image: '/images/products/corporate-suit-executive.jpg', href: '/shop/corporate-workwear/executive-suits', features: ['Premium wool', 'Tailored fit', 'Wrinkle-resistant'] },
+  { id: 'office-uniforms', name: 'Office Uniforms', description: 'Professional office attire for staff', price: 'From SAR 299', image: '/images/products/office-uniform.jpg', href: '/shop/corporate-workwear/office-uniforms', features: ['Comfortable', 'Durable', 'Easy care'] },
+  { id: 'corporate-polo', name: 'Corporate Polo Shirts', description: 'Smart casual polo shirts with logo', price: 'From SAR 149', image: '/images/products/corporate-polo.jpg', href: '/shop/corporate-workwear/corporate-polo', features: ['Breathable', 'Logo-ready', 'Multiple colors'] },
+  { id: 'dress-shirts', name: 'Corporate Dress Shirts', description: 'Professional dress shirts for business', price: 'From SAR 129', image: '/images/products/dress-shirt.jpg', href: '/shop/corporate-workwear/dress-shirts', features: ['Non-iron', 'Classic fit', 'Premium cotton'] },
+];
 
 export default function CorporateWorkwearPage() {
-  const locale = 'en';
-  
-  // Corporate workwear products
-  const products: Product[] = [
-    {
-      id: 'executive-blazer',
-      name: 'Executive Blazer',
-      description: 'Premium tailored blazer for corporate executives and management personnel, featuring sophisticated design and premium fabric.',
-      price: 'From SAR 359',
-      image: '/images/healthcare/medical_hijab_uniform.jpg',
-      href: '/shop/corporate-workwear/business-formal-set',
-      features: ['Premium materials', 'Coordinated set', 'Professional design', 'Custom sizing'],
-      colors: ['Navy', 'Black', 'Charcoal']
-    }
-  ];
-  
-  // Department filters
-  const departments = [
-    { id: 'all', name: 'All Departments' },
-    { id: 'executive', name: 'Executive' },
-    { id: 'management', name: 'Management' },
-    { id: 'office-staff', name: 'Office Staff' },
-    { id: 'reception', name: 'Reception & Front Desk' }
-  ];
-  
-  // Features filters
-  const featureFilters = [
-    { id: 'premium-fabric', name: 'Premium Fabric' },
-    { id: 'wrinkle-resistant', name: 'Wrinkle Resistant' },
-    { id: 'stain-resistant', name: 'Stain Resistant' },
-    { id: 'comfort-stretch', name: 'Comfort Stretch' },
-    { id: 'tailored-fit', name: 'Tailored Fit' }
-  ];
-  
   return (
-    <div className="bg-white">
-    
-      {/* Breadcrumb */}
-      <div className="bg-gray-100 py-4">
+    <>
+      <SEO2026 title="Corporate Workwear Saudi Arabia | UNEOM" titleAr="ملابس الشركات السعودية | يونيوم" description="Premium corporate workwear." locale="en" pageType="category" mainEntity="Corporate Workwear" primaryImage="/images/products/corporate-suit-executive.jpg" primaryImageAlt="Corporate Workwear" faqs={corporateFAQs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Corporate Workwear', url: '/shop/corporate-workwear' }]} industry="Corporate" />
+
+      <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 text-white relative overflow-hidden py-16">
         <Container>
-          <nav className="flex" aria-label="Breadcrumb">
-            <ol className="inline-flex items-center space-x-1 md:space-x-3">
-              <li className="inline-flex items-center">
-                <Link href="/" className="text-sm text-gray-700 hover:text-primary-600">Home</Link>
-              </li>
-              <li>
-                <div className="flex items-center">
-                  <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
-                  </svg>
-                  <Link href="/shop" className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">Shop</Link>
-                </div>
-              </li>
-              <li aria-current="page">
-                <div className="flex items-center">
-                  <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
-                  </svg>
-                  <span className="text-sm text-gray-500 ml-1 md:ml-2">Corporate Workwear</span>
-                </div>
-              </li>
-            </ol>
-          </nav>
-        </Container>
-      </div>
-      
-      {/* Category Hero */}
-      <section className="relative pt-16 pb-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/healthcare/medical_hijab_uniform.jpg"
-            alt="Corporate Workwear"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        </div>
-        
-        <Container className="relative z-10">
-          <div className="max-w-2xl text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Corporate Workwear</h1>
-            <p className="text-xl mb-8">
-              Professional corporate attire designed to elevate your brand and empower your team. UNEOM provides high-quality, tailored corporate uniforms for Saudi businesses across all sectors.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button variant="primary" href="#products">
-                View Collection
-              </Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900" href="/contact?subject=Corporate%20Workwear">
-                Request Custom Design
-              </Button>
-            </div>
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Shop', href: '/shop' }, { label: 'Corporate Workwear', href: '/shop/corporate-workwear' }]} className="text-white/80 mb-6 relative z-10" />
+          <div className="relative z-10 max-w-4xl">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"><span className="text-blue-400">🏢</span><span className="text-sm font-medium">Corporate Industry</span></div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Corporate <span className="bg-gradient-to-r from-blue-300 to-gray-300 text-transparent bg-clip-text">Workwear</span></h1>
+            <p className="text-xl mb-8 text-blue-100 leading-relaxed">Professional business uniforms and corporate attire for Saudi companies.</p>
           </div>
         </Container>
       </section>
-      
-      {/* Shop Section */}
-      <section className="py-16" id="products">
+
+      <main className="py-16">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {/* Filters Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="bg-white border rounded-lg p-6 sticky top-24">
-                <h2 className="text-lg font-bold mb-4">Filters</h2>
-                
-                {/* Department Filter */}
-                <div className="mb-6">
-                  <h3 className="font-medium mb-2">Department</h3>
-                  <div className="space-y-2">
-                    {departments.map((department) => (
-                      <div key={department.id} className="flex items-center">
-                        <input
-                          type="checkbox"
-                          id={`department-${department.id}`}
-                          className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
-                        />
-                        <label htmlFor={`department-${department.id}`} className="ml-2 text-sm text-gray-700">
-                          {department.name}
-                        </label>
-                      </div>
-                    ))}
+          <section className="mb-16">
+            <SectionHeading subtitle="Shop Business Attire" centered>Corporate Workwear Collection</SectionHeading>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+              {products.map((product) => (
+                <Link key={product.id} href={product.href} className="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                  <div className="relative aspect-[4/3] overflow-hidden"><Image src={product.image} alt={product.name} fill className="object-cover group-hover:scale-105 transition-transform duration-300" /></div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{product.name}</h3>
+                    <p className="text-gray-600 text-sm mb-3">{product.description}</p>
+                    <div className="flex items-center gap-2 mb-3 flex-wrap">{product.features?.map((f, i) => (<span key={i} className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">{f}</span>))}</div>
+                    <div className="flex justify-between items-center"><span className="text-lg font-bold text-blue-600">{product.price}</span><span className="text-gray-400 group-hover:text-blue-600">→</span></div>
                   </div>
-                </div>
-                
-                {/* Features Filter */}
-                <div className="mb-6">
-                  <h3 className="font-medium mb-2">Features</h3>
-                  <div className="space-y-2">
-                    {featureFilters.map((feature) => (
-                      <div key={feature.id} className="flex items-center">
-                        <input
-                          type="checkbox"
-                          id={`feature-${feature.id}`}
-                          className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
-                        />
-                        <label htmlFor={`feature-${feature.id}`} className="ml-2 text-sm text-gray-700">
-                          {feature.name}
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Price Range */}
-                <div className="mb-6">
-                  <h3 className="font-medium mb-2">Price Range</h3>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div>
-                      <label htmlFor="min-price" className="sr-only">Minimum Price</label>
-                      <input
-                        type="number"
-                        id="min-price"
-                        placeholder="Min"
-                        className="w-full border border-gray-300 rounded py-1.5 px-3 text-sm"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="max-price" className="sr-only">Maximum Price</label>
-                      <input
-                        type="number"
-                        id="max-price"
-                        placeholder="Max"
-                        className="w-full border border-gray-300 rounded py-1.5 px-3 text-sm"
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <button className="w-full bg-primary-600 text-white rounded py-2 text-sm font-medium hover:bg-primary-700 transition">
-                  Apply Filters
-                </button>
-              </div>
+                </Link>
+              ))}
             </div>
-            
-            {/* Products Grid */}
-            <div className="lg:col-span-3">
-              <div className="flex flex-wrap items-center justify-between mb-6">
-                <h2 className="text-xl font-bold">Corporate Workwear ({products.length})</h2>
-                
-                <div className="flex items-center space-x-4">
-                  <label htmlFor="sort" className="text-sm text-gray-700">Sort by:</label>
-                  <select
-                    id="sort"
-                    className="border-gray-300 rounded-md text-sm focus:ring-primary-500 focus:border-primary-500"
-                  >
-                    <option>Most Popular</option>
-                    <option>Price: Low to High</option>
-                    <option>Price: High to Low</option>
-                    <option>Newest</option>
-                  </select>
-                </div>
-              </div>
-              
-              {/* Products */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {products.map((product) => (
-                  <Link key={product.id} href={product.href} className="group">
-                    <div className="bg-white border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
-                      <div className="relative h-64 overflow-hidden bg-gray-200">
-                        <Image
-                          src={product.image}
-                          alt={product.name}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        {product.isNew && (
-                          <div className="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
-                            NEW
-                          </div>
-                        )}
-                        {product.isBestseller && (
-                          <div className="absolute top-2 left-2 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded">
-                            BESTSELLER
-                          </div>
-                        )}
-                      </div>
-                      <div className="p-4">
-                        <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors duration-200">
-                          {product.name}
-                        </h3>
-                        <p className="text-sm text-gray-600 mt-1 mb-2 line-clamp-2">{product.description}</p>
-                        <div className="flex items-center justify-between mt-2">
-                          <span className="font-medium text-gray-900">{product.price}</span>
-                          <span className="text-primary-600 text-sm font-medium group-hover:underline">View Details</span>
-                        </div>
-                        {product.features && (
-                          <div className="mt-3 flex flex-wrap gap-1">
-                            {product.features.slice(0, 2).map((feature, index) => (
-                              <span key={index} className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                                {feature}
-                              </span>
-                            ))}
-                            {product.features.length > 2 && (
-                              <span className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-                                +{product.features.length - 2} more
-                              </span>
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
+          </section>
+
+          <section className="mb-16" itemScope itemType="https://schema.org/FAQPage">
+            <SectionHeading subtitle="Common Questions" centered>Corporate Workwear FAQ</SectionHeading>
+            <div className="max-w-4xl mx-auto mt-12 space-y-4">
+              {corporateFAQs.map((faq, index) => (<div key={index} className="bg-white rounded-xl shadow-sm p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question"><h3 className="text-lg font-bold text-gray-900 mb-3" itemProp="name">{faq.question}</h3><div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"><p className="text-gray-600" itemProp="text">{faq.answer}</p></div></div>))}
             </div>
-          </div>
+          </section>
+
+          <section className="text-center bg-gradient-to-r from-gray-700 to-blue-800 text-white rounded-2xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Corporate Uniform Program?</h2>
+            <p className="text-xl mb-8 text-blue-100">Contact us for company-wide uniform solutions with custom branding.</p>
+            <Link href="/quote?category=corporate" className="inline-flex items-center px-8 py-4 bg-white text-blue-700 hover:bg-gray-100 font-bold rounded-xl transition-all shadow-lg">Get Corporate Quote →</Link>
+          </section>
         </Container>
-      </section>
-      
-      {/* Features Section */}
-      <section className="py-16 bg-gray-50">
-        <Container>
-          <SectionHeading centered>Why Choose UNEOM Corporate Uniforms</SectionHeading>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Brand Representation</h3>
-              <p className="text-gray-600">
-                Our corporate uniforms are designed to reflect your brand identity and values, creating a cohesive professional appearance for your team.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Customization Options</h3>
-              <p className="text-gray-600">
-                We offer extensive customization options including corporate logo embroidery, custom colors, and tailored fit to meet your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Premium Quality</h3>
-              <p className="text-gray-600">
-                Our corporate workwear is made with high-quality fabrics and expert craftsmanship to ensure durability, comfort, and a professional appearance.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-      
-      {/* Related Categories */}
-      <section className="py-16">
-        <Container>
-          <SectionHeading centered>Related Categories</SectionHeading>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            <Link href="/shop/hospitality-attire" className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/products/hotel-uniform.jpg"
-                    alt="Hospitality Attire"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold group-hover:text-primary-600 transition-colors duration-200">
-                    Hospitality Attire
-                  </h3>
-                </div>
-              </div>
-            </Link>
-            <Link href="/shop/medical-scrubs" className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/healthcare/medical_hijab_uniform.jpg"
-                    alt="Medical Scrubs"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold group-hover:text-primary-600 transition-colors duration-200">
-                    Medical Scrubs
-                  </h3>
-                </div>
-              </div>
-            </Link>
-            <Link href="/shop/security-uniforms" className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/product-placeholder.jpg"
-                    alt="Security Uniforms"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-bold group-hover:text-primary-600 transition-colors duration-200">
-                    Security Uniforms
-                  </h3>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </Container>
-      </section>
-      
-      {/* CTA Section */}
-      <section className="py-16 bg-primary-600 text-white">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Need Custom Corporate Uniforms?</h2>
-              <p className="text-lg mb-6">
-                UNEOM specializes in creating custom corporate uniform programs that align with your brand identity and business requirements. From executive attire to office staff uniforms, we can design and produce workwear that represents your company professionally.
-              </p>
-              <Button
-                variant="outline"
-                href="/contact?subject=Custom%20Corporate%20Workwear"
-                className="inline-block bg-white text-primary-600 hover:bg-gray-100"
-              >
-                Request Consultation
-              </Button>
-            </div>
-            <div className="hidden lg:block">
-              <div className="relative h-80 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/healthcare/medical_hijab_uniform.jpg"
-                  alt="Corporate Workwear Design Service"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-    
-      </div>
+      </main>
+      <section className="py-6 bg-gray-100 border-t"><div className="container mx-auto px-4 text-center"><Link href="/ar/shop/corporate-workwear" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg text-sm">🇸🇦 العربية</Link></div></section>
+    </>
   );
-} 
+}
