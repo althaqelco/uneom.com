@@ -1,31 +1,35 @@
 import { Metadata } from 'next';
+import { generateMetadata2026 } from '@/lib/seo-2026';
 
-export const metadata: Metadata = {
-  title: 'Industrial Uniforms & Manufacturing Workwear | Safety Attire | UNEOM',
-  description: 'Shop premium industrial uniforms and manufacturing workwear designed for Saudi factories and production facilities. Safety-compliant, durable attire for industrial environments.',
-  keywords: 'industrial uniforms Saudi Arabia, manufacturing workwear Riyadh, factory safety clothing, production facility attire, industrial safety uniforms, heavy industry workwear, manufacturing PPE, UNEOM industrial uniforms',
-  openGraph: {
-    title: 'Industrial Uniforms & Manufacturing Workwear | Safety Attire | UNEOM',
-    description: 'Premium-quality industrial uniforms engineered for Saudi Arabian manufacturing and production environments. Combining safety compliance, durability, and climate adaptability.',
-    type: 'website',
-    locale: 'en',
-    images: [
-      {
-        url: '/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Professional Industrial Uniforms Collection by UNEOM'}
-    ]},
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Industrial Uniforms & Manufacturing Workwear | UNEOM Saudi Arabia',
-    description: 'Premium industrial uniforms designed for Saudi manufacturing facilities. Safety compliance meets durability with climate-adaptive features.',
-    images: ['/images/industries/manufacturing/manufacturing_uniform_hard-work.jpg']},
-  robots: {
-    index: true,
-    follow: true},
-  alternates: {
-    canonical: 'https://uneom.com/shop/industrial-uniforms',
-    languages: {
-      'en': 'https://uneom.com/shop/industrial-uniforms',
-      'ar': 'https://uneom.com/ar/shop/industrial-uniforms'}}}; 
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Industrial Uniforms & Safety Workwear | UNEOM Saudi Arabia',
+  titleAr: 'أزياء صناعية وملابس سلامة | يونيوم السعودية',
+  description: 'SASO certified industrial uniforms and safety workwear for Saudi factories and oil/gas. Flame-resistant, high-visibility, chemical-resistant. ARAMCO approved.',
+  descriptionAr: 'أزياء صناعية وملابس سلامة معتمدة من ساسو لمصانع السعودية والنفط والغاز. مقاومة للهب، عالية الرؤية، مقاومة للكيماويات. معتمدة من أرامكو.',
+  keywords: [
+    'industrial uniforms saudi arabia',
+    'safety workwear riyadh',
+    'flame resistant clothing',
+    'SASO certified uniforms',
+    'ARAMCO approved workwear',
+    'hi-vis safety vest',
+    'industrial coveralls',
+    'oil gas uniforms saudi',
+    'factory workwear ksa',
+    'construction uniforms',
+  ],
+  keywordsAr: [
+    'أزياء صناعية السعودية',
+    'ملابس سلامة الرياض',
+    'ملابس مقاومة للحريق',
+    'أزياء معتمدة ساسو',
+    'ملابس عمل أرامكو',
+  ],
+  locale: 'en',
+  pageType: 'category',
+  path: '/shop/industrial-uniforms',
+  image: '/images/categories/industrial-uniforms.jpg',
+  imageAlt: 'Industrial Uniforms Collection by UNEOM',
+  aiSummary: 'UNEOM industrial uniforms for Saudi Arabia. Products: Flame-resistant coveralls (FRC), hi-vis vests, chemical suits, welding gear, hard hats. Certifications: SASO, ARAMCO approved, NFPA 2112. Industries: Oil & gas, petrochemical, construction, manufacturing. Features: Heat protection up to 350°C, chemical resistance, high visibility. Price: 199-899 SAR. Sizes: S-5XL.',
+  aiSummaryAr: 'أزياء صناعية من يونيوم للسعودية. المنتجات: أفرول مقاوم للهب، سترات عالية الرؤية، بدل كيميائية. معتمد: ساسو، أرامكو.',
+});

@@ -1,31 +1,35 @@
 import { Metadata } from 'next';
+import { generateMetadata2026 } from '@/lib/seo-2026';
 
-export const metadata: Metadata = {
-  title: 'Housekeeping Uniforms | Professional Cleaning Staff Attire | UNEOM Saudi Arabia',
-  description: 'Premium housekeeping uniforms designed for Saudi Arabia\'s hospitality sector. Durable, comfortable attire with practical designs for housekeeping and cleaning staff efficiency.',
-  keywords: 'housekeeping uniforms Saudi Arabia, hotel cleaning staff uniforms Riyadh, housekeeping workwear, professional cleaning uniforms, hotel maid uniforms Jeddah, hospitality cleaning staff attire, housekeeping wear Dammam, cleaning uniform supplier, hotel housekeeping workwear, Saudi cleaning uniforms',
-  openGraph: {
-    title: 'Professional Housekeeping Uniforms for Hotel Excellence | UNEOM Saudi Arabia',
-    description: 'Enhance your housekeeping team\'s efficiency with our premium uniforms. Designed for Saudi Arabia\'s hotels with durable fabrics, practical features, and superior comfort for cleaning staff.',
-    type: 'website',
-    locale: 'en',
-    images: [
-      {
-        url: '/images/products/housekeeping-uniform.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Professional Housekeeping Uniform Collection by UNEOM'}
-    ]},
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Housekeeping Uniforms | UNEOM Saudi Arabia',
-    description: 'Premium housekeeping uniforms designed for Saudi Arabia\'s hospitality sector. Practicality meets durability with superior comfort.',
-    images: ['/images/products/housekeeping-uniform.jpg']},
-  robots: {
-    index: true,
-    follow: true},
-  alternates: {
-    canonical: 'https://uneom.com/shop/hospitality-attire/housekeeping-uniform',
-    languages: {
-      'en': 'https://uneom.com/shop/hospitality-attire/housekeeping-uniform',
-      'ar': 'https://uneom.com/ar/shop/hospitality-attire/housekeeping-uniform'}}}; 
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Housekeeping Uniforms | Hotel Cleaning Staff Attire | UNEOM',
+  titleAr: 'زي التدبير المنزلي | ملابس طاقم النظافة بالفندق | يونيوم',
+  description: 'Durable housekeeping uniforms for Saudi hotels and resorts. Comfortable tunics, practical dresses, easy-care fabrics. For cleaning staff, room attendants.',
+  descriptionAr: 'زي تدبير منزلي متين لفنادق ومنتجعات السعودية. سترات مريحة، فساتين عملية، أقمشة سهلة العناية.',
+  keywords: [
+    'housekeeping uniform saudi',
+    'hotel cleaning staff attire',
+    'room attendant uniform',
+    'cleaning staff dress',
+    'hotel housekeeping riyadh',
+    'maid uniform saudi arabia',
+  ],
+  keywordsAr: [
+    'زي تدبير منزلي السعودية',
+    'ملابس طاقم التنظيف',
+    'زي خادمات الفندق',
+  ],
+  locale: 'en',
+  pageType: 'product',
+  path: '/shop/hospitality-attire/housekeeping-uniform',
+  image: '/images/products/housekeeping-uniform.jpg',
+  imageAlt: 'Housekeeping Uniform by UNEOM',
+  aiSummary: 'UNEOM housekeeping uniforms for Saudi hotels. Includes: Tunics, dresses, aprons. Features: Durable polyester-cotton, stain-resistant, easy-care, comfortable fit. Colors: Gray, burgundy, navy. Sizes: S-3XL. Price: Starting 149 SAR. Practical pocket designs. MOQ: 20 pieces.',
+  productInfo: {
+    name: 'Housekeeping Uniform',
+    price: 149,
+    currency: 'SAR',
+    availability: 'InStock',
+    category: 'Hospitality Uniforms',
+  },
+});

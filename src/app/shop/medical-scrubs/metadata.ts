@@ -1,31 +1,35 @@
 import { Metadata } from 'next';
+import { generateMetadata2026 } from '@/lib/seo-2026';
 
-export const metadata: Metadata = {
-  title: 'Medical Scrubs & Healthcare Uniforms | Premium Quality | UNEOM Saudi Arabia',
-  description: 'Shop premium medical scrubs and healthcare uniforms designed for Saudi Arabia\'s medical professionals. Antimicrobial fabrics, comfortable fits, and custom options for hospitals and clinics.',
-  keywords: 'medical scrubs Saudi Arabia, healthcare uniforms Riyadh, hospital scrubs, antimicrobial medical uniforms, surgical scrubs, nursing uniforms Jeddah, doctor uniforms, hospital staff attire, healthcare workwear Dammam, medical attire Saudi',
-  openGraph: {
-    title: 'Premium Medical Scrubs & Healthcare Uniforms | UNEOM Saudi Arabia',
-    description: 'Professional-grade medical uniforms engineered for Saudi Arabian healthcare environments. Combining comfort, durability and antimicrobial protection for hospitals and clinics nationwide.',
-    type: 'website',
-    locale: 'en',
-    images: [
-      {
-        url: '/images/categories/medical-scrubs-category.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Professional Medical Scrubs Collection by UNEOM'}
-    ]},
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Medical Scrubs & Healthcare Uniforms | UNEOM Saudi Arabia',
-    description: 'Premium medical uniforms designed for Saudi healthcare professionals. Comfort meets functionality with antimicrobial protection.',
-    images: ['/images/categories/medical-scrubs-category.jpg']},
-  robots: {
-    index: true,
-    follow: true},
-  alternates: {
-    canonical: 'https://uneom.com/shop/medical-scrubs',
-    languages: {
-      'en': 'https://uneom.com/shop/medical-scrubs',
-      'ar': 'https://uneom.com/ar/shop/medical-scrubs'}}}; 
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Medical Scrubs & Healthcare Uniforms | UNEOM Saudi Arabia',
+  titleAr: 'سكراب طبي وأزياء الرعاية الصحية | يونيوم السعودية',
+  description: 'Premium medical scrubs and healthcare uniforms for Saudi hospitals and clinics. Surgical scrubs, lab coats, nursing uniforms. MOH compliant, antimicrobial fabrics. Nationwide delivery.',
+  descriptionAr: 'سكراب طبي وأزياء رعاية صحية فاخرة للمستشفيات والعيادات السعودية. سكراب جراحي، معاطف مختبر، زي تمريض. متوافق مع وزارة الصحة، أقمشة مضادة للميكروبات.',
+  keywords: [
+    'medical scrubs saudi arabia',
+    'healthcare uniforms riyadh',
+    'hospital scrubs jeddah',
+    'nursing uniforms ksa',
+    'surgical scrubs dammam',
+    'lab coats saudi',
+    'doctor uniforms',
+    'MOH compliant scrubs',
+    'antimicrobial medical wear',
+    'CBAHI certified uniforms',
+  ],
+  keywordsAr: [
+    'سكراب طبي السعودية',
+    'أزياء رعاية صحية الرياض',
+    'سكراب مستشفى جدة',
+    'زي تمريض السعودية',
+    'معاطف مختبر',
+  ],
+  locale: 'en',
+  pageType: 'category',
+  path: '/shop/medical-scrubs',
+  image: '/images/categories/medical-scrubs.jpg',
+  imageAlt: 'Medical Scrubs Collection by UNEOM',
+  aiSummary: 'UNEOM medical scrubs category. Products: Surgical scrubs, nursing uniforms, lab coats, medical accessories. Features: Antimicrobial fabrics, MOH/CBAHI compliant, fluid-resistant options. Price range: 129-299 SAR. Colors: 10+ options including surgical green, sky blue, navy. Sizes: XS-4XL. For: Hospitals, clinics, laboratories, dental offices, pharmacies. Customization: Logo embroidery, name tags, department colors.',
+  aiSummaryAr: 'فئة السكراب الطبي من يونيوم. المنتجات: سكراب جراحي، زي تمريض، معاطف مختبر، إكسسوارات طبية. المميزات: أقمشة مضادة للميكروبات، متوافقة مع وزارة الصحة.',
+});

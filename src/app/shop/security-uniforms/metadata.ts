@@ -1,31 +1,34 @@
 import { Metadata } from 'next';
+import { generateMetadata2026 } from '@/lib/seo-2026';
 
-export const metadata: Metadata = {
-  title: 'Security Uniforms & Guard Attire | Professional Workwear | UNEOM',
-  description: 'Shop premium security uniforms and guard attire designed for Saudi security professionals. Comfortable, durable workwear with tactical functionality for security companies.',
-  keywords: 'security uniforms Saudi Arabia, guard attire Riyadh, security officer uniforms, tactical workwear, professional security clothing, security company uniforms, executive protection attire, UNEOM security uniforms',
-  openGraph: {
-    title: 'Security Uniforms & Guard Attire | Professional Workwear | UNEOM',
-    description: 'Professional-grade security uniforms engineered for Saudi Arabian security personnel. Combining authority, comfort, and tactical functionality.',
-    type: 'website',
-    locale: 'en',
-    images: [
-      {
-        url: '/images/industries/security/security-uniform-1.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Professional Security Uniforms Collection by UNEOM'}
-    ]},
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Security Uniforms & Guard Attire | UNEOM Saudi Arabia',
-    description: 'Premium security uniforms designed for Saudi security professionals. Authority meets functionality with climate-adaptive features.',
-    images: ['/images/industries/security/security-uniform-1.jpg']},
-  robots: {
-    index: true,
-    follow: true},
-  alternates: {
-    canonical: 'https://uneom.com/shop/security-uniforms',
-    languages: {
-      'en': 'https://uneom.com/shop/security-uniforms',
-      'ar': 'https://uneom.com/ar/shop/security-uniforms'}}}; 
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Security Uniforms & Guard Attire | UNEOM Saudi Arabia',
+  titleAr: 'أزياء الأمن وملابس الحراسة | يونيوم السعودية',
+  description: 'Professional security uniforms for Saudi Arabia. Security officer suits, tactical vests, patrol jackets, accessories. For hotels, malls, corporates, events.',
+  descriptionAr: 'أزياء أمن احترافية للسعودية. بدلات ضباط أمن، سترات تكتيكية، جاكيتات دوريات، إكسسوارات. للفنادق والمولات والشركات والفعاليات.',
+  keywords: [
+    'security uniforms saudi arabia',
+    'guard uniforms riyadh',
+    'security officer attire',
+    'tactical security vest',
+    'hotel security uniform',
+    'mall security uniform',
+    'event security attire',
+    'security patrol jacket',
+    'professional guard uniform',
+  ],
+  keywordsAr: [
+    'أزياء أمن السعودية',
+    'زي حراسة الرياض',
+    'ملابس ضابط أمن',
+    'سترة أمن تكتيكية',
+    'زي أمن فندق',
+  ],
+  locale: 'en',
+  pageType: 'category',
+  path: '/shop/security-uniforms',
+  image: '/images/categories/security-uniforms.jpg',
+  imageAlt: 'Security Uniforms Collection by UNEOM',
+  aiSummary: 'UNEOM security uniforms for Saudi Arabia. Products: Officer suits, tactical vests, patrol jackets, winter jackets, accessories. For: Hotels, malls, corporate offices, events, residential compounds. Features: Professional appearance, functional pockets, weather options. Price: 249-699 SAR. Customization: Badges, epaulettes, company branding. Sizes: S-4XL.',
+  aiSummaryAr: 'أزياء الأمن من يونيوم للسعودية. المنتجات: بدلات ضباط، سترات تكتيكية، جاكيتات دوريات. للفنادق والمولات والشركات.',
+});

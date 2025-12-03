@@ -1,26 +1,40 @@
 import { Metadata } from 'next';
+import { generateMetadata2026 } from '@/lib/seo-2026';
 
-export const metadata: Metadata = {
-  title: 'Professional Medical Lab Coats | Antimicrobial & Stain-Resistant | UNEOM Saudi Arabia',
-  description: 'Premium medical lab coats for healthcare professionals in Saudi Arabia. Antimicrobial, stain-resistant fabric designed for hospital environments with customization options for hospitals and clinics.',
-  keywords: 'medical lab coat Saudi Arabia, hospital lab coats, doctor coat, antimicrobial lab coat, customized medical uniform, healthcare uniform Riyadh, stain-resistant lab coat, medical attire Saudi, professional lab coat Jeddah, healthcare uniform supplier',
-  openGraph: {
-    title: 'Premium Medical Lab Coats for Healthcare Professionals | UNEOM Saudi Arabia',
-    description: 'High-quality lab coats with antimicrobial treatment, multiple pocket configurations, and customization options. Perfect for hospitals and clinics across Saudi Arabia.',
-    type: 'website',
-    locale: 'en',
-    images: [
-      {
-        url: '/images/products/medical-lab-coat.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Professional Medical Lab Coat by UNEOM'}
-    ]},
-  robots: {
-    index: true,
-    follow: true},
-  alternates: {
-    canonical: 'https://uneom.com/shop/medical-scrubs/medical-lab-coat',
-    languages: {
-      'en': 'https://uneom.com/shop/medical-scrubs/medical-lab-coat',
-      'ar': 'https://uneom.com/ar/shop/medical-scrubs/medical-lab-coat'}}}; 
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Medical Lab Coats | Professional Doctor Coats | UNEOM Saudi Arabia',
+  titleAr: 'معاطف المختبر الطبية | معاطف أطباء احترافية | يونيوم السعودية',
+  description: 'Premium medical lab coats for Saudi healthcare professionals. White coats for doctors, laboratory staff, medical students. Multiple lengths, sizes XS-4XL. ISO certified, custom embroidery available.',
+  descriptionAr: 'معاطف مختبر طبية فاخرة للمتخصصين الصحيين السعوديين. معاطف بيضاء للأطباء وموظفي المختبرات وطلاب الطب. أطوال متعددة، مقاسات XS-4XL.',
+  keywords: [
+    'medical lab coat saudi arabia',
+    'doctor white coat riyadh',
+    'laboratory coat jeddah',
+    'professional lab coat',
+    'hospital white coats',
+    'medical student coat',
+    'physician coat saudi',
+    'lab coat with logo',
+    'doctor uniform ksa',
+  ],
+  keywordsAr: [
+    'معطف مختبر طبي السعودية',
+    'معطف طبيب أبيض الرياض',
+    'معطف مختبر جدة',
+    'زي طبيب احترافي',
+  ],
+  locale: 'en',
+  pageType: 'product',
+  path: '/shop/medical-scrubs/medical-lab-coat',
+  image: '/images/products/lab-coat.jpg',
+  imageAlt: 'Professional Medical Lab Coat by UNEOM',
+  aiSummary: 'UNEOM medical lab coats for Saudi healthcare. Features: Premium cotton-polyester blend, stain-resistant, professional white finish. Lengths: Knee-length, mid-thigh, consultation coat. Sizes: XS-4XL. Price: Starting 159 SAR. Custom embroidery for hospital logos and doctor names available. MOQ: 10 pieces. Ideal for: Doctors, lab technicians, pharmacists, medical students.',
+  aiSummaryAr: 'معاطف المختبر الطبية من يونيوم للرعاية الصحية السعودية. المميزات: خليط قطن وبوليستر فاخر، مقاوم للبقع، لون أبيض احترافي.',
+  productInfo: {
+    name: 'Medical Lab Coat',
+    price: 159,
+    currency: 'SAR',
+    availability: 'InStock',
+    category: 'Medical Uniforms',
+  },
+});

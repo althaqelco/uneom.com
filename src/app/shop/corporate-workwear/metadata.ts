@@ -1,31 +1,34 @@
 import { Metadata } from 'next';
+import { generateMetadata2026 } from '@/lib/seo-2026';
 
-export const metadata: Metadata = {
-  title: 'Corporate Workwear & Business Attire | Professional Uniforms | UNEOM',
-  description: 'Shop premium corporate workwear and business attire designed for Saudi companies. Professional, tailored uniforms for corporate environments across the Kingdom.',
-  keywords: 'corporate workwear Saudi Arabia, business attire Riyadh, professional uniforms, office clothing, executive attire, corporate identity uniforms, Saudi business casual, UNEOM corporate uniforms',
-  openGraph: {
-    title: 'Corporate Workwear & Business Attire | Professional Uniforms | UNEOM',
-    description: 'Premium-quality corporate workwear engineered for Saudi Arabian business environments. Combining professional appearance, comfort, and cultural considerations.',
-    type: 'website',
-    locale: 'en',
-    images: [
-      {
-        url: '/images/corporate/corporate_uniform_formal.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Professional Corporate Workwear Collection by UNEOM'}
-    ]},
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Corporate Workwear & Business Attire | UNEOM Saudi Arabia',
-    description: 'Premium corporate uniforms designed for Saudi business environments. Professionalism meets comfort with cultural sensitivity considerations.',
-    images: ['/images/corporate/corporate_uniform_formal.jpg']},
-  robots: {
-    index: true,
-    follow: true},
-  alternates: {
-    canonical: 'https://uneom.com/shop/corporate-workwear',
-    languages: {
-      'en': 'https://uneom.com/shop/corporate-workwear',
-      'ar': 'https://uneom.com/ar/shop/corporate-workwear'}}}; 
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Corporate Workwear & Business Uniforms | UNEOM Saudi Arabia',
+  titleAr: 'ملابس العمل المؤسسية والزي الموحد | يونيوم السعودية',
+  description: 'Premium corporate uniforms and business attire for Saudi companies. Executive suits, office shirts, professional blazers. Custom branded workwear for banks, offices, corporates.',
+  descriptionAr: 'زي موحد مؤسسي وملابس عمل فاخرة لشركات السعودية. بدلات تنفيذية، قمصان مكتبية، بليزر احترافي. ملابس عمل مخصصة بالعلامة التجارية.',
+  keywords: [
+    'corporate uniforms saudi arabia',
+    'business attire riyadh',
+    'office uniforms jeddah',
+    'executive suits ksa',
+    'company uniforms saudi',
+    'professional workwear',
+    'branded corporate wear',
+    'bank uniforms saudi',
+    'office dress code',
+  ],
+  keywordsAr: [
+    'زي شركات السعودية',
+    'ملابس مكتبية الرياض',
+    'زي مكتب جدة',
+    'بدلات تنفيذية',
+    'ملابس عمل مهنية',
+  ],
+  locale: 'en',
+  pageType: 'category',
+  path: '/shop/corporate-workwear',
+  image: '/images/categories/corporate-uniforms.jpg',
+  imageAlt: 'Corporate Workwear Collection by UNEOM',
+  aiSummary: 'UNEOM corporate workwear for Saudi businesses. Products: Executive suits, blazers, shirts, trousers, ties. For: Banks, corporations, law firms, consulting companies. Features: Premium fabrics, tailored fit, wrinkle-resistant. Price: 179-599 SAR. Custom embroidery and company branding available. Style options: Traditional thobe-compatible, Western business, smart casual.',
+  aiSummaryAr: 'ملابس العمل المؤسسية من يونيوم لشركات السعودية. المنتجات: بدلات تنفيذية، بليزر، قمصان، بناطيل. للبنوك والشركات.',
+});
