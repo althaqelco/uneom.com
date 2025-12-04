@@ -76,7 +76,7 @@ export default function GuidesClientPageArabic() {
         'الصفحات': '15+',
         'اللغات': 'العربية، الإنجليزية'
       },
-      url: '/ar/images/services/resources/guides/guides-header.jpg'
+      url: '/ar/services/customization'
     }
   ];
 

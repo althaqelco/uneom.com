@@ -15,7 +15,7 @@ export const metadata: Metadata = generateSEO({
     'ملابس طبية مقاومة للسوائل',
     'يونيوم المملكة العربية السعودية'
   ],
-  path: '/ar/images/products/surgical-scrubs.jpg',
+  path: '/ar/shop/medical-scrubs/surgical-scrubs',
   locale: 'ar'
 });
 

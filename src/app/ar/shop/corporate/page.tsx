@@ -43,7 +43,7 @@ export default function CorporateUniformsPageAr() {
       <EnhancedSEO2025
         title="أزياء الشركات | ملابس رسمية وبدل تنفيذية وقمصان بولو | يونيوم"
         description="مجموعة متكاملة من أزياء الشركات والمؤسسات في المملكة العربية السعودية. بدل تنفيذية، قمصان عمل رسمية، قمصان بولو، وملابس مكتبية تعكس الاحترافية والهوية المؤسسية."
-        canonicalUrl="https://uneom.com/ar/images/industries/corporate/hero-corporate-uniforms.jpg" 
+        canonicalUrl="https://uneom.com/ar/shop/corporate" 
       />
 
       {/* Hero Section */}

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: 'خدمات شاملة لمراقبة جودة الزي الموحد واختباره للمؤسسات السعودية. تضمن يونيوم ملابس عمل متينة وعالية الجودة من خلال اختبار المواد الصارم والامتثال للمعايير.',
     images: [
       {
-        url: 'https://uneom.com/ar/images/services/services/quality-assurance/quality-header.jpg',
+        url: 'https://uneom.com/images/services/services/quality-assurance/quality-header.jpg',
         width: 1200,
         height: 630,
         alt: 'خدمات ضمان جودة واختبار الزي الموحد من يونيوم'}
