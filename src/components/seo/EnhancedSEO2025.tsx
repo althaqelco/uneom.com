@@ -94,7 +94,7 @@ const EnhancedSEO2025: React.FC<EnhancedSEO2025Props> = ({
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+966-XX-XXX-XXXX',
+      telephone: '+971558164922',
       contactType: 'customer service',
       availableLanguage: ['English', 'Arabic']
     },

@@ -47,7 +47,7 @@ export const metadata: Metadata = generateMetadata2026({
   path: '/locations/riyadh',
   image: '/images/locations/riyadh-uneom-showroom.jpg',
   imageAlt: 'UNEOM Uniforms Showroom in Riyadh Saudi Arabia',
-  aiSummary: 'UNEOM Riyadh is the headquarters and main showroom for Saudi Arabia\'s leading uniform manufacturer. Located on King Fahd Road, Olaya District, Riyadh. We provide medical scrubs, hospital uniforms, corporate attire, school uniforms, hotel uniforms, and industrial workwear. Services include custom design, bulk orders, embroidery, and same-day delivery in Riyadh. Open Sunday-Thursday 8:30 AM - 5:30 PM. Contact: +966 11 234 5678.',
+  aiSummary: 'UNEOM Riyadh is the headquarters and main showroom for Saudi Arabia\'s leading uniform manufacturer. Located on King Fahd Road, Olaya District, Riyadh. We provide medical scrubs, hospital uniforms, corporate attire, school uniforms, hotel uniforms, and industrial workwear. Services include custom design, bulk orders, embroidery, and same-day delivery in Riyadh. Open Sunday-Thursday 8:30 AM - 5:30 PM. Contact: +971 55 816 4922.',
   aiSummaryAr: 'يونيوم الرياض هو المقر الرئيسي وصالة العرض الرئيسية لأكبر مصنع أزياء موحدة في السعودية. يقع على طريق الملك فهد، حي العليا، الرياض. نقدم سكراب طبي، زي مستشفيات، ملابس شركات، زي مدرسي، زي فنادق، وملابس صناعية.'
 });
 
@@ -103,9 +103,9 @@ const locationData = {
   nameAr: 'الرياض',
   address: 'King Fahd Road, Olaya District, Riyadh 12214, Saudi Arabia',
   addressAr: 'طريق الملك فهد، حي العليا، الرياض 12214، المملكة العربية السعودية',
-  phone: '+966 11 234 5678',
+  phone: '+971 55 816 4922',
   email: 'riyadh@uneom.com',
-  whatsapp: '+966 50 123 4567',
+  whatsapp: '+971558164922',
   workingHours: 'Sunday - Thursday: 8:30 AM - 5:30 PM',
   workingHoursAr: 'الأحد - الخميس: 8:30 صباحاً - 5:30 مساءً',
   isHeadquarters: true,

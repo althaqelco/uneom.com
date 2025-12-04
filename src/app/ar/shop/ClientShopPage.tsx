@@ -143,7 +143,7 @@ export default function ClientShopPage() {
     name: 'متجر يونيوم',
     description: 'متجر يونيوم للأزياء الموحدة المهنية في المملكة العربية السعودية',
     url: 'https://uneom.com/ar/shop',
-    telephone: '+966500000000',
+    telephone: '+971558164922',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'طريق الملك فهد',

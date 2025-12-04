@@ -32,7 +32,7 @@ export const metadata: Metadata = generateMetadata2026({
   path: '/faq',
   image: '/images/faq/uneom-faq.jpg',
   imageAlt: 'UNEOM Uniform FAQ - Frequently Asked Questions',
-  aiSummary: 'UNEOM FAQ page answers common questions about uniforms in Saudi Arabia. Topics covered: How to order uniforms, pricing and bulk discounts, customization with logos, delivery times across Saudi Arabia, sizing and measurements, minimum order quantities, payment methods, return policy, fabric options, and care instructions. Contact UNEOM at +966 11 234 5678 or info@uneom.com for specific questions.',
+  aiSummary: 'UNEOM FAQ page answers common questions about uniforms in Saudi Arabia. Topics covered: How to order uniforms, pricing and bulk discounts, customization with logos, delivery times across Saudi Arabia, sizing and measurements, minimum order quantities, payment methods, return policy, fabric options, and care instructions. Contact UNEOM at +971 55 816 4922 or info@uneom.com for specific questions.',
   aiSummaryAr: 'صفحة الأسئلة الشائعة من يونيوم تجيب على الأسئلة الشائعة عن الأزياء الموحدة في السعودية. المواضيع المغطاة: كيفية الطلب، الأسعار والخصومات، التخصيص بالشعارات، أوقات التوصيل، المقاسات، الحد الأدنى للطلب.'
 });
 
@@ -50,8 +50,8 @@ const faqCategories = [
       {
         question: 'How do I order uniforms from UNEOM?',
         questionAr: 'كيف أطلب الأزياء من يونيوم؟',
-        answer: 'You can order from UNEOM in several ways: 1) Request a quote on our website, 2) Call us at +966 11 234 5678, 3) Email sales@uneom.com, 4) Visit our showrooms in Riyadh, Jeddah, or Dammam, 5) WhatsApp us at +966 50 123 4567. Our team will guide you through product selection, sizing, customization options, and provide a detailed quote.',
-        answerAr: 'يمكنك الطلب من يونيوم بعدة طرق: 1) طلب عرض سعر على موقعنا، 2) الاتصال بنا على +966 11 234 5678، 3) إيميل sales@uneom.com، 4) زيارة صالات العرض في الرياض أو جدة أو الدمام، 5) واتساب على +966 50 123 4567.'
+        answer: 'You can order from UNEOM in several ways: 1) Request a quote on our website, 2) Call us at +971 55 816 4922, 3) Email sales@uneom.com, 4) Visit our showrooms in Riyadh, Jeddah, or Dammam, 5) WhatsApp us at +971 55 816 4922. Our team will guide you through product selection, sizing, customization options, and provide a detailed quote.',
+        answerAr: 'يمكنك الطلب من يونيوم بعدة طرق: 1) طلب عرض سعر على موقعنا، 2) الاتصال بنا على +971 55 816 4922، 3) إيميل sales@uneom.com، 4) زيارة صالات العرض في الرياض أو جدة أو الدمام، 5) واتساب على +971 55 816 4922.'
       },
       {
         question: 'What is the minimum order quantity?',

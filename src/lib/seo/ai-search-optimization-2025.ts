@@ -92,7 +92,7 @@ export const AI_OPTIMIZED_FAQS = {
       },
       {
         question: 'كيف أطلب زي موحد لشركتي؟',
-        answer: 'يمكنك طلب الزي الموحد من يونيوم عبر: 1) طلب عرض سعر مجاني من الموقع 2) الاتصال على +966-50-123-4567 3) زيارة أحد معارضنا في الرياض أو جدة. نقدم استشارات مجانية لتصميم الزي الأمثل.'
+        answer: 'يمكنك طلب الزي الموحد من يونيوم عبر: 1) طلب عرض سعر مجاني من الموقع 2) الاتصال على +971 55 816 4922 3) زيارة أحد معارضنا في الرياض أو جدة. نقدم استشارات مجانية لتصميم الزي الأمثل.'
       }
     ],
     en: [
@@ -102,7 +102,7 @@ export const AI_OPTIMIZED_FAQS = {
       },
       {
         question: 'How do I order uniforms for my company?',
-        answer: 'You can order uniforms from UNEOM by: 1) Requesting a free quote from our website 2) Calling +966-50-123-4567 3) Visiting our showrooms in Riyadh or Jeddah. We offer free consultations for optimal uniform design.'
+        answer: 'You can order uniforms from UNEOM by: 1) Requesting a free quote from our website 2) Calling +971 55 816 4922 3) Visiting our showrooms in Riyadh or Jeddah. We offer free consultations for optimal uniform design.'
       }
     ]
   },
@@ -157,14 +157,14 @@ export function generateAIOptimizedContent(
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+966-50-123-4567',
+        telephone: '+971558164922',
         contactType: 'customer service',
         availableLanguage: ['English', 'Arabic'],
         areaServed: 'SA'
       },
       {
         '@type': 'ContactPoint',
-        telephone: '+966-50-123-4567',
+        telephone: '+971558164922',
         contactType: 'sales',
         availableLanguage: ['English', 'Arabic'],
         areaServed: 'SA'

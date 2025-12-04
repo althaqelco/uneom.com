@@ -174,7 +174,7 @@ export default function TermsOfServicePage() {
                 <div className="mt-3">
                   <p>يونيوم المملكة العربية السعودية</p>
                   <p>البريد الإلكتروني: legal@uneom.com</p>
-                  <p>هاتف: +966 13 XXX XXXX</p>
+                  <p>هاتف: +971 55 816 4922</p>
                   <p>العنوان: بوابة الأعمال، الرياض، المملكة العربية السعودية</p>
                 </div>
               </div>

@@ -132,7 +132,7 @@ const LocalSEO: React.FC<LocalSEOProps> = ({
   title,
   description,
   images = [],
-  telephone = "+966112345678",
+  telephone = "+971558164922",
   email = "info@uneom.com",
   priceRange = "₪₪-₪₪₪",
   showMap = true

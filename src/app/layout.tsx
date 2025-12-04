@@ -165,7 +165,7 @@ export default function RootLayout({
               "logo": "https://uneom.com/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+966-50-123-4567",
+                "telephone": "+971558164922",
                 "contactType": "customer service",
                 "areaServed": "SA",
                 "availableLanguage": ["English", "Arabic"]

@@ -70,9 +70,9 @@ const locationData = {
   name: 'Dammam',
   nameAr: 'الدمام',
   address: 'Prince Mohammed Bin Fahd Road, Al Faisaliyah District, Dammam 32241',
-  phone: '+966 13 234 5678',
+  phone: '+971 55 816 4922',
   email: 'dammam@uneom.com',
-  whatsapp: '+966 50 345 6789',
+  whatsapp: '+971558164922',
   workingHours: 'Sunday - Thursday: 8:00 AM - 5:00 PM',
 };
 

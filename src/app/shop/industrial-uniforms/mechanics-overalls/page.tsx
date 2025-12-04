@@ -449,7 +449,7 @@ export default function MechanicsOverallsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
                 <FaPhone className="h-5 w-5" />
-                <span>Call +966 13 123 4567</span>
+                <span>Call +971 55 816 4922</span>
               </button>
               <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2">
                 <FaWhatsapp className="h-5 w-5" />

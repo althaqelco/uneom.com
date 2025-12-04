@@ -496,7 +496,7 @@ export default function HealthcareIndustryPage() {
               
               {/* Quick Contact */}
               <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-blue-200">
-                <span>📞 +966-XX-XXX-XXXX</span>
+                <span>📞 +971 55 816 4922</span>
                 <span>📧 healthcare@uneom.com</span>
                 <span>📍 Riyadh | Jeddah | Dammam</span>
               </div>

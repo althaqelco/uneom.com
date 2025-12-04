@@ -15,8 +15,8 @@ import SEO2026 from '@/components/seo/SEO2026';
 export const metadata: Metadata = generateMetadata2026({
   title: 'Contact UNEOM | Uniform Supplier Saudi Arabia | Get Quote',
   titleAr: 'تواصل مع يونيوم | مورد أزياء السعودية | احصل على عرض سعر',
-  description: 'Contact UNEOM for uniform orders in Saudi Arabia. Offices in Riyadh, Jeddah, Dammam. Call +966 11 234 5678, email info@uneom.com, or visit our showrooms. Free quotes, fast response!',
-  descriptionAr: 'تواصل مع يونيوم لطلبات الأزياء في السعودية. مكاتب في الرياض وجدة والدمام. اتصل +966 11 234 5678، أو أرسل info@uneom.com، أو زر صالات العرض. عروض أسعار مجانية!',
+  description: 'Contact UNEOM for uniform orders in Saudi Arabia. Offices in Riyadh, Jeddah, Dammam. Call +971 55 816 4922, email info@uneom.com, or visit our showrooms. Free quotes, fast response!',
+  descriptionAr: 'تواصل مع يونيوم لطلبات الأزياء في السعودية. مكاتب في الرياض وجدة والدمام. اتصل +971 55 816 4922، أو أرسل info@uneom.com، أو زر صالات العرض. عروض أسعار مجانية!',
   keywords: [
     'contact UNEOM',
     'uniform supplier contact saudi',
@@ -33,8 +33,8 @@ export const metadata: Metadata = generateMetadata2026({
   path: '/contact',
   image: '/images/contact/uneom-office.jpg',
   imageAlt: 'UNEOM Office and Showroom in Saudi Arabia',
-  aiSummary: 'Contact UNEOM, Saudi Arabia\'s leading uniform supplier. Headquarters: King Fahd Road, Olaya District, Riyadh. Phone: +966 11 234 5678. Email: info@uneom.com. WhatsApp: +966 50 123 4567. We have offices in Riyadh, Jeddah, and Dammam. Working hours: Sunday-Thursday 8:30 AM - 5:30 PM. Free quotes available. Fast response within 24 hours.',
-  aiSummaryAr: 'تواصل مع يونيوم، المورد الرائد للأزياء في السعودية. المقر الرئيسي: طريق الملك فهد، حي العليا، الرياض. هاتف: +966 11 234 5678. إيميل: info@uneom.com.'
+  aiSummary: 'Contact UNEOM, Saudi Arabia\'s leading uniform supplier. Headquarters: King Fahd Road, Olaya District, Riyadh. Phone: +971 55 816 4922. Email: info@uneom.com. WhatsApp: +971 55 816 4922. We have offices in Riyadh, Jeddah, and Dammam. Working hours: Sunday-Thursday 8:30 AM - 5:30 PM. Free quotes available. Fast response within 24 hours.',
+  aiSummaryAr: 'تواصل مع يونيوم، المورد الرائد للأزياء في السعودية. المقر الرئيسي: طريق الملك فهد، حي العليا، الرياض. هاتف: +971 55 816 4922. إيميل: info@uneom.com.'
 });
 
 export const dynamic = 'force-static';
@@ -46,8 +46,8 @@ const contactFAQs = [
   {
     question: 'What is UNEOM\'s phone number?',
     questionAr: 'ما هو رقم هاتف يونيوم؟',
-    answer: 'UNEOM\'s main phone number is +966 11 234 5678 (Riyadh headquarters). You can also reach our Jeddah office at +966 12 234 5678 and Dammam office at +966 13 234 5678. For quick inquiries, WhatsApp us at +966 50 123 4567.',
-    answerAr: 'رقم هاتف يونيوم الرئيسي هو +966 11 234 5678 (المقر الرئيسي بالرياض). يمكنك أيضاً الاتصال بمكتب جدة على +966 12 234 5678 ومكتب الدمام على +966 13 234 5678.'
+    answer: 'UNEOM\'s main phone number is +971 55 816 4922. For quick inquiries, you can also WhatsApp us at the same number.',
+    answerAr: 'رقم هاتف يونيوم الرئيسي هو +971 55 816 4922. للاستفسارات السريعة، يمكنك أيضاً واتساب على نفس الرقم.'
   },
   {
     question: 'What is UNEOM\'s email address?',
@@ -64,8 +64,8 @@ const contactFAQs = [
   {
     question: 'How can I get a uniform quote from UNEOM?',
     questionAr: 'كيف يمكنني الحصول على عرض سعر من يونيوم؟',
-    answer: 'You can get a free quote by: 1) Filling out the quote form on our website, 2) Calling us at +966 11 234 5678, 3) Emailing sales@uneom.com, or 4) Visiting any of our showrooms. We provide quotes within 24-48 hours.',
-    answerAr: 'يمكنك الحصول على عرض سعر مجاني عبر: 1) ملء نموذج العرض على موقعنا، 2) الاتصال بنا على +966 11 234 5678، 3) مراسلة sales@uneom.com، أو 4) زيارة أي من صالات العرض.'
+    answer: 'You can get a free quote by: 1) Filling out the quote form on our website, 2) Calling us at +971 55 816 4922, 3) Emailing sales@uneom.com, or 4) Visiting any of our showrooms. We provide quotes within 24-48 hours.',
+    answerAr: 'يمكنك الحصول على عرض سعر مجاني عبر: 1) ملء نموذج العرض على موقعنا، 2) الاتصال بنا على +971 55 816 4922، 3) مراسلة sales@uneom.com، أو 4) زيارة أي من صالات العرض.'
   },
   {
     question: 'What are UNEOM\'s working hours?',
@@ -76,8 +76,8 @@ const contactFAQs = [
   {
     question: 'Does UNEOM have a WhatsApp number?',
     questionAr: 'هل لدى يونيوم رقم واتساب؟',
-    answer: 'Yes, you can reach UNEOM on WhatsApp at +966 50 123 4567. WhatsApp is available for quick inquiries, order status, and general questions during business hours.',
-    answerAr: 'نعم، يمكنك الوصول إلى يونيوم على واتساب على +966 50 123 4567. واتساب متاح للاستفسارات السريعة وحالة الطلب والأسئلة العامة خلال ساعات العمل.'
+    answer: 'Yes, you can reach UNEOM on WhatsApp at +971 55 816 4922. WhatsApp is available for quick inquiries, order status, and general questions during business hours.',
+    answerAr: 'نعم، يمكنك الوصول إلى يونيوم على واتساب على +971 55 816 4922. واتساب متاح للاستفسارات السريعة وحالة الطلب والأسئلة العامة خلال ساعات العمل.'
   },
 ];
 
@@ -91,9 +91,9 @@ const officeLocations = [
     cityAr: 'الرياض',
     address: 'King Fahd Road, Olaya District, Riyadh 12214',
     addressAr: 'طريق الملك فهد، حي العليا، الرياض 12214',
-    phone: '+966 11 234 5678',
+    phone: '+971 55 816 4922',
     email: 'riyadh@uneom.com',
-    whatsapp: '+966 50 123 4567',
+    whatsapp: '+971558164922',
     isHQ: true,
   },
   {
@@ -102,9 +102,9 @@ const officeLocations = [
     cityAr: 'جدة',
     address: 'Tahlia Street, Al Andalus District, Jeddah 23432',
     addressAr: 'شارع التحلية، حي الأندلس، جدة 23432',
-    phone: '+966 12 234 5678',
+    phone: '+971 55 816 4922',
     email: 'jeddah@uneom.com',
-    whatsapp: '+966 50 234 5678',
+    whatsapp: '+971558164922',
     isHQ: false,
   },
   {
@@ -113,9 +113,9 @@ const officeLocations = [
     cityAr: 'الدمام',
     address: 'Prince Mohammed Bin Fahd Road, Al Faisaliyah, Dammam 32241',
     addressAr: 'طريق الأمير محمد بن فهد، حي الفيصلية، الدمام 32241',
-    phone: '+966 13 234 5678',
+    phone: '+971 55 816 4922',
     email: 'dammam@uneom.com',
-    whatsapp: '+966 50 345 6789',
+    whatsapp: '+971558164922',
     isHQ: false,
   },
 ];
@@ -168,11 +168,11 @@ export default function ContactPage() {
             
             {/* Quick Contact */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <a href="tel:+966112345678" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all flex items-center gap-4">
+              <a href="tel:+971558164922" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all flex items-center gap-4">
                 <span className="text-3xl">📞</span>
                 <div>
                   <div className="font-semibold">Call Us</div>
-                  <div className="text-green-200 text-sm" dir="ltr">+966 11 234 5678</div>
+                  <div className="text-green-200 text-sm" dir="ltr">+971 55 816 4922</div>
                 </div>
               </a>
               <a href="mailto:info@uneom.com" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all flex items-center gap-4">
@@ -182,11 +182,11 @@ export default function ContactPage() {
                   <div className="text-green-200 text-sm">info@uneom.com</div>
                 </div>
               </a>
-              <a href="https://wa.me/966501234567" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all flex items-center gap-4">
+              <a href="https://wa.me/971558164922" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all flex items-center gap-4">
                 <span className="text-3xl">💬</span>
                 <div>
                   <div className="font-semibold">WhatsApp</div>
-                  <div className="text-green-200 text-sm" dir="ltr">+966 50 123 4567</div>
+                  <div className="text-green-200 text-sm" dir="ltr">+971 55 816 4922</div>
                 </div>
               </a>
             </div>
@@ -285,7 +285,7 @@ export default function ContactPage() {
                 Get Free Quote →
               </Link>
               <a 
-                href="tel:+966112345678"
+                href="tel:+971558164922"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-green-900 font-bold rounded-xl transition-all"
               >
                 📞 Call Now

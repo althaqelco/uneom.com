@@ -141,7 +141,7 @@ export default function QuotePageAr() {
                   <div className="space-y-3 text-sm text-gray-600">
                     <div>
                       <p className="font-medium text-gray-900">الهاتف</p>
-                      <p>+966 11 234 5678</p>
+                      <p>+971 55 816 4922</p>
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">البريد الإلكتروني</p>
