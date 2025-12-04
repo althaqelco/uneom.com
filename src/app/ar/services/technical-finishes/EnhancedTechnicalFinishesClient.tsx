@@ -150,7 +150,7 @@ export default function EnhancedTechnicalFinishesClient() {
       name: 'د. أحمد الطبيب',
       role: 'مدير المستشفى',
       company: 'مستشفى الملك فهد',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'المعالجة المضادة للميكروبات من يونيوم حسنت من معايير النظافة في مستشفانا بشكل كبير.'
     },
@@ -159,7 +159,7 @@ export default function EnhancedTechnicalFinishesClient() {
       name: 'م. سارة المهندسة',
       role: 'مديرة المصنع',
       company: 'مصانع الغذاء المتقدمة',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'تقنية مقاومة البقع وفرت علينا الكثير من وقت وتكلفة التنظيف. نتائج ممتازة.'
     },
@@ -168,7 +168,7 @@ export default function EnhancedTechnicalFinishesClient() {
       name: 'أ. خالد العامل',
       role: 'مشرف الموقع',
       company: 'شركة البناء الحديث',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'الحماية من الأشعة فوق البنفسجية جعلت العمل تحت الشمس أكثر راحة وأماناً لفريقنا.'
     }

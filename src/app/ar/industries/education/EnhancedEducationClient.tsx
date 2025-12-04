@@ -150,7 +150,7 @@ export default function EnhancedEducationClient() {
       name: 'أ. سارة الأحمد',
       role: 'مديرة مدرسة',
       company: 'مدارس الفيصلية الأهلية',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/education/teacher-uniform-professional.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'أزياء يونيوم حسنت من مظهر طلابنا وعززت الانتماء للمدرسة. الجودة ممتازة والأسعار معقولة.'
     },
@@ -159,7 +159,7 @@ export default function EnhancedEducationClient() {
       name: 'د. أحمد الحربي',
       role: 'عميد الكلية',
       company: 'كلية التقنية بالرياض',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/education/teacher-uniform-professional.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'ملابس المختبرات والورش من يونيوم توفر الحماية اللازمة مع الراحة في العمل. خدمة متميزة.'
     },
@@ -168,7 +168,7 @@ export default function EnhancedEducationClient() {
       name: 'أ. نورا القحطاني',
       role: 'مسؤولة المشتريات',
       company: 'إدارة تعليم الرياض',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/education/teacher-uniform-professional.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'التعامل مع يونيوم سهل ومرن. يلبون احتياجاتنا بسرعة ودقة عالية. شريك موثوق.'
     }

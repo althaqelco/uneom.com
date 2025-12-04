@@ -125,7 +125,7 @@ export const metadata: Metadata = {
 // Critical images to preload
 const CRITICAL_IMAGES = [
   '/images/og-image.jpg',
-  '/images/banner-placeholder.jpg',
+  '/images/hero/uniform-hero-2.jpg',
   '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
   '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg'
 ];

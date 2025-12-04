@@ -192,19 +192,19 @@ export default function HealthcareFabricGuidePage() {
         id: 'microshield',
         title: 'MicroShield™ Antimicrobial Fabric',
         description: 'Advanced antimicrobial protection designed specifically for healthcare environments in Saudi Arabia',
-        image: '/images/healthcare/healthcare_medical_uniform.jpg'
+        image: '/images/healthcare/antimicrobial-medical-uniform.jpg'
       },
       {
         id: 'coolcore',
         title: 'CoolCore™ Climate-Optimized Fabric',
         description: 'Temperature-regulating technology for comfort in Saudi Arabia\'s climate',
-        image: '/images/healthcare/healthcare_nurce_uniform.jpg'
+        image: '/images/healthcare/healthcare-textile-innovation.jpg'
       },
       {
         id: 'modestcare',
         title: 'ModestCare™ Medical Fabrics',
         description: 'Professional healthcare fabrics designed with modesty and cultural considerations in mind',
-        image: '/images/healthcare/medical_hijab_uniform.jpg'
+        image: '/images/healthcare/healthcare_doctor_consultation.jpg'
       }
     ],
     

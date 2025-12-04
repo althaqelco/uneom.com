@@ -73,7 +73,7 @@ const DirectImage: React.FC<DirectImageProps> = ({
   const handleError = () => {
     if (attempts >= 5) {
       // بعد 5 محاولات، استخدم الصورة الاحتياطية
-      setCurrentSrc('/images/defaults/default-placeholder.jpg');
+      setCurrentSrc('/images/hero/uniform-hero-2.jpg');
       setError(true);
       if (onError) onError();
       return;
@@ -140,7 +140,7 @@ const DirectImage: React.FC<DirectImageProps> = ({
       
       case 5:
         // محاولة 5: استخدام الصورة الاحتياطية
-        setCurrentSrc('/images/defaults/default-placeholder.jpg');
+        setCurrentSrc('/images/hero/uniform-hero-2.jpg');
         break;
       
       default:
@@ -148,7 +148,7 @@ const DirectImage: React.FC<DirectImageProps> = ({
         if (typeof window !== 'undefined' && window.fallbackImageDataUrl) {
           setCurrentSrc(window.fallbackImageDataUrl);
         } else {
-          setCurrentSrc('/images/default-placeholder.svg');
+          setCurrentSrc('/images/uneom-logo-en.png');
         }
     }
   };

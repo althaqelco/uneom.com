@@ -374,7 +374,7 @@ export default function ReceptionUniformPage() {
               <div className="group relative">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                   <Image
-                    src="/images/corporate/corporate_uniform.jpg"
+                    src="/images/corporate/corporate_uniform_office.jpg"
                     alt="Corporate Shirt"
                     width={500}
                     height={500}
@@ -422,7 +422,7 @@ export default function ReceptionUniformPage() {
               <div className="group relative">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                   <Image
-                    src="/images/corporate/corporate_custom_logo.jpg"
+                    src="/images/corporate/corporate_brand.jpg"
                     alt="Corporate Identity Package"
                     width={500}
                     height={500}

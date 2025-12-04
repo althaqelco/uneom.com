@@ -78,7 +78,7 @@ export default function BoutiqueSalesConsultantUniformPage() {
       description: 'Complete luxury retail uniform collection for high-end stores and boutiques',
       features: ['Premium fabrics', 'Tailored fit', 'Customizable color schemes'],
       price: 795,
-      images: ['/images/industries/retail-shops/retail-shops-uniform-identity-4.jpg'],
+      images: ['/images/industries/retail-shops/retail-shops-uniform-brand.jpg'],
       colors: ['#2c3e50', '#34495e', '#7f8c8d'],
       sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
       category: 'retail-uniforms',

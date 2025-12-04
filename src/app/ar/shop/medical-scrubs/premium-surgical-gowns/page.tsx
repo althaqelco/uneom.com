@@ -50,7 +50,7 @@ export default function PremiumSurgicalGownsPageArabic() {
       { name: 'التعبئة', value: 'عبوات فردية أو خيارات بالجملة متوفرة' }
     ],
     images: [
-      { src: '/images/avatar-placeholder.jpg', alt: 'فريق جراحي يرتدي عباءات فاخرة' },
+      { src: '/images/healthcare/healthcare_medical_doctor.jpg', alt: 'فريق جراحي يرتدي عباءات فاخرة' },
       { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'جراحون في عباءات فاخرة أثناء العملية' },
       { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'لقطة مقربة لقماش العباءة الجراحية الفاخرة وتفاصيلها' },
       { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'أخصائي رعاية صحية في ملابس جراحية فاخرة' }
@@ -86,14 +86,14 @@ export default function PremiumSurgicalGownsPageArabic() {
         author: "د. محمد الحربي",
         position: "رئيس قسم الجراحة",
         company: "مستشفى الملك فيصل التخصصي",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       },
       {
         quote: "مستوى الحماية الذي توفره هذه العباءات استثنائي. توفر المناطق المقواة راحة بال إضافية، ويظل القماش قابلاً للتنفس حتى أثناء الإجراءات الأكثر كثافة.",
         author: "د. سارة القحطاني",
         position: "رئيسة التمريض الجراحي",
         company: "المستشفى السعودي الألماني",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       }
     ]
   };
@@ -343,7 +343,7 @@ export default function PremiumSurgicalGownsPageArabic() {
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-1 relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/avatar-placeholder.jpg" 
+                src="/images/healthcare/healthcare_medical_doctor.jpg" 
                 alt="عباءات جراحية مخصصة لفرق المستشفيات" 
                 fill
                 className="object-cover"

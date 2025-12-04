@@ -9,7 +9,7 @@ export default function ProgramManagementServicePage() {
   const serviceData = {
     title: "UNEOM - Professional Uniforms",
     subtitle: 'Comprehensive solutions for enterprise-level uniform programs',
-    heroImage: '/images/banner-placeholder.jpg',
+    heroImage: '/images/hero/uniform-hero-2.jpg',
     
     overview: [
       "UNEOM's Uniform Program Management service provides a comprehensive solution for organizations looking to streamline and optimize their uniform programs. From inventory management to employee onboarding, our expert team takes care of every aspect of your uniform program, allowing you to focus on your core business operations.",
@@ -96,7 +96,7 @@ export default function ProgramManagementServicePage() {
         author: 'Dr. Ahmed Al-Sayed',
         position: 'Operations Director',
         company: 'Riyadh Medical Network',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       },
       {
         id: "hotel-hr-director",
@@ -104,7 +104,7 @@ export default function ProgramManagementServicePage() {
         author: 'Layla Mahmoud',
         position: 'HR Director',
         company: 'Najd Luxury Hotels',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       }
     ],
     

@@ -51,8 +51,8 @@ export default function ExecutiveMedicalUniformsPageArabic() {
       { name: 'خيارات التخصيص', value: 'شعارات المؤسسات، تطريز الأسماء/المؤهلات، علامات القيادة' }
     ],
     images: [
-      { src: '/images/product-placeholder.jpg', alt: 'قيادي في الرعاية الصحية يرتدي زي طبي تنفيذي كحلي فاخر' },
-      { src: '/images/product-placeholder.jpg', alt: 'قيادية في الرعاية الصحية بزي طبي تنفيذي احترافي' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'قيادي في الرعاية الصحية يرتدي زي طبي تنفيذي كحلي فاخر' },
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'قيادية في الرعاية الصحية بزي طبي تنفيذي احترافي' },
       { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'إداريون طبيون في أزياء تنفيذية خلال اجتماع قيادي' },
       { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'مدير طبي سعودي في زي تنفيذي مصمم مع فريقه' }
     ],
@@ -70,11 +70,11 @@ export default function ExecutiveMedicalUniformsPageArabic() {
       { name: 'زي رئيس القسم', price: '465 ريال سعودي' }
     ],
     colors: [
-      { name: 'كحلي', value: '#000080', image: '/images/product-placeholder.jpg' },
-      { name: 'أسود', value: '#000000', image: '/images/product-placeholder.jpg' },
-      { name: 'عنابي', value: '#800020', image: '/images/product-placeholder.jpg' },
-      { name: 'رمادي فحمي', value: '#36454F', image: '/images/product-placeholder.jpg' },
-      { name: 'أزرق ملكي', value: '#4169E1', image: '/images/product-placeholder.jpg' }
+      { name: 'كحلي', value: '#000080', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'أسود', value: '#000000', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'عنابي', value: '#800020', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'رمادي فحمي', value: '#36454F', image: '/images/healthcare/medical_hijab_uniform.jpg' },
+      { name: 'أزرق ملكي', value: '#4169E1', image: '/images/healthcare/medical_hijab_uniform.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -93,14 +93,14 @@ export default function ExecutiveMedicalUniformsPageArabic() {
         author: "د. محمد الحربي",
         position: "الرئيس التنفيذي للمستشفى",
         company: "مركز المملكة الطبي المتقدم",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       },
       {
         quote: "بعد تطبيق برنامج الأزياء الطبية التنفيذية من يونيوم لفريقنا الإداري، لاحظنا تحسناً في ثقة المرضى وتماسك الكوادر. حظيت خيارات التصميم المحتشم بتقدير خاص من قبل القيادات النسائية لدينا، وتضمن الجودة الممتازة احتفاظ هذه الأزياء بمظهرها المميز رغم بيئة الرعاية الصحية المتطلبة.",
         author: "د. هناء الرشيد",
         position: "المديرة الطبية",
         company: "المجمع الطبي الدولي",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       }
     ]
   };
@@ -345,7 +345,7 @@ export default function ExecutiveMedicalUniformsPageArabic() {
             <div className="order-2 md:order-1">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/avatar-placeholder.jpg" 
+                  src="/images/healthcare/healthcare_medical_doctor.jpg" 
                   alt="فريق قيادة الرعاية الصحية في أزياء طبية تنفيذية" 
                   fill
                   className="object-cover"

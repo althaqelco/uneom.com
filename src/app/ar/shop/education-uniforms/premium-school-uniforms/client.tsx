@@ -93,14 +93,14 @@ export default function PremiumSchoolUniformsClientPage() {
         author: "د. عبدالله السيد",
         position: "مدير المدرسة",
         company: "مدرسة المنار العالمية",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/education/teacher-uniform-professional.jpg"
       },
       {
         quote: "العمل مع 'يونيوم' سهّل علينا إدارة برنامج الزي الموحد بشكل كبير. أقمشتهم تتحمل نمط الحياة النشط لطلابنا، ونجح فريق التصميم لديهم في دمج قيمنا التقليدية مع احتياجات التعليم المعاصرة.",
         author: "فاطمة العتيبي",
         position: "المدير الإداري",
         company: "أكاديمية الرياض الحديثة",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/education/teacher-uniform-professional.jpg"
       }
     ]
   };

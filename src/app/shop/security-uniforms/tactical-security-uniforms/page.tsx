@@ -52,8 +52,8 @@ export default function TacticalSecurityUniformsPage() {
     images: [
       { src: '/images/products/industrial-coverall.jpg', alt: 'Security personnel in tactical uniform' },
       { src: '/images/products/industrial-coverall.jpg', alt: 'Security officer on patrol in tactical uniform' },
-      { src: '/images/product-placeholder.jpg', alt: 'Close-up of tactical security uniform details' },
-      { src: '/images/avatar-placeholder.jpg', alt: 'Security team in coordinated tactical uniforms' }
+      { src: '/images/security/security_team_professional.jpg', alt: 'Close-up of tactical security uniform details' },
+      { src: '/images/security/security_team_professional.jpg', alt: 'Security team in coordinated tactical uniforms' }
     ],
     category: 'Security Uniforms',
     categorySlug: 'security-uniforms',
@@ -89,14 +89,14 @@ export default function TacticalSecurityUniformsPage() {
         author: "Khalid Al-Otaibi",
         position: "Security Director",
         company: "Al Mamlaka Security Services",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/security/security_team_professional.jpg"
       },
       {
         quote: "After switching to UNEOM's tactical uniforms, we've noticed a marked improvement in officer comfort during long shifts. The authoritative appearance has enhanced our professional image, while the robust construction stands up to the demands of daily security operations.",
         author: "Fahad Al-Qahtani",
         position: "Operations Manager",
         company: "Riyadh Protective Services",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/security/security_team_professional.jpg"
       }
     ]
   };
@@ -375,7 +375,7 @@ export default function TacticalSecurityUniformsPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/avatar-placeholder.jpg" 
+                src="/images/security/security_team_professional.jpg" 
                 alt="Professional security team in customized tactical uniforms" 
                 fill
                 className="object-cover"

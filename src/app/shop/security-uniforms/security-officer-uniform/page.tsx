@@ -45,7 +45,7 @@ export default function SecurityOfficerUniformPage() {
     ],
     images: [
       { src: '/images/products/industrial-coverall.jpg', alt: 'Professional Security Officer Uniform Front View' },
-      { src: '/images/product-placeholder.jpg', alt: 'Security Officer Uniform on Model' },
+      { src: '/images/security/security_team_professional.jpg', alt: 'Security Officer Uniform on Model' },
       { src: '/images/products/industrial-coverall.jpg', alt: 'Security Officer Uniform Detail' },
       { src: '/images/products/industrial-coverall.jpg', alt: 'Security Accessories' }
     ],

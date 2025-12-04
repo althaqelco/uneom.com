@@ -51,10 +51,10 @@ export default function ExecutiveMedicalUniformsPage() {
       { name: 'Customization Options', value: 'Institution logos, name/credential embroidery, leadership indicators' }
     ],
     images: [
-      { src: '/images/product-placeholder.jpg', alt: 'Healthcare executive wearing premium navy medical uniform' },
-      { src: '/images/product-placeholder.jpg', alt: 'Female healthcare leader in professional executive medical attire' },
-      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'Medical administrators in executive uniforms during leadership meeting' },
-      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'Saudi medical director in tailored executive uniform with staff' }
+      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'Healthcare executive wearing premium navy medical uniform' },
+      { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'Female healthcare leader in professional executive medical attire' },
+      { src: '/images/healthcare/healthcare_doctor_consultation.jpg', alt: 'Medical administrators in executive uniforms during leadership meeting' },
+      { src: '/images/healthcare/healthcare_medical_doctor.jpg', alt: 'Saudi medical director in tailored executive uniform with staff' }
     ],
     category: 'Medical Scrubs',
     categorySlug: 'medical-scrubs',
@@ -70,11 +70,11 @@ export default function ExecutiveMedicalUniformsPage() {
       { name: 'Department Chief Attire', price: 'SAR 465' }
     ],
     colors: [
-      { name: 'Navy', value: '#000080', image: '/images/product-placeholder.jpg' },
-      { name: 'Black', value: '#000000', image: '/images/product-placeholder.jpg' },
-      { name: 'Burgundy', value: '#800020', image: '/images/product-placeholder.jpg' },
-      { name: 'Charcoal Grey', value: '#36454F', image: '/images/product-placeholder.jpg' },
-      { name: 'Royal Blue', value: '#4169E1', image: '/images/product-placeholder.jpg' }
+      { name: 'Navy', value: '#000080', image: '/images/healthcare/healthcare_medical_uniform.jpg' },
+      { name: 'Black', value: '#000000', image: '/images/healthcare/full_clothes_doctor_uniform.jpg' },
+      { name: 'Burgundy', value: '#800020', image: '/images/healthcare/healthcare_nurce_uniform.jpg' },
+      { name: 'Charcoal Grey', value: '#36454F', image: '/images/healthcare/healthcare_medical_doctor_uniform.jpg' },
+      { name: 'Royal Blue', value: '#4169E1', image: '/images/healthcare/2_pices_nurce_uniform.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -93,14 +93,14 @@ export default function ExecutiveMedicalUniformsPage() {
         author: "Dr. Mohammed Al-Harbi",
         position: "Hospital CEO",
         company: "Kingdom Advanced Medical Center",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       },
       {
         quote: "After implementing Uneom's executive medical uniform program for our administrative team, we've noticed improved patient confidence and staff cohesion. The modest design options have been particularly appreciated by our female executives, and the premium quality ensures these uniforms maintain their distinguished appearance despite our demanding healthcare environment.",
         author: "Dr. Hana Al-Rasheed",
         position: "Medical Director",
         company: "International Medical Complex",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       }
     ]
   };
@@ -348,7 +348,7 @@ export default function ExecutiveMedicalUniformsPage() {
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/avatar-placeholder.jpg" 
+                  src="/images/healthcare/healthcare_medical_doctor.jpg" 
                   alt="Healthcare leadership team in executive medical uniforms" 
                   fill
                   className="object-cover"

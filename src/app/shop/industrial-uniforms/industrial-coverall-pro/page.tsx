@@ -45,11 +45,11 @@ export default function IndustrialCoverallProPage() {
     longDescription: "Our Heavy Duty Industrial Coverall is designed for professionals working in factory environments, manufacturing facilities, and industrial settings. This premium coverall offers exceptional durability, comfort, and protection for workers in demanding conditions. The two-tone design combines style with functionality, while the reinforced seams and strategic pocket placement ensure practicality in everyday use.",
     price: "SAR 289",
     minOrder: 15,
-    mainImage: "/images/banner-placeholder.jpg",
+    mainImage: "/images/industrial/industrial_hero.jpg",
     additionalImages: [
-      "/images/product-placeholder.jpg",
-      "/images/product-placeholder.jpg",
-      "/images/product-placeholder.jpg"
+      "/images/industrial/factory-workers.jpg",
+      "/images/industrial/construction-site-workers.jpg",
+      "/images/industrial/factory-floor.jpg"
     ],
     colors: [
       { name: "Black/Gray", value: "#333333" },
@@ -124,7 +124,7 @@ export default function IndustrialCoverallProPage() {
       {
         id: "industrial-safety-vest",
         name: "High-Visibility Safety Vest",
-        image: "/images/product-placeholder.jpg",
+        image: "/images/industrial/heat-resistant-fabric.jpg",
         price: "SAR 269",
         href: "/shop/industrial-uniforms/mechanics-overalls"
       }

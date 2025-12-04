@@ -148,7 +148,7 @@ export default function EnhancedQualityAssuranceClient() {
       name: 'د. محمد الحربي',
       role: 'مدير الجودة',
       company: 'مستشفى الملك فهد التخصصي',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'معايير الجودة في يونيوم تفوق توقعاتنا. الأزياء الطبية تلبي جميع المتطلبات الصحية والمهنية بامتياز.'
     },
@@ -157,7 +157,7 @@ export default function EnhancedQualityAssuranceClient() {
       name: 'م. سارة العتيبي',
       role: 'مديرة المشتريات',
       company: 'شركة أرامكو السعودية',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'الاهتمام بالتفاصيل ومراقبة الجودة في كل مرحلة يضمن حصولنا على منتجات تلبي أعلى المعايير الصناعية.'
     },
@@ -166,7 +166,7 @@ export default function EnhancedQualityAssuranceClient() {
       name: 'أ. فهد القحطاني',
       role: 'مدير العمليات',
       company: 'الخطوط الجوية السعودية',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'جودة أزياء الطيران من يونيوم تعكس صورة مهنية متميزة لشركتنا. الجودة ثابتة في كل دفعة إنتاج.'
     }

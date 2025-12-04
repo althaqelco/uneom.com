@@ -221,7 +221,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   };
   
   // Fallback image for errors
-  const fallbackSrc = '/images/default-placeholder.jpg';
+  const fallbackSrc = '/images/hero/uniform-hero-2.jpg';
   
   // Container classes
   const containerClasses = [

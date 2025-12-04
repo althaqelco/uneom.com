@@ -206,9 +206,9 @@ export default function HousekeepingUniformPage() {
       { name: 'Customization Options', value: 'Property embroidery, department identification, fabric reinforcement in high-wear areas' }
     ],
     images: [
-      { src: '/images/product-placeholder.jpg', alt: 'Professional housekeeping staff in durable uniform maintaining luxury hotel room' },
-      { src: '/images/product-placeholder.jpg', alt: 'Female housekeeper in modest uniform with ergonomic design features at Saudi luxury hotel' },
-      { src: '/images/avatar-placeholder.jpg', alt: 'Hotel housekeeping team in coordinated professional uniforms maintaining property standards' },
+      { src: '/images/hospitality/hospitality_uniform_hotel_service.jpg', alt: 'Professional housekeeping staff in durable uniform maintaining luxury hotel room' },
+      { src: '/images/hospitality/hospitality_uniform_hotel_service.jpg', alt: 'Female housekeeper in modest uniform with ergonomic design features at Saudi luxury hotel' },
+      { src: '/images/hospitality/hotel-staff-uniform.jpg', alt: 'Hotel housekeeping team in coordinated professional uniforms maintaining property standards' },
       { src: '/images/hospitality/hospitality_uniform_department.jpg', alt: 'Saudi housekeeping staff in culturally appropriate professional uniforms at five-star property' }
     ],
     category: 'Hospitality Attire',
@@ -225,11 +225,11 @@ export default function HousekeepingUniformPage() {
       { name: 'Utility Housekeeping Collection', price: 'SAR 295' }
     ],
     colors: [
-      { name: 'Teal Green', value: '#008080', image: '/images/product-placeholder.jpg' },
-      { name: 'Navy Blue', value: '#000080', image: '/images/product-placeholder.jpg' },
-      { name: 'Charcoal Grey', value: '#36454F', image: '/images/product-placeholder.jpg' },
-      { name: 'Burgundy', value: '#800020', image: '/images/product-placeholder.jpg' },
-      { name: 'Khaki', value: '#C3B091', image: '/images/product-placeholder.jpg' }
+      { name: 'Teal Green', value: '#008080', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
+      { name: 'Navy Blue', value: '#000080', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
+      { name: 'Charcoal Grey', value: '#36454F', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
+      { name: 'Burgundy', value: '#800020', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
+      { name: 'Khaki', value: '#C3B091', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -248,14 +248,14 @@ export default function HousekeepingUniformPage() {
         author: "Noura Al-Otaibi",
         position: "Executive Housekeeper",
         company: "Luxury Heights Hotel & Towers",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/hospitality/hotel-staff-uniform.jpg"
       },
       {
         quote: "After implementing Uneom's Professional Housekeeping Uniforms across our hotel chain, we've documented a significant improvement in both efficiency and staff satisfaction. The practical features like reinforced pockets and strategic stretch panels support our rigorous cleaning standards, while the professional appearance elevates our brand image. Even with daily intensive cleaning duties, these uniforms maintain their quality and appearance far longer than previous options we've tried.",
         author: "Ahmad Al-Zahrani",
         position: "Director of Accommodation Services",
         company: "Royal Hospitality Group",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/hospitality/hotel-staff-uniform.jpg"
       }
     ],
     relatedProducts: [
@@ -519,7 +519,7 @@ export default function HousekeepingUniformPage() {
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/avatar-placeholder.jpg" 
+                  src="/images/hospitality/hotel-staff-uniform.jpg" 
                   alt="Professional housekeeping team in coordinated uniforms during staff briefing at luxury hotel" 
                   fill
                   className="object-cover"

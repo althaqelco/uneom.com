@@ -45,7 +45,7 @@ export default function ExecutiveSuitPage() {
     ],
     images: [
       { src: '/images/products/corporate-suit-executive.jpg', alt: 'Premium Executive Suit - Front View' },
-      { src: '/images/avatar-placeholder.jpg', alt: 'Executive Team Wearing Corporate Suits' },
+      { src: '/images/corporate/corporate-team.jpg', alt: 'Executive Team Wearing Corporate Suits' },
       { src: '/images/products/corporate-suit-executive.jpg', alt: 'Executive Suit Side View' },
       { src: '/images/products/corporate-suit-executive.jpg', alt: 'Corporate Meeting With Executive Suits' }
     ],

@@ -97,14 +97,14 @@ export default function NursingScrubsPage() {
         author: "Nora Al-Mansour",
         position: "Chief Nursing Officer",
         company: "King Salman Medical City",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       },
       {
         quote: "After standardizing with Uneom nursing scrubs across our hospital network, we've seen marked improvements in staff satisfaction and professional appearance. The department color coding system has facilitated patient interactions, and the durability despite constant laundering is exceptional.",
         author: "Dr. Faisal Al-Juhani",
         position: "Executive Director of Nursing",
         company: "National Healthcare Group",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       }
     ]
   };

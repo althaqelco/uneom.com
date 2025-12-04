@@ -52,7 +52,7 @@ export default function ExecutiveSuitsPageArabic() {
     images: [
       { src: '/images/products/corporate-suit-executive.jpg', alt: 'منظر أمامي للبدلة التنفيذية' },
       { src: '/images/products/corporate-suit-executive.jpg', alt: 'بدلة تنفيذية للنساء' },
-      { src: '/images/avatar-placeholder.jpg', alt: 'فريق تنفيذي بالبدلات المصممة' },
+      { src: '/images/corporate/corporate-team.jpg', alt: 'فريق تنفيذي بالبدلات المصممة' },
       { src: '/images/products/corporate-suit-executive.jpg', alt: 'تفاصيل القماش الفاخر' }
     ],
     category: 'ملابس مؤسسية',
@@ -90,14 +90,14 @@ export default function ExecutiveSuitsPageArabic() {
         author: "أحمد آل سعود",
         position: "مدير الموارد البشرية، البنك السعودي للاستثمار",
         company: "البنك السعودي للاستثمار",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/corporate/corporate-team.jpg"
       },
       {
         quote: "كمديرة تنفيذية في المملكة العربية السعودية، كان العثور على ملابس عمل مناسبة وأنيقة تحديًا دائمًا. تحل مجموعة UNEOM التنفيذية هذا بشكل مثالي مع تصاميم محتشمة وراقية.",
         author: "نورة القصبي",
         position: "نائبة الرئيس للعمليات، أرامكو",
         company: "أرامكو",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/corporate/corporate-team.jpg"
       }
     ]
   };

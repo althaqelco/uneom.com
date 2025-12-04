@@ -48,7 +48,7 @@ export default function PremiumScrubsSetArabicPage() {
       { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'طقم البدلة الطبية الممتازة - منظر أمامي' },
       { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'طقم البدلة الطبية الممتازة يرتديها متخصصون طبيون' },
       { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'طقم البدلة الطبية الممتازة أثناء الاستخدام' },
-      { src: '/images/avatar-placeholder.jpg', alt: 'فريق طبي يرتدي بدلات طبية' }
+      { src: '/images/healthcare/healthcare_medical_doctor.jpg', alt: 'فريق طبي يرتدي بدلات طبية' }
     ],
     category: 'ملابس الرعاية الصحية',
     categorySlug: 'medical-scrubs',

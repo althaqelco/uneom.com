@@ -9,7 +9,7 @@ export default function UniformPoliciesPage() {
   const serviceData = {
     title: "UNEOM - Professional Uniforms",
     subtitle: 'Comprehensive guidelines for effective uniform program governance',
-    heroImage: '/images/product-placeholder.jpg',
+    heroImage: '/images/products/uniform-collection.jpg',
     
     overview: [
       "UNEOM's Corporate Uniform Policies service provides expert guidance in developing comprehensive, effective governance frameworks for your uniform program. We create customized policies that align with your organizational culture, industry requirements, and operational needs while ensuring compliance with relevant regulations.",
@@ -96,7 +96,7 @@ export default function UniformPoliciesPage() {
         author: 'Nawaf Al-Harbi',
         position: 'Operations Director',
         company: 'National Commercial Bank Group',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       },
       {
         id: "safety-manager",
@@ -104,7 +104,7 @@ export default function UniformPoliciesPage() {
         author: 'Eng. Saad Al-Qahtani',
         position: 'HSE Compliance Manager',
         company: 'Saudi Petrochemical Industries',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       }
     ],
     

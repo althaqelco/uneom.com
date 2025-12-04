@@ -53,7 +53,7 @@ export default function AdvancedMedicalScrubsClientPage() {
     images: [
       { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'طبيب يرتدي الأزياء الطبية المتطورة أثناء الاستشارة' },
       { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'ممرضات في الأزياء الطبية المتطورة في محطة التمريض' },
-      { src: '/images/avatar-placeholder.jpg', alt: 'فريق جراحي يرتدي الأزياء الطبية المتخصصة في غرفة العمليات' },
+      { src: '/images/healthcare/healthcare_medical_doctor.jpg', alt: 'فريق جراحي يرتدي الأزياء الطبية المتخصصة في غرفة العمليات' },
       { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'طبيبة محجبة ترتدي الأزياء الطبية المتوافقة مع الحجاب' }
     ],
     category: 'الرعاية الصحية',
@@ -96,14 +96,14 @@ export default function AdvancedMedicalScrubsClientPage() {
         author: "د. فاطمة الزهراني",
         position: "رئيسة الطاقم الطبي",
         company: "مدينة الملك فهد الطبية",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       },
       {
         quote: "بعد توحيد الأزياء الطبية من يونيوم في جميع منشآتنا، لاحظنا تحسناً ملحوظاً في رضا الكوادر والمظهر الاحترافي. نظام ترميز الأقسام بالألوان سهّل التعرف البصري، وحظيت الميزات المخصصة للتخصصات المختلفة بتقدير كبير من الأطباء والممرضين.",
         author: "أحمد الناصر",
         position: "مدير المشتريات",
         company: "مجموعة مستشفيات السعودي الألماني",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       }
     ]
   };
@@ -175,7 +175,7 @@ export default function AdvancedMedicalScrubsClientPage() {
             "image": [
               "https://uneom.com/images/healthcare/medical_hijab_uniform.jpg",
               "https://uneom.com/images/healthcare/medical_hijab_uniform.jpg",
-              "https://uneom.com/images/avatar-placeholder.jpg"
+              "https://uneom.com/images/healthcare/healthcare_medical_doctor.jpg"
             ],
             "description": "أزياء طبية مبتكرة وعالية الجودة مصممة خصيصاً للكوادر الصحية في المملكة العربية السعودية، مع تقنيات مضادة للميكروبات، راحة فائقة ومظهر احترافي يليق بالقطاع الطبي.",
             "sku": "UNEOM-AMS-100",

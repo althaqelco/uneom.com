@@ -54,7 +54,7 @@ export default function AdvancedMedicalScrubsClientPage() {
     images: [
       { src: '/images/healthcare/full_clothes_doctor_uniform.jpg', alt: 'Doctor wearing advanced medical scrubs during consultation' },
       { src: '/images/healthcare/nurce_uniform.jpg', alt: 'Nurses in advanced medical scrubs at hospital station' },
-      { src: '/images/avatar-placeholder.jpg', alt: 'Surgical team wearing specialized medical attire in operating theater' },
+      { src: '/images/healthcare/healthcare_medical_doctor.jpg', alt: 'Surgical team wearing specialized medical attire in operating theater' },
       { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'Muslim female doctor in hijab-compatible medical scrubs' }
     ],
     category: 'Healthcare',
@@ -97,14 +97,14 @@ export default function AdvancedMedicalScrubsClientPage() {
         author: "Dr. Fatima Al-Zahrani",
         position: "Chief of Medical Staff",
         company: "King Fahd Medical City",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       },
       {
         quote: "After standardizing with UNEOM's medical scrubs across our facilities, we've noticed a significant improvement in staff satisfaction and professional appearance. The department color-coding system has improved visual identification, and the custom features for different specialties have been widely appreciated.",
         author: "Ahmad Al-Nasser",
         position: "Director of Procurement",
         company: "Saudi German Hospitals Group",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       }
     ]
   };
@@ -175,7 +175,7 @@ export default function AdvancedMedicalScrubsClientPage() {
             "image": [
               "https://uneom.com/images/healthcare/full_clothes_doctor_uniform.jpg",
               "https://uneom.com/images/healthcare/nurce_uniform.jpg",
-              "https://uneom.com/images/avatar-placeholder.jpg"
+              "https://uneom.com/images/healthcare/healthcare_medical_doctor.jpg"
             ],
             "description": "Premium medical scrubs designed for healthcare professionals in Saudi Arabia, featuring antimicrobial technology, superior comfort, and professional appearance. Our Advanced Medical Scrubs represent the pinnacle of healthcare attire, engineered specifically for the demands of Saudi Arabian medical environments.",
             "sku": "UNEOM-AMS-100",

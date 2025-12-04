@@ -178,7 +178,7 @@ export default function EnhancedManufacturingClient() {
       name: 'م. أحمد الفيصل',
       role: 'مدير المصنع',
       company: 'مصنع الجبيل للبتروكيماويات',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'أزياء يونيوم وفرت الحماية اللازمة لعمالنا مع راحة استثنائية. انخفضت الحوادث بشكل ملحوظ.'
     },
@@ -187,7 +187,7 @@ export default function EnhancedManufacturingClient() {
       name: 'أ. فاطمة الحربي',
       role: 'مديرة السلامة',
       company: 'مصنع الرياض للأغذية',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'الأزياء تلبي جميع معايير السلامة الغذائية وسهلة التنظيف. فريقنا راضٍ جداً عن الجودة.'
     },
@@ -196,7 +196,7 @@ export default function EnhancedManufacturingClient() {
       name: 'م. خالد النجار',
       role: 'مدير الإنتاج',
       company: 'مصانع الحديد والصلب',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'المتانة والجودة في أزياء يونيوم تناسب تماماً بيئة العمل القاسية في مصانعنا.'
     }

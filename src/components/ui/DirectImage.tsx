@@ -28,7 +28,7 @@ export default function DirectImage({
   className = '',
   style = {},
   priority = false,
-  fallbackSrc = '/images/defaults/default-placeholder.jpg',
+  fallbackSrc = '/images/hero/uniform-hero-2.jpg',
   onClick,
   onLoad}: DirectImageProps) {
   const [imageSrc, setImageSrc] = useState<string>(src);

@@ -9,7 +9,7 @@ export default function MeasurementServicesPageArabic() {
     locale: 'ar',
     title: "UNEOM - Professional Uniforms",
     subtitle: 'حلول قياس احترافية للحصول على أزياء موحدة مثالية المقاس',
-    heroImage: '/images/banner-placeholder.jpg',
+    heroImage: '/images/hero/uniform-hero-2.jpg',
     
     overview: [
       "توفر خدمات القياس من يونيوم حلول قياس احترافية لضمان حصول كل موظف على أزياء موحدة مقاسة بدقة تعزز الراحة والمظهر والوظائف. يستخدم متخصصو القياس الخبراء لدينا تقنيات وتكنولوجيات قياس متقدمة لالتقاط بيانات مقاسات دقيقة، مما يلغي التخمين وعدم الاتساق المرتبط غالبًا بالقياس الذاتي.",
@@ -91,7 +91,7 @@ export default function MeasurementServicesPageArabic() {
         author: 'فاطمة آل سعود',
         position: 'مديرة الموارد البشرية',
         company: 'فنادق المملكة الفاخرة',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       },
       {
         id: "2",
@@ -99,7 +99,7 @@ export default function MeasurementServicesPageArabic() {
         author: 'د. خالد العمري',
         position: 'الرئيس التنفيذي للعمليات',
         company: 'شبكة الرياض الطبية',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       }
     ],
     

@@ -79,7 +79,7 @@ export const getImagePathAlternatives = (src: string): string[] => {
     `/public/images/${filename}`,
     
     // Ruta de respaldo
-    '/images/defaults/default-placeholder.jpg'
+    '/images/hero/uniform-hero-2.jpg'
   ];
   
   // Filtrar duplicados usando Array.filter en lugar de Set

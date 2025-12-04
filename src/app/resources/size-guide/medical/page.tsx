@@ -410,19 +410,19 @@ export default function MedicalSizeGuidePage() {
         id: 'womens-scrubs',
         title: 'Women\'s Medical Scrubs Size Guide',
         description: 'Comprehensive sizing information for women\'s medical scrubs, including standard and modest fit options',
-        image: '/images/healthcare/healthcare_nurce_uniform.jpg'
+        image: '/images/healthcare/2_pices_nurce_uniform.jpg'
       },
       {
         id: 'mens-scrubs',
         title: 'Men\'s Medical Scrubs Size Guide',
         description: 'Detailed measurements and fit guidance for men\'s medical scrubs and healthcare uniforms',
-        image: '/images/healthcare/healthcare_medical_uniform.jpg'
+        image: '/images/healthcare/full_clothes_doctor_uniform.jpg'
       },
       {
         id: 'lab-coats',
         title: 'Lab Coat Sizing Guide',
         description: 'Professional lab coat measurements for physicians, researchers, and healthcare specialists',
-        image: '/images/healthcare/healthcare_medical_doctor_uniform.jpg'
+        image: '/images/healthcare/healthcare_medical_doctor.jpg'
       }
     ],
     

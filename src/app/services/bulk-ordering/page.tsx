@@ -9,7 +9,7 @@ export default function BulkOrderingServicePage() {
   const serviceData = {
     title: "UNEOM - Professional Uniforms",
     subtitle: 'Streamlined procurement solutions for large-scale uniform requirements',
-    heroImage: '/images/banner-placeholder.jpg',
+    heroImage: '/images/hero/uniform-hero-2.jpg',
     
     overview: [
       "UNEOM's Bulk Ordering service provides a streamlined solution for organizations requiring large quantities of uniforms across multiple departments or locations. Our specialized procurement team works with you to coordinate complex orders, manage logistics, and ensure consistent quality across your entire uniform program.",
@@ -28,7 +28,7 @@ export default function BulkOrderingServicePage() {
         description: 'Our team develops a comprehensive proposal with volume-based pricing tiers and identifies opportunities for cost optimization without compromising quality. We work with you to refine the proposal until it perfectly aligns with your needs and budget.'
       },
       {
-        icon: '/images/product-placeholder.jpg',
+        icon: '/images/products/uniform-collection.jpg',
         title: 'Production & Quality Control',
         description: 'Once approved, we coordinate the production process with rigorous quality control standards at every stage. Our dedicated teams ensure consistent sizing, correct customization, and adherence to all specifications across your entire order.'
       },
@@ -78,21 +78,21 @@ export default function BulkOrderingServicePage() {
         title: "Luxury Hotel Chain Uniform Rollout",
         description: "A leading luxury hotel chain needed to outfit 2,500 staff members across 12 locations with new uniforms as part of a brand refresh.",
         result: "Reduced procurement costs by 22% while ensuring consistent quality and on-time delivery to all locations.",
-        image: "/images/product-placeholder.jpg"
+        image: "/images/products/uniform-collection.jpg"
       },
       {
         id: "airline-rebrand",
         title: "International Airline Rebrand",
         description: "A major airline required 10,000+ new uniforms for flight attendants, ground crew, and administrative staff following a complete brand redesign.",
         result: "Successfully delivered the entire order within a tight 3-month timeline while maintaining impeccable quality standards.",
-        image: "/images/product-placeholder.jpg"
+        image: "/images/products/uniform-collection.jpg"
       },
       {
         id: "hospital-network",
         title: "Hospital Network Standardization",
         description: "A network of 8 hospitals needed to standardize staff uniforms across all facilities while accommodating different department requirements.",
         result: "Implemented a comprehensive uniform program with color-coding by department, reducing annual uniform costs by 18%.",
-        image: "/images/product-placeholder.jpg"
+        image: "/images/products/uniform-collection.jpg"
       }
     ],
     
@@ -103,7 +103,7 @@ export default function BulkOrderingServicePage() {
         author: 'Dr. Ibrahim Al-Harbi',
         position: 'Operations Director',
         company: 'National Healthcare Group',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       },
       {
         id: "education-manager",
@@ -111,7 +111,7 @@ export default function BulkOrderingServicePage() {
         author: 'Nadia Al-Faisal',
         position: 'Procurement Manager',
         company: 'Al-Faisal Educational Foundation',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       }
     ],
     

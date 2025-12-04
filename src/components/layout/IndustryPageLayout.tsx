@@ -397,7 +397,7 @@ export default function IndustryPageLayout({
         React.createElement(
           Image,
           {
-            src: industryData.heroImage || '/images/banner-placeholder.jpg',
+            src: industryData.heroImage || '/images/hero/uniform-hero-2.jpg',
             alt: industryData.title || 'Industry Overview',
             fill: true,
             className: "object-cover",

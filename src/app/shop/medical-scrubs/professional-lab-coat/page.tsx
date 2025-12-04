@@ -94,14 +94,14 @@ export default function ProfessionalLabCoatPage() {
         author: "Prof. Dr. Ibrahim Al-Sharif",
         position: "Chief Medical Officer",
         company: "Royal Saudi Medical Complex",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       },
       {
         quote: "After implementing Uneom's Professional Elite Lab Coats for our department chairs and consultants, we've observed a measurable improvement in patient confidence and professional presence. The tailored fit and distinguished styling create an immediate impression of expertise and authority. The fabric quality maintains its pristine appearance even with intensive wear, and the customized embroidery options allow us to clearly differentiate our specialists.",
         author: "Dr. Nora Al-Qahtani",
         position: "Head of Executive Medicine",
         company: "King Abdullah Medical City",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       }
     ]
   };

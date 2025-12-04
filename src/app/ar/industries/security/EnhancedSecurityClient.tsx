@@ -178,7 +178,7 @@ export default function EnhancedSecurityClient() {
       name: 'العقيد أحمد الشهري',
       role: 'مدير العمليات الأمنية',
       company: 'شركة الأمان للحراسات',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/security/security_team_professional.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'أزياء يونيوم أعطت فريقنا الهيبة المطلوبة وحسنت من تفاعلهم مع الجمهور. جودة استثنائية.'
     },
@@ -187,7 +187,7 @@ export default function EnhancedSecurityClient() {
       name: 'أ. سارة العتيبي',
       role: 'مديرة الأمن',
       company: 'مجمع الرياض التجاري',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/security/security_team_professional.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'الأزياء مريحة وعملية، والتصميم يساعد الزوار على التعرف على فريق الأمن بسهولة.'
     },
@@ -196,7 +196,7 @@ export default function EnhancedSecurityClient() {
       name: 'الرائد خالد النجار',
       role: 'رئيس الأمن',
       company: 'مدينة الملك عبدالله الاقتصادية',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/security/security_team_professional.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'المتانة والجودة في أزياء يونيوم تناسب تماماً طبيعة العمل الأمني المكثف.'
     }

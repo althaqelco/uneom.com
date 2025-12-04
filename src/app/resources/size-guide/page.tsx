@@ -174,7 +174,7 @@ export default function SizeGuidePage() {
             </table>
           </div>
         `,
-        image: '/images/product-placeholder.jpg'},
+        image: '/images/products/uniform-collection.jpg'},
       {
         title: 'Industry-Specific Sizing',
         content: `

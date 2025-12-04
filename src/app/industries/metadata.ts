@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/banner-placeholder.jpg',
+        url: '/images/hero/industries-hero.jpg',
         width: 1200,
         height: 630,
         alt: 'UNEOM Industry-Specific Uniform Solutions'
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Industry-Specific Uniform Solutions | UNEOM Saudi Arabia',
     description: 'Specialized uniform solutions for every industry sector in Saudi Arabia',
-    images: ['/images/banner-placeholder.jpg']
+    images: ['/images/hero/industries-hero.jpg']
   },
   alternates: {
     canonical: 'https://uneom.com/industries/',

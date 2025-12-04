@@ -161,7 +161,7 @@ export default function WorkplaceUniformsClientPage() {
         <div className="mt-8 relative rounded-xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-l from-primary-900/80 to-primary-800/40 z-10"></div>
           <Image 
-            src="/images/avatar-placeholder.jpg"
+            src="/images/corporate/corporate-team.jpg"
             alt="فريق مؤسسي يرتدي ملابس مهنية"
             width={1200}
             height={400}
@@ -308,7 +308,7 @@ export default function WorkplaceUniformsClientPage() {
             <div className="bg-white rounded-lg shadow overflow-hidden">
               <div className="relative h-48">
                 <Image 
-                  src="/images/avatar-placeholder.jpg"
+                  src="/images/corporate/corporate-team.jpg"
                   alt="ملابس المكتب اليومية"
                   fill
                   className="object-cover"

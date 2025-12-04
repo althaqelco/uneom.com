@@ -13,8 +13,8 @@ export default function ImagePreloader() {
 
     // List of critical images to preload
     const criticalImages = [
-      '/images/defaults/default-placeholder.jpg',
-      '/images/default-placeholder.svg',
+      '/images/hero/uniform-hero-2.jpg',
+      '/images/uneom-logo-en.png',
     ];
 
     // Preload critical images

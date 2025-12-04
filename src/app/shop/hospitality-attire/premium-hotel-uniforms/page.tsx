@@ -68,7 +68,7 @@ export default function PremiumHotelUniformsPage() {
       { name: 'Management Executive Uniform', price: 'SAR 1,199' }
     ],
     colors: [
-      { name: 'Rich Burgundy', value: '#800020', image: '/images/hospitality/hospitality_uniform_formal.jpg' },
+      { name: 'Rich Burgundy', value: '#800020', image: '/images/hospitality/hospitality_hotel_reception.jpg' },
       { name: 'Royal Gold', value: '#caa548', image: '/images/hospitality/hospitality_uniform_concierge.jpg' },
       { name: 'Deep Navy', value: '#1a2942', image: '/images/products/hotel-uniform.jpg' },
       { name: 'Emerald Green', value: '#2e5d4b', image: '/images/hospitality/hospitality_uniform_department.jpg' },
@@ -91,14 +91,14 @@ export default function PremiumHotelUniformsPage() {
         author: "Abdullah Al-Mansour",
         position: "General Manager",
         company: "Royal Palms Riyadh Hotel",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/hospitality/hotel-staff-uniform.jpg"
       },
       {
         quote: "Working with UNEOM has significantly simplified our uniform management. The fabric quality is outstanding - showing minimal wear even after months of constant use, and their design team understood our need to balance traditional Saudi elegance with modern hospitality standards.",
         author: "Nadia Al-Harbi",
         position: "Executive Housekeeper",
         company: "Jeddah Grand Resort & Spa",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/hospitality/hotel-staff-uniform.jpg"
       }
     ]
   };
@@ -377,7 +377,7 @@ export default function PremiumHotelUniformsPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/hospitality/hospitality_uniform_formal.jpg"
+                src="/images/hospitality/hospitality_hotel_staff.jpg"
                 alt="Luxury hotel staff in coordinated customized uniforms" 
                 fill
                 className="object-cover"

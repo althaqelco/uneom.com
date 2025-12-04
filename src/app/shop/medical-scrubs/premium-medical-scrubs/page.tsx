@@ -31,9 +31,9 @@ export default function PremiumMedicalScrubsPage() {
     minOrder: 20,
     mainImage: "/images/products/scrubs-set.jpg",
     additionalImages: [
-      "/images/product-placeholder.jpg",
-      "/images/product-placeholder.jpg",
-      "/images/product-placeholder.jpg"
+      "/images/healthcare/medical_hijab_uniform.jpg",
+      "/images/healthcare/medical_hijab_uniform.jpg",
+      "/images/healthcare/medical_hijab_uniform.jpg"
     ],
     colors: [
       { name: "Sky Blue", value: "#87CEEB" },
@@ -108,7 +108,7 @@ export default function PremiumMedicalScrubsPage() {
       {
         id: "surgical-scrubs",
         name: "Surgical Scrubs Set",
-        image: "/images/product-placeholder.jpg",
+        image: "/images/healthcare/medical_hijab_uniform.jpg",
         price: "SAR 189",
         href: "/shop/medical-scrubs/nurse-uniform"
       }

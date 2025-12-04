@@ -206,10 +206,10 @@ export default function ConciergeUniformPage() {
       { name: 'Customization Options', value: 'Property embroidery, metal buttons with logo, accent color piping, premium fabric upgrades' }
     ],
     images: [
-      { src: '/images/product-placeholder.jpg', alt: 'Premium concierge staff in distinguished uniform assisting guest at luxury Saudi hotel' },
-      { src: '/images/product-placeholder.jpg', alt: 'Professional concierge in tailored uniform welcoming guests at five-star property entrance' },
+      { src: '/images/hospitality/hospitality_uniform_hotel_service.jpg', alt: 'Premium concierge staff in distinguished uniform assisting guest at luxury Saudi hotel' },
+      { src: '/images/hospitality/hospitality_hotel_reception.jpg', alt: 'Professional concierge in tailored uniform welcoming guests at five-star property entrance' },
       { src: '/images/hospitality/hospitality_uniform_concierge.jpg', alt: 'Concierge team in coordinated premium uniforms at prestigious hotel lobby in Saudi Arabia' },
-      { src: '/images/product-placeholder.jpg', alt: 'Close-up detail of premium concierge uniform showing quality tailoring and Saudi-inspired accents' }
+      { src: '/images/hospitality/executive-hospitality-suit.jpg', alt: 'Close-up detail of premium concierge uniform showing quality tailoring and Saudi-inspired accents' }
     ],
     category: 'Hospitality Attire',
     categorySlug: 'hospitality-attire',
@@ -225,11 +225,11 @@ export default function ConciergeUniformPage() {
       { name: 'Saudi-Inspired Premium Design', price: 'SAR 550' }
     ],
     colors: [
-      { name: 'Navy Blue', value: '#000080', image: '/images/product-placeholder.jpg' },
-      { name: 'Charcoal Grey', value: '#36454F', image: '/images/product-placeholder.jpg' },
-      { name: 'Deep Burgundy', value: '#800020', image: '/images/product-placeholder.jpg' },
-      { name: 'Royal Black', value: '#000000', image: '/images/product-placeholder.jpg' },
-      { name: 'Desert Sand', value: '#E1C699', image: '/images/product-placeholder.jpg' }
+      { name: 'Navy Blue', value: '#000080', image: '/images/hospitality/hospitality_uniform_formal.jpg' },
+      { name: 'Charcoal Grey', value: '#36454F', image: '/images/hospitality/hospitality_uniform_department.jpg' },
+      { name: 'Deep Burgundy', value: '#800020', image: '/images/hospitality/hospitality_uniform_buttons.jpg' },
+      { name: 'Royal Black', value: '#000000', image: '/images/hospitality/hospitality_uniform_hotel.jpg' },
+      { name: 'Desert Sand', value: '#E1C699', image: '/images/hospitality/brand-identity-uniforms.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'],
     sizeEquivalents: {
@@ -247,14 +247,14 @@ export default function ConciergeUniformPage() {
         author: "Fahad Al-Rashidi",
         position: "Front Office Manager",
         company: "Royal Oasis Hotel & Residence",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/hospitality/hotel-staff-uniform.jpg"
       },
       {
         quote: "After implementing Uneom's concierge collection across our hotel portfolio, we've received consistent praise from both guests and staff. The attention to detail in the tailoring creates a commanding yet approachable presence that perfectly embodies our service philosophy. The subtle integration of Saudi design elements provides a distinctive character while maintaining international appeal. Most importantly, the performance fabrics have proven exceptionally durable while providing the comfort our front-line staff require.",
         author: "Layla Al-Harbi",
         position: "Director of Brand Standards",
         company: "Prestige Hospitality Group",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/hospitality/hotel-staff-uniform.jpg"
       }
     ],
     relatedProducts: [
@@ -519,7 +519,7 @@ export default function ConciergeUniformPage() {
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/avatar-placeholder.jpg" 
+                  src="/images/hospitality/hotel-staff-uniform.jpg" 
                   alt="Professional concierge team in premium uniforms at luxury Saudi hotel lobby" 
                   fill
                   className="object-cover"

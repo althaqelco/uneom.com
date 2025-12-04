@@ -51,9 +51,9 @@ export default function HousekeepingUniformPageArabic() {
       { name: 'خيارات التخصيص', value: 'تطريز الممتلكات، تحديد القسم، تقوية النسيج في مناطق التآكل العالية' }
     ],
     images: [
-      { src: '/images/product-placeholder.jpg', alt: 'طاقم النظافة المحترف بزي متين يحافظ على غرفة فندق فاخرة' },
-      { src: '/images/product-placeholder.jpg', alt: 'عاملة نظافة بزي محتشم مع ميزات تصميم مريحة في فندق فاخر سعودي' },
-      { src: '/images/avatar-placeholder.jpg', alt: 'فريق التدبير المنزلي بالفندق في أزياء مهنية منسقة للحفاظ على معايير الممتلكات' },
+      { src: '/images/hospitality/hospitality_uniform_hotel_service.jpg', alt: 'طاقم النظافة المحترف بزي متين يحافظ على غرفة فندق فاخرة' },
+      { src: '/images/hospitality/hospitality_uniform_hotel_service.jpg', alt: 'عاملة نظافة بزي محتشم مع ميزات تصميم مريحة في فندق فاخر سعودي' },
+      { src: '/images/hospitality/hotel-staff-uniform.jpg', alt: 'فريق التدبير المنزلي بالفندق في أزياء مهنية منسقة للحفاظ على معايير الممتلكات' },
       { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'فريق النظافة السعودي في أزياء مهنية مناسبة ثقافيًا في منشأة من فئة خمس نجوم' }
     ],
     category: 'أزياء الضيافة',
@@ -70,11 +70,11 @@ export default function HousekeepingUniformPageArabic() {
       { name: 'مجموعة النظافة المرافقة', price: '295 ريال سعودي' }
     ],
     colors: [
-      { name: 'أخضر تيل', value: '#008080', image: '/images/product-placeholder.jpg' },
-      { name: 'أزرق بحري', value: '#000080', image: '/images/product-placeholder.jpg' },
-      { name: 'رمادي فحمي', value: '#36454F', image: '/images/product-placeholder.jpg' },
-      { name: 'نبيذي', value: '#800020', image: '/images/product-placeholder.jpg' },
-      { name: 'كاكي', value: '#C3B091', image: '/images/product-placeholder.jpg' }
+      { name: 'أخضر تيل', value: '#008080', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
+      { name: 'أزرق بحري', value: '#000080', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
+      { name: 'رمادي فحمي', value: '#36454F', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
+      { name: 'نبيذي', value: '#800020', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
+      { name: 'كاكي', value: '#C3B091', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -93,14 +93,14 @@ export default function HousekeepingUniformPageArabic() {
         author: "نورة العتيبي",
         position: "مشرفة النظافة التنفيذية",
         company: "فندق وأبراج الارتفاعات الفاخرة",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/hospitality/hotel-staff-uniform.jpg"
       },
       {
         quote: "بعد تنفيذ أزياء النظافة المهنية من يونيوم عبر سلسلة الفنادق لدينا، وثقنا تحسنًا كبيرًا في كل من الكفاءة ورضا الموظفين. تدعم الميزات العملية مثل الجيوب المعززة ولوحات التمدد الاستراتيجية معايير التنظيف الصارمة لدينا، بينما يرفع المظهر المهني صورة علامتنا التجارية. حتى مع واجبات التنظيف اليومية المكثفة، تحافظ هذه الأزياء على جودتها ومظهرها لفترة أطول بكثير من الخيارات السابقة التي جربناها.",
         author: "أحمد الزهراني",
         position: "مدير خدمات الإقامة",
         company: "مجموعة الضيافة الملكية",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/hospitality/hotel-staff-uniform.jpg"
       }
     ]
   };
@@ -344,7 +344,7 @@ export default function HousekeepingUniformPageArabic() {
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/avatar-placeholder.jpg" 
+                  src="/images/hospitality/hotel-staff-uniform.jpg" 
                   alt="فريق النظافة المهني في أزياء منسقة خلال الاجتماع التوجيهي للموظفين في فندق فاخر" 
                   fill
                   className="object-cover"

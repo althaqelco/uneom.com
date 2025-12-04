@@ -174,7 +174,7 @@ export default function SizeGuideClientPageArabic() {
             </table>
           </div>
         `,
-        image: '/images/product-placeholder.jpg'},
+        image: '/images/products/uniform-collection.jpg'},
       {
         title: 'المقاسات الخاصة بالصناعات',
         content: `

@@ -13,7 +13,7 @@ interface VercelCompatibleImageProps extends Omit<ImageProps, 'src'> {
 
 const VercelCompatibleImage: React.FC<VercelCompatibleImageProps> = ({
   src,
-  fallbackSrc = '/images/defaults/default-placeholder.jpg',
+  fallbackSrc = '/images/hero/uniform-hero-2.jpg',
   alt,
   className,
   containerClassName,

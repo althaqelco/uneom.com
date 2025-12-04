@@ -46,7 +46,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ locale }) => {
         id: 'p1',
         name: 'Executive Office Wear',
         description: 'Professional corporate uniforms designed for Saudi executives and office staff.',
-        image: '/images/product-placeholder.jpg',
+        image: '/images/products/uniform-collection.jpg',
         category: 'corporate',
         categoryLabel: 'Corporate',
         href: '/shop/corporate-workwear'
@@ -55,7 +55,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ locale }) => {
         id: 'p2',
         name: 'Healthcare Scrubs',
         description: 'Comfortable and durable medical scrubs for healthcare professionals.',
-        image: '/images/product-placeholder.jpg',
+        image: '/images/products/uniform-collection.jpg',
         category: 'healthcare',
         categoryLabel: 'Healthcare',
         href: '/shop/medical-scrubs'
@@ -64,7 +64,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ locale }) => {
         id: 'p3',
         name: 'Hospitality Staff Uniforms',
         description: 'Elegant and practical uniforms for hotels, restaurants, and hospitality services.',
-        image: '/images/product-placeholder.jpg',
+        image: '/images/products/uniform-collection.jpg',
         category: 'hospitality',
         categoryLabel: 'Hospitality',
         href: '/shop/hospitality-attire'
@@ -73,7 +73,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ locale }) => {
         id: 'p4',
         name: 'Industrial Workwear',
         description: 'Durable and safety-compliant workwear for industrial environments.',
-        image: '/images/product-placeholder.jpg',
+        image: '/images/products/uniform-collection.jpg',
         category: 'industrial',
         categoryLabel: 'Industrial',
         href: '/shop/industrial-uniforms'
@@ -84,7 +84,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ locale }) => {
         id: 'p1',
         name: 'ملابس المكاتب التنفيذية',
         description: 'زي موحد احترافي للشركات مصمم للتنفيذيين وموظفي المكاتب السعوديين.',
-        image: '/images/product-placeholder.jpg',
+        image: '/images/products/uniform-collection.jpg',
         category: 'corporate',
         categoryLabel: 'الشركات',
         href: '/ar/shop/corporate-workwear'
@@ -93,7 +93,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ locale }) => {
         id: 'p2',
         name: 'الزي الطبي',
         description: 'زي طبي مريح ومتين لمتخصصي الرعاية الصحية.',
-        image: '/images/product-placeholder.jpg',
+        image: '/images/products/uniform-collection.jpg',
         category: 'healthcare',
         categoryLabel: 'الرعاية الصحية',
         href: '/ar/shop/medical-scrubs'
@@ -102,7 +102,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ locale }) => {
         id: 'p3',
         name: 'زي موظفي الضيافة',
         description: 'زي أنيق وعملي للفنادق والمطاعم وخدمات الضيافة.',
-        image: '/images/product-placeholder.jpg',
+        image: '/images/products/uniform-collection.jpg',
         category: 'hospitality',
         categoryLabel: 'الضيافة',
         href: '/ar/shop/hospitality-attire'
@@ -111,7 +111,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ locale }) => {
         id: 'p4',
         name: 'ملابس العمل الصناعية',
         description: 'ملابس عمل متينة ومتوافقة مع معايير السلامة للبيئات الصناعية.',
-        image: '/images/product-placeholder.jpg',
+        image: '/images/products/uniform-collection.jpg',
         category: 'industrial',
         categoryLabel: 'الصناعة',
         href: '/ar/shop/industrial-uniforms'

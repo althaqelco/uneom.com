@@ -150,7 +150,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const handleError = () => {
     setHasError(true);
     // Fallback to placeholder
-    setCurrentSrc('/images/default-placeholder.jpg');
+    setCurrentSrc('/images/hero/uniform-hero-2.jpg');
     onError?.();
   };
 

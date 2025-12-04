@@ -95,14 +95,14 @@ export default function MedicalLabCoatsClientPage() {
         author: "د. عبدالله القحطاني",
         position: "المدير الطبي",
         company: "مدينة الملك فهد الطبية",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       },
       {
         quote: "بعد التحول إلى معاطف المختبر الفاخرة من يونيوم، تلقينا العديد من الإشادات من المرضى حول المظهر المهني لكوادرنا. كانت خيارات التصميم المحتشم ذات قيمة خاصة لطبيباتنا، كما أن المتانة مع الغسيل المتكرر جعلت هذه المعاطف خياراً فعالاً من حيث التكلفة لشبكة مستشفياتنا.",
         author: "د. سمر الزامل",
         position: "رئيسة الكادر الطبي",
         company: "مجموعة المستشفى السعودي الألماني",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       }
     ]
   };

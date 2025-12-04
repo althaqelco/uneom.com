@@ -45,7 +45,7 @@ export default function SecurityOfficerUniformClientPage() {
     ],
     images: [
       { src: '/images/products/industrial-coverall.jpg', alt: 'زي ضابط الأمن الاحترافي - منظر أمامي' },
-      { src: '/images/product-placeholder.jpg', alt: 'زي ضابط الأمن على النموذج' },
+      { src: '/images/security/security_team_professional.jpg', alt: 'زي ضابط الأمن على النموذج' },
       { src: '/images/products/industrial-coverall.jpg', alt: 'تفاصيل زي ضابط الأمن' },
       { src: '/images/products/industrial-coverall.jpg', alt: 'ملحقات الأمن' }
     ],

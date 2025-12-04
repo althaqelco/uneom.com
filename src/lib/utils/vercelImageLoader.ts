@@ -16,7 +16,7 @@ export interface VercelImageLoaderConfig {
 }
 
 // الصورة الافتراضية في حالة الفشل
-const DEFAULT_FALLBACK_IMAGE = '/images/defaults/default-placeholder.jpg';
+const DEFAULT_FALLBACK_IMAGE = '/images/hero/uniform-hero-2.jpg';
 
 interface VercelImageLoaderOptions {
   quality?: number;

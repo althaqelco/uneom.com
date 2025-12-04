@@ -91,14 +91,14 @@ export default function PremiumHotelUniformsPageArabic() {
         author: "عبدالله المنصور",
         position: "المدير العام",
         company: "فندق رويال بالمز الرياض",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/hospitality/hotel-staff-uniform.jpg"
       },
       {
         quote: "العمل مع UNEOM بسّط إدارة الأزياء الموحدة لدينا بشكل كبير. جودة القماش متميزة - حيث تظهر الحد الأدنى من التآكل حتى بعد أشهر من الاستخدام المستمر، وفهم فريق التصميم لديهم حاجتنا للموازنة بين الأناقة السعودية التقليدية ومعايير الضيافة الحديثة.",
         author: "نادية الحربي",
         position: "مديرة التدبير المنزلي التنفيذية",
         company: "منتجع وسبا جدة جراند",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/hospitality/hotel-staff-uniform.jpg"
       }
     ]
   };

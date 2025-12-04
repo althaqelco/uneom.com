@@ -75,7 +75,7 @@ export default function BlogPage() {
                 <div className="grid md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
                   <div className="relative aspect-video rounded-xl overflow-hidden">
                     <Image
-                      src={allPosts[0].featuredImage || '/images/blog/placeholder.jpg'}
+                      src={allPosts[0].featuredImage || '/images/blog/sustainable-textiles.jpg'}
                       alt={allPosts[0].title}
                       fill
                       className="object-cover"
@@ -123,7 +123,7 @@ export default function BlogPage() {
                     <Link href={`/blog/${post.slug}`}>
                       <div className="relative aspect-video overflow-hidden">
                         <Image
-                          src={post.featuredImage || '/images/blog/placeholder.jpg'}
+                          src={post.featuredImage || '/images/blog/sustainable-textiles.jpg'}
                           alt={post.title}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-300"

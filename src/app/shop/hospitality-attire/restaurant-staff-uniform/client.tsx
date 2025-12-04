@@ -189,7 +189,7 @@ export function RestaurantStaffUniformClientPage() {
     leadTime: '14-16 days',
     customization: true,
     images: [
-      { src: '/images/product-placeholder.jpg', alt: 'Restaurant staff uniform for hospitality' },
+      { src: '/images/hospitality/hospitality_uniform_hotel_service.jpg', alt: 'Restaurant staff uniform for hospitality' },
       { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'Restaurant staff in professional uniforms' },
       { src: '/images/hospitality/hospitality_uniform_department.jpg', alt: 'Food service professional in restaurant attire' },
       { src: '/images/products/chef-uniform.jpg', alt: 'Chef in professional kitchen uniform' }
@@ -267,7 +267,7 @@ export function RestaurantStaffUniformClientPage() {
             "@type": "Product",
             "name": "Restaurant Staff Uniform by UNEOM",
             "image": [
-              "https://uneom.com/images/product-placeholder.jpg",
+              "https://uneom.com/images/hospitality/hospitality_uniform_hotel_service.jpg",
               "https://uneom.com/images/hospitality/hospitality_uniform_formal.jpg"
             ],
             "description": "Premium restaurant staff uniforms designed for Saudi Arabian hospitality establishments, combining style, comfort and practicality for food service professionals.",
@@ -495,7 +495,7 @@ export function RestaurantStaffUniformClientPage() {
                 >
                   <div className="aspect-square relative overflow-hidden rounded-lg bg-neutral-100 mb-3">
                     <Image 
-                      src="/images/product-placeholder.jpg"
+                      src="/images/hospitality/hospitality_uniform_hotel_service.jpg"
                       alt={relatedProduct.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"

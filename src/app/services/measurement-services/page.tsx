@@ -9,7 +9,7 @@ export default function MeasurementServicesPage() {
   const serviceData = {
     title: "UNEOM - Professional Uniforms",
     subtitle: 'Professional fitting solutions for perfect-fit uniforms',
-    heroImage: '/images/banner-placeholder.jpg',
+    heroImage: '/images/hero/uniform-hero-2.jpg',
     
     overview: [
       "UNEOM's Measurement Services provide professional fitting solutions to ensure every employee receives precisely fitted uniforms that enhance comfort, appearance, and functionality. Our expert fitting specialists use advanced measurement techniques and technologies to capture accurate sizing data, eliminating the guesswork and inconsistency often associated with self-measurement.",
@@ -96,7 +96,7 @@ export default function MeasurementServicesPage() {
         author: 'Fatima Al-Saud',
         position: 'HR Director',
         company: 'Al-Mamlaka Luxury Hotels',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       },
       {
         id: "medical-coo",
@@ -104,7 +104,7 @@ export default function MeasurementServicesPage() {
         author: 'Dr. Khalid Al-Omari',
         position: 'Chief Operating Officer',
         company: 'Riyadh Medical Network',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       }
     ],
     

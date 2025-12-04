@@ -177,19 +177,19 @@ export default function HospitalPolicyTemplatesPage() {
         id: 'general-policy',
         title: 'General Hospital Uniform Policy Template',
         description: 'Comprehensive template covering all aspects of healthcare uniform standards with customizable sections for different facility types',
-        image: '/images/healthcare/healthcare_medical_uniform.jpg'
+        image: '/images/healthcare/full_clothes_doctor_uniform.jpg'
       },
       {
         id: 'infection-control',
         title: 'Infection Control Uniform Guidelines',
         description: 'Specialized policy focusing on infection prevention aspects of healthcare attire, including laundering protocols and fabric specifications',
-        image: '/images/healthcare/healthcare_medical_doctor_uniform.jpg'
+        image: '/images/healthcare/antimicrobial-fabric.jpg'
       },
       {
         id: 'cultural-guidelines',
         title: 'Cultural Accommodation Guidelines',
         description: 'Policy template addressing cultural and religious considerations for healthcare uniforms in Saudi Arabia, including modest uniform options',
-        image: '/images/healthcare/medical_hijab_uniform.jpg'
+        image: '/images/healthcare/healthcare_hijab_doctor.jpg'
       }
     ],
     

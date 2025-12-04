@@ -25,7 +25,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   primaryButtonUrl,
   secondaryButtonText,
   secondaryButtonUrl,
-  image = '/images/banner-placeholder.jpg'
+  image = '/images/hero/uniform-hero-2.jpg'
 }) => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);

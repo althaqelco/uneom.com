@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/banner-placeholder.jpg',
+        url: '/images/hero/services-hero.jpg',
         width: 1200,
         height: 630,
         alt: 'UNEOM Professional Uniform Services and Solutions'
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Professional Uniform Services & Solutions | UNEOM Saudi Arabia',
     description: 'Comprehensive uniform services for Saudi organizations',
-    images: ['/images/banner-placeholder.jpg']
+    images: ['/images/hero/services-hero.jpg']
   },
   robots: {
     index: true,

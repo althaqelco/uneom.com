@@ -35,7 +35,7 @@ export default function PremiumMedicalScrubsArabicPage() {
     minOrder: 20,
     mainImage: "/images/healthcare/medical_hijab_uniform.jpg",
     additionalImages: [
-      "/images/avatar-placeholder.jpg",
+      "/images/healthcare/healthcare_medical_doctor.jpg",
       "/images/healthcare/medical_hijab_uniform.jpg",
       "/images/healthcare/medical_hijab_uniform.jpg"
     ],
@@ -112,7 +112,7 @@ export default function PremiumMedicalScrubsArabicPage() {
       {
         id: "surgical-scrubs",
         name: "طقم سكروب جراحي",
-        image: "/images/product-placeholder.jpg",
+        image: "/images/healthcare/medical_hijab_uniform.jpg",
         price: "ريال 199",
         href: "/ar/shop/medical-scrubs/nurse-uniform"
       }

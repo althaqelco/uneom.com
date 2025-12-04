@@ -9,7 +9,7 @@ export default function CustomDesignServiceClientPage() {
     locale: 'ar',
     title: 'تصميم مخصص وعلامات تجارية',
     subtitle: 'حلول أزياء موحدة مميزة ترتقي بهوية علامتك التجارية',
-    heroImage: '/images/banner-placeholder.jpg',
+    heroImage: '/images/hero/uniform-hero-2.jpg',
     
     overview: [
       "تقدم خدمة التصميم المخصص والعلامات التجارية من يونيوم حلولًا فريدة للأزياء الموحدة تعكس هوية وقيم مؤسستك المميزة. يعمل فريق التصميم المتخصص لدينا بشكل وثيق معك لإنشاء أزياء موحدة لا تلبي المتطلبات الوظيفية فحسب، بل تعمل أيضًا كسفراء قويين لعلامتك التجارية.",
@@ -18,7 +18,7 @@ export default function CustomDesignServiceClientPage() {
     
     steps: [
       {
-        icon: '/images/banner-placeholder.jpg',
+        icon: '/images/hero/uniform-hero-2.jpg',
         title: 'اكتشاف العلامة التجارية',
         description: 'نبدأ بمرحلة اكتشاف شاملة لفهم قيم علامتك التجارية وعناصر الهوية وتفضيلات التصميم. يحلل فريقنا هويتك البصرية الحالية والجمهور المستهدف وموقع الصناعة لتحديد أهداف تصميم واضحة.'
       },
@@ -33,7 +33,7 @@ export default function CustomDesignServiceClientPage() {
         description: 'بناءً على ملاحظاتك، نقوم بتحسين المفاهيم المختارة وتطوير تصاميم مفصلة. يتم إنشاء نماذج أولية لقطع الزي الموحد الرئيسية، مما يسمح باختبار المقاس وتقييم المواد وإجراء تعديلات إضافية على التصميم.'
       },
       {
-        icon: '/images/product-placeholder.jpg',
+        icon: '/images/products/uniform-collection.jpg',
         title: 'الإنتاج والتنفيذ',
         description: 'بمجرد الموافقة على التصاميم، ندير عملية الإنتاج بمعايير صارمة لمراقبة الجودة. ينسق فريقنا القياسات والتصنيع والتسليم لضمان طرح سلس لبرنامج الزي الموحد المخصص الخاص بك.'
       }
@@ -96,7 +96,7 @@ export default function CustomDesignServiceClientPage() {
         author: 'نورة الفيصل',
         position: 'مديرة العلامة التجارية',
         company: 'فنادق ومنتجعات المملكة',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       },
       {
         id: "2",
@@ -104,7 +104,7 @@ export default function CustomDesignServiceClientPage() {
         author: 'فهد العتيبي',
         position: 'رئيس التسويق',
         company: 'مجموعة الرياض المالية',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       }
     ],
     

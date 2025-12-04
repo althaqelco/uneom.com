@@ -1,0 +1,22 @@
+{
+  "name": "UNEOM - Professional Uniforms Saudi Arabia",
+  "short_name": "UNEOM",
+  "description": "Leading uniform manufacturer in Saudi Arabia offering healthcare, corporate, hospitality, aviation, and industrial uniforms",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a5f",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/UNEOM_FAVICON.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+

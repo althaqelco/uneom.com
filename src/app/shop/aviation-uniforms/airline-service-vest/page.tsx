@@ -190,7 +190,7 @@ export default function AirlineServiceVestPage() {
       { src: '/images/aviation/aviation_uniform_airline.jpg', alt: 'Airline staff in professional service vests' },
       { src: '/images/products/aviation/airline-2.jpg', alt: 'Cabin crew members wearing service vests' },
       { src: '/images/aviation/aviation_uniform_main.jpg', alt: 'Service personnel in professional vest' },
-      { src: '/images/product-placeholder.jpg', alt: 'Staff member in airline service vest' }
+      { src: '/images/aviation/aviation_uniform_main.jpg', alt: 'Staff member in airline service vest' }
     ],
     colors: [
       { name: 'Navy Blue', value: '#000080' },

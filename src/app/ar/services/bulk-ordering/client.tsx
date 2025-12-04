@@ -9,7 +9,7 @@ export default function BulkOrderingServiceClientPage() {
     locale: 'ar',
     title: 'طلبات بالجملة',
     subtitle: 'حلول شراء مبسطة لمتطلبات الزي الموحد واسعة النطاق',
-    heroImage: '/images/banner-placeholder.jpg',
+    heroImage: '/images/hero/uniform-hero-2.jpg',
     
     overview: [
       "توفر خدمة الطلب بالجملة من يونيوم حلاً مبسطًا للمؤسسات التي تتطلب كميات كبيرة من الأزياء الموحدة عبر أقسام أو مواقع متعددة. يعمل فريق المشتريات المتخصص لدينا معك لتنسيق الطلبات المعقدة، وإدارة الخدمات اللوجستية، وضمان جودة متسقة عبر برنامج الزي الموحد بأكمله.",
@@ -28,7 +28,7 @@ export default function BulkOrderingServiceClientPage() {
         description: 'بناءً على متطلباتك، نقوم بإنشاء عرض شامل يتضمن خيارات التصميم والأقمشة، ومواصفات المنتج، والتسعير التفصيلي، وجداول التسليم. نقدم عينات حسب الحاجة للتحقق من الجودة والمقاس قبل التصنيع بكميات كبيرة.'
       },
       {
-        icon: '/images/product-placeholder.jpg',
+        icon: '/images/products/uniform-collection.jpg',
         title: 'الإنتاج والمراقبة',
         description: 'بمجرد الموافقة على العرض، نبدأ دورة الإنتاج مع ضوابط صارمة لمراقبة الجودة في كل مرحلة. نقدم تحديثات منتظمة حول التقدم المحرز، ونتعامل بشكل استباقي مع أي مشكلات قد تنشأ أثناء عملية التصنيع.'
       },
@@ -78,7 +78,7 @@ export default function BulkOrderingServiceClientPage() {
         title: "برنامج الزي الطبي على مستوى المستشفى",
         description: "كانت مجموعة مستشفيات الرياض تدير أكثر من 5000 من العاملين في القطاع الصحي عبر خمسة مواقع، مع ضرورة توفير أزياء طبية متسقة وعالية الجودة. قمنا بتطوير نظام توريد بالجملة مع رموز ألوان مخصصة للأقسام وتطريز للشعارات.",
         result: "تخفيض التكاليف بنسبة 22٪ وتحسين معدل رضا الموظفين وتوفير 15 ساعة أسبوعيًا من وقت الموظفين الإداريين.",
-        image: '/images/banner-placeholder.jpg'
+        image: '/images/hero/uniform-hero-2.jpg'
       },
       {
         id: "campus-uniform",
@@ -96,7 +96,7 @@ export default function BulkOrderingServiceClientPage() {
         author: "د. إبراهيم الحربي",
         position: "مدير العمليات",
         company: "مجموعة مستشفيات الرياض",
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       },
       {
         id: "2",
@@ -104,7 +104,7 @@ export default function BulkOrderingServiceClientPage() {
         author: "نادية الفيصل",
         position: "مديرة المشتريات",
         company: "مؤسسة الفيصل التعليمية",
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       }
     ],
     

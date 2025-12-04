@@ -94,14 +94,14 @@ export default function PremiumSchoolUniformsClientPage() {
         author: "Dr. Abdullah Al-Sayed",
         position: "Principal",
         company: "Al Manar International School",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/education/teacher-uniform-professional.jpg"
       },
       {
         quote: "Working with UNEOM has simplified our uniform program management tremendously. Their fabrics stand up to the active lifestyles of our students, and their design team successfully incorporated our traditional values with contemporary educational needs.",
         author: "Fatima Al-Otaibi",
         position: "Administrative Director",
         company: "Riyadh Modern Academy",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/education/teacher-uniform-professional.jpg"
       }
     ]
   };

@@ -98,14 +98,14 @@ export default function NursingScrubsClientPage() {
         author: "نورة المنصور",
         position: "رئيسة التمريض",
         company: "مدينة الملك سلمان الطبية",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       },
       {
         quote: "بعد توحيد أزياء التمريض من يونيوم عبر شبكة مستشفياتنا، شهدنا تحسينات كبيرة في رضا الكوادر والمظهر الاحترافي. نظام ترميز الأقسام بالألوان سهّل التفاعل مع المرضى، والمتانة رغم الغسيل المستمر أمر استثنائي.",
         author: "د. فيصل الجهني",
         position: "المدير التنفيذي للتمريض",
         company: "المجموعة الوطنية للرعاية الصحية",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor.jpg"
       }
     ]
   };

@@ -178,7 +178,7 @@ export default function EnhancedRetailClient() {
       name: 'أ. سعد الراجحي',
       role: 'مدير العمليات',
       company: 'مجموعة الراجحي التجارية',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'أزياء يونيوم حسنت من مظهر فريقنا وعززت ثقة العملاء في متاجرنا. جودة ممتازة وخدمة متميزة.'
     },
@@ -187,7 +187,7 @@ export default function EnhancedRetailClient() {
       name: 'أ. فاطمة الدوسري',
       role: 'مديرة المتجر',
       company: 'بوتيك الأناقة',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'التصاميم الأنيقة والجودة العالية جعلت موظفاتي يشعرن بالثقة والراحة. عملاؤنا يلاحظون الفرق.'
     },
@@ -196,7 +196,7 @@ export default function EnhancedRetailClient() {
       name: 'أ. محمد الشمري',
       role: 'مدير المطعم',
       company: 'مطاعم الطازج',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'الأزياء عملية ومقاومة للبقع، وسهلة التنظيف. فريق المطبخ راضٍ جداً عن الجودة والراحة.'
     }

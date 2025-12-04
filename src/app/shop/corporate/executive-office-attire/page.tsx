@@ -50,7 +50,7 @@ export default function ExecutiveOfficeAttirePage() {
       { name: 'Customization', value: 'Corporate logos, custom color matching, bespoke tailoring' }
     ],
     images: [
-      { src: '/images/avatar-placeholder.jpg', alt: 'Business executives in premium office attire during meeting' },
+      { src: '/images/corporate/corporate-team.jpg', alt: 'Business executives in premium office attire during meeting' },
       { src: '/images/products/corporate-suit-executive.jpg', alt: 'Corporate professional in tailored executive suit' },
       { src: '/images/products/corporate-suit-executive.jpg', alt: 'Saudi business executive in traditional-modern fusion attire' },
       { src: '/images/products/corporate-suit-executive.jpg', alt: 'Saudi businesswoman in professional corporate attire with hijab' }
@@ -70,11 +70,11 @@ export default function ExecutiveOfficeAttirePage() {
     ],
     colors: [
       { name: 'Navy Blue', value: '#1a2942', image: '/images/products/corporate-suit-executive.jpg' },
-      { name: 'Charcoal Grey', value: '#36454f', image: '/images/products/corporate-suit-executive.jpg' },
-      { name: 'Black', value: '#000000', image: '/images/products/corporate-suit-executive.jpg' },
-      { name: 'Dark Brown', value: '#3e2723', image: '/images/products/corporate-suit-executive.jpg' },
-      { name: 'Light Grey', value: '#b0b0b0', image: '/images/products/corporate-suit-executive.jpg' },
-      { name: 'Sand', value: '#c2b280', image: '/images/products/corporate-suit-executive.jpg' }
+      { name: 'Charcoal Grey', value: '#36454f', image: '/images/products/corporate/classic-executive-suit.jpg' },
+      { name: 'Black', value: '#000000', image: '/images/corporate/corporate_uniform_formal.jpg' },
+      { name: 'Dark Brown', value: '#3e2723', image: '/images/corporate/corporate_formal.jpg' },
+      { name: 'Light Grey', value: '#b0b0b0', image: '/images/corporate/corporate_business_uniform.jpg' },
+      { name: 'Sand', value: '#c2b280', image: '/images/corporate/corporate_uniform_professional.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'],
     sizeEquivalents: {
@@ -92,14 +92,14 @@ export default function ExecutiveOfficeAttirePage() {
         author: "Khalid Al-Majid",
         position: "Vice President of Operations",
         company: "Saudi International Banking Group",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/clients/modern-arabic-businessman-SBI-300984397.jpg"
       },
       {
         quote: "We've implemented UNEOM's corporate attire program across our entire organization, from entry-level to C-suite. The consistent quality, attention to detail, and ability to incorporate our branding elements subtly has strengthened our corporate identity while providing our employees with comfortable, professional attire.",
         author: "Norah Al-Sheikh",
         position: "Director of Corporate Culture",
         company: "Advanced Saudi Technologies",
-        image: "/images/avatar-placeholder.jpg"
+        image: "/images/clients/adult-beautiful-muslim-woman-with-hijab-on-head-smiling-for-camera-in-room-SBI-351089408.jpg"
       }
     ]
   };

@@ -43,7 +43,7 @@ export default function PremiumScrubsSetPage() {
       { src: '/images/products/scrubs-set.jpg', alt: 'Premium Scrubs Set Front View' },
       { src: '/images/healthcare/healthcare_medical_uniform.jpg', alt: 'Premium Scrubs Set Worn by Medical Professionals' },
       { src: '/images/healthcare/healthcare_nurce_uniform.jpg', alt: 'Premium Scrubs Set in Use' },
-      { src: '/images/avatar-placeholder.jpg', alt: 'Medical Team Wearing Scrubs' }
+      { src: '/images/healthcare/healthcare_medical_doctor.jpg', alt: 'Medical Team Wearing Scrubs' }
     ],
     category: 'Healthcare Apparel',
     categorySlug: 'medical-scrubs',
@@ -379,7 +379,7 @@ export default function PremiumScrubsSetPage() {
               </div>
               <div className="relative h-64 lg:h-auto bg-gray-100">
                 <Image
-                  src="/images/avatar-placeholder.jpg"
+                  src="/images/healthcare/healthcare_medical_doctor.jpg"
                   alt="Custom Medical Uniform Design"
                   fill
                   className="object-cover"

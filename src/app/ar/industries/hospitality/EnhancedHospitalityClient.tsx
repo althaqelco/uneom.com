@@ -150,7 +150,7 @@ export default function EnhancedHospitalityClient() {
       name: 'أ. منى الشهري',
       role: 'مديرة العمليات',
       company: 'فندق موفنبيك الرياض',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/hospitality/hotel-staff-uniform.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'أزياء يونيوم حسنت من مظهر فريقنا وعززت ثقة الضيوف في خدماتنا. جودة استثنائية وخدمة متميزة.'
     },
@@ -159,7 +159,7 @@ export default function EnhancedHospitalityClient() {
       name: 'أ. خالد العمري',
       role: 'مدير المطعم',
       company: 'مطعم لقمة شهية',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/hospitality/hotel-staff-uniform.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'الأزياء عملية ومريحة لفريق العمل، والتصميم يعكس هوية مطعمنا بشكل مثالي. شريك موثوق.'
     },
@@ -168,7 +168,7 @@ export default function EnhancedHospitalityClient() {
       name: 'د. نورا الحربي',
       role: 'مديرة المنتجع',
       company: 'منتجع شاطئ الخليج',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/hospitality/hotel-staff-uniform.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'التصاميم المبتكرة والألوان الزاهية أضافت لمسة مميزة لمنتجعنا. الضيوف يلاحظون الفرق.'
     }

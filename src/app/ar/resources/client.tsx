@@ -21,7 +21,7 @@ export default function ResourcesClientPageArabic() {
           id: 'fabric-technology',
           name: 'تقنية الأقمشة',
           description: 'استكشف تقنيات النسيج المبتكرة التي تعزز الراحة والمتانة والوظائف للأزياء الموحدة الحديثة.',
-          image: '/images/avatar-placeholder.jpg',
+          image: '/images/team/uneom-team.jpg',
           href: '/ar/resources/fabric-technology'
         }
       ]
@@ -78,14 +78,14 @@ export default function ResourcesClientPageArabic() {
       id: 'case-studies',
       name: 'دراسات الحالة',
       description: 'أمثلة واقعية توضح كيف حلت حلول الزي الموحد لدينا التحديات للمؤسسات عبر الصناعات المختلفة.',
-      image: '/images/product-placeholder.jpg',
+      image: '/images/products/uniform-collection.jpg',
       href: '/ar/resources/case-studies'
     },
     {
       id: 'webinars',
       name: 'الندوات عبر الإنترنت والفعاليات',
       description: 'انضم إلى ندواتنا التعليمية عبر الإنترنت وفعاليات الصناعة لتعميق معرفتك والتواصل مع النظراء.',
-      image: '/images/product-placeholder.jpg',
+      image: '/images/products/uniform-collection.jpg',
       href: '/ar/resources/events'
     }
   ];

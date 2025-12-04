@@ -371,7 +371,7 @@ export default function TeacherUniformPage() {
             {[1, 2, 3].map((i) => (
               <div key={i} className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-center mb-4">
-                  <Image src="/images/authors/avatar-placeholder.jpg" alt={`Testimonial author ${i}`} width={48} height={48} className="rounded-full mr-4" />
+                  <Image src="/images/education/school-staff.jpg" alt={`Testimonial author ${i}`} width={48} height={48} className="rounded-full mr-4" />
                   <div>
                     <p className="font-semibold text-gray-900">Educator Name {i}</p>
                     <p className="text-sm text-gray-500">School Name, City</p>
@@ -400,9 +400,9 @@ export default function TeacherUniformPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "The Impact of Teacher Attire on Student Perception", slug: "teacher-attire-student-perception", image: "/images/blog/placeholder1.jpg" },
-              { title: "Choosing Durable and Comfortable Fabrics for Daily Teaching", slug: "fabrics-for-teaching", image: "/images/blog/placeholder2.jpg" },
-              { title: "Maintaining a Professional Image in Saudi Schools", slug: "professional-image-saudi-schools", image: "/images/blog/placeholder-corporate1.jpg" },
+              { title: "The Impact of Teacher Attire on Student Perception", slug: "teacher-attire-student-perception", image: "/images/blog/healthcare-uniforms.jpg" },
+              { title: "Choosing Durable and Comfortable Fabrics for Daily Teaching", slug: "fabrics-for-teaching", image: "/images/blog/textile-innovations.jpg" },
+              { title: "Maintaining a Professional Image in Saudi Schools", slug: "professional-image-saudi-schools", image: "/images/blog/corporate-uniforms.jpg" },
             ].map((article) => (
               <div key={article.slug} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <Link href={`/blog/${article.slug}/`} className="block">

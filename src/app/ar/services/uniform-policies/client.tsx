@@ -9,7 +9,7 @@ export default function UniformPoliciesServiceClientPage() {
     locale: 'ar',
     title: 'سياسات الزي الموحد للشركات',
     subtitle: 'إرشادات شاملة لحوكمة فعالة لبرنامج الزي الموحد',
-    heroImage: '/images/product-placeholder.jpg',
+    heroImage: '/images/products/uniform-collection.jpg',
     
     overview: [
       "توفر خدمة سياسات الزي الموحد للشركات من يونيوم إرشادات خبيرة في تطوير أطر حوكمة شاملة وفعالة لبرنامج الزي الموحد الخاص بك. نقوم بإنشاء سياسات مخصصة تتوافق مع ثقافة مؤسستك ومتطلبات الصناعة واحتياجاتك التشغيلية مع ضمان الامتثال للوائح ذات الصلة.",
@@ -96,7 +96,7 @@ export default function UniformPoliciesServiceClientPage() {
         author: 'نواف الحربي',
         position: 'مدير العمليات',
         company: 'مجموعة البنك التجاري الوطني',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       },
       {
         id: "2",
@@ -104,7 +104,7 @@ export default function UniformPoliciesServiceClientPage() {
         author: 'م. سعد القحطاني',
         position: 'مدير الامتثال للصحة والسلامة والبيئة',
         company: 'الصناعات البتروكيماوية السعودية',
-        image: '/images/avatar-placeholder.jpg'
+        image: '/images/team/uneom-team.jpg'
       }
     ],
     

@@ -154,7 +154,7 @@ export default function EnhancedFactoryIndustryClient() {
       name: 'المهندس/ عبد الرحمن الفهد',
       role: 'مدير مصنع الرياض للحديد',
       company: 'مصنع الرياض للحديد والصلب',
-      image: '/images/avatar-placeholder.jpg', // Placeholder
+      image: '/images/team/uneom-team.jpg', // Placeholder
       logo: '/images/about/riyadh_chamber_of_commerce.png', // Placeholder
       quote: 'أزياء يونيوم وفرت الحماية اللازمة لعمالنا مع الحفاظ على الراحة. لاحظنا انخفاضاً في إصابات العمل.'
     },
@@ -163,7 +163,7 @@ export default function EnhancedFactoryIndustryClient() {
       name: 'السيدة/ نورة السالم',
       role: 'مسؤولة السلامة والجودة',
       company: 'مصنع جدة للمنتجات الغذائية',
-      image: '/images/avatar-placeholder.jpg', // Placeholder
+      image: '/images/team/uneom-team.jpg', // Placeholder
       logo: '/images/about/riyadh_chamber_of_commerce.png', // Placeholder
       quote: 'الأزياء تلبي جميع معايير السلامة الغذائية وهي سهلة التنظيف. فريقنا سعيد جداً بالجودة والمتانة.'
     },
@@ -172,7 +172,7 @@ export default function EnhancedFactoryIndustryClient() {
       name: 'المهندس/ علي المنصور',
       role: 'مدير الإنتاج',
       company: 'مصنع الدمام للبتروكيماويات',
-      image: '/images/avatar-placeholder.jpg', // Placeholder
+      image: '/images/team/uneom-team.jpg', // Placeholder
       logo: '/images/about/riyadh_chamber_of_commerce.png', // Placeholder
       quote: 'المتانة والجودة العالية لأزياء يونيوم تتناسب تماماً مع بيئة العمل القاسية في مصنعنا.'
     }

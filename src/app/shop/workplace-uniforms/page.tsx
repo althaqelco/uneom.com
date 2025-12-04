@@ -93,7 +93,7 @@ export default function WorkplaceUniformsPage() {
         <div className="mt-8 relative rounded-xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-800/40 z-10"></div>
           <Image 
-            src="/images/avatar-placeholder.jpg"
+            src="/images/corporate/corporate-team.jpg"
             alt="Corporate team wearing professional uniforms"
             width={1200}
             height={400}

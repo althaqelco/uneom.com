@@ -31,7 +31,7 @@ export default function StoreStaffPage() {
       {
         title: "Brand-Aligned Styling",
         description: "Our store staff uniforms are designed to be a natural extension of your brand identity, reinforcing your retail presence through consistent visual representation across all customer touchpoints.",
-        image: "/images/industries/retail-shops/retail-shops-uniform-2.jpg"
+        image: "/images/industries/retail-shops/retail-shops-uniform-brand.jpg"
       },
       {
         title: "All-Day Comfort",

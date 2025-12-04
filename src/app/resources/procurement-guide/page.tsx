@@ -164,25 +164,25 @@ export default function ProcurementGuidePage() {
         id: "needs-assessment",
         title: "Needs Assessment",
         description: "Conduct a thorough assessment of functional requirements, compliance standards, and brand considerations.",
-        image: "/images/product-placeholder.jpg"
+        image: "/images/products/uniform-collection.jpg"
       },
       {
         id: "supplier-selection",
         title: "Supplier Selection",
         description: "Choose the right supplier based on quality, capacity, experience, and ethical practices.",
-        image: "/images/product-placeholder.jpg"
+        image: "/images/products/uniform-collection.jpg"
       },
       {
         id: "budget-planning",
         title: "Budget Planning",
         description: "Create a comprehensive budget accounting for initial costs, replacements, and management expenses.",
-        image: "/images/product-placeholder.jpg"
+        image: "/images/products/uniform-collection.jpg"
       },
       {
         id: "implementation",
         title: "Implementation & Distribution",
         description: "Develop an effective distribution strategy and timeline for your uniform program rollout.",
-        image: "/images/product-placeholder.jpg"
+        image: "/images/products/uniform-collection.jpg"
       }
     ],
     relatedResources: [

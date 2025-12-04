@@ -143,7 +143,7 @@ export default function EnhancedFabricSelectionClient() {
       name: 'م. عبدالله الحربي',
       role: 'مدير المشتريات',
       company: 'مجموعة سابك',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'خبرة يونيوم في اختيار الأقمشة ساعدتنا في الحصول على أزياء تتحمل البيئة الصناعية القاسية مع الحفاظ على الراحة.'
     },
@@ -152,7 +152,7 @@ export default function EnhancedFabricSelectionClient() {
       name: 'د. سارة العتيبي',
       role: 'مديرة الجودة',
       company: 'مستشفى الملك فيصل التخصصي',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'الأقمشة المضادة للبكتيريا التي اختارتها يونيوم حسنت من معايير النظافة في مستشفانا بشكل ملحوظ.'
     },
@@ -161,7 +161,7 @@ export default function EnhancedFabricSelectionClient() {
       name: 'أ. فهد القحطاني',
       role: 'مدير العمليات',
       company: 'الخطوط السعودية',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'جودة الأقمشة وخصائصها التقنية تناسب تماماً متطلبات العمل في الطيران. فريقنا راضٍ جداً عن الراحة والمظهر.'
     }

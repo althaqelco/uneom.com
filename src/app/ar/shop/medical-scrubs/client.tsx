@@ -31,7 +31,7 @@ export default function MedicalScrubsClientPage() {
       name: 'طقم ملابس طبية فاخرة',
       description: 'مجموعة ملابس طبية احترافية مصنوعة من نسيج مضاد للميكروبات، مصممة للراحة أثناء المناوبات الطويلة.',
       price: 'من 399 ريال',
-      image: '/images/product-placeholder.jpg',
+      image: '/images/healthcare/medical_hijab_uniform.jpg',
       href: '/ar/shop/medical-scrubs/clinical-uniform-set',
       features: ['طقم كامل', 'تخصيص العلامة التجارية', 'بنية متينة', 'مظهر احترافي'],
       colors: ['خيارات متعددة متاحة'],
@@ -102,7 +102,7 @@ export default function MedicalScrubsClientPage() {
       <div className="relative py-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/banner-placeholder.jpg"
+            src="/images/healthcare/hero-bg.jpg"
             alt="الأزياء والملابس الطبية"
             fill
             className="object-cover"

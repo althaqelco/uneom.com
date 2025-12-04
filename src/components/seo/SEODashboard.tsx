@@ -386,7 +386,7 @@ const SEODashboard: React.FC = () => {
                             alt="Preview" 
                             onError={(e) => {
                               const target = e.target as HTMLImageElement;
-                              target.src = '/images/placeholder.jpg';
+                              target.src = '/images/hero/uniform-hero-2.jpg';
                             }}
                           />
                         </div>

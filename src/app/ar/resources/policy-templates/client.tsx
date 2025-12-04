@@ -160,7 +160,7 @@ export default function PolicyTemplatesClientPageArabic() {
             </div>
           </div>
         `,
-        image: '/images/avatar-placeholder.jpg'},
+        image: '/images/team/uneom-team.jpg'},
       {
         title: 'دليل تنفيذ السياسة',
         content: `

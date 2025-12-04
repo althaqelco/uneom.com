@@ -372,7 +372,7 @@ export default function TeacherUniformPageAr() {
             {[1, 2, 3].map((i) => (
               <div key={i} className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="flex items-center mb-4">
-                  <Image src="/images/authors/avatar-placeholder.jpg" alt={`صورة المؤلف ${i}`} width={48} height={48} className="rounded-full ml-4" /> {/* ml-4 for RTL */}
+                  <Image src="/images/education/school-staff.jpg" alt={`صورة المؤلف ${i}`} width={48} height={48} className="rounded-full ml-4" /> {/* ml-4 for RTL */}
                   <div>
                     <p className="font-semibold text-gray-900">اسم المعلم {i}</p>
                     <p className="text-sm text-gray-500">اسم المدرسة, المدينة</p>
@@ -401,9 +401,9 @@ export default function TeacherUniformPageAr() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "تأثير ملابس المعلم على تصور الطلاب", slug: "teacher-attire-student-perception", image: "/images/blog/placeholder1.jpg" },
-              { title: "اختيار الأقمشة المتينة والمريحة للتدريس اليومي", slug: "fabrics-for-teaching", image: "/images/blog/placeholder2.jpg" },
-              { title: "الحفاظ على صورة مهنية في المدارس السعودية", slug: "professional-image-saudi-schools", image: "/images/blog/placeholder-corporate1.jpg" },
+              { title: "تأثير ملابس المعلم على تصور الطلاب", slug: "teacher-attire-student-perception", image: "/images/blog/healthcare-uniforms.jpg" },
+              { title: "اختيار الأقمشة المتينة والمريحة للتدريس اليومي", slug: "fabrics-for-teaching", image: "/images/blog/textile-innovations.jpg" },
+              { title: "الحفاظ على صورة مهنية في المدارس السعودية", slug: "professional-image-saudi-schools", image: "/images/blog/corporate-uniforms.jpg" },
             ].map((article) => (
               <div key={article.slug} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <Link href={`/ar/blog/${article.slug}/`} className="block">

@@ -155,7 +155,7 @@ export default function EventsPageArabic() {
             `).join('')}
           </div>
         `,
-        image: '/images/avatar-placeholder.jpg'}
+        image: '/images/team/uneom-team.jpg'}
     ],
     relatedResources: [
       {

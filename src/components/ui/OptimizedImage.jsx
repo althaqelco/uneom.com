@@ -18,7 +18,7 @@ import { useState } from 'react';
 export default function OptimizedImage({ 
   src, 
   alt, 
-  fallbackSrc = '/images/defaults/default-placeholder.jpg', 
+  fallbackSrc = '/images/hero/uniform-hero-2.jpg', 
   ...props 
 }) {
   const [imgSrc, setImgSrc] = useState(src);

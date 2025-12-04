@@ -109,7 +109,7 @@ export default function ServicePageLayout({ locale, serviceData, skipMainLayout 
         <section className="relative bg-gradient-to-r from-primary-900 to-primary-800 text-white py-24 pt-32">
           <div className="absolute inset-0 overflow-hidden opacity-30">
             <Image
-              src={serviceData.heroImage || '/images/banner-placeholder.jpg'}
+              src={serviceData.heroImage || '/images/hero/uniform-hero-2.jpg'}
               alt={serviceData.title}
               fill
               className="object-cover"
@@ -387,7 +387,7 @@ export default function ServicePageLayout({ locale, serviceData, skipMainLayout 
                         <div className="flex-shrink-0 mr-4 mb-4 md:mb-0">
                           <div className="w-16 h-16 rounded-full overflow-hidden">
                             <Image
-                              src={testimonial.image || '/images/avatar-placeholder.jpg'}
+                              src={testimonial.image || '/images/clients/modern-arabic-businessman-SBI-300984397.jpg'}
                               alt={testimonial.author}
                               width={64}
                               height={64}

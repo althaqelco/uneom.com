@@ -26,11 +26,11 @@ export default function LuxuryHotelUniformArabicPage() {
     basePrice: 349,
     rating: 4.9,
     reviewCount: 78,
-    mainImage: "/images/healthcare/medical_hijab_uniform.jpg Staff_Uniform.png",
+    mainImage: "/images/hospitality/hospitality_uniform_hotel_service.jpg",
     additionalImages: [
       "/images/hospitality/hospitality_uniform_formal.jpg",
-      "/images/product-placeholder.jpg",
-      "/images/hospitality/hospitality_uniform_formal.jpg"
+      "/images/hospitality/hospitality_hotel_reception.jpg",
+      "/images/hospitality/hospitality_uniform_concierge.jpg"
     ],
     description: 'طقم زي فندقي فاخر مصمم للمنشآت ذات الخمس نجوم في المملكة العربية السعودية. يجمع بين الأناقة والراحة العملية لموظفي الاستقبال والكونسيرج وطاقم الإدارة.',
     features: [
@@ -53,9 +53,9 @@ export default function LuxuryHotelUniformArabicPage() {
     ],
     images: [
       { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'زي الفندق الفاخر - موظفي الاستقبال' },
-      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'زي الفندق الفاخر - خدمة الكونسيرج' },
-      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'زي الفندق الفاخر - طراز المدير' },
-      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'زي الفندق الفاخر - المجموعة الكاملة' }
+      { src: '/images/hospitality/hospitality_uniform_concierge.jpg', alt: 'زي الفندق الفاخر - خدمة الكونسيرج' },
+      { src: '/images/hospitality/executive-hospitality-suit.jpg', alt: 'زي الفندق الفاخر - طراز المدير' },
+      { src: '/images/hospitality/hospitality_full_look.jpg', alt: 'زي الفندق الفاخر - المجموعة الكاملة' }
     ],
     category: 'أزياء الضيافة',
     categorySlug: 'hospitality-attire',
@@ -180,7 +180,7 @@ export default function LuxuryHotelUniformArabicPage() {
         <meta name="description" content="زي فندقي أنيق وعالي الجودة مصمم خصيصًا للفنادق الفاخرة في المملكة العربية السعودية، مع خيارات تخصيص حسب احتياجات منشأتك" />
         <meta property="og:title" content="زي فندقي فاخر - يونيوم للأزياء المهنية" />
         <meta property="og:description" content="زي فندقي أنيق وعالي الجودة مصمم خصيصًا للفنادق الفاخرة في المملكة العربية السعودية، مع خيارات تخصيص حسب احتياجات منشأتك" />
-        <meta property="og:image" content="/images/healthcare/medical_hijab_uniform.jpg Staff_Uniform.png" />
+        <meta property="og:image" content="/images/hospitality/hospitality_uniform_hotel_service.jpg" />
       </Head>
       
       {/* مسار التنقل */}

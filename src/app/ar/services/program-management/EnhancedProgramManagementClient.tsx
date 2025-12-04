@@ -126,7 +126,7 @@ export default function EnhancedProgramManagementClient() {
       name: 'السيد/ عمر خالد',
       role: 'مدير المشتريات',
       company: 'مجموعة شركات السالم القابضة',
-      image: '/images/avatar-placeholder.jpg', // Placeholder
+      image: '/images/team/uneom-team.jpg', // Placeholder
       logo: '/images/about/riyadh_chamber_of_commerce.png', // Placeholder
       quote: 'إدارة يونيوم لبرنامج أزيائنا الموحدة كانت احترافية وفعالة. لقد وفروا علينا الكثير من الجهد والمال.'
     },
@@ -135,7 +135,7 @@ export default function EnhancedProgramManagementClient() {
       name: 'السيدة/ ليلى عبد العزيز',
       role: 'مديرة الموارد البشرية',
       company: 'البنك السعودي للاستثمار',
-      image: '/images/avatar-placeholder.jpg', // Placeholder
+      image: '/images/team/uneom-team.jpg', // Placeholder
       logo: '/images/about/riyadh_chamber_of_commerce.png', // Placeholder
       quote: 'فريق إدارة البرامج في يونيوم يتمتع بخبرة كبيرة وقدم لنا حلولاً مبتكرة لتوحيد أزياء موظفينا.'
     },
@@ -144,7 +144,7 @@ export default function EnhancedProgramManagementClient() {
       name: 'المهندس/ أحمد ياسين',
       role: 'مدير العمليات',
       company: 'شركة المقاولات الوطنية',
-      image: '/images/avatar-placeholder.jpg', // Placeholder
+      image: '/images/team/uneom-team.jpg', // Placeholder
       logo: '/images/about/riyadh_chamber_of_commerce.png', // Placeholder
       quote: 'نقدر التزام يونيوم بالجودة والمواعيد في إدارة برنامج أزياء السلامة الخاص بعمالنا.'
     }

@@ -45,7 +45,7 @@ const featuredUniforms = [
   {
     id: '1',
     name: 'Premium School Uniform Set - Boys',
-    image: '/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg',
+    image: '/images/education/premium-boys-uniform.jpg',
     price: 'Request Quote',
     href: '/shop/education/school-uniforms/premium-boys-set/',
     category: 'Boys Uniforms',
@@ -54,7 +54,7 @@ const featuredUniforms = [
   {
     id: '2',
     name: 'Classic School Uniform - Girls',
-    image: '/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg',
+    image: '/images/education/education-uniforms.jpg',
     price: 'Request Quote',
     href: '/shop/education/school-uniforms/classic-girls-set/',
     category: 'Girls Uniforms',
@@ -63,7 +63,7 @@ const featuredUniforms = [
   {
     id: '3',
     name: 'Sports Uniform Set',
-    image: '/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg',
+    image: '/images/products/education/sports-uniform-set.jpg',
     price: 'Request Quote',
     href: '/shop/education/school-uniforms/sports-set/',
     category: 'Sports Wear'

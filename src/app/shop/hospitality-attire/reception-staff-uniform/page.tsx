@@ -206,7 +206,7 @@ export default function ReceptionStaffUniformPage() {
     leadTime: '14-18 days',
     customization: true,
     images: [
-      { src: '/images/product-placeholder.jpg', alt: 'Professional reception staff uniform for hospitality' },
+      { src: '/images/hospitality/hospitality_uniform_hotel_service.jpg', alt: 'Professional reception staff uniform for hospitality' },
       { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'Hotel reception staff in professional uniforms' },
       { src: '/images/hospitality/hospitality_uniform_concierge.jpg', alt: 'Hospitality professionals in reception attire' },
       { src: '/images/products/hotel-uniform.jpg', alt: 'Front desk professional in reception uniform' }

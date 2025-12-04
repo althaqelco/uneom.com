@@ -166,7 +166,7 @@ export default function EnhancedManufacturingClient() {
       name: 'م. أحمد الفيصل',
       role: 'مدير المشتريات',
       company: 'مجموعة بن لادن',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'جودة التصنيع في يونيوم تفوق التوقعات. الالتزام بالمواعيد والمعايير العالية جعلهم شريكنا المفضل في الأزياء الموحدة.'
     },
@@ -175,7 +175,7 @@ export default function EnhancedManufacturingClient() {
       name: 'أ. سارة القحطاني',
       role: 'مديرة العمليات',
       company: 'مستشفى الملك فهد',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'المرونة في الإنتاج والقدرة على التعامل مع طلباتنا المتغيرة ميزة كبيرة. الجودة ثابتة في كل دفعة إنتاج.'
     },
@@ -184,7 +184,7 @@ export default function EnhancedManufacturingClient() {
       name: 'د. خالد العتيبي',
       role: 'المدير التنفيذي',
       company: 'شركة الطيران السعودي',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'التقنيات المتطورة في التصنيع والاهتمام بالتفاصيل جعل أزياء طاقمنا تحافظ على مظهرها الأنيق حتى في الرحلات الطويلة.'
     }

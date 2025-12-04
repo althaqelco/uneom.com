@@ -154,7 +154,7 @@ export default function EnhancedCorporateProgramsClient() {
       name: 'أ. عبدالله الفيصل',
       role: 'الرئيس التنفيذي',
       company: 'مجموعة الفيصل التجارية',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/corporate/corporate-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'برنامج يونيوم المؤسسي وفر علينا الكثير من الوقت والجهد. خدمة متميزة وجودة عالية.'
     },
@@ -163,7 +163,7 @@ export default function EnhancedCorporateProgramsClient() {
       name: 'د. نورا الدوسري',
       role: 'مديرة الموارد البشرية',
       company: 'مستشفى الملك فهد',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/corporate/corporate-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'الدعم المستمر والحلول المبتكرة جعلت إدارة الأزياء الطبية أسهل وأكثر كفاءة.'
     },
@@ -172,7 +172,7 @@ export default function EnhancedCorporateProgramsClient() {
       name: 'م. خالد النجار',
       role: 'مدير العمليات',
       company: 'شركة الاتصالات السعودية',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/corporate/corporate-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'التزام يونيوم بالمواعيد والجودة جعلهم الشريك المثالي لبرامجنا المؤسسية.'
     }

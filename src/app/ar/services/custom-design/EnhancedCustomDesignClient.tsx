@@ -150,7 +150,7 @@ export default function EnhancedCustomDesignClient() {
       name: 'م. فهد العتيبي',
       role: 'مدير العمليات',
       company: 'مجموعة الرياض للاستثمار',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'فريق التصميم في يونيوم فهم رؤيتنا تماماً وحولها إلى واقع يفوق التوقعات. التصاميم المخصصة عكست هويتنا بشكل مثالي.'
     },
@@ -159,7 +159,7 @@ export default function EnhancedCustomDesignClient() {
       name: 'أ. نورا القحطاني',
       role: 'مديرة الموارد البشرية',
       company: 'شركة أرامكو السعودية',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'عملية التصميم كانت تعاونية ومهنية. النتيجة النهائية تجاوزت توقعاتنا وحسنت من صورة شركتنا بشكل كبير.'
     },
@@ -168,7 +168,7 @@ export default function EnhancedCustomDesignClient() {
       name: 'د. خالد السويلم',
       role: 'الرئيس التنفيذي',
       company: 'مستشفى الدكتور سليمان الحبيب',
-      image: '/images/avatar-placeholder.jpg',
+      image: '/images/team/uneom-team.jpg',
       logo: '/images/about/riyadh_chamber_of_commerce.png',
       quote: 'التصاميم الطبية من يونيوم جمعت بين الوظائف العملية والمظهر المهني. فريقنا الطبي راضٍ جداً عن الجودة.'
     }

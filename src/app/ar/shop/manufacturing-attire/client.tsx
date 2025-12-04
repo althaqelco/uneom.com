@@ -19,7 +19,7 @@ export default function ManufacturingAttireClientPage() {
       name: 'أفرول صناعي',
       description: 'أفرول صناعي متين مصمم للحماية والراحة في بيئات التصنيع والصناعة الثقيلة.',
       price: 'من 249 ريال',
-      image: '/images/product-placeholder.jpg',
+      image: '/images/industries/manufacturing/manufacturing_uniform_for_eng.jpg',
       href: '/ar/shop/manufacturing-attire/industrial-protective-uniforms',
       isNew: true
     }
