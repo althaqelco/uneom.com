@@ -541,11 +541,9 @@ export default function IndustryPageLayout({
                 {
                   src: locale === 'en' && industryData.title && industryData.title.toLowerCase().includes('healthcare') 
                     ? '/images/healthcare/healthcare_nurce_uniform.jpg'
-                    : `/images/${locale === 'ar' ? 'ar-' : ''}${
-                      Array.isArray(industryData.products) && industryData.products.length > 0 && industryData.products[0]?.image
+                    : (Array.isArray(industryData.products) && industryData.products.length > 0 && industryData.products[0]?.image
                         ? industryData.products[0].image
-                        : industryData.heroImage || 'industry-default.jpg'
-                    }`,
+                        : industryData.heroImage || '/images/industry-default.jpg'),
                   alt: industryData.title,
                   width: 600,
                   height: 450,
