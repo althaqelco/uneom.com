@@ -9,19 +9,19 @@ import { generateMetadata2026 } from '@/lib/seo-2026';
 import SEO2026 from '@/components/seo/SEO2026';
 
 export const metadata: Metadata = generateMetadata2026({
-  title: 'الزي المدرسي السعودية | أزياء التعليم | يونيوم',
-  titleAr: 'الزي المدرسي السعودية | أزياء التعليم | يونيوم',
-  description: 'School uniforms in Saudi Arabia.',
-  descriptionAr: 'زي مدرسي فاخر في السعودية. زي ابتدائي، متوسط، ثانوي، ملابس رياضية، معاطف مختبر. من 99 ريال. خصومات بالجملة للمدارس!',
-  keywords: ['الزي المدرسي السعودية', 'أزياء التعليم'],
-  keywordsAr: ['الزي المدرسي السعودية', 'أزياء التعليم', 'زي ابتدائي', 'ملابس رياضية', 'زي الطلاب', 'زي مدارس'],
+  title: 'الزي المدرسي في السعودية | أزياء التعليم والطلاب | يونيوم',
+  titleAr: 'الزي المدرسي في السعودية | أزياء التعليم والطلاب | يونيوم',
+  description: 'Premium school uniforms in Saudi Arabia for all educational stages.',
+  descriptionAr: 'أفضل زي مدرسي في السعودية. زي ابتدائي، متوسط، ثانوي، ملابس رياضية. أقمشة متينة ومريحة للطلاب. من 99 ريال. خصومات كبيرة للمدارس!',
+  keywords: ['school uniforms saudi arabia', 'education uniforms ksa', 'primary school uniform'],
+  keywordsAr: ['الزي المدرسي السعودية', 'زي طلاب الرياض', 'أزياء التعليم', 'زي ابتدائي', 'ملابس رياضية'],
   locale: 'ar',
   pageType: 'category',
   path: '/ar/shop/education-uniforms',
   image: '/images/products/school-uniform-primary.jpg',
-  imageAlt: 'الزي المدرسي السعودية',
+  imageAlt: 'الزي المدرسي في السعودية - يونيوم',
   aiSummary: 'UNEOM school uniforms for Saudi educational institutions.',
-  aiSummaryAr: 'الزي المدرسي من يونيوم للمؤسسات التعليمية السعودية. المنتجات: زي ابتدائي (من 99 ريال)، زي متوسط (من 119 ريال)، زي ثانوي (من 139 ريال)، ملابس رياضية (من 79 ريال). خصومات بالجملة للمدارس. نخدم المدارس الدولية والخاصة والحكومية.'
+  aiSummaryAr: 'الزي المدرسي من يونيوم للمؤسسات التعليمية السعودية. المنتجات: زي ابتدائي (من 99 ريال)، زي متوسط (من 119 ريال)، زي ثانوي (من 139 ريال)، ملابس رياضية (من 79 ريال). خصومات بالجملة للمدارس.'
 });
 
 export const dynamic = 'force-static';
@@ -36,18 +36,18 @@ const educationFAQsAr = [
 const products = [
   { id: 'primary-school', name: 'زي المرحلة الابتدائية', description: 'زي متين لطلاب الابتدائية', price: 'من 99 ريال', image: '/images/products/school-uniform-primary.jpg', href: '/ar/shop/education-uniforms/primary-school', features: ['متين', 'سهل العناية', 'مريح'] },
   { id: 'intermediate-school', name: 'زي المرحلة المتوسطة', description: 'زي أنيق لطلاب المتوسطة', price: 'من 119 ريال', image: '/images/products/school-uniform-intermediate.jpg', href: '/ar/shop/education-uniforms/intermediate-school', features: ['تصميم أنيق', 'متين', 'سهل الغسل'] },
-  { id: 'secondary-school', name: 'زي المرحلة الثانوية', description: 'زي احترافي لطلاب الثانوية', price: 'من 139 ريال', image: '/images/products/school-uniform-secondary.jpg', href: '/ar/shop/education-uniforms/secondary-school', features: ['احترافي', 'مريح', 'متين'] },
+  { id: 'secondary-school', name: 'زي المرحلة الثانوية', description: 'زي احترافي لطلاب الثانوية', price: 'من 139 ريال', image: '/images/education/premium-school-uniforms.jpg', href: '/ar/shop/education-uniforms/secondary-school', features: ['احترافي', 'مريح', 'متين'] },
   { id: 'pe-sports-wear', name: 'ملابس التربية البدنية', description: 'ملابس رياضية للتربية البدنية', price: 'من 79 ريال', image: '/images/products/pe-uniform.jpg', href: '/ar/shop/education-uniforms/pe-sports-wear', features: ['قابل للتنفس', 'مرن', 'سريع الجفاف'] },
 ];
 
 export default function EducationUniformsPageAr() {
   return (
     <div dir="rtl">
-      <SEO2026 title="الزي المدرسي السعودية | يونيوم" titleAr="الزي المدرسي السعودية | يونيوم" description="School uniforms." descriptionAr="زي مدرسي فاخر للسعودية." locale="ar" pageType="category" mainEntity="School Uniforms" mainEntityAr="الزي المدرسي" primaryImage="/images/products/school-uniform-primary.jpg" primaryImageAlt="الزي المدرسي" faqs={educationFAQsAr} breadcrumbs={[{ name: 'Shop', nameAr: 'المتجر', url: '/ar/shop' }, { name: 'Education', nameAr: 'التعليم', url: '/ar/shop/education-uniforms' }]} industry="التعليم" />
+      <SEO2026 title="الزي المدرسي في السعودية | يونيوم" titleAr="الزي المدرسي في السعودية | يونيوم" description="School uniforms for Saudi Arabia." descriptionAr="زي مدرسي فاخر للسعودية." locale="ar" pageType="category" mainEntity="School Uniforms" mainEntityAr="الزي المدرسي" primaryImage="/images/products/school-uniform-primary.jpg" primaryImageAlt="الزي المدرسي" faqs={educationFAQsAr} breadcrumbs={[{ name: 'Shop', nameAr: 'المتجر', url: '/ar/shop' }, { name: 'Education', nameAr: 'التعليم', url: '/ar/shop/education-uniforms' }]} industry="التعليم" />
 
       <section className="bg-gradient-to-br from-indigo-900 via-purple-800 to-violet-800 text-white relative overflow-hidden py-16">
         <Container>
-          <Breadcrumbs items={[{ label: 'الرئيسية', href: '/ar' }, { label: 'المتجر', href: '/ar/shop' }, { label: 'الزي المدرسي', href: '/ar/shop/education-uniforms' }]} className="text-white/80 mb-6" />
+          <Breadcrumbs items={[{ label: 'الرئيسية', href: '/ar' }, { label: 'المتجر', href: '/ar/shop' }, { label: 'الزي المدرسي', href: '/ar/shop/education-uniforms' }]} className="text-white/80 mb-6 relative z-10" />
           <div className="relative z-10 max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"><span className="text-purple-400">🎓</span><span className="text-sm font-medium">قطاع التعليم</span></div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">الزي <span className="bg-gradient-to-r from-purple-300 to-pink-300 text-transparent bg-clip-text">المدرسي</span></h1>

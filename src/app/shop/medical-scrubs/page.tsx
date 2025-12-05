@@ -19,7 +19,7 @@ export const metadata: Metadata = generateMetadata2026({
   locale: 'en',
   pageType: 'category',
   path: '/shop/medical-scrubs',
-  image: '/images/products/scrubs-set.jpg',
+  image: '/images/healthcare/scrubs-collections.jpg',
   imageAlt: 'Medical Scrubs and Healthcare Uniforms Saudi Arabia',
   aiSummary: 'UNEOM medical scrubs collection in Saudi Arabia. Products include: Premium Medical Scrubs (from SAR 169) - antimicrobial, stain-resistant. Nursing Uniforms (from SAR 149) - comfortable for long shifts. Surgical Scrubs (from SAR 199) - sterile-ready. Lab Coats (from SAR 129) - professional appearance. All products feature antimicrobial fabric, moisture-wicking, and come in multiple colors. Available for hospitals, clinics, and medical centers across Saudi Arabia.',
   aiSummaryAr: 'مجموعة السكراب الطبي من يونيوم في السعودية. المنتجات تشمل: سكراب طبي فاخر (من 169 ريال) - مضاد للميكروبات، مقاوم للبقع. زي تمريض (من 149 ريال) - مريح للمناوبات الطويلة. سكراب جراحي (من 199 ريال). معاطف مختبر (من 129 ريال).'
@@ -36,7 +36,7 @@ const medicalFAQs = [
 ];
 
 const products = [
-  { id: 'premium-medical-scrubs', name: 'Premium Medical Scrubs', nameAr: 'سكراب طبي فاخر', description: 'High-performance antimicrobial scrubs', price: 'From SAR 169', originalPrice: 'SAR 249', image: '/images/products/scrubs-set.jpg', href: '/shop/medical-scrubs/premium-medical-scrubs', features: ['Antimicrobial', 'Stain-resistant', 'Moisture-wicking'], isBestseller: true, rating: 4.9 },
+  { id: 'premium-medical-scrubs', name: 'Premium Medical Scrubs', nameAr: 'سكراب طبي فاخر', description: 'High-performance antimicrobial scrubs', price: 'From SAR 169', originalPrice: 'SAR 249', image: '/images/healthcare/scrubs-collections.jpg', href: '/shop/medical-scrubs/premium-medical-scrubs', features: ['Antimicrobial', 'Stain-resistant', 'Moisture-wicking'], isBestseller: true, rating: 4.9 },
   { id: 'nursing-uniform-set', name: 'Nursing Uniform Set', nameAr: 'طقم زي تمريض', description: 'Comfortable nursing uniforms for long shifts', price: 'From SAR 149', image: '/images/products/nursing-scrubs.jpg', href: '/shop/medical-scrubs/nursing-uniform-set', features: ['Breathable', 'Stretch fabric', 'Multiple pockets'], rating: 4.8 },
   { id: 'surgical-scrubs', name: 'Surgical Scrubs', nameAr: 'سكراب جراحي', description: 'Sterile-ready surgical scrubs', price: 'From SAR 199', image: '/images/products/surgical-scrubs.jpg', href: '/shop/medical-scrubs/surgical-scrubs', features: ['Sterile-ready', 'Fluid-resistant', 'Antimicrobial'], isNew: true, rating: 4.9 },
   { id: 'lab-coats', name: 'Medical Lab Coats', nameAr: 'معاطف مختبر طبية', description: 'Professional lab coats for doctors', price: 'From SAR 129', image: '/images/products/lab-coat.jpg', href: '/shop/medical-scrubs/lab-coats', features: ['Professional look', 'Stain-resistant', 'Multiple lengths'], rating: 4.7 },
@@ -56,7 +56,7 @@ export default function MedicalScrubsPage() {
         pageType="category"
         mainEntity="Medical Scrubs and Healthcare Uniforms"
         mainEntityAr="السكراب الطبي وأزياء الرعاية الصحية"
-        primaryImage="/images/products/scrubs-set.jpg"
+        primaryImage="/images/healthcare/scrubs-collections.jpg"
         primaryImageAlt="Medical Scrubs"
         faqs={medicalFAQs}
         breadcrumbs={[

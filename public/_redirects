@@ -1,0 +1,116 @@
+# Netlify Redirects - Replacing middleware and next.config redirects
+
+# Remove /en prefix - English is default
+/en/*  /:splat  301!
+
+# About & Contact
+/about-us  /about/  301
+/ar/about-us  /ar/about/  301
+/contact-us  /contact/  301
+/contactus  /contact/  301
+/ar/contactus  /ar/contact/  301
+
+# Quote & FAQ
+/request-a-quote  /quote/  301
+/book-a-demo  /quote/  301
+/faqs  /faq/  301
+
+# Industries consolidation
+/industries/supply-manufacturing  /industries/manufacturing/  301
+/ar/industries/supply-manufacturing  /ar/industries/manufacturing/  301
+/industries/factory-industry  /industries/manufacturing/  301
+/ar/industries/factory-industry  /ar/industries/manufacturing/  301
+
+# Services
+/services-page  /services/  301
+
+# General aliases
+/sitemap  /  301
+/careers  /about/  301
+/ar/careers  /ar/about/  301
+/search  /  301
+/ar/search  /ar/  301
+/categories  /shop/  301
+/ar/categories  /ar/shop/  301
+
+# Blog pagination
+/blog/page/1  /blog/  301
+/ar/blog/page/1  /ar/blog/  301
+
+# School & Education
+/sectors/school-uniforms  /industries/education/  301
+/sectors/education-uniforms  /industries/education/  301
+
+# Corporate & Business
+/sectors/business-wear-uniform-companies  /industries/corporate/  301
+/sectors/company-uniforms  /industries/corporate/  301
+/sectors/corporate-uniforms  /industries/corporate/  301
+/sectors/professional-uniforms  /industries/  301
+
+# Healthcare
+/sectors/jackets-for-scrubs  /shop/healthcare-accessories/  301
+/sectors/med-scrubs  /shop/medical-scrubs/  301
+/sectors/medical-scrubs  /shop/medical-scrubs/  301
+/sectors/greys-anatomy-scrubs  /shop/medical-scrubs/  301
+/sectors/scrub-suits  /shop/medical-scrubs/  301
+/sectors/healthcare-uniforms  /industries/healthcare/  301
+/sectors/healthcare  /industries/healthcare/  301
+/sectors/medical-uniforms  /industries/healthcare/  301
+
+# Hospitality
+/sectors/waitress-uniforms  /industries/hospitality/restaurants/  301
+/sectors/uniforms-for-hotels  /industries/hospitality/hotels/  301
+/sectors/restaurants  /industries/hospitality/restaurants/  301
+/sectors/restaurant-uniforms  /industries/hospitality/restaurants/  301
+/sectors/hospitality-uniforms  /industries/hospitality/  301
+
+# Other Industries
+/sectors/uniform-for-security  /industries/security/  301
+/sectors/pilot-uniforms  /industries/aviation/  301
+/sectors/aviation-uniforms  /industries/aviation/  301
+/sectors/industrial-uniforms  /industries/factory-industry/  301
+/sectors/workers-uniform  /industries/factory-industry/  301
+/sectors/uniform-factory  /industries/manufacturing/  301
+
+# Locations
+/location/medina  /locations/medina/  301
+/location/dammam  /locations/dammam/  301
+/location/riyadh  /locations/riyadh/  301
+/location/jeddah  /locations/jeddah/  301
+/sectors/uniform-in-riyadh  /locations/riyadh/  301
+/sectors/uniform-in-dammam  /locations/dammam/  301
+/sectors/uniform-in-jeddah  /locations/jeddah/  301
+/sectors/uniform-in-mecca  /locations/mecca/  301
+/sectors/uniform-in-medina  /locations/medina/  301
+
+# Categories
+/category/blog  /blog/  301
+/category/sectors  /industries/  301
+
+# Arabic Sectors
+/ar/sectors/healthcare-uniforms  /ar/industries/healthcare/  301
+/ar/sectors/corporate-uniforms  /ar/industries/corporate/  301
+/ar/sectors/restaurant-uniforms  /ar/industries/hospitality/restaurants/  301
+/ar/sectors/uniform-in-riyadh  /ar/locations/riyadh/  301
+/ar/sectors/uniform-in-dammam  /ar/locations/dammam/  301
+/ar/sectors/uniform-in-jeddah  /ar/locations/jeddah/  301
+/ar/sectors/uniform-in-mecca  /ar/locations/mecca/  301
+/ar/sectors/uniform-in-medina  /ar/locations/medina/  301
+/ar/sectors/education-uniforms  /ar/industries/education/  301
+/ar/sectors/industrial-uniforms  /ar/industries/factory-industry/  301
+/ar/sectors/uniform-factory  /ar/industries/manufacturing/  301
+/ar/sectors/workers-uniform  /ar/industries/factory-industry/  301
+/ar/sectors/hospitality-uniforms  /ar/industries/hospitality/  301
+
+# Arabic Pages
+/ar/contact-us  /ar/contact/  301
+/ar/request-a-quote  /ar/quote/  301
+/ar/faqs  /ar/faq/  301
+/ar/about-us  /ar/about/  301
+
+# Pattern Redirects
+/sectors/*  /industries/:splat  301
+/location/*  /locations/:splat  301
+/category/*  /blog/categories/:splat  301
+/ar/sectors/*  /ar/industries/:splat  301
+/ar/location/*  /ar/locations/:splat  301

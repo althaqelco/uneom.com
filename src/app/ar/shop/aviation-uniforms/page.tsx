@@ -11,46 +11,47 @@ import SEO2026 from '@/components/seo/SEO2026';
 export const metadata: Metadata = generateMetadata2026({
   title: 'أزياء الطيران السعودية | زي الطيارين وطاقم الطائرة | يونيوم',
   titleAr: 'أزياء الطيران السعودية | زي الطيارين وطاقم الطائرة | يونيوم',
-  description: 'Premium aviation uniforms in Saudi Arabia.',
-  descriptionAr: 'أزياء طيران فاخرة في السعودية. زي الطيارين، ملابس طاقم الطائرة، زي موظفي الأرض للخطوط الجوية السعودية. من 899 ريال. تصاميم مخصصة، توصيل سريع!',
-  keywords: ['أزياء الطيران السعودية', 'زي الطيارين'],
-  keywordsAr: ['أزياء الطيران السعودية', 'زي الطيارين', 'ملابس طاقم الطائرة', 'زي الخطوط الجوية', 'زي المضيفات', 'زي طاقم الأرض'],
+  description: 'Premium aviation uniforms in Saudi Arabia for pilots, cabin crew, and ground staff.',
+  descriptionAr: 'أفضل أزياء طيران في السعودية. زي الطيارين الاحترافي، ملابس المضيفات الأنيقة، زي طاقم الأرض للخطوط الجوية السعودية. أقمشة فاخرة مقاومة للتجاعيد. من 599 ريال. تطريز شعار الخطوط الجوية، توصيل سريع!',
+  keywords: ['aviation uniforms saudi arabia', 'pilot uniforms ksa', 'cabin crew attire'],
+  keywordsAr: ['أزياء الطيران السعودية', 'زي الطيارين', 'ملابس طاقم الطائرة', 'زي المضيفات', 'زي الخطوط الجوية السعودية', 'أزياء طيران الرياض', 'زي طاقم الأرض'],
   locale: 'ar',
   pageType: 'category',
   path: '/ar/shop/aviation-uniforms',
-  image: '/images/airline-1.jpg',
-  imageAlt: 'أزياء الطيران السعودية - الطيارين وطاقم الطائرة',
+  image: '/images/aviation/aviation_uniform_airline.jpg',
+  imageAlt: 'أزياء الطيران السعودية - يونيوم',
   aiSummary: 'UNEOM aviation uniforms for Saudi airlines.',
-  aiSummaryAr: 'أزياء الطيران من يونيوم للخطوط الجوية السعودية. المنتجات: زي الطيارين (من 1,299 ريال) - احترافي، شارات الكتف مشمولة. ملابس طاقم الطائرة (من 899 ريال) - أنيقة، مريحة للرحلات الطويلة. زي موظفي الأرض (من 599 ريال) - متينة، ذات علامة تجارية. جميع الأزياء قابلة للتخصيص بشعارات الخطوط الجوية.'
+  aiSummaryAr: 'أزياء الطيران من يونيوم للخطوط الجوية السعودية. المنتجات: زي الطيارين (من 1,299 ريال) - احترافي مع شارات الكتف. ملابس طاقم الطائرة (من 899 ريال) - أنيقة ومريحة. زي موظفي الأرض (من 599 ريال) - متين. تخصيص بشعار الخطوط الجوية.'
 });
 
 export const dynamic = 'force-static';
 
 const aviationFAQsAr = [
-  { question: 'هل توردون أزياء الطيران للخطوط الجوية السعودية؟', questionAr: 'هل توردون أزياء الطيران للخطوط الجوية السعودية؟', answer: 'Yes.', answerAr: 'نعم، يونيوم تورد أزياء الطيران لعدة خطوط جوية سعودية وأكاديميات طيران. نقدم حلول زي موحد كاملة تشمل زي الطيارين، ملابس طاقم الطائرة، وزي موظفي الأرض.' },
-  { question: 'هل يمكنكم تخصيص أزياء الطيران بشعار خطوطنا الجوية؟', questionAr: 'هل يمكنكم تخصيص أزياء الطيران بشعار خطوطنا الجوية؟', answer: 'Yes.', answerAr: 'نعم، نقدم تخصيصاً كاملاً يشمل تطريز شعارات الخطوط الجوية، شارات الكتف المخصصة، الأجنحة، وشارات الاسم. نطابق ألوان العلامة التجارية بدقة باستخدام مراجع بانتون.' },
-  { question: 'ما الحد الأدنى لطلب أزياء الطيران؟', questionAr: 'ما الحد الأدنى لطلب أزياء الطيران؟', answer: 'Minimum 25 pieces.', answerAr: 'الحد الأدنى للطلب لأزياء الطيران القياسية هو 25 قطعة لكل نمط. للأزياء المصممة خصيصاً، الحد الأدنى 50 قطعة. طلبات العينات متاحة للموافقة.' },
+  { question: 'هل توردون أزياء طيران للخطوط الجوية السعودية؟', questionAr: 'هل توردون أزياء طيران للخطوط الجوية السعودية؟', answer: 'Yes, UNEOM supplies aviation uniforms to multiple Saudi airlines.', answerAr: 'نعم، يونيوم تورد أزياء الطيران للعديد من الخطوط الجوية السعودية وأكاديميات الطيران. نقدم حلول زي كاملة تشمل زي الطيارين وملابس طاقم الطائرة وزي موظفي الأرض.' },
+  { question: 'هل يمكنكم تطريز شعار شركة الطيران؟', questionAr: 'هل يمكنكم تطريز شعار شركة الطيران؟', answer: 'Yes, we offer full customization.', answerAr: 'نعم، نقدم تخصيصاً كاملاً يشمل تطريز شعارات الخطوط الجوية، شارات الكتف المخصصة، الأجنحة، وشارات الأسماء. نطابق ألوان العلامة التجارية بدقة باستخدام مراجع بانتون.' },
+  { question: 'ما الحد الأدنى لطلب أزياء الطيران؟', questionAr: 'ما الحد الأدنى لطلب أزياء الطيران؟', answer: 'Minimum order is 25 pieces per style.', answerAr: 'الحد الأدنى للأزياء القياسية 25 قطعة لكل نمط. للأزياء المصممة خصيصاً، الحد الأدنى 50 قطعة. طلبات العينات متاحة للموافقة قبل الإنتاج.' },
+  { question: 'هل أزياء الطيران تلبي المعايير الدولية؟', questionAr: 'هل أزياء الطيران تلبي المعايير الدولية؟', answer: 'Yes, all uniforms comply with international aviation standards.', answerAr: 'نعم، جميع أزياء الطيران لدينا تتوافق مع معايير سلطات الطيران الدولية ومصنوعة من مواد مقاومة للهب ومضادة للكهرباء الساكنة كما هو مطلوب.' },
 ];
 
 const products = [
-  { id: 'pilot-uniform', name: 'طقم زي الطيار', description: 'زي طيار كامل مع جاكيت وبنطلون وشارات الكتف', price: 'من 1,299 ريال', image: '/images/products/pilot-uniform.jpg', href: '/ar/shop/aviation-uniforms/pilot-uniform', features: ['كابتن 4 خطوط', 'مقاوم للحريق', 'صوف فاخر'] },
-  { id: 'cabin-crew-female', name: 'زي طاقم الطائرة للسيدات', description: 'ملابس طاقم طائرة أنيقة للمضيفات', price: 'من 899 ريال', image: '/images/products/cabin-crew-female.jpg', href: '/ar/shop/aviation-uniforms/cabin-crew-female', features: ['مقاوم للتجاعيد', 'تصميم أنيق', 'مقاس مريح'] },
-  { id: 'cabin-crew-male', name: 'زي طاقم الطائرة للرجال', description: 'ملابس طاقم طائرة احترافية للمضيفين', price: 'من 899 ريال', image: '/images/products/cabin-crew-male.jpg', href: '/ar/shop/aviation-uniforms/cabin-crew-male', features: ['مظهر احترافي', 'قماش متين', 'سهل العناية'] },
-  { id: 'ground-crew', name: 'زي طاقم الأرض', description: 'أزياء متينة لموظفي المطار الأرضي', price: 'من 599 ريال', image: '/images/products/ground-crew.jpg', href: '/ar/shop/aviation-uniforms/ground-crew', features: ['خيارات عاكسة', 'مقاوم للطقس', 'شرائط عاكسة'] },
+  { id: 'pilot-uniform', name: 'طقم زي الطيار', description: 'زي طيار كامل مع جاكيت وبنطلون وشارات الكتف', price: 'من 1,299 ريال', image: '/images/aviation/aviation_captin_uniform.jpg', href: '/ar/shop/aviation-uniforms/pilot-uniform', features: ['كابتن 4 خطوط', 'مقاوم للهب', 'صوف فاخر'] },
+  { id: 'cabin-crew-female', name: 'زي المضيفات', description: 'ملابس أنيقة لمضيفات الطيران', price: 'من 899 ريال', image: '/images/aviation/cabin_crew_uniform.jpg', href: '/ar/shop/aviation-uniforms/flight-attendant-dress', features: ['مقاوم للتجاعيد', 'تصميم أنيق', 'مريح'] },
+  { id: 'cabin-crew-male', name: 'زي طاقم الطائرة الرجالي', description: 'ملابس احترافية لطاقم الطائرة الذكور', price: 'من 899 ريال', image: '/images/aviation/airline_crew_uniform.jpg', href: '/ar/shop/aviation-uniforms/airline-crew-uniform', features: ['مظهر احترافي', 'قماش متين', 'سهل العناية'] },
+  { id: 'ground-crew', name: 'زي طاقم الأرض', description: 'زي متين لموظفي المطار الأرضيين', price: 'من 599 ريال', image: '/images/aviation/ground_crew_uniform.jpg', href: '/ar/shop/aviation-uniforms/ground-crew-uniform', features: ['خيارات عاكسة', 'مقاوم للطقس', 'شرائط عاكسة'] },
 ];
 
 export default function AviationUniformsPageAr() {
   return (
     <div dir="rtl">
-      <SEO2026 title="أزياء الطيران السعودية | يونيوم" titleAr="أزياء الطيران السعودية | يونيوم" description="Aviation uniforms." descriptionAr="أزياء طيران فاخرة." locale="ar" pageType="category" mainEntity="Aviation Uniforms" mainEntityAr="أزياء الطيران" primaryImage="/images/airline-1.jpg" primaryImageAlt="أزياء الطيران" faqs={aviationFAQsAr} breadcrumbs={[{ name: 'Shop', nameAr: 'المتجر', url: '/ar/shop' }, { name: 'Aviation', nameAr: 'الطيران', url: '/ar/shop/aviation-uniforms' }]} industry="الطيران" />
+      <SEO2026 title="أزياء الطيران السعودية | يونيوم" titleAr="أزياء الطيران السعودية | يونيوم" description="Premium aviation uniforms." descriptionAr="أزياء طيران فاخرة للسعودية." locale="ar" pageType="category" mainEntity="Aviation Uniforms" mainEntityAr="أزياء الطيران" primaryImage="/images/aviation/aviation_uniform_airline.jpg" primaryImageAlt="أزياء الطيران" faqs={aviationFAQsAr} breadcrumbs={[{ name: 'Shop', nameAr: 'المتجر', url: '/ar/shop' }, { name: 'Aviation', nameAr: 'الطيران', url: '/ar/shop/aviation-uniforms' }]} industry="الطيران" />
 
       <section className="bg-gradient-to-br from-blue-900 via-sky-800 to-indigo-800 text-white relative overflow-hidden py-16">
         <Container>
-          <Breadcrumbs items={[{ label: 'الرئيسية', href: '/ar' }, { label: 'المتجر', href: '/ar/shop' }, { label: 'أزياء الطيران', href: '/ar/shop/aviation-uniforms' }]} className="text-white/80 mb-6" />
+          <Breadcrumbs items={[{ label: 'الرئيسية', href: '/ar' }, { label: 'المتجر', href: '/ar/shop' }, { label: 'أزياء الطيران', href: '/ar/shop/aviation-uniforms' }]} className="text-white/80 mb-6 relative z-10" />
           <div className="relative z-10 max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"><span className="text-sky-400">✈️</span><span className="text-sm font-medium">صناعة الطيران</span></div>
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"><span className="text-sky-400">✈️</span><span className="text-sm font-medium">قطاع الطيران</span></div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">أزياء <span className="bg-gradient-to-r from-sky-300 to-blue-300 text-transparent bg-clip-text">الطيران</span></h1>
-            <p className="text-xl mb-8 text-sky-100 leading-relaxed">أزياء طيران فاخرة للخطوط الجوية السعودية. زي الطيارين، طاقم الطائرة، وموظفي الأرض مع علامة تجارية مخصصة.</p>
+            <p className="text-xl mb-8 text-sky-100 leading-relaxed">أزياء طيران فاخرة للخطوط الجوية السعودية. زي الطيارين وطاقم الطائرة وموظفي الأرض مع التخصيص بشعار الشركة.</p>
           </div>
         </Container>
       </section>
@@ -83,8 +84,8 @@ export default function AviationUniformsPageAr() {
 
           <section className="text-center bg-gradient-to-r from-blue-600 to-sky-600 text-white rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">تحتاج أزياء طيران مخصصة؟</h2>
-            <p className="text-xl mb-8 text-blue-100">تواصل معنا لحلول أزياء خاصة بالخطوط الجوية مع علامة تجارية مخصصة.</p>
-            <Link href="/ar/quote?category=aviation" className="inline-flex items-center px-8 py-4 bg-white text-blue-700 hover:bg-gray-100 font-bold rounded-xl transition-all shadow-lg">احصل على عرض سعر للخطوط الجوية ←</Link>
+            <p className="text-xl mb-8 text-blue-100">تواصل معنا لحلول أزياء طيران كاملة مع التخصيص بشعار وألوان خطوطك الجوية.</p>
+            <Link href="/ar/quote?category=aviation" className="inline-flex items-center px-8 py-4 bg-white text-blue-700 hover:bg-gray-100 font-bold rounded-xl transition-all shadow-lg">احصل على عرض سعر ←</Link>
           </section>
         </Container>
       </main>

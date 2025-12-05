@@ -36,7 +36,7 @@ const productData = {
     { name: 'الشهادات', value: 'ISO 20743 (فعالية مضادات الميكروبات)' }
   ],
   images: [
-    { src: '/images/products/scrubs-set.jpg', alt: 'منظر أمامي للملابس الطبية المضادة للميكروبات' },
+    { src: '/images/healthcare/scrubs-collections.jpg', alt: 'منظر أمامي للملابس الطبية المضادة للميكروبات' },
     { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'متخصصون طبيون يرتدون ملابس مضادة للميكروبات' },
     { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'صورة مقربة للنسيج المضاد للميكروبات' },
     { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'عرض توضيحي لمقاومة النسيج للسوائل' }
@@ -59,7 +59,7 @@ const productData = {
     'دمج تقنية RFID لإدارة المخزون'
   ],
   relatedProducts: [
-    { id: 'premium-scrubs-set', name: 'طقم ملابس طبية فاخرة', image: '/images/products/scrubs-set.jpg', price: 'ريال سعودي 249', link: '/ar/shop/medical-scrubs/premium-scrubs-set' }
+    { id: 'premium-scrubs-set', name: 'طقم ملابس طبية فاخرة', image: '/images/healthcare/scrubs-collections.jpg', price: 'ريال سعودي 249', link: '/ar/shop/medical-scrubs/premium-scrubs-set' }
   ]
 };
 

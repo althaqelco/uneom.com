@@ -74,7 +74,7 @@ export default function SurgicalScrubsPage() {
       { name: 'Caribbean Blue', value: '#0086cb', image: '/images/healthcare/healthcare_medical_doctor_uniform.jpg' },
       { name: 'Ceil Blue', value: '#92a1cf', image: '/images/healthcare/full_clothes_doctor_uniform.jpg' },
       { name: 'Navy', value: '#000080', image: '/images/healthcare/healthcare_hijab_doctor.jpg' },
-      { name: 'Royal Blue', value: '#4169e1', image: '/images/products/scrubs-set.jpg' }
+      { name: 'Royal Blue', value: '#4169e1', image: '/images/healthcare/scrubs-collections.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {

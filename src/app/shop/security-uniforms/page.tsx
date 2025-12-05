@@ -18,7 +18,7 @@ export const metadata: Metadata = generateMetadata2026({
   locale: 'en',
   pageType: 'category',
   path: '/shop/security-uniforms',
-  image: '/images/products/security-officer-uniform.jpg',
+  image: '/images/products/security/security-patrol-jacket-main.jpg',
   imageAlt: 'Security Uniforms Saudi Arabia',
   aiSummary: 'UNEOM security uniforms for Saudi security companies. Products: Security Officer Uniforms (from SAR 199), Tactical Security Vests (from SAR 149), Patrol Jackets (from SAR 229), Security Accessories (from SAR 49). Serving private security companies, mall security, hotel security, and event security.',
   aiSummaryAr: 'أزياء الأمن من يونيوم لشركات الأمن السعودية. المنتجات: زي ضابط أمن (من 199 ريال)، سترات أمنية تكتيكية (من 149 ريال)، جاكيت دوريات (من 229 ريال).'
@@ -34,7 +34,7 @@ const securityFAQs = [
 ];
 
 const products = [
-  { id: 'security-officer-uniform', name: 'Security Officer Uniform', description: 'Professional uniform for security officers', price: 'From SAR 199', image: '/images/products/security-officer-uniform.jpg', href: '/shop/security-uniforms/security-officer-uniform', features: ['Professional', 'Durable', 'Comfortable'] },
+  { id: 'security-officer-uniform', name: 'Security Officer Uniform', description: 'Professional uniform for security officers', price: 'From SAR 199', image: '/images/products/security/security-patrol-jacket-main.jpg', href: '/shop/security-uniforms/security-officer-uniform', features: ['Professional', 'Durable', 'Comfortable'] },
   { id: 'tactical-security-vest', name: 'Tactical Security Vest', description: 'Utility vest for security personnel', price: 'From SAR 149', image: '/images/products/tactical-vest.jpg', href: '/shop/security-uniforms/tactical-security-vest', features: ['Multi-pocket', 'Durable', 'Adjustable'] },
   { id: 'security-patrol-jacket', name: 'Security Patrol Jacket', description: 'Weather-resistant patrol jacket', price: 'From SAR 229', image: '/images/products/security-jacket.jpg', href: '/shop/security-uniforms/security-patrol-jacket', features: ['Waterproof', 'Reflective', 'Warm'] },
   { id: 'security-accessories', name: 'Security Accessories Kit', description: 'Complete security accessories package', price: 'From SAR 49', image: '/images/products/security-accessories.jpg', href: '/shop/security-uniforms/security-accessories-kit', features: ['Utility belt', 'ID holder', 'Radio pouch'] },
@@ -43,7 +43,7 @@ const products = [
 export default function SecurityUniformsPage() {
   return (
     <>
-      <SEO2026 title="Security Uniforms Saudi Arabia | UNEOM" titleAr="أزياء الأمن السعودية | يونيوم" description="Security uniforms for Saudi Arabia." locale="en" pageType="category" mainEntity="Security Uniforms" primaryImage="/images/products/security-officer-uniform.jpg" primaryImageAlt="Security Uniforms" faqs={securityFAQs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Security Uniforms', url: '/shop/security-uniforms' }]} industry="Security" />
+      <SEO2026 title="Security Uniforms Saudi Arabia | UNEOM" titleAr="أزياء الأمن السعودية | يونيوم" description="Security uniforms for Saudi Arabia." locale="en" pageType="category" mainEntity="Security Uniforms" primaryImage="/images/products/security/security-patrol-jacket-main.jpg" primaryImageAlt="Security Uniforms" faqs={securityFAQs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Security Uniforms', url: '/shop/security-uniforms' }]} industry="Security" />
 
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden py-16">
         <Container>

@@ -447,7 +447,7 @@ export default function ExecutiveProtectionUniformPage() {
             <Link href="/shop/security-uniforms/security-officer-uniform" className="group">
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <Image
-                  src="/images/products/security-officer-uniform.jpg"
+                  src="/images/products/security/security-patrol-jacket-main.jpg"
                   alt="Security Officer Uniform"
                   width={300}
                   height={200}

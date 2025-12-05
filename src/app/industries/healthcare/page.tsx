@@ -151,7 +151,7 @@ const featuredProducts = [
     id: '1',
     name: 'Premium Medical Scrubs',
     description: 'Antimicrobial, moisture-wicking scrubs for nurses and medical staff. Available in 12 colors.',
-    image: '/images/products/scrubs-set.jpg',
+    image: '/images/healthcare/scrubs-collections.jpg',
     price: 'From SAR 189',
     href: '/shop/medical-scrubs/premium-medical-scrubs/',
     category: 'Medical Scrubs',

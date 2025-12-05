@@ -165,7 +165,7 @@ const featuredProducts = [
     id: '4',
     name: 'Concierge & Front Desk',
     description: 'Sophisticated uniforms for guest-facing staff. First impressions matter.',
-    image: '/images/hospitality_uniform_concierge.jpg',
+    image: '/images/hospitality/hospitality_uniform_concierge.jpg',
     price: 'From SAR 349',
     href: '/shop/hospitality-attire/concierge-uniform/',
     category: 'Front Desk',

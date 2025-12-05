@@ -40,7 +40,7 @@ export default function PremiumScrubsSetPage() {
       { name: 'Custom Options', value: 'Embroidery, custom sizing, color matching' }
     ],
     images: [
-      { src: '/images/products/scrubs-set.jpg', alt: 'Premium Scrubs Set Front View' },
+      { src: '/images/healthcare/scrubs-collections.jpg', alt: 'Premium Scrubs Set Front View' },
       { src: '/images/healthcare/healthcare_medical_uniform.jpg', alt: 'Premium Scrubs Set Worn by Medical Professionals' },
       { src: '/images/healthcare/healthcare_nurce_uniform.jpg', alt: 'Premium Scrubs Set in Use' },
       { src: '/images/healthcare/healthcare_medical_doctor.jpg', alt: 'Medical Team Wearing Scrubs' }

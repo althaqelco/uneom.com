@@ -135,7 +135,7 @@ const featuredProducts = [
     id: '1',
     name: 'السكراب الطبي الفاخر',
     description: 'سكراب مضاد للميكروبات وماص للرطوبة للممرضات والطاقم الطبي. متوفر بـ 12 لون.',
-    image: '/images/products/scrubs-set.jpg',
+    image: '/images/healthcare/scrubs-collections.jpg',
     price: 'يبدأ من 189 ريال',
     href: '/ar/shop/medical-scrubs/premium-medical-scrubs/',
     category: 'السكراب الطبي',

@@ -18,7 +18,7 @@ export const metadata: Metadata = generateMetadata2026({
   locale: 'ar',
   pageType: 'category',
   path: '/ar/shop/medical-scrubs',
-  image: '/images/products/scrubs-set.jpg',
+  image: '/images/healthcare/scrubs-collections.jpg',
   imageAlt: 'سكراب طبي وأزياء رعاية صحية السعودية',
   aiSummary: 'UNEOM medical scrubs collection in Saudi Arabia.',
   aiSummaryAr: 'مجموعة السكراب الطبي من يونيوم في السعودية. المنتجات تشمل: سكراب طبي فاخر (من 169 ريال) - مضاد للميكروبات، مقاوم للبقع. زي تمريض (من 149 ريال) - مريح للمناوبات الطويلة. سكراب جراحي (من 199 ريال) - جاهز للتعقيم. معاطف مختبر (من 129 ريال) - مظهر احترافي. جميع المنتجات تتميز بقماش مضاد للميكروبات، ماص للرطوبة، ومتوفرة بألوان متعددة. متاحة للمستشفيات والعيادات والمراكز الطبية في جميع أنحاء السعودية.'
@@ -35,7 +35,7 @@ const medicalFAQsAr = [
 ];
 
 const products = [
-  { id: 'premium-medical-scrubs', name: 'سكراب طبي فاخر', description: 'سكراب عالي الأداء مضاد للميكروبات', price: 'من 169 ريال', originalPrice: '249 ريال', image: '/images/products/scrubs-set.jpg', href: '/ar/shop/medical-scrubs/premium-medical-scrubs', features: ['مضاد للميكروبات', 'مقاوم للبقع', 'ماص للرطوبة'], isBestseller: true },
+  { id: 'premium-medical-scrubs', name: 'سكراب طبي فاخر', description: 'سكراب عالي الأداء مضاد للميكروبات', price: 'من 169 ريال', originalPrice: '249 ريال', image: '/images/healthcare/scrubs-collections.jpg', href: '/ar/shop/medical-scrubs/premium-medical-scrubs', features: ['مضاد للميكروبات', 'مقاوم للبقع', 'ماص للرطوبة'], isBestseller: true },
   { id: 'nursing-uniform-set', name: 'طقم زي تمريض', description: 'أزياء تمريض مريحة للمناوبات الطويلة', price: 'من 149 ريال', image: '/images/products/nursing-scrubs.jpg', href: '/ar/shop/medical-scrubs/nursing-uniform-set', features: ['قابل للتنفس', 'قماش مرن', 'جيوب متعددة'] },
   { id: 'surgical-scrubs', name: 'سكراب جراحي', description: 'سكراب جاهز للتعقيم', price: 'من 199 ريال', image: '/images/products/surgical-scrubs.jpg', href: '/ar/shop/medical-scrubs/surgical-scrubs', features: ['جاهز للتعقيم', 'مقاوم للسوائل', 'مضاد للميكروبات'], isNew: true },
   { id: 'lab-coats', name: 'معاطف مختبر طبية', description: 'معاطف مختبر احترافية للأطباء', price: 'من 129 ريال', image: '/images/products/lab-coat.jpg', href: '/ar/shop/medical-scrubs/lab-coats', features: ['مظهر احترافي', 'مقاوم للبقع', 'أطوال متعددة'] },
@@ -46,7 +46,7 @@ const products = [
 export default function MedicalScrubsPageAr() {
   return (
     <div dir="rtl">
-      <SEO2026 title="سكراب طبي السعودية | يونيوم" titleAr="سكراب طبي السعودية | يونيوم" description="Buy medical scrubs." descriptionAr="شراء سكراب طبي فاخر في السعودية." locale="ar" pageType="category" mainEntity="Medical Scrubs" mainEntityAr="السكراب الطبي وأزياء الرعاية الصحية" primaryImage="/images/products/scrubs-set.jpg" primaryImageAlt="سكراب طبي" faqs={medicalFAQsAr} breadcrumbs={[{ name: 'Shop', nameAr: 'المتجر', url: '/ar/shop' }, { name: 'Medical Scrubs', nameAr: 'السكراب الطبي', url: '/ar/shop/medical-scrubs' }]} industry="الرعاية الصحية" serviceArea={['الرياض', 'جدة', 'الدمام', 'جميع السعودية']} />
+      <SEO2026 title="سكراب طبي السعودية | يونيوم" titleAr="سكراب طبي السعودية | يونيوم" description="Buy medical scrubs." descriptionAr="شراء سكراب طبي فاخر في السعودية." locale="ar" pageType="category" mainEntity="Medical Scrubs" mainEntityAr="السكراب الطبي وأزياء الرعاية الصحية" primaryImage="/images/healthcare/scrubs-collections.jpg" primaryImageAlt="سكراب طبي" faqs={medicalFAQsAr} breadcrumbs={[{ name: 'Shop', nameAr: 'المتجر', url: '/ar/shop' }, { name: 'Medical Scrubs', nameAr: 'السكراب الطبي', url: '/ar/shop/medical-scrubs' }]} industry="الرعاية الصحية" serviceArea={['الرياض', 'جدة', 'الدمام', 'جميع السعودية']} />
 
       <section className="bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-800 text-white relative overflow-hidden py-16">
         <Container>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './globals.css';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { QuoteProvider } from '@/contexts/QuoteContext';
 import LayoutWrapper from '@/components/layout/LayoutWrapper';
@@ -8,9 +8,6 @@ import Script from 'next/script';
 import dynamic from 'next/dynamic';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-// Removed Vercel Analytics for Netlify deployment
-// import { SpeedInsights } from '@vercel/speed-insights/next';
-// import { Analytics } from '@vercel/analytics/react';
 
 // Importar ImageResolver dinámicamente para evitar errores de SSR
 const ImageResolver = dynamic(() => import('@/components/ImageResolver'), { 
@@ -37,6 +34,14 @@ const EmergencyImageLoader = dynamic(() => import('@/components/ui/EmergencyImag
 });
 
 const inter = Inter({ subsets: ['latin'] });
+
+// Viewport configuration - separated from metadata per Next.js 14 requirements
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#1e3a8a',
+  colorScheme: 'light',
+};
 
 export const metadata: Metadata = {
   title: 'UNEOM | يونيوم - Professional Uniforms & Workwear in Saudi Arabia',
@@ -145,8 +150,6 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#1e3a8a" />
         
         {/* Language alternates */}
         <link rel="alternate" hrefLang="en" href="https://uneom.com" />

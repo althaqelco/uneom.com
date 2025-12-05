@@ -58,7 +58,7 @@ export const HEALTHCARE_IMAGES: IndustryImageSet = {
   ],
   products: [
     {
-      src: '/images/products/scrubs-set.jpg',
+      src: '/images/healthcare/scrubs-collections.jpg',
       alt: 'Complete medical scrubs set',
       altAr: 'طقم سكرابز طبي كامل',
       category: 'healthcare',
@@ -213,7 +213,7 @@ export const HOSPITALITY_IMAGES: IndustryImageSet = {
       tags: ['formal', 'hotel', 'staff']
     },
     {
-      src: '/images/hospitality_uniform_concierge.jpg',
+      src: '/images/hospitality/hospitality_uniform_concierge.jpg',
       alt: 'Professional concierge uniform',
       altAr: 'زي كونسيرج احترافي',
       category: 'hospitality',

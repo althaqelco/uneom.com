@@ -29,7 +29,7 @@ export default function PremiumMedicalScrubsPage() {
     longDescription: "Our Premium Medical Scrubs provide healthcare professionals with exceptional comfort, durability, and professional appearance. Designed specifically for the Saudi Arabian healthcare environment, these scrubs feature antimicrobial properties, moisture-wicking fabric, and practical pocket configurations for all medical staff needs.",
     price: "SAR 179",
     minOrder: 20,
-    mainImage: "/images/products/scrubs-set.jpg",
+    mainImage: "/images/healthcare/scrubs-collections.jpg",
     additionalImages: [
       "/images/healthcare/medical_hijab_uniform.jpg",
       "/images/healthcare/medical_hijab_uniform.jpg",

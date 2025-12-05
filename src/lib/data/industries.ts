@@ -284,8 +284,8 @@ export const industries: Industry[] = [
     title: "Professional Corporate Workwear & Office Uniforms in Saudi Arabia",
     description: "Sophisticated corporate attire designed for Saudi business environments. Projecting professionalism while ensuring comfort in office settings.",
     descriptionAr: "ملابس شركات متطورة مصممة لبيئات الأعمال السعودية. تعكس الاحترافية مع ضمان الراحة في بيئات المكاتب.",
-    image: "/images/modern-arabic-businessman-SBI-300984397.jpg",
-    heroImage: "/images/arabic-businessman-in-the-middle-east-SBI-300984430.jpg",
+    image: "/images/corporate/corporate-hero.jpg",
+    heroImage: "/images/corporate/corporate_uniform_office_hero.jpg",
     benefits: [
       { 
         title: "Professional Brand Image", 
@@ -359,7 +359,7 @@ export const industries: Industry[] = [
     description: "High-quality school uniforms designed for Saudi educational institutions. Combining comfort, durability, and adherence to educational standards.",
     descriptionAr: "زي مدرسي عالي الجودة مصمم للمؤسسات التعليمية السعودية. يجمع بين الراحة والمتانة والالتزام بالمعايير التعليمية.",
     image: "/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg",
-    heroImage: "/images/4k-top-view-of-little-asian-students-with-uniforms-reading-book-in-library-together-SBI-351422735.jpg",
+    heroImage: "/images/education/education-uniforms.jpg",
     benefits: [
       { 
         title: "Durable Construction", 
@@ -432,8 +432,8 @@ export const industries: Industry[] = [
     title: "Professional Security Uniforms in Saudi Arabia",
     description: "Durable and functional security uniforms designed for Saudi security personnel. Combining professional appearance with practical features for security operations.",
     descriptionAr: "زي أمني متين وعملي مصمم لأفراد الأمن السعوديين. يجمع بين المظهر المهني والميزات العملية لعمليات الأمن.",
-    image: "/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg",
-    heroImage: "/images/confident-man-in-uniform-with-phone-2025-02-12-01-27-59-utc.jpg",
+    image: "/images/security/security-header.jpg",
+    heroImage: "/images/security/corporate-security-officers.jpg",
     benefits: [
       { 
         title: "Professional Authority", 
@@ -506,7 +506,7 @@ export const industries: Industry[] = [
     title: "Professional Firefighting Uniforms in Saudi Arabia",
     description: "High-performance firefighting gear designed for Saudi fire services. Meeting international safety standards while adapted for local conditions.",
     descriptionAr: "معدات إطفاء عالية الأداء مصممة لخدمات الإطفاء السعودية. تلبي معايير السلامة الدولية مع التكيف مع الظروف المحلية.",
-    image: "/images/firefighters-fight-the-fire-flame-to-control-fire-not-to-spreading-out-firefighter-ind-SBI-349465280.jpg",
+    image: "/images/a-firefighter-giving-instructions-to-her-team-SBI-301057339.jpg",
     heroImage: "/images/a-firefighter-giving-instructions-to-her-team-SBI-301057339.jpg",
     benefits: [
       { 
@@ -581,7 +581,7 @@ export const industries: Industry[] = [
     description: "Practical and recognizable uniforms for Saudi delivery services. Designed for comfort during long delivery shifts in various weather conditions.",
     descriptionAr: "يونيفورم عملي ومميز لخدمات التوصيل السعودية. مصمم للراحة أثناء مناوبات التوصيل الطويلة في مختلف الظروف الجوية.",
     image: "/images/a-delivery-person-dressed-in-a-red-polo-and-cap-shows-approval-with-a-thumbs-up-while--SBI-350024443.jpg",
-    heroImage: "/images/caucasian-delivery-man-checking-a-list-of-deliveri-2025-01-30-20-43-07-utc.jpg",
+    heroImage: "/images/a-delivery-person-dressed-in-a-red-polo-and-cap-shows-approval-with-a-thumbs-up-while--SBI-350024443.jpg",
     benefits: [
       { 
         title: "Brand Recognition", 

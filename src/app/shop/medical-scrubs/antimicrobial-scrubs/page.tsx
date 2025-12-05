@@ -36,7 +36,7 @@ const productData = {
     { name: 'Certifications', value: 'ISO 20743 (Antimicrobial effectiveness)' }
   ],
   images: [
-    { src: '/images/products/scrubs-set.jpg', alt: 'Antimicrobial Scrubs Front View' },
+    { src: '/images/healthcare/scrubs-collections.jpg', alt: 'Antimicrobial Scrubs Front View' },
     { src: '/images/healthcare/healthcare_medical_uniform.jpg', alt: 'Medical professionals wearing Antimicrobial Scrubs' },
     { src: '/images/healthcare/healthcare_nurce_uniform.jpg', alt: 'Antimicrobial Fabric Close-up' },
     { src: '/images/healthcare/healthcare_medical_doctor_uniform.jpg', alt: 'Fluid-resistant Fabric Demonstration' }
@@ -59,7 +59,7 @@ const productData = {
     'RFID tag integration for inventory management'
   ],
   relatedProducts: [
-    { id: 'premium-scrubs-set', name: 'Premium Scrubs Set', image: '/images/products/scrubs-set.jpg', price: 'SAR 199', link: '/shop/medical-scrubs/professional-lab-coat' }
+    { id: 'premium-scrubs-set', name: 'Premium Scrubs Set', image: '/images/healthcare/scrubs-collections.jpg', price: 'SAR 199', link: '/shop/medical-scrubs/professional-lab-coat' }
   ]
 };
 

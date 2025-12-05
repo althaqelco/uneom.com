@@ -37,14 +37,14 @@ const shopFAQsAr = [
 ];
 
 const categories = [
-  { id: 'medical-scrubs', name: 'الملابس الصحية', description: 'سكراب طبي، معاطف مختبر، زي تمريض', image: '/images/products/scrubs-set.jpg', href: '/ar/shop/medical-scrubs', price: 'من 169 ريال', popular: true, gradient: 'from-emerald-600 to-teal-600' },
-  { id: 'aviation-uniforms', name: 'أزياء الطيران', description: 'زي طيار، مضيفات، طاقم أرضي', image: '/images/airline-1.jpg', href: '/ar/shop/aviation-uniforms', price: 'من 899 ريال', popular: false, gradient: 'from-blue-600 to-sky-600' },
-  { id: 'hospitality-attire', name: 'أزياء الضيافة', description: 'زي فنادق، مطاعم، كونسيرج', image: '/images/hospitality_uniform_concierge.jpg', href: '/ar/shop/hospitality-attire', price: 'من 329 ريال', popular: true, gradient: 'from-orange-600 to-amber-600' },
-  { id: 'corporate-workwear', name: 'ملابس الشركات', description: 'بدلات رسمية، زي مكاتب، بولو', image: '/images/products/corporate-suit-executive.jpg', href: '/ar/shop/corporate-workwear', price: 'من 799 ريال', popular: false, gradient: 'from-gray-700 to-blue-800' },
+  { id: 'medical-scrubs', name: 'الملابس الصحية', description: 'سكراب طبي، معاطف مختبر، زي تمريض', image: '/images/healthcare/scrubs-collections.jpg', href: '/ar/shop/medical-scrubs', price: 'من 169 ريال', popular: true, gradient: 'from-emerald-600 to-teal-600' },
+  { id: 'aviation-uniforms', name: 'أزياء الطيران', description: 'زي طيار، مضيفات، طاقم أرضي', image: '/images/aviation/aviation_uniform_airline.jpg', href: '/ar/shop/aviation-uniforms', price: 'من 899 ريال', popular: false, gradient: 'from-blue-600 to-sky-600' },
+  { id: 'hospitality-attire', name: 'أزياء الضيافة', description: 'زي فنادق، مطاعم، كونسيرج', image: '/images/hospitality/hospitality_uniform_concierge.jpg', href: '/ar/shop/hospitality-attire', price: 'من 329 ريال', popular: true, gradient: 'from-orange-600 to-amber-600' },
+  { id: 'corporate-workwear', name: 'ملابس الشركات', description: 'بدلات رسمية، زي مكاتب، بولو', image: '/images/products/corporate/corporate-suit-executive.jpg', href: '/ar/shop/corporate-workwear', price: 'من 799 ريال', popular: false, gradient: 'from-gray-700 to-blue-800' },
   { id: 'culinary-uniforms', name: 'أزياء الطهاة', description: 'معاطف شيف، زي مطبخ، مآزر', image: '/images/products/chef-coat-white.jpg', href: '/ar/shop/culinary-uniforms', price: 'من 249 ريال', popular: false, gradient: 'from-red-600 to-orange-600' },
   { id: 'industrial-uniforms', name: 'الملابس الصناعية', description: 'أفرول، ملابس سلامة، FR', image: '/images/products/industrial-coverall.jpg', href: '/ar/shop/industrial-uniforms', price: 'من 199 ريال', popular: true, gradient: 'from-yellow-600 to-orange-600' },
   { id: 'education-uniforms', name: 'الزي المدرسي', description: 'زي مدارس، رياضي، معاطف مختبر', image: '/images/products/school-uniform-primary.jpg', href: '/ar/shop/education-uniforms', price: 'من 149 ريال', popular: false, gradient: 'from-indigo-600 to-purple-600' },
-  { id: 'security-uniforms', name: 'أزياء الأمن', description: 'زي حراسة، ملابس تكتيكية', image: '/images/products/security-officer-uniform.jpg', href: '/ar/shop/security-uniforms', price: 'من 299 ريال', popular: false, gradient: 'from-gray-800 to-gray-900' },
+  { id: 'security-uniforms', name: 'أزياء الأمن', description: 'زي حراسة، ملابس تكتيكية', image: '/images/products/security/security-patrol-jacket-main.jpg', href: '/ar/shop/security-uniforms', price: 'من 299 ريال', popular: false, gradient: 'from-gray-800 to-gray-900' },
 ];
 
 export default function ShopPageAr() {

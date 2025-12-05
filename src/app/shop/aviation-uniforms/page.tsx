@@ -18,7 +18,7 @@ export const metadata: Metadata = generateMetadata2026({
   locale: 'en',
   pageType: 'category',
   path: '/shop/aviation-uniforms',
-  image: '/images/airline-1.jpg',
+  image: '/images/aviation/aviation_uniform_airline.jpg',
   imageAlt: 'Aviation Uniforms Saudi Arabia - Pilot and Cabin Crew',
   aiSummary: 'UNEOM aviation uniforms for Saudi airlines. Products: Pilot Uniforms (from SAR 1,299) - professional, epaulettes included. Cabin Crew Attire (from SAR 899) - elegant, comfortable for long flights. Ground Staff Uniforms (from SAR 599) - durable, branded. All uniforms can be customized with airline logos.',
   aiSummaryAr: 'أزياء الطيران من يونيوم للخطوط الجوية السعودية. المنتجات: زي الطيارين (من 1,299 ريال) - احترافي، شارات الكتف مشمولة. ملابس طاقم الطائرة (من 899 ريال) - أنيقة، مريحة للرحلات الطويلة. زي موظفي الأرض (من 599 ريال) - متينة، ذات علامة تجارية.'
@@ -43,7 +43,7 @@ const products = [
 export default function AviationUniformsPage() {
   return (
     <>
-      <SEO2026 title="Aviation Uniforms Saudi Arabia | UNEOM" titleAr="أزياء الطيران السعودية | يونيوم" description="Premium aviation uniforms." descriptionAr="أزياء طيران فاخرة." locale="en" pageType="category" mainEntity="Aviation Uniforms" primaryImage="/images/airline-1.jpg" primaryImageAlt="Aviation Uniforms" faqs={aviationFAQs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Aviation Uniforms', url: '/shop/aviation-uniforms' }]} industry="Aviation" />
+      <SEO2026 title="Aviation Uniforms Saudi Arabia | UNEOM" titleAr="أزياء الطيران السعودية | يونيوم" description="Premium aviation uniforms." descriptionAr="أزياء طيران فاخرة." locale="en" pageType="category" mainEntity="Aviation Uniforms" primaryImage="/images/aviation/aviation_uniform_airline.jpg" primaryImageAlt="Aviation Uniforms" faqs={aviationFAQs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Aviation Uniforms', url: '/shop/aviation-uniforms' }]} industry="Aviation" />
 
       <section className="bg-gradient-to-br from-blue-900 via-sky-800 to-indigo-800 text-white relative overflow-hidden py-16">
         <Container>

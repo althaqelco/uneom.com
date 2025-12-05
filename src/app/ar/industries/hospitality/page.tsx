@@ -130,7 +130,7 @@ const featuredProducts = [
     id: '4',
     name: 'زي الكونسيرج والاستقبال',
     description: 'أزياء راقية لموظفي الواجهة. الانطباعات الأولى مهمة.',
-    image: '/images/hospitality_uniform_concierge.jpg',
+    image: '/images/hospitality/hospitality_uniform_concierge.jpg',
     price: 'يبدأ من 349 ريال',
     href: '/ar/shop/hospitality-attire/concierge-uniform/',
     category: 'زي الاستقبال',

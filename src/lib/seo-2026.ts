@@ -5,7 +5,34 @@
  * optimized for 2026 SEO standards and AI search engines.
  */
 
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
+
+// ============================================
+// VIEWPORT EXPORT (Next.js 14 Requirement)
+// ============================================
+
+/**
+ * Standard viewport configuration for all pages
+ * In Next.js 14, viewport settings must be exported separately from metadata
+ */
+export const viewport2026: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#1e40af' },
+    { media: '(prefers-color-scheme: dark)', color: '#1e3a8a' }
+  ],
+  colorScheme: 'light dark',
+};
+
+/**
+ * Generate viewport configuration (can be customized per page if needed)
+ */
+export function generateViewport2026(): Viewport {
+  return viewport2026;
+}
 
 // ============================================
 // TYPES
@@ -227,20 +254,8 @@ export function generateMetadata2026(config: SEO2026Config): Metadata {
     // Referrer
     referrer: 'strict-origin-when-cross-origin',
     
-    // Color scheme
-    colorScheme: 'light dark',
-    themeColor: [
-      { media: '(prefers-color-scheme: light)', color: '#1e40af' },
-      { media: '(prefers-color-scheme: dark)', color: '#1e3a8a' }
-    ],
-    
-    // Viewport
-    viewport: {
-      width: 'device-width',
-      initialScale: 1,
-      maximumScale: 5,
-      userScalable: true
-    },
+    // Note: colorScheme, themeColor, and viewport have been moved to viewport export
+    // as per Next.js 14 requirements. Use generateViewport2026() for these.
     
     // Robots
     robots: {

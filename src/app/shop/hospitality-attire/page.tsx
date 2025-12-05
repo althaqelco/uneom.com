@@ -18,7 +18,7 @@ export const metadata: Metadata = generateMetadata2026({
   locale: 'en',
   pageType: 'category',
   path: '/shop/hospitality-attire',
-  image: '/images/hospitality_uniform_concierge.jpg',
+  image: '/images/hospitality/hospitality_uniform_concierge.jpg',
   imageAlt: 'Hospitality Uniforms Saudi Arabia - Hotel and Restaurant Staff',
   aiSummary: 'UNEOM hospitality uniforms for Saudi hotels and restaurants. Products: Luxury Hotel Uniforms (from SAR 399), Restaurant Staff Uniforms (from SAR 249), Chef Uniforms (from SAR 299), Concierge Attire (from SAR 349). Serving 5-star hotels, luxury resorts, and fine dining restaurants.',
   aiSummaryAr: 'أزياء الضيافة من يونيوم للفنادق والمطاعم السعودية. المنتجات: زي الفنادق الفاخرة (من 399 ريال)، زي موظفي المطاعم (من 249 ريال)، زي الطهاة (من 299 ريال)، زي الكونسيرج (من 349 ريال).'
@@ -37,7 +37,7 @@ const products = [
   { id: 'luxury-hotel-uniform', name: 'Luxury Hotel Uniform', description: 'Premium uniforms for 5-star hotels', price: 'From SAR 399', image: '/images/products/hotel-uniform.jpg', href: '/shop/hospitality-attire/luxury-hotel-uniform', features: ['Elegant design', 'Stain-resistant', 'Breathable'] },
   { id: 'restaurant-staff-uniform', name: 'Restaurant Staff Uniform', description: 'Professional waiter and service attire', price: 'From SAR 249', image: '/images/products/restaurant-uniform.jpg', href: '/shop/hospitality-attire/restaurant-staff-uniform', features: ['Easy care', 'Durable', 'Comfortable'] },
   { id: 'chef-uniform', name: 'Chef Uniform', description: 'Professional chef coats and kitchen attire', price: 'From SAR 299', image: '/images/products/chef-coat-white.jpg', href: '/shop/hospitality-attire/chef-uniform', features: ['Heat-resistant', 'Stain-resistant', 'Breathable'] },
-  { id: 'concierge-attire', name: 'Concierge Attire', description: 'Sophisticated uniforms for guest services', price: 'From SAR 349', image: '/images/hospitality_uniform_concierge.jpg', href: '/shop/hospitality-attire/concierge-attire', features: ['Premium fabric', 'Tailored fit', 'Professional'] },
+  { id: 'concierge-attire', name: 'Concierge Attire', description: 'Sophisticated uniforms for guest services', price: 'From SAR 349', image: '/images/hospitality/hospitality_uniform_concierge.jpg', href: '/shop/hospitality-attire/concierge-attire', features: ['Premium fabric', 'Tailored fit', 'Professional'] },
   { id: 'housekeeping-uniform', name: 'Housekeeping Uniform', description: 'Practical uniforms for housekeeping staff', price: 'From SAR 199', image: '/images/products/housekeeping-uniform.jpg', href: '/shop/hospitality-attire/housekeeping-uniform', features: ['Durable', 'Easy wash', 'Comfortable'] },
   { id: 'spa-uniform', name: 'Spa & Wellness Uniform', description: 'Relaxed uniforms for spa therapists', price: 'From SAR 229', image: '/images/products/spa-uniform.jpg', href: '/shop/hospitality-attire/spa-uniform', features: ['Soft fabric', 'Relaxed fit', 'Professional'] },
 ];
@@ -45,7 +45,7 @@ const products = [
 export default function HospitalityAttirePage() {
   return (
     <>
-      <SEO2026 title="Hospitality Uniforms Saudi Arabia | UNEOM" titleAr="أزياء الضيافة السعودية | يونيوم" description="Premium hospitality uniforms." descriptionAr="أزياء ضيافة فاخرة." locale="en" pageType="category" mainEntity="Hospitality Uniforms" primaryImage="/images/hospitality_uniform_concierge.jpg" primaryImageAlt="Hospitality Uniforms" faqs={hospitalityFAQs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Hospitality Attire', url: '/shop/hospitality-attire' }]} industry="Hospitality" />
+      <SEO2026 title="Hospitality Uniforms Saudi Arabia | UNEOM" titleAr="أزياء الضيافة السعودية | يونيوم" description="Premium hospitality uniforms." descriptionAr="أزياء ضيافة فاخرة." locale="en" pageType="category" mainEntity="Hospitality Uniforms" primaryImage="/images/hospitality/hospitality_uniform_concierge.jpg" primaryImageAlt="Hospitality Uniforms" faqs={hospitalityFAQs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Hospitality Attire', url: '/shop/hospitality-attire' }]} industry="Hospitality" />
 
       <section className="bg-gradient-to-br from-amber-900 via-orange-800 to-red-800 text-white relative overflow-hidden py-16">
         <Container>

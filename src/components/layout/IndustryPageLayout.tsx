@@ -543,7 +543,7 @@ export default function IndustryPageLayout({
                     ? '/images/healthcare/healthcare_nurce_uniform.jpg'
                     : (Array.isArray(industryData.products) && industryData.products.length > 0 && industryData.products[0]?.image
                         ? industryData.products[0].image
-                        : industryData.heroImage || '/images/industry-default.jpg'),
+                        : industryData.heroImage || '/images/defaults/default-industry.jpg'),
                   alt: industryData.title,
                   width: 600,
                   height: 450,
