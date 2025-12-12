@@ -334,6 +334,7 @@ const SEO2026: React.FC<SEO2026Props> = ({
   };
 
   // WebPage Schema
+  // For FAQ pages, include mainEntity with Question/Answer pairs as required by Google
   const webPageSchema = {
     '@type': getPageSchemaType(pageType),
     '@id': `${currentUrl}/#webpage`,
@@ -342,6 +343,17 @@ const SEO2026: React.FC<SEO2026Props> = ({
     description: localDescription,
     isPartOf: { '@id': `${baseUrl}/#website` },
     about: localEntity ? { '@type': 'Thing', name: localEntity } : undefined,
+    // Required for FAQPage: mainEntity must contain Question/Answer pairs
+    ...(pageType === 'faq' && faqs.length > 0 ? {
+      mainEntity: faqs.map(faq => ({
+        '@type': 'Question',
+        name: isArabic ? (faq.questionAr || faq.question) : faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: isArabic ? (faq.answerAr || faq.answer) : faq.answer
+        }
+      }))
+    } : {}),
     primaryImageOfPage: primaryImage ? {
       '@type': 'ImageObject',
       '@id': `${currentUrl}/#primaryimage`,
