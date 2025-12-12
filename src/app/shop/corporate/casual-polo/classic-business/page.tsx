@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { 
+import {
   CheckCircleIcon,
   StarIcon,
   ShieldCheckIcon,
@@ -19,7 +19,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Classic Business Polo Shirts | Professional Corporate Attire | UNEOM',
     description: 'Premium classic business polo shirts designed for corporate professionals, combining comfort with professional appearance.',
-    images: ['/images/products/corporate-polo-shirts.jpg']}}
+    images: ['/images/products/corporate-polo-shirts.jpg']
+  }
+}
 
 const poloFeatures = [
   {
@@ -166,7 +168,7 @@ export default function ClassicBusinessPoloPage() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/products/corporate-polo-shirts.jpg"
+                src="/images/corporate/polo-shirt-collection.jpg"
                 alt="Classic business polo shirt details"
                 fill
                 className="object-cover"
@@ -216,7 +218,7 @@ export default function ClassicBusinessPoloPage() {
             {colorOptions.map((color) => (
               <div key={color.name} className="bg-white border rounded-lg p-6 shadow-md">
                 <div className="flex items-center mb-4">
-                  <div 
+                  <div
                     className="w-12 h-12 rounded-full border-2 border-gray-300 mr-4"
                     style={{ backgroundColor: color.code }}
                   ></div>

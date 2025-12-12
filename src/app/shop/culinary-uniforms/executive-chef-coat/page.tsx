@@ -15,7 +15,7 @@ export default function ExecutiveChefCoatPage() {
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(5);
   const [showSizeChart, setShowSizeChart] = useState(false);
-  
+
   // Product details
   const product = {
     id: 'executive-chef-coat',
@@ -46,10 +46,10 @@ export default function ExecutiveChefCoatPage() {
       { name: 'Customization', value: 'Embroidery options for name and restaurant logo' }
     ],
     images: [
-      { src: '/images/hospitality/executive-hospitality-suit.jpg', alt: 'Executive Chef Coat - Front View' },
-      { src: '/images/hospitality/executive-hospitality-suit.jpg', alt: 'Executive Chef Coat - Side View' },
-      { src: '/images/hospitality/executive-hospitality-suit.jpg', alt: 'Chef Coat Detail' },
-      { src: '/images/hospitality/executive-hospitality-suit.jpg', alt: 'Complete Chef Uniform' }
+      { src: '/images/hospitality/premium-chef-uniform.jpg', alt: 'Executive Chef Coat - Front View' },
+      { src: '/images/hospitality/chef-uniform-professional.jpg', alt: 'Executive Chef Coat - Side View' },
+      { src: '/images/hospitality/chef-uniform-design.jpg', alt: 'Chef Coat Detail' },
+      { src: '/images/hospitality/restaurant-chef-uniforms.jpg', alt: 'Complete Chef Uniform' }
     ],
     category: 'Culinary Uniforms',
     categorySlug: 'culinary-uniforms',
@@ -78,13 +78,13 @@ export default function ExecutiveChefCoatPage() {
       {
         id: 'chef-pants',
         name: 'Professional Chef Pants',
-        image: '/images/hospitality/executive-hospitality-suit.jpg',
+        image: '/images/hospitality/chef-coat-maintenance.jpg',
         price: 'From SAR 129',
         href: '/shop/culinary-uniforms/chef-apron'
       }
     ]
   };
-  
+
   // Size chart
   const sizeChart = {
     unisex: [
@@ -98,7 +98,7 @@ export default function ExecutiveChefCoatPage() {
       { size: '4XL', chest: '48-50"', shoulder: '23"', sleeve: '36"', length: '35"' },
     ]
   };
-  
+
   // Handle quantity change
   const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(e.target.value);
@@ -106,7 +106,7 @@ export default function ExecutiveChefCoatPage() {
       setQuantity(value);
     }
   };
-  
+
   // Handle add to quote
   const handleAddToQuote = () => {
     console.log('Added to quote:', {
@@ -117,7 +117,7 @@ export default function ExecutiveChefCoatPage() {
     });
     alert('Product added to your quote request.');
   };
-  
+
   // Generate pricing display based on quantity
   const getPriceDisplay = () => {
     if (quantity >= 500) {
@@ -130,10 +130,10 @@ export default function ExecutiveChefCoatPage() {
       return 'SAR ' + (product.basePrice * quantity).toLocaleString();
     }
   };
-  
+
   return (
     <div className="bg-white">
-    
+
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-4">
         <Container>
@@ -145,7 +145,7 @@ export default function ExecutiveChefCoatPage() {
               <li>
                 <div className="flex items-center">
                   <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                   </svg>
                   <Link href="/shop" className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">Shop</Link>
                 </div>
@@ -153,7 +153,7 @@ export default function ExecutiveChefCoatPage() {
               <li>
                 <div className="flex items-center">
                   <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                   </svg>
                   <Link href="/shop/culinary-uniforms" className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">
                     Culinary Uniforms
@@ -163,7 +163,7 @@ export default function ExecutiveChefCoatPage() {
               <li aria-current="page">
                 <div className="flex items-center">
                   <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                   </svg>
                   <span className="text-sm text-gray-500 ml-1 md:ml-2">{product.name}</span>
                 </div>
@@ -172,7 +172,7 @@ export default function ExecutiveChefCoatPage() {
           </nav>
         </Container>
       </div>
-      
+
       {/* Product Details Section */}
       <section className="py-12">
         <Container>
@@ -190,8 +190,8 @@ export default function ExecutiveChefCoatPage() {
               </div>
               <div className="grid grid-cols-4 gap-4">
                 {product.images.map((image, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className={`relative h-24 rounded-md overflow-hidden cursor-pointer border-2 transition-colors
                       ${activeImage === index ? 'border-primary-600' : 'border-transparent hover:border-primary-400'}`}
                     onClick={() => setActiveImage(index)}
@@ -206,19 +206,19 @@ export default function ExecutiveChefCoatPage() {
                 ))}
               </div>
             </div>
-            
+
             {/* Product Info */}
             <div>
               <span className="text-sm text-primary-600 font-medium">{product.category}</span>
               <h1 className="text-3xl font-bold text-gray-900 mt-1 mb-2">{product.name}</h1>
-              
+
               <div className="flex items-center mb-4">
                 <div className="flex items-center">
                   {Array(5).fill(0).map((_, i) => (
-                    <svg 
-                      key={i} 
-                      className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-gray-300'}`} 
-                      fill="currentColor" 
+                    <svg
+                      key={i}
+                      className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
+                      fill="currentColor"
                       viewBox="0 0 20 20"
                     >
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -227,13 +227,13 @@ export default function ExecutiveChefCoatPage() {
                 </div>
                 <span className="text-gray-600 ml-2">{product.rating} ({product.reviews} reviews)</span>
               </div>
-              
+
               <p className="text-2xl font-bold text-gray-900 mb-4">{product.price}</p>
-              
+
               <div className="prose prose-sm mb-8">
                 <p>{product.description}</p>
               </div>
-              
+
               {/* Color Selection */}
               {product.colors && product.colors.length > 0 && (
                 <div className="mb-6">
@@ -252,42 +252,42 @@ export default function ExecutiveChefCoatPage() {
                   </div>
                 </div>
               )}
-              
+
               {/* Size Selection */}
               {product.sizes && product.sizes.length > 0 && (
                 <div className="mb-6">
                   <div className="flex justify-between items-center mb-3">
                     <h3 className="text-sm font-medium text-gray-900">Size</h3>
-                    <button 
+                    <button
                       onClick={() => setShowSizeChart(!showSizeChart)}
                       className="text-sm text-primary-600 hover:text-primary-700"
                     >
                       Size chart
                     </button>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {product.sizes.map((size, index) => (
                       <button
                         key={index}
                         onClick={() => setSelectedSize(size)}
                         className={`px-4 py-2 text-sm font-medium rounded-md border focus:outline-none
-                          ${selectedSize === size 
-                            ? 'border-primary-600 bg-primary-50 text-primary-700' 
+                          ${selectedSize === size
+                            ? 'border-primary-600 bg-primary-50 text-primary-700'
                             : 'border-gray-300 text-gray-700 hover:border-gray-400'}`}
                       >
                         {size}
                       </button>
                     ))}
                   </div>
-                  
+
                   {/* Size Chart Modal */}
                   {showSizeChart && (
                     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
                       <div className="bg-white rounded-lg shadow-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6">
                         <div className="flex justify-between items-center mb-4">
                           <h2 className="text-xl font-bold">Chef Coat Size Chart</h2>
-                          <button 
+                          <button
                             onClick={() => setShowSizeChart(false)}
                             className="text-gray-500 hover:text-gray-700"
                           >
@@ -296,7 +296,7 @@ export default function ExecutiveChefCoatPage() {
                             </svg>
                           </button>
                         </div>
-                        
+
                         <div className="overflow-x-auto">
                           <table className="w-full text-sm text-gray-700">
                             <thead className="bg-gray-50">
@@ -321,7 +321,7 @@ export default function ExecutiveChefCoatPage() {
                             </tbody>
                           </table>
                         </div>
-                        
+
                         <div className="mt-6 text-sm text-gray-500">
                           <p>All measurements are in inches. For best results, measure an existing chef coat that fits well and compare to these measurements.</p>
                         </div>
@@ -330,7 +330,7 @@ export default function ExecutiveChefCoatPage() {
                   )}
                 </div>
               )}
-              
+
               {/* Quantity Selection */}
               <div className="mb-6">
                 <h3 className="text-sm font-medium text-gray-900 mb-3">Quantity</h3>
@@ -345,7 +345,7 @@ export default function ExecutiveChefCoatPage() {
                   <span className="ml-3 text-sm text-gray-500">Minimum order: {product.minOrderQuantity} units</span>
                 </div>
               </div>
-              
+
               {/* Total Price */}
               <div className="mb-8 p-4 bg-gray-50 rounded-lg">
                 <div className="flex justify-between items-center">
@@ -354,7 +354,7 @@ export default function ExecutiveChefCoatPage() {
                 </div>
                 <p className="text-xs text-gray-500 mt-1">Final price will be confirmed in quote</p>
               </div>
-              
+
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -375,7 +375,7 @@ export default function ExecutiveChefCoatPage() {
                   </Button>
                 </Link>
               </div>
-              
+
               {/* Custom Options */}
               {product.customizationOptions && product.customizationOptions.length > 0 && (
                 <div className="mt-8 pt-6 border-t border-gray-200">
@@ -395,7 +395,7 @@ export default function ExecutiveChefCoatPage() {
           </div>
         </Container>
       </section>
-      
+
       {/* Product Details Tabs */}
       <section className="py-12 bg-gray-50">
         <Container>
@@ -413,7 +413,7 @@ export default function ExecutiveChefCoatPage() {
                     <li key={index}>{feature}</li>
                   ))}
                 </ul>
-                
+
                 <h3 className="mt-6">Product Specifications</h3>
                 <div className="overflow-x-auto mt-4">
                   <table className="w-full border-collapse">
@@ -427,26 +427,26 @@ export default function ExecutiveChefCoatPage() {
                     </tbody>
                   </table>
                 </div>
-                
+
                 <h3 className="mt-6">Product Description</h3>
                 <p>
-                  Our Executive Chef Coat is the finest culinary garment in our collection, designed specifically for executive chefs 
+                  Our Executive Chef Coat is the finest culinary garment in our collection, designed specifically for executive chefs
                   and culinary leaders in Saudi Arabia's premier hotels, restaurants, and catering establishments.
                 </p>
                 <p>
-                  Crafted from 100% premium Egyptian cotton at 240 gsm, this coat offers exceptional breathability, comfort, and durability 
-                  that withstands the rigors of professional kitchens. The fabric has been specially treated to resist stains and maintain 
+                  Crafted from 100% premium Egyptian cotton at 240 gsm, this coat offers exceptional breathability, comfort, and durability
+                  that withstands the rigors of professional kitchens. The fabric has been specially treated to resist stains and maintain
                   its pristine appearance through multiple industrial washings.
                 </p>
                 <p>
-                  The classic double-breasted design with hidden snap closures allows for quick changing between services while maintaining 
-                  the elegant traditional look. When one side becomes stained, simply reverse the front to maintain a professional appearance. 
+                  The classic double-breasted design with hidden snap closures allows for quick changing between services while maintaining
+                  the elegant traditional look. When one side becomes stained, simply reverse the front to maintain a professional appearance.
                   The thermometer pocket on the left sleeve provides convenient access to essential tools.
                 </p>
                 <p>
-                  Available in classic white for traditional kitchens and black for modern culinary establishments, this coat can be 
-                  customized with name embroidery and restaurant logos to enhance your brand identity. The design accommodates the 
-                  Saudi culinary environment with enhanced breathability and moisture-wicking properties to keep chefs comfortable 
+                  Available in classic white for traditional kitchens and black for modern culinary establishments, this coat can be
+                  customized with name embroidery and restaurant logos to enhance your brand identity. The design accommodates the
+                  Saudi culinary environment with enhanced breathability and moisture-wicking properties to keep chefs comfortable
                   even in hot kitchen conditions.
                 </p>
               </div>
@@ -454,13 +454,13 @@ export default function ExecutiveChefCoatPage() {
           </div>
         </Container>
       </section>
-      
+
       {/* Bulk Pricing */}
       <section className="py-12">
         <Container>
           <SectionHeading centered>Volume Pricing</SectionHeading>
           <p className="text-center text-gray-700 mb-8">Benefit from significant savings with our volume pricing structure.</p>
-          
+
           <div className="max-w-2xl mx-auto">
             <div className="overflow-x-auto">
               <table className="w-full text-sm text-gray-700">
@@ -488,13 +488,13 @@ export default function ExecutiveChefCoatPage() {
           </div>
         </Container>
       </section>
-      
+
       {/* Related Products */}
       {product.relatedProducts && product.relatedProducts.length > 0 && (
         <section className="py-12 bg-gray-50">
           <Container>
             <SectionHeading centered>Related Products</SectionHeading>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
               {product.relatedProducts.map((relatedProduct, index) => (
                 <Link href={relatedProduct.href} key={index} className="group">
@@ -524,7 +524,7 @@ export default function ExecutiveChefCoatPage() {
           </Container>
         </section>
       )}
-      
+
       {/* Quick Quote Form */}
       <section className="py-12">
         <Container>
@@ -541,7 +541,7 @@ export default function ExecutiveChefCoatPage() {
           </div>
         </Container>
       </section>
-    
-      </div>
+
+    </div>
   );
 } 
