@@ -80,7 +80,7 @@ const productSchema = {
   "image": [
     "https://uneom.com/images/products/industrial/mechanic-1.jpg",
     "https://uneom.com/images/products/industrial/mechanic-2.jpg",
-    "https://uneom.com/images/products/industrial-coverall.jpg"
+    "https://uneom.com/images/products/factory-workwear.jpg"
   ],
   "offers": {
     "@type": "AggregateOffer",
@@ -326,7 +326,7 @@ export default function MechanicsOverallsPage() {
               
               <div className="relative group overflow-hidden rounded-xl">
                 <Image
-                  src="/images/products/industrial-coverall.jpg"
+                  src="/images/products/factory-workwear.jpg"
                   alt="Industrial Coverall Full Body"
                   width={400}
                   height={500}

@@ -31,9 +31,9 @@ export default function PremiumMedicalScrubsPage() {
     minOrder: 20,
     mainImage: "/images/healthcare/scrubs-collections.jpg",
     additionalImages: [
-      "/images/healthcare/medical_hijab_uniform.jpg",
-      "/images/healthcare/medical_hijab_uniform.jpg",
-      "/images/healthcare/medical_hijab_uniform.jpg"
+      "/images/healthcare/dept-doctors.jpg",
+      "/images/healthcare/dept-doctors.jpg",
+      "/images/healthcare/dept-doctors.jpg"
     ],
     colors: [
       { name: "Sky Blue", value: "#87CEEB" },
@@ -96,7 +96,7 @@ export default function PremiumMedicalScrubsPage() {
       { 
         name: "Department Color Coding", 
         description: "Color options to designate different departments or roles",
-        image: "/images/healthcare/medical_hijab_uniform.jpg"
+        image: "/images/healthcare/dept-doctors.jpg"
       },
       { 
         name: "Custom Pocket Configuration", 
@@ -108,7 +108,7 @@ export default function PremiumMedicalScrubsPage() {
       {
         id: "surgical-scrubs",
         name: "Surgical Scrubs Set",
-        image: "/images/healthcare/medical_hijab_uniform.jpg",
+        image: "/images/healthcare/dept-doctors.jpg",
         price: "SAR 189",
         href: "/shop/medical-scrubs/nurse-uniform"
       }

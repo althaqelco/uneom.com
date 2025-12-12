@@ -117,7 +117,7 @@ export default function HospitalPolicyTemplatesPage() {
             <p>Cultural accommodation should be integrated thoughtfully into uniform policies, not added as an afterthought. Our templates provide comprehensive guidelines that respect Saudi cultural values while prioritizing patient safety and clinical excellence.</p>
           </div>
         `,
-        image: '/images/healthcare/medical_hijab_uniform.jpg'
+        image: '/images/healthcare/healthcare_nurce_uniform.jpg'
       },
       {
         title: 'Department-Specific Uniform Standards',

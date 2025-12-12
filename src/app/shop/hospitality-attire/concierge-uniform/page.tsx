@@ -206,7 +206,7 @@ export default function ConciergeUniformPage() {
       { name: 'Customization Options', value: 'Property embroidery, metal buttons with logo, accent color piping, premium fabric upgrades' }
     ],
     images: [
-      { src: '/images/hospitality/hospitality_uniform_hotel_service.jpg', alt: 'Premium concierge staff in distinguished uniform assisting guest at luxury Saudi hotel' },
+      { src: '/images/hospitality/hospitality_uniform_restaurant.jpg', alt: 'Premium concierge staff in distinguished uniform assisting guest at luxury Saudi hotel' },
       { src: '/images/hospitality/hospitality_hotel_reception.jpg', alt: 'Professional concierge in tailored uniform welcoming guests at five-star property entrance' },
       { src: '/images/hospitality/hospitality_uniform_concierge.jpg', alt: 'Concierge team in coordinated premium uniforms at prestigious hotel lobby in Saudi Arabia' },
       { src: '/images/hospitality/executive-hospitality-suit.jpg', alt: 'Close-up detail of premium concierge uniform showing quality tailoring and Saudi-inspired accents' }

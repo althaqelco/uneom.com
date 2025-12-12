@@ -51,10 +51,10 @@ export default function ExecutiveMedicalUniformsPageArabic() {
       { name: 'خيارات التخصيص', value: 'شعارات المؤسسات، تطريز الأسماء/المؤهلات، علامات القيادة' }
     ],
     images: [
-      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'قيادي في الرعاية الصحية يرتدي زي طبي تنفيذي كحلي فاخر' },
-      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'قيادية في الرعاية الصحية بزي طبي تنفيذي احترافي' },
-      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'إداريون طبيون في أزياء تنفيذية خلال اجتماع قيادي' },
-      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'مدير طبي سعودي في زي تنفيذي مصمم مع فريقه' }
+      { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'قيادي في الرعاية الصحية يرتدي زي طبي تنفيذي كحلي فاخر' },
+      { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'قيادية في الرعاية الصحية بزي طبي تنفيذي احترافي' },
+      { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'إداريون طبيون في أزياء تنفيذية خلال اجتماع قيادي' },
+      { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'مدير طبي سعودي في زي تنفيذي مصمم مع فريقه' }
     ],
     category: 'الأزياء الطبية',
     categorySlug: 'medical-scrubs',
@@ -70,11 +70,11 @@ export default function ExecutiveMedicalUniformsPageArabic() {
       { name: 'زي رئيس القسم', price: '465 ريال سعودي' }
     ],
     colors: [
-      { name: 'كحلي', value: '#000080', image: '/images/healthcare/medical_hijab_uniform.jpg' },
-      { name: 'أسود', value: '#000000', image: '/images/healthcare/medical_hijab_uniform.jpg' },
-      { name: 'عنابي', value: '#800020', image: '/images/healthcare/medical_hijab_uniform.jpg' },
-      { name: 'رمادي فحمي', value: '#36454F', image: '/images/healthcare/medical_hijab_uniform.jpg' },
-      { name: 'أزرق ملكي', value: '#4169E1', image: '/images/healthcare/medical_hijab_uniform.jpg' }
+      { name: 'كحلي', value: '#000080', image: '/images/healthcare/healthcare_hijab_doctor.jpg' },
+      { name: 'أسود', value: '#000000', image: '/images/healthcare/healthcare_hijab_doctor.jpg' },
+      { name: 'عنابي', value: '#800020', image: '/images/healthcare/healthcare_hijab_doctor.jpg' },
+      { name: 'رمادي فحمي', value: '#36454F', image: '/images/healthcare/healthcare_hijab_doctor.jpg' },
+      { name: 'أزرق ملكي', value: '#4169E1', image: '/images/healthcare/healthcare_hijab_doctor.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {

@@ -51,9 +51,9 @@ export default function SurgicalScrubsPage() {
       { name: 'Customization Options', value: 'Hospital logos, department identification, surgeon name embroidery' }
     ],
     images: [
-      { src: '/images/healthcare/healthcare_medical_doctor.jpg', alt: 'Surgical team wearing advanced scrubs in operating room' },
+      { src: '/images/healthcare/dept-surgeons.jpg', alt: 'Surgical team wearing advanced scrubs in operating room' },
       { src: '/images/healthcare/healthcare_medical_doctor_uniform.jpg', alt: 'Surgeon and nurse in high-performance surgical attire preparing for procedure' },
-      { src: '/images/healthcare/healthcare_medical_doctor.jpg', alt: 'Medical professionals in matching surgical scrubs during operation' },
+      { src: '/images/healthcare/dept-surgeons.jpg', alt: 'Medical professionals in matching surgical scrubs during operation' },
       { src: '/images/healthcare/full_clothes_doctor_uniform.jpg', alt: 'Saudi surgeon in specialized surgical scrubs with team' }
     ],
     category: 'Medical Scrubs',
@@ -93,14 +93,14 @@ export default function SurgicalScrubsPage() {
         author: "Dr. Khalid Al-Anazi",
         position: "Chief of Surgery",
         company: "King Faisal Specialist Hospital",
-        image: "/images/healthcare/healthcare_medical_doctor.jpg"
+        image: "/images/healthcare/dept-surgeons.jpg"
       },
       {
         quote: "After standardizing with Uneom's surgical scrubs across our network of operating facilities, we've documented a measurable improvement in staff comfort during long procedures. The modest design options have been particularly valuable for our female surgeons, and the customized embroidery helps maintain clear identification in surgical environments.",
         author: "Dr. Layla Al-Oraini",
         position: "Surgical Department Director",
         company: "Saudi German Hospitals Group",
-        image: "/images/healthcare/healthcare_medical_doctor.jpg"
+        image: "/images/healthcare/dept-surgeons.jpg"
       }
     ]
   };
@@ -348,7 +348,7 @@ export default function SurgicalScrubsPage() {
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                  src="/images/healthcare/healthcare_medical_doctor.jpg" 
+                  src="/images/healthcare/dept-surgeons.jpg" 
                   alt="Surgical team in standardized scrubs preparing for operation" 
                   fill
                   className="object-cover"

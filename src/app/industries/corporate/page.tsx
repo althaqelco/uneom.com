@@ -283,7 +283,7 @@ export default function CorporateIndustryPage() {
             <div className="relative hidden lg:block">
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg"
+                  src="/images/men-shaking-hands-over-business-meeting-2025-01-25-05-47-49-utc.jpg"
                   alt="Business professionals wearing UNEOM corporate uniforms in Saudi Arabia"
                   fill
                   className="object-cover"

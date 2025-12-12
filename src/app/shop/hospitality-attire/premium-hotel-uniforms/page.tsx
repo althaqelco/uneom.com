@@ -50,7 +50,7 @@ export default function PremiumHotelUniformsPage() {
       { name: 'Customization', value: 'Hotel logos, staff names, department color coding' }
     ],
     images: [
-      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'Hotel reception staff in premium uniforms' },
+      { src: '/images/hospitality/hospitality_uniform_management.jpg', alt: 'Hotel reception staff in premium uniforms' },
       { src: '/images/hospitality/hospitality_uniform_concierge.jpg', alt: 'Concierge in premium hotel uniform' },
       { src: '/images/hospitality/hospitality_uniform_department.jpg', alt: 'Housekeeping staff in professional uniforms' },
       { src: '/images/products/hotel-uniform.jpg', alt: 'Hotel manager in executive uniform greeting guests' }

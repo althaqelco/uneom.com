@@ -352,7 +352,7 @@ const saudiSuccessStories = [
     challenge: 'Unifying brand identity across 8 food & beverage outlets',
     solution: 'Created modular uniform system with shared base pieces and outlet-specific accessories',
     result: '30% reduction in uniform costs, improved brand cohesion',
-    image: '/images/hospitality/hospitality_uniform_formal.jpg'
+    image: '/images/hospitality/hospitality_uniform_hotel.jpg'
   },
   {
     property: 'Heritage Boutique Hotel, Jeddah',

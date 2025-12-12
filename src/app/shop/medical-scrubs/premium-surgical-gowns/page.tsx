@@ -50,7 +50,7 @@ export default function PremiumSurgicalGownsPage() {
       { name: 'Packaging', value: 'Individual packs or bulk options available' }
     ],
     images: [
-      { src: '/images/healthcare/healthcare_medical_doctor.jpg', alt: 'Surgical team wearing premium gowns' },
+      { src: '/images/healthcare/dept-doctors.jpg', alt: 'Surgical team wearing premium gowns' },
       { src: '/images/healthcare/healthcare_medical_doctor_uniform.jpg', alt: 'Surgeons in premium gowns during operation' },
       { src: '/images/healthcare/full_clothes_doctor_uniform.jpg', alt: 'Close-up of premium surgical gown fabric and details' },
       { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'Healthcare professional in premium surgical attire' }
@@ -86,14 +86,14 @@ export default function PremiumSurgicalGownsPage() {
         author: "Dr. Mohammed Al-Harbi",
         position: "Chief of Surgery",
         company: "King Faisal Specialist Hospital",
-        image: "/images/healthcare/healthcare_medical_doctor.jpg"
+        image: "/images/healthcare/dept-doctors.jpg"
       },
       {
         quote: "The level of protection these gowns provide is exceptional. The reinforced zones offer extra peace of mind, and the fabric remains breathable even during the most intense procedures.",
         author: "Dr. Sarah Al-Qahtani",
         position: "Head of Surgical Nursing",
         company: "Saudi German Hospital",
-        image: "/images/healthcare/healthcare_medical_doctor.jpg"
+        image: "/images/healthcare/dept-doctors.jpg"
       }
     ]
   };
@@ -376,7 +376,7 @@ export default function PremiumSurgicalGownsPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image 
-                src="/images/healthcare/healthcare_medical_doctor.jpg" 
+                src="/images/healthcare/dept-doctors.jpg" 
                 alt="Customized surgical gowns for hospital teams" 
                 fill
                 className="object-cover"

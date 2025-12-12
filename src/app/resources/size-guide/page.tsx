@@ -226,7 +226,7 @@ export default function SizeGuidePage() {
         id: "womens-sizing",
         title: "Women's Sizing Guide",
         description: "Detailed measurements for women's uniforms with size conversion tables.",
-        image: "/images/healthcare/medical_hijab_uniform.jpg"
+        image: "/images/healthcare/nurce_uniform.jpg"
       },
       {
         id: "measurement-guide",

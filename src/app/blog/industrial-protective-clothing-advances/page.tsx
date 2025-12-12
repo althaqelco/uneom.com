@@ -37,7 +37,7 @@ const articleJsonLd = {
   image: [
     'https://uneom.com/images/blog/industrial-protective-advances.jpg',
     'https://uneom.com/images/categories/Industrial_Manufacturing_Uniforms.png',
-    'https://uneom.com/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg'
+    'https://uneom.com/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg'
   ],
   author: {
     '@type': 'Person',
@@ -171,7 +171,7 @@ export default function IndustrialProtectiveClothingAdvances() {
               <div className="mb-12">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg"
+                    src="/images/professional-textile-expert-checking-the-quality-of-a-fabric-in-a-factory-man-SBI-300990818.jpg"
                     alt="Worker wearing advanced protective clothing in industrial environment"
                     width={800}
                     height={500}

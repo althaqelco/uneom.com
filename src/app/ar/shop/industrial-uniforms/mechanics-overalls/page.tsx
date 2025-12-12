@@ -80,7 +80,7 @@ const productSchema = {
   "image": [
     "https://uneom.com/images/products/industrial/mechanic-1.jpg",
     "https://uneom.com/images/products/industrial/mechanic-2.jpg",
-    "https://uneom.com/images/products/industrial-coverall.jpg"
+    "https://uneom.com/images/products/hi-vis-vest.jpg"
   ],
   "offers": {
     "@type": "AggregateOffer",
@@ -326,7 +326,7 @@ export default function MechanicsOverallsPageAR() {
               
               <div className="relative group overflow-hidden rounded-xl">
                 <Image
-                  src="/images/products/industrial-coverall.jpg"
+                  src="/images/products/hi-vis-vest.jpg"
                   alt="دبل صناعي كامل الجسم"
                   width={400}
                   height={500}

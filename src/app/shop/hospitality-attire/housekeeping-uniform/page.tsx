@@ -206,8 +206,8 @@ export default function HousekeepingUniformPage() {
       { name: 'Customization Options', value: 'Property embroidery, department identification, fabric reinforcement in high-wear areas' }
     ],
     images: [
-      { src: '/images/hospitality/hospitality_uniform_hotel_service.jpg', alt: 'Professional housekeeping staff in durable uniform maintaining luxury hotel room' },
-      { src: '/images/hospitality/hospitality_uniform_hotel_service.jpg', alt: 'Female housekeeper in modest uniform with ergonomic design features at Saudi luxury hotel' },
+      { src: '/images/hospitality/hotel-staff-uniform.jpg', alt: 'Professional housekeeping staff in durable uniform maintaining luxury hotel room' },
+      { src: '/images/hospitality/hotel-staff-uniform.jpg', alt: 'Female housekeeper in modest uniform with ergonomic design features at Saudi luxury hotel' },
       { src: '/images/hospitality/hotel-staff-uniform.jpg', alt: 'Hotel housekeeping team in coordinated professional uniforms maintaining property standards' },
       { src: '/images/hospitality/hospitality_uniform_department.jpg', alt: 'Saudi housekeeping staff in culturally appropriate professional uniforms at five-star property' }
     ],
@@ -225,11 +225,11 @@ export default function HousekeepingUniformPage() {
       { name: 'Utility Housekeeping Collection', price: 'SAR 295' }
     ],
     colors: [
-      { name: 'Teal Green', value: '#008080', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
-      { name: 'Navy Blue', value: '#000080', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
-      { name: 'Charcoal Grey', value: '#36454F', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
-      { name: 'Burgundy', value: '#800020', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
-      { name: 'Khaki', value: '#C3B091', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' }
+      { name: 'Teal Green', value: '#008080', image: '/images/hospitality/hotel-staff-uniform.jpg' },
+      { name: 'Navy Blue', value: '#000080', image: '/images/hospitality/hotel-staff-uniform.jpg' },
+      { name: 'Charcoal Grey', value: '#36454F', image: '/images/hospitality/hotel-staff-uniform.jpg' },
+      { name: 'Burgundy', value: '#800020', image: '/images/hospitality/hotel-staff-uniform.jpg' },
+      { name: 'Khaki', value: '#C3B091', image: '/images/hospitality/hotel-staff-uniform.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {

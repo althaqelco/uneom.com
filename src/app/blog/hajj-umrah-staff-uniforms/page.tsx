@@ -117,7 +117,7 @@ const sectorGuidelines = [
       'Easy identification for guest assistance'
     ],
     colorSchemes: 'Deep greens, whites, golds - colors associated with Islamic heritage',
-    image: '/images/hospitality/hospitality_uniform_hotel_service.jpg'
+    image: '/images/hospitality/saudi-hospitality-culture.jpg'
   },
   {
     sector: 'Transport & Logistics',

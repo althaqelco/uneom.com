@@ -37,9 +37,9 @@ const productData = {
   ],
   images: [
     { src: '/images/healthcare/scrubs-collections.jpg', alt: 'منظر أمامي للملابس الطبية المضادة للميكروبات' },
-    { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'متخصصون طبيون يرتدون ملابس مضادة للميكروبات' },
-    { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'صورة مقربة للنسيج المضاد للميكروبات' },
-    { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'عرض توضيحي لمقاومة النسيج للسوائل' }
+    { src: '/images/healthcare/advanced-fabrics.jpg', alt: 'متخصصون طبيون يرتدون ملابس مضادة للميكروبات' },
+    { src: '/images/healthcare/advanced-fabrics.jpg', alt: 'صورة مقربة للنسيج المضاد للميكروبات' },
+    { src: '/images/healthcare/advanced-fabrics.jpg', alt: 'عرض توضيحي لمقاومة النسيج للسوائل' }
   ],
   category: 'الملابس الطبية',
   categorySlug: 'medical-scrubs',

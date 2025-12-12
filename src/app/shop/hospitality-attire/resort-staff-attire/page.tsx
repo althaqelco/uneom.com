@@ -189,7 +189,7 @@ export default function ResortStaffAttirePage() {
     images: [
       { src: '/images/products/hotel-uniform.jpg', alt: 'Resort staff in professional attire greeting guests' },
       { src: '/images/hospitality/hospitality_uniform_concierge.jpg', alt: 'Resort team members in coordinated uniforms' },
-      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'Resort staff in lightweight professional clothing' },
+      { src: '/images/hospitality/hospitality_full_look.jpg', alt: 'Resort staff in lightweight professional clothing' },
       { src: '/images/hospitality/hospitality_uniform_department.jpg', alt: 'Guest services staff in resort uniform' }
     ],
     colors: [

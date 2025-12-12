@@ -24,7 +24,7 @@ export default function IndustrialSafetyComplianceGuidePage() {
       <section className="relative bg-gradient-to-r from-primary-800 to-primary-700 text-white py-20">
         <div className="absolute inset-0 opacity-30">
           <Image
-            src="/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg"
+            src="/images/manufacturing_manufacturing_industrial_workwear_1.webp"
             alt="Industrial Safety Compliance"
             fill
             className="object-cover"

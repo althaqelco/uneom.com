@@ -24,7 +24,7 @@ const featuredUniforms = [
   {
     id: '2',
     name: 'Floor Supervisor Uniform',
-    image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
+    image: '/images/industries/manufacturing.jpg',
     price: 'Request Quote',
     href: '/shop/manufacturing-workwear/supervisor-uniform/floor-supervisor/',
     category: 'Floor Supervisor',

@@ -18,7 +18,7 @@ export const metadata: Metadata = generateMetadata2026({
   locale: 'en',
   pageType: 'category',
   path: '/shop/industrial-uniforms',
-  image: '/images/products/industrial-coverall.jpg',
+  image: '/images/products/industrial-coverall-pro.webp',
   imageAlt: 'Industrial Uniforms Saudi Arabia - Safety Workwear',
   aiSummary: 'UNEOM industrial uniforms for Saudi manufacturing and oil & gas. Products: Industrial Coveralls (from SAR 199), FR Flame-Resistant Clothing (from SAR 399), Hi-Vis Safety Vests (from SAR 79), Safety Jackets (from SAR 249). All products SASO compliant. Serving Aramco contractors, SABIC, and industrial facilities.',
   aiSummaryAr: 'الملابس الصناعية من يونيوم للتصنيع والنفط والغاز السعودي. المنتجات: أفرول صناعي (من 199 ريال)، ملابس FR مقاومة للحريق (من 399 ريال)، سترات عاكسة (من 79 ريال).'
@@ -34,7 +34,7 @@ const industrialFAQs = [
 ];
 
 const products = [
-  { id: 'industrial-coverall', name: 'Industrial Coveralls', description: 'Durable coveralls for industrial work', price: 'From SAR 199', image: '/images/products/industrial-coverall.jpg', href: '/shop/industrial-uniforms/industrial-coverall', features: ['Durable', 'Multi-pocket', 'Breathable'] },
+  { id: 'industrial-coverall', name: 'Industrial Coveralls', description: 'Durable coveralls for industrial work', price: 'From SAR 199', image: '/images/products/industrial-coverall-pro.webp', href: '/shop/industrial-uniforms/industrial-coverall', features: ['Durable', 'Multi-pocket', 'Breathable'] },
   { id: 'fr-coverall', name: 'FR Flame-Resistant Coverall', description: 'Fire-resistant coveralls for oil & gas', price: 'From SAR 399', image: '/images/products/fr-coverall.jpg', href: '/shop/industrial-uniforms/fr-coverall', features: ['NFPA 2112', 'Arc rated', 'Lightweight'] },
   { id: 'hi-vis-vest', name: 'Hi-Vis Safety Vest', description: 'High visibility safety vests', price: 'From SAR 79', image: '/images/products/hi-vis-vest.jpg', href: '/shop/industrial-uniforms/hi-vis-vest', features: ['Reflective', 'Breathable', 'Multiple pockets'] },
   { id: 'safety-jacket', name: 'Industrial Safety Jacket', description: 'Protective jackets for industrial use', price: 'From SAR 249', image: '/images/products/safety-jacket.jpg', href: '/shop/industrial-uniforms/safety-jacket', features: ['Waterproof', 'Insulated', 'Hi-vis'] },
@@ -43,7 +43,7 @@ const products = [
 export default function IndustrialUniformsPage() {
   return (
     <>
-      <SEO2026 title="Industrial Uniforms Saudi Arabia | UNEOM" titleAr="الملابس الصناعية السعودية | يونيوم" description="Industrial uniforms and safety workwear." locale="en" pageType="category" mainEntity="Industrial Uniforms" primaryImage="/images/products/industrial-coverall.jpg" primaryImageAlt="Industrial Uniforms" faqs={industrialFAQs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Industrial Uniforms', url: '/shop/industrial-uniforms' }]} industry="Manufacturing" />
+      <SEO2026 title="Industrial Uniforms Saudi Arabia | UNEOM" titleAr="الملابس الصناعية السعودية | يونيوم" description="Industrial uniforms and safety workwear." locale="en" pageType="category" mainEntity="Industrial Uniforms" primaryImage="/images/products/industrial-coverall-pro.webp" primaryImageAlt="Industrial Uniforms" faqs={industrialFAQs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Industrial Uniforms', url: '/shop/industrial-uniforms' }]} industry="Manufacturing" />
 
       <section className="bg-gradient-to-br from-yellow-700 via-orange-700 to-red-700 text-white relative overflow-hidden py-16">
         <Container>

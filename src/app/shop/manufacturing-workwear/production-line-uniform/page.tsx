@@ -15,7 +15,7 @@ const featuredUniforms = [
   {
     id: '1',
     name: 'Standard Production Line Uniform',
-    image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
+    image: '/images/diverse-workers-in-a-protective-workwear-SBI-300873394.jpg',
     price: 'Request Quote',
     href: '/shop/manufacturing-workwear/production-line-uniform/standard/',
     category: 'Production Line',
@@ -24,7 +24,7 @@ const featuredUniforms = [
   {
     id: '2',
     name: 'Heavy Duty Production Uniform',
-    image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
+    image: '/images/diverse-workers-in-a-protective-workwear-SBI-300873394.jpg',
     price: 'Request Quote',
     href: '/shop/manufacturing-workwear/production-line-uniform/heavy-duty/',
     category: 'Heavy Duty',
@@ -33,7 +33,7 @@ const featuredUniforms = [
   {
     id: '3',
     name: 'Clean Room Production Uniform',
-    image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
+    image: '/images/diverse-workers-in-a-protective-workwear-SBI-300873394.jpg',
     price: 'Request Quote',
     href: '/shop/manufacturing-workwear/production-line-uniform/clean-room/',
     category: 'Clean Room'
@@ -93,7 +93,7 @@ export default function ProductionLineUniformPage() {
       <section className="relative bg-gradient-to-r from-primary-800 to-primary-700 text-white py-20">
         <div className="absolute inset-0 opacity-30">
           <Image
-            src="/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg"
+            src="/images/diverse-workers-in-a-protective-workwear-SBI-300873394.jpg"
             alt="Production Line Uniforms"
             fill
             className="object-cover"
@@ -159,7 +159,7 @@ export default function ProductionLineUniformPage() {
               </div>
               <div className="relative aspect-square rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg"
+                  src="/images/diverse-workers-in-a-protective-workwear-SBI-300873394.jpg"
                   alt="Manufacturing Worker in Uniform"
                   fill
                   className="object-cover"

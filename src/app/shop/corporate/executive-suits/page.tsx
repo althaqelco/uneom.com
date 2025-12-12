@@ -24,7 +24,7 @@ const featuredSuits = [
   {
     id: '2',
     name: 'Classic Executive Suit',
-    image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
+    image: '/images/diverse-business-meeting-manager-brainstorming-with-meeting-participants-in-office-conf-SBI-391494217.jpg',
     price: 'Request Quote',
     href: '/shop/corporate/executive-suits/classic/',
     category: 'Classic',
@@ -120,7 +120,7 @@ export default function ExecutiveSuitsPage() {
               </div>
               <div className="relative aspect-square rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg"
+                  src="/images/diverse-business-meeting-manager-brainstorming-with-meeting-participants-in-office-conf-SBI-391494217.jpg"
                   alt="Executive Professional"
                   fill
                   className="object-cover"

@@ -181,7 +181,7 @@ export default function HotelsPage() {
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
               <div className="relative h-64">
                 <Image 
-                  src="/images/hospitality/hospitality_uniform_hotel_service.jpg" 
+                  src="/images/hospitality/hospitality_uniform_hotel.jpg" 
                   alt="Concierge & Bellhop Uniforms"
                   fill
                   style={{ objectFit: 'cover' }}

@@ -184,7 +184,7 @@ const uniformComponents = [
       'Easy to wash and replace',
       'Adds professional appearance'
     ],
-    image: '/images/hospitality/hospitality_uniform_formal.jpg'
+    image: '/images/hospitality/brand-identity-uniforms.jpg'
   }
 ]
 

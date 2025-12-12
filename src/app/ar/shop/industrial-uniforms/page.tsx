@@ -18,7 +18,7 @@ export const metadata: Metadata = generateMetadata2026({
   locale: 'ar',
   pageType: 'category',
   path: '/ar/shop/industrial-uniforms',
-  image: '/images/products/industrial-coverall.jpg',
+  image: '/images/products/supervisor-industrial-uniform.jpg',
   imageAlt: 'الملابس الصناعية السعودية - ملابس السلامة',
   aiSummary: 'UNEOM industrial uniforms for Saudi manufacturing.',
   aiSummaryAr: 'الملابس الصناعية من يونيوم للتصنيع والنفط والغاز السعودي. المنتجات: أفرول صناعي (من 199 ريال)، ملابس FR مقاومة للحريق (من 399 ريال)، سترات عاكسة (من 79 ريال)، جاكيت سلامة (من 249 ريال). جميع المنتجات متوافقة مع SASO. نخدم مقاولي أرامكو، سابك، والمرافق الصناعية.'
@@ -33,7 +33,7 @@ const industrialFAQsAr = [
 ];
 
 const products = [
-  { id: 'industrial-coverall', name: 'أفرول صناعي', description: 'أفرول متين للعمل الصناعي', price: 'من 199 ريال', image: '/images/products/industrial-coverall.jpg', href: '/ar/shop/industrial-uniforms/industrial-coverall', features: ['متين', 'متعدد الجيوب', 'قابل للتنفس'] },
+  { id: 'industrial-coverall', name: 'أفرول صناعي', description: 'أفرول متين للعمل الصناعي', price: 'من 199 ريال', image: '/images/products/supervisor-industrial-uniform.jpg', href: '/ar/shop/industrial-uniforms/industrial-coverall', features: ['متين', 'متعدد الجيوب', 'قابل للتنفس'] },
   { id: 'fr-coverall', name: 'أفرول FR مقاوم للحريق', description: 'أفرول مقاوم للحريق للنفط والغاز', price: 'من 399 ريال', image: '/images/products/fr-coverall.jpg', href: '/ar/shop/industrial-uniforms/fr-coverall', features: ['NFPA 2112', 'مُقيَّم للقوس', 'خفيف الوزن'] },
   { id: 'hi-vis-vest', name: 'سترة عاكسة', description: 'سترات سلامة عالية الرؤية', price: 'من 79 ريال', image: '/images/products/hi-vis-vest.jpg', href: '/ar/shop/industrial-uniforms/hi-vis-vest', features: ['عاكس', 'قابل للتنفس', 'جيوب متعددة'] },
   { id: 'safety-jacket', name: 'جاكيت سلامة صناعي', description: 'جاكيت حماية للاستخدام الصناعي', price: 'من 249 ريال', image: '/images/products/safety-jacket.jpg', href: '/ar/shop/industrial-uniforms/safety-jacket', features: ['مقاوم للماء', 'معزول', 'عاكس'] },
@@ -42,7 +42,7 @@ const products = [
 export default function IndustrialUniformsPageAr() {
   return (
     <div dir="rtl">
-      <SEO2026 title="الملابس الصناعية السعودية | يونيوم" titleAr="الملابس الصناعية السعودية | يونيوم" description="Industrial uniforms." descriptionAr="ملابس صناعية وملابس سلامة." locale="ar" pageType="category" mainEntity="Industrial Uniforms" mainEntityAr="الملابس الصناعية" primaryImage="/images/products/industrial-coverall.jpg" primaryImageAlt="الملابس الصناعية" faqs={industrialFAQsAr} breadcrumbs={[{ name: 'Shop', nameAr: 'المتجر', url: '/ar/shop' }, { name: 'Industrial', nameAr: 'الصناعي', url: '/ar/shop/industrial-uniforms' }]} industry="التصنيع" />
+      <SEO2026 title="الملابس الصناعية السعودية | يونيوم" titleAr="الملابس الصناعية السعودية | يونيوم" description="Industrial uniforms." descriptionAr="ملابس صناعية وملابس سلامة." locale="ar" pageType="category" mainEntity="Industrial Uniforms" mainEntityAr="الملابس الصناعية" primaryImage="/images/products/supervisor-industrial-uniform.jpg" primaryImageAlt="الملابس الصناعية" faqs={industrialFAQsAr} breadcrumbs={[{ name: 'Shop', nameAr: 'المتجر', url: '/ar/shop' }, { name: 'Industrial', nameAr: 'الصناعي', url: '/ar/shop/industrial-uniforms' }]} industry="التصنيع" />
 
       <section className="bg-gradient-to-br from-yellow-700 via-orange-700 to-red-700 text-white relative overflow-hidden py-16">
         <Container>

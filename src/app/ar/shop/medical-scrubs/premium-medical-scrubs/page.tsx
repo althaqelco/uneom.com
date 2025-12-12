@@ -33,11 +33,11 @@ export default function PremiumMedicalScrubsArabicPage() {
     longDescription: "توفر ملابس السكروب الطبية الممتازة للمتخصصين في الرعاية الصحية راحة استثنائية ومتانة ومظهرًا احترافيًا. تم تصميمها خصيصًا لبيئة الرعاية الصحية في المملكة العربية السعودية، تتميز هذه الملابس بخصائص مضادة للميكروبات، ونسيج يمتص الرطوبة، وتكوينات عملية للجيوب لتلبية جميع احتياجات الطاقم الطبي.",
     price: "ريال 179",
     minOrder: 20,
-    mainImage: "/images/healthcare/medical_hijab_uniform.jpg",
+    mainImage: "/images/healthcare/dept-surgeons.jpg",
     additionalImages: [
       "/images/healthcare/healthcare_medical_doctor.jpg",
-      "/images/healthcare/medical_hijab_uniform.jpg",
-      "/images/healthcare/medical_hijab_uniform.jpg"
+      "/images/healthcare/dept-surgeons.jpg",
+      "/images/healthcare/dept-surgeons.jpg"
     ],
     colors: [
       { name: "أزرق سماوي", value: "#87CEEB" },
@@ -90,29 +90,29 @@ export default function PremiumMedicalScrubsArabicPage() {
       { 
         name: "شعار المستشفى/العيادة", 
         description: "إضافة شعار مؤسستك مطرزًا على الصدر أو الكم",
-        image: "/images/healthcare/medical_hijab_uniform.jpg"
+        image: "/images/healthcare/dept-surgeons.jpg"
       },
       { 
         name: "تطريز الاسم", 
         description: "اسم الموظف ومؤهلاته مطرزة للتعريف",
-        image: "/images/healthcare/medical_hijab_uniform.jpg"
+        image: "/images/healthcare/dept-surgeons.jpg"
       },
       { 
         name: "ترميز الألوان للأقسام", 
         description: "خيارات الألوان لتمييز الأقسام المختلفة أو الأدوار",
-        image: "/images/healthcare/medical_hijab_uniform.jpg"
+        image: "/images/healthcare/dept-surgeons.jpg"
       },
       { 
         name: "تكوين جيوب مخصص", 
         description: "تعديل موضع الجيوب بناءً على احتياجات قسم معين",
-        image: "/images/healthcare/medical_hijab_uniform.jpg"
+        image: "/images/healthcare/dept-surgeons.jpg"
       }
     ],
     relatedProducts: [
       {
         id: "surgical-scrubs",
         name: "طقم سكروب جراحي",
-        image: "/images/healthcare/medical_hijab_uniform.jpg",
+        image: "/images/healthcare/dept-surgeons.jpg",
         price: "ريال 199",
         href: "/ar/shop/medical-scrubs/nurse-uniform"
       }
@@ -150,7 +150,7 @@ export default function PremiumMedicalScrubsArabicPage() {
     '@context': 'https://schema.org/',
     '@type': 'Product',
     name: 'ملابس طبية متميزة',
-    image: '/images/healthcare/medical_hijab_uniform.jpg',
+    image: '/images/healthcare/dept-surgeons.jpg',
     description: 'ملابس طبية متميزة عالية الجودة مصنوعة من أقمشة متطورة للاستخدام في المستشفيات والمراكز الطبية بالمملكة العربية السعودية',
     sku: 'MED-SCR-001',
     brand: {

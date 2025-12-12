@@ -15,7 +15,7 @@ const featuredUniforms = [
   {
     id: '1',
     name: 'Heavy Duty Maintenance Coverall',
-    image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
+    image: '/images/strong-female-industrial-worker-at-a-factory-examini-SBI-335602991.jpg',
     price: 'Request Quote',
     href: '/shop/manufacturing-workwear/maintenance-uniform/heavy-duty-coverall/',
     category: 'Coveralls',
@@ -33,7 +33,7 @@ const featuredUniforms = [
   {
     id: '3',
     name: 'Mechanical Maintenance Set',
-    image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
+    image: '/images/strong-female-industrial-worker-at-a-factory-examini-SBI-335602991.jpg',
     price: 'Request Quote',
     href: '/shop/manufacturing-workwear/maintenance-uniform/mechanical-set/',
     category: 'Mechanical'
@@ -54,7 +54,7 @@ export default function MaintenanceUniformPage() {
       <section className="relative bg-gradient-to-r from-primary-800 to-primary-700 text-white py-20">
         <div className="absolute inset-0 opacity-30">
           <Image
-            src="/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg"
+            src="/images/strong-female-industrial-worker-at-a-factory-examini-SBI-335602991.jpg"
             alt="Maintenance Uniforms"
             fill
             className="object-cover"

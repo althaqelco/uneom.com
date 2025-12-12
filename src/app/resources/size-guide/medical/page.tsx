@@ -401,7 +401,7 @@ export default function MedicalSizeGuidePage() {
           
           <p>The modest fit collection maintains all the functional features of our standard medical uniforms while providing appropriate coverage options that comply with cultural preferences in Saudi healthcare environments.</p>
         `,
-        image: '/images/healthcare/medical_hijab_uniform.jpg'
+        image: '/images/healthcare/full_clothes_doctor_uniform.jpg'
       }
     ],
     

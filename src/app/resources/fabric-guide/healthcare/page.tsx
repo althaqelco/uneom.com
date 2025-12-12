@@ -147,7 +147,7 @@ export default function HealthcareFabricGuidePage() {
           
           <p>These modesty-conscious fabrics maintain all the technical performance qualities of our standard healthcare fabrics while offering appropriate coverage options for Saudi medical professionals.</p>
         `,
-        image: '/images/healthcare/medical_hijab_uniform.jpg'
+        image: '/images/healthcare/healthcare_medical_doctor_uniform.jpg'
       },
       {
         title: 'Department-Specific Fabric Solutions',

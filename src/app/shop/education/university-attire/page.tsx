@@ -54,7 +54,7 @@ const featuredAttire = [
   {
     id: '2',
     name: 'Academic Staff Uniform Set',
-    image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
+    image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg',
     price: 'Request Quote',
     href: '/shop/education/university-attire/staff-uniform/',
     category: 'Staff Uniforms',
@@ -190,7 +190,7 @@ export default function UniversityAttirePage() {
               </div>
               <div className="relative aspect-square rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg"
+                  src="/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg"
                   alt="University Professional Attire"
                   fill
                   className="object-cover"

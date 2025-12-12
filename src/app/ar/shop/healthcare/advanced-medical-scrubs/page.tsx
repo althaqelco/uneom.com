@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: 'أزياء طبية مبتكرة وعالية الجودة مصممة خصيصاً للكوادر الصحية في المملكة العربية السعودية، مع تقنيات مضادة للميكروبات، راحة فائقة ومظهر احترافي يليق بالقطاع الطبي.',
     images: [
       {
-        url: 'https://uneom.com/images/healthcare/medical_hijab_uniform.jpg',
+        url: 'https://uneom.com/images/healthcare/healthcare_doctor_consultation.jpg',
         width: 1200,
         height: 630,
         alt: 'الأزياء الطبية المتطورة من يونيوم للكوادر الصحية'},

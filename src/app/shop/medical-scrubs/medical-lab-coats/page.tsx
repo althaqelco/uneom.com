@@ -94,14 +94,14 @@ export default function MedicalLabCoatsPage() {
         author: "Dr. Abdullah Al-Qahtani",
         position: "Medical Director",
         company: "King Fahad Medical City",
-        image: "/images/healthcare/healthcare_medical_doctor.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor_uniform.jpg"
       },
       {
         quote: "After switching to Uneom's premium lab coats, we've received numerous compliments from patients about our staff's professional appearance. The modest design options have been particularly valuable for our female physicians, and the durability through repeated laundering has made these coats a cost-effective choice for our hospital network.",
         author: "Dr. Samar Al-Zamil",
         position: "Chief of Medical Staff",
         company: "Saudi German Hospital Group",
-        image: "/images/healthcare/healthcare_medical_doctor.jpg"
+        image: "/images/healthcare/healthcare_medical_doctor_uniform.jpg"
       }
     ]
   };

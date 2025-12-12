@@ -51,9 +51,9 @@ export default function PremiumSurgicalGownsPageArabic() {
     ],
     images: [
       { src: '/images/healthcare/healthcare_medical_doctor.jpg', alt: 'فريق جراحي يرتدي عباءات فاخرة' },
-      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'جراحون في عباءات فاخرة أثناء العملية' },
-      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'لقطة مقربة لقماش العباءة الجراحية الفاخرة وتفاصيلها' },
-      { src: '/images/healthcare/medical_hijab_uniform.jpg', alt: 'أخصائي رعاية صحية في ملابس جراحية فاخرة' }
+      { src: '/images/healthcare/dept-laboratory.jpg', alt: 'جراحون في عباءات فاخرة أثناء العملية' },
+      { src: '/images/healthcare/dept-laboratory.jpg', alt: 'لقطة مقربة لقماش العباءة الجراحية الفاخرة وتفاصيلها' },
+      { src: '/images/healthcare/dept-laboratory.jpg', alt: 'أخصائي رعاية صحية في ملابس جراحية فاخرة' }
     ],
     category: 'ملابس الرعاية الصحية',
     categorySlug: 'medical-scrubs',
@@ -68,9 +68,9 @@ export default function PremiumSurgicalGownsPageArabic() {
       { name: 'عباءة بشعار المستشفى المخصص', price: '٤٦٩ ريال' }
     ],
     colors: [
-      { name: 'أخضر جراحي', value: '#2d8659', image: '/images/healthcare/medical_hijab_uniform.jpg' },
-      { name: 'أزرق ملكي', value: '#1e4d8c', image: '/images/healthcare/medical_hijab_uniform.jpg' },
-      { name: 'كحلي', value: '#0a1e3c', image: '/images/healthcare/medical_hijab_uniform.jpg' }
+      { name: 'أخضر جراحي', value: '#2d8659', image: '/images/healthcare/dept-laboratory.jpg' },
+      { name: 'أزرق ملكي', value: '#1e4d8c', image: '/images/healthcare/dept-laboratory.jpg' },
+      { name: 'كحلي', value: '#0a1e3c', image: '/images/healthcare/dept-laboratory.jpg' }
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     sizeEquivalents: {

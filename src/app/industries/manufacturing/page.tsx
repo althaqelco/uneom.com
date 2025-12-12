@@ -116,7 +116,7 @@ const featuredProducts = [
     id: '3',
     name: 'Industrial Coveralls',
     description: 'Durable work coveralls for factories and manufacturing environments.',
-    image: '/images/products/industrial-coverall.jpg',
+    image: '/images/products/anti-static-uniform.jpg',
     price: 'From SAR 149',
     href: '/shop/industrial-uniforms/coveralls/',
     category: 'Coveralls',

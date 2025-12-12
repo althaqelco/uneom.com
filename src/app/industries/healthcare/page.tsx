@@ -181,7 +181,7 @@ const featuredProducts = [
     id: '4',
     name: 'Medical Hijab',
     description: 'Specially designed antimicrobial hijab for healthcare settings.',
-    image: '/images/healthcare/medical_hijab_uniform.jpg',
+    image: '/images/healthcare/dept-nurses.jpg',
     price: 'From SAR 79',
     href: '/shop/medical-scrubs/medical-hijab/',
     category: 'Medical Hijab',
