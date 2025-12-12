@@ -27,7 +27,8 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website'},
+    type: 'website'
+  },
   alternates: {
     canonical: 'https://uneom.com/shop/education/school-uniforms/',
     languages: {
@@ -113,7 +114,7 @@ const uniformFeatures = [
 export default function SchoolUniformsPage() {
   return (
     <div>
-      <EnhancedSEO2025 
+      <EnhancedSEO2025
         title="School Uniforms | Premium Educational Attire for Students | Uneom"
         description="High-quality school uniforms designed for comfort, durability, and academic excellence. Professional educational attire for schools across Saudi Arabia."
         canonicalUrl="https://uneom.com/shop/education/school-uniforms/"
@@ -131,7 +132,7 @@ export default function SchoolUniformsPage() {
             priority
           />
         </div>
-        
+
         <Container>
           <Breadcrumbs
             items={[
@@ -142,23 +143,23 @@ export default function SchoolUniformsPage() {
             ]}
             className="text-white/80 mb-6 relative z-10"
           />
-          
+
           <div className="relative z-10 max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">School Uniforms</h1>
             <p className="text-xl opacity-90 mb-8 max-w-3xl">
               Premium school uniforms designed to promote academic excellence, school pride, and student comfort. Our educational attire combines durability, style, and functionality for the modern learning environment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
+              <Button
                 href="/quote"
-                variant="secondary" 
+                variant="secondary"
                 size="lg"
               >
                 Request School Quote
               </Button>
-              <Button 
+              <Button
                 href="#featured-uniforms"
-                variant="outline" 
+                variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-primary-700"
               >
@@ -190,7 +191,7 @@ export default function SchoolUniformsPage() {
               </div>
               <div className="relative aspect-square rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg"
+                  src="/images/education/education-uniforms.jpg"
                   alt="Students in School Uniforms"
                   fill
                   className="object-cover"
@@ -204,7 +205,7 @@ export default function SchoolUniformsPage() {
             <SectionHeading subtitle="Why Choose Our School Uniforms" centered>
               Quality That Supports Education
             </SectionHeading>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
               {uniformFeatures.map((feature, index) => (
                 <div key={index} className="text-center">
@@ -223,13 +224,13 @@ export default function SchoolUniformsPage() {
             <SectionHeading subtitle="Our School Uniform Collection" centered>
               Premium Educational Attire
             </SectionHeading>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               {featuredUniforms.map((uniform) => (
                 <ProductCard key={uniform.id} product={uniform} showAddToQuote={true} />
               ))}
             </div>
-            
+
             <div className="text-center mt-12">
               <Button href="/shop/education/" variant="primary" size="lg">
                 View All Educational Uniforms
@@ -242,7 +243,7 @@ export default function SchoolUniformsPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative aspect-square rounded-xl overflow-hidden">
                 <Image
-                  src="/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg"
+                  src="/images/education/school-performance.jpg"
                   alt="School Uniform Benefits"
                   fill
                   className="object-cover"

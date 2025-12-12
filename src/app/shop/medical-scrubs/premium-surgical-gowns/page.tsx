@@ -20,7 +20,7 @@ export default function PremiumSurgicalGownsPage() {
   const [selectedSize, setSelectedSize] = useState<string | null>('M');
   const [quantity, setQuantity] = useState(10);
   const [showSizeChart, setShowSizeChart] = useState(false);
-  
+
   // Product details
   const product = {
     id: 'premium-surgical-gowns',
@@ -86,14 +86,14 @@ export default function PremiumSurgicalGownsPage() {
         author: "Dr. Mohammed Al-Harbi",
         position: "Chief of Surgery",
         company: "King Faisal Specialist Hospital",
-        image: "/images/healthcare/dept-doctors.jpg"
+        image: "/images/clients/modern-arabic-businessman-SBI-300984397.jpg"
       },
       {
         quote: "The level of protection these gowns provide is exceptional. The reinforced zones offer extra peace of mind, and the fabric remains breathable even during the most intense procedures.",
         author: "Dr. Sarah Al-Qahtani",
         position: "Head of Surgical Nursing",
         company: "Saudi German Hospital",
-        image: "/images/healthcare/dept-doctors.jpg"
+        image: "/images/clients/adult-beautiful-muslim-woman-with-hijab-on-head-smiling-for-camera-in-room-SBI-351089408.jpg"
       }
     ]
   };
@@ -136,18 +136,18 @@ export default function PremiumSurgicalGownsPage() {
 
   return (
     <div className="bg-white">
-    
+
       <Container className="py-8">
         <Breadcrumbs items={breadcrumbs.map(item => ({
           label: item.name,
           href: item.url
         }))} />
-        
+
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
           <div>
             <div className="aspect-square relative overflow-hidden rounded-lg mb-4 bg-neutral-100">
-              <Image 
+              <Image
                 src={product.images[activeImage].src}
                 alt={product.images[activeImage].alt}
                 fill
@@ -156,12 +156,12 @@ export default function PremiumSurgicalGownsPage() {
             </div>
             <div className="grid grid-cols-4 gap-2">
               {product.images.map((image, index) => (
-                <button 
+                <button
                   key={index}
                   className={`aspect-square relative overflow-hidden rounded-md ${activeImage === index ? 'ring-2 ring-primary-600' : 'ring-1 ring-neutral-200'}`}
                   onClick={() => setActiveImage(index)}
                 >
-                  <Image 
+                  <Image
                     src={image.src}
                     alt={image.alt}
                     fill
@@ -171,16 +171,16 @@ export default function PremiumSurgicalGownsPage() {
               ))}
             </div>
           </div>
-          
+
           {/* Product Details */}
           <div>
             <h1 className="text-3xl font-bold text-neutral-900">{product.name}</h1>
             <p className="text-xl font-semibold text-primary-600 mt-2">{product.price}</p>
-            
+
             <div className="flex items-center mt-2">
               <div className="flex items-center">
                 {[...Array(5)].map((_, i) => (
-                  <svg 
+                  <svg
                     key={i}
                     className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-neutral-300'}`}
                     fill="currentColor"
@@ -192,7 +192,7 @@ export default function PremiumSurgicalGownsPage() {
                 <span className="text-neutral-600 ml-2">{product.rating} ({product.reviews} reviews)</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-neutral-700">{product.description}</p>
             </div>
@@ -208,7 +208,7 @@ export default function PremiumSurgicalGownsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">Colors</h3>
               <div className="mt-2 flex flex-wrap gap-2">
@@ -223,12 +223,12 @@ export default function PremiumSurgicalGownsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <div className="flex justify-between items-center">
                 <h3 className="text-sm font-medium text-neutral-900">Size</h3>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="text-primary-600 text-sm"
                   onClick={() => setShowSizeChart(true)}
                 >
@@ -239,11 +239,10 @@ export default function PremiumSurgicalGownsPage() {
                 {product.sizes.map((size) => (
                   <button
                     key={size}
-                    className={`py-2 px-4 border rounded-md text-center ${
-                      selectedSize === size 
-                        ? 'border-primary-600 bg-primary-50 text-primary-600' 
+                    className={`py-2 px-4 border rounded-md text-center ${selectedSize === size
+                        ? 'border-primary-600 bg-primary-50 text-primary-600'
                         : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
-                    }`}
+                      }`}
                     onClick={() => handleSizeSelect(size)}
                   >
                     {size}
@@ -251,7 +250,7 @@ export default function PremiumSurgicalGownsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">Quantity (Min: {product.minOrder})</h3>
               <div className="mt-2 flex items-center">
@@ -265,10 +264,10 @@ export default function PremiumSurgicalGownsPage() {
                 <span className="ml-2 text-neutral-500">units</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-sm text-neutral-500 mb-2">Lead time: {product.leadTime}</p>
-              <AddToQuoteButton 
+              <AddToQuoteButton
                 product={product}
                 color={selectedColor || undefined}
                 size={selectedSize || undefined}
@@ -277,7 +276,7 @@ export default function PremiumSurgicalGownsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Product Description */}
         <div className="mt-16">
           <SectionHeading>Product Details</SectionHeading>
@@ -309,7 +308,7 @@ export default function PremiumSurgicalGownsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Hospital Compliance Section */}
         <div className="mt-16 bg-neutral-50 p-6 rounded-lg">
           <SectionHeading>Hospital Compliance & Certification</SectionHeading>
@@ -340,14 +339,14 @@ export default function PremiumSurgicalGownsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Customization Section */}
         <div className="mt-16">
           <SectionHeading>Hospital Customization Options</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <p className="text-neutral-700 mb-4">
-                We offer extensive customization options for hospitals and medical facilities. From color-coding 
+                We offer extensive customization options for hospitals and medical facilities. From color-coding
                 by department to hospital logo embroidery, our surgical gowns can be tailored to meet your specific requirements.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
@@ -375,22 +374,22 @@ export default function PremiumSurgicalGownsPage() {
               </div>
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
-              <Image 
-                src="/images/healthcare/dept-doctors.jpg" 
-                alt="Customized surgical gowns for hospital teams" 
+              <Image
+                src="/images/healthcare/healthcare-header.jpg"
+                alt="Customized surgical gowns for hospital teams"
                 fill
                 className="object-cover"
               />
             </div>
           </div>
         </div>
-        
+
         {/* Testimonials */}
         <div className="mt-16">
           <SectionHeading>Client Testimonials</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             {product.testimonials.map((testimonial, index) => (
-              <TestimonialCard 
+              <TestimonialCard
                 key={index}
                 id={index}
                 name={testimonial.author}
@@ -402,7 +401,7 @@ export default function PremiumSurgicalGownsPage() {
             ))}
           </div>
         </div>
-        
+
         {/* Size Chart Modal */}
         {showSizeChart && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -444,7 +443,7 @@ export default function PremiumSurgicalGownsPage() {
           </div>
         )}
       </Container>
-    
-      </div>
+
+    </div>
   );
 } 

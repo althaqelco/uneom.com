@@ -15,7 +15,7 @@ export default function SecurityOfficerUniformPage() {
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(5);
   const [showSizeChart, setShowSizeChart] = useState(false);
-  
+
   // Product details
   const product = {
     id: 'security-officer-uniform',
@@ -44,10 +44,10 @@ export default function SecurityOfficerUniformPage() {
       { name: 'Custom Options', value: 'Company embroidery, name badges, shoulder patches' }
     ],
     images: [
-      { src: '/images/products/safety-coveralls.jpg', alt: 'Professional Security Officer Uniform Front View' },
+      { src: '/images/security/security_guard.jpg', alt: 'Professional Security Officer Uniform Front View' },
       { src: '/images/security/security_team_professional.jpg', alt: 'Security Officer Uniform on Model' },
-      { src: '/images/products/safety-coveralls.jpg', alt: 'Security Officer Uniform Detail' },
-      { src: '/images/products/safety-coveralls.jpg', alt: 'Security Accessories' }
+      { src: '/images/security/security-uniform-authority.jpg', alt: 'Security Officer Uniform Detail' },
+      { src: '/images/security/security-compliance.jpg', alt: 'Security Accessories' }
     ],
     category: 'Security Uniforms',
     categorySlug: 'security-uniforms',
@@ -77,13 +77,13 @@ export default function SecurityOfficerUniformPage() {
       {
         id: 'security-patrol-jacket',
         name: 'Security Patrol Jacket',
-        image: '/images/products/safety-coveralls.jpg',
+        image: '/images/security/security-header.jpg',
         price: 'From SAR 179',
         href: '/shop/security-uniforms/security-accessories-kit'
       }
     ]
   };
-  
+
   // Size chart
   const sizeChart = {
     unisex: [
@@ -96,7 +96,7 @@ export default function SecurityOfficerUniformPage() {
       { size: '4XL', chest: '52"', waist: '46"', hip: '54"', inseam: '33"' },
     ]
   };
-  
+
   // Handle quantity change
   const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(e.target.value);
@@ -104,7 +104,7 @@ export default function SecurityOfficerUniformPage() {
       setQuantity(value);
     }
   };
-  
+
   // Handle add to quote
   const handleAddToQuote = () => {
     // In a real application, this would add the product to a quote cart
@@ -116,7 +116,7 @@ export default function SecurityOfficerUniformPage() {
     });
     alert('Product added to your quote request.');
   };
-  
+
   // Generate pricing display based on quantity
   const getPriceDisplay = () => {
     if (quantity >= 500) {
@@ -129,10 +129,10 @@ export default function SecurityOfficerUniformPage() {
       return 'SAR ' + (product.basePrice * quantity).toLocaleString();
     }
   };
-  
+
   return (
     <div className="bg-white">
-    
+
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-4">
         <Container>
@@ -144,7 +144,7 @@ export default function SecurityOfficerUniformPage() {
               <li>
                 <div className="flex items-center">
                   <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                   </svg>
                   <Link href="/shop" className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">Shop</Link>
                 </div>
@@ -152,7 +152,7 @@ export default function SecurityOfficerUniformPage() {
               <li>
                 <div className="flex items-center">
                   <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                   </svg>
                   <Link href="/shop/security-uniforms" className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">
                     Security Uniforms
@@ -162,7 +162,7 @@ export default function SecurityOfficerUniformPage() {
               <li aria-current="page">
                 <div className="flex items-center">
                   <svg className="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
                   </svg>
                   <span className="text-sm text-gray-500 ml-1 md:ml-2">{product.name}</span>
                 </div>
@@ -171,7 +171,7 @@ export default function SecurityOfficerUniformPage() {
           </nav>
         </Container>
       </div>
-      
+
       {/* Product Details Section */}
       <section className="py-12">
         <Container>
@@ -189,8 +189,8 @@ export default function SecurityOfficerUniformPage() {
               </div>
               <div className="grid grid-cols-4 gap-4">
                 {product.images.map((image, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className={`relative h-24 rounded-md overflow-hidden cursor-pointer border-2 transition-colors
                       ${activeImage === index ? 'border-primary-600' : 'border-transparent hover:border-primary-400'}`}
                     onClick={() => setActiveImage(index)}
@@ -205,18 +205,18 @@ export default function SecurityOfficerUniformPage() {
                 ))}
               </div>
             </div>
-            
+
             {/* Product Info */}
             <div>
               <span className="text-sm text-primary-600 font-medium">{product.category}</span>
               <h1 className="text-3xl font-bold text-gray-900 mt-1 mb-2">{product.name}</h1>
-              
+
               <p className="text-2xl font-bold text-gray-900 mb-4">{product.price}</p>
-              
+
               <div className="prose prose-sm mb-8">
                 <p>{product.description}</p>
               </div>
-              
+
               {/* Color Selection */}
               {product.colors && product.colors.length > 0 && (
                 <div className="mb-6">
@@ -235,42 +235,42 @@ export default function SecurityOfficerUniformPage() {
                   </div>
                 </div>
               )}
-              
+
               {/* Size Selection */}
               {product.sizes && product.sizes.length > 0 && (
                 <div className="mb-6">
                   <div className="flex justify-between items-center mb-3">
                     <h3 className="text-sm font-medium text-gray-900">Size</h3>
-                    <button 
+                    <button
                       onClick={() => setShowSizeChart(!showSizeChart)}
                       className="text-sm text-primary-600 hover:text-primary-700"
                     >
                       Size chart
                     </button>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {product.sizes.map((size, index) => (
                       <button
                         key={index}
                         onClick={() => setSelectedSize(size)}
                         className={`px-4 py-2 text-sm font-medium rounded-md border focus:outline-none
-                          ${selectedSize === size 
-                            ? 'border-primary-600 bg-primary-50 text-primary-700' 
+                          ${selectedSize === size
+                            ? 'border-primary-600 bg-primary-50 text-primary-700'
                             : 'border-gray-300 text-gray-700 hover:border-gray-400'}`}
                       >
                         {size}
                       </button>
                     ))}
                   </div>
-                  
+
                   {/* Size Chart Modal */}
                   {showSizeChart && (
                     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
                       <div className="bg-white rounded-lg shadow-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6">
                         <div className="flex justify-between items-center mb-4">
                           <h2 className="text-xl font-bold">Size Chart</h2>
-                          <button 
+                          <button
                             onClick={() => setShowSizeChart(false)}
                             className="text-gray-500 hover:text-gray-700"
                           >
@@ -279,7 +279,7 @@ export default function SecurityOfficerUniformPage() {
                             </svg>
                           </button>
                         </div>
-                        
+
                         <div className="overflow-x-auto">
                           <table className="w-full text-sm text-gray-700">
                             <thead className="bg-gray-50">
@@ -304,7 +304,7 @@ export default function SecurityOfficerUniformPage() {
                             </tbody>
                           </table>
                         </div>
-                        
+
                         <div className="mt-6 text-sm text-gray-500">
                           <p>All measurements are in inches. For best results, take your measurements over undergarments similar to those you will wear with your uniform.</p>
                         </div>
@@ -313,7 +313,7 @@ export default function SecurityOfficerUniformPage() {
                   )}
                 </div>
               )}
-              
+
               {/* Quantity Selection */}
               <div className="mb-6">
                 <h3 className="text-sm font-medium text-gray-900 mb-3">Quantity</h3>
@@ -328,7 +328,7 @@ export default function SecurityOfficerUniformPage() {
                   <span className="ml-3 text-sm text-gray-500">Minimum order: {product.minOrderQuantity} units</span>
                 </div>
               </div>
-              
+
               {/* Total Price */}
               <div className="mb-8 p-4 bg-gray-50 rounded-lg">
                 <div className="flex justify-between items-center">
@@ -337,7 +337,7 @@ export default function SecurityOfficerUniformPage() {
                 </div>
                 <p className="text-xs text-gray-500 mt-1">Final price will be confirmed in quote</p>
               </div>
-              
+
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -358,7 +358,7 @@ export default function SecurityOfficerUniformPage() {
                   </Button>
                 </Link>
               </div>
-              
+
               {/* Custom Options */}
               {product.customizationOptions && product.customizationOptions.length > 0 && (
                 <div className="mt-8 pt-6 border-t border-gray-200">
@@ -378,7 +378,7 @@ export default function SecurityOfficerUniformPage() {
           </div>
         </Container>
       </section>
-      
+
       {/* Product Details Tabs */}
       <section className="py-12 bg-gray-50">
         <Container>
@@ -396,7 +396,7 @@ export default function SecurityOfficerUniformPage() {
                     <li key={index}>{feature}</li>
                   ))}
                 </ul>
-                
+
                 <h3 className="mt-6">Product Specifications</h3>
                 <div className="overflow-x-auto mt-4">
                   <table className="w-full border-collapse">
@@ -415,13 +415,13 @@ export default function SecurityOfficerUniformPage() {
           </div>
         </Container>
       </section>
-      
+
       {/* Bulk Pricing */}
       <section className="py-12">
         <Container>
           <SectionHeading centered>Volume Pricing</SectionHeading>
           <p className="text-center text-gray-700 mb-8">Benefit from significant savings with our volume pricing structure.</p>
-          
+
           <div className="max-w-2xl mx-auto">
             <div className="overflow-x-auto">
               <table className="w-full text-sm text-gray-700">
@@ -449,13 +449,13 @@ export default function SecurityOfficerUniformPage() {
           </div>
         </Container>
       </section>
-      
+
       {/* Related Products */}
       {product.relatedProducts && product.relatedProducts.length > 0 && (
         <section className="py-12 bg-gray-50">
           <Container>
             <SectionHeading centered>Related Products</SectionHeading>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
               {product.relatedProducts.map((relatedProduct, index) => (
                 <Link href={relatedProduct.href} key={index} className="group">
@@ -485,7 +485,7 @@ export default function SecurityOfficerUniformPage() {
           </Container>
         </section>
       )}
-      
+
       {/* Quick Quote Form */}
       <section className="py-12">
         <Container>
@@ -502,7 +502,7 @@ export default function SecurityOfficerUniformPage() {
           </div>
         </Container>
       </section>
-    
-      </div>
+
+    </div>
   );
 } 
