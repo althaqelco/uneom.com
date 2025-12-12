@@ -2,9 +2,9 @@ import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { 
+import {
   SparklesIcon,
-  ClockIcon, 
+  ClockIcon,
   UserIcon,
   TagIcon,
   ArrowRightIcon,
@@ -352,7 +352,7 @@ const saudiSuccessStories = [
     challenge: 'Unifying brand identity across 8 food & beverage outlets',
     solution: 'Created modular uniform system with shared base pieces and outlet-specific accessories',
     result: '30% reduction in uniform costs, improved brand cohesion',
-    image: '/images/hospitality/hospitality_uniform_hotel.jpg'
+    image: '/images/hospitality/luxury-hotel-uniforms.jpg'
   },
   {
     property: 'Heritage Boutique Hotel, Jeddah',
@@ -370,7 +370,7 @@ export default function HospitalityUniformsGuestExperiencePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
+
       <div className="min-h-screen bg-white">
         {/* Breadcrumb */}
         <nav className="bg-gray-50 py-4 border-b" aria-label="Breadcrumb">
@@ -406,17 +406,17 @@ export default function HospitalityUniformsGuestExperiencePage() {
                   Guest Experience
                 </span>
               </div>
-              
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Hospitality Uniforms: Creating Unforgettable Guest Experiences
               </h1>
-              
+
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Discover how professional uniforms transform guest perceptions and elevate 
-                service quality in Saudi Arabia's thriving hospitality sector. From luxury 
+                Discover how professional uniforms transform guest perceptions and elevate
+                service quality in Saudi Arabia's thriving hospitality sector. From luxury
                 hotels to boutique restaurants.
               </p>
-              
+
               <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400">
                 <div className="flex items-center gap-2">
                   <UserIcon className="h-5 w-5" />
@@ -438,7 +438,7 @@ export default function HospitalityUniformsGuestExperiencePage() {
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-            
+
             {/* Table of Contents */}
             <aside className="lg:col-span-1">
               <div className="sticky top-24">
@@ -478,22 +478,22 @@ export default function HospitalityUniformsGuestExperiencePage() {
 
             {/* Article Content */}
             <article className="lg:col-span-3 prose prose-lg max-w-none">
-              
+
               {/* Introduction */}
               <section id="introduction" className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">The Power of First Impressions</h2>
-                
+
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  In Saudi Arabia's rapidly expanding hospitality sector, the uniform your staff wears is 
-                  far more than a dress code—it's a powerful statement of your brand's commitment to 
-                  excellence. As the Kingdom welcomes millions of visitors for tourism, business, and 
-                  religious pilgrimage, the competition for exceptional guest experiences has never been 
+                  In Saudi Arabia's rapidly expanding hospitality sector, the uniform your staff wears is
+                  far more than a dress code—it's a powerful statement of your brand's commitment to
+                  excellence. As the Kingdom welcomes millions of visitors for tourism, business, and
+                  religious pilgrimage, the competition for exceptional guest experiences has never been
                   more intense.
                 </p>
 
                 <div className="relative rounded-2xl overflow-hidden mb-8">
                   <Image
-                    src="/images/hospitality/hospitality_uniform_hotel_service.jpg"
+                    src="/images/hospitality/executive-hospitality-suit.jpg"
                     alt="Professional hospitality staff in uniforms"
                     width={800}
                     height={400}
@@ -502,9 +502,9 @@ export default function HospitalityUniformsGuestExperiencePage() {
                 </div>
 
                 <p className="text-gray-700 leading-relaxed">
-                  From the moment a guest steps through your doors, every visual cue shapes their 
-                  perception. Staff uniforms communicate professionalism, attention to detail, and 
-                  the level of service they can expect. This guide explores how to leverage uniform 
+                  From the moment a guest steps through your doors, every visual cue shapes their
+                  perception. Staff uniforms communicate professionalism, attention to detail, and
+                  the level of service they can expect. This guide explores how to leverage uniform
                   design to create memorable guest experiences that drive loyalty and positive reviews.
                 </p>
               </section>
@@ -512,9 +512,9 @@ export default function HospitalityUniformsGuestExperiencePage() {
               {/* Guest Psychology */}
               <section id="guest-psychology" className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Guest Psychology & Uniform Impact</h2>
-                
+
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Research consistently demonstrates the profound psychological impact of staff 
+                  Research consistently demonstrates the profound psychological impact of staff
                   appearance on guest perceptions and behavior:
                 </p>
 
@@ -531,10 +531,10 @@ export default function HospitalityUniformsGuestExperiencePage() {
                 <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                   <h3 className="font-bold text-gray-900 mb-4">The Halo Effect in Hospitality</h3>
                   <p className="text-gray-700">
-                    When guests perceive staff as professionally dressed, they unconsciously attribute 
-                    other positive qualities—competence, trustworthiness, attention to detail—to the 
-                    entire organization. This "halo effect" extends to their perception of room 
-                    cleanliness, food quality, and overall value. Conversely, poorly maintained or 
+                    When guests perceive staff as professionally dressed, they unconsciously attribute
+                    other positive qualities—competence, trustworthiness, attention to detail—to the
+                    entire organization. This "halo effect" extends to their perception of room
+                    cleanliness, food quality, and overall value. Conversely, poorly maintained or
                     ill-fitting uniforms can trigger negative assumptions about service quality.
                   </p>
                 </div>
@@ -543,9 +543,9 @@ export default function HospitalityUniformsGuestExperiencePage() {
               {/* Department Guide */}
               <section id="department-guide" className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Department-Specific Uniform Guide</h2>
-                
+
                 <p className="text-gray-700 leading-relaxed mb-8">
-                  Each department has unique functional requirements and guest interaction patterns. 
+                  Each department has unique functional requirements and guest interaction patterns.
                   Here's a comprehensive guide to uniform design by department:
                 </p>
 
@@ -568,7 +568,7 @@ export default function HospitalityUniformsGuestExperiencePage() {
                             </div>
                             <h3 className="text-xl font-bold text-gray-900">{dept.department}</h3>
                           </div>
-                          
+
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
                               <h4 className="font-semibold text-gray-800 mb-2">Key Elements:</h4>
@@ -593,7 +593,7 @@ export default function HospitalityUniformsGuestExperiencePage() {
                               </ul>
                             </div>
                           </div>
-                          
+
                           <div className="bg-gray-50 rounded-lg p-3">
                             <span className="text-sm text-gray-700">
                               <strong>Recommended Fabrics:</strong> {dept.fabrics}
@@ -609,10 +609,10 @@ export default function HospitalityUniformsGuestExperiencePage() {
               {/* Cultural Considerations */}
               <section id="cultural-considerations" className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Cultural & Modest Design</h2>
-                
+
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Saudi Arabia's hospitality sector uniquely balances international luxury standards 
-                  with cultural values. Successful uniform programs respect these considerations while 
+                  Saudi Arabia's hospitality sector uniquely balances international luxury standards
+                  with cultural values. Successful uniform programs respect these considerations while
                   creating world-class guest experiences:
                 </p>
 
@@ -640,9 +640,9 @@ export default function HospitalityUniformsGuestExperiencePage() {
               {/* Fabric Technology */}
               <section id="fabric-technology" className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Fabric Technology for Hospitality</h2>
-                
+
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Modern fabric technologies solve the unique challenges of hospitality environments, 
+                  Modern fabric technologies solve the unique challenges of hospitality environments,
                   keeping staff comfortable and uniforms looking professional throughout demanding shifts:
                 </p>
 
@@ -677,9 +677,9 @@ export default function HospitalityUniformsGuestExperiencePage() {
               {/* Brand Integration */}
               <section id="brand-integration" className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Brand Identity Integration</h2>
-                
+
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Uniforms are one of the most visible expressions of your brand. Strategic design 
+                  Uniforms are one of the most visible expressions of your brand. Strategic design
                   ensures they reinforce your brand identity at every guest touchpoint:
                 </p>
 
@@ -707,9 +707,9 @@ export default function HospitalityUniformsGuestExperiencePage() {
               {/* Case Studies */}
               <section id="case-studies" className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Saudi Success Stories</h2>
-                
+
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  See how leading Saudi hospitality properties have transformed their guest experience 
+                  See how leading Saudi hospitality properties have transformed their guest experience
                   through strategic uniform programs:
                 </p>
 
@@ -753,18 +753,18 @@ export default function HospitalityUniformsGuestExperiencePage() {
                 <div className="text-center">
                   <h2 className="text-2xl font-bold mb-4">Elevate Your Guest Experience</h2>
                   <p className="text-amber-100 mb-6 max-w-2xl mx-auto">
-                    UNEOM partners with Saudi Arabia's leading hotels, resorts, and restaurants to create 
+                    UNEOM partners with Saudi Arabia's leading hotels, resorts, and restaurants to create
                     distinctive uniform programs that enhance brand identity and guest satisfaction.
                   </p>
                   <div className="flex flex-wrap justify-center gap-4">
-                    <Link 
+                    <Link
                       href="/contact"
                       className="bg-white text-amber-600 px-8 py-3 rounded-xl font-bold hover:bg-amber-50 transition-colors inline-flex items-center gap-2"
                     >
                       Request Consultation
                       <ArrowRightIcon className="h-5 w-5" />
                     </Link>
-                    <Link 
+                    <Link
                       href="/industries/hospitality"
                       className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors"
                     >

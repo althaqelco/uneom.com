@@ -2,9 +2,9 @@ import React from 'react';
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { 
+import {
   StarIcon,
-  ClockIcon, 
+  ClockIcon,
   UserIcon,
   TagIcon,
   ArrowRightIcon,
@@ -317,7 +317,7 @@ export default function HajjUmrahStaffUniformsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
+
       <div className="min-h-screen bg-white">
         {/* Breadcrumb */}
         <nav className="bg-gray-50 py-4 border-b">
@@ -353,16 +353,16 @@ export default function HajjUmrahStaffUniformsPage() {
                   Pilgrim Services
                 </span>
               </div>
-              
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Hajj & Umrah Staff Uniforms: Serving Pilgrims with Excellence
               </h1>
-              
+
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                A comprehensive guide to designing uniforms that honor the sacred responsibility 
+                A comprehensive guide to designing uniforms that honor the sacred responsibility
                 of serving millions of pilgrims in the Holy Cities of Makkah and Madinah.
               </p>
-              
+
               <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400">
                 <div className="flex items-center gap-2">
                   <UserIcon className="h-5 w-5" />
@@ -384,7 +384,7 @@ export default function HajjUmrahStaffUniformsPage() {
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-            
+
             {/* Sidebar */}
             <aside className="lg:col-span-1">
               <div className="sticky top-24">
@@ -424,21 +424,21 @@ export default function HajjUmrahStaffUniformsPage() {
 
             {/* Article Content */}
             <article className="lg:col-span-3 prose prose-lg max-w-none">
-              
+
               {/* Introduction */}
               <section id="introduction" className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">The Sacred Responsibility</h2>
-                
+
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Serving pilgrims during Hajj and Umrah is among the most honored responsibilities 
-                  in the Kingdom of Saudi Arabia. The uniforms worn by service staff are not merely 
-                  functional garments—they represent the Kingdom's commitment to hospitality, 
+                  Serving pilgrims during Hajj and Umrah is among the most honored responsibilities
+                  in the Kingdom of Saudi Arabia. The uniforms worn by service staff are not merely
+                  functional garments—they represent the Kingdom's commitment to hospitality,
                   respect for the sacred journey, and the highest standards of service excellence.
                 </p>
 
                 <div className="relative rounded-2xl overflow-hidden mb-8">
                   <Image
-                    src="/images/hospitality/hospitality_uniform_hotel.jpg"
+                    src="/images/hospitality/saudi-hospitality-culture.jpg"
                     alt="Hajj and Umrah service staff"
                     width={800}
                     height={400}
@@ -475,7 +475,7 @@ export default function HajjUmrahStaffUniformsPage() {
               {/* Unique Requirements */}
               <section id="unique-requirements" className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Unique Requirements</h2>
-                
+
                 <p className="text-gray-700 leading-relaxed mb-6">
                   Hajj and Umrah service uniforms face challenges unlike any other hospitality environment:
                 </p>
@@ -503,7 +503,7 @@ export default function HajjUmrahStaffUniformsPage() {
               {/* Sector Guide */}
               <section id="sector-guide" className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Sector-Specific Guidelines</h2>
-                
+
                 <div className="space-y-8">
                   {sectorGuidelines.map((sector, index) => (
                     <div key={index} className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
@@ -548,7 +548,7 @@ export default function HajjUmrahStaffUniformsPage() {
               {/* Climate Solutions */}
               <section id="climate-solutions" className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Climate & Comfort Solutions</h2>
-                
+
                 <p className="text-gray-700 leading-relaxed mb-6">
                   Advanced fabric technologies are essential for staff working in extreme Hajj season temperatures:
                 </p>
@@ -574,9 +574,9 @@ export default function HajjUmrahStaffUniformsPage() {
               {/* Cultural Sensitivity */}
               <section id="cultural-sensitivity" className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Cultural Sensitivity</h2>
-                
+
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Uniforms for Hajj and Umrah services must demonstrate the highest respect for Islamic values 
+                  Uniforms for Hajj and Umrah services must demonstrate the highest respect for Islamic values
                   and the sanctity of the Holy Cities:
                 </p>
 
@@ -600,7 +600,7 @@ export default function HajjUmrahStaffUniformsPage() {
               {/* Implementation Timeline */}
               <section id="implementation" className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Timeline</h2>
-                
+
                 <p className="text-gray-700 leading-relaxed mb-6">
                   Successful Hajj uniform programs require careful advance planning:
                 </p>
@@ -632,18 +632,18 @@ export default function HajjUmrahStaffUniformsPage() {
                 <div className="text-center">
                   <h2 className="text-2xl font-bold mb-4">Prepare for Hajj Season 2025</h2>
                   <p className="text-emerald-100 mb-6 max-w-2xl mx-auto">
-                    UNEOM has been the trusted uniform partner for Hajj and Umrah service providers 
+                    UNEOM has been the trusted uniform partner for Hajj and Umrah service providers
                     for over 15 years. Start your planning early to ensure excellence in service.
                   </p>
                   <div className="flex flex-wrap justify-center gap-4">
-                    <Link 
+                    <Link
                       href="/contact"
                       className="bg-white text-emerald-600 px-8 py-3 rounded-xl font-bold hover:bg-emerald-50 transition-colors inline-flex items-center gap-2"
                     >
                       Request Hajj Consultation
                       <ArrowRightIcon className="h-5 w-5" />
                     </Link>
-                    <Link 
+                    <Link
                       href="/industries/hospitality"
                       className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors"
                     >
