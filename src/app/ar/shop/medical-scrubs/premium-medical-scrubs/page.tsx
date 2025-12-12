@@ -36,8 +36,8 @@ export default function PremiumMedicalScrubsArabicPage() {
     mainImage: "/images/healthcare/dept-surgeons.jpg",
     additionalImages: [
       "/images/healthcare/healthcare_medical_doctor.jpg",
-      "/images/healthcare/dept-surgeons.jpg",
-      "/images/healthcare/dept-surgeons.jpg"
+      "/images/healthcare/dept-nurses.jpg",
+      "/images/healthcare/dept-laboratory.jpg"
     ],
     colors: [
       { name: "أزرق سماوي", value: "#87CEEB" },
@@ -87,25 +87,25 @@ export default function PremiumMedicalScrubsArabicPage() {
       { name: "المميزات", value: "مضاد للميكروبات، يمتص الرطوبة، مقاوم للسوائل" }
     ],
     customizationOptions: [
-      { 
-        name: "شعار المستشفى/العيادة", 
+      {
+        name: "شعار المستشفى/العيادة",
         description: "إضافة شعار مؤسستك مطرزًا على الصدر أو الكم",
-        image: "/images/healthcare/dept-surgeons.jpg"
+        image: "/images/healthcare/healthcare-header.jpg"
       },
-      { 
-        name: "تطريز الاسم", 
+      {
+        name: "تطريز الاسم",
         description: "اسم الموظف ومؤهلاته مطرزة للتعريف",
-        image: "/images/healthcare/dept-surgeons.jpg"
+        image: "/images/healthcare/nurse-uniform.jpg"
       },
-      { 
-        name: "ترميز الألوان للأقسام", 
+      {
+        name: "ترميز الألوان للأقسام",
         description: "خيارات الألوان لتمييز الأقسام المختلفة أو الأدوار",
-        image: "/images/healthcare/dept-surgeons.jpg"
+        image: "/images/healthcare/scrubs-collections.jpg"
       },
-      { 
-        name: "تكوين جيوب مخصص", 
+      {
+        name: "تكوين جيوب مخصص",
         description: "تعديل موضع الجيوب بناءً على احتياجات قسم معين",
-        image: "/images/healthcare/dept-surgeons.jpg"
+        image: "/images/healthcare/healthcare_medical_uniform.jpg"
       }
     ],
     relatedProducts: [
@@ -182,7 +182,7 @@ export default function PremiumMedicalScrubsArabicPage() {
           </script>
         `
       }} />
-      
+
       {/* Product content */}
       <div className="bg-neutral-50 py-8">
         <Container>
@@ -197,7 +197,7 @@ export default function PremiumMedicalScrubsArabicPage() {
             ]}
             className="mb-6"
           />
-          
+
           <div className="flex items-center text-sm text-neutral-600 justify-end">
             <Link href="/ar/shop" className="hover:text-primary-600 transition-colors">
               المتجر
@@ -213,7 +213,7 @@ export default function PremiumMedicalScrubsArabicPage() {
       </div>
 
       <Container className="py-12">
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start lg:flex-row-reverse"
           variants={containerVariants}
           initial="hidden"
@@ -301,11 +301,10 @@ export default function PremiumMedicalScrubsArabicPage() {
                     <button
                       key={size}
                       onClick={() => setSelectedSize(size)}
-                      className={`py-2 border rounded-md ${
-                        selectedSize === size
+                      className={`py-2 border rounded-md ${selectedSize === size
                           ? 'bg-primary-50 border-primary-500 text-primary-700'
                           : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
-                      }`}
+                        }`}
                     >
                       {size}
                     </button>
@@ -338,31 +337,28 @@ export default function PremiumMedicalScrubsArabicPage() {
           <div className="flex space-x-8 border-b border-neutral-200 justify-end">
             <button
               onClick={() => setActiveTab('customization')}
-              className={`pb-4 font-medium text-sm ${
-                activeTab === 'customization'
+              className={`pb-4 font-medium text-sm ${activeTab === 'customization'
                   ? 'text-primary-600 border-b-2 border-primary-600'
                   : 'text-neutral-600 hover:text-neutral-900'
-              }`}
+                }`}
             >
               خيارات التخصيص
             </button>
             <button
               onClick={() => setActiveTab('specifications')}
-              className={`pb-4 font-medium text-sm ${
-                activeTab === 'specifications'
+              className={`pb-4 font-medium text-sm ${activeTab === 'specifications'
                   ? 'text-primary-600 border-b-2 border-primary-600'
                   : 'text-neutral-600 hover:text-neutral-900'
-              }`}
+                }`}
             >
               المواصفات
             </button>
             <button
               onClick={() => setActiveTab('description')}
-              className={`pb-4 font-medium text-sm ${
-                activeTab === 'description'
+              className={`pb-4 font-medium text-sm ${activeTab === 'description'
                   ? 'text-primary-600 border-b-2 border-primary-600'
                   : 'text-neutral-600 hover:text-neutral-900'
-              }`}
+                }`}
             >
               الوصف
             </button>
@@ -575,6 +571,6 @@ export default function PremiumMedicalScrubsArabicPage() {
           </div>
         </div>
       )}
-        </main>
+    </main>
   );
 } 

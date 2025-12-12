@@ -20,7 +20,7 @@ export default function PremiumSurgicalGownsPageArabic() {
   const [selectedSize, setSelectedSize] = useState<string | null>('M');
   const [quantity, setQuantity] = useState(10);
   const [showSizeChart, setShowSizeChart] = useState(false);
-  
+
   // Product details
   const product = {
     id: 'premium-surgical-gowns',
@@ -51,9 +51,9 @@ export default function PremiumSurgicalGownsPageArabic() {
     ],
     images: [
       { src: '/images/healthcare/healthcare_medical_doctor.jpg', alt: 'فريق جراحي يرتدي عباءات فاخرة' },
-      { src: '/images/healthcare/dept-laboratory.jpg', alt: 'جراحون في عباءات فاخرة أثناء العملية' },
+      { src: '/images/healthcare/dept-surgeons.jpg', alt: 'جراحون في عباءات فاخرة أثناء العملية' },
       { src: '/images/healthcare/dept-laboratory.jpg', alt: 'لقطة مقربة لقماش العباءة الجراحية الفاخرة وتفاصيلها' },
-      { src: '/images/healthcare/dept-laboratory.jpg', alt: 'أخصائي رعاية صحية في ملابس جراحية فاخرة' }
+      { src: '/images/healthcare/healthcare-header.jpg', alt: 'أخصائي رعاية صحية في ملابس جراحية فاخرة' }
     ],
     category: 'ملابس الرعاية الصحية',
     categorySlug: 'medical-scrubs',
@@ -69,8 +69,8 @@ export default function PremiumSurgicalGownsPageArabic() {
     ],
     colors: [
       { name: 'أخضر جراحي', value: '#2d8659', image: '/images/healthcare/dept-laboratory.jpg' },
-      { name: 'أزرق ملكي', value: '#1e4d8c', image: '/images/healthcare/dept-laboratory.jpg' },
-      { name: 'كحلي', value: '#0a1e3c', image: '/images/healthcare/dept-laboratory.jpg' }
+      { name: 'أزرق ملكي', value: '#1e4d8c', image: '/images/healthcare/dept-surgeons.jpg' },
+      { name: 'كحلي', value: '#0a1e3c', image: '/images/healthcare/healthcare-header.jpg' }
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     sizeEquivalents: {
@@ -86,14 +86,14 @@ export default function PremiumSurgicalGownsPageArabic() {
         author: "د. محمد الحربي",
         position: "رئيس قسم الجراحة",
         company: "مستشفى الملك فيصل التخصصي",
-        image: "/images/healthcare/healthcare_medical_doctor.jpg"
+        image: "/images/clients/modern-arabic-businessman-SBI-300984397.jpg"
       },
       {
         quote: "مستوى الحماية الذي توفره هذه العباءات استثنائي. توفر المناطق المقواة راحة بال إضافية، ويظل القماش قابلاً للتنفس حتى أثناء الإجراءات الأكثر كثافة.",
         author: "د. سارة القحطاني",
         position: "رئيسة التمريض الجراحي",
         company: "المستشفى السعودي الألماني",
-        image: "/images/healthcare/healthcare_medical_doctor.jpg"
+        image: "/images/clients/adult-beautiful-muslim-woman-with-hijab-on-head-smiling-for-camera-in-room-SBI-351089408.jpg"
       }
     ]
   };
@@ -138,12 +138,12 @@ export default function PremiumSurgicalGownsPageArabic() {
     <main>
       <Container className="py-8">
         <Breadcrumbs items={breadcrumbs} />
-        
+
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
           <div className="order-2 lg:order-1">
             <div className="aspect-square relative overflow-hidden rounded-lg mb-4 bg-neutral-100">
-              <Image 
+              <Image
                 src={product.images[activeImage].src}
                 alt={product.images[activeImage].alt}
                 fill
@@ -152,12 +152,12 @@ export default function PremiumSurgicalGownsPageArabic() {
             </div>
             <div className="grid grid-cols-4 gap-2">
               {product.images.map((image, index) => (
-                <button 
+                <button
                   key={index}
                   className={`aspect-square relative overflow-hidden rounded-md ${activeImage === index ? 'ring-2 ring-primary-600' : 'ring-1 ring-neutral-200'}`}
                   onClick={() => setActiveImage(index)}
                 >
-                  <Image 
+                  <Image
                     src={image.src}
                     alt={image.alt}
                     fill
@@ -167,16 +167,16 @@ export default function PremiumSurgicalGownsPageArabic() {
               ))}
             </div>
           </div>
-          
+
           {/* Product Details */}
           <div className="order-1 lg:order-2">
             <h1 className="text-3xl font-bold text-neutral-900">{product.name}</h1>
             <p className="text-xl font-semibold text-primary-600 mt-2">{product.price}</p>
-            
+
             <div className="flex items-center mt-2">
               <div className="flex items-center">
                 {[...Array(5)].map((_, i) => (
-                  <svg 
+                  <svg
                     key={i}
                     className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-neutral-300'}`}
                     fill="currentColor"
@@ -188,7 +188,7 @@ export default function PremiumSurgicalGownsPageArabic() {
                 <span className="text-neutral-600 mr-2">{product.rating} ({product.reviews} تقييم)</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-neutral-700">{product.description}</p>
             </div>
@@ -204,7 +204,7 @@ export default function PremiumSurgicalGownsPageArabic() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">الألوان</h3>
               <div className="mt-2 flex flex-wrap gap-2">
@@ -219,12 +219,12 @@ export default function PremiumSurgicalGownsPageArabic() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <div className="flex justify-between items-center">
                 <h3 className="text-sm font-medium text-neutral-900">المقاس</h3>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="text-primary-600 text-sm"
                   onClick={() => setShowSizeChart(true)}
                 >
@@ -235,11 +235,10 @@ export default function PremiumSurgicalGownsPageArabic() {
                 {product.sizes.map((size) => (
                   <button
                     key={size}
-                    className={`py-2 px-4 border rounded-md text-center ${
-                      selectedSize === size 
-                        ? 'border-primary-600 bg-primary-50 text-primary-600' 
+                    className={`py-2 px-4 border rounded-md text-center ${selectedSize === size
+                        ? 'border-primary-600 bg-primary-50 text-primary-600'
                         : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
-                    }`}
+                      }`}
                     onClick={() => handleSizeSelect(size)}
                   >
                     {size}
@@ -247,7 +246,7 @@ export default function PremiumSurgicalGownsPageArabic() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">الكمية (الحد الأدنى: {product.minOrder})</h3>
               <div className="mt-2 flex items-center">
@@ -261,10 +260,10 @@ export default function PremiumSurgicalGownsPageArabic() {
                 <span className="mr-2 text-neutral-500">وحدة</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-sm text-neutral-500 mb-2">وقت التسليم: {product.leadTime}</p>
-              <AddToQuoteButton 
+              <AddToQuoteButton
                 product={product}
                 color={selectedColor || undefined}
                 size={selectedSize || undefined}
@@ -273,7 +272,7 @@ export default function PremiumSurgicalGownsPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* Product Description */}
         <div className="mt-16">
           <SectionHeading>تفاصيل المنتج</SectionHeading>
@@ -305,7 +304,7 @@ export default function PremiumSurgicalGownsPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* Hospital Compliance Section */}
         <div className="mt-16 bg-neutral-50 p-6 rounded-lg">
           <SectionHeading>الامتثال للمستشفيات والشهادات</SectionHeading>
@@ -336,15 +335,15 @@ export default function PremiumSurgicalGownsPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* Customization Section */}
         <div className="mt-16">
           <SectionHeading>خيارات التخصيص للمستشفيات</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-1 relative h-80 rounded-lg overflow-hidden">
-              <Image 
-                src="/images/healthcare/healthcare_medical_doctor.jpg" 
-                alt="عباءات جراحية مخصصة لفرق المستشفيات" 
+              <Image
+                src="/images/healthcare/healthcare_medical_doctor.jpg"
+                alt="عباءات جراحية مخصصة لفرق المستشفيات"
                 fill
                 className="object-cover"
               />
@@ -380,13 +379,13 @@ export default function PremiumSurgicalGownsPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* Testimonials */}
         <div className="mt-16">
           <SectionHeading>آراء العملاء</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             {product.testimonials.map((testimonial, index) => (
-              <TestimonialCard 
+              <TestimonialCard
                 key={index}
                 id={index}
                 quote={testimonial.quote}
@@ -399,7 +398,7 @@ export default function PremiumSurgicalGownsPageArabic() {
             ))}
           </div>
         </div>
-        
+
         {/* Size Chart Modal */}
         {showSizeChart && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -441,6 +440,6 @@ export default function PremiumSurgicalGownsPageArabic() {
           </div>
         )}
       </Container>
-        </main>
+    </main>
   );
 } 

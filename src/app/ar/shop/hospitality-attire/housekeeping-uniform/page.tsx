@@ -20,7 +20,7 @@ export default function HousekeepingUniformPageArabic() {
   const [selectedSize, setSelectedSize] = useState<string | null>('M');
   const [quantity, setQuantity] = useState(30);
   const [showSizeChart, setShowSizeChart] = useState(false);
-  
+
   // تفاصيل المنتج مع محتوى محسن للسيو
   const product = {
     id: 'housekeeping-uniform',
@@ -52,7 +52,7 @@ export default function HousekeepingUniformPageArabic() {
     ],
     images: [
       { src: '/images/hospitality/hospitality_uniform_hotel_service.jpg', alt: 'طاقم النظافة المحترف بزي متين يحافظ على غرفة فندق فاخرة' },
-      { src: '/images/hospitality/hospitality_uniform_hotel_service.jpg', alt: 'عاملة نظافة بزي محتشم مع ميزات تصميم مريحة في فندق فاخر سعودي' },
+      { src: '/images/hospitality/housekeeping-uniform.jpg', alt: 'عاملة نظافة بزي محتشم مع ميزات تصميم مريحة في فندق فاخر سعودي' },
       { src: '/images/hospitality/hotel-staff-uniform.jpg', alt: 'فريق التدبير المنزلي بالفندق في أزياء مهنية منسقة للحفاظ على معايير الممتلكات' },
       { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'فريق النظافة السعودي في أزياء مهنية مناسبة ثقافيًا في منشأة من فئة خمس نجوم' }
     ],
@@ -71,10 +71,10 @@ export default function HousekeepingUniformPageArabic() {
     ],
     colors: [
       { name: 'أخضر تيل', value: '#008080', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
-      { name: 'أزرق بحري', value: '#000080', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
-      { name: 'رمادي فحمي', value: '#36454F', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
-      { name: 'نبيذي', value: '#800020', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' },
-      { name: 'كاكي', value: '#C3B091', image: '/images/hospitality/hospitality_uniform_hotel_service.jpg' }
+      { name: 'أزرق بحري', value: '#000080', image: '/images/hospitality/hospitality_uniform_chef.jpg' },
+      { name: 'رمادي فحمي', value: '#36454F', image: '/images/hospitality/hotel-housekeeping.jpg' },
+      { name: 'نبيذي', value: '#800020', image: '/images/hospitality/hospitality_uniform_formal.jpg' },
+      { name: 'كاكي', value: '#C3B091', image: '/images/hospitality/hospitality_uniform_blue.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -93,14 +93,14 @@ export default function HousekeepingUniformPageArabic() {
         author: "نورة العتيبي",
         position: "مشرفة النظافة التنفيذية",
         company: "فندق وأبراج الارتفاعات الفاخرة",
-        image: "/images/hospitality/hotel-staff-uniform.jpg"
+        image: "/images/clients/adult-beautiful-muslim-woman-with-hijab-on-head-smiling-for-camera-in-room-SBI-351089408.jpg"
       },
       {
         quote: "بعد تنفيذ أزياء النظافة المهنية من يونيوم عبر سلسلة الفنادق لدينا، وثقنا تحسنًا كبيرًا في كل من الكفاءة ورضا الموظفين. تدعم الميزات العملية مثل الجيوب المعززة ولوحات التمدد الاستراتيجية معايير التنظيف الصارمة لدينا، بينما يرفع المظهر المهني صورة علامتنا التجارية. حتى مع واجبات التنظيف اليومية المكثفة، تحافظ هذه الأزياء على جودتها ومظهرها لفترة أطول بكثير من الخيارات السابقة التي جربناها.",
         author: "أحمد الزهراني",
         position: "مدير خدمات الإقامة",
         company: "مجموعة الضيافة الملكية",
-        image: "/images/hospitality/hotel-staff-uniform.jpg"
+        image: "/images/clients/modern-arabic-businessman-SBI-300984397.jpg"
       }
     ]
   };
@@ -145,12 +145,12 @@ export default function HousekeepingUniformPageArabic() {
     <main>
       <Container className="py-8 rtl">
         <Breadcrumbs items={breadcrumbs} />
-        
+
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* صور المنتج */}
           <div>
             <div className="aspect-square relative overflow-hidden rounded-lg mb-4 bg-neutral-100">
-              <Image 
+              <Image
                 src={product.images[activeImage].src}
                 alt={product.images[activeImage].alt}
                 fill
@@ -159,12 +159,12 @@ export default function HousekeepingUniformPageArabic() {
             </div>
             <div className="grid grid-cols-4 gap-2">
               {product.images.map((image, index) => (
-                <button 
+                <button
                   key={index}
                   className={`aspect-square relative overflow-hidden rounded-md ${activeImage === index ? 'ring-2 ring-primary-600' : 'ring-1 ring-neutral-200'}`}
                   onClick={() => setActiveImage(index)}
                 >
-                  <Image 
+                  <Image
                     src={image.src}
                     alt={image.alt}
                     fill
@@ -174,16 +174,16 @@ export default function HousekeepingUniformPageArabic() {
               ))}
             </div>
           </div>
-          
+
           {/* تفاصيل المنتج */}
           <div>
             <h1 className="text-3xl font-bold text-neutral-900">{product.name}</h1>
             <p className="text-xl font-semibold text-primary-600 mt-2">{product.price}</p>
-            
+
             <div className="flex items-center mt-2">
               <div className="flex items-center">
                 {[...Array(5)].map((_, i) => (
-                  <svg 
+                  <svg
                     key={i}
                     className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-neutral-300'}`}
                     fill="currentColor"
@@ -195,7 +195,7 @@ export default function HousekeepingUniformPageArabic() {
                 <span className="text-neutral-600 mr-2">{product.rating} ({product.reviews} تقييم)</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-neutral-700">{product.description}</p>
             </div>
@@ -211,7 +211,7 @@ export default function HousekeepingUniformPageArabic() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">الألوان</h3>
               <div className="mt-2 flex flex-wrap gap-2">
@@ -226,12 +226,12 @@ export default function HousekeepingUniformPageArabic() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <div className="flex justify-between items-center">
                 <h3 className="text-sm font-medium text-neutral-900">المقاس</h3>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="text-primary-600 text-sm"
                   onClick={() => setShowSizeChart(true)}
                 >
@@ -242,11 +242,10 @@ export default function HousekeepingUniformPageArabic() {
                 {product.sizes.map((size) => (
                   <button
                     key={size}
-                    className={`py-2 px-4 border rounded-md text-center ${
-                      selectedSize === size 
-                        ? 'border-primary-600 bg-primary-50 text-primary-600' 
+                    className={`py-2 px-4 border rounded-md text-center ${selectedSize === size
+                        ? 'border-primary-600 bg-primary-50 text-primary-600'
                         : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
-                    }`}
+                      }`}
                     onClick={() => handleSizeSelect(size)}
                   >
                     {size}
@@ -254,7 +253,7 @@ export default function HousekeepingUniformPageArabic() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">الكمية (الحد الأدنى: {product.minOrder})</h3>
               <div className="mt-2 flex items-center">
@@ -268,10 +267,10 @@ export default function HousekeepingUniformPageArabic() {
                 <span className="mr-2 text-neutral-500">قطعة</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-sm text-neutral-500 mb-2">مدة التسليم: {product.leadTime}</p>
-              <AddToQuoteButton 
+              <AddToQuoteButton
                 product={product}
                 color={selectedColor || undefined}
                 size={selectedSize || undefined}
@@ -280,7 +279,7 @@ export default function HousekeepingUniformPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* وصف المنتج */}
         <div className="mt-16">
           <SectionHeading>تفاصيل المنتج</SectionHeading>
@@ -312,7 +311,7 @@ export default function HousekeepingUniformPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* قسم التميز التشغيلي */}
         <div className="mt-16 bg-neutral-50 p-6 rounded-lg">
           <SectionHeading>التميز التشغيلي</SectionHeading>
@@ -336,16 +335,16 @@ export default function HousekeepingUniformPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* برنامج زي النظافة */}
         <div className="mt-16">
           <SectionHeading>برنامج التميز في النظافة</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
-                <Image 
-                  src="/images/hospitality/hotel-staff-uniform.jpg" 
-                  alt="فريق النظافة المهني في أزياء منسقة خلال الاجتماع التوجيهي للموظفين في فندق فاخر" 
+                <Image
+                  src="/images/hospitality/hotel-housekeeping.jpg"
+                  alt="فريق النظافة المهني في أزياء منسقة خلال الاجتماع التوجيهي للموظفين في فندق فاخر"
                   fill
                   className="object-cover"
                 />
@@ -381,13 +380,13 @@ export default function HousekeepingUniformPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* شهادات العملاء */}
         <div className="mt-16">
           <SectionHeading>شهادات العملاء</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             {product.testimonials.map((testimonial, index) => (
-              <TestimonialCard 
+              <TestimonialCard
                 key={index}
                 id={index}
                 quote={testimonial.quote}
@@ -400,7 +399,7 @@ export default function HousekeepingUniformPageArabic() {
             ))}
           </div>
         </div>
-        
+
         {/* نافذة جدول المقاسات */}
         {showSizeChart && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -478,9 +477,9 @@ export default function HousekeepingUniformPageArabic() {
                 </div>
                 <div className="mt-4">
                   <p className="text-sm text-neutral-500">
-                    ملاحظة: هذه القياسات هي إرشادات عامة. بالنسبة لأزياء فريق النظافة، 
-                    نوصي بخدمة القياس المهنية لدينا لضمان ملاءمة دقيقة ومريحة 
-                    تستوعب الحركات البدنية المطلوبة في واجبات النظافة. 
+                    ملاحظة: هذه القياسات هي إرشادات عامة. بالنسبة لأزياء فريق النظافة،
+                    نوصي بخدمة القياس المهنية لدينا لضمان ملاءمة دقيقة ومريحة
+                    تستوعب الحركات البدنية المطلوبة في واجبات النظافة.
                     تتوفر خيارات تحديد المقاسات المخصصة والتعديلات المريحة لفريق النظافة لديك.
                   </p>
                 </div>
@@ -489,6 +488,6 @@ export default function HousekeepingUniformPageArabic() {
           </div>
         )}
       </Container>
-        </main>
+    </main>
   );
 } 

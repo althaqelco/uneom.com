@@ -20,7 +20,7 @@ export default function ExecutiveMedicalUniformsPageArabic() {
   const [selectedSize, setSelectedSize] = useState<string | null>('M');
   const [quantity, setQuantity] = useState(20);
   const [showSizeChart, setShowSizeChart] = useState(false);
-  
+
   // تفاصيل المنتج
   const product = {
     id: 'executive-medical-uniforms',
@@ -52,9 +52,9 @@ export default function ExecutiveMedicalUniformsPageArabic() {
     ],
     images: [
       { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'قيادي في الرعاية الصحية يرتدي زي طبي تنفيذي كحلي فاخر' },
-      { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'قيادية في الرعاية الصحية بزي طبي تنفيذي احترافي' },
-      { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'إداريون طبيون في أزياء تنفيذية خلال اجتماع قيادي' },
-      { src: '/images/healthcare/healthcare_hijab_doctor.jpg', alt: 'مدير طبي سعودي في زي تنفيذي مصمم مع فريقه' }
+      { src: '/images/healthcare/healthcare_medical_doctor.jpg', alt: 'قيادية في الرعاية الصحية بزي طبي تنفيذي احترافي' },
+      { src: '/images/healthcare/healthcare-header.jpg', alt: 'إداريون طبيون في أزياء تنفيذية خلال اجتماع قيادي' },
+      { src: '/images/healthcare/healthcare-professional-group.jpg', alt: 'مدير طبي سعودي في زي تنفيذي مصمم مع فريقه' }
     ],
     category: 'الأزياء الطبية',
     categorySlug: 'medical-scrubs',
@@ -71,10 +71,10 @@ export default function ExecutiveMedicalUniformsPageArabic() {
     ],
     colors: [
       { name: 'كحلي', value: '#000080', image: '/images/healthcare/healthcare_hijab_doctor.jpg' },
-      { name: 'أسود', value: '#000000', image: '/images/healthcare/healthcare_hijab_doctor.jpg' },
-      { name: 'عنابي', value: '#800020', image: '/images/healthcare/healthcare_hijab_doctor.jpg' },
-      { name: 'رمادي فحمي', value: '#36454F', image: '/images/healthcare/healthcare_hijab_doctor.jpg' },
-      { name: 'أزرق ملكي', value: '#4169E1', image: '/images/healthcare/healthcare_hijab_doctor.jpg' }
+      { name: 'أسود', value: '#000000', image: '/images/healthcare/healthcare_medical_doctor.jpg' },
+      { name: 'عنابي', value: '#800020', image: '/images/healthcare/healthcare-header.jpg' },
+      { name: 'رمادي فحمي', value: '#36454F', image: '/images/healthcare/healthcare-professional-group.jpg' },
+      { name: 'أزرق ملكي', value: '#4169E1', image: '/images/healthcare/dept-doctors.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -93,14 +93,14 @@ export default function ExecutiveMedicalUniformsPageArabic() {
         author: "د. محمد الحربي",
         position: "الرئيس التنفيذي للمستشفى",
         company: "مركز المملكة الطبي المتقدم",
-        image: "/images/healthcare/healthcare_medical_doctor.jpg"
+        image: "/images/clients/modern-arabic-businessman-SBI-300984397.jpg"
       },
       {
         quote: "بعد تطبيق برنامج الأزياء الطبية التنفيذية من يونيوم لفريقنا الإداري، لاحظنا تحسناً في ثقة المرضى وتماسك الكوادر. حظيت خيارات التصميم المحتشم بتقدير خاص من قبل القيادات النسائية لدينا، وتضمن الجودة الممتازة احتفاظ هذه الأزياء بمظهرها المميز رغم بيئة الرعاية الصحية المتطلبة.",
         author: "د. هناء الرشيد",
         position: "المديرة الطبية",
         company: "المجمع الطبي الدولي",
-        image: "/images/healthcare/healthcare_medical_doctor.jpg"
+        image: "/images/clients/adult-beautiful-muslim-woman-with-hijab-on-head-smiling-for-camera-in-room-SBI-351089408.jpg"
       }
     ]
   };
@@ -146,12 +146,12 @@ export default function ExecutiveMedicalUniformsPageArabic() {
       <Container className="py-8">
         <h1 className="sr-only">الأزياء الطبية التنفيذية المتميزة للقيادات الصحية | أزياء طبية فاخرة للإدارة الطبية | يونيوم</h1>
         <Breadcrumbs items={breadcrumbs} />
-        
+
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* صور المنتج */}
           <div className="order-2 lg:order-1">
             <div className="aspect-square relative overflow-hidden rounded-lg mb-4 bg-neutral-100">
-              <Image 
+              <Image
                 src={product.images[activeImage].src}
                 alt={product.images[activeImage].alt}
                 fill
@@ -160,12 +160,12 @@ export default function ExecutiveMedicalUniformsPageArabic() {
             </div>
             <div className="grid grid-cols-4 gap-2">
               {product.images.map((image, index) => (
-                <button 
+                <button
                   key={index}
                   className={`aspect-square relative overflow-hidden rounded-md ${activeImage === index ? 'ring-2 ring-primary-600' : 'ring-1 ring-neutral-200'}`}
                   onClick={() => setActiveImage(index)}
                 >
-                  <Image 
+                  <Image
                     src={image.src}
                     alt={image.alt}
                     fill
@@ -175,17 +175,17 @@ export default function ExecutiveMedicalUniformsPageArabic() {
               ))}
             </div>
           </div>
-          
+
           {/* تفاصيل المنتج */}
           <div className="order-1 lg:order-2">
             <h1 className="text-3xl font-bold text-neutral-900 text-right">{product.name}</h1>
             <p className="text-xl font-semibold text-primary-600 mt-2 text-right">{product.price}</p>
-            
+
             <div className="flex items-center mt-2 justify-end">
               <div className="flex items-center">
                 <span className="text-neutral-600 mr-2">{product.rating} ({product.reviews} تقييم)</span>
                 {[...Array(5)].map((_, i) => (
-                  <svg 
+                  <svg
                     key={i}
                     className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-neutral-300'}`}
                     fill="currentColor"
@@ -196,7 +196,7 @@ export default function ExecutiveMedicalUniformsPageArabic() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-neutral-700 text-right">{product.description}</p>
             </div>
@@ -212,7 +212,7 @@ export default function ExecutiveMedicalUniformsPageArabic() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900 text-right">الألوان</h3>
               <div className="mt-2 flex flex-wrap gap-2 justify-end">
@@ -227,11 +227,11 @@ export default function ExecutiveMedicalUniformsPageArabic() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <div className="flex justify-between items-center">
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="text-primary-600 text-sm"
                   onClick={() => setShowSizeChart(true)}
                 >
@@ -243,11 +243,10 @@ export default function ExecutiveMedicalUniformsPageArabic() {
                 {product.sizes.map((size) => (
                   <button
                     key={size}
-                    className={`py-2 px-4 border rounded-md text-center ${
-                      selectedSize === size 
-                        ? 'border-primary-600 bg-primary-50 text-primary-600' 
+                    className={`py-2 px-4 border rounded-md text-center ${selectedSize === size
+                        ? 'border-primary-600 bg-primary-50 text-primary-600'
                         : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
-                    }`}
+                      }`}
                     onClick={() => handleSizeSelect(size)}
                   >
                     {size}
@@ -255,7 +254,7 @@ export default function ExecutiveMedicalUniformsPageArabic() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900 text-right">الكمية (الحد الأدنى: {product.minOrder})</h3>
               <div className="mt-2 flex items-center justify-end">
@@ -269,19 +268,19 @@ export default function ExecutiveMedicalUniformsPageArabic() {
                 />
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-sm text-neutral-500 mb-2 text-right">مدة التوصيل: {product.leadTime}</p>
-              <AddToQuoteButton 
-  product={product}
-  color={selectedColor || undefined}
-  size={selectedSize || undefined}
-  quantity={quantity}
-/>
+              <AddToQuoteButton
+                product={product}
+                color={selectedColor || undefined}
+                size={selectedSize || undefined}
+                quantity={quantity}
+              />
             </div>
           </div>
         </div>
-        
+
         {/* وصف المنتج */}
         <div className="mt-16">
           <SectionHeading>تفاصيل المنتج</SectionHeading>
@@ -313,7 +312,7 @@ export default function ExecutiveMedicalUniformsPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* قسم التميز القيادي */}
         <div className="mt-16 bg-neutral-50 p-6 rounded-lg">
           <SectionHeading>التميز القيادي</SectionHeading>
@@ -337,16 +336,16 @@ export default function ExecutiveMedicalUniformsPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* قسم قيادة الرعاية الصحية */}
         <div className="mt-16">
           <SectionHeading>برنامج قيادة الرعاية الصحية</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-1">
               <div className="relative h-80 rounded-lg overflow-hidden">
-                <Image 
-                  src="/images/healthcare/healthcare_medical_doctor.jpg" 
-                  alt="فريق قيادة الرعاية الصحية في أزياء طبية تنفيذية" 
+                <Image
+                  src="/images/healthcare/healthcare_medical_doctor.jpg"
+                  alt="فريق قيادة الرعاية الصحية في أزياء طبية تنفيذية"
                   fill
                   className="object-cover"
                 />
@@ -382,13 +381,13 @@ export default function ExecutiveMedicalUniformsPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* آراء العملاء */}
         <div className="mt-16">
           <SectionHeading>آراء العملاء</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             {product.testimonials.map((testimonial, index) => (
-              <TestimonialCard 
+              <TestimonialCard
                 key={index}
                 id={index}
                 quote={testimonial.quote}
@@ -401,7 +400,7 @@ export default function ExecutiveMedicalUniformsPageArabic() {
             ))}
           </div>
         </div>
-        
+
         {/* جدول المقاسات */}
         {showSizeChart && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -479,9 +478,9 @@ export default function ExecutiveMedicalUniformsPageArabic() {
                 </div>
                 <div className="mt-4">
                   <p className="text-sm text-neutral-500 text-right">
-                    ملاحظة: هذه القياسات هي إرشادات عامة. بالنسبة للأزياء الطبية التنفيذية، 
-                    نوصي بشدة بخدمة القياس المهنية لدينا لضمان مظهر دقيق ومصمم 
-                    بشكل مناسب لأدوار القيادة. تتوفر خيارات تفصيل مخصصة 
+                    ملاحظة: هذه القياسات هي إرشادات عامة. بالنسبة للأزياء الطبية التنفيذية،
+                    نوصي بشدة بخدمة القياس المهنية لدينا لضمان مظهر دقيق ومصمم
+                    بشكل مناسب لأدوار القيادة. تتوفر خيارات تفصيل مخصصة
                     لاستيعاب التفضيلات والمتطلبات الفردية.
                   </p>
                 </div>
@@ -490,6 +489,6 @@ export default function ExecutiveMedicalUniformsPageArabic() {
           </div>
         )}
       </Container>
-        </main>
+    </main>
   );
 } 

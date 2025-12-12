@@ -16,7 +16,7 @@ const featuredUniforms = [
   {
     id: '1',
     name: 'طقم الزي المدرسي الفاخر - بنين',
-    image: '/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg',
+    image: '/images/education/uniform_school_product-1.jpg',
     price: 'اطلب عرض سعر',
     href: '/ar/shop/education-uniforms/school-uniforms/premium-boys-set/',
     category: 'زي البنين',
@@ -25,7 +25,7 @@ const featuredUniforms = [
   {
     id: '2',
     name: 'الزي المدرسي الكلاسيكي - بنات',
-    image: '/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg',
+    image: '/images/education/uniform_school_product-2.jpg',
     price: 'اطلب عرض سعر',
     href: '/ar/shop/education-uniforms/school-uniforms/classic-girls-set/',
     category: 'زي البنات',
@@ -34,7 +34,7 @@ const featuredUniforms = [
   {
     id: '3',
     name: 'طقم الزي الرياضي المدرسي',
-    image: '/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg',
+    image: '/images/education/uniform_school_product-4.jpg',
     price: 'اطلب عرض سعر',
     href: '/ar/shop/education-uniforms/school-uniforms/sports-set/',
     category: 'الزي الرياضي'
@@ -84,7 +84,7 @@ const uniformFeatures = [
 export default function SchoolUniformsPageAr() {
   return (
     <div dir="rtl" className="font-arabic">
-      <EnhancedSEO2025 
+      <EnhancedSEO2025
         title="الزي المدرسي | أزياء تعليمية فاخرة للطلاب | يونيوم"
         description="زي مدرسي عالي الجودة مصمم للراحة والمتانة والتميز الأكاديمي. أزياء تعليمية احترافية للمدارس في المملكة العربية السعودية مع خيارات التخصيص."
         canonicalUrl="https://uneom.com/ar/shop/education-uniforms/school-uniforms/"
@@ -102,7 +102,7 @@ export default function SchoolUniformsPageAr() {
             priority
           />
         </div>
-        
+
         <Container>
           <Breadcrumbs
             items={[
@@ -113,23 +113,23 @@ export default function SchoolUniformsPageAr() {
             ]}
             className="text-white/80 mb-6 relative z-10"
           />
-          
+
           <div className="relative z-10 max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">الزي المدرسي الفاخر</h1>
             <p className="text-xl opacity-90 mb-8 max-w-3xl">
               زي مدرسي فاخر مصمم لتعزيز التميز الأكاديمي وفخر المدرسة وراحة الطلاب. أزياؤنا التعليمية تجمع بين المتانة والأناقة والوظائف العملية للبيئة التعليمية الحديثة.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
+              <Button
                 href="/ar/quote"
-                variant="secondary" 
+                variant="secondary"
                 size="lg"
               >
                 اطلب عرض سعر للمدرسة
               </Button>
-              <Button 
+              <Button
                 href="#featured-uniforms"
-                variant="outline" 
+                variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-primary-700"
               >
@@ -175,7 +175,7 @@ export default function SchoolUniformsPageAr() {
             <SectionHeading subtitle="لماذا تختار زينا المدرسي" centered>
               جودة تدعم التعليم والتميز
             </SectionHeading>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
               {uniformFeatures.map((feature, index) => (
                 <div key={index} className="text-center">
@@ -194,13 +194,13 @@ export default function SchoolUniformsPageAr() {
             <SectionHeading subtitle="مجموعة الزي المدرسي" centered>
               أزياء تعليمية فاخرة
             </SectionHeading>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               {featuredUniforms.map((uniform) => (
                 <ProductCard key={uniform.id} product={uniform} showAddToQuote={true} />
               ))}
             </div>
-            
+
             <div className="text-center mt-12">
               <Button href="/ar/shop/education-uniforms/" variant="primary" size="lg">
                 استعرض جميع الأزياء التعليمية
@@ -213,7 +213,7 @@ export default function SchoolUniformsPageAr() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative aspect-square rounded-xl overflow-hidden">
                 <Image
-                  src="/images/group-of-elementary-school-pupils-wearing-uniform-folding-arms-against-red-studio-back-SBI-349929394.jpg"
+                  src="/images/education/education-uniforms.jpg"
                   alt="فوائد الزي المدرسي"
                   fill
                   className="object-cover"

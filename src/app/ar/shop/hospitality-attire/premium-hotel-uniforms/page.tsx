@@ -20,7 +20,7 @@ export default function PremiumHotelUniformsPageArabic() {
   const [selectedSize, setSelectedSize] = useState<string | null>('M');
   const [quantity, setQuantity] = useState(10);
   const [showSizeChart, setShowSizeChart] = useState(false);
-  
+
   // Product details in Arabic
   const product = {
     id: 'premium-hotel-uniforms',
@@ -51,9 +51,9 @@ export default function PremiumHotelUniformsPageArabic() {
     ],
     images: [
       { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'موظفو استقبال الفندق بأزياء فاخرة' },
-      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'موظف الكونسيرج بزي فندقي فاخر' },
-      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'طاقم التدبير المنزلي بأزياء مهنية' },
-      { src: '/images/hospitality/hospitality_uniform_formal.jpg', alt: 'مدير الفندق بزي تنفيذي يرحب بالضيوف' }
+      { src: '/images/hospitality/hotel-staff-uniform.jpg', alt: 'موظف الكونسيرج بزي فندقي فاخر' },
+      { src: '/images/hospitality/housekeeping-uniform.jpg', alt: 'طاقم التدبير المنزلي بأزياء مهنية' },
+      { src: '/images/hospitality/hospitality_hotel_reception.jpg', alt: 'مدير الفندق بزي تنفيذي يرحب بالضيوف' }
     ],
     category: 'أزياء الضيافة',
     categorySlug: 'hospitality-attire',
@@ -69,9 +69,9 @@ export default function PremiumHotelUniformsPageArabic() {
     ],
     colors: [
       { name: 'أحمر نبيذي', value: '#800020', image: '/images/hospitality/hospitality_uniform_formal.jpg' },
-      { name: 'ذهبي ملكي', value: '#caa548', image: '/images/hospitality/hospitality_uniform_formal.jpg' },
-      { name: 'كحلي غامق', value: '#1a2942', image: '/images/hospitality/hospitality_uniform_formal.jpg' },
-      { name: 'أخضر زمردي', value: '#2e5d4b', image: '/images/hospitality/hospitality_uniform_formal.jpg' },
+      { name: 'ذهبي ملكي', value: '#caa548', image: '/images/hospitality/hotel-staff-uniform.jpg' },
+      { name: 'كحلي غامق', value: '#1a2942', image: '/images/hospitality/hospitality_hotel_reception.jpg' },
+      { name: 'أخضر زمردي', value: '#2e5d4b', image: '/images/hospitality/housekeeping-uniform.jpg' },
       { name: 'أسود كلاسيكي', value: '#232323', image: '/images/hospitality/hospitality_uniform_formal.jpg' }
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL'],
@@ -91,14 +91,14 @@ export default function PremiumHotelUniformsPageArabic() {
         author: "عبدالله المنصور",
         position: "المدير العام",
         company: "فندق رويال بالمز الرياض",
-        image: "/images/hospitality/hotel-staff-uniform.jpg"
+        image: "/images/clients/modern-arabic-businessman-SBI-300984397.jpg"
       },
       {
         quote: "العمل مع UNEOM بسّط إدارة الأزياء الموحدة لدينا بشكل كبير. جودة القماش متميزة - حيث تظهر الحد الأدنى من التآكل حتى بعد أشهر من الاستخدام المستمر، وفهم فريق التصميم لديهم حاجتنا للموازنة بين الأناقة السعودية التقليدية ومعايير الضيافة الحديثة.",
         author: "نادية الحربي",
         position: "مديرة التدبير المنزلي التنفيذية",
         company: "منتجع وسبا جدة جراند",
-        image: "/images/hospitality/hotel-staff-uniform.jpg"
+        image: "/images/clients/adult-beautiful-muslim-woman-with-hijab-on-head-smiling-for-camera-in-room-SBI-351089408.jpg"
       }
     ]
   };
@@ -144,12 +144,12 @@ export default function PremiumHotelUniformsPageArabic() {
       <Container className="py-8">
         <h1 className="sr-only">أزياء الفنادق الفاخرة | يونيفورم فندقي عالي الجودة للضيافة السعودية | يونيوم</h1>
         <Breadcrumbs items={breadcrumbs} />
-        
+
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
           <div className="order-2 lg:order-1">
             <div className="aspect-square relative overflow-hidden rounded-lg mb-4 bg-neutral-100">
-              <Image 
+              <Image
                 src={product.images[activeImage].src}
                 alt={product.images[activeImage].alt}
                 fill
@@ -158,12 +158,12 @@ export default function PremiumHotelUniformsPageArabic() {
             </div>
             <div className="grid grid-cols-4 gap-2">
               {product.images.map((image, index) => (
-                <button 
+                <button
                   key={index}
                   className={`aspect-square relative overflow-hidden rounded-md ${activeImage === index ? 'ring-2 ring-primary-600' : 'ring-1 ring-neutral-200'}`}
                   onClick={() => setActiveImage(index)}
                 >
-                  <Image 
+                  <Image
                     src={image.src}
                     alt={image.alt}
                     fill
@@ -173,16 +173,16 @@ export default function PremiumHotelUniformsPageArabic() {
               ))}
             </div>
           </div>
-          
+
           {/* Product Details */}
           <div className="order-1 lg:order-2">
             <h1 className="text-3xl font-bold text-neutral-900">{product.name}</h1>
             <p className="text-xl font-semibold text-primary-600 mt-2">{product.price}</p>
-            
+
             <div className="flex items-center mt-2">
               <div className="flex items-center">
                 {[...Array(5)].map((_, i) => (
-                  <svg 
+                  <svg
                     key={i}
                     className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-neutral-300'}`}
                     fill="currentColor"
@@ -194,7 +194,7 @@ export default function PremiumHotelUniformsPageArabic() {
                 <span className="text-neutral-600 mr-2">{product.rating} ({product.reviews} تقييم)</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-neutral-700">{product.description}</p>
             </div>
@@ -210,7 +210,7 @@ export default function PremiumHotelUniformsPageArabic() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">الألوان</h3>
               <div className="mt-2 flex flex-wrap gap-2">
@@ -225,12 +225,12 @@ export default function PremiumHotelUniformsPageArabic() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <div className="flex justify-between items-center">
                 <h3 className="text-sm font-medium text-neutral-900">المقاس</h3>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="text-primary-600 text-sm"
                   onClick={() => setShowSizeChart(true)}
                 >
@@ -241,11 +241,10 @@ export default function PremiumHotelUniformsPageArabic() {
                 {product.sizes.map((size) => (
                   <button
                     key={size}
-                    className={`py-2 px-4 border rounded-md text-center ${
-                      selectedSize === size 
-                        ? 'border-primary-600 bg-primary-50 text-primary-600' 
+                    className={`py-2 px-4 border rounded-md text-center ${selectedSize === size
+                        ? 'border-primary-600 bg-primary-50 text-primary-600'
                         : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
-                    }`}
+                      }`}
                     onClick={() => handleSizeSelect(size)}
                   >
                     {size}
@@ -253,7 +252,7 @@ export default function PremiumHotelUniformsPageArabic() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">الكمية (الحد الأدنى: {product.minOrder})</h3>
               <div className="mt-2 flex items-center">
@@ -267,10 +266,10 @@ export default function PremiumHotelUniformsPageArabic() {
                 <span className="mr-2 text-neutral-500">وحدة</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-sm text-neutral-500 mb-2">وقت التسليم: {product.leadTime}</p>
-              <AddToQuoteButton 
+              <AddToQuoteButton
                 product={product}
                 color={selectedColor || undefined}
                 size={selectedSize || undefined}
@@ -279,7 +278,7 @@ export default function PremiumHotelUniformsPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* Product Description */}
         <div className="mt-16">
           <SectionHeading>تفاصيل المنتج</SectionHeading>
@@ -311,13 +310,13 @@ export default function PremiumHotelUniformsPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* Hospitality Excellence Section */}
         <div className="mt-16 bg-neutral-50 p-6 rounded-lg">
           <SectionHeading>التميز في الضيافة</SectionHeading>
           <div className="mt-4">
             <p className="text-neutral-700 mb-4">
-              صُممت أزياء موظفي الفنادق الفاخرة لدينا لتعكس الأناقة والرقي المتوقعين في قطاع الضيافة الفاخر في المملكة العربية السعودية. 
+              صُممت أزياء موظفي الفنادق الفاخرة لدينا لتعكس الأناقة والرقي المتوقعين في قطاع الضيافة الفاخر في المملكة العربية السعودية.
               تم صناعة كل تفصيل لتعزيز صورة العلامة التجارية لفندقك مع ضمان راحة الموظفين وثقتهم طوال المناوبات المتطلبة.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
@@ -336,15 +335,15 @@ export default function PremiumHotelUniformsPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* Hotel Branding Section */}
         <div className="mt-16">
           <SectionHeading>العلامة التجارية للفندق والتخصيص</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-1 relative h-80 rounded-lg overflow-hidden">
-              <Image 
-                src="/images/hospitality/hospitality_uniform_formal.jpg" 
-                alt="طاقم فندق فاخر في أزياء موحدة مخصصة ومنسقة" 
+              <Image
+                src="/images/hospitality/hospitality_uniform_formal.jpg"
+                alt="طاقم فندق فاخر في أزياء موحدة مخصصة ومنسقة"
                 fill
                 className="object-cover"
               />
@@ -352,7 +351,7 @@ export default function PremiumHotelUniformsPageArabic() {
             <div className="order-1 md:order-2">
               <p className="text-neutral-700 mb-4">
                 نقدم خيارات تخصيص واسعة لضمان أن أزياء موظفي الفندق تعكس بشكل مثالي هوية علامتك التجارية.
-                من الألوان المخصصة التي تتناسب مع التصميم الداخلي إلى الشعارات المطرزة وشارات الأسماء الشخصية، يعمل فريق التصميم لدينا 
+                من الألوان المخصصة التي تتناسب مع التصميم الداخلي إلى الشعارات المطرزة وشارات الأسماء الشخصية، يعمل فريق التصميم لدينا
                 بشكل وثيق مع إدارتكم لإنشاء هوية بصرية متماسكة عبر جميع الأقسام.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
@@ -381,13 +380,13 @@ export default function PremiumHotelUniformsPageArabic() {
             </div>
           </div>
         </div>
-        
+
         {/* Testimonials */}
         <div className="mt-16">
           <SectionHeading>آراء العملاء</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             {product.testimonials.map((testimonial, index) => (
-              <TestimonialCard 
+              <TestimonialCard
                 key={index}
                 id={index}
                 quote={testimonial.quote}
@@ -400,7 +399,7 @@ export default function PremiumHotelUniformsPageArabic() {
             ))}
           </div>
         </div>
-        
+
         {/* Size Chart Modal */}
         {showSizeChart && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -487,6 +486,6 @@ export default function PremiumHotelUniformsPageArabic() {
           </div>
         )}
       </Container>
-        </main>
+    </main>
   );
 } 
