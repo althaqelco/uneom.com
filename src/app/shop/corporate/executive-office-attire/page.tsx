@@ -20,7 +20,7 @@ export default function ExecutiveOfficeAttirePage() {
   const [selectedSize, setSelectedSize] = useState<string | null>('M');
   const [quantity, setQuantity] = useState(20);
   const [showSizeChart, setShowSizeChart] = useState(false);
-  
+
   // Product details
   const product = {
     id: 'executive-office-attire',
@@ -52,8 +52,8 @@ export default function ExecutiveOfficeAttirePage() {
     images: [
       { src: '/images/corporate/corporate-team.jpg', alt: 'Business executives in premium office attire during meeting' },
       { src: '/images/products/corporate-suit-executive.jpg', alt: 'Corporate professional in tailored executive suit' },
-      { src: '/images/products/corporate-suit-executive.jpg', alt: 'Saudi business executive in traditional-modern fusion attire' },
-      { src: '/images/products/corporate-suit-executive.jpg', alt: 'Saudi businesswoman in professional corporate attire with hijab' }
+      { src: '/images/corporate/corporate_business_uniform.jpg', alt: 'Saudi business executive in traditional-modern fusion attire' },
+      { src: '/images/corporate/corporate_uniform_professional.jpg', alt: 'Saudi businesswoman in professional corporate attire with hijab' }
     ],
     category: 'Corporate',
     categorySlug: 'corporate',
@@ -142,18 +142,18 @@ export default function ExecutiveOfficeAttirePage() {
 
   return (
     <div className="bg-white">
-    
+
       <Container className="py-8">
         <Breadcrumbs items={breadcrumbs.map(item => ({
           label: item.name,
           href: item.url
         }))} />
-        
+
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
           <div>
             <div className="aspect-square relative overflow-hidden rounded-lg mb-4 bg-neutral-100">
-              <Image 
+              <Image
                 src={product.images[activeImage].src}
                 alt={product.images[activeImage].alt}
                 fill
@@ -162,12 +162,12 @@ export default function ExecutiveOfficeAttirePage() {
             </div>
             <div className="grid grid-cols-4 gap-2">
               {product.images.map((image, index) => (
-                <button 
+                <button
                   key={index}
                   className={`aspect-square relative overflow-hidden rounded-md ${activeImage === index ? 'ring-2 ring-primary-600' : 'ring-1 ring-neutral-200'}`}
                   onClick={() => setActiveImage(index)}
                 >
-                  <Image 
+                  <Image
                     src={image.src}
                     alt={image.alt}
                     fill
@@ -177,16 +177,16 @@ export default function ExecutiveOfficeAttirePage() {
               ))}
             </div>
           </div>
-          
+
           {/* Product Details */}
           <div>
             <h1 className="text-3xl font-bold text-neutral-900">{product.name}</h1>
             <p className="text-xl font-semibold text-primary-600 mt-2">{product.price}</p>
-            
+
             <div className="flex items-center mt-2">
               <div className="flex items-center">
                 {[...Array(5)].map((_, i) => (
-                  <svg 
+                  <svg
                     key={i}
                     className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-neutral-300'}`}
                     fill="currentColor"
@@ -198,7 +198,7 @@ export default function ExecutiveOfficeAttirePage() {
                 <span className="text-neutral-600 ml-2">{product.rating} ({product.reviews} reviews)</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-neutral-700">{product.description}</p>
             </div>
@@ -214,7 +214,7 @@ export default function ExecutiveOfficeAttirePage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">Colors</h3>
               <div className="mt-2 flex flex-wrap gap-2">
@@ -229,12 +229,12 @@ export default function ExecutiveOfficeAttirePage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <div className="flex justify-between items-center">
                 <h3 className="text-sm font-medium text-neutral-900">Size</h3>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="text-primary-600 text-sm"
                   onClick={() => setShowSizeChart(true)}
                 >
@@ -245,11 +245,10 @@ export default function ExecutiveOfficeAttirePage() {
                 {product.sizes.map((size) => (
                   <button
                     key={size}
-                    className={`py-2 px-4 border rounded-md text-center ${
-                      selectedSize === size 
-                        ? 'border-primary-600 bg-primary-50 text-primary-600' 
+                    className={`py-2 px-4 border rounded-md text-center ${selectedSize === size
+                        ? 'border-primary-600 bg-primary-50 text-primary-600'
                         : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
-                    }`}
+                      }`}
                     onClick={() => handleSizeSelect(size)}
                   >
                     {size}
@@ -257,7 +256,7 @@ export default function ExecutiveOfficeAttirePage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">Quantity (Min: {product.minOrder})</h3>
               <div className="mt-2 flex items-center">
@@ -271,10 +270,10 @@ export default function ExecutiveOfficeAttirePage() {
                 <span className="ml-2 text-neutral-500">units</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-sm text-neutral-500 mb-2">Lead time: {product.leadTime}</p>
-              <AddToQuoteButton 
+              <AddToQuoteButton
                 product={product}
                 color={selectedColor || undefined}
                 size={selectedSize || undefined}
@@ -283,7 +282,7 @@ export default function ExecutiveOfficeAttirePage() {
             </div>
           </div>
         </div>
-        
+
         {/* Product Description */}
         <div className="mt-16">
           <SectionHeading>Product Details</SectionHeading>
@@ -315,7 +314,7 @@ export default function ExecutiveOfficeAttirePage() {
             </div>
           </div>
         </div>
-        
+
         {/* Corporate Excellence Section */}
         <div className="mt-16 bg-neutral-50 p-6 rounded-lg">
           <SectionHeading>Corporate Excellence</SectionHeading>
@@ -339,7 +338,7 @@ export default function ExecutiveOfficeAttirePage() {
             </div>
           </div>
         </div>
-        
+
         {/* Corporate Customization Section */}
         <div className="mt-16">
           <SectionHeading>Corporate Identity Program</SectionHeading>
@@ -373,22 +372,22 @@ export default function ExecutiveOfficeAttirePage() {
               </div>
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
-              <Image 
-                src="/images/products/corporate-suit-executive.jpg" 
-                alt="Corporate executives in custom-tailored business attire" 
+              <Image
+                src="/images/products/corporate-suit-executive.jpg"
+                alt="Corporate executives in custom-tailored business attire"
                 fill
                 className="object-cover"
               />
             </div>
           </div>
         </div>
-        
+
         {/* Testimonials */}
         <div className="mt-16">
           <SectionHeading>Client Testimonials</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             {product.testimonials.map((testimonial, index) => (
-              <TestimonialCard 
+              <TestimonialCard
                 key={index}
                 id={index}
                 quote={testimonial.quote}
@@ -400,7 +399,7 @@ export default function ExecutiveOfficeAttirePage() {
             ))}
           </div>
         </div>
-        
+
         {/* Size Chart Modal */}
         {showSizeChart && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -480,8 +479,8 @@ export default function ExecutiveOfficeAttirePage() {
                 </div>
                 <div className="mt-4">
                   <p className="text-sm text-neutral-500">
-                    Note: These measurements are general guidelines. For corporate programs, we offer comprehensive 
-                    measurement services for all employees. Our bespoke tailoring ensures perfect fit even for 
+                    Note: These measurements are general guidelines. For corporate programs, we offer comprehensive
+                    measurement services for all employees. Our bespoke tailoring ensures perfect fit even for
                     non-standard sizes. Custom adjustments are available for individual preferences and requirements.
                   </p>
                 </div>
@@ -490,7 +489,7 @@ export default function ExecutiveOfficeAttirePage() {
           </div>
         )}
       </Container>
-    
-      </div>
+
+    </div>
   );
 } 

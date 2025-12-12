@@ -31,7 +31,7 @@ export default function CulinaryUniformsPage() {
       name: 'Premium Chef Coat',
       description: 'Professional chef coat made with premium fabric, designed for comfort and style in the kitchen environment.',
       price: 'From SAR 189',
-      image: '/images/healthcare/medical_hijab_uniform.jpg',
+      image: '/images/hospitality/chef-uniform-professional.jpg',
       href: '/shop/culinary-uniforms/culinary-student-uniform',
       features: ['Cost-effective', 'Durable', 'Easy-care', 'Complete set'],
       colors: ['White']
@@ -92,7 +92,7 @@ export default function CulinaryUniformsPage() {
       <section className="relative pt-16 pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/healthcare/medical_hijab_uniform.jpg"
+            src="/images/hospitality/premium-chef-uniform.jpg"
             alt="Culinary Uniforms"
             fill
             className="object-cover object-center"
@@ -298,7 +298,7 @@ export default function CulinaryUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/healthcare/medical_hijab_uniform.jpg"
+                    src="/images/products/corporate-suit-executive.jpg"
                     alt="Corporate Workwear"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -315,7 +315,7 @@ export default function CulinaryUniformsPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/healthcare/medical_hijab_uniform.jpg"
+                    src="/images/healthcare/scrubs-collections.jpg"
                     alt="Medical Scrubs"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -352,7 +352,7 @@ export default function CulinaryUniformsPage() {
             <div className="hidden lg:block">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/healthcare/medical_hijab_uniform.jpg"
+                  src="/images/hospitality/restaurant-chef-uniforms.jpg"
                   alt="Culinary Uniform Design Service"
                   fill
                   className="object-cover"

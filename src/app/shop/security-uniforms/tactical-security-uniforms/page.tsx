@@ -20,7 +20,7 @@ export default function TacticalSecurityUniformsPage() {
   const [selectedSize, setSelectedSize] = useState<string | null>('L');
   const [quantity, setQuantity] = useState(10);
   const [showSizeChart, setShowSizeChart] = useState(false);
-  
+
   // Product details
   const product = {
     id: 'tactical-security-uniforms',
@@ -50,10 +50,10 @@ export default function TacticalSecurityUniformsPage() {
       { name: 'Customization', value: 'Company logos, name patches, rank insignia' }
     ],
     images: [
-      { src: '/images/products/construction-uniform.jpg', alt: 'Security personnel in tactical uniform' },
-      { src: '/images/products/construction-uniform.jpg', alt: 'Security officer on patrol in tactical uniform' },
+      { src: '/images/products/security-officer-uniform.jpg', alt: 'Security personnel in tactical uniform' },
+      { src: '/images/products/tactical-security.jpg', alt: 'Security officer on patrol in tactical uniform' },
       { src: '/images/security/security_team_professional.jpg', alt: 'Close-up of tactical security uniform details' },
-      { src: '/images/security/security_team_professional.jpg', alt: 'Security team in coordinated tactical uniforms' }
+      { src: '/images/products/security-uniforms.jpg', alt: 'Security team in coordinated tactical uniforms' }
     ],
     category: 'Security Uniforms',
     categorySlug: 'security-uniforms',
@@ -68,10 +68,10 @@ export default function TacticalSecurityUniformsPage() {
       { name: 'Command Staff Uniform', price: 'SAR 1,499' }
     ],
     colors: [
-      { name: 'Tactical Black', value: '#252525', image: '/images/products/construction-uniform.jpg' },
-      { name: 'Navy', value: '#1a2942', image: '/images/products/construction-uniform.jpg' },
-      { name: 'Desert Tan', value: '#d2b48c', image: '/images/products/construction-uniform.jpg' },
-      { name: 'Olive Green', value: '#556b2f', image: '/images/products/construction-uniform.jpg' }
+      { name: 'Tactical Black', value: '#252525', image: '/images/products/security-officer-uniform.jpg' },
+      { name: 'Navy', value: '#1a2942', image: '/images/products/security-jacket.jpg' },
+      { name: 'Desert Tan', value: '#d2b48c', image: '/images/products/tactical-vest.jpg' },
+      { name: 'Olive Green', value: '#556b2f', image: '/images/products/tactical-gear.jpg' }
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL', '3XL', '4XL'],
     sizeEquivalents: {
@@ -139,18 +139,18 @@ export default function TacticalSecurityUniformsPage() {
 
   return (
     <div className="bg-white">
-    
+
       <Container className="py-8">
         <Breadcrumbs items={breadcrumbs.map(item => ({
           label: item.name,
           href: item.url
         }))} />
-        
+
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
           <div>
             <div className="aspect-square relative overflow-hidden rounded-lg mb-4 bg-neutral-100">
-              <Image 
+              <Image
                 src={product.images[activeImage].src}
                 alt={product.images[activeImage].alt}
                 fill
@@ -159,12 +159,12 @@ export default function TacticalSecurityUniformsPage() {
             </div>
             <div className="grid grid-cols-4 gap-2">
               {product.images.map((image, index) => (
-                <button 
+                <button
                   key={index}
                   className={`aspect-square relative overflow-hidden rounded-md ${activeImage === index ? 'ring-2 ring-primary-600' : 'ring-1 ring-neutral-200'}`}
                   onClick={() => setActiveImage(index)}
                 >
-                  <Image 
+                  <Image
                     src={image.src}
                     alt={image.alt}
                     fill
@@ -174,16 +174,16 @@ export default function TacticalSecurityUniformsPage() {
               ))}
             </div>
           </div>
-          
+
           {/* Product Details */}
           <div>
             <h1 className="text-3xl font-bold text-neutral-900">{product.name}</h1>
             <p className="text-xl font-semibold text-primary-600 mt-2">{product.price}</p>
-            
+
             <div className="flex items-center mt-2">
               <div className="flex items-center">
                 {[...Array(5)].map((_, i) => (
-                  <svg 
+                  <svg
                     key={i}
                     className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-neutral-300'}`}
                     fill="currentColor"
@@ -195,7 +195,7 @@ export default function TacticalSecurityUniformsPage() {
                 <span className="text-neutral-600 ml-2">{product.rating} ({product.reviews} reviews)</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-neutral-700">{product.description}</p>
             </div>
@@ -211,7 +211,7 @@ export default function TacticalSecurityUniformsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">Colors</h3>
               <div className="mt-2 flex flex-wrap gap-2">
@@ -226,12 +226,12 @@ export default function TacticalSecurityUniformsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <div className="flex justify-between items-center">
                 <h3 className="text-sm font-medium text-neutral-900">Size</h3>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="text-primary-600 text-sm"
                   onClick={() => setShowSizeChart(true)}
                 >
@@ -242,11 +242,10 @@ export default function TacticalSecurityUniformsPage() {
                 {product.sizes.map((size) => (
                   <button
                     key={size}
-                    className={`py-2 px-4 border rounded-md text-center ${
-                      selectedSize === size 
-                        ? 'border-primary-600 bg-primary-50 text-primary-600' 
+                    className={`py-2 px-4 border rounded-md text-center ${selectedSize === size
+                        ? 'border-primary-600 bg-primary-50 text-primary-600'
                         : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
-                    }`}
+                      }`}
                     onClick={() => handleSizeSelect(size)}
                   >
                     {size}
@@ -254,7 +253,7 @@ export default function TacticalSecurityUniformsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">Quantity (Min: {product.minOrder})</h3>
               <div className="mt-2 flex items-center">
@@ -268,10 +267,10 @@ export default function TacticalSecurityUniformsPage() {
                 <span className="ml-2 text-neutral-500">units</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-sm text-neutral-500 mb-2">Lead time: {product.leadTime}</p>
-              <AddToQuoteButton 
+              <AddToQuoteButton
                 product={product}
                 color={selectedColor || undefined}
                 size={selectedSize || undefined}
@@ -280,7 +279,7 @@ export default function TacticalSecurityUniformsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Product Description */}
         <div className="mt-16">
           <SectionHeading>Product Details</SectionHeading>
@@ -312,14 +311,14 @@ export default function TacticalSecurityUniformsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Security Excellence Section */}
         <div className="mt-16 bg-neutral-50 p-6 rounded-lg">
           <SectionHeading>Security Operational Excellence</SectionHeading>
           <div className="mt-4">
             <p className="text-neutral-700 mb-4">
-              Our Tactical Security Uniforms are designed to enhance operational capabilities for security personnel in Saudi Arabia. 
-              Every element is engineered to support the demanding requirements of security operations while projecting authority 
+              Our Tactical Security Uniforms are designed to enhance operational capabilities for security personnel in Saudi Arabia.
+              Every element is engineered to support the demanding requirements of security operations while projecting authority
               and professionalism.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
@@ -338,15 +337,15 @@ export default function TacticalSecurityUniformsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Security Company Customization Section */}
         <div className="mt-16">
           <SectionHeading>Security Company Customization</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <p className="text-neutral-700 mb-4">
-                We offer comprehensive customization options for security companies of all sizes. From company branding to 
-                rank identification systems, our security uniforms can be tailored to meet your specific operational requirements 
+                We offer comprehensive customization options for security companies of all sizes. From company branding to
+                rank identification systems, our security uniforms can be tailored to meet your specific operational requirements
                 while maintaining a cohesive and professional appearance.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
@@ -374,22 +373,22 @@ export default function TacticalSecurityUniformsPage() {
               </div>
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
-              <Image 
-                src="/images/security/security_team_professional.jpg" 
-                alt="Professional security team in customized tactical uniforms" 
+              <Image
+                src="/images/security/security_team_professional.jpg"
+                alt="Professional security team in customized tactical uniforms"
                 fill
                 className="object-cover"
               />
             </div>
           </div>
         </div>
-        
+
         {/* Testimonials */}
         <div className="mt-16">
           <SectionHeading>Client Testimonials</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             {product.testimonials.map((testimonial, index) => (
-              <TestimonialCard 
+              <TestimonialCard
                 key={index}
                 id={index}
                 name={testimonial.author}
@@ -401,7 +400,7 @@ export default function TacticalSecurityUniformsPage() {
             ))}
           </div>
         </div>
-        
+
         {/* Size Chart Modal */}
         {showSizeChart && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -482,7 +481,7 @@ export default function TacticalSecurityUniformsPage() {
           </div>
         )}
       </Container>
-    
-      </div>
+
+    </div>
   );
 } 

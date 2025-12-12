@@ -67,7 +67,8 @@ export default function ProcurementGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg'},
+        image: '/images/business-team-at-meeting-in-the-modern-office-c-SBI-300994903.jpg'
+      },
       {
         title: 'Supplier Selection',
         content: `
@@ -115,7 +116,8 @@ export default function ProcurementGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg'},
+        image: '/images/factory-worker-portrait-industrial-man-looking-at-camera-close-up-of-industry-worker-p-SBI-351092701.jpg'
+      },
       {
         title: 'Program Implementation',
         content: `
@@ -157,32 +159,33 @@ export default function ProcurementGuidePage() {
             </ul>
           </div>
         `,
-        image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg'}
+        image: '/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg'
+      }
     ],
     items: [
       {
         id: "needs-assessment",
         title: "Needs Assessment",
         description: "Conduct a thorough assessment of functional requirements, compliance standards, and brand considerations.",
-        image: "/images/products/uniform-collection.jpg"
+        image: "/images/corporate/corporate_team_meeting.jpg"
       },
       {
         id: "supplier-selection",
         title: "Supplier Selection",
         description: "Choose the right supplier based on quality, capacity, experience, and ethical practices.",
-        image: "/images/products/uniform-collection.jpg"
+        image: "/images/tailor-working-on-a-suit-in-his-workshop-2023-11-27-05-01-04-utc.jpg"
       },
       {
         id: "budget-planning",
         title: "Budget Planning",
         description: "Create a comprehensive budget accounting for initial costs, replacements, and management expenses.",
-        image: "/images/products/uniform-collection.jpg"
+        image: "/images/businessman-checking-documents-and-using-laptop-w-2024-11-01-23-29-12-utc.jpg"
       },
       {
         id: "implementation",
         title: "Implementation & Distribution",
         description: "Develop an effective distribution strategy and timeline for your uniform program rollout.",
-        image: "/images/products/uniform-collection.jpg"
+        image: "/images/group-of-successful-people-with-various-profession-2024-11-14-15-58-51-utc.jpg"
       }
     ],
     relatedResources: [
