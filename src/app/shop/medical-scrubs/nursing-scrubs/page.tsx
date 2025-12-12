@@ -20,7 +20,7 @@ export default function NursingScrubsPage() {
   const [selectedSize, setSelectedSize] = useState<string | null>('M');
   const [quantity, setQuantity] = useState(30);
   const [showSizeChart, setShowSizeChart] = useState(false);
-  
+
   // Product details
   const product = {
     id: 'nursing-scrubs',
@@ -75,7 +75,7 @@ export default function NursingScrubsPage() {
       { name: 'Wine', value: '#722f37', image: '/images/healthcare/2_pices_nurce_uniform.jpg' },
       { name: 'Pewter', value: '#8e8e8e', image: '/images/healthcare/healthcare_medical_doctor_uniform.jpg' },
       { name: 'Hunter Green', value: '#355e3b', image: '/images/healthcare/scrubs-collections.jpg' },
-      { name: 'Royal Blue', value: '#4169e1', image: '/images/healthcare/healthcare_nurce_uniform.jpg' },
+      { name: 'Royal Blue', value: '#4169e1', image: '/images/healthcare/dept-nurses.jpg' },
       { name: 'Black', value: '#000000', image: '/images/healthcare/healthcare_medical_uniform.jpg' },
       { name: 'Eggplant', value: '#614051', image: '/images/products/nursing-uniform.jpg' },
       { name: 'Rose Pink', value: '#e8909c', image: '/images/healthcare/2_pices_nurce_uniform.jpg' }
@@ -147,18 +147,18 @@ export default function NursingScrubsPage() {
 
   return (
     <div className="bg-white">
-    
+
       <Container className="py-8">
         <Breadcrumbs items={breadcrumbs.map(item => ({
           label: item.name,
           href: item.url
         }))} />
-        
+
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
           <div>
             <div className="aspect-square relative overflow-hidden rounded-lg mb-4 bg-neutral-100">
-              <Image 
+              <Image
                 src={product.images[activeImage].src}
                 alt={product.images[activeImage].alt}
                 fill
@@ -167,12 +167,12 @@ export default function NursingScrubsPage() {
             </div>
             <div className="grid grid-cols-4 gap-2">
               {product.images.map((image, index) => (
-                <button 
+                <button
                   key={index}
                   className={`aspect-square relative overflow-hidden rounded-md ${activeImage === index ? 'ring-2 ring-primary-600' : 'ring-1 ring-neutral-200'}`}
                   onClick={() => setActiveImage(index)}
                 >
-                  <Image 
+                  <Image
                     src={image.src}
                     alt={image.alt}
                     fill
@@ -182,16 +182,16 @@ export default function NursingScrubsPage() {
               ))}
             </div>
           </div>
-          
+
           {/* Product Details */}
           <div>
             <h1 className="text-3xl font-bold text-neutral-900">{product.name}</h1>
             <p className="text-xl font-semibold text-primary-600 mt-2">{product.price}</p>
-            
+
             <div className="flex items-center mt-2">
               <div className="flex items-center">
                 {[...Array(5)].map((_, i) => (
-                  <svg 
+                  <svg
                     key={i}
                     className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-neutral-300'}`}
                     fill="currentColor"
@@ -203,7 +203,7 @@ export default function NursingScrubsPage() {
                 <span className="text-neutral-600 ml-2">{product.rating} ({product.reviews} reviews)</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-neutral-700">{product.description}</p>
             </div>
@@ -219,7 +219,7 @@ export default function NursingScrubsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">Colors</h3>
               <div className="mt-2 flex flex-wrap gap-2">
@@ -234,12 +234,12 @@ export default function NursingScrubsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <div className="flex justify-between items-center">
                 <h3 className="text-sm font-medium text-neutral-900">Size</h3>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="text-primary-600 text-sm"
                   onClick={() => setShowSizeChart(true)}
                 >
@@ -250,11 +250,10 @@ export default function NursingScrubsPage() {
                 {product.sizes.map((size) => (
                   <button
                     key={size}
-                    className={`py-2 px-4 border rounded-md text-center ${
-                      selectedSize === size 
-                        ? 'border-primary-600 bg-primary-50 text-primary-600' 
+                    className={`py-2 px-4 border rounded-md text-center ${selectedSize === size
+                        ? 'border-primary-600 bg-primary-50 text-primary-600'
                         : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
-                    }`}
+                      }`}
                     onClick={() => handleSizeSelect(size)}
                   >
                     {size}
@@ -262,7 +261,7 @@ export default function NursingScrubsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">Quantity (Minimum: {product.minOrder})</h3>
               <div className="mt-2 flex items-center">
@@ -276,10 +275,10 @@ export default function NursingScrubsPage() {
                 <span className="ml-2 text-neutral-500">pieces</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-sm text-neutral-500 mb-2">Lead time: {product.leadTime}</p>
-              <AddToQuoteButton 
+              <AddToQuoteButton
                 product={product}
                 color={selectedColor || undefined}
                 size={selectedSize || undefined}
@@ -288,7 +287,7 @@ export default function NursingScrubsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Product Description */}
         <div className="mt-16">
           <SectionHeading>Product Details</SectionHeading>
@@ -320,7 +319,7 @@ export default function NursingScrubsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Nursing Excellence Section */}
         <div className="mt-16 bg-neutral-50 p-6 rounded-lg">
           <SectionHeading>Nursing Excellence</SectionHeading>
@@ -344,16 +343,16 @@ export default function NursingScrubsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Nursing Scrubs Customization */}
         <div className="mt-16">
           <SectionHeading>Nursing Scrubs Customization Program</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
-                <Image 
-                  src="/images/healthcare/healthcare_nurce_uniform.jpg"
-                  alt="Nursing staff in customized scrubs" 
+                <Image
+                  src="/images/healthcare/dept-nurses.jpg"
+                  alt="Nursing staff in customized scrubs"
                   fill
                   className="object-cover"
                 />
@@ -389,13 +388,13 @@ export default function NursingScrubsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Testimonials */}
         <div className="mt-16">
           <SectionHeading>Client Testimonials</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             {product.testimonials.map((testimonial, index) => (
-              <TestimonialCard 
+              <TestimonialCard
                 key={index}
                 id={index}
                 name={testimonial.author}
@@ -407,7 +406,7 @@ export default function NursingScrubsPage() {
             ))}
           </div>
         </div>
-        
+
         {/* Size Chart Modal */}
         {showSizeChart && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -485,9 +484,9 @@ export default function NursingScrubsPage() {
                 </div>
                 <div className="mt-4">
                   <p className="text-sm text-neutral-500">
-                    Note: These measurements are general guidelines. For the most accurate fit, we recommend our 
-                    professional measurement service for healthcare institutions. We also offer custom tailoring 
-                    for non-standard sizes to ensure all nursing staff receive appropriately fitting scrubs that 
+                    Note: These measurements are general guidelines. For the most accurate fit, we recommend our
+                    professional measurement service for healthcare institutions. We also offer custom tailoring
+                    for non-standard sizes to ensure all nursing staff receive appropriately fitting scrubs that
                     support their important work.
                   </p>
                 </div>

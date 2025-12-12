@@ -89,14 +89,14 @@ export default function TacticalSecurityUniformsPage() {
         author: "Khalid Al-Otaibi",
         position: "Security Director",
         company: "Al Mamlaka Security Services",
-        image: "/images/security/security_team_professional.jpg"
+        image: "/images/clients/portrait-of-an-arab-man-sheikh-SBI-300981247.jpg"
       },
       {
         quote: "After switching to UNEOM's tactical uniforms, we've noticed a marked improvement in officer comfort during long shifts. The authoritative appearance has enhanced our professional image, while the robust construction stands up to the demands of daily security operations.",
         author: "Fahad Al-Qahtani",
         position: "Operations Manager",
         company: "Riyadh Protective Services",
-        image: "/images/security/security_team_professional.jpg"
+        image: "/images/clients/modern-arabic-businessman-SBI-300984397.jpg"
       }
     ]
   };
@@ -243,8 +243,8 @@ export default function TacticalSecurityUniformsPage() {
                   <button
                     key={size}
                     className={`py-2 px-4 border rounded-md text-center ${selectedSize === size
-                        ? 'border-primary-600 bg-primary-50 text-primary-600'
-                        : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
+                      ? 'border-primary-600 bg-primary-50 text-primary-600'
+                      : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
                       }`}
                     onClick={() => handleSizeSelect(size)}
                   >

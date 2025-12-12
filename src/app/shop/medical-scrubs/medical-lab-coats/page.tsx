@@ -20,7 +20,7 @@ export default function MedicalLabCoatsPage() {
   const [selectedSize, setSelectedSize] = useState<string | null>('M');
   const [quantity, setQuantity] = useState(25);
   const [showSizeChart, setShowSizeChart] = useState(false);
-  
+
   // Product details
   const product = {
     id: 'medical-lab-coats',
@@ -94,14 +94,14 @@ export default function MedicalLabCoatsPage() {
         author: "Dr. Abdullah Al-Qahtani",
         position: "Medical Director",
         company: "King Fahad Medical City",
-        image: "/images/healthcare/healthcare_medical_doctor_uniform.jpg"
+        image: "/images/clients/modern-arabic-businessman-SBI-300984397.jpg"
       },
       {
         quote: "After switching to Uneom's premium lab coats, we've received numerous compliments from patients about our staff's professional appearance. The modest design options have been particularly valuable for our female physicians, and the durability through repeated laundering has made these coats a cost-effective choice for our hospital network.",
         author: "Dr. Samar Al-Zamil",
         position: "Chief of Medical Staff",
         company: "Saudi German Hospital Group",
-        image: "/images/healthcare/healthcare_medical_doctor_uniform.jpg"
+        image: "/images/clients/adult-beautiful-muslim-woman-with-hijab-on-head-smiling-for-camera-in-room-SBI-351089408.jpg"
       }
     ]
   };
@@ -144,18 +144,18 @@ export default function MedicalLabCoatsPage() {
 
   return (
     <div className="bg-white">
-    
+
       <Container className="py-8">
         <Breadcrumbs items={breadcrumbs.map(item => ({
           label: item.name,
           href: item.url
         }))} />
-        
+
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
           <div>
             <div className="aspect-square relative overflow-hidden rounded-lg mb-4 bg-neutral-100">
-              <Image 
+              <Image
                 src={product.images[activeImage].src}
                 alt={product.images[activeImage].alt}
                 fill
@@ -164,12 +164,12 @@ export default function MedicalLabCoatsPage() {
             </div>
             <div className="grid grid-cols-4 gap-2">
               {product.images.map((image, index) => (
-                <button 
+                <button
                   key={index}
                   className={`aspect-square relative overflow-hidden rounded-md ${activeImage === index ? 'ring-2 ring-primary-600' : 'ring-1 ring-neutral-200'}`}
                   onClick={() => setActiveImage(index)}
                 >
-                  <Image 
+                  <Image
                     src={image.src}
                     alt={image.alt}
                     fill
@@ -179,16 +179,16 @@ export default function MedicalLabCoatsPage() {
               ))}
             </div>
           </div>
-          
+
           {/* Product Details */}
           <div>
             <h1 className="text-3xl font-bold text-neutral-900">{product.name}</h1>
             <p className="text-xl font-semibold text-primary-600 mt-2">{product.price}</p>
-            
+
             <div className="flex items-center mt-2">
               <div className="flex items-center">
                 {[...Array(5)].map((_, i) => (
-                  <svg 
+                  <svg
                     key={i}
                     className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-neutral-300'}`}
                     fill="currentColor"
@@ -200,7 +200,7 @@ export default function MedicalLabCoatsPage() {
                 <span className="text-neutral-600 ml-2">{product.rating} ({product.reviews} reviews)</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-neutral-700">{product.description}</p>
             </div>
@@ -216,7 +216,7 @@ export default function MedicalLabCoatsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">Colors</h3>
               <div className="mt-2 flex flex-wrap gap-2">
@@ -231,12 +231,12 @@ export default function MedicalLabCoatsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <div className="flex justify-between items-center">
                 <h3 className="text-sm font-medium text-neutral-900">Size</h3>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="text-primary-600 text-sm"
                   onClick={() => setShowSizeChart(true)}
                 >
@@ -247,11 +247,10 @@ export default function MedicalLabCoatsPage() {
                 {product.sizes.map((size) => (
                   <button
                     key={size}
-                    className={`py-2 px-4 border rounded-md text-center ${
-                      selectedSize === size 
-                        ? 'border-primary-600 bg-primary-50 text-primary-600' 
+                    className={`py-2 px-4 border rounded-md text-center ${selectedSize === size
+                        ? 'border-primary-600 bg-primary-50 text-primary-600'
                         : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
-                    }`}
+                      }`}
                     onClick={() => handleSizeSelect(size)}
                   >
                     {size}
@@ -259,7 +258,7 @@ export default function MedicalLabCoatsPage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h3 className="text-sm font-medium text-neutral-900">Quantity (Minimum: {product.minOrder})</h3>
               <div className="mt-2 flex items-center">
@@ -273,10 +272,10 @@ export default function MedicalLabCoatsPage() {
                 <span className="ml-2 text-neutral-500">pieces</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <p className="text-sm text-neutral-500 mb-2">Lead time: {product.leadTime}</p>
-              <AddToQuoteButton 
+              <AddToQuoteButton
                 product={product}
                 color={selectedColor || undefined}
                 size={selectedSize || undefined}
@@ -285,7 +284,7 @@ export default function MedicalLabCoatsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Product Description */}
         <div className="mt-16">
           <SectionHeading>Product Details</SectionHeading>
@@ -317,7 +316,7 @@ export default function MedicalLabCoatsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Clinical Excellence Section */}
         <div className="mt-16 bg-neutral-50 p-6 rounded-lg">
           <SectionHeading>Clinical Excellence</SectionHeading>
@@ -341,16 +340,16 @@ export default function MedicalLabCoatsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Customization Section */}
         <div className="mt-16">
           <SectionHeading>Medical Lab Coat Customization Program</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <div className="relative h-80 rounded-lg overflow-hidden">
-                <Image 
+                <Image
                   src="/images/healthcare/full_clothes_doctor_uniform.jpg"
-                  alt="Medical professionals in customized lab coats" 
+                  alt="Medical professionals in customized lab coats"
                   fill
                   className="object-cover"
                 />
@@ -386,13 +385,13 @@ export default function MedicalLabCoatsPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Testimonials */}
         <div className="mt-16">
           <SectionHeading>Client Testimonials</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             {product.testimonials.map((testimonial, index) => (
-              <TestimonialCard 
+              <TestimonialCard
                 key={index}
                 id={index}
                 name={testimonial.author}
@@ -404,7 +403,7 @@ export default function MedicalLabCoatsPage() {
             ))}
           </div>
         </div>
-        
+
         {/* Size Chart Modal */}
         {showSizeChart && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -488,8 +487,8 @@ export default function MedicalLabCoatsPage() {
                 </div>
                 <div className="mt-4">
                   <p className="text-sm text-neutral-500">
-                    Note: These measurements are general guidelines. For the most accurate fit, we recommend our 
-                    professional measurement service for healthcare institutions. Custom sizing and length options 
+                    Note: These measurements are general guidelines. For the most accurate fit, we recommend our
+                    professional measurement service for healthcare institutions. Custom sizing and length options
                     are available to accommodate all medical staff requirements.
                   </p>
                 </div>
@@ -498,7 +497,7 @@ export default function MedicalLabCoatsPage() {
           </div>
         )}
       </Container>
-    
-      </div>
+
+    </div>
   );
 } 
