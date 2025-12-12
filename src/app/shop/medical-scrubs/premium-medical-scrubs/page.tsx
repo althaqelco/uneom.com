@@ -32,8 +32,8 @@ export default function PremiumMedicalScrubsPage() {
     mainImage: "/images/healthcare/scrubs-collections.jpg",
     additionalImages: [
       "/images/healthcare/dept-doctors.jpg",
-      "/images/healthcare/dept-doctors.jpg",
-      "/images/healthcare/dept-doctors.jpg"
+      "/images/healthcare/healthcare_medical_doctor.jpg",
+      "/images/healthcare/healthcare_nurce_uniform.jpg"
     ],
     colors: [
       { name: "Sky Blue", value: "#87CEEB" },
@@ -83,23 +83,23 @@ export default function PremiumMedicalScrubsPage() {
       { name: "Features", value: "Antimicrobial, moisture-wicking, fluid-resistant" }
     ],
     customizationOptions: [
-      { 
-        name: "Hospital/Clinic Logo", 
+      {
+        name: "Hospital/Clinic Logo",
         description: "Add your institution's logo embroidered on chest or sleeve",
         image: "/images/healthcare/healthcare_medical_uniform.jpg"
       },
-      { 
-        name: "Name Embroidery", 
+      {
+        name: "Name Embroidery",
         description: "Personnel name and credentials embroidered for identification",
         image: "/images/healthcare/healthcare_nurce_uniform.jpg"
       },
-      { 
-        name: "Department Color Coding", 
+      {
+        name: "Department Color Coding",
         description: "Color options to designate different departments or roles",
-        image: "/images/healthcare/dept-doctors.jpg"
+        image: "/images/healthcare/dept-nurses.jpg"
       },
-      { 
-        name: "Custom Pocket Configuration", 
+      {
+        name: "Custom Pocket Configuration",
         description: "Modify pocket placement based on specific department needs",
         image: "/images/healthcare/healthcare_medical_doctor_uniform.jpg"
       }
@@ -108,7 +108,7 @@ export default function PremiumMedicalScrubsPage() {
       {
         id: "surgical-scrubs",
         name: "Surgical Scrubs Set",
-        image: "/images/healthcare/dept-doctors.jpg",
+        image: "/images/healthcare/dept-surgeons.jpg",
         price: "SAR 189",
         href: "/shop/medical-scrubs/nurse-uniform"
       }
@@ -129,11 +129,10 @@ export default function PremiumMedicalScrubsPage() {
         <button
           key={size}
           onClick={() => onChange(size)}
-          className={`py-2 border rounded-md ${
-            selectedSize === size
+          className={`py-2 border rounded-md ${selectedSize === size
               ? 'bg-primary-50 border-primary-500 text-primary-700'
               : 'border-neutral-200 text-neutral-700 hover:border-neutral-300'
-          }`}
+            }`}
         >
           {size}
         </button>
@@ -269,7 +268,7 @@ export default function PremiumMedicalScrubsPage() {
       </div>
 
       <Container className="py-12">
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
           variants={containerVariants}
           initial="hidden"
@@ -384,31 +383,28 @@ export default function PremiumMedicalScrubsPage() {
           <div className="flex space-x-8 border-b border-neutral-200">
             <button
               onClick={() => setActiveTab('description')}
-              className={`pb-4 font-medium text-sm ${
-                activeTab === 'description'
+              className={`pb-4 font-medium text-sm ${activeTab === 'description'
                   ? 'text-primary-600 border-b-2 border-primary-600'
                   : 'text-neutral-600 hover:text-neutral-900'
-              }`}
+                }`}
             >
               Description
             </button>
             <button
               onClick={() => setActiveTab('specifications')}
-              className={`pb-4 font-medium text-sm ${
-                activeTab === 'specifications'
+              className={`pb-4 font-medium text-sm ${activeTab === 'specifications'
                   ? 'text-primary-600 border-b-2 border-primary-600'
                   : 'text-neutral-600 hover:text-neutral-900'
-              }`}
+                }`}
             >
               Specifications
             </button>
             <button
               onClick={() => setActiveTab('customization')}
-              className={`pb-4 font-medium text-sm ${
-                activeTab === 'customization'
+              className={`pb-4 font-medium text-sm ${activeTab === 'customization'
                   ? 'text-primary-600 border-b-2 border-primary-600'
                   : 'text-neutral-600 hover:text-neutral-900'
-              }`}
+                }`}
             >
               Customization Options
             </button>
@@ -544,6 +540,6 @@ export default function PremiumMedicalScrubsPage() {
           </div>
         </div>
       )}
-        </main>
+    </main>
   );
 } 
