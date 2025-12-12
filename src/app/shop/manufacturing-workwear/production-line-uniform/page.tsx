@@ -15,7 +15,7 @@ const featuredUniforms = [
   {
     id: '1',
     name: 'Standard Production Line Uniform',
-    image: '/images/diverse-workers-in-a-protective-workwear-SBI-300873394.jpg',
+    image: '/images/manufacturing/production-line-worker.jpg',
     price: 'Request Quote',
     href: '/shop/manufacturing-workwear/production-line-uniform/standard/',
     category: 'Production Line',
@@ -24,7 +24,7 @@ const featuredUniforms = [
   {
     id: '2',
     name: 'Heavy Duty Production Uniform',
-    image: '/images/diverse-workers-in-a-protective-workwear-SBI-300873394.jpg',
+    image: '/images/manufacturing/heavy-duty-uniform.jpg',
     price: 'Request Quote',
     href: '/shop/manufacturing-workwear/production-line-uniform/heavy-duty/',
     category: 'Heavy Duty',
@@ -33,7 +33,7 @@ const featuredUniforms = [
   {
     id: '3',
     name: 'Clean Room Production Uniform',
-    image: '/images/diverse-workers-in-a-protective-workwear-SBI-300873394.jpg',
+    image: '/images/manufacturing/clean-room-uniform.jpg',
     price: 'Request Quote',
     href: '/shop/manufacturing-workwear/production-line-uniform/clean-room/',
     category: 'Clean Room'
@@ -82,7 +82,7 @@ const safetyFeatures = [
 export default function ProductionLineUniformPage() {
   return (
     <div>
-      <EnhancedSEO2025 
+      <EnhancedSEO2025
         title="Production Line Uniforms | Manufacturing Workwear | Uneom"
         description="Professional production line uniforms designed for manufacturing environments. Safety-compliant workwear with durability and comfort for industrial workers."
         canonicalUrl="https://uneom.com/shop/manufacturing-workwear/production-line-uniform/"
@@ -100,7 +100,7 @@ export default function ProductionLineUniformPage() {
             priority
           />
         </div>
-        
+
         <Container>
           <Breadcrumbs
             items={[
@@ -111,23 +111,23 @@ export default function ProductionLineUniformPage() {
             ]}
             className="text-white/80 mb-6 relative z-10"
           />
-          
+
           <div className="relative z-10 max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Production Line Uniforms</h1>
             <p className="text-xl opacity-90 mb-8 max-w-3xl">
               Professional manufacturing uniforms designed for production line workers. Combining safety compliance, durability, and comfort for demanding industrial environments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
+              <Button
                 href="/quote"
-                variant="secondary" 
+                variant="secondary"
                 size="lg"
               >
                 Request Manufacturing Quote
               </Button>
-              <Button 
+              <Button
                 href="#featured-uniforms"
-                variant="outline" 
+                variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-primary-700"
               >
@@ -159,7 +159,7 @@ export default function ProductionLineUniformPage() {
               </div>
               <div className="relative aspect-square rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/diverse-workers-in-a-protective-workwear-SBI-300873394.jpg"
+                  src="/images/manufacturing_manufacturing_industrial_workwear_1.webp"
                   alt="Manufacturing Worker in Uniform"
                   fill
                   className="object-cover"
@@ -173,7 +173,7 @@ export default function ProductionLineUniformPage() {
             <SectionHeading subtitle="Safety & Performance Features" centered>
               Built for Manufacturing Excellence
             </SectionHeading>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
               {safetyFeatures.map((feature, index) => (
                 <div key={index} className="text-center">
@@ -192,13 +192,13 @@ export default function ProductionLineUniformPage() {
             <SectionHeading subtitle="Production Line Uniform Collection" centered>
               Professional Manufacturing Workwear
             </SectionHeading>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               {featuredUniforms.map((uniform) => (
                 <ProductCard key={uniform.id} product={uniform} showAddToQuote={true} />
               ))}
             </div>
-            
+
             <div className="text-center mt-12">
               <Button href="/shop/manufacturing-workwear/" variant="primary" size="lg">
                 View All Manufacturing Workwear
