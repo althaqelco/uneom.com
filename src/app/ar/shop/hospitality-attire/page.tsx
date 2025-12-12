@@ -34,10 +34,10 @@ const hospitalityFAQsAr = [
 ];
 
 const products = [
-  { id: 'luxury-hotel-uniform', name: 'زي الفنادق الفاخرة', description: 'أزياء راقية لفنادق 5 نجوم', price: 'من 399 ريال', image: '/images/hospitality/luxury-hotel-uniforms.jpg', href: '/ar/shop/hospitality-attire/luxury-hotel-uniform', features: ['تصميم أنيق', 'مقاوم للبقع', 'قابل للتنفس'] },
-  { id: 'restaurant-staff-uniform', name: 'زي موظفي المطاعم', description: 'ملابس احترافية للنادلين وخدمة الطعام', price: 'من 249 ريال', image: '/images/hospitality/hospitality_restaurant_uniform.jpg', href: '/ar/shop/hospitality-attire/restaurant-staff-uniform', features: ['سهل العناية', 'متين', 'مريح'] },
-  { id: 'chef-uniform', name: 'زي الشيف', description: 'معاطف شيف احترافية وملابس المطبخ', price: 'من 299 ريال', image: '/images/hospitality/chef-uniform-professional.jpg', href: '/ar/shop/hospitality-attire/chef-uniform', features: ['مقاوم للحرارة', 'مقاوم للبقع', 'قابل للتنفس'] },
-  { id: 'concierge-attire', name: 'زي الكونسيرج', description: 'أزياء راقية لخدمات الضيوف', price: 'من 349 ريال', image: '/images/hospitality/hospitality_uniform_concierge.jpg', href: '/ar/shop/hospitality-attire/concierge-uniform', features: ['قماش فاخر', 'قصة مفصلة', 'احترافي'] },
+  { id: 'luxury-hotel-uniform', name: 'زي الفندق الفاخر', description: 'زي فاخر لفنادق ٥ نجوم', price: 'من ٣٩٩ ريال', image: '/images/products/hotel-uniform.jpg', href: '/ar/shop/hospitality-attire/luxury-hotel-uniform', features: ['تصميم أنيق', 'مقاوم للبقع', 'قابل للتنفس'] },
+  { id: 'restaurant-staff-uniform', name: 'زي طاقم المطعم', description: 'زي احترافي للنادل والخدمة', price: 'من ٢٤٩ ريال', image: '/images/hospitality/hospitality_uniform_resturant.jpg', href: '/ar/shop/hospitality-attire/restaurant-staff-uniform', features: ['سهل العناية', 'متين', 'مريح'] },
+  { id: 'chef-uniform', name: 'زي الشيف', description: 'معاطف شيف احترافية وملابس مطبخ', price: 'من ٢٩٩ ريال', image: '/images/hospitality/hospitality_uniform_chef.jpg', href: '/ar/shop/hospitality-attire/chef-uniform', features: ['مقاوم للحرارة', 'مقاوم للبقع', 'قابل للتنفس'] },
+  { id: 'concierge-attire', name: 'زي الكونسيرج', description: 'زي متطور لخدمات الضيوف', price: 'من ٣٤٩ ريال', image: '/images/hospitality/hospitality_uniform_concierge.jpg', href: '/ar/shop/hospitality-attire/concierge-attire', features: ['قماش فاخر', 'قصة مفصلة', 'محترف'] },
   { id: 'housekeeping-uniform', name: 'زي التدبير المنزلي', description: 'أزياء عملية لموظفي التدبير المنزلي', price: 'من 199 ريال', image: '/images/hospitality/housekeeping-uniform.jpg', href: '/ar/shop/hospitality-attire/housekeeping-uniform', features: ['متين', 'سهل الغسل', 'مريح'] },
   { id: 'spa-uniform', name: 'زي السبا والعافية', description: 'أزياء مريحة لمعالجي السبا', price: 'من 229 ريال', image: '/images/products/wellness-uniforms.jpg', href: '/ar/shop/hospitality-attire/spa-uniform', features: ['قماش ناعم', 'قصة مريحة', 'احترافي'] },
 ];

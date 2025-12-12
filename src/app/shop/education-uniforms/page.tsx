@@ -18,7 +18,7 @@ export const metadata: Metadata = generateMetadata2026({
   locale: 'en',
   pageType: 'category',
   path: '/shop/education-uniforms',
-  image: '/images/products/school-uniform-primary.jpg',
+  image: '/images/education/uniform_school_product-1.jpg',
   imageAlt: 'School Uniforms Saudi Arabia',
   aiSummary: 'UNEOM school uniforms for Saudi educational institutions. Products: Primary School Uniforms (from SAR 99), Intermediate Uniforms (from SAR 119), Secondary Uniforms (from SAR 139), PE Sports Wear (from SAR 79), Lab Coats for Students (from SAR 89). Bulk discounts for schools. Serving international, private, and public schools.',
   aiSummaryAr: 'الزي المدرسي من يونيوم للمؤسسات التعليمية السعودية. المنتجات: زي ابتدائي (من 99 ريال)، زي متوسط (من 119 ريال)، زي ثانوي (من 139 ريال)، ملابس رياضية (من 79 ريال).'
@@ -34,16 +34,16 @@ const educationFAQs = [
 ];
 
 const products = [
-  { id: 'primary-school', name: 'Primary School Uniform', description: 'Durable uniforms for primary students', price: 'From SAR 99', image: '/images/products/school-uniform-primary.jpg', href: '/shop/education-uniforms/primary-school', features: ['Durable', 'Easy care', 'Comfortable'] },
-  { id: 'intermediate-school', name: 'Intermediate School Uniform', description: 'Smart uniforms for intermediate students', price: 'From SAR 119', image: '/images/products/school-uniform-intermediate.jpg', href: '/shop/education-uniforms/intermediate-school', features: ['Smart design', 'Durable', 'Easy wash'] },
-  { id: 'secondary-school', name: 'Secondary School Uniform', description: 'Professional uniforms for secondary students', price: 'From SAR 139', image: '/images/products/school-uniform-secondary.jpg', href: '/shop/education-uniforms/secondary-school', features: ['Professional', 'Comfortable', 'Durable'] },
-  { id: 'pe-sports-wear', name: 'PE Sports Wear', description: 'Athletic wear for physical education', price: 'From SAR 79', image: '/images/products/pe-uniform.jpg', href: '/shop/education-uniforms/pe-sports-wear', features: ['Breathable', 'Flexible', 'Quick-dry'] },
+  { id: 'primary-school', name: 'Primary School Uniform', description: 'Durable uniforms for primary students', price: 'From SAR 99', image: '/images/education/uniform_school_product-1.jpg', href: '/shop/education-uniforms/primary-school', features: ['Durable', 'Easy care', 'Comfortable'] },
+  { id: 'intermediate-school', name: 'Intermediate School Uniform', description: 'Smart uniforms for intermediate students', price: 'From SAR 119', image: '/images/education/uniform_school_product-2.jpg', href: '/shop/education-uniforms/intermediate-school', features: ['Smart design', 'Durable', 'Easy wash'] },
+  { id: 'secondary-school', name: 'Secondary School Uniform', description: 'Professional uniforms for secondary students', price: 'From SAR 139', image: '/images/education/uniform_school_product-4.jpg', href: '/shop/education-uniforms/secondary-school', features: ['Professional', 'Comfortable', 'Durable'] },
+  { id: 'pe-sports-wear', name: 'PE Sports Wear', description: 'Athletic wear for physical education', price: 'From SAR 79', image: '/images/education/uniform_school_product-5.jpg', href: '/shop/education-uniforms/pe-sports-wear', features: ['Breathable', 'Flexible', 'Quick-dry'] },
 ];
 
 export default function EducationUniformsPage() {
   return (
     <>
-      <SEO2026 title="School Uniforms Saudi Arabia | UNEOM" titleAr="الزي المدرسي السعودية | يونيوم" description="School uniforms for Saudi Arabia." locale="en" pageType="category" mainEntity="School Uniforms" primaryImage="/images/products/school-uniform-primary.jpg" primaryImageAlt="School Uniforms" faqs={educationFAQs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Education Uniforms', url: '/shop/education-uniforms' }]} industry="Education" />
+      <SEO2026 title="School Uniforms Saudi Arabia | UNEOM" titleAr="الزي المدرسي السعودية | يونيوم" description="School uniforms for Saudi Arabia." locale="en" pageType="category" mainEntity="School Uniforms" primaryImage="/images/education/uniform_school_product-1.jpg" primaryImageAlt="School Uniforms" faqs={educationFAQs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Education Uniforms', url: '/shop/education-uniforms' }]} industry="Education" />
 
       <section className="bg-gradient-to-br from-indigo-900 via-purple-800 to-violet-800 text-white relative overflow-hidden py-16">
         <Container>

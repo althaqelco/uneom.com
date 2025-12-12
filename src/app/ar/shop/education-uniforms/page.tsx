@@ -18,7 +18,7 @@ export const metadata: Metadata = generateMetadata2026({
   locale: 'ar',
   pageType: 'category',
   path: '/ar/shop/education-uniforms',
-  image: '/images/products/school-uniform-primary.jpg',
+  image: '/images/education/uniform_school_product-1.jpg',
   imageAlt: 'الزي المدرسي في السعودية - يونيوم',
   aiSummary: 'UNEOM school uniforms for Saudi educational institutions.',
   aiSummaryAr: 'الزي المدرسي من يونيوم للمؤسسات التعليمية السعودية. المنتجات: زي ابتدائي (من 99 ريال)، زي متوسط (من 119 ريال)، زي ثانوي (من 139 ريال)، ملابس رياضية (من 79 ريال). خصومات بالجملة للمدارس.'
@@ -34,16 +34,16 @@ const educationFAQsAr = [
 ];
 
 const products = [
-  { id: 'primary-school', name: 'زي المرحلة الابتدائية', description: 'زي متين لطلاب الابتدائية', price: 'من 99 ريال', image: '/images/products/school-uniform-primary.jpg', href: '/ar/shop/education-uniforms/primary-school', features: ['متين', 'سهل العناية', 'مريح'] },
-  { id: 'intermediate-school', name: 'زي المرحلة المتوسطة', description: 'زي أنيق لطلاب المتوسطة', price: 'من 119 ريال', image: '/images/products/school-uniform-intermediate.jpg', href: '/ar/shop/education-uniforms/intermediate-school', features: ['تصميم أنيق', 'متين', 'سهل الغسل'] },
-  { id: 'secondary-school', name: 'زي المرحلة الثانوية', description: 'زي احترافي لطلاب الثانوية', price: 'من 139 ريال', image: '/images/education/premium-school-uniforms.jpg', href: '/ar/shop/education-uniforms/secondary-school', features: ['احترافي', 'مريح', 'متين'] },
-  { id: 'pe-sports-wear', name: 'ملابس التربية البدنية', description: 'ملابس رياضية للتربية البدنية', price: 'من 79 ريال', image: '/images/products/pe-uniform.jpg', href: '/ar/shop/education-uniforms/pe-sports-wear', features: ['قابل للتنفس', 'مرن', 'سريع الجفاف'] },
+  { id: 'primary-school', name: 'الزي المدرسي الابتدائي', description: 'زي متين لطلاب المرحلة الابتدائية', price: 'من ٩٩ ريال', image: '/images/education/uniform_school_product-1.jpg', href: '/ar/shop/education-uniforms/primary-school', features: ['متين', 'سهل العناية', 'مريح'] },
+  { id: 'intermediate-school', name: 'الزي المدرسي المتوسط', description: 'زي أنيق لطلاب المرحلة المتوسطة', price: 'من ١١٩ ريال', image: '/images/education/uniform_school_product-2.jpg', href: '/ar/shop/education-uniforms/intermediate-school', features: ['تصميم أنيق', 'متين', 'سهل الغسيل'] },
+  { id: 'secondary-school', name: 'الزي المدرسي الثانوي', description: 'زي محترف لطلاب المرحلة الثانوية', price: 'من ١٣٩ ريال', image: '/images/education/uniform_school_product-4.jpg', href: '/ar/shop/education-uniforms/secondary-school', features: ['محترف', 'مريح', 'متين'] },
+  { id: 'pe-sports-wear', name: 'ملابس الرياضة البدنية', description: 'ملابس رياضية للتربية البدنية', price: 'من ٧٩ ريال', image: '/images/education/uniform_school_product-5.jpg', href: '/ar/shop/education-uniforms/pe-sports-wear', features: ['قابل للتنفس', 'مرن', 'سريع الجفاف'] },
 ];
 
 export default function EducationUniformsPageAr() {
   return (
     <div dir="rtl">
-      <SEO2026 title="الزي المدرسي في السعودية | يونيوم" titleAr="الزي المدرسي في السعودية | يونيوم" description="School uniforms for Saudi Arabia." descriptionAr="زي مدرسي فاخر للسعودية." locale="ar" pageType="category" mainEntity="School Uniforms" mainEntityAr="الزي المدرسي" primaryImage="/images/products/school-uniform-primary.jpg" primaryImageAlt="الزي المدرسي" faqs={educationFAQsAr} breadcrumbs={[{ name: 'Shop', nameAr: 'المتجر', url: '/ar/shop' }, { name: 'Education', nameAr: 'التعليم', url: '/ar/shop/education-uniforms' }]} industry="التعليم" />
+      <SEO2026 title="الزي المدرسي في السعودية | يونيوم" titleAr="الزي المدرسي في السعودية | يونيوم" description="زي مدرسي للمدارس السعودية." descriptionAr="زي مدرسي للمدارس السعودية." locale="ar" pageType="category" mainEntity="School Uniforms" mainEntityAr="الزي المدرسي" primaryImage="/images/education/uniform_school_product-1.jpg" primaryImageAlt="الزي المدرسي" faqs={educationFAQsAr} breadcrumbs={[{ name: 'المتجر', url: '/ar/shop' }, { name: 'الزي المدرسي', url: '/ar/shop/education-uniforms' }]} industry="Education" />
 
       <section className="bg-gradient-to-br from-indigo-900 via-purple-800 to-violet-800 text-white relative overflow-hidden py-16">
         <Container>

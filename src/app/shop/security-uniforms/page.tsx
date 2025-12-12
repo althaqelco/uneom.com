@@ -35,9 +35,9 @@ const securityFAQs = [
 
 const products = [
   { id: 'security-officer-uniform', name: 'Security Officer Uniform', description: 'Professional uniform for security officers', price: 'From SAR 199', image: '/images/products/security/security-patrol-jacket-main.jpg', href: '/shop/security-uniforms/security-officer-uniform', features: ['Professional', 'Durable', 'Comfortable'] },
-  { id: 'tactical-security-vest', name: 'Tactical Security Vest', description: 'Utility vest for security personnel', price: 'From SAR 149', image: '/images/products/tactical-vest.jpg', href: '/shop/security-uniforms/tactical-security-vest', features: ['Multi-pocket', 'Durable', 'Adjustable'] },
-  { id: 'security-patrol-jacket', name: 'Security Patrol Jacket', description: 'Weather-resistant patrol jacket', price: 'From SAR 229', image: '/images/products/security-jacket.jpg', href: '/shop/security-uniforms/security-patrol-jacket', features: ['Waterproof', 'Reflective', 'Warm'] },
-  { id: 'security-accessories', name: 'Security Accessories Kit', description: 'Complete security accessories package', price: 'From SAR 49', image: '/images/products/security-accessories.jpg', href: '/shop/security-uniforms/security-accessories-kit', features: ['Utility belt', 'ID holder', 'Radio pouch'] },
+  { id: 'tactical-security-vest', name: 'Tactical Security Vest', description: 'Utility vest for security personnel', price: 'From SAR 149', image: '/images/security/bulletproof-vest-modern.jpg', href: '/shop/security-uniforms/tactical-security-vest', features: ['Multi-pocket', 'Durable', 'Adjustable'] },
+  { id: 'security-patrol-jacket', name: 'Security Patrol Jacket', description: 'Weather-resistant patrol jacket', price: 'From SAR 229', image: '/images/security/security_guard.jpg', href: '/shop/security-uniforms/security-patrol-jacket', features: ['Waterproof', 'Reflective', 'Warm'] },
+  { id: 'security-accessories', name: 'Security Accessories Kit', description: 'Complete security accessories package', price: 'From SAR 49', image: '/images/security/security-compliance.jpg', href: '/shop/security-uniforms/security-accessories-kit', features: ['Utility belt', 'ID holder', 'Radio pouch'] },
 ];
 
 export default function SecurityUniformsPage() {

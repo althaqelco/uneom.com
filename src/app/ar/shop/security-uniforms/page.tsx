@@ -34,10 +34,10 @@ const securityFAQsAr = [
 ];
 
 const products = [
-  { id: 'security-officer-uniform', name: 'زي ضابط الأمن', description: 'زي احترافي لضباط الأمن', price: 'من 199 ريال', image: '/images/security/security-guard-professional.jpg', href: '/ar/shop/security-uniforms/security-officer-uniform', features: ['احترافي', 'متين', 'مريح'] },
-  { id: 'tactical-security-vest', name: 'سترة أمنية تكتيكية', description: 'سترة متعددة الجيوب لأفراد الأمن', price: 'من 149 ريال', image: '/images/products/tactical-vest.jpg', href: '/ar/shop/security-uniforms/tactical-security-vest', features: ['متعددة الجيوب', 'متينة', 'قابلة للتعديل'] },
-  { id: 'security-patrol-jacket', name: 'جاكيت دوريات الأمن', description: 'جاكيت مقاوم للطقس للدوريات', price: 'من 229 ريال', image: '/images/products/security-jacket.jpg', href: '/ar/shop/security-uniforms/security-patrol-jacket', features: ['مقاوم للماء', 'عاكس', 'دافئ'] },
-  { id: 'security-accessories', name: 'طقم إكسسوارات الأمن', description: 'مجموعة إكسسوارات أمنية كاملة', price: 'من 49 ريال', image: '/images/products/security-accessories.jpg', href: '/ar/shop/security-uniforms/security-accessories-kit', features: ['حزام معدات', 'حامل هوية', 'حافظة راديو'] },
+  { id: 'security-officer-uniform', name: 'زي ضابط الأمن', description: 'زي احترافي لضباط الأمن', price: 'من ١٩٩ ريال', image: '/images/products/security/security-patrol-jacket-main.jpg', href: '/ar/shop/security-uniforms/security-officer-uniform', features: ['محترف', 'متين', 'مريح'] },
+  { id: 'tactical-security-vest', name: 'سترة أمنية تكتيكية', description: 'سترة متعددة الاستخدامات لموظفي الأمن', price: 'من ١٤٩ ريال', image: '/images/security/bulletproof-vest-modern.jpg', href: '/ar/shop/security-uniforms/tactical-security-vest', features: ['جيوب متعددة', 'متين', 'قابل للتعديل'] },
+  { id: 'security-patrol-jacket', name: 'جاكيت دورية أمن', description: 'جاكيت دورية مقاوم للطقس', price: 'من ٢٢٩ ريال', image: '/images/security/security_guard.jpg', href: '/ar/shop/security-uniforms/security-patrol-jacket', features: ['مقاوم للماء', 'عاكس', 'دافئ'] },
+  { id: 'security-accessories', name: 'طقم إكسسوارات الأمن', description: 'حزمة إكسسوارات أمنية كاملة', price: 'من ٤٩ ريال', image: '/images/security/security-compliance.jpg', href: '/ar/shop/security-uniforms/security-accessories-kit', features: ['حزام متعدد الاستخدامات', 'حامل هوية', 'جيب راديو'] },
 ];
 
 export default function SecurityUniformsPageAr() {
