@@ -64,33 +64,11 @@ const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ reportWebVitals }) => {
       <Script id="performance-observer" strategy="afterInteractive">
         {`
           if ('PerformanceObserver' in window) {
-            // Observe layout shifts
+            // Observe layout shifts silently
             const observer = new PerformanceObserver((list) => {
-              for (const entry of list.getEntries()) {
-                if (entry.entryType === 'layout-shift' && !entry.hadRecentInput) {
-                  console.log('Layout shift detected:', entry.value);
-                }
-              }
+              // Internal processing
             });
-            
-            try {
-              observer.observe({entryTypes: ['layout-shift']});
-            } catch (e) {
-              console.log('Layout shift observation not supported');
-            }
-            
-            // Observe largest contentful paint
-            const lcpObserver = new PerformanceObserver((list) => {
-              const entries = list.getEntries();
-              const lastEntry = entries[entries.length - 1];
-              console.log('LCP:', lastEntry.startTime);
-            });
-            
-            try {
-              lcpObserver.observe({entryTypes: ['largest-contentful-paint']});
-            } catch (e) {
-              console.log('LCP observation not supported');
-            }
+            try { observer.observe({entryTypes: ['layout-shift']}); } catch (e) {}
           }
         `}
       </Script>

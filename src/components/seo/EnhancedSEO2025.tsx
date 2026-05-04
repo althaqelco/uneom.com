@@ -149,10 +149,10 @@ const EnhancedSEO2025: React.FC<EnhancedSEO2025Props> = ({
             }
           }
           
-          // Load web-vitals and report
+          // Load web-vitals and report from CDN since bare specifiers fail in raw browser scripts
           if ('requestIdleCallback' in window) {
             requestIdleCallback(() => {
-              import('web-vitals').then((webVitals) => {
+              import('https://unpkg.com/web-vitals@4.2.4/dist/web-vitals.js?module').then((webVitals) => {
                 if (webVitals.onCLS) webVitals.onCLS(reportWebVitals);
                 if (webVitals.onINP) webVitals.onINP(reportWebVitals); // INP replaces FID in v5
                 if (webVitals.onFCP) webVitals.onFCP(reportWebVitals);
