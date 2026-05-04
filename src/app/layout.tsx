@@ -6,32 +6,44 @@ import { QuoteProvider } from '@/contexts/QuoteContext';
 import LayoutWrapper from '@/components/layout/LayoutWrapper';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { PhantomTrap } from '@/components/security/PhantomTrap';
+import { SpeculationRules } from '@/components/performance/SpeculationRules';
 
-// Importar ImageResolver dinámicamente para evitar errores de SSR
-const ImageResolver = dynamic(() => import('@/components/ImageResolver'), { 
-  ssr: false 
-});
+// Dynamic imports for client-side only components
+const BatterySaverProvider = dynamic(
+  () => import('@/components/performance/BatterySaver').then(mod => ({ default: mod.BatterySaverProvider })),
+  { ssr: false }
+);
 
-// Importar el depurador de imágenes dinámicamente
-const ImageDebugger = dynamic(() => import('@/components/ui/ImageDebugger'), {
-  ssr: false
-});
+const ScrollDepthTracker = dynamic(
+  () => import('@/components/behavior/ScrollDepthTracker').then(mod => ({ default: mod.ScrollDepthTracker })),
+  { ssr: false }
+);
 
-// Importar el corrector de imágenes para Vercel
-const VercelImageFixer = dynamic(() => import('@/components/VercelImageFixer'), {
-  ssr: false
-});
+const StickyWhatsApp = dynamic(
+  () => import('@/components/behavior/StickyWhatsApp').then(mod => ({ default: mod.StickyWhatsApp })),
+  { ssr: false }
+);
 
-// Import new image components
-const ImagePreloader = dynamic(() => import('@/components/ui/ImagePreloader'), {
-  ssr: false
-});
+const GoogleAnalytics = dynamic(
+  () => import('@/components/analytics/GoogleAnalytics').then(mod => ({ default: mod.GoogleAnalytics })),
+  { ssr: false }
+);
 
-const EmergencyImageLoader = dynamic(() => import('@/components/ui/EmergencyImageLoader'), {
-  ssr: false
-});
+const WebVitalsReporter = dynamic(
+  () => import('@/components/analytics/WebVitalsReporter').then(mod => ({ default: mod.WebVitalsReporter })),
+  { ssr: false }
+);
+
+const CookieConsent = dynamic(
+  () => import('@/components/compliance/CookieConsent').then(mod => ({ default: mod.CookieConsent })),
+  { ssr: false }
+);
+
+const ExitIntentPopup = dynamic(
+  () => import('@/components/behavior/ExitIntentPopup').then(mod => ({ default: mod.ExitIntentPopup })),
+  { ssr: false }
+);
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -161,11 +173,19 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": ["Organization", "ClothingStore", "LocalBusiness"],
               "name": "UNEOM",
-              "alternateName": "يونيوم",
+              "alternateName": "يونيوم للأزياء المهنية",
               "url": "https://uneom.com",
-              "logo": "https://uneom.com/logo.png",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://uneom.com/logo.png",
+                "width": 512,
+                "height": 512
+              },
+              "description": "Leading manufacturer of professional uniforms and workwear in Saudi Arabia. ISO 9001 certified.",
+              "foundingDate": "2015",
+              "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 50, "maxValue": 200 },
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+971558164922",
@@ -177,7 +197,57 @@ export default function RootLayout({
                 "@type": "PostalAddress",
                 "streetAddress": "King Fahd Road, Al Olaya District",
                 "addressLocality": "Riyadh",
+                "addressRegion": "Riyadh Region",
+                "postalCode": "12211",
                 "addressCountry": "SA"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 24.7136,
+                "longitude": 46.6753
+              },
+              "areaServed": [
+                { "@type": "City", "name": "Riyadh" },
+                { "@type": "City", "name": "Jeddah" },
+                { "@type": "City", "name": "Dammam" },
+                { "@type": "City", "name": "Mecca" },
+                { "@type": "City", "name": "Medina" },
+                { "@type": "City", "name": "Khobar" },
+                { "@type": "City", "name": "Tabuk" },
+                { "@type": "City", "name": "Abha" },
+                { "@type": "City", "name": "Taif" },
+                { "@type": "City", "name": "Hail" },
+                { "@type": "City", "name": "Buraidah" },
+                { "@type": "City", "name": "Najran" },
+                { "@type": "Country", "name": "Saudi Arabia" }
+              ],
+              "knowsAbout": [
+                "Professional Uniform Manufacturing",
+                "Medical Scrubs",
+                "Corporate Workwear",
+                "Aviation Uniforms",
+                "Hospitality Attire",
+                "Industrial Safety Workwear",
+                "Custom Uniform Design",
+                "Fabric Technology",
+                "تصنيع الأزياء المهنية",
+                "الزي الموحد السعودي"
+              ],
+              "hasCredential": [
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "credentialCategory": "Quality Management",
+                  "name": "ISO 9001:2015 Quality Management System"
+                }
+              ],
+              "potentialAction": {
+                "@type": "ReserveAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://uneom.com/quote?service={serviceSlug}&city={citySlug}",
+                  "inLanguage": ["ar-SA", "en"]
+                },
+                "result": { "@type": "Reservation", "name": "Uniform Quote Request" }
               },
               "sameAs": [
                 "https://twitter.com/uneom_sa",
@@ -189,13 +259,29 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} min-h-screen flex flex-col antialiased`}>
-        <QuoteProvider>
-          <LayoutWrapper>
-            {children}
-          </LayoutWrapper>
-        </QuoteProvider>
-        <SpeedInsights />
-        <Analytics />
+        <BatterySaverProvider>
+          <QuoteProvider>
+            <LayoutWrapper>
+              {children}
+            </LayoutWrapper>
+          </QuoteProvider>
+        </BatterySaverProvider>
+        {/* PhantomTrap — invisible honeypot for scraper detection */}
+        <PhantomTrap />
+        {/* Speculation Rules — prefetch for instant navigations */}
+        <SpeculationRules />
+        {/* Scroll Depth Tracker — Navboost engagement signal */}
+        <ScrollDepthTracker />
+        {/* Floating WhatsApp CTA — conversion driver */}
+        <StickyWhatsApp />
+        {/* Google Analytics 4 — G-RSQSS61R9J */}
+        <GoogleAnalytics />
+        {/* Core Web Vitals → GA4 */}
+        <WebVitalsReporter />
+        {/* Privacy Compliance — Saudi PDPL */}
+        <CookieConsent />
+        {/* Exit Intent — Conversion Recovery */}
+        <ExitIntentPopup />
       </body>
     </html>
   );

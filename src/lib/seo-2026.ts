@@ -368,6 +368,13 @@ export function generateMetadata2026(config: SEO2026Config): Metadata {
       'service-area': 'Saudi Arabia, UAE, GCC',
       'established': '2015',
       
+      // Sovereign Entity Signals — E-E-A-T (§37.4)
+      'quality-guarantee': 'ISO 9001:2015 Certified Manufacturing',
+      'warranty-policy': '12-month quality warranty on all products',
+      'return-policy': '30-day return policy for unused items',
+      'payment-methods': 'Bank Transfer, Credit Card, Cash on Delivery, Installments',
+      'delivery-coverage': '24 Saudi cities — same-day available in Riyadh',
+      
       // Content info
       'content-language': isArabic ? 'ar' : 'en',
       'geo.region': 'SA',

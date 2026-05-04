@@ -1,50 +1,95 @@
 import React from 'react';
 import Link from "next/link";
 import { Metadata } from "next";
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
-// نضيف البيانات الوصفية لصفحة 404
 export const metadata: Metadata = {
-  title: "404 - Page Not Found | Uneom",
-  description: "Sorry, the page you are looking for does not exist.",
+  title: "404 - Page Not Found | UNEOM",
+  description: "Sorry, the page you are looking for does not exist. Browse our uniform categories or get a free quote.",
   robots: {
     index: false,
-    follow: false}};
+    follow: true, // Allow following links even on 404
+  },
+};
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[70vh] px-4 text-center">
-      <h1 className="text-6xl font-bold text-primary mb-6">404</h1>
-      <h2 className="text-2xl font-semibold text-gray-700 mb-4">Page Not Found</h2>
-      <p className="text-gray-600 mb-8 max-w-md">
-        We couldn't find the page you're looking for. It might have been moved, 
-        deleted, or perhaps never existed.
-      </p>
-      
-      <div className="flex flex-col sm:flex-row gap-4">
-        <Link 
-          href="/"
-          className="px-6 py-3 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors"
-        >
-          Back to Home
-        </Link>
-        
-        <Link 
-          href="/ar"
-          className="px-6 py-3 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-colors"
-        >
-          النسخة العربية
-        </Link>
-      </div>
-      
-      {/* إضافة بعض النص لشرح حالة 404 لتحسين SEO */}
-      <div className="mt-12 text-gray-500 text-sm max-w-xl">
-        <p>
-          Error 404 occurs when a page cannot be found on the server. If you 
-          believe this is an error, please contact our support team or try 
-          searching for what you need from our homepage.
+    <div className="min-h-[80vh] bg-gradient-to-br from-gray-50 to-blue-50 flex items-center justify-center px-4">
+      <div className="max-w-2xl text-center">
+        {/* Animated 404 */}
+        <div className="relative mb-8">
+          <span className="text-[150px] md:text-[200px] font-black text-gray-100 leading-none select-none">
+            404
+          </span>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-6xl">🔍</span>
+          </div>
+        </div>
+
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          الصفحة غير موجودة
+          <span className="block text-lg font-normal text-gray-500 mt-2">Page Not Found</span>
+        </h1>
+
+        <p className="text-gray-600 mb-10 max-w-md mx-auto text-lg">
+          عذراً، لم نتمكن من إيجاد الصفحة المطلوبة. جرب أحد الخيارات أدناه:
         </p>
+
+        {/* Recovery Links */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+          {[
+            { name: 'الرئيسية', nameEn: 'Home', href: '/', icon: '🏠' },
+            { name: 'عرض سعر', nameEn: 'Quote', href: '/quote', icon: '📋' },
+            { name: 'القطاعات', nameEn: 'Industries', href: '/industries', icon: '🏢' },
+            { name: 'المواقع', nameEn: 'Locations', href: '/locations', icon: '📍' },
+          ].map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="group bg-white rounded-xl p-4 shadow-sm hover:shadow-lg transition-all border border-gray-100 hover:border-blue-200"
+            >
+              <span className="text-2xl block mb-2">{link.icon}</span>
+              <span className="text-sm font-bold text-gray-900 group-hover:text-blue-600 block">{link.name}</span>
+              <span className="text-[10px] text-gray-400">{link.nameEn}</span>
+            </Link>
+          ))}
+        </div>
+
+        {/* Top Cities Quick Links */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100">
+          <p className="text-sm font-bold text-gray-800 mb-3">🇸🇦 ابحث حسب المدينة:</p>
+          <div className="flex flex-wrap justify-center gap-2">
+            {[
+              { name: 'الرياض', slug: 'riyadh' },
+              { name: 'جدة', slug: 'jeddah' },
+              { name: 'الدمام', slug: 'dammam' },
+              { name: 'مكة', slug: 'mecca' },
+              { name: 'المدينة', slug: 'medina' },
+              { name: 'تبوك', slug: 'tabuk' },
+            ].map((city) => (
+              <Link
+                key={city.slug}
+                href={`/locations/${city.slug}`}
+                className="text-xs bg-blue-50 hover:bg-blue-100 text-blue-700 px-3 py-1.5 rounded-full transition-colors font-medium"
+              >
+                📍 {city.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* WhatsApp Recovery */}
+        <div className="mt-8">
+          <a
+            href="https://wa.me/971558164922?text=مرحباً، لم أجد الصفحة المطلوبة"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md"
+          >
+            <span>💬</span>
+            تواصل معنا عبر واتساب
+          </a>
+        </div>
       </div>
     </div>
   );
-} 
+}

@@ -7,12 +7,9 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig = {
-  // Para Netlify necesitamos exportación estática
-  output: 'export',
-  
-  // Force the generation of a 404.html file for Netlify
-  // This is really important to ensure Netlify serves proper 404 status codes
-  generateEtags: false,
+  // Firebase App Hosting — SSR/ISR mode (no static export)
+  // This enables: API Routes, Middleware, ISR, Server Actions, Image Optimization
+  generateEtags: true,
   
   // Skip type checking in production to make builds faster and more reliable on Vercel
   typescript: {
@@ -30,10 +27,10 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   
-  // Configure image optimization
+  // Configure image optimization — Firebase App Hosting supports Next.js Image
   images: {
-    // Set unoptimized: true for static site generation (Netlify compatibility)
-    unoptimized: true,
+    // Firebase App Hosting supports image optimization natively
+    unoptimized: false,
     domains: [
       'uneom.com',
       'uneom-com.vercel.app',
@@ -161,18 +158,74 @@ const nextConfig = {
   // Enable React strict mode for better development experience
   reactStrictMode: true,
   
-  // Configure trailing slashes - CAMBIO CRÍTICO PARA NETLIFY
+  // Preserve trailing slashes to prevent 301 redirect storm during migration
   trailingSlash: true,
   
-  // Este valor es esencial para despliegue en Netlify
   assetPrefix: '/',
-  
-  // Para trabajar correctamente con archivos estáticos en Netlify
   basePath: '',
   
-  // NOTE: headers() and redirects() removed - they don't work with "output: export"
-  // Headers are now in public/_headers (Netlify format)
-  // Redirects are now in public/_redirects (Netlify format)
+  // ============================================
+  // SECURITY & PERFORMANCE HEADERS (Firebase App Hosting + Cloud CDN)
+  // Migrated from public/_headers (Netlify) to next.config.mjs
+  // ============================================
+  async headers() {
+    return [
+      // Global security headers
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self)' },
+        ],
+      },
+      // Static assets — immutable long cache (Cloud CDN respects s-maxage)
+      {
+        source: '/images/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+        ],
+      },
+      // Font files — immutable
+      {
+        source: '/:path*.woff2',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      // ISR pages — CDN caches for 1 hour, stale-while-revalidate
+      {
+        source: '/locations/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=60' },
+        ],
+      },
+      // Shop pages — CDN caches for 6 hours
+      {
+        source: '/shop/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, s-maxage=21600, stale-while-revalidate=120' },
+        ],
+      },
+      // Blog — CDN caches for 24 hours
+      {
+        source: '/blog/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=300' },
+        ],
+      },
+      // Utility files — noindex
+      {
+        source: '/css/image-fixes.css',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

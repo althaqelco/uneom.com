@@ -56,7 +56,7 @@ const ArabicFooter: React.FC = () => {
   return (
     <footer className="bg-neutral-900 text-white pt-16 pb-8" dir="rtl">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 lg:dir-rtl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12 lg:dir-rtl">
           {/* About */}
           <div className="text-right">
             <h3 className="font-heading text-xl font-bold mb-4">{content.about}</h3>
@@ -146,6 +146,34 @@ const ArabicFooter: React.FC = () => {
               <li>
                 <Link href="/ar/contact/" className="hover:text-primary-400 transition duration-300">
                   {content.contactUsLink}
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          {/* مواقعنا — PageRank Hub */}
+          <div className="text-right">
+            <h3 className="font-heading text-xl font-bold mb-4">مواقعنا</h3>
+            <ul className="space-y-2 text-neutral-300">
+              {[
+                { name: 'الرياض', slug: 'riyadh' },
+                { name: 'جدة', slug: 'jeddah' },
+                { name: 'الدمام', slug: 'dammam' },
+                { name: 'مكة المكرمة', slug: 'mecca' },
+                { name: 'المدينة المنورة', slug: 'medina' },
+                { name: 'الخبر', slug: 'khobar' },
+                { name: 'تبوك', slug: 'tabuk' },
+                { name: 'أبها', slug: 'abha' },
+              ].map((city) => (
+                <li key={city.slug}>
+                  <Link href={`/ar/locations/${city.slug}`} className="hover:text-primary-400 transition duration-300">
+                    📍 {city.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/ar/locations/" className="text-primary-400 hover:text-primary-300 font-semibold transition duration-300">
+                  جميع المدن الـ 24 ←
                 </Link>
               </li>
             </ul>

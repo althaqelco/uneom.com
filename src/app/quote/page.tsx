@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import { generateMetadata2026 } from '@/lib/seo-2026';
 import SEO2026 from '@/components/seo/SEO2026';
+import { QuoteWizard } from '@/components/behavior/QuoteWizard';
 
 export const metadata: Metadata = generateMetadata2026({
   title: 'Get Uniform Quote Saudi Arabia | Free Pricing | UNEOM',
@@ -97,62 +98,9 @@ export default function QuotePage() {
       <main className="py-16">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Form Section */}
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-2xl font-bold mb-6">Request Quote</h2>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-                    <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your name" required />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
-                    <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Company name" required />
-                  </div>
-                </div>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
-                    <input type="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="email@company.com" required />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone *</label>
-                    <input type="tel" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="+971 5X XXX XXXX" required />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Industry *</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
-                    <option value="">Select industry</option>
-                    <option value="healthcare">Healthcare</option>
-                    <option value="hospitality">Hospitality</option>
-                    <option value="corporate">Corporate</option>
-                    <option value="industrial">Industrial / Manufacturing</option>
-                    <option value="education">Education</option>
-                    <option value="security">Security</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Quantity Needed *</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
-                    <option value="">Select quantity</option>
-                    <option value="10-49">10-49 pieces</option>
-                    <option value="50-99">50-99 pieces (10% discount)</option>
-                    <option value="100-249">100-249 pieces (15% discount)</option>
-                    <option value="250-499">250-499 pieces (20% discount)</option>
-                    <option value="500+">500+ pieces (25% discount)</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Requirements</label>
-                  <textarea rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Describe your uniform needs, customization requirements, timeline..."></textarea>
-                </div>
-                <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl transition-colors">
-                  Submit Quote Request →
-                </button>
-              </form>
+            {/* QuoteWizard — Multi-Step Conversion Funnel */}
+            <div>
+              <QuoteWizard />
             </div>
 
             {/* Info Section */}

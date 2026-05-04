@@ -164,7 +164,7 @@ const content = {
   stats: [
     { value: '500+', label: 'Satisfied Clients', icon: '👥' },
     { value: '50K+', label: 'Uniforms Delivered', icon: '👔' },
-    { value: '13', label: 'Cities Served', icon: '📍' },
+    { value: '24', label: 'Cities Served', icon: '📍' },
     { value: '20+', label: 'Years Experience', icon: '🏆' },
   ],
   trustSignals: [
@@ -354,6 +354,74 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
             >
               View All Industries
+              <span>→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* LOCATIONS — 24 CITIES INTERNAL LINKING HUB */}
+      {/* ============================================ */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <span className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-4 block">Nationwide Coverage</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Serving 24 Cities Across Saudi Arabia
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              From the capital to the coast, we deliver climate-tested professional uniforms to every major Saudi city.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
+            {[
+              { name: 'Riyadh', nameAr: 'الرياض', slug: 'riyadh', badge: 'HQ' },
+              { name: 'Jeddah', nameAr: 'جدة', slug: 'jeddah' },
+              { name: 'Dammam', nameAr: 'الدمام', slug: 'dammam' },
+              { name: 'Mecca', nameAr: 'مكة', slug: 'mecca' },
+              { name: 'Medina', nameAr: 'المدينة', slug: 'medina' },
+              { name: 'Khobar', nameAr: 'الخبر', slug: 'khobar' },
+              { name: 'Tabuk', nameAr: 'تبوك', slug: 'tabuk' },
+              { name: 'Taif', nameAr: 'الطائف', slug: 'taif' },
+              { name: 'Abha', nameAr: 'أبها', slug: 'abha' },
+              { name: 'Buraidah', nameAr: 'بريدة', slug: 'buraidah' },
+              { name: 'Hail', nameAr: 'حائل', slug: 'hail' },
+              { name: 'Najran', nameAr: 'نجران', slug: 'najran' },
+              { name: 'Jubail', nameAr: 'الجبيل', slug: 'jubail' },
+              { name: 'Yanbu', nameAr: 'ينبع', slug: 'yanbu' },
+              { name: 'Al Ahsa', nameAr: 'الأحساء', slug: 'al-ahsa' },
+              { name: 'Jizan', nameAr: 'جازان', slug: 'jizan' },
+              { name: 'Khamis M.', nameAr: 'خميس مشيط', slug: 'khamis-mushait' },
+              { name: 'Dhahran', nameAr: 'الظهران', slug: 'dhahran' },
+              { name: 'Al Kharj', nameAr: 'الخرج', slug: 'al-kharj' },
+              { name: 'Sakaka', nameAr: 'سكاكا', slug: 'sakaka' },
+              { name: 'Arar', nameAr: 'عرعر', slug: 'arar' },
+              { name: 'Al Baha', nameAr: 'الباحة', slug: 'al-baha' },
+              { name: 'NEOM', nameAr: 'نيوم', slug: 'neom' },
+              { name: 'Qatif', nameAr: 'القطيف', slug: 'qatif' },
+            ].map((city) => (
+              <Link
+                key={city.slug}
+                href={`/locations/${city.slug}`}
+                className="group bg-gray-50 hover:bg-blue-50 rounded-xl p-3 text-center transition-all hover:shadow-md border border-transparent hover:border-blue-200 relative"
+              >
+                {city.badge && (
+                  <span className="absolute -top-1 -right-1 bg-amber-500 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-full">{city.badge}</span>
+                )}
+                <div className="text-xs font-bold text-gray-900 group-hover:text-blue-600">{city.name}</div>
+                <div className="text-[10px] text-gray-500 mt-0.5">{city.nameAr}</div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/locations"
+              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+            >
+              View All Locations & Industries
               <span>→</span>
             </Link>
           </div>

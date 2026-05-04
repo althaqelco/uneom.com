@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next'
-import QuoteForm from '@/components/forms/QuoteForm'
+import { QuoteWizard } from '@/components/behavior/QuoteWizard'
 import Container from '@/components/ui/Container'
 import Card from '@/components/ui/Card'
 import { CheckCircleIcon, ClockIcon, ShieldCheckIcon, TruckIcon } from '@heroicons/react/24/outline'
@@ -100,7 +100,7 @@ export default function QuotePageAr() {
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">
                     أخبرنا عن متطلباتك
                   </h2>
-                  <QuoteForm />
+                  <QuoteWizard />
                 </Card>
               </div>
 

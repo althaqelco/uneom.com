@@ -79,7 +79,7 @@ const Footer: React.FC<FooterProps> = ({ locale = 'en' }) => {
   return (
     <footer className="bg-neutral-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 ${isRTL ? 'lg:dir-rtl' : ''}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12 ${isRTL ? 'lg:dir-rtl' : ''}`}>
           {/* About */}
           <div className={isRTL ? 'text-right' : ''}>
             <h3 className="font-heading text-xl font-bold mb-4">{content.about}</h3>
@@ -169,6 +169,34 @@ const Footer: React.FC<FooterProps> = ({ locale = 'en' }) => {
               <li>
                 <Link href={locale === 'en' ? '/contact/' : '/ar/contact/'} className="hover:text-primary-400 transition duration-300">
                   {content.contactUsLink}
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Locations — PageRank Hub */}
+          <div className={isRTL ? 'text-right' : ''}>
+            <h3 className="font-heading text-xl font-bold mb-4">{locale === 'en' ? 'Our Locations' : 'مواقعنا'}</h3>
+            <ul className="space-y-2 text-neutral-300">
+              {[
+                { en: 'Riyadh', ar: 'الرياض', slug: 'riyadh' },
+                { en: 'Jeddah', ar: 'جدة', slug: 'jeddah' },
+                { en: 'Dammam', ar: 'الدمام', slug: 'dammam' },
+                { en: 'Mecca', ar: 'مكة المكرمة', slug: 'mecca' },
+                { en: 'Medina', ar: 'المدينة المنورة', slug: 'medina' },
+                { en: 'Khobar', ar: 'الخبر', slug: 'khobar' },
+                { en: 'Tabuk', ar: 'تبوك', slug: 'tabuk' },
+                { en: 'Abha', ar: 'أبها', slug: 'abha' },
+              ].map((city) => (
+                <li key={city.slug}>
+                  <Link href={`${locale === 'en' ? '' : '/ar'}/locations/${city.slug}`} className="hover:text-primary-400 transition duration-300">
+                    📍 {locale === 'en' ? city.en : city.ar}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link href={locale === 'en' ? '/locations/' : '/ar/locations/'} className="text-primary-400 hover:text-primary-300 font-semibold transition duration-300">
+                  {locale === 'en' ? 'All 24 Cities →' : 'جميع المدن الـ 24 ←'}
                 </Link>
               </li>
             </ul>

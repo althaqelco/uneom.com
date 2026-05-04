@@ -207,11 +207,23 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'DotBot',
         disallow: '/',
       },
+      // Common Crawl — used by AI training datasets (block to protect content)
+      {
+        userAgent: 'CCBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'DataForSeoBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'BLEXBot',
+        disallow: '/',
+      },
     ],
     
     sitemap: [
       `${baseUrl}/sitemap.xml`,
-      `${baseUrl}/sitemap-index.xml`,
     ],
     
     host: baseUrl,
