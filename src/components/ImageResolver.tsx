@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect } from 'react';
-import VercelSafeImage from './ui/VercelSafeImage';
 
 /**
  * Componente que mejora la carga de imágenes en diferentes entornos, especialmente en Vercel

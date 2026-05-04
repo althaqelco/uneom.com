@@ -36,17 +36,16 @@ export default function DirectImage({
   const [triedFallback, setTriedFallback] = useState<boolean>(false);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
-  // Función para convertir rutas relativas a absolutas para Vercel
-  const getVercelImageUrl = (imgSrc: string): string => {
+  // Función para convertir rutas relativas a absolutas
+  const getAbsoluteUrl = (imgSrc: string): string => {
     if (imgSrc.startsWith('http')) return imgSrc;
     
     // Determinar la URL base
-    const isVercel = typeof window !== 'undefined' && 
-      (window.location.hostname.includes('vercel.app') || 
-       window.location.hostname === 'uneom.com' ||
+    const isProd = typeof window !== 'undefined' && 
+      (window.location.hostname === 'uneom.com' ||
        window.location.hostname.endsWith('.uneom.com'));
        
-    const baseUrl = isVercel ? `https://${window.location.hostname}` : '';
+    const baseUrl = isProd ? `https://${window.location.hostname}` : '';
     
     // Asegurar que la ruta comience con '/'
     const normalizedSrc = imgSrc.startsWith('/') ? imgSrc : `/${imgSrc}`;
@@ -73,13 +72,13 @@ export default function DirectImage({
     if (hasError) {
       // Ya intentamos una vez, ahora intentar con el fallback
       console.warn('Intentando con imagen de respaldo:', fallbackSrc);
-      setImageSrc(getVercelImageUrl(fallbackSrc));
+      setImageSrc(getAbsoluteUrl(fallbackSrc));
       setTriedFallback(true);
       return;
     }
 
     // Primer error, intentar con URL absoluta
-    const absoluteUrl = getVercelImageUrl(src);
+    const absoluteUrl = getAbsoluteUrl(src);
     console.warn('Imagen no cargada, intentando con URL absoluta:', absoluteUrl);
     setImageSrc(absoluteUrl);
     setHasError(true);

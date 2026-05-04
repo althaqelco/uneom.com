@@ -23,12 +23,6 @@ const ArabicOptimizer: React.FC = () => {
     // Initialize Arabic optimizations on mount
     initArabicOptimizations();
     
-    // Check if running on Vercel
-    const isVercel = typeof window !== 'undefined' && 
-      (window.location.hostname.includes('vercel.app') || 
-       window.location.hostname === 'uneom.com' ||
-       window.location.hostname.endsWith('.uneom.com'));
-    
     // Load Google Fonts for Arabic
     const cairoGoogleFont = document.createElement('link');
     cairoGoogleFont.rel = 'stylesheet';
@@ -51,7 +45,7 @@ const ArabicOptimizer: React.FC = () => {
     CRITICAL_IMAGES.forEach(imagePath => {
       const link = document.createElement('link');
       link.rel = 'preload';
-      link.href = isVercel ? `https://uneom-com.vercel.app${imagePath}` : imagePath;
+      link.href = imagePath;
       link.as = 'image';
       document.head.appendChild(link);
     });

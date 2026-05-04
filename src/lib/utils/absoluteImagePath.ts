@@ -3,19 +3,16 @@
  */
 
 /**
- * Determina si la aplicación está ejecutándose en el entorno de Vercel
+ * Determina si la aplicación está ejecutándose en producción
  */
-export const isVercelEnvironment = (): boolean => {
+export const isProdEnvironment = (): boolean => {
   if (typeof window === 'undefined') {
     // Entorno de servidor
-    return process.env.VERCEL === '1' || 
-           process.env.VERCEL_ENV !== undefined ||
-           process.env.NEXT_PUBLIC_VERCEL_URL !== undefined;
+    return process.env.NODE_ENV === 'production';
   }
   
   // Entorno de cliente
-  return window.location.hostname.includes('vercel.app') ||
-         window.location.hostname === 'uneom.com' ||
+  return window.location.hostname === 'uneom.com' ||
          window.location.hostname.endsWith('.uneom.com');
 };
 
@@ -36,14 +33,13 @@ export const getAbsoluteImagePath = (src: string): string => {
     // En el cliente, usar la URL del navegador
     baseUrl = window.location.origin;
   } else {
-    // En el servidor, intentar usar la URL de Vercel
-    const vercelUrl = process.env.NEXT_PUBLIC_VERCEL_URL || 
-                      process.env.VERCEL_URL || 
-                      'uneom-com.vercel.app';
+    // En el servidor, intentar usar la URL de Firebase u origen de config
+    const publicUrl = process.env.NEXT_PUBLIC_SITE_URL || 
+                      'https://uneom.com';
     
-    baseUrl = vercelUrl.startsWith('http') 
-      ? vercelUrl 
-      : `https://${vercelUrl}`;
+    baseUrl = publicUrl.startsWith('http') 
+      ? publicUrl 
+      : `https://${publicUrl}`;
   }
   
   // Normalizar la ruta de origen

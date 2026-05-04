@@ -11,47 +11,19 @@ import { Locale } from '@/lib/i18n/config';
  */
 interface ExtendedImageLoaderProps extends ImageLoaderProps {
   locale?: Locale;
-  isVercel?: boolean;
 }
 
 /**
  * Custom image loader that can be used with next/image
  * This can be extended to use a CDN or image optimization service
  */
-export const customImageLoader = ({ src, width, quality, locale, isVercel }: ExtendedImageLoaderProps): string => {
+export const customImageLoader = ({ src, width, quality, locale }: ExtendedImageLoaderProps): string => {
   // If it's an external URL, return it as is
   if (src.startsWith('http://') || src.startsWith('https://')) {
     return src;
   }
   
-  // On Vercel, handle specifically for production
-  if (isVercel) {
-    // Ensure src starts with a slash for relative URLs
-    const formattedSrc = src.startsWith('/') ? src : `/${src}`;
-    
-    // Handle localized paths
-    if (locale && locale !== 'en') {
-      // Check if path already has locale suffix
-      if (formattedSrc.includes(`-${locale}.`)) {
-        // Already has locale suffix
-        return formattedSrc;
-      }
-      
-      // Add locale suffix
-      const hasExtension = formattedSrc.includes('.');
-      if (hasExtension) {
-        const lastDotIndex = formattedSrc.lastIndexOf('.');
-        const fileName = formattedSrc.substring(0, lastDotIndex);
-        const extension = formattedSrc.substring(lastDotIndex);
-        return `${fileName}-${locale}${extension}`;
-      } else {
-        return `${formattedSrc}-${locale}`;
-      }
-    }
-    
-    // Return direct URL to the resource
-    return formattedSrc;
-  }
+
   
   // Regular development environment
   
@@ -79,26 +51,6 @@ export const customImageLoader = ({ src, width, quality, locale, isVercel }: Ext
   return `${src}?w=${width}&q=${quality || 75}`;
 };
 
-/**
- * Vercel-specific image loader that handles image loading in Vercel environment
- */
-export const vercelImageLoader = ({ src, width, quality = 75 }: ImageLoaderProps): string => {
-  // If it's an external URL, return it as is
-  if (src.startsWith('http://') || src.startsWith('https://')) {
-    return src;
-  }
-  
-  // Ensure src starts with a slash for relative URLs
-  const formattedSrc = src.startsWith('/') ? src : `/${src}`;
-  
-  // For images in the public directory, use them directly
-  if (formattedSrc.startsWith('/images/')) {
-    return formattedSrc;
-  }
-  
-  // For other images, use Next.js image optimization
-  return `/_next/image?url=${encodeURIComponent(formattedSrc)}&w=${width}&q=${quality}`;
-};
 
 /**
  * Generates responsive image srcSet for different device sizes

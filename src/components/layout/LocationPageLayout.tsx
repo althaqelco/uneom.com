@@ -6,7 +6,6 @@ import Footer from './Footer';
 import ArabicHeader from './ArabicHeader';
 import ArabicFooter from './ArabicFooter';
 import dynamic from 'next/dynamic';
-import VercelImageFixer from '../ui/VercelImageFixer';
 
 // Dynamically import FloatingWhatsApp with no SSR
 const FloatingWhatsApp = dynamic(() => import('../ui/FloatingWhatsApp'), {
@@ -22,7 +21,6 @@ const LocationPageLayout: React.FC<LocationPageLayoutProps> = ({ children, local
   
   return (
     <div className={`min-h-screen flex flex-col`} dir={isRTL ? 'rtl' : 'ltr'}>
-      <VercelImageFixer />
       {isRTL ? <ArabicHeader /> : <Header locale={locale} />}
       <main className="flex-grow">
         {children}

@@ -32,14 +32,13 @@ const DirectImage: React.FC<DirectImageProps> = ({
   const [attempts, setAttempts] = useState<number>(0);
   const [loaded, setLoaded] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
-  const [isVercel, setIsVercel] = useState<boolean>(false);
+  const [isProd, setIsProd] = useState<boolean>(false);
   
   useEffect(() => {
-    // تحديد ما إذا كنا في بيئة Vercel
+    // تحديد ما إذا كنا في بيئة الإنتاج
     if (typeof window !== 'undefined') {
       const hostname = window.location.hostname;
-      setIsVercel(
-        hostname.includes('vercel.app') || 
+      setIsProd(
         hostname === 'uneom.com' || 
         hostname.endsWith('.uneom.com')
       );
@@ -54,15 +53,15 @@ const DirectImage: React.FC<DirectImageProps> = ({
     setError(false);
   }, [src]);
   
-  // Normalize image path for Vercel
+  // Normalize image path
   const normalizeImagePath = (imagePath: string): string => {
     // If it's already an absolute URL, return it as is
     if (imagePath.startsWith('http') || imagePath.startsWith('data:')) {
       return imagePath;
     }
 
-    // For Vercel, ensure paths start with a slash
-    if (isVercel && !imagePath.startsWith('/')) {
+    // Ensure paths start with a slash
+    if (isProd && !imagePath.startsWith('/')) {
       return '/' + imagePath;
     }
 
@@ -161,13 +160,13 @@ const DirectImage: React.FC<DirectImageProps> = ({
   
   // Normalize the initial src
   useEffect(() => {
-    if (isVercel) {
+    if (isProd) {
       const normalizedSrc = normalizeImagePath(src);
       if (normalizedSrc !== currentSrc) {
         setCurrentSrc(normalizedSrc);
       }
     }
-  }, [isVercel, src]);
+  }, [isProd, src]);
   
   return (
     <img
