@@ -61,7 +61,7 @@ const DirectImage: React.FC<DirectImageProps> = ({
     }
 
     // Ensure paths start with a slash
-    if (isProd && !imagePath.startsWith('/')) {
+    if (!imagePath.startsWith('/')) {
       return '/' + imagePath;
     }
 
