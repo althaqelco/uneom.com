@@ -27,10 +27,10 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   
-  // Configure image optimization — Firebase App Hosting supports Next.js Image
+  // Configure image optimization
   images: {
-    // Firebase App Hosting supports image optimization natively
-    unoptimized: false,
+    // Disable Next.js image optimization API completely to fix broken images on Firebase App Hosting
+    unoptimized: true,
     domains: [
       'uneom.com',
       'uneom-com.vercel.app',
