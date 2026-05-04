@@ -37,10 +37,10 @@ export default function NotFound() {
         {/* Recovery Links */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
           {[
-            { name: 'الرئيسية', nameEn: 'Home', href: '/', icon: '🏠' },
-            { name: 'عرض سعر', nameEn: 'Quote', href: '/quote', icon: '📋' },
-            { name: 'القطاعات', nameEn: 'Industries', href: '/industries', icon: '🏢' },
-            { name: 'المواقع', nameEn: 'Locations', href: '/locations', icon: '📍' },
+            { name: 'الرئيسية', nameEn: 'Home', href: '/ar', icon: '🏠' },
+            { name: 'عرض سعر', nameEn: 'Quote', href: '/ar/contact', icon: '📋' },
+            { name: 'القطاعات', nameEn: 'Industries', href: '/ar/industries', icon: '🏢' },
+            { name: 'المواقع', nameEn: 'Locations', href: '/ar/locations', icon: '📍' },
           ].map((link) => (
             <Link
               key={link.href}
@@ -68,7 +68,7 @@ export default function NotFound() {
             ].map((city) => (
               <Link
                 key={city.slug}
-                href={`/locations/${city.slug}`}
+                href={`/ar/locations/${city.slug}`}
                 className="text-xs bg-blue-50 hover:bg-blue-100 text-blue-700 px-3 py-1.5 rounded-full transition-colors font-medium"
               >
                 📍 {city.name}
