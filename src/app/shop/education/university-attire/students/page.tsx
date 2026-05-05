@@ -1,77 +1,22 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
-import Container from '@/components/ui/Container';
-import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
-import Breadcrumbs from '@/components/ui/Breadcrumbs';
-
-export const metadata: Metadata = {
-  title: 'Students | Professional Shop - UNEOM Uniforms',
-  description: 'Discover premium Students by UNEOM. We provide high-quality professional uniforms across Saudi Arabia with fast delivery.',
-};
-
-export default function GeneratedPage() {
-  return (
-    <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-900 text-white relative overflow-hidden py-16 md:py-24">
-        <div className="absolute inset-0 bg-[url('/images/patterns/grid.svg')] opacity-10"></div>
-        <Container>
-          <div className="relative z-10 max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-              <span className="text-orange-400">★</span>
-              <span className="text-sm font-medium uppercase tracking-wider">Shop</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Students
-            </h1>
-            
-            <p className="text-xl mb-10 text-gray-300 leading-relaxed max-w-2xl">
-              Discover premium Students by UNEOM. We provide high-quality professional uniforms across Saudi Arabia with fast delivery.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                href="/quote"
-                variant="primary" 
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold border-0 shadow-lg shadow-orange-500/30"
-              >
-                Get a Free Quote →
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Main Content Area */}
-      <main className="py-16 bg-gray-50">
-        <Container>
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Premium Solutions for Shop</h2>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              We are currently updating this section with our latest catalogs and products. Please contact our sales team for full details and custom pricing.
-            </p>
-            
-            <div className="flex justify-center gap-4">
-               <Link 
-                  href="/contact"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                >
-                  Contact Us
-                </Link>
-                <Link 
-                  href="/"
-                  className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium"
-                >
-                  Back to Home
-                </Link>
-            </div>
-          </div>
-        </Container>
-      </main>
-    </>
-  );
+import React from 'react';import Link from 'next/link';import { Metadata } from 'next';import Container from '@/components/ui/Container';import SectionHeading from '@/components/ui/SectionHeading';import Breadcrumbs from '@/components/ui/Breadcrumbs';import { generateMetadata2026 } from '@/lib/seo-2026';import SEO2026 from '@/components/seo/SEO2026';
+export const metadata: Metadata = generateMetadata2026({ title: 'University Student Uniforms Saudi Arabia | Academic Wear - UNEOM', titleAr: 'أزياء طلاب الجامعات في السعودية - يونيوم', description: 'University student uniforms for Saudi Arabia. Blazers, polos, hoodies & academic gowns. Custom university branding. From SAR 65. Bulk university pricing available.', descriptionAr: 'أزياء طلاب الجامعات في السعودية. بليزرات، بولو، هوديز وعباءات أكاديمية.', keywords: ['university student uniforms saudi', 'academic wear ksa', 'college uniforms riyadh'], keywordsAr: ['أزياء طلاب جامعات'], locale: 'en', pageType: 'product', path: '/shop/education/university-attire/students', image: '/images/education/students.jpg', imageAlt: 'University Student Uniforms', aiSummary: 'UNEOM university student uniforms: blazers, polo shirts, hoodies, and academic gowns with custom university branding for Saudi institutions.' });
+export const dynamic = 'force-static';
+const products = [
+  { name: 'University Blazer', price: 'SAR 195', desc: 'Custom blazer with university crest embroidery. Navy, black, or burgundy.' },
+  { name: 'Campus Polo Shirt', price: 'SAR 65', desc: 'Embroidered university logo. Moisture-wicking. 10+ colors available.' },
+  { name: 'University Hoodie', price: 'SAR 85', desc: 'Premium cotton-poly blend. Front or back university print.' },
+  { name: 'Academic Gown', price: 'SAR 150', desc: 'Graduation gown with university-specific colors and trim.' },
+  { name: 'University T-Shirt', price: 'SAR 45', desc: 'Casual campus wear with university branding. Bulk event pricing.' },
+  { name: 'Sports Jersey', price: 'SAR 75', desc: 'Custom team jerseys with student name and number printing.' },
+];
+const faqs = [
+  { question: 'What is the minimum order for university uniforms?', answer: 'Standard MOQ: 25 pieces per style. For large universities (500+ students), we offer annual supply contracts with quarterly deliveries and size exchange programs. Volume pricing: 100+ (15% discount), 500+ (25% discount), 1000+ (custom pricing).' },
+  { question: 'Can you match our university brand colors exactly?', answer: 'Yes. We use Pantone color matching to ensure exact reproduction of your university colors. Free color matching for bulk orders. We keep your custom color formulas on file for consistent reorders.' },
+  { question: 'Do you provide graduation gowns?', answer: 'Yes. Academic regalia including bachelor, master, and doctoral gowns with university-specific hood colors, cap/tassel sets, and stoles. Rental and purchase options available. Custom-made for Saudi university ceremonies.' },
+];
+export default function UniversityStudentsPage() {
+  return (<><SEO2026 title="University Student Uniforms" titleAr="أزياء طلاب الجامعات" description="University student uniforms." locale="en" pageType="product" mainEntity="Student Uniforms" primaryImage="/images/education/students.jpg" primaryImageAlt="Student Uniforms" faqs={faqs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Education', url: '/shop/education' }, { name: 'Students', url: '/shop/education/university-attire/students' }]} certifications={[]} clientCount={50} yearsInBusiness={20} industry="Education" />
+    <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-800 text-white"><Container><Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Shop', href: '/shop' }, { label: 'Education', href: '/shop/education' }, { label: 'Students', href: '/shop/education/university-attire/students' }]} className="text-white/80 mb-6 pt-8" /><div className="py-16 lg:py-24 max-w-4xl"><h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">University Student <span className="bg-gradient-to-r from-indigo-300 to-purple-300 text-transparent bg-clip-text">Uniforms</span></h1><p className="text-xl text-indigo-100">Campus wear with your university branding. From SAR 45.</p></div></Container></section>
+    <main className="py-16"><Container><SectionHeading subtitle="Campus Wear" centered>Student Collection</SectionHeading><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">{products.map((p, i) => (<div key={i} className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-all"><div className="flex justify-between items-start mb-3"><h3 className="text-lg font-bold text-gray-900">{p.name}</h3><span className="text-indigo-600 font-bold">{p.price}</span></div><p className="text-gray-600 text-sm">{p.desc}</p><Link href="/quote?product=university" className="inline-block mt-4 text-indigo-600 font-medium text-sm hover:underline">Request Quote →</Link></div>))}</div>
+    <section className="mt-20 mb-16" itemScope itemType="https://schema.org/FAQPage"><SectionHeading subtitle="Common Questions" centered>Student Uniforms FAQ</SectionHeading><div className="max-w-4xl mx-auto mt-12 space-y-4">{faqs.map((faq, i) => (<div key={i} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question"><h3 className="text-lg font-bold text-gray-900 mb-3" itemProp="name">{faq.question}</h3><div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"><p className="text-gray-600 leading-relaxed" itemProp="text">{faq.answer}</p></div></div>))}</div></section></Container></main></>);
 }
