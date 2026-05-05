@@ -123,7 +123,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { url: `${baseUrl}/resources/${r}`, lastModified: CONTENT_DATES.resources, changeFrequency: 'monthly' as const, priority: 0.7 },
       { url: `${baseUrl}/ar/resources/${r}`, lastModified: CONTENT_DATES.resources, changeFrequency: 'monthly' as const, priority: 0.7 },
     ]),
-    ...sitemapPaths.caseStudies.flatMap(cs => [
+    ...sitemapPaths['case-studies'].flatMap(cs => [
       { url: `${baseUrl}/case-studies/${cs}`, lastModified: CONTENT_DATES.resources, changeFrequency: 'monthly' as const, priority: 0.7 },
       { url: `${baseUrl}/ar/case-studies/${cs}`, lastModified: CONTENT_DATES.resources, changeFrequency: 'monthly' as const, priority: 0.7 },
     ]),
