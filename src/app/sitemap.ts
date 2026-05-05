@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
 import sitemapPaths from '@/lib/data/sitemap-paths.json';
+import { INDUSTRIES } from '@/lib/data/industries';
 
 /**
  * SEO 2026 Sovereign Sitemap — Temporal Integrity Engine
@@ -70,9 +71,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { url: `${baseUrl}/locations/${city.slug}`, lastModified: CONTENT_DATES.locations, changeFrequency: 'monthly' as const, priority: city.priority },
       { url: `${baseUrl}/ar/locations/${city.slug}`, lastModified: CONTENT_DATES.locations, changeFrequency: 'monthly' as const, priority: city.priority },
     ]),
-    // City × Industry cross-pages (528 pages!)
+    // City × Industry cross-pages (264 pages!)
     ...SAUDI_CITIES.flatMap(city =>
-      sitemapPaths.industries.flatMap(ind => [
+      INDUSTRIES.map(i => i.slug).flatMap(ind => [
         { url: `${baseUrl}/locations/${city.slug}/${ind}`, lastModified: CONTENT_DATES.locations, changeFrequency: 'monthly' as const, priority: Math.max(city.priority - 0.1, 0.5) },
         { url: `${baseUrl}/ar/locations/${city.slug}/${ind}`, lastModified: CONTENT_DATES.locations, changeFrequency: 'monthly' as const, priority: Math.max(city.priority - 0.1, 0.5) },
       ])
