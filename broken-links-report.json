@@ -1,7 +1,59 @@
 {
   "locations": [],
-  "industries": [],
-  "shop": [],
+  "industries": [
+    {
+      "url": "/ar/industries/beauty-salons",
+      "found_on_pages": [
+        "/ar/industries/beauty-salons",
+        "/industries/beauty-salons"
+      ]
+    }
+  ],
+  "shop": [
+    {
+      "url": "/shop/corporate-uniforms",
+      "found_on_pages": [
+        "/ar/shop/corporate-uniforms",
+        "/shop/corporate-uniforms"
+      ]
+    },
+    {
+      "url": "/ar/shop/education/university-attire/faculty",
+      "found_on_pages": [
+        "/ar/shop/education/university-attire/faculty",
+        "/shop/education/university-attire/faculty"
+      ]
+    },
+    {
+      "url": "/ar/shop/education/university-attire/staff",
+      "found_on_pages": [
+        "/ar/shop/education/university-attire/staff",
+        "/shop/education/university-attire/staff"
+      ]
+    },
+    {
+      "url": "/ar/shop/education/university-attire/students",
+      "found_on_pages": [
+        "/ar/shop/education/university-attire/students",
+        "/shop/education/university-attire/students"
+      ]
+    }
+  ],
   "blog": [],
-  "other": []
+  "other": [
+    {
+      "url": "/ar/case-studies/spa-chain-rebranding",
+      "found_on_pages": [
+        "/ar/case-studies/spa-chain-rebranding",
+        "/case-studies/spa-chain-rebranding"
+      ]
+    },
+    {
+      "url": "/ar/mobile",
+      "found_on_pages": [
+        "/ar/mobile",
+        "/mobile"
+      ]
+    }
+  ]
 }
