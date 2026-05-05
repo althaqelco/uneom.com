@@ -221,6 +221,7 @@ export default function RootLayout({
                 { "@type": "City", "name": "Najran" },
                 { "@type": "Country", "name": "Saudi Arabia" }
               ],
+              "taxID": "CRN-PENDING",
               "knowsAbout": [
                 "Professional Uniform Manufacturing",
                 "Medical Scrubs",
@@ -240,6 +241,22 @@ export default function RootLayout({
                   "name": "ISO 9001:2015 Quality Management System"
                 }
               ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "UNEOM Uniforms Catalog",
+                "itemOffered": {
+                  "@type": "Offer",
+                  "warranty": {
+                    "@type": "WarrantyPromise",
+                    "durationOfWarranty": {
+                      "@type": "QuantitativeValue",
+                      "value": "12",
+                      "unitCode": "MON"
+                    },
+                    "description": "12-month quality warranty on all manufactured uniforms"
+                  }
+                }
+              },
               "potentialAction": {
                 "@type": "ReserveAction",
                 "target": {

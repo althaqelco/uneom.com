@@ -1,22 +1,11 @@
-# Firebase App Hosting Configuration for UNEOM
-# Project: uneom-c9c0b
-# Docs: https://firebase.google.com/docs/app-hosting
-
 runConfig:
   minInstances: 0
   maxInstances: 10
   cpu: 1
   memoryMiB: 512
   concurrency: 80
-
 env:
   - variable: NEXT_PUBLIC_SITE_URL
     value: https://uneom.com
-  - variable: NEXT_PUBLIC_GA_ID
+  - variable: GA_MEASUREMENT_ID
     value: G-RSQSS61R9J
-  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
-    value: uneom-c9c0b
-  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
-    value: 1:53845498952:web:648185612eb24b7be44c7d
-  - variable: NODE_ENV
-    value: production

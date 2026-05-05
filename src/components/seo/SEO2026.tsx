@@ -242,10 +242,16 @@ const SEO2026: React.FC<SEO2026Props> = ({
       minValue: 100,
       maxValue: 500
     },
-    areaServed: serviceArea.map(area => ({
-      '@type': 'Country',
-      name: area
-    })),
+    taxID: 'CRN-PENDING', // CRN placeholder
+    areaServed: [
+      ...serviceArea.map(area => ({
+        '@type': 'Country',
+        name: area
+      })),
+      { '@type': 'City', name: 'Riyadh' },
+      { '@type': 'City', name: 'Jeddah' },
+      { '@type': 'City', name: 'Dammam' }
+    ],
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'King Fahd Road, Al Olaya District',
@@ -472,6 +478,13 @@ const SEO2026: React.FC<SEO2026Props> = ({
             unitCode: 'DAY'
           }
         }
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 30,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/FreeReturn'
       }
     },
     additionalProperty: product.features?.map(feature => ({
