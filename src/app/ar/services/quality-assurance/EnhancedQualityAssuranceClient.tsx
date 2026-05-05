@@ -244,7 +244,7 @@ export default function EnhancedQualityAssuranceClient() {
                 استشارة جودة مجانية
               </Button>
               <Button 
-                href="/ar/quality-certificates" 
+                href="/ar/about" 
                 variant="outline" 
                 size="lg"
                 className="text-lg px-8 py-4"
@@ -573,7 +573,7 @@ export default function EnhancedQualityAssuranceClient() {
                 استشارة جودة مجانية
               </Button>
               <Button 
-                href="/ar/quality-certificates" 
+                href="/ar/about" 
                 variant="outline" 
                 size="lg"
                 className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-blue-600"

@@ -329,7 +329,7 @@ export default function PremiumSurgicalGownsPageArabic() {
               </div>
             </div>
             <div className="mt-6">
-              <Link href="/ar/resources/compliance-guide">
+              <Link href="/ar/about">
                 <Button variant="secondary">تحميل وثائق الامتثال</Button>
               </Link>
             </div>

@@ -193,7 +193,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ locale }) => {
         {/* View All Products Button */}
         <div className="mt-12 text-center">
           <Button 
-            href="/products"
+            href="/shop"
             variant="primary"
             size="lg"
           >

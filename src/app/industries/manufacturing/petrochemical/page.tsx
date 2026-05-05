@@ -100,7 +100,7 @@ export default function PetrochemicalPage() {
                 Request Consultation <FaArrowRight />
               </Button>
               <Button 
-                href="/products/petrochemical"
+                href="/shop/industrial-uniforms/chemical-resistant-suit"
                 variant="outline"
                 size="lg"
               >

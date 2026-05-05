@@ -277,7 +277,7 @@ export default function EventsPage() {
             </div>
             
             <div className="text-center">
-              <Link href="/resources/events/archive">
+              <Link href="/resources/events">
                 <Button variant="outline">View All Past Events</Button>
               </Link>
             </div>

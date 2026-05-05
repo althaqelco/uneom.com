@@ -117,7 +117,7 @@ export default function HeavyIndustryPageAr() {
                 طلب استشارة <FaArrowRight className="rotate-180" />
               </Button>
               <Button 
-                href="/ar/products/heavy-industry"
+                href="/ar/shop/industrial-uniforms/industrial-protective-uniforms"
                 variant="outline"
                 size="lg"
               >

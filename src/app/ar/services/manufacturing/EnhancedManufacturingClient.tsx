@@ -262,7 +262,7 @@ export default function EnhancedManufacturingClient() {
                 طلب عرض سعر للإنتاج
               </Button>
               <Button 
-                href="/ar/factory-tour" 
+                href="/ar/about" 
                 variant="outline" 
                 size="lg"
                 className="text-lg px-8 py-4"
@@ -664,7 +664,7 @@ export default function EnhancedManufacturingClient() {
                 طلب عرض سعر للإنتاج
               </Button>
               <Button 
-                href="/ar/factory-tour" 
+                href="/ar/about" 
                 variant="outline" 
                 size="lg"
                 className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-orange-600"

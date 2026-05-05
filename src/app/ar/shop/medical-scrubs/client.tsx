@@ -257,7 +257,7 @@ export default function MedicalScrubsClientPage() {
           
           <div className="mt-12 text-center">
             <Button 
-              href="/ar/shop/medical-scrubs/all" 
+              href="/ar/shop/medical-scrubs" 
               variant="outline"
             >
               عرض جميع المنتجات الطبية

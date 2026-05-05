@@ -117,7 +117,7 @@ export default function HeavyIndustryPage() {
                 Request Consultation <FaArrowRight />
               </Button>
               <Button 
-                href="/products/heavy-industry"
+                href="/shop/industrial-uniforms/industrial-protective-uniforms"
                 variant="outline"
                 size="lg"
               >

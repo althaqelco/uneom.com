@@ -348,7 +348,7 @@ export default function ClientPage({ product, relatedProducts, locale }: ClientP
                 تواصل معنا
               </Link>
               <Link 
-                href="/ar/services/custom-uniforms" 
+                href="/ar/services/custom-design" 
                 className="inline-block bg-white text-primary-600 border border-primary-600 px-8 py-3 rounded-md hover:bg-neutral-50 transition-colors duration-200"
               >
                 اكتشف خدماتنا المخصصة

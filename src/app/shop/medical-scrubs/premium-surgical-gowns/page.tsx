@@ -333,7 +333,7 @@ export default function PremiumSurgicalGownsPage() {
               </div>
             </div>
             <div className="mt-6">
-              <Link href="/resources/compliance-guide">
+              <Link href="/about">
                 <Button variant="outline">Download Compliance Documentation</Button>
               </Link>
             </div>

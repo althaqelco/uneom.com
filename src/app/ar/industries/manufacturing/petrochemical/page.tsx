@@ -100,7 +100,7 @@ export default function PetrochemicalPageAr() {
                 طلب استشارة <FaArrowRight className="rotate-180" />
               </Button>
               <Button 
-                href="/ar/products/petrochemical"
+                href="/ar/shop/industrial-uniforms/chemical-resistant-suit"
                 variant="outline"
                 size="lg"
               >

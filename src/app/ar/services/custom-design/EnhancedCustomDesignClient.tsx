@@ -246,7 +246,7 @@ export default function EnhancedCustomDesignClient() {
                 طلب استشارة تصميم مجانية
               </Button>
               <Button 
-                href="/ar/portfolio" 
+                href="/ar/about" 
                 variant="outline" 
                 size="lg"
                 className="text-lg px-8 py-4"
@@ -627,7 +627,7 @@ export default function EnhancedCustomDesignClient() {
                 احجز استشارة تصميم مجانية
               </Button>
               <Button 
-                href="/ar/portfolio" 
+                href="/ar/about" 
                 variant="outline" 
                 size="lg"
                 className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-purple-600"
