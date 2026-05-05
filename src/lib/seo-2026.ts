@@ -195,10 +195,10 @@ export function generateMetadata2026(config: SEO2026Config): Metadata {
   } = config;
 
   const isArabic = locale === 'ar';
-  const currentUrl = canonical || `${BASE_URL}${path}`;
+  const currentUrl = canonical || `${BASE_URL}${path.startsWith('/') ? path : '/' + path}`.replace(/\/\//g, '/').replace('https:/', 'https://');
   const alternateUrl = isArabic 
-    ? path.replace('/ar', '') || BASE_URL
-    : `${BASE_URL}/ar${path}`;
+    ? `${BASE_URL}${path.replace('/ar', '') || '/'}`.replace(/\/\//g, '/').replace('https:/', 'https://')
+    : `${BASE_URL}/ar${path.startsWith('/') ? path : '/' + path}`.replace(/\/\//g, '/').replace('https:/', 'https://');
 
   // Localized content
   const localTitle = isArabic ? (titleAr || title) : title;

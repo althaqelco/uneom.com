@@ -29,12 +29,14 @@ export function generateMetadata({
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
   
   // Create canonical URL with trailing slash
-  const canonicalPath = locale === 'ar' ? `/ar${cleanPath}/` : `${cleanPath}/`;
-  const canonicalUrl = `${baseUrl}${canonicalPath}`;
+  // Ensure we don't prepend /ar/ if the path already includes it
+  const cleanPathWithoutAr = cleanPath.startsWith('/ar/') ? cleanPath.replace('/ar', '') : cleanPath;
+  const canonicalPath = locale === 'ar' ? `/ar${cleanPathWithoutAr}/` : `${cleanPathWithoutAr}/`;
+  const canonicalUrl = `${baseUrl}${canonicalPath}`.replace(/\/\//g, '/').replace('https:/', 'https://');
   
   // Create alternate URLs for hreflang
-  const enUrl = locale === 'ar' ? `${baseUrl}${cleanPath}/` : canonicalUrl;
-  const arUrl = locale === 'ar' ? canonicalUrl : `${baseUrl}/ar${cleanPath}/`;
+  const enUrl = locale === 'ar' ? `${baseUrl}${cleanPathWithoutAr}/`.replace(/\/\//g, '/').replace('https:/', 'https://') : canonicalUrl;
+  const arUrl = locale === 'ar' ? canonicalUrl : `${baseUrl}/ar${cleanPathWithoutAr}/`.replace(/\/\//g, '/').replace('https:/', 'https://');
 
   return {
     title,
