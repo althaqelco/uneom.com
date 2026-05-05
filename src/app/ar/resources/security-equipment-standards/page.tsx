@@ -3,73 +3,71 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-export const metadata: Metadata = {
-  title: 'Security Equipment Standards | Resources - يونيوم للزي الموحد',
-  description: 'اكتشف أفضل Security Equipment Standards من يونيوم. نقدم حلول الزي الموحد عالية الجودة في السعودية مع توصيل سريع.',
-};
+export const metadata: Metadata = generateMetadata2026({
+  title: 'معايير التجهيزات الأمنية في السعودية | يونيوم',
+  titleAr: 'معايير التجهيزات الأمنية | دليل خبير - يونيوم',
+  description: 'مواصفات ومعايير المعدات الأمنية والدروع الواقية والسترات التكتيكية المستخدمة في القطاع الأمني في المملكة.',
+  descriptionAr: 'مواصفات ومعايير المعدات الأمنية والدروع الواقية والسترات التكتيكية المستخدمة في القطاع الأمني في المملكة.',
+  keywords: ['تجهيزات أمنية', 'معايير دروع تكتيكية', 'أحزمة أمنية'],
+  keywordsAr: ['تجهيزات أمنية', 'معايير دروع تكتيكية', 'أحزمة أمنية'],
+  locale: 'ar',
+  pageType: 'article',
+  path: '/ar/resources/security-equipment-standards',
+  image: '/images/industries/security/security_uniforms_background.jpg',
+  imageAlt: 'معايير التجهيزات الأمنية',
+  aiSummary: 'مواصفات ومعايير المعدات الأمنية والدروع الواقية والسترات التكتيكية المستخدمة في القطاع الأمني في المملكة.',
+});
 
-export default function GeneratedPage() {
+export const dynamic = 'force-static';
+
+const sections = [
+  { title: 'نظرة عامة', content: 'مواصفات ومعايير المعدات الأمنية والدروع الواقية والسترات التكتيكية المستخدمة في القطاع الأمني في المملكة. هذا الدليل الشامل يغطي المعايير الدولية والمتطلبات الخاصة بالسوق السعودي وأفضل الممارسات لمديري المشتريات ومسؤولي السلامة.' },
+  { title: 'المعايير والشهادات الرئيسية', content: 'يغطي هذا القسم المعايير الدولية والسعودية الأساسية المطبقة على معايير التجهيزات الأمنية. ويشمل ذلك متطلبات الهيئة السعودية للمواصفات والمقاييس والجودة (SASO)، وشهادات الأيزو، وأطر الامتثال الخاصة بالصناعة ذات الصلة بالمؤسسات العاملة في جميع أنحاء المملكة.' },
+  { title: 'معايير الاختيار', content: 'عند اختيار المنتجات ذات الصلة بـ معايير التجهيزات الأمنية، ضع في اعتبارك: صلاحية الشهادة، تقييمات الأداء، الملاءمة للمناخ السعودي، موثوقية المورد، والتكلفة الإجمالية للملكية. تقدم يونيوم إرشادات خبراء حول جميع معايير الاختيار.' },
+  { title: 'الاعتبارات الخاصة بالسوق السعودي', content: 'لدى المملكة العربية السعودية متطلبات فريدة بسبب الظروف المناخية القاسية، والامتثال لرؤية 2030، والشهادات الإلزامية من الهيئة السعودية للمواصفات والمقاييس والجودة (SASO)، ولوائح الصناعة المحددة (مثل أرامكو، والشركة السعودية للكهرباء). يتناول هذا الدليل كل هذه العوامل.' },
+  { title: 'أفضل ممارسات الشراء', content: 'أفضل الممارسات لـ معايير التجهيزات الأمنية: تحقق من جميع شهادات SASO، واطلب تقارير اختبار من مختبرات معتمدة، وقم بتقييم التكلفة الإجمالية لدورة الحياة، وقم بتضمين شروط الصيانة والاستبدال في العقود.' },
+];
+
+const faqs = [
+  { question: 'ما هي المعايير المطبقة في المملكة العربية السعودية؟', answer: 'تشمل المعايير الرئيسية شهادات SASO الإلزامية، ومعايير ISO ذات الصلة، والمتطلبات الخاصة بالصناعة من الجهات الكبرى. تلبي منتجات يونيوم جميع المعايير السعودية والدولية المعمول بها.' },
+  { question: 'كيف يمكن لـ يونيوم المساعدة في تحقيق الامتثال؟', answer: 'توفر يونيوم: منتجات معتمدة تلبي جميع المعايير ذات الصلة، ووثائق الامتثال للتدقيق، واستشارات الخبراء بشأن الاختيار، والتدريب على الاستخدام السليم والصيانة.' },
+  { question: 'ما هي الوثائق المطلوبة للشراء؟', answer: 'الوثائق المطلوبة: شهادات مطابقة SASO، وتقارير اختبار من مختبرات معتمدة، وشهادات ISO للمورد، وأوراق مواصفات المنتج. توفر يونيوم حزم وثائق كاملة مع كل طلب.' },
+];
+
+export default function SecurityEquipmentStandardsPageAR() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-900 text-white relative overflow-hidden py-16 md:py-24">
-        <div className="absolute inset-0 bg-[url('/images/patterns/grid.svg')] opacity-10"></div>
+      <SEO2026 title="معايير التجهيزات الأمنية" titleAr="معايير التجهيزات الأمنية" description="مواصفات ومعايير المعدات الأمنية والدروع الواقية والسترات التكتيكية المستخدمة في القطاع الأمني في المملكة." locale="ar" pageType="article" mainEntity="معايير التجهيزات الأمنية" primaryImage="/images/industries/security/security_uniforms_background.jpg" primaryImageAlt="معايير التجهيزات الأمنية" faqs={faqs} breadcrumbs={[{ name: 'الرئيسية', url: '/ar' }, { name: 'الموارد الأدلة', url: '/ar/resources' }, { name: 'معايير التجهيزات الأمنية', url: '/ar/resources/security-equipment-standards' }]} certifications={['SASO', 'ISO 9001']} clientCount={150} yearsInBusiness={20} industry="الخدمات المؤسسية" />
+      <section className="bg-gradient-to-bl from-slate-900 via-gray-800 to-zinc-800 text-white" dir="rtl">
         <Container>
-          <div className="relative z-10 max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-              <span className="text-orange-400">★</span>
-              <span className="text-sm font-medium uppercase tracking-wider">Resources</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Security Equipment Standards
-            </h1>
-            
-            <p className="text-xl mb-10 text-gray-300 leading-relaxed max-w-2xl">
-              اكتشف أفضل Security Equipment Standards من يونيوم. نقدم حلول الزي الموحد عالية الجودة في السعودية مع توصيل سريع.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                href="/ar/quote"
-                variant="primary" 
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold border-0 shadow-lg shadow-orange-500/30"
-              >
-                احصل على عرض سعر مجاني →
-              </Button>
-            </div>
+          <Breadcrumbs items={[{ label: 'الرئيسية', href: '/ar' }, { label: 'الموارد الأدلة', href: '/ar/resources' }, { label: 'معايير التجهيزات الأمنية', href: '/ar/resources/security-equipment-standards' }]} className="text-white/80 mb-6 pt-8" />
+          <div className="py-16 lg:py-24 max-w-4xl">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"><span>🔒</span><span className="text-sm font-medium">دليل الخبراء</span></div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">معايير التجهيزات الأمنية</h1>
+            <p className="text-xl text-gray-300 leading-relaxed">مواصفات ومعايير المعدات الأمنية والدروع الواقية والسترات التكتيكية المستخدمة في القطاع الأمني في المملكة.</p>
           </div>
         </Container>
       </section>
-
-      {/* Main Content Area */}
-      <main className="py-16 bg-gray-50">
+      <main className="py-16" dir="rtl">
         <Container>
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">حلول متقدمة لقطاع Resources</h2>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              نقوم حالياً بتحديث هذا القسم بأحدث الكتالوجات والمنتجات. يرجى التواصل مع فريق المبيعات للحصول على التفاصيل الكاملة والأسعار المخصصة.
-            </p>
-            
-            <div className="flex justify-center gap-4">
-               <Link 
-                  href="/ar/contact"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                >
-                  تواصل معنا
-                </Link>
-                <Link 
-                  href="/ar"
-                  className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium"
-                >
-                  العودة للرئيسية
-                </Link>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            {sections.map((s, i) => (<article key={i} className="mb-10 bg-white rounded-xl shadow-sm border border-gray-100 p-8"><h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3"><span className="bg-slate-100 text-slate-700 text-sm font-mono px-3 py-1 rounded-full">{String(i+1).padStart(2,'0')}</span>{s.title}</h2><p className="text-gray-700 leading-relaxed text-lg">{s.content}</p></article>))}
           </div>
+          <section className="max-w-4xl mx-auto mt-16 mb-20" itemScope itemType="https://schema.org/FAQPage">
+            <SectionHeading subtitle="الأسئلة الشائعة" centered>أسئلة متكررة حول معايير التجهيزات الأمنية</SectionHeading>
+            <div className="mt-12 space-y-4">
+              {faqs.map((faq, i) => (<div key={i} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question"><h3 className="text-lg font-bold text-gray-900 mb-3" itemProp="name">{faq.question}</h3><div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"><p className="text-gray-600 leading-relaxed" itemProp="text">{faq.answer}</p></div></div>))}
+            </div>
+          </section>
+          <section className="text-center bg-gradient-to-r from-slate-800 to-gray-700 text-white rounded-2xl p-12">
+            <h2 className="text-3xl font-bold mb-6">هل تحتاج إلى استشارة الخبراء؟</h2>
+            <p className="text-xl mb-8 text-gray-300">خبراء يونيوم جاهزون لمساعدتك في تلبية جميع المعايير والمتطلبات بفعالية.</p>
+            <Link href="/ar/contact" className="inline-flex items-center px-8 py-4 bg-white text-slate-800 hover:bg-gray-100 font-bold rounded-xl transition-all shadow-lg">تواصل مع خبرائنا →</Link>
+          </section>
         </Container>
       </main>
     </>
