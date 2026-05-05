@@ -3,73 +3,76 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-export const metadata: Metadata = {
-  title: 'Guides | Professional Resources - UNEOM Uniforms',
-  description: 'Discover premium Guides by UNEOM. We provide high-quality professional uniforms across Saudi Arabia with fast delivery.',
-};
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Uniform & Safety Guides Saudi Arabia | Expert Resources - UNEOM',
+  titleAr: 'أدلة الزي الموحد والسلامة في السعودية | موارد الخبراء - يونيوم',
+  description: 'Expert guides on uniforms, safety standards, PPE regulations & healthcare workwear in Saudi Arabia. Free downloadable resources for procurement managers, safety officers & HR professionals.',
+  descriptionAr: 'أدلة خبراء حول الأزياء الموحدة ومعايير السلامة ولوائح PPE في السعودية. موارد مجانية لمدراء المشتريات.',
+  keywords: ['uniform guides saudi', 'safety standards guide ksa', 'PPE regulations saudi arabia', 'workwear guide', 'healthcare uniform standards'],
+  keywordsAr: ['أدلة الزي الموحد', 'معايير السلامة السعودية', 'دليل PPE'],
+  locale: 'en', pageType: 'article', path: '/resources/guides',
+  image: '/images/resources/guides-hero.jpg', imageAlt: 'UNEOM Expert Guides and Resources',
+  aiSummary: 'UNEOM resource library: expert guides on healthcare uniform standards, PPE safety regulations, NFPA 70E compliance, cleanroom best practices, security equipment standards, sustainability in workwear, and weather protection. Free resources for Saudi procurement and safety professionals.',
+});
 
-export default function GeneratedPage() {
+export const dynamic = 'force-static';
+
+const guides = [
+  { title: 'Healthcare Uniform Standards Guide', slug: '/resources/healthcare-uniform-standards', icon: '🏥', desc: 'MOH compliance, infection control, fabric specifications for Saudi healthcare facilities.', category: 'Healthcare' },
+  { title: 'Nursing Uniform Guide', slug: '/resources/nursing-uniform-guide', icon: '👩‍⚕️', desc: 'Complete guide to nursing uniforms: fit, function, infection prevention, and department coding.', category: 'Healthcare' },
+  { title: 'Safety Standards Guide', slug: '/resources/safety-standards-guide', icon: '🛡️', desc: 'SASO, ISO, and international safety standards for workplace uniforms and PPE in Saudi Arabia.', category: 'Safety' },
+  { title: 'NFPA 70E Compliance Guide', slug: '/resources/nfpa70e-guide', icon: '⚡', desc: 'Arc flash protection, flame-resistant clothing requirements, and electrical safety PPE.', category: 'Safety' },
+  { title: 'Electrical Safety PPE Guide', slug: '/resources/electrical-safety-ppe-guide', icon: '🔌', desc: 'Complete guide to PPE for electrical workers: insulated gloves, face shields, FR clothing.', category: 'Safety' },
+  { title: 'Cleanroom Best Practices', slug: '/resources/cleanroom-best-practices', icon: '🧪', desc: 'ISO 14644 cleanroom garment standards, gowning procedures, and contamination control.', category: 'Specialized' },
+  { title: 'Security Equipment Standards', slug: '/resources/security-equipment-standards', icon: '🔒', desc: 'Standards for security uniforms, tactical gear, body armor certification, and duty equipment.', category: 'Security' },
+  { title: 'Professional Security Standards', slug: '/resources/professional-security-standards', icon: '🎖️', desc: 'Executive protection uniform standards and VIP security dress codes.', category: 'Security' },
+  { title: 'Tactical Equipment Standards', slug: '/resources/tactical-equipment-standards', icon: '⚔️', desc: 'NIJ standards for body armor, helmet ratings, and tactical gear certification.', category: 'Security' },
+  { title: 'Tactical Outerwear Standards', slug: '/resources/tactical-outerwear-standards', icon: '🧥', desc: 'Tactical jacket standards, weather protection ratings, and flame resistance requirements.', category: 'Security' },
+  { title: 'Lightweight Tactical Guide', slug: '/resources/lightweight-tactical-guide', icon: '🕶️', desc: 'Guide to covert and plainclothes security uniforms for corporate and event security.', category: 'Security' },
+  { title: 'Sustainability Guide', slug: '/resources/sustainability-guide', icon: '🌿', desc: 'Vision 2030 aligned sustainability guide: recycled fabrics, carbon-neutral production, ESG reporting.', category: 'Sustainability' },
+  { title: 'Weather Protection Guide', slug: '/resources/weather-protection-guide', icon: '🌡️', desc: 'Guide to climate-adaptive workwear for Saudi heat, rain, cold storage, and UV exposure.', category: 'Specialized' },
+];
+
+export default function GuidesPage() {
+  const categories = [...new Set(guides.map(g => g.category))];
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-900 text-white relative overflow-hidden py-16 md:py-24">
-        <div className="absolute inset-0 bg-[url('/images/patterns/grid.svg')] opacity-10"></div>
+      <SEO2026 title="Expert Guides & Resources" titleAr="أدلة وموارد الخبراء" description="Free expert guides on uniforms and safety standards." locale="en" pageType="article" mainEntity="Uniform & Safety Guides" primaryImage="/images/resources/guides-hero.jpg" primaryImageAlt="UNEOM Guides" breadcrumbs={[{ name: 'Resources', url: '/resources' }, { name: 'Guides', url: '/resources/guides' }]} certifications={[]} clientCount={500} yearsInBusiness={20} industry="Workwear" />
+      <section className="bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-800 text-white">
         <Container>
-          <div className="relative z-10 max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-              <span className="text-orange-400">★</span>
-              <span className="text-sm font-medium uppercase tracking-wider">Resources</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Guides
-            </h1>
-            
-            <p className="text-xl mb-10 text-gray-300 leading-relaxed max-w-2xl">
-              Discover premium Guides by UNEOM. We provide high-quality professional uniforms across Saudi Arabia with fast delivery.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                href="/quote"
-                variant="primary" 
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold border-0 shadow-lg shadow-orange-500/30"
-              >
-                Get a Free Quote →
-              </Button>
-            </div>
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Resources', href: '/resources' }, { label: 'Guides', href: '/resources/guides' }]} className="text-white/80 mb-6 pt-8" />
+          <div className="py-16 lg:py-24 max-w-4xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Expert <span className="bg-gradient-to-r from-indigo-300 to-purple-300 text-transparent bg-clip-text">Guides</span></h1>
+            <p className="text-xl text-indigo-100 leading-relaxed">Free expert resources on uniforms, safety standards, PPE regulations, and best practices for Saudi Arabia&apos;s industries.</p>
           </div>
         </Container>
       </section>
-
-      {/* Main Content Area */}
-      <main className="py-16 bg-gray-50">
+      <main className="py-16">
         <Container>
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Premium Solutions for Resources</h2>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              We are currently updating this section with our latest catalogs and products. Please contact our sales team for full details and custom pricing.
-            </p>
-            
-            <div className="flex justify-center gap-4">
-               <Link 
-                  href="/contact"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                >
-                  Contact Us
-                </Link>
-                <Link 
-                  href="/"
-                  className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium"
-                >
-                  Back to Home
-                </Link>
-            </div>
-          </div>
+          {categories.map(cat => (
+            <section key={cat} className="mb-16">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-indigo-600 pl-4">{cat}</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {guides.filter(g => g.category === cat).map((g, i) => (
+                  <Link key={i} href={g.slug} className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all border border-gray-100 p-6">
+                    <div className="text-3xl mb-3">{g.icon}</div>
+                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors mb-2">{g.title}</h3>
+                    <p className="text-gray-600 text-sm">{g.desc}</p>
+                    <span className="inline-block mt-4 text-indigo-600 font-medium text-sm group-hover:underline">Read Guide →</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ))}
+          <section className="text-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-12 mt-12">
+            <h2 className="text-3xl font-bold mb-6">Need Custom Guidance?</h2>
+            <p className="text-xl mb-8 text-indigo-100">Our uniform consultants can provide personalized recommendations for your organization.</p>
+            <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-white text-indigo-700 hover:bg-gray-100 font-bold rounded-xl transition-all shadow-lg">Contact Our Experts →</Link>
+          </section>
         </Container>
       </main>
     </>
