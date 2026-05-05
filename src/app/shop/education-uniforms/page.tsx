@@ -34,10 +34,10 @@ const educationFAQs = [
 ];
 
 const products = [
-  { id: 'primary-school', name: 'Primary School Uniform', description: 'Durable uniforms for primary students', price: 'From SAR 99', image: '/images/education/uniform_school_product-1.jpg', href: '/shop/education-uniforms/primary-school', features: ['Durable', 'Easy care', 'Comfortable'] },
-  { id: 'intermediate-school', name: 'Intermediate School Uniform', description: 'Smart uniforms for intermediate students', price: 'From SAR 119', image: '/images/education/uniform_school_product-2.jpg', href: '/shop/education-uniforms/intermediate-school', features: ['Smart design', 'Durable', 'Easy wash'] },
-  { id: 'secondary-school', name: 'Secondary School Uniform', description: 'Professional uniforms for secondary students', price: 'From SAR 139', image: '/images/education/uniform_school_product-4.jpg', href: '/shop/education-uniforms/secondary-school', features: ['Professional', 'Comfortable', 'Durable'] },
-  { id: 'pe-sports-wear', name: 'PE Sports Wear', description: 'Athletic wear for physical education', price: 'From SAR 79', image: '/images/education/uniform_school_product-5.jpg', href: '/shop/education-uniforms/pe-sports-wear', features: ['Breathable', 'Flexible', 'Quick-dry'] },
+  { id: 'primary-school', name: 'Primary School Uniform', description: 'Durable uniforms for primary students', price: 'From SAR 99', image: '/images/education/uniform_school_product-1.jpg', href: '/shop/education-uniforms/premium-school-uniform', features: ['Durable', 'Easy care', 'Comfortable'] },
+  { id: 'intermediate-school', name: 'Intermediate School Uniform', description: 'Smart uniforms for intermediate students', price: 'From SAR 119', image: '/images/education/uniform_school_product-2.jpg', href: '/shop/education-uniforms/premium-school-uniform', features: ['Smart design', 'Durable', 'Easy wash'] },
+  { id: 'secondary-school', name: 'Secondary School Uniform', description: 'Professional uniforms for secondary students', price: 'From SAR 139', image: '/images/education/uniform_school_product-4.jpg', href: '/shop/education-uniforms/premium-school-uniforms', features: ['Professional', 'Comfortable', 'Durable'] },
+  { id: 'pe-sports-wear', name: 'PE Sports Wear', description: 'Athletic wear for physical education', price: 'From SAR 79', image: '/images/education/uniform_school_product-5.jpg', href: '/shop/education-uniforms/student-athletic-wear', features: ['Breathable', 'Flexible', 'Quick-dry'] },
 ];
 
 export default function EducationUniformsPage() {

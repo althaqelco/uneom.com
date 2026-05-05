@@ -32,7 +32,7 @@ export default function IndustrialAttireClientPage() {
       description: 'أفرهولات مقاومة للهب للعاملين في بيئات صناعية عالية المخاطر، مصممة للحماية القصوى مع راحة طويلة الأمد.',
       price: 'من 599 ريال',
       image: '/images/products/industrial-coverall.jpg',
-      href: '/ar/shop/industrial-attire/high-visibility-jackets',
+      href: '/ar/shop/industrial-uniforms/hi-vis-safety-uniform',
       features: ['عاكسات 3M', 'مقاومة للماء', 'مضادة للرياح', 'جيوب متعددة للأدوات'],
       colors: ['أصفر ساطع', 'برتقالي ساطع', 'أصفر/أسود', 'برتقالي/أسود'],
       isNew: true
@@ -43,7 +43,7 @@ export default function IndustrialAttireClientPage() {
       description: 'بناطيل عمل متينة مصممة لتحمل ظروف العمل الصناعية القاسية، مع ميزات سلامة وجيوب عملية.',
       price: 'من 249 ريال',
       image: '/images/products/industrial-coverall.jpg',
-      href: '/ar/shop/industrial-attire/industrial-safety-sets',
+      href: '/ar/shop/industrial-uniforms/industrial-coverall',
       features: ['طقم متكامل', 'حماية شاملة', 'متين', 'مريح'],
       colors: ['أزرق/أسود', 'أخضر زيتي/أسود', 'رمادي/أسود', 'برتقالي/كحلي']
     },
@@ -53,7 +53,7 @@ export default function IndustrialAttireClientPage() {
       description: 'ملابس متخصصة للحماية من شرارات اللحام والحرارة والمخاطر المتعلقة بها، مصنوعة من مواد عالية المقاومة.',
       price: 'من 649 ريال',
       image: '/images/products/industrial-coverall.jpg',
-      href: '/ar/shop/industrial-attire/welding-protection-wear',
+      href: '/ar/shop/industrial-uniforms/flame-resistant-workwear',
       features: ['مقاوم للشرارات', 'عازل للحرارة', 'متين للغاية', 'تصميم مريح'],
       colors: ['أسود', 'رمادي داكن', 'بني داكن']
     }

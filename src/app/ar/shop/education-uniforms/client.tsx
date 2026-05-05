@@ -42,7 +42,7 @@ export default function EducationUniformsClientPage() {
       description: 'زي تخرج كامل يشمل القبعات والعباءات والإكسسوارات للمدارس والكليات والجامعات.',
       price: 'من 299 ريال',
       image: '/images/multi-generation-black-family-celebrating-graduation-SBI-305067350.jpg',
-      href: '/ar/shop/education-uniforms/graduation-attire',
+      href: '/ar/shop/education-uniforms/graduate-attire',
       features: ['تصميم تقليدي', 'نسيج فاخر', 'قابل للتخصيص', 'طقم كامل'],
       colors: ['أسود', 'أزرق', 'أحمر', 'أخضر']
     }

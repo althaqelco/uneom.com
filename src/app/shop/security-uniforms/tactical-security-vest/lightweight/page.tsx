@@ -92,7 +92,7 @@ const relatedProducts = [
   {
     name: 'Lightweight Accessories',
     image: '/images/products/security/lightweight-accessories-kit.jpg',
-    href: '/shop/security-accessories/lightweight-kit/',
+    href: '/shop/security-accessories',
     price: 'From SAR 120'
   }
 ]

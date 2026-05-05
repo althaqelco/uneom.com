@@ -32,7 +32,7 @@ export default function CorporatePage() {
       description: 'Premium tailored attire for corporate executives and management personnel, featuring sophisticated design and premium fabric.',
       price: 'From SAR 599',
       image: '/images/Corporate_Uniforms_Business.png',
-      href: '/shop/corporate/corporate-event-attire',
+      href: '/shop/corporate',
       features: ['Premium materials', 'Elegant design', 'Professional look', 'Custom sizing'],
       colors: ['Navy', 'Black', 'Burgundy', 'Custom colors available']
     }

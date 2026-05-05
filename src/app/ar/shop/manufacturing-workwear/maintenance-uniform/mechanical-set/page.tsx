@@ -89,7 +89,7 @@ const relatedProducts = [
   {
     name: 'أحذية سلامة صناعية',
     image: '/images/products/footwear/industrial-safety-boots.jpg',
-    href: '/ar/shop/safety-footwear/industrial-boots/',
+    href: '/ar/shop/industrial-uniforms/work-boots',
     price: 'ابتداءً من 180 ر.س'
   }
 ]

@@ -34,10 +34,10 @@ const corporateFAQs = [
 ];
 
 const products = [
-  { id: 'executive-suits', name: 'Executive Business Suits', description: 'Premium suits for executives and management', price: 'From SAR 799', image: '/images/products/corporate-suit-executive.jpg', href: '/shop/corporate-workwear/executive-suits', features: ['Premium wool', 'Tailored fit', 'Wrinkle-resistant'] },
-  { id: 'office-uniforms', name: 'Office Uniforms', description: 'Professional office attire for staff', price: 'From SAR 299', image: '/images/products/office-uniform.jpg', href: '/shop/corporate-workwear/office-uniforms', features: ['Comfortable', 'Durable', 'Easy care'] },
-  { id: 'corporate-polo', name: 'Corporate Polo Shirts', description: 'Smart casual polo shirts with logo', price: 'From SAR 149', image: '/images/products/corporate-polo.jpg', href: '/shop/corporate-workwear/corporate-polo', features: ['Breathable', 'Logo-ready', 'Multiple colors'] },
-  { id: 'dress-shirts', name: 'Corporate Dress Shirts', description: 'Professional dress shirts for business', price: 'From SAR 129', image: '/images/products/dress-shirt.jpg', href: '/shop/corporate-workwear/dress-shirts', features: ['Non-iron', 'Classic fit', 'Premium cotton'] },
+  { id: 'executive-suits', name: 'Executive Business Suits', description: 'Premium suits for executives and management', price: 'From SAR 799', image: '/images/products/corporate-suit-executive.jpg', href: '/shop/corporate-workwear/executive-suit', features: ['Premium wool', 'Tailored fit', 'Wrinkle-resistant'] },
+  { id: 'office-uniforms', name: 'Office Uniforms', description: 'Professional office attire for staff', price: 'From SAR 299', image: '/images/products/office-uniform.jpg', href: '/shop/corporate-workwear/reception-uniform', features: ['Comfortable', 'Durable', 'Easy care'] },
+  { id: 'corporate-polo', name: 'Corporate Polo Shirts', description: 'Smart casual polo shirts with logo', price: 'From SAR 149', image: '/images/products/corporate-polo.jpg', href: '/shop/corporate-workwear/corporate-shirt', features: ['Breathable', 'Logo-ready', 'Multiple colors'] },
+  { id: 'dress-shirts', name: 'Corporate Dress Shirts', description: 'Professional dress shirts for business', price: 'From SAR 129', image: '/images/products/dress-shirt.jpg', href: '/shop/corporate-workwear/corporate-shirt', features: ['Non-iron', 'Classic fit', 'Premium cotton'] },
 ];
 
 export default function CorporateWorkwearPage() {

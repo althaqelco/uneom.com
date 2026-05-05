@@ -42,7 +42,7 @@ export default function AviationUniformsClientPage() {
       description: 'زي رسمي وعملي مصمم لفرق أمن الطيران، يجمع بين المظهر السلطوي والراحة العملية.',
       price: 'من 399 ريال',
       image: '/images/african-american-security-staff-working-at-airport-SBI-338134198.jpg',
-      href: '/ar/shop/aviation-uniforms/aviation-security-uniform',
+      href: '/ar/shop/aviation-uniforms/airline-service-vest',
       features: ['تصميم أنيق', 'نسيج مريح', 'علامة تجارية موحدة', 'سهل العناية'],
       colors: ['كحلي', 'أسود', 'رمادي', 'أبيض']
     }

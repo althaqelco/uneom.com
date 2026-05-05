@@ -87,13 +87,13 @@ const relatedProducts = [
   {
     name: 'إكسسوارات التخرج',
     image: '/images/products/education/graduation-accessories-main.jpg',
-    href: '/ar/shop/education/graduation-accessories/',
+    href: '/ar/shop/education-uniforms/graduate-attire',
     price: 'ابتداءً من 80 ر.س'
   },
   {
     name: 'أزياء أكاديمية خاصة',
     image: '/images/products/education/special-academic-attire-main.jpg',
-    href: '/ar/shop/education/special-academic-attire/',
+    href: '/ar/shop/education-uniforms/university-attire',
     price: 'ابتداءً من 500 ر.س'
   }
 ]

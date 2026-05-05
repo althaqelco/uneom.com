@@ -35,9 +35,9 @@ const industrialFAQs = [
 
 const products = [
   { id: 'industrial-coverall', name: 'Industrial Coveralls', description: 'Durable coveralls for industrial work', price: 'From SAR 199', image: '/images/products/industrial-coverall-pro.webp', href: '/shop/industrial-uniforms/industrial-coverall', features: ['Durable', 'Multi-pocket', 'Breathable'] },
-  { id: 'fr-coverall', name: 'FR Flame-Resistant Coverall', description: 'Fire-resistant coveralls for oil & gas', price: 'From SAR 399', image: '/images/products/fr-coverall.jpg', href: '/shop/industrial-uniforms/fr-coverall', features: ['NFPA 2112', 'Arc rated', 'Lightweight'] },
-  { id: 'hi-vis-vest', name: 'Hi-Vis Safety Vest', description: 'High visibility safety vests', price: 'From SAR 79', image: '/images/products/hi-vis-vest.jpg', href: '/shop/industrial-uniforms/hi-vis-vest', features: ['Reflective', 'Breathable', 'Multiple pockets'] },
-  { id: 'safety-jacket', name: 'Industrial Safety Jacket', description: 'Protective jackets for industrial use', price: 'From SAR 249', image: '/images/products/safety-jacket.jpg', href: '/shop/industrial-uniforms/safety-jacket', features: ['Waterproof', 'Insulated', 'Hi-vis'] },
+  { id: 'fr-coverall', name: 'FR Flame-Resistant Coverall', description: 'Fire-resistant coveralls for oil & gas', price: 'From SAR 399', image: '/images/products/fr-coverall.jpg', href: '/shop/industrial-uniforms/flame-resistant-workwear', features: ['NFPA 2112', 'Arc rated', 'Lightweight'] },
+  { id: 'hi-vis-vest', name: 'Hi-Vis Safety Vest', description: 'High visibility safety vests', price: 'From SAR 79', image: '/images/products/hi-vis-vest.jpg', href: '/shop/industrial-uniforms/hi-vis-safety-uniform', features: ['Reflective', 'Breathable', 'Multiple pockets'] },
+  { id: 'safety-jacket', name: 'Industrial Safety Jacket', description: 'Protective jackets for industrial use', price: 'From SAR 249', image: '/images/products/safety-jacket.jpg', href: '/shop/industrial-uniforms/industrial-jacket', features: ['Waterproof', 'Insulated', 'Hi-vis'] },
 ];
 
 export default function IndustrialUniformsPage() {

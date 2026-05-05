@@ -34,10 +34,10 @@ const educationFAQsAr = [
 ];
 
 const products = [
-  { id: 'primary-school', name: 'الزي المدرسي الابتدائي', description: 'زي متين لطلاب المرحلة الابتدائية', price: 'من ٩٩ ريال', image: '/images/education/uniform_school_product-1.jpg', href: '/ar/shop/education-uniforms/primary-school', features: ['متين', 'سهل العناية', 'مريح'] },
-  { id: 'intermediate-school', name: 'الزي المدرسي المتوسط', description: 'زي أنيق لطلاب المرحلة المتوسطة', price: 'من ١١٩ ريال', image: '/images/education/uniform_school_product-2.jpg', href: '/ar/shop/education-uniforms/intermediate-school', features: ['تصميم أنيق', 'متين', 'سهل الغسيل'] },
-  { id: 'secondary-school', name: 'الزي المدرسي الثانوي', description: 'زي محترف لطلاب المرحلة الثانوية', price: 'من ١٣٩ ريال', image: '/images/education/uniform_school_product-4.jpg', href: '/ar/shop/education-uniforms/secondary-school', features: ['محترف', 'مريح', 'متين'] },
-  { id: 'pe-sports-wear', name: 'ملابس الرياضة البدنية', description: 'ملابس رياضية للتربية البدنية', price: 'من ٧٩ ريال', image: '/images/education/uniform_school_product-5.jpg', href: '/ar/shop/education-uniforms/pe-sports-wear', features: ['قابل للتنفس', 'مرن', 'سريع الجفاف'] },
+  { id: 'primary-school', name: 'الزي المدرسي الابتدائي', description: 'زي متين لطلاب المرحلة الابتدائية', price: 'من ٩٩ ريال', image: '/images/education/uniform_school_product-1.jpg', href: '/ar/shop/education-uniforms/premium-school-uniform', features: ['متين', 'سهل العناية', 'مريح'] },
+  { id: 'intermediate-school', name: 'الزي المدرسي المتوسط', description: 'زي أنيق لطلاب المرحلة المتوسطة', price: 'من ١١٩ ريال', image: '/images/education/uniform_school_product-2.jpg', href: '/ar/shop/education-uniforms/premium-school-uniform', features: ['تصميم أنيق', 'متين', 'سهل الغسيل'] },
+  { id: 'secondary-school', name: 'الزي المدرسي الثانوي', description: 'زي محترف لطلاب المرحلة الثانوية', price: 'من ١٣٩ ريال', image: '/images/education/uniform_school_product-4.jpg', href: '/ar/shop/education-uniforms/premium-school-uniforms', features: ['محترف', 'مريح', 'متين'] },
+  { id: 'pe-sports-wear', name: 'ملابس الرياضة البدنية', description: 'ملابس رياضية للتربية البدنية', price: 'من ٧٩ ريال', image: '/images/education/uniform_school_product-5.jpg', href: '/ar/shop/education-uniforms/student-athletic-wear', features: ['قابل للتنفس', 'مرن', 'سريع الجفاف'] },
 ];
 
 export default function EducationUniformsPageAr() {

@@ -17,7 +17,7 @@ const featuredSuits = [
     name: 'البدلة التنفيذية الفاخرة',
     image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/corporate-attire/executive-suits/premium-business/',
+    href: '/ar/shop/corporate/executive-suits/premium-business',
     category: 'فاخرة',
     isNew: true
   },
@@ -26,7 +26,7 @@ const featuredSuits = [
     name: 'البدلة التنفيذية الكلاسيكية',
     image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/corporate-attire/executive-suits/classic/',
+    href: '/ar/shop/corporate/executive-suits/classic',
     category: 'كلاسيكية',
     isFeatured: true
   },
@@ -35,7 +35,7 @@ const featuredSuits = [
     name: 'البدلة التنفيذية العصرية',
     image: '/images/businessman-checking-documents-and-using-laptop-w-2024-11-01-23-29-12-utc.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/corporate-attire/executive-suits/modern/',
+    href: '/ar/shop/corporate/executive-suits/modern',
     category: 'عصرية'
   }
 ];

@@ -102,7 +102,7 @@ const relatedProducts = [
   {
     name: 'تيشيرتات عالية الأداء',
     image: '/images/products/corporate/performance-tshirts.jpg', // Placeholder
-    href: '/ar/shop/corporate/performance-wear/', // Placeholder
+    href: '/ar/shop/corporate/casual-polo', // Placeholder
     price: 'من 60 ريال سعودي'
   }
 ]

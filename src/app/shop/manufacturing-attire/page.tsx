@@ -32,7 +32,7 @@ export default function ManufacturingAttirePage() {
       description: 'High-performance industrial safety uniform designed for manufacturing environments, featuring durable and flame-resistant materials.',
       price: 'From SAR 329',
       image: '/images/Factory_Workers_Manufacturing.png',
-      href: '/shop/manufacturing-attire/industrial-safety-uniform',
+      href: '/shop/manufacturing-attire/industrial-protective-uniforms',
       features: ['Flame-resistant', 'High-visibility', 'Durable fabric', 'Multiple pockets'],
       colors: ['Navy', 'Dark Grey', 'Orange/Navy', 'Yellow/Navy'],
       isBestseller: true
@@ -43,7 +43,7 @@ export default function ManufacturingAttirePage() {
       description: 'Full-body coverall designed for factory workers in manufacturing settings, offering protection and comfort during long shifts.',
       price: 'From SAR 259',
       image: '/images/diverse-workers-in-a-protective-workwear-SBI-300873394.jpg',
-      href: '/shop/manufacturing-attire/hi-vis-safety-jacket',
+      href: '/shop/manufacturing-attire/general-manufacturing-workwear',
       features: ['High-visibility', 'Reflective strips', 'Water-resistant', 'Durable design'],
       colors: ['Orange', 'Yellow', 'Orange/Navy', 'Yellow/Navy']
     },
@@ -53,7 +53,7 @@ export default function ManufacturingAttirePage() {
       description: 'Reinforced work pants with built-in knee pad pockets, designed for manufacturing professionals who need extra protection and durability.',
       price: 'From SAR 219',
       image: '/images/strong-female-industrial-worker-at-a-factory-examini-SBI-335602991.jpg',
-      href: '/shop/manufacturing-attire/manufacturing-supervisor-attire',
+      href: '/shop/manufacturing-attire/general-manufacturing-workwear',
       features: ['Professional look', 'Durable construction', 'Comfort design', 'Multiple pockets'],
       colors: ['Navy', 'Grey', 'Black', 'Khaki']
     }

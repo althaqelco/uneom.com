@@ -89,7 +89,7 @@ const relatedProducts = [
   {
     name: 'Industrial Safety Boots',
     image: '/images/products/footwear/industrial-safety-boots.jpg',
-    href: '/shop/safety-footwear/industrial-boots/',
+    href: '/shop/industrial-uniforms/work-boots',
     price: 'From SAR 180'
   }
 ]

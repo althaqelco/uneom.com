@@ -102,7 +102,7 @@ const relatedProducts = [
   {
     name: 'Performance T-Shirts',
     image: '/images/products/corporate/performance-tshirts.jpg', // Placeholder
-    href: '/shop/corporate/performance-wear/', // Placeholder
+    href: '/shop/corporate/casual-polo', // Placeholder
     price: 'From SAR 60'
   }
 ]

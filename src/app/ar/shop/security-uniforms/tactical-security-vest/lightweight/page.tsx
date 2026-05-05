@@ -92,7 +92,7 @@ const relatedProducts = [
   {
     name: 'إكسسوارات خفيفة الوزن',
     image: '/images/products/security/lightweight-accessories-kit.jpg',
-    href: '/ar/shop/security-accessories/lightweight-kit/',
+    href: '/ar/shop/security-accessories',
     price: 'ابتداءً من 120 ر.س'
   }
 ]

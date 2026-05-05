@@ -17,7 +17,7 @@ const featuredHospitalityUniforms = [
     name: 'زي الاستقبال الفاخر',
     image: '/images/hospitality/hospitality_uniform_concierge.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/hospitality-attire/luxury-hospitality/reception/',
+    href: '/ar/shop/hospitality-attire/reception-staff-uniform',
     category: 'استقبال',
     isNew: true
   },
@@ -26,7 +26,7 @@ const featuredHospitalityUniforms = [
     name: 'زي خدمة الضيوف المتميز',
     image: '/images/hospitality/hospitality_uniform_formal.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/hospitality-attire/luxury-hospitality/guest-service/',
+    href: '/ar/shop/hospitality-attire/concierge-uniform',
     category: 'خدمة ضيوف',
     isFeatured: true
   },
@@ -35,7 +35,7 @@ const featuredHospitalityUniforms = [
     name: 'زي المطاعم الراقية',
     image: '/images/hospitality/hospitality_uniform_department.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/hospitality-attire/luxury-hospitality/fine-dining/',
+    href: '/ar/shop/hospitality-attire/restaurant-staff-uniform',
     category: 'مطاعم راقية'
   }
 ];

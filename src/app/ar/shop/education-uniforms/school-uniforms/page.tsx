@@ -18,7 +18,7 @@ const featuredUniforms = [
     name: 'طقم الزي المدرسي الفاخر - بنين',
     image: '/images/education/uniform_school_product-1.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/education-uniforms/school-uniforms/premium-boys-set/',
+    href: '/ar/shop/education-uniforms/premium-school-uniform',
     category: 'زي البنين',
     isNew: true
   },
@@ -27,7 +27,7 @@ const featuredUniforms = [
     name: 'الزي المدرسي الكلاسيكي - بنات',
     image: '/images/education/uniform_school_product-2.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/education-uniforms/school-uniforms/classic-girls-set/',
+    href: '/ar/shop/education-uniforms/premium-school-uniforms',
     category: 'زي البنات',
     isFeatured: true
   },
@@ -36,7 +36,7 @@ const featuredUniforms = [
     name: 'طقم الزي الرياضي المدرسي',
     image: '/images/education/uniform_school_product-4.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/education-uniforms/school-uniforms/sports-set/',
+    href: '/ar/shop/education-uniforms/student-athletic-wear',
     category: 'الزي الرياضي'
   }
 ];

@@ -90,7 +90,7 @@ const relatedProducts = [
   {
     name: 'أرواب غرف أبحاث نظيفة للاستخدام مرة واحدة',
     image: '/images/products/industrial/disposable-clean-room-gowns.jpg', // صورة مؤقتة
-    href: '/ar/shop/disposable-workwear/clean-room-gowns/', // رابط مؤقت
+    href: '/ar/shop/manufacturing-workwear/production-line-uniform/clean-room', // رابط مؤقت
     price: 'اتصل للاستعلام عن السعر'
   }
 ]

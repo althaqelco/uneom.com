@@ -17,7 +17,7 @@ const featuredShirts = [
     name: 'القميص التجاري الكلاسيكي',
     image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/corporate-attire/business-shirts/classic-business/',
+    href: '/ar/shop/corporate/business-shirts/classic',
     category: 'كلاسيكي',
     isNew: true
   },
@@ -26,7 +26,7 @@ const featuredShirts = [
     name: 'قميص الأعمال المطور',
     image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/corporate-attire/business-shirts/premium/',
+    href: '/ar/shop/corporate/business-shirts/premium-dress',
     category: 'مطور',
     isFeatured: true
   },
@@ -35,7 +35,7 @@ const featuredShirts = [
     name: 'قميص الأعمال العصري',
     image: '/images/businessman-checking-documents-and-using-laptop-w-2024-11-01-23-29-12-utc.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/corporate-attire/business-shirts/modern/',
+    href: '/ar/shop/corporate/business-shirts/modern-fit',
     category: 'عصري'
   }
 ];

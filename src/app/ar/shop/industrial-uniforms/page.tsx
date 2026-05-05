@@ -34,9 +34,9 @@ const industrialFAQsAr = [
 
 const products = [
   { id: 'industrial-coverall', name: 'أفرول صناعي', description: 'أفرول متين للعمل الصناعي', price: 'من 199 ريال', image: '/images/products/supervisor-industrial-uniform.jpg', href: '/ar/shop/industrial-uniforms/industrial-coverall', features: ['متين', 'متعدد الجيوب', 'قابل للتنفس'] },
-  { id: 'fr-coverall', name: 'أفرول FR مقاوم للحريق', description: 'أفرول مقاوم للحريق للنفط والغاز', price: 'من 399 ريال', image: '/images/products/fr-coverall.jpg', href: '/ar/shop/industrial-uniforms/fr-coverall', features: ['NFPA 2112', 'مُقيَّم للقوس', 'خفيف الوزن'] },
-  { id: 'hi-vis-vest', name: 'سترة عاكسة', description: 'سترات سلامة عالية الرؤية', price: 'من 79 ريال', image: '/images/products/hi-vis-vest.jpg', href: '/ar/shop/industrial-uniforms/hi-vis-vest', features: ['عاكس', 'قابل للتنفس', 'جيوب متعددة'] },
-  { id: 'safety-jacket', name: 'جاكيت سلامة صناعي', description: 'جاكيت حماية للاستخدام الصناعي', price: 'من 249 ريال', image: '/images/products/safety-jacket.jpg', href: '/ar/shop/industrial-uniforms/safety-jacket', features: ['مقاوم للماء', 'معزول', 'عاكس'] },
+  { id: 'fr-coverall', name: 'أفرول FR مقاوم للحريق', description: 'أفرول مقاوم للحريق للنفط والغاز', price: 'من 399 ريال', image: '/images/products/fr-coverall.jpg', href: '/ar/shop/industrial-uniforms/flame-resistant-workwear', features: ['NFPA 2112', 'مُقيَّم للقوس', 'خفيف الوزن'] },
+  { id: 'hi-vis-vest', name: 'سترة عاكسة', description: 'سترات سلامة عالية الرؤية', price: 'من 79 ريال', image: '/images/products/hi-vis-vest.jpg', href: '/ar/shop/industrial-uniforms/hi-vis-safety-uniform', features: ['عاكس', 'قابل للتنفس', 'جيوب متعددة'] },
+  { id: 'safety-jacket', name: 'جاكيت سلامة صناعي', description: 'جاكيت حماية للاستخدام الصناعي', price: 'من 249 ريال', image: '/images/products/safety-jacket.jpg', href: '/ar/shop/industrial-uniforms/industrial-jacket', features: ['مقاوم للماء', 'معزول', 'عاكس'] },
 ];
 
 export default function IndustrialUniformsPageAr() {

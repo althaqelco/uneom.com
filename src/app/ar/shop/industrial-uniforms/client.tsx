@@ -23,14 +23,14 @@ export default function IndustrialUniformsClientPage() {
     {
       id: 'safety-vest',
       name: 'سترة السلامة عالية الوضوح',
-      href: '/ar/shop/industrial-uniforms/safety-vest',
+      href: '/ar/shop/industrial-uniforms/safety-vests',
       image: '/images/products/industrial-coverall.jpg',
       description: 'سترات سلامة بألوان عاكسة مصممة للاستخدام في بيئات العمل منخفضة الإضاءة، مع أشرطة عاكسة وميزات سلامة متطورة.'
     },
     {
       id: 'work-pants',
       name: 'بنطلون العمل الصناعي',
-      href: '/ar/shop/industrial-uniforms/work-pants',
+      href: '/ar/shop/industrial-uniforms/industrial-coverall',
       image: '/images/products/industrial-coverall.jpg',
       description: 'بناطيل عمل قوية مصنوعة من نسيج متين ومقاوم للتمزق، مع جيوب متعددة الاستخدامات لتخزين المعدات والأدوات.'
     },

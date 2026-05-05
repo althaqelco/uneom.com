@@ -89,7 +89,7 @@ export default function ExecutiveSuitPage() {
         name: 'Premium Corporate Shirt',
         image: '/images/products/corporate-shirts-blouses.jpg',
         price: 'From SAR 349',
-        href: '/shop/corporate-workwear/formal-trousers'
+        href: '/shop/corporate-workwear/office-trouser'
       }
     ]
   };

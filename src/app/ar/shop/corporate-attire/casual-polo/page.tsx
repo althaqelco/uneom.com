@@ -17,7 +17,7 @@ const featuredPolos = [
     name: 'بولو الأعمال الكلاسيكي',
     image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/corporate-attire/casual-polo/classic-business/',
+    href: '/ar/shop/corporate/casual-polo/classic-business',
     category: 'كلاسيكي',
     isNew: true
   },
@@ -26,7 +26,7 @@ const featuredPolos = [
     name: 'بولو الأعمال المطور',
     image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/corporate-attire/casual-polo/premium/',
+    href: '/ar/shop/corporate/casual-polo/premium-corporate',
     category: 'مطور',
     isFeatured: true
   },
@@ -35,7 +35,7 @@ const featuredPolos = [
     name: 'بولو الأعمال الرياضي',
     image: '/images/businessman-checking-documents-and-using-laptop-w-2024-11-01-23-29-12-utc.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/corporate-attire/casual-polo/sport/',
+    href: '/ar/shop/corporate/casual-polo/classic',
     category: 'رياضي'
   }
 ];

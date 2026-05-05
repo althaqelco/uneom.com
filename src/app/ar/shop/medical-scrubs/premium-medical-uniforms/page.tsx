@@ -17,7 +17,7 @@ const featuredMedicalUniforms = [
     name: 'الزي الطبي المتطور للأطباء',
     image: '/images/products/lab-coat.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/medical-scrubs/premium-medical-uniforms/doctor/',
+    href: '/ar/shop/medical-scrubs/medical-lab-coat',
     category: 'أطباء',
     isNew: true
   },
@@ -26,7 +26,7 @@ const featuredMedicalUniforms = [
     name: 'زي التمريض المريح',
     image: '/images/products/nursing-uniform.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/medical-scrubs/premium-medical-uniforms/nursing/',
+    href: '/ar/shop/medical-scrubs/nurse-uniform',
     category: 'تمريض',
     isFeatured: true
   },
@@ -35,7 +35,7 @@ const featuredMedicalUniforms = [
     name: 'الزي الجراحي المعقم',
     image: '/images/products/lab-coat.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/medical-scrubs/premium-medical-uniforms/surgical/',
+    href: '/ar/shop/medical-scrubs/premium-surgical-gowns',
     category: 'جراحة'
   }
 ];

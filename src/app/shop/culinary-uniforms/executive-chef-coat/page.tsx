@@ -80,7 +80,7 @@ export default function ExecutiveChefCoatPage() {
         name: 'Professional Chef Pants',
         image: '/images/hospitality/chef-coat-maintenance.jpg',
         price: 'From SAR 129',
-        href: '/shop/culinary-uniforms/chef-apron'
+        href: '/shop/culinary-uniforms'
       }
     ]
   };

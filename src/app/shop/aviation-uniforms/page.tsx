@@ -35,9 +35,9 @@ const aviationFAQs = [
 
 const products = [
   { id: 'pilot-uniform', name: 'Pilot Uniform Set', description: 'Complete pilot uniform with jacket, trousers, and epaulettes', price: 'From SAR 1,299', image: '/images/products/pilot-uniform.jpg', href: '/shop/aviation-uniforms/pilot-uniform', features: ['4-stripe captain', 'Flame-retardant', 'Premium wool blend'] },
-  { id: 'cabin-crew-female', name: 'Female Cabin Crew Uniform', description: 'Elegant cabin crew attire for female flight attendants', price: 'From SAR 899', image: '/images/products/cabin-crew-female.jpg', href: '/shop/aviation-uniforms/cabin-crew-female', features: ['Wrinkle-resistant', 'Elegant design', 'Comfortable fit'] },
-  { id: 'cabin-crew-male', name: 'Male Cabin Crew Uniform', description: 'Professional cabin crew attire for male flight attendants', price: 'From SAR 899', image: '/images/products/cabin-crew-male.jpg', href: '/shop/aviation-uniforms/cabin-crew-male', features: ['Professional look', 'Durable fabric', 'Easy care'] },
-  { id: 'ground-crew', name: 'Ground Crew Uniform', description: 'Durable uniforms for airport ground staff', price: 'From SAR 599', image: '/images/products/ground-crew.jpg', href: '/shop/aviation-uniforms/ground-crew', features: ['Hi-vis options', 'Weather-resistant', 'Reflective strips'] },
+  { id: 'cabin-crew-female', name: 'Female Cabin Crew Uniform', description: 'Elegant cabin crew attire for female flight attendants', price: 'From SAR 899', image: '/images/products/cabin-crew-female.jpg', href: '/shop/aviation-uniforms/flight-attendant-dress', features: ['Wrinkle-resistant', 'Elegant design', 'Comfortable fit'] },
+  { id: 'cabin-crew-male', name: 'Male Cabin Crew Uniform', description: 'Professional cabin crew attire for male flight attendants', price: 'From SAR 899', image: '/images/products/cabin-crew-male.jpg', href: '/shop/aviation-uniforms/airline-crew-uniform', features: ['Professional look', 'Durable fabric', 'Easy care'] },
+  { id: 'ground-crew', name: 'Ground Crew Uniform', description: 'Durable uniforms for airport ground staff', price: 'From SAR 599', image: '/images/products/ground-crew.jpg', href: '/shop/aviation-uniforms/ground-crew-uniform', features: ['Hi-vis options', 'Weather-resistant', 'Reflective strips'] },
 ];
 
 export default function AviationUniformsPage() {

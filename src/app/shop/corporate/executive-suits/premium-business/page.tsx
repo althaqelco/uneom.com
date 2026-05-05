@@ -93,7 +93,7 @@ const relatedProducts = [
   {
     name: 'Executive Accessories',
     image: '/images/products/corporate/executive-accessories-main.jpg',
-    href: '/shop/corporate/executive-accessories/',
+    href: '/shop/corporate',
     price: 'From SAR 150'
   }
 ]

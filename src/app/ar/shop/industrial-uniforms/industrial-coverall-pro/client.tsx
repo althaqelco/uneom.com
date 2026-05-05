@@ -122,7 +122,7 @@ const product = {
       name: "سترة عالية الوضوح",
       image: "/images/products/high-visibility-jacket.webp",
       price: "ريال 180",
-      href: "/ar/shop/industrial-uniforms/high-visibility-jacket"
+      href: "/ar/shop/industrial-uniforms/hi-vis-safety-uniform"
     }
   ],
   industries: ["صناعة النفط والغاز", "البناء والتشييد", "التصنيع", "الصيانة الصناعية", "المستودعات والخدمات اللوجستية"]

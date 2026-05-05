@@ -42,7 +42,7 @@ export default function SecurityUniformsClientPage() {
       description: 'زي أمني أنيق مصمم للشركات والمؤسسات، يوفر مظهرًا احترافيًا مع الحفاظ على الوظائف الأمنية.',
       price: 'من 379 ريال',
       image: '/images/security-guard-standing-in-front-of-entrance-SBI-301173096.jpg',
-      href: '/ar/shop/security-uniforms/security-outerwear',
+      href: '/ar/shop/security-uniforms/security-winter-jacket',
       features: ['مقاوم للماء', 'عازل للحرارة', 'متين', 'مظهر احترافي'],
       colors: ['أسود', 'كحلي', 'رمادي داكن']
     }

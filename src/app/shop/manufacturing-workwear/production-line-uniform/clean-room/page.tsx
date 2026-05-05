@@ -90,7 +90,7 @@ const relatedProducts = [
   {
     name: 'Disposable Clean Room Gowns',
     image: '/images/products/industrial/disposable-clean-room-gowns.jpg', // Placeholder image
-    href: '/shop/disposable-workwear/clean-room-gowns/', // Placeholder link
+    href: '/shop/manufacturing-workwear/production-line-uniform/clean-room', // Placeholder link
     price: 'Contact for Pricing'
   }
 ]

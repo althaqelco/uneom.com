@@ -87,13 +87,13 @@ const relatedProducts = [
   {
     name: 'Graduation Accessories',
     image: '/images/products/education/graduation-accessories-main.jpg',
-    href: '/shop/education/graduation-accessories/',
+    href: '/shop/education-uniforms/graduate-attire',
     price: 'From SAR 80'
   },
   {
     name: 'Special Academic Attire',
     image: '/images/products/education/special-academic-attire-main.jpg',
-    href: '/shop/education/special-academic-attire/',
+    href: '/shop/education-uniforms/university-attire',
     price: 'From SAR 500'
   }
 ]

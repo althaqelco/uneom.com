@@ -33,10 +33,10 @@ const corporateFAQsAr = [
 ];
 
 const products = [
-  { id: 'executive-suits', name: 'بدلات تنفيذية', description: 'بدلات فاخرة للمدراء والإدارة', price: 'من 799 ريال', image: '/images/products/corporate-suit-executive.jpg', href: '/ar/shop/corporate-workwear/executive-suits', features: ['صوف فاخر', 'مقاس مفصل', 'مقاوم للتجاعيد'] },
-  { id: 'office-uniforms', name: 'زي المكاتب', description: 'ملابس مكتب احترافية للموظفين', price: 'من 299 ريال', image: '/images/products/office-uniform.jpg', href: '/ar/shop/corporate-workwear/office-uniforms', features: ['مريح', 'متين', 'سهل العناية'] },
-  { id: 'corporate-polo', name: 'بولو الشركات', description: 'بولو ذكية كاجوال مع الشعار', price: 'من 149 ريال', image: '/images/products/corporate-polo.jpg', href: '/ar/shop/corporate-workwear/corporate-polo', features: ['قابل للتنفس', 'جاهز للشعار', 'ألوان متعددة'] },
-  { id: 'dress-shirts', name: 'قمصان رسمية', description: 'قمصان رسمية احترافية للأعمال', price: 'من 129 ريال', image: '/images/products/dress-shirt.jpg', href: '/ar/shop/corporate-workwear/dress-shirts', features: ['بدون كي', 'مقاس كلاسيكي', 'قطن فاخر'] },
+  { id: 'executive-suits', name: 'بدلات تنفيذية', description: 'بدلات فاخرة للمدراء والإدارة', price: 'من 799 ريال', image: '/images/products/corporate-suit-executive.jpg', href: '/ar/shop/corporate-workwear/executive-suit', features: ['صوف فاخر', 'مقاس مفصل', 'مقاوم للتجاعيد'] },
+  { id: 'office-uniforms', name: 'زي المكاتب', description: 'ملابس مكتب احترافية للموظفين', price: 'من 299 ريال', image: '/images/products/office-uniform.jpg', href: '/ar/shop/corporate-workwear/reception-uniform', features: ['مريح', 'متين', 'سهل العناية'] },
+  { id: 'corporate-polo', name: 'بولو الشركات', description: 'بولو ذكية كاجوال مع الشعار', price: 'من 149 ريال', image: '/images/products/corporate-polo.jpg', href: '/ar/shop/corporate-workwear/corporate-shirt', features: ['قابل للتنفس', 'جاهز للشعار', 'ألوان متعددة'] },
+  { id: 'dress-shirts', name: 'قمصان رسمية', description: 'قمصان رسمية احترافية للأعمال', price: 'من 129 ريال', image: '/images/products/dress-shirt.jpg', href: '/ar/shop/corporate-workwear/corporate-shirt', features: ['بدون كي', 'مقاس كلاسيكي', 'قطن فاخر'] },
 ];
 
 export default function CorporateWorkwearPageAr() {

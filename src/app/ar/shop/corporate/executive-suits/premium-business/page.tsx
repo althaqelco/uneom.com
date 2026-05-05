@@ -93,7 +93,7 @@ const relatedProducts = [
   {
     name: 'إكسسوارات تنفيذية',
     image: '/images/products/corporate/executive-accessories-main.jpg',
-    href: '/ar/shop/corporate/executive-accessories/',
+    href: '/ar/shop/corporate',
     price: 'ابتداءً من 150 ر.س'
   }
 ]

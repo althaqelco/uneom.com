@@ -54,9 +54,9 @@ const products = [
   { name: 'Premium Medical Scrubs', icon: '🩺', desc: 'Antimicrobial, moisture-wicking scrubs in 12 colors. 4-way stretch for comfort during long shifts.', price: 'From SAR 189', href: '/shop/medical-scrubs/premium-medical-scrubs' },
   { name: 'Professional Lab Coats', icon: '🥼', desc: 'Stain-resistant lab coats for doctors and consultants. Multiple pocket configurations.', price: 'From SAR 179', href: '/shop/medical-scrubs/professional-lab-coat' },
   { name: 'Nursing Uniforms', icon: '👩‍⚕️', desc: 'Elegant nursing uniforms designed for Saudi healthcare. Comfortable fit, professional look.', price: 'From SAR 169', href: '/shop/medical-scrubs/nursing-scrubs' },
-  { name: 'Surgical Gowns', icon: '🏥', desc: 'Fluid-resistant surgical gowns for operating rooms. Sterile packaging available.', price: 'From SAR 149', href: '/shop/medical-scrubs/surgical-gowns' },
-  { name: 'Medical Hijab', icon: '🧕', desc: 'Quick-dry antimicrobial hijab for healthcare workers. No pins needed, secure fit.', price: 'From SAR 79', href: '/shop/medical-scrubs/medical-hijab' },
-  { name: 'Doctor Coats', icon: '👨‍⚕️', desc: 'Premium consultant coats for physicians. Executive style with custom embroidery.', price: 'From SAR 249', href: '/shop/medical-scrubs/doctor-coats' },
+  { name: 'Surgical Gowns', icon: '🏥', desc: 'Fluid-resistant surgical gowns for operating rooms. Sterile packaging available.', price: 'From SAR 149', href: '/shop/medical-scrubs/premium-surgical-gowns' },
+  { name: 'Medical Hijab', icon: '🧕', desc: 'Quick-dry antimicrobial hijab for healthcare workers. No pins needed, secure fit.', price: 'From SAR 79', href: '/shop/medical-scrubs' },
+  { name: 'Doctor Coats', icon: '👨‍⚕️', desc: 'Premium consultant coats for physicians. Executive style with custom embroidery.', price: 'From SAR 249', href: '/shop/medical-scrubs/medical-lab-coats' },
 ];
 
 const benefits = [

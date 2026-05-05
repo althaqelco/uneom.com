@@ -36,11 +36,11 @@ const medicalFAQsAr = [
 
 const products = [
   { id: 'premium-medical-scrubs', name: 'سكراب طبي فاخر', nameAr: 'سكراب طبي فاخر', description: 'سكراب مضاد للميكروبات عالي الأداء', price: 'من ١٦٩ ريال', originalPrice: '٢٤٩ ريال', image: '/images/healthcare/scrubs-collections.jpg', href: '/ar/shop/medical-scrubs/premium-medical-scrubs', features: ['مضاد للميكروبات', 'مقاوم للبقع', 'ماص للرطوبة'], isBestseller: true, rating: 4.9 },
-  { id: 'nursing-uniform-set', name: 'طقم زي التمريض', nameAr: 'طقم زي تمريض', description: 'زي تمريض مريح للمناوبات الطويلة', price: 'من ١٤٩ ريال', image: '/images/healthcare/nurse-uniform.jpg', href: '/ar/shop/medical-scrubs/nursing-uniform-set', features: ['قابل للتنفس', 'قماش مرن', 'جيوب متعددة'], rating: 4.8 },
+  { id: 'nursing-uniform-set', name: 'طقم زي التمريض', nameAr: 'طقم زي تمريض', description: 'زي تمريض مريح للمناوبات الطويلة', price: 'من ١٤٩ ريال', image: '/images/healthcare/nurse-uniform.jpg', href: '/ar/shop/medical-scrubs/nurse-uniform', features: ['قابل للتنفس', 'قماش مرن', 'جيوب متعددة'], rating: 4.8 },
   { id: 'surgical-scrubs', name: 'سكراب الجراحة', nameAr: 'سكراب جراحي', description: 'سكراب جراحي جاهز للتعقيم', price: 'من ١٩٩ ريال', image: '/images/healthcare/dept-surgeons.jpg', href: '/ar/shop/medical-scrubs/surgical-scrubs', features: ['جاهز للتعقيم', 'مقاوم للسوائل', 'مضاد للميكروبات'], isNew: true, rating: 4.9 },
   { id: 'lab-coats', name: 'معاطف المختبر الطبية', nameAr: 'معاطف مختبر طبية', description: 'معاطف مختبر احترافية للأطباء', price: 'من ١٢٩ ريال', image: '/images/products/lab-coat.jpg', href: '/ar/shop/medical-scrubs/lab-coats', features: ['مظهر احترافي', 'مقاوم للبقع', 'أطوال متعددة'], rating: 4.7 },
-  { id: 'doctor-coat', name: 'معطف الطبيب الأبيض', nameAr: 'معطف طبيب أبيض', description: 'معاطف بيضاء كلاسيكية للأطباء', price: 'من ١٧٩ ريال', image: '/images/healthcare/healthcare_medical_doctor.jpg', href: '/ar/shop/medical-scrubs/doctor-coat', features: ['قماش فاخر', 'مقاوم للتجاعيد', 'جاهز للتطريز'], rating: 4.8 },
-  { id: 'maternity-scrubs', name: 'سكراب حوامل', description: 'سكراب مريح للأمهات الحوامل', price: 'من 189 ريال', image: '/images/products/maternity-scrubs.jpg', href: '/ar/shop/medical-scrubs/maternity-scrubs', features: ['قابل للتوسع', 'لوحة دعم', 'مريح'] },
+  { id: 'doctor-coat', name: 'معطف الطبيب الأبيض', nameAr: 'معطف طبيب أبيض', description: 'معاطف بيضاء كلاسيكية للأطباء', price: 'من ١٧٩ ريال', image: '/images/healthcare/healthcare_medical_doctor.jpg', href: '/ar/shop/medical-scrubs/medical-lab-coat', features: ['قماش فاخر', 'مقاوم للتجاعيد', 'جاهز للتطريز'], rating: 4.8 },
+  { id: 'maternity-scrubs', name: 'سكراب حوامل', description: 'سكراب مريح للأمهات الحوامل', price: 'من 189 ريال', image: '/images/products/maternity-scrubs.jpg', href: '/ar/shop/medical-scrubs', features: ['قابل للتوسع', 'لوحة دعم', 'مريح'] },
 ];
 
 export default function MedicalScrubsPageAr() {

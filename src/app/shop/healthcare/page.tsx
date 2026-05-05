@@ -32,7 +32,7 @@ export default function HealthcarePage() {
       description: 'Premium medical scrubs designed for healthcare professionals, featuring antimicrobial fabric and superior comfort.',
       price: 'From SAR 249',
       image: '/images/Healthcare_Uniforms.png',
-      href: '/shop/healthcare/dental-uniform',
+      href: '/shop/healthcare',
       features: ['Antimicrobial', 'Stain-resistant', 'Comfort fit', 'Professional look'],
       colors: ['White', 'Light Blue', 'Navy', 'Black']
     }

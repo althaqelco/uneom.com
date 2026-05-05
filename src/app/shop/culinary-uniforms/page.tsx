@@ -32,7 +32,7 @@ export default function CulinaryUniformsPage() {
       description: 'Professional chef coat made with premium fabric, designed for comfort and style in the kitchen environment.',
       price: 'From SAR 189',
       image: '/images/hospitality/chef-uniform-professional.jpg',
-      href: '/shop/culinary-uniforms/culinary-student-uniform',
+      href: '/shop/culinary-uniforms/executive-chef-coat',
       features: ['Cost-effective', 'Durable', 'Easy-care', 'Complete set'],
       colors: ['White']
     }

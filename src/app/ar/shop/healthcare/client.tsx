@@ -34,7 +34,7 @@ export default function HealthcareClientPage() {
       description: 'سكرب طبي ممتاز مصمم للعاملين في مجال الرعاية الصحية، يتميز بنسيج مضاد للميكروبات وراحة فائقة.',
       price: 'من 249 ريال',
       image: '/images/Healthcare_Uniforms.png', // Main product image
-      href: '/ar/shop/medical-scrubs/advanced-medical-scrubs', // Main product link
+      href: '/ar/shop/medical-scrubs/advanced-medical-uniform', // Main product link
       imageGallery: [
         '/images/doctor-SBI-300813580.jpg',
         '/images/studio-portrait-of-smiling-mature-doctor-or-nurse-wearing-scrubs-against-green-screen-SBI-351289040.jpg',

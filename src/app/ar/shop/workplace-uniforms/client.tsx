@@ -40,7 +40,7 @@ export default function WorkplaceUniformsClientPage() {
       rating: 4.7,
       reviews: 124,
       description: 'قمصان مؤسسية عالية الجودة بمجموعة متنوعة من الألوان، تتميز بقماش يمتص الرطوبة وخصائص سهلة العناية للارتداء المهني اليومي.',
-      href: '/ar/shop/workplace-uniforms/corporate-shirts'
+      href: '/ar/shop/workplace-uniforms/executive-suits'
     },
     {
       id: 'business-blazers',
@@ -50,7 +50,7 @@ export default function WorkplaceUniformsClientPage() {
       rating: 4.6,
       reviews: 58,
       description: 'سترات أنيقة ومريحة للمهنيين في مجال الأعمال، متوفرة بأنماط متنوعة مناسبة للبيئات المؤسسية السعودية.',
-      href: '/ar/shop/workplace-uniforms/business-blazers'
+      href: '/ar/shop/workplace-uniforms/executive-suits'
     },
     {
       id: 'professional-abayas',
@@ -60,7 +60,7 @@ export default function WorkplaceUniformsClientPage() {
       rating: 4.8,
       reviews: 92,
       description: 'عباءات مهنية مصممة خصيصًا للبيئات المؤسسية، تجمع بين الحشمة التقليدية وجماليات الأعمال المعاصرة.',
-      href: '/ar/shop/workplace-uniforms/professional-abayas'
+      href: '/ar/shop/workplace-uniforms'
     },
     {
       id: 'formal-pants',
@@ -70,7 +70,7 @@ export default function WorkplaceUniformsClientPage() {
       rating: 4.5,
       reviews: 77,
       description: 'بناطيل رسمية متينة مع قماش مرن مريح، مصممة لأيام طويلة في بيئة المكتب.',
-      href: '/ar/shop/workplace-uniforms/formal-pants'
+      href: '/ar/shop/workplace-uniforms/executive-suits'
     },
     {
       id: 'corporate-skirts',
@@ -80,7 +80,7 @@ export default function WorkplaceUniformsClientPage() {
       rating: 4.6,
       reviews: 64,
       description: 'تنانير بطول مهني مصممة للبيئات المؤسسية، تحافظ على الحشمة مع توفير مظهر أنيق للأعمال.',
-      href: '/ar/shop/workplace-uniforms/corporate-skirts'
+      href: '/ar/shop/workplace-uniforms'
     }
   ];
 

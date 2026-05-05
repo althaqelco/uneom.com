@@ -17,7 +17,7 @@ const featuredKits = [
     name: 'Complete Security Accessories Kit',
     image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
     price: 'Request Quote',
-    href: '/shop/security-uniforms/security-accessories-kit/complete/',
+    href: '/shop/security-accessories/professional-kit',
     category: 'Complete Kit',
     isNew: true
   },
@@ -26,7 +26,7 @@ const featuredKits = [
     name: 'Basic Security Accessories',
     image: '/images/business-professionals-having-meeting-in-conference-room-2025-01-02-22-59-16-utc.jpg',
     price: 'Request Quote',
-    href: '/shop/security-uniforms/security-accessories-kit/basic/',
+    href: '/shop/security-accessories/professional-kit',
     category: 'Basic Kit',
     isFeatured: true
   },
@@ -35,7 +35,7 @@ const featuredKits = [
     name: 'Premium Security Kit',
     image: '/images/woman-in-business-casual-attire-smiling-SBI-300979979.jpg',
     price: 'Request Quote',
-    href: '/shop/security-uniforms/security-accessories-kit/premium/',
+    href: '/shop/security-accessories/tactical-kit',
     category: 'Premium Kit'
   }
 ];

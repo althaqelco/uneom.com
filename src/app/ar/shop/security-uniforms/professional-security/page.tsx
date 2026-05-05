@@ -17,7 +17,7 @@ const featuredSecurityUniforms = [
     name: 'زي الأمن التنفيذي',
     image: '/images/portrait-of-an-arab-business-man-in-modern-office-SBI-300991172.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/security-uniforms/professional-security/executive/',
+    href: '/ar/shop/security-uniforms/executive-protection',
     category: 'تنفيذي',
     isNew: true
   },
@@ -26,7 +26,7 @@ const featuredSecurityUniforms = [
     name: 'زي الأمن التكتيكي',
     image: '/images/selective-focus-of-a-male-worker-in-protective-uniform-working-on-milling-machine-as-SBI-300940118.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/security-uniforms/professional-security/tactical/',
+    href: '/ar/shop/security-uniforms/tactical-security-uniforms',
     category: 'تكتيكي',
     isFeatured: true
   },
@@ -35,7 +35,7 @@ const featuredSecurityUniforms = [
     name: 'زي أمن المرافق',
     image: '/images/businessman-checking-documents-and-using-laptop-w-2024-11-01-23-29-12-utc.jpg',
     price: 'اطلب عرض سعر',
-    href: '/ar/shop/security-uniforms/professional-security/facility/',
+    href: '/ar/shop/security-uniforms/security-officer-uniform',
     category: 'مرافق'
   }
 ];

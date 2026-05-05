@@ -96,7 +96,7 @@ export default function LuxuryHotelUniformArabicPage() {
         name: 'زي عمال النظافة الفندقية',
         image: '/images/hospitality/hospitality_uniform_formal.jpg',
         price: 'من ريال 249',
-        href: '/ar/shop/hospitality-attire/hotel-housekeeping-uniform'
+        href: '/ar/shop/hospitality-attire/housekeeping-uniform'
       }
     ]
   };
