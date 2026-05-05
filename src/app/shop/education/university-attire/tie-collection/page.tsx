@@ -3,73 +3,63 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-export const metadata: Metadata = {
-  title: 'Tie Collection | Professional Shop - UNEOM Uniforms',
-  description: 'Discover premium Tie Collection by UNEOM. We provide high-quality professional uniforms across Saudi Arabia with fast delivery.',
-};
+export const metadata: Metadata = generateMetadata2026({
+  title: 'Custom University Ties Saudi Arabia | Academic Neckwear - UNEOM',
+  titleAr: 'ربطات عنق جامعية في السعودية | ربطات أكاديمية - يونيوم',
+  description: 'Custom university ties featuring college crests and colors in Saudi Arabia. Premium silk and microfiber ties for students, alumni, and faculty.',
+  descriptionAr: 'ربطات عنق جامعية مخصصة بشعارات وألوان الكليات في السعودية. حرير وميكروفايبر فاخر للطلاب والخريجين.',
+  keywords: ['university ties saudi', 'custom college neckties ksa', 'academic tie collection riyadh', 'custom crest ties saudi'],
+  keywordsAr: ['ربطات عنق جامعية', 'ربطات كليات', 'ربطات تخرج سعودية'],
+  locale: 'en', pageType: 'product', path: '/shop/education/university-attire/tie-collection',
+  image: '/images/education/students.jpg', imageAlt: 'University Tie Collection',
+  aiSummary: 'UNEOM custom university ties: premium silk and microfiber neckties featuring woven college crests and brand colors. Perfect for faculty, graduating students, and alumni associations.',
+});
 
-export default function GeneratedPage() {
+export const dynamic = 'force-static';
+
+const products = [
+  { name: 'Woven Crest Silk Tie', price: 'SAR 120', desc: '100% pure silk. The university crest is woven directly into the fabric for a luxurious, traditional academic look.' },
+  { name: 'Striped College Tie', price: 'SAR 95', desc: 'Classic diagonal stripes using exact university Pantone colors. Available in silk or premium microfiber.' },
+  { name: 'Printed Logo Microfiber Tie', price: 'SAR 65', desc: 'Durable microfiber with custom printed logo. Highly stain-resistant, perfect for daily student wear.' },
+  { name: 'Graduation Bow Tie', price: 'SAR 55', desc: 'Formal bow ties in university colors. Popular for graduation ceremonies and academic banquets.' },
+  { name: 'Alumni Gift Tie Box', price: 'SAR 150', desc: 'Premium silk tie presented in a custom-branded gift box. Perfect for alumni association merchandise.' },
+];
+
+const faqs = [
+  { question: 'What is the difference between woven and printed crests?', answer: 'Woven crests are created using dyed threads woven into the fabric itself, creating a textured, premium, traditional look (highly recommended for faculty and alumni). Printed crests are dyed onto the surface, which allows for extremely fine details and lower costs for large student volumes.' },
+  { question: 'What is the minimum order quantity for custom university ties?', answer: 'The minimum order quantity for custom woven ties is 50 pieces. For custom printed ties, the MOQ is 100 pieces. We can mix different colorways within the order (e.g., 50 blue, 50 red) as long as the woven pattern remains the same.' },
+  { question: 'How long does custom tie production take?', answer: 'Production for custom academic ties typically takes 3 to 4 weeks after design approval. We recommend placing orders well in advance of graduation season or the start of the academic year.' },
+];
+
+export default function UniversityTiesPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-900 text-white relative overflow-hidden py-16 md:py-24">
-        <div className="absolute inset-0 bg-[url('/images/patterns/grid.svg')] opacity-10"></div>
+      <SEO2026 title="University Tie Collection" titleAr="مجموعة ربطات عنق جامعية" description="Custom university ties and academic neckwear." locale="en" pageType="product" mainEntity="University Tie Collection" primaryImage="/images/education/students.jpg" primaryImageAlt="University Tie Collection" faqs={faqs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Education', url: '/shop/education' }, { name: 'Tie Collection', url: '/shop/education/university-attire/tie-collection' }]} certifications={[]} clientCount={40} yearsInBusiness={20} industry="Education" />
+      <section className="bg-gradient-to-br from-slate-900 via-gray-800 to-indigo-900 text-white">
         <Container>
-          <div className="relative z-10 max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-              <span className="text-orange-400">★</span>
-              <span className="text-sm font-medium uppercase tracking-wider">Shop</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Tie Collection
-            </h1>
-            
-            <p className="text-xl mb-10 text-gray-300 leading-relaxed max-w-2xl">
-              Discover premium Tie Collection by UNEOM. We provide high-quality professional uniforms across Saudi Arabia with fast delivery.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                href="/quote"
-                variant="primary" 
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold border-0 shadow-lg shadow-orange-500/30"
-              >
-                Get a Free Quote →
-              </Button>
-            </div>
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Shop', href: '/shop' }, { label: 'Education', href: '/shop/education' }, { label: 'Ties', href: '/shop/education/university-attire/tie-collection' }]} className="text-white/80 mb-6 pt-8" />
+          <div className="py-16 lg:py-24 max-w-4xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">University Tie <span className="bg-gradient-to-r from-gray-300 to-indigo-300 text-transparent bg-clip-text">Collection</span></h1>
+            <p className="text-xl text-gray-300 leading-relaxed">Custom silk and microfiber ties featuring your university crest and colors.</p>
           </div>
         </Container>
       </section>
-
-      {/* Main Content Area */}
-      <main className="py-16 bg-gray-50">
+      <main className="py-16">
         <Container>
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Premium Solutions for Shop</h2>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              We are currently updating this section with our latest catalogs and products. Please contact our sales team for full details and custom pricing.
-            </p>
-            
-            <div className="flex justify-center gap-4">
-               <Link 
-                  href="/contact"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                >
-                  Contact Us
-                </Link>
-                <Link 
-                  href="/"
-                  className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium"
-                >
-                  Back to Home
-                </Link>
-            </div>
+          <SectionHeading subtitle="Academic Neckwear" centered>Custom Ties</SectionHeading>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            {products.map((p, i) => (<div key={i} className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-all"><div className="flex justify-between items-start mb-3"><h3 className="text-lg font-bold text-gray-900">{p.name}</h3><span className="text-indigo-600 font-bold">{p.price}</span></div><p className="text-gray-600 text-sm">{p.desc}</p><Link href="/quote?product=university-ties" className="inline-block mt-4 text-indigo-600 font-medium text-sm hover:underline">Request Quote →</Link></div>))}
           </div>
+          <section className="mt-20 mb-16" itemScope itemType="https://schema.org/FAQPage">
+            <SectionHeading subtitle="Common Questions" centered>University Ties FAQ</SectionHeading>
+            <div className="max-w-4xl mx-auto mt-12 space-y-4">
+              {faqs.map((faq, i) => (<div key={i} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question"><h3 className="text-lg font-bold text-gray-900 mb-3" itemProp="name">{faq.question}</h3><div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"><p className="text-gray-600 leading-relaxed" itemProp="text">{faq.answer}</p></div></div>))}
+            </div>
+          </section>
         </Container>
       </main>
     </>

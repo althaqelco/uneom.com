@@ -3,73 +3,63 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-export const metadata: Metadata = {
-  title: 'Dress Shirt | Professional Shop - UNEOM Uniforms',
-  description: 'Discover premium Dress Shirt by UNEOM. We provide high-quality professional uniforms across Saudi Arabia with fast delivery.',
-};
+export const metadata: Metadata = generateMetadata2026({
+  title: 'University Dress Shirts Saudi Arabia | Academic Formal Wear - UNEOM',
+  titleAr: 'قمصان رسمية للجامعات في السعودية | ملابس أكاديمية - يونيوم',
+  description: 'Premium dress shirts for university students and staff in Saudi Arabia. Oxford cotton, wrinkle-resistant fabrics, custom university logo embroidery.',
+  descriptionAr: 'قمصان رسمية فاخرة لطلاب وموظفي الجامعات في السعودية. قطن أكسفورد، أقمشة مقاومة للتجعد، وتطريز شعار الجامعة.',
+  keywords: ['university dress shirts saudi', 'college uniform shirts ksa', 'academic dress shirts riyadh', 'oxford shirts university'],
+  keywordsAr: ['قمصان جامعية', 'قمصان رسمية للطلاب', 'زي جامعي سعودي'],
+  locale: 'en', pageType: 'product', path: '/shop/education/university-attire/dress-shirt',
+  image: '/images/education/students.jpg', imageAlt: 'University Dress Shirts',
+  aiSummary: 'UNEOM university dress shirts: Oxford cotton and wrinkle-resistant options for Saudi college students and staff. Available in white, light blue, and custom colors with embroidered university crests.',
+});
 
-export default function GeneratedPage() {
+export const dynamic = 'force-static';
+
+const products = [
+  { name: 'Oxford Cotton Shirt', price: 'SAR 95', desc: 'Classic Oxford weave cotton. Durable, breathable, and perfect for daily campus wear. Button-down collar.' },
+  { name: 'Easy-Care Poplin Shirt', price: 'SAR 85', desc: 'Wrinkle-resistant poly-cotton blend. Requires minimal ironing, ideal for busy students.' },
+  { name: 'Premium Faculty Shirt', price: 'SAR 145', desc: '100% Egyptian cotton. Executive style with spread collar and French cuffs for professors.' },
+  { name: 'Short Sleeve Summer Shirt', price: 'SAR 80', desc: 'Lightweight breathable fabric designed specifically for the Saudi summer climate.' },
+  { name: 'Women’s Tailored Blouse', price: 'SAR 90', desc: 'Modest, tailored fit with opaque fabrics. Perfect for female university students and staff.' },
+];
+
+const faqs = [
+  { question: 'Do you offer custom embroidery for university crests?', answer: 'Yes. We provide high-precision embroidery for university crests and department logos. Embroidery can be placed on the left chest, pocket, or collar. We ensure brand guidelines are strictly followed.' },
+  { question: 'What is the most durable fabric for student daily wear?', answer: 'For daily student wear, we highly recommend our Poly-Cotton Poplin (65% polyester / 35% cotton). It offers the breathability of cotton but is highly durable, resists wrinkles, and withstands frequent washing.' },
+  { question: 'Do you provide sizing samples?', answer: 'Yes, for university contracts (100+ students), we provide a full sizing matrix set. We organize fitting days on campus to ensure every student and staff member gets the perfect fit before mass production begins.' },
+];
+
+export default function UniversityDressShirtsPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-900 text-white relative overflow-hidden py-16 md:py-24">
-        <div className="absolute inset-0 bg-[url('/images/patterns/grid.svg')] opacity-10"></div>
+      <SEO2026 title="University Dress Shirts" titleAr="قمصان رسمية للجامعات" description="Premium dress shirts for university students and staff." locale="en" pageType="product" mainEntity="University Dress Shirts" primaryImage="/images/education/students.jpg" primaryImageAlt="University Dress Shirts" faqs={faqs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Education', url: '/shop/education' }, { name: 'Dress Shirts', url: '/shop/education/university-attire/dress-shirt' }]} certifications={[]} clientCount={80} yearsInBusiness={20} industry="Education" />
+      <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-800 text-white">
         <Container>
-          <div className="relative z-10 max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-              <span className="text-orange-400">★</span>
-              <span className="text-sm font-medium uppercase tracking-wider">Shop</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Dress Shirt
-            </h1>
-            
-            <p className="text-xl mb-10 text-gray-300 leading-relaxed max-w-2xl">
-              Discover premium Dress Shirt by UNEOM. We provide high-quality professional uniforms across Saudi Arabia with fast delivery.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                href="/quote"
-                variant="primary" 
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold border-0 shadow-lg shadow-orange-500/30"
-              >
-                Get a Free Quote →
-              </Button>
-            </div>
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Shop', href: '/shop' }, { label: 'Education', href: '/shop/education' }, { label: 'Dress Shirts', href: '/shop/education/university-attire/dress-shirt' }]} className="text-white/80 mb-6 pt-8" />
+          <div className="py-16 lg:py-24 max-w-4xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">University Dress <span className="bg-gradient-to-r from-indigo-300 to-purple-300 text-transparent bg-clip-text">Shirts</span></h1>
+            <p className="text-xl text-indigo-100 leading-relaxed">Classic Oxford and wrinkle-resistant dress shirts for Saudi students and academic staff.</p>
           </div>
         </Container>
       </section>
-
-      {/* Main Content Area */}
-      <main className="py-16 bg-gray-50">
+      <main className="py-16">
         <Container>
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Premium Solutions for Shop</h2>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              We are currently updating this section with our latest catalogs and products. Please contact our sales team for full details and custom pricing.
-            </p>
-            
-            <div className="flex justify-center gap-4">
-               <Link 
-                  href="/contact"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                >
-                  Contact Us
-                </Link>
-                <Link 
-                  href="/"
-                  className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium"
-                >
-                  Back to Home
-                </Link>
-            </div>
+          <SectionHeading subtitle="Academic Formal Wear" centered>Shirt Collection</SectionHeading>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            {products.map((p, i) => (<div key={i} className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-all"><div className="flex justify-between items-start mb-3"><h3 className="text-lg font-bold text-gray-900">{p.name}</h3><span className="text-indigo-600 font-bold">{p.price}</span></div><p className="text-gray-600 text-sm">{p.desc}</p><Link href="/quote?product=university-shirts" className="inline-block mt-4 text-indigo-600 font-medium text-sm hover:underline">Request Quote →</Link></div>))}
           </div>
+          <section className="mt-20 mb-16" itemScope itemType="https://schema.org/FAQPage">
+            <SectionHeading subtitle="Common Questions" centered>Dress Shirts FAQ</SectionHeading>
+            <div className="max-w-4xl mx-auto mt-12 space-y-4">
+              {faqs.map((faq, i) => (<div key={i} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question"><h3 className="text-lg font-bold text-gray-900 mb-3" itemProp="name">{faq.question}</h3><div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"><p className="text-gray-600 leading-relaxed" itemProp="text">{faq.answer}</p></div></div>))}
+            </div>
+          </section>
         </Container>
       </main>
     </>

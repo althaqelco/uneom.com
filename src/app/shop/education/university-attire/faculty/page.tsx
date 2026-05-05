@@ -3,73 +3,64 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
-import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-export const metadata: Metadata = {
-  title: 'Faculty | Professional Shop - UNEOM Uniforms',
-  description: 'Discover premium Faculty by UNEOM. We provide high-quality professional uniforms across Saudi Arabia with fast delivery.',
-};
+export const metadata: Metadata = generateMetadata2026({
+  title: 'University Faculty Uniforms Saudi Arabia | Professors Attire - UNEOM',
+  titleAr: 'أزياء هيئة التدريس الجامعية في السعودية | أزياء الأساتذة - يونيوم',
+  description: 'Premium attire for university faculty and professors in Saudi Arabia. Tailored blazers, worsted wool trousers, modest skirts, and formal academic wear.',
+  descriptionAr: 'أزياء فاخرة لأعضاء هيئة التدريس والأساتذة بالجامعات السعودية. بليزرات مفصلة، بناطيل صوف، وملابس أكاديمية رسمية.',
+  keywords: ['university faculty uniforms saudi', 'professors attire ksa', 'academic staff clothing riyadh', 'tailored blazers university'],
+  keywordsAr: ['أزياء هيئة التدريس', 'أزياء أساتذة الجامعات', 'بليزرات أكاديمية سعودية'],
+  locale: 'en', pageType: 'product', path: '/shop/education/university-attire/faculty',
+  image: '/images/education/students.jpg', imageAlt: 'University Faculty Uniforms',
+  aiSummary: 'UNEOM university faculty uniforms: tailored blazers, worsted wool trousers, modest skirts, and custom academic wear for professors in Saudi universities.',
+});
 
-export default function GeneratedPage() {
+export const dynamic = 'force-static';
+
+const products = [
+  { name: 'Professor Tailored Blazer', price: 'SAR 350', desc: 'Premium wool-blend tailored blazer. Classic fit with university crest embroidered on the chest pocket.' },
+  { name: 'Worsted Wool Trousers', price: 'SAR 180', desc: 'Durable, wrinkle-resistant worsted wool trousers. Professional look for daily lectures.' },
+  { name: 'Modest Faculty Skirt', price: 'SAR 160', desc: 'A-line modest maxi skirt in premium suiting fabric. Designed for female professors.' },
+  { name: 'Academic Two-Piece Suit', price: 'SAR 480', desc: 'Matching blazer and trousers/skirt set. Perfect for symposiums and formal university events.' },
+  { name: 'Executive Dress Shirt', price: 'SAR 145', desc: '100% Egyptian cotton dress shirt. High breathability for long teaching hours.' },
+  { name: 'Custom Graduation Regalia', price: 'Contact Us', desc: 'Bespoke doctoral and masters gowns, tailored to university-specific colors and velvet trims.' },
+];
+
+const faqs = [
+  { question: 'Do you offer made-to-measure services for faculty?', answer: 'Yes. For university faculty and senior management, we offer full made-to-measure services. Our tailors will visit your campus to take exact measurements for each professor to ensure a flawless, professional fit.' },
+  { question: 'What fabrics do you recommend for university blazers?', answer: 'We recommend a premium Wool-Polyester blend (e.g., 50/50 or 70/30). It provides the luxurious drape and breathability of wool, combined with the wrinkle resistance and durability of polyester, perfect for long days on campus.' },
+  { question: 'Can you replicate our exact university crest?', answer: 'Absolutely. We use high-density digitized embroidery to replicate intricate university crests perfectly on blazer pockets, ties, and shirts. We submit a physical embroidery sample for your approval before mass production.' },
+];
+
+export default function UniversityFacultyPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-900 text-white relative overflow-hidden py-16 md:py-24">
-        <div className="absolute inset-0 bg-[url('/images/patterns/grid.svg')] opacity-10"></div>
+      <SEO2026 title="University Faculty Uniforms" titleAr="أزياء هيئة التدريس الجامعية" description="Premium attire for university faculty." locale="en" pageType="product" mainEntity="University Faculty Uniforms" primaryImage="/images/education/students.jpg" primaryImageAlt="University Faculty Uniforms" faqs={faqs} breadcrumbs={[{ name: 'Shop', url: '/shop' }, { name: 'Education', url: '/shop/education' }, { name: 'Faculty', url: '/shop/education/university-attire/faculty' }]} certifications={[]} clientCount={60} yearsInBusiness={20} industry="Education" />
+      <section className="bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 text-white">
         <Container>
-          <div className="relative z-10 max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-              <span className="text-orange-400">★</span>
-              <span className="text-sm font-medium uppercase tracking-wider">Shop</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Faculty
-            </h1>
-            
-            <p className="text-xl mb-10 text-gray-300 leading-relaxed max-w-2xl">
-              Discover premium Faculty by UNEOM. We provide high-quality professional uniforms across Saudi Arabia with fast delivery.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                href="/quote"
-                variant="primary" 
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold border-0 shadow-lg shadow-orange-500/30"
-              >
-                Get a Free Quote →
-              </Button>
-            </div>
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Shop', href: '/shop' }, { label: 'Education', href: '/shop/education' }, { label: 'Faculty', href: '/shop/education/university-attire/faculty' }]} className="text-white/80 mb-6 pt-8" />
+          <div className="py-16 lg:py-24 max-w-4xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">University Faculty <span className="bg-gradient-to-r from-purple-300 to-indigo-300 text-transparent bg-clip-text">Attire</span></h1>
+            <p className="text-xl text-indigo-100 leading-relaxed">Premium blazers, trousers, and academic wear for professors in Saudi universities.</p>
           </div>
         </Container>
       </section>
-
-      {/* Main Content Area */}
-      <main className="py-16 bg-gray-50">
+      <main className="py-16">
         <Container>
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Premium Solutions for Shop</h2>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              We are currently updating this section with our latest catalogs and products. Please contact our sales team for full details and custom pricing.
-            </p>
-            
-            <div className="flex justify-center gap-4">
-               <Link 
-                  href="/contact"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                >
-                  Contact Us
-                </Link>
-                <Link 
-                  href="/"
-                  className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium"
-                >
-                  Back to Home
-                </Link>
-            </div>
+          <SectionHeading subtitle="Professional Academic Wear" centered>Faculty Collection</SectionHeading>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            {products.map((p, i) => (<div key={i} className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-all"><div className="flex justify-between items-start mb-3"><h3 className="text-lg font-bold text-gray-900">{p.name}</h3><span className="text-purple-600 font-bold">{p.price}</span></div><p className="text-gray-600 text-sm">{p.desc}</p><Link href="/quote?product=faculty-attire" className="inline-block mt-4 text-purple-600 font-medium text-sm hover:underline">Request Quote →</Link></div>))}
           </div>
+          <section className="mt-20 mb-16" itemScope itemType="https://schema.org/FAQPage">
+            <SectionHeading subtitle="Common Questions" centered>Faculty Attire FAQ</SectionHeading>
+            <div className="max-w-4xl mx-auto mt-12 space-y-4">
+              {faqs.map((faq, i) => (<div key={i} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 p-6" itemScope itemProp="mainEntity" itemType="https://schema.org/Question"><h3 className="text-lg font-bold text-gray-900 mb-3" itemProp="name">{faq.question}</h3><div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"><p className="text-gray-600 leading-relaxed" itemProp="text">{faq.answer}</p></div></div>))}
+            </div>
+          </section>
         </Container>
       </main>
     </>
