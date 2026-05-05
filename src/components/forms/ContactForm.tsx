@@ -92,6 +92,23 @@ Submitted: ${now.toLocaleString()}
       // Open WhatsApp in a new window/tab
       window.open(whatsappUrl, '_blank');
       
+      // GA4 / Meta / TikTok Conversion Tracking (generate_lead)
+      try {
+        if (typeof window !== 'undefined' && (window as any).dataLayer) {
+          (window as any).dataLayer.push({
+            event: 'generate_lead',
+            lead_type: 'contact_form',
+            company: formData.company,
+            subject: formData.subject,
+            currency: 'SAR',
+            value: 200 // Estimated baseline LTV for general contact inquiry
+          });
+          console.log('Fired generate_lead conversion event for Contact Form');
+        }
+      } catch (trackingError) {
+        console.error('Tracking error:', trackingError);
+      }
+      
       // MODIFIED APPROACH: Backup to localStorage and attempt simpler API call
       try {
         // First, backup the form data to localStorage

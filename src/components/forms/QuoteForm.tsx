@@ -276,6 +276,23 @@ Submitted: ${now.toLocaleString()}
       // Open WhatsApp in a new window/tab
       window.open(whatsappUrl, '_blank');
 
+      // GA4 / Meta / TikTok Conversion Tracking (generate_lead)
+      try {
+        if (typeof window !== 'undefined' && (window as any).dataLayer) {
+          (window as any).dataLayer.push({
+            event: 'generate_lead',
+            lead_type: 'quote_request',
+            industry: values.industry,
+            company_size: values.employeeCount,
+            currency: 'SAR',
+            value: 500 // Estimated baseline LTV for B2B uniform lead
+          });
+          console.log('Fired generate_lead conversion event');
+        }
+      } catch (trackingError) {
+        console.error('Tracking error:', trackingError);
+      }
+
       try {
         // First, backup the form data to localStorage
         try {
