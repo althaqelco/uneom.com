@@ -9,7 +9,7 @@ import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SEO2026 from '@/components/seo/SEO2026';
 import { SAUDI_CITIES, getCityBySlug, getClimateDescription, getFabricRecommendation } from '@/lib/data/saudi-cities';
-import { INDUSTRIES, getIndustryBySlug } from '@/lib/data/industries';
+import { industries, getIndustryBySlug } from '@/lib/data/industries';
 import AiBaitStats from '@/components/seo/AiBaitStats';
 import { CognitiveEstimator } from '@/components/behavior/CognitiveEstimator';
 
@@ -24,8 +24,8 @@ export const revalidate = 86400;
 export async function generateStaticParams() {
   const params: { city: string; industry: string }[] = [];
   for (const city of SAUDI_CITIES) {
-    for (const ind of INDUSTRIES) {
-      params.push({ city: city.slug, industry: ind.slug });
+    for (const ind of industries) {
+      params.push({ city: city.slug, industry: ind.id });
     }
   }
   return params;
@@ -40,7 +40,7 @@ export async function generateMetadata({
   params: { city: string; industry: string };
 }): Promise<Metadata> {
   const city = getCityBySlug(params.city);
-  const industry = getIndustryBySlug(params.industry);
+  const industry = industries.find(i => i.id === params.industry);
   if (!city || !industry) return {};
 
   const title = `${industry.nameEn} Uniforms in ${city.nameEn} | UNEOM Saudi Arabia`;
@@ -50,16 +50,16 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `https://uneom.com/locations/${city.slug}/${industry.slug}`,
+      canonical: `https://uneom.com/locations/${city.slug}/${industry.id}`,
       languages: {
-        'ar-SA': `https://uneom.com/ar/locations/${city.slug}/${industry.slug}`,
-        'en': `https://uneom.com/locations/${city.slug}/${industry.slug}`,
+        'ar-SA': `https://uneom.com/ar/locations/${city.slug}/${industry.id}`,
+        'en': `https://uneom.com/locations/${city.slug}/${industry.id}`,
       },
     },
     openGraph: {
       title,
       description,
-      url: `https://uneom.com/locations/${city.slug}/${industry.slug}`,
+      url: `https://uneom.com/locations/${city.slug}/${industry.id}`,
       siteName: 'UNEOM',
       locale: 'en',
       type: 'website',
@@ -76,17 +76,17 @@ export default function CityIndustryPage({
   params: { city: string; industry: string };
 }) {
   const city = getCityBySlug(params.city);
-  const industry = getIndustryBySlug(params.industry);
+  const industry = industries.find(i => i.id === params.industry);
   if (!city || !industry) notFound();
 
   // Other industries in this city for internal linking
-  const otherIndustries = INDUSTRIES.filter(
-    (ind) => ind.slug !== industry.slug && city.dominantIndustries.includes(ind.slug)
+  const otherIndustries = industries.filter(
+    (ind) => ind.id !== industry.id && city.dominantIndustries.includes(ind.id)
   ).slice(0, 4);
 
   // Other cities for this industry for internal linking
   const otherCities = SAUDI_CITIES.filter(
-    (c) => c.slug !== city.slug && c.dominantIndustries.includes(industry.slug)
+    (c) => c.slug !== city.slug && c.dominantIndustries.includes(industry.id)
   ).slice(0, 6);
 
   return (
@@ -106,7 +106,7 @@ export default function CityIndustryPage({
         breadcrumbs={[
           { name: 'Locations', nameAr: 'المواقع', url: '/locations' },
           { name: city.nameEn, nameAr: city.nameAr, url: `/locations/${city.slug}` },
-          { name: industry.nameEn, nameAr: industry.nameAr, url: `/locations/${city.slug}/${industry.slug}` },
+          { name: industry.nameEn, nameAr: industry.nameAr, url: `/locations/${city.slug}/${industry.id}` },
         ]}
         location={{
           name: `UNEOM ${city.nameEn} — ${industry.nameEn}`,
@@ -175,7 +175,7 @@ export default function CityIndustryPage({
               { label: 'Home', href: '/' },
               { label: 'Locations', href: '/locations' },
               { label: city.nameEn, href: `/locations/${city.slug}` },
-              { label: industry.nameEn, href: `/locations/${city.slug}/${industry.slug}` },
+              { label: industry.nameEn, href: `/locations/${city.slug}/${industry.id}` },
             ]}
             className="text-white/80 mb-6 relative z-10 pt-8"
           />
@@ -207,7 +207,7 @@ export default function CityIndustryPage({
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
-                  href={`/quote?city=${city.slug}&industry=${industry.slug}`}
+                  href={`/quote?city=${city.slug}&industry=${industry.id}`}
                   variant="secondary"
                   size="lg"
                   className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold border-0"
@@ -215,7 +215,7 @@ export default function CityIndustryPage({
                   Get {industry.nameEn} Quote — {city.nameEn} →
                 </Button>
                 <Button
-                  href={`/industries/${industry.slug}`}
+                  href={`/industries/${industry.id}`}
                   variant="outline"
                   size="lg"
                   className="border-white text-white hover:bg-white hover:text-gray-900"
@@ -251,7 +251,7 @@ export default function CityIndustryPage({
             cityEn={city.nameEn}
             industryAr={industry.nameAr}
             industryEn={industry.nameEn}
-            industrySlug={industry.slug}
+            industrySlug={industry.id}
           />
 
           {/* Interactive Cost Calculator */}
@@ -323,8 +323,8 @@ export default function CityIndustryPage({
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                 {otherIndustries.map((ind) => (
                   <Link
-                    key={ind.slug}
-                    href={`/locations/${city.slug}/${ind.slug}`}
+                    key={ind.id}
+                    href={`/locations/${city.slug}/${ind.id}`}
                     className="bg-white rounded-xl border border-gray-100 p-4 text-center hover:shadow-md transition-shadow"
                   >
                     <span className="text-2xl block mb-2">{ind.icon}</span>
@@ -345,7 +345,7 @@ export default function CityIndustryPage({
                 {otherCities.map((c) => (
                   <Link
                     key={c.slug}
-                    href={`/locations/${c.slug}/${industry.slug}`}
+                    href={`/locations/${c.slug}/${industry.id}`}
                     className="bg-white px-5 py-2.5 rounded-full border border-gray-200 text-sm font-medium text-gray-700 shadow-sm hover:shadow-md hover:text-blue-600 transition-all"
                   >
                     📍 {c.nameEn}
@@ -367,7 +367,7 @@ export default function CityIndustryPage({
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href={`/quote?city=${city.slug}&industry=${industry.slug}`}
+                  href={`/quote?city=${city.slug}&industry=${industry.id}`}
                   className="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl transition-all shadow-lg"
                 >
                   Get Free {industry.nameEn} Quote →
@@ -389,7 +389,7 @@ export default function CityIndustryPage({
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-600 mb-3 text-sm">This page is also available in Arabic</p>
           <Link
-            href={`/ar/locations/${city.slug}/${industry.slug}`}
+            href={`/ar/locations/${city.slug}/${industry.id}`}
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm"
           >
             🇸🇦 العربية

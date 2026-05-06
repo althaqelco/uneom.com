@@ -9,7 +9,7 @@ import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SEO2026 from '@/components/seo/SEO2026';
 import { SAUDI_CITIES, getCityBySlug, getClimateDescription, getFabricRecommendation } from '@/lib/data/saudi-cities';
-import { INDUSTRIES, getIndustryBySlug } from '@/lib/data/industries';
+import { industries, getIndustryBySlug } from '@/lib/data/industries';
 import AiBaitStats from '@/components/seo/AiBaitStats';
 import { CognitiveEstimator } from '@/components/behavior/CognitiveEstimator';
 
@@ -18,8 +18,8 @@ export const revalidate = 86400;
 export async function generateStaticParams() {
   const params: { city: string; industry: string }[] = [];
   for (const city of SAUDI_CITIES) {
-    for (const ind of INDUSTRIES) {
-      params.push({ city: city.slug, industry: ind.slug });
+    for (const ind of industries) {
+      params.push({ city: city.slug, industry: ind.id });
     }
   }
   return params;
@@ -27,25 +27,25 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { city: string; industry: string } }): Promise<Metadata> {
   const city = getCityBySlug(params.city);
-  const industry = getIndustryBySlug(params.industry);
+  const industry = industries.find(i => i.id === params.industry);
   if (!city || !industry) return {};
   return {
     title: `أزياء ${industry.nameAr} في ${city.nameAr} | يونيوم السعودية`,
     description: `اشتري أزياء ${industry.nameAr} في ${city.nameAr}. ${industry.descriptionAr}. ${getFabricRecommendation(city.climate, 'ar')}. توصيل سريع!`,
     alternates: {
-      canonical: `https://uneom.com/ar/locations/${city.slug}/${industry.slug}`,
-      languages: { 'en': `https://uneom.com/locations/${city.slug}/${industry.slug}`, 'ar-SA': `https://uneom.com/ar/locations/${city.slug}/${industry.slug}` },
+      canonical: `https://uneom.com/ar/locations/${city.slug}/${industry.id}`,
+      languages: { 'en': `https://uneom.com/locations/${city.slug}/${industry.id}`, 'ar-SA': `https://uneom.com/ar/locations/${city.slug}/${industry.id}` },
     },
   };
 }
 
 export default function ArCityIndustryPage({ params }: { params: { city: string; industry: string } }) {
   const city = getCityBySlug(params.city);
-  const industry = getIndustryBySlug(params.industry);
+  const industry = industries.find(i => i.id === params.industry);
   if (!city || !industry) notFound();
 
-  const otherIndustries = INDUSTRIES.filter(ind => ind.slug !== industry.slug && city.dominantIndustries.includes(ind.slug)).slice(0, 4);
-  const otherCities = SAUDI_CITIES.filter(c => c.slug !== city.slug && c.dominantIndustries.includes(industry.slug)).slice(0, 6);
+  const otherIndustries = industries.filter(ind => ind.id !== industry.id && city.dominantIndustries.includes(ind.id)).slice(0, 4);
+  const otherCities = SAUDI_CITIES.filter(c => c.slug !== city.slug && c.dominantIndustries.includes(industry.id)).slice(0, 6);
 
   return (
     <div dir="rtl" lang="ar">
@@ -63,7 +63,7 @@ export default function ArCityIndustryPage({ params }: { params: { city: string;
         breadcrumbs={[
           { name: 'Locations', nameAr: 'المواقع', url: '/ar/locations' },
           { name: city.nameEn, nameAr: city.nameAr, url: `/ar/locations/${city.slug}` },
-          { name: industry.nameEn, nameAr: industry.nameAr, url: `/ar/locations/${city.slug}/${industry.slug}` },
+          { name: industry.nameEn, nameAr: industry.nameAr, url: `/ar/locations/${city.slug}/${industry.id}` },
         ]}
         location={{
           name: `يونيوم ${city.nameAr} — ${industry.nameAr}`,
@@ -94,7 +94,7 @@ export default function ArCityIndustryPage({ params }: { params: { city: string;
               { label: 'الرئيسية', href: '/ar' },
               { label: 'المواقع', href: '/ar/locations' },
               { label: city.nameAr, href: `/ar/locations/${city.slug}` },
-              { label: industry.nameAr, href: `/ar/locations/${city.slug}/${industry.slug}` },
+              { label: industry.nameAr, href: `/ar/locations/${city.slug}/${industry.id}` },
             ]}
             className="text-white/80 mb-6 relative z-10 pt-8"
           />
@@ -117,10 +117,10 @@ export default function ArCityIndustryPage({ params }: { params: { city: string;
                 <span className="bg-white/10 px-4 py-2 rounded-lg text-sm font-medium">🏆 ISO 9001</span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button href={`/ar/quote?city=${city.slug}&industry=${industry.slug}`} variant="secondary" size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold border-0">
+                <Button href={`/ar/quote?city=${city.slug}&industry=${industry.id}`} variant="secondary" size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold border-0">
                   عرض سعر {industry.nameAr} — {city.nameAr} ←
                 </Button>
-                <Button href={`/ar/industries/${industry.slug}`} variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-gray-900">
+                <Button href={`/ar/industries/${industry.id}`} variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-gray-900">
                   تفاصيل {industry.nameAr}
                 </Button>
               </div>
@@ -137,7 +137,7 @@ export default function ArCityIndustryPage({ params }: { params: { city: string;
       {/* Content */}
       <main className="py-16">
         <Container>
-          <AiBaitStats cityAr={city.nameAr} cityEn={city.nameEn} industryAr={industry.nameAr} industryEn={industry.nameEn} industrySlug={industry.slug} />
+          <AiBaitStats cityAr={city.nameAr} cityEn={city.nameEn} industryAr={industry.nameAr} industryEn={industry.nameEn} industrySlug={industry.id} />
 
           <CognitiveEstimator industryAr={industry.nameAr} industryEn={industry.nameEn} cityAr={city.nameAr} />
 
@@ -179,7 +179,7 @@ export default function ArCityIndustryPage({ params }: { params: { city: string;
               <SectionHeading subtitle={`المزيد من حلول الأزياء في ${city.nameAr}`} centered>قطاعات أخرى في {city.nameAr}</SectionHeading>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                 {otherIndustries.map((ind) => (
-                  <Link key={ind.slug} href={`/ar/locations/${city.slug}/${ind.slug}`} className="bg-white rounded-xl border border-gray-100 p-4 text-center hover:shadow-md transition-shadow">
+                  <Link key={ind.id} href={`/ar/locations/${city.slug}/${ind.id}`} className="bg-white rounded-xl border border-gray-100 p-4 text-center hover:shadow-md transition-shadow">
                     <span className="text-2xl block mb-2">{ind.icon}</span>
                     <span className="text-sm font-bold text-gray-800">{ind.nameAr}</span>
                   </Link>
@@ -193,7 +193,7 @@ export default function ArCityIndustryPage({ params }: { params: { city: string;
               <SectionHeading subtitle={`${industry.nameAr} في مدن سعودية أخرى`} centered>{industry.nameAr} في مدن أخرى</SectionHeading>
               <div className="flex flex-wrap justify-center gap-3 mt-8">
                 {otherCities.map((c) => (
-                  <Link key={c.slug} href={`/ar/locations/${c.slug}/${industry.slug}`} className="bg-white px-5 py-2.5 rounded-full border border-gray-200 text-sm font-medium text-gray-700 shadow-sm hover:shadow-md hover:text-blue-600 transition-all">
+                  <Link key={c.slug} href={`/ar/locations/${c.slug}/${industry.id}`} className="bg-white px-5 py-2.5 rounded-full border border-gray-200 text-sm font-medium text-gray-700 shadow-sm hover:shadow-md hover:text-blue-600 transition-all">
                     📍 {c.nameAr}
                   </Link>
                 ))}
@@ -206,7 +206,7 @@ export default function ArCityIndustryPage({ params }: { params: { city: string;
             <h2 className="text-3xl md:text-4xl font-bold mb-6">تحتاج أزياء {industry.nameAr} في {city.nameAr}؟</h2>
             <p className="text-xl mb-8 text-white/90 max-w-3xl mx-auto">احصل على عرض سعر مخصص لمنشأتك في {city.nameAr}. استشارة مجانية وأسعار تنافسية.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={`/ar/quote?city=${city.slug}&industry=${industry.slug}`} className="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl transition-all shadow-lg">
+              <Link href={`/ar/quote?city=${city.slug}&industry=${industry.id}`} className="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl transition-all shadow-lg">
                 احصل على عرض سعر مجاني ←
               </Link>
               <Link href="/ar/contact" className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold rounded-xl transition-all">
@@ -220,7 +220,7 @@ export default function ArCityIndustryPage({ params }: { params: { city: string;
       <section className="py-6 bg-gray-100 border-t">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-600 mb-3 text-sm">This page is also available in English</p>
-          <Link href={`/locations/${city.slug}/${industry.slug}`} className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg text-sm">
+          <Link href={`/locations/${city.slug}/${industry.id}`} className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg text-sm">
             🇬🇧 English
           </Link>
         </div>

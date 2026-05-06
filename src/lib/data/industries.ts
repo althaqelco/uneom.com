@@ -43,8 +43,8 @@ export const industries: Industry[] = [
     icon: "🏥",
     color: "from-blue-600 to-teal-600",
     products: [
-      { name: "Premium Scrubs", nameAr: "سكراب فاخر", href: "/shop/medical-scrubs/premium-medical-scrubs" },
-      { name: "Lab Coats", nameAr: "معاطف مختبر", href: "/shop/medical-scrubs/professional-lab-coat" }
+      { name: "Premium Scrubs", nameAr: "سكراب فاخر", href: "/shop/medical-scrubs/premium-scrubs-set" },
+      { name: "Lab Coats", nameAr: "معاطف مختبر", href: "/shop/medical-scrubs" }
     ],
     benefitsEn: [
       { icon: "🦠", title: "Antimicrobial Protection", desc: "Silver-ion treatment that inhibits bacterial growth." },
@@ -72,8 +72,8 @@ export const industries: Industry[] = [
         image: "/images/healthcare/scrubs-collections.jpg",
         priceEn: "From SAR 189",
         priceAr: "من 189 ريال",
-        hrefEn: "/shop/medical-scrubs/premium-medical-scrubs",
-        hrefAr: "/ar/shop/medical-scrubs/premium-medical-scrubs"
+        hrefEn: "/shop/medical-scrubs/premium-scrubs-set",
+        hrefAr: "/ar/shop/medical-scrubs/premium-scrubs-set"
       }
     ]
   },
@@ -89,8 +89,8 @@ export const industries: Industry[] = [
     icon: "🏨",
     color: "from-orange-600 to-amber-600",
     products: [
-      { name: "Chef Uniforms", nameAr: "زي طهاة", href: "/shop/culinary-uniforms" },
-      { name: "Reception Wear", nameAr: "زي استقبال", href: "/shop/hospitality-attire" }
+      { name: "Chef Uniforms", nameAr: "زي طهاة", href: "/shop/culinary-uniforms/executive-chef-coat" },
+      { name: "Reception Wear", nameAr: "زي استقبال", href: "/shop/hospitality-attire/luxury-hotel-uniform" }
     ],
     benefitsEn: [
       { icon: "✨", title: "Luxury Finish", desc: "Elegant designs for premium guest service." }
@@ -116,8 +116,8 @@ export const industries: Industry[] = [
         image: "/images/hospitality/chef-uniform.jpg",
         priceEn: "From SAR 249",
         priceAr: "من 249 ريال",
-        hrefEn: "/shop/hospitality/executive-chef",
-        hrefAr: "/ar/shop/hospitality/executive-chef"
+        hrefEn: "/shop/culinary-uniforms/executive-chef-coat",
+        hrefAr: "/ar/shop/culinary-uniforms/executive-chef-coat"
       }
     ]
   },
@@ -133,7 +133,7 @@ export const industries: Industry[] = [
     icon: "✈️",
     color: "from-blue-700 to-indigo-800",
     products: [
-      { name: "Pilot Uniforms", nameAr: "زي طيار", href: "/shop/aviation-uniforms" }
+      { name: "Pilot Uniforms", nameAr: "زي طيار", href: "/shop/aviation-uniforms/airline-crew-uniform" }
     ],
     benefitsEn: [
       { icon: "🌍", title: "Global Standards", desc: "Compliant with aviation safety and aesthetic standards." }
@@ -159,7 +159,7 @@ export const industries: Industry[] = [
     icon: "🏢",
     color: "from-slate-700 to-blue-900",
     products: [
-      { name: "Business Suits", nameAr: "بدلات عمل", href: "/shop/corporate-workwear" }
+      { name: "Business Suits", nameAr: "بدلات عمل", href: "/shop/corporate-workwear/executive-suit" }
     ],
     benefitsEn: [
       { icon: "💼", title: "Professional Image", desc: "Boost your brand identity with cohesive corporate wear." }
@@ -184,7 +184,7 @@ export const industries: Industry[] = [
     heroImage: "/images/industries/education-uniforms.jpg",
     icon: "🎓",
     color: "from-indigo-600 to-purple-600",
-    products: [{ name: "School Uniforms", nameAr: "زي مدرسي", href: "/shop/education-uniforms" }],
+    products: [{ name: "School Uniforms", nameAr: "زي مدرسي", href: "/shop/education-uniforms/premium-school-uniforms" }],
     benefitsEn: [{ icon: "📚", title: "Student Comfort", desc: "Durable fabrics designed for daily school activities." }],
     benefitsAr: [{ icon: "📚", title: "راحة الطلاب", desc: "أقمشة متينة مصممة للأنشطة المدرسية اليومية." }],
     featuresEn: ["Durable", "Breathable", "Custom Logos"],
@@ -204,7 +204,7 @@ export const industries: Industry[] = [
     heroImage: "/images/industries/manufacturing-uniforms.jpg",
     icon: "🏭",
     color: "from-orange-700 to-amber-800",
-    products: [{ name: "Industrial Coveralls", nameAr: "أوفرول صناعي", href: "/shop/industrial-uniforms" }],
+    products: [{ name: "Industrial Coveralls", nameAr: "أوفرول صناعي", href: "/shop/industrial-uniforms/industrial-coverall" }],
     benefitsEn: [{ icon: "🛠️", title: "High Durability", desc: "Built to withstand tough industrial conditions." }],
     benefitsAr: [{ icon: "🛠️", title: "متانة عالية", desc: "مصممة لتحمل الظروف الصناعية القاسية." }],
     featuresEn: ["Safety First", "Heavy Duty", "Reinforced"],
@@ -224,7 +224,7 @@ export const industries: Industry[] = [
     heroImage: "/images/industries/security-uniforms.jpg",
     icon: "🛡️",
     color: "from-gray-800 to-slate-900",
-    products: [{ name: "Security Guard Set", nameAr: "طقم حارس أمن", href: "/shop/security-uniforms" }],
+    products: [{ name: "Security Guard Set", nameAr: "طقم حارس أمن", href: "/shop/security-uniforms/security-officer-uniform" }],
     benefitsEn: [{ icon: "👮", title: "Professional Authority", desc: "Commands respect and provides clear identification." }],
     benefitsAr: [{ icon: "👮", title: "سلطة مهنية", desc: "يفرض الاحترام ويوفر تعريفاً واضحاً." }],
     featuresEn: ["Tactical Design", "All-Weather", "Durable"],
@@ -244,7 +244,7 @@ export const industries: Industry[] = [
     heroImage: "/images/industries/factory-uniforms.jpg",
     icon: "⚙️",
     color: "from-yellow-700 to-orange-800",
-    products: [{ name: "Technical Factory Wear", nameAr: "ملابس مصانع تقنية", href: "/shop/factory-industry" }],
+    products: [{ name: "Technical Factory Wear", nameAr: "ملابس مصانع تقنية", href: "/shop/industrial-uniforms/industrial-coverall" }],
     benefitsEn: [{ icon: "👷", title: "Operational Safety", desc: "Designed for safe operation in factory settings." }],
     benefitsAr: [{ icon: "👷", title: "سلامة العمليات", desc: "مصمم للعمل الآمن في بيئات المصانع." }],
     featuresEn: ["Heat Resistant", "Oil Resistant", "Safety Compliant"],
@@ -264,7 +264,7 @@ export const industries: Industry[] = [
     heroImage: "/images/industries/retail-uniforms.jpg",
     icon: "🛍️",
     color: "from-pink-600 to-rose-700",
-    products: [{ name: "Retail Staff Polo", nameAr: "بولو لموظفي التجزئة", href: "/shop/retail-shops" }],
+    products: [{ name: "Retail Staff Polo", nameAr: "بولو لموظفي التجزئة", href: "/shop/retail-uniforms/luxury-retail-collection" }],
     benefitsEn: [{ icon: "🏷️", title: "Brand Identity", desc: "Reinforce your retail brand with cohesive staff wear." }],
     benefitsAr: [{ icon: "🏷️", title: "هوية العلامة", desc: "عزز علامتك التجارية للتجزئة بزي موحد للموظفين." }],
     featuresEn: ["Stylish", "Comfortable", "Custom Colors"],
@@ -284,7 +284,7 @@ export const industries: Industry[] = [
     heroImage: "/images/industries/supply-uniforms.jpg",
     icon: "🚚",
     color: "from-blue-500 to-indigo-600",
-    products: [{ name: "Logistics Vest", nameAr: "سترة لوجستية", href: "/shop/supply-manufacturing" }],
+    products: [{ name: "Logistics Vest", nameAr: "سترة لوجستية", href: "/shop/industrial-uniforms/industrial-coverall" }],
     benefitsEn: [{ icon: "📦", title: "Functional Mobility", desc: "Designed for ease of movement in logistics roles." }],
     benefitsAr: [{ icon: "📦", title: "حركية وظيفية", desc: "مصمم لسهولة الحركة في الأدوار اللوجستية." }],
     featuresEn: ["High Visibility", "Durable", "Breathable"],

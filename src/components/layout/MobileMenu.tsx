@@ -98,7 +98,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ locale = 'en', onClose }) => {
     { name: 'الرئيسية', href: '/ar/' },
     { name: 'من نحن', href: '/ar/about/' },
     { name: 'المتجر', href: '/ar/shop/', children: [
-      { name: 'أزياء المستشفيات', href: '/ar/shop/healthcare/' },
+      { name: 'أزياء المستشفيات', href: '/ar/shop/medical-scrubs/' },
       { name: 'الأزياء الفندقية', href: '/ar/shop/hospitality-attire/' },
       { name: 'الزي الرسمي للشركات', href: '/ar/shop/corporate-workwear/' },
       { name: 'أزياء الطيران', href: '/ar/shop/aviation-uniforms/' },
@@ -106,6 +106,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ locale = 'en', onClose }) => {
       { name: 'أزياء تعليمية', href: '/ar/shop/education-uniforms/' },
       { name: 'ملابس مطاعم', href: '/ar/shop/culinary-uniforms/' },
       { name: 'أزياء أمنية', href: '/ar/shop/security-uniforms/' },
+      { name: 'أزياء التجزئة', href: '/ar/shop/retail-uniforms/' },
     ] },
     { name: 'خدماتنا', href: '/ar/services/', children: [
       { name: 'تصميم مخصص', href: '/ar/services/custom-design/' },
@@ -146,7 +147,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ locale = 'en', onClose }) => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about/' },
     { name: 'Shop', href: '/shop/', children: [
-      { name: 'Healthcare Uniforms', href: '/shop/healthcare/' },
+      { name: 'Healthcare Uniforms', href: '/shop/medical-scrubs/' },
       { name: 'Hospitality Attire', href: '/shop/hospitality-attire/' },
       { name: 'Corporate Workwear', href: '/shop/corporate-workwear/' },
       { name: 'Aviation Uniforms', href: '/shop/aviation-uniforms/' },
@@ -154,6 +155,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ locale = 'en', onClose }) => {
       { name: 'Education Uniforms', href: '/shop/education-uniforms/' },
       { name: 'Culinary Uniforms', href: '/shop/culinary-uniforms/' },
       { name: 'Security Uniforms', href: '/shop/security-uniforms/' },
+      { name: 'Retail Uniforms', href: '/shop/retail-uniforms/' },
     ] },
     { name: 'Services', href: '/services/', children: [
       { name: 'Custom Design', href: '/services/custom-design/' },

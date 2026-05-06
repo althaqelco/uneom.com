@@ -45,6 +45,7 @@ const categories = [
   { id: 'industrial-uniforms', name: 'الملابس الصناعية', description: 'أفرول، ملابس سلامة، FR', image: '/images/products/industrial-coverall.jpg', href: '/ar/shop/industrial-uniforms', price: 'من 199 ريال', popular: true, gradient: 'from-yellow-600 to-orange-600' },
   { id: 'education-uniforms', name: 'الزي المدرسي', description: 'زي مدارس، رياضي، معاطف مختبر', image: '/images/products/school-uniform-primary.jpg', href: '/ar/shop/education-uniforms', price: 'من 149 ريال', popular: false, gradient: 'from-indigo-600 to-purple-600' },
   { id: 'security-uniforms', name: 'أزياء الأمن', description: 'زي حراسة، ملابس تكتيكية', image: '/images/products/security/security-patrol-jacket-main.jpg', href: '/ar/shop/security-uniforms', price: 'من 299 ريال', popular: false, gradient: 'from-gray-800 to-gray-900' },
+  { id: 'retail-uniforms', name: 'أزياء التجزئة', description: 'زي محلات، صالات عرض، موظفي مبيعات', image: '/images/products/retail/luxury-collection.jpg', href: '/ar/shop/retail-uniforms', price: 'من 389 ريال', popular: false, gradient: 'from-pink-600 to-rose-600' },
 ];
 
 export default function ShopPageAr() {

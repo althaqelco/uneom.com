@@ -49,87 +49,53 @@ export const metadata: Metadata = {
   }
 }
 
-const industries = [
-  {
-    name: 'Healthcare',
-    href: '/industries/healthcare/',
-    icon: HeartIcon,
-    description: 'Medical scrubs, lab coats, and healthcare uniforms designed for comfort and hygiene.',
-    features: ['Antimicrobial fabrics', 'Easy-care materials', 'Professional appearance'],
-    color: 'bg-red-50 hover:bg-red-100 border-red-200',
-    iconColor: 'text-red-600'
-  },
-  {
-    name: 'Corporate',
-    href: '/industries/corporate/',
-    icon: BuildingOfficeIcon,
-    description: 'Professional business attire that reflects your company\'s brand and values.',
-    features: ['Custom branding', 'Premium fabrics', 'Tailored fit'],
-    color: 'bg-blue-50 hover:bg-blue-100 border-blue-200',
-    iconColor: 'text-blue-600'
-  },
-  {
-    name: 'Security',
-    href: '/industries/security/',
-    icon: ShieldCheckIcon,
-    description: 'Durable security uniforms built for protection and professional appearance.',
-    features: ['High-visibility options', 'Tactical features', 'Weather resistance'],
-    color: 'bg-gray-50 hover:bg-gray-100 border-gray-200',
-    iconColor: 'text-gray-600'
-  },
-  {
-    name: 'Manufacturing',
-    href: '/industries/manufacturing/',
-    icon: WrenchScrewdriverIcon,
-    description: 'Industrial workwear designed for safety, durability, and comfort.',
-    features: ['Safety compliance', 'Flame resistance', 'Heavy-duty construction'],
-    color: 'bg-orange-50 hover:bg-orange-100 border-orange-200',
-    iconColor: 'text-orange-600'
-  },
-  {
-    name: 'Education',
-    href: '/industries/education/',
-    icon: AcademicCapIcon,
-    description: 'School uniforms and educational staff attire promoting unity and professionalism.',
-    features: ['Age-appropriate designs', 'Durable materials', 'Easy maintenance'],
-    color: 'bg-green-50 hover:bg-green-100 border-green-200',
-    iconColor: 'text-green-600'
-  },
-  {
-    name: 'Hospitality',
-    href: '/industries/hospitality/',
-    icon: HomeModernIcon,
-    description: 'Elegant hospitality uniforms for hotels, restaurants, and service industries.',
-    features: ['Elegant designs', 'Stain resistance', 'Comfort fit'],
-    color: 'bg-purple-50 hover:bg-purple-100 border-purple-200',
-    iconColor: 'text-purple-600'
-  },
-  {
-    name: 'Aviation',
-    href: '/industries/aviation/',
-    icon: PaperAirplaneIcon,
-    description: 'Professional aviation uniforms meeting international standards and regulations.',
-    features: ['Regulation compliance', 'Professional appearance', 'Comfort at altitude'],
-    color: 'bg-indigo-50 hover:bg-indigo-100 border-indigo-200',
-    iconColor: 'text-indigo-600'
-  },
-  {
-    name: 'Retail',
-    href: '/industries/retail-shops/',
-    icon: BuildingStorefrontIcon,
-    description: 'Retail uniforms that enhance brand identity and customer experience.',
-    features: ['Brand customization', 'Customer-facing design', 'Versatile styles'],
-    color: 'bg-pink-50 hover:bg-pink-100 border-pink-200',
-    iconColor: 'text-pink-600'
-  }
-]
+import { industries as industriesData } from '@/lib/data/industries'
 
 const stats = [
   { number: '15+', label: 'Years of Experience' },
   { number: '500+', label: 'Companies Served' },
-  { number: '8', label: 'Industry Sectors' },
+  { number: '10', label: 'Industry Sectors' },
   { number: '50,000+', label: 'Uniforms Delivered' }
 ]
+
+const iconMap: Record<string, any> = {
+  'healthcare': HeartIcon,
+  'hospitality': HomeModernIcon,
+  'aviation': PaperAirplaneIcon,
+  'corporate': BuildingOfficeIcon,
+  'education': AcademicCapIcon,
+  'manufacturing': WrenchScrewdriverIcon,
+  'security': ShieldCheckIcon,
+  'factory-industry': BuildingStorefrontIcon,
+  'retail-shops': BuildingStorefrontIcon,
+  'supply-manufacturing': PaperAirplaneIcon,
+};
+
+const colorMap: Record<string, string> = {
+  'healthcare': 'bg-red-50 hover:bg-red-100 border-red-200',
+  'hospitality': 'bg-purple-50 hover:bg-purple-100 border-purple-200',
+  'aviation': 'bg-indigo-50 hover:bg-indigo-100 border-indigo-200',
+  'corporate': 'bg-blue-50 hover:bg-blue-100 border-blue-200',
+  'education': 'bg-green-50 hover:bg-green-100 border-green-200',
+  'manufacturing': 'bg-orange-50 hover:bg-orange-100 border-orange-200',
+  'security': 'bg-gray-50 hover:bg-gray-100 border-gray-200',
+  'factory-industry': 'bg-yellow-50 hover:bg-yellow-100 border-yellow-200',
+  'retail-shops': 'bg-pink-50 hover:bg-pink-100 border-pink-200',
+  'supply-manufacturing': 'bg-blue-50 hover:bg-blue-100 border-blue-200',
+};
+
+const iconColorMap: Record<string, string> = {
+  'healthcare': 'text-red-600',
+  'hospitality': 'text-purple-600',
+  'aviation': 'text-indigo-600',
+  'corporate': 'text-blue-600',
+  'education': 'text-green-600',
+  'manufacturing': 'text-orange-600',
+  'security': 'text-gray-600',
+  'factory-industry': 'text-yellow-600',
+  'retail-shops': 'text-pink-600',
+  'supply-manufacturing': 'text-blue-600',
+};
 
 export default function IndustriesPage() {
   return (
@@ -174,39 +140,45 @@ export default function IndustriesPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {industries.map((industry, index) => (
-              <Link key={index} href={industry.href}>
-                <Card className={`p-8 h-full transition-all duration-300 border-2 ${industry.color} group cursor-pointer`}>
-                  <div className="flex items-start space-x-4">
-                    <div className={`p-3 rounded-lg bg-white shadow-sm group-hover:shadow-md transition-shadow`}>
-                      <industry.icon className={`h-8 w-8 ${industry.iconColor}`} />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                        {industry.name}
-                      </h3>
-                      <p className="text-gray-600 mb-4 leading-relaxed">
-                        {industry.description}
-                      </p>
-                      <ul className="space-y-2">
-                        {industry.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-sm text-gray-500">
-                            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                      <div className="mt-6 flex items-center text-blue-600 font-medium group-hover:text-blue-700">
-                        Learn More
-                        <svg className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
+            {industriesData.map((industry, index) => {
+              const Icon = iconMap[industry.id] || BuildingOfficeIcon;
+              const colorClass = colorMap[industry.id] || 'bg-blue-50 border-blue-200';
+              const iconColor = iconColorMap[industry.id] || 'text-blue-600';
+              
+              return (
+                <Link key={index} href={`/industries/${industry.id}/`}>
+                  <Card className={`p-8 h-full transition-all duration-300 border-2 ${colorClass} group cursor-pointer`}>
+                    <div className="flex items-start space-x-4">
+                      <div className={`p-3 rounded-lg bg-white shadow-sm group-hover:shadow-md transition-shadow`}>
+                        <Icon className={`h-8 w-8 ${iconColor}`} />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                          {industry.nameEn}
+                        </h3>
+                        <p className="text-gray-600 mb-4 leading-relaxed">
+                          {industry.descriptionEn}
+                        </p>
+                        <ul className="space-y-2">
+                          {industry.featuresEn.slice(0, 3).map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center text-sm text-gray-500">
+                              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="mt-6 flex items-center text-blue-600 font-medium group-hover:text-blue-700">
+                          Learn More
+                          <svg className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Card>
-              </Link>
-            ))}
+                  </Card>
+                </Link>
+              );
+            })}
           </div>
         </Container>
       </section>

@@ -11,39 +11,63 @@ import { getProductById, getProductsByCategory } from '@/lib/data/products';
 import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 // Fetch product data based on slug array
-const getProductData = (slug: string[], locale: string = 'en') => {
+// Fetch data based on slug array
+const getPageData = (slug: string[], locale: string = 'en') => {
+  const isAr = locale === 'ar';
+  
+  // Try to find if it's a product (last segment is ID)
   const productId = slug[slug.length - 1];
   const product = getProductById(productId, locale);
   
-  if (!product) {
-    return null;
+  if (product) {
+    // Get related products
+    const relatedProducts = getProductsByCategory(product.category, locale)
+      .filter(p => p.id !== productId)
+      .slice(0, 3)
+      .map(p => ({
+        id: p.id,
+        name: p.name,
+        image: p.images[0].src,
+        price: p.price,
+        href: p.href
+      }));
+
+    return {
+      type: 'product' as const,
+      data: {
+        ...product,
+        relatedProducts
+      }
+    };
   }
   
-  // Get related products
-  const relatedProducts = getProductsByCategory(product.category, locale)
-    .filter(p => p.id !== productId)
-    .slice(0, 3)
-    .map(p => ({
-      id: p.id,
-      name: p.name,
-      image: p.images[0].src,
-      price: p.price,
-      href: p.href
-    }));
+  // Try to find if it's a category
+  // A category can be a single slug or nested
+  const categorySlug = slug.join('/');
+  const categoryProducts = getProductsByCategory(categorySlug, locale);
+  
+  if (categoryProducts.length > 0) {
+    return {
+      type: 'category' as const,
+      data: {
+        id: categorySlug,
+        name: isAr ? categoryProducts[0].categoryName : categoryProducts[0].categoryName,
+        products: categoryProducts
+      }
+    };
+  }
 
-  return {
-    ...product,
-    relatedProducts
-  };
+  return null;
 };
 
 interface ClientPageProps {
   params: {
     slug: string[];
   };
+  locale: 'en' | 'ar';
 }
 
-export default function ClientPage({ params }: ClientPageProps) {
+export default function ClientPage({ params, locale }: ClientPageProps) {
   const { slug } = params;
   const [activeImage, setActiveImage] = useState(0);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
@@ -51,15 +75,104 @@ export default function ClientPage({ params }: ClientPageProps) {
   const [quantity, setQuantity] = useState(5);
   const [showSizeChart, setShowSizeChart] = useState(false);
   
-  const pathname = usePathname();
-  const isArabic = pathname?.startsWith('/ar');
-  const locale = isArabic ? 'ar' : 'en';
+  const isArabic = locale === 'ar';
   
-  const product = getProductData(slug, locale);
+  const pageResult = getPageData(slug, locale);
   
-  if (!product) {
+  if (!pageResult) {
     return notFound();
   }
+  
+  if (pageResult.type === 'category') {
+    const category = pageResult.data;
+    const labels = {
+      home: isArabic ? 'الرئيسية' : 'Home',
+      shop: isArabic ? 'المتجر' : 'Shop',
+      viewProduct: isArabic ? 'عرض المنتج' : 'View Product',
+      from: isArabic ? 'من' : 'From',
+    };
+
+    return (
+      <div dir={isArabic ? 'rtl' : 'ltr'} className={isArabic ? 'text-right' : 'text-left'}>
+        <EnhancedSEO2025 
+          title={`${category.name} | UNEOM Saudi Arabia`}
+          description={`Browse our premium ${category.name} collection. High-quality professional uniforms in Saudi Arabia.`}
+          keywords={[category.name, 'uniforms', 'Saudi Arabia', 'shop']}
+          locale={locale}
+          contentType="category"
+        />
+
+        <div className="bg-gray-100 py-4">
+          <Container>
+            <nav className="flex" aria-label="Breadcrumb">
+              <ol className="inline-flex items-center space-x-1 md:space-x-3 rtl:space-x-reverse">
+                <li className="inline-flex items-center">
+                  <Link href={isArabic ? "/ar" : "/"} className="text-sm text-gray-700 hover:text-primary-600">{labels.home}</Link>
+                </li>
+                <li>
+                  <div className="flex items-center">
+                    <svg className={`w-3 h-3 text-gray-400 mx-1 ${isArabic ? 'rotate-180' : ''}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <Link href={isArabic ? "/ar/shop" : "/shop"} className="text-sm text-gray-700 hover:text-primary-600 ml-1 md:ml-2">{labels.shop}</Link>
+                  </div>
+                </li>
+                <li aria-current="page">
+                  <div className="flex items-center">
+                    <svg className={`w-3 h-3 text-gray-400 mx-1 ${isArabic ? 'rotate-180' : ''}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span className="text-sm text-gray-500 ml-1 md:ml-2">{category.name}</span>
+                  </div>
+                </li>
+              </ol>
+            </nav>
+          </Container>
+        </div>
+
+        <section className="py-12">
+          <Container>
+            <SectionHeading subtitle={isArabic ? 'تصفح مجموعتنا' : 'Browse Collection'}>
+              {category.name}
+            </SectionHeading>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {category.products.map((p) => (
+                <Link key={p.id} href={p.href} className="group">
+                  <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image 
+                        src={p.images[0].src} 
+                        alt={p.images[0].alt} 
+                        fill 
+                        className="object-cover group-hover:scale-105 transition-transform duration-300" 
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                        {p.name}
+                      </h3>
+                      <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                        {p.shortDescription}
+                      </p>
+                      <div className="flex justify-between items-center">
+                        <span className="text-primary-600 font-bold">{p.price}</span>
+                        <span className="text-sm font-medium text-primary-600 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform">
+                          {labels.viewProduct} →
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </Container>
+        </section>
+      </div>
+    );
+  }
+
+  const product = pageResult.data;
   
   const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(e.target.value);

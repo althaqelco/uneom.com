@@ -96,6 +96,7 @@ const categories = [
   { id: 'industrial-uniforms', name: 'Industrial Workwear', nameAr: 'الملابس الصناعية', description: 'Coveralls, safety wear, FR clothing', image: '/images/products/fr-coverall.jpg', href: '/shop/industrial-uniforms', price: 'From SAR 199', popular: true, gradient: 'from-yellow-600 to-orange-600' },
   { id: 'education-uniforms', name: 'Education Uniforms', nameAr: 'الزي المدرسي', description: 'School uniforms, PE wear, lab coats', image: '/images/products/school-uniform-primary.jpg', href: '/shop/education-uniforms', price: 'From SAR 149', popular: false, gradient: 'from-indigo-600 to-purple-600' },
   { id: 'security-uniforms', name: 'Security Uniforms', nameAr: 'أزياء الأمن', description: 'Guard uniforms, tactical wear', image: '/images/products/security/security-patrol-jacket-main.jpg', href: '/shop/security-uniforms', price: 'From SAR 299', popular: false, gradient: 'from-gray-800 to-gray-900' },
+  { id: 'retail-uniforms', name: 'Retail Uniforms', nameAr: 'أزياء التجزئة', description: 'Boutique, showroom, retail staff uniforms', image: '/images/products/retail/luxury-collection.jpg', href: '/shop/retail-uniforms', price: 'From SAR 389', popular: false, gradient: 'from-pink-600 to-rose-600' },
 ];
 
 // ============================================

@@ -1,0 +1,357 @@
+
+> uneom-5@0.1.0 build
+> bash scripts/pull-lfs.sh && NEXT_TELEMETRY_DISABLED=1 next build
+
+=========================================
+📥 Setting up Git LFS for Firebase Build
+=========================================
+✅ git-lfs is already installed in the environment.
+Updated Git hooks.
+Git LFS initialized.
+🚀 Pulling actual image assets from Git LFS...
+✅ Git LFS pull complete! Images are now ready for Next.js build.
+  ▲ Next.js 14.2.23
+  - Environments: .env.local
+  - Experiments (use with caution):
+    · scrollRestoration
+    · instrumentationHook
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/876) ...
+   Generating static pages (219/876) 
+   Generating static pages (438/876) 
+   Generating static pages (657/876) 
+ ✓ Generating static pages (876/876)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                            Size     First Load JS
+┌ ○ /                                                  195 B           102 kB
+├ ○ /_not-found                                        172 B          87.4 kB
+├ ○ /about                                             1.91 kB         109 kB
+├ ƒ /api/contact                                       0 B                0 B
+├ ○ /api/cron/cleanup                                  0 B                0 B
+├ ƒ /api/system-core/abyss                             0 B                0 B
+├ ○ /ar                                                195 B           102 kB
+├ ○ /ar/about                                          1.91 kB         109 kB
+├ ○ /ar/authors                                        2.69 kB         104 kB
+├ ● /ar/authors/[slug]                                 2.69 kB         104 kB
+├   ├ /ar/authors/abdullah-al-qahtani
+├   ├ /ar/authors/noura-al-ahmad
+├   ├ /ar/authors/khalid-ibrahim
+├   └ [+7 more paths]
+├ ○ /ar/blog                                           7.13 kB         145 kB
+├ ● /ar/blog/[slug]                                    550 B          99.6 kB
+├   ├ /ar/blog/school-uniforms-academic-performance
+├   ├ /ar/blog/sustainable-uniforms-2024-trends
+├   ├ /ar/blog/sustainable-school-uniforms-saudi
+├   └ [+16 more paths]
+├ ○ /ar/blog/advanced-fabrics-security-uniforms        363 B          99.4 kB
+├ ○ /ar/blog/airline-uniform-design-cultural-identity  8.48 kB         110 kB
+├ ○ /ar/blog/aviation-uniforms-brand-identity          360 B          99.4 kB
+├ ○ /ar/blog/bulletproof-protection-technologies       360 B          99.4 kB
+├ ○ /ar/blog/chef-uniform-design-guide                 360 B          99.4 kB
+├ ○ /ar/blog/choosing-uniform-supplier-guide           360 B          99.4 kB
+├ ○ /ar/blog/circular-economy-uniforms                 360 B          99.4 kB
+├ ○ /ar/blog/corporate-dress-code-evolution            1.41 kB        97.7 kB
+├ ○ /ar/blog/corporate-security-branding               8.31 kB         110 kB
+├ ○ /ar/blog/corporate-uniform-employee-satisfaction   360 B          99.4 kB
+├ ○ /ar/blog/corporate-uniforms-brand-culture          360 B          99.4 kB
+├ ○ /ar/blog/corporate-uniforms-brand-perception       10.1 kB         112 kB
+├ ○ /ar/blog/fabrics-professional-attire               7.6 kB          109 kB
+├ ○ /ar/blog/fabrics-student-uniforms                  360 B          99.4 kB
+├ ○ /ar/blog/future-aviation-uniforms-gcc              8.3 kB          110 kB
+├ ○ /ar/blog/future-professional-wear-digital-age      11 kB           112 kB
+├ ○ /ar/blog/hajj-umrah-staff-uniforms                 359 B          99.4 kB
+├ ○ /ar/blog/healthcare-compliance-guide               360 B          99.4 kB
+├ ○ /ar/blog/hospital-uniform-safety-standards         8.15 kB         110 kB
+├ ○ /ar/blog/hospitality-uniforms-guest-experience     360 B          99.4 kB
+├ ○ /ar/blog/hotel-staff-uniform-guide                 1.41 kB        97.7 kB
+├ ○ /ar/blog/industrial-electrostatic-protection       195 B          94.1 kB
+├ ○ /ar/blog/industrial-heat-stress-management         9.16 kB         111 kB
+├ ○ /ar/blog/industrial-protective-clothing-advances   359 B          99.4 kB
+├ ○ /ar/blog/industrial-safety-compliance-guide        360 B          99.4 kB
+├ ○ /ar/blog/industrial-safety-standards               1.41 kB        97.7 kB
+├ ○ /ar/blog/industrial-safety-workwear-saudi          360 B          99.4 kB
+├ ○ /ar/blog/industrial-uniform-color-coding           9.67 kB         111 kB
+├ ○ /ar/blog/mall-retail-uniforms-excellence           360 B          99.4 kB
+├ ○ /ar/blog/material-innovations-aviation-attire      9.43 kB         111 kB
+├ ○ /ar/blog/medical-hijab-healthcare-standards        360 B          99.4 kB
+├ ○ /ar/blog/medical-scrubs-evolution-saudi            360 B          99.4 kB
+├ ○ /ar/blog/medical-textile-innovation                195 B          94.1 kB
+├ ○ /ar/blog/national-day-corporate-uniforms           360 B          99.4 kB
+├ ○ /ar/blog/retail-uniform-impact                     10 kB           111 kB
+├ ○ /ar/blog/retail-uniform-selection-guide            1.41 kB        97.7 kB
+├ ○ /ar/blog/safety-standards-saudi-manufacturing      360 B          99.4 kB
+├ ○ /ar/blog/school-uniform-buyer-guide                1.41 kB        97.7 kB
+├ ○ /ar/blog/school-uniforms-national-identity-saudi   359 B          99.4 kB
+├ ○ /ar/blog/security-uniform-psychology               9.61 kB         111 kB
+├ ○ /ar/blog/security-uniform-safety-standards         360 B          99.4 kB
+├ ○ /ar/blog/security-uniforms-authority-trust         360 B          99.4 kB
+├ ○ /ar/blog/smart-fabrics-professional-wear           11.1 kB         113 kB
+├ ○ /ar/blog/smart-security-uniforms-future            360 B          99.4 kB
+├ ○ /ar/blog/sustainable-healthcare-uniforms           360 B          99.4 kB
+├ ○ /ar/blog/sustainable-retail-uniforms               1.41 kB        97.7 kB
+├ ○ /ar/blog/sustainable-school-uniforms-saudi         1.37 kB        97.7 kB
+├ ○ /ar/blog/sustainable-uniform-practices             1.41 kB        97.7 kB
+├ ○ /ar/blog/sustainable-uniforms-2024-trends          1.41 kB        97.7 kB
+├ ● /ar/blog/tag/[tag]                                 1.37 kB        97.7 kB
+├   ├ /ar/blog/tag/corporate
+├   ├ /ar/blog/tag/healthcare
+├   └ /ar/blog/tag/trends
+├ ○ /ar/blog/teacher-uniform-professional-guide        360 B          99.4 kB
+├ ○ /ar/blog/top-10-uniform-innovations-2025           360 B          99.4 kB
+├ ○ /ar/blog/uniform-budget-planning-2026              360 B          99.4 kB
+├ ○ /ar/blog/uniform-trends-2025-saudi-market          360 B          99.4 kB
+├ ○ /ar/blog/uniforms-modern-education                 360 B          99.4 kB
+├ ○ /ar/blog/workwear-innovations-saudi-factories      360 B          99.4 kB
+├ ○ /ar/case-studies                                   658 B           108 kB
+├ ○ /ar/case-studies/5-star-hotel-spa                  218 B           102 kB
+├ ○ /ar/case-studies/beauty-chain-standardization      1.66 kB         104 kB
+├ ○ /ar/case-studies/factory-safety-improvement        10.7 kB         112 kB
+├ ○ /ar/case-studies/hospital-aesthetic-clinic         218 B           102 kB
+├ ○ /ar/case-studies/luxury-salon-evolution            218 B           102 kB
+├ ○ /ar/case-studies/nationwide-retail-branding        360 B          99.4 kB
+├ ○ /ar/case-studies/retail-brand-transformation       10.8 kB         112 kB
+├ ○ /ar/case-studies/spa-chain-rebranding              1.3 kB          103 kB
+├ ○ /ar/contact                                        1.66 kB         104 kB
+├ ○ /ar/faq                                            1.3 kB          103 kB
+├ ○ /ar/industries                                     365 B          94.3 kB
+├ ○ /ar/locations                                      1.1 kB          100 kB
+├ ● /ar/locations/[city]                               151 B           111 kB
+├   ├ /ar/locations/riyadh
+├   ├ /ar/locations/jeddah
+├   ├ /ar/locations/mecca
+├   └ [+2 more paths]
+├ ● /ar/locations/[city]/[industry]                    154 B           111 kB
+├   ├ /ar/locations/riyadh/healthcare
+├   ├ /ar/locations/riyadh/hospitality
+├   ├ /ar/locations/riyadh/aviation
+├   └ [+237 more paths]
+├ ○ /ar/mobile                                         1.3 kB          103 kB
+├ ○ /ar/privacy                                        4.88 kB         105 kB
+├ ○ /ar/privacy-policy                                 2.66 kB          99 kB
+├ ○ /ar/quote                                          184 B          90.6 kB
+├ ○ /ar/resources                                      658 B           108 kB
+├ ○ /ar/resources/case-studies                         4.15 kB         142 kB
+├ ○ /ar/resources/cleanroom-best-practices             1.66 kB         104 kB
+├ ○ /ar/resources/electrical-safety-ppe-guide          1.66 kB         104 kB
+├ ○ /ar/resources/events                               3.1 kB          141 kB
+├ ○ /ar/resources/fabric-guide                         361 B          99.4 kB
+├ ○ /ar/resources/fabric-guide/healthcare              1.41 kB        97.7 kB
+├ ○ /ar/resources/fabric-technology                    360 B          99.4 kB
+├ ○ /ar/resources/fit-optimization                     195 B          94.1 kB
+├ ○ /ar/resources/guides                               3.6 kB          142 kB
+├ ○ /ar/resources/healthcare-uniform-standards         1.66 kB         104 kB
+├ ○ /ar/resources/lightweight-tactical-guide           1.66 kB         104 kB
+├ ○ /ar/resources/nfpa70e-guide                        1.66 kB         104 kB
+├ ○ /ar/resources/nursing-uniform-guide                1.66 kB         104 kB
+├ ○ /ar/resources/policy-templates                     360 B          99.4 kB
+├ ○ /ar/resources/policy-templates/hospital            1.41 kB        97.7 kB
+├ ○ /ar/resources/procurement-guide                    4.48 kB         143 kB
+├ ○ /ar/resources/professional-security-standards      1.66 kB         104 kB
+├ ○ /ar/resources/safety-standards-guide               1.66 kB         104 kB
+├ ○ /ar/resources/security-equipment-standards         1.66 kB         104 kB
+├ ○ /ar/resources/size-guide                           3.15 kB         141 kB
+├ ○ /ar/resources/size-guide/medical                   1.41 kB        97.7 kB
+├ ○ /ar/resources/sustainability-guide                 1.66 kB         104 kB
+├ ○ /ar/resources/tactical-equipment-standards         1.66 kB         104 kB
+├ ○ /ar/resources/tactical-outerwear-standards         1.66 kB         104 kB
+├ ○ /ar/resources/weather-protection-guide             1.66 kB         104 kB
+├ ○ /ar/services                                       1.66 kB         104 kB
+├ ○ /ar/services/bulk-ordering                         4.26 kB         144 kB
+├ ○ /ar/services/corporate-programs                    1.66 kB         104 kB
+├ ○ /ar/services/custom-design                         1.66 kB         104 kB
+├ ○ /ar/services/fabric-selection                      4.82 kB         147 kB
+├ ○ /ar/services/healthcare-uniform-program            1.66 kB         104 kB
+├ ○ /ar/services/lightweight-tactical-program          1.66 kB         104 kB
+├ ○ /ar/services/manufacturing                         1.66 kB         104 kB
+├ ○ /ar/services/measurement-services                  4.51 kB         144 kB
+├ ○ /ar/services/ppe-program-management                1.66 kB         104 kB
+├ ○ /ar/services/professional-security-program         1.66 kB         104 kB
+├ ○ /ar/services/program-management                    4.8 kB          147 kB
+├ ○ /ar/services/quality-assurance                     1.66 kB         104 kB
+├ ○ /ar/services/security-uniform-program              1.66 kB         104 kB
+├ ○ /ar/services/sustainable-uniforms                  1.66 kB         104 kB
+├ ○ /ar/services/tactical-equipment-program            1.66 kB         104 kB
+├ ○ /ar/services/tactical-patrol-program               1.66 kB         104 kB
+├ ○ /ar/services/technical-finishes                    4.66 kB         147 kB
+├ ○ /ar/services/uniform-policies                      4.61 kB         144 kB
+├ ○ /ar/services/uniform-program-management            1.66 kB         104 kB
+├ ○ /ar/services/weather-protection-program            1.66 kB         104 kB
+├ ○ /ar/shop                                           1.53 kB         109 kB
+├ ● /ar/shop/[...slug]                                 149 B           113 kB
+├   ├ /ar/shop/medical-scrubs
+├   ├ /ar/shop/aviation-uniforms
+├   ├ /ar/shop/hospitality-attire
+├   └ [+16 more paths]
+├ ○ /ar/terms                                          4.99 kB         106 kB
+├ ○ /ar/terms-of-service                               195 B          94.1 kB
+├ ○ /authors                                           2.69 kB         104 kB
+├ ● /authors/[slug]                                    2.69 kB         104 kB
+├   ├ /authors/abdullah-al-qahtani
+├   ├ /authors/noura-al-ahmad
+├   ├ /authors/khalid-ibrahim
+├   └ [+7 more paths]
+├ ○ /blog                                              407 B           107 kB
+├ ● /blog/[slug]                                       374 B          99.4 kB
+├   ├ /blog/uniform-trends-2023
+├   ├ /blog/sustainable-fabrics
+├   └ /blog/healthcare-uniforms-innovation
+├ ○ /blog/advanced-fabrics-security-uniforms           9.6 kB          111 kB
+├ ○ /blog/airline-uniform-design-cultural-identity     7.95 kB         109 kB
+├ ○ /blog/aviation-uniforms-brand-identity             360 B          99.4 kB
+├ ○ /blog/chef-uniform-design-guide                    360 B          99.4 kB
+├ ○ /blog/choosing-uniform-supplier-guide              360 B          99.4 kB
+├ ○ /blog/circular-economy-uniforms                    360 B          99.4 kB
+├ ○ /blog/corporate-dress-code-evolution               407 B           107 kB
+├ ○ /blog/corporate-security-branding                  7.77 kB         109 kB
+├ ○ /blog/corporate-uniform-employee-satisfaction      3.79 kB         105 kB
+├ ○ /blog/corporate-uniforms-brand-culture             359 B          99.4 kB
+├ ○ /blog/corporate-uniforms-brand-perception          8.21 kB         110 kB
+├ ○ /blog/fabrics-professional-attire                  9.35 kB         111 kB
+├ ○ /blog/fabrics-student-uniforms                     359 B          99.4 kB
+├ ○ /blog/future-aviation-uniforms-gcc                 7.09 kB         109 kB
+├ ○ /blog/hajj-umrah-staff-uniforms                    360 B          99.4 kB
+├ ○ /blog/healthcare-compliance-guide                  408 B           107 kB
+├ ○ /blog/hospital-uniform-safety-standards            7.55 kB         109 kB
+├ ○ /blog/hospitality-uniforms-guest-experience        360 B          99.4 kB
+├ ○ /blog/hotel-staff-uniform-guide                    407 B           107 kB
+├ ○ /blog/industrial-protective-clothing-advances      360 B          99.4 kB
+├ ○ /blog/industrial-safety-compliance-guide           10.7 kB         112 kB
+├ ○ /blog/industrial-safety-standards                  407 B           107 kB
+├ ○ /blog/industrial-safety-workwear-saudi             360 B          99.4 kB
+├ ○ /blog/industrial-uniform-color-coding              360 B          99.4 kB
+├ ○ /blog/mall-retail-uniforms-excellence              360 B          99.4 kB
+├ ○ /blog/material-innovations-aviation-attire         7.81 kB         109 kB
+├ ○ /blog/medical-hijab-healthcare-standards           360 B          99.4 kB
+├ ○ /blog/medical-scrubs-evolution-saudi               360 B          99.4 kB
+├ ○ /blog/medical-textile-innovation                   195 B          94.1 kB
+├ ○ /blog/national-day-corporate-uniforms              360 B          99.4 kB
+├ ● /blog/posts/[slug]                                 2.69 kB         104 kB
+├   ├ /blog/posts/uniform-trends-2023
+├   ├ /blog/posts/sustainable-fabrics
+├   ├ /blog/posts/healthcare-uniforms-innovation
+├   └ [+20 more paths]
+├ ○ /blog/retail-uniform-impact                        360 B          99.4 kB
+├ ○ /blog/retail-uniform-selection-guide               362 B          99.4 kB
+├ ○ /blog/safety-standards-saudi-manufacturing         362 B          99.4 kB
+├ ○ /blog/school-uniform-buyer-guide                   407 B           107 kB
+├ ○ /blog/school-uniforms-national-identity-saudi      360 B          99.4 kB
+├ ○ /blog/security-uniform-psychology                  8.97 kB         110 kB
+├ ○ /blog/security-uniforms-authority-trust            361 B          99.4 kB
+├ ○ /blog/sustainable-healthcare-uniforms              360 B          99.4 kB
+├ ○ /blog/sustainable-retail-uniforms                  360 B          99.4 kB
+├ ○ /blog/sustainable-school-uniforms-saudi            1.37 kB        97.7 kB
+├ ○ /blog/sustainable-uniform-practices                407 B           107 kB
+├ ○ /blog/sustainable-uniforms-2024-trends             360 B          99.4 kB
+├ ● /blog/tag/[tag]                                    374 B          99.4 kB
+├   ├ /blog/tag/healthcare
+├   ├ /blog/tag/safety-standards
+├   ├ /blog/tag/infection-control
+├   └ [+35 more paths]
+├ ○ /blog/teacher-uniform-professional-guide           360 B          99.4 kB
+├ ○ /blog/top-10-uniform-innovations-2025              360 B          99.4 kB
+├ ○ /blog/uniform-budget-planning-2026                 362 B          99.4 kB
+├ ○ /blog/uniform-trends-2025-saudi-market             406 B           107 kB
+├ ○ /blog/uniforms-modern-education                    360 B          99.4 kB
+├ ○ /blog/workwear-innovations-saudi-factories         360 B          99.4 kB
+├ ○ /case-studies                                      658 B           108 kB
+├ ○ /case-studies/5-star-hotel-spa                     218 B           102 kB
+├ ○ /case-studies/beauty-chain-standardization         218 B           102 kB
+├ ○ /case-studies/hospital-aesthetic-clinic            218 B           102 kB
+├ ○ /case-studies/luxury-salon-evolution               218 B           102 kB
+├ ○ /case-studies/nationwide-retail-branding           361 B          99.4 kB
+├ ○ /case-studies/retail-brand-transformation          7.86 kB         109 kB
+├ ○ /case-studies/spa-chain-rebranding                 1.3 kB          103 kB
+├ ○ /contact                                           1.66 kB         104 kB
+├ ○ /faq                                               1.3 kB          103 kB
+├ ○ /industries                                        365 B          94.3 kB
+├ ○ /locations                                         638 B           103 kB
+├ ● /locations/[city]                                  151 B           111 kB
+├   ├ /locations/riyadh
+├   ├ /locations/jeddah
+├   ├ /locations/mecca
+├   └ [+2 more paths]
+├ ● /locations/[city]/[industry]                       154 B           111 kB
+├   ├ /locations/riyadh/healthcare
+├   ├ /locations/riyadh/hospitality
+├   ├ /locations/riyadh/aviation
+├   └ [+237 more paths]
+├ ○ /mobile                                            1.3 kB          103 kB
+├ ○ /privacy                                           4.39 kB         105 kB
+├ ○ /privacy-policy                                    382 B           102 kB
+├ ○ /quote                                             205 B           105 kB
+├ ○ /resources                                         658 B           108 kB
+├ ○ /resources/case-studies                            7.89 kB         109 kB
+├ ○ /resources/cleanroom-best-practices                1.66 kB         104 kB
+├ ○ /resources/electrical-safety-ppe-guide             1.66 kB         104 kB
+├ ○ /resources/events                                  7.22 kB         109 kB
+├ ○ /resources/fabric-guide                            359 B          99.4 kB
+├ ○ /resources/fabric-guide/healthcare                 192 B           138 kB
+├ ○ /resources/fabric-technology                       359 B          99.4 kB
+├ ○ /resources/fit-optimization                        8.32 kB         110 kB
+├ ○ /resources/guides                                  1.3 kB          103 kB
+├ ○ /resources/healthcare-uniform-standards            1.66 kB         104 kB
+├ ○ /resources/lightweight-tactical-guide              172 B          87.4 kB
+├ ○ /resources/nfpa70e-guide                           1.66 kB         104 kB
+├ ○ /resources/nursing-uniform-guide                   1.66 kB         104 kB
+├ ○ /resources/policy-templates                        360 B          99.4 kB
+├ ○ /resources/policy-templates/hospital               192 B           138 kB
+├ ○ /resources/procurement-guide                       2.97 kB         141 kB
+├ ○ /resources/professional-security-standards         172 B          87.4 kB
+├ ○ /resources/safety-standards-guide                  1.66 kB         104 kB
+├ ○ /resources/security-equipment-standards            172 B          87.4 kB
+├ ○ /resources/size-guide                              2.92 kB         141 kB
+├ ○ /resources/size-guide/medical                      192 B           138 kB
+├ ○ /resources/sustainability-guide                    1.66 kB         104 kB
+├ ○ /resources/tactical-equipment-standards            172 B          87.4 kB
+├ ○ /resources/tactical-outerwear-standards            172 B          87.4 kB
+├ ○ /resources/weather-protection-guide                172 B          87.4 kB
+├ ○ /robots.txt                                        0 B                0 B
+├ ○ /services                                          1.66 kB         104 kB
+├ ○ /services/bulk-ordering                            3.83 kB         143 kB
+├ ○ /services/corporate-programs                       1.66 kB         104 kB
+├ ○ /services/custom-design                            1.66 kB         104 kB
+├ ○ /services/fabric-selection                         7.7 kB          146 kB
+├ ○ /services/healthcare-uniform-program               1.94 kB         104 kB
+├ ○ /services/lightweight-tactical-program             1.94 kB         104 kB
+├ ○ /services/manufacturing                            1.66 kB         104 kB
+├ ○ /services/measurement-services                     3.96 kB         143 kB
+├ ○ /services/ppe-program-management                   1.94 kB         104 kB
+├ ○ /services/professional-security-program            1.94 kB         104 kB
+├ ○ /services/program-management                       3.46 kB         143 kB
+├ ○ /services/quality-assurance                        1.66 kB         104 kB
+├ ○ /services/security-uniform-program                 1.94 kB         104 kB
+├ ○ /services/sustainable-uniforms                     1.94 kB         104 kB
+├ ○ /services/tactical-equipment-program               1.94 kB         104 kB
+├ ○ /services/tactical-patrol-program                  1.94 kB         104 kB
+├ ○ /services/technical-finishes                       9.57 kB         148 kB
+├ ○ /services/uniform-policies                         4.03 kB         143 kB
+├ ○ /services/uniform-program-management               1.94 kB         104 kB
+├ ○ /services/weather-protection-program               1.94 kB         104 kB
+├ ○ /shop                                              1.53 kB         109 kB
+├ ● /shop/[...slug]                                    149 B           113 kB
+├   ├ /shop/medical-scrubs
+├   ├ /shop/aviation-uniforms
+├   ├ /shop/hospitality-attire
+├   └ [+16 more paths]
+├ ○ /sitemap.xml                                       0 B                0 B
+├ ○ /terms                                             4.45 kB         105 kB
+└ ○ /terms-of-service                                  382 B           102 kB
++ First Load JS shared by all                          87.2 kB
+  ├ chunks/2117-a02c6e1506024001.js                    31.5 kB
+  ├ chunks/fd9d1056-5d07d39d2bc35e9f.js                53.6 kB
+  └ other shared chunks (total)                        2.01 kB
+
+
+ƒ Middleware                                           27.3 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+
