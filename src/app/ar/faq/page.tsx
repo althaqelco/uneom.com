@@ -20,7 +20,7 @@ export const metadata: Metadata = generateMetadata2026({
   image: '/images/faq/uneom-faq.jpg',
   imageAlt: 'الأسئلة الشائعة يونيوم',
   aiSummary: 'UNEOM FAQ page answers common questions about uniforms in Saudi Arabia.',
-  aiSummaryAr: 'صفحة الأسئلة الشائعة من يونيوم تجيب على الأسئلة الشائعة عن الأزياء الموحدة في السعودية. المواضيع المغطاة: كيفية طلب الأزياء، الأسعار وخصومات الجملة، التخصيص بالشعارات، أوقات التوصيل في السعودية، المقاسات والقياسات، الحد الأدنى للطلب، طرق الدفع، سياسة الإرجاع، خيارات الأقمشة، وإرشادات العناية. تواصل مع يونيوم على +971 55 816 4922 أو info@uneom.com للأسئلة المحددة.'
+  aiSummaryAr: 'صفحة الأسئلة الشائعة من يونيوم تجيب على الأسئلة الشائعة عن الأزياء الموحدة في السعودية. المواضيع المغطاة: كيفية طلب الأزياء، الأسعار وخصومات الجملة، التخصيص بالشعارات، أوقات التوصيل في السعودية، المقاسات والقياسات، الحد الأدنى للطلب، طرق الدفع، سياسة الإرجاع، خيارات الأقمشة، وإرشادات العناية. تواصل مع يونيوم على +966 56 461 2017 أو info@uneom.com للأسئلة المحددة.'
 });
 
 export const dynamic = 'force-static';
@@ -30,7 +30,7 @@ const faqCategories = [
     category: 'الطلب والأسعار',
     icon: '💰',
     faqs: [
-      { question: 'كيف أطلب الأزياء من يونيوم؟', questionAr: 'كيف أطلب الأزياء من يونيوم؟', answer: 'Multiple ways to order.', answerAr: 'يمكنك الطلب من يونيوم بعدة طرق: 1) طلب عرض سعر على موقعنا، 2) الاتصال بنا على +971 55 816 4922، 3) إيميل sales@uneom.com، 4) زيارة صالات العرض في الرياض أو جدة أو الدمام، 5) واتساب على +971 55 816 4922. سيرشدك فريقنا خلال اختيار المنتج والمقاسات وخيارات التخصيص وتقديم عرض سعر مفصل.' },
+      { question: 'كيف أطلب الأزياء من يونيوم؟', questionAr: 'كيف أطلب الأزياء من يونيوم؟', answer: 'Multiple ways to order.', answerAr: 'يمكنك الطلب من يونيوم بعدة طرق: 1) طلب عرض سعر على موقعنا، 2) الاتصال بنا على +966 56 461 2017، 3) إيميل sales@uneom.com، 4) زيارة صالات العرض في الرياض أو جدة أو الدمام، 5) واتساب على +966 56 461 2017. سيرشدك فريقنا خلال اختيار المنتج والمقاسات وخيارات التخصيص وتقديم عرض سعر مفصل.' },
       { question: 'ما الحد الأدنى لكمية الطلب؟', questionAr: 'ما الحد الأدنى لكمية الطلب؟', answer: 'Varies by product.', answerAr: 'الحد الأدنى للطلب يختلف حسب المنتج: الأزياء القياسية - حد أدنى 10 قطع. الأزياء المصممة خصيصاً - 25 قطعة. المطرزات - 12 قطعة. للكميات الأصغر، لدينا منتجات جاهزة متوفرة بدون حد أدنى.' },
       { question: 'هل تقدم يونيوم خصومات للطلبات بالجملة؟', questionAr: 'هل تقدم يونيوم خصومات للطلبات بالجملة؟', answer: 'Yes, tiered discounts.', answerAr: 'نعم! تقدم يونيوم خصومات متدرجة بالجملة: طلبات 50-99 قطعة: خصم 10%. طلبات 100-249 قطعة: خصم 15%. طلبات 250-499 قطعة: خصم 20%. طلبات 500+ قطعة: خصم 25%. الحسابات المؤسسية قد تؤهل لخصومات إضافية.' },
       { question: 'ما طرق الدفع التي تقبلها يونيوم؟', questionAr: 'ما طرق الدفع التي تقبلها يونيوم؟', answer: 'Multiple payment methods.', answerAr: 'تقبل يونيوم طرق دفع متعددة: تحويل بنكي (مفضل للطلبات المؤسسية)، بطاقات ائتمان/خصم (فيزا، ماستركارد)، الدفع عند الاستلام (للطلبات أقل من 5000 ريال)، شروط ائتمان للحسابات المؤسسية المعتمدة، وخطط تقسيط للطلبات الكبيرة.' },
@@ -96,7 +96,7 @@ export default function FAQPageAr() {
             <p className="text-xl mb-8 leading-relaxed max-w-3xl mx-auto text-purple-100">فريقنا هنا للمساعدة. تواصل معنا لأي أسئلة عن احتياجات الأزياء.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/ar/contact" className="inline-flex items-center px-8 py-4 bg-white text-purple-700 hover:bg-gray-100 font-bold rounded-xl transition-all shadow-lg">تواصل معنا ←</Link>
-              <a href="https://wa.me/966501234567" className="inline-flex items-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all">💬 واتساب</a>
+              <a href="https://wa.me/966564612017" className="inline-flex items-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all">💬 واتساب</a>
             </div>
           </section>
         </Container>

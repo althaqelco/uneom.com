@@ -27,7 +27,7 @@ const LocationPageLayout: React.FC<LocationPageLayoutProps> = ({ children, local
       </main>
       {isRTL ? <ArabicFooter /> : <Footer locale={locale} />}
       <FloatingWhatsApp 
-        phoneNumber="971558164922" 
+        phoneNumber="966564612017" 
         locale={locale as 'en' | 'ar'} 
         position={isRTL ? 'left' : 'right'}
       />

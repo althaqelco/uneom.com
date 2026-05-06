@@ -80,7 +80,7 @@ export default function NotFound() {
         {/* WhatsApp Recovery */}
         <div className="mt-8">
           <a
-            href="https://wa.me/971558164922?text=مرحباً، لم أجد الصفحة المطلوبة"
+            href="https://wa.me/966564612017?text=مرحباً، لم أجد الصفحة المطلوبة"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md"

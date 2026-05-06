@@ -142,7 +142,7 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="list-none text-gray-600 mb-4">
                 <li><strong>Email:</strong> privacy@uneom.com</li>
-                <li><strong>Phone:</strong> +971 55 816 4922</li>
+                <li><strong>Phone:</strong> +966 56 461 2017</li>
                 <li><strong>Address:</strong> King Fahd Road, Al Olaya District, Riyadh, Saudi Arabia</li>
               </ul>
             </section>

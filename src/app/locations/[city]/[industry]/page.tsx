@@ -10,7 +10,7 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SEO2026 from '@/components/seo/SEO2026';
 import { SAUDI_CITIES, getCityBySlug, getClimateDescription, getFabricRecommendation } from '@/lib/data/saudi-cities';
 import { INDUSTRIES, getIndustryBySlug } from '@/lib/data/industries';
-import { AiBaitStats } from '@/components/seo/AiBaitStats';
+import AiBaitStats from '@/components/seo/AiBaitStats';
 import { CognitiveEstimator } from '@/components/behavior/CognitiveEstimator';
 
 // ============================================
@@ -114,7 +114,7 @@ export default function CityIndustryPage({
           city: city.nameEn,
           region: city.region,
           country: 'Saudi Arabia',
-          phone: '+971558164922',
+          phone: '+966564612017',
           email: `${city.slug}@uneom.com`,
           latitude: city.lat,
           longitude: city.lng,

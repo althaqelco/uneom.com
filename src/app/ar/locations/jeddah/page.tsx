@@ -34,7 +34,7 @@ const jeddahFAQsAr = [
   { question: 'ما ساعات عمل يونيوم جدة؟', questionAr: 'ما ساعات عمل يونيوم جدة؟', answer: 'Sunday to Thursday, 9 AM - 6 PM.', answerAr: 'يونيوم جدة مفتوح من الأحد إلى الخميس، من 9:00 صباحاً إلى 6:00 مساءً. ساعات ممتدة خلال مواسم الحج والعمرة.' },
 ];
 
-const locationData = { name: 'جدة', address: 'شارع التحلية، حي الأندلس، جدة 23432', phone: '+971 55 816 4922', email: 'jeddah@uneom.com', whatsapp: '+971558164922', workingHours: 'الأحد - الخميس: 9:00 صباحاً - 6:00 مساءً' };
+const locationData = { name: 'جدة', address: 'شارع التحلية، حي الأندلس، جدة 23432', phone: '+966 56 461 2017', email: 'jeddah@uneom.com', whatsapp: '+966564612017', workingHours: 'الأحد - الخميس: 9:00 صباحاً - 6:00 مساءً' };
 
 const services = [
   { icon: '🏨', title: 'زي الفنادق', desc: 'أزياء ضيافة لفنادق ومنتجعات جدة' },

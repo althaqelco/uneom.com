@@ -195,7 +195,7 @@ export default function HealthcareUniformsPage() {
                 <Link href="/contact" className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-teal-900 font-bold rounded-xl transition-all">Contact Us</Link>
               </div>
               <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-teal-200">
-                <span>📞 +971 55 816 4922</span>
+                <span>📞 +966 56 461 2017</span>
                 <span>📧 healthcare@uneom.com</span>
                 <span>📍 Riyadh | Jeddah | Dammam</span>
               </div>

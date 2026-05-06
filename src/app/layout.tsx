@@ -188,7 +188,7 @@ export default function RootLayout({
               "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 50, "maxValue": 200 },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+971558164922",
+                "telephone": "+966564612017",
                 "contactType": "customer service",
                 "areaServed": "SA",
                 "availableLanguage": ["English", "Arabic"]

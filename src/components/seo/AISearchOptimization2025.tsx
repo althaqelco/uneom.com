@@ -139,14 +139,14 @@ const AISearchOptimization2025: React.FC<AISearchOptimization2025Props> = ({
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+971558164922',
+        telephone: '+966564612017',
         contactType: 'customer service',
         availableLanguage: ['English', 'Arabic'],
         areaServed: 'SA'
       },
       {
         '@type': 'ContactPoint',
-        telephone: '+971558164922',
+        telephone: '+966564612017',
         contactType: 'sales',
         availableLanguage: ['English', 'Arabic'],
         areaServed: 'SA'

@@ -51,7 +51,7 @@ const LayoutWrapper: React.FC<LayoutWrapperProps> = ({ children }) => {
       
       {/* WhatsApp floating button */}
       <FloatingWhatsApp 
-        phoneNumber="971558164922" 
+        phoneNumber="966564612017" 
         locale={isArabic ? 'ar' : 'en'} 
         position={isArabic ? 'left' : 'right'}
       />

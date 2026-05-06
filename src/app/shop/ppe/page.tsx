@@ -283,7 +283,7 @@ export default function PPEShopPage() {
               </div>
               
               <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-orange-200">
-                <span>📞 +971 55 816 4922</span>
+                <span>📞 +966 56 461 2017</span>
                 <span>📧 safety@uneom.com</span>
                 <span>📍 Riyadh | Jeddah | Dammam</span>
               </div>

@@ -263,7 +263,7 @@ const SEO2026: React.FC<SEO2026Props> = ({
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+971558164922',
+        telephone: '+966564612017',
         contactType: 'sales',
         availableLanguage: ['English', 'Arabic'],
         areaServed: 'SA',
@@ -276,7 +276,7 @@ const SEO2026: React.FC<SEO2026Props> = ({
       },
       {
         '@type': 'ContactPoint',
-        telephone: '+971558164922',
+        telephone: '+966564612017',
         contactType: 'customer service',
         availableLanguage: ['English', 'Arabic'],
         areaServed: ['SA', 'AE', 'KW', 'BH', 'QA', 'OM']
@@ -520,7 +520,7 @@ const SEO2026: React.FC<SEO2026Props> = ({
       latitude: location.geo.latitude,
       longitude: location.geo.longitude
     } : undefined,
-    telephone: location.telephone || '+971558164922',
+    telephone: location.telephone || '+966564612017',
     email: location.email || 'info@uneom.com',
     url: currentUrl,
     openingHoursSpecification: location.openingHours?.map(hours => {

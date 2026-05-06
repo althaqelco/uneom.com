@@ -34,7 +34,7 @@ const dammamFAQsAr = [
   { question: 'ما ساعات عمل يونيوم الدمام؟', questionAr: 'ما ساعات عمل يونيوم الدمام؟', answer: 'Sunday to Thursday, 8 AM - 5 PM.', answerAr: 'يونيوم الدمام مفتوح من الأحد إلى الخميس، من 8:00 صباحاً إلى 5:00 مساءً. يمكن للعملاء الصناعيين ترتيب مواعيد خارج أوقات العمل.' },
 ];
 
-const locationData = { name: 'الدمام', address: 'طريق الأمير محمد بن فهد، حي الفيصلية، الدمام 32241', phone: '+971 55 816 4922', email: 'dammam@uneom.com', whatsapp: '+971558164922', workingHours: 'الأحد - الخميس: 8:00 صباحاً - 5:00 مساءً' };
+const locationData = { name: 'الدمام', address: 'طريق الأمير محمد بن فهد، حي الفيصلية، الدمام 32241', phone: '+966 56 461 2017', email: 'dammam@uneom.com', whatsapp: '+966564612017', workingHours: 'الأحد - الخميس: 8:00 صباحاً - 5:00 مساءً' };
 
 const services = [
   { icon: '🛢️', title: 'زي النفط والغاز', desc: 'أفرول FR وملابس صناعية لقطاع البترول' },

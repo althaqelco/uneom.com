@@ -27,7 +27,7 @@ export default function HomePageStructuredData() {
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+971558164922",
+        "telephone": "+966564612017",
         "contactType": "customer service",
         "areaServed": "Saudi Arabia",
         "availableLanguage": ["English", "Arabic"]

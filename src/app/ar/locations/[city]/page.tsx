@@ -10,7 +10,7 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SEO2026 from '@/components/seo/SEO2026';
 import { SAUDI_CITIES, getCityBySlug, getClimateDescription, getFabricRecommendation } from '@/lib/data/saudi-cities';
 import { INDUSTRIES } from '@/lib/data/industries';
-import { AiBaitStats } from '@/components/seo/AiBaitStats';
+import AiBaitStats from '@/components/seo/AiBaitStats';
 
 export const revalidate = 86400;
 
@@ -60,7 +60,7 @@ export default function ArCityPage({ params }: { params: { city: string } }) {
           city: city.nameAr,
           region: city.regionAr,
           country: 'المملكة العربية السعودية',
-          phone: '+971558164922',
+          phone: '+966564612017',
           email: `${city.slug}@uneom.com`,
           latitude: city.lat,
           longitude: city.lng,
@@ -181,7 +181,7 @@ export default function ArCityPage({ params }: { params: { city: string } }) {
                 تواصل معنا
               </Link>
             </div>
-            <div className="mt-8 text-sm text-blue-200">📞 +971 55 816 4922 &nbsp;|&nbsp; 📧 {city.slug}@uneom.com</div>
+            <div className="mt-8 text-sm text-blue-200">📞 +966 56 461 2017 &nbsp;|&nbsp; 📧 {city.slug}@uneom.com</div>
           </section>
         </Container>
       </main>

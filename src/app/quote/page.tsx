@@ -128,7 +128,7 @@ export default function QuotePage() {
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
                 <h3 className="text-lg font-bold text-blue-800 mb-4">Contact Directly</h3>
                 <div className="space-y-3 text-blue-700">
-                  <p className="flex items-center gap-2"><span>📞</span><a href="tel:+971558164922" className="hover:underline">+971 55 816 4922</a></p>
+                  <p className="flex items-center gap-2"><span>📞</span><a href="tel:+966564612017" className="hover:underline">+966 56 461 2017</a></p>
                   <p className="flex items-center gap-2"><span>📧</span><a href="mailto:info@uneom.com" className="hover:underline">info@uneom.com</a></p>
                   <p className="flex items-center gap-2"><span>💬</span><span>WhatsApp available</span></p>
                 </div>

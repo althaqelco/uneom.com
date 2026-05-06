@@ -255,7 +255,7 @@ export default function PrivacyPolicyPage() {
                 <h3 className="text-lg font-semibold mb-4">UNEOM Privacy Office</h3>
                 <div className="space-y-2">
                   <p><strong>Email:</strong> privacy@uneom.com</p>
-                  <p><strong>Phone:</strong> +971 55 816 4922</p>
+                  <p><strong>Phone:</strong> +966 56 461 2017</p>
                   <p><strong>Address:</strong> Al Olaya St, Al Olaya District, Riyadh 12213, Saudi Arabia</p>
                 </div>
                 <p className="mt-4 text-sm text-neutral-600">

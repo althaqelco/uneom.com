@@ -71,9 +71,9 @@ const locationData = {
   nameAr: 'جدة',
   address: 'Tahlia Street, Al Andalus District, Jeddah 23432, Saudi Arabia',
   addressAr: 'شارع التحلية، حي الأندلس، جدة 23432',
-  phone: '+971 55 816 4922',
+  phone: '+966 56 461 2017',
   email: 'jeddah@uneom.com',
-  whatsapp: '+971558164922',
+  whatsapp: '+966564612017',
   workingHours: 'Sunday - Thursday: 9:00 AM - 6:00 PM',
 };
 

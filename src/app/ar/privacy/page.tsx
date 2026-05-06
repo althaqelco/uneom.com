@@ -255,7 +255,7 @@ export default function ArabicPrivacyPolicyPage() {
                 <h3 className="text-lg font-semibold mb-4">مكتب الخصوصية - يونيوم</h3>
                 <div className="space-y-2">
                   <p><strong>البريد الإلكتروني:</strong> privacy@uneom.com</p>
-                  <p><strong>الهاتف:</strong> +971 55 816 4922</p>
+                  <p><strong>الهاتف:</strong> +966 56 461 2017</p>
                   <p><strong>العنوان:</strong> شارع العليا، حي العليا، الرياض 12213، المملكة العربية السعودية</p>
                 </div>
                 <p className="mt-4 text-sm text-neutral-600">

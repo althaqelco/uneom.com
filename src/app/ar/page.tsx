@@ -452,7 +452,7 @@ export default function ArabicHomePage() {
             <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-blue-200">
               <div className="flex items-center gap-2">
                 <span>📞</span>
-                <span dir="ltr">+971 55 816 4922</span>
+                <span dir="ltr">+966 56 461 2017</span>
               </div>
               <div className="flex items-center gap-2">
                 <span>📧</span>

@@ -21,7 +21,7 @@ const locationsData = {
       description: 'مقرنا الرئيسي في العاصمة يضم استوديوهات التصميم ومرافق الإنتاج الحديثة وصالة العرض الرئيسية.',
       image: '/images/locations/riyadh-office.jpg',
       address: 'طريق الملك فهد، حي العليا، الرياض',
-      phone: '+971 55 816 4922',
+      phone: '+966 56 461 2017',
       email: 'riyadh@uneom.com',
       services: [
         'تصميم وتطوير المنتجات',
@@ -39,7 +39,7 @@ const locationsData = {
       description: 'يخدم المنطقة الغربية ويركز على قطاعات الضيافة والخدمات التجارية والرعاية الصحية.',
       image: '/images/locations/jeddah-office.jpg',
       address: 'طريق الأمير محمد بن عبدالعزيز، جدة',
-      phone: '+971 55 816 4922',
+      phone: '+966 56 461 2017',
       email: 'jeddah@uneom.com',
       services: [
         'حلول الضيافة المتخصصة',
@@ -57,7 +57,7 @@ const locationsData = {
       description: 'يركز على الصناعات البترولية والكيميائية والتصنيع مع التخصص في ملابس السلامة.',
       image: '/images/locations/dammam-office.jpg',
       address: 'طريق الملك فهد، الدمام',
-      phone: '+971 55 816 4922',
+      phone: '+966 56 461 2017',
       email: 'dammam@uneom.com',
       services: [
         'ملابس السلامة الصناعية',
@@ -75,7 +75,7 @@ const locationsData = {
       description: 'متخصص في خدمة قطاع الحج والعمرة والخدمات الدينية والضيافة المقدسة.',
       image: '/images/locations/mecca-office.jpg',
       address: 'شارع إبراهيم الخليل، مكة المكرمة',
-      phone: '+971 55 816 4922',
+      phone: '+966 56 461 2017',
       email: 'mecca@uneom.com',
       services: [
         'زي موظفي الحرمين',
@@ -93,7 +93,7 @@ const locationsData = {
       description: 'يقدم خدمات متخصصة للمؤسسات الدينية والتعليمية وخدمة زوار المسجد النبوي.',
       image: '/images/locations/medina-office.jpg',
       address: 'طريق قباء، المدينة المنورة',
-      phone: '+971 55 816 4922',
+      phone: '+966 56 461 2017',
       email: 'medina@uneom.com',
       services: [
         'زي المؤسسات الدينية',

@@ -10,7 +10,7 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SEO2026 from '@/components/seo/SEO2026';
 import { SAUDI_CITIES, getCityBySlug, getClimateDescription, getFabricRecommendation } from '@/lib/data/saudi-cities';
 import { INDUSTRIES } from '@/lib/data/industries';
-import { AiBaitStats } from '@/components/seo/AiBaitStats';
+import AiBaitStats from '@/components/seo/AiBaitStats';
 
 // ============================================
 // ISR: Revalidate every 24 hours
@@ -88,7 +88,7 @@ export default function CityLocationPage({ params }: { params: { city: string } 
           city: city.nameEn,
           region: city.region,
           country: 'Saudi Arabia',
-          phone: '+971558164922',
+          phone: '+966564612017',
           email: `${city.slug}@uneom.com`,
           latitude: city.lat,
           longitude: city.lng,
@@ -120,7 +120,7 @@ export default function CityLocationPage({ params }: { params: { city: string } 
             "name": `UNEOM — ${city.nameEn}`,
             "alternateName": `يونيوم ${city.nameAr}`,
             "url": `https://uneom.com/locations/${city.slug}`,
-            "telephone": "+971558164922",
+            "telephone": "+966564612017",
             "email": `${city.slug}@uneom.com`,
             "address": {
               "@type": "PostalAddress",
@@ -351,7 +351,7 @@ export default function CityLocationPage({ params }: { params: { city: string } 
                 </Link>
               </div>
               <div className="mt-8 text-sm text-blue-200">
-                📞 +971 55 816 4922 &nbsp;|&nbsp; 📧 {city.slug}@uneom.com
+                📞 +966 56 461 2017 &nbsp;|&nbsp; 📧 {city.slug}@uneom.com
               </div>
             </div>
           </section>

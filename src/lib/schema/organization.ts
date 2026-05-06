@@ -43,7 +43,7 @@ export function getOrganizationSchema(locale: string = 'en') {
       latitude: 24.6909617,
       longitude: 46.6851237
     },
-    telephone: '+971558164922',
+    telephone: '+966564612017',
     email: 'info@uneom.com',
     sameAs: [
       'https://www.facebook.com/uneom',
@@ -54,7 +54,7 @@ export function getOrganizationSchema(locale: string = 'en') {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+971558164922',
+        telephone: '+966564612017',
         contactType: 'customer service',
         areaServed: [
           {
@@ -75,7 +75,7 @@ export function getOrganizationSchema(locale: string = 'en') {
       },
       {
         '@type': 'ContactPoint',
-        telephone: '+971558164922',
+        telephone: '+966564612017',
         contactType: 'sales',
         areaServed: [
           {
@@ -205,7 +205,7 @@ export function getLocalBusinessSchema() {
     image: 'https://uneom.com/images/uneom-logo.png',
     '@id': 'https://uneom.com',
     url: 'https://uneom.com',
-    telephone: '+971558164922',
+    telephone: '+966564612017',
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',

@@ -18,7 +18,7 @@ interface StickyWhatsAppProps {
 }
 
 export function StickyWhatsApp({ 
-  phoneNumber = '971558164922',
+  phoneNumber = '966564612017',
   message,
   industry 
 }: StickyWhatsAppProps) {

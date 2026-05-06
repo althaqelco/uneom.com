@@ -115,7 +115,7 @@ const en = {
     },
     followUs: "Follow Us",
     email: "Email: info@uneom.com",
-    phone: "Phone: +971558164922",
+    phone: "Phone: +966564612017",
     address: "Riyadh, Saudi Arabia",
   },
 
@@ -150,7 +150,7 @@ const en = {
     contact: {
       title: "Contact Us",
       email: "Email: info@uneom.com",
-      phone: "Phone: +971558164922",
+      phone: "Phone: +966564612017",
       address: "Riyadh, Saudi Arabia",
     },
     copyright: "© 2023 UNEOM. All rights reserved.",

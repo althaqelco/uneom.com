@@ -133,7 +133,7 @@ const homeFAQs = [
   {
     question: 'How can I request a quote from UNEOM?',
     questionAr: 'كيف يمكنني طلب عرض سعر من يونيوم؟',
-    answer: 'Requesting a quote from UNEOM is quick and easy. You can: 1) Fill out our online quote form at uneom.com/quote with your requirements, 2) Call us directly at +971 55 816 4922 for immediate assistance, 3) Email us at info@uneom.com with your specifications, or 4) Visit our showrooms in Riyadh, Jeddah, or Dammam. Our sales team typically responds within 2-4 hours during business days. For faster service, please include: type of uniforms needed, quantity, customization requirements, and preferred delivery timeline.',
+    answer: 'Requesting a quote from UNEOM is quick and easy. You can: 1) Fill out our online quote form at uneom.com/quote with your requirements, 2) Call us directly at +966 56 461 2017 for immediate assistance, 3) Email us at info@uneom.com with your specifications, or 4) Visit our showrooms in Riyadh, Jeddah, or Dammam. Our sales team typically responds within 2-4 hours during business days. For faster service, please include: type of uniforms needed, quantity, customization requirements, and preferred delivery timeline.',
     answerAr: 'طلب عرض سعر من يونيوم سريع وسهل. يمكنك: 1) ملء نموذج عرض السعر على uneom.com/ar/quote، 2) الاتصال بنا مباشرة للمساعدة الفورية، 3) مراسلتنا عبر البريد الإلكتروني info@uneom.com، أو 4) زيارة صالات العرض في الرياض أو جدة أو الدمام. يستجيب فريق المبيعات عادة خلال 2-4 ساعات. للحصول على خدمة أسرع، يرجى تضمين: نوع الزي المطلوب، الكمية، متطلبات التخصيص، والجدول الزمني للتسليم.'
   },
   {
@@ -520,7 +520,7 @@ export default function HomePage() {
             <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-blue-200">
               <div className="flex items-center gap-2">
                 <span>📞</span>
-                <span>+971 55 816 4922</span>
+                <span>+966 56 461 2017</span>
               </div>
               <div className="flex items-center gap-2">
                 <span>📧</span>

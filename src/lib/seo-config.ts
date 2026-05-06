@@ -192,7 +192,7 @@ export const commonSEO = {
     nameAr: 'يونيوم',
     url: 'https://uneom.com',
     logo: '/images/uneom-logo.png',
-    phone: '+971558164922',
+    phone: '+966564612017',
     email: 'info@uneom.com',
     address: {
       street: 'King Fahd Road, Al Olaya District',

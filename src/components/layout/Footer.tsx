@@ -55,7 +55,7 @@ const Footer: React.FC<FooterProps> = ({ locale = 'en' }) => {
     tiktok: "https://www.tiktok.com/@uneomcom",
     pinterest: "https://www.pinterest.com/uneomcompany/",
     youtube: "https://www.youtube.com/@uneom-uniforms",
-    whatsapp: "https://wa.me/+971558164922"
+    whatsapp: "https://wa.me/966564612017"
   };
   
   // Certification images
@@ -127,7 +127,7 @@ const Footer: React.FC<FooterProps> = ({ locale = 'en' }) => {
                 <svg className={`w-5 h-5 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                 </svg>
-                <span dir="ltr">+971558164922</span>
+                <span dir="ltr">+966564612017</span>
               </li>
             </ul>
           </div>
