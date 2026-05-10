@@ -5,7 +5,7 @@ import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
 import { SERVICES } from '@/lib/data/services';
 import { t, localizedHref, type Lang } from '@/lib/i18n/ui';
 
-import logoImg from '../../../../public/images/logo.png';
+import logoImg from '../../../public/images/logo.png';
 
 export function Footer({ lang = 'en' }: { lang?: Lang }) {
   const ui = t(lang);

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { t, localizedHref, type Lang } from '@/lib/i18n/ui';
 import { LangSwitcher } from './LangSwitcher';
 
-import logoImg from '../../../../public/images/logo.png';
+import logoImg from '../../../public/images/logo.png';
 
 export function Header({ lang = 'en' }: { lang?: Lang }) {
   const ui = t(lang);
