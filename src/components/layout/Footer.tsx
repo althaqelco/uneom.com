@@ -6,6 +6,10 @@ import { SERVICES } from '@/lib/data/services';
 import { t, localizedHref, type Lang } from '@/lib/i18n/ui';
 
 import logoImg from '../../../public/images/logo.png';
+import isoImg from '../../../public/images/certificate/ISO_90012015.png';
+import oekoImg from '../../../public/images/certificate/OEKO-TEX.png';
+import sasoImg from '../../../public/images/certificate/Saudi_Quality_Mark.png';
+import gotsImg from '../../../public/images/certificate/GOTS_Certified.png';
 
 export function Footer({ lang = 'en' }: { lang?: Lang }) {
   const ui = t(lang);
@@ -97,17 +101,22 @@ export function Footer({ lang = 'en' }: { lang?: Lang }) {
           </nav>
         </div>
 
-        <div className="mt-16 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/10 pt-8">
-          <span className="text-xs font-bold uppercase tracking-[0.18em] text-white/60">{ui.footer.compliance}</span>
-          <span className="text-sm text-navy-200/80">ISO 9001:2015</span>
-          <span className="text-sm text-navy-200/80">·</span>
-          <span className="text-sm text-navy-200/80">OEKO-TEX Standard 100</span>
-          <span className="text-sm text-navy-200/80">·</span>
-          <span className="text-sm text-navy-200/80">SASO {isAr ? 'معتمد' : 'Certified'}</span>
-          <span className="text-sm text-navy-200/80">·</span>
-          <span className="text-sm text-navy-200/80">Maroof {isAr ? 'موثّق' : 'Verified'}</span>
-          <span className="text-sm text-navy-200/80">·</span>
-          <span className="text-sm text-navy-200/80">ZATCA E-Invoicing</span>
+        <div className="mt-16 flex flex-col xl:flex-row xl:items-center justify-between gap-8 border-t border-white/10 pt-8">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-white/60 shrink-0">{ui.footer.compliance}</span>
+            <div className="flex flex-wrap items-center gap-6 sm:gap-8">
+              <Image src={isoImg} alt="ISO 9001:2015" title="ISO 9001:2015" className="h-10 sm:h-12 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300" />
+              <Image src={oekoImg} alt="OEKO-TEX Standard 100" title="OEKO-TEX Standard 100" className="h-8 sm:h-10 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300" />
+              <Image src={sasoImg} alt="SASO Quality Mark" title="SASO Quality Mark" className="h-10 sm:h-12 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300" />
+              <Image src={gotsImg} alt="GOTS Certified" title="GOTS Certified" className="h-12 sm:h-14 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300" />
+            </div>
+          </div>
+          
+          <div className="flex items-center gap-4 text-xs font-medium text-navy-200/60 uppercase tracking-wider">
+            <span>Maroof {isAr ? 'موثّق' : 'Verified'}</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-navy-200/30"></span>
+            <span>ZATCA E-Invoicing</span>
+          </div>
         </div>
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-navy-200/60">
