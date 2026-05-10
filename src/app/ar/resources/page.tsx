@@ -4,6 +4,7 @@ import { RESOURCES } from '@/lib/data/resources';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { siloAr } from '@/lib/i18n/silo-labels';
 
 export const metadata: Metadata = {
   title: 'الأدلة — دليلك لبرامج الزي الموحّد السعودي',
@@ -30,7 +31,7 @@ export default function ArResourcesHubPage() {
           {RESOURCES.map(r => (
             <Link key={r.slug} href={`/ar/resources/${r.slug}/`} className="group flex flex-col gap-4 bg-white p-8 transition-colors hover:bg-ink-50/60">
               <div className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
-                {r.silo} · {r.readingMinutes} دقيقة قراءة
+                {siloAr(r.silo)} · {r.readingMinutes} دقيقة قراءة
               </div>
               <h3 className="text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">
                 {r.titleAr}

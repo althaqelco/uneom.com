@@ -4,6 +4,7 @@ import { CASE_STUDIES } from '@/lib/data/case-studies';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { siloAr } from '@/lib/i18n/silo-labels';
 
 export const metadata: Metadata = {
   title: 'دراسات الحالة — نتائج برامج الزي الموحّد السعودية',
@@ -37,7 +38,7 @@ export default function ArCaseStudiesHubPage() {
                 </picture>
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-gradient-to-t from-navy-950/90 to-transparent p-6 text-white">
                   <div>
-                    <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-300">{c.silo}</div>
+                    <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-300">{siloAr(c.silo)}</div>
                     <div className="mt-1 text-2xl font-bold stat-number">{c.headlineAr.value}</div>
                     <div className="text-sm text-white/80">{c.headlineAr.label}</div>
                   </div>

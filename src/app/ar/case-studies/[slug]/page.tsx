@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { CASE_STUDIES, CASE_STUDIES_BY_SLUG } from '@/lib/data/case-studies';
 import { INDUSTRIES_BY_SLUG } from '@/lib/data/industries';
+import { CITIES_BY_SLUG } from '@/lib/data/saudi-cities';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SiloLinks } from '@/components/ui/SiloLinks';
 import { CtaBlock } from '@/components/ui/CtaBlock';
@@ -37,7 +38,7 @@ export default async function ArCaseStudyPage({ params }: { params: Promise<{ sl
       <article>
         <header className="container-page section-tight">
           <div className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
-            {industry?.nameAr} · {c.city}
+            {industry?.nameAr} · {CITIES_BY_SLUG[c.city]?.nameAr ?? c.city}
           </div>
           <h1 className="mt-4 text-display-xl text-navy-900 max-w-4xl balance">{c.titleAr}</h1>
           <p className="mt-6 text-xl leading-relaxed text-ink-500 max-w-3xl pretty">{c.summaryAr}</p>

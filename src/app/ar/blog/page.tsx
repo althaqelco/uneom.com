@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { BLOG_POSTS, BLOG_CATEGORIES } from '@/lib/data/blog';
+import { BLOG_POSTS, BLOG_CATEGORIES, BLOG_CATEGORIES_BY_SLUG } from '@/lib/data/blog';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
@@ -29,7 +29,7 @@ function PostCard({ post }: { post: typeof BLOG_POSTS[number] }) {
       </div>
       <div className="flex flex-1 flex-col p-7">
         <div className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
-          {post.category.replace(/-/g, ' & ')}
+          {BLOG_CATEGORIES_BY_SLUG[post.category]?.nameAr ?? post.category}
         </div>
         <h3 className="mt-3 text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">
           {post.titleAr}

@@ -4,6 +4,7 @@ import { RESOURCES, RESOURCES_BY_SLUG } from '@/lib/data/resources';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SiloLinks } from '@/components/ui/SiloLinks';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { siloAr } from '@/lib/i18n/silo-labels';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 
 export const dynamicParams = false;
@@ -36,7 +37,7 @@ export default async function ArResourcePage({ params }: { params: Promise<{ slu
       <article>
         <header className="container-page section-tight">
           <div className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
-            {r.silo} · {r.readingMinutes} دقيقة قراءة
+            {siloAr(r.silo)} · {r.readingMinutes} دقيقة قراءة
           </div>
           <h1 className="mt-4 text-display-xl text-navy-900 max-w-4xl balance">{r.titleAr}</h1>
           <p className="mt-6 text-xl leading-relaxed text-ink-500 max-w-3xl pretty">{r.summaryAr}</p>

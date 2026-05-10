@@ -22,7 +22,7 @@ export function IndustryCard({ industry, variant = 'full', lang = 'en' }: Props)
           {name}
         </h3>
         <p className="text-sm leading-relaxed text-ink-500">
-          {industry.tagline}
+          {lang === 'ar' ? industry.taglineAr : industry.tagline}
         </p>
         <span className="mt-auto pt-2 text-sm font-semibold text-accent-700 group-hover:text-accent-600">
           {lang === 'ar' ? 'استعراض ←' : 'Explore →'}
@@ -63,7 +63,7 @@ export function IndustryCard({ industry, variant = 'full', lang = 'en' }: Props)
           {name}
         </h3>
         <p className="text-sm leading-relaxed text-white/85 line-clamp-2 pretty">
-          {industry.tagline}
+          {lang === 'ar' ? industry.taglineAr : industry.tagline}
         </p>
         <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-300 group-hover:text-accent-200">
           {lang === 'ar' ? 'استعراض القطاع' : 'Explore the silo'}
