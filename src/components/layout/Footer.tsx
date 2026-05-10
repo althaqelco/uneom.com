@@ -1,8 +1,11 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { INDUSTRIES } from '@/lib/data/industries';
 import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
 import { SERVICES } from '@/lib/data/services';
 import { t, localizedHref, type Lang } from '@/lib/i18n/ui';
+
+import logoImg from '../../../../public/images/logo.png';
 
 export function Footer({ lang = 'en' }: { lang?: Lang }) {
   const ui = t(lang);
@@ -16,11 +19,9 @@ export function Footer({ lang = 'en' }: { lang?: Lang }) {
           {/* Brand col */}
           <div className="col-span-2 md:col-span-2 lg:col-span-2">
             <Link href={localizedHref('/', lang)} className="inline-block group" aria-label="UNEOM Home">
-              <img 
-                src="/images/logo.png" 
+              <Image 
+                src={logoImg}
                 alt="UNEOM Logo" 
-                width="140" 
-                height="43" 
                 className="w-auto h-8 sm:h-10 brightness-0 invert opacity-90 transition-opacity duration-300 group-hover:opacity-100" 
               />
             </Link>
