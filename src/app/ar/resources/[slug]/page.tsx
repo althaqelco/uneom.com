@@ -77,7 +77,7 @@ export default async function ArResourcePage({ params }: { params: Promise<{ slu
         </div>
 
         <div className="container-page section-tight">
-          <SiloLinks context={{ type: 'resource', silo: r.silo, resourceSlug: r.slug }} />
+          <SiloLinks context={{ type: 'resource', silo: r.silo, resourceSlug: r.slug }} lang="ar" />
         </div>
       </article>
 

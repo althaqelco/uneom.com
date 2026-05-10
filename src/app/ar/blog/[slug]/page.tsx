@@ -153,7 +153,7 @@ export default async function ArBlogPostPage({ params }: { params: Promise<{ slu
         </div>
 
         <div className="container-page section-tight">
-          <SiloLinks context={{ type: 'blog-post', silo: post.silo, postSlug: post.slug }} />
+          <SiloLinks context={{ type: 'blog-post', silo: post.silo, postSlug: post.slug }} lang="ar" />
         </div>
       </article>
 

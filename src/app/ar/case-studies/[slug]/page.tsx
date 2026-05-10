@@ -110,7 +110,7 @@ export default async function ArCaseStudyPage({ params }: { params: Promise<{ sl
         </div>
 
         <div className="container-page section-tight">
-          <SiloLinks context={{ type: 'case-study', silo: c.silo, caseSlug: c.slug }} />
+          <SiloLinks context={{ type: 'case-study', silo: c.silo, caseSlug: c.slug }} lang="ar" />
         </div>
       </article>
 

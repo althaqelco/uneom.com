@@ -382,7 +382,7 @@ export default async function ArProductPage({ params }: { params: Promise<{ cate
         </section>
       )}
 
-      <SiloLinks context={{ type: 'product', productSlug: p.slug }} />
+      <SiloLinks context={{ type: 'product', productSlug: p.slug }} lang="ar" />
 
       <section className="container-page section">
         <CtaBlock

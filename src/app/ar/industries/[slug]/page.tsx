@@ -381,7 +381,7 @@ export default async function ArIndustryPillarPage({ params }: { params: Promise
       </section>
 
       {/* ===== SILO LINKS ===== */}
-      <SiloLinks context={{ type: 'industry-pillar', silo: industry.slug }} />
+      <SiloLinks context={{ type: 'industry-pillar', silo: industry.slug }} lang="ar" />
 
       {/* ===== FAQ ===== */}
       <section className="section bg-white">
