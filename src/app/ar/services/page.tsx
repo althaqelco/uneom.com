@@ -37,11 +37,11 @@ export default function ArServicesHubPage() {
                 {service.nameAr}
               </h3>
               <p className="text-sm leading-relaxed text-ink-500 pretty">
-                {service.summary}
+                {service.summaryAr}
               </p>
               <div className="mt-auto pt-3">
-                <div className="text-xl font-bold text-navy-900 stat-number">{service.outcome.value}</div>
-                <div className="text-xs font-medium uppercase tracking-wider text-accent-700">{service.outcome.label}</div>
+                <div className="text-xl font-bold text-navy-900 stat-number">{service.outcomeAr.value}</div>
+                <div className="text-xs font-medium uppercase tracking-wider text-accent-700">{service.outcomeAr.label}</div>
               </div>
             </Link>
           ))}
