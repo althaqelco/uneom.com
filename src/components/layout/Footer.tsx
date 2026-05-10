@@ -1,282 +1,118 @@
-"use client";
-
-import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp, FaTiktok, FaYoutube, FaPinterest } from 'react-icons/fa';
-import Logo from '../ui/Logo';
+import { INDUSTRIES } from '@/lib/data/industries';
+import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
+import { SERVICES } from '@/lib/data/services';
+import { t, localizedHref, type Lang } from '@/lib/i18n/ui';
 
-interface FooterProps {
-  locale?: string;
-}
+export function Footer({ lang = 'en' }: { lang?: Lang }) {
+  const ui = t(lang);
+  const isAr = lang === 'ar';
+  const currentYear = new Date().getFullYear();
 
-const Footer: React.FC<FooterProps> = ({ locale = 'en' }) => {
-  const isRTL = locale === 'ar';
-  
-  const footer = {
-    en: {
-      about: 'About UNEOM',
-      aboutContent: 'UNEOM is Saudi Arabia\'s leading provider of professional uniforms and scrubs for businesses across healthcare, aviation, hospitality, and corporate sectors.',
-      contactUs: 'Contact Us',
-      address: 'King Fahd Road, Riyadh, Saudi Arabia',
-      quickLinks: 'Quick Links',
-      industries: 'Industries',
-      products: 'Products',
-      services: 'Services',
-      blog: 'Blog',
-      resources: 'Resources',
-      aboutUs: 'About Us',
-      contactUsLink: 'Contact Us',
-      followUs: 'Follow Us',
-      copyright: '© 2025 UNEOM. All rights reserved.',
-      certifications: 'Quality Certifications'},
-    ar: {
-      about: 'عن يونيوم',
-      aboutContent: 'يونيوم هي الشركة الرائدة في المملكة العربية السعودية في توفير الأزياء المهنية والملابس الرسمية للقطاعات المختلفة بما في ذلك الرعاية الصحية والطيران والضيافة والشركات.',
-      contactUs: 'اتصل بنا',
-      address: 'طريق الملك فهد، الرياض، المملكة العربية السعودية',
-      quickLinks: 'روابط سريعة',
-      industries: 'القطاعات',
-      products: 'المنتجات',
-      services: 'الخدمات',
-      blog: 'المدونة',
-      resources: 'الموارد',
-      aboutUs: 'من نحن',
-      contactUsLink: 'تواصل معنا',
-      followUs: 'تابعنا',
-      copyright: '© 2025 يونيوم. جميع الحقوق محفوظة.',
-      certifications: 'شهادات الجودة'}};
-  
-  // روابط وسائل التواصل الاجتماعي
-  const socialLinks = {
-    facebook: "https://www.facebook.com/uneomuniforms/",
-    twitter: "https://www.linkedin.com/company/uneom",
-    instagram: "https://www.instagram.com/uneomuniforms/",
-    tiktok: "https://www.tiktok.com/@uneomcom",
-    pinterest: "https://www.pinterest.com/uneomcompany/",
-    youtube: "https://www.youtube.com/@uneom-uniforms",
-    whatsapp: "https://wa.me/966564612017"
-  };
-  
-  // Certification images
-  const certificates = [
-    {
-      name: 'ISO 9001:2015',
-      logo: '/images/certificate/ISO_90012015.png'},
-    {
-      name: 'OEKO-TEX® Standard 100',
-      logo: '/images/certificate/OEKO-TEX.png'},
-    {
-      name: 'Saudi Quality Mark',
-      logo: '/images/certificate/Saudi_Quality_Mark.png'},
-    {
-      name: 'GOTS Certified',
-      logo: '/images/certificate/GOTS_Certified.png'}
-  ];
-  
-  const content = locale === 'en' ? footer.en : footer.ar;
-  
   return (
-    <footer className="bg-neutral-900 text-white pt-16 pb-8">
-      <div className="container mx-auto px-4">
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12 ${isRTL ? 'lg:dir-rtl' : ''}`}>
-          {/* About */}
-          <div className={isRTL ? 'text-right' : ''}>
-            <h3 className="font-heading text-xl font-bold mb-4">{content.about}</h3>
-            <Logo locale={locale} inverted={true} withLink={false} className="h-12 w-auto mb-4" width={200} height={60} />
-            <p className="text-neutral-300 mb-4">
-              {content.aboutContent}
+    <footer className="bg-navy-900 text-navy-100">
+      <div className="container-page py-20">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-4 lg:grid-cols-6">
+          {/* Brand col */}
+          <div className="col-span-2 md:col-span-2 lg:col-span-2">
+            <Link href={localizedHref('/', lang)} className="inline-block">
+              <span className="font-display text-3xl font-extrabold tracking-tight text-white">UNEOM</span>
+            </Link>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-navy-200/80 pretty">
+              {ui.footer.tagline}
             </p>
-            
-            {/* Certificates under About section */}
-            <div className="mt-4">
-              <div className="flex flex-wrap gap-3 items-center mb-2">
-                {certificates.map((cert) => (
-                  <div key={cert.name} className={`flex items-center justify-center ${isRTL ? 'ml-2' : 'mr-2'} last:m-0`}>
-                    <Image
-                      src={cert.logo}
-                      alt={cert.name}
-                      width={45}
-                      height={45}
-                      className="opacity-80 hover:opacity-100 transition-opacity duration-300"
-                    />
-                  </div>
-                ))}
+            <div className="mt-6 space-y-2 text-sm">
+              <div className="flex items-center gap-2 text-navy-200">
+                <span className="text-accent-400">{isAr ? '←' : '→'}</span>
+                <a href="tel:+966564612017" className="hover:text-white transition-colors stat-number">+966 56 461 2017</a>
+              </div>
+              <div className="flex items-center gap-2 text-navy-200">
+                <span className="text-accent-400">{isAr ? '←' : '→'}</span>
+                <a href="mailto:info@uneom.com" className="hover:text-white transition-colors">info@uneom.com</a>
               </div>
             </div>
           </div>
-          
-          {/* Contact */}
-          <div className={isRTL ? 'text-right' : ''}>
-            <h3 className="font-heading text-xl font-bold mb-4">{content.contactUs}</h3>
-            <ul className="space-y-3 text-neutral-300">
-              <li className={`flex items-center ${isRTL ? 'flex-row-reverse justify-end space-x-0' : ''}`}>
-                <svg className={`w-5 h-5 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-                <span>{content.address}</span>
-              </li>
-              <li className={`flex items-center ${isRTL ? 'flex-row-reverse justify-end space-x-0' : ''}`}>
-                <svg className={`w-5 h-5 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
-                <span>info@uneom.com</span>
-              </li>
-              <li className={`flex items-center ${isRTL ? 'flex-row-reverse justify-end space-x-0' : ''}`}>
-                <svg className={`w-5 h-5 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                </svg>
-                <span dir="ltr">+966564612017</span>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Quick Links */}
-          <div className={isRTL ? 'text-right' : ''}>
-            <h3 className="font-heading text-xl font-bold mb-4">{content.quickLinks}</h3>
-            <ul className="space-y-2 text-neutral-300">
-              <li>
-                <Link href={locale === 'en' ? '/industries/' : '/ar/industries/'} className="hover:text-primary-400 transition duration-300">
-                  {content.industries}
-                </Link>
-              </li>
-              <li>
-                <Link href={locale === 'en' ? '/shop/' : '/ar/shop/'} className="hover:text-primary-400 transition duration-300">
-                  {content.products}
-                </Link>
-              </li>
-              <li>
-                <Link href={locale === 'en' ? '/services/' : '/ar/services/'} className="hover:text-primary-400 transition duration-300">
-                  {content.services}
-                </Link>
-              </li>
-              <li>
-                <Link href={locale === 'en' ? '/resources/' : '/ar/resources/'} className="hover:text-primary-400 transition duration-300">
-                  {content.resources}
-                </Link>
-              </li>
-              <li>
-                <Link href={locale === 'en' ? '/blog/' : '/ar/blog/'} className="hover:text-primary-400 transition duration-300">
-                  {content.blog}
-                </Link>
-              </li>
-              <li>
-                <Link href={locale === 'en' ? '/about/' : '/ar/about/'} className="hover:text-primary-400 transition duration-300">
-                  {content.aboutUs}
-                </Link>
-              </li>
-              <li>
-                <Link href={locale === 'en' ? '/contact/' : '/ar/contact/'} className="hover:text-primary-400 transition duration-300">
-                  {content.contactUsLink}
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Locations — PageRank Hub */}
-          <div className={isRTL ? 'text-right' : ''}>
-            <h3 className="font-heading text-xl font-bold mb-4">{locale === 'en' ? 'Our Locations' : 'مواقعنا'}</h3>
-            <ul className="space-y-2 text-neutral-300">
-              {[
-                { en: 'Riyadh', ar: 'الرياض', slug: 'riyadh' },
-                { en: 'Jeddah', ar: 'جدة', slug: 'jeddah' },
-                { en: 'Dammam', ar: 'الدمام', slug: 'dammam' },
-                { en: 'Mecca', ar: 'مكة المكرمة', slug: 'mecca' },
-                { en: 'Medina', ar: 'المدينة المنورة', slug: 'medina' },
-                { en: 'Khobar', ar: 'الخبر', slug: 'khobar' },
-                { en: 'Tabuk', ar: 'تبوك', slug: 'tabuk' },
-                { en: 'Abha', ar: 'أبها', slug: 'abha' },
-              ].map((city) => (
-                <li key={city.slug}>
-                  <Link href={`${locale === 'en' ? '' : '/ar'}/locations/${city.slug}`} className="hover:text-primary-400 transition duration-300">
-                    📍 {locale === 'en' ? city.en : city.ar}
+
+          <nav aria-labelledby="footer-industries">
+            <h3 id="footer-industries" className="text-xs font-bold uppercase tracking-[0.18em] text-white/90">{ui.footer.industries}</h3>
+            <ul className="mt-5 space-y-2.5 text-sm">
+              {INDUSTRIES.map(i => (
+                <li key={i.slug}>
+                  <Link href={localizedHref(`/industries/${i.slug}/`, lang)} className="text-navy-200/80 transition-colors hover:text-white">
+                    {isAr ? i.nameAr : i.nameEn}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link href={locale === 'en' ? '/locations/' : '/ar/locations/'} className="text-primary-400 hover:text-primary-300 font-semibold transition duration-300">
-                  {locale === 'en' ? 'All 24 Cities →' : 'جميع المدن الـ 24 ←'}
+            </ul>
+          </nav>
+
+          <nav aria-labelledby="footer-services">
+            <h3 id="footer-services" className="text-xs font-bold uppercase tracking-[0.18em] text-white/90">{ui.footer.services}</h3>
+            <ul className="mt-5 space-y-2.5 text-sm">
+              {SERVICES.slice(0, 6).map(s => (
+                <li key={s.slug}>
+                  <Link href={localizedHref(`/services/${s.slug}/`, lang)} className="text-navy-200/80 transition-colors hover:text-white">
+                    {isAr ? s.nameAr : s.nameEn}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav aria-labelledby="footer-cities">
+            <h3 id="footer-cities" className="text-xs font-bold uppercase tracking-[0.18em] text-white/90">{ui.footer.majorCities}</h3>
+            <ul className="mt-5 space-y-2.5 text-sm">
+              {SAUDI_CITIES.filter(c => c.populationTier === 'metro' || c.populationTier === 'major').slice(0, 8).map(c => (
+                <li key={c.slug}>
+                  <Link href={localizedHref(`/locations/${c.slug}/`, lang)} className="text-navy-200/80 transition-colors hover:text-white">
+                    {isAr ? c.nameAr : c.nameEn}
+                  </Link>
+                </li>
+              ))}
+              <li className="pt-2">
+                <Link href={localizedHref('/locations/', lang)} className="font-semibold text-accent-400 hover:text-accent-300">
+                  {ui.footer.allCities}
                 </Link>
               </li>
             </ul>
-          </div>
-          
-          {/* Social Media */}
-          <div className={isRTL ? 'text-right' : ''}>
-            <h3 className="font-heading text-xl font-bold mb-4">{content.followUs}</h3>
-            <div className={`flex flex-wrap ${isRTL ? 'justify-end' : ''} gap-3`}>
-              <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="bg-neutral-800 hover:bg-primary-600 transition duration-300 p-3 rounded-full">
-                <FaFacebook className="w-5 h-5" />
-              </a>
-              <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" className="bg-neutral-800 hover:bg-primary-600 transition duration-300 p-3 rounded-full">
-                <FaTwitter className="w-5 h-5" />
-              </a>
-              <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="bg-neutral-800 hover:bg-primary-600 transition duration-300 p-3 rounded-full">
-                <FaInstagram className="w-5 h-5" />
-              </a>
-              <a href={socialLinks.tiktok} target="_blank" rel="noopener noreferrer" className="bg-neutral-800 hover:bg-primary-600 transition duration-300 p-3 rounded-full">
-                <FaTiktok className="w-5 h-5" />
-              </a>
-              <a href={socialLinks.pinterest} target="_blank" rel="noopener noreferrer" className="bg-neutral-800 hover:bg-primary-600 transition duration-300 p-3 rounded-full">
-                <FaPinterest className="w-5 h-5" />
-              </a>
-              <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="bg-neutral-800 hover:bg-primary-600 transition duration-300 p-3 rounded-full">
-                <FaYoutube className="w-5 h-5" />
-              </a>
-              {/* Enhanced WhatsApp Icon with Animation */}
-              <a 
-                href={socialLinks.whatsapp} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="relative p-3 rounded-full overflow-hidden group"
-                style={{ background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)' }}
-              >
-                {/* Pulse Animation - Only visible on hover */}
-                <span 
-                  className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-70" 
-                  style={{ 
-                    background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
-                    animationDuration: '1.5s'
-                  }}
-                ></span>
-                <span 
-                  className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-50" 
-                  style={{ 
-                    background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
-                    animationDuration: '2s',
-                    animationDelay: '0.3s'
-                  }}
-                ></span>
-                {/* Glow Effect */}
-                <span 
-                  className="absolute inset-1 rounded-full bg-red-500 opacity-0 group-hover:opacity-20 animate-pulse"
-                  style={{ animationDuration: '1.2s' }}
-                ></span>
-                {/* Icon with Rotation on Hover */}
-                <div className="relative z-10 group-hover:rotate-12 transform transition-transform duration-300">
-                  <FaWhatsapp className="w-5 h-5" />
-                </div>
-              </a>
-            </div>
-            <div className="mt-6">
-              <Link 
-                href={locale === 'en' ? '/quote/' : '/ar/quote/'}
-                className={`inline-flex items-center ${isRTL ? 'flex-row-reverse' : ''} px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-md font-medium transition duration-300`}
-              >
-                {locale === 'en' ? 'Request a Quote' : 'طلب عرض سعر'}
-              </Link>
-            </div>
-          </div>
+          </nav>
+
+          <nav aria-labelledby="footer-company">
+            <h3 id="footer-company" className="text-xs font-bold uppercase tracking-[0.18em] text-white/90">{ui.footer.company}</h3>
+            <ul className="mt-5 space-y-2.5 text-sm">
+              <li><Link href={localizedHref('/about/', lang)} className="text-navy-200/80 transition-colors hover:text-white">{isAr ? 'عن UNEOM' : 'About'}</Link></li>
+              <li><Link href={localizedHref('/case-studies/', lang)} className="text-navy-200/80 transition-colors hover:text-white">{ui.nav.caseStudies}</Link></li>
+              <li><Link href={localizedHref('/blog/', lang)} className="text-navy-200/80 transition-colors hover:text-white">{ui.nav.blog}</Link></li>
+              <li><Link href={localizedHref('/careers/', lang)} className="text-navy-200/80 transition-colors hover:text-white">{isAr ? 'الوظائف' : 'Careers'}</Link></li>
+              <li><Link href={localizedHref('/contact/', lang)} className="text-navy-200/80 transition-colors hover:text-white">{ui.nav.contact}</Link></li>
+              <li><Link href={localizedHref('/quote/', lang)} className="text-navy-200/80 transition-colors hover:text-white">{ui.nav.requestQuote}</Link></li>
+            </ul>
+          </nav>
         </div>
-        
-        {/* Copyright */}
-        <div className="border-t border-neutral-800 pt-8 text-center text-neutral-400">
-          <p>{content.copyright}</p>
+
+        <div className="mt-16 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/10 pt-8">
+          <span className="text-xs font-bold uppercase tracking-[0.18em] text-white/60">{ui.footer.compliance}</span>
+          <span className="text-sm text-navy-200/80">ISO 9001:2015</span>
+          <span className="text-sm text-navy-200/80">·</span>
+          <span className="text-sm text-navy-200/80">OEKO-TEX Standard 100</span>
+          <span className="text-sm text-navy-200/80">·</span>
+          <span className="text-sm text-navy-200/80">SASO {isAr ? 'معتمد' : 'Certified'}</span>
+          <span className="text-sm text-navy-200/80">·</span>
+          <span className="text-sm text-navy-200/80">Maroof {isAr ? 'موثّق' : 'Verified'}</span>
+          <span className="text-sm text-navy-200/80">·</span>
+          <span className="text-sm text-navy-200/80">ZATCA E-Invoicing</span>
+        </div>
+
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-navy-200/60">
+          <p>© {currentYear} UNEOM Saudi Arabia. {ui.footer.allRights}</p>
+          <nav aria-label={ui.footer.legal} className="flex gap-6">
+            <Link href={localizedHref('/privacy-policy/', lang)} className="hover:text-white">{ui.footer.privacy}</Link>
+            <Link href={localizedHref('/terms-of-service/', lang)} className="hover:text-white">{ui.footer.terms}</Link>
+            <Link href={localizedHref('/license/', lang)} className="hover:text-white">{ui.footer.license}</Link>
+            <Link href="/sitemap.xml" className="hover:text-white">{ui.footer.sitemap}</Link>
+          </nav>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer; 
+}

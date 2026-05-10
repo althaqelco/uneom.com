@@ -1,150 +1,445 @@
-import React from 'react';
-import { industries } from '@/lib/data/industries';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Container from '@/components/ui/Container';
-import SectionHeading from '@/components/ui/SectionHeading';
-import Image from 'next/image';
 import Link from 'next/link';
-import { Metadata } from 'next';
+import { INDUSTRIES, getIndustry } from '@/lib/data/industries';
+import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
+import { INDUSTRY_STATS } from '@/lib/data/stats';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
+import { SectionHeader } from '@/components/ui/SectionHeader';
+import { TrustAnchorList } from '@/components/ui/TrustAnchorList';
+import { CtaBlock } from '@/components/ui/CtaBlock';
+import { SiloLinks } from '@/components/ui/SiloLinks';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { faqSchema } from '@/lib/seo/schemas';
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return INDUSTRIES.map(i => ({ slug: i.slug }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const industry = industries.find(i => i.id === params.slug);
-  if (!industry) return { title: 'القطاع غير موجود | UNEOM' };
-
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const industry = getIndustry(slug);
+  if (!industry) return {};
+  const titleMap: Record<string, string> = {
+    healthcare: 'الزي الطبي في السعودية — سكرابات معتمدة من وزارة الصحة | UNEOM'
+  };
+  const descMap: Record<string, string> = {
+    healthcare: 'سكرابات وأزياء طبية معتمدة من وزارة الصحة وSFDA في 24 مدينة سعودية. قماش antimicrobial AATCC 100، ضمان 18 شهراً. اطلب عرضاً.'
+  };
   return {
-    title: `${industry.nameAr} | UNEOM`,
-    description: industry.descriptionAr,
+    title: titleMap[slug] ?? `أزياء ${industry.nameAr} — المملكة العربية السعودية | UNEOM`,
+    description: descMap[slug] ?? industry.taglineAr,
+    alternates: {
+      canonical: `https://uneom.com/ar/industries/${slug}/`,
+      languages: {
+        en: `https://uneom.com/industries/${slug}/`,
+        'ar-SA': `https://uneom.com/ar/industries/${slug}/`,
+        'x-default': `https://uneom.com/industries/${slug}/`
+      }
+    },
     openGraph: {
-      title: industry.nameAr,
-      description: industry.descriptionAr,
-      images: [{ url: industry.heroImage }]
+      title: `أزياء ${industry.nameAr} — UNEOM السعودية`,
+      description: industry.taglineAr,
+      images: [{ url: `/images/${industry.heroImage}.avif`, width: 1920, height: 1080 }]
     }
   };
 }
 
-export async function generateStaticParams() {
-  return industries.map((industry) => ({
-    slug: industry.id,
-  }));
-}
+export default async function ArIndustryPillarPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const industry = getIndustry(slug);
+  if (!industry) notFound();
 
-export default function IndustryPageAr({ params }: PageProps) {
-  const industry = industries.find(i => i.id === params.slug);
+  const stats = INDUSTRY_STATS[slug];
 
-  if (!industry) {
-    return notFound();
-  }
+  // Use expanded 8-FAQ if present, otherwise default 5
+  const faqs = industry.expandedFaqs
+    ? industry.expandedFaqs.map(f => ({ q: f.qAr, a: f.aAr }))
+    : [
+        { q: `لماذا تتخصّص UNEOM في أزياء ${industry.nameAr}؟`, a: industry.architectEquationAr },
+        { q: `ما هو وقت التسليم لبرامج أزياء ${industry.nameAr}؟`, a: 'البرامج المتكرّرة تُشحَن في 14–21 يوماً. التصاميم الجديدة تُشحَن في 21–35 يوماً، تشمل القياسات الميدانية.' },
+        { q: `ما المعايير السعودية التي يمتثل لها UNEOM لقطاع ${industry.nameAr}؟`, a: `${industry.regulators.map(r => r.toUpperCase()).join('، ')}, بالإضافة إلى ISO 9001 وOEKO-TEX Standard 100 على كامل البرنامج.` },
+        { q: `ما متوسط سعر الوحدة لأزياء ${industry.nameAr}؟`, a: `التسعير يعتمد على الحجم وفئة القماش والتخصيص. متوسط سعر الوحدة لقطاع ${industry.nameAr} يتراوح حول ${stats?.avgPriceSAR} ريال — اطلب عرض سعر للأرقام الدقيقة.` },
+        { q: `هل تخدم UNEOM جميع المدن السعودية لقطاع ${industry.nameAr}؟`, a: 'نعم. UNEOM يشحن إلى جميع الـ 24 مدينة سعودية، مع قياسات ميدانية متاحة للتجمعات التي تتجاوز 50 موظفاً في أي منطقة.' }
+      ];
 
   return (
-    <div className="min-h-screen bg-white" dir="rtl">
-      {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src={industry.heroImage}
-            alt={industry.nameAr}
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
+    <>
+      <JsonLd data={faqSchema(faqs)} />
+      <Breadcrumbs items={[
+        { name: 'القطاعات', path: '/ar/industries/' },
+        { name: industry.nameAr, path: `/ar/industries/${industry.slug}/` }
+      ]} />
+
+      {/* ===== HERO ===== */}
+      <section className="relative overflow-hidden bg-navy-900">
+        <div className="absolute inset-0">
+          <picture>
+            <source type="image/avif" srcSet={`/images/${industry.heroImage}.avif`} />
+            <source type="image/webp" srcSet={`/images/${industry.heroImage}.webp`} />
+            <img
+              src={`/images/${industry.heroImage}.avif`}
+              alt=""
+              role="presentation"
+              className="h-full w-full object-cover opacity-40"
+              fetchPriority="high"
+              decoding="sync"
+              width={1920}
+              height={1080}
+            />
+          </picture>
+          <div className="absolute inset-0 bg-gradient-to-l from-navy-950/95 via-navy-900/80 to-transparent" aria-hidden />
         </div>
-        
-        <Container className="relative z-10 text-white">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">{industry.nameAr}</h1>
-            <p className="text-xl text-gray-200 mb-8">{industry.descriptionAr}</p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/ar/quote/"
-                className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-bold transition-colors"
-              >
-                طلب عرض سعر
-              </Link>
-              <Link
-                href="/ar/contact/"
-                className="bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-sm px-8 py-3 rounded-lg font-bold transition-colors"
-              >
-                استشارة خبير
+        <div className="relative container-page pt-12 pb-20 sm:pt-16 sm:pb-28">
+          <div className="max-w-3xl text-white">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-accent-300">
+              القطاع · {industry.regulators.map(r => r.toUpperCase()).join(' · ')}
+            </span>
+            <h1 className="mt-5 text-display-2xl text-white balance">
+              أزياء {industry.nameAr} — مبنية وفق <span className="text-accent-400">المعايير السعودية.</span>
+            </h1>
+            <p className="mt-6 text-lg leading-relaxed text-white/85 lg:text-xl pretty">
+              {industry.taglineAr}
+            </p>
+            {industry.lastUpdated && (
+              <p className="mt-4 text-xs text-white/50">
+                آخر تحديث: <time dateTime={industry.lastUpdated}>{industry.lastUpdated}</time>
+              </p>
+            )}
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href={`/ar/quote/?industry=${industry.slug}`} className="btn-accent">طلب عرض سعر</Link>
+              <Link href="/ar/case-studies/" className="btn-ghost text-white border border-white/20 hover:bg-white/10 hover:text-white">
+                مشاهدة دراسات الحالة
               </Link>
             </div>
           </div>
-        </Container>
+        </div>
       </section>
 
-      {/* Products & Solutions */}
-      <section className="py-20 bg-gray-50">
-        <Container>
-          <SectionHeading centered subtitle="حلول متخصصة">
-            منتجات {industry.nameAr}
-          </SectionHeading>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            {industry.products.map((product, index) => (
-              <Link key={index} href={product.href.startsWith('/shop') ? `/ar${product.href}` : product.href} className="group">
-                <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-                  <div className="text-4xl mb-4">{industry.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
-                    {product.nameAr}
-                  </h3>
-                  <div className="flex items-center text-primary-600 font-medium mt-4">
-                    عرض المنتج
-                    <svg className="mr-2 w-4 h-4 transform rotate-180 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* ===== ARCHITECT EQUATION ===== */}
+      <section className="bg-ink-50 border-b border-ink-100">
+        <div className="container-page section-tight">
+          <div className="grid items-start gap-12 lg:grid-cols-[1.4fr_1fr]">
             <div>
-              <SectionHeading subtitle="لماذا تختارنا">
-                ميزة UNEOM لقطاع {industry.nameAr}
-              </SectionHeading>
-              <div className="space-y-8 mt-12">
-                {industry.benefitsAr.map((benefit, index) => (
-                  <div key={index} className="flex gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-primary-50 rounded-full flex items-center justify-center text-2xl">
-                      {benefit.icon}
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-1">{benefit.title}</h4>
-                      <p className="text-gray-600">{benefit.desc}</p>
-                    </div>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
+                معادلة المعمار
+              </span>
+              <p className="mt-5 text-display text-navy-900 balance">
+                {industry.architectEquationAr}
+              </p>
+              {industry.definitionLockIn && (
+                <blockquote className="mt-8 border-r-4 border-accent-500 bg-white p-6 text-base leading-relaxed text-navy-800 pretty">
+                  <span className="block text-xs font-bold uppercase tracking-[0.18em] text-accent-700 mb-2">التعريف</span>
+                  {industry.definitionLockIn.ar}
+                </blockquote>
+              )}
+            </div>
+            {stats && (
+              <div className="card p-8 lg:p-10">
+                <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">اقتصاديات البرنامج</h3>
+                <dl className="mt-6 space-y-5">
+                  <div>
+                    <dt className="text-xs font-medium uppercase tracking-wider text-ink-400">متوسط سعر الوحدة</dt>
+                    <dd className="stat-number mt-1 text-3xl font-extrabold text-navy-900">{stats.avgPriceSAR} <span className="text-base font-medium text-ink-500">ريال</span></dd>
                   </div>
+                  <div>
+                    <dt className="text-xs font-medium uppercase tracking-wider text-ink-400">وقت التسليم</dt>
+                    <dd className="stat-number mt-1 text-3xl font-extrabold text-navy-900">{stats.leadTimeDays} <span className="text-base font-medium text-ink-500">يوم</span></dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs font-medium uppercase tracking-wider text-ink-400">الضمان</dt>
+                    <dd className="stat-number mt-1 text-3xl font-extrabold text-navy-900">{stats.warrantyMonths} <span className="text-base font-medium text-ink-500">شهر</span></dd>
+                  </div>
+                </dl>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== INDUSTRY CONTEXT BLOCK (Saudi market reality) ===== */}
+      {industry.industryContext && (
+        <section className="section bg-white">
+          <div className="container-page">
+            <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.4fr]">
+              <SectionHeader
+                eyebrow="السياق القطاعي"
+                title={`واقع قطاع ${industry.nameAr} في السعودية.`}
+                lead="لماذا تفشل الإرشادات العالمية الـgeneric في هذا السوق — وما الذي يتغيّر عند التصميم له تحديداً."
+              />
+              <div className="prose prose-lg max-w-none text-ink-700">
+                {industry.industryContext.ar.map((para, i) => (
+                  <p key={i} className="leading-relaxed pretty">{para}</p>
                 ))}
               </div>
             </div>
-            
-            <div className="bg-gray-100 p-8 rounded-3xl">
-              <h3 className="text-2xl font-bold mb-6">مميزات الأداء الرئيسية</h3>
-              <ul className="space-y-4">
-                {industry.featuresAr.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700 font-medium">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+          </div>
+        </section>
+      )}
+
+      {/* ===== COMPLIANCE CITATIONS ===== */}
+      {industry.complianceCitations && industry.complianceCitations.length > 0 && (
+        <section className="section bg-ink-50">
+          <div className="container-page">
+            <SectionHeader
+              eyebrow="الالتزام والاستشهادات"
+              title="نصوص حرفية من الجهات السعودية التي تُدقّق عملنا."
+              lead="كل بند أدناه اقتباس مباشر من النصّ التنظيمي العام. برامج UNEOM مُصمَّمة لتلبية هذه المتطلّبات على مستوى الدفعة (batch)."
+            />
+            <div className="mt-12 grid gap-6 lg:grid-cols-3">
+              {industry.complianceCitations.map((c, i) => (
+                <article key={i} className="bg-white border border-ink-100 rounded-2xl p-6">
+                  <header>
+                    <a
+                      href={c.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-bold text-accent-700 hover:underline"
+                    >
+                      {c.entityAr} ↗
+                    </a>
+                    <p className="mt-2 text-xs uppercase tracking-wider text-ink-400">{c.refLabelAr}</p>
+                  </header>
+                  <blockquote className="mt-4 border-r-2 border-accent-300 pr-4 text-sm leading-relaxed text-ink-700 italic">
+                    «{c.quoteAr}»
+                  </blockquote>
+                </article>
+              ))}
             </div>
           </div>
-        </Container>
+        </section>
+      )}
+
+      {/* ===== SIGNATURE STAT ===== */}
+      <section className="section-tight bg-white">
+        <div className="container-page">
+          <div className="mx-auto max-w-4xl text-center">
+            <span className="eyebrow">معلومة مميّزة</span>
+            <p className="mt-6 text-display-lg text-navy-900 balance">
+              <span className="text-accent-700 stat-number">{industry.signatureStat.value}</span>
+              {' '}
+              <span className="text-ink-500 font-medium">{industry.signatureStatAr.label}</span>
+            </p>
+            <p className="mt-6 text-base text-ink-500 max-w-2xl mx-auto pretty">
+              {industry.signatureStatAr.context}
+            </p>
+          </div>
+        </div>
       </section>
-    </div>
+
+      {/* ===== PILLARS ===== */}
+      <section className="section bg-ink-50">
+        <div className="container-page">
+          <SectionHeader
+            eyebrow="ما يميّز UNEOM"
+            title={`ثلاثة أشياء تفعلها برامجنا لقطاع ${industry.nameAr} ولا تستطيع الكتالوجات فعلها.`}
+          />
+          <div className="mt-12 grid gap-px overflow-hidden rounded-3xl bg-ink-100 lg:grid-cols-3">
+            {industry.pillarsAr.map((p, i) => (
+              <div key={i} className="bg-white p-8 lg:p-10">
+                <div className="font-display text-5xl font-extrabold text-accent-200 stat-number">
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+                <h3 className="mt-4 text-xl font-bold text-navy-900 balance">{p.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-ink-500 pretty">{p.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== COMPARISON MATRIX ===== */}
+      {industry.comparisonMatrix && (
+        <section className="section bg-white">
+          <div className="container-page">
+            <SectionHeader
+              eyebrow="مقارنة المستويات"
+              title={industry.comparisonMatrix.titleAr}
+              lead="تفصيل جنباً إلى جنب لما يقدّمه كل مستوى فعلياً — القماش، الأداء، الضمان، وإجمالي الكلفة."
+            />
+            <div className="mt-12 overflow-x-auto rounded-2xl border border-ink-100">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="bg-navy-900 text-white">
+                    <th className="px-6 py-4 text-right font-bold">البُعد</th>
+                    {industry.comparisonMatrix.columnsAr.map((col, i) => (
+                      <th
+                        key={i}
+                        className={`px-6 py-4 text-right font-bold ${i === 0 ? 'bg-accent-700' : ''}`}
+                      >
+                        {col}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {industry.comparisonMatrix.rows.map((row, i) => (
+                    <tr key={i} className={i % 2 === 0 ? 'bg-ink-50' : 'bg-white'}>
+                      <td className="px-6 py-4 font-semibold text-navy-900 border-l border-ink-100">{row.dimensionAr}</td>
+                      {row.valuesAr.map((val, j) => (
+                        <td
+                          key={j}
+                          className={`px-6 py-4 text-ink-700 ${j === 0 ? 'font-bold text-accent-700 bg-accent-50/50' : ''}`}
+                        >
+                          {val}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-6 text-xs text-ink-400">
+              التسعير يعكس عروض UNEOM للربع الأول من 2026. أسعار البرامج تُطبَّق على الطلبات فوق 500 قطعة.
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* ===== NEGATIVE ENTITY FRAME ===== */}
+      {industry.negativeFrames && industry.negativeFrames.length > 0 && (
+        <section className="section bg-navy-900 text-white">
+          <div className="container-page">
+            <div className="text-white">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-accent-300">ما يحدث خطأ</span>
+              <h2 className="mt-5 text-display-lg text-white balance">
+                اثنان من أخطاء الشراء في قطاع {industry.nameAr} — والفيزياء وراء فشلها.
+              </h2>
+              <p className="mt-5 max-w-3xl text-lg leading-relaxed text-white/80 pretty">
+                ليس كل خيار رخيص خاطئاً. لكن بعض ردود الفعل الشرائية القياسية لها أوضاع فشل قابلة للقياس. هاتان أكثرهما تكراراً.
+              </p>
+            </div>
+            <div className="mt-12 grid gap-8 lg:grid-cols-2">
+              {industry.negativeFrames.map((nf, i) => (
+                <article key={i} className="rounded-2xl bg-white/5 backdrop-blur p-8 border border-white/10">
+                  <div className="text-xs font-bold uppercase tracking-[0.2em] text-red-300 mb-3">
+                    ممارسة خاطئة {i + 1}
+                  </div>
+                  <h3 className="text-xl font-bold text-white balance">{nf.practiceAr}</h3>
+                  <div className="mt-6 space-y-4">
+                    <div>
+                      <div className="text-xs font-bold uppercase tracking-wider text-white/60 mb-2">لماذا تفشل</div>
+                      <p className="text-sm leading-relaxed text-white/85 pretty">{nf.whyFailsAr}</p>
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold uppercase tracking-wider text-accent-300 mb-2">الحل</div>
+                      <p className="text-sm leading-relaxed text-white pretty">{nf.solutionAr}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== TRUST ANCHORS ===== */}
+      <section className="section-tight bg-white">
+        <div className="container-page">
+          <div className="grid items-start gap-12 lg:grid-cols-[1.2fr_1fr]">
+            <div>
+              <SectionHeader
+                eyebrow="المعايير والجهات التنظيمية"
+                title="مرتبطون بالجهات التنظيمية السعودية التي تُراجع عملنا."
+                lead="كل برنامج يُقاس مقابل الوزارة أو السلطة وجهة الاعتماد ذات الصلة. مسار التدقيق هو المُخرَج."
+              />
+            </div>
+            <TrustAnchorList regulators={industry.regulators} city={industry.anchorCity} />
+          </div>
+        </div>
+      </section>
+
+      {/* ===== CITY COVERAGE ===== */}
+      <section className="section bg-navy-900 text-white">
+        <div className="container-page">
+          <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
+            <div className="max-w-2xl">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-accent-300">التغطية الجغرافية</span>
+              <h2 className="mt-5 text-display-lg text-white balance">
+                برامج {industry.nameAr} مُسلَّمة إلى جميع الـ 24 مدينة سعودية.
+              </h2>
+              <p className="mt-5 text-lg leading-relaxed text-white/80 pretty">
+                قياسات ميدانية، شحن دورات الاستبدال، وإدارة مجموعات الموظفين الجدد — منطلقة من {industry.anchorCity ? SAUDI_CITIES.find(c => c.slug === industry.anchorCity)?.nameAr : 'الرياض'}.
+              </p>
+            </div>
+          </div>
+          <div className="mt-12 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {SAUDI_CITIES.map(city => (
+              <Link
+                key={city.slug}
+                href={`/ar/locations/${city.slug}/`}
+                className="group flex items-center justify-between rounded-xl bg-white/5 px-4 py-3 text-sm font-medium text-white/90 transition-all hover:bg-white/10 hover:text-white"
+              >
+                <span>{city.nameAr}</span>
+                <span className="text-white/40 transition-transform group-hover:-translate-x-1 group-hover:text-accent-400" aria-hidden>←</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== SILO LINKS ===== */}
+      <SiloLinks context={{ type: 'industry-pillar', silo: industry.slug }} />
+
+      {/* ===== FAQ ===== */}
+      <section className="section bg-white">
+        <div className="container-page">
+          <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.4fr]">
+            <SectionHeader
+              eyebrow="الأسئلة الشائعة"
+              title={`أسئلة برنامج ${industry.nameAr}.`}
+              lead="الأسئلة التي تطرحها فِرَق المشتريات السعودية قبل التوقيع. إجابات مباشرة، بدون التواء تسويقي."
+            />
+            <div>
+              <dl className="divide-y divide-ink-100 border-t border-ink-100">
+                {faqs.map(f => (
+                  <div key={f.q} className="py-6">
+                    <dt className="text-base font-bold text-navy-900">{f.q}</dt>
+                    <dd className="mt-3 text-sm leading-relaxed text-ink-500 pretty">{f.a}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== EXTERNAL SOURCES ===== */}
+      {industry.externalSources && industry.externalSources.length > 0 && (
+        <section className="section-tight bg-ink-50 border-y border-ink-100">
+          <div className="container-page">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">الجهات والمعايير الخارجية</span>
+            <ul className="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+              {industry.externalSources.map((src, i) => (
+                <li key={i}>
+                  <a
+                    href={src.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-navy-900 hover:text-accent-700 underline-offset-4 hover:underline"
+                  >
+                    {src.nameAr} ↗
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* ===== CTA ===== */}
+      <section className="container-page section">
+        <CtaBlock
+          dark
+          eyebrow="ابدأ برنامجك"
+          heading={`أخبرنا عن متطلبات أزياء ${industry.nameAr} الموحّدة.`}
+          body="طلب عرض سعر من 4 خطوات يستغرق أقل من دقيقتين. نردّ خلال يوم عمل واحد بعيّنات قماش وخيارات تصميم ومقترح برنامج."
+          primary={{ label: 'طلب عرض سعر', href: `/ar/quote/?industry=${industry.slug}` }}
+          secondary={{ label: 'تحدّث مع العمليات', href: '/ar/contact/' }}
+        />
+      </section>
+    </>
   );
 }

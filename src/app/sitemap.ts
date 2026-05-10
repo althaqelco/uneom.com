@@ -1,125 +1,80 @@
-import { MetadataRoute } from 'next';
-import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
-import { products } from '@/lib/data/products';
+import type { MetadataRoute } from 'next';
 import { INDUSTRIES } from '@/lib/data/industries';
-import { getAllBlogPosts } from '@/lib/data/blogPosts.server';
+import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
+import { SERVICES } from '@/lib/data/services';
+import { PRODUCT_CATEGORIES, PRODUCTS } from '@/lib/data/products';
+import { BLOG_POSTS, BLOG_CATEGORIES } from '@/lib/data/blog';
+import { RESOURCES } from '@/lib/data/resources';
+import { CASE_STUDIES } from '@/lib/data/case-studies';
+
+const SITE = 'https://uneom.com';
 
 /**
- * SEO 2026 Sovereign Sitemap — Temporal Integrity Engine
+ * Master sitemap. Per master-plan-v11 §11 we'll segment to 6 files at scale,
+ * but Next.js single-sitemap output is fine until we cross 500+ URLs.
+ *
+ * Build-time invariant: total entries should sit in 270–300 (en + ar mirrors).
  */
-
-const CONTENT_DATES = {
-  homepage: '2026-05-04',
-  core: '2026-05-01',
-  industries: '2026-05-05',
-  locations: '2026-05-04',
-  services: '2026-05-05',
-  shop: '2026-05-06', // Updated today
-  blog: '2026-05-06',
-  resources: '2026-05-05',
-  legal: '2026-01-01',
-};
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://uneom.com';
+  const lastmod = new Date('2026-05-08');
+  const entries: MetadataRoute.Sitemap = [];
 
-  // 1. Homepage
-  const homepage: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: CONTENT_DATES.homepage, changeFrequency: 'daily', priority: 1.0 },
-    { url: `${baseUrl}/ar`, lastModified: CONTENT_DATES.homepage, changeFrequency: 'daily', priority: 1.0 },
-  ];
+  function add(path: string, freq: MetadataRoute.Sitemap[number]['changeFrequency'], pri: number, mirrorAr = true) {
+    entries.push({ url: `${SITE}${path}`, lastModified: lastmod, changeFrequency: freq, priority: pri });
+    if (mirrorAr) {
+      entries.push({ url: `${SITE}/ar${path}`, lastModified: lastmod, changeFrequency: freq, priority: pri });
+    }
+  }
 
-  // 2. Core Pages
-  const corePages: MetadataRoute.Sitemap = [
-    'quote', 'contact', 'about', 'faq', 'privacy-policy', 'terms-of-service'
-  ].flatMap(page => [
-    { url: `${baseUrl}/${page}`, lastModified: CONTENT_DATES.core, changeFrequency: 'monthly' as const, priority: 0.8 },
-    { url: `${baseUrl}/ar/${page}`, lastModified: CONTENT_DATES.core, changeFrequency: 'monthly' as const, priority: 0.8 },
-  ]);
+  // ===== Core pages (9 × 2 = 18) =====
+  add('/',                  'weekly',  1.0);
+  add('/about/',            'monthly', 0.7);
+  add('/contact/',          'monthly', 0.7);
+  add('/quote/',            'monthly', 0.9);
+  add('/faq/',              'monthly', 0.6);
+  add('/careers/',          'monthly', 0.5);
+  add('/privacy-policy/',   'yearly',  0.3);
+  add('/terms-of-service/', 'yearly',  0.3);
+  add('/license/',          'yearly',  0.3);
 
-  // 3. Industries (Dynamic)
-  const industryPages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/industries`, lastModified: CONTENT_DATES.industries, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/ar/industries`, lastModified: CONTENT_DATES.industries, changeFrequency: 'weekly', priority: 0.9 },
-    ...INDUSTRIES.flatMap(ind => [
-      { url: `${baseUrl}/industries/${ind.slug}`, lastModified: CONTENT_DATES.industries, changeFrequency: 'weekly' as const, priority: 0.9 },
-      { url: `${baseUrl}/ar/industries/${ind.slug}`, lastModified: CONTENT_DATES.industries, changeFrequency: 'weekly' as const, priority: 0.9 },
-    ]),
-  ];
+  // ===== Hubs (7 × 2 = 14) =====
+  add('/industries/',   'monthly', 0.9);
+  add('/locations/',    'monthly', 0.9);
+  add('/services/',     'monthly', 0.8);
+  add('/shop/',         'weekly',  0.9);
+  add('/blog/',         'weekly',  0.85);
+  add('/resources/',    'monthly', 0.85);
+  add('/case-studies/', 'monthly', 0.85);
 
-  // 4. Locations (Dynamic)
-  const locationPages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/locations`, lastModified: CONTENT_DATES.locations, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/ar/locations`, lastModified: CONTENT_DATES.locations, changeFrequency: 'monthly', priority: 0.9 },
-    ...SAUDI_CITIES.flatMap(city => [
-      { url: `${baseUrl}/locations/${city.slug}`, lastModified: CONTENT_DATES.locations, changeFrequency: 'monthly' as const, priority: city.priority },
-      { url: `${baseUrl}/ar/locations/${city.slug}`, lastModified: CONTENT_DATES.locations, changeFrequency: 'monthly' as const, priority: city.priority },
-      ...INDUSTRIES.map(i => i.slug).flatMap(ind => [
-        { url: `${baseUrl}/locations/${city.slug}/${ind}`, lastModified: CONTENT_DATES.locations, changeFrequency: 'monthly' as const, priority: Math.max(city.priority - 0.1, 0.5) },
-        { url: `${baseUrl}/ar/locations/${city.slug}/${ind}`, lastModified: CONTENT_DATES.locations, changeFrequency: 'monthly' as const, priority: Math.max(city.priority - 0.1, 0.5) },
-      ])
-    ]),
-  ];
+  // ===== Industry pillars (8 × 2 = 16) =====
+  for (const i of INDUSTRIES) add(`/industries/${i.slug}/`, 'monthly', 0.85);
 
-  // 5. Shop (Dynamic)
-  const productCategories = Array.from(new Set(products.map(p => p.category)));
-  const shopPages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/shop`, lastModified: CONTENT_DATES.shop, changeFrequency: 'daily', priority: 0.9 },
-    { url: `${baseUrl}/ar/shop`, lastModified: CONTENT_DATES.shop, changeFrequency: 'daily', priority: 0.9 },
-    ...productCategories.flatMap(cat => [
-      { url: `${baseUrl}/shop/${cat}`, lastModified: CONTENT_DATES.shop, changeFrequency: 'weekly' as const, priority: 0.85 },
-      { url: `${baseUrl}/ar/shop/${cat}`, lastModified: CONTENT_DATES.shop, changeFrequency: 'weekly' as const, priority: 0.85 },
-    ]),
-    ...products.flatMap(product => [
-      { url: `${baseUrl}/shop/${product.category}/${product.id}`, lastModified: CONTENT_DATES.shop, changeFrequency: 'weekly' as const, priority: 0.8 },
-      { url: `${baseUrl}/ar/shop/${product.category}/${product.id}`, lastModified: CONTENT_DATES.shop, changeFrequency: 'weekly' as const, priority: 0.8 },
-    ]),
-  ];
+  // ===== City pages (24 × 2 = 48) =====
+  for (const c of SAUDI_CITIES) add(`/locations/${c.slug}/`, 'monthly', 0.7);
 
-  // 6. Services (Dynamic)
-  // We'll use a curated list of active service paths
-  const activeServices = [
-    'program-management', 'custom-design', 'bulk-ordering', 'measurement-services', 
-    'uniform-policies', 'fabric-selection', 'quality-assurance', 'manufacturing', 
-    'technical-finishes', 'corporate-programs'
-  ];
-  const servicePages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/services`, lastModified: CONTENT_DATES.services, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/ar/services`, lastModified: CONTENT_DATES.services, changeFrequency: 'weekly', priority: 0.9 },
-    ...activeServices.flatMap(svc => [
-      { url: `${baseUrl}/services/${svc}`, lastModified: CONTENT_DATES.services, changeFrequency: 'monthly' as const, priority: 0.85 },
-      { url: `${baseUrl}/ar/services/${svc}`, lastModified: CONTENT_DATES.services, changeFrequency: 'monthly' as const, priority: 0.85 },
-    ]),
-  ];
+  // ===== Services (7 × 2 = 14) =====
+  for (const s of SERVICES) add(`/services/${s.slug}/`, 'monthly', 0.7);
 
-  // 7. Blog (Dynamic)
-  const enPosts = getAllBlogPosts('en');
-  const arPosts = getAllBlogPosts('ar');
-  
-  const blogPages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/blog`, lastModified: CONTENT_DATES.blog, changeFrequency: 'daily', priority: 0.85 },
-    { url: `${baseUrl}/ar/blog`, lastModified: CONTENT_DATES.blog, changeFrequency: 'daily', priority: 0.85 },
-    ...enPosts.map(post => ({
-      url: `${baseUrl}/blog/${post.slug}`,
-      lastModified: post.date || CONTENT_DATES.blog,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7
-    })),
-    ...arPosts.map(post => ({
-      url: `${baseUrl}/ar/blog/${post.slug}`,
-      lastModified: post.date || CONTENT_DATES.blog,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7
-    })),
-  ];
+  // ===== Shop categories (8 × 2 = 16) =====
+  for (const c of PRODUCT_CATEGORIES) add(`/shop/${c.slug}/`, 'weekly', 0.75);
 
-  return [
-    ...homepage,
-    ...corePages,
-    ...industryPages,
-    ...locationPages,
-    ...shopPages,
-    ...servicePages,
-    ...blogPages,
-  ];
+  // ===== Products (16 × 2 = 32) =====
+  for (const p of PRODUCTS) add(`/shop/${p.category}/${p.slug}/`, 'weekly', 0.7);
+
+  // ===== Blog categories (6 × 2 = 12) =====
+  for (const c of BLOG_CATEGORIES) add(`/blog/category/${c.slug}/`, 'weekly', 0.7);
+
+  // ===== Blog posts (10 × 2 = 20) =====
+  for (const p of BLOG_POSTS) add(`/blog/${p.slug}/`, 'monthly', 0.65);
+
+  // ===== Resources (12 × 2 = 24) =====
+  for (const r of RESOURCES) add(`/resources/${r.slug}/`, 'monthly', 0.7);
+
+  // ===== Case studies (8 × 2 = 16) =====
+  for (const c of CASE_STUDIES) add(`/case-studies/${c.slug}/`, 'monthly', 0.7);
+
+  // ===== Price index (1 × 2 = 2) =====
+  add('/resources/uniform-price-index-ksa/', 'yearly', 0.8);
+
+  return entries;
 }

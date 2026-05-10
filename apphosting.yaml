@@ -1,11 +1,19 @@
+# Firebase App Hosting configuration
+# Per master-plan-v11 §3.1.2
+
 runConfig:
-  minInstances: 0
+  minInstances: 1
   maxInstances: 10
   cpu: 1
-  memoryMiB: 512
+  memoryMiB: 1024
   concurrency: 80
+  cpuThrottling: false
+
 env:
   - variable: NEXT_PUBLIC_SITE_URL
     value: https://uneom.com
-  - variable: GA_MEASUREMENT_ID
-    value: G-RSQSS61R9J
+  - variable: REVALIDATE_SECRET
+    secret: revalidate-secret
+
+cacheConfig:
+  ttl: "3600s"

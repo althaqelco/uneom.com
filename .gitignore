@@ -1,65 +1,59 @@
-# dependencies
-/node_modules
-/.pnp
+# Dependencies
+node_modules/
+.pnp
 .pnp.js
 
-# testing
-/coverage
+# Build output
+.next/
+out/
+build/
+dist/
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+build.log
+build_output*.txt
+dev.log
 
-# local env files
+# Environment
 .env*.local
-.env
+.env.development.local
+.env.test.local
+.env.production.local
 
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-# next-env.d.ts
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
 # IDE
-.vscode/
 .idea/
+.vscode/
+*.swp
+*.swo
+*~
 
-# Backup files
-*.bak 
+# Reports & temp scans
+broken-links*.{txt,json}
+linkinator-report.txt
+blc-report.txt
+curl_output.html
 
-# Additional unnecessary files
-/tmp_edits/
-/tmp_branch_files/
-/temp/
-/pages_backup/
-/fixed-files/
-unused-images.txt
-used-images.txt
-missing-images.txt
-renamed-images.txt
-optimized-images.txt
-*.zip
-/~/ 
-# Local Netlify folder
-.netlify
-
-# Firebase sensitive files — NEVER COMMIT
-info.md
-*-firebase-adminsdk-*.json
-firebase-debug.log
-firebase-debug.*.log
+# Firebase
 .firebase/
-.firebaserc
+*.firebaserc.local
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel
+.vercel/
+
+# Cache
+.cache/
+.eslintcache

@@ -1,264 +1,171 @@
-import React from 'react';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
-import Link from 'next/link';
-import { format } from 'date-fns';
-import { FaCalendar, FaUser } from 'react-icons/fa';
-import Container from '@/components/ui/Container';
-import MainHeading from '@/components/ui/MainHeading';
-import SmartHeading from '@/components/ui/SmartHeading';
-import { getBlogPostBySlug, getRelatedPosts } from '@/lib/data/blogPosts.server';
-import { Metadata } from 'next';
-import { formatDate } from '@/lib/utils';
-import Markdown from 'react-markdown';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import { BLOG_POSTS, BLOG_POSTS_BY_SLUG, BLOG_CATEGORIES_BY_SLUG } from '@/lib/data/blog';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
+import { CtaBlock } from '@/components/ui/CtaBlock';
+import { SiloLinks } from '@/components/ui/SiloLinks';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { faqSchema } from '@/lib/seo/schemas';
 
-interface BlogPostPageProps {
-  params: {
-    slug: string;
-  };
-}
+export const dynamicParams = false;
+export function generateStaticParams() { return BLOG_POSTS.map(p => ({ slug: p.slug })); }
 
-export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const post = getBlogPostBySlug(params.slug, 'ar');
-  
-  if (!post) {
-    return {
-      title: 'المقال غير موجود | مدونة يونيوم',
-      description: 'لم يتم العثور على المقال المطلوب.'
-    };
-  }
-  
-  const authorName = typeof post.author === 'string' ? post.author : post.author.name;
-  
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = BLOG_POSTS_BY_SLUG[slug];
+  if (!post) return {};
   return {
-    title: `${post.title} | مدونة يونيوم`,
-    description: post.excerpt,
+    title: `${post.titleAr} — UNEOM`,
+    description: post.excerptAr,
+    alternates: { canonical: `https://uneom.com/ar/blog/${slug}/` },
     openGraph: {
-      title: `${post.title} | مدونة يونيوم`,
-      description: post.excerpt,
-      url: `https://uneom.com/ar/blog/${post.slug}/`,
-      siteName: 'يونيوم',
-      images: post.featuredImage ? [
-        {
-          url: post.featuredImage,
-          width: 1200,
-          height: 630,
-          alt: post.title
-        }
-      ] : undefined,
-      locale: 'ar_SA',
+      title: post.titleAr,
+      description: post.excerptAr,
       type: 'article',
-      publishedTime: post.date,
-      authors: [authorName],
-      tags: post.tags},
-    alternates: {
-      canonical: `https://uneom.com/ar/blog/${post.slug}/`,
-      languages: {
-        'en-SA': `https://uneom.com/blog/${post.slug}/`,
-        'ar-SA': `https://uneom.com/ar/blog/${post.slug}/`,
-        'x-default': `https://uneom.com/blog/${post.slug}/`
-      }
-    }
+      publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt,
+      authors: [post.author.nameAr],
+      images: [{ url: `/images/${post.hero}.avif`, width: 1920, height: 1080 }]
+    },
+    twitter: { card: 'summary_large_image', title: post.titleAr, description: post.excerptAr }
   };
 }
 
-export const dynamic = 'force-static';
-export const revalidate = 3600; // revalidate every hour
+export default async function ArBlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = BLOG_POSTS_BY_SLUG[slug];
+  if (!post) notFound();
 
-// Generate static params for all blog posts
-export async function generateStaticParams() {
-  // Define all possible blog post slugs for the Arabic version
-  return [
-    { slug: 'school-uniforms-academic-performance' },
-    { slug: 'sustainable-uniforms-2024-trends' },
-    { slug: 'sustainable-school-uniforms-saudi' },
-    { slug: 'retail-uniform-selection-guide' },
-    { slug: 'restaurant-uniform-trends' },
-    { slug: 'hospital-uniform-safety-standards' },
-    { slug: 'industrial-protective-clothing-advances' },
-    { slug: 'security-uniform-safety-standards' },
-    { slug: 'corporate-uniforms-brand-perception' },
-    { slug: 'fabrics-professional-attire' },
-    { slug: 'future-aviation-uniforms-gcc' },
-    { slug: 'material-innovations-aviation-attire' },
-    { slug: 'airline-uniform-design-cultural-identity' },
-    // Placeholder posts
-    { slug: 'placeholder1' },
-    { slug: 'placeholder2' },
-    { slug: 'placeholder-corporate1' },
-    { slug: 'placeholder-corporate2' },
-    { slug: 'placeholder-aviation1' },
-    { slug: 'placeholder-aviation2' },
-    // Add any other Arabic blog post slugs here
-  ];
-}
+  const cat = BLOG_CATEGORIES_BY_SLUG[post.category];
+  const date = new Date(post.publishedAt).toLocaleDateString('ar-SA', { day: 'numeric', month: 'long', year: 'numeric' });
 
-// Format date function
-function formatBlogDate(dateString: string) {
-  try {
-    return format(new Date(dateString), 'MMMM dd, yyyy');
-  } catch (error) {
-    console.error('Error formatting date:', error);
-    return dateString;
-  }
-}
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.titleAr,
+    description: post.excerptAr,
+    image: `https://uneom.com/images/${post.hero}.avif`,
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt || post.publishedAt,
+    author: { '@type': 'Person', name: post.author.nameAr, jobTitle: post.author.titleAr, worksFor: { '@id': 'https://uneom.com/#organization' } },
+    reviewedBy: post.reviewer ? { '@type': 'Person', name: post.reviewer.nameAr, jobTitle: post.reviewer.titleAr, memberOf: { '@type': 'Organization', name: post.reviewer.affiliationAr } } : undefined,
+    publisher: { '@id': 'https://uneom.com/#organization' },
+    mainEntityOfPage: `https://uneom.com/ar/blog/${post.slug}/`,
+    articleSection: cat?.nameAr,
+    inLanguage: 'ar',
+    wordCount: post.sections.reduce((acc, s) => acc + s.bodyAr.split(/\s+/).length, post.leadAr.split(/\s+/).length)
+  };
 
-// The page component
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getBlogPostBySlug(params.slug, 'ar');
-  
-  if (!post) {
-    notFound();
-  }
-  
-  const authorName = typeof post.author === 'string' ? post.author : post.author.name;
-  const authorAvatar = typeof post.author === 'string' ? null : post.author.avatar;
-  const authorBio = typeof post.author === 'string' ? null : post.author.bio;
-  const authorTitle = typeof post.author === 'string' ? null : post.author.title;
-  
-  const relatedPosts = getRelatedPosts(post.slug, 3, 'ar');
-  
   return (
-    <main className="py-10" dir="rtl">
-      <Container>
-        <div className="max-w-4xl mx-auto">
-          <Link 
-            href="/ar/blog" 
-            className="text-blue-600 hover:text-blue-800 mb-6 inline-flex items-center"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1 rotate-180" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
-            </svg>
-            العودة إلى المدونة
-          </Link>
-          
-          <article>
-            <header className="mb-8">
-              <MainHeading>{post.title}</MainHeading>
-              
-              <div className="flex items-center text-gray-600 mb-6">
-                <time dateTime={post.date}>{formatDate(post.date)}</time>
-                <span className="mx-2">•</span>
-                <span>{post.readingTime}</span>
-                {post.tags && post.tags.length > 0 && (
-                  <>
-                    <span className="mx-2">•</span>
-                    <div className="flex flex-wrap gap-2">
-                      {post.tags.map(tag => (
-                        <Link 
-                          key={tag}
-                          href={`/ar/blog/tag/${tag}`}
-                          className="text-xs px-2 py-1 bg-gray-100 hover:bg-gray-200 rounded-full"
-                        >
-                          #{tag}
-                        </Link>
-                      ))}
-                    </div>
-                  </>
-                )}
-              </div>
-              
-              {post.featuredImage && (
-                <div className="relative aspect-[16/9] rounded-xl overflow-hidden mb-8">
-                  <Image
-                    src={post.featuredImage}
-                    alt={post.title}
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              )}
-            </header>
-            
-            <div className="prose prose-lg max-w-none">
-              <Markdown>{post.content}</Markdown>
+    <>
+      <JsonLd data={[articleSchema, faqSchema(post.faqs)]} />
+      <Breadcrumbs items={[
+        { name: 'المقالات', path: '/ar/blog/' },
+        { name: cat?.nameAr ?? post.category, path: `/ar/blog/category/${post.category}/` },
+        { name: post.titleAr, path: `/ar/blog/${post.slug}/` }
+      ]} />
+
+      <article>
+        <header className="container-page section-tight">
+          <div className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
+            {cat?.nameAr ?? post.category} · {post.readingMinutes} دقيقة قراءة
+          </div>
+          <h1 className="mt-4 text-display-xl text-navy-900 max-w-4xl balance">{post.titleAr}</h1>
+          <p className="mt-6 text-xl leading-relaxed text-ink-500 max-w-3xl pretty">{post.excerptAr}</p>
+          <div className="mt-8 flex flex-wrap items-center gap-6 border-t border-ink-100 pt-8">
+            <div>
+              <span className="text-xs font-medium text-ink-400">بقلم</span>
+              <p className="mt-0.5 font-semibold text-navy-900">{post.author.nameAr}</p>
+              <p className="text-xs text-ink-500">{post.author.titleAr}</p>
             </div>
-            
-            <div className="mt-12 pt-8 border-t border-gray-200">
-              <div className="flex items-center">
-                {authorAvatar && (
-                  <div className="ml-4">
-                    <Image
-                      src={authorAvatar}
-                      alt={authorName}
-                      width={60}
-                      height={60}
-                      className="rounded-full"
-                    />
-                  </div>
-                )}
-                
-                <div>
-                  <SmartHeading level={3} className="font-bold text-lg">{authorName}</SmartHeading>
-                  {authorTitle && <p className="text-gray-600 text-sm mb-1">{authorTitle}</p>}
-                  {authorBio && <p className="text-gray-600">{authorBio}</p>}
-                </div>
+            {post.reviewer && (
+              <div>
+                <span className="text-xs font-medium text-ink-400">مُراجَع من</span>
+                <p className="mt-0.5 font-semibold text-navy-900">{post.reviewer.nameAr}</p>
+                <p className="text-xs text-ink-500">{post.reviewer.affiliationAr}</p>
               </div>
+            )}
+            <div className="mr-auto">
+              <span className="text-xs font-medium text-ink-400">نُشر</span>
+              <p className="mt-0.5 text-sm text-navy-900">{date}</p>
             </div>
-          </article>
-          
-          {relatedPosts.length > 0 && (
-            <div className="mt-16">
-              <SmartHeading level={2} className="text-2xl font-bold mb-8">مقالات ذات صلة</SmartHeading>
-              <div className="grid md:grid-cols-3 gap-8">
-                {relatedPosts.map(relatedPost => {
-                  const relatedAuthorName = typeof relatedPost.author === 'string' 
-                    ? relatedPost.author 
-                    : relatedPost.author.name;
-                  
-                  return (
-                    <div key={relatedPost.slug} className="flex flex-col">
-                      {relatedPost.featuredImage && (
-                        <Link href={`/ar/blog/${relatedPost.slug}`} className="block relative aspect-video overflow-hidden rounded-lg mb-4">
-                          <Image
-                            src={relatedPost.featuredImage}
-                            alt={relatedPost.title}
-                            fill
-                            className="object-cover transition-transform hover:scale-105 duration-300"
-                          />
-                        </Link>
-                      )}
-                      
-                      <div className="mb-2 text-sm text-gray-500">
-                        {formatDate(relatedPost.date)} • بواسطة {relatedAuthorName}
-                      </div>
-                      
-                      <SmartHeading level={3} className="text-lg font-bold mb-2 hover:text-blue-600 transition-colors">
-                        <Link href={`/ar/blog/${relatedPost.slug}`}>
-                          {relatedPost.title}
-                        </Link>
-                      </SmartHeading>
-                      
-                      <p className="text-gray-600 text-sm mb-4 flex-grow">{relatedPost.excerpt}</p>
-                      
-                      <Link 
-                        href={`/ar/blog/${relatedPost.slug}`}
-                        className="text-blue-600 hover:text-blue-800 font-medium text-sm inline-flex items-center mt-auto"
-                      >
-                        قراءة المزيد
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 rotate-180" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
-                      </Link>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-          
-          <div className="mt-16 text-center">
-            <Link 
-              href="/ar/blog"
-              className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 rounded-md font-medium transition-colors"
-            >
-              عرض جميع المقالات
-            </Link>
+          </div>
+        </header>
+
+        {/* Hero image */}
+        <div className="container-page">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-3xl bg-ink-100">
+            <picture>
+              <source type="image/avif" srcSet={`/images/${post.hero}.avif`} />
+              <source type="image/webp" srcSet={`/images/${post.hero}.webp`} />
+              <img src={`/images/${post.hero}.avif`} alt={post.titleAr} className="h-full w-full object-cover" fetchPriority="high" decoding="sync" width={1920} height={1080} />
+            </picture>
           </div>
         </div>
-      </Container>
-    </main>
+
+        {/* Body */}
+        <div className="container-prose section">
+          <p className="text-xl leading-relaxed text-navy-900 font-medium pretty">{post.leadAr}</p>
+
+          {/* TOC */}
+          <nav aria-label="المحتويات" className="mt-12 rounded-2xl bg-ink-50 p-6 ring-1 ring-ink-100">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink-400">المحتويات</p>
+            <ol className="mt-4 space-y-2">
+              {post.sections.map((s, i) => {
+                const sid = `section-${i}`;
+                return (
+                  <li key={sid}>
+                    <a href={`#${sid}`} className="text-sm font-medium text-navy-900 hover:text-accent-700 transition-colors">
+                      {i + 1}. {s.headingAr}
+                    </a>
+                  </li>
+                );
+              })}
+              <li>
+                <a href="#faq" className="text-sm font-medium text-navy-900 hover:text-accent-700 transition-colors">
+                  {post.sections.length + 1}. الأسئلة الشائعة
+                </a>
+              </li>
+            </ol>
+          </nav>
+
+          {post.sections.map((s, i) => (
+            <section key={i} id={`section-${i}`} className="mt-12">
+              <h2 className="text-display text-navy-900">{s.headingAr}</h2>
+              <p className="mt-4 text-lg leading-relaxed text-ink-500 pretty">{s.bodyAr}</p>
+            </section>
+          ))}
+
+          {/* FAQ */}
+          {post.faqs.length > 0 && (
+            <section id="faq" className="mt-16">
+              <h2 className="text-display text-navy-900">الأسئلة الشائعة</h2>
+              <dl className="mt-6 divide-y divide-ink-100 border-t border-ink-100">
+                {post.faqs.map(f => (
+                  <div key={f.q} className="py-6">
+                    <dt className="text-base font-bold text-navy-900">{f.qAr}</dt>
+                    <dd className="mt-3 text-base leading-relaxed text-ink-500 pretty">{f.aAr}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          )}
+        </div>
+
+        <div className="container-page section-tight">
+          <SiloLinks context={{ type: 'blog-post', silo: post.silo, postSlug: post.slug }} />
+        </div>
+      </article>
+
+      <section className="container-page section">
+        <CtaBlock
+          dark
+          heading="هل أثارت هذه المقالة سؤالاً تشغيلياً؟"
+          body="راسلنا مباشرة. مؤلّف هذه المقالة هو عضو في فريق عمليات UNEOM."
+          primary={{ label: 'تحدّث معنا', href: '/ar/contact/' }}
+          secondary={{ label: 'طلب عرض سعر', href: '/ar/quote/' }}
+        />
+      </section>
+    </>
   );
-} 
+}
