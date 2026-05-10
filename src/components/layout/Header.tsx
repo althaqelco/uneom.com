@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { t, localizedHref, type Lang } from '@/lib/i18n/ui';
 import { LangSwitcher } from './LangSwitcher';
 
@@ -17,12 +18,17 @@ export function Header({ lang = 'en' }: { lang?: Lang }) {
   return (
     <header className="sticky top-0 z-40 border-b border-ink-100/70 bg-white/85 backdrop-blur-md">
       <div className="container-page flex h-16 items-center justify-between gap-8 lg:h-20">
-        <Link href={localizedHref('/', lang)} className="group flex items-center gap-3" aria-label={`UNEOM ${ui.nav.home}`}>
-          <span className="font-display text-2xl font-extrabold tracking-tight text-navy-800 group-hover:text-navy-900 transition-colors">
-            UNEOM
-          </span>
-          <span className="hidden h-5 w-px bg-ink-200 sm:block" aria-hidden="true" />
-          <span className="hidden text-xs font-medium text-ink-500 sm:block">
+        <Link href={localizedHref('/', lang)} className="group flex items-center gap-4" aria-label={`UNEOM ${ui.nav.home}`}>
+          <Image 
+            src="/images/uneom-logo.png" 
+            alt="UNEOM Logo" 
+            width={140} 
+            height={43} 
+            className="w-auto h-7 sm:h-9 object-contain transition-transform duration-300 group-hover:scale-105"
+            priority 
+          />
+          <span className="hidden h-6 w-px bg-ink-200 lg:block" aria-hidden="true" />
+          <span className="hidden text-xs font-medium text-ink-500 lg:block">
             {ui.nav.tagline}
           </span>
         </Link>

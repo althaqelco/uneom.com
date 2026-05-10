@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { INDUSTRIES } from '@/lib/data/industries';
 import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
 import { SERVICES } from '@/lib/data/services';
@@ -15,8 +16,14 @@ export function Footer({ lang = 'en' }: { lang?: Lang }) {
         <div className="grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-4 lg:grid-cols-6">
           {/* Brand col */}
           <div className="col-span-2 md:col-span-2 lg:col-span-2">
-            <Link href={localizedHref('/', lang)} className="inline-block">
-              <span className="font-display text-3xl font-extrabold tracking-tight text-white">UNEOM</span>
+            <Link href={localizedHref('/', lang)} className="inline-block group" aria-label="UNEOM Home">
+              <Image 
+                src="/images/uneom-logo.png" 
+                alt="UNEOM Logo" 
+                width={140} 
+                height={43} 
+                className="w-auto h-8 sm:h-10 brightness-0 invert opacity-90 transition-opacity duration-300 group-hover:opacity-100" 
+              />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-navy-200/80 pretty">
               {ui.footer.tagline}
