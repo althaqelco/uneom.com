@@ -23,6 +23,7 @@ export function Footer({ lang = 'en' }: { lang?: Lang }) {
                 width={140} 
                 height={43} 
                 className="w-auto h-8 sm:h-10 brightness-0 invert opacity-90 transition-opacity duration-300 group-hover:opacity-100" 
+                unoptimized
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-navy-200/80 pretty">

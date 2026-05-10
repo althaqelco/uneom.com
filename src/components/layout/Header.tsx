@@ -25,7 +25,8 @@ export function Header({ lang = 'en' }: { lang?: Lang }) {
             width={140} 
             height={43} 
             className="w-auto h-7 sm:h-9 object-contain transition-transform duration-300 group-hover:scale-105"
-            priority 
+            priority
+            unoptimized
           />
           <span className="hidden h-6 w-px bg-ink-200 lg:block" aria-hidden="true" />
           <span className="hidden text-xs font-medium text-ink-500 lg:block">
