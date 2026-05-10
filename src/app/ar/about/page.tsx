@@ -16,13 +16,23 @@ export default function ArAboutPage() {
     <>
       <Breadcrumbs items={[{ name: 'عن UNEOM', path: '/ar/about/' }]} />
 
-      <section className="container-page section-tight">
-        <SectionHeader
-          eyebrow={`سعودية الملكية · ${COMPANY_STATS.yearsInMarket} سنة في السوق`}
-          title={<>نصنع <span className="text-accent-700">الأزياء الموحّدة</span> للمؤسسات السعودية التي تبني المملكة.</>}
-          lead={`UNEOM شركة سعودية لتصنيع الزي الموحّد تأسّست عام 2013. نُشغّل مصنعاً واحداً وثلاثة مراكز عمليات وفريق قياسات يتنقّل إلى كل مقاطعة سعودية. لا نبيع كتالوجات — نُدير برامج.`}
-          hero
-        />
+      {/* Hero with background image */}
+      <section className="relative overflow-hidden bg-navy-900 text-white">
+        <div className="absolute inset-0">
+          <picture>
+            <source type="image/avif" srcSet="/images/process/custom-design-workflow.avif" />
+            <source type="image/webp" srcSet="/images/process/custom-design-workflow.webp" />
+            <img src="/images/process/custom-design-workflow.avif" alt="" role="presentation" className="h-full w-full object-cover opacity-30" loading="eager" width={1920} height={800} />
+          </picture>
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-900/80 to-navy-900/40" aria-hidden />
+        </div>
+        <div className="relative container-page pt-12 pb-20 sm:pt-16 sm:pb-28">
+          <div className="max-w-3xl">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-accent-300">{`سعودية الملكية · ${COMPANY_STATS.yearsInMarket} سنة في السوق`}</span>
+            <h1 className="mt-5 text-display-2xl text-white balance">نصنع <span className="text-accent-300">الأزياء الموحّدة</span> للمؤسسات السعودية التي تبني المملكة.</h1>
+            <p className="mt-6 text-xl leading-relaxed text-white/85 pretty">{`UNEOM شركة سعودية لتصنيع الزي الموحّد تأسّست عام 2013. نُشغّل مصنعاً واحداً وثلاثة مراكز عمليات وفريق قياسات يتنقّل إلى كل مقاطعة سعودية. لا نبيع كتالوجات — نُدير برامج.`}</p>
+          </div>
+        </div>
       </section>
 
       <section className="container-page py-12">
@@ -37,10 +47,20 @@ export default function ArAboutPage() {
       <section className="section bg-ink-50">
         <div className="container-page">
           <div className="grid items-start gap-16 lg:grid-cols-[1fr_1.4fr]">
-            <SectionHeader
-              eyebrow="مبدأ التشغيل"
-              title="شريك في البرنامج. لا كتالوجاً."
-            />
+            <div>
+              <SectionHeader
+                eyebrow="مبدأ التشغيل"
+                title="شريك في البرنامج. لا كتالوجاً."
+              />
+              {/* Process image */}
+              <div className="mt-8 overflow-hidden rounded-2xl">
+                <picture>
+                  <source type="image/avif" srcSet="/images/process/quality-assurance.avif" />
+                  <source type="image/webp" srcSet="/images/process/quality-assurance.webp" />
+                  <img src="/images/process/quality-assurance.avif" alt="فحص الجودة في مصنع UNEOM" className="w-full object-cover rounded-2xl" loading="lazy" width={640} height={480} />
+                </picture>
+              </div>
+            </div>
             <div className="space-y-6 text-lg leading-relaxed text-ink-500 pretty">
               <p>
                 معظم موردي الزي الموحّد في المملكة العربية السعودية موزّعو كتالوجات. يشحنون منتجاً قياسياً، يأخذون الدفع، ثم يختفون حتى الطلب التالي. ينكسر الخياطة، يبهت اللون، لا تصل مجموعة الموظفين الجدد — فتكتب إدارة الموارد البشرية طلب مناقصة جديداً.
@@ -51,6 +71,14 @@ export default function ArAboutPage() {
               <p>
                 نموذجنا مبني للعقد الثاني، لا البيعة الأولى. {COMPANY_STATS.repeatClientRate}% من إيرادات UNEOM تأتي من عملاء في دورة برنامجهم الثالثة أو أبعد. هذا المقياس الوحيد الذي يهمّنا.
               </p>
+              {/* Measurement image */}
+              <div className="mt-4 overflow-hidden rounded-2xl">
+                <picture>
+                  <source type="image/avif" srcSet="/images/process/measurement-services.avif" />
+                  <source type="image/webp" srcSet="/images/process/measurement-services.webp" />
+                  <img src="/images/process/measurement-services.avif" alt="خدمات القياس الميدانية" className="w-full object-cover rounded-2xl" loading="lazy" width={640} height={400} />
+                </picture>
+              </div>
             </div>
           </div>
         </div>

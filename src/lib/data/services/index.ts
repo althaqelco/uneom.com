@@ -3,6 +3,13 @@
  * All deeper "*-program" variants from legacy site collapse into these.
  */
 
+export interface ServiceSection {
+  heading: string;
+  headingAr: string;
+  body: string;
+  bodyAr: string;
+}
+
 export interface Service {
   slug: string;
   nameEn: string;
@@ -11,6 +18,15 @@ export interface Service {
   summaryAr: string;
   description: string;
   descriptionAr: string;
+  /** Hero image path (relative to /images/) — reuses existing process/product/fabric imagery */
+  heroImage: string;
+  /** Deep content sections for rich service pages */
+  sections: ServiceSection[];
+  /** Key stats shown in a feature grid */
+  stats: { value: string; label: string; labelAr: string }[];
+  /** Who this service is for */
+  idealFor: string[];
+  idealForAr: string[];
   /** Outcome metric — used in service hero block */
   outcome: { value: string; label: string };
   outcomeAr: { value: string; label: string };

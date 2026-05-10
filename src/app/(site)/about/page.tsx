@@ -16,13 +16,23 @@ export default function AboutPage() {
     <>
       <Breadcrumbs items={[{ name: 'About', path: '/about/' }]} />
 
-      <section className="container-page section-tight">
-        <SectionHeader
-          eyebrow={`Saudi-owned · ${COMPANY_STATS.yearsInMarket} years in market`}
-          title={<>We build the <span className="text-accent-700">uniforms behind</span> the Saudi enterprises that build the kingdom.</>}
-          lead={`UNEOM is a Saudi-owned uniform manufacturer founded in 2013. We operate one factory, three operations hubs, and a fitting team that travels to every Saudi province. We don't sell catalogues — we run programmes.`}
-          hero
-        />
+      {/* Hero with background image */}
+      <section className="relative overflow-hidden bg-navy-900 text-white">
+        <div className="absolute inset-0">
+          <picture>
+            <source type="image/avif" srcSet="/images/process/custom-design-workflow.avif" />
+            <source type="image/webp" srcSet="/images/process/custom-design-workflow.webp" />
+            <img src="/images/process/custom-design-workflow.avif" alt="" role="presentation" className="h-full w-full object-cover opacity-30" loading="eager" width={1920} height={800} />
+          </picture>
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-900/80 to-navy-900/40" aria-hidden />
+        </div>
+        <div className="relative container-page pt-12 pb-20 sm:pt-16 sm:pb-28">
+          <div className="max-w-3xl">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-accent-300">{`Saudi-owned · ${COMPANY_STATS.yearsInMarket} years in market`}</span>
+            <h1 className="mt-5 text-display-2xl text-white balance">We build the <span className="text-accent-300">uniforms behind</span> the Saudi enterprises that build the kingdom.</h1>
+            <p className="mt-6 text-xl leading-relaxed text-white/85 pretty">{`UNEOM is a Saudi-owned uniform manufacturer founded in 2013. We operate one factory, three operations hubs, and a fitting team that travels to every Saudi province. We don't sell catalogues — we run programmes.`}</p>
+          </div>
+        </div>
       </section>
 
       <section className="container-page py-12">
@@ -37,10 +47,19 @@ export default function AboutPage() {
       <section className="section bg-ink-50">
         <div className="container-page">
           <div className="grid items-start gap-16 lg:grid-cols-[1fr_1.4fr]">
-            <SectionHeader
-              eyebrow="Operating principle"
-              title="Programme partner. Not a catalogue."
-            />
+            <div>
+              <SectionHeader
+                eyebrow="Operating principle"
+                title="Programme partner. Not a catalogue."
+              />
+              <div className="mt-8 overflow-hidden rounded-2xl">
+                <picture>
+                  <source type="image/avif" srcSet="/images/process/quality-assurance.avif" />
+                  <source type="image/webp" srcSet="/images/process/quality-assurance.webp" />
+                  <img src="/images/process/quality-assurance.avif" alt="UNEOM quality assurance inspection" className="w-full object-cover rounded-2xl" loading="lazy" width={640} height={480} />
+                </picture>
+              </div>
+            </div>
             <div className="space-y-6 text-lg leading-relaxed text-ink-500 pretty">
               <p>
                 Most uniform suppliers in Saudi Arabia are catalogue resellers. They ship a stock product, take payment, and disappear until the next order. The seam fails, the colour fades, the joiner kit doesn't arrive — and the HR team writes another procurement RFP.
@@ -51,6 +70,13 @@ export default function AboutPage() {
               <p>
                 Our model is built for the second contract, not the first sale. {COMPANY_STATS.repeatClientRate}% of UNEOM revenue comes from clients in their third programme cycle or beyond. That's the only KPI that matters.
               </p>
+              <div className="mt-4 overflow-hidden rounded-2xl">
+                <picture>
+                  <source type="image/avif" srcSet="/images/process/measurement-services.avif" />
+                  <source type="image/webp" srcSet="/images/process/measurement-services.webp" />
+                  <img src="/images/process/measurement-services.avif" alt="On-site measurement services" className="w-full object-cover rounded-2xl" loading="lazy" width={640} height={400} />
+                </picture>
+              </div>
             </div>
           </div>
         </div>
