@@ -346,7 +346,7 @@ export default async function ArIndustryPillarPage({ params }: { params: Promise
                 lead="كل برنامج يُقاس مقابل الوزارة أو السلطة وجهة الاعتماد ذات الصلة. مسار التدقيق هو المُخرَج."
               />
             </div>
-            <TrustAnchorList regulators={industry.regulators} city={industry.anchorCity} />
+            <TrustAnchorList regulators={industry.regulators} city={industry.anchorCity} lang="ar" />
           </div>
         </div>
       </section>

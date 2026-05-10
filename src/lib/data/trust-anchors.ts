@@ -17,6 +17,7 @@ export interface GovEntity {
   type: EntityType;
   /** What UNEOM products/services this entity is relevant to */
   scope: string;
+  scopeAr: string;
 }
 
 export const GOV_ENTITIES: Record<string, GovEntity> = {
@@ -26,7 +27,8 @@ export const GOV_ENTITIES: Record<string, GovEntity> = {
     nameAr: 'هيئة الزكاة والضريبة والجمارك',
     url: 'https://zatca.gov.sa',
     type: 'authority',
-    scope: 'Tax compliance, e-invoicing, customs'
+    scope: 'Tax compliance, e-invoicing, customs',
+    scopeAr: 'الامتثال الضريبي، الفوترة الإلكترونية، الجمارك'
   },
   mhrsd: {
     slug: 'mhrsd',
@@ -34,7 +36,8 @@ export const GOV_ENTITIES: Record<string, GovEntity> = {
     nameAr: 'وزارة الموارد البشرية والتنمية الاجتماعية',
     url: 'https://hrsd.gov.sa',
     type: 'ministry',
-    scope: 'Workforce regulations, Saudization (Nitaqat)'
+    scope: 'Workforce regulations, Saudization (Nitaqat)',
+    scopeAr: 'أنظمة القوى العاملة، السعودة (نطاقات)'
   },
   moh: {
     slug: 'moh',
@@ -42,7 +45,8 @@ export const GOV_ENTITIES: Record<string, GovEntity> = {
     nameAr: 'وزارة الصحة',
     url: 'https://www.moh.gov.sa',
     type: 'ministry',
-    scope: 'Healthcare uniform standards, infection control'
+    scope: 'Healthcare uniform standards, infection control',
+    scopeAr: 'معايير الزي الطبي، مكافحة العدوى'
   },
   sfda: {
     slug: 'sfda',
@@ -50,7 +54,8 @@ export const GOV_ENTITIES: Record<string, GovEntity> = {
     nameAr: 'الهيئة العامة للغذاء والدواء',
     url: 'https://www.sfda.gov.sa',
     type: 'authority',
-    scope: 'Healthcare, food service, hygiene compliance'
+    scope: 'Healthcare, food service, hygiene compliance',
+    scopeAr: 'الرعاية الصحية، خدمات الغذاء، الامتثال الصحي'
   },
   saso: {
     slug: 'saso',
@@ -58,7 +63,8 @@ export const GOV_ENTITIES: Record<string, GovEntity> = {
     nameAr: 'الهيئة السعودية للمواصفات والمقاييس والجودة',
     url: 'https://www.saso.gov.sa',
     type: 'authority',
-    scope: 'Textile and product quality standards'
+    scope: 'Textile and product quality standards',
+    scopeAr: 'معايير جودة المنسوجات والمنتجات'
   },
   mc: {
     slug: 'mc',
@@ -66,7 +72,8 @@ export const GOV_ENTITIES: Record<string, GovEntity> = {
     nameAr: 'وزارة التجارة',
     url: 'https://mc.gov.sa',
     type: 'ministry',
-    scope: 'Commercial registration, Maroof verification'
+    scope: 'Commercial registration, Maroof verification',
+    scopeAr: 'السجل التجاري، التحقق عبر منصة معروف'
   },
   gaca: {
     slug: 'gaca',
@@ -74,7 +81,8 @@ export const GOV_ENTITIES: Record<string, GovEntity> = {
     nameAr: 'الهيئة العامة للطيران المدني',
     url: 'https://gaca.gov.sa',
     type: 'authority',
-    scope: 'Aviation crew uniform airworthiness'
+    scope: 'Aviation crew uniform airworthiness',
+    scopeAr: 'صلاحية أزياء طاقم الطيران'
   },
   hcis: {
     slug: 'hcis',
@@ -82,7 +90,8 @@ export const GOV_ENTITIES: Record<string, GovEntity> = {
     nameAr: 'الرئاسة العامة للأمن الصناعي',
     url: 'https://www.hcis.gov.sa',
     type: 'authority',
-    scope: 'Industrial security and PPE regulations'
+    scope: 'Industrial security and PPE regulations',
+    scopeAr: 'أنظمة الأمن الصناعي ومعدّات الحماية الشخصية'
   },
   moe: {
     slug: 'moe',
@@ -90,7 +99,8 @@ export const GOV_ENTITIES: Record<string, GovEntity> = {
     nameAr: 'وزارة التعليم',
     url: 'https://moe.gov.sa',
     type: 'ministry',
-    scope: 'School uniform guidelines'
+    scope: 'School uniform guidelines',
+    scopeAr: 'إرشادات الزي المدرسي'
   },
   mt: {
     slug: 'mt',
@@ -98,7 +108,8 @@ export const GOV_ENTITIES: Record<string, GovEntity> = {
     nameAr: 'وزارة السياحة',
     url: 'https://mt.gov.sa',
     type: 'ministry',
-    scope: 'Hospitality industry oversight'
+    scope: 'Hospitality industry oversight',
+    scopeAr: 'الإشراف على قطاع الضيافة'
   },
   iso: {
     slug: 'iso',
@@ -106,7 +117,8 @@ export const GOV_ENTITIES: Record<string, GovEntity> = {
     nameAr: 'منظمة المعايير الدولية',
     url: 'https://www.iso.org',
     type: 'cert-body',
-    scope: 'Quality management (ISO 9001)'
+    scope: 'Quality management (ISO 9001)',
+    scopeAr: 'إدارة الجودة (ISO 9001)'
   },
   oekoTex: {
     slug: 'oeko-tex',
@@ -114,7 +126,8 @@ export const GOV_ENTITIES: Record<string, GovEntity> = {
     nameAr: 'أوكو-تكس',
     url: 'https://www.oeko-tex.com',
     type: 'cert-body',
-    scope: 'Textile harmful-substance certification'
+    scope: 'Textile harmful-substance certification',
+    scopeAr: 'شهادة المواد الضارة في المنسوجات'
   },
   sec: {
     slug: 'sec',
@@ -122,7 +135,8 @@ export const GOV_ENTITIES: Record<string, GovEntity> = {
     nameAr: 'الهيئة السعودية للمهندسين',
     url: 'https://saudieng.sa',
     type: 'cert-body',
-    scope: 'Engineering certification (textile + safety)'
+    scope: 'Engineering certification (textile + safety)',
+    scopeAr: 'شهادات هندسية (المنسوجات + السلامة)'
   }
 };
 
@@ -166,7 +180,8 @@ export function buildClosure(regulators: string[], city?: string): GovEntity[] {
       nameAr: AMANAT[city].nameAr,
       url: AMANAT[city].url,
       type: 'amanah',
-      scope: 'Municipal authority — workplace regulations'
+      scope: 'Municipal authority — workplace regulations',
+      scopeAr: 'جهة بلدية — أنظمة بيئة العمل'
     });
   }
 
