@@ -33,20 +33,20 @@ export default function ArCaseStudiesHubPage() {
                 <picture>
                   <source type="image/avif" srcSet={`/images/case-studies/${c.imageFolder}/after.avif`} />
                   <source type="image/webp" srcSet={`/images/case-studies/${c.imageFolder}/after.webp`} />
-                  <img src={`/images/case-studies/${c.imageFolder}/after.avif`} alt={c.title} className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" width={1200} height={900} />
+                  <img src={`/images/case-studies/${c.imageFolder}/after.avif`} alt={c.titleAr} className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" width={1200} height={900} />
                 </picture>
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-gradient-to-t from-navy-950/90 to-transparent p-6 text-white">
                   <div>
                     <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-300">{c.silo}</div>
-                    <div className="mt-1 text-2xl font-bold stat-number">{c.headline.value}</div>
-                    <div className="text-sm text-white/80">{c.headline.label}</div>
+                    <div className="mt-1 text-2xl font-bold stat-number">{c.headlineAr.value}</div>
+                    <div className="text-sm text-white/80">{c.headlineAr.label}</div>
                   </div>
                 </div>
               </div>
               <div className="flex flex-1 flex-col p-8">
-                <h3 className="text-2xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">{c.title}</h3>
-                <p className="mt-3 text-sm font-semibold text-ink-500">{c.clientType}</p>
-                <p className="mt-4 text-sm leading-relaxed text-ink-500 pretty">{c.summary}</p>
+                <h3 className="text-2xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">{c.titleAr}</h3>
+                <p className="mt-3 text-sm font-semibold text-ink-500">{c.clientTypeAr}</p>
+                <p className="mt-4 text-sm leading-relaxed text-ink-500 pretty">{c.summaryAr}</p>
                 <span className="mt-auto pt-5 text-sm font-semibold text-accent-700 inline-flex items-center gap-1">
                   اقرأ البرنامج كاملاً <span aria-hidden className="transition-transform group-hover:-translate-x-1">←</span>
                 </span>

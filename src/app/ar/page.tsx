@@ -140,7 +140,7 @@ export default function ArHomePage() {
               <Link key={s.slug} href={`/ar/services/${s.slug}/`} className="group flex items-center justify-between rounded-2xl border border-ink-100 bg-white p-6 transition-all hover:border-accent-500/40 hover:shadow-elevation-lg">
                 <div>
                   <h3 className="font-bold text-navy-900 group-hover:text-accent-700 transition-colors">{s.nameAr}</h3>
-                  <p className="mt-1 text-sm text-ink-500 line-clamp-1">{s.summary}</p>
+                  <p className="mt-1 text-sm text-ink-500 line-clamp-1">{s.summaryAr}</p>
                 </div>
                 <span className="text-ink-300 transition-transform group-hover:-translate-x-1 group-hover:text-accent-500" aria-hidden>←</span>
               </Link>
