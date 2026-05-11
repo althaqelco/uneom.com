@@ -9,6 +9,9 @@ import { IndustryCard } from '@/components/ui/IndustryCard';
 import { CityCard } from '@/components/ui/CityCard';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { Eyebrow } from '@/components/ui/Eyebrow';
+import { ClientLogos } from '@/components/ui/ClientLogos';
+import { TestimonialSection } from '@/components/ui/TestimonialSection';
+import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
 
 export const metadata = {
   description: COMPANY_STATS.activeClients + '+ Saudi enterprises trust UNEOM for healthcare, hospitality, aviation, corporate, education, manufacturing, security, and retail uniforms across all 24 Saudi cities.'
@@ -85,6 +88,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ============== CLIENT LOGOS MARQUEE ============== */}
+      <ClientLogos lang="en" />
+
       {/* ============== TRUST STRIP ============== */}
       <section className="border-b border-ink-100 bg-white">
         <div className="container-page py-12">
@@ -146,8 +152,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ============== HOW IT WORKS — PROCESS TIMELINE ============== */}
+      <ProcessTimeline lang="en" />
+
       {/* ============== WHY UNEOM — INFORMATION GAIN ============== */}
-      <section className="section bg-white">
+      <section className="section bg-ink-50">
         <div className="container-page">
           <div className="grid items-start gap-16 lg:grid-cols-[1fr_1.2fr]">
             <div>
@@ -188,6 +197,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ============== TESTIMONIALS ============== */}
+      <TestimonialSection lang="en" />
 
       {/* ============== CITY COVERAGE ============== */}
       <section className="section bg-navy-900 text-white">

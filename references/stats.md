@@ -161,8 +161,8 @@
 ## TODO المستخدم
 
 قبل Wave 1 finalize، المستخدم يملأ:
-- [ ] CRN حقيقي
-- [ ] VAT حقيقي
+- [x] CRN حقيقي → `4030253566` (confirmed 2026-05-11)
+- [x] VAT حقيقي → `311280328300003` (confirmed 2026-05-11)
 - [ ] Founding date
 - [ ] Active client count exact
 - [ ] Number of partner hospitals/companies per industry (8 industries)

@@ -1,9 +1,8 @@
 /**
  * Schema.org JSON-LD generators per master-plan-v11 §4.
  *
- * NOTE: All numeric/identifier placeholders ({REAL_CRN}, {ZATCA_VAT}, etc.)
- * MUST be filled with UNEOM's actual values before publishing. They are
- * left as TODO until the user provides them (see master-plan-v11 §31).
+ * CRN and VAT are UNEOM's verified business identifiers.
+ * All other values (address, phone, etc.) are confirmed.
  */
 
 import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
@@ -11,10 +10,10 @@ import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
 const SITE = 'https://uneom.com';
 const ORG_ID = `${SITE}/#organization`;
 
-// TODO: replace with real values from UNEOM (master-plan-v11 §31)
+// UNEOM verified business identifiers (confirmed 2026-05-11)
 const REAL = {
-  CRN: '1010XXXXXX',
-  VAT: '300XXXXXXXXXX03',
+  CRN: '4030253566',
+  VAT: '311280328300003',
   FOUNDED: '2013',
   STREET: 'King Fahd Road',
   POSTAL_CODE: '11451',

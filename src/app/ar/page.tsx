@@ -9,6 +9,9 @@ import { IndustryCard } from '@/components/ui/IndustryCard';
 import { CityCard } from '@/components/ui/CityCard';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { Eyebrow } from '@/components/ui/Eyebrow';
+import { ClientLogos } from '@/components/ui/ClientLogos';
+import { TestimonialSection } from '@/components/ui/TestimonialSection';
+import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
 
 export const metadata = {
   title: 'UNEOM — الأزياء المهنية السعودية | الرعاية الصحية والضيافة والطيران والتصنيع',
@@ -85,45 +88,147 @@ export default function ArHomePage() {
         </div>
       </section>
 
+      {/* ============== CLIENT LOGOS MARQUEE ============== */}
+      <ClientLogos lang="ar" />
+
+      {/* ============== TRUST STRIP ============== */}
+      <section className="border-b border-ink-100 bg-white">
+        <div className="container-page py-12">
+          <div className="flex flex-col items-center gap-6">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink-400">
+              الامتثال والاعتماد
+            </span>
+            <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-sm font-semibold text-ink-500">
+              <span className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent-500" aria-hidden />
+                ISO 9001:2015
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent-500" aria-hidden />
+                OEKO-TEX Standard 100
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent-500" aria-hidden />
+                معتمد من SASO
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent-500" aria-hidden />
+                موثّق في مرقوم
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent-500" aria-hidden />
+                فوترة ZATCA الإلكترونية
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ============== INDUSTRIES ============== */}
-      <section className="section bg-white">
+      <section className="section bg-ink-50">
         <div className="container-page">
-          <SectionHeader
-            eyebrow={`${COMPANY_STATS.industries} قطاعات · ${COMPANY_STATS.activeClients}+ عميل`}
-            title={<>ثمانية قطاعات سعودية. <span className="text-accent-700">متخصّصون فيها، لا مجرّد كتالوج.</span></>}
-            lead="كل قطاع في هذه الصفحة هو برنامج متكامل — صفحات رئيسية، منتجات، جهات تنظيمية، دراسات حالة، وعمليات على مستوى المدينة لتنفيذه."
-          />
+          <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
+            <SectionHeader
+              eyebrow={`${COMPANY_STATS.industries} قطاعات · ${COMPANY_STATS.activeClients}+ عميل`}
+              title={<>ثمانية قطاعات سعودية. <span className="text-accent-700">متخصّصون فيها، لا مجرّد كتالوج.</span></>}
+              lead="كل قطاع في هذه الصفحة هو برنامج متكامل — صفحات رئيسية، منتجات، جهات تنظيمية، دراسات حالة، وعمليات على مستوى المدينة لتنفيذه."
+            />
+            <Link href="/ar/industries/" className="btn-outline shrink-0">
+              جميع القطاعات الثمانية
+            </Link>
+          </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {heroIndustries.map(industry => (
               <IndustryCard key={industry.slug} industry={industry} lang="ar" />
             ))}
           </div>
-          <div className="mt-8 text-center">
-            <Link href="/ar/industries/" className="btn-secondary">
-              جميع القطاعات الثمانية ←
-            </Link>
+
+          {/* Remaining 4 — compact */}
+          <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {INDUSTRIES.slice(4).map(industry => (
+              <IndustryCard key={industry.slug} industry={industry} variant="compact" lang="ar" />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ============== CITIES ============== */}
+      {/* ============== HOW IT WORKS — PROCESS TIMELINE ============== */}
+      <ProcessTimeline lang="ar" />
+
+      {/* ============== WHY UNEOM — INFORMATION GAIN ============== */}
       <section className="section bg-ink-50">
         <div className="container-page">
-          <SectionHeader
-            eyebrow={`${COMPANY_STATS.cities} مدينة · فريق عمليات واحد`}
-            title={<>من الحزام الصناعي بالمنطقة الشرقية إلى <span className="text-accent-700">مرتفعات عسير.</span></>}
-            lead="UNEOM يُسلِّم برامج الزي الموحّد لكل مقاطعة سعودية. قياسات ميدانية للتجمعات التي تتجاوز 50 موظفاً، توصيل دورات الاستبدال في أي مكان خلال 48 ساعة."
-          />
+          <div className="grid items-start gap-16 lg:grid-cols-[1.2fr_1fr]">
+            <div className="grid gap-10 sm:grid-cols-2">
+              <StatBlock
+                value={`${COMPANY_STATS.activeClients}+`}
+                label="مؤسسة سعودية تخدمها"
+                context="من عيادات تضمّ 50 موظفاً إلى سلاسل تجزئة على مستوى المملكة. عقود برامج، لا مبيعات كتالوج."
+              />
+              <StatBlock
+                value="78%"
+                label="معدّل تكرار العملاء"
+                context="عبر 12 عاماً. نموذجنا مبني للعقد الثاني، لا للبيع الأول."
+              />
+              <StatBlock
+                value="14–21"
+                label="يوماً للشحن بالجملة"
+                context="مدّة تسليم برنامج التكرار. التصاميم الجديدة تُشحن خلال 21–35 يوماً تشمل القياسات."
+              />
+              <StatBlock
+                value="18 شهراً"
+                label="ضمان الرعاية الصحية"
+                context="6 أشهر فوق المعيار الصناعي — نحن نقف وراء تحمّل دورات الغسيل."
+              />
+            </div>
+            <div>
+              <SectionHeader
+                eyebrow="لماذا UNEOM"
+                title={<>أرقام نكسبها. معايير نمتلكها.</>}
+                lead="سوق الزي الموحّد السعودي مليء بالكتالوجات. نحن نتنافس بالحقائق التشغيلية التي لا ينشرها أحد غيرنا."
+              />
+              <div className="mt-10 space-y-2">
+                <Link href="/ar/about/" className="link inline-flex items-center gap-1">
+                  اقرأ الموجز التشغيلي
+                  <span aria-hidden>←</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============== TESTIMONIALS ============== */}
+      <TestimonialSection lang="ar" />
+
+      {/* ============== CITIES ============== */}
+      <section className="section bg-navy-900 text-white">
+        <div className="container-page">
+          <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
+            <div className="max-w-2xl">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-accent-300">
+                التغطية الجغرافية
+              </span>
+              <h2 className="mt-5 text-display-lg text-white balance">
+                {COMPANY_STATS.cities} مدينة. <span className="text-accent-400">فريق عمليات واحد.</span>
+              </h2>
+              <p className="mt-5 text-lg leading-relaxed text-white/80 pretty">
+                قياسات ميدانية وإرسال حقيبة المنضمّين ودورات استبدال —
+                من الحزام الصناعي بالمنطقة الشرقية إلى مرتفعات عسير.
+              </p>
+            </div>
+            <Link href="/ar/locations/" className="btn-ghost text-white border border-white/20 hover:bg-white/10 hover:text-white shrink-0">
+              كل الـ {COMPANY_STATS.cities} مدينة ←
+            </Link>
+          </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {METRO_CITIES.map(city => (
               <CityCard key={city.slug} city={city} lang="ar" />
             ))}
           </div>
-          <div className="mt-8 text-center">
-            <Link href="/ar/locations/" className="btn-secondary">
-              جميع الـ {COMPANY_STATS.cities} مدينة ←
-            </Link>
-          </div>
+          <p className="mt-8 text-sm text-white/60">
+            + {SAUDI_CITIES.length - METRO_CITIES.length} مدينة أخرى تشمل {SAUDI_CITIES.slice(5, 11).map(c => c.nameAr).join('، ')}، وغيرها.
+          </p>
         </div>
       </section>
 
@@ -135,63 +240,61 @@ export default function ArHomePage() {
             title={<>من <span className="text-accent-700">التصميم</span> إلى الخياطة، وكل خطوة بينهما.</>}
             lead="UNEOM شريك في البرامج وليس متجراً للكتالوجات. هذه الخدمات التشغيلية هي التي تُبقي كل عقد زي موحّد متماسكاً."
           />
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.slice(0, 6).map(s => (
-              <Link key={s.slug} href={`/ar/services/${s.slug}/`} className="group flex items-center justify-between rounded-2xl border border-ink-100 bg-white p-6 transition-all hover:border-accent-500/40 hover:shadow-elevation-lg">
-                <div>
-                  <h3 className="font-bold text-navy-900 group-hover:text-accent-700 transition-colors">{s.nameAr}</h3>
-                  <p className="mt-1 text-sm text-ink-500 line-clamp-1">{s.summaryAr}</p>
+          <div className="mt-12 grid gap-px overflow-hidden rounded-3xl bg-ink-100 sm:grid-cols-2 lg:grid-cols-3">
+            {SERVICES.map(service => (
+              <Link
+                key={service.slug}
+                href={`/ar/services/${service.slug}/`}
+                className="group flex flex-col gap-4 bg-white p-8 transition-colors hover:bg-ink-50/60"
+              >
+                <div className="flex items-baseline justify-between gap-3">
+                  <h3 className="text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors">
+                    {service.nameAr}
+                  </h3>
+                  <span className="text-ink-300 transition-transform group-hover:-translate-x-1 group-hover:text-accent-500" aria-hidden>←</span>
                 </div>
-                <span className="text-ink-300 transition-transform group-hover:-translate-x-1 group-hover:text-accent-500" aria-hidden>←</span>
+                <p className="text-sm leading-relaxed text-ink-500 line-clamp-3">
+                  {service.summaryAr}
+                </p>
+                <div className="mt-auto pt-3">
+                  <div className="text-xl font-bold text-navy-900 stat-number">{service.outcomeAr.value}</div>
+                  <div className="text-xs font-medium uppercase tracking-wider text-accent-700">{service.outcomeAr.label}</div>
+                </div>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ============== TRUST ============== */}
-      <section className="section bg-navy-900 text-white">
+      {/* ============== EDITORIAL QUOTE / PROOF POINT ============== */}
+      <section className="section-tight bg-ink-50">
         <div className="container-page">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-accent-300">الامتثال والاعتماد</span>
-              <h2 className="mt-5 text-display-lg text-white balance">
-                مبني على المعايير السعودية والدولية.
-              </h2>
-              <p className="mt-5 text-lg leading-relaxed text-white/80 pretty">
-                كل برنامج يُقاس مقابل الوزارة أو السلطة وجهة الاعتماد ذات الصلة. مسار التدقيق هو المُخرَج.
-              </p>
-              <div className="mt-8">
-                <Link href="/ar/quote/" className="btn-accent">طلب عرض سعر</Link>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { title: 'ISO 9001:2015', body: 'نظام إدارة الجودة يُدقَّق عليه سنوياً.' },
-                { title: 'OEKO-TEX 100', body: 'شهادة المواد الضارة في المنسوجات.' },
-                { title: 'علامة جودة SASO', body: 'مسجّل لدى الهيئة السعودية للمواصفات.' },
-                { title: 'موثّق في مرقوم', body: 'التحقق من أعمال وزارة التجارة السعودية.' }
-              ].map(c => (
-                <div key={c.title} className="rounded-2xl bg-white/8 p-6">
-                  <h3 className="font-bold text-white">{c.title}</h3>
-                  <p className="mt-2 text-sm text-white/70 pretty">{c.body}</p>
-                </div>
-              ))}
-            </div>
+          <div className="mx-auto max-w-4xl text-center">
+            <Eyebrow>مكسب معلوماتي</Eyebrow>
+            <p className="mt-6 text-display text-navy-900 balance">
+              في الرياض، يمرّ سكراب الرعاية الصحية بـ <span className="text-accent-700">4.2 دورة غسيل</span> لكل وردية —
+              <br />
+              38% فوق المعدّل العالمي. معظم الأزياء لم تُبنَ لذلك. أزياؤنا بُنيت لذلك.
+            </p>
+            <p className="mt-6 text-sm text-ink-500">
+              بيانات عمليات UNEOM، 38 مستشفى سعودي شريك، 2024–2026.
+            </p>
           </div>
         </div>
       </section>
 
       {/* ============== CTA ============== */}
-      <section className="container-page section">
-        <CtaBlock
-          dark
-          eyebrow="الخطوة التالية"
-          heading="أخبرنا عن متطلبات الزي الموحّد لمؤسستك."
-          body="طلب عرض سعر من 4 خطوات يستغرق أقل من دقيقتين. نردّ خلال يوم عمل واحد بعيّنات قماش وخيارات تصميم ومقترح برنامج."
-          primary={{ label: 'طلب عرض سعر', href: '/ar/quote/' }}
-          secondary={{ label: 'تحدّث مع العمليات', href: '/ar/contact/' }}
-        />
+      <section className="section bg-white">
+        <div className="container-page">
+          <CtaBlock
+            dark
+            eyebrow="الخطوة التالية"
+            heading="أخبرنا عن متطلبات الزي الموحّد لمؤسستك."
+            body="طلب عرض سعر من 4 خطوات يستغرق أقل من دقيقتين. نردّ خلال يوم عمل واحد بعيّنات قماش وخيارات تصميم ومقترح برنامج."
+            primary={{ label: 'طلب عرض سعر', href: '/ar/quote/' }}
+            secondary={{ label: 'تحدّث مع العمليات', href: '/ar/contact/' }}
+          />
+        </div>
       </section>
     </>
   );

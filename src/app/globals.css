@@ -144,6 +144,91 @@
   }
 }
 
+/* ─── Client Logo Marquee ──────────────────────────────────────────── */
+.client-marquee-wrapper {
+  overflow: hidden;
+}
+
+.client-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 35s linear infinite;
+}
+
+.client-marquee-track--rtl {
+  animation-name: marquee-scroll-rtl;
+}
+
+.client-marquee-wrapper:hover .client-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-scroll-rtl {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* ─── Testimonial Cards ────────────────────────────────────────────── */
+.testimonial-card {
+  will-change: transform;
+}
+
+/* ─── Process Steps ────────────────────────────────────────────────── */
+.process-step {
+  opacity: 1;
+}
+
+/* ─── Staggered Fade — used for section entries ────────────────────── */
+@keyframes stagger-up {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Subtle Glow Pulse — for accent CTA buttons ──────────────────── */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgba(16, 185, 129, 0.15);
+  }
+}
+
+.btn-accent {
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+.btn-accent:hover {
+  animation: none;
+}
+
+/* ─── Count-Up Shimmer — stat numbers ─────────────────────────────── */
+@keyframes shimmer-text {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .client-marquee-track {
+    animation: none;
+  }
+  .btn-accent {
+    animation: none;
+  }
+}
+
 /* Network-aware lite mode — degrades heavy UI on slow connections (§10.4) */
 .uneom-lite-mode .hero-video,
 .uneom-lite-mode .product-carousel,
