@@ -14,7 +14,8 @@ import { TestimonialSection } from '@/components/ui/TestimonialSection';
 import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
 
 export const metadata = {
-  description: COMPANY_STATS.activeClients + '+ Saudi enterprises trust UNEOM for healthcare, hospitality, aviation, corporate, education, manufacturing, security, and retail uniforms across all 24 Saudi cities.'
+  title: 'UNEOM — Saudi Arabia Uniform Company | Medical Scrubs, School Uniforms, Corporate Workwear',
+  description: COMPANY_STATS.activeClients + '+ Saudi enterprises trust UNEOM for medical uniforms, scrub suits, school uniforms, chef uniforms, coverall uniforms, safety uniforms, and corporate workwear — uniform shop serving all 24 Saudi cities from Riyadh, Jeddah, and Dammam.'
 };
 
 export default function HomePage() {

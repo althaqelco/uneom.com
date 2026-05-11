@@ -4,8 +4,8 @@ export const education: Industry = {
   slug: 'education',
   nameEn: 'Education',
   nameAr: 'التعليم',
-  tagline: 'School and university uniforms aligned with Saudi MoE guidelines and growth cycles.',
-  taglineAr: 'أزياء مدرسية وجامعية متوافقة مع إرشادات وزارة التعليم ودورات النمو.',
+  tagline: 'School uniforms and university attire aligned with Saudi MoE guidelines — growth-engineered for the academic year.',
+  taglineAr: 'يونيفورم مدارس والزي الموحد للمدارس وأزياء جامعية متوافقة مع إرشادات وزارة التعليم — مهندَسة للنمو طوال العام الدراسي.',
   architectEquation:
     'Unlike imported school uniforms fitted for static body types, UNEOM education lines are sized to the Saudi school-year growth curve — twin-needle reinforcement at every stress point, hidden waist adjusters, and replaceable knee panels. MoE-compliant cuts in poly-cotton built for Saudi laundry realities, delivered ahead of every term at school-block volume.',
   architectEquationAr:
@@ -43,7 +43,7 @@ export const education: Industry = {
 
   definitionLockIn: {
     en: 'School uniforms in Saudi Arabia are the MoE-compliant, growth-engineered, modesty-graded poly-cotton garments that students wear in licensed Saudi schools — designed to extend service life across the school-year growth curve and synchronise procurement to the August intake cycle.',
-    ar: 'الزي المدرسي في السعودية هو القطع البولي-قطن الملتزمة بمعايير وزارة التعليم، المهندَسة للنموّ، المُدرَّجة للحشمة، التي يرتديها الطلّاب في المدارس السعودية المرخّصة — مصمَّمة لتمديد العمر التشغيلي عبر منحنى نمو العام الدراسي ومزامنة الشراء مع دورة قبول أغسطس.'
+    ar: 'الزي الموحد للمدارس في السعودية — يونيفورم مدارس متوافق مع وزارة التعليم — هو القطع البولي-قطن الملتزمة بمعايير وزارة التعليم، المهندَسة للنموّ، المُدرَّجة للحشمة، التي يرتديها الطلّاب في المدارس السعودية المرخّصة — مصمَّمة لتمديد العمر التشغيلي عبر منحنى نمو العام الدراسي ومزامنة الشراء مع دورة قبول أغسطس.'
   },
 
   industryContext: {

@@ -14,8 +14,8 @@ import { TestimonialSection } from '@/components/ui/TestimonialSection';
 import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
 
 export const metadata = {
-  title: 'UNEOM — الأزياء المهنية السعودية | الرعاية الصحية والضيافة والطيران والتصنيع',
-  description: `${COMPANY_STATS.activeClients}+ مؤسسة سعودية تثق بـ UNEOM للرعاية الصحية والضيافة والطيران والشركات والتعليم والتصنيع والأمن والتجزئة — عبر جميع الـ 24 مدينة سعودية.`,
+  title: 'UNEOM — يونيفورم وزي موحد في السعودية | سكراب طبي، يونيفورم مدارس، الزي الموحد للشركات',
+  description: `شركة الزي الموحد الرائدة في السعودية. ${COMPANY_STATS.activeClients}+ مؤسسة تثق بـ UNEOM — يونيفورم عاملات، سكراب طبي، يونيفورم مطاعم، زي موحد للمدارس والشركات — تفصيل وخياطة الزي الموحد في الرياض وجدة والدمام وكل المدن الـ 24.`,
   alternates: { canonical: 'https://uneom.com/ar/' }
 };
 

@@ -4,8 +4,8 @@ export const aviation: Industry = {
   slug: 'aviation',
   nameEn: 'Aviation',
   nameAr: 'الطيران',
-  tagline: 'Crew, ground-staff, and operations uniforms compliant with GACA airworthiness standards.',
-  taglineAr: 'أزياء الطاقم والعمليات الأرضية متوافقة مع معايير صلاحية الطيران من هيئة الطيران المدني.',
+  tagline: 'Crew, ground-staff, and operations uniforms compliant with GACA airworthiness standards — from Riyadh Air to legacy carriers.',
+  taglineAr: 'أزياء الطاقم والعمليات الأرضية متوافقة مع معايير صلاحية الطيران من هيئة الطيران المدني — من طيران الرياض إلى الناقلات التقليدية.',
   architectEquation:
     'Unlike aviation uniforms cut from generic worsted wool that retains odour and crumples under in-flight humidity, UNEOM aviation lines use lightweight tropical wool blends with built-in moisture wicking, FR treatment, and stain shield — engineered for the 14-hour rotation cycles flown out of Riyadh and Jeddah. Every garment passes GACA crew-attire airworthiness and visual-conformity standards.',
   architectEquationAr:

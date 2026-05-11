@@ -19,9 +19,30 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const { city: citySlug } = await params;
   const city = getCity(citySlug);
   if (!city) return {};
+  const cityTitleMapAr: Record<string, string> = {
+    riyadh: `الزي الموحد الرياض — محل الزي الموحد في الرياض | UNEOM`,
+    jeddah: `الزي الموحد جدة — زي موحد جدة ويونيفورم | UNEOM`,
+    dammam: `الزي الموحد الدمام — زي موحد للعمال المنطقة الشرقية | UNEOM`,
+    mecca: `زي موحد مكة — يونيفورم موسم الحج | UNEOM`,
+    medina: `زي موحد المدينة — يونيفورم فنادق ومدارس | UNEOM`,
+    khobar: `زي موحد الخبر — يونيفورم المنطقة الشرقية | UNEOM`,
+    tabuk: `زي موحد تبوك — يونيفورم منطقة نيوم | UNEOM`,
+    abha: `زي موحد أبها — يونيفورم منطقة عسير | UNEOM`,
+    'al-qatif': `الزي الموحد القطيف — يونيفورم | UNEOM`,
+    'arar': `الزي الموحد عرعر — يونيفورم | UNEOM`,
+    'hafar-al-batin': `الزي الموحد حفر الباطن — يونيفورم | UNEOM`,
+  };
+  const cityDescMapAr: Record<string, string> = {
+    riyadh: `محل الزي الموحد في الرياض — سكراب طبي، الزي الموحد للشركات، يونيفورم مدارس وأفرولات. 240+ حساب نشط. معمل خياطة الزي الموحد الرياض.`,
+    jeddah: `زي موحد جدة — يونيفورم مطاعم، يونيفورم خدم، سكراب طبي وزي فنادق لموسم الحج. أقمشة مهندسة لرطوبة البحر الأحمر.`,
+    dammam: `الزي الموحد الدمام — أفرولات بمواصفات أرامكو، زي موحد للعمال وملابس سلامة. خدمة الممر البتروكيماوي للمنطقة الشرقية.`,
+    mecca: `يونيفورم مكة — زي فنادق، سكراب طبي وزي أمني لموسم الحج. مستودع UNEOM بمكة للاستبدال اليومي.`,
+    medina: `زي موحد المدينة — يونيفورم فنادق، سكراب طبي ويونيفورم مدارس للمدينة المنورة.`,
+    khobar: `يونيفورم الخبر — الزي الموحد للشركات، أفرولات صناعية وسكراب طبي. خدمة المنطقة الشرقية من عمليات محلية.`,
+  };
   return {
-    title: `أزياء ${city.nameAr} الموحّدة — المملكة العربية السعودية (${city.regionAr})`,
-    description: `برامج زي موحّد مهني تخدم ${city.nameAr}، ${city.regionAr}. عمليات UNEOM في الرعاية الصحية والضيافة والطيران والتصنيع وما بعدها.`,
+    title: cityTitleMapAr[citySlug] || `الزي الموحد ${city.nameAr} — يونيفورم ${city.nameAr} | UNEOM`,
+    description: cityDescMapAr[citySlug] || `برامج زي موحد مهني تخدم ${city.nameAr}، ${city.regionAr}. عمليات UNEOM في الرعاية الصحية والضيافة والطيران والتصنيع.`,
     alternates: {
       canonical: `https://uneom.com/ar/locations/${citySlug}/`,
       languages: {

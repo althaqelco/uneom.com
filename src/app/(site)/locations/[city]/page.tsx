@@ -19,9 +19,27 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const { city: citySlug } = await params;
   const city = getCity(citySlug);
   if (!city) return {};
+  const cityTitleMap: Record<string, string> = {
+    riyadh: `${city.nameEn} Uniforms — Uniform Shop in Riyadh | UNEOM`,
+    jeddah: `${city.nameEn} Uniforms — Uniform Shop in Jeddah | UNEOM`,
+    dammam: `${city.nameEn} Uniforms — Uniform Shop in Dammam | UNEOM`,
+    mecca: `${city.nameEn} Uniforms — Hajj-Season Uniform Provider | UNEOM`,
+    medina: `${city.nameEn} Uniforms — Uniform Supplier in Medina | UNEOM`,
+    khobar: `${city.nameEn} Uniforms — Eastern Province Uniform Shop | UNEOM`,
+    tabuk: `${city.nameEn} Uniforms — NEOM Region Supplier | UNEOM`,
+    abha: `${city.nameEn} Uniforms — Asir Region Uniform Provider | UNEOM`,
+  };
+  const cityDescMap: Record<string, string> = {
+    riyadh: `Professional uniform programmes in Riyadh — medical scrubs, corporate workwear, school uniforms & coveralls. 240+ active accounts. UNEOM uniform shop near you in Riyadh.`,
+    jeddah: `Uniform shop in Jeddah — chef uniforms, maid uniforms, medical scrubs & Hajj-season hotel attire. Coastal-grade fabric engineering for Red Sea humidity.`,
+    dammam: `Uniform supplier in Dammam — Aramco-grade coverall uniforms, safety uniforms & industrial PPE. Serving the Eastern Province petrochemical corridor.`,
+    mecca: `Hajj-season uniform programmes in Mecca — hospitality attire, medical scrubs & security uniforms. UNEOM Mecca depot with daily replacement stock.`,
+    medina: `Professional uniforms in Medina — hotel staff uniforms, healthcare scrubs & school uniforms for the Prophet's City. Climate-calibrated fabric.`,
+    khobar: `Gulf uniform supplier in Khobar — corporate workwear, industrial coveralls & medical scrubs. Serving Eastern Province enterprises from local operations.`,
+  };
   return {
-    title: `${city.nameEn} Uniforms — Saudi Arabia (${city.region})`,
-    description: `Professional uniform programmes serving ${city.nameEn}, ${city.region}. UNEOM operations across healthcare, hospitality, aviation, manufacturing, and beyond.`,
+    title: cityTitleMap[citySlug] || `${city.nameEn} Uniforms — Saudi Arabia (${city.region}) | UNEOM`,
+    description: cityDescMap[citySlug] || `Professional uniform programmes serving ${city.nameEn}, ${city.region}. UNEOM operations across healthcare, hospitality, aviation, manufacturing, and beyond.`,
     alternates: {
       canonical: `https://uneom.com/locations/${citySlug}/`,
       languages: {

@@ -4,8 +4,8 @@ export const corporate: Industry = {
   slug: 'corporate',
   nameEn: 'Corporate',
   nameAr: 'المؤسسات',
-  tagline: 'Executive suits, business shirts, and corporate identity programmes for Saudi enterprises.',
-  taglineAr: 'بدلات تنفيذية وقمصان رسمية وبرامج هوية مؤسسية للشركات السعودية.',
+  tagline: 'Executive suits, business shirts, and corporate identity uniform programmes for Saudi enterprises — the uniform advantage.',
+  taglineAr: 'الزي الموحد للشركات — بدلات تنفيذية وقمصان رسمية وبرامج هوية مؤسسية ويونيفورم عاملات للمنشآت السعودية.',
   architectEquation:
     'Unlike imported corporate suits cut for European climates that arrive heavy and rigid, UNEOM tailors to a Saudi office reality — climate-controlled boardrooms with desert transitions. Lightweight Italian wool blends, half-canvas construction, and brand-colour linings at the price point of mass-tailored programmes. From 50 to 5,000 employees, every fit grade is real, and every detail is yours.',
   architectEquationAr:
@@ -42,8 +42,8 @@ export const corporate: Industry = {
   lastUpdated: '2026-05-09',
 
   definitionLockIn: {
-    en: 'Corporate uniforms in Saudi Arabia are the half-canvas-constructed, climate-engineered, brand-coordinated executive and business attire that Saudi enterprise staff wear for boardroom, client-facing, and field-office representation across regulatory-licensed companies registered with the Ministry of Commerce.',
-    ar: 'الزي الإداري في السعودية هو الملابس التنفيذية والرسمية المُنشأة بنصف كانفاس، المهندَسة للمناخ، المنسّقة مع هوية العلامة، التي يرتديها موظّفو المنشآت السعودية لتمثيل قاعات الإدارة، والاجتماعات مع العملاء، والمكاتب الميدانية عبر الشركات المرخّصة من وزارة التجارة.'
+    en: 'Corporate uniforms in Saudi Arabia are the half-canvas-constructed, climate-engineered, brand-coordinated executive and business attire — including staff uniforms and workwear for employees — that Saudi enterprise staff wear for boardroom, client-facing, and field-office representation across regulatory-licensed companies registered with the Ministry of Commerce.',
+    ar: 'الزي الرسمي الموحد للشركات في السعودية — بما فيه يونيفورم عاملات ولباس موحد للموظفين — هو الملابس التنفيذية والرسمية المُنشأة بنصف كانفاس، المهندَسة للمناخ، المنسّقة مع هوية العلامة، التي يرتديها موظّفو المنشآت السعودية لتمثيل قاعات الإدارة، والاجتماعات مع العملاء، والمكاتب الميدانية عبر الشركات المرخّصة من وزارة التجارة.'
   },
 
   industryContext: {

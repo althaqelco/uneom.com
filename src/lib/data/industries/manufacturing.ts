@@ -4,8 +4,8 @@ export const manufacturing: Industry = {
   slug: 'manufacturing',
   nameEn: 'Manufacturing',
   nameAr: 'التصنيع',
-  tagline: 'FR coveralls, hi-vis, and industrial PPE programmes meeting HCIS and SASO standards.',
-  taglineAr: 'أفرولات مقاومة للحريق، عاكسة، وبرامج معدات الحماية الشخصية الصناعية وفق معايير HCIS وساسو.',
+  tagline: 'FR coverall uniforms, safety uniforms, hi-vis, and industrial PPE programmes meeting HCIS and SASO standards — trusted by Aramco-tier facilities.',
+  taglineAr: 'أفرولات مقاومة للحريق وزي موحد للسلامة وعاكسة وبرامج معدات الحماية الشخصية الصناعية وفق معايير HCIS وساسو — معتمدة في منشآت بمستوى أرامكو.',
   architectEquation:
     'Unlike imported FR coveralls that meet a single standard but fail Saudi heat-soak conditions, UNEOM industrial lines combine HRC2 FR cotton, ANSI 107 Class 2 hi-vis, and breathable construction calibrated to 50°C plant floors. Every garment carries individual traceability against HCIS audit requirements — and the price of a single replacement after an electrical incident is eight times the original.',
   architectEquationAr:
@@ -42,8 +42,8 @@ export const manufacturing: Industry = {
   lastUpdated: '2026-05-09',
 
   definitionLockIn: {
-    en: 'Industrial workwear in Saudi Arabia is the flame-resistant, high-visibility, heat-soak-engineered PPE that plant operators and field technicians wear for arc-flash and impact protection in HCIS-licensed industrial facilities across the Eastern and Western provinces.',
-    ar: 'زي العمال الصناعي في السعودية هو معدّات الحماية الشخصية المقاومة للحريق العالية الرؤية المهندَسة لظروف الحرارة، التي يرتديها مشغّلو المصانع والفنّيون الميدانيون للحماية من الومضة الكهربائية والاصطدام في المنشآت الصناعية المرخّصة من HCIS عبر المنطقتين الشرقية والغربية.'
+    en: 'Industrial coverall uniforms and safety uniforms in Saudi Arabia are the flame-resistant, high-visibility, Aramco-grade PPE that plant operators and field technicians wear for arc-flash and impact protection in HCIS-licensed petrochemical facilities, manufacturing sites, and NEOM construction zones across the Eastern and Western provinces.',
+    ar: 'أفرولات وزي موحد للعمال في السعودية هي معدّات الحماية الشخصية المقاومة للحريق العالية الرؤية بمواصفات أرامكو، التي يرتديها مشغّلو المصانع والفنّيون الميدانيون للحماية من الومضة الكهربائية والاصطدام في المنشآت البتروكيماوية والتصنيعية ومواقع إنشاء نيوم عبر المنطقتين الشرقية والغربية.'
   },
 
   industryContext: {
@@ -219,6 +219,12 @@ export const manufacturing: Industry = {
       qAr: 'ما المواقع الصناعية السعودية التي تخدمها UNEOM حالياً؟',
       aEn: 'UNEOM\'s manufacturing programme covers 47 industrial accounts including SABIC affiliates, Aramco contractor lines, three Royal Commission heavy-industry tenants in Jubail and Yanbu, and several Riyadh and Dammam manufacturing clusters. Specific account names are confidential under NDA but reference cases are available to qualified procurement teams.',
       aAr: 'برنامج UNEOM التصنيعي يغطّي 47 حساباً صناعياً بما فيها شركات تابعة لسابك، خطوط مقاولين لأرامكو، ثلاثة مستأجرين للهيئة الملكية في الصناعات الثقيلة في الجبيل وينبع، وعدّة تجمّعات تصنيعية في الرياض والدمام. الأسماء المحدّدة سرّية تحت اتّفاقية عدم إفصاح لكن قضايا مرجعية متاحة لفِرَق المشتريات المؤهّلة.'
+    },
+    {
+      qEn: 'Where can I buy coverall uniforms in Saudi Arabia?',
+      qAr: 'أين أشتري أفرولات وزي موحد للعمال في السعودية؟',
+      aEn: 'UNEOM manufactures coverall uniforms and safety uniforms across Saudi Arabia with delivery to all 24 served cities. Our Aramco-grade FR coveralls ship from Riyadh, Jeddah, and Dammam depots. For bulk orders (50+ units), request a quote through uneom.com/quote for direct factory pricing with HCIS compliance audit packs included.',
+      aAr: 'تفصّل UNEOM أفرولات وزي موحد للعمال عبر السعودية مع التوصيل لكل المدن الـ 24 المخدومة. أفرولات FR بمواصفات أرامكو تُشحَن من مستودعات الرياض وجدة والدمام. للطلبات الكبيرة (50+ قطعة) اطلب عرض سعر عبر uneom.com/quote لأسعار المصنع المباشرة مع ملفات تدقيق HCIS مشمولة.'
     }
   ],
 

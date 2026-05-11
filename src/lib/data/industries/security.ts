@@ -4,8 +4,8 @@ export const security: Industry = {
   slug: 'security',
   nameEn: 'Security',
   nameAr: 'الأمن',
-  tagline: 'Tactical and corporate security uniforms aligned with HCIS regulations.',
-  taglineAr: 'أزياء أمنية تكتيكية ومؤسسية متوافقة مع لوائح الأمن الصناعي.',
+  tagline: 'Tactical, military-grade, and corporate security uniforms aligned with HCIS regulations — serving Saudi police and private security.',
+  taglineAr: 'أزياء أمنية تكتيكية وعسكرية ومؤسسية متوافقة مع لوائح الأمن الصناعي — لخدمة الأمن الخاص والحراسات السعودية.',
   architectEquation:
     'Unlike off-the-shelf guard uniforms that signal authority through cut alone, UNEOM security lines integrate HCIS-compliant ballistic vest mounts, radio harness routing, and modular load-carriage as standard — without sacrificing the silhouette of corporate security. Every garment is built to the duty cycles of Saudi corporate complexes, residential compounds, and event security.',
   architectEquationAr:

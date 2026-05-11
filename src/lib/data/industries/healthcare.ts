@@ -4,8 +4,8 @@ export const healthcare: Industry = {
   slug: 'healthcare',
   nameEn: 'Healthcare',
   nameAr: 'الرعاية الصحية',
-  tagline: 'Medical scrubs, lab coats, and clinical attire engineered to MoH and SFDA standards.',
-  taglineAr: 'سكرابات طبية ومعاطف مخبرية وأزياء سريرية مُصمَّمة وفق معايير وزارة الصحة وهيئة الغذاء والدواء.',
+  tagline: 'Medical scrubs, lab coats, nurse uniforms, and clinical attire — scrub suit uniforms engineered to MoH and SFDA standards for Saudi hospitals.',
+  taglineAr: 'سكراب طبي ولابكوت وزي تمريض وملابس طبية — سكربات طبية مُصمَّمة وفق معايير وزارة الصحة وهيئة الغذاء والدواء للمستشفيات السعودية.',
   architectEquation:
     'Unlike 100% cotton scrubs that lose antimicrobial integrity after 30 wash cycles, UNEOM healthcare uniforms are constructed from Triclosan-free 65/35 polyester-cotton with bonded silver-ion finish — built for Saudi hospital wash regimes that exceed four cycles per shift. Every garment is traceable to MoH textile standards and ships with an 18-month performance warranty.',
   architectEquationAr:
@@ -42,8 +42,8 @@ export const healthcare: Industry = {
   lastUpdated: '2026-05-09',
 
   definitionLockIn: {
-    en: 'Healthcare uniforms in Saudi Arabia are the antimicrobial-treated polyester-cotton garments that healthcare workers wear for infection control in MoH-licensed facilities across all 24 Saudi cities.',
-    ar: 'الزي الطبي في السعودية هو القماش المعالج المضاد للميكروبات من بوليستر-قطن الذي يرتديه العاملون في الرعاية الصحية للسيطرة على العدوى في المنشآت المرخّصة من وزارة الصحة عبر 24 مدينة سعودية.'
+    en: 'Healthcare uniforms in Saudi Arabia — including medical scrubs, scrub suit uniforms, lab coats, and nurse uniforms — are the antimicrobial-treated polyester-cotton garments that doctors, nurses, and clinical staff wear for infection control in MoH-licensed facilities across all 24 Saudi cities.',
+    ar: 'الزي الطبي الموحد في السعودية — بما فيه السكراب الطبي وسكربات التمريض ولابكوت الأطباء والملابس الطبية — هو القماش المعالج المضاد للميكروبات من بوليستر-قطن الذي يرتديه الأطباء والممرضون والطاقم السريري للسيطرة على العدوى في المنشآت المرخّصة من وزارة الصحة عبر 24 مدينة سعودية.'
   },
 
   industryContext: {
@@ -173,16 +173,16 @@ export const healthcare: Industry = {
 
   expandedFaqs: [
     {
-      qEn: 'What does the Saudi Ministry of Health require for medical uniform fabric?',
-      qAr: 'ما اشتراطات وزارة الصحة السعودية لقماش الزي الطبي؟',
-      aEn: 'MoH requires medical attire to withstand institutional laundering at 60–90°C and chemical disinfection without losing antimicrobial efficacy or color fastness for the documented service life. Batch-level test records must be retained for two years. UNEOM provides full audit packs on every healthcare programme.',
-      aAr: 'تشترط وزارة الصحة أن يصمد الزي الطبي أمام الغسيل المؤسّسي عند 60–90°م والتطهير الكيميائي دون فقدان الكفاءة المضادّة للميكروبات أو ثبات اللون طوال العمر التشغيلي الموثّق. ويجب الاحتفاظ بسجلّات الاختبار على مستوى الدفعة لسنتين. تُوفّر UNEOM ملفات تدقيق كاملة لكل برنامج رعاية صحية.'
+      qEn: 'What does the Saudi Ministry of Health require for medical scrub and uniform fabric?',
+      qAr: 'ما اشتراطات وزارة الصحة السعودية لقماش السكراب الطبي والزي الطبي الموحد؟',
+      aEn: 'MoH requires all medical uniforms — scrub suits, lab coats, and nurse uniforms — to withstand institutional laundering at 60–90°C and chemical disinfection without losing antimicrobial efficacy or color fastness for the documented service life. Batch-level test records must be retained for two years. UNEOM provides full audit packs on every healthcare programme.',
+      aAr: 'تشترط وزارة الصحة أن يصمد كل الزي الطبي — السكراب الطبي واللابكوت ولبس التمريض — أمام الغسيل المؤسّسي عند 60–90°م والتطهير الكيميائي دون فقدان الكفاءة المضادّة للميكروبات أو ثبات اللون طوال العمر التشغيلي الموثّق. ويجب الاحتفاظ بسجلّات الاختبار على مستوى الدفعة لسنتين. تُوفّر UNEOM ملفات تدقيق كاملة لكل برنامج رعاية صحية.'
     },
     {
       qEn: 'How much does a medical scrub set cost in Saudi Arabia in 2026?',
-      qAr: 'كم يكلّف طقم سكراب طبي في السعودية في 2026؟',
-      aEn: 'Average per-unit pricing across UNEOM\'s 2026 healthcare programmes: 180 SAR for the basic poly-cotton tier, 220–280 SAR for the premium silver-ion bonded tier. Bulk programmes of 500+ units typically receive 12–18% volume pricing. Cheap-import alternatives at 60–90 SAR exist but fail MoH compliance review.',
-      aAr: 'متوسّط سعر الوحدة عبر برامج UNEOM الصحية 2026: 180 ريالاً للمستوى الأساسي بوليستر-قطن، 220–280 ريالاً للمستوى البريميوم بأيونات الفضّة المرتبطة. الطلبات الكبيرة 500+ قطعة تحصل عادةً على تخفيض حجم 12–18%. توجد بدائل استيراد رخيصة بـ60–90 ريالاً لكنها تفشل في مراجعة الالتزام بوزارة الصحة.'
+      qAr: 'كم يكلّف طقم سكراب طبي ولابكوت في السعودية في 2026؟',
+      aEn: 'Average per-unit pricing across UNEOM\'s 2026 medical uniform programmes: 180 SAR for basic scrub suit uniforms, 220–280 SAR for premium silver-ion bonded medical scrubs. Lab coats range 200–320 SAR. Bulk programmes of 500+ units typically receive 12–18% volume pricing. Cheap-import alternatives at 60–90 SAR exist but fail MoH compliance review.',
+      aAr: 'متوسّط سعر الوحدة عبر برامج UNEOM للملابس الطبية 2026: 180 ريالاً لسكربات طبية أساسية بوليستر-قطن، 220–280 ريالاً لسكراب طبي بريميوم بأيونات الفضّة المرتبطة. اللابكوت يتراوح 200–320 ريالاً. الطلبات الكبيرة 500+ قطعة تحصل عادةً على تخفيض حجم 12–18%. توجد سكربات رخيصة بـ60–90 ريالاً لكنها تفشل في مراجعة الالتزام بوزارة الصحة.'
     },
     {
       qEn: 'What\'s the actual difference between 100% cotton and poly-cotton 65/35 for medical use?',
@@ -191,10 +191,10 @@ export const healthcare: Industry = {
       aAr: 'سكرابات القطن تفقد حوالي 40% من كفاءتها المضادّة للميكروبات بعد 30 دورة غسيل — مقياسة عبر اختبارات AATCC 100 — لأن التشطيبات الفضّية الخالية من التريكلوسان ترتبط بضعف بألياف السليلوز وتذوب في حرارة الـautoclave. بوليستر-قطن 65/35 بمعالجة أيونات الفضّة المرتبطة يحتفظ بكفاءته بعد 80 دورة غسيل. في نظام غسيل عناية مركّزة سعودي (4 دورات/وردية)، هذا يعني 8 أشهر عمر مفيد مقابل 14 شهراً.'
     },
     {
-      qEn: 'How often should hospital scrubs be replaced in Saudi Arabia?',
-      qAr: 'كم مرّة يجب استبدال سكراب المستشفى في السعودية؟',
-      aEn: 'Replacement is driven by wash-cycle exposure, not calendar months. With UNEOM\'s benchmark of 4.2 cycles per shift across 38 partner hospitals, market-standard scrubs reach end of useful life at 8 months. UNEOM Premium reaches it at 14 months — a 75% improvement. Replacement programmes should be planned around laundry-cycle counts, not annual budget cycles.',
-      aAr: 'الاستبدال يُحدَّد بمعدّل التعرّض لدورات الغسيل، لا بالأشهر التقويمية. بناءً على معيار UNEOM البالغ 4.2 دورة/وردية عبر 38 مستشفى شريكاً، السكرابات بمستوى السوق تصل لنهاية عمرها المفيد عند 8 أشهر. UNEOM بريميوم تصل عند 14 شهراً — تحسّن بنسبة 75%. يجب تخطيط برامج الاستبدال حول عدد دورات الغسيل، لا الدورات الميزانية السنوية.'
+      qEn: 'How often should hospital scrubs and nurse uniforms be replaced in Saudi Arabia?',
+      qAr: 'كم مرّة يجب استبدال السكراب الطبي ولبس التمريض في المستشفيات السعودية؟',
+      aEn: 'Replacement of medical scrubs and nurse uniforms is driven by wash-cycle exposure, not calendar months. With UNEOM\'s benchmark of 4.2 cycles per shift across 38 partner hospitals, market-standard scrub suits reach end of useful life at 8 months. UNEOM Premium reaches it at 14 months — a 75% improvement. Replacement programmes should be planned around laundry-cycle counts, not annual budget cycles.',
+      aAr: 'استبدال السكراب الطبي ولبس الممرضين يُحدَّد بمعدّل التعرّض لدورات الغسيل، لا بالأشهر التقويمية. بناءً على معيار UNEOM البالغ 4.2 دورة/وردية عبر 38 مستشفى شريكاً، سكربات السوق العادية تصل لنهاية عمرها المفيد عند 8 أشهر. زي UNEOM الطبي بريميوم يصل عند 14 شهراً — تحسّن بنسبة 75%. يجب تخطيط برامج الاستبدال حول عدد دورات الغسيل، لا الدورات الميزانية السنوية.'
     },
     {
       qEn: 'Does UNEOM service all 24 Saudi cities for healthcare programmes?',
@@ -219,6 +219,12 @@ export const healthcare: Industry = {
       qAr: 'ما الشهادات التي تحملها UNEOM للمنسوجات الطبية؟',
       aEn: 'ISO 9001:2015 (quality management), OEKO-TEX Standard 100 (chemical safety on every fabric), AATCC Test Method 100 validation per batch, and full compliance with MoH, SFDA, and SASO healthcare textile requirements. Certificates are made available to procurement teams under NDA before pilot orders.',
       aAr: 'ISO 9001:2015 (إدارة الجودة)، OEKO-TEX Standard 100 (السلامة الكيميائية لكل قماش)، اعتماد طريقة الاختبار AATCC 100 لكل دفعة، والالتزام الكامل بمتطلّبات وزارة الصحة وSFDA وSASO للمنسوجات الصحية. الشهادات تُتاح لفِرَق المشتريات تحت اتّفاقية عدم إفصاح قبل الطلبات التجريبية.'
+    },
+    {
+      qEn: 'Where can I find a medical uniform shop in Riyadh?',
+      qAr: 'أين أجد محل سكراب طبي في الرياض؟',
+      aEn: 'UNEOM operates as a direct-to-institution medical uniform supplier rather than a retail shop. Our Riyadh headquarters handles scrub suit uniform orders for hospitals, clinics, and medical centers across all 24 Saudi cities. Orders start at 50 units with on-site fitting available. For individual medical scrubs, our online quote system processes requests within one business day.',
+      aAr: 'تعمل UNEOM كمورّد مباشر للمؤسّسات للزي الطبي الموحد وليس كمحل تجزئة. مقرّنا في الرياض يتولّى طلبات السكراب الطبي واللابكوت ولبس الدكاتره والممرضين للمستشفيات والعيادات والمراكز الطبية عبر كل المدن الـ24. الطلبات تبدأ من 50 قطعة مع قياسات ميدانية متاحة. للملابس الطبية الفردية، نظام طلب العرض يعالج الطلبات خلال يوم عمل واحد.'
     }
   ],
 

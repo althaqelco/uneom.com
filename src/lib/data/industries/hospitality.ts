@@ -4,8 +4,8 @@ export const hospitality: Industry = {
   slug: 'hospitality',
   nameEn: 'Hospitality',
   nameAr: 'الضيافة',
-  tagline: 'Front-of-house, F&B, and housekeeping uniforms for Saudi luxury hotels and the Hajj season.',
-  taglineAr: 'أزياء الاستقبال والأغذية والمشروبات والتدبير المنزلي لفنادق السعودية الفاخرة وموسم الحج.',
+  tagline: 'Front-of-house, chef uniforms, F&B, maid uniforms, and housekeeping attire for Saudi luxury hotels and the Hajj season.',
+  taglineAr: 'يونيفورم مطاعم وزي موحد للمطاعم ويونيفورم شيف ويونيفورم خدم وأزياء التدبير المنزلي لفنادق السعودية الفاخرة وموسم الحج.',
   architectEquation:
     'Unlike off-the-shelf hotel uniforms that fade and pill within six months of Jeddah\'s humid, salt-laden coastal cycle, UNEOM hospitality lines use mercerised wool-poly weaves with fade-resistant reactive dyes calibrated for 90% relative humidity. Each programme is designed around the property\'s service choreography — front desk, concierge, F&B, housekeeping — with cross-shift fit consistency at every touchpoint.',
   architectEquationAr:
@@ -42,8 +42,8 @@ export const hospitality: Industry = {
   lastUpdated: '2026-05-09',
 
   definitionLockIn: {
-    en: 'Hospitality uniforms in Saudi Arabia are the role-graded, humidity-engineered, brand-coherent garments that hotel and F&B staff wear for guest-facing service in MOT-licensed properties — designed for Jeddah coastal humidity, Riyadh thermal swings, and Hajj-season laundering volume.',
-    ar: 'زي الضيافة في السعودية هو القطع المُدرَّجة بحسب الدور، المهندَسة للرطوبة، المتّسقة مع العلامة التجارية، التي يرتديها طاقم الفنادق والأغذية والمشروبات لخدمة الضيوف في المنشآت المرخّصة من وزارة السياحة — مصمّمة لرطوبة ساحل جدة، وتقلّبات الرياض الحرارية، وحجم غسيل موسم الحج.'
+    en: 'Hospitality uniforms in Saudi Arabia — including chef uniforms, front-of-house attire, maid uniforms, and F&B staff wear — are the role-graded, humidity-engineered, brand-coherent garments that hotel and restaurant staff wear for guest-facing service in MOT-licensed properties — designed for Jeddah coastal humidity, Riyadh thermal swings, and Hajj-season laundering volume.',
+    ar: 'زي الضيافة الموحد في السعودية — بما فيه يونيفورم شيف ويونيفورم مطاعم ويونيفورم خدم وزي الاستقبال — هو القطع المُدرَّجة بحسب الدور، المهندَسة للرطوبة، المتّسقة مع العلامة التجارية، التي يرتديها طاقم الفنادق والمطاعم لخدمة الضيوف في المنشآت المرخّصة من وزارة السياحة — مصمّمة لرطوبة ساحل جدة، وتقلّبات الرياض الحرارية، وحجم غسيل موسم الحج.'
   },
 
   industryContext: {

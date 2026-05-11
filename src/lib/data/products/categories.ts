@@ -4,19 +4,19 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
   { 
     slug: 'medical-scrubs', 
     nameEn: 'Medical Scrubs', 
-    nameAr: 'الزي الطبي', 
+    nameAr: 'سكراب طبي', 
     industry: 'healthcare', 
-    summary: 'Antimicrobial scrub sets, lab coats, and clinical attire — MoH-compliant for Saudi hospitals.', 
-    summaryAr: 'أطقم سكراب مضادة للميكروبات، معاطف مختبر، وأزياء سريرية — مطابقة لمواصفات وزارة الصحة للمستشفيات السعودية.',
+    summary: 'Scrub suit uniforms, lab coats, nurse uniforms & medical uniforms — MoH-compliant for Saudi hospitals. Antimicrobial medical scrubs near you.', 
+    summaryAr: 'سكراب طبي، لابكوت وسكراب، لبس التمريض، سكربات طبية ولبس الدكاتره — ملابس طبية مطابقة لمواصفات وزارة الصحة. محل سكراب طبي يخدم كل السعودية.',
     hero: 'heroes/healthcare-pillar-hero' 
   },
   { 
     slug: 'hospitality-attire', 
     nameEn: 'Hospitality Attire', 
-    nameAr: 'زي الضيافة', 
+    nameAr: 'يونيفورم مطاعم وفنادق', 
     industry: 'hospitality', 
-    summary: 'Front-of-house, F&B, housekeeping, and concierge uniforms for Saudi luxury hotels and the Hajj season.', 
-    summaryAr: 'أزياء الاستقبال، الأغذية والمشروبات، التدبير المنزلي، وخدمات الإرشاد للفنادق السعودية الفاخرة وموسم الحج.',
+    summary: 'Chef uniforms, maid uniforms, hotel front-desk attire & restaurant staff workwear — SFDA-compliant for Saudi luxury hotels and Hajj season.', 
+    summaryAr: 'يونيفورم شيف، يونيفورم خدم، يونيفورم مطاعم وزي فنادق فاخرة — مطابق لمواصفات هيئة الغذاء والدواء للفنادق السعودية وموسم الحج.',
     hero: 'heroes/hospitality-pillar-hero' 
   },
   { 
@@ -31,37 +31,37 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
   { 
     slug: 'corporate', 
     nameEn: 'Corporate Workwear', 
-    nameAr: 'الزي المؤسسي', 
+    nameAr: 'الزي الموحد للشركات', 
     industry: 'corporate', 
-    summary: 'Executive suits, business shirts, and corporate-identity programmes for Saudi enterprises.', 
-    summaryAr: 'بدل تنفيذية، قمصان رسمية، وبرامج الهوية المؤسسية للشركات السعودية.',
+    summary: 'Corporate uniform programmes, staff workwear & executive suits — Saudization-compliant uniform advantage for Saudi enterprises.', 
+    summaryAr: 'الزي الموحد للشركات، يونيفورم عاملات، لباس موحد وبدل تنفيذية — الزي الرسمي للمؤسسات السعودية مع برامج الهوية المؤسسية.',
     hero: 'heroes/corporate-pillar-hero' 
   },
   { 
     slug: 'education', 
     nameEn: 'Education', 
-    nameAr: 'زي التعليم', 
+    nameAr: 'يونيفورم مدارس', 
     industry: 'education', 
-    summary: 'School and university uniforms aligned to Saudi MoE guidelines and the academic growth curve.', 
-    summaryAr: 'أزياء مدرسية وجامعية تتماشى مع إرشادات وزارة التعليم السعودية ومنحنى النمو الأكاديمي.',
+    summary: 'School uniforms for Saudi K–12 — MoE-compliant uniform programmes with growth-aware sizing for international and national schools.', 
+    summaryAr: 'يونيفورم مدارس — الزي الموحد للمدارس واليونيفورم للمدارس وفق إرشادات وزارة التعليم مع مقاسات واعية للنمو.',
     hero: 'heroes/education-pillar-hero' 
   },
   { 
     slug: 'manufacturing', 
     nameEn: 'Manufacturing', 
-    nameAr: 'الزي الصناعي', 
+    nameAr: 'أفرولات وزي صناعي', 
     industry: 'manufacturing', 
-    summary: 'FR coveralls, hi-vis jackets, and industrial PPE — HCIS-compliant for Saudi heat-soak environments.', 
-    summaryAr: 'أفرولات مقاومة للحريق (FR)، سترات عاكسة، ومعدات سلامة صناعية — مطابقة لمواصفات الهيئة العليا للأمن الصناعي للبيئات شديدة الحرارة.',
+    summary: 'Coverall uniforms, safety uniforms & Aramco-grade FR PPE — HCIS-compliant industrial workwear for Saudi petrochemical and manufacturing sites.', 
+    summaryAr: 'أفرولات مقاومة للحريق، زي موحد للعمال وملابس سلامة صناعية — مطابقة لمواصفات HCIS للمواقع البتروكيماوية والتصنيعية السعودية.',
     hero: 'heroes/manufacturing-pillar-hero' 
   },
   { 
     slug: 'security', 
     nameEn: 'Security', 
-    nameAr: 'زي الأمن', 
+    nameAr: 'زي أمني وعسكري', 
     industry: 'security', 
-    summary: 'Tactical and corporate security uniforms — HCIS-aligned, climate-tuned for Saudi shifts.', 
-    summaryAr: 'أزياء أمنية تكتيكية ومؤسسية — متوافقة مع HCIS ومصممة لتلائم المناخ خلال نوبات العمل السعودية.',
+    summary: 'Military uniforms, Saudi police uniforms & tactical guard attire — HCIS 2024-spec security workwear with vest-mount integration.', 
+    summaryAr: 'أزياء أمنية عسكرية، زي الشرطة السعودية وزي حراسة تكتيكي — ملابس أمنية بمواصفات HCIS 2024 مع تكامل حامل الدرع.',
     hero: 'heroes/security-pillar-hero' 
   },
   { 

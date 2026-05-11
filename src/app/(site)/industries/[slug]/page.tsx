@@ -23,10 +23,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const industry = getIndustry(slug);
   if (!industry) return {};
   const titleMap: Record<string, string> = {
-    healthcare: 'Healthcare Uniforms in Saudi Arabia — MoH-Compliant Scrubs | UNEOM'
+    healthcare: 'Healthcare Uniforms in Saudi Arabia — Medical Scrubs & Lab Coats | UNEOM',
+    hospitality: 'Hospitality Uniforms — Chef Uniforms, Maid Uniforms & Hotel Attire | UNEOM',
+    education: 'School Uniforms in Saudi Arabia — MoE-Compliant | UNEOM',
+    corporate: 'Corporate Uniforms & Staff Workwear — Saudi Enterprises | UNEOM',
+    manufacturing: 'Coverall Uniforms & Safety Uniforms — Aramco-Grade PPE | UNEOM',
+    security: 'Security Uniforms — Military & Tactical Guard Attire | UNEOM',
+    aviation: 'Aviation Uniforms — Riyadh Air & Crew Attire | UNEOM',
+    retail: 'Retail Staff Uniforms — Branded Store Attire | UNEOM'
   };
   const descMap: Record<string, string> = {
-    healthcare: 'MoH and SFDA-compliant medical scrubs and clinical uniforms across all 24 Saudi cities. AATCC-100 antimicrobial fabric, 18-month warranty. Get a quote.'
+    healthcare: 'MoH and SFDA-compliant medical scrubs, scrub suit uniforms, lab coats, and nurse uniforms across all 24 Saudi cities. AATCC-100 antimicrobial fabric, 18-month warranty. Get a quote.',
+    hospitality: 'Chef uniforms, maid uniforms, and front-of-house hotel attire for Saudi luxury properties. Hajj-season durability, Pantone-matched colourways. Request a programme quote.',
+    education: 'MoE-compliant school uniforms engineered for Saudi student growth cycles. Hidden adjusters, replaceable panels. Bulk programmes for 35,000+ schools.',
+    corporate: 'Corporate uniforms and staff workwear for Saudi enterprises. Half-canvas executive suits, brand-coordinated programmes from 50 to 5,000 employees.',
+    manufacturing: 'FR coverall uniforms, safety uniforms, and industrial PPE meeting HCIS and SASO standards. Aramco-tier traceability. Quote in 24 hours.',
+    security: 'Tactical and corporate security uniforms aligned with HCIS. Military-grade construction for Saudi police and private security operations.',
+    aviation: 'GACA-compliant crew and ground-staff aviation uniforms. Riyadh Air-grade tropical wool blends for 14-hour rotation cycles.',
+    retail: 'Branded retail staff uniforms with 200+ wash-cycle durability. Rotating programmes for Saudi mall and store chains.'
   };
   return {
     title: titleMap[slug] ?? `${industry.nameEn} Uniforms — Saudi Arabia | UNEOM`,
