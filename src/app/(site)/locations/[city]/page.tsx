@@ -36,6 +36,9 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
     mecca: `Hajj-season uniform programmes in Mecca — hospitality attire, medical scrubs & security uniforms. UNEOM Mecca depot with daily replacement stock.`,
     medina: `Professional uniforms in Medina — hotel staff uniforms, healthcare scrubs & school uniforms for the Prophet's City. Climate-calibrated fabric.`,
     khobar: `Gulf uniform supplier in Khobar — corporate workwear, industrial coveralls & medical scrubs. Serving Eastern Province enterprises from local operations.`,
+    'al-qatif': `Uniform provider in Al Qatif — medical uniforms, nurse uniforms, maid uniforms & industrial workwear. Serving Eastern Province with 14–21 day delivery.`,
+    'arar': `Uniform supplier in Arar — school uniforms, winter uniforms & corporate workwear for the Northern Borders. Direct delivery from UNEOM operations.`,
+    'hafar-al-batin': `Uniform provider in Hafar Al-Batin — safety uniforms, coverall uniforms & industrial workwear. Serving the military & industrial sectors.`,
   };
   return {
     title: cityTitleMap[citySlug] || `${city.nameEn} Uniforms — Saudi Arabia (${city.region}) | UNEOM`,

@@ -219,6 +219,18 @@ export const hospitality: Industry = {
       qAr: 'ما المنشآت السياحية السعودية التي خدمتها UNEOM؟',
       aEn: 'UNEOM\'s hospitality programme covers 24 luxury Saudi properties — including international five-star hotel chains in Riyadh and Jeddah, dedicated Hajj/Umrah accommodation operators, and the spa and wellness segment of three resort destinations. Specific names are confidential under NDA but UNEOM provides reference contacts to qualified procurement teams.',
       aAr: 'يغطّي برنامج UNEOM للضيافة 24 منشأة سعودية فاخرة — بما فيها سلاسل فنادق خمس نجوم عالمية في الرياض وجدة، مشغّلون متخصّصون في إقامة الحج/العمرة، وقطاع السبا والعافية في ثلاث وجهات منتجعية. الأسماء المحدّدة سرّية تحت اتّفاقية عدم إفصاح لكن UNEOM تُوفّر جهات اتّصال مرجعية لفِرَق المشتريات المؤهّلة.'
+    },
+    {
+      qEn: 'Does UNEOM offer maid uniforms in different styles — long, cotton, winter, and budget options?',
+      qAr: 'هل توفّر UNEOM يونيفورم عاملات بأنماط مختلفة — يونيفورم عاملات طويل، يونيفورم عاملات قطن، يونيفورم عاملات شتوي، ويونيفورم عاملات رخيص؟',
+      aEn: 'Yes. UNEOM\'s maid uniform programme offers four configuration tiers: (1) Standard maid uniforms — poly-cotton 65/35 budget-friendly sets from 85 SAR; (2) Long maid uniforms (full-length) — modesty-compliant for residential and hotel environments; (3) Cotton maid uniforms — 100% combed cotton for premium properties prioritising comfort; (4) Winter maid uniforms — fleece-lined or layered options for Riyadh and Tabuk winter shifts. All styles available in dress-cut (يونيفورم عاملات فستان) or tunic-trouser combinations. MOQ: 50 units per style.',
+      aAr: 'نعم. برنامج يونيفورم العاملات من UNEOM يُقدّم أربعة مستويات: (1) يونيفورم عاملات رخيص — أطقم بولي-قطن 65/35 اقتصادية من 85 ريالاً؛ (2) يونيفورم عاملات طويل (بطول كامل) — ملتزم بالحشمة للبيئات السكنية والفندقية؛ (3) يونيفورم عاملات قطن — قطن ممشّط 100% للمنشآت الفاخرة؛ (4) يونيفورم عاملات شتوي — خيارات فليس أو طبقات لورديات الرياض وتبوك الشتوية. جميع الأنماط متوفّرة بقصّة فستان (يونيفورم عاملات فستان) أو تونيك-بنطلون. الحد الأدنى: 50 وحدة لكل نمط.'
+    },
+    {
+      qEn: 'Where can I find a chef uniform supplier near me in Saudi Arabia?',
+      qAr: 'أين أجد مورّد يونيفورم شيف ويونيفورم مطاعم قريب مني في السعودية؟',
+      aEn: 'UNEOM manufactures chef uniforms, restaurant staff uniforms, and full F&B attire with delivery from Riyadh, Jeddah, and Dammam depots. Our chef uniform line includes SFDA-compliant dual-layer flame-resistant chef coats, breathable chef trousers, and skull caps. Restaurant uniform programmes cover host/hostess, waitstaff, bartenders, and kitchen crew with Pantone brand-matching. Request a quote at uneom.com/quote.',
+      aAr: 'تُصنّع UNEOM يونيفورم شيف، يونيفورم مطاعم، وزي أغذية ومشروبات كامل مع التوصيل من مستودعات الرياض وجدة والدمام. خط يونيفورم الشيف يشمل معاطف شيف مقاومة للحريق ثنائية الطبقة بمواصفات هيئة الغذاء والدواء، بناطيل شيف قابلة للتنفّس، وقبّعات. برامج يونيفورم المطاعم تغطّي الاستقبال والخدمة والبار وطاقم المطبخ مع مطابقة بانتون للعلامة التجارية. اطلب عرض سعر عبر uneom.com/quote.'
     }
   ],
 

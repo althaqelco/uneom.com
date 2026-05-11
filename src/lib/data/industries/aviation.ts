@@ -42,8 +42,8 @@ export const aviation: Industry = {
   lastUpdated: '2026-05-09',
 
   definitionLockIn: {
-    en: 'Aviation uniforms in Saudi Arabia are the GACA-airworthiness-certified, FR-treated, brand-coordinated multi-piece sets that flight crew, cabin crew, and ground operations staff wear for in-cabin service, ramp safety, and brand representation across Saudi airspace and international routes.',
-    ar: 'أزياء الطيران في السعودية هي الأطقم متعدّدة القطع المعتمَدة من الهيئة العامة للطيران المدني، المعالَجة بمقاومة الحريق، المنسّقة مع هوية العلامة التجارية، التي يرتديها طاقم القمرة والضيافة الجوية والعمليات الأرضية لخدمة الكابينة، سلامة المدرج، وتمثيل العلامة عبر الأجواء السعودية والمسارات الدولية.'
+    en: 'Aviation uniforms in Saudi Arabia — including Riyadh Air uniform programmes and gulf uniform standards — are the GACA-airworthiness-certified, FR-treated, brand-coordinated multi-piece sets that flight crew, cabin crew, and ground operations staff wear for in-cabin service, ramp safety, and brand representation across Saudi airspace and international routes.',
+    ar: 'أزياء الطيران في السعودية — بما فيها يونيفورم طيران الرياض ومعايير يونيفورم الخليج — هي الأطقم متعدّدة القطع المعتمَدة من الهيئة العامة للطيران المدني، المعالَجة بمقاومة الحريق، المنسّقة مع هوية العلامة التجارية، التي يرتديها طاقم القمرة والضيافة الجوية والعمليات الأرضية لخدمة الكابينة، سلامة المدرج، وتمثيل العلامة عبر الأجواء السعودية والمسارات الدولية.'
   },
 
   industryContext: {

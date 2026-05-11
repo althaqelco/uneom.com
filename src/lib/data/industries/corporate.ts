@@ -210,6 +210,12 @@ export const corporate: Industry = {
       qAr: 'هل تُقدّم UNEOM تقارير موردي ملتزمة بالسعوَدة؟',
       aEn: 'Yes. UNEOM is a fully Saudi-registered manufacturer with documented Saudization headcount data. We provide quarterly reports on uniform programme expenditure formatted for MHRSD Saudization compliance reporting, and the cost-of-employment calculations as required for Nitaqat reporting. UNEOM CRN, ZATCA VAT, and Maroof verification are all included in the supplier audit pack.',
       aAr: 'نعم. UNEOM مُصنِّع سعودي مسجَّل بالكامل ببيانات سعوَدة موثّقة. نُقدّم تقارير فصلية عن نفقات برنامج الزي مصاغة لتقارير الالتزام بالسعوَدة لـMHRSD، وحسابات تكلفة التوظيف كما هو مطلوب لتقارير نطاقات. CRN لـUNEOM، رقم ضريبة القيمة المضافة من ZATCA، والتحقّق من معروف، كلها مشمولة في ملف تدقيق المورد.'
+    },
+    {
+      qEn: 'What is the uniform advantage of a managed corporate programme compared to ad-hoc tailoring?',
+      qAr: 'ما ميزة الزي المحترف في برنامج مُدار مقارنةً بتفصيل زي موحد من الخياطين المستقلّين؟',
+      aEn: 'The uniform advantage of a managed UNEOM corporate programme — compared to ad-hoc tailoring (تفصيل زي موحد) — is documented in three areas: (1) Cost: programme pricing is 18–22% lower than individual tailoring at comparable quality due to fabric bulk-purchase economies; (2) Consistency: every uniform across 200+ employees matches within ±0.5cm tolerance, while independent tailors produce ±2cm variation; (3) Compliance: all staff uniforms (ملابس عاملات and executive attire) include SASO-compliant labelling, ZATCA VAT documentation, and Nitaqat-ready supplier reporting — none of which independent tailors provide.',
+      aAr: 'ميزة الزي المحترف في برنامج UNEOM المُدار — مقارنةً بتفصيل زي موحد من خيّاطين مستقلّين — موثّقة في ثلاث مجالات: (1) التكلفة: تسعير البرنامج أقل بـ18-22% من التفصيل الفردي بجودة مماثلة بفضل اقتصاديات شراء القماش بالجملة؛ (2) التناسق: كل لباس موحد عبر 200+ موظف يتطابق ضمن تسامح ±0.5 سم، بينما الخيّاطون المستقلّون ينتجون تفاوت ±2 سم؛ (3) الالتزام: جميع ملابس العاملات والزي التنفيذي تشمل تسمية بمواصفات SASO، وتوثيق ضريبة ZATCA، وتقارير موردين متوافقة مع نطاقات — لا يُقدّمها الخيّاطون المستقلّون.'
     }
   ],
 

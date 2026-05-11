@@ -225,6 +225,12 @@ export const healthcare: Industry = {
       qAr: 'أين أجد محل سكراب طبي في الرياض؟',
       aEn: 'UNEOM operates as a direct-to-institution medical uniform supplier rather than a retail shop. Our Riyadh headquarters handles scrub suit uniform orders for hospitals, clinics, and medical centers across all 24 Saudi cities. Orders start at 50 units with on-site fitting available. For individual medical scrubs, our online quote system processes requests within one business day.',
       aAr: 'تعمل UNEOM كمورّد مباشر للمؤسّسات للزي الطبي الموحد وليس كمحل تجزئة. مقرّنا في الرياض يتولّى طلبات السكراب الطبي واللابكوت ولبس الدكاتره والممرضين للمستشفيات والعيادات والمراكز الطبية عبر كل المدن الـ24. الطلبات تبدأ من 50 قطعة مع قياسات ميدانية متاحة. للملابس الطبية الفردية، نظام طلب العرض يعالج الطلبات خلال يوم عمل واحد.'
+    },
+    {
+      qEn: 'Are there affordable scrub suit uniforms near me — and how does UNEOM compare to budget medical uniform shops?',
+      qAr: 'هل يوجد سكراب طبي رخيص — وكيف تقارن UNEOM بمحلات لبس السكراب واسكراب والملابس الطبية الرخيصة؟',
+      aEn: 'Budget scrub suits (لبس سكراب) from catalogue shops typically cost 45–75 SAR but lack antimicrobial treatment, fade within 20 wash cycles, and use single-layer construction. UNEOM\'s entry-level nurse uniforms and scrub suit uniforms start at 95 SAR with full MoH-grade antimicrobial treatment, 50-cycle colour-fast guarantee, and institutional-grade seam reinforcement. The cost-of-ownership over 18 months is 40% lower than budget alternatives because UNEOM medical uniforms (الملابس الطبية) last 3× longer. Our المظهر الطبي programme delivers professional medical appearance with scrub suit uniform delivery near you across all 24 Saudi cities.',
+      aAr: 'سكربات وأسكراب الكتالوج الرخيصة تكلّف عادةً 45-75 ريالاً لكن تفتقر للمعالجة المضادة للميكروبات، وتبهت خلال 20 دورة غسيل، وتستخدم بناءً أحادي الطبقة. لبس التمريض والسكراب الطبي من UNEOM يبدأ من 95 ريالاً مع معالجة مضادة للميكروبات بمواصفات وزارة الصحة، وضمان ثبات لون 50 دورة، وتعزيز خياطة بمستوى مؤسّسي. تكلفة الملكية خلال 18 شهراً أقل بنسبة 40% من البدائل الرخيصة لأن الملابس الطبية من UNEOM تدوم 3 أضعاف. برنامج المظهر الطبي يُقدّم لبس طبي احترافي مع توصيل سكراب طبي لكل المدن الـ24 السعودية.'
     }
   ],
 

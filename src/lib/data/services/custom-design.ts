@@ -5,8 +5,8 @@ export const customDesign: Service = {
   nameEn: 'Custom Design',
   nameAr: 'التصميم المخصّص',
   heroImage: 'process/custom-design-workflow',
-  summary: 'Bespoke uniform design from concept sketch to bulk-ready production tech-pack — in 14 days.',
-  summaryAr: 'تصميم أزياء مخصّصة من الرسم الأوّلي إلى حزمة إنتاج جاهزة للتصنيع — خلال 14 يوماً.',
+  summary: 'Bespoke uniform design from concept sketch to bulk-ready production tech-pack — custom design & tailoring for Saudi enterprises in 14 days.',
+  summaryAr: 'تفصيل يونيفورم وتصميم أزياء مخصّصة من الرسم الأوّلي إلى حزمة إنتاج جاهزة للتصنيع — تفصيل الزي الموحد وخياطة الزي الموحد للمؤسسات السعودية خلال 14 يوماً.',
 
   description: 'Six-step workflow: brand audit → concept design → fabric and trim sourcing → physical sampling → fit refinement across body sizes → production tech-pack and grading. Average concept-to-sample time: 14 days.',
   descriptionAr: 'سير عمل من 6 خطوات: تدقيق العلامة التجارية ← تصميم أوّلي ← تأمين الأقمشة والكماليات ← عيّنات مادية ← تحسين القياسات عبر أحجام الجسم ← حزمة التصنيع وتدريج المقاسات. متوسط الوقت من الفكرة للعيّنة: 14 يوماً.',

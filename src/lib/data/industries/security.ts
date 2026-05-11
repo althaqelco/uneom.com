@@ -42,8 +42,8 @@ export const security: Industry = {
   lastUpdated: '2026-05-09',
 
   definitionLockIn: {
-    en: 'Security uniforms in Saudi Arabia are the HCIS-compliant, vest-integrated, modular load-carriage attire that licensed security personnel wear for corporate-complex, residential-compound, and event-security duties across MHRSD-registered private security companies.',
-    ar: 'الزي الأمني في السعودية هو الزي الملتزم بمواصفات HCIS، المُدمج لحامل الدرع، بحمل وحدات معياري، الذي يرتديه رجال الأمن المرخّصون لواجبات المجمّعات المؤسّسية، المجمّعات السكنية، وأمن الفعاليات عبر شركات الأمن الخاصّة المسجّلة لدى وزارة الموارد البشرية.'
+    en: 'Security and safety uniforms in Saudi Arabia — including private security uniforms, police-style uniforms, and military-grade tactical attire — are the HCIS-compliant, vest-integrated, modular load-carriage garments that licensed security personnel wear for corporate-complex, residential-compound, and event-security duties across MHRSD-registered private security companies.',
+    ar: 'زي الأمن والسلامة في السعودية — بما فيه الزي الأمني الخاص، وزي الشرطة، والزي العسكري التكتيكي — هو الزي الملتزم بمواصفات HCIS، المُدمج لحامل الدرع، بحمل وحدات معياري، الذي يرتديه رجال الأمن المرخّصون لواجبات المجمّعات المؤسّسية، المجمّعات السكنية، وأمن الفعاليات عبر شركات الأمن الخاصّة المسجّلة لدى وزارة الموارد البشرية.'
   },
 
   industryContext: {
@@ -210,6 +210,12 @@ export const security: Industry = {
       qAr: 'ما شركات الأمن السعودية التي تخدمها UNEOM؟',
       aEn: 'UNEOM has supplied 22 Saudi security firms across Riyadh, Jeddah, Dammam, and the Eastern Province industrial zones. Clients include corporate-complex security operators, residential-compound providers, religious-site security firms, and event-security contractors for major Saudi sports and concert venues. Specific names are confidential under NDA.',
       aAr: 'وفّرت UNEOM لـ22 شركة أمن سعودية عبر الرياض، جدة، الدمام، والمناطق الصناعية في المنطقة الشرقية. يشمل العملاء مشغّلي أمن المجمّعات المؤسّسية، مزوّدي المجمّعات السكنية، شركات أمن المواقع الدينية، ومقاولي أمن الفعاليات للمواقع الرياضية والحفلات السعودية الكبرى. الأسماء المحدّدة سرّية تحت اتّفاقية عدم إفصاح.'
+    },
+    {
+      qEn: 'Does UNEOM manufacture military uniforms, police uniforms, or Saudi police black uniforms?',
+      qAr: 'هل تُصنّع UNEOM زيّاً عسكرياً أو زي الشرطة السعودية الأسود؟',
+      aEn: 'UNEOM\'s core capability is private-sector security and safety uniforms, not military uniforms or Saudi police uniforms issued through government channels. However, we manufacture police-style uniforms for private security firms that require tactical black attire matching police uniform in Saudi Arabia aesthetics — including rip-stop BDU, epaulet configuration, and reflective-trim safety uniforms compliant with HCIS standards. For government-issued military uniform or Saudi police black uniform procurement, we recommend contacting the relevant ministry.',
+      aAr: 'القدرة الأساسية لـUNEOM هي أزياء الأمن والسلامة للقطاع الخاص، وليس الزي العسكري أو زي الشرطة السعودية الصادر من القنوات الحكومية. لكننا نُصنّع أزياء بطابع أمني للشركات الأمنية الخاصّة التي تحتاج ملابس تكتيكية سوداء بمظهر يُماثل زي الشرطة في السعودية — بما فيه BDU ريب-ستوب، تهيئة الأكتاف، وأزياء سلامة عاكسة بمواصفات HCIS. لشراء الزي العسكري أو زي الشرطة السعودية الأسود الحكومي، ننصح بالتواصل مع الوزارة المختصّة.'
     }
   ],
 

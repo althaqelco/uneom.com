@@ -5,8 +5,8 @@ export const bulkOrdering: Service = {
   nameEn: 'Bulk Ordering',
   nameAr: 'الطلبات بالجملة',
   heroImage: 'process/bulk-ordering',
-  summary: 'Volume programmes from 50 to 50,000 units — consistent fit, on-time delivery, 14–21 day lead times.',
-  summaryAr: 'برامج أحجام من 50 إلى 50,000 وحدة — قياسات متناسقة، تسليم في الوقت المحدّد، أوقات تنفيذ 14-21 يوماً.',
+  summary: 'Bulk uniform ordering from 50 to 50,000 units — your uniform shop near you with consistent fit, on-time delivery, and 14–21 day lead times across Saudi Arabia.',
+  summaryAr: 'شركة الزي الموحد للطلبات بالجملة من 50 إلى 50,000 وحدة — محلات الزي الموحد وملابس يونيفورم بقياسات متناسقة وتسليم في الوقت المحدّد وأوقات تنفيذ 14-21 يوماً عبر السعودية.',
 
   description: 'Dedicated production blocks, in-house cutting and sewing, multi-stage QC, and direct-to-site delivery anywhere in Saudi Arabia. Lead times 14–21 days for repeat programmes, 21–35 for new designs.',
   descriptionAr: 'خطوط إنتاج مخصّصة، قصّ وخياطة داخلية، فحص جودة متعدد المراحل، وتسليم مباشر للموقع في أيّ مكان بالمملكة العربية السعودية. أوقات التسليم 14-21 يوماً للبرامج المتكررة، و21-35 يوماً للتصاميم الجديدة.',

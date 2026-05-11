@@ -42,8 +42,8 @@ export const education: Industry = {
   lastUpdated: '2026-05-09',
 
   definitionLockIn: {
-    en: 'School uniforms in Saudi Arabia are the MoE-compliant, growth-engineered, modesty-graded poly-cotton garments that students wear in licensed Saudi schools — designed to extend service life across the school-year growth curve and synchronise procurement to the August intake cycle.',
-    ar: 'الزي الموحد للمدارس في السعودية — يونيفورم مدارس متوافق مع وزارة التعليم — هو القطع البولي-قطن الملتزمة بمعايير وزارة التعليم، المهندَسة للنموّ، المُدرَّجة للحشمة، التي يرتديها الطلّاب في المدارس السعودية المرخّصة — مصمَّمة لتمديد العمر التشغيلي عبر منحنى نمو العام الدراسي ومزامنة الشراء مع دورة قبول أغسطس.'
+    en: 'School uniforms in Saudi Arabia — the standard school uniform for Saudi public and private institutions — are the MoE-compliant, growth-engineered, modesty-graded poly-cotton garments that students wear in licensed Saudi schools — designed to extend service life across the school-year growth curve and synchronise procurement to the August intake cycle.',
+    ar: 'الزي الموحد للمدارس في السعودية — اليونيفورم للمدارس ويونيفورم مدارس المتوافق مع وزارة التعليم — هو القطع البولي-قطن الملتزمة بمعايير وزارة التعليم، المهندَسة للنموّ، المُدرَّجة للحشمة، التي يرتديها الطلّاب في المدارس السعودية المرخّصة — مصمَّمة لتمديد العمر التشغيلي عبر منحنى نمو العام الدراسي ومزامنة الشراء مع دورة قبول أغسطس.'
   },
 
   industryContext: {
