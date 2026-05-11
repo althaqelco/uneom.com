@@ -42,7 +42,7 @@ export const manufacturing: Industry = {
   lastUpdated: '2026-05-09',
 
   definitionLockIn: {
-    en: 'Industrial coverall uniforms and safety uniforms in Saudi Arabia are the flame-resistant, high-visibility, Aramco-grade PPE that plant operators and field technicians wear for arc-flash and impact protection in HCIS-licensed petrochemical facilities, manufacturing sites, and NEOM construction zones across the Eastern and Western provinces.',
+    en: 'Industrial coverall uniforms, Aramco uniforms, and safety uniforms in Saudi Arabia are the flame-resistant, high-visibility, Aramco-grade PPE that plant operators and field technicians wear for arc-flash and impact protection in HCIS-licensed petrochemical facilities, manufacturing sites, and NEOM construction zones across the Eastern and Western provinces.',
     ar: 'أفرولات وزي موحد للعمال في السعودية هي معدّات الحماية الشخصية المقاومة للحريق العالية الرؤية بمواصفات أرامكو، التي يرتديها مشغّلو المصانع والفنّيون الميدانيون للحماية من الومضة الكهربائية والاصطدام في المنشآت البتروكيماوية والتصنيعية ومواقع إنشاء نيوم عبر المنطقتين الشرقية والغربية.'
   },
 

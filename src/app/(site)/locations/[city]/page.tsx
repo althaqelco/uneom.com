@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
     abha: `${city.nameEn} Uniforms — Asir Region Uniform Provider | UNEOM`,
   };
   const cityDescMap: Record<string, string> = {
-    riyadh: `Professional uniform programmes in Riyadh — medical scrubs, corporate workwear, school uniforms & coveralls. 240+ active accounts. UNEOM uniform shop near you in Riyadh.`,
+    riyadh: `Professional uniform Riyadh programmes — medical scrubs, corporate workwear, school uniforms & coveralls. 240+ active accounts. UNEOM uniform shop near you in Riyadh.`,
     jeddah: `Uniform shop in Jeddah — chef uniforms, maid uniforms, medical scrubs & Hajj-season hotel attire. Coastal-grade fabric engineering for Red Sea humidity.`,
     dammam: `Uniform supplier in Dammam — Aramco-grade coverall uniforms, safety uniforms & industrial PPE. Serving the Eastern Province petrochemical corridor.`,
     mecca: `Hajj-season uniform programmes in Mecca — hospitality attire, medical scrubs & security uniforms. UNEOM Mecca depot with daily replacement stock.`,

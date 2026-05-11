@@ -58,7 +58,7 @@ export default function ArHomePage() {
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/85 lg:text-xl pretty">
               UNEOM هو الشريك في برامج الزي الموحّد بالجملة لـ {COMPANY_STATS.activeClients}+ عميل سعودي B2B عبر
               الرعاية الصحية والضيافة والطيران والشركات والتعليم والتصنيع والأمن والتجزئة —
-              مبنية وفق معايير ISO 9001 + OEKO-TEX ومُسلَّمة إلى جميع {COMPANY_STATS.cities} مدينة.
+              يونيفورم بلس سكراب طبي ولاب كوت وكل ما يحمل معنى يونيفورم مهني، مبنية وفق معايير ISO 9001 + OEKO-TEX ومُسلَّمة إلى جميع {COMPANY_STATS.cities} مدينة.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link href="/ar/quote/" className="btn-accent">

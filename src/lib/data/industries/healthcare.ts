@@ -43,7 +43,7 @@ export const healthcare: Industry = {
 
   definitionLockIn: {
     en: 'Healthcare uniforms in Saudi Arabia — including medical scrubs, scrub suit uniforms, lab coats, and nurse uniforms — are the antimicrobial-treated polyester-cotton garments that doctors, nurses, and clinical staff wear for infection control in MoH-licensed facilities across all 24 Saudi cities.',
-    ar: 'الزي الطبي الموحد في السعودية — بما فيه السكراب الطبي وسكربات التمريض ولابكوت الأطباء والملابس الطبية — هو القماش المعالج المضاد للميكروبات من بوليستر-قطن الذي يرتديه الأطباء والممرضون والطاقم السريري للسيطرة على العدوى في المنشآت المرخّصة من وزارة الصحة عبر 24 مدينة سعودية.'
+    ar: 'الزي الطبي الموحد في السعودية — بما فيه السكراب الطبي (سكرب طبي، زي سكراب) وسكربات التمريض والابكوت ولابكوت الأطباء ولبس دكتور وزي للملابس الطبية — هو القماش المعالج المضاد للميكروبات من بوليستر-قطن الذي يرتديه الأطباء والممرضون والطاقم السريري للسيطرة على العدوى في المنشآت المرخّصة من وزارة الصحة عبر 24 مدينة سعودية.'
   },
 
   industryContext: {

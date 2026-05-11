@@ -5,7 +5,7 @@ export const hospitality: Industry = {
   nameEn: 'Hospitality',
   nameAr: 'الضيافة',
   tagline: 'Front-of-house, chef uniforms, F&B, maid uniforms, and housekeeping attire for Saudi luxury hotels and the Hajj season.',
-  taglineAr: 'يونيفورم مطاعم وزي موحد للمطاعم ويونيفورم شيف ويونيفورم خدم وأزياء التدبير المنزلي لفنادق السعودية الفاخرة وموسم الحج.',
+  taglineAr: 'يونيفورم مطاعم وزي موحد للمطاعم ويونيفورم شيف ويونيفورم خدم ولبس عاملات وأزياء التدبير المنزلي لفنادق السعودية الفاخرة وموسم الحج.',
   architectEquation:
     'Unlike off-the-shelf hotel uniforms that fade and pill within six months of Jeddah\'s humid, salt-laden coastal cycle, UNEOM hospitality lines use mercerised wool-poly weaves with fade-resistant reactive dyes calibrated for 90% relative humidity. Each programme is designed around the property\'s service choreography — front desk, concierge, F&B, housekeeping — with cross-shift fit consistency at every touchpoint.',
   architectEquationAr:

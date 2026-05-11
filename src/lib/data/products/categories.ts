@@ -6,8 +6,8 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     nameEn: 'Medical Scrubs', 
     nameAr: 'سكراب طبي', 
     industry: 'healthcare', 
-    summary: 'Scrub suit uniforms, lab coats, nurse uniforms & medical uniforms — MoH-compliant for Saudi hospitals. Antimicrobial medical scrubs near you.', 
-    summaryAr: 'سكراب طبي، لابكوت وسكراب، لبس التمريض، سكربات طبية ولبس الدكاتره — ملابس طبية مطابقة لمواصفات وزارة الصحة. محل سكراب طبي يخدم كل السعودية.',
+    summary: 'Scrub suit uniforms near me, lab coats, nurse uniforms & medical uniforms — MoH-compliant for Saudi hospitals. Antimicrobial medical scrubs near you.', 
+    summaryAr: 'سكراب طبي، يونيفورم طبي، اليونيفورم الطبي — لابكوت وسكراب، زي طبي، لبس التمريض، سكربات طبية ولبس الدكاتره — ملابس طبية مطابقة لمواصفات وزارة الصحة. محل سكراب طبي يخدم كل السعودية.',
     hero: 'heroes/healthcare-pillar-hero' 
   },
   { 
@@ -16,7 +16,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     nameAr: 'يونيفورم مطاعم وفنادق', 
     industry: 'hospitality', 
     summary: 'Chef uniforms, maid uniforms, hotel front-desk attire & restaurant staff workwear — SFDA-compliant for Saudi luxury hotels and Hajj season.', 
-    summaryAr: 'يونيفورم شيف، يونيفورم خدم، يونيفورم مطاعم وزي فنادق فاخرة — مطابق لمواصفات هيئة الغذاء والدواء للفنادق السعودية وموسم الحج.',
+    summaryAr: 'يونيفورم شيف، يونيفورم خدم، يونيفورم للخدم، يونيفورم للعاملات، يونيفورم مطاعم وزي فنادق فاخرة — مطابق لمواصفات هيئة الغذاء والدواء للفنادق السعودية وموسم الحج.',
     hero: 'heroes/hospitality-pillar-hero' 
   },
   { 
@@ -34,7 +34,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     nameAr: 'الزي الموحد للشركات', 
     industry: 'corporate', 
     summary: 'Corporate uniform programmes, staff workwear & executive suits — Saudization-compliant uniform advantage for Saudi enterprises.', 
-    summaryAr: 'الزي الموحد للشركات، يونيفورم عاملات، لباس موحد وبدل تنفيذية — الزي الرسمي للمؤسسات السعودية مع برامج الهوية المؤسسية.',
+    summaryAr: 'الزي الموحد للشركات، يونيفورم عاملات، زي موحد للعاملات، الزي الموحد للعاملات، لباس موحد وبدل تنفيذية — الزي الرسمي للمؤسسات السعودية مع برامج الهوية المؤسسية.',
     hero: 'heroes/corporate-pillar-hero' 
   },
   { 
@@ -61,7 +61,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     nameAr: 'زي أمني وعسكري', 
     industry: 'security', 
     summary: 'Military uniforms, Saudi police uniforms & tactical guard attire — HCIS 2024-spec security workwear with vest-mount integration.', 
-    summaryAr: 'أزياء أمنية عسكرية، زي الشرطة السعودية وزي حراسة تكتيكي — ملابس أمنية بمواصفات HCIS 2024 مع تكامل حامل الدرع.',
+    summaryAr: 'أزياء أمنية عسكرية، الزي الموحد الطبي الأمني، زي الشرطة السعودية وزي حراسة تكتيكي — ملابس أمنية بمواصفات HCIS 2024 مع تكامل حامل الدرع.',
     hero: 'heroes/security-pillar-hero' 
   },
   { 
