@@ -32,6 +32,16 @@ import { mallRetailUniformsExcellence } from './posts/mall-retail-uniforms-excel
 import { corporateSecurityBranding } from './posts/corporate-security-branding';
 import { choosingUniformSupplierGuide } from './posts/choosing-uniform-supplier-guide';
 import { circularEconomyUniforms } from './posts/circular-economy-uniforms';
+import { maidUniformGuideSaudi } from './posts/maid-uniform-guide-saudi';
+import { medicalScrubsBuyingGuide } from './posts/medical-scrubs-buying-guide-price';
+import { restaurantUniformGuideSaudi } from './posts/restaurant-uniform-guide-saudi';
+import { industrialCoverallSpecificationGuide } from './posts/industrial-coverall-specification-guide';
+import { corporateUniformProgrammeRoi } from './posts/corporate-uniform-programme-roi';
+import { schoolUniformProcurementSaudi } from './posts/school-uniform-procurement-saudi';
+import { uniformSupplierRiyadhJeddahDammam } from './posts/uniform-shop-riyadh-jeddah-dammam';
+import { riyadhAirAviationUniformStandards } from './posts/riyadh-air-aviation-uniform-standards';
+import { uniformFabricGuideSaudiClimate } from './posts/uniform-fabric-guide-saudi-climate';
+import { customUniformTailoringProcess } from './posts/custom-uniform-tailoring-process';
 
 export type BlogCategorySlug =
   | 'healthcare'
@@ -101,7 +111,17 @@ export const BLOG_POSTS: BlogPost[] = [
   mallRetailUniformsExcellence,
   corporateSecurityBranding,
   choosingUniformSupplierGuide,
-  circularEconomyUniforms
+  circularEconomyUniforms,
+  maidUniformGuideSaudi,
+  medicalScrubsBuyingGuide,
+  restaurantUniformGuideSaudi,
+  industrialCoverallSpecificationGuide,
+  corporateUniformProgrammeRoi,
+  schoolUniformProcurementSaudi,
+  uniformSupplierRiyadhJeddahDammam,
+  riyadhAirAviationUniformStandards,
+  uniformFabricGuideSaudiClimate,
+  customUniformTailoringProcess
 ];
 
 export const BLOG_CATEGORIES_BY_SLUG = Object.fromEntries(
