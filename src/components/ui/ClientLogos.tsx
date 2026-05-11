@@ -56,7 +56,7 @@ export function ClientLogos({ lang = 'en' }: Props) {
                     alt={isAr ? client.nameAr : client.name}
                     width={140}
                     height={56}
-                    className="h-9 sm:h-11 w-auto object-contain grayscale opacity-50 transition-all duration-500 hover:grayscale-0 hover:opacity-100"
+                    className="h-11 sm:h-14 w-auto object-contain grayscale opacity-50 transition-all duration-500 hover:grayscale-0 hover:opacity-100"
                     loading="lazy"
                   />
                 </div>
