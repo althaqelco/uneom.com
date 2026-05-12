@@ -10,7 +10,7 @@ export const corporateDressCodeEvolution: BlogPost = {
     excerptAr: 'من الثوب فقط إلى البرامج الهجينة — كيف تتطور قواعد اللباس المؤسسي مع بيئات عمل رؤية 2030.',
     category: 'corporate-education',
     publishedAt: '2025-04-08',
-    hero: 'blog/corporate-uniform-psychology',
+    hero: 'blog/corporate-dress-code-evolution',
     silo: 'corporate',
     readingMinutes: 7,
     lead: 'A Saudi boardroom in 2026 can include a CFO in a thobe, a CEO in a tailored navy suit, and a board member in a tailored women\'s blazer with hijab. The corporate dress code conversation has moved from "what should staff wear" to "how do we run a programme that serves all of them."',

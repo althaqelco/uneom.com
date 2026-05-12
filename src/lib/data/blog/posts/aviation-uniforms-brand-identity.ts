@@ -10,7 +10,7 @@ export const aviationUniformsBrandIdentity: BlogPost = {
     excerptAr: 'كيف تحوّل شركات الطيران السعودية المقصورة إلى سطح للعلامة التجارية — وما تتطلبه صلاحية GACA من التجربة.',
     category: 'aviation',
     publishedAt: '2025-11-19',
-    hero: 'blog/airline-uniform-design-cultural-identity',
+    hero: 'blog/aviation-uniforms-brand-identity',
     silo: 'aviation',
     readingMinutes: 9,
     lead: 'A passenger sees the airline\'s logo three times — boarding pass, jetway, safety card. They see the cabin crew uniform for the entire flight. The brand-identity conversation about Saudi aviation uniforms is the most under-leveraged at the operational layer of every Saudi carrier we work with.',

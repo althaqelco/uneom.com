@@ -207,7 +207,7 @@ export const medicalScrubs: Product[] = [
     fabricWeight: '210gsm',
     fabricWeightAr: '210 جرام للمتر المربع',
     priceFrom: 280,
-    image: 'products/medical-scrubs/scrub-set-classic',
+    image: 'products/medical-scrubs/scrub-set-premium',
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL'],
     colors: ['Surgical Navy', 'Slate', 'Teal', 'Royal Blue'],
     colorsAr: ['كحلي جراحي', 'رمادي مزرق', 'تيل', 'أزرق ملكي'],

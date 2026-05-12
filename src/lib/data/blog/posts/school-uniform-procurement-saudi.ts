@@ -8,7 +8,7 @@ export const schoolUniformProcurementSaudi: BlogPost = {
   excerptAr: 'أقمشة UPF 30+ للخارج، لوجستيات أطقم منتصف الفصل، تسعير الحجم لـ 100 مقابل 5,000 طالب، وحالة الاستدامة لبرامج استرجاع الأزياء.',
   category: 'corporate-education',
   publishedAt: '2026-04-28',
-  hero: 'blog/cultural-identity-saudi-school-uniforms',
+  hero: 'blog/school-uniform-procurement-saudi',
   silo: 'education',
   readingMinutes: 8,
   lead: `School uniform procurement in Saudi Arabia is a SAR 2.4 billion annual market — yet most purchasing decisions are made on price alone. UNEOM works with 85+ schools across the Kingdom, and this guide consolidates the framework we use: fabric specifications that survive the academic year, sizing systems that accommodate growth, logistics that handle the September rush, and the economics of scale that transform per-student costs.`,

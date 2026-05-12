@@ -10,7 +10,7 @@ export const futureProfessionalWearDigitalAge: BlogPost = {
     excerptAr: 'المنسوجات الذكية وأجهزة الاستشعار القابلة للارتداء والجيل القادم من أزياء B2B القادمة للشركات السعودية.',
     category: 'sustainability-trends',
     publishedAt: '2026-04-15',
-    hero: 'blog/circular-economy-uniforms',
+    hero: 'blog/future-professional-wear-digital-age',
     silo: 'corporate',
     readingMinutes: 10,
     lead: 'Smart textiles are no longer a research-lab curiosity. Vital-sign monitoring fabric, RFID-integrated workwear for traceable PPE, and self-cleaning antimicrobials are all in pilot deployments at Saudi industrial and healthcare sites. The next 36 months will see the first Saudi enterprises run programme contracts that include sensor-grade fabric.',

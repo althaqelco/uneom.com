@@ -8,7 +8,7 @@ export const maidUniformGuideSaudi: BlogPost = {
   excerptAr: 'مواصفات الأقمشة، اختيار الوزن الموسمي، تسعير البرامج الجماعية، والواقع التشغيلي لتوحيد أزياء العاملات عبر المجمعات السكنية والمنشآت المؤسسية في السعودية.',
   category: 'corporate-education',
   publishedAt: '2026-05-10',
-  hero: 'blog/corporate-uniform-psychology',
+  hero: 'blog/maid-uniform-guide-saudi',
   silo: 'corporate',
   city: 'riyadh',
   readingMinutes: 8,

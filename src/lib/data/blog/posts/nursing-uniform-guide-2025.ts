@@ -10,7 +10,7 @@ export const nursingUniformGuide2025: BlogPost = {
     excerptAr: 'المقاس والقماش والاحتشام والمتانة — أربع محادثات يحتاجها كل برنامج تمريض بالترتيب.',
     category: 'healthcare',
     publishedAt: '2026-01-18',
-    hero: 'blog/medical-hijab-healthcare-standards',
+    hero: 'blog/nursing-uniform-guide-2025',
     silo: 'healthcare',
     readingMinutes: 8,
     lead: 'Most Saudi hospitals run nursing uniform procurement once every 18 months and get four chances to make four decisions in their career. This is the framework UNEOM uses with hospital procurement leads — and the order of conversations that prevents the second-year regret.',

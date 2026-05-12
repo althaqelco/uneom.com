@@ -8,7 +8,7 @@ export const medicalScrubsBuyingGuide: BlogPost = {
   excerptAr: 'لماذا أرخص سكراب يكلفك أكثر، وكيف يتفوق مزيج 65/35 بوليستر-قطن مع معالجة مضادة للميكروبات، والاقتصاديات الحقيقية لتجهيز 50-5,000 موظف طبي.',
   category: 'healthcare',
   publishedAt: '2026-05-08',
-  hero: 'blog/medical-scrubs-evolution-saudi',
+  hero: 'blog/medical-scrubs-buying-guide',
   silo: 'healthcare',
   city: 'riyadh',
   readingMinutes: 8,

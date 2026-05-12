@@ -8,7 +8,7 @@ export const uniformSupplierRiyadhJeddahDammam: BlogPost = {
   excerptAr: 'سبعة أسئلة قبل توقيع العقد، اعتبارات كل منطقة، ولماذا يتحول 78% من الشركات السعودية للمشتريات البرامجية.',
   category: 'sustainability-trends',
   publishedAt: '2026-04-24',
-  hero: 'blog/choosing-uniform-supplier-guide',
+  hero: 'blog/uniform-shop-riyadh-jeddah-dammam',
   silo: 'corporate',
   city: 'riyadh',
   readingMinutes: 7,

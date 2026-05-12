@@ -8,7 +8,7 @@ export const uniformFabricGuideSaudiClimate: BlogPost = {
   excerptAr: 'القطن مقابل البوليستر مقابل المزيج — بالبيانات وليس الرأي. معالجات امتصاص الرطوبة وحماية UV وتحسين الوزن الموسمي وشهادة OEKO-TEX للسوق السعودي.',
   category: 'sustainability-trends',
   publishedAt: '2026-04-16',
-  hero: 'blog/circular-economy-uniforms',
+  hero: 'blog/uniform-fabric-guide-saudi-climate',
   silo: 'corporate',
   readingMinutes: 10,
   lead: `At 50°C ambient temperature with 85% humidity on the Gulf coast, a uniform fabric that performs well in London or Dubai will fail in Dammam. Saudi Arabia's climate is not just "hot" — it is a composite of extreme UV radiation (index 11+ for seven months), temperature ranges spanning 12°C to 52°C within the same city across seasons, and coastal humidity that accelerates every form of fabric degradation. This guide provides the fabric selection framework UNEOM uses across 500+ B2B programmes — specifying fabrics by data, not by tradition.`,

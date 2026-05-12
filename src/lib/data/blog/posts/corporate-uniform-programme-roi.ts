@@ -8,7 +8,7 @@ export const corporateUniformProgrammeRoi: BlogPost = {
   excerptAr: 'كيف يخفض برنامج الزي الموحد وقت المشتريات 40 ساعة/شهرياً، ويرفع NPS الموظفين 22 نقطة، ويحقق زيادة 28% في متوسط قيمة المعاملة للأدوار المواجهة للعملاء.',
   category: 'corporate-education',
   publishedAt: '2026-05-02',
-  hero: 'blog/corporate-uniform-psychology',
+  hero: 'blog/corporate-uniform-programme-roi',
   silo: 'corporate',
   city: 'riyadh',
   readingMinutes: 9,

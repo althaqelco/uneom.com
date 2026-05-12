@@ -10,7 +10,7 @@ export const healthcareUniformsInfectionControl: BlogPost = {
     excerptAr: 'قراءة مباشرة للإرشادات ذات الصلة من وزارة الصحة وهيئة الغذاء والدواء — وما يفوته معظم فرق المشتريات عند توريد السكراب.',
     category: 'healthcare',
     publishedAt: '2025-11-04',
-    hero: 'blog/medical-hijab-healthcare-standards',
+    hero: 'blog/healthcare-uniforms-infection-control',
     silo: 'healthcare',
     readingMinutes: 7,
     lead: 'Most Saudi healthcare procurement teams source scrubs against the manufacturer\'s data sheet, not the MoH guidance. The gap is rarely catastrophic, but it costs money — usually in the form of fabric that meets one standard and fails another. Here is what the regulators actually publish, and how UNEOM\'s spec sheet maps to it.',

@@ -15,7 +15,7 @@ export const securityProducts: Product[] = [
     fabricWeight: '220gsm',
     fabricWeightAr: '220 جرام للمتر المربع',
     priceFrom: 680,
-    image: 'products/security/security-tactical-set',
+    image: 'products/security/tactical-set',
     sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
     colors: ['Navy', 'Black', 'Khaki'],
     colorsAr: ['كحلي', 'أسود', 'كاكي'],

@@ -10,7 +10,7 @@ export const mallRetailUniformsExcellence: BlogPost = {
     excerptAr: 'لماذا تدوم أزياء التجزئة السعودية في المولات 6 أشهر بالقماش العادي — وكيف تمدّدها يونيوم إلى 14 شهرًا.',
     category: 'sustainability-trends',
     publishedAt: '2025-11-26',
-    hero: 'blog/circular-economy-uniforms',
+    hero: 'blog/mall-retail-uniforms-excellence',
     silo: 'retail',
     readingMinutes: 7,
     lead: 'Saudi mall retail is one of the most uniform-stressing service environments in the kingdom. 12-hour shifts, daily laundry, brand-presence requirements that punish fabric inconsistency. Standard fabrics last 6 months. UNEOM\'s retail line extends that to 14 — and the math behind it is in the wash-cycle endurance data.',

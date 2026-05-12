@@ -10,7 +10,7 @@ export const bulletproofProtectionTechnologies: BlogPost = {
     excerptAr: 'مواصفات السترات وتصنيفات NIJ ودمج الحماية البالستية في الأمن المؤسسي السعودي الحديث.',
     category: 'manufacturing-safety',
     publishedAt: '2025-03-28',
-    hero: 'blog/advanced-fabrics-security-uniforms',
+    hero: 'blog/bulletproof-protection-technologies',
     silo: 'security',
     readingMinutes: 8,
     lead: 'Ballistic-rated security uniforms in Saudi corporate compounds are a niche but growing programme category. The conversation is technical: NIJ levels, plate compatibility, climate-aware vest carriers. Most procurement teams enter the conversation under-prepared. UNEOM\'s spec sheet is the briefing.',

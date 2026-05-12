@@ -10,7 +10,7 @@ export const choosingUniformSupplierGuide: BlogPost = {
     excerptAr: 'ستة أسئلة يجب أن تطرحها كل شركة سعودية قبل توقيع عقد برنامج الأزياء.',
     category: 'sustainability-trends',
     publishedAt: '2025-02-14',
-    hero: 'blog/circular-economy-uniforms',
+    hero: 'blog/choosing-uniform-supplier-guide-hero',
     silo: 'corporate',
     readingMinutes: 8,
     lead: 'Most Saudi enterprises evaluate uniform suppliers on price and turnaround. Both are easy to fake. The questions that actually predict programme success are about audit traceability, fitting workflow, and replacement-cycle logistics — and most catalogue suppliers will fail two of three.',

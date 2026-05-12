@@ -8,7 +8,7 @@ export const customUniformTailoringProcess: BlogPost = {
   excerptAr: 'عملية الإنتاج من 6 مراحل لبرامج الزي المخصص: الاكتشاف، التصميم، هندسة الأقمشة، القوالب، الإنتاج بفحص 18 نقطة، وإدارة البرنامج المستمرة.',
   category: 'sustainability-trends',
   publishedAt: '2026-04-12',
-  hero: 'blog/choosing-uniform-supplier-guide',
+  hero: 'blog/custom-uniform-tailoring-process',
   silo: 'corporate',
   readingMinutes: 10,
   lead: `"How long does it take to make 500 custom uniforms?" is the question every procurement manager asks first. The answer — 14 days from approved design to first delivery — is the least interesting part. What matters is the engineering that happens before production begins: understanding the operational environment, selecting fabrics that survive it, creating patterns that fit 9+ body types across XS-4XL, and building the quality-control framework that ensures piece 500 is identical to piece 1. This guide walks through UNEOM's 6-phase custom tailoring process — the same framework we use for 250,000+ garments produced annually.`,

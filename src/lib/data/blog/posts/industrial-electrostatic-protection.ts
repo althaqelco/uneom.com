@@ -10,7 +10,7 @@ export const industrialElectrostaticProtection: BlogPost = {
     excerptAr: 'أفرولات مصنّفة ESD للبتروكيماويات وتجميع الإلكترونيات وبيئات المتفجرات — ما يتوقعه HCIS.',
     category: 'manufacturing-safety',
     publishedAt: '2025-12-14',
-    hero: 'blog/industrial-safety-workwear-saudi',
+    hero: 'blog/industrial-electrostatic-protection',
     silo: 'manufacturing',
     readingMinutes: 7,
     lead: 'In a Saudi petrochemical plant, an electrostatic discharge is not a static-shock annoyance — it is an explosive-environment ignition source. ESD-rated coveralls are the difference between a near-miss and an incident. The HCIS spec is specific; most catalogue products don\'t meet it.',

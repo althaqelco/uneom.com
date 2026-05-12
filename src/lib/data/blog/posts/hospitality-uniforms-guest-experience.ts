@@ -10,7 +10,7 @@ export const hospitalityUniformsGuestExperience: BlogPost = {
     excerptAr: 'لماذا تصل الأزياء للضيوف 100 مرة أكثر من الشعارات — وكيف تستغل الفنادق السعودية الفاخرة هذه الحقيقة.',
     category: 'hospitality',
     publishedAt: '2025-05-22',
-    hero: 'blog/hotel-staff-uniform-guide',
+    hero: 'blog/hospitality-uniforms-guest-experience',
     silo: 'hospitality',
     city: 'jeddah',
     readingMinutes: 8,

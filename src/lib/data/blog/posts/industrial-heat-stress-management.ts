@@ -10,7 +10,7 @@ export const industrialHeatStressManagement: BlogPost = {
     excerptAr: 'كيف يغيّر اختيار القماش في أرضية مصنع بحرارة 50 درجة مخاطر الإصابات والإنتاجية ونتائج تدقيق HCIS.',
     category: 'manufacturing-safety',
     publishedAt: '2025-06-05',
-    hero: 'blog/industrial-safety-workwear-saudi',
+    hero: 'blog/industrial-heat-stress-management',
     silo: 'manufacturing',
     city: 'al-jubail',
     readingMinutes: 9,

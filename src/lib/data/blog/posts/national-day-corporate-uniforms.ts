@@ -10,7 +10,7 @@ export const nationalDayCorporateUniforms: BlogPost = {
     excerptAr: 'برامج أزياء اليوم الوطني السعودي — كيف تنفّذها بشكل صحيح والأخطاء التشغيلية التي ترتكبها معظم الشركات.',
     category: 'corporate-education',
     publishedAt: '2025-09-22',
-    hero: 'blog/corporate-uniform-psychology',
+    hero: 'blog/national-day-corporate-uniforms',
     silo: 'corporate',
     readingMinutes: 6,
     lead: 'Saudi National Day uniforms are a category of their own — short-window, high-visibility, low-tolerance for production failure. Most enterprises run them as one-off purchases and pay the consequences. The programme model treats National Day as an annual operational event with planned lead times and budgeted spend.',

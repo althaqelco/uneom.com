@@ -10,7 +10,7 @@ export const materialInnovationsAviationAttire: BlogPost = {
     excerptAr: 'مزيج الصوف الاستوائي والمقاومة للحريق رباعية الاتجاه والجيل القادم من أقمشة طواقم الطائرات القادمة لشركات الطيران السعودية.',
     category: 'aviation',
     publishedAt: '2026-02-25',
-    hero: 'blog/airline-uniform-design-cultural-identity',
+    hero: 'blog/material-innovations-aviation-attire',
     silo: 'aviation',
     readingMinutes: 8,
     lead: 'Aviation uniform fabric science was static for thirty years. The last five have rewritten the spec sheet — tropical wool blends with four-way stretch, FR treatments that no longer crumple, and anti-static finishes that actually survive 200 wash cycles. The next generation is arriving on Saudi carriers in 2026.',

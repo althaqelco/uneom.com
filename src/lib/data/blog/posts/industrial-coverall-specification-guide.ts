@@ -8,7 +8,7 @@ export const industrialCoverallSpecificationGuide: BlogPost = {
   excerptAr: 'HRC1 مقابل HRC2 مقابل HRC3، FR ذاتي مقابل معالج، فك شفرات تصنيف ATPV، تسلسل القطع عبر QR، ولماذا التحول لـ FR ذاتي يمدد عمر الأفرول 71%.',
   category: 'manufacturing-safety',
   publishedAt: '2026-05-04',
-  hero: 'blog/industrial-safety-workwear-saudi',
+  hero: 'blog/industrial-coverall-specification-guide',
   silo: 'manufacturing',
   city: 'al-jubail',
   readingMinutes: 11,

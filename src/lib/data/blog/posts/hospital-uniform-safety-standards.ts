@@ -10,7 +10,7 @@ export const hospitalUniformSafetyStandards: BlogPost = {
     excerptAr: 'معايير وزارة الصحة وهيئة الغذاء والدواء وساسو التي يجب أن يرجع إليها كل ملف مشتريات مستشفى — وكيف تتوافق مواصفات UNEOM مع كل منها.',
     category: 'healthcare',
     publishedAt: '2025-04-12',
-    hero: 'blog/medical-scrubs-evolution-saudi',
+    hero: 'blog/hospital-uniform-safety-standards',
     silo: 'healthcare',
     readingMinutes: 8,
     lead: 'A hospital uniform compliance file should fit on one shelf. Most we see span three. The reason is not regulatory complexity — it is procurement drift, where the same hospital signs three contracts that reference three different spec sheets. UNEOM\'s alternative: one programme, one spec, one file.',

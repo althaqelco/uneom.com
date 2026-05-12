@@ -10,7 +10,7 @@ export const advancedFabricsHealthcareUniforms: BlogPost = {
     excerptAr: 'ربط أيونات الفضة ودروع السوائل بدرجة تفلون والجيل الجديد من التشطيبات المضادة للميكروبات القادمة للمستشفيات السعودية.',
     category: 'healthcare',
     publishedAt: '2026-03-04',
-    hero: 'blog/medical-scrubs-evolution-saudi',
+    hero: 'blog/advanced-fabrics-healthcare-uniforms',
     silo: 'healthcare',
     readingMinutes: 10,
     lead: 'The healthcare textile lab has moved faster in the last 24 months than in the prior decade. Silver-ion bonding has displaced Triclosan; Teflon-grade fluid shields have moved from premium to programme-standard; and the wash-cycle endurance numbers we now publish would have been research-grade five years ago.',

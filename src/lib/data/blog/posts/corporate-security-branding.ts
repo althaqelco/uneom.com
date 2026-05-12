@@ -10,7 +10,7 @@ export const corporateSecurityBranding: BlogPost = {
     excerptAr: 'كيف تستخدم المجمّعات السعودية تصميم الزي لإبراز السلطة دون الترهيب.',
     category: 'sustainability-trends',
     publishedAt: '2025-05-09',
-    hero: 'blog/advanced-fabrics-security-uniforms',
+    hero: 'blog/corporate-security-branding',
     silo: 'security',
     readingMinutes: 7,
     lead: 'The corporate-security uniform conversation in Saudi Arabia is increasingly subtle. Compound managers want guards who read as professional, not paramilitary; identifiable, not intimidating. UNEOM\'s corporate-security line is built around this brand-design problem disguised as a security one.',

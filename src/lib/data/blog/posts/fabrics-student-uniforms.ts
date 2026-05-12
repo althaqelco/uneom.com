@@ -10,7 +10,7 @@ export const fabricsStudentUniforms: BlogPost = {
     excerptAr: 'لماذا أصبح البوليستر-قطن 65/35 المعيار العالمي — وأين تختلف متطلبات المناخ السعودي.',
     category: 'corporate-education',
     publishedAt: '2025-08-30',
-    hero: 'blog/cultural-identity-saudi-school-uniforms',
+    hero: 'blog/fabrics-student-uniforms',
     silo: 'education',
     readingMinutes: 6,
     lead: 'Polyester-cotton 65/35 became the global school-uniform default for one reason: it survives the laundry. In Saudi schools, that bar is higher — heat-soak, dust, four-day rotation cycles. The blend that works for a Manchester schoolboy needs adjustment for an Asir highland student.',

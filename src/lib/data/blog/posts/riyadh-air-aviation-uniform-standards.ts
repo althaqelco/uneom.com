@@ -8,7 +8,7 @@ export const riyadhAirAviationUniformStandards: BlogPost = {
   excerptAr: 'أوزان أقمشة متوافقة مع GACA، هندسة دمج الحجاب لطاقم الضيافة، مواصفات مقاومة التجعد واللهب، ودورة البرنامج 24 شهراً.',
   category: 'aviation',
   publishedAt: '2026-04-20',
-  hero: 'blog/airline-uniform-design-cultural-identity',
+  hero: 'blog/riyadh-air-aviation-uniform-standards',
   silo: 'aviation',
   readingMinutes: 9,
   lead: `The launch of Riyadh Air — Saudi Arabia's new flagship carrier — has redefined expectations for aviation uniform design in the Gulf region. The carrier's announcement signalled a deliberate departure from conventional Gulf airline aesthetics, integrating Saudi cultural identity with contemporary performance fabrics. For the broader Saudi aviation industry, including ground handling companies, airport authorities, and private aviation operators, this shift creates new benchmarks. This guide examines the technical standards, cultural requirements, and programme frameworks that govern aviation uniform procurement in the Kingdom.`,

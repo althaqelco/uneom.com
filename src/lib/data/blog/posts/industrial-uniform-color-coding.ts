@@ -10,7 +10,7 @@ export const industrialUniformColorCoding: BlogPost = {
     excerptAr: 'لماذا تقلّل الأزياء المرمّزة بالألوان الحوادث وتختصر وقت التدريب وتجتاز تدقيقات HCIS أسرع.',
     category: 'manufacturing-safety',
     publishedAt: '2025-08-14',
-    hero: 'blog/industrial-safety-workwear-saudi',
+    hero: 'blog/industrial-uniform-color-coding',
     silo: 'manufacturing',
     readingMinutes: 6,
     lead: 'A plant floor is a complex environment where instant visual identification of role and authority matters. Color-coded uniforms — operator, supervisor, contractor, visitor, emergency — are not aesthetic choices but operational ones. UNEOM\'s manufacturing programmes treat color as a safety tool.',

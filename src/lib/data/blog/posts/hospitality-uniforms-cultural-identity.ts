@@ -10,7 +10,7 @@ export const hospitalityUniformsCulturalIdentity: BlogPost = {
     excerptAr: 'كيف تنسج الفنادق والمطاعم السعودية هوية الحجاز والنجد وعسير في أزياء الضيافة الحديثة.',
     category: 'hospitality',
     publishedAt: '2025-10-30',
-    hero: 'blog/hotel-staff-uniform-guide',
+    hero: 'blog/hospitality-uniforms-cultural-identity',
     silo: 'hospitality',
     readingMinutes: 7,
     lead: 'A Hijazi hotel reads different from a Najdi one — and a Saudi guest knows the difference at a glance. Cultural identity in uniforms is not decoration; it is the operating language of a property\'s welcome. UNEOM\'s heritage programme is built around this conversation.',

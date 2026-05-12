@@ -8,7 +8,7 @@ export const restaurantUniformGuideSaudi: BlogPost = {
   excerptAr: 'متطلبات أقمشة الاستقبال مقابل المطبخ، مقاومة حرارة المطبخ، كيمياء إزالة البقع، تصاميم متوافقة مع الحجاب، واقتصاديات دورة حياة برامج أزياء المطاعم.',
   category: 'hospitality',
   publishedAt: '2026-05-06',
-  hero: 'blog/chef-uniform-design-guide',
+  hero: 'blog/restaurant-uniform-guide-saudi',
   silo: 'hospitality',
   city: 'jeddah',
   readingMinutes: 9,
