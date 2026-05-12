@@ -101,9 +101,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {post.sections.map((s, i) => (
               <section key={i}>
                 <h2 className="text-display text-navy-900 balance">{s.heading}</h2>
+                {s.body && (
                 <p className="mt-5 text-lg leading-relaxed text-ink-500 pretty">
-                  {s.body || <span className="italic text-ink-400">[Section authored — see master-plan-v11 §6.3 voice rules.]</span>}
+                  {s.body}
                 </p>
+                )}
               </section>
             ))}
           </div>

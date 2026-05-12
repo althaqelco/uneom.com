@@ -132,7 +132,7 @@ export default async function ArBlogPostPage({ params }: { params: Promise<{ slu
           {post.sections.map((s, i) => (
             <section key={i} id={`section-${i}`} className="mt-12">
               <h2 className="text-display text-navy-900">{s.headingAr}</h2>
-              <p className="mt-4 text-lg leading-relaxed text-ink-500 pretty">{s.bodyAr}</p>
+              {s.bodyAr && <p className="mt-4 text-lg leading-relaxed text-ink-500 pretty">{s.bodyAr}</p>}
             </section>
           ))}
 

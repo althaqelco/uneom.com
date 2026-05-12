@@ -1,6 +1,5 @@
 import type { BlogPost } from '../index';
 
-const lorem = (s: string) => s;
 
 export const medicalScrubsEvolutionSaudi: BlogPost = {
     slug: 'medical-scrubs-evolution-saudi',
@@ -15,12 +14,8 @@ export const medicalScrubsEvolutionSaudi: BlogPost = {
     silo: 'healthcare',
     city: 'riyadh',
     readingMinutes: 9,
-    lead: lorem(
-      `Unlike 100% cotton scrubs that lose antimicrobial integrity after 30 wash cycles, Saudi hospitals in 2026 run scrubs through 4.2 wash cycles per shift — 38% above the global benchmark. Twelve years ago, that workload would have failed any fabric on the market. The story of how the industry caught up is also the story of how UNEOM measures performance: by what survives the laundry, not what photographs well.`
-    ),
-    leadAr: lorem(
-      `على عكس سكراب القطن 100% الذي يفقد خواصه المضادة للميكروبات بعد 30 دورة غسيل، تُمرّر المستشفيات السعودية في 2026 السكراب خلال 4.2 دورة غسيل لكل وردية — بزيادة 38% عن المعدل العالمي. قبل اثني عشر عامًا، كان هذا الحمل سيُفشل أي قماش في السوق. قصة كيف لحقت الصناعة بالركب هي أيضًا قصة كيف تقيس يونيوم الأداء: بما ينجو من الغسيل، لا بما يبدو جميلًا في الصور.`
-    ),
+    lead: `Unlike 100% cotton scrubs that lose antimicrobial integrity after 30 wash cycles, Saudi hospitals in 2026 run scrubs through 4.2 wash cycles per shift — 38% above the global benchmark. Twelve years ago, that workload would have failed any fabric on the market. The story of how the industry caught up is also the story of how UNEOM measures performance: by what survives the laundry, not what photographs well.`,
+    leadAr: `على عكس سكراب القطن 100% الذي يفقد خواصه المضادة للميكروبات بعد 30 دورة غسيل، تُمرّر المستشفيات السعودية في 2026 السكراب خلال 4.2 دورة غسيل لكل وردية — بزيادة 38% عن المعدل العالمي. قبل اثني عشر عامًا، كان هذا الحمل سيُفشل أي قماش في السوق. قصة كيف لحقت الصناعة بالركب هي أيضًا قصة كيف تقيس يونيوم الأداء: بما ينجو من الغسيل، لا بما يبدو جميلًا في الصور.`,
     sections: [
       { heading: 'The 2013 baseline', headingAr: 'خط الأساس في 2013', body: 'A short audit of what Saudi hospitals were buying in 2013, and why it cost them more than the price tag suggested.', bodyAr: 'تدقيق مختصر لما كانت المستشفيات السعودية تشتريه في 2013، ولماذا كلّفها أكثر مما يوحي به السعر.' },
       { heading: 'The fabric shift', headingAr: 'التحوّل في الأقمشة', body: 'How polyester-cotton 65/35 with bonded antimicrobial finishes replaced 100% cotton — and why some hospitals still resist.', bodyAr: 'كيف حلّ مزيج البوليستر-قطن 65/35 مع التشطيبات المضادة للميكروبات محل القطن 100% — ولماذا لا تزال بعض المستشفيات تقاوم.' },

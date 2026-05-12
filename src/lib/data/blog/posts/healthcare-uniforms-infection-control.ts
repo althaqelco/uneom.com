@@ -1,6 +1,5 @@
 import type { BlogPost } from '../index';
 
-const lorem = (s: string) => s;
 
 export const healthcareUniformsInfectionControl: BlogPost = {
     slug: 'healthcare-uniforms-infection-control',
