@@ -1,46 +1,52 @@
 # UNEOM — Saudi Arabia Uniform Company
 # https://uneom.com
 
-# Content Signals — AI content usage preferences
-# @see https://contentsignals.org
-# @see https://www.ietf.org/archive/id/draft-content-signal-00.html
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
-
 User-Agent: *
 Allow: /
 Disallow: /api/admin/
 Disallow: /admin/
 Disallow: /api/revalidate
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-Agent: GPTBot
 Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-Agent: Google-Extended
 Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-Agent: PerplexityBot
 Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-Agent: ClaudeBot
 Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-Agent: CCBot
 Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-Agent: OAI-SearchBot
 Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-Agent: Applebot-Extended
 Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-Agent: anthropic-ai
 Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-Agent: Bytespider
 Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-Agent: cohere-ai
 Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-Agent: AhrefsBot
 Crawl-delay: 10
