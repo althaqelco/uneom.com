@@ -5,11 +5,11 @@ import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
 import { SERVICES } from '@/lib/data/services';
 import { t, localizedHref, type Lang } from '@/lib/i18n/ui';
 
-import logoImg from '../../../public/images/logo.png';
-import isoImg from '../../../public/images/certificate/ISO_90012015.png';
-import oekoImg from '../../../public/images/certificate/OEKO-TEX.png';
-import sasoImg from '../../../public/images/certificate/Saudi_Quality_Mark.png';
-import gotsImg from '../../../public/images/certificate/GOTS_Certified.png';
+import logoImg from '../../../public/images/logo.webp';
+import isoImg from '../../../public/images/certificate/ISO_90012015.webp';
+import oekoImg from '../../../public/images/certificate/OEKO-TEX.webp';
+import sasoImg from '../../../public/images/certificate/Saudi_Quality_Mark.webp';
+import gotsImg from '../../../public/images/certificate/GOTS_Certified.webp';
 
 export function Footer({ lang = 'en' }: { lang?: Lang }) {
   const ui = t(lang);
@@ -112,14 +112,14 @@ export function Footer({ lang = 'en' }: { lang?: Lang }) {
             </div>
           </div>
           
-          <div className="flex items-center gap-4 text-xs font-medium text-navy-200/60 uppercase tracking-wider">
+          <div className="flex items-center gap-4 text-xs font-medium text-navy-200 uppercase tracking-wider">
             <span>Maroof {isAr ? 'موثّق' : 'Verified'}</span>
             <span className="w-1.5 h-1.5 rounded-full bg-navy-200/30"></span>
             <span>ZATCA E-Invoicing</span>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-navy-200/60">
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-navy-200">
           <p>© {currentYear} UNEOM Saudi Arabia. {ui.footer.allRights}</p>
           <nav aria-label={ui.footer.legal} className="flex gap-6">
             <Link href={localizedHref('/privacy-policy/', lang)} className="hover:text-white">{ui.footer.privacy}</Link>

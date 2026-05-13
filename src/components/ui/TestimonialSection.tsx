@@ -56,7 +56,7 @@ const TESTIMONIALS: Testimonial[] = [
 
 function StarRating({ count }: { count: number }) {
   return (
-    <div className="flex gap-0.5" aria-label={`${count} out of 5 stars`}>
+    <div className="flex gap-0.5" role="img" aria-label={`${count} out of 5 stars`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}

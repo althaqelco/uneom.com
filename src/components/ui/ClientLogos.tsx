@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import type { Lang } from '@/lib/i18n/ui';
 
 interface Client {
@@ -37,6 +36,7 @@ export function ClientLogos({ lang = 'en' }: Props) {
           </span>
           <div
             className="client-marquee-wrapper relative w-full"
+            role="img"
             aria-label={isAr ? 'شعارات العملاء' : 'Client logos'}
           >
             {/* Edge fades */}
@@ -49,14 +49,15 @@ export function ClientLogos({ lang = 'en' }: Props) {
                   key={`${client.name}-${i}`}
                   className="client-logo-item flex-shrink-0 px-6 sm:px-8 lg:px-10"
                 >
-                  <Image
+                  {/* Native img — bypasses Next.js Image optimizer for direct WebP delivery */}
+                  <img
                     src={client.logo}
                     alt={isAr ? client.nameAr : client.name}
-                    width={140}
-                    height={56}
-                    sizes="140px"
+                    width={160}
+                    height={160}
                     className="h-11 sm:h-14 w-auto object-contain grayscale opacity-50 transition-all duration-500 hover:grayscale-0 hover:opacity-100"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               ))}

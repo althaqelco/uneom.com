@@ -81,7 +81,7 @@
   }
 
   .btn-accent {
-    @apply btn bg-accent-500 text-white shadow-elevation hover:bg-accent-600 hover:shadow-elevation-lg active:translate-y-px;
+    @apply btn bg-accent-700 text-white shadow-elevation hover:bg-accent-800 hover:shadow-elevation-lg active:translate-y-px;
   }
 
   .btn-ghost {
@@ -208,19 +208,33 @@
 /* ─── Subtle Glow Pulse — for accent CTA buttons ──────────────────── */
 @keyframes glow-pulse {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    opacity: 0;
   }
   50% {
-    box-shadow: 0 0 20px 4px rgba(16, 185, 129, 0.15);
+    opacity: 1;
   }
 }
 
 .btn-accent {
-  animation: glow-pulse 4s ease-in-out 3;
+  position: relative;
+  overflow: visible;
 }
 
-.btn-accent:hover {
+.btn-accent::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  box-shadow: 0 0 20px 4px rgba(4, 120, 87, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  animation: glow-pulse 4s ease-in-out 3;
+  will-change: opacity;
+}
+
+.btn-accent:hover::after {
   animation: none;
+  opacity: 0;
 }
 
 /* ─── Count-Up Shimmer — stat numbers ─────────────────────────────── */
@@ -234,7 +248,7 @@
   .client-marquee-track {
     animation: none;
   }
-  .btn-accent {
+  .btn-accent::after {
     animation: none;
   }
 }

@@ -70,7 +70,7 @@ export const viewport: Viewport = {
  */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html className={tajawal.variable}>
+    <html lang="en" className={tajawal.variable}>
       <head>
         {/* LCP preload — start downloading hero image during HTML parse */}
         <link
