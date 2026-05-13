@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
 const WHATSAPP_NUMBER = '966564612017';
@@ -18,34 +17,27 @@ const PREFILL = {
 /**
  * Floating WhatsApp CTA — appears on every page after a short delay.
  * Locale-aware: detects `/ar/` prefix for RTL positioning + Arabic copy.
- * Includes a subtle entrance animation, pulse ring, and hover tooltip.
+ *
+ * Optimisation history:
+ *  - Phase 4.3: Replaced useState+useEffect entrance timer → CSS animation-delay.
+ *  - Phase 8: Replaced useState(hovered)+onMouseEnter/Leave → CSS :hover pseudo.
+ *            Now only 1 client hook remains (usePathname). Zero React state.
  */
 export function WhatsAppFloat() {
   const pathname = usePathname();
   const isAr = pathname?.startsWith('/ar');
   const lang = isAr ? 'ar' : 'en';
 
-  const [visible, setVisible] = useState(false);
-  const [hovered, setHovered] = useState(false);
-
-  // Delay entrance so it doesn't fight with initial page load
-  useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), 2200);
-    return () => clearTimeout(timer);
-  }, []);
-
   const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(PREFILL[lang])}`;
 
   return (
     <div
       id="whatsapp-float"
-      className={`whatsapp-float ${isAr ? 'whatsapp-float--rtl' : ''} ${visible ? 'whatsapp-float--visible' : ''}`}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      className={`whatsapp-float whatsapp-float--css-entrance ${isAr ? 'whatsapp-float--rtl' : ''}`}
     >
-      {/* Tooltip */}
+      {/* Tooltip — now CSS-only via :hover */}
       <span
-        className={`whatsapp-float__tooltip ${hovered ? 'whatsapp-float__tooltip--show' : ''}`}
+        className="whatsapp-float__tooltip"
         aria-hidden="true"
       >
         {TOOLTIP[lang]}

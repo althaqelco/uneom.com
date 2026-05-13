@@ -82,8 +82,16 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
           <div>
             <div className="relative aspect-square overflow-hidden rounded-3xl bg-ink-50">
               <picture>
-                <source type="image/avif" srcSet={`/images/${p.image}.avif`} />
-                <source type="image/webp" srcSet={`/images/${p.image}.webp`} />
+                <source
+                  type="image/avif"
+                  srcSet={`/images/${p.image}-400.avif 400w, /images/${p.image}-800.avif 800w, /images/${p.image}.avif 1200w`}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <source
+                  type="image/webp"
+                  srcSet={`/images/${p.image}-400.webp 400w, /images/${p.image}-800.webp 800w, /images/${p.image}.webp 1200w`}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
                 <img src={`/images/${p.image}.avif`} alt={p.nameEn} className="h-full w-full object-cover" fetchPriority="high" decoding="sync" width={1200} height={1200} />
               </picture>
             </div>

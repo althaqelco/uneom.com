@@ -18,13 +18,14 @@ export function Header({ lang = 'en' }: { lang?: Lang }) {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-100/70 bg-white/85 backdrop-blur-md">
+    <header className="header-blur sticky top-0 z-40 border-b border-ink-100/70 bg-white/85 backdrop-blur-md">
       <div className="container-page flex h-16 items-center justify-between gap-8 lg:h-20">
         <Link href={localizedHref('/', lang)} className="group flex items-center gap-4" aria-label={`UNEOM ${ui.nav.home}`}>
           <Image 
             src={logoImg}
             alt="UNEOM Logo" 
             className="w-auto h-7 sm:h-9 object-contain transition-transform duration-300 group-hover:scale-105"
+            sizes="140px"
             priority
           />
           <span className="hidden h-6 w-px bg-ink-200 lg:block" aria-hidden="true" />

@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import type { Lang } from '@/lib/i18n/ui';
 
@@ -10,15 +8,15 @@ interface Client {
 }
 
 const CLIENTS: Client[] = [
-  { name: 'Saudi Aramco', nameAr: 'أرامكو السعودية', logo: '/images/clients/aramco.png' },
-  { name: 'SABIC', nameAr: 'سابك', logo: '/images/clients/sabic.png' },
-  { name: 'STC', nameAr: 'STC', logo: '/images/clients/stc.png' },
-  { name: 'Almarai', nameAr: 'المراعي', logo: '/images/clients/almarai.png' },
-  { name: 'SNB', nameAr: 'البنك الأهلي السعودي', logo: '/images/clients/snb.png' },
-  { name: 'NAPCO', nameAr: 'نابكو', logo: '/images/clients/napco.png' },
-  { name: 'Nada', nameAr: 'ندى', logo: '/images/clients/nada.png' },
-  { name: 'Al Baik', nameAr: 'البيك', logo: '/images/clients/albaic.png' },
-  { name: 'QNB', nameAr: 'QNB', logo: '/images/clients/QNB.png' },
+  { name: 'Saudi Aramco', nameAr: 'أرامكو السعودية', logo: '/images/clients/aramco.webp' },
+  { name: 'SABIC', nameAr: 'سابك', logo: '/images/clients/sabic.webp' },
+  { name: 'STC', nameAr: 'STC', logo: '/images/clients/stc.webp' },
+  { name: 'Almarai', nameAr: 'المراعي', logo: '/images/clients/almarai.webp' },
+  { name: 'SNB', nameAr: 'البنك الأهلي السعودي', logo: '/images/clients/snb.webp' },
+  { name: 'NAPCO', nameAr: 'نابكو', logo: '/images/clients/napco.webp' },
+  { name: 'Nada', nameAr: 'ندى', logo: '/images/clients/nada.webp' },
+  { name: 'Al Baik', nameAr: 'البيك', logo: '/images/clients/albaic.webp' },
+  { name: 'QNB', nameAr: 'QNB', logo: '/images/clients/QNB.webp' },
 ];
 
 interface Props {
@@ -56,6 +54,7 @@ export function ClientLogos({ lang = 'en' }: Props) {
                     alt={isAr ? client.nameAr : client.name}
                     width={140}
                     height={56}
+                    sizes="140px"
                     className="h-11 sm:h-14 w-auto object-contain grayscale opacity-50 transition-all duration-500 hover:grayscale-0 hover:opacity-100"
                     loading="lazy"
                   />

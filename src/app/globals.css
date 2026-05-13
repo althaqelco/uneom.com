@@ -142,6 +142,17 @@
     background-position: center;
     height: 6px;
   }
+  /* Phase 18: content-visibility for below-fold rendering deferral.
+     Apply to any section below the first viewport to skip layout/paint
+     until scroll proximity. contain-intrinsic-size prevents CLS. */
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 600px;
+  }
+  .cv-auto-sm {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 300px;
+  }
 }
 
 /* ─── Client Logo Marquee ──────────────────────────────────────────── */
@@ -174,9 +185,8 @@
 }
 
 /* ─── Testimonial Cards ────────────────────────────────────────────── */
-.testimonial-card {
-  will-change: transform;
-}
+/* Note: removed permanent will-change:transform — GPU memory optimisation (Phase 7.2).
+   The hover transition already handles compositor promotion when needed. */
 
 /* ─── Process Steps ────────────────────────────────────────────────── */
 .process-step {
@@ -206,7 +216,7 @@
 }
 
 .btn-accent {
-  animation: glow-pulse 4s ease-in-out infinite;
+  animation: glow-pulse 4s ease-in-out 3;
 }
 
 .btn-accent:hover {
@@ -227,6 +237,31 @@
   .btn-accent {
     animation: none;
   }
+}
+
+/* ─── Phase 10: Conditional Header Blur ────────────────────────────── */
+/* Mobile: solid near-opaque background — avoids GPU backdrop-filter cost */
+@media (max-width: 767px) {
+  .header-blur {
+    background-color: rgba(255, 255, 255, 0.97) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+/* Battery saver / lite mode: kill all blurs site-wide */
+.uneom-power-saver .header-blur,
+.uneom-lite-mode .header-blur {
+  background-color: rgba(255, 255, 255, 0.97) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.uneom-power-saver .whatsapp-float__tooltip,
+.uneom-lite-mode .whatsapp-float__tooltip {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background: rgba(15, 44, 77, 0.95);
 }
 
 /* Network-aware lite mode — degrades heavy UI on slow connections (§10.4) */
@@ -283,6 +318,23 @@
   pointer-events: auto;
 }
 
+/* Phase 4.3: CSS-only entrance with 2.2s delay — replaces JS useState + useEffect timer */
+@keyframes wa-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(2rem) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.whatsapp-float--css-entrance {
+  animation: wa-entrance 0.5s cubic-bezier(0.16, 1, 0.3, 1) 2.2s both;
+  pointer-events: auto;
+}
+
 /* Main button */
 .whatsapp-float__btn {
   position: relative;
@@ -329,7 +381,7 @@
   inset: -4px;
   border-radius: 50%;
   border: 2px solid rgba(37, 211, 102, 0.5);
-  animation: wa-pulse 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  animation: wa-pulse 2.5s cubic-bezier(0, 0, 0.2, 1) 5;
 }
 
 @keyframes wa-pulse {
@@ -370,12 +422,12 @@
   transform: translateX(-0.5rem);
 }
 
-/* Show tooltip only on devices that support hover (not mobile) */
+/* Show tooltip only on devices that support hover (not mobile) — now CSS-only */
 @media (hover: hover) {
   .whatsapp-float__tooltip {
     display: block;
   }
-  .whatsapp-float__tooltip--show {
+  .whatsapp-float:hover .whatsapp-float__tooltip {
     opacity: 1;
     transform: translateX(0);
   }

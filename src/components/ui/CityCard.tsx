@@ -15,16 +15,24 @@ export function CityCard({ city, lang = 'en' }: Props) {
       className="group relative flex aspect-[16/10] overflow-hidden rounded-2xl bg-navy-800"
     >
       <picture>
-        <source type="image/avif" srcSet={`/images/cities/hero-${city.slug}.avif`} />
-        <source type="image/webp" srcSet={`/images/cities/hero-${city.slug}.webp`} />
+        <source
+          type="image/avif"
+          srcSet={`/images/cities/hero-${city.slug}-640.avif 640w, /images/cities/hero-${city.slug}-960.avif 960w, /images/cities/hero-${city.slug}.avif 1920w`}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        />
+        <source
+          type="image/webp"
+          srcSet={`/images/cities/hero-${city.slug}-640.webp 640w, /images/cities/hero-${city.slug}-960.webp 960w, /images/cities/hero-${city.slug}.webp 1920w`}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        />
         <img
-          src={`/images/cities/hero-${city.slug}.avif`}
+          src={`/images/cities/hero-${city.slug}-640.avif`}
           alt={`UNEOM uniforms serving ${city.nameEn}, ${city.region}`}
           className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           loading="lazy"
           decoding="async"
-          width={1920}
-          height={800}
+          width={640}
+          height={267}
         />
       </picture>
       <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/20 to-transparent" aria-hidden />

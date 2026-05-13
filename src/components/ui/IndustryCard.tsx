@@ -39,16 +39,24 @@ export function IndustryCard({ industry, variant = 'full', lang = 'en' }: Props)
       {/* Background image */}
       <div className="absolute inset-0">
         <picture>
-          <source type="image/avif" srcSet={`/images/${industry.heroImage}.avif`} />
-          <source type="image/webp" srcSet={`/images/${industry.heroImage}.webp`} />
+          <source
+            type="image/avif"
+            srcSet={`/images/${industry.heroImage}-640.avif 640w, /images/${industry.heroImage}-960.avif 960w, /images/${industry.heroImage}.avif 1920w`}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
+          <source
+            type="image/webp"
+            srcSet={`/images/${industry.heroImage}-640.webp 640w, /images/${industry.heroImage}-960.webp 960w, /images/${industry.heroImage}.webp 1920w`}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
           <img
-            src={`/images/${industry.heroImage}.avif`}
+            src={`/images/${industry.heroImage}-640.avif`}
             alt={`UNEOM ${name} uniforms in Saudi Arabia`}
             className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             loading="lazy"
             decoding="async"
-            width={1920}
-            height={1080}
+            width={640}
+            height={360}
           />
         </picture>
         <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/30 to-transparent" aria-hidden />

@@ -105,10 +105,10 @@ export function Footer({ lang = 'en' }: { lang?: Lang }) {
           <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
             <span className="text-xs font-bold uppercase tracking-[0.18em] text-white/60 shrink-0">{ui.footer.compliance}</span>
             <div className="flex flex-wrap items-center gap-6 sm:gap-8">
-              <Image src={isoImg} alt="ISO 9001:2015" title="ISO 9001:2015" className="h-10 sm:h-12 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300" />
-              <Image src={oekoImg} alt="OEKO-TEX Standard 100" title="OEKO-TEX Standard 100" className="h-8 sm:h-10 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300" />
-              <Image src={sasoImg} alt="SASO Quality Mark" title="SASO Quality Mark" className="h-10 sm:h-12 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300" />
-              <Image src={gotsImg} alt="GOTS Certified" title="GOTS Certified" className="h-12 sm:h-14 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300" />
+              <Image src={isoImg} alt="ISO 9001:2015" title="ISO 9001:2015" sizes="48px" loading="lazy" className="h-10 sm:h-12 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300" />
+              <Image src={oekoImg} alt="OEKO-TEX Standard 100" title="OEKO-TEX Standard 100" sizes="40px" loading="lazy" className="h-8 sm:h-10 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300" />
+              <Image src={sasoImg} alt="SASO Quality Mark" title="SASO Quality Mark" sizes="48px" loading="lazy" className="h-10 sm:h-12 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300" />
+              <Image src={gotsImg} alt="GOTS Certified" title="GOTS Certified" sizes="56px" loading="lazy" className="h-12 sm:h-14 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300" />
             </div>
           </div>
           

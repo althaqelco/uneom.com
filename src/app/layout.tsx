@@ -2,17 +2,15 @@ import type { Metadata, Viewport } from 'next';
 import { Tajawal } from 'next/font/google';
 import { JsonLd } from '@/lib/seo/JsonLd';
 import { organizationSchema, websiteSchema } from '@/lib/seo/schemas';
-import { SpeculationRules } from '@/components/perf/SpeculationRules';
-import { NetworkAware } from '@/components/perf/NetworkAware';
-import { BatterySaver } from '@/components/perf/BatterySaver';
 import { WhatsAppFloat } from '@/components/ui/WhatsAppFloat';
 import './globals.css';
 
 const tajawal = Tajawal({
   subsets: ['arabic', 'latin'],
-  weight: ['400', '500', '700', '800'],
+  weight: ['400', '700', '800'],
   display: 'swap',
-  variable: '--font-tajawal'
+  variable: '--font-tajawal',
+  adjustFontFallback: true
 });
 
 export const metadata: Metadata = {
@@ -74,20 +72,36 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html className={tajawal.variable}>
       <head>
+        {/* LCP preload — start downloading hero image during HTML parse */}
+        <link
+          rel="preload"
+          href="/images/heroes/healthcare-pillar-hero-960.avif"
+          as="image"
+          type="image/avif"
+          fetchPriority="high"
+        />
+        {/* Preconnect to WhatsApp for faster CTA click */}
+        <link rel="preconnect" href="https://wa.me" />
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
       </head>
       <body className="min-h-screen flex flex-col">
         {children}
         {/* WhatsApp floating CTA — global, locale-aware */}
         <WhatsAppFloat />
-        {/* Performance optimization components */}
-        <SpeculationRules />
-        <NetworkAware />
-        <BatterySaver />
-        {/* Service Worker registration */}
+        {/* Performance: Speculation Rules + Network-Aware + Battery Saver + SW registration
+            Inlined as raw script to avoid 3 React hydration boundaries (Phase 4.1). */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js',{scope:'/'})}`
+            __html: [
+              // Network-aware lite mode — must run FIRST (synchronous, fast)
+              `if('connection' in navigator){var c=navigator.connection;if(c.saveData||/2g|3g/.test(c.effectiveType))document.documentElement.classList.add('uneom-lite-mode')}`,
+              // Battery saver — async (getBattery returns a promise)
+              `if('getBattery' in navigator)navigator.getBattery().then(function(b){function ck(){b.level<.2&&!b.charging?document.documentElement.classList.add('uneom-power-saver'):document.documentElement.classList.remove('uneom-power-saver')}ck();b.addEventListener('levelchange',ck);b.addEventListener('chargingchange',ck)})`,
+              // Speculation Rules — prerender industry pages, prefetch shop/locations (EN + AR)
+              `if(HTMLScriptElement.prototype&&'speculationrules' in HTMLScriptElement.prototype){var s=document.createElement('script');s.type='speculationrules';s.textContent=JSON.stringify({prerender:[{source:'document',where:{and:[{href_matches:'/industries/*'},{not:{href_matches:'/industries/*/*'}}]},eagerness:'moderate'},{source:'document',where:{and:[{href_matches:'/ar/industries/*'},{not:{href_matches:'/ar/industries/*/*'}}]},eagerness:'moderate'}],prefetch:[{source:'document',where:{href_matches:'/shop/*'},eagerness:'conservative'},{source:'document',where:{href_matches:'/locations/*'},eagerness:'conservative'},{source:'document',where:{href_matches:'/ar/locations/*'},eagerness:'conservative'}]});document.body.appendChild(s)}`,
+              // Service Worker — deferred to idle time (non-critical for first paint)
+              `(window.requestIdleCallback||function(cb){setTimeout(cb,2000)})(function(){if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js',{scope:'/'})})`
+            ].join(';')
           }}
         />
       </body>

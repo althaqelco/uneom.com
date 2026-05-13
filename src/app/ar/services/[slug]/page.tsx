@@ -46,14 +46,23 @@ export default async function ArServicePage({ params }: { params: Promise<{ slug
       <section className="relative overflow-hidden bg-navy-900 text-white">
         <div className="absolute inset-0">
           <picture>
-            <source type="image/avif" srcSet={`/images/${service.heroImage}.avif`} />
-            <source type="image/webp" srcSet={`/images/${service.heroImage}.webp`} />
+            <source
+              type="image/avif"
+              srcSet={`/images/${service.heroImage}-640.avif 640w, /images/${service.heroImage}-960.avif 960w, /images/${service.heroImage}-1440.avif 1440w, /images/${service.heroImage}.avif 1920w`}
+              sizes="100vw"
+            />
+            <source
+              type="image/webp"
+              srcSet={`/images/${service.heroImage}-640.webp 640w, /images/${service.heroImage}-960.webp 960w, /images/${service.heroImage}-1440.webp 1440w, /images/${service.heroImage}.webp 1920w`}
+              sizes="100vw"
+            />
             <img
               src={`/images/${service.heroImage}.avif`}
               alt=""
               role="presentation"
               className="h-full w-full object-cover opacity-40"
               loading="eager"
+              decoding="async"
               width={1920}
               height={800}
             />

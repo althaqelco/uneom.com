@@ -34,8 +34,16 @@ export default function ArHomePage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <picture>
-            <source type="image/avif" srcSet="/images/heroes/healthcare-pillar-hero.avif" />
-            <source type="image/webp" srcSet="/images/heroes/healthcare-pillar-hero.webp" />
+            <source
+              type="image/avif"
+              srcSet="/images/heroes/healthcare-pillar-hero-640.avif 640w, /images/heroes/healthcare-pillar-hero-960.avif 960w, /images/heroes/healthcare-pillar-hero-1440.avif 1440w, /images/heroes/healthcare-pillar-hero.avif 1920w"
+              sizes="100vw"
+            />
+            <source
+              type="image/webp"
+              srcSet="/images/heroes/healthcare-pillar-hero-640.webp 640w, /images/heroes/healthcare-pillar-hero-960.webp 960w, /images/heroes/healthcare-pillar-hero-1440.webp 1440w, /images/heroes/healthcare-pillar-hero.webp 1920w"
+              sizes="100vw"
+            />
             <img
               src="/images/heroes/healthcare-pillar-hero.avif"
               alt=""
@@ -131,7 +139,7 @@ export default function ArHomePage() {
       </section>
 
       {/* ============== INDUSTRIES ============== */}
-      <section className="section bg-ink-50">
+      <section className="section bg-ink-50 cv-auto">
         <div className="container-page">
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
             <SectionHeader
@@ -162,7 +170,7 @@ export default function ArHomePage() {
       <ProcessTimeline lang="ar" />
 
       {/* ============== WHY UNEOM — INFORMATION GAIN ============== */}
-      <section className="section bg-ink-50">
+      <section className="section bg-ink-50 cv-auto">
         <div className="container-page">
           <div className="grid items-start gap-16 lg:grid-cols-[1.2fr_1fr]">
             <div className="grid gap-10 sm:grid-cols-2">
@@ -208,7 +216,7 @@ export default function ArHomePage() {
       <TestimonialSection lang="ar" />
 
       {/* ============== CITIES ============== */}
-      <section className="section bg-navy-900 text-white">
+      <section className="section bg-navy-900 text-white cv-auto">
         <div className="container-page">
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
             <div className="max-w-2xl">
@@ -239,7 +247,7 @@ export default function ArHomePage() {
       </section>
 
       {/* ============== SERVICES ============== */}
-      <section className="section bg-white">
+      <section className="section bg-white cv-auto">
         <div className="container-page">
           <SectionHeader
             eyebrow="سبع خدمات. فريق عمليات واحد."
@@ -273,7 +281,7 @@ export default function ArHomePage() {
       </section>
 
       {/* ============== EDITORIAL QUOTE / PROOF POINT ============== */}
-      <section className="section-tight bg-ink-50">
+      <section className="section-tight bg-ink-50 cv-auto-sm">
         <div className="container-page">
           <div className="mx-auto max-w-4xl text-center">
             <Eyebrow>مكسب معلوماتي</Eyebrow>

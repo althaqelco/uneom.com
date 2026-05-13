@@ -91,8 +91,16 @@ export default async function IndustryPillarPage({ params }: { params: Promise<{
       <section className="relative overflow-hidden bg-navy-900">
         <div className="absolute inset-0">
           <picture>
-            <source type="image/avif" srcSet={`/images/${industry.heroImage}.avif`} />
-            <source type="image/webp" srcSet={`/images/${industry.heroImage}.webp`} />
+            <source
+              type="image/avif"
+              srcSet={`/images/${industry.heroImage}-640.avif 640w, /images/${industry.heroImage}-960.avif 960w, /images/${industry.heroImage}-1440.avif 1440w, /images/${industry.heroImage}.avif 1920w`}
+              sizes="100vw"
+            />
+            <source
+              type="image/webp"
+              srcSet={`/images/${industry.heroImage}-640.webp 640w, /images/${industry.heroImage}-960.webp 960w, /images/${industry.heroImage}-1440.webp 1440w, /images/${industry.heroImage}.webp 1920w`}
+              sizes="100vw"
+            />
             <img
               src={`/images/${industry.heroImage}.avif`}
               alt=""

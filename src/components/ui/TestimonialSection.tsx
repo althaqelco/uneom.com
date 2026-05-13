@@ -25,7 +25,7 @@ const TESTIMONIALS: Testimonial[] = [
     companyAr: 'مستشفى الملك فيصل التخصصي',
     quoteEn: 'UNEOM delivered 3,200 scrub sets across four departments in 18 days — each unit tracked, fitted, and replaced on-cycle. Their programme management is what separates them from every catalogue supplier we\'ve tried.',
     quoteAr: 'سلّم فريق UNEOM 3,200 طقم سكراب عبر أربعة أقسام خلال 18 يوماً — كل قطعة مُتتبّعة ومُقاسة ومُستبدلة في موعدها. إدارتهم للبرنامج هي ما يميّزهم عن كل مورّد كتالوج جرّبناه.',
-    image: '/images/testimonials/abdullah.png',
+    image: '/images/testimonials/abdullah.webp',
     rating: 5
   },
   {
@@ -37,7 +37,7 @@ const TESTIMONIALS: Testimonial[] = [
     companyAr: 'فنادق ومنتجعات هيلتون الرياض',
     quoteEn: 'We switched from an international supplier to UNEOM for our 1,400-room property. The fabric endurance in Riyadh\'s climate and the on-site fitting programme saved us 34% on annual replacement costs.',
     quoteAr: 'انتقلنا من مورّد دولي إلى UNEOM لعقارنا المكوّن من 1,400 غرفة. متانة الأقمشة في مناخ الرياض وبرنامج القياس الميداني وفّرا لنا 34% من تكاليف الاستبدال السنوية.',
-    image: '/images/testimonials/aisha.png',
+    image: '/images/testimonials/aisha.webp',
     rating: 5
   },
   {
@@ -49,7 +49,7 @@ const TESTIMONIALS: Testimonial[] = [
     companyAr: 'سابك للتصنيع',
     quoteEn: 'The FR-rated coveralls UNEOM developed for our petrochemical facilities exceeded NFPA 70E requirements. 14-month warranty, on-site replacement within 48 hours. That\'s the standard we needed.',
     quoteAr: 'بدلات الحماية من الحريق التي طوّرها UNEOM لمنشآتنا البتروكيماوية تجاوزت متطلبات NFPA 70E. ضمان 14 شهراً واستبدال ميداني خلال 48 ساعة. هذا هو المعيار الذي كنّا نحتاجه.',
-    image: '/images/testimonials/fahad.jpg',
+    image: '/images/testimonials/fahad.webp',
     rating: 5
   }
 ];
@@ -134,6 +134,7 @@ export function TestimonialSection({ lang = 'en' }: Props) {
                     alt={name}
                     width={48}
                     height={48}
+                    sizes="48px"
                     className="h-12 w-12 rounded-full object-cover ring-2 ring-ink-100"
                     loading="lazy"
                   />
