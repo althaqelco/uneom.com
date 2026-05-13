@@ -3,6 +3,7 @@ import { Tajawal } from 'next/font/google';
 import { JsonLd } from '@/lib/seo/JsonLd';
 import { organizationSchema, websiteSchema } from '@/lib/seo/schemas';
 import { WhatsAppFloat } from '@/components/ui/WhatsAppFloat';
+import { WebMCPProvider } from '@/components/WebMCPProvider';
 import './globals.css';
 
 const tajawal = Tajawal({
@@ -88,6 +89,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         {/* WhatsApp floating CTA — global, locale-aware */}
         <WhatsAppFloat />
+        {/* WebMCP — expose site tools to AI agents via browser */}
+        <WebMCPProvider />
         {/* Performance: Speculation Rules + Network-Aware + Battery Saver + SW registration
             Inlined as raw script to avoid 3 React hydration boundaries (Phase 4.1). */}
         <script

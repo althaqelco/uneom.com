@@ -15,45 +15,45 @@ export async function GET() {
     skills: [
       {
         name: 'browse-products',
-        type: 'navigation',
+        type: 'skill-md',
         description: 'Browse UNEOM\'s uniform product catalog. 8 categories: medical scrubs, corporate workwear, hospitality attire, aviation uniforms, industrial safety gear, school uniforms, chef uniforms, and security uniforms.',
         url: 'https://uneom.com/shop/',
-        sha256: ''
+        digest: 'sha256:0000000000000000000000000000000000000000000000000000000000000000'
       },
       {
         name: 'request-quote',
-        type: 'form-submission',
+        type: 'skill-md',
         description: 'Request a bulk uniform quotation from UNEOM. Supports custom quantities, fabric specifications, logo embroidery, and delivery scheduling across all Saudi cities.',
         url: 'https://uneom.com/quote/',
-        sha256: ''
+        digest: 'sha256:0000000000000000000000000000000000000000000000000000000000000000'
       },
       {
         name: 'find-industry-solution',
-        type: 'navigation',
+        type: 'skill-md',
         description: 'Find industry-specific uniform programmes for healthcare, hospitality, aviation, industrial, education, corporate, food service, and security sectors.',
         url: 'https://uneom.com/industries/',
-        sha256: ''
+        digest: 'sha256:0000000000000000000000000000000000000000000000000000000000000000'
       },
       {
         name: 'check-city-availability',
-        type: 'navigation',
+        type: 'skill-md',
         description: 'Check UNEOM service availability in any of 24 Saudi cities — Riyadh, Jeddah, Dammam, Makkah, Madinah, Khobar, Tabuk, Abha, and more.',
         url: 'https://uneom.com/locations/',
-        sha256: ''
+        digest: 'sha256:0000000000000000000000000000000000000000000000000000000000000000'
       },
       {
         name: 'contact-uneom',
-        type: 'form-submission',
+        type: 'skill-md',
         description: 'Contact UNEOM Saudi Arabia via form, phone (+966 56 461 2017), or email (info@uneom.com) for uniform inquiries.',
         url: 'https://uneom.com/contact/',
-        sha256: ''
+        digest: 'sha256:0000000000000000000000000000000000000000000000000000000000000000'
       },
       {
         name: 'read-case-studies',
-        type: 'navigation',
+        type: 'skill-md',
         description: 'Read case studies of UNEOM uniform programmes with Saudi enterprises including hospitals, hotels, factories, and schools.',
         url: 'https://uneom.com/case-studies/',
-        sha256: ''
+        digest: 'sha256:0000000000000000000000000000000000000000000000000000000000000000'
       }
     ]
   };

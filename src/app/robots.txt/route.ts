@@ -7,9 +7,16 @@ import { NextResponse } from 'next/server';
  * @see https://contentsignals.org
  * @see https://www.ietf.org/archive/id/draft-content-signal-00.html
  */
+export const dynamic = 'force-static';
+
 export async function GET() {
   const body = `# UNEOM — Saudi Arabia Uniform Company
 # https://uneom.com
+
+# Content Signals — AI content usage preferences
+# @see https://contentsignals.org
+# @see https://www.ietf.org/archive/id/draft-content-signal-00.html
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-Agent: *
 Allow: /
@@ -56,10 +63,6 @@ Crawl-delay: 10
 User-Agent: MJ12bot
 Crawl-delay: 10
 
-# Content Signals — AI content usage preferences
-# @see https://contentsignals.org
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
-
 Host: https://uneom.com
 Sitemap: https://uneom.com/sitemap.xml
 Sitemap: https://uneom.com/sitemap-images.xml
@@ -69,7 +72,7 @@ Sitemap: https://uneom.com/sitemap-images.xml
     status: 200,
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
-      'Cache-Control': 'public, max-age=86400, stale-while-revalidate=604800'
+      'Cache-Control': 'public, max-age=0, must-revalidate'
     }
   });
 }
