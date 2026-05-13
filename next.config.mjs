@@ -65,6 +65,20 @@ const nextConfig = {
       {
         source: '/sitemap.xml',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }]
+      },
+      {
+        /* Agent discovery — Link headers (RFC 8288 + RFC 9727) */
+        source: '/',
+        headers: [
+          {
+            key: 'Link',
+            value: '</.well-known/api-catalog>; rel="api-catalog", </.well-known/mcp/server-card.json>; rel="service-desc", </.well-known/agent-skills/index.json>; rel="describedby", </llms.txt>; rel="service-doc"'
+          }
+        ]
+      },
+      {
+        source: '/.well-known/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' }]
       }
     ];
   },
