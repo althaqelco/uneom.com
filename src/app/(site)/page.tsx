@@ -12,6 +12,8 @@ import { Eyebrow } from '@/components/ui/Eyebrow';
 import { ClientLogos } from '@/components/ui/ClientLogos';
 import { TestimonialSection } from '@/components/ui/TestimonialSection';
 import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { webPageSchema, collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata = {
   title: 'UNEOM — Saudi Arabia Uniform Company | Medical Scrubs, School Uniforms, Corporate Workwear',
@@ -21,8 +23,12 @@ export const metadata = {
 export default function HomePage() {
   const heroIndustries = INDUSTRIES.slice(0, 4);
 
+  const homePageSchema = webPageSchema({ path: '/', name: 'UNEOM — Saudi Arabia Uniform Company', description: 'B2B uniform programmes across 8 industries and 24 Saudi cities. ISO 9001 + OEKO-TEX certified.' });
+  const industriesListSchema = collectionPageSchema({ path: '/', name: 'UNEOM Industry Silos', description: 'Eight industry-specific uniform programmes', items: INDUSTRIES.map(i => ({ name: i.nameEn, url: `/industries/${i.slug}/`, description: i.tagline, image: `/images/${i.heroImage}.avif` })) });
+
   return (
     <>
+      <JsonLd data={[homePageSchema, industriesListSchema]} />
       {/* ============== HERO ============== */}
       <section className="relative overflow-hidden">
         {/* Background hero image */}

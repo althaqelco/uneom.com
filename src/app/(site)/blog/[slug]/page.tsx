@@ -52,6 +52,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     publisher: { '@id': 'https://uneom.com/#organization' },
     mainEntityOfPage: `https://uneom.com/blog/${post.slug}/`,
     articleSection: cat?.nameEn,
+    inLanguage: 'en',
     wordCount: post.sections.reduce((acc, s) => acc + s.body.split(/\s+/).length, post.lead.split(/\s+/).length)
   };
 

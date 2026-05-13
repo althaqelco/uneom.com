@@ -4,6 +4,8 @@ import { PRODUCT_CATEGORIES, PRODUCTS } from '@/lib/data/products';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'المتجر — منتجات رئيسية عبر جميع القطاعات الـ 8',
@@ -12,8 +14,10 @@ export const metadata: Metadata = {
 };
 
 export default function ArShopHubPage() {
+  const schema = collectionPageSchema({ path: '/ar/shop/', name: 'كتالوج منتجات يونيوم', description: 'أزياء موحّدة بمستوى برامج عبر 8 قطاعات', items: PRODUCT_CATEGORIES.map(c => ({ name: c.nameAr, url: `/ar/shop/${c.slug}/`, description: c.summaryAr, image: `/images/${c.hero}.avif` })) });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'المتجر', path: '/ar/shop/' }]} />
 
       <section className="container-page section-tight">

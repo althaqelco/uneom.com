@@ -5,6 +5,8 @@ import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CityCard } from '@/components/ui/CityCard';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'All 24 Saudi Cities — Uniform Programme Coverage',
@@ -19,8 +21,11 @@ export default function LocationsHubPage() {
     return acc;
   }, {});
 
+  const schema = collectionPageSchema({ path: '/locations/', name: 'UNEOM Saudi City Coverage', description: 'Uniform programme coverage across all 24 Saudi cities', items: SAUDI_CITIES.map(c => ({ name: c.nameEn, url: `/locations/${c.slug}/`, description: `Uniform programmes in ${c.nameEn}, ${c.region}` })) });
+
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'Locations', path: '/locations/' }]} />
 
       <section className="container-page section-tight">

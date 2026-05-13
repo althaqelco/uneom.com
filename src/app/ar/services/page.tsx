@@ -4,6 +4,8 @@ import { SERVICES } from '@/lib/data/services';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'الخدمات — عمليات برامج الزي الموحّد',
@@ -12,8 +14,10 @@ export const metadata: Metadata = {
 };
 
 export default function ArServicesHubPage() {
+  const schema = collectionPageSchema({ path: '/ar/services/', name: 'خدمات يونيوم', description: 'سبع خدمات تشغيلية لبرامج الزي الموحّد', items: SERVICES.map(s => ({ name: s.nameAr, url: `/ar/services/${s.slug}/`, description: s.summaryAr, image: `/images/${s.heroImage}.avif` })) });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'الخدمات', path: '/ar/services/' }]} />
       <section className="container-page section-tight">
         <SectionHeader

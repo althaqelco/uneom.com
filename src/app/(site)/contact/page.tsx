@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { contactPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'Contact UNEOM — Saudi Operations Team',
@@ -11,6 +13,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={contactPageSchema()} />
       <Breadcrumbs items={[{ name: 'Contact', path: '/contact/' }]} />
 
       <section className="container-page section-tight">

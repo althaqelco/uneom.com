@@ -4,6 +4,8 @@ import { SectionHeader } from '@/components/ui/SectionHeader';
 import { StatBlock } from '@/components/ui/StatBlock';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { aboutPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'عن UNEOM — مصنّع الزي الموحّد السعودي B2B منذ 2013',
@@ -14,6 +16,7 @@ export const metadata: Metadata = {
 export default function ArAboutPage() {
   return (
     <>
+      <JsonLd data={aboutPageSchema('ar')} />
       <Breadcrumbs items={[{ name: 'عن UNEOM', path: '/ar/about/' }]} />
 
       {/* Hero with background image */}

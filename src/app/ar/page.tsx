@@ -12,6 +12,8 @@ import { Eyebrow } from '@/components/ui/Eyebrow';
 import { ClientLogos } from '@/components/ui/ClientLogos';
 import { TestimonialSection } from '@/components/ui/TestimonialSection';
 import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { webPageSchema, collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata = {
   title: 'UNEOM — يونيفورم وزي موحد في السعودية | سكراب طبي، يونيفورم مدارس، الزي الموحد للشركات',
@@ -22,8 +24,12 @@ export const metadata = {
 export default function ArHomePage() {
   const heroIndustries = INDUSTRIES.slice(0, 4);
 
+  const arHomePageSchema = webPageSchema({ path: '/ar/', name: 'يونيوم — شركة الزي الموحد السعودية', description: 'برامج الزي الموحّد عبر 8 قطاعات و24 مدينة سعودية. معتمدون ISO 9001 + OEKO-TEX.' });
+  const arIndustriesListSchema = collectionPageSchema({ path: '/ar/', name: 'قطاعات يونيوم', description: 'ثمانية برامج زي موحّد متخصّصة بالقطاع', items: INDUSTRIES.map(i => ({ name: i.nameAr, url: `/ar/industries/${i.slug}/`, description: i.taglineAr, image: `/images/${i.heroImage}.avif` })) });
+
   return (
     <>
+      <JsonLd data={[arHomePageSchema, arIndustriesListSchema]} />
       {/* ============== HERO ============== */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">

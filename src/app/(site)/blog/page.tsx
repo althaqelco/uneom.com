@@ -4,6 +4,8 @@ import { BLOG_POSTS, BLOG_CATEGORIES } from '@/lib/data/blog';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'Editorial — Insights from the Saudi Uniform Industry',
@@ -52,8 +54,11 @@ export default function BlogIndexPage() {
   const featured = posts[0];
   const rest = posts.slice(1);
 
+  const blogCollectionSchema = collectionPageSchema({ path: '/blog/', name: 'UNEOM Editorial', description: 'Long-form editorial on Saudi uniform programmes', items: BLOG_POSTS.map(p => ({ name: p.title, url: `/blog/${p.slug}/`, description: p.excerpt, image: `/images/${p.hero}.avif` })) });
+
   return (
     <>
+      <JsonLd data={blogCollectionSchema} />
       <Breadcrumbs items={[{ name: 'Editorial', path: '/blog/' }]} />
 
       <section className="container-page section-tight">

@@ -4,6 +4,8 @@ import { BLOG_POSTS, BLOG_CATEGORIES, BLOG_CATEGORIES_BY_SLUG } from '@/lib/data
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'المقالات — رؤى من داخل صناعة الزي الموحّد السعودي',
@@ -52,8 +54,11 @@ export default function ArBlogIndexPage() {
   const featured = posts[0];
   const rest = posts.slice(1);
 
+  const arBlogSchema = collectionPageSchema({ path: '/ar/blog/', name: 'مقالات UNEOM', description: 'مقالات تحليلية عن صناعة الزي الموحّد السعودي', items: BLOG_POSTS.map(p => ({ name: p.titleAr || p.title, url: `/ar/blog/${p.slug}/`, description: p.excerptAr || p.excerpt, image: `/images/${p.hero}.avif` })) });
+
   return (
     <>
+      <JsonLd data={arBlogSchema} />
       <Breadcrumbs items={[{ name: 'المقالات', path: '/ar/blog/' }]} />
 
       <section className="container-page section-tight">

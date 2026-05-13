@@ -5,6 +5,8 @@ import { SectionHeader } from '@/components/ui/SectionHeader';
 import { IndustryCard } from '@/components/ui/IndustryCard';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'All 8 Industries — Saudi Uniform Programmes',
@@ -13,8 +15,10 @@ export const metadata: Metadata = {
 };
 
 export default function IndustriesHubPage() {
+  const schema = collectionPageSchema({ path: '/industries/', name: 'UNEOM Industry Silos', description: 'Eight industry-specific uniform programmes in Saudi Arabia', items: INDUSTRIES.map(i => ({ name: i.nameEn, url: `/industries/${i.slug}/`, description: i.tagline, image: `/images/${i.heroImage}.avif` })) });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'Industries', path: '/industries/' }]} />
 
       <section className="container-page section-tight">

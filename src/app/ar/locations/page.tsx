@@ -6,6 +6,8 @@ import { CityCard } from '@/components/ui/CityCard';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import Link from 'next/link';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'جميع الـ 24 مدينة سعودية — تغطية برامج الزي الموحّد',
@@ -20,8 +22,11 @@ export default function ArLocationsHubPage() {
     return acc;
   }, {});
 
+  const schema = collectionPageSchema({ path: '/ar/locations/', name: 'تغطية المدن السعودية', description: 'تغطية برامج الزي الموحّد عبر 24 مدينة سعودية', items: SAUDI_CITIES.map(c => ({ name: c.nameAr, url: `/ar/locations/${c.slug}/`, description: `برامج الزي الموحّد في ${c.nameAr}` })) });
+
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'المدن', path: '/ar/locations/' }]} />
 
       <section className="container-page section-tight">

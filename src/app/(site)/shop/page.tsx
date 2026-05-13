@@ -4,6 +4,8 @@ import { PRODUCT_CATEGORIES, PRODUCTS } from '@/lib/data/products';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'Shop — Hero Products Across All 8 Industry Silos',
@@ -12,8 +14,10 @@ export const metadata: Metadata = {
 };
 
 export default function ShopHubPage() {
+  const schema = collectionPageSchema({ path: '/shop/', name: 'UNEOM Product Catalogue', description: 'Programme-grade uniforms across 8 industry silos', items: PRODUCT_CATEGORIES.map(c => ({ name: c.nameEn, url: `/shop/${c.slug}/`, description: c.summary, image: `/images/${c.hero}.avif` })) });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'Shop', path: '/shop/' }]} />
 
       <section className="container-page section-tight">

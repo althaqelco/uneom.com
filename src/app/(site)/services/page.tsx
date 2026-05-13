@@ -4,6 +4,8 @@ import { SERVICES } from '@/lib/data/services';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'Services — Uniform Programme Operations',
@@ -12,8 +14,10 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesHubPage() {
+  const schema = collectionPageSchema({ path: '/services/', name: 'UNEOM Services', description: 'Seven uniform programme operations services', items: SERVICES.map(s => ({ name: s.nameEn, url: `/services/${s.slug}/`, description: s.summary, image: `/images/${s.heroImage}.avif` })) });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'Services', path: '/services/' }]} />
       <section className="container-page section-tight">
         <SectionHeader

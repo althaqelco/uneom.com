@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { contactPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'تواصل مع UNEOM — فريق العمليات السعودي',
@@ -11,6 +13,7 @@ export const metadata: Metadata = {
 export default function ArContactPage() {
   return (
     <>
+      <JsonLd data={contactPageSchema('ar')} />
       <Breadcrumbs items={[{ name: 'تواصل معنا', path: '/ar/contact/' }]} />
 
       <section className="container-page section-tight">

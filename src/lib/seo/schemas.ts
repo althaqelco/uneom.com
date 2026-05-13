@@ -74,7 +74,27 @@ export function organizationSchema() {
     contactPoint: [
       { '@type': 'ContactPoint', telephone: REAL.PHONE, contactType: 'customer service', areaServed: 'SA', availableLanguage: ['Arabic', 'English'] },
       { '@type': 'ContactPoint', telephone: REAL.PHONE, contactType: 'sales', areaServed: 'SA', availableLanguage: ['Arabic', 'English'] }
-    ]
+    ],
+    hasMerchantReturnPolicy: {
+      '@type': 'MerchantReturnPolicy',
+      '@id': `${SITE}/#return-policy`,
+      applicableCountry: 'SA',
+      returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+      merchantReturnDays: 14,
+      returnMethod: 'https://schema.org/ReturnByMail',
+      returnFees: 'https://schema.org/FreeReturn'
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'UNEOM Uniform Programmes',
+      url: `${SITE}/shop/`,
+      itemListElement: [
+        { '@type': 'OfferCatalog', name: 'Healthcare Uniforms', url: `${SITE}/shop/medical-scrubs/` },
+        { '@type': 'OfferCatalog', name: 'Hospitality Uniforms', url: `${SITE}/shop/hospitality-attire/` },
+        { '@type': 'OfferCatalog', name: 'Industrial Uniforms', url: `${SITE}/shop/industrial-uniforms/` },
+        { '@type': 'OfferCatalog', name: 'Corporate Uniforms', url: `${SITE}/shop/corporate-workwear/` }
+      ]
+    }
   };
 }
 
@@ -155,6 +175,112 @@ export function faqSchema(faqs: { q: string; a: string }[]) {
       name: f.q,
       acceptedAnswer: { '@type': 'Answer', text: f.a }
     }))
+  };
+}
+
+/* ─── NEW GENERATORS ─── */
+
+export function webPageSchema(opts: { path: string; name: string; description: string; dateModified?: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE}${opts.path}#webpage`,
+    url: `${SITE}${opts.path}`,
+    name: opts.name,
+    description: opts.description,
+    isPartOf: { '@id': `${SITE}/#website` },
+    about: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID },
+    inLanguage: ['en', 'ar-SA'],
+    ...(opts.dateModified ? { dateModified: opts.dateModified } : {})
+  };
+}
+
+export function aboutPageSchema(locale: 'en' | 'ar' = 'en') {
+  const prefix = locale === 'ar' ? '/ar' : '';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    '@id': `${SITE}${prefix}/about/#webpage`,
+    url: `${SITE}${prefix}/about/`,
+    name: locale === 'ar' ? 'عن UNEOM — مصنّع الزي الموحّد السعودي منذ 2013' : 'About UNEOM — Saudi B2B Uniform Manufacturer Since 2013',
+    description: locale === 'ar' ? 'شركة سعودية لتصنيع الزي الموحّد تأسّست عام 2013. معتمدون ISO 9001 + OEKO-TEX عبر 24 مدينة.' : 'Saudi-owned uniform manufacturer founded in 2013. ISO 9001 + OEKO-TEX certified, operating across 24 cities.',
+    isPartOf: { '@id': `${SITE}/#website` },
+    mainEntity: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID },
+    inLanguage: locale === 'ar' ? 'ar-SA' : 'en'
+  };
+}
+
+export function contactPageSchema(locale: 'en' | 'ar' = 'en') {
+  const prefix = locale === 'ar' ? '/ar' : '';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    '@id': `${SITE}${prefix}/contact/#webpage`,
+    url: `${SITE}${prefix}/contact/`,
+    name: locale === 'ar' ? 'تواصل مع UNEOM — فريق العمليات السعودي' : 'Contact UNEOM — Saudi Operations Team',
+    description: locale === 'ar' ? 'تحدّث مباشرة مع فريق عمليات UNEOM. راسلنا على info@uneom.com أو اتصل على +966 56 461 2017.' : 'Talk to UNEOM operations directly. Email info@uneom.com or call +966 56 461 2017.',
+    isPartOf: { '@id': `${SITE}/#website` },
+    mainEntity: {
+      '@id': ORG_ID,
+      contactPoint: [
+        { '@type': 'ContactPoint', telephone: REAL.PHONE, contactType: 'customer service', email: REAL.EMAIL, areaServed: 'SA', availableLanguage: ['Arabic', 'English'], hoursAvailable: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'], opens: '08:00', closes: '18:00' } }
+      ]
+    },
+    publisher: { '@id': ORG_ID },
+    inLanguage: locale === 'ar' ? 'ar-SA' : 'en'
+  };
+}
+
+export interface CollectionItem { name: string; url: string; description?: string; image?: string; }
+
+export function collectionPageSchema(opts: { path: string; name: string; description: string; items: CollectionItem[] }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${SITE}${opts.path}#webpage`,
+    url: `${SITE}${opts.path}`,
+    name: opts.name,
+    description: opts.description,
+    isPartOf: { '@id': `${SITE}/#website` },
+    publisher: { '@id': ORG_ID },
+    inLanguage: ['en', 'ar-SA'],
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: opts.items.length,
+      itemListElement: opts.items.map((item, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: item.name,
+        url: `${SITE}${item.url}`,
+        ...(item.description ? { description: item.description } : {}),
+        ...(item.image ? { image: `${SITE}${item.image}` } : {})
+      }))
+    }
+  };
+}
+
+export function merchantReturnSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'MerchantReturnPolicy',
+    '@id': `${SITE}/#return-policy`,
+    applicableCountry: 'SA',
+    returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+    merchantReturnDays: 14,
+    returnMethod: 'https://schema.org/ReturnByMail',
+    returnFees: 'https://schema.org/FreeReturn'
+  };
+}
+
+export function warrantySchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WarrantyPromise',
+    '@id': `${SITE}/#warranty`,
+    durationOfWarranty: { '@type': 'QuantitativeValue', value: 12, unitCode: 'MON' },
+    warrantyScope: 'https://schema.org/WarrantyFullLifetime'
   };
 }
 

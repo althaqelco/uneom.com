@@ -5,6 +5,8 @@ import { SectionHeader } from '@/components/ui/SectionHeader';
 import { IndustryCard } from '@/components/ui/IndustryCard';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'جميع القطاعات الـ 8 — برامج الزي الموحّد السعودي',
@@ -13,8 +15,10 @@ export const metadata: Metadata = {
 };
 
 export default function ArIndustriesHubPage() {
+  const schema = collectionPageSchema({ path: '/ar/industries/', name: 'قطاعات يونيوم', description: 'ثمانية برامج زي موحّد في السعودية', items: INDUSTRIES.map(i => ({ name: i.nameAr, url: `/ar/industries/${i.slug}/`, description: i.taglineAr, image: `/images/${i.heroImage}.avif` })) });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'القطاعات', path: '/ar/industries/' }]} />
 
       <section className="container-page section-tight">
