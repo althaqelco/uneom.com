@@ -1,16 +1,4 @@
-import { NextResponse } from 'next/server';
-
-/**
- * Custom robots.txt route handler — replaces Next.js MetadataRoute.Robots
- * to support Content-Signal directives for AI agent readiness.
- *
- * @see https://contentsignals.org
- * @see https://www.ietf.org/archive/id/draft-content-signal-00.html
- */
-export const dynamic = 'force-static';
-
-export async function GET() {
-  const body = `# UNEOM — Saudi Arabia Uniform Company
+# UNEOM — Saudi Arabia Uniform Company
 # https://uneom.com
 
 # Content Signals — AI content usage preferences
@@ -66,13 +54,3 @@ Crawl-delay: 10
 Host: https://uneom.com
 Sitemap: https://uneom.com/sitemap.xml
 Sitemap: https://uneom.com/sitemap-images.xml
-`;
-
-  return new NextResponse(body, {
-    status: 200,
-    headers: {
-      'Content-Type': 'text/plain; charset=utf-8',
-      'Cache-Control': 'public, max-age=0, must-revalidate'
-    }
-  });
-}
