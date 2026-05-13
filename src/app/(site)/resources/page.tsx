@@ -4,6 +4,8 @@ import { RESOURCES } from '@/lib/data/resources';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'Resources — Saudi Uniform Programme Guides',
@@ -12,8 +14,10 @@ export const metadata: Metadata = {
 };
 
 export default function ResourcesHubPage() {
+  const schema = collectionPageSchema({ path: '/resources/', name: 'UNEOM Resources & Guides', description: 'Deep guides on fabric science, sizing, procurement, and compliance for Saudi uniform programmes.', items: RESOURCES.map(r => ({ name: r.title, url: `/resources/${r.slug}/`, description: r.summary })) });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'Resources', path: '/resources/' }]} />
 
       <section className="container-page section-tight">

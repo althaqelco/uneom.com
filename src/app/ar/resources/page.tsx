@@ -5,6 +5,8 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { siloAr } from '@/lib/i18n/silo-labels';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'الأدلة — دليلك لبرامج الزي الموحّد السعودي',
@@ -13,8 +15,10 @@ export const metadata: Metadata = {
 };
 
 export default function ArResourcesHubPage() {
+  const schema = collectionPageSchema({ path: '/ar/resources/', name: 'أدلة وموارد UNEOM', description: 'أدلة عميقة حول علم الأقمشة، المقاسات، المشتريات والامتثال لبرامج الزي الموحّد السعودي.', items: RESOURCES.map(r => ({ name: r.titleAr, url: `/ar/resources/${r.slug}/`, description: r.summaryAr })) });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'الأدلة', path: '/ar/resources/' }]} />
 
       <section className="container-page section-tight">

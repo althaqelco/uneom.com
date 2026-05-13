@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
@@ -8,8 +10,10 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPolicyPage() {
+  const schema = webPageSchema({ path: '/privacy-policy/', name: 'Privacy Policy — UNEOM', description: 'UNEOM data privacy practices aligned with Saudi PDPL.', dateModified: '2026-05-08' });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'Privacy Policy', path: '/privacy-policy/' }]} />
       <article className="container-prose section">
         <header>

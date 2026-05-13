@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'شروط الخدمة — UNEOM',
@@ -8,8 +10,10 @@ export const metadata: Metadata = {
 };
 
 export default function ArTermsPage() {
+  const schema = webPageSchema({ path: '/ar/terms-of-service/', name: 'شروط الخدمة — UNEOM', description: 'شروط استخدام خدمات وبرامج الزي الموحّد من UNEOM.', dateModified: '2026-05-08' });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'شروط الخدمة', path: '/ar/terms-of-service/' }]} />
       <article className="container-prose section">
         <header>

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'ترخيص الصور والمحتوى — UNEOM',
@@ -15,8 +17,10 @@ export const metadata: Metadata = {
 };
 
 export default function ArLicensePage() {
+  const schema = webPageSchema({ path: '/ar/license/', name: 'ترخيص الصور والمحتوى — UNEOM', description: 'شروط ترخيص التصوير التحريري وصور المنتجات.', dateModified: '2026-05-08' });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'الترخيص', path: '/ar/license/' }]} />
       <article className="container-prose section">
         <header>

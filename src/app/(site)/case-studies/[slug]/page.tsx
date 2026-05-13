@@ -6,6 +6,8 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SiloLinks } from '@/components/ui/SiloLinks';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { StatBlock } from '@/components/ui/StatBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { caseStudySchema } from '@/lib/seo/schemas';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return CASE_STUDIES.map(c => ({ slug: c.slug })); }
@@ -28,8 +30,11 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   if (!c) notFound();
   const industry = INDUSTRIES_BY_SLUG[c.silo];
 
+  const schema = caseStudySchema({ slug: c.slug, title: c.title, summary: c.summary, image: `/images/case-studies/${c.imageFolder}/after.avif`, industry: industry?.nameEn || c.silo, city: c.city, outcomes: c.outcomes });
+
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[
         { name: 'Case Studies', path: '/case-studies/' },
         { name: c.title, path: `/case-studies/${c.slug}/` }

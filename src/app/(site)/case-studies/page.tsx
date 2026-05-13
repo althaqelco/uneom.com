@@ -4,6 +4,8 @@ import { CASE_STUDIES } from '@/lib/data/case-studies';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'Case Studies — Saudi Uniform Programme Outcomes',
@@ -12,8 +14,10 @@ export const metadata: Metadata = {
 };
 
 export default function CaseStudiesHubPage() {
+  const schema = collectionPageSchema({ path: '/case-studies/', name: 'UNEOM Case Studies', description: 'Eight Saudi uniform programme transformations with real outcomes.', items: CASE_STUDIES.map(c => ({ name: c.title, url: `/case-studies/${c.slug}/`, description: c.summary, image: `/images/case-studies/${c.imageFolder}/after.avif` })) });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'Case Studies', path: '/case-studies/' }]} />
 
       <section className="container-page section-tight">

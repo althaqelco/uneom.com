@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'Image & Content License — UNEOM',
@@ -14,7 +16,10 @@ export const metadata: Metadata = {
 };
 
 export default function LicensePage() {
+  const schema = webPageSchema({ path: '/license/', name: 'Image & Content License — UNEOM', description: 'Licensing terms for UNEOM photography, product images, and brand assets.', dateModified: '2026-05-08' });
   return (
+    <>
+    <JsonLd data={schema} />
     <main className="mx-auto max-w-3xl px-6 py-16">
       <header className="mb-12">
         <h1 className="text-4xl font-black text-slate-900 mb-3">
@@ -103,5 +108,6 @@ export default function LicensePage() {
         </p>
       </article>
     </main>
+    </>
   );
 }

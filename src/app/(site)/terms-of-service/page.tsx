@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
@@ -8,8 +10,10 @@ export const metadata: Metadata = {
 };
 
 export default function TermsPage() {
+  const schema = webPageSchema({ path: '/terms-of-service/', name: 'Terms of Service — UNEOM', description: 'Terms governing UNEOM services and uniform programme agreements.', dateModified: '2026-05-08' });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'Terms of Service', path: '/terms-of-service/' }]} />
       <article className="container-prose section">
         <header>

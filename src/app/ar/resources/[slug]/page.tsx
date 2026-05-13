@@ -6,6 +6,8 @@ import { SiloLinks } from '@/components/ui/SiloLinks';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { siloAr } from '@/lib/i18n/silo-labels';
 import { SectionHeader } from '@/components/ui/SectionHeader';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { guideSchema } from '@/lib/seo/schemas';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return RESOURCES.map(r => ({ slug: r.slug })); }
@@ -27,8 +29,11 @@ export default async function ArResourcePage({ params }: { params: Promise<{ slu
   const r = RESOURCES_BY_SLUG[slug];
   if (!r) notFound();
 
+  const schema = guideSchema({ slug: r.slug, title: r.titleAr, summary: r.summaryAr, image: `/images/${r.hero}.avif`, locale: 'ar' });
+
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[
         { name: 'الأدلة', path: '/ar/resources/' },
         { name: r.titleAr, path: `/ar/resources/${r.slug}/` }

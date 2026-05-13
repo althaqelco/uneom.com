@@ -3,6 +3,8 @@ import { INDUSTRIES } from '@/lib/data/industries';
 import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'Request a Quote — UNEOM Programme Proposal',
@@ -11,8 +13,10 @@ export const metadata: Metadata = {
 };
 
 export default function QuotePage() {
+  const schema = webPageSchema({ path: '/quote/', name: 'Request a Quote — UNEOM', description: 'Submit a uniform programme brief. UNEOM responds within one business day.' });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'Request a Quote', path: '/quote/' }]} />
 
       <section className="container-page section-tight">

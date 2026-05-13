@@ -3,6 +3,8 @@ import { INDUSTRIES } from '@/lib/data/industries';
 import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'طلب عرض سعر — مقترح برنامج UNEOM',
@@ -11,8 +13,10 @@ export const metadata: Metadata = {
 };
 
 export default function ArQuotePage() {
+  const schema = webPageSchema({ path: '/ar/quote/', name: 'طلب عرض سعر — UNEOM', description: 'أرسل ملخص برنامج الزي الموحّد. UNEOM يردّ خلال يوم عمل واحد.' });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'طلب عرض سعر', path: '/ar/quote/' }]} />
 
       <section className="container-page section-tight">

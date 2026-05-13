@@ -3,6 +3,8 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { COMPANY_STATS } from '@/lib/data/stats';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { webPageSchema, jobPostingSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'Careers — Build Programmes, Not Catalogues',
@@ -20,8 +22,11 @@ const ROLES = [
 ];
 
 export default function CareersPage() {
+  const pageSchema = webPageSchema({ path: '/careers/', name: 'Careers at UNEOM', description: 'Open roles across operations, design, manufacturing, and fitting teams.' });
+  const jobSchemas = jobPostingSchema(ROLES);
   return (
     <>
+      <JsonLd data={[pageSchema, ...jobSchemas]} />
       <Breadcrumbs items={[{ name: 'Careers', path: '/careers/' }]} />
 
       <section className="container-page section-tight">

@@ -3,6 +3,8 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { COMPANY_STATS } from '@/lib/data/stats';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'الوظائف — ابنِ برامج، لا كتالوجات',
@@ -20,8 +22,10 @@ const ROLES = [
 ];
 
 export default function ArCareersPage() {
+  const schema = webPageSchema({ path: '/ar/careers/', name: 'الوظائف — UNEOM', description: 'وظائف شاغرة في العمليات والتصميم والتصنيع وفرق القياسات الميدانية.' });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'الوظائف', path: '/ar/careers/' }]} />
 
       <section className="container-page section-tight">

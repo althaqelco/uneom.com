@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'سياسة الخصوصية — UNEOM',
@@ -8,8 +10,10 @@ export const metadata: Metadata = {
 };
 
 export default function ArPrivacyPolicyPage() {
+  const schema = webPageSchema({ path: '/ar/privacy-policy/', name: 'سياسة الخصوصية — UNEOM', description: 'ممارسات حماية البيانات الشخصية المتوافقة مع نظام PDPL السعودي.', dateModified: '2026-05-08' });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'سياسة الخصوصية', path: '/ar/privacy-policy/' }]} />
       <article className="container-prose section">
         <header>

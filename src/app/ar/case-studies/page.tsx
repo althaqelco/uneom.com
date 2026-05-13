@@ -5,6 +5,8 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { siloAr } from '@/lib/i18n/silo-labels';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
   title: 'دراسات الحالة — نتائج برامج الزي الموحّد السعودية',
@@ -13,8 +15,10 @@ export const metadata: Metadata = {
 };
 
 export default function ArCaseStudiesHubPage() {
+  const schema = collectionPageSchema({ path: '/ar/case-studies/', name: 'دراسات حالة UNEOM', description: 'ثماني تحوّلات في برامج الزي الموحّد بنتائج حقيقية.', items: CASE_STUDIES.map(c => ({ name: c.titleAr, url: `/ar/case-studies/${c.slug}/`, description: c.summaryAr, image: `/images/case-studies/${c.imageFolder}/after.avif` })) });
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'دراسات الحالة', path: '/ar/case-studies/' }]} />
 
       <section className="container-page section-tight">

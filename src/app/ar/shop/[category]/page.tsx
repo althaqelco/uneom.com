@@ -6,6 +6,8 @@ import { INDUSTRIES_BY_SLUG } from '@/lib/data/industries';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return PRODUCT_CATEGORIES.map(c => ({ category: c.slug })); }
@@ -30,8 +32,11 @@ export default async function ArShopCategoryPage({ params }: { params: Promise<{
   const products = productsByCategory(cat.slug);
   const industry = INDUSTRIES_BY_SLUG[cat.industry];
 
+  const schema = collectionPageSchema({ path: `/ar/shop/${cat.slug}/`, name: cat.nameAr, description: cat.summaryAr, items: products.map(p => ({ name: p.nameAr, url: `/ar/shop/${p.category}/${p.slug}/`, description: p.summaryAr, image: `/images/${p.image}.avif` })) });
+
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[
         { name: 'المتجر', path: '/ar/shop/' },
         { name: cat.nameAr, path: `/ar/shop/${cat.slug}/` }

@@ -5,6 +5,8 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SiloLinks } from '@/components/ui/SiloLinks';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { SectionHeader } from '@/components/ui/SectionHeader';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { guideSchema } from '@/lib/seo/schemas';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return RESOURCES.map(r => ({ slug: r.slug })); }
@@ -26,8 +28,11 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
   const r = RESOURCES_BY_SLUG[slug];
   if (!r) notFound();
 
+  const schema = guideSchema({ slug: r.slug, title: r.title, summary: r.summary, image: `/images/${r.hero}.avif` });
+
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[
         { name: 'Resources', path: '/resources/' },
         { name: r.title, path: `/resources/${r.slug}/` }

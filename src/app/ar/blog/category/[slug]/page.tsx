@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { BLOG_CATEGORIES, BLOG_CATEGORIES_BY_SLUG, postsByCategory, type BlogCategorySlug } from '@/lib/data/blog';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return BLOG_CATEGORIES.map(c => ({ slug: c.slug })); }
@@ -25,9 +27,11 @@ export default async function ArBlogCategoryPage({ params }: { params: Promise<{
   if (!cat) notFound();
 
   const posts = postsByCategory(cat.slug);
+  const schema = collectionPageSchema({ path: `/ar/blog/category/${cat.slug}/`, name: `${cat.nameAr} — مقالات UNEOM`, description: cat.descriptionAr, items: posts.map(p => ({ name: p.titleAr, url: `/ar/blog/${p.slug}/`, description: p.excerptAr, image: `/images/${p.hero}.avif` })) });
 
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[
         { name: 'المقالات', path: '/ar/blog/' },
         { name: cat.nameAr, path: `/ar/blog/category/${cat.slug}/` }

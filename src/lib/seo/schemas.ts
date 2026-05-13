@@ -284,4 +284,88 @@ export function warrantySchema() {
   };
 }
 
+/* ─── CASE STUDY ─── */
+
+export interface CaseStudySchemaOpts {
+  slug: string;
+  title: string;
+  summary: string;
+  image: string;
+  industry: string;
+  city: string;
+  outcomes: { metric: string; description: string }[];
+  locale?: 'en' | 'ar';
+}
+
+export function caseStudySchema(opts: CaseStudySchemaOpts) {
+  const prefix = opts.locale === 'ar' ? '/ar' : '';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${SITE}${prefix}/case-studies/${opts.slug}/#article`,
+    headline: opts.title,
+    description: opts.summary,
+    image: `${SITE}${opts.image}`,
+    author: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID },
+    mainEntityOfPage: `${SITE}${prefix}/case-studies/${opts.slug}/`,
+    articleSection: opts.industry,
+    inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en',
+    about: {
+      '@type': 'CreativeWork',
+      name: opts.title,
+      locationCreated: { '@type': 'City', name: opts.city },
+      result: opts.outcomes.map(o => ({
+        '@type': 'QuantitativeValue',
+        name: o.description,
+        value: o.metric
+      }))
+    }
+  };
+}
+
+/* ─── JOB POSTING ─── */
+
+export interface JobPostingOpts {
+  title: string;
+  city: string;
+  team: string;
+  type: string;
+}
+
+export function jobPostingSchema(jobs: JobPostingOpts[]) {
+  return jobs.map(j => ({
+    '@context': 'https://schema.org',
+    '@type': 'JobPosting',
+    title: j.title,
+    hiringOrganization: { '@id': ORG_ID },
+    jobLocation: {
+      '@type': 'Place',
+      address: { '@type': 'PostalAddress', addressLocality: j.city, addressCountry: 'SA' }
+    },
+    employmentType: j.type === 'Full-time' ? 'FULL_TIME' : 'PART_TIME',
+    datePosted: '2026-01-15',
+    validThrough: '2026-12-31',
+    industry: 'Uniform Manufacturing',
+    occupationalCategory: j.team
+  }));
+}
+
+/* ─── RESOURCE / GUIDE ─── */
+
+export function guideSchema(opts: { slug: string; title: string; summary: string; image?: string; locale?: 'en' | 'ar' }) {
+  const prefix = opts.locale === 'ar' ? '/ar' : '';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    '@id': `${SITE}${prefix}/resources/${opts.slug}/#howto`,
+    name: opts.title,
+    description: opts.summary,
+    ...(opts.image ? { image: `${SITE}${opts.image}` } : {}),
+    author: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID },
+    inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en'
+  };
+}
+
 // JsonLd component lives in @/lib/seo/JsonLd.tsx (separate JSX module).

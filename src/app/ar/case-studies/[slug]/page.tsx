@@ -6,6 +6,8 @@ import { CITIES_BY_SLUG } from '@/lib/data/saudi-cities';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SiloLinks } from '@/components/ui/SiloLinks';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { caseStudySchema } from '@/lib/seo/schemas';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return CASE_STUDIES.map(c => ({ slug: c.slug })); }
@@ -28,8 +30,11 @@ export default async function ArCaseStudyPage({ params }: { params: Promise<{ sl
   if (!c) notFound();
   const industry = INDUSTRIES_BY_SLUG[c.silo];
 
+  const schema = caseStudySchema({ slug: c.slug, title: c.titleAr, summary: c.summaryAr, image: `/images/case-studies/${c.imageFolder}/after.avif`, industry: industry?.nameAr || c.silo, city: c.city, outcomes: c.outcomesAr, locale: 'ar' });
+
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[
         { name: 'دراسات الحالة', path: '/ar/case-studies/' },
         { name: c.titleAr, path: `/ar/case-studies/${c.slug}/` }

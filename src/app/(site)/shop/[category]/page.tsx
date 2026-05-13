@@ -6,6 +6,8 @@ import { INDUSTRIES_BY_SLUG } from '@/lib/data/industries';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
+import { JsonLd } from '@/lib/seo/JsonLd';
+import { collectionPageSchema } from '@/lib/seo/schemas';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return PRODUCT_CATEGORIES.map(c => ({ category: c.slug })); }
@@ -30,8 +32,11 @@ export default async function ShopCategoryPage({ params }: { params: Promise<{ c
   const products = productsByCategory(cat.slug);
   const industry = INDUSTRIES_BY_SLUG[cat.industry];
 
+  const schema = collectionPageSchema({ path: `/shop/${cat.slug}/`, name: cat.nameEn, description: cat.summary, items: products.map(p => ({ name: p.nameEn, url: `/shop/${p.category}/${p.slug}/`, description: p.summary, image: `/images/${p.image}.avif` })) });
+
   return (
     <>
+      <JsonLd data={schema} />
       <Breadcrumbs items={[
         { name: 'Shop', path: '/shop/' },
         { name: cat.nameEn, path: `/shop/${cat.slug}/` }
