@@ -5,7 +5,7 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { SiloLinks } from '@/components/ui/SiloLinks';
 import { JsonLd } from '@/lib/seo/JsonLd';
-import { faqSchema } from '@/lib/seo/schemas';
+import { faqSchema, articleSchema } from '@/lib/seo/schemas';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return BLOG_POSTS.map(p => ({ slug: p.slug })); }
@@ -17,14 +17,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${post.titleAr} — UNEOM`,
     description: post.excerptAr,
-    alternates: { canonical: `https://uneom.com/ar/blog/${slug}/` },
+    authors: [{ name: post.author.nameAr }],
+    alternates: { 
+      canonical: `https://uneom.com/ar/blog/${slug}/`,
+      languages: {
+        en: `https://uneom.com/blog/${slug}/`,
+        'ar-SA': `https://uneom.com/ar/blog/${slug}/`,
+        'x-default': `https://uneom.com/blog/${slug}/`
+      }
+    },
     openGraph: {
       title: post.titleAr,
       description: post.excerptAr,
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      authors: [post.author.nameAr],
       images: [{ url: `/images/${post.hero}.avif`, width: 1920, height: 1080 }]
     },
     twitter: { card: 'summary_large_image', title: post.titleAr, description: post.excerptAr }
@@ -39,26 +46,28 @@ export default async function ArBlogPostPage({ params }: { params: Promise<{ slu
   const cat = BLOG_CATEGORIES_BY_SLUG[post.category];
   const date = new Date(post.publishedAt).toLocaleDateString('ar-SA', { day: 'numeric', month: 'long', year: 'numeric' });
 
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.titleAr,
-    description: post.excerptAr,
-    image: `https://uneom.com/images/${post.hero}.avif`,
+  const schema = articleSchema({
+    slug: post.slug,
+    title: post.titleAr,
+    excerpt: post.excerptAr,
+    image: post.hero,
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
-    author: { '@type': 'Person', name: post.author.nameAr, jobTitle: post.author.titleAr, worksFor: { '@id': 'https://uneom.com/#organization' } },
-    reviewedBy: post.reviewer ? { '@type': 'Person', name: post.reviewer.nameAr, jobTitle: post.reviewer.titleAr, memberOf: { '@type': 'Organization', name: post.reviewer.affiliationAr } } : undefined,
-    publisher: { '@id': 'https://uneom.com/#organization' },
-    mainEntityOfPage: `https://uneom.com/ar/blog/${post.slug}/`,
-    articleSection: cat?.nameAr,
-    inLanguage: 'ar',
-    wordCount: post.sections.reduce((acc, s) => acc + s.bodyAr.split(/\s+/).length, post.leadAr.split(/\s+/).length)
-  };
+    authorName: post.author.nameAr,
+    authorTitle: post.author.titleAr,
+    reviewerName: post.reviewer?.nameAr,
+    reviewerTitle: post.reviewer?.titleAr,
+    reviewerAffiliation: post.reviewer?.affiliationAr,
+    section: cat?.nameAr,
+    wordCount: post.sections.reduce((acc, s) => acc + s.bodyAr.split(/\s+/).length, post.leadAr.split(/\s+/).length),
+    locale: 'ar'
+  });
+
+  const faqs = post.faqs.map(f => ({ q: f.qAr, a: f.aAr }));
 
   return (
     <>
-      <JsonLd data={[articleSchema, faqSchema(post.faqs)]} />
+      <JsonLd data={[schema, faqSchema(faqs)]} />
       <Breadcrumbs items={[
         { name: 'المقالات', path: '/ar/blog/' },
         { name: cat?.nameAr ?? post.category, path: `/ar/blog/category/${post.category}/` },

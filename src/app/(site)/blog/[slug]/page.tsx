@@ -5,7 +5,7 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { SiloLinks } from '@/components/ui/SiloLinks';
 import { JsonLd } from '@/lib/seo/JsonLd';
-import { faqSchema } from '@/lib/seo/schemas';
+import { faqSchema, articleSchema } from '@/lib/seo/schemas';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return BLOG_POSTS.map(p => ({ slug: p.slug })); }
@@ -17,17 +17,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: post.title,
     description: post.excerpt,
-    alternates: { canonical: `https://uneom.com/blog/${slug}/` },
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      type: 'article',
-      publishedTime: post.publishedAt,
-      modifiedTime: post.updatedAt,
-      authors: [post.author.name],
-      images: [{ url: `/images/${post.hero}.avif`, width: 1920, height: 1080 }]
+    authors: [{ name: post.author.name }],
+    alternates: {
+      canonical: `https://uneom.com/blog/${slug}/`,
+      languages: {
+        en: `https://uneom.com/blog/${slug}/`,
+        'ar-SA': `https://uneom.com/ar/blog/${slug}/`,
+        'x-default': `https://uneom.com/blog/${slug}/`
+      }
     },
-    twitter: { card: 'summary_large_image', title: post.title, description: post.excerpt }
+    openGraph: { type: 'article', title: post.title, description: post.excerpt, publishedTime: post.publishedAt, images: [{ url: `/images/${post.hero}.avif`, width: 1920, height: 1080 }] }
   };
 }
 
@@ -39,26 +38,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const cat = BLOG_CATEGORIES_BY_SLUG[post.category];
   const date = new Date(post.publishedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.excerpt,
-    image: `https://uneom.com/images/${post.hero}.avif`,
+  const schema = articleSchema({
+    slug: post.slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    image: post.hero,
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
-    author: { '@type': 'Person', name: post.author.name, jobTitle: post.author.title, worksFor: { '@id': 'https://uneom.com/#organization' } },
-    reviewedBy: post.reviewer ? { '@type': 'Person', name: post.reviewer.name, jobTitle: post.reviewer.title, memberOf: { '@type': 'Organization', name: post.reviewer.affiliation } } : undefined,
-    publisher: { '@id': 'https://uneom.com/#organization' },
-    mainEntityOfPage: `https://uneom.com/blog/${post.slug}/`,
-    articleSection: cat?.nameEn,
-    inLanguage: 'en',
-    wordCount: post.sections.reduce((acc, s) => acc + s.body.split(/\s+/).length, post.lead.split(/\s+/).length)
-  };
+    authorName: post.author.name,
+    authorTitle: post.author.title,
+    reviewerName: post.reviewer?.name,
+    reviewerTitle: post.reviewer?.title,
+    reviewerAffiliation: post.reviewer?.affiliation,
+    section: cat?.nameEn,
+    wordCount: post.sections.reduce((acc, s) => acc + s.body.split(/\s+/).length, post.lead.split(/\s+/).length),
+    locale: 'en'
+  });
 
   return (
     <>
-      <JsonLd data={[articleSchema, faqSchema(post.faqs)]} />
+      <JsonLd data={[schema, faqSchema(post.faqs)]} />
       <Breadcrumbs items={[
         { name: 'Editorial', path: '/blog/' },
         ...(cat ? [{ name: cat.nameEn, path: `/blog/category/${cat.slug}/` }] : []),

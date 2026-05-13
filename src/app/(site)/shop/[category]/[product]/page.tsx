@@ -8,7 +8,7 @@ import { SectionHeader } from '@/components/ui/SectionHeader';
 import { SiloLinks } from '@/components/ui/SiloLinks';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { JsonLd } from '@/lib/seo/JsonLd';
-import { faqSchema } from '@/lib/seo/schemas';
+import { faqSchema, productSchema } from '@/lib/seo/schemas';
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -41,28 +41,12 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
   const cat = PRODUCT_CATEGORIES_BY_SLUG[p.category];
   const industry = INDUSTRIES_BY_SLUG[p.industry];
 
-  const productSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    '@id': `https://uneom.com/shop/${p.category}/${p.slug}/#product`,
-    name: p.nameEn,
-    alternateName: p.nameAr,
-    description: p.description,
-    image: `https://uneom.com/images/${p.image}.avif`,
-    brand: { '@type': 'Brand', name: 'UNEOM' },
-    manufacturer: { '@id': 'https://uneom.com/#organization' },
-    category: cat?.nameEn,
-    material: p.fabric,
-    audience: { '@type': 'BusinessAudience', name: 'Saudi enterprises' },
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'SAR',
-      lowPrice: p.priceFrom,
-      offerCount: p.sizes.length * p.colors.length,
-      availability: 'https://schema.org/InStock',
-      potentialAction: { '@type': 'ReserveAction', target: { '@type': 'EntryPoint', urlTemplate: `https://uneom.com/quote/?product=${p.slug}` } }
-    }
-  };
+  const schema = productSchema({
+    slug: p.slug, category: p.category, name: p.nameEn, alternateName: p.nameAr,
+    description: p.description, image: p.image, categoryName: cat?.nameEn || '', fabric: p.fabric,
+    priceFrom: p.priceFrom, sizes: p.sizes, colors: p.colors, locale: 'en',
+    compliance: p.compliance, warrantyMonths: p.numericAnchors?.warrantyMonths
+  });
 
   // FAQ schema if available
   const faqs = p.expandedFaqs?.map(f => ({ q: f.qEn, a: f.aEn })) ?? [];
@@ -72,6 +56,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: `Care instructions for ${p.nameEn}`,
+    inLanguage: 'en',
     step: p.careInstructions.en.map((s, i) => ({
       '@type': 'HowToStep',
       position: i + 1,
@@ -82,7 +67,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
 
   return (
     <>
-      <JsonLd data={productSchema} />
+      <JsonLd data={schema} />
       {faqs.length > 0 && <JsonLd data={faqSchema(faqs)} />}
       {howToSchema && <JsonLd data={howToSchema} />}
       <Breadcrumbs items={[

@@ -8,7 +8,7 @@ import { SectionHeader } from '@/components/ui/SectionHeader';
 import { SiloLinks } from '@/components/ui/SiloLinks';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { JsonLd } from '@/lib/seo/JsonLd';
-import { faqSchema } from '@/lib/seo/schemas';
+import { faqSchema, productSchema } from '@/lib/seo/schemas';
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -41,26 +41,12 @@ export default async function ArProductPage({ params }: { params: Promise<{ cate
   const cat = PRODUCT_CATEGORIES_BY_SLUG[p.category];
   const industry = INDUSTRIES_BY_SLUG[p.industry];
 
-  const productSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    '@id': `https://uneom.com/ar/shop/${p.category}/${p.slug}/#product`,
-    name: p.nameAr,
-    alternateName: p.nameEn,
-    description: p.descriptionAr,
-    image: `https://uneom.com/images/${p.image}.avif`,
-    brand: { '@type': 'Brand', name: 'UNEOM' },
-    manufacturer: { '@id': 'https://uneom.com/#organization' },
-    category: cat?.nameAr,
-    material: p.fabricAr,
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'SAR',
-      lowPrice: p.priceFrom,
-      offerCount: p.sizes.length * p.colors.length,
-      availability: 'https://schema.org/InStock',
-    }
-  };
+  const schema = productSchema({
+    slug: p.slug, category: p.category, name: p.nameAr, alternateName: p.nameEn,
+    description: p.descriptionAr, image: p.image, categoryName: cat?.nameAr || '', fabric: p.fabricAr,
+    priceFrom: p.priceFrom, sizes: p.sizes, colors: p.colorsAr, locale: 'ar',
+    compliance: p.compliance, warrantyMonths: p.numericAnchors?.warrantyMonths
+  });
 
   // FAQ schema (AR for AR page)
   const faqs = p.expandedFaqs?.map(f => ({ q: f.qAr, a: f.aAr })) ?? [];
@@ -81,7 +67,7 @@ export default async function ArProductPage({ params }: { params: Promise<{ cate
 
   return (
     <>
-      <JsonLd data={productSchema} />
+      <JsonLd data={schema} />
       {faqs.length > 0 && <JsonLd data={faqSchema(faqs)} />}
       {howToSchema && <JsonLd data={howToSchema} />}
       <Breadcrumbs items={[

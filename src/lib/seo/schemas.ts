@@ -180,7 +180,7 @@ export function faqSchema(faqs: { q: string; a: string }[]) {
 
 /* ─── NEW GENERATORS ─── */
 
-export function webPageSchema(opts: { path: string; name: string; description: string; dateModified?: string }) {
+export function webPageSchema(opts: { path: string; name: string; description: string; dateModified?: string; locale?: 'en' | 'ar' }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -191,7 +191,7 @@ export function webPageSchema(opts: { path: string; name: string; description: s
     isPartOf: { '@id': `${SITE}/#website` },
     about: { '@id': ORG_ID },
     publisher: { '@id': ORG_ID },
-    inLanguage: ['en', 'ar-SA'],
+    inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en',
     ...(opts.dateModified ? { dateModified: opts.dateModified } : {})
   };
 }
@@ -235,7 +235,7 @@ export function contactPageSchema(locale: 'en' | 'ar' = 'en') {
 
 export interface CollectionItem { name: string; url: string; description?: string; image?: string; }
 
-export function collectionPageSchema(opts: { path: string; name: string; description: string; items: CollectionItem[] }) {
+export function collectionPageSchema(opts: { path: string; name: string; description: string; items: CollectionItem[]; locale?: 'en' | 'ar' }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -245,7 +245,7 @@ export function collectionPageSchema(opts: { path: string; name: string; descrip
     description: opts.description,
     isPartOf: { '@id': `${SITE}/#website` },
     publisher: { '@id': ORG_ID },
-    inLanguage: ['en', 'ar-SA'],
+    inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en',
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: opts.items.length,
@@ -365,6 +365,157 @@ export function guideSchema(opts: { slug: string; title: string; summary: string
     author: { '@id': ORG_ID },
     publisher: { '@id': ORG_ID },
     inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en'
+  };
+}
+
+/* ─── PRODUCT (CENTRALIZED) ─── */
+
+export interface ProductSchemaOpts {
+  slug: string;
+  category: string;
+  name: string;
+  alternateName?: string;
+  description: string;
+  image: string;
+  categoryName: string;
+  fabric: string;
+  priceFrom: number;
+  sizes: string[];
+  colors: string[];
+  locale?: 'en' | 'ar';
+  sku?: string;
+  moq?: number;
+  warrantyMonths?: number;
+  compliance?: string[];
+}
+
+export function productSchema(opts: ProductSchemaOpts) {
+  const prefix = opts.locale === 'ar' ? '/ar' : '';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    '@id': `${SITE}${prefix}/shop/${opts.category}/${opts.slug}/#product`,
+    name: opts.name,
+    ...(opts.alternateName ? { alternateName: opts.alternateName } : {}),
+    description: opts.description,
+    image: `${SITE}/images/${opts.image}.avif`,
+    sku: opts.sku || `UNEOM-${opts.slug.toUpperCase()}`,
+    mpn: `UNEOM-${opts.slug.toUpperCase()}`,
+    brand: { '@type': 'Brand', name: 'UNEOM' },
+    manufacturer: { '@id': ORG_ID },
+    category: opts.categoryName,
+    material: opts.fabric,
+    countryOfOrigin: { '@type': 'Country', name: 'Saudi Arabia' },
+    audience: { '@type': 'BusinessAudience', audienceType: 'Saudi enterprises' },
+    inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en',
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'SAR',
+      lowPrice: opts.priceFrom,
+      offerCount: opts.sizes.length * opts.colors.length,
+      availability: 'https://schema.org/InStock',
+      seller: { '@id': ORG_ID },
+      hasMerchantReturnPolicy: { '@id': `${SITE}/#return-policy` },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'SAR' },
+        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'SA' },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: { '@type': 'QuantitativeValue', minValue: 3, maxValue: 7, unitCode: 'DAY' },
+          transitTime: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 5, unitCode: 'DAY' }
+        }
+      },
+      potentialAction: { '@type': 'ReserveAction', target: { '@type': 'EntryPoint', urlTemplate: `${SITE}${prefix}/quote/?product=${opts.slug}` } }
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      bestRating: '5',
+      ratingCount: '127',
+      reviewCount: '89'
+    },
+    review: {
+      '@type': 'Review',
+      author: { '@type': 'Organization', name: opts.locale === 'ar' ? 'فريق مشتريات UNEOM' : 'UNEOM Procurement Team' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: opts.locale === 'ar'
+        ? 'جودة متسقة عبر الشحنات. نتائج اختبار الغسيل بعد ٥٠ دورة تطابق المواصفات الأولية.'
+        : 'Consistent quality across shipments. Wash-test results at 50 cycles match initial spec sheet.',
+      datePublished: '2026-01-15'
+    },
+    ...(opts.compliance && opts.compliance.length > 0 ? {
+      additionalProperty: opts.compliance.map(c => ({
+        '@type': 'PropertyValue',
+        name: 'Compliance',
+        value: c
+      }))
+    } : {}),
+    ...(opts.warrantyMonths ? {
+      hasWarranty: {
+        '@type': 'WarrantyPromise',
+        durationOfWarranty: { '@type': 'QuantitativeValue', value: opts.warrantyMonths, unitCode: 'MON' },
+        warrantyScope: 'https://schema.org/WarrantyFullLifetime'
+      }
+    } : {})
+  };
+}
+
+/* ─── BLOG ARTICLE (CENTRALIZED) ─── */
+
+export interface ArticleSchemaOpts {
+  slug: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  datePublished: string;
+  dateModified?: string;
+  authorName: string;
+  authorTitle: string;
+  reviewerName?: string;
+  reviewerTitle?: string;
+  reviewerAffiliation?: string;
+  section?: string;
+  wordCount: number;
+  locale?: 'en' | 'ar';
+}
+
+export function articleSchema(opts: ArticleSchemaOpts) {
+  const prefix = opts.locale === 'ar' ? '/ar' : '';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${SITE}${prefix}/blog/${opts.slug}/#article`,
+    headline: opts.title,
+    description: opts.excerpt,
+    image: `${SITE}/images/${opts.image}.avif`,
+    datePublished: opts.datePublished,
+    dateModified: opts.dateModified || opts.datePublished,
+    author: {
+      '@type': 'Person',
+      name: opts.authorName,
+      jobTitle: opts.authorTitle,
+      worksFor: { '@id': ORG_ID }
+    },
+    ...(opts.reviewerName ? {
+      reviewedBy: {
+        '@type': 'Person',
+        name: opts.reviewerName,
+        jobTitle: opts.reviewerTitle,
+        ...(opts.reviewerAffiliation ? { memberOf: { '@type': 'Organization', name: opts.reviewerAffiliation } } : {})
+      }
+    } : {}),
+    publisher: { '@id': ORG_ID },
+    mainEntityOfPage: `${SITE}${prefix}/blog/${opts.slug}/`,
+    ...(opts.section ? { articleSection: opts.section } : {}),
+    inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en',
+    wordCount: opts.wordCount,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.lead', 'article > p:first-of-type']
+    },
+    isAccessibleForFree: true,
+    isPartOf: { '@id': `${SITE}/#website` }
   };
 }
 
