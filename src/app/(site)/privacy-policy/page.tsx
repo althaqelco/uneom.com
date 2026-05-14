@@ -6,7 +6,14 @@ import { webPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'How UNEOM collects, uses, and protects personal data — aligned to Saudi Arabia\'s Personal Data Protection Law (PDPL).',
-  alternates: { canonical: 'https://uneom.com/privacy-policy/' }
+  alternates: {
+    canonical: 'https://uneom.com/privacy-policy/',
+    languages: {
+      en: 'https://uneom.com/privacy-policy/',
+      'ar-SA': 'https://uneom.com/ar/privacy-policy/',
+      'x-default': 'https://uneom.com/privacy-policy/'
+    }
+  }
 };
 
 export default function PrivacyPolicyPage() {

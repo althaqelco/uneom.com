@@ -11,7 +11,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'الأدلة — دليلك لبرامج الزي الموحّد السعودي',
   description: '12 دليلاً عميقاً يغطّي علم الأقمشة، المقاسات، المشتريات، الامتثال، الاستدامة، والأطر التشغيلية وراء كل برنامج من UNEOM.',
-  alternates: { canonical: 'https://uneom.com/ar/resources/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/resources/',
+    languages: {
+      en: 'https://uneom.com/resources/',
+      'ar-SA': 'https://uneom.com/ar/resources/',
+      'x-default': 'https://uneom.com/resources/'
+    }
+  }
 };
 
 export default function ArResourcesHubPage() {

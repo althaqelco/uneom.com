@@ -19,7 +19,14 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   return {
     title: `${cat.nameAr} — UNEOM`,
     description: cat.summaryAr,
-    alternates: { canonical: `https://uneom.com/ar/shop/${category}/` },
+    alternates: {
+      canonical: `https://uneom.com/ar/shop/${category}/`,
+      languages: {
+        en: `https://uneom.com/shop/${category}/`,
+        'ar-SA': `https://uneom.com/ar/shop/${category}/`,
+        'x-default': `https://uneom.com/shop/${category}/`
+      }
+    },
     openGraph: { title: `${cat.nameAr} — UNEOM`, description: cat.summaryAr, images: [{ url: `/images/${cat.hero}.avif`, width: 1920, height: 1080 }] }
   };
 }

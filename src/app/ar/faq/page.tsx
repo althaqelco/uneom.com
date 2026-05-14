@@ -8,7 +8,14 @@ import { CtaBlock } from '@/components/ui/CtaBlock';
 export const metadata: Metadata = {
   title: 'الأسئلة الشائعة — برامج الزي الموحّد UNEOM السعودية',
   description: 'أسئلة شائعة حول برامج الزي الموحّد من UNEOM: أوقات التسليم، التخصيص، مواصفات الأقمشة، الامتثال، العمليات متعددة المدن، ودورات الاستبدال.',
-  alternates: { canonical: 'https://uneom.com/ar/faq/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/faq/',
+    languages: {
+      en: 'https://uneom.com/faq/',
+      'ar-SA': 'https://uneom.com/ar/faq/',
+      'x-default': 'https://uneom.com/faq/'
+    }
+  }
 };
 
 const FAQS = [

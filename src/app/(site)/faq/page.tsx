@@ -8,7 +8,14 @@ import { CtaBlock } from '@/components/ui/CtaBlock';
 export const metadata: Metadata = {
   title: 'FAQ — UNEOM Saudi Uniform Programmes',
   description: 'Common questions about UNEOM uniform programmes: lead times, customisation, fabric specs, compliance, multi-city operations, and replacement cycles.',
-  alternates: { canonical: 'https://uneom.com/faq/' }
+  alternates: {
+    canonical: 'https://uneom.com/faq/',
+    languages: {
+      en: 'https://uneom.com/faq/',
+      'ar-SA': 'https://uneom.com/ar/faq/',
+      'x-default': 'https://uneom.com/faq/'
+    }
+  }
 };
 
 const FAQS: { q: string; a: string }[] = [

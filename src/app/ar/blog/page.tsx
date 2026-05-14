@@ -10,7 +10,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'المقالات — رؤى من داخل صناعة الزي الموحّد السعودي',
   description: 'تحرير طويل الأمد حول برامج الزي الموحّد السعودية — علم الأقمشة، الأطر التنظيمية، واقع المشتريات، والحقائق التشغيلية التي تتجاهلها الكتالوجات.',
-  alternates: { canonical: 'https://uneom.com/ar/blog/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/blog/',
+    languages: {
+      en: 'https://uneom.com/blog/',
+      'ar-SA': 'https://uneom.com/ar/blog/',
+      'x-default': 'https://uneom.com/blog/'
+    }
+  }
 };
 
 function PostCard({ post }: { post: typeof BLOG_POSTS[number] }) {

@@ -6,7 +6,14 @@ import { webPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'Terms governing the use of uneom.com and engagement with UNEOM uniform programmes.',
-  alternates: { canonical: 'https://uneom.com/terms-of-service/' }
+  alternates: {
+    canonical: 'https://uneom.com/terms-of-service/',
+    languages: {
+      en: 'https://uneom.com/terms-of-service/',
+      'ar-SA': 'https://uneom.com/ar/terms-of-service/',
+      'x-default': 'https://uneom.com/terms-of-service/'
+    }
+  }
 };
 
 export default function TermsPage() {

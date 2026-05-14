@@ -8,7 +8,14 @@ import { QuoteFormEN } from '@/components/forms/QuoteFormEN';
 export const metadata: Metadata = {
   title: 'Request a Quote — UNEOM Programme Proposal',
   description: 'Tell us about your uniform programme. UNEOM responds within one business day with sample garments, fabric options, and a programme proposal.',
-  alternates: { canonical: 'https://uneom.com/quote/' }
+  alternates: {
+    canonical: 'https://uneom.com/quote/',
+    languages: {
+      en: 'https://uneom.com/quote/',
+      'ar-SA': 'https://uneom.com/ar/quote/',
+      'x-default': 'https://uneom.com/quote/'
+    }
+  }
 };
 
 export default function QuotePage() {

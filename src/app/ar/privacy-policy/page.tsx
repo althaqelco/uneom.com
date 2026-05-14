@@ -6,7 +6,14 @@ import { webPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'سياسة الخصوصية — UNEOM',
   description: 'كيف تجمع UNEOM البيانات الشخصية وتستخدمها وتحميها — متوافقة مع نظام حماية البيانات الشخصية السعودي.',
-  alternates: { canonical: 'https://uneom.com/ar/privacy-policy/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/privacy-policy/',
+    languages: {
+      en: 'https://uneom.com/privacy-policy/',
+      'ar-SA': 'https://uneom.com/ar/privacy-policy/',
+      'x-default': 'https://uneom.com/privacy-policy/'
+    }
+  }
 };
 
 export default function ArPrivacyPolicyPage() {

@@ -18,7 +18,14 @@ import { webPageSchema, collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata = {
   title: 'UNEOM — يونيفورم وزي موحد في السعودية | سكراب طبي، يونيفورم مدارس، الزي الموحد للشركات',
   description: `شركة الزي الموحد الرائدة في السعودية. ${COMPANY_STATS.activeClients}+ مؤسسة تثق بـ UNEOM — يونيفورم عاملات، سكراب طبي، يونيفورم مطاعم، زي موحد للمدارس والشركات — تفصيل وخياطة الزي الموحد في الرياض وجدة والدمام وكل المدن الـ 24.`,
-  alternates: { canonical: 'https://uneom.com/ar/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/',
+    languages: {
+      en: 'https://uneom.com/',
+      'ar-SA': 'https://uneom.com/ar/',
+      'x-default': 'https://uneom.com/'
+    }
+  }
 };
 
 export default function ArHomePage() {

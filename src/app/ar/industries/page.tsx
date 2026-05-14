@@ -11,7 +11,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'جميع القطاعات الـ 8 — برامج الزي الموحّد السعودي',
   description: 'UNEOM تخدم ثمانية قطاعات في المملكة العربية السعودية: الرعاية الصحية، الضيافة، الطيران، الشركات، التعليم، التصنيع، الأمن، والتجزئة. كل واحد مُنظَّم ومُتقَن.',
-  alternates: { canonical: 'https://uneom.com/ar/industries/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/industries/',
+    languages: {
+      en: 'https://uneom.com/industries/',
+      'ar-SA': 'https://uneom.com/ar/industries/',
+      'x-default': 'https://uneom.com/industries/'
+    }
+  }
 };
 
 export default function ArIndustriesHubPage() {

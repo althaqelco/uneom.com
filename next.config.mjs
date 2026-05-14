@@ -76,7 +76,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Link',
-            value: '</.well-known/api-catalog>; rel="api-catalog", </.well-known/mcp/server-card.json>; rel="service-desc", </.well-known/agent-skills/index.json>; rel="describedby", </llms.txt>; rel="service-doc"'
+            value: '</.well-known/api-catalog>; rel="api-catalog", </.well-known/mcp/server-card.json>; rel="mcp", </.well-known/agent-skills/index.json>; rel="agent-skills", </.well-known/ucp>; rel="ucp", </llms.txt>; rel="service-doc"'
           }
         ]
       },

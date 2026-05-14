@@ -10,7 +10,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'Resources — Saudi Uniform Programme Guides',
   description: '12 deep guides covering fabric science, sizing, procurement, compliance, sustainability, and the operational frameworks behind every UNEOM programme.',
-  alternates: { canonical: 'https://uneom.com/resources/' }
+  alternates: {
+    canonical: 'https://uneom.com/resources/',
+    languages: {
+      en: 'https://uneom.com/resources/',
+      'ar-SA': 'https://uneom.com/ar/resources/',
+      'x-default': 'https://uneom.com/resources/'
+    }
+  }
 };
 
 export default function ResourcesHubPage() {

@@ -9,7 +9,14 @@ import { webPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'الوظائف — ابنِ برامج، لا كتالوجات',
   description: 'UNEOM توظّف في العمليات والتصميم والتصنيع وفرق القياسات الميدانية. ملكية سعودية، تركيز على البرامج، ومبنية للمدى البعيد.',
-  alternates: { canonical: 'https://uneom.com/ar/careers/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/careers/',
+    languages: {
+      en: 'https://uneom.com/careers/',
+      'ar-SA': 'https://uneom.com/ar/careers/',
+      'x-default': 'https://uneom.com/careers/'
+    }
+  }
 };
 
 const ROLES = [

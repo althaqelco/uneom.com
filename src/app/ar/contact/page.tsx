@@ -7,7 +7,14 @@ import { contactPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'تواصل مع UNEOM — فريق العمليات السعودي',
   description: 'تحدّث مباشرة مع فريق عمليات UNEOM. راسلنا على info@uneom.com أو اتصل على +966 56 461 2017. نردّ خلال يوم عمل واحد، كل يوم أسبوع.',
-  alternates: { canonical: 'https://uneom.com/ar/contact/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/contact/',
+    languages: {
+      en: 'https://uneom.com/contact/',
+      'ar-SA': 'https://uneom.com/ar/contact/',
+      'x-default': 'https://uneom.com/contact/'
+    }
+  }
 };
 
 export default function ArContactPage() {

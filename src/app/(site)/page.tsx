@@ -17,7 +17,15 @@ import { webPageSchema, collectionPageSchema } from '@/lib/seo/schemas';
 
 export const metadata = {
   title: 'UNEOM — Saudi Arabia Uniform Company | Medical Scrubs, School Uniforms, Corporate Workwear',
-  description: COMPANY_STATS.activeClients + '+ Saudi enterprises trust UNEOM for medical uniforms, scrub suits, school uniforms, chef uniforms, coverall uniforms, safety uniforms, and corporate workwear — uniform shop serving all 24 Saudi cities from Riyadh, Jeddah, and Dammam.'
+  description: COMPANY_STATS.activeClients + '+ Saudi enterprises trust UNEOM for medical uniforms, scrub suits, school uniforms, chef uniforms, coverall uniforms, safety uniforms, and corporate workwear — uniform shop serving all 24 Saudi cities from Riyadh, Jeddah, and Dammam.',
+  alternates: {
+    canonical: 'https://uneom.com/',
+    languages: {
+      en: 'https://uneom.com/',
+      'ar-SA': 'https://uneom.com/ar/',
+      'x-default': 'https://uneom.com/'
+    }
+  }
 };
 
 export default function HomePage() {

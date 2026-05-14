@@ -10,7 +10,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'المتجر — منتجات رئيسية عبر جميع القطاعات الـ 8',
   description: '8 تصنيفات منتجات، 16 منتجاً رئيسياً. أزياء موحّدة بمستوى برامج مُصمَّمة لعملاء B2B السعوديين في الرعاية الصحية والضيافة والطيران والتصنيع وما بعدها.',
-  alternates: { canonical: 'https://uneom.com/ar/shop/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/shop/',
+    languages: {
+      en: 'https://uneom.com/shop/',
+      'ar-SA': 'https://uneom.com/ar/shop/',
+      'x-default': 'https://uneom.com/shop/'
+    }
+  }
 };
 
 export default function ArShopHubPage() {

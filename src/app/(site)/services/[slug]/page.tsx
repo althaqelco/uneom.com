@@ -20,7 +20,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${service.nameEn} — UNEOM`,
     description: service.summary,
-    alternates: { canonical: `https://uneom.com/services/${slug}/` },
+    alternates: {
+      canonical: `https://uneom.com/services/${slug}/`,
+      languages: {
+        en: `https://uneom.com/services/${slug}/`,
+        'ar-SA': `https://uneom.com/ar/services/${slug}/`,
+        'x-default': `https://uneom.com/services/${slug}/`
+      }
+    },
     openGraph: {
       title: `${service.nameEn} — UNEOM`,
       description: service.summary,

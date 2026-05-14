@@ -12,7 +12,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'جميع الـ 24 مدينة سعودية — تغطية برامج الزي الموحّد',
   description: 'UNEOM يُسلِّم برامج الزي الموحّد إلى جميع الـ 24 مدينة سعودية — من الرياض وجدة إلى عسير وتبوك والحدود الشمالية. قياسات ميدانية، مجموعات موظفين جدد، دورات استبدال.',
-  alternates: { canonical: 'https://uneom.com/ar/locations/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/locations/',
+    languages: {
+      en: 'https://uneom.com/locations/',
+      'ar-SA': 'https://uneom.com/ar/locations/',
+      'x-default': 'https://uneom.com/locations/'
+    }
+  }
 };
 
 export default function ArLocationsHubPage() {

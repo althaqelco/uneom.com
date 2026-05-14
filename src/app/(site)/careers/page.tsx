@@ -9,7 +9,14 @@ import { webPageSchema, jobPostingSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'Careers — Build Programmes, Not Catalogues',
   description: 'UNEOM is hiring across operations, design, manufacturing, and on-site fitting teams. Saudi-owned, programme-focused, and built for the long term.',
-  alternates: { canonical: 'https://uneom.com/careers/' }
+  alternates: {
+    canonical: 'https://uneom.com/careers/',
+    languages: {
+      en: 'https://uneom.com/careers/',
+      'ar-SA': 'https://uneom.com/ar/careers/',
+      'x-default': 'https://uneom.com/careers/'
+    }
+  }
 };
 
 const ROLES = [

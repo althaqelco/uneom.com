@@ -10,7 +10,14 @@ import { aboutPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'About UNEOM — Saudi B2B Uniform Manufacturer Since 2013',
   description: 'UNEOM is a Saudi-owned uniform manufacturer with 12 years of experience supplying healthcare, hospitality, aviation, manufacturing, and corporate clients across all 24 cities.',
-  alternates: { canonical: 'https://uneom.com/about/' }
+  alternates: {
+    canonical: 'https://uneom.com/about/',
+    languages: {
+      en: 'https://uneom.com/about/',
+      'ar-SA': 'https://uneom.com/ar/about/',
+      'x-default': 'https://uneom.com/about/'
+    }
+  }
 };
 
 export default function AboutPage() {

@@ -10,7 +10,14 @@ import { aboutPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'عن UNEOM — مصنّع الزي الموحّد السعودي B2B منذ 2013',
   description: 'UNEOM شركة سعودية لتصنيع الزي الموحّد بخبرة 12 عاماً في خدمة عملاء الرعاية الصحية والضيافة والطيران والتصنيع والشركات في جميع الـ 24 مدينة.',
-  alternates: { canonical: 'https://uneom.com/ar/about/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/about/',
+    languages: {
+      en: 'https://uneom.com/about/',
+      'ar-SA': 'https://uneom.com/ar/about/',
+      'x-default': 'https://uneom.com/about/'
+    }
+  }
 };
 
 export default function ArAboutPage() {

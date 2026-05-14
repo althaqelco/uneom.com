@@ -19,7 +19,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${c.titleAr} — UNEOM`,
     description: c.summaryAr,
-    alternates: { canonical: `https://uneom.com/ar/case-studies/${slug}/` },
+    alternates: {
+      canonical: `https://uneom.com/ar/case-studies/${slug}/`,
+      languages: {
+        en: `https://uneom.com/case-studies/${slug}/`,
+        'ar-SA': `https://uneom.com/ar/case-studies/${slug}/`,
+        'x-default': `https://uneom.com/case-studies/${slug}/`
+      }
+    },
     openGraph: { title: c.titleAr, description: c.summaryAr, images: [{ url: `/images/case-studies/${c.imageFolder}/after.avif`, width: 1200, height: 900 }] }
   };
 }

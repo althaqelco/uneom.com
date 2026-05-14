@@ -10,7 +10,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'Editorial — Insights from the Saudi Uniform Industry',
   description: 'Long-form editorial on Saudi uniform programmes — fabric science, regulatory frameworks, procurement realities, and the operational truths that catalogues skip.',
-  alternates: { canonical: 'https://uneom.com/blog/' }
+  alternates: {
+    canonical: 'https://uneom.com/blog/',
+    languages: {
+      en: 'https://uneom.com/blog/',
+      'ar-SA': 'https://uneom.com/ar/blog/',
+      'x-default': 'https://uneom.com/blog/'
+    }
+  }
 };
 
 function PostCard({ post }: { post: typeof BLOG_POSTS[number] }) {

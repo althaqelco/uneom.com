@@ -8,7 +8,14 @@ import { QuoteFormAR } from '@/components/forms/QuoteFormAR';
 export const metadata: Metadata = {
   title: 'طلب عرض سعر — مقترح برنامج UNEOM',
   description: 'أخبرنا عن برنامج الزي الموحّد الخاص بك. UNEOM يردّ خلال يوم عمل واحد بعيّنات قماش وخيارات تصميم ومقترح برنامج.',
-  alternates: { canonical: 'https://uneom.com/ar/quote/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/quote/',
+    languages: {
+      en: 'https://uneom.com/quote/',
+      'ar-SA': 'https://uneom.com/ar/quote/',
+      'x-default': 'https://uneom.com/quote/'
+    }
+  }
 };
 
 export default function ArQuotePage() {

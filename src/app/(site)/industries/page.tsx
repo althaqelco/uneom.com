@@ -11,7 +11,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'All 8 Industries — Saudi Uniform Programmes',
   description: 'UNEOM serves eight industry silos in Saudi Arabia: healthcare, hospitality, aviation, corporate, education, manufacturing, security, and retail. Each one regulated, each one mastered.',
-  alternates: { canonical: 'https://uneom.com/industries/' }
+  alternates: {
+    canonical: 'https://uneom.com/industries/',
+    languages: {
+      en: 'https://uneom.com/industries/',
+      'ar-SA': 'https://uneom.com/ar/industries/',
+      'x-default': 'https://uneom.com/industries/'
+    }
+  }
 };
 
 export default function IndustriesHubPage() {

@@ -10,7 +10,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'Shop — Hero Products Across All 8 Industry Silos',
   description: '8 product categories, 16 hero products. Programme-grade uniforms speced for Saudi B2B clients across healthcare, hospitality, aviation, manufacturing, and beyond.',
-  alternates: { canonical: 'https://uneom.com/shop/' }
+  alternates: {
+    canonical: 'https://uneom.com/shop/',
+    languages: {
+      en: 'https://uneom.com/shop/',
+      'ar-SA': 'https://uneom.com/ar/shop/',
+      'x-default': 'https://uneom.com/shop/'
+    }
+  }
 };
 
 export default function ShopHubPage() {

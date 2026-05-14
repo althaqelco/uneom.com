@@ -11,7 +11,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'دراسات الحالة — نتائج برامج الزي الموحّد السعودية',
   description: 'ثماني مؤسسات سعودية. ثماني تحوّلات في برامج الزي الموحّد. أرقام حقيقية، جداول زمنية حقيقية، قبل وبعد حقيقيان.',
-  alternates: { canonical: 'https://uneom.com/ar/case-studies/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/case-studies/',
+    languages: {
+      en: 'https://uneom.com/case-studies/',
+      'ar-SA': 'https://uneom.com/ar/case-studies/',
+      'x-default': 'https://uneom.com/case-studies/'
+    }
+  }
 };
 
 export default function ArCaseStudiesHubPage() {

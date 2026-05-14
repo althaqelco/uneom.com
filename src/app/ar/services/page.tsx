@@ -10,7 +10,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'الخدمات — عمليات برامج الزي الموحّد',
   description: 'التصميم المخصّص، الطلبات بالجملة، إدارة البرامج، ضمان الجودة، اختيار الأقمشة، قياسات ميدانية، وأزياء مستدامة. سبع خدمات، فريق عمليات واحد.',
-  alternates: { canonical: 'https://uneom.com/ar/services/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/services/',
+    languages: {
+      en: 'https://uneom.com/services/',
+      'ar-SA': 'https://uneom.com/ar/services/',
+      'x-default': 'https://uneom.com/services/'
+    }
+  }
 };
 
 export default function ArServicesHubPage() {

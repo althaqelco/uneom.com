@@ -6,7 +6,14 @@ import { webPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'شروط الخدمة — UNEOM',
   description: 'الشروط التي تحكم استخدام uneom.com والتعامل مع برامج الزي الموحّد من UNEOM.',
-  alternates: { canonical: 'https://uneom.com/ar/terms-of-service/' }
+  alternates: {
+    canonical: 'https://uneom.com/ar/terms-of-service/',
+    languages: {
+      en: 'https://uneom.com/terms-of-service/',
+      'ar-SA': 'https://uneom.com/ar/terms-of-service/',
+      'x-default': 'https://uneom.com/terms-of-service/'
+    }
+  }
 };
 
 export default function ArTermsPage() {

@@ -10,7 +10,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'Services — Uniform Programme Operations',
   description: 'Custom design, bulk ordering, programme management, quality assurance, fabric selection, on-site measurement, and sustainable uniforms. Seven services, one operations team.',
-  alternates: { canonical: 'https://uneom.com/services/' }
+  alternates: {
+    canonical: 'https://uneom.com/services/',
+    languages: {
+      en: 'https://uneom.com/services/',
+      'ar-SA': 'https://uneom.com/ar/services/',
+      'x-default': 'https://uneom.com/services/'
+    }
+  }
 };
 
 export default function ServicesHubPage() {

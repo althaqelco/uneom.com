@@ -17,7 +17,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${cat.nameEn} — Editorial`,
     description: cat.description,
-    alternates: { canonical: `https://uneom.com/blog/category/${slug}/` }
+    alternates: {
+      canonical: `https://uneom.com/blog/category/${slug}/`,
+      languages: {
+        en: `https://uneom.com/blog/category/${slug}/`,
+        'ar-SA': `https://uneom.com/ar/blog/category/${slug}/`,
+        'x-default': `https://uneom.com/blog/category/${slug}/`
+      }
+    }
   };
 }
 

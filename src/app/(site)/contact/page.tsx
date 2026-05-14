@@ -7,7 +7,14 @@ import { contactPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'Contact UNEOM — Saudi Operations Team',
   description: 'Talk to UNEOM operations directly. Email info@uneom.com or call +966 56 461 2017. We respond within one business day, every weekday.',
-  alternates: { canonical: 'https://uneom.com/contact/' }
+  alternates: {
+    canonical: 'https://uneom.com/contact/',
+    languages: {
+      en: 'https://uneom.com/contact/',
+      'ar-SA': 'https://uneom.com/ar/contact/',
+      'x-default': 'https://uneom.com/contact/'
+    }
+  }
 };
 
 export default function ContactPage() {

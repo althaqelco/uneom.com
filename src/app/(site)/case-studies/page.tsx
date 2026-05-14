@@ -10,7 +10,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'Case Studies — Saudi Uniform Programme Outcomes',
   description: 'Eight Saudi enterprises. Eight uniform programme transformations. Real numbers, real timelines, real before-and-after.',
-  alternates: { canonical: 'https://uneom.com/case-studies/' }
+  alternates: {
+    canonical: 'https://uneom.com/case-studies/',
+    languages: {
+      en: 'https://uneom.com/case-studies/',
+      'ar-SA': 'https://uneom.com/ar/case-studies/',
+      'x-default': 'https://uneom.com/case-studies/'
+    }
+  }
 };
 
 export default function CaseStudiesHubPage() {

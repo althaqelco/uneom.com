@@ -11,7 +11,14 @@ import { collectionPageSchema } from '@/lib/seo/schemas';
 export const metadata: Metadata = {
   title: 'All 24 Saudi Cities — Uniform Programme Coverage',
   description: 'UNEOM delivers uniform programmes across all 24 Saudi cities — from Riyadh and Jeddah to Asir, Tabuk, and Northern Borders. On-site fittings, joiner kits, replacement cycles.',
-  alternates: { canonical: 'https://uneom.com/locations/' }
+  alternates: {
+    canonical: 'https://uneom.com/locations/',
+    languages: {
+      en: 'https://uneom.com/locations/',
+      'ar-SA': 'https://uneom.com/ar/locations/',
+      'x-default': 'https://uneom.com/locations/'
+    }
+  }
 };
 
 export default function LocationsHubPage() {
