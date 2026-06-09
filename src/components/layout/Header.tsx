@@ -13,6 +13,7 @@ export function Header({ lang = 'en' }: { lang?: Lang }) {
     { label: ui.nav.industries, href: localizedHref('/industries/', lang) },
     { label: ui.nav.locations, href: localizedHref('/locations/', lang) },
     { label: ui.nav.services, href: localizedHref('/services/', lang) },
+    { label: ui.nav.shop, href: localizedHref('/shop/', lang) },
     { label: ui.nav.resources, href: localizedHref('/resources/', lang) },
     { label: ui.nav.caseStudies, href: localizedHref('/case-studies/', lang) }
   ];

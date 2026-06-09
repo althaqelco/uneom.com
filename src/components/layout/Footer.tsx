@@ -92,6 +92,7 @@ export function Footer({ lang = 'en' }: { lang?: Lang }) {
             <h3 id="footer-company" className="text-xs font-bold uppercase tracking-[0.18em] text-white/90">{ui.footer.company}</h3>
             <ul className="mt-5 space-y-2.5 text-sm">
               <li><Link href={localizedHref('/about/', lang)} className="text-navy-200/80 transition-colors hover:text-white">{isAr ? 'عن UNEOM' : 'About'}</Link></li>
+              <li><Link href={localizedHref('/shop/', lang)} className="text-navy-200/80 transition-colors hover:text-white">{ui.nav.shop}</Link></li>
               <li><Link href={localizedHref('/case-studies/', lang)} className="text-navy-200/80 transition-colors hover:text-white">{ui.nav.caseStudies}</Link></li>
               <li><Link href={localizedHref('/blog/', lang)} className="text-navy-200/80 transition-colors hover:text-white">{ui.nav.blog}</Link></li>
               <li><Link href={localizedHref('/careers/', lang)} className="text-navy-200/80 transition-colors hover:text-white">{isAr ? 'الوظائف' : 'Careers'}</Link></li>
