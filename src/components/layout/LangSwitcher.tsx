@@ -27,7 +27,7 @@ export function LangSwitcher({ lang }: { lang: Lang }) {
   return (
     <Link
       href={mirrorHref}
-      className="hidden text-sm font-medium text-ink-500 hover:text-navy-900 sm:inline-flex"
+      className="inline-flex items-center justify-center text-xs font-semibold text-ink-500 hover:text-navy-900 sm:text-sm rounded-full px-2.5 py-1 bg-ink-50 hover:bg-ink-100 transition-colors"
       aria-label={ariaLabel}
     >
       <span lang={lang === 'ar' ? 'en' : 'ar'} dir={lang === 'ar' ? 'ltr' : 'rtl'}>
