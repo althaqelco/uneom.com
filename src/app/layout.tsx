@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   creator: 'UNEOM',
   publisher: 'UNEOM',
   robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  // Google Search Console ownership token — carried over from the previous
+  // architecture; v2 shipped without any site verification.
+  verification: { google: 'k27-50XLg0yC-wwjyTIqfkGiowHO5nrAjTNiYmmf7is' },
   alternates: {
     canonical: 'https://uneom.com/',
     languages: {

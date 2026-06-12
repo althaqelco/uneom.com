@@ -478,8 +478,45 @@ const nextConfig = {
       { source: '/ar/case-studies/luxury-salon-evolution/',    destination: '/ar/case-studies/luxury-salon/', permanent: true },
     ];
 
+    // ─────────────────────────────────────────────────────────────────────────
+    // LAYER 11 — Pre-v2 platform legacy (live-verified 404s, June 2026 audit)
+    // (a) Old legal paths: /privacy/ and /terms/ were live-confirmed 404 and
+    //     are still indexed; consolidate onto the current legal pages.
+    // (b) The pre-Next /sectors/ architecture still surfaces in Google
+    //     (site:uneom.com shows /sectors/education/ etc.); map known slugs
+    //     onto /industries/ (v2 slugs verified: corporate, education, …).
+    // (c) City slug aliases: old links used jubail/jizan/qatif while the
+    //     canonical SAUDI_CITIES slugs are al-jubail/jazan/al-qatif.
+    // ─────────────────────────────────────────────────────────────────────────
+    const legacyPlatform = [
+      // (a) Legal
+      { source: '/privacy/',              destination: '/privacy-policy/',       permanent: true },
+      { source: '/ar/privacy/',           destination: '/ar/privacy-policy/',    permanent: true },
+      { source: '/terms/',                destination: '/terms-of-service/',     permanent: true },
+      { source: '/ar/terms/',             destination: '/ar/terms-of-service/',  permanent: true },
+      { source: '/terms-conditions/',     destination: '/terms-of-service/',     permanent: true },
+      { source: '/ar/terms-conditions/',  destination: '/ar/terms-of-service/',  permanent: true },
+
+      // (b) /sectors/ → /industries/
+      { source: '/sectors/business-wear-uniform-companies/',    destination: '/industries/corporate/',    permanent: true },
+      { source: '/ar/sectors/business-wear-uniform-companies/', destination: '/ar/industries/corporate/', permanent: true },
+      { source: '/sectors/:slug/',     destination: '/industries/:slug/',     permanent: true },
+      { source: '/ar/sectors/:slug/',  destination: '/ar/industries/:slug/',  permanent: true },
+      { source: '/sectors/',           destination: '/industries/',           permanent: true },
+      { source: '/ar/sectors/',        destination: '/ar/industries/',        permanent: true },
+
+      // (c) City slug aliases
+      { source: '/locations/jubail/:path*',     destination: '/locations/al-jubail/:path*',    permanent: true },
+      { source: '/ar/locations/jubail/:path*',  destination: '/ar/locations/al-jubail/:path*', permanent: true },
+      { source: '/locations/jizan/:path*',      destination: '/locations/jazan/:path*',        permanent: true },
+      { source: '/ar/locations/jizan/:path*',   destination: '/ar/locations/jazan/:path*',     permanent: true },
+      { source: '/locations/qatif/:path*',      destination: '/locations/al-qatif/:path*',     permanent: true },
+      { source: '/ar/locations/qatif/:path*',   destination: '/ar/locations/al-qatif/:path*',  permanent: true },
+    ];
+
     return [
       ...wildcards,
+      ...legacyPlatform,
       ...blogPostsSpecific,
       ...blogPostsWildcard,
       ...blogDeprecated,
