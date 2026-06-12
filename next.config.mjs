@@ -508,7 +508,16 @@ const nextConfig = {
       { source: '/sectors/',           destination: '/industries/',           permanent: true },
       { source: '/ar/sectors/',        destination: '/ar/industries/',        permanent: true },
 
-      // (c) City slug aliases
+      // (c) City slug aliases — bare-path rules FIRST so the hub URL
+      // resolves in a single hop (the :path* wildcard alone emits a
+      // slash-less destination for the bare URL, costing a second 308
+      // through the trailingSlash normalizer).
+      { source: '/locations/jubail/',     destination: '/locations/al-jubail/',    permanent: true },
+      { source: '/ar/locations/jubail/',  destination: '/ar/locations/al-jubail/', permanent: true },
+      { source: '/locations/jizan/',      destination: '/locations/jazan/',        permanent: true },
+      { source: '/ar/locations/jizan/',   destination: '/ar/locations/jazan/',     permanent: true },
+      { source: '/locations/qatif/',      destination: '/locations/al-qatif/',     permanent: true },
+      { source: '/ar/locations/qatif/',   destination: '/ar/locations/al-qatif/',  permanent: true },
       { source: '/locations/jubail/:path*',     destination: '/locations/al-jubail/:path*',    permanent: true },
       { source: '/ar/locations/jubail/:path*',  destination: '/ar/locations/al-jubail/:path*', permanent: true },
       { source: '/locations/jizan/:path*',      destination: '/locations/jazan/:path*',        permanent: true },
