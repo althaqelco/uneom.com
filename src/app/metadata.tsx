@@ -51,11 +51,11 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1}},
   alternates: {
-    canonical: 'https://uneom.com',
+    canonical: 'https://uneom.com/',
     languages: {
-      'en': 'https://uneom.com',
-      'ar': 'https://uneom.com/ar'}},
-  verification: {
-    google: 'google-site-verification-code-here'},
-  other: {
-    'baidu-site-verification': 'baidu-verification-code-here'}}; 
+      'en': 'https://uneom.com/',
+      'ar-SA': 'https://uneom.com/ar/',
+      'x-default': 'https://uneom.com/'}}};
+  // Verification is declared once in src/app/layout.tsx (real GSC token).
+  // Never ship placeholder verification codes — they render as invalid
+  // meta tags on every page.

@@ -18,11 +18,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!industry) return { title: 'القطاع غير موجود | UNEOM' };
 
   return {
-    title: `${industry.nameAr} | UNEOM`,
+    title: `${industry.titleAr} | يونيوم`,
     description: industry.descriptionAr,
+    alternates: {
+      canonical: `https://uneom.com/ar/industries/${industry.id}/`,
+      languages: {
+        'en': `https://uneom.com/industries/${industry.id}/`,
+        'ar-SA': `https://uneom.com/ar/industries/${industry.id}/`,
+        'x-default': `https://uneom.com/industries/${industry.id}/`,
+      },
+    },
     openGraph: {
-      title: industry.nameAr,
+      title: industry.titleAr,
       description: industry.descriptionAr,
+      url: `https://uneom.com/ar/industries/${industry.id}/`,
       images: [{ url: industry.heroImage }]
     }
   };

@@ -10,15 +10,25 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const productId = slug[slug.length - 1];
   const productData = products.find(p => p.id === productId);
-  
+  const shopPath = slug.join('/');
+  const shopAlternates = {
+    canonical: `https://uneom.com/shop/${shopPath}/`,
+    languages: {
+      'en': `https://uneom.com/shop/${shopPath}/`,
+      'ar-SA': `https://uneom.com/ar/shop/${shopPath}/`,
+      'x-default': `https://uneom.com/shop/${shopPath}/`,
+    },
+  };
+
   if (productData) {
     return {
       title: `${productData.nameEn} | UNEOM Saudi Arabia`,
       description: productData.descriptionEn,
+      alternates: shopAlternates,
       openGraph: {
         title: `${productData.nameEn} | UNEOM Saudi Arabia`,
         description: productData.descriptionEn,
-        url: `https://uneom.com/shop/${slug.join('/')}`,
+        url: `https://uneom.com/shop/${shopPath}/`,
         siteName: 'UNEOM',
         images: [
           {
@@ -34,17 +44,17 @@ export async function generateMetadata(
   }
 
   // Check if it's a category
-  const categorySlug = slug.join('/');
-  const categoryProducts = products.filter(p => p.category === categorySlug);
+  const categoryProducts = products.filter(p => p.category === shopPath);
   if (categoryProducts.length > 0) {
     const catName = categoryProducts[0].categoryNameEn;
     return {
       title: `${catName} | Professional Uniforms | UNEOM`,
       description: `Explore our premium collection of ${catName.toLowerCase()}. High-quality, durable uniforms for Saudi Arabian businesses.`,
+      alternates: shopAlternates,
       openGraph: {
         title: `${catName} | UNEOM`,
         description: `Explore our premium collection of ${catName.toLowerCase()}.`,
-        url: `https://uneom.com/shop/${categorySlug}`,
+        url: `https://uneom.com/shop/${shopPath}/`,
         siteName: 'UNEOM',
         locale: 'en_US'
       }

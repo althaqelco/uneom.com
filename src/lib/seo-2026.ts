@@ -195,10 +195,16 @@ export function generateMetadata2026(config: SEO2026Config): Metadata {
   } = config;
 
   const isArabic = locale === 'ar';
-  const currentUrl = canonical || `${BASE_URL}${path.startsWith('/') ? path : '/' + path}`.replace(/\/\//g, '/').replace('https:/', 'https://');
-  const alternateUrl = isArabic 
-    ? `${BASE_URL}${path.replace('/ar', '') || '/'}`.replace(/\/\//g, '/').replace('https:/', 'https://')
-    : `${BASE_URL}/ar${path.startsWith('/') ? path : '/' + path}`.replace(/\/\//g, '/').replace('https:/', 'https://');
+  // Normalize to a leading + trailing slash (next.config.mjs trailingSlash: true)
+  // and strip the /ar prefix ONLY when it is the locale segment — a naive
+  // replace('/ar', '') corrupts city paths like /locations/arar.
+  const rawPath = path.startsWith('/') ? path : '/' + path;
+  const pathWithSlash = rawPath.endsWith('/') ? rawPath : `${rawPath}/`;
+  const enPath = isArabic ? (pathWithSlash.replace(/^\/ar(\/|$)/, '/') || '/') : pathWithSlash;
+  const currentUrl = canonical || `${BASE_URL}${pathWithSlash}`;
+  const alternateUrl = isArabic
+    ? `${BASE_URL}${enPath}`
+    : `${BASE_URL}/ar${pathWithSlash}`;
 
   // Localized content
   const localTitle = isArabic ? (titleAr || title) : title;
@@ -214,8 +220,11 @@ export function generateMetadata2026(config: SEO2026Config): Metadata {
     ? [...keywordsAr, ...defaultKwAr, ...keywords, ...defaultKw]
     : [...keywords, ...defaultKw, ...keywordsAr, ...defaultKwAr];
 
-  // Full title with branding
-  const fullTitle = `${localTitle} | ${localSiteName}`;
+  // Full title with branding — never double-append the brand when the
+  // page title already contains it (prevents "… | UNEOM | UNEOM").
+  const fullTitle = localTitle.includes(localSiteName)
+    ? localTitle
+    : `${localTitle} | ${localSiteName}`;
 
   // Image URL
   const imageUrl = image.startsWith('http') ? image : `${BASE_URL}${image}`;
@@ -319,23 +328,19 @@ export function generateMetadata2026(config: SEO2026Config): Metadata {
       images: ogImages.map(img => img.url)
     },
     
-    // Alternates
+    // Alternates — x-default always points to the English version.
     alternates: {
       canonical: currentUrl,
       languages: {
-        'en-SA': isArabic ? alternateUrl : currentUrl,
+        'en': isArabic ? alternateUrl : currentUrl,
         'ar-SA': isArabic ? currentUrl : alternateUrl,
-        'x-default': currentUrl.replace('/ar', '')
-      },
-      types: {
-        'application/rss+xml': `${BASE_URL}/rss.xml`
+        'x-default': isArabic ? alternateUrl : currentUrl
       }
     },
-    
-    // Verification
+
+    // Verification (Google only — never ship placeholder codes)
     verification: {
-      google: 'k27-50XLg0yC-wwjyTIqfkGiowHO5nrAjTNiYmmf7is',
-      yandex: 'yandex-verification-code'
+      google: 'k27-50XLg0yC-wwjyTIqfkGiowHO5nrAjTNiYmmf7is'
     },
     
     // Category

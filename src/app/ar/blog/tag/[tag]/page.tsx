@@ -21,18 +21,22 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { tag } = params;
   const capitalizedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
-  
-  return generateMetadata2026({
-    title: `مقالات ${capitalizedTag} | مدونة يونيوم للأزياء المهنية`,
-    titleAr: `مقالات ${capitalizedTag} | مدونة يونيوم للأزياء المهنية`,
-    description: `اكتشف أحدث المقالات والنصائح والاتجاهات حول ${capitalizedTag} في مدونة يونيوم للأزياء الموحدة في السعودية.`,
-    descriptionAr: `اكتشف أحدث المقالات والنصائح والاتجاهات حول ${capitalizedTag} في مدونة يونيوم للأزياء الموحدة في السعودية.`,
-    keywords: ['مدونة', tag, 'زي موحد', 'السعودية'],
-    keywordsAr: ['مدونة', tag, 'زي موحد', 'السعودية'],
-    locale: 'ar',
-    pageType: 'article',
-    path: `/ar/blog/tag/${tag}`
-  });
+
+  return {
+    ...generateMetadata2026({
+      title: `مقالات ${capitalizedTag} | مدونة يونيوم للأزياء المهنية`,
+      titleAr: `مقالات ${capitalizedTag} | مدونة يونيوم للأزياء المهنية`,
+      description: `اكتشف أحدث المقالات والنصائح والاتجاهات حول ${capitalizedTag} في مدونة يونيوم للأزياء الموحدة في السعودية.`,
+      descriptionAr: `اكتشف أحدث المقالات والنصائح والاتجاهات حول ${capitalizedTag} في مدونة يونيوم للأزياء الموحدة في السعودية.`,
+      keywords: ['مدونة', tag, 'زي موحد', 'السعودية'],
+      keywordsAr: ['مدونة', tag, 'زي موحد', 'السعودية'],
+      locale: 'ar',
+      pageType: 'article',
+      path: `/ar/blog/tag/${tag}`
+    }),
+    // Thin tag archives: keep out of the index, follow links to articles.
+    robots: { index: false, follow: true },
+  };
 }
 
 export default function BlogTagPage({ params }: Props) {

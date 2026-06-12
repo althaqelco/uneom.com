@@ -1,22 +1,19 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '🇸🇦 الرائدة في تصنيع الأزياء المهنية والزي الموحد في السعودية | يونيوم',
+  title: 'يونيوم | تصنيع وتوريد الزي الموحد والأزياء المهنية في السعودية',
   description: 'شركة يونيوم الرائدة في تصنيع الأزياء المهنية والزي الموحد في السعودية. نخدم القطاعات الطبية والطيران والضيافة والشركات بأعلى معايير الجودة. خدمة شاملة في جميع أنحاء المملكة.',
   keywords: 'الأزياء المهنية السعودية, الزي الموحد, يونيوم, أزياء طبية, أزياء الطيران, الأزياء الصناعية, أزياء الضيافة, الأزياء التعليمية, أزياء الأمن, تصنيع الأزياء المهنية, الزي المدرسي, سكرابز طبية, أزياء المستشفيات, الرياض, جدة, الدمام',
-  alternates: {
-    canonical: 'https://uneom.com/ar',
-    languages: {
-      'en': 'https://uneom.com',
-      'ar': 'https://uneom.com/ar',
-    },
-  },
+  // NOTE: no `alternates` at layout level on purpose — a layout canonical is
+  // inherited by every /ar/* page that lacks its own and would mass-
+  // canonicalize them to the Arabic homepage. The /ar homepage gets its
+  // canonical + hreflang from generateMetadata2026 in src/app/ar/page.tsx.
   openGraph: {
-    title: '🇸🇦 الرائدة في تصنيع الأزياء المهنية والزي الموحد في السعودية | يونيوم',
+    title: 'يونيوم | تصنيع وتوريد الزي الموحد والأزياء المهنية في السعودية',
     description: 'شركة يونيوم الرائدة في تصنيع الأزياء المهنية والزي الموحد في السعودية. نخدم القطاعات الطبية والطيران والضيافة والشركات بأعلى معايير الجودة.',
-    url: 'https://uneom.com/ar',
+    url: 'https://uneom.com/ar/',
     siteName: 'يونيوم للأزياء المهنية',
-    locale: 'ar',
+    locale: 'ar_SA',
     type: 'website',
   },
 };

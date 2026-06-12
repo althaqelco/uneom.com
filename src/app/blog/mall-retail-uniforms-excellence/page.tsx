@@ -299,7 +299,7 @@ export default function MallRetailUniformsExcellencePage() {
                 <p className="text-rose-100 mb-6 max-w-2xl mx-auto">UNEOM partners with Saudi Arabia's leading retailers and malls to create uniform programs that enhance brand identity and customer experience.</p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/contact" className="bg-white text-rose-600 px-8 py-3 rounded-xl font-bold hover:bg-rose-50 transition-colors inline-flex items-center gap-2">Request Consultation<ArrowRightIcon className="h-5 w-5" /></Link>
-                  <Link href="/industries/retail" className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">View Retail Solutions</Link>
+                  <Link href="/industries/retail-shops/" className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">View Retail Solutions</Link>
                 </div>
               </div>
             </section>

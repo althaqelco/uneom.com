@@ -233,7 +233,7 @@ export default function MallRetailUniformsExcellencePageAr() {
                 <p className="text-rose-100 mb-6 max-w-2xl mx-auto">يونيوم تشارك كبار تجار التجزئة والمولات في السعودية لإنشاء برامج زي تعزز هوية العلامة التجارية وتجربة العملاء.</p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/ar/contact" className="bg-white text-rose-600 px-8 py-3 rounded-xl font-bold hover:bg-rose-50 transition-colors inline-flex items-center gap-2">طلب استشارة<ArrowLeftIcon className="h-5 w-5" /></Link>
-                  <Link href="/ar/industries/retail" className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">عرض حلول التجزئة</Link>
+                  <Link href="/ar/industries/retail-shops/" className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">عرض حلول التجزئة</Link>
                 </div>
               </div>
             </section>

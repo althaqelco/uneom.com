@@ -190,11 +190,14 @@ export default function robots(): MetadataRoute.Robots {
       // BLOCK UNWANTED BOTS
       // ============================================
       
-      // Block aggressive scrapers
+      // Allow AhrefsBot (rate-limited) — required for our own Ahrefs
+      // Site Explorer / Site Audit data to stay fresh
       {
         userAgent: 'AhrefsBot',
-        disallow: '/',
+        allow: '/',
+        crawlDelay: 10,
       },
+      // Block aggressive scrapers
       {
         userAgent: 'SemrushBot',
         disallow: '/',

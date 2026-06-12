@@ -35,9 +35,12 @@ export function middleware(request: NextRequest) {
 
   // ========================================
   // 2. BLOCK KNOWN AGGRESSIVE SCRAPERS
+  // Must stay consistent with src/app/robots.ts: AI retrieval bots
+  // (GPTBot, ClaudeBot, anthropic-ai, Bytespider, PerplexityBot) are
+  // ALLOWED there for AI-search visibility — never 403 them here.
   // ========================================
   const ua = request.headers.get('user-agent') || '';
-  const blockedBots = /SemrushBot|AhrefsBot|MJ12bot|DotBot|BLEXBot|DataForSeoBot|CCBot|GPTBot|ClaudeBot|anthropic-ai|bytespider|PetalBot|Sogou/i;
+  const blockedBots = /SemrushBot|MJ12bot|DotBot|BLEXBot|DataForSeoBot|CCBot|PetalBot|Sogou/i;
   if (blockedBots.test(ua)) {
     return new NextResponse('Access Denied', { status: 403 });
   }

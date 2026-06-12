@@ -10,7 +10,6 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SEO2026 from '@/components/seo/SEO2026';
 import { SAUDI_CITIES, getCityBySlug, getClimateDescription, getFabricRecommendation } from '@/lib/data/saudi-cities';
 import { industries, getIndustryBySlug } from '@/lib/data/industries';
-import AiBaitStats from '@/components/seo/AiBaitStats';
 import { CognitiveEstimator } from '@/components/behavior/CognitiveEstimator';
 
 export const revalidate = 86400;
@@ -31,10 +30,14 @@ export async function generateMetadata({ params }: { params: { city: string; ind
   if (!city || !industry) return {};
   return {
     title: `أزياء ${industry.nameAr} في ${city.nameAr} | يونيوم السعودية`,
-    description: `اشتري أزياء ${industry.nameAr} في ${city.nameAr}. ${industry.descriptionAr}. ${getFabricRecommendation(city.climate, 'ar')}. توصيل سريع!`,
+    description: `زي موحد لقطاع ${industry.nameAr} في ${city.nameAr}: تطريز الشعار، أسعار جملة، وتوصيل سريع في ${city.regionAr}. اطلب عرض سعر مجانياً اليوم.`,
     alternates: {
-      canonical: `https://uneom.com/ar/locations/${city.slug}/${industry.id}`,
-      languages: { 'en': `https://uneom.com/locations/${city.slug}/${industry.id}`, 'ar-SA': `https://uneom.com/ar/locations/${city.slug}/${industry.id}` },
+      canonical: `https://uneom.com/ar/locations/${city.slug}/${industry.id}/`,
+      languages: {
+        'en': `https://uneom.com/locations/${city.slug}/${industry.id}/`,
+        'ar-SA': `https://uneom.com/ar/locations/${city.slug}/${industry.id}/`,
+        'x-default': `https://uneom.com/locations/${city.slug}/${industry.id}/`,
+      },
     },
   };
 }
@@ -58,7 +61,7 @@ export default function ArCityIndustryPage({ params }: { params: { city: string;
         pageType="location"
         mainEntity={`${industry.nameEn} Uniforms in ${city.nameEn}`}
         mainEntityAr={`أزياء ${industry.nameAr} في ${city.nameAr}`}
-        primaryImage="/images/locations/city-hero.jpg"
+        primaryImage="/images/locations/default-location.jpg"
         primaryImageAlt={`أزياء ${industry.nameAr} في ${city.nameAr}`}
         breadcrumbs={[
           { name: 'Locations', nameAr: 'المواقع', url: '/ar/locations' },
@@ -72,7 +75,7 @@ export default function ArCityIndustryPage({ params }: { params: { city: string;
           region: city.regionAr,
           country: 'المملكة العربية السعودية',
           phone: '+966564612017',
-          email: `${city.slug}@uneom.com`,
+          email: 'info@uneom.com',
           latitude: city.lat,
           longitude: city.lng,
         }}
@@ -127,7 +130,7 @@ export default function ArCityIndustryPage({ params }: { params: { city: string;
             </div>
             <div className="relative hidden lg:block">
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="/images/locations/city-hero.jpg" alt={`أزياء ${industry.nameAr} في ${city.nameAr}`} fill className="object-cover" priority />
+                <Image src="/images/locations/default-location.jpg" alt={`أزياء ${industry.nameAr} في ${city.nameAr}`} fill className="object-cover" priority />
               </div>
             </div>
           </div>
@@ -137,8 +140,6 @@ export default function ArCityIndustryPage({ params }: { params: { city: string;
       {/* Content */}
       <main className="py-16">
         <Container>
-          <AiBaitStats cityAr={city.nameAr} cityEn={city.nameEn} industryAr={industry.nameAr} industryEn={industry.nameEn} industrySlug={industry.id} />
-
           <CognitiveEstimator industryAr={industry.nameAr} industryEn={industry.nameEn} cityAr={city.nameAr} />
 
           {/* Products */}

@@ -58,12 +58,14 @@ export const revalidate = 3600; // revalidate every hour
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
-  // Define all possible blog post slugs for the English version
-  // Only include slugs for which data exists in blogPosts.server.ts
+  // The previous hardcoded list ('uniform-trends-2023',
+  // 'sustainable-fabrics', 'healthcare-uniforms-innovation') had NO
+  // matching content, so the build shipped three permanent 404 pages.
+  // Prebuild only slugs that exist in src/content/blog AND do not already
+  // have a static folder under src/app/blog/<slug>/ (build-output paths
+  // collide and the dynamic route's 404 can overwrite the real page).
   return [
-    { slug: 'uniform-trends-2023' },
-    { slug: 'sustainable-fabrics' },
-    { slug: 'healthcare-uniforms-innovation' },
+    { slug: 'school-uniforms-academic-performance' },
   ];
 }
 

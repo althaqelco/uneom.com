@@ -270,9 +270,17 @@ const Footer: React.FC<FooterProps> = ({ locale = 'en' }) => {
           </div>
         </div>
         
-        {/* Copyright */}
+        {/* Copyright & Legal */}
         <div className="border-t border-neutral-800 pt-8 text-center text-neutral-400">
-          <p>{content.copyright}</p>
+          <p className="mb-4">{content.copyright}</p>
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            <Link href={locale === 'en' ? '/privacy-policy/' : '/ar/privacy-policy/'} className="hover:text-white transition-colors">
+              {locale === 'en' ? 'Privacy Policy' : 'سياسة الخصوصية'}
+            </Link>
+            <Link href={locale === 'en' ? '/terms-of-service/' : '/ar/terms-of-service/'} className="hover:text-white transition-colors">
+              {locale === 'en' ? 'Terms of Service' : 'شروط الخدمة'}
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -68,29 +68,15 @@ export const revalidate = 3600; // revalidate every hour
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
-  // Define all possible blog post slugs for the Arabic version
+  // CRITICAL: never list a slug here that ALSO exists as a static folder
+  // under src/app/ar/blog/<slug>/ — at build time both render to the same
+  // output path and this dynamic route's result (often a prerendered 404
+  // when the markdown lookup fails) can overwrite the real static page.
+  // That exact collision 404'd corporate-uniforms-brand-perception,
+  // fabrics-professional-attire and future-aviation-uniforms-gcc.
+  // Placeholder slugs must never be prebuilt either.
   return [
     { slug: 'school-uniforms-academic-performance' },
-    { slug: 'sustainable-uniforms-2024-trends' },
-    { slug: 'sustainable-school-uniforms-saudi' },
-    { slug: 'retail-uniform-selection-guide' },
-    { slug: 'restaurant-uniform-trends' },
-    { slug: 'hospital-uniform-safety-standards' },
-    { slug: 'industrial-protective-clothing-advances' },
-    { slug: 'security-uniform-safety-standards' },
-    { slug: 'corporate-uniforms-brand-perception' },
-    { slug: 'fabrics-professional-attire' },
-    { slug: 'future-aviation-uniforms-gcc' },
-    { slug: 'material-innovations-aviation-attire' },
-    { slug: 'airline-uniform-design-cultural-identity' },
-    // Placeholder posts
-    { slug: 'placeholder1' },
-    { slug: 'placeholder2' },
-    { slug: 'placeholder-corporate1' },
-    { slug: 'placeholder-corporate2' },
-    { slug: 'placeholder-aviation1' },
-    { slug: 'placeholder-aviation2' },
-    // Add any other Arabic blog post slugs here
   ];
 }
 

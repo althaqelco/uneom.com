@@ -20,9 +20,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${industry.titleEn} | UNEOM`,
     description: industry.descriptionEn,
+    alternates: {
+      canonical: `https://uneom.com/industries/${industry.id}/`,
+      languages: {
+        'en': `https://uneom.com/industries/${industry.id}/`,
+        'ar-SA': `https://uneom.com/ar/industries/${industry.id}/`,
+        'x-default': `https://uneom.com/industries/${industry.id}/`,
+      },
+    },
     openGraph: {
       title: industry.titleEn,
       description: industry.descriptionEn,
+      url: `https://uneom.com/industries/${industry.id}/`,
       images: [{ url: industry.heroImage }]
     }
   };

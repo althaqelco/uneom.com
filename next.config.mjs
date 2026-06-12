@@ -164,6 +164,119 @@ const nextConfig = {
   assetPrefix: '/',
   basePath: '',
   
+  async redirects() {
+    return [
+      // Consolidate Legal Pages
+      {
+        source: '/privacy/',
+        destination: '/privacy-policy/',
+        permanent: true,
+      },
+      {
+        source: '/ar/privacy/',
+        destination: '/ar/privacy-policy/',
+        permanent: true,
+      },
+      {
+        source: '/terms/',
+        destination: '/terms-of-service/',
+        permanent: true,
+      },
+      {
+        source: '/ar/terms/',
+        destination: '/ar/terms-of-service/',
+        permanent: true,
+      },
+      {
+        source: '/terms-conditions/',
+        destination: '/terms-of-service/',
+        permanent: true,
+      },
+      {
+        source: '/ar/terms-conditions/',
+        destination: '/ar/terms-of-service/',
+        permanent: true,
+      },
+      // Legacy /sectors/ architecture still indexed by Google (e.g.
+      // /sectors/education/, /sectors/business-wear-uniform-companies/).
+      // Map known slugs to their /industries/ successors, then catch all.
+      {
+        source: '/sectors/business-wear-uniform-companies/',
+        destination: '/industries/corporate/',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/business-wear-uniform-companies/',
+        destination: '/ar/industries/corporate/',
+        permanent: true,
+      },
+      {
+        source: '/sectors/:slug/',
+        destination: '/industries/:slug/',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/:slug/',
+        destination: '/ar/industries/:slug/',
+        permanent: true,
+      },
+      {
+        source: '/sectors/',
+        destination: '/industries/',
+        permanent: true,
+      },
+      {
+        source: '/ar/sectors/',
+        destination: '/ar/industries/',
+        permanent: true,
+      },
+      // City slug aliases — old links used jubail/jizan while the canonical
+      // slugs in SAUDI_CITIES are al-jubail/jazan.
+      {
+        source: '/locations/jubail/:path*',
+        destination: '/locations/al-jubail/:path*',
+        permanent: true,
+      },
+      {
+        source: '/ar/locations/jubail/:path*',
+        destination: '/ar/locations/al-jubail/:path*',
+        permanent: true,
+      },
+      {
+        source: '/locations/jizan/:path*',
+        destination: '/locations/jazan/:path*',
+        permanent: true,
+      },
+      {
+        source: '/ar/locations/jizan/:path*',
+        destination: '/ar/locations/jazan/:path*',
+        permanent: true,
+      },
+      // Dead-link aliases surfaced by the full-site crawl: content pages
+      // reference shop categories / utility routes that never existed.
+      // Map each to its closest real destination.
+      { source: '/shop/education/', destination: '/shop/education-uniforms/', permanent: true },
+      { source: '/ar/shop/education/', destination: '/ar/shop/education-uniforms/', permanent: true },
+      { source: '/shop/manufacturing-attire/', destination: '/shop/industrial-uniforms/', permanent: true },
+      { source: '/ar/shop/manufacturing-attire/', destination: '/ar/shop/industrial-uniforms/', permanent: true },
+      { source: '/ar/shop/manufacturing-workwear/', destination: '/ar/shop/industrial-uniforms/', permanent: true },
+      { source: '/ar/shop/corporate-uniforms/', destination: '/ar/shop/corporate-workwear/', permanent: true },
+      { source: '/shop/medical-scrubs/nursing-scrubs/', destination: '/shop/medical-scrubs/', permanent: true },
+      { source: '/industries/beauty-salons/', destination: '/industries/', permanent: true },
+      { source: '/ar/services/consultations/', destination: '/ar/contact/', permanent: false },
+      { source: '/ar/subscribe/', destination: '/ar/contact/', permanent: false },
+      { source: '/resources/events/:slug/', destination: '/resources/events/', permanent: false },
+      { source: '/ar/resources/events/:slug/', destination: '/ar/resources/events/', permanent: false },
+      // (Arabic twins for corporate-uniforms-brand-perception,
+      // fabrics-professional-attire, future-aviation-uniforms-gcc and
+      // industrial-protective-clothing-advances now exist as full
+      // translations — their temporary redirects to /ar/blog/ were removed.)
+      // Redirect any stale shop product IDs that might have changed
+      // This is a catch-all to prevent 404s for old catalog items
+      // Example: If an item existed at /shop/category/old-id, it will now hit the dynamic route
+      // which handles the 404 gracefully, but we can add specific high-traffic redirects here if needed.
+    ];
+  },
   // ============================================
   // SECURITY & PERFORMANCE HEADERS (Firebase App Hosting + Cloud CDN)
   // Migrated from public/_headers (Netlify) to next.config.mjs

@@ -56,7 +56,7 @@ export default function LocationsPage() {
         pageType="location"
         mainEntity="UNEOM Saudi Arabia Locations"
         mainEntityAr="مواقع يونيوم في السعودية"
-        primaryImage="/images/locations/city-hero.jpg"
+        primaryImage="/images/locations/default-location.jpg"
         primaryImageAlt="UNEOM locations across Saudi Arabia"
         breadcrumbs={[
           { name: 'Locations', nameAr: 'المواقع', url: '/locations' },

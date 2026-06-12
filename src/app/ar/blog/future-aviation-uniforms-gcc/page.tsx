@@ -1,61 +1,102 @@
-'use client';
-
 import React from 'react';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Container from '@/components/ui/Container';
-import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
 
 export const dynamic = 'force-static';
 
+export const metadata: Metadata = {
+  title: 'مستقبل أزياء الطيران في الخليج 2025-2030 | يونيوم',
+  description:
+    'اكتشف أحدث الابتكارات والاتجاهات الناشئة التي تعيد تشكيل تصميم أزياء الطيران في دول مجلس التعاون الخليجي: أقمشة ذكية، استدامة، واعتبارات ثقافية للناقلات.',
+  alternates: {
+    canonical: 'https://uneom.com/ar/blog/future-aviation-uniforms-gcc/',
+    languages: {
+      'en': 'https://uneom.com/blog/future-aviation-uniforms-gcc/',
+      'ar-SA': 'https://uneom.com/ar/blog/future-aviation-uniforms-gcc/',
+      'x-default': 'https://uneom.com/blog/future-aviation-uniforms-gcc/',
+    },
+  },
+  openGraph: {
+    title: 'مستقبل أزياء الطيران في الخليج 2025-2030 | يونيوم',
+    description:
+      'الابتكارات والاتجاهات التي ترسم ملامح تصميم أزياء الطيران في دول مجلس التعاون الخليجي: أقمشة تقنية ذكية، استدامة، وهوية بصرية للناقلات.',
+    url: 'https://uneom.com/ar/blog/future-aviation-uniforms-gcc/',
+    locale: 'ar_SA',
+    type: 'article',
+    images: [
+      {
+        url: 'https://uneom.com/images/products/aviation/airline-1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'مستقبل أزياء الطيران في دول مجلس التعاون الخليجي',
+      },
+    ],
+  },
+};
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'مستقبل أزياء الطيران في دول مجلس التعاون الخليجي: ابتكارات واتجاهات 2025-2030',
+  description:
+    'استكشاف الابتكارات المتطورة والاتجاهات الناشئة التي سترسم ملامح تصميم أزياء الطيران في دول مجلس التعاون الخليجي: الأقمشة الذكية، الاستدامة، والاعتبارات الثقافية.',
+  image: 'https://uneom.com/images/products/aviation/airline-1.jpg',
+  inLanguage: 'ar',
+  datePublished: '2025-03-10',
+  dateModified: '2026-06-12',
+  author: { '@id': 'https://uneom.com/#organization' },
+  publisher: { '@id': 'https://uneom.com/#organization' },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://uneom.com/ar/blog/future-aviation-uniforms-gcc/',
+  },
+};
+
 export default function FutureAviationUniformsGCCPageAr() {
   return (
-    <div dir="rtl" className="font-arabic">
-      <EnhancedSEO2025 
-        title="ثورة أزياء الطيران في المملكة العربية السعودية 2025 | تقنيات متطورة وحلول مبتكرة | يونيوم"
-        description="اكتشف كيف تقود المملكة العربية السعودية ثورة حقيقية في تصميم أزياء الطيران بتقنيات الذكاء الاصطناعي والأقمشة الذكية. حلول مبتكرة تجمع بين التراث السعودي والتكنولوجيا المتقدمة لخدمة رؤية 2030."
-        canonicalUrl="https://uneom.com/ar/blog/future-aviation-uniforms-gcc/"
-        locale="ar"
-        image="/images/aviation/aviation_uniform_main.jpg"
+    <div dir="rtl" lang="ar">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-emerald-800 to-teal-700 text-white py-20">
+      {/* قسم البطل */}
+      <section className="relative bg-gradient-to-l from-primary-800 to-primary-700 text-white py-20">
         <div className="absolute inset-0 opacity-30">
           <Image
-            src="/images/aviation/aviation_uniform_main.jpg"
-            alt="ثورة أزياء الطيران في المملكة العربية السعودية"
+            src="/images/products/aviation/airline-1.jpg"
+            alt="مستقبل أزياء الطيران في دول مجلس التعاون الخليجي"
             fill
             className="object-cover"
             priority
           />
         </div>
-        
+
         <Container>
           <Breadcrumbs
             items={[
-              { label: 'الرئيسية', href: '/ar' },
-              { label: 'المدونة', href: '/ar/blog' },
-              { label: 'ثورة أزياء الطيران السعودية', href: '/ar/blog/future-aviation-uniforms-gcc' }
+              { label: 'الرئيسية', href: '/ar/' },
+              { label: 'المدونة', href: '/ar/blog/' },
+              { label: 'مستقبل أزياء الطيران في الخليج', href: '/ar/blog/future-aviation-uniforms-gcc/' }
             ]}
+            includeHome={false}
             className="text-white/80 mb-6 relative z-10"
           />
-          
+
           <div className="relative z-10 max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-              كيف تقود المملكة العربية السعودية ثورة أزياء الطيران العالمية
+              مستقبل أزياء الطيران في دول مجلس التعاون الخليجي: ابتكارات واتجاهات 2025-2030
             </h1>
             <p className="text-xl opacity-90 mb-6 max-w-3xl">
-              من الرياض إلى العالم: رحلة استكشافية في عالم التقنيات الثورية التي تعيد تشكيل مستقبل أزياء الطيران، حيث تلتقي الأصالة السعودية بأحدث الابتكارات التكنولوجية.
+              استكشاف الابتكارات المتطورة والاتجاهات الناشئة التي سترسم ملامح تصميم أزياء الطيران في منطقة دول مجلس التعاون الخليجي خلال العقد القادم.
             </p>
             <div className="flex items-center gap-4 text-white/80">
-              <span>25 مايو 2025</span>
+              <span>10 مارس 2025</span>
               <span>•</span>
-              <span>15 دقيقة قراءة</span>
-              <span>•</span>
-              <span>تحليل متخصص</span>
+              <span>12 دقيقة للقراءة</span>
             </div>
           </div>
         </Container>
@@ -65,234 +106,149 @@ export default function FutureAviationUniformsGCCPageAr() {
         <Container>
           <div className="max-w-4xl mx-auto">
             <article className="prose prose-lg max-w-none">
-              
+
               <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-emerald-800">المملكة العربية السعودية: رائدة الابتكار في صناعة الطيران</h2>
-                
-                <div className="relative aspect-video rounded-2xl overflow-hidden mb-8 shadow-2xl">
+                <h2 className="text-3xl font-bold mb-6">مقدمة في تطور أزياء الطيران</h2>
+
+                <div className="relative aspect-video rounded-2xl overflow-hidden mb-8">
                   <Image
-                    src="/images/aviation/aviation_uniform_airline.jpg"
-                    alt="الطيران السعودي يقود الابتكار العالمي"
+                    src="/images/products/aviation/airline-2.jpg"
+                    alt="تطور أزياء الطيران الحديثة"
                     fill
                     className="object-cover"
                   />
                 </div>
 
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  تشهد المملكة العربية السعودية نهضة حقيقية في قطاع الطيران، حيث تستثمر مليارات الريالات في تطوير أحدث التقنيات وأكثرها تطوراً. وفي إطار رؤية المملكة 2030، تبرز أزياء الطيران كأحد أهم عناصر الهوية الوطنية والتميز التقني، مما يضع المملكة في مقدمة الدول الرائدة عالمياً في هذا المجال.
+                  يشهد قطاع الطيران في منطقة دول مجلس التعاون الخليجي نمواً غير مسبوق، حيث تقود ناقلات كبرى مثل طيران الإمارات والخطوط الجوية القطرية والاتحاد للطيران مسيرة الابتكار العالمي، إلى جانب الناقلات السعودية الصاعدة مثل الخطوط السعودية وطيران الرياض. ومع توسع عمليات هذه الناقلات وتعزيز حضور علاماتها التجارية، تتطور أزياء الطيران لتتجاوز حدود الوظيفة التقليدية نحو دمج التقنيات المتطورة ومبادئ الاستدامة والحساسية الثقافية.
                 </p>
 
-                <div className="bg-emerald-50 border-r-4 border-emerald-500 p-6 mb-8 rounded-lg">
-                  <h3 className="text-lg font-semibold text-emerald-900 mb-2">إحصائية مهمة</h3>
-                  <p className="text-emerald-800">
-                    تشير الدراسات الحديثة إلى أن الاستثمار السعودي في تقنيات أزياء الطيران المتطورة سيصل إلى 2.5 مليار ريال بحلول عام 2030، مما يجعل المملكة المركز الإقليمي الأول لهذه الصناعة.
+                <div className="bg-blue-50 border-r-4 border-blue-500 p-6 mb-8">
+                  <h3 className="text-lg font-semibold text-blue-900 mb-2">رؤية محورية في القطاع</h3>
+                  <p className="text-blue-800">
+                    من المتوقع أن ينمو سوق الطيران الخليجي بنسبة 7.5% سنوياً حتى عام 2030، مما يعزز الطلب على حلول أزياء موحدة مبتكرة تعكس الريادة الإقليمية في التميز بقطاع الطيران.
                   </p>
                 </div>
               </section>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-emerald-800">التقنيات الثورية التي تغير قواعد اللعبة</h2>
-                
-                <h3 className="text-2xl font-semibold mb-4 text-teal-700">الذكاء الاصطناعي في تصميم الأزياء</h3>
+                <h2 className="text-3xl font-bold mb-6">الابتكارات التقنية في تصميم الأزياء الموحدة</h2>
+
+                <h3 className="text-2xl font-semibold mb-4">الأقمشة الذكية والتقنيات القابلة للارتداء</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  تقود الشركات السعودية المتخصصة في أزياء الطيران ثورة حقيقية باستخدام الذكاء الاصطناعي لتطوير تصاميم فريدة تجمع بين الراحة والأناقة والوظائف المتقدمة. هذه التقنيات لا تقتصر على التصميم فحسب، بل تمتد لتشمل التنبؤ بالاحتياجات المستقبلية وتحليل بيانات الراحة والأداء.
+                  يمثل دمج الأقمشة الذكية تحولاً ثورياً في تصميم أزياء الطيران. فهذه الخامات التقنية المتقدمة تتضمن مستشعرات وأليافاً موصلة قادرة على مراقبة المؤشرات الحيوية ورصد التغيرات البيئية، بل وتوفير قدرات اتصال فوري لأطقم الطيران.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-lg">
-                    <h4 className="text-xl font-semibold mb-3 text-emerald-700">تقنيات التصميم الذكي</h4>
-                    <ul className="text-gray-700 space-y-2">
-                      <li>• خوارزميات تحليل بيانات الجسم لتصميم مثالي</li>
-                      <li>• نمذجة ثلاثية الأبعاد للتنبؤ بالراحة</li>
-                      <li>• تحليل الحركة لتحسين المرونة</li>
-                      <li>• تخصيص فوري حسب المتطلبات الفردية</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-lg">
-                    <h4 className="text-xl font-semibold mb-3 text-emerald-700">الأقمشة النانوية المتطورة</h4>
-                    <ul className="text-gray-700 space-y-2">
-                      <li>• ألياف نانوية مقاومة للبكتيريا والفيروسات</li>
-                      <li>• تقنية التنظيم الحراري الذاتي</li>
-                      <li>• خصائص مضادة للكهرباء الساكنة</li>
-                      <li>• مقاومة فائقة للتجاعيد والبقع</li>
-                    </ul>
-                  </div>
-                </div>
+                <ul className="list-disc pr-6 mb-6 text-gray-700">
+                  <li>أقمشة منظمة للحرارة تتكيف مع ظروف المقصورة</li>
+                  <li>خامات طاردة للرطوبة معززة بخصائص مضادة للميكروبات</li>
+                  <li>أنظمة اتصال مدمجة لتنسيق سلس بين أفراد الطاقم</li>
+                  <li>مراقبة حيوية لصحة وسلامة طاقم الضيافة الجوية</li>
+                </ul>
 
-                <h3 className="text-2xl font-semibold mb-4 text-teal-700">تقنيات الاستشعار المدمجة</h3>
+                <h3 className="text-2xl font-semibold mb-4">خامات متكيفة مع المناخ</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  تطور الشركات السعودية أزياء طيران مزودة بأجهزة استشعار دقيقة قادرة على مراقبة الحالة الصحية لطاقم الطيران في الوقت الفعلي، مما يضمن أعلى مستويات السلامة والأداء. هذه التقنيات تمثل نقلة نوعية في مفهوم السلامة المهنية.
+                  نظراً للظروف المناخية القاسية في منطقة الخليج، تتجه أزياء الطيران نحو تبني تقنيات متقدمة متكيفة مع المناخ. تستجيب هذه الخامات ديناميكياً لتقلبات درجات الحرارة، بما يضمن راحة مثالية لأفراد الطاقم خلال تنقلهم بين الطائرات المكيفة والحرارة الشديدة في مطارات المنطقة.
                 </p>
               </section>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-emerald-800">الهوية السعودية في تصميم أزياء الطيران</h2>
-                
-                <div className="relative aspect-video rounded-2xl overflow-hidden mb-8 shadow-2xl">
+                <h2 className="text-3xl font-bold mb-6">الاعتبارات الثقافية والإقليمية</h2>
+
+                <div className="relative aspect-video rounded-2xl overflow-hidden mb-8">
                   <Image
-                    src="/images/aviation/aviation_captin_uniform.jpg"
-                    alt="الهوية السعودية في أزياء الطيران"
+                    src="/images/products/aviation/airline-3.jpg"
+                    alt="الاعتبارات الثقافية في أزياء الطيران"
                     fill
                     className="object-cover"
                   />
                 </div>
 
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  تحرص الشركات السعودية على دمج عناصر التراث والهوية الوطنية في تصاميم أزياء الطيران، مما يخلق توازناً مثالياً بين الأصالة والحداثة. هذا النهج لا يعكس فقط الفخر بالتراث السعودي، بل يساهم أيضاً في تعزيز الصورة الإيجابية للمملكة على المستوى العالمي.
+                  يؤثر الإرث الثقافي الغني لمنطقة الخليج وقيمها الإسلامية تأثيراً عميقاً في تصميم أزياء الطيران. وستعكس الأزياء المستقبلية هذه الاعتبارات الثقافية بصورة متزايدة، مع الحفاظ على معايير الطيران الدولية ومتطلبات المظهر المهني.
                 </p>
 
-                <div className="bg-amber-50 border-r-4 border-amber-500 p-6 mb-8 rounded-lg">
-                  <h3 className="text-lg font-semibold text-amber-900 mb-2">نموذج ملهم</h3>
-                  <p className="text-amber-800">
-                    نجحت الخطوط الجوية السعودية في تطوير تصاميم أزياء تجمع بين الأناقة العصرية والعناصر التراثية السعودية، مما جعلها مثالاً يُحتذى به في الصناعة العالمية.
+                <div className="bg-green-50 border-r-4 border-green-500 p-6 mb-8">
+                  <h3 className="text-lg font-semibold text-green-900 mb-2">التكامل الثقافي</h3>
+                  <p className="text-green-800">
+                    تنجح أزياء الطيران الحديثة في الخليج في المزج بين متطلبات الاحتشام التقليدية والجماليات المهنية المعاصرة، لتصنع هوية بصرية مميزة للناقلات تحتفي بالقيم الثقافية.
                   </p>
                 </div>
               </section>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-emerald-800">الاستدامة والمسؤولية البيئية</h2>
-                
+                <h2 className="text-3xl font-bold mb-6">الاستدامة في أزياء الطيران</h2>
+
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  تتصدر المملكة العربية السعودية جهود الاستدامة في صناعة أزياء الطيران من خلال تطوير مواد صديقة للبيئة وعمليات إنتاج مستدامة. هذا الالتزام يتماشى مع مبادرات المملكة الخضراء ويساهم في تحقيق أهداف التنمية المستدامة.
-                </p>
-
-                <div className="grid md:grid-cols-3 gap-6 mb-8">
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                    <h4 className="text-lg font-semibold mb-3 text-green-800">المواد المستدامة</h4>
-                    <ul className="text-green-700 text-sm space-y-1">
-                      <li>• ألياف معاد تدويرها من مصادر محلية</li>
-                      <li>• أصباغ طبيعية مستخرجة من النباتات</li>
-                      <li>• مواد قابلة للتحلل الحيوي</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                    <h4 className="text-lg font-semibold mb-3 text-blue-800">الإنتاج الأخضر</h4>
-                    <ul className="text-blue-700 text-sm space-y-1">
-                      <li>• مصانع تعمل بالطاقة الشمسية</li>
-                      <li>• تقنيات توفير المياه المتقدمة</li>
-                      <li>• إعادة تدوير النفايات بنسبة 100%</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                    <h4 className="text-lg font-semibold mb-3 text-purple-800">الابتكار البيئي</h4>
-                    <ul className="text-purple-700 text-sm space-y-1">
-                      <li>• تقنيات الطباعة ثلاثية الأبعاد</li>
-                      <li>• تصميم بدون نفايات</li>
-                      <li>• دورة حياة مستدامة للمنتج</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-emerald-800">رؤية مستقبلية: أزياء الطيران في عام 2030</h2>
-                
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  تتطلع المملكة العربية السعودية إلى ترسيخ مكانتها كمركز عالمي لتطوير وتصنيع أزياء الطيران المتطورة. الخطط الطموحة تشمل إنشاء مراكز بحثية متخصصة وتطوير شراكات استراتيجية مع أكبر شركات الطيران العالمية.
-                </p>
-
-                <div className="bg-gradient-to-r from-emerald-50 to-teal-50 border-r-4 border-emerald-500 p-8 mb-8 rounded-lg">
-                  <h3 className="text-xl font-semibold text-emerald-900 mb-4">التوقعات للعقد القادم</h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold text-emerald-800 mb-2">التقنيات المتوقعة</h4>
-                      <ul className="text-emerald-700 space-y-1 text-sm">
-                        <li>• أزياء ذكية بالكامل مع ذكاء اصطناعي مدمج</li>
-                        <li>• تقنيات الواقع المعزز للتدريب والصيانة</li>
-                        <li>• مواد ذاتية الإصلاح والتنظيف</li>
-                        <li>• تخصيص فوري باستخدام الطباعة ثلاثية الأبعاد</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-emerald-800 mb-2">الأهداف الاستراتيجية</h4>
-                      <ul className="text-emerald-700 space-y-1 text-sm">
-                        <li>• قيادة السوق العالمي بحصة 25%</li>
-                        <li>• تصدير التقنيات السعودية لـ 50 دولة</li>
-                        <li>• توظيف 100,000 شخص في القطاع</li>
-                        <li>• تحقيق الحياد الكربوني في الإنتاج</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-emerald-800">التحديات والفرص في السوق السعودي</h2>
-                
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  رغم الإنجازات المتميزة، تواجه صناعة أزياء الطيران في المملكة تحديات عديدة تتطلب حلولاً مبتكرة. في الوقت نفسه، تفتح هذه التحديات آفاقاً واسعة للنمو والتطوير، خاصة مع الدعم الحكومي القوي والاستثمارات الضخمة في القطاع.
+                  أصبحت الاستدامة البيئية اعتباراً جوهرياً في تصميم أزياء الطيران. وتتجه شركات الطيران الخليجية بشكل متزايد نحو اعتماد خامات وعمليات إنتاج صديقة للبيئة، بما يتماشى مع أهداف الاستدامة العالمية والمبادرات البيئية الإقليمية.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-8 mb-8">
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-                    <h4 className="text-xl font-semibold mb-4 text-red-800">التحديات الرئيسية</h4>
-                    <ul className="text-red-700 space-y-3">
-                      <li className="flex items-start">
-                        <span className="text-red-500 mr-2">•</span>
-                        <span>الحاجة إلى كوادر متخصصة في التقنيات المتقدمة</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-red-500 mr-2">•</span>
-                        <span>التنافس الشديد مع الشركات العالمية الراسخة</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-red-500 mr-2">•</span>
-                        <span>ضرورة مواكبة التطورات التقنية السريعة</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-red-500 mr-2">•</span>
-                        <span>تحقيق التوازن بين الجودة والتكلفة</span>
-                      </li>
+                  <div className="bg-white border border-gray-200 rounded-lg p-6">
+                    <h4 className="text-xl font-semibold mb-3">خامات مستدامة</h4>
+                    <ul className="text-gray-700 space-y-2">
+                      <li>• بوليستر معاد تدويره من العبوات البلاستيكية</li>
+                      <li>• مزيج من القطن العضوي وألياف القنّب</li>
+                      <li>• ألياف صناعية حيوية المنشأ</li>
+                      <li>• خامات من موارد متجددة</li>
                     </ul>
                   </div>
-                  
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                    <h4 className="text-xl font-semibold mb-4 text-green-800">الفرص الذهبية</h4>
-                    <ul className="text-green-700 space-y-3">
-                      <li className="flex items-start">
-                        <span className="text-green-500 mr-2">•</span>
-                        <span>الموقع الاستراتيجي كجسر بين الشرق والغرب</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-green-500 mr-2">•</span>
-                        <span>الدعم الحكومي القوي ضمن رؤية 2030</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-green-500 mr-2">•</span>
-                        <span>نمو قطاع الطيران السعودي بمعدلات قياسية</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-green-500 mr-2">•</span>
-                        <span>الطلب المتزايد على الحلول المبتكرة عالمياً</span>
-                      </li>
+
+                  <div className="bg-white border border-gray-200 rounded-lg p-6">
+                    <h4 className="text-xl font-semibold mb-3">ابتكارات الإنتاج</h4>
+                    <ul className="text-gray-700 space-y-2">
+                      <li>• عمليات صباغة موفرة لاستهلاك المياه</li>
+                      <li>• منشآت تصنيع تعمل بالطاقة الشمسية</li>
+                      <li>• أساليب إنتاج خالية من النفايات</li>
+                      <li>• مبادرات التوريد المحلي</li>
                     </ul>
                   </div>
                 </div>
               </section>
 
               <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-emerald-800">دور يونيوم في قيادة التحول</h2>
-                
+                <h2 className="text-3xl font-bold mb-6">توقعات المستقبل 2025-2030</h2>
+
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  تقف شركة يونيوم في المقدمة كإحدى الشركات الرائدة في تطوير أزياء الطيران المتطورة في المملكة العربية السعودية. من خلال الاستثمار في أحدث التقنيات والشراكات الاستراتيجية، تساهم يونيوم في تحقيق رؤية المملكة 2030 وترسيخ مكانة المملكة كمركز عالمي للابتكار في هذا المجال.
+                  ستشهد السنوات الخمس القادمة تحولات جذرية في تصميم أزياء الطيران عبر منطقة الخليج. ويتوقع خبراء القطاع عدداً من التطورات الرئيسية التي ستعيد رسم الطريقة التي يرتدي بها محترفو الطيران أزياءهم ويؤدون بها مهامهم.
                 </p>
 
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
-                  <h3 className="text-2xl font-bold mb-4 text-blue-900">انضم إلى رحلة الابتكار مع يونيوم</h3>
-                  <p className="text-blue-800 mb-6 max-w-2xl mx-auto">
-                    اكتشف كيف يمكن لحلولنا المبتكرة في أزياء الطيران أن تساهم في تحقيق أهدافك وتعزيز مكانتك في السوق العالمي. نحن نقدم استشارات متخصصة وحلول مخصصة تلبي أعلى المعايير العالمية.
+                <div className="bg-yellow-50 border-r-4 border-yellow-500 p-6 mb-8">
+                  <h3 className="text-lg font-semibold text-yellow-900 mb-2">توقعات الخبراء</h3>
+                  <p className="text-yellow-800">
+                    بحلول عام 2030، ستدمج 80% من شركات الطيران الخليجية تقنيات المنسوجات الذكية في أزياء أطقمها، مع تحول المراقبة الصحية المدمجة وقدرات التكيف البيئي إلى مواصفات قياسية.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button href="/ar/contact" variant="primary" size="lg" className="bg-blue-600 hover:bg-blue-700">
-                      احجز استشارة مجانية
-                    </Button>
-                    <Button href="/ar/shop/aviation-uniforms" variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
-                      استعرض منتجاتنا
-                    </Button>
-                  </div>
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4">الاتجاهات الناشئة</h3>
+                <ul className="list-disc pr-6 mb-6 text-gray-700">
+                  <li>قَصّات مخصصة للأزياء باستخدام تقنية المسح ثلاثي الأبعاد للجسم</li>
+                  <li>أنظمة أزياء معيارية تناسب مختلف مسارات الرحلات والمناخات</li>
+                  <li>دمج عناصر الواقع المعزز لتعزيز الأداء الوظيفي</li>
+                  <li>تقنيات متقدمة للأقمشة المقاومة للبقع وذاتية التنظيف</li>
+                  <li>دمج المقاييس الحيوية لأغراض الأمن والتحقق من الهوية</li>
+                </ul>
+              </section>
+
+              <section className="mb-12">
+                <h2 className="text-3xl font-bold mb-6">الخلاصة وتوصيات القطاع</h2>
+
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  يمثل مستقبل أزياء الطيران في منطقة الخليج نقطة التقاء بين الابتكار التقني والحساسية الثقافية والمسؤولية البيئية. ومع استمرار المنطقة في قيادة التميز العالمي في قطاع الطيران، سيؤدي تصميم الأزياء الموحدة دوراً متنامي الأهمية في صياغة الهوية البصرية للناقلات الجوية وتعزيز أداء طواقمها من الطيارين وطاقم الضيافة الجوية.
+                </p>
+
+                <p className="text-gray-700 mb-8 leading-relaxed">
+                  ويتعين على شركات الطيران ومصنعي الأزياء الموحدة التعاون عن كثب لتطوير حلول تواجه التحديات الفريدة لبيئة الطيران الخليجية، مع اغتنام الفرص التي تتيحها التقنيات الناشئة والممارسات المستدامة.
+                </p>
+
+                <div className="bg-primary-50 rounded-2xl p-8 text-center">
+                  <h3 className="text-2xl font-bold mb-4">اجعل يونيوم شريكك في أزياء طيران جاهزة للمستقبل</h3>
+                  <p className="text-gray-700 mb-6">
+                    ابقَ في صدارة اتجاهات القطاع مع حلولنا المبتكرة لأزياء الطيران المصممة خصيصاً للسوق الخليجي والسعودي.
+                  </p>
+                  <Button href="/ar/contact/" variant="primary" size="lg">
+                    ناقش احتياجات أزياء الطيران لديك
+                  </Button>
                 </div>
               </section>
 

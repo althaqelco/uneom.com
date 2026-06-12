@@ -2,47 +2,32 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Container from '@/components/ui/Container';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-export const metadata: Metadata = {
-  title: 'Ar | Privacy Policy | يونيوم المملكة العربية السعودية',
-  description: 'توفر يونيوم حلول الزي الموحد والملابس المهنية عالية الجودة المصممة خصيصًا للشركات والمؤسسات السعودية.',
-  keywords: ['زي موحد', 'ملابس مهنية', 'يونيوم', 'المملكة العربية السعودية', 'ar | privacy policy'],
-  openGraph: {
-    title: 'Ar | Privacy Policy | يونيوم المملكة العربية السعودية',
-    description: 'توفر يونيوم حلول الزي الموحد والملابس المهنية عالية الجودة المصممة خصيصًا للشركات والمؤسسات السعودية.',
-    url: 'https://uneom.com/ar/privacy-policy/',
-    siteName: 'UNEOM',
-    images: [
-      {
-        url: 'https://uneom.com/images/og-image.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Ar | Privacy Policy - يونيوم المملكة العربية السعودية'
-      }
-    ],
-    locale: 'ar'
-  }
-};
+export const metadata: Metadata = generateMetadata2026({
+  title: 'سياسة الخصوصية | يونيوم السعودية',
+  description: 'تعرف على كيفية جمع واستخدام وحماية معلوماتك في يونيوم. نلتزم بأعلى معايير حماية البيانات والخصوصية لعملائنا في المملكة العربية السعودية.',
+  keywordsAr: ['سياسة الخصوصية', 'حماية البيانات', 'يونيوم السعودية', 'الخصوصية'],
+  locale: 'ar',
+  pageType: 'resources',
+  path: '/ar/privacy-policy',
+});
 
 export default function PrivacyPolicyPageArabic() {
   return (
     <>
-      {/* Enhanced SEO for Google May 2025 Standards */}
-      <EnhancedSEO2025 
-        title="UNEOM - Professional Uniforms Saudi Arabia"
-        description="Premium quality professional uniforms and workwear solutions in Saudi Arabia."
-        keywords={["uniform Saudi Arabia","professional uniforms","custom uniforms"]}
-        author="UNEOM Expert Team"
-        expertise="Uniform Manufacturing & Design"
-        contentType="service"
-        trustSignals={[
-          'ISO certified manufacturing',
-          'Premium quality materials',
-          'Custom design solutions',
-          'Saudi Arabia market leader'
+      {/* SEO 2026 Infrastructure */}
+      <SEO2026 
+        title="سياسة الخصوصية | يونيوم"
+        description="سياسة الخصوصية وحماية البيانات في يونيوم السعودية."
+        locale="ar"
+        pageType="resources"
+        mainEntity="Privacy Policy"
+        mainEntityAr="سياسة الخصوصية"
+        breadcrumbs={[
+          { name: 'Privacy Policy', nameAr: 'سياسة الخصوصية', url: '/ar/privacy-policy' },
         ]}
-        locale="en"
       />
 
       <section className="bg-gradient-to-b from-neutral-100 to-white py-16 md:py-24">

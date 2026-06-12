@@ -217,9 +217,17 @@ const ArabicFooter: React.FC = () => {
           </div>
         </div>
         
-        {/* Copyright */}
+        {/* حقوق النشر والروابط القانونية */}
         <div className="border-t border-neutral-800 pt-8 text-center text-neutral-400">
-          <p>{content.copyright}</p>
+          <p className="mb-4">{content.copyright}</p>
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            <Link href="/ar/privacy-policy/" className="hover:text-white transition-colors">
+              سياسة الخصوصية
+            </Link>
+            <Link href="/ar/terms-of-service/" className="hover:text-white transition-colors">
+              شروط الخدمة
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

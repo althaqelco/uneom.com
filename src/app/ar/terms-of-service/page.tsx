@@ -2,32 +2,33 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
-import EnhancedSEO2025 from '@/components/seo/EnhancedSEO2025';
+import { generateMetadata2026 } from '@/lib/seo-2026';
+import SEO2026 from '@/components/seo/SEO2026';
 
-export const metadata: Metadata = {
-  title: 'Ar | Terms Of Service | يونيوم المملكة العربية السعودية',
-  description: 'توفر يونيوم حلول الزي الموحد والملابس المهنية عالية الجودة المصممة خصيصًا للشركات والمؤسسات السعودية.',
-  keywords: ['زي موحد', 'ملابس مهنية', 'يونيوم', 'المملكة العربية السعودية', 'ar | terms of service'],
-  openGraph: {
-    title: 'Ar | Terms Of Service | يونيوم المملكة العربية السعودية',
-    description: 'توفر يونيوم حلول الزي الموحد والملابس المهنية عالية الجودة المصممة خصيصًا للشركات والمؤسسات السعودية.',
-    url: 'https://uneom.com/ar/terms-of-service/',
-    siteName: 'UNEOM',
-    images: [
-      {
-        url: 'https://uneom.com/images/og-image.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Ar | Terms Of Service - يونيوم المملكة العربية السعودية'
-      }
-    ],
-    locale: 'ar'
-  }
-};
+export const metadata: Metadata = generateMetadata2026({
+  title: 'شروط الخدمة | يونيوم السعودية',
+  description: 'تعرف على شروط وأحكام استخدام خدمات ومنتجات يونيوم. نوضح حقوقك والتزاماتنا لضمان أفضل خدمة لعملائنا في المملكة العربية السعودية.',
+  keywordsAr: ['شروط الخدمة', 'الأحكام والشروط', 'يونيوم السعودية', 'اتفاقية الاستخدام'],
+  locale: 'ar',
+  pageType: 'resources',
+  path: '/ar/terms-of-service',
+});
 
 export default function TermsOfServicePage() {
   return (
     <div className="bg-white" dir="rtl">
+      {/* SEO 2026 Infrastructure */}
+      <SEO2026 
+        title="شروط الخدمة | يونيوم"
+        description="شروط وأحكام الخدمة في يونيوم السعودية."
+        locale="ar"
+        pageType="resources"
+        mainEntity="Terms of Service"
+        mainEntityAr="شروط الخدمة"
+        breadcrumbs={[
+          { name: 'Terms of Service', nameAr: 'شروط الخدمة', url: '/ar/terms-of-service' },
+        ]}
+      />
       {/* Hero Section */}
       <section className="bg-blue-900 text-white py-16">
         <div className="container mx-auto px-4">

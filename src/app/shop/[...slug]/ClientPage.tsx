@@ -132,7 +132,7 @@ export default function ClientPage({ params, locale }: ClientPageProps) {
 
         <section className="py-12">
           <Container>
-            <SectionHeading subtitle={isArabic ? 'تصفح مجموعتنا' : 'Browse Collection'}>
+            <SectionHeading as="h1" subtitle={isArabic ? 'تصفح مجموعتنا' : 'Browse Collection'}>
               {category.name}
             </SectionHeading>
             

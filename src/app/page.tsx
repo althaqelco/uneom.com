@@ -9,8 +9,11 @@ import Image from 'next/image';
 // SEO 2026 OPTIMIZED METADATA
 // ============================================
 export const metadata: Metadata = generateMetadata2026({
-  title: 'Leading Uniform Manufacturer in Saudi Arabia | Professional Workwear Since 2003',
-  titleAr: 'الرائد في تصنيع الزي الموحد في السعودية | أزياء مهنية منذ 2003',
+  // NOTE: founding-year claims removed — prior builds shipped three
+  // conflicting years (2003 / 2013 / 2015). Restore only with the verified
+  // date, and keep the title ≤ 60 chars (brand suffix added by the helper).
+  title: 'Uniform Manufacturer & Supplier in Saudi Arabia',
+  titleAr: 'تصنيع وتوريد الزي الموحد والأزياء المهنية في السعودية',
   description: 'UNEOM is Saudi Arabia\'s #1 uniform manufacturer. Premium medical scrubs, corporate uniforms, hospitality attire, industrial workwear & school uniforms. ISO certified, nationwide delivery to Riyadh, Jeddah, Dammam. Get free quote today!',
   descriptionAr: 'يونيوم الشركة الأولى في تصنيع الزي الموحد في السعودية. سكراب طبي، زي شركات، ملابس ضيافة، ملابس سلامة صناعية، زي مدرسي. شهادة ISO، توصيل لجميع المدن. احصل على عرض سعر مجاني!',
   keywords: [
@@ -80,8 +83,8 @@ export const metadata: Metadata = generateMetadata2026({
   path: '/',
   image: '/images/og/uneom-homepage-2026.jpg',
   imageAlt: 'UNEOM - Leading Uniform Manufacturer in Saudi Arabia - Professional Workwear',
-  aiSummary: 'UNEOM is Saudi Arabia\'s leading professional uniform manufacturer since 2003. We provide premium quality uniforms for healthcare (medical scrubs, nursing uniforms), hospitality (hotel, restaurant), corporate (business suits, office wear), industrial (safety workwear, protective clothing), and education sectors (school uniforms). ISO 9001 certified with nationwide delivery to all Saudi cities including Riyadh, Jeddah, Dammam, Mecca, and Medina. Over 500 satisfied clients and 50,000+ uniforms delivered. Custom design services available with embroidery and branding options.',
-  aiSummaryAr: 'يونيوم هي الشركة الرائدة في تصنيع الزي الموحد في السعودية منذ 2003. نقدم أزياء مهنية عالية الجودة للقطاعات الطبية والضيافة والشركات والصناعة والتعليم. شهادة ISO 9001 مع التوصيل لجميع مدن السعودية. أكثر من 500 عميل راضٍ و50,000+ قطعة مسلمة.'
+  aiSummary: 'UNEOM is Saudi Arabia\'s leading professional uniform manufacturer. We provide premium quality uniforms for healthcare (medical scrubs, nursing uniforms), hospitality (hotel, restaurant), corporate (business suits, office wear), industrial (safety workwear, protective clothing), and education sectors (school uniforms). ISO 9001 certified with nationwide delivery to all Saudi cities including Riyadh, Jeddah, Dammam, Mecca, and Medina. Over 500 satisfied clients and 50,000+ uniforms delivered. Custom design services available with embroidery and branding options.',
+  aiSummaryAr: 'يونيوم هي الشركة الرائدة في تصنيع الزي الموحد في السعودية. نقدم أزياء مهنية عالية الجودة للقطاعات الطبية والضيافة والشركات والصناعة والتعليم. شهادة ISO 9001 مع التوصيل لجميع مدن السعودية. أكثر من 500 عميل راضٍ و50,000+ قطعة مسلمة.'
 });
 
 // ============================================
@@ -145,8 +148,8 @@ const homeFAQs = [
   {
     question: 'What makes UNEOM different from other uniform suppliers in Saudi Arabia?',
     questionAr: 'ما الذي يميز يونيوم عن موردي الزي الموحد الآخرين في السعودية؟',
-    answer: 'UNEOM stands out as Saudi Arabia\'s premier uniform manufacturer for several key reasons: 1) Experience: Over 20 years of expertise since 2003, serving 500+ satisfied clients. 2) Quality: ISO 9001:2015 and OEKO-TEX certified products with rigorous quality control. 3) Local Manufacturing: Made in Saudi Arabia, supporting local economy and ensuring faster delivery. 4) Custom Solutions: Full design and customization services from concept to delivery. 5) Comprehensive Range: One-stop shop for all industries from healthcare to hospitality. 6) Fast Delivery: 48-hour express service and nationwide coverage. 7) Competitive Pricing: Factory-direct pricing with bulk discounts. 8) After-Sales Support: Dedicated account managers and warranty coverage.',
-    answerAr: 'تتميز يونيوم كأفضل مصنع زي موحد في السعودية لعدة أسباب: 1) الخبرة: أكثر من 20 عاماً منذ 2003، نخدم 500+ عميل راضٍ. 2) الجودة: شهادات ISO 9001:2015 و OEKO-TEX. 3) التصنيع المحلي: صنع في السعودية مما يدعم الاقتصاد المحلي. 4) الحلول المخصصة: خدمات تصميم كاملة. 5) النطاق الشامل: حلول لجميع القطاعات. 6) التوصيل السريع: خدمة 48 ساعة وتغطية على مستوى المملكة. 7) الأسعار التنافسية: أسعار مباشرة من المصنع مع خصومات. 8) دعم ما بعد البيع: مديرو حسابات مخصصون وتغطية ضمان.'
+    answer: 'UNEOM stands out as Saudi Arabia\'s premier uniform manufacturer for several key reasons: 1) Experience: A proven track record serving 500+ satisfied clients across the Kingdom. 2) Quality: ISO 9001:2015 and OEKO-TEX certified products with rigorous quality control. 3) Local Manufacturing: Made in Saudi Arabia, supporting local economy and ensuring faster delivery. 4) Custom Solutions: Full design and customization services from concept to delivery. 5) Comprehensive Range: One-stop shop for all industries from healthcare to hospitality. 6) Fast Delivery: 48-hour express service and nationwide coverage. 7) Competitive Pricing: Factory-direct pricing with bulk discounts. 8) After-Sales Support: Dedicated account managers and warranty coverage.',
+    answerAr: 'تتميز يونيوم كأفضل مصنع زي موحد في السعودية لعدة أسباب: 1) الخبرة: سجل حافل في خدمة أكثر من 500 عميل راضٍ في المملكة. 2) الجودة: شهادات ISO 9001:2015 و OEKO-TEX. 3) التصنيع المحلي: صنع في السعودية مما يدعم الاقتصاد المحلي. 4) الحلول المخصصة: خدمات تصميم كاملة. 5) النطاق الشامل: حلول لجميع القطاعات. 6) التوصيل السريع: خدمة 48 ساعة وتغطية على مستوى المملكة. 7) الأسعار التنافسية: أسعار مباشرة من المصنع مع خصومات. 8) دعم ما بعد البيع: مديرو حسابات مخصصون وتغطية ضمان.'
   },
 ];
 
@@ -389,18 +392,18 @@ export default function HomePage() {
               { name: 'Buraidah', nameAr: 'بريدة', slug: 'buraidah' },
               { name: 'Hail', nameAr: 'حائل', slug: 'hail' },
               { name: 'Najran', nameAr: 'نجران', slug: 'najran' },
-              { name: 'Jubail', nameAr: 'الجبيل', slug: 'jubail' },
+              { name: 'Jubail', nameAr: 'الجبيل', slug: 'al-jubail' },
               { name: 'Yanbu', nameAr: 'ينبع', slug: 'yanbu' },
               { name: 'Al Ahsa', nameAr: 'الأحساء', slug: 'al-ahsa' },
-              { name: 'Jizan', nameAr: 'جازان', slug: 'jizan' },
+              { name: 'Jizan', nameAr: 'جازان', slug: 'jazan' },
               { name: 'Khamis M.', nameAr: 'خميس مشيط', slug: 'khamis-mushait' },
               { name: 'Dhahran', nameAr: 'الظهران', slug: 'dhahran' },
               { name: 'Al Kharj', nameAr: 'الخرج', slug: 'al-kharj' },
               { name: 'Sakaka', nameAr: 'سكاكا', slug: 'sakaka' },
               { name: 'Arar', nameAr: 'عرعر', slug: 'arar' },
               { name: 'Al Baha', nameAr: 'الباحة', slug: 'al-baha' },
-              { name: 'NEOM', nameAr: 'نيوم', slug: 'neom' },
-              { name: 'Qatif', nameAr: 'القطيف', slug: 'qatif' },
+              { name: 'Wadi Al-Dawasir', nameAr: 'وادي الدواسر', slug: 'wadi-al-dawasir' },
+              { name: 'Qatif', nameAr: 'القطيف', slug: 'al-qatif' },
             ].map((city) => (
               <Link
                 key={city.slug}

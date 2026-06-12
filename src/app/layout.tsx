@@ -9,11 +9,12 @@ import dynamic from 'next/dynamic';
 import { PhantomTrap } from '@/components/security/PhantomTrap';
 import { SpeculationRules } from '@/components/performance/SpeculationRules';
 
-// Dynamic imports for client-side only components
-const BatterySaverProvider = dynamic(
-  () => import('@/components/performance/BatterySaver').then(mod => ({ default: mod.BatterySaverProvider })),
-  { ssr: false }
-);
+// CRITICAL: BatterySaverProvider wraps the ENTIRE app. Importing it with
+// dynamic({ ssr: false }) forces BAILOUT_TO_CLIENT_SIDE_RENDERING for the
+// whole tree — every page ships as an EMPTY shell (zero content for
+// Googlebot). It is a 'use client' component with all browser APIs inside
+// useEffect, so it is fully SSR-safe as a static import. NEVER re-add ssr:false here.
+import { BatterySaverProvider } from '@/components/performance/BatterySaver';
 
 const ScrollDepthTracker = dynamic(
   () => import('@/components/behavior/ScrollDepthTracker').then(mod => ({ default: mod.ScrollDepthTracker })),
@@ -74,9 +75,9 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       noimageindex: false,
-      'max-video-preview': 30,
+      'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': 160}},
+      'max-snippet': -1}},
   openGraph: {
     type: 'website',
     locale: 'en_SA',
@@ -111,23 +112,12 @@ export const metadata: Metadata = {
       alt: 'UNEOM - Leading Professional Uniforms Manufacturer in Saudi Arabia',
       width: 1200,
       height: 630}},
-  alternates: {
-    canonical: 'https://uneom.com',
-    languages: {
-      'en': 'https://uneom.com',
-      'ar': 'https://uneom.com/ar',
-    },
-    media: {
-      'only screen and (max-width: 600px)': 'https://uneom.com/mobile'},
-    types: {
-      'application/rss+xml': 'https://uneom.com/rss.xml'}},
+  // NOTE: no site-wide `alternates` here on purpose.
+  // A root-level canonical would be inherited by every page that does not
+  // define its own, mass-canonicalizing them to the homepage. Each page
+  // must declare its own canonical + hreflang via generateMetadata.
   verification: {
-    google: 'k27-50XLg0yC-wwjyTIqfkGiowHO5nrAjTNiYmmf7is',
-    yandex: 'yandex-verification-code',
-    yahoo: 'yahoo-verification-code',
-    other: {
-      'msvalidate.01': 'bing-verification-code',
-      'facebook-domain-verification': 'facebook-verification-code'}},
+    google: 'k27-50XLg0yC-wwjyTIqfkGiowHO5nrAjTNiYmmf7is'},
   category: 'Manufacturing',
   classification: 'Business',
   other: {
@@ -153,39 +143,55 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+        {/* Correct lang/dir for Arabic routes before first paint.
+            The root layout cannot know the pathname during static render,
+            so /ar/* would otherwise ship with lang="en" dir="ltr".
+            Proper long-term fix: split into (en)/ and ar/ root layouts. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var p=location.pathname;if(p==='/ar'||p.indexOf('/ar/')===0){var d=document.documentElement;d.lang='ar';d.dir='rtl';}}catch(e){}})();",
+          }}
+        />
+        {/* Favicons are served via the App Router file convention:
+            src/app/icon.png (512×512) and src/app/apple-icon.png (180×180).
+            The previous hardcoded links pointed at files that did not exist
+            (/favicon.ico, /favicon.svg, /icons/*) — all 404s. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Language alternates */}
-        <link rel="alternate" hrefLang="en" href="https://uneom.com" />
-        <link rel="alternate" hrefLang="ar" href="https://uneom.com/ar" />
-        <link rel="alternate" hrefLang="x-default" href="https://uneom.com" />
-        
+        {/* hreflang is emitted per-page via the Metadata API (alternates.languages).
+            Do NOT hardcode homepage-wide alternate links here — they would be
+            injected into every page and conflict with the per-page values. */}
+
+        {/* Canonical Organization entity — single source of truth.
+            Page-level schemas must reference it via
+            {"@id": "https://uneom.com/#organization"} instead of
+            re-declaring their own Organization with divergent facts.
+            (foundingDate / numberOfEmployees intentionally omitted until
+            verified business values are provided — previous builds shipped
+            three conflicting founding years: 2003, 2013, 2015.) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": ["Organization", "ClothingStore", "LocalBusiness"],
+              "@type": ["Organization", "LocalBusiness"],
+              "@id": "https://uneom.com/#organization",
               "name": "UNEOM",
               "alternateName": "يونيوم للأزياء المهنية",
-              "url": "https://uneom.com",
+              "url": "https://uneom.com/",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://uneom.com/logo.png",
-                "width": 512,
-                "height": 512
+                "url": "https://uneom.com/images/uneom-logo.png",
+                "width": 600,
+                "height": 200
               },
+              "image": "https://uneom.com/images/og/uneom-og-image.jpg",
               "description": "Leading manufacturer of professional uniforms and workwear in Saudi Arabia. ISO 9001 certified.",
-              "foundingDate": "2015",
-              "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 50, "maxValue": 200 },
+              "telephone": "+966564612017",
+              "email": "info@uneom.com",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+966564612017",
@@ -221,7 +227,6 @@ export default function RootLayout({
                 { "@type": "City", "name": "Najran" },
                 { "@type": "Country", "name": "Saudi Arabia" }
               ],
-              "taxID": "CRN-PENDING",
               "knowsAbout": [
                 "Professional Uniform Manufacturing",
                 "Medical Scrubs",
@@ -241,35 +246,10 @@ export default function RootLayout({
                   "name": "ISO 9001:2015 Quality Management System"
                 }
               ],
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "UNEOM Uniforms Catalog",
-                "itemOffered": {
-                  "@type": "Offer",
-                  "warranty": {
-                    "@type": "WarrantyPromise",
-                    "durationOfWarranty": {
-                      "@type": "QuantitativeValue",
-                      "value": "12",
-                      "unitCode": "MON"
-                    },
-                    "description": "12-month quality warranty on all manufactured uniforms"
-                  }
-                }
-              },
-              "potentialAction": {
-                "@type": "ReserveAction",
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://uneom.com/quote?service={serviceSlug}&city={citySlug}",
-                  "inLanguage": ["ar-SA", "en"]
-                },
-                "result": { "@type": "Reservation", "name": "Uniform Quote Request" }
-              },
               "sameAs": [
-                "https://twitter.com/uneom_sa",
-                "https://linkedin.com/company/uneom",
-                "https://instagram.com/uneom_official"
+                "https://www.facebook.com/uneomuniforms/",
+                "https://www.instagram.com/uneomuniforms/",
+                "https://www.linkedin.com/company/uneom"
               ]
             })
           }}

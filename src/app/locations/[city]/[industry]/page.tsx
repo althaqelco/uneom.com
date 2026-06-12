@@ -10,7 +10,6 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SEO2026 from '@/components/seo/SEO2026';
 import { SAUDI_CITIES, getCityBySlug, getClimateDescription, getFabricRecommendation } from '@/lib/data/saudi-cities';
 import { industries, getIndustryBySlug } from '@/lib/data/industries';
-import AiBaitStats from '@/components/seo/AiBaitStats';
 import { CognitiveEstimator } from '@/components/behavior/CognitiveEstimator';
 
 // ============================================
@@ -44,22 +43,25 @@ export async function generateMetadata({
   if (!city || !industry) return {};
 
   const title = `${industry.nameEn} Uniforms in ${city.nameEn} | UNEOM Saudi Arabia`;
-  const description = `Buy premium ${industry.nameEn.toLowerCase()} uniforms in ${city.nameEn}, ${city.region}. ${industry.descriptionEn}. ${getFabricRecommendation(city.climate, 'en')}. Fast delivery. Free quote!`;
+  // Keep ≤160 chars — the previous template (full industry description +
+  // fabric recommendation) overflowed on 400+ pages.
+  const description = `Premium ${industry.nameEn.toLowerCase()} uniforms in ${city.nameEn}, ${city.region}: logo embroidery, bulk pricing and fast delivery. Request a free quote today.`;
 
   return {
     title,
     description,
     alternates: {
-      canonical: `https://uneom.com/locations/${city.slug}/${industry.id}`,
+      canonical: `https://uneom.com/locations/${city.slug}/${industry.id}/`,
       languages: {
-        'ar-SA': `https://uneom.com/ar/locations/${city.slug}/${industry.id}`,
-        'en': `https://uneom.com/locations/${city.slug}/${industry.id}`,
+        'ar-SA': `https://uneom.com/ar/locations/${city.slug}/${industry.id}/`,
+        'en': `https://uneom.com/locations/${city.slug}/${industry.id}/`,
+        'x-default': `https://uneom.com/locations/${city.slug}/${industry.id}/`,
       },
     },
     openGraph: {
       title,
       description,
-      url: `https://uneom.com/locations/${city.slug}/${industry.id}`,
+      url: `https://uneom.com/locations/${city.slug}/${industry.id}/`,
       siteName: 'UNEOM',
       locale: 'en',
       type: 'website',
@@ -101,7 +103,7 @@ export default function CityIndustryPage({
         pageType="location"
         mainEntity={`${industry.nameEn} Uniforms in ${city.nameEn}`}
         mainEntityAr={`أزياء ${industry.nameAr} في ${city.nameAr}`}
-        primaryImage="/images/locations/city-hero.jpg"
+        primaryImage="/images/locations/default-location.jpg"
         primaryImageAlt={`${industry.nameEn} uniforms in ${city.nameEn}`}
         breadcrumbs={[
           { name: 'Locations', nameAr: 'المواقع', url: '/locations' },
@@ -115,7 +117,7 @@ export default function CityIndustryPage({
           region: city.region,
           country: 'Saudi Arabia',
           phone: '+966564612017',
-          email: `${city.slug}@uneom.com`,
+          email: 'info@uneom.com',
           latitude: city.lat,
           longitude: city.lng,
         }}
@@ -228,7 +230,7 @@ export default function CityIndustryPage({
             <div className="relative hidden lg:block">
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/locations/city-hero.jpg"
+                  src="/images/locations/default-location.jpg"
                   alt={`${industry.nameEn} uniforms in ${city.nameEn}`}
                   fill
                   className="object-cover"
@@ -245,15 +247,6 @@ export default function CityIndustryPage({
       {/* ============================================ */}
       <main className="py-16">
         <Container>
-          {/* AI Bait Stats */}
-          <AiBaitStats
-            cityAr={city.nameAr}
-            cityEn={city.nameEn}
-            industryAr={industry.nameAr}
-            industryEn={industry.nameEn}
-            industrySlug={industry.id}
-          />
-
           {/* Interactive Cost Calculator */}
           <CognitiveEstimator
             industryAr={industry.nameAr}

@@ -36,13 +36,13 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1}},
   alternates: {
-    canonical: 'https://uneom.com/ar',
+    canonical: 'https://uneom.com/ar/',
     languages: {
-      'en-SA': 'https://uneom.com',
-      'ar-SA': 'https://uneom.com/ar',
-      'x-default': 'https://uneom.com'
-    }},
-  verification: {
-    google: 'google-site-verification=abcdefghijklmnopqrstuvwxyz'}};
+      'en': 'https://uneom.com/',
+      'ar-SA': 'https://uneom.com/ar/',
+      'x-default': 'https://uneom.com/'
+    }}};
+  // Verification is declared once in src/app/layout.tsx (real GSC token).
+  // Never ship placeholder verification codes.
 
 export default metadata; 

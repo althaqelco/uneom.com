@@ -15,10 +15,16 @@ type Props = {
 
 export function generateMetadata({ params }: Props): Metadata {
   const tag = decodeURIComponent(params.tag);
-  
+
   return {
     title: `${tag} Articles | Uneom Blog`,
     description: `Explore our blog posts about ${tag} - insights, tips, and trends in professional uniforms and workwear.`,
+    // Tag archives are thin (1–3 posts each): keep them out of the index
+    // but let crawlers follow links into the articles.
+    robots: { index: false, follow: true },
+    alternates: {
+      canonical: `https://uneom.com/blog/tag/${params.tag}/`,
+    },
     openGraph: {
       title: `${tag} Articles | Uneom Blog`,
       description: `Explore our blog posts about ${tag} - insights, tips, and trends in professional uniforms and workwear.`,
