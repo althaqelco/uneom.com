@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Tajawal } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { JsonLd } from '@/lib/seo/JsonLd';
 import { organizationSchema, websiteSchema } from '@/lib/seo/schemas';
 import { WhatsAppFloat } from '@/components/ui/WhatsAppFloat';
@@ -94,6 +95,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <WhatsAppFloat />
         {/* WebMCP — expose site tools to AI agents via browser */}
         <WebMCPProvider />
+        {/* GA4 — property "uneom-c9c0b" (a393573556/p536061119). The GA4
+            property + GSC link exist, but v2 shipped with no tag at all
+            ("No data received from your website yet"). Loaded via
+            @next/third-parties (afterInteractive, non-blocking). The CSP in
+            next.config.mjs allowlists googletagmanager/google-analytics. */}
+        <GoogleAnalytics gaId="G-RSQSS61R9J" />
         {/* Performance: Speculation Rules + Network-Aware + Battery Saver + SW registration
             Inlined as raw script to avoid 3 React hydration boundaries (Phase 4.1). */}
         <script
