@@ -42,6 +42,7 @@ import { uniformSupplierRiyadhJeddahDammam } from './posts/uniform-shop-riyadh-j
 import { riyadhAirAviationUniformStandards } from './posts/riyadh-air-aviation-uniform-standards';
 import { uniformFabricGuideSaudiClimate } from './posts/uniform-fabric-guide-saudi-climate';
 import { customUniformTailoringProcess } from './posts/custom-uniform-tailoring-process';
+import { uniformProcurementTenderGuideSaudi } from './posts/uniform-procurement-tender-guide-saudi';
 
 export type BlogCategorySlug =
   | 'healthcare'
@@ -121,7 +122,8 @@ export const BLOG_POSTS: BlogPost[] = [
   uniformSupplierRiyadhJeddahDammam,
   riyadhAirAviationUniformStandards,
   uniformFabricGuideSaudiClimate,
-  customUniformTailoringProcess
+  customUniformTailoringProcess,
+  uniformProcurementTenderGuideSaudi
 ];
 
 export const BLOG_CATEGORIES_BY_SLUG = Object.fromEntries(
