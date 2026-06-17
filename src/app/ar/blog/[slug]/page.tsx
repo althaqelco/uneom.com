@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { BLOG_POSTS, BLOG_POSTS_BY_SLUG, BLOG_CATEGORIES_BY_SLUG } from '@/lib/data/blog';
+import Link from 'next/link';
+import { BLOG_POSTS, BLOG_POSTS_BY_SLUG, BLOG_CATEGORIES_BY_SLUG, postsBySilo, postsByCategory } from '@/lib/data/blog';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { SiloLinks } from '@/components/ui/SiloLinks';
@@ -45,6 +46,13 @@ export default async function ArBlogPostPage({ params }: { params: Promise<{ slu
 
   const cat = BLOG_CATEGORIES_BY_SLUG[post.category];
   const date = new Date(post.publishedAt).toLocaleDateString('ar-SA', { day: 'numeric', month: 'long', year: 'numeric' });
+
+  // Related posts — sibling articles in the same silo (then category), giving
+  // each post peer inlinks that SiloLinks alone does not provide.
+  const related = [
+    ...postsBySilo(post.silo).filter(p => p.slug !== post.slug),
+    ...postsByCategory(post.category).filter(p => p.slug !== post.slug)
+  ].filter((p, i, arr) => arr.findIndex(x => x.slug === p.slug) === i).slice(0, 3);
 
   const schema = articleSchema({
     slug: post.slug,
@@ -165,6 +173,29 @@ export default async function ArBlogPostPage({ params }: { params: Promise<{ slu
           <SiloLinks context={{ type: 'blog-post', silo: post.silo, postSlug: post.slug }} lang="ar" />
         </div>
       </article>
+
+      {related.length > 0 && (
+        <section className="container-page section-tight" dir="rtl">
+          <h2 className="text-display text-navy-900">مقالات ذات صلة</h2>
+          <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {related.map(rp => (
+              <Link key={rp.slug} href={`/ar/blog/${rp.slug}/`} className="group flex flex-col card-hover overflow-hidden">
+                <div className="relative aspect-[16/9] overflow-hidden bg-ink-100">
+                  <picture>
+                    <source type="image/avif" sizes="(min-width: 1024px) 360px, 100vw" srcSet={`/images/${rp.hero}-640.avif 640w, /images/${rp.hero}-960.avif 960w`} />
+                    <source type="image/webp" sizes="(min-width: 1024px) 360px, 100vw" srcSet={`/images/${rp.hero}-640.webp 640w, /images/${rp.hero}-960.webp 960w`} />
+                    <img src={`/images/${rp.hero}-960.avif`} alt={rp.titleAr} className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy" width={960} height={540} />
+                  </picture>
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="text-lg font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">{rp.titleAr}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-500 line-clamp-2">{rp.excerptAr}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="container-page section">
         <CtaBlock
