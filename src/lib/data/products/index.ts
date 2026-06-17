@@ -5,6 +5,10 @@ export interface ProductCategory {
   industry: string;
   summary: string;
   summaryAr: string;
+  /** Long-form unique intro (~100 words) rendered on the category page —
+   *  added to lift these listing pages out of the thin/soft-404 bucket. */
+  intro: string;
+  introAr: string;
   hero: string;
 }
 

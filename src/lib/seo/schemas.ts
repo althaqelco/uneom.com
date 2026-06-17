@@ -55,11 +55,15 @@ export function organizationSchema() {
       { '@type': 'EducationalOccupationalCredential', credentialCategory: REAL.ISO_9001 },
       { '@type': 'EducationalOccupationalCredential', credentialCategory: REAL.OEKO_TEX }
     ],
-    areaServed: SAUDI_CITIES.map(c => ({
-      '@type': 'City',
-      name: c.nameEn,
-      geo: { '@type': 'GeoCoordinates', latitude: c.lat, longitude: c.lng }
-    })),
+    // De-bloated: the Organization node ships on EVERY page, so emitting all
+    // 24 cities × (City + GeoCoordinates) here put ~7,400 City + ~7,400 Geo
+    // nodes across the site for zero ranking benefit. The org serves the whole
+    // Kingdom — represent that as a Country plus the tier-1 metros by name.
+    // Per-city geo lives on the city pages' LocalBusiness node where it counts.
+    areaServed: [
+      { '@type': 'Country', name: 'Saudi Arabia' },
+      ...['Riyadh', 'Jeddah', 'Dammam', 'Mecca', 'Medina'].map(name => ({ '@type': 'City', name }))
+    ],
     knowsAbout: [
       'Healthcare uniforms', 'Hospitality attire', 'Aviation uniforms',
       'Corporate workwear', 'Education uniforms', 'Industrial uniforms',
@@ -419,6 +423,10 @@ export function productSchema(opts: ProductSchemaOpts) {
       priceCurrency: 'SAR',
       lowPrice: opts.priceFrom,
       offerCount: opts.sizes.length * opts.colors.length,
+      // Google recommends priceValidUntil on offers; baked at build time as
+      // ~1 year out and refreshed every deploy. Without it, Merchant/Rich
+      // Results flags the offer as incomplete.
+      priceValidUntil: (() => { const d = new Date(); d.setFullYear(d.getFullYear() + 1); return d.toISOString().slice(0, 10); })(),
       availability: 'https://schema.org/InStock',
       seller: { '@id': ORG_ID },
       hasMerchantReturnPolicy: { '@id': `${SITE}/#return-policy` },

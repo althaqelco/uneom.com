@@ -96,7 +96,7 @@ export default async function ArBlogPostPage({ params }: { params: Promise<{ slu
             )}
             <div className="mr-auto">
               <span className="text-xs font-medium text-ink-400">نُشر</span>
-              <p className="mt-0.5 text-sm text-navy-900">{date}</p>
+              <p className="mt-0.5 text-sm text-navy-900"><time dateTime={post.publishedAt}>{date}</time></p>
             </div>
           </div>
         </header>

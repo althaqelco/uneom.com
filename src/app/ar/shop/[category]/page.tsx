@@ -56,8 +56,11 @@ export default async function ArShopCategoryPage({ params }: { params: Promise<{
           lead={cat.summaryAr}
           hero
         />
+        <div className="mt-8 max-w-3xl text-base leading-relaxed text-ink-600 pretty">
+          {cat.introAr}
+        </div>
         {industry && (
-          <p className="mt-8 text-sm text-ink-500">
+          <p className="mt-6 text-sm text-ink-500">
             جزء من <Link href={`/ar/industries/${industry.slug}/`} className="link">{industry.nameAr}</Link>.
           </p>
         )}

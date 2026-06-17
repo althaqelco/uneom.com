@@ -47,7 +47,7 @@ function PostCard({ post }: { post: typeof BLOG_POSTS[number] }) {
           {post.excerpt}
         </p>
         <div className="mt-auto flex items-center gap-3 pt-5 text-xs text-ink-400">
-          <span>{date}</span>
+          <time dateTime={post.publishedAt}>{date}</time>
           <span aria-hidden>·</span>
           <span>{post.readingMinutes} min read</span>
         </div>

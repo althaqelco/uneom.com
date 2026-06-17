@@ -51,6 +51,9 @@ export default async function ArBlogCategoryPage({ params }: { params: Promise<{
           lead={cat.descriptionAr}
           hero
         />
+        <div className="mt-8 max-w-3xl text-base leading-relaxed text-ink-600 pretty">
+          {cat.introAr}
+        </div>
       </section>
 
       <section className="container-page pb-24">
@@ -73,7 +76,7 @@ export default async function ArBlogCategoryPage({ params }: { params: Promise<{
                     <h3 className="text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">{post.titleAr}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-ink-500 line-clamp-3">{post.excerptAr}</p>
                     <div className="mt-auto flex items-center gap-3 pt-5 text-xs text-ink-400">
-                      <span>{date}</span><span aria-hidden>·</span><span>{post.readingMinutes} دقيقة</span>
+                      <time dateTime={post.publishedAt}>{date}</time><span aria-hidden>·</span><span>{post.readingMinutes} دقيقة</span>
                     </div>
                   </div>
                 </Link>

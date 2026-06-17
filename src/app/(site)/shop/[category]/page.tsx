@@ -56,8 +56,11 @@ export default async function ShopCategoryPage({ params }: { params: Promise<{ c
           lead={cat.summary}
           hero
         />
+        <div className="mt-8 max-w-3xl text-base leading-relaxed text-ink-600 pretty">
+          {cat.intro}
+        </div>
         {industry && (
-          <p className="mt-8 text-sm text-ink-500">
+          <p className="mt-6 text-sm text-ink-500">
             Part of the <Link href={`/industries/${industry.slug}/`} className="link">{industry.nameEn} silo</Link>.
           </p>
         )}

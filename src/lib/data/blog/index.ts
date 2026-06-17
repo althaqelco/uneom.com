@@ -58,6 +58,10 @@ export interface BlogCategory {
   nameAr: string;
   description: string;
   descriptionAr: string;
+  /** Long-form unique intro rendered on the category page to lift these
+   *  editorial listing pages out of the thin/soft-404 bucket. */
+  intro: string;
+  introAr: string;
   industries: string[];
 }
 
