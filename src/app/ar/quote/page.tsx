@@ -26,7 +26,7 @@ export default function ArQuotePage() {
       <Breadcrumbs items={[{ name: 'طلب عرض سعر', path: '/ar/quote/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow="ملخّص البرنامج"
           title={<>أربعة أسئلة. <span className="text-accent-700">يوم عمل واحد.</span></>}
           lead="عيّنات قماش تُشحَن، خيارات تصميم مُجمَّعة، ومقترح برنامج في صندوق بريدك قبل شروق الشمس التالي."

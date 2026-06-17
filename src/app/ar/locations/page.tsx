@@ -37,7 +37,7 @@ export default function ArLocationsHubPage() {
       <Breadcrumbs items={[{ name: 'المدن', path: '/ar/locations/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${COMPANY_STATS.cities} مدينة · فريق عمليات واحد`}
           title={<>من الحزام الصناعي بالمنطقة الشرقية إلى <span className="text-accent-700">مرتفعات عسير.</span></>}
           lead="UNEOM يشحن برامج الزي الموحّد إلى كل مقاطعة سعودية. قياسات ميدانية للتجمعات التي تتجاوز 50 موظفاً، توصيل دورات الاستبدال في أي مكان خلال 48 ساعة، ومواصفات قماش مُعيَّرة حسب المدينة."

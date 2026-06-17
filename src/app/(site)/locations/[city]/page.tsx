@@ -20,14 +20,14 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const city = getCity(citySlug);
   if (!city) return {};
   const cityTitleMap: Record<string, string> = {
-    riyadh: `${city.nameEn} Uniforms — Uniform Shop in Riyadh | UNEOM`,
-    jeddah: `${city.nameEn} Uniforms — Uniform Shop in Jeddah | UNEOM`,
-    dammam: `${city.nameEn} Uniforms — Uniform Shop in Dammam | UNEOM`,
-    mecca: `${city.nameEn} Uniforms — Hajj-Season Uniform Provider | UNEOM`,
-    medina: `${city.nameEn} Uniforms — Uniform Supplier in Medina | UNEOM`,
-    khobar: `${city.nameEn} Uniforms — Eastern Province Uniform Shop | UNEOM`,
-    tabuk: `${city.nameEn} Uniforms — NEOM Region Supplier | UNEOM`,
-    abha: `${city.nameEn} Uniforms — Asir Region Uniform Provider | UNEOM`,
+    riyadh: `${city.nameEn} Uniforms — Uniform Shop in Riyadh`,
+    jeddah: `${city.nameEn} Uniforms — Uniform Shop in Jeddah`,
+    dammam: `${city.nameEn} Uniforms — Uniform Shop in Dammam`,
+    mecca: `${city.nameEn} Uniforms — Hajj-Season Uniform Provider`,
+    medina: `${city.nameEn} Uniforms — Uniform Supplier in Medina`,
+    khobar: `${city.nameEn} Uniforms — Eastern Province Uniform Shop`,
+    tabuk: `${city.nameEn} Uniforms — NEOM Region Supplier`,
+    abha: `${city.nameEn} Uniforms — Asir Region Uniform Provider`,
   };
   const cityDescMap: Record<string, string> = {
     riyadh: `Professional uniform Riyadh programmes — medical scrubs, corporate workwear, school uniforms & coveralls. 240+ active accounts. UNEOM uniform shop near you in Riyadh.`,
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
     'hafar-al-batin': `Uniform provider in Hafar Al-Batin — safety uniforms, coverall uniforms & industrial workwear. Serving the military & industrial sectors.`,
   };
   return {
-    title: cityTitleMap[citySlug] || `${city.nameEn} Uniforms — Saudi Arabia (${city.region}) | UNEOM`,
+    title: cityTitleMap[citySlug] || `${city.nameEn} Uniforms — Saudi Arabia (${city.region})`,
     description: cityDescMap[citySlug] || `Professional uniform programmes serving ${city.nameEn}, ${city.region}. UNEOM operations across healthcare, hospitality, aviation, manufacturing, and beyond.`,
     alternates: {
       canonical: `https://uneom.com/locations/${citySlug}/`,

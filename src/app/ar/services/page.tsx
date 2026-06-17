@@ -27,7 +27,7 @@ export default function ArServicesHubPage() {
       <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'الخدمات', path: '/ar/services/' }]} />
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow="سبع خدمات. فريق عمليات واحد."
           title={<>من <span className="text-accent-700">التصميم</span> إلى الخياطة، وكل خطوة بينهما.</>}
           lead="UNEOM شريك في البرامج وليس كتالوجاً. هذه الخدمات التشغيلية هي ما يُبقي كل عقد زي موحّد متماسكاً."

@@ -28,7 +28,7 @@ export default function CaseStudiesHubPage() {
       <Breadcrumbs items={[{ name: 'Case Studies', path: '/case-studies/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${CASE_STUDIES.length} programmes · real numbers`}
           title={<>Saudi enterprises that <span className="text-accent-700">switched.</span></>}
           lead="Each case study is a Saudi B2B programme rebuilt with UNEOM. Before-and-after photography, real metrics, and the operational story behind the numbers."

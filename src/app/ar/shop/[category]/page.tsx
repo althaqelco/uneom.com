@@ -50,7 +50,7 @@ export default async function ArShopCategoryPage({ params }: { params: Promise<{
       ]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${products.length} منتج رئيسي`}
           title={cat.nameAr}
           lead={cat.summaryAr}

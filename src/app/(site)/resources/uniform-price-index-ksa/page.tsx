@@ -67,9 +67,12 @@ export default function UniformPriceIndexPage() {
         { '@type': 'PropertyValue', name: `${i.nameEn} — warranty window`, value: s.warrantyMonths, unitText: 'months' }
       ];
     }),
+    // NOTE: the application/json DataDownload was removed — it pointed at
+    // /resources/uniform-price-index-ksa/data.json which 404s (no such route),
+    // making the Dataset cite a broken distribution asset. Re-add only once a
+    // real JSON endpoint is published.
     distribution: [
-      { '@type': 'DataDownload', encodingFormat: 'text/html', contentUrl: `${SITE}/resources/uniform-price-index-ksa/` },
-      { '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: `${SITE}/resources/uniform-price-index-ksa/data.json` }
+      { '@type': 'DataDownload', encodingFormat: 'text/html', contentUrl: `${SITE}/resources/uniform-price-index-ksa/` }
     ],
     citation: 'UNEOM (2026). Saudi Professional Uniform Price Index. Retrieved from https://uneom.com/resources/uniform-price-index-ksa/'
   };

@@ -24,7 +24,7 @@ export default function ArContactPage() {
       <Breadcrumbs items={[{ name: 'تواصل معنا', path: '/ar/contact/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow="تحدّث مع العمليات"
           title={<>خط مباشر للفريق الذي <span className="text-accent-700">يُدير برنامجك.</span></>}
           lead="بلا قمع تسويقي. بلا رسائل مُتدرِّجة. أوّل ردّ تتلقّاه يكون من مدير العمليات الذي سيتولّى عقدك."

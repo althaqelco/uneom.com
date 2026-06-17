@@ -29,7 +29,7 @@ export default function IndustriesHubPage() {
       <Breadcrumbs items={[{ name: 'Industries', path: '/industries/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${COMPANY_STATS.industries} silos · ${COMPANY_STATS.activeClients}+ clients`}
           title={<>Eight Saudi industries. <span className="text-accent-700">Mastered, not catalogued.</span></>}
           lead="Every silo on this page is a complete programme — pillar pages, products, regulators, case studies, and the city-level operations to deliver. Click any silo to see its full architecture."

@@ -29,7 +29,7 @@ export default function ArIndustriesHubPage() {
       <Breadcrumbs items={[{ name: 'القطاعات', path: '/ar/industries/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${COMPANY_STATS.industries} قطاعات · ${COMPANY_STATS.activeClients}+ عميل`}
           title={<>ثمانية قطاعات سعودية. <span className="text-accent-700">متخصّصون فيها، لا مجرّد كتالوج.</span></>}
           lead="كل قطاع في هذه الصفحة هو برنامج متكامل — صفحات رئيسية، منتجات، جهات تنظيمية، دراسات حالة، وعمليات على مستوى المدينة لتنفيذه. اضغط على أي قطاع لمشاهدة هيكله الكامل."

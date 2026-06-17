@@ -50,7 +50,7 @@ export default async function ShopCategoryPage({ params }: { params: Promise<{ c
       ]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${products.length} hero ${products.length === 1 ? 'product' : 'products'}`}
           title={cat.nameEn}
           lead={cat.summary}

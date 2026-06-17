@@ -26,7 +26,7 @@ export default function QuotePage() {
       <Breadcrumbs items={[{ name: 'Request a Quote', path: '/quote/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow="Programme brief"
           title={<>Four questions. <span className="text-accent-700">One business day.</span></>}
           lead="Sample garments dispatched, fabric options assembled, and a programme proposal in your inbox before our next sunrise."

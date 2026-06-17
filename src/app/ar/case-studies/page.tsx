@@ -29,7 +29,7 @@ export default function ArCaseStudiesHubPage() {
       <Breadcrumbs items={[{ name: 'دراسات الحالة', path: '/ar/case-studies/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${CASE_STUDIES.length} برامج · أرقام حقيقية`}
           title={<>مؤسسات سعودية <span className="text-accent-700">اختارت التغيير.</span></>}
           lead="كل دراسة حالة هي برنامج B2B سعودي أُعيد بناؤه مع UNEOM. تصوير قبل وبعد، مقاييس حقيقية، والقصة التشغيلية وراء الأرقام."

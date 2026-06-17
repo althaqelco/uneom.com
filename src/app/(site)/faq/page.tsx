@@ -38,7 +38,7 @@ export default function FaqPage() {
       <Breadcrumbs items={[{ name: 'FAQ', path: '/faq/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow="FAQ"
           title="Programme questions, answered."
           lead="The questions we hear most from Saudi enterprises evaluating uniform programme partners."

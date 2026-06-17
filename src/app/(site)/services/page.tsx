@@ -27,7 +27,7 @@ export default function ServicesHubPage() {
       <JsonLd data={schema} />
       <Breadcrumbs items={[{ name: 'Services', path: '/services/' }]} />
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow="Seven services. One operations team."
           title={<>From <span className="text-accent-700">sketch</span> to seam, and every step between.</>}
           lead="UNEOM is a programme partner — not a catalogue. These are the operational services that hold every uniform contract together."

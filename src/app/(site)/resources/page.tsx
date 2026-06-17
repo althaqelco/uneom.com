@@ -28,7 +28,7 @@ export default function ResourcesHubPage() {
       <Breadcrumbs items={[{ name: 'Resources', path: '/resources/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${RESOURCES.length} deep guides`}
           title={<>The <span className="text-accent-700">operations briefs</span> behind every UNEOM programme.</>}
           lead="Fabric science, sizing engineering, procurement frameworks, compliance citations — the documents we hand to client procurement teams. Now public."

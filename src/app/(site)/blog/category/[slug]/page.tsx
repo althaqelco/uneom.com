@@ -45,7 +45,7 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ s
       ]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`Category · ${posts.length} ${posts.length === 1 ? 'post' : 'posts'}`}
           title={cat.nameEn}
           lead={cat.description}

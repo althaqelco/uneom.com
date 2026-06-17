@@ -38,7 +38,7 @@ export default function ArFaqPage() {
       <Breadcrumbs items={[{ name: 'الأسئلة الشائعة', path: '/ar/faq/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow="الأسئلة الشائعة"
           title="أسئلة البرنامج، مُجابة."
           lead="الأسئلة التي نسمعها أكثر من المؤسسات السعودية التي تُقيّم شركاء برامج الزي الموحّد."

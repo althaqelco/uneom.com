@@ -355,15 +355,21 @@ export function jobPostingSchema(jobs: JobPostingOpts[]) {
 
 export function guideSchema(opts: { slug: string; title: string; summary: string; image?: string; locale?: 'en' | 'ar' }) {
   const prefix = opts.locale === 'ar' ? '/ar' : '';
+  // Was '@type': 'HowTo' with NO `step` array — invalid HowTo (Google rejects
+  // a HowTo lacking steps; it generates a Search Console structured-data error
+  // and zero rich results). These resources are reference guides, not literal
+  // step-by-step procedures, so Article is the correct, valid type.
   return {
     '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    '@id': `${SITE}${prefix}/resources/${opts.slug}/#howto`,
+    '@type': 'Article',
+    '@id': `${SITE}${prefix}/resources/${opts.slug}/#article`,
+    headline: opts.title,
     name: opts.title,
     description: opts.summary,
     ...(opts.image ? { image: `${SITE}${opts.image}` } : {}),
     author: { '@id': ORG_ID },
     publisher: { '@id': ORG_ID },
+    mainEntityOfPage: `${SITE}${prefix}/resources/${opts.slug}/`,
     inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en'
   };
 }
@@ -428,22 +434,12 @@ export function productSchema(opts: ProductSchemaOpts) {
       },
       potentialAction: { '@type': 'ReserveAction', target: { '@type': 'EntryPoint', urlTemplate: `${SITE}${prefix}/quote/?product=${opts.slug}` } }
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      bestRating: '5',
-      ratingCount: '127',
-      reviewCount: '89'
-    },
-    review: {
-      '@type': 'Review',
-      author: { '@type': 'Organization', name: opts.locale === 'ar' ? 'فريق مشتريات UNEOM' : 'UNEOM Procurement Team' },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: opts.locale === 'ar'
-        ? 'جودة متسقة عبر الشحنات. نتائج اختبار الغسيل بعد ٥٠ دورة تطابق المواصفات الأولية.'
-        : 'Consistent quality across shipments. Wash-test results at 50 cycles match initial spec sheet.',
-      datePublished: '2026-01-15'
-    },
+    // NOTE: aggregateRating + review intentionally OMITTED. The prior values
+    // (ratingValue 4.8 / ratingCount 127 / reviewCount 89, plus a seller-
+    // authored 5-star Review) were HARDCODED IDENTICAL on all 36 products —
+    // a Google fake-review structured-data policy violation (manual-action /
+    // rich-result-suppression risk). Re-add ONLY when wired to a real,
+    // per-product review source. Do not ship fabricated ratings.
     ...(opts.compliance && opts.compliance.length > 0 ? {
       additionalProperty: opts.compliance.map(c => ({
         '@type': 'PropertyValue',

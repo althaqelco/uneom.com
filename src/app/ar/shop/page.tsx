@@ -28,7 +28,7 @@ export default function ArShopHubPage() {
       <Breadcrumbs items={[{ name: 'المتجر', path: '/ar/shop/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${PRODUCT_CATEGORIES.length} تصنيف · ${PRODUCTS.length} منتج رئيسي`}
           title={<>منتجات رئيسية. <span className="text-accent-700">اقتصاديات البرامج.</span></>}
           lead="UNEOM مشغّل برامج وليس متجراً للكتالوجات — لكن كل برنامج يبدأ بمنتج رئيسي. هذه الملابس الأكثر طلباً عبر القطاعات الثمانية."

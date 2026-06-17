@@ -75,16 +75,28 @@ export const viewport: Viewport = {
  */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={tajawal.variable}>
+    <html lang="en" dir="ltr" className={tajawal.variable} suppressHydrationWarning>
       <head>
-        {/* LCP preload — start downloading hero image during HTML parse */}
-        <link
-          rel="preload"
-          href="/images/heroes/healthcare-pillar-hero-960.avif"
-          as="image"
-          type="image/avif"
-          fetchPriority="high"
+        {/* Locale correction: this shared root layout cannot know the path at
+            static-render time (calling headers() here would force EVERY page
+            to dynamic SSR and destroy the static/CDN cache). So /ar/* pages
+            ship as lang="en" in raw HTML; this tiny synchronous script fixes
+            <html lang/dir> before first paint, so Googlebot's renderer and
+            screen readers see lang="ar" dir="rtl". Gold-standard follow-up:
+            migrate /ar to a [lang] segment with per-locale root <html>. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var p=location.pathname;if(p==='/ar'||p.indexOf('/ar/')===0){var d=document.documentElement;d.lang='ar';d.dir='rtl';}}catch(e){}})();",
+          }}
         />
+        {/* NOTE: removed the hardcoded LCP preload of
+            healthcare-pillar-hero-960.avif — it was injected on EVERY page,
+            so ~294 of 296 pages preloaded an image they never render (wasted
+            bytes) AND failed to preload their actual LCP hero. Each template's
+            hero <img> already carries fetchPriority="high", which is the
+            correct per-page LCP signal. Re-introduce per-route preload via the
+            page's own <head> if needed. */}
         {/* Preconnect to WhatsApp for faster CTA click */}
         <link rel="preconnect" href="https://wa.me" />
         <JsonLd data={[organizationSchema(), websiteSchema()]} />

@@ -23,14 +23,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const industry = getIndustry(slug);
   if (!industry) return {};
   const titleMap: Record<string, string> = {
-    healthcare: 'Healthcare Uniforms in Saudi Arabia — Medical Scrubs & Lab Coats | UNEOM',
-    hospitality: 'Hospitality Uniforms — Chef Uniforms, Maid Uniforms & Hotel Attire | UNEOM',
-    education: 'School Uniforms in Saudi Arabia — MoE-Compliant | UNEOM',
-    corporate: 'Corporate Uniforms & Staff Workwear — Saudi Enterprises | UNEOM',
-    manufacturing: 'Coverall Uniforms & Safety Uniforms — Aramco-Grade PPE | UNEOM',
-    security: 'Security Uniforms — Military & Tactical Guard Attire | UNEOM',
-    aviation: 'Aviation Uniforms — Riyadh Air & Crew Attire | UNEOM',
-    retail: 'Retail Staff Uniforms — Branded Store Attire | UNEOM'
+    healthcare: 'Healthcare Uniforms in Saudi Arabia — Medical Scrubs & Lab Coats',
+    hospitality: 'Hospitality Uniforms — Chef Uniforms, Maid Uniforms & Hotel Attire',
+    education: 'School Uniforms in Saudi Arabia — MoE-Compliant',
+    corporate: 'Corporate Uniforms & Staff Workwear — Saudi Enterprises',
+    manufacturing: 'Coverall Uniforms & Safety Uniforms — Aramco-Grade PPE',
+    security: 'Security Uniforms — Military & Tactical Guard Attire',
+    aviation: 'Aviation Uniforms — Riyadh Air & Crew Attire',
+    retail: 'Retail Staff Uniforms — Branded Store Attire'
   };
   const descMap: Record<string, string> = {
     healthcare: 'MoH and SFDA-compliant medical scrubs, scrub suit uniforms, lab coats, and nurse uniforms across all 24 Saudi cities. AATCC-100 antimicrobial fabric, 18-month warranty. Get a quote.',
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     retail: 'Branded retail staff uniforms with 200+ wash-cycle durability. Rotating programmes for Saudi mall and store chains.'
   };
   return {
-    title: titleMap[slug] ?? `${industry.nameEn} Uniforms — Saudi Arabia | UNEOM`,
+    title: titleMap[slug] ?? `${industry.nameEn} Uniforms — Saudi Arabia`,
     description: descMap[slug] ?? industry.tagline,
     alternates: {
       canonical: `https://uneom.com/industries/${slug}/`,

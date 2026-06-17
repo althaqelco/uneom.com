@@ -20,17 +20,17 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const city = getCity(citySlug);
   if (!city) return {};
   const cityTitleMapAr: Record<string, string> = {
-    riyadh: `الزي الموحد الرياض — محل الزي الموحد في الرياض | UNEOM`,
-    jeddah: `الزي الموحد جدة — زي موحد جدة ويونيفورم | UNEOM`,
-    dammam: `الزي الموحد الدمام — زي موحد للعمال المنطقة الشرقية | UNEOM`,
-    mecca: `زي موحد مكة — يونيفورم موسم الحج | UNEOM`,
-    medina: `زي موحد المدينة — يونيفورم فنادق ومدارس | UNEOM`,
-    khobar: `زي موحد الخبر — يونيفورم المنطقة الشرقية | UNEOM`,
-    tabuk: `زي موحد تبوك — يونيفورم منطقة نيوم | UNEOM`,
-    abha: `زي موحد أبها — يونيفورم منطقة عسير | UNEOM`,
-    'al-qatif': `الزي الموحد القطيف — يونيفورم | UNEOM`,
-    'arar': `الزي الموحد عرعر — يونيفورم | UNEOM`,
-    'hafar-al-batin': `الزي الموحد حفر الباطن — يونيفورم | UNEOM`,
+    riyadh: `الزي الموحد الرياض — محل الزي الموحد في الرياض`,
+    jeddah: `الزي الموحد جدة — زي موحد جدة ويونيفورم`,
+    dammam: `الزي الموحد الدمام — زي موحد للعمال المنطقة الشرقية`,
+    mecca: `زي موحد مكة — يونيفورم موسم الحج`,
+    medina: `زي موحد المدينة — يونيفورم فنادق ومدارس`,
+    khobar: `زي موحد الخبر — يونيفورم المنطقة الشرقية`,
+    tabuk: `زي موحد تبوك — يونيفورم منطقة نيوم`,
+    abha: `زي موحد أبها — يونيفورم منطقة عسير`,
+    'al-qatif': `الزي الموحد القطيف — يونيفورم`,
+    'arar': `الزي الموحد عرعر — يونيفورم`,
+    'hafar-al-batin': `الزي الموحد حفر الباطن — يونيفورم`,
   };
   const cityDescMapAr: Record<string, string> = {
     riyadh: `محل الزي الموحد في الرياض — سكراب طبي، الزي الموحد للشركات، يونيفورم مدارس وأفرولات. 240+ حساب نشط. معمل خياطة الزي الموحد الرياض. المظهر الطبي الرياض.`,
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
     'hafar-al-batin': `الزي الموحد حفر الباطن — أفرولات صناعية، يونيفورم عسكري، وزي موحد للعمال. خدمة منطقة حفر الباطن والقطاع العسكري.`,
   };
   return {
-    title: cityTitleMapAr[citySlug] || `الزي الموحد ${city.nameAr} — يونيفورم ${city.nameAr} | UNEOM`,
+    title: cityTitleMapAr[citySlug] || `الزي الموحد ${city.nameAr} — يونيفورم ${city.nameAr}`,
     description: cityDescMapAr[citySlug] || `برامج زي موحد مهني تخدم ${city.nameAr}، ${city.regionAr}. عمليات UNEOM في الرعاية الصحية والضيافة والطيران والتصنيع.`,
     alternates: {
       canonical: `https://uneom.com/ar/locations/${citySlug}/`,

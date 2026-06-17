@@ -45,7 +45,7 @@ export default async function ArBlogCategoryPage({ params }: { params: Promise<{
       ]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`التصنيف · ${posts.length} ${posts.length === 1 ? 'مقالة' : 'مقالات'}`}
           title={cat.nameAr}
           lead={cat.descriptionAr}

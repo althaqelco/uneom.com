@@ -115,7 +115,19 @@ export function middleware(req: NextRequest) {
     }
   }
 
-  return NextResponse.next();
+  // ── Passthrough ──
+  // The homepage is in the matcher (for markdown negotiation above). Firebase
+  // App Hosting's adapter defaults middleware-touched routes to `Cache-Control:
+  // no-store`, which bypassed Cloud CDN on '/' (cold TTFB ~2.2s on the highest-
+  // value page) even though it is statically prerendered. Re-assert the CDN
+  // cache header on the '/' passthrough so the homepage is edge-cached like the
+  // rest of the site. (Other routes aren't middleware-touched and already get
+  // s-maxage from next.config.mjs headers().)
+  const res = NextResponse.next();
+  if (path === '/') {
+    res.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
+  }
+  return res;
 }
 
 export const config = {

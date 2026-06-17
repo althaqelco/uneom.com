@@ -29,7 +29,7 @@ export default function ArResourcesHubPage() {
       <Breadcrumbs items={[{ name: 'الأدلة', path: '/ar/resources/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${RESOURCES.length} دليل عميق`}
           title={<>الملخّصات <span className="text-accent-700">التشغيلية</span> وراء كل برنامج من UNEOM.</>}
           lead="علم الأقمشة، هندسة المقاسات، أطر الشراء، الاستشهادات الامتثالية — الوثائق التي نسلّمها لفرق المشتريات لدى العملاء. الآن متاحة للجميع."

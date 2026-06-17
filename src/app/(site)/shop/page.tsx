@@ -28,7 +28,7 @@ export default function ShopHubPage() {
       <Breadcrumbs items={[{ name: 'Shop', path: '/shop/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${PRODUCT_CATEGORIES.length} categories · ${PRODUCTS.length} hero products`}
           title={<>Hero products. <span className="text-accent-700">Programme economics.</span></>}
           lead="UNEOM is a programme operator, not a catalogue retailer — but every programme starts with a hero product. These are the most-ordered garments across the eight industry silos."

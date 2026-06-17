@@ -36,7 +36,7 @@ export default function LocationsHubPage() {
       <Breadcrumbs items={[{ name: 'Locations', path: '/locations/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${COMPANY_STATS.cities} cities · single operations team`}
           title={<>From the Eastern Province industrial belt to the <span className="text-accent-700">Asir highlands.</span></>}
           lead="UNEOM ships uniform programmes to every Saudi province. On-site fittings for headcounts above 50, replacement-cycle delivery anywhere within 48 hours, and city-tuned fabric specs."

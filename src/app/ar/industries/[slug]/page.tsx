@@ -23,14 +23,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const industry = getIndustry(slug);
   if (!industry) return {};
   const titleMap: Record<string, string> = {
-    healthcare: 'الزي الطبي في السعودية — سكراب طبي ولابكوت معتمدة من وزارة الصحة | UNEOM',
-    hospitality: 'يونيفورم مطاعم وشيف وخدم — زي موحد للفنادق السعودية | UNEOM',
-    education: 'يونيفورم مدارس — الزي الموحد للمدارس السعودية | UNEOM',
-    corporate: 'الزي الموحد للشركات — يونيفورم عاملات وموظفين | UNEOM',
-    manufacturing: 'زي موحد للسلامة وأفرولات صناعية — معايير HCIS | UNEOM',
-    security: 'أزياء أمنية وعسكرية — الزي الموحد للحراسات | UNEOM',
-    aviation: 'أزياء الطيران — زي طيران الرياض والطاقم | UNEOM',
-    retail: 'زي موحد للتجزئة — يونيفورم موظفي المتاجر | UNEOM'
+    healthcare: 'الزي الطبي في السعودية — سكراب طبي ولابكوت معتمدة من وزارة الصحة',
+    hospitality: 'يونيفورم مطاعم وشيف وخدم — زي موحد للفنادق السعودية',
+    education: 'يونيفورم مدارس — الزي الموحد للمدارس السعودية',
+    corporate: 'الزي الموحد للشركات — يونيفورم عاملات وموظفين',
+    manufacturing: 'زي موحد للسلامة وأفرولات صناعية — معايير HCIS',
+    security: 'أزياء أمنية وعسكرية — الزي الموحد للحراسات',
+    aviation: 'أزياء الطيران — زي طيران الرياض والطاقم',
+    retail: 'زي موحد للتجزئة — يونيفورم موظفي المتاجر'
   };
   const descMap: Record<string, string> = {
     healthcare: 'سكراب طبي وسكربات طبية ولابكوت ولبس تمريض معتمدة من وزارة الصحة وSFDA في 24 مدينة سعودية. قماش antimicrobial AATCC 100، ضمان 18 شهراً. اطلب عرضاً.',
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     retail: 'زي موحد للتجزئة بمتانة 200+ دورة غسيل. برامج دورية لسلاسل المراكز التجارية السعودية.'
   };
   return {
-    title: titleMap[slug] ?? `أزياء ${industry.nameAr} — المملكة العربية السعودية | UNEOM`,
+    title: titleMap[slug] ?? `أزياء ${industry.nameAr} — المملكة العربية السعودية`,
     description: descMap[slug] ?? industry.taglineAr,
     alternates: {
       canonical: `https://uneom.com/ar/industries/${slug}/`,

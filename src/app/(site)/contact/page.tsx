@@ -24,7 +24,7 @@ export default function ContactPage() {
       <Breadcrumbs items={[{ name: 'Contact', path: '/contact/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow="Talk to operations"
           title={<>Direct line to the team that <span className="text-accent-700">runs your programme.</span></>}
           lead="No marketing funnel. No drip emails. The first reply you get is from the operations manager who'll handle your contract."

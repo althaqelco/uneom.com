@@ -37,7 +37,7 @@ export default function CareersPage() {
       <Breadcrumbs items={[{ name: 'Careers', path: '/careers/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${COMPANY_STATS.staff}+ team · ${ROLES.length} open roles`}
           title={<>We hire for the <span className="text-accent-700">second contract</span>, not the first sale.</>}
           lead="UNEOM is a Saudi-owned uniform programme operator. We don't sell catalogues — we run multi-year contracts. The roles below are for people who want to build something that survives the second-year audit."

@@ -69,7 +69,7 @@ export default function BlogIndexPage() {
       <Breadcrumbs items={[{ name: 'Editorial', path: '/blog/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${BLOG_POSTS.length} evergreen posts · ${BLOG_CATEGORIES.length} categories`}
           title={<>Editorial from <span className="text-accent-700">inside</span> the Saudi uniform industry.</>}
           lead="Fabric science, regulatory frameworks, procurement realities, and the operational truths that catalogues skip. Authored by UNEOM operations leads, reviewed by Saudi Council of Engineers members."

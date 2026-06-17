@@ -69,7 +69,7 @@ export default function ArBlogIndexPage() {
       <Breadcrumbs items={[{ name: 'المقالات', path: '/ar/blog/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${BLOG_POSTS.length} مقالة دائمة الصلاحية · ${BLOG_CATEGORIES.length} تصنيفات`}
           title={<>تحرير من <span className="text-accent-700">داخل</span> صناعة الزي الموحّد السعودي.</>}
           lead="علم الأقمشة، الأطر التنظيمية، واقع المشتريات، والحقائق التشغيلية التي تتجاهلها الكتالوجات. بقلم مشغّلي عمليات UNEOM، مُراجَعة من أعضاء هيئة المهندسين السعوديين."

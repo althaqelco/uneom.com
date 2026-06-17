@@ -36,7 +36,7 @@ export default function ArCareersPage() {
       <Breadcrumbs items={[{ name: 'الوظائف', path: '/ar/careers/' }]} />
 
       <section className="container-page section-tight">
-        <SectionHeader
+        <SectionHeader as="h1"
           eyebrow={`${COMPANY_STATS.staff}+ موظف · ${ROLES.length} وظائف شاغرة`}
           title={<>نوظّف للعقد <span className="text-accent-700">الثاني</span>، لا البيعة الأولى.</>}
           lead="UNEOM شركة سعودية لتشغيل برامج الزي الموحّد. لا نبيع كتالوجات — ندير عقوداً متعددة السنوات. الأدوار أدناه للأشخاص الذين يريدون بناء شيء يصمد أمام تدقيق العام الثاني."
