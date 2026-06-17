@@ -85,8 +85,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="container-page">
           <div className="relative aspect-[16/9] overflow-hidden rounded-3xl bg-ink-100">
             <picture>
-              <source type="image/avif" srcSet={`/images/${post.hero}.avif`} />
-              <source type="image/webp" srcSet={`/images/${post.hero}.webp`} />
+              <source type="image/avif" sizes="(min-width: 1024px) 768px, 100vw" srcSet={`/images/${post.hero}-640.avif 640w, /images/${post.hero}-960.avif 960w, /images/${post.hero}-1440.avif 1440w, /images/${post.hero}.avif 1920w`} />
+              <source type="image/webp" sizes="(min-width: 1024px) 768px, 100vw" srcSet={`/images/${post.hero}-640.webp 640w, /images/${post.hero}-960.webp 960w, /images/${post.hero}-1440.webp 1440w, /images/${post.hero}.webp 1920w`} />
               <img src={`/images/${post.hero}.avif`} alt={post.title} className="h-full w-full object-cover" fetchPriority="high" decoding="sync" width={1920} height={1080} />
             </picture>
           </div>

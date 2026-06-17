@@ -86,8 +86,8 @@ export default async function ArCityPage({ params }: { params: Promise<{ city: s
       <section className="relative overflow-hidden bg-navy-900 text-white">
         <div className="absolute inset-0">
           <picture>
-            <source type="image/avif" srcSet={`/images/cities/hero-${city.slug}.avif`} />
-            <source type="image/webp" srcSet={`/images/cities/hero-${city.slug}.webp`} />
+            <source type="image/avif" sizes="100vw" srcSet={`/images/cities/hero-${city.slug}-640.avif 640w, /images/cities/hero-${city.slug}-960.avif 960w, /images/cities/hero-${city.slug}-1440.avif 1440w, /images/cities/hero-${city.slug}.avif 1920w`} />
+            <source type="image/webp" sizes="100vw" srcSet={`/images/cities/hero-${city.slug}-640.webp 640w, /images/cities/hero-${city.slug}-960.webp 960w, /images/cities/hero-${city.slug}-1440.webp 1440w, /images/cities/hero-${city.slug}.webp 1920w`} />
             <img
               src={`/images/cities/hero-${city.slug}.avif`}
               alt=""
