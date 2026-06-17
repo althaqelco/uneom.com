@@ -13,7 +13,7 @@ import { ClientLogos } from '@/components/ui/ClientLogos';
 import { TestimonialSection } from '@/components/ui/TestimonialSection';
 import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
 import { JsonLd } from '@/lib/seo/JsonLd';
-import { webPageSchema, collectionPageSchema } from '@/lib/seo/schemas';
+import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata = {
   title: 'UNEOM — Saudi Arabia Uniform Company | Medical Scrubs, School Uniforms, Corporate Workwear',
@@ -31,8 +31,22 @@ export const metadata = {
 export default function HomePage() {
   const heroIndustries = INDUSTRIES.slice(0, 4);
 
-  const homePageSchema = webPageSchema({ path: '/', name: 'UNEOM — Saudi Arabia Uniform Company', description: 'B2B uniform programmes across 8 industries and 24 Saudi cities. ISO 9001 + OEKO-TEX certified.' });
-  const industriesListSchema = collectionPageSchema({ path: '/', name: 'UNEOM Industry Silos', description: 'Eight industry-specific uniform programmes', items: INDUSTRIES.map(i => ({ name: i.nameEn, url: `/industries/${i.slug}/`, description: i.tagline, image: `/images/${i.heroImage}.avif` })) });
+  // Home is the root — no breadcrumb trail, so hasBreadcrumb:false (otherwise
+  // the WebPage references a #breadcrumb node that is never emitted).
+  const homePageSchema = webPageSchema({ path: '/', name: 'UNEOM — Saudi Arabia Uniform Company', description: 'B2B uniform programmes across 8 industries and 24 Saudi cities. ISO 9001 + OEKO-TEX certified.', hasBreadcrumb: false, speakableSelectors: ['h1'] });
+  // The industry grid is an ItemList on the home WebPage — NOT a second
+  // CollectionPage (that collided with the WebPage at @id /#webpage). Distinct
+  // @id, and it is the home page's mainEntity.
+  const industriesListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': 'https://uneom.com/#industry-list',
+    name: 'UNEOM Industry Programmes',
+    description: 'Eight industry-specific uniform programmes',
+    isPartOf: { '@id': 'https://uneom.com/#webpage' },
+    numberOfItems: INDUSTRIES.length,
+    itemListElement: INDUSTRIES.map((i, idx) => ({ '@type': 'ListItem', position: idx + 1, name: `${i.nameEn} Uniforms`, url: `https://uneom.com/industries/${i.slug}/` }))
+  };
 
   return (
     <>

@@ -10,7 +10,7 @@ import { TrustAnchorList } from '@/components/ui/TrustAnchorList';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { SiloLinks } from '@/components/ui/SiloLinks';
 import { JsonLd } from '@/lib/seo/JsonLd';
-import { faqSchema } from '@/lib/seo/schemas';
+import { faqSchema, webPageSchema } from '@/lib/seo/schemas';
 
 export const dynamicParams = false;
 
@@ -81,7 +81,17 @@ export default async function ArIndustryPillarPage({ params }: { params: Promise
 
   return (
     <>
-      <JsonLd data={faqSchema(faqs)} />
+      <JsonLd data={[
+        webPageSchema({
+          path: `/ar/industries/${slug}/`,
+          name: `أزياء ${industry.nameAr} — UNEOM السعودية`,
+          description: industry.taglineAr,
+          locale: 'ar',
+          primaryImage: { url: `/images/${industry.heroImage}.avif`, width: 1920, height: 1080, caption: `أزياء ${industry.nameAr} من UNEOM` },
+          speakableSelectors: ['h1', '.lead']
+        }),
+        faqSchema(faqs)
+      ]} />
       <Breadcrumbs items={[
         { name: 'القطاعات', path: '/ar/industries/' },
         { name: industry.nameAr, path: `/ar/industries/${industry.slug}/` }

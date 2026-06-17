@@ -9,6 +9,7 @@ import { SAUDI_CITIES } from '@/lib/data/saudi-cities';
 
 const SITE = 'https://uneom.com';
 const ORG_ID = `${SITE}/#organization`;
+const WEBSITE_ID = `${SITE}/#website`;
 
 // UNEOM verified business identifiers (confirmed 2026-05-11)
 const REAL = {
@@ -26,16 +27,26 @@ const REAL = {
 export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': ['Organization', 'LocalBusiness'],
     '@id': ORG_ID,
     name: 'UNEOM',
     alternateName: 'يونيوم',
+    legalName: 'UNEOM Professional Uniforms',
     url: SITE,
-    logo: { '@type': 'ImageObject', url: `${SITE}/images/uneom-logo.png`, width: 600, height: 200 },
-    image: `${SITE}/images/uneom-og-image.jpg`,
+    mainEntityOfPage: { '@id': WEBSITE_ID },
+    logo: { '@type': 'ImageObject', '@id': `${SITE}/#logo`, url: `${SITE}/images/uneom-logo.png`, width: 600, height: 200, caption: 'UNEOM' },
+    image: { '@id': `${SITE}/#logo` },
+    slogan: 'Saudi professional uniforms, engineered to standard.',
+    description: "Saudi Arabia's B2B professional-uniform manufacturer and programme manager since 2013 — ISO 9001:2015 and OEKO-TEX Standard 100 certified, serving 8 industries across 24 cities.",
     telephone: REAL.PHONE,
     email: REAL.EMAIL,
     foundingDate: REAL.FOUNDED,
+    foundingLocation: { '@type': 'Place', name: 'Riyadh, Saudi Arabia' },
+    numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 50, maxValue: 200 },
+    knowsLanguage: ['ar-SA', 'en'],
+    priceRange: 'SAR 100–2000',
+    currenciesAccepted: 'SAR',
+    paymentAccepted: ['Mada', 'STC Pay', 'Apple Pay', 'SADAD', 'Bank Transfer'],
     address: {
       '@type': 'PostalAddress',
       streetAddress: REAL.STREET,
@@ -106,48 +117,188 @@ export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': `${SITE}/#website`,
+    '@id': WEBSITE_ID,
     url: SITE,
     name: 'UNEOM',
+    alternateName: 'يونيوم',
+    description: "Saudi Arabia's B2B professional-uniform programme partner — design, manufacture, and delivery across 8 industries and 24 cities.",
     publisher: { '@id': ORG_ID },
-    inLanguage: ['en', 'ar-SA'],
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: `${SITE}/search?q={search_term_string}` },
-      'query-input': 'required name=search_term_string'
-    }
+    inLanguage: ['en', 'ar-SA']
+    // NOTE: the SearchAction (sitelinks-searchbox) was removed — it pointed at
+    // /search?q=, which 404s (no site-search route exists). Advertising a
+    // non-functional action is worse than omitting it. To re-enable the
+    // searchbox rich result, build a real /search route, then restore:
+    //   potentialAction: { '@type': 'SearchAction',
+    //     target: { '@type': 'EntryPoint', urlTemplate: `${SITE}/search?q={search_term_string}` },
+    //     'query-input': 'required name=search_term_string' }
   };
 }
 
-export function localBusinessSchema(citySlug: string) {
+/* ─────────────────────────────────────────────────────────────────────────
+ * 10/10 GRAPH SYSTEM
+ * Google merges every JSON-LD block on a page into one graph via @id. These
+ * embeddable NODE builders (no own @context) + pageGraph() assemble a single
+ * connected @graph per page: WebPage ⇄ BreadcrumbList ⇄ primaryImage ⇄
+ * Organization/WebSite ⇄ the page's primary entity (Product/Article/Service/…)
+ * ⇄ FAQPage. Every node is @id-addressable and cross-linked.
+ * ──────────────────────────────────────────────────────────────────────── */
+
+type Locale = 'en' | 'ar';
+const lang = (l?: Locale) => (l === 'ar' ? 'ar-SA' : 'en');
+const abs = (p: string) => (p.startsWith('http') ? p : `${SITE}${p}`);
+
+/** ImageObject node, @id-addressable so WebPage.primaryImageOfPage can point to it. */
+export function imageObjectNode(opts: { url: string; id?: string; width?: number; height?: number; caption?: string }) {
+  return {
+    '@type': 'ImageObject',
+    '@id': opts.id,
+    url: abs(opts.url),
+    contentUrl: abs(opts.url),
+    ...(opts.width ? { width: opts.width } : {}),
+    ...(opts.height ? { height: opts.height } : {}),
+    ...(opts.caption ? { caption: opts.caption } : {})
+  };
+}
+
+/** BreadcrumbList node WITH @id (so the WebPage can reference it). */
+export function breadcrumbNode(items: BreadcrumbItem[], pageId: string) {
+  return {
+    '@type': 'BreadcrumbList',
+    '@id': `${pageId}#breadcrumb`,
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: abs(item.path)
+    }))
+  };
+}
+
+/** WebPage (or subtype) node — the hub every page's graph hangs off. */
+export function webPageNode(opts: {
+  path: string;
+  name: string;
+  description: string;
+  locale?: Locale;
+  type?: 'WebPage' | 'CollectionPage' | 'AboutPage' | 'ContactPage' | 'ItemPage' | 'ProfilePage';
+  datePublished?: string;
+  dateModified?: string;
+  primaryImageId?: string;
+  hasBreadcrumb?: boolean;
+  speakableSelectors?: string[];
+}) {
+  const id = `${abs(opts.path)}#webpage`;
+  return {
+    '@type': opts.type ?? 'WebPage',
+    '@id': id,
+    url: abs(opts.path),
+    name: opts.name,
+    description: opts.description,
+    isPartOf: { '@id': WEBSITE_ID },
+    about: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID },
+    inLanguage: lang(opts.locale),
+    ...(opts.primaryImageId ? { primaryImageOfPage: { '@id': opts.primaryImageId }, image: { '@id': opts.primaryImageId } } : {}),
+    ...(opts.hasBreadcrumb ? { breadcrumb: { '@id': `${abs(opts.path)}#breadcrumb` } } : {}),
+    ...(opts.datePublished ? { datePublished: opts.datePublished } : {}),
+    ...(opts.dateModified ? { dateModified: opts.dateModified } : {}),
+    ...(opts.speakableSelectors ? { speakable: { '@type': 'SpeakableSpecification', cssSelector: opts.speakableSelectors } } : {})
+  };
+}
+
+/**
+ * pageGraph — assemble a single, fully @id-linked @graph for a page.
+ * Pass the WebPage spec, the breadcrumb trail, an optional primary image, and
+ * any primary entities (already built as nodes). Org + WebSite live in the
+ * root layout and are referenced by @id, so they are not duplicated here.
+ */
+export function pageGraph(opts: {
+  page: Parameters<typeof webPageNode>[0];
+  breadcrumbs?: BreadcrumbItem[];
+  primaryImage?: { url: string; width?: number; height?: number; caption?: string };
+  entities?: object[];
+}) {
+  const pageId = `${abs(opts.page.path)}#webpage`;
+  const primaryImageId = opts.primaryImage ? `${abs(opts.page.path)}#primaryimage` : undefined;
+  const nodes: object[] = [];
+  nodes.push(
+    webPageNode({
+      ...opts.page,
+      primaryImageId,
+      hasBreadcrumb: !!(opts.breadcrumbs && opts.breadcrumbs.length)
+    })
+  );
+  if (opts.primaryImage) {
+    nodes.push(imageObjectNode({ ...opts.primaryImage, id: primaryImageId }));
+  }
+  if (opts.breadcrumbs && opts.breadcrumbs.length) {
+    nodes.push(breadcrumbNode(opts.breadcrumbs, pageId));
+  }
+  if (opts.entities) nodes.push(...opts.entities);
+  return { '@context': 'https://schema.org', '@graph': nodes };
+}
+
+export function localBusinessSchema(citySlug: string, locale: Locale = 'en') {
   const city = SAUDI_CITIES.find(c => c.slug === citySlug);
   if (!city) return null;
-  return {
-    '@context': 'https://schema.org',
+  const ar = locale === 'ar';
+  const prefix = ar ? '/ar' : '';
+  // Locale-correct path so the WebPage @id, url, breadcrumb ref and
+  // LocalBusiness.url all match the page the markup actually renders on. The
+  // previous version always emitted the EN path — on AR city pages that
+  // produced a WebPage claiming the EN URL (canonical confusion) and a
+  // breadcrumb ref that couldn't resolve against the AR <Breadcrumbs>.
+  const path = `${prefix}/locations/${city.slug}/`;
+  const cityName = ar ? city.nameAr : city.nameEn;
+  const regionName = ar ? city.regionAr : city.region;
+  const heroUrl = `/images/cities/hero-${city.slug}.avif`;
+  const business = {
     '@type': 'LocalBusiness',
-    '@id': `${SITE}/locations/${city.slug}/#business`,
-    name: `UNEOM — ${city.nameEn}`,
-    image: `${SITE}/images/cities/hero-${city.slug}.avif`,
-    url: `${SITE}/locations/${city.slug}/`,
+    '@id': `${SITE}${path}#business`,
+    name: `UNEOM — ${cityName}`,
+    image: { '@id': `${SITE}${path}#primaryimage` },
+    url: `${SITE}${path}`,
     telephone: REAL.PHONE,
-    priceRange: 'SAR 100-2000',
-    address: { '@type': 'PostalAddress', addressLocality: city.nameEn, addressRegion: city.region, addressCountry: 'SA' },
+    email: REAL.EMAIL,
+    priceRange: 'SAR 100–2000',
+    address: { '@type': 'PostalAddress', addressLocality: cityName, addressRegion: regionName, addressCountry: 'SA' },
     geo: { '@type': 'GeoCoordinates', latitude: city.lat, longitude: city.lng },
+    areaServed: { '@type': 'City', name: cityName },
     openingHoursSpecification: [
       { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'], opens: '08:00', closes: '18:00' }
     ],
     paymentAccepted: ['Mada', 'STC Pay', 'Apple Pay', 'SADAD', 'Bank Transfer'],
     currenciesAccepted: 'SAR',
-    parentOrganization: { '@id': ORG_ID }
+    parentOrganization: { '@id': ORG_ID },
+    mainEntityOfPage: { '@id': `${SITE}${path}#webpage` }
+  };
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      webPageNode({
+        path,
+        name: ar ? `UNEOM — أزياء ${cityName} الموحّدة` : `UNEOM — ${cityName} Uniforms`,
+        description: ar
+          ? `برامج الأزياء الموحّدة الاحترافية في ${cityName}، ${regionName}.`
+          : `Professional uniform programmes serving ${cityName}, ${regionName}.`,
+        locale, type: 'WebPage', primaryImageId: `${SITE}${path}#primaryimage`, hasBreadcrumb: true, speakableSelectors: ['h1']
+      }),
+      imageObjectNode({ url: heroUrl, id: `${SITE}${path}#primaryimage`, width: 1920, height: 800, caption: `UNEOM — ${cityName}` }),
+      business
+    ]
   };
 }
 
 export interface BreadcrumbItem { name: string; path: string; }
 
 export function breadcrumbSchema(items: BreadcrumbItem[]) {
+  // @id derived from the LAST crumb (the current page) so the page's WebPage
+  // node can reference it via `breadcrumb: { '@id': `${url}#breadcrumb` }`.
+  const lastPath = items.length ? items[items.length - 1].path : '/';
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': `${SITE}${lastPath}#breadcrumb`,
     itemListElement: items.map((item, i) => ({
       '@type': 'ListItem',
       position: i + 1,
@@ -157,16 +308,30 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
   };
 }
 
-export function serviceSchema(slug: string, name: string, description: string) {
-  return {
-    '@context': 'https://schema.org',
+export function serviceSchema(slug: string, name: string, description: string, locale: Locale = 'en') {
+  const prefix = locale === 'ar' ? '/ar' : '';
+  const path = `${prefix}/services/${slug}/`;
+  const pageId = `${SITE}${path}#webpage`;
+  const service = {
     '@type': 'Service',
-    '@id': `${SITE}/services/${slug}/#service`,
+    '@id': `${SITE}${prefix}/services/${slug}/#service`,
     name,
     description,
+    serviceType: name,
     provider: { '@id': ORG_ID },
-    areaServed: SAUDI_CITIES.map(c => ({ '@type': 'City', name: c.nameEn })),
-    audience: { '@type': 'BusinessAudience', name: 'Saudi enterprises' }
+    // areaServed de-bloated from 24 City nodes to Country (was the same bloat
+    // pattern fixed in the Organization node).
+    areaServed: { '@type': 'Country', name: 'Saudi Arabia' },
+    audience: { '@type': 'BusinessAudience', name: 'Saudi enterprises' },
+    mainEntityOfPage: { '@id': pageId },
+    inLanguage: lang(locale)
+  };
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      webPageNode({ path, name: `${name} — UNEOM`, description, locale, type: 'WebPage', hasBreadcrumb: true, speakableSelectors: ['h1'] }),
+      service
+    ]
   };
 }
 
@@ -184,20 +349,36 @@ export function faqSchema(faqs: { q: string; a: string }[]) {
 
 /* ─── NEW GENERATORS ─── */
 
-export function webPageSchema(opts: { path: string; name: string; description: string; dateModified?: string; locale?: 'en' | 'ar' }) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${SITE}${opts.path}#webpage`,
-    url: `${SITE}${opts.path}`,
-    name: opts.name,
-    description: opts.description,
-    isPartOf: { '@id': `${SITE}/#website` },
-    about: { '@id': ORG_ID },
-    publisher: { '@id': ORG_ID },
-    inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en',
-    ...(opts.dateModified ? { dateModified: opts.dateModified } : {})
-  };
+/**
+ * Standalone WebPage block (own @context) for templates that emit separate
+ * JSON-LD scripts. Emits the WebPage node + its primaryImage ImageObject as a
+ * mini-@graph, referencing the breadcrumb (#breadcrumb, from <Breadcrumbs>),
+ * Organization (#organization) and WebSite (#website) by @id — so the page's
+ * full graph resolves across all its JSON-LD blocks. `hasBreadcrumb` defaults
+ * true (every content page renders <Breadcrumbs>).
+ */
+export function webPageSchema(opts: {
+  path: string;
+  name: string;
+  description: string;
+  locale?: Locale;
+  type?: 'WebPage' | 'CollectionPage' | 'AboutPage' | 'ContactPage' | 'ItemPage' | 'ProfilePage';
+  datePublished?: string;
+  dateModified?: string;
+  primaryImage?: { url: string; width?: number; height?: number; caption?: string };
+  hasBreadcrumb?: boolean;
+  speakableSelectors?: string[];
+}) {
+  const primaryImageId = opts.primaryImage ? `${abs(opts.path)}#primaryimage` : undefined;
+  const node = webPageNode({
+    ...opts,
+    primaryImageId,
+    hasBreadcrumb: opts.hasBreadcrumb !== false
+  });
+  if (opts.primaryImage) {
+    return { '@context': 'https://schema.org', '@graph': [node, imageObjectNode({ ...opts.primaryImage, id: primaryImageId })] };
+  }
+  return { '@context': 'https://schema.org', ...node };
 }
 
 export function aboutPageSchema(locale: 'en' | 'ar' = 'en') {
@@ -303,16 +484,19 @@ export interface CaseStudySchemaOpts {
 
 export function caseStudySchema(opts: CaseStudySchemaOpts) {
   const prefix = opts.locale === 'ar' ? '/ar' : '';
-  return {
-    '@context': 'https://schema.org',
+  const path = `${prefix}/case-studies/${opts.slug}/`;
+  const pageId = `${SITE}${path}#webpage`;
+  const imgId = `${SITE}${path}#primaryimage`;
+  const article = {
     '@type': 'Article',
-    '@id': `${SITE}${prefix}/case-studies/${opts.slug}/#article`,
+    '@id': `${SITE}${path}#article`,
     headline: opts.title,
     description: opts.summary,
-    image: `${SITE}${opts.image}`,
+    image: { '@id': imgId },
     author: { '@id': ORG_ID },
     publisher: { '@id': ORG_ID },
-    mainEntityOfPage: `${SITE}${prefix}/case-studies/${opts.slug}/`,
+    mainEntityOfPage: { '@id': pageId },
+    isPartOf: { '@id': pageId },
     articleSection: opts.industry,
     inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en',
     about: {
@@ -325,6 +509,17 @@ export function caseStudySchema(opts: CaseStudySchemaOpts) {
         value: o.metric
       }))
     }
+  };
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      webPageNode({
+        path, name: opts.title, description: opts.summary, locale: opts.locale,
+        type: 'WebPage', primaryImageId: imgId, hasBreadcrumb: true, speakableSelectors: ['h1']
+      }),
+      imageObjectNode({ url: opts.image, id: imgId, width: 1920, height: 1080, caption: opts.title }),
+      article
+    ]
   };
 }
 
@@ -359,22 +554,36 @@ export function jobPostingSchema(jobs: JobPostingOpts[]) {
 
 export function guideSchema(opts: { slug: string; title: string; summary: string; image?: string; locale?: 'en' | 'ar' }) {
   const prefix = opts.locale === 'ar' ? '/ar' : '';
+  const path = `${prefix}/resources/${opts.slug}/`;
+  const pageId = `${SITE}${path}#webpage`;
+  const imgId = `${SITE}${path}#primaryimage`;
   // Was '@type': 'HowTo' with NO `step` array — invalid HowTo (Google rejects
   // a HowTo lacking steps; it generates a Search Console structured-data error
   // and zero rich results). These resources are reference guides, not literal
   // step-by-step procedures, so Article is the correct, valid type.
-  return {
-    '@context': 'https://schema.org',
+  const article = {
     '@type': 'Article',
-    '@id': `${SITE}${prefix}/resources/${opts.slug}/#article`,
+    '@id': `${SITE}${path}#article`,
     headline: opts.title,
     name: opts.title,
     description: opts.summary,
-    ...(opts.image ? { image: `${SITE}${opts.image}` } : {}),
+    ...(opts.image ? { image: { '@id': imgId } } : {}),
     author: { '@id': ORG_ID },
     publisher: { '@id': ORG_ID },
-    mainEntityOfPage: `${SITE}${prefix}/resources/${opts.slug}/`,
+    mainEntityOfPage: { '@id': pageId },
+    isPartOf: { '@id': pageId },
     inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en'
+  };
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      webPageNode({
+        path, name: opts.title, description: opts.summary, locale: opts.locale,
+        type: 'WebPage', primaryImageId: opts.image ? imgId : undefined, hasBreadcrumb: true, speakableSelectors: ['h1']
+      }),
+      ...(opts.image ? [imageObjectNode({ url: opts.image, id: imgId, width: 1920, height: 1080, caption: opts.title })] : []),
+      article
+    ]
   };
 }
 
@@ -401,14 +610,16 @@ export interface ProductSchemaOpts {
 
 export function productSchema(opts: ProductSchemaOpts) {
   const prefix = opts.locale === 'ar' ? '/ar' : '';
-  return {
-    '@context': 'https://schema.org',
+  const path = `${prefix}/shop/${opts.category}/${opts.slug}/`;
+  const pageId = `${SITE}${path}#webpage`;
+  const imgId = `${SITE}${path}#primaryimage`;
+  const product = {
     '@type': 'Product',
     '@id': `${SITE}${prefix}/shop/${opts.category}/${opts.slug}/#product`,
     name: opts.name,
     ...(opts.alternateName ? { alternateName: opts.alternateName } : {}),
     description: opts.description,
-    image: `${SITE}/images/${opts.image}.avif`,
+    image: { '@type': 'ImageObject', '@id': imgId, url: `${SITE}/images/${opts.image}.avif`, contentUrl: `${SITE}/images/${opts.image}.avif`, width: 1920, height: 1080, caption: opts.name },
     sku: opts.sku || `UNEOM-${opts.slug.toUpperCase()}`,
     mpn: `UNEOM-${opts.slug.toUpperCase()}`,
     brand: { '@type': 'Brand', name: 'UNEOM' },
@@ -417,6 +628,8 @@ export function productSchema(opts: ProductSchemaOpts) {
     material: opts.fabric,
     countryOfOrigin: { '@type': 'Country', name: 'Saudi Arabia' },
     audience: { '@type': 'BusinessAudience', audienceType: 'Saudi enterprises' },
+    mainEntityOfPage: { '@id': pageId },
+    isPartOf: { '@id': pageId },
     inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en',
     offers: {
       '@type': 'AggregateOffer',
@@ -463,6 +676,16 @@ export function productSchema(opts: ProductSchemaOpts) {
       }
     } : {})
   };
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      webPageNode({
+        path, name: opts.name, description: opts.description, locale: opts.locale,
+        type: 'ItemPage', primaryImageId: imgId, hasBreadcrumb: true, speakableSelectors: ['h1']
+      }),
+      product
+    ]
+  };
 }
 
 /* ─── BLOG ARTICLE (CENTRALIZED) ─── */
@@ -486,13 +709,16 @@ export interface ArticleSchemaOpts {
 
 export function articleSchema(opts: ArticleSchemaOpts) {
   const prefix = opts.locale === 'ar' ? '/ar' : '';
-  return {
-    '@context': 'https://schema.org',
+  const path = `${prefix}/blog/${opts.slug}/`;
+  const pageId = `${SITE}${path}#webpage`;
+  const imgId = `${SITE}${path}#primaryimage`;
+  const article = {
     '@type': 'Article',
     '@id': `${SITE}${prefix}/blog/${opts.slug}/#article`,
     headline: opts.title,
     description: opts.excerpt,
-    image: `${SITE}/images/${opts.image}.avif`,
+    image: { '@type': 'ImageObject', '@id': imgId, url: `${SITE}/images/${opts.image}.avif`, contentUrl: `${SITE}/images/${opts.image}.avif`, width: 1920, height: 1080, caption: opts.title },
+    thumbnailUrl: `${SITE}/images/${opts.image}-640.avif`,
     datePublished: opts.datePublished,
     dateModified: opts.dateModified || opts.datePublished,
     author: {
@@ -510,7 +736,8 @@ export function articleSchema(opts: ArticleSchemaOpts) {
       }
     } : {}),
     publisher: { '@id': ORG_ID },
-    mainEntityOfPage: `${SITE}${prefix}/blog/${opts.slug}/`,
+    mainEntityOfPage: { '@id': pageId },
+    isPartOf: { '@id': pageId },
     ...(opts.section ? { articleSection: opts.section } : {}),
     inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en',
     wordCount: opts.wordCount,
@@ -518,8 +745,18 @@ export function articleSchema(opts: ArticleSchemaOpts) {
       '@type': 'SpeakableSpecification',
       cssSelector: ['h1', '.lead', 'article > p:first-of-type']
     },
-    isAccessibleForFree: true,
-    isPartOf: { '@id': `${SITE}/#website` }
+    isAccessibleForFree: true
+  };
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      webPageNode({
+        path, name: opts.title, description: opts.excerpt, locale: opts.locale,
+        type: 'WebPage', datePublished: opts.datePublished, dateModified: opts.dateModified || opts.datePublished,
+        primaryImageId: imgId, hasBreadcrumb: true, speakableSelectors: ['h1', '.lead']
+      }),
+      article
+    ]
   };
 }
 

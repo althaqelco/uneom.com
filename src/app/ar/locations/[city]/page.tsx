@@ -66,7 +66,7 @@ export default async function ArCityPage({ params }: { params: Promise<{ city: s
   const city = getCity(citySlug);
   if (!city) notFound();
 
-  const businessSchema = localBusinessSchema(citySlug);
+  const businessSchema = localBusinessSchema(citySlug, 'ar');
   const anchorIndustries = INDUSTRIES.filter(i => city.anchorIndustries.includes(i.slug));
   const otherIndustries = INDUSTRIES.filter(i => !city.anchorIndustries.includes(i.slug));
 

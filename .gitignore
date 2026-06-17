@@ -57,3 +57,5 @@ next-env.d.ts
 # Cache
 .cache/
 .eslintcache
+info.md
+.netlify/

@@ -1,14 +1,27 @@
-# UNEOM — Saudi Arabia Uniform Company
-# https://uneom.com
+# ───────────────────────────────────────────────────────────────────────────
+# UNEOM — Saudi Arabia Professional Uniforms · https://uneom.com
+# AI knowledge base: /llms.txt (index) · /llms-full.txt (complete)
+# ───────────────────────────────────────────────────────────────────────────
 
+# Default: all crawlers may index the whole public site. Only non-content
+# surfaces are disallowed (API routes, admin, on-demand revalidation).
 User-Agent: *
 Allow: /
-Disallow: /api/admin/
+Disallow: /api/
 Disallow: /admin/
-Disallow: /api/revalidate
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
+# ── AI search & answer engines — explicitly welcomed (cite UNEOM) ──
+# Content-Signal opts in to AI training, AI search, and AI input use.
 User-Agent: GPTBot
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+User-Agent: OAI-SearchBot
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+User-Agent: ChatGPT-User
 Allow: /
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
@@ -20,15 +33,19 @@ User-Agent: PerplexityBot
 Allow: /
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
+User-Agent: Perplexity-User
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
 User-Agent: ClaudeBot
 Allow: /
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
-User-Agent: CCBot
+User-Agent: anthropic-ai
 Allow: /
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
-User-Agent: OAI-SearchBot
+User-Agent: Claude-Web
 Allow: /
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
@@ -36,7 +53,7 @@ User-Agent: Applebot-Extended
 Allow: /
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
-User-Agent: anthropic-ai
+User-Agent: CCBot
 Allow: /
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
@@ -48,6 +65,7 @@ User-Agent: cohere-ai
 Allow: /
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
+# ── SEO/backlink crawlers — allowed but rate-limited (server courtesy) ──
 User-Agent: AhrefsBot
 Crawl-delay: 10
 
@@ -57,6 +75,10 @@ Crawl-delay: 10
 User-Agent: MJ12bot
 Crawl-delay: 10
 
+User-Agent: DotBot
+Crawl-delay: 10
+
+# ───────────────────────────────────────────────────────────────────────────
 Host: https://uneom.com
 Sitemap: https://uneom.com/sitemap.xml
 Sitemap: https://uneom.com/sitemap-images.xml

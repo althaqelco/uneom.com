@@ -16,13 +16,23 @@ const SITE = 'https://uneom.com';
  * Build-time invariant: total entries should sit in 270–300 (en + ar mirrors).
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastmod = new Date('2026-05-08');
+  // Real per-content lastmod. The previous single hardcoded date (2026-05-08
+  // on every URL) is an unreliable-freshness signal Google learns to ignore.
+  // Static/hub/pillar pages use the build date (honest: they are regenerated
+  // each deploy); blog posts pass their own publishedAt/updatedAt below.
+  const BUILD_DATE = new Date();
   const entries: MetadataRoute.Sitemap = [];
 
-  function add(path: string, freq: MetadataRoute.Sitemap[number]['changeFrequency'], pri: number, mirrorAr = true) {
-    entries.push({ url: `${SITE}${path}`, lastModified: lastmod, changeFrequency: freq, priority: pri });
+  function add(
+    path: string,
+    freq: MetadataRoute.Sitemap[number]['changeFrequency'],
+    pri: number,
+    mirrorAr = true,
+    lastModified: Date | string = BUILD_DATE
+  ) {
+    entries.push({ url: `${SITE}${path}`, lastModified, changeFrequency: freq, priority: pri });
     if (mirrorAr) {
-      entries.push({ url: `${SITE}/ar${path}`, lastModified: lastmod, changeFrequency: freq, priority: pri });
+      entries.push({ url: `${SITE}/ar${path}`, lastModified, changeFrequency: freq, priority: pri });
     }
   }
 
@@ -64,8 +74,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ===== Blog categories (6 × 2 = 12) =====
   for (const c of BLOG_CATEGORIES) add(`/blog/category/${c.slug}/`, 'weekly', 0.7);
 
-  // ===== Blog posts (10 × 2 = 20) =====
-  for (const p of BLOG_POSTS) add(`/blog/${p.slug}/`, 'monthly', 0.65);
+  // ===== Blog posts (real per-post lastmod) =====
+  for (const p of BLOG_POSTS) add(`/blog/${p.slug}/`, 'monthly', 0.65, true, p.updatedAt || p.publishedAt);
 
   // ===== Resources (12 × 2 = 24) =====
   for (const r of RESOURCES) add(`/resources/${r.slug}/`, 'monthly', 0.7);
