@@ -552,17 +552,34 @@ export function jobPostingSchema(jobs: JobPostingOpts[]) {
 
 /* ─── RESOURCE / GUIDE ─── */
 
-export function guideSchema(opts: { slug: string; title: string; summary: string; image?: string; locale?: 'en' | 'ar' }) {
+export function guideSchema(opts: {
+  slug: string;
+  title: string;
+  summary: string;
+  image?: string;
+  locale?: 'en' | 'ar';
+  /** 'TechArticle' for standards/compliance/technical guides; defaults to 'Article'. */
+  type?: 'Article' | 'TechArticle';
+  datePublished?: string;
+  dateModified?: string;
+  proficiencyLevel?: 'Beginner' | 'Expert';
+  /** Topic entities for entity-SEO (rendered as schema:about Thing nodes). */
+  about?: string[];
+  keywords?: string;
+  /** When provided, emits a FAQPage node. The caller MUST also render these FAQs visibly — schema has to mirror on-page content. */
+  faqs?: { q: string; a: string }[];
+}) {
   const prefix = opts.locale === 'ar' ? '/ar' : '';
   const path = `${prefix}/resources/${opts.slug}/`;
   const pageId = `${SITE}${path}#webpage`;
   const imgId = `${SITE}${path}#primaryimage`;
-  // Was '@type': 'HowTo' with NO `step` array — invalid HowTo (Google rejects
-  // a HowTo lacking steps; it generates a Search Console structured-data error
-  // and zero rich results). These resources are reference guides, not literal
-  // step-by-step procedures, so Article is the correct, valid type.
+  const dateModified = opts.dateModified || opts.datePublished;
+  // Article vs TechArticle: technical/standards guides (Aramco PPE, FR specs,
+  // compliance checklists) are TechArticle — more specific, signals expert
+  // reference content. Never HowTo here (these are reference guides, not
+  // step-by-step procedures; a stepless HowTo is invalid and Google rejects it).
   const article = {
-    '@type': 'Article',
+    '@type': opts.type ?? 'Article',
     '@id': `${SITE}${path}#article`,
     headline: opts.title,
     name: opts.title,
@@ -572,19 +589,36 @@ export function guideSchema(opts: { slug: string; title: string; summary: string
     publisher: { '@id': ORG_ID },
     mainEntityOfPage: { '@id': pageId },
     isPartOf: { '@id': pageId },
-    inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en'
+    inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en',
+    ...(opts.datePublished ? { datePublished: opts.datePublished } : {}),
+    ...(dateModified ? { dateModified } : {}),
+    ...(opts.type === 'TechArticle' && opts.proficiencyLevel ? { proficiencyLevel: opts.proficiencyLevel } : {}),
+    ...(opts.about && opts.about.length ? { about: opts.about.map(name => ({ '@type': 'Thing', name })) } : {}),
+    ...(opts.keywords ? { keywords: opts.keywords } : {})
   };
-  return {
-    '@context': 'https://schema.org',
-    '@graph': [
-      webPageNode({
-        path, name: opts.title, description: opts.summary, locale: opts.locale,
-        type: 'WebPage', primaryImageId: opts.image ? imgId : undefined, hasBreadcrumb: true, speakableSelectors: ['h1']
-      }),
-      ...(opts.image ? [imageObjectNode({ url: opts.image, id: imgId, width: 1920, height: 1080, caption: opts.title })] : []),
-      article
-    ]
-  };
+  const graph: object[] = [
+    webPageNode({
+      path, name: opts.title, description: opts.summary, locale: opts.locale,
+      type: 'WebPage', datePublished: opts.datePublished, dateModified,
+      primaryImageId: opts.image ? imgId : undefined, hasBreadcrumb: true, speakableSelectors: ['h1']
+    }),
+    ...(opts.image ? [imageObjectNode({ url: opts.image, id: imgId, width: 1920, height: 1080, caption: opts.title })] : []),
+    article
+  ];
+  if (opts.faqs && opts.faqs.length) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': `${SITE}${path}#faq`,
+      isPartOf: { '@id': pageId },
+      inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en',
+      mainEntity: opts.faqs.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a }
+      }))
+    });
+  }
+  return { '@context': 'https://schema.org', '@graph': graph };
 }
 
 /* ─── PRODUCT (CENTRALIZED) ─── */

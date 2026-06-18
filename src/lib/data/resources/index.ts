@@ -19,6 +19,13 @@ export interface Resource {
   relatedPosts?: string[];
   relatedCategories?: string[];
   references?: { name: string; url: string }[];
+  /** Schema @type for the article node. Technical/standards guides use 'TechArticle'. Defaults to 'Article'. */
+  schemaType?: 'Article' | 'TechArticle';
+  datePublished?: string;
+  dateModified?: string;
+  /** Optional FAQ. When present, the page renders a visible FAQ section AND emits FAQPage JSON-LD (schema must mirror visible content). */
+  faqs?: { q: string; a: string }[];
+  faqsAr?: { q: string; a: string }[];
 }
 
 import { fabricGuide } from './fabric-guide';

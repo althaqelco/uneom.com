@@ -36,7 +36,12 @@ export default async function ArResourcePage({ params }: { params: Promise<{ slu
   const r = RESOURCES_BY_SLUG[slug];
   if (!r) notFound();
 
-  const schema = guideSchema({ slug: r.slug, title: r.titleAr, summary: r.summaryAr, image: `/images/${r.hero}.avif`, locale: 'ar' });
+  const schema = guideSchema({
+    slug: r.slug, title: r.titleAr, summary: r.summaryAr, image: `/images/${r.hero}.avif`, locale: 'ar',
+    type: r.schemaType, datePublished: r.datePublished, dateModified: r.dateModified,
+    proficiencyLevel: r.schemaType === 'TechArticle' ? 'Expert' : undefined,
+    faqs: r.faqsAr
+  });
 
   return (
     <>
@@ -87,6 +92,23 @@ export default async function ArResourcePage({ params }: { params: Promise<{ slu
               <p className="mt-4 text-lg leading-relaxed text-ink-500 pretty">{s.body}</p>
             </section>
           ))}
+
+          {/* الأسئلة الشائعة — محتوى ظاهر يطابق بيانات FAQPage المنظمة */}
+          {r.faqsAr && r.faqsAr.length > 0 && (
+            <section id="faq" className="mt-12">
+              <h2 className="text-display text-navy-900">الأسئلة الشائعة</h2>
+              <dl className="mt-8 space-y-4">
+                {r.faqsAr.map((f, i) => (
+                  <details key={i} className="group rounded-2xl border border-ink-100 bg-white p-6 open:bg-ink-50">
+                    <summary className="cursor-pointer list-none text-lg font-semibold text-navy-900 marker:hidden">
+                      {f.q}
+                    </summary>
+                    <p className="mt-4 text-lg leading-relaxed text-ink-500 pretty">{f.a}</p>
+                  </details>
+                ))}
+              </dl>
+            </section>
+          )}
         </div>
 
         <div className="container-page section-tight">

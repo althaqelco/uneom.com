@@ -35,7 +35,12 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
   const r = RESOURCES_BY_SLUG[slug];
   if (!r) notFound();
 
-  const schema = guideSchema({ slug: r.slug, title: r.title, summary: r.summary, image: `/images/${r.hero}.avif` });
+  const schema = guideSchema({
+    slug: r.slug, title: r.title, summary: r.summary, image: `/images/${r.hero}.avif`,
+    type: r.schemaType, datePublished: r.datePublished, dateModified: r.dateModified,
+    proficiencyLevel: r.schemaType === 'TechArticle' ? 'Expert' : undefined,
+    faqs: r.faqs
+  });
 
   return (
     <>
@@ -95,6 +100,23 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
               </section>
             ))}
           </div>
+
+          {/* FAQ — visible content that mirrors the FAQPage JSON-LD */}
+          {r.faqs && r.faqs.length > 0 && (
+            <section id="faq" className="mt-16">
+              <h2 className="text-display text-navy-900 balance">Frequently asked questions</h2>
+              <dl className="mt-8 space-y-4">
+                {r.faqs.map((f, i) => (
+                  <details key={i} className="group rounded-2xl border border-ink-100 bg-white p-6 open:bg-ink-50">
+                    <summary className="cursor-pointer list-none text-lg font-semibold text-navy-900 marker:hidden">
+                      {f.q}
+                    </summary>
+                    <p className="mt-4 text-lg leading-relaxed text-ink-500 pretty">{f.a}</p>
+                  </details>
+                ))}
+              </dl>
+            </section>
+          )}
 
           {/* References */}
           {r.references && r.references.length > 0 && (
