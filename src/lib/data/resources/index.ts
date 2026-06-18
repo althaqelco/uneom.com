@@ -42,6 +42,10 @@ import { weatherProtectionGuide } from './weather-protection-guide';
 import { policyTemplates } from './policy-templates';
 import { madeInSaudiLocalContentGuide } from './made-in-saudi-uniform-local-content-guide';
 import { aramcoPpeCoverallVendorSpecGuide } from './aramco-ppe-coverall-vendor-spec-guide';
+import { polyCottonBlendRatiosGuide } from './poly-cotton-blend-ratios-guide';
+import { coolingMoistureWickingFabricGuide } from './cooling-moisture-wicking-uniform-fabric-guide';
+import { uniformRentalVsPurchaseGuide } from './uniform-rental-vs-purchase-guide';
+import { uniformLogoBrandingMethodsGuide } from './uniform-logo-branding-methods-guide';
 
 export const RESOURCES: Resource[] = [
   fabricGuide,
@@ -57,7 +61,11 @@ export const RESOURCES: Resource[] = [
   weatherProtectionGuide,
   policyTemplates,
   madeInSaudiLocalContentGuide,
-  aramcoPpeCoverallVendorSpecGuide
+  aramcoPpeCoverallVendorSpecGuide,
+  polyCottonBlendRatiosGuide,
+  coolingMoistureWickingFabricGuide,
+  uniformRentalVsPurchaseGuide,
+  uniformLogoBrandingMethodsGuide
 ];
 
 export const RESOURCES_BY_SLUG = Object.fromEntries(
