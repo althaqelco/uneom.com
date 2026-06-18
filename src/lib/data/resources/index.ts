@@ -41,6 +41,7 @@ import { professionalSecurityStandards } from './professional-security-standards
 import { weatherProtectionGuide } from './weather-protection-guide';
 import { policyTemplates } from './policy-templates';
 import { madeInSaudiLocalContentGuide } from './made-in-saudi-uniform-local-content-guide';
+import { aramcoPpeCoverallVendorSpecGuide } from './aramco-ppe-coverall-vendor-spec-guide';
 
 export const RESOURCES: Resource[] = [
   fabricGuide,
@@ -55,7 +56,8 @@ export const RESOURCES: Resource[] = [
   professionalSecurityStandards,
   weatherProtectionGuide,
   policyTemplates,
-  madeInSaudiLocalContentGuide
+  madeInSaudiLocalContentGuide,
+  aramcoPpeCoverallVendorSpecGuide
 ];
 
 export const RESOURCES_BY_SLUG = Object.fromEntries(
