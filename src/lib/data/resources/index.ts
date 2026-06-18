@@ -40,6 +40,7 @@ import { securityEquipmentStandards } from './security-equipment-standards';
 import { professionalSecurityStandards } from './professional-security-standards';
 import { weatherProtectionGuide } from './weather-protection-guide';
 import { policyTemplates } from './policy-templates';
+import { madeInSaudiLocalContentGuide } from './made-in-saudi-uniform-local-content-guide';
 
 export const RESOURCES: Resource[] = [
   fabricGuide,
@@ -53,7 +54,8 @@ export const RESOURCES: Resource[] = [
   securityEquipmentStandards,
   professionalSecurityStandards,
   weatherProtectionGuide,
-  policyTemplates
+  policyTemplates,
+  madeInSaudiLocalContentGuide
 ];
 
 export const RESOURCES_BY_SLUG = Object.fromEntries(
