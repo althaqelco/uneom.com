@@ -44,6 +44,11 @@ import { polyCottonBlendRatiosGuide } from './poly-cotton-blend-ratios-guide';
 import { coolingMoistureWickingFabricGuide } from './cooling-moisture-wicking-uniform-fabric-guide';
 import { uniformRentalVsPurchaseGuide } from './uniform-rental-vs-purchase-guide';
 import { uniformLogoBrandingMethodsGuide } from './uniform-logo-branding-methods-guide';
+import { cafeBaristaUniformsSaudiArabia } from './cafe-barista-uniforms-saudi-arabia';
+import { qsrVsFineDiningUniformsGuide } from './qsr-vs-fine-dining-uniforms-guide';
+import { uniformFabricWeightGsmGuide } from './uniform-fabric-weight-gsm-guide';
+import { uniformColourfastnessUvGuide } from './uniform-colourfastness-uv-guide';
+import { saudiUniformBuyersGuide } from './saudi-uniform-buyers-guide';
 
 export const RESOURCES: Resource[] = [
   fabricGuide,
@@ -61,7 +66,12 @@ export const RESOURCES: Resource[] = [
   polyCottonBlendRatiosGuide,
   coolingMoistureWickingFabricGuide,
   uniformRentalVsPurchaseGuide,
-  uniformLogoBrandingMethodsGuide
+  uniformLogoBrandingMethodsGuide,
+  cafeBaristaUniformsSaudiArabia,
+  qsrVsFineDiningUniformsGuide,
+  uniformFabricWeightGsmGuide,
+  uniformColourfastnessUvGuide,
+  saudiUniformBuyersGuide
 ];
 
 export const RESOURCES_BY_SLUG = Object.fromEntries(
