@@ -49,6 +49,12 @@ import { qsrVsFineDiningUniformsGuide } from './qsr-vs-fine-dining-uniforms-guid
 import { uniformFabricWeightGsmGuide } from './uniform-fabric-weight-gsm-guide';
 import { uniformColourfastnessUvGuide } from './uniform-colourfastness-uv-guide';
 import { saudiUniformBuyersGuide } from './saudi-uniform-buyers-guide';
+import { modestHospitalityUniformsSaudiArabia } from './modest-hospitality-uniforms-saudi-arabia';
+import { spaWellnessStaffUniformsSaudiArabia } from './spa-wellness-staff-uniforms-saudi-arabia';
+import { schoolPeSportsKitSaudiArabia } from './school-pe-sports-kit-saudi-arabia';
+import { nurseryKindergartenUniformsSaudiArabia } from './nursery-kindergarten-uniforms-saudi-arabia';
+import { uniformTotalCostOfOwnershipGuide } from './uniform-total-cost-of-ownership-guide';
+import { uniformInventoryReorderManagementGuide } from './uniform-inventory-reorder-management-guide';
 
 export const RESOURCES: Resource[] = [
   fabricGuide,
@@ -71,7 +77,13 @@ export const RESOURCES: Resource[] = [
   qsrVsFineDiningUniformsGuide,
   uniformFabricWeightGsmGuide,
   uniformColourfastnessUvGuide,
-  saudiUniformBuyersGuide
+  saudiUniformBuyersGuide,
+  modestHospitalityUniformsSaudiArabia,
+  spaWellnessStaffUniformsSaudiArabia,
+  schoolPeSportsKitSaudiArabia,
+  nurseryKindergartenUniformsSaudiArabia,
+  uniformTotalCostOfOwnershipGuide,
+  uniformInventoryReorderManagementGuide
 ];
 
 export const RESOURCES_BY_SLUG = Object.fromEntries(
