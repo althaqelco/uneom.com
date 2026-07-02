@@ -10,10 +10,10 @@ runConfig:
   cpu: 1
   memoryMiB: 1024
   concurrency: 80
-  # ⚠️ cpuThrottling: false = CPU مخصّص حتى بين الطلبات (أغلى). للمحتوى الثابت لا
-  #    داعي له؛ إزالته (العودة للافتراضي) توفّر أكثر وقت تشغيل الـ instance — لكن
-  #    نتركه الآن (قد يخدم عملاً خلفياً بعد الرد) حتى تأكيد لاحق. فرصة توفير تالية.
-  cpuThrottling: false
+  # 💰 cpuThrottling عاد للافتراضي (true): كل مسارات الـ API (quote/revalidate/
+  #    health/og/ai-feed) متزامنة بالكامل — لا عمل خلفي بعد الرد، فلا حاجة لـ CPU
+  #    دائم التخصيص. ⚠️ لو نُفّذ TODO تكامل CRM في api/quote مستقبلاً يجب أن تكون
+  #    نداءاته awaited قبل إرسال الرد (fire-and-forget سيتجمّد مع الخنق الافتراضي).
 
 env:
   - variable: NEXT_PUBLIC_SITE_URL
