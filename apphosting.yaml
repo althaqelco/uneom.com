@@ -2,11 +2,17 @@
 # Per master-plan-v11 §3.1.2
 
 runConfig:
-  minInstances: 1
+  # 💰 minInstances: 0 — موقع محتوى B2B (زي موحّد): لا webhook/cron/functions،
+  #    فقط نموذج quote متزامن وrevalidate — كلها تتحمّل cold-start. الـ instance
+  #    الدائم كان يستهلك أغلب فاتورة $15/شهر؛ مع 0 نُحاسَب على المعالجة فقط.
+  minInstances: 0
   maxInstances: 10
   cpu: 1
   memoryMiB: 1024
   concurrency: 80
+  # ⚠️ cpuThrottling: false = CPU مخصّص حتى بين الطلبات (أغلى). للمحتوى الثابت لا
+  #    داعي له؛ إزالته (العودة للافتراضي) توفّر أكثر وقت تشغيل الـ instance — لكن
+  #    نتركه الآن (قد يخدم عملاً خلفياً بعد الرد) حتى تأكيد لاحق. فرصة توفير تالية.
   cpuThrottling: false
 
 env:
