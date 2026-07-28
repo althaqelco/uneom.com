@@ -94,6 +94,14 @@ import { restaurantUniformGuideFohBohSaudi } from './posts/restaurant-uniform-gu
 import { hospitalScrubColourPolicyByDepartment } from './posts/hospital-scrub-colour-policy-by-department';
 import { stretchFabricsActiveUniformRoles } from './posts/stretch-fabrics-active-uniform-roles';
 
+import { employeeResistanceNewUniforms } from './posts/employee-resistance-new-uniforms';
+import { pilotUniformRankInsigniaSaudi } from './posts/pilot-uniform-rank-insignia-saudi';
+import { telecomRetailStaffUniformsSaudi } from './posts/telecom-retail-staff-uniforms-saudi';
+import { receptionFrontDeskUniformsSaudi } from './posts/reception-front-desk-uniforms-saudi';
+import { hotelUniformsGuestExperienceSaudi } from './posts/hotel-uniforms-guest-experience-saudi';
+import { hiVisClassSelectionGuideSaudi } from './posts/hi-vis-class-selection-guide-saudi';
+import { weldingPpeSelectionGuideSaudi } from './posts/welding-ppe-selection-guide-saudi';
+
 const ALL_BLOG_POSTS: BlogPost[] = [
   medicalScrubsEvolutionSaudi,
   healthcareUniformsInfectionControl,
@@ -143,6 +151,13 @@ const ALL_BLOG_POSTS: BlogPost[] = [
   restaurantUniformGuideFohBohSaudi,
   hospitalScrubColourPolicyByDepartment,
   stretchFabricsActiveUniformRoles,
+  employeeResistanceNewUniforms,
+  pilotUniformRankInsigniaSaudi,
+  telecomRetailStaffUniformsSaudi,
+  receptionFrontDeskUniformsSaudi,
+  hotelUniformsGuestExperienceSaudi,
+  hiVisClassSelectionGuideSaudi,
+  weldingPpeSelectionGuideSaudi,
 ];
 
 /**
