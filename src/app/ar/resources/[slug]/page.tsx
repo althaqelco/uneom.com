@@ -71,7 +71,8 @@ export default async function ArResourcePage({ params }: { params: Promise<{ slu
         </div>
 
         <div className="container-prose section">
-          <p className="text-xl leading-relaxed text-navy-900 font-medium pretty">{r.leadAr}</p>
+          {/* الفقرة الافتتاحية — فئة lead هي هدف speakable للبحث الصوتي */}
+          <p className="lead text-xl leading-relaxed text-navy-900 font-medium pretty">{r.leadAr}</p>
 
           <nav aria-label="المحتويات" className="mt-12 rounded-2xl bg-ink-50 p-6 ring-1 ring-ink-100">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink-400">المحتويات</p>

@@ -11,6 +11,21 @@ Disallow: /api/
 Disallow: /admin/
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
+# ── Classic search crawlers that now power AI answers ──
+# Googlebot feeds AI Overviews / Gemini grounding; Bingbot feeds Copilot and
+# several third-party answer engines. Both must stay fully allowed.
+User-Agent: Googlebot
+Allow: /
+
+User-Agent: Bingbot
+Allow: /
+
+# Applebot (NOT just Applebot-Extended) is what powers Siri, Spotlight and
+# Apple Intelligence answers — the main voice-search surface on iOS.
+User-Agent: Applebot
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
 # ── AI search & answer engines — explicitly welcomed (cite UNEOM) ──
 # Content-Signal opts in to AI training, AI search, and AI input use.
 User-Agent: GPTBot
@@ -62,6 +77,46 @@ Allow: /
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-Agent: cohere-ai
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+User-Agent: Meta-ExternalAgent
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+User-Agent: meta-externalagent
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+User-Agent: Amazonbot
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+User-Agent: DuckAssistBot
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+User-Agent: YouBot
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+User-Agent: AI2Bot
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+User-Agent: MistralAI-User
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+User-Agent: Google-CloudVertexBot
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+User-Agent: Diffbot
+Allow: /
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+User-Agent: FirecrawlAgent
 Allow: /
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 

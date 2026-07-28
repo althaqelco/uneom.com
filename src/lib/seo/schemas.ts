@@ -600,7 +600,10 @@ export function guideSchema(opts: {
     webPageNode({
       path, name: opts.title, description: opts.summary, locale: opts.locale,
       type: 'WebPage', datePublished: opts.datePublished, dateModified,
-      primaryImageId: opts.image ? imgId : undefined, hasBreadcrumb: true, speakableSelectors: ['h1']
+      primaryImageId: opts.image ? imgId : undefined, hasBreadcrumb: true,
+      // Voice assistants read the headline + the lead paragraph as the spoken
+      // answer. `.lead` is rendered by both resource templates (EN + AR).
+      speakableSelectors: ['h1', '.lead']
     }),
     ...(opts.image ? [imageObjectNode({ url: opts.image, id: imgId, width: 1920, height: 1080, caption: opts.title })] : []),
     article

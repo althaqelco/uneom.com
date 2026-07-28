@@ -70,8 +70,9 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
         </div>
 
         <div className="container-prose section">
-          {/* Lead */}
-          <p className="text-xl leading-relaxed text-navy-900 font-medium pretty">{r.lead}</p>
+          {/* Lead — `lead` class is the speakable target for voice assistants
+              (Siri/Assistant read h1 + this paragraph as the direct answer). */}
+          <p className="lead text-xl leading-relaxed text-navy-900 font-medium pretty">{r.lead}</p>
 
           {/* Table of contents */}
           <nav aria-label="Contents" className="mt-12 rounded-2xl bg-ink-50 p-6 ring-1 ring-ink-100">
