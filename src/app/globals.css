@@ -19,6 +19,25 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
+    /* Contain horizontal overflow.
+       The closed mobile drawer is parked off-screen with translateX(±100%).
+       In an LTR document the browser clips anything past the left edge, so it
+       was invisible — but the Arabic tree now renders <html dir="rtl">, where
+       that off-screen area lies in the scroll direction. The browser turned it
+       into ~380px of scrollable width, showing as a blank band beside the
+       layout on /ar/ pages.
+       `clip` contains it WITHOUT creating a scroll container, so the sticky
+       header keeps working; `overflow-x: hidden` would break sticky. */
+    overflow-x: clip;
+  }
+
+  /* Fallback for engines without overflow-x: clip (Safari < 16). `hidden`
+     costs sticky positioning there, which is a far smaller regression than a
+     broken RTL layout. */
+  @supports not (overflow-x: clip) {
+    html {
+      overflow-x: hidden;
+    }
   }
 
   body {
@@ -563,6 +582,21 @@
 .mobile-menu-backdrop--visible {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* The mobile menu is triggered by a hamburger that is `lg:hidden`, but the
+   drawer and backdrop had no matching breakpoint, so they stayed in the layout
+   at every width — parked off-screen via translateX(±100%).
+   In an LTR document the browser clips anything past the left edge, so this was
+   invisible. The Arabic tree now renders <html dir="rtl">, where that off-screen
+   area lies in the scroll direction: the 380px white drawer became scrollable
+   width and showed as a blank band beside the layout.
+   A menu that cannot be opened should not be in the layout at all. */
+@media (min-width: 1024px) {
+  .mobile-menu-drawer,
+  .mobile-menu-backdrop {
+    display: none;
+  }
 }
 
 /* Drawer Panel */
