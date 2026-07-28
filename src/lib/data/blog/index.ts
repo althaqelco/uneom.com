@@ -86,7 +86,15 @@ export interface BlogPost {
   reviewer?: { name: string; nameAr: string; title: string; titleAr: string; affiliation: string; affiliationAr: string };
 }
 
-export const BLOG_POSTS: BlogPost[] = [
+import { schoolUniformProcurementTimelineSaudi } from './posts/school-uniform-procurement-timeline-saudi';
+import { backToSchoolUniformOrderingSaudi } from './posts/back-to-school-uniform-ordering-saudi';
+import { securityUniformAccessoriesLoadCarriage } from './posts/security-uniform-accessories-load-carriage';
+import { insuranceFinanceSectorUniformStandards } from './posts/insurance-finance-sector-uniform-standards';
+import { restaurantUniformGuideFohBohSaudi } from './posts/restaurant-uniform-guide-foh-boh-saudi';
+import { hospitalScrubColourPolicyByDepartment } from './posts/hospital-scrub-colour-policy-by-department';
+import { stretchFabricsActiveUniformRoles } from './posts/stretch-fabrics-active-uniform-roles';
+
+const ALL_BLOG_POSTS: BlogPost[] = [
   medicalScrubsEvolutionSaudi,
   healthcareUniformsInfectionControl,
   nursingUniformGuide2025,
@@ -127,8 +135,45 @@ export const BLOG_POSTS: BlogPost[] = [
   riyadhAirAviationUniformStandards,
   uniformFabricGuideSaudiClimate,
   customUniformTailoringProcess,
-  uniformProcurementTenderGuideSaudi
+  uniformProcurementTenderGuideSaudi,
+  schoolUniformProcurementTimelineSaudi,
+  backToSchoolUniformOrderingSaudi,
+  securityUniformAccessoriesLoadCarriage,
+  insuranceFinanceSectorUniformStandards,
+  restaurantUniformGuideFohBohSaudi,
+  hospitalScrubColourPolicyByDepartment,
+  stretchFabricsActiveUniformRoles,
 ];
+
+/**
+ * SCHEDULED PUBLISHING GATE
+ * --------------------------------------------------------------------------
+ * Posts carry a real `publishedAt`. Anything dated in the future is excluded
+ * from the build entirely — it is not listed, not in the sitemap, not in
+ * /llms.txt, and `generateStaticParams` never emits it, so the URL 404s until
+ * its date arrives. That keeps Google from ever seeing a half-published or
+ * pre-announced article.
+ *
+ * A scheduled daily rebuild (.github/workflows/scheduled-publish.yml) is what
+ * moves the line forward: each run re-evaluates "today" and the posts due that
+ * day enter the build naturally, spread across the Saudi work week.
+ *
+ * `PUBLISH_CUTOFF_OVERRIDE` exists only so the schedule can be simulated and
+ * tested locally — set it to an ISO date to build the site "as of" that day.
+ */
+const PUBLISH_CUTOFF_OVERRIDE = process.env.UNEOM_PUBLISH_DATE;
+
+function publishCutoff(): string {
+  return (PUBLISH_CUTOFF_OVERRIDE || new Date().toISOString().slice(0, 10));
+}
+
+/** Every post ever authored, including future-dated drafts. Authoring only. */
+export { ALL_BLOG_POSTS };
+
+/** Posts live as of the build date — this is what the whole site renders from. */
+export const BLOG_POSTS: BlogPost[] = ALL_BLOG_POSTS
+  .filter(p => p.publishedAt.slice(0, 10) <= publishCutoff());
+
 
 export const BLOG_CATEGORIES_BY_SLUG = Object.fromEntries(
   BLOG_CATEGORIES.map(c => [c.slug, c])

@@ -1,0 +1,61 @@
+name: Scheduled publish
+
+# Moves the publishing line forward.
+#
+# Blog posts carry a real `publishedAt`; src/lib/data/blog/index.ts excludes any
+# post dated in the future from the build entirely (not listed, not in the
+# sitemap, not in /llms.txt, and its URL 404s). Nothing else is needed to
+# "schedule" a post — it simply enters the site on the first build that happens
+# on or after its date.
+#
+# This workflow is what causes that build to happen. It runs once a day and
+# pushes an empty commit to main, which Firebase App Hosting picks up as a
+# normal deploy.
+#
+# Timing: 05:11 UTC = 08:11 Riyadh, before the Saudi work day. The odd minute is
+# deliberate — every repo that asks for "6am" lands on :00 and GitHub delays
+# those runs under load.
+on:
+  schedule:
+    - cron: '11 5 * * 0-4'   # Sun-Thu, the Saudi work week
+  workflow_dispatch:          # manual trigger for testing
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scheduled-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check whether anything is due today
+        id: due
+        run: |
+          TODAY=$(date -u +%F)
+          DUE=$(grep -rhoE "publishedAt: '[0-9]{4}-[0-9]{2}-[0-9]{2}'" src/lib/data/blog/posts/ \
+                | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' \
+                | awk -v t="$TODAY" '$0 == t' | wc -l | tr -d ' ')
+          echo "today=$TODAY" >> "$GITHUB_OUTPUT"
+          echo "count=$DUE"   >> "$GITHUB_OUTPUT"
+          echo "::notice::$DUE post(s) scheduled for $TODAY"
+
+      - name: Trigger rebuild
+        if: steps.due.outputs.count != '0'
+        run: |
+          git config user.name  "uneom-scheduler[bot]"
+          git config user.email "scheduler@uneom.com"
+          git commit --allow-empty \
+            -m "chore(publish): release ${{ steps.due.outputs.count }} scheduled post(s) for ${{ steps.due.outputs.today }}"
+          git push origin main
+
+      - name: Nothing due
+        if: steps.due.outputs.count == '0'
+        run: echo "No posts dated ${{ steps.due.outputs.today }} — skipping rebuild."
