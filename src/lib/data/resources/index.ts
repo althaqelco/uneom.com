@@ -56,6 +56,10 @@ import { nurseryKindergartenUniformsSaudiArabia } from './nursery-kindergarten-u
 import { uniformTotalCostOfOwnershipGuide } from './uniform-total-cost-of-ownership-guide';
 import { uniformInventoryReorderManagementGuide } from './uniform-inventory-reorder-management-guide';
 
+import { labCoatStandardsGuideSaudi } from './lab-coat-standards-guide-saudi';
+import { dentalClinicUniformsSaudi } from './dental-clinic-uniforms-saudi';
+import { pharmacyUniformsSaudi } from './pharmacy-uniforms-saudi';
+
 export const RESOURCES: Resource[] = [
   fabricGuide,
   sizeGuide,
@@ -83,7 +87,10 @@ export const RESOURCES: Resource[] = [
   schoolPeSportsKitSaudiArabia,
   nurseryKindergartenUniformsSaudiArabia,
   uniformTotalCostOfOwnershipGuide,
-  uniformInventoryReorderManagementGuide
+  uniformInventoryReorderManagementGuide,
+  labCoatStandardsGuideSaudi,
+  dentalClinicUniformsSaudi,
+  pharmacyUniformsSaudi
 ];
 
 export const RESOURCES_BY_SLUG = Object.fromEntries(
