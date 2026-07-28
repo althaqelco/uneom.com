@@ -1,0 +1,98 @@
+import type { BlogPost } from '../index';
+
+/**
+ * Scheduled article — publishes 2026-10-13 (Tue).
+ * Written + adversarially verified (uneom-schedule batch 5/6).
+ * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
+ * Guardrail: لا تخترع أعراف ألوان أكاديمية سعودية أو متطلبات جامعية بعينها.
+ */
+export const universityLabCoatsFacultyAttire: BlogPost = {
+  "slug": "university-lab-coats-faculty-attire",
+  "title": "University Lab Coats and Faculty Attire: Choosing a University Lab Coat Supplier in Saudi Arabia",
+  "titleAr": "معاطف المختبرات الجامعية وأزياء الكوادر الأكاديمية: كيف تختار مورّد معاطف مختبرات جامعية في السعودية",
+  "excerpt": "How Saudi universities specify lab coats, faculty and campus staff attire across colleges, size thousands of wearers, set a departmental colour policy, and buy on the academic calendar.",
+  "excerptAr": "كيف تحدّد الجامعات السعودية مواصفات معاطف المختبرات وأزياء الكوادر الأكاديمية والإدارية، وتضبط المقاسات لأعداد كبيرة، وتكتب سياسة ألوان الأقسام، وتشتري وفق التقويم الدراسي.",
+  "category": "corporate-education",
+  "publishedAt": "2026-10-13",
+  "hero": "blog/university-lab-coats-faculty-attire",
+  "silo": "education",
+  "readingMinutes": 6,
+  "lead": "A university uniform programme is several programmes at once: lab coats for science and health colleges, attire for faculty and administrative staff, and durable workwear for technical, security and grounds teams. Getting it right in Saudi Arabia means writing specifications from risk assessment, sizing a large and diverse population accurately, and buying to the academic calendar.",
+  "leadAr": "برنامج الزي الجامعي هو في الحقيقة عدة برامج في آنٍ واحد: معاطف مختبرات للكليات العلمية والصحية، وأزياء لأعضاء هيئة التدريس والكوادر الإدارية، وملابس عمل متينة للفرق الفنية والأمن والصيانة. وإتقانه في السعودية يعني بناء المواصفة على تقييم المخاطر، وضبط المقاسات لجمهور كبير ومتنوع، والشراء وفق التقويم الدراسي.",
+  "sections": [
+    {
+      "heading": "Mapping the Campus Population",
+      "headingAr": "خريطة فئات الحرم الجامعي",
+      "body": "A university order is rarely one garment. Before writing a specification, split the campus population into wearer groups and count each honestly: students in teaching laboratories, postgraduate researchers, faculty moving between offices and benches, laboratory technicians and preparation-room staff, administrative teams in faculties and student services, workshop technicians, and the security, grounds and maintenance crews who spend most of the day outdoors. Each group carries a different exposure, wash cycle and replacement rhythm. A teaching coat worn twice a week for one semester is not the same purchase as a technician's coat laundered weekly for years, and neither resembles a security uniform facing a full Saudi summer. Students on clinical placement are a further case, since what they may wear on a ward is set by the host hospital's infection prevention policy rather than the university. Counting the groups separately prevents the most common campus mistake: writing one mid-range specification for everybody, then finding it too warm for outdoor teams, too light for solvent handling and too costly for first-year students.",
+      "bodyAr": "طلب الجامعة نادراً ما يكون قطعة واحدة. قبل كتابة أي مواصفة، قسّم منسوبي الحرم إلى فئات ارتداء وأحصِ كل فئة بدقة: طلبة المختبرات التعليمية، وباحثو الدراسات العليا، وأعضاء هيئة التدريس المتنقلون بين المكاتب والمناضد المخبرية، وفنيو المختبرات وغرف التحضير، والكوادر الإدارية في الكليات وخدمات الطلبة، وفنيو الورش، وفرق الأمن والصيانة والمسطحات التي تقضي معظم اليوم في الخارج. لكل فئة تعرّض مختلف، ودورة غسيل مختلفة، وإيقاع استبدال مختلف؛ فمعطف تعليمي يُلبس مرتين أسبوعياً لفصل واحد ليس شراءً مماثلاً لمعطف فني يُغسل أسبوعياً لسنوات، ولا يشبه أيٌّ منهما زيَّ أمن يواجه الصيف السعودي بكامله. وطلبة التدريب السريري حالة إضافية، لأن ما يُسمح بارتدائه داخل الأقسام السريرية تحدده سياسة مكافحة العدوى في المنشأة الصحية المستضيفة لا الجامعة. وفصل الفئات في العدّ يجنّبك الخطأ الأشيع: مواصفة وسطية واحدة للجميع، ثم اكتشاف أنها حارّة على فرق الخارج، وخفيفة على أعمال المذيبات، ومكلفة على طلبة السنة الأولى."
+    },
+    {
+      "heading": "Specification Follows Risk",
+      "headingAr": "المواصفة تتبع تقييم المخاطر",
+      "body": "Specification follows risk, not habit. Ask the environmental health and safety office to classify each laboratory: general teaching benches, wet chemistry with flammable solvents, biological work at defined containment levels, or specialised handling of pyrophorics. That classification decides the fabric family. Cotton-rich cloth chars rather than melting, which is why it remains the default around open flame, while thermoplastic synthetics can melt and adhere to skin, a decisive argument against untreated polyester in solvent laboratories, even though polyester blends serve well in dry teaching spaces. Where the assessment identifies flash-fire or arc exposure, an inherently flame-resistant or FR-treated fabric is required rather than preferred, and the garment must be certified against the relevant standard rather than described loosely as fire-retardant. Read the applicable standards directly: laboratory fire protection guidance, limited-performance chemical splash classifications, flame and arc garment standards, and biological barrier standards each set their own criteria. Then fix the practical details in writing: how far coverage extends down the leg, closures that open quickly in an emergency, and cuffs chosen for the cleaning method you actually use.",
+      "bodyAr": "تُبنى المواصفة على المخاطر لا على العادة. اطلب من إدارة الصحة والسلامة تصنيف كل مختبر: مناضد تعليمية عامة، أو كيمياء رطبة بمذيبات قابلة للاشتعال، أو عمل حيوي عند مستويات احتواء محددة، أو تداول مواد ذاتية الاشتعال. هذا التصنيف هو ما يحدد عائلة القماش. فالأقمشة الغنية بالقطن تتفحّم ولا تنصهر، ولهذا تبقى الخيار الافتراضي قرب اللهب المكشوف، بينما الألياف الصناعية الحرارية قد تنصهر وتلتصق بالجلد، وهي حجة حاسمة ضد البوليستر غير المعالَج في مختبرات المذيبات، وإن خدمت خلطات البوليستر جيداً في القاعات التعليمية الجافة. وحين يكشف التقييم تعرّضاً لوميض حريق أو قوس كهربائي، يصبح القماش المقاوم للهب جوهرياً أو المعالَج مطلباً لا تفضيلاً، وينبغي أن تكون القطعة مشهودة وفق المعيار المعني لا موصوفة على نحو فضفاض بأنها مقاومة للحريق. ارجع إلى المعايير نفسها: إرشادات الوقاية من الحريق في المختبرات، وتصنيفات الحماية المحدودة من رذاذ الكيماويات، ومعايير ملابس اللهب والقوس، ومعايير الحواجز البيولوجية؛ فلكلٍّ منها معاييره الخاصة. ثم ثبّت التفاصيل كتابةً: مدى التغطية على الساق، ومغالق تُفتح سريعاً عند الطوارئ، وأساور تُختار وفق أسلوب التنظيف المتّبع فعلاً."
+    },
+    {
+      "heading": "Colour Coding as Written Policy",
+      "headingAr": "ترميز الألوان سياسة مكتوبة",
+      "body": "Departmental colour coding is an internal convention, not an external requirement. No national rule tells a Saudi university which colour belongs to chemistry, pharmacy or engineering, and colours used at one campus carry no meaning at another, so treat any scheme as a policy your institution writes, approves and can explain. Keep the palette deliberately small. Every additional colour multiplies stock-keeping units, complicates replenishment, and raises the risk of visible shade variation between production runs, because dye lots differ and a coat replaced two years later rarely matches the original exactly. Where the aim is identifying a department rather than signalling a hazard, embroidered department names, coloured trim or a contrast collar achieve the same recognition on a single base colour and are far easier to reorder. Where colour genuinely carries a safety meaning, such as separating visitors from trained staff or marking coats that must never leave a containment area, write that meaning into the laboratory rules, brief students on it, and enforce it, because an unenforced code teaches people to ignore colour altogether.",
+      "bodyAr": "ترميز الأقسام بالألوان عُرف داخلي لا اشتراط خارجي. لا توجد قاعدة وطنية تُحدد للجامعة السعودية لوناً للكيمياء أو الصيدلة أو الهندسة، والألوان المستخدمة في حرم لا تحمل المعنى نفسه في حرم آخر؛ لذا تعامل مع أي مخطط بوصفه سياسة تكتبها مؤسستك وتعتمدها وتستطيع تفسيرها. واحرص على لوحة ألوان صغيرة عمداً، فكل لون إضافي يضاعف أصناف المخزون، ويعقّد إعادة التزويد، ويرفع احتمال اختلاف الدرجة بين دفعات الإنتاج، لأن حمّامات الصباغة تتفاوت ونادراً ما يطابق معطف بديل بعد عامين اللون الأصلي مطابقة تامة. وإذا كان الهدف تعريف القسم لا الإشارة إلى خطر، فإن تطريز اسم القسم أو الحواف الملوّنة أو ياقة مغايرة تحقق التمييز نفسه على لون أساس واحد، وتسهّل إعادة الطلب كثيراً. أما إذا حمل اللون معنى سلامة حقيقياً، كفصل الزوّار عن الكوادر المدرَّبة أو تمييز معاطف يُمنع خروجها من منطقة احتواء، فاكتب هذا المعنى في لوائح المختبر، وعرّف به الطلبة، وطبّقه فعلياً؛ فالترميز غير المطبَّق يعلّم الناس تجاهل اللون كلياً."
+    },
+    {
+      "heading": "Sizing Across a Large Campus",
+      "headingAr": "المقاسات على نطاق الحرم",
+      "body": "Sizing decides whether a coat gets worn. At campus scale the failure mode is predictable: a single unisex block is ordered, women receive scaled-down men's patterns that pull across the shoulders and hang wrongly at the hip, and the coats end up unbuttoned or abandoned. Specify separate fit blocks drafted for women rather than downsized men's patterns, and offer generous length and a relaxed cut for wearers who prefer fuller coverage or wear the coat over an abaya, along with sleeve options and collar shapes that sit comfortably with a hijab. Circulate physical size sets to every college before the order closes and run sizing sessions alongside orientation, because self-reported sizes from a form generate exchanges that consume more staff time than the fitting would have. Decide early whether coats are personally issued and named or pooled per laboratory, since pooled coats need a larger size spread, a laundering route and a hygiene rule. Then hold buffer stock in the common sizes and agree a replenishment lead time before the semester begins.",
+      "bodyAr": "المقاس هو ما يحدد إن كان المعطف سيُلبَس أصلاً. وعلى نطاق الحرم يتكرر الإخفاق نفسه: يُطلب قالب موحّد واحد، فتتسلم الموظفات والطالبات باترونات رجالية مصغّرة تشدّ عند الكتفين وتسقط خطأً عند الورك، فينتهي المعطف مفتوحاً أو مهجوراً. حدّد قوالب قياس مستقلة مصممة للنساء لا نسخاً مصغّرة من القوالب الرجالية، وأتِح أطوالاً أوفر وقصّة أوسع لمن يفضّلن تغطية أشمل أو يرتدين المعطف فوق العباءة، مع خيارات أكمام وياقات تستقر بارتياح مع الحجاب. وعمّم أطقم مقاسات فعلية على كل كلية قبل إغلاق الطلب، وأدر جلسات قياس بالتزامن مع الأسبوع التعريفي، لأن المقاسات المُدخلة ذاتياً عبر نموذج تولّد عمليات استبدال تستهلك من وقت الموظفين أكثر مما كان القياس ليستهلك. واحسم مبكراً هل تُصرف المعاطف باسم كل شخص أم تُجمَّع لكل مختبر، فالمعاطف المشتركة تحتاج مدى مقاسات أوسع ومساراً للغسيل وقاعدة نظافة واضحة. ثم احتفظ بمخزون احتياطي في المقاسات الشائعة، واتفق على زمن إعادة التزويد قبل بدء الفصل."
+    },
+    {
+      "heading": "Buying on the Academic Calendar",
+      "headingAr": "الشراء وفق التقويم الدراسي",
+      "body": "University buying is governed by the teaching calendar, not the purchase order date. Work backwards from the first week of laboratory classes: delivery and distribution, production, award, evaluation, quotation or tender, wear trial, sample approval, and specification sign-off each need their own slot, and the sample and trial stages are the ones most often compressed until they disappear. Because a new intake arrives every year, a framework or call-off agreement with agreed specifications, size charts and prices held for a defined term is usually more efficient than re-tendering annually, and it lets colleges draw stock as enrolment firms up. Public institutions commonly publish requirements through government e-procurement channels while universities with independent financial charters run their own processes, so confirm the route and complete supplier registration and documentation long before the deadline. Ask for phased delivery by college rather than one consignment nobody has space to store, and agree in advance how mid-year replenishment works for late enrolments, new appointments and damaged coats, including the lead time and the ordering contact.",
+      "bodyAr": "الشراء الجامعي يحكمه التقويم الدراسي لا تاريخ أمر الشراء. احسب رجوعاً من أول أسبوع للمختبرات: التسليم والتوزيع، والإنتاج، والترسية، والتقييم، وطلب العروض أو المنافسة، وتجربة الارتداء، واعتماد العينة، وإقرار المواصفة؛ لكل مرحلة حيّزها الزمني، وأكثر ما يُضغط حتى يتلاشى هو مرحلتا العينة والتجربة. ولأن دفعة جديدة تلتحق كل عام، فإن اتفاقية إطارية أو عقد سحب بمواصفات وجداول مقاسات وأسعار ثابتة لمدة محددة أجدى غالباً من طرح منافسة سنوية، ويتيح للكليات السحب تدريجياً مع استقرار أعداد المقيدين. وتنشر الجهات الحكومية احتياجاتها عادةً عبر قنوات الشراء الإلكتروني الحكومية، بينما تدير الجامعات ذات الاستقلال المالي إجراءاتها الخاصة؛ لذا تأكد من المسار وأكمل تسجيل المورّد ومستنداته قبل الموعد بوقت كافٍ. واطلب تسليماً مرحلياً بحسب الكليات بدل شحنة واحدة لا مكان لتخزينها، واتفق مسبقاً على آلية إعادة التزويد خلال العام لحالات الالتحاق المتأخر والتعيينات الجديدة والمعاطف التالفة، بما في ذلك زمن التوريد وجهة الطلب."
+    },
+    {
+      "heading": "Choosing a Supplier in the Kingdom",
+      "headingAr": "اختيار المورّد داخل المملكة",
+      "body": "Judge a university lab coat supplier in Saudi Arabia on evidence you can inspect. Ask for a pre-production sample cut from the fabric that will actually be delivered, not a showroom garment, and put it through a wear trial and an institutional wash cycle before award. Ask how the size range is held and how quickly a replenishment order reaches a college mid-semester, because in-Kingdom production shortens that loop in a way an import lead time cannot. Check whether the same supplier can cover the non-laboratory categories, including administrative attire, workshop and technical wear, and security and grounds uniforms built for long outdoor shifts in Saudi summer heat, so one contract governs the whole campus. Confirm that care labelling is legible in Arabic and English, and remember that embroidery perforates fabric, which matters on garments specified as a liquid barrier. UNEOM has manufactured professional uniforms inside the Kingdom since 2013 and works to ISO 9001:2015 with OEKO-TEX Standard 100 certification, and procurement teams should ask any supplier for that evidence in writing.",
+      "bodyAr": "قيّم مورّد معاطف المختبرات الجامعية في السعودية بأدلة يمكنك فحصها. اطلب عينة ما قبل الإنتاج مقصوصة من القماش الذي سيُورَّد فعلاً لا قطعة عرض، وأخضعها لتجربة ارتداء ولدورة غسيل مؤسسية قبل الترسية. واسأل كيف يُحفظ مدى المقاسات، وكم يستغرق وصول طلب تزويد إلى كلية في منتصف الفصل، فالإنتاج داخل المملكة يختصر هذه الحلقة على نحو لا تبلغه مهل الاستيراد. وتحقّق مما إذا كان المورّد نفسه يغطي الفئات غير المخبرية، من الزي الإداري وملابس الورش والفنيين إلى أزياء الأمن والمسطحات المصممة لنوبات خارجية طويلة في حر الصيف السعودي، ليحكم عقد واحد الحرم بأكمله. وتأكد من وضوح بطاقات العناية بالعربية والإنجليزية، وتذكّر أن التطريز يخرق نسيج القماش، وهو أمر ذو أثر على القطع الموصوفة بوصفها حاجزاً للسوائل. تصنّع يونيوم الأزياء المهنية داخل المملكة منذ 2013 وتعمل وفق ISO 9001:2015 مع شهادة OEKO-TEX Standard 100، وعلى فرق المشتريات أن تطلب هذه الأدلة كتابةً من أي مورّد."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a standard colour code for university lab coats in Saudi Arabia?",
+      "qAr": "هل يوجد ترميز لوني معياري لمعاطف المختبرات في الجامعات السعودية؟",
+      "a": "No national convention assigns colours to academic departments. Any scheme is an institutional decision, so write it into policy, keep the palette small to control stock-keeping units and shade variation between production runs, and consider embroidered department names or coloured trim on one base colour instead of multiple garment colours.",
+      "aAr": "لا يوجد عُرف وطني يخصص ألواناً للأقسام الأكاديمية؛ فأي مخطط هو قرار مؤسسي. اكتبه في سياسة معتمدة، وأبقِ لوحة الألوان صغيرة للتحكم في أصناف المخزون وفروق الدرجة بين دفعات الإنتاج، وفكّر في تطريز اسم القسم أو حواف ملوّنة على لون أساس واحد بدل تعدد ألوان القطع."
+    },
+    {
+      "q": "Cotton or polyester blend for teaching laboratory coats?",
+      "qAr": "قطن أم خلطة بوليستر لمعاطف المختبرات التعليمية؟",
+      "a": "It depends on the work. Cotton-rich cloth chars instead of melting, which keeps it the default around open flame and flammable solvents, while polyester blends resist creasing and hold colour in dry teaching spaces. Let the environmental health and safety classification of each laboratory decide, and specify certified flame-resistant fabric where the assessment requires it.",
+      "aAr": "الأمر يتبع طبيعة العمل. الأقمشة الغنية بالقطن تتفحّم ولا تنصهر، ولهذا تبقى الخيار الافتراضي قرب اللهب والمذيبات القابلة للاشتعال، بينما تقاوم خلطات البوليستر التجعّد وتحافظ على اللون في القاعات الجافة. دع تصنيف الصحة والسلامة لكل مختبر يحسم الاختيار، واشترط قماشاً مقاوماً للهب مشهوداً حين يستوجب التقييم ذلك."
+    },
+    {
+      "q": "How far ahead should a university order lab coats for a new intake?",
+      "qAr": "قبل كم من الوقت ينبغي طلب معاطف المختبرات لدفعة جديدة؟",
+      "a": "Work backwards from the first week of laboratory classes rather than from the purchase order. Specification sign-off, sample approval, a wear trial, tendering, award, production, delivery and college-level distribution each need time. A framework agreement with fixed specifications and size charts removes most of that lead time in later years.",
+      "aAr": "احسب رجوعاً من أول أسبوع للمختبرات لا من تاريخ أمر الشراء. فإقرار المواصفة، واعتماد العينة، وتجربة الارتداء، والمنافسة، والترسية، والإنتاج، والتسليم، والتوزيع على الكليات، كلها تحتاج وقتاً. واتفاقية إطارية بمواصفات وجداول مقاسات ثابتة تختصر معظم هذه المهلة في الأعوام التالية."
+    },
+    {
+      "q": "How do we size thousands of students and staff without endless exchanges?",
+      "qAr": "كيف نقيس آلاف الطلبة والموظفين دون استبدالات لا تنتهي؟",
+      "a": "Circulate physical size sets to each college and run fitting sessions during orientation instead of collecting self-reported sizes on a form. Use separate fit blocks drafted for women rather than downsized men's patterns, offer longer and roomier options for fuller coverage, and hold buffer stock in the most common sizes.",
+      "aAr": "عمّم أطقم مقاسات فعلية على كل كلية، وأدر جلسات قياس خلال الأسبوع التعريفي بدل جمع مقاسات مُدخلة ذاتياً عبر نموذج. واستخدم قوالب قياس مستقلة مصممة للنساء لا نسخاً مصغّرة من القوالب الرجالية، وأتِح خيارات أطول وأوسع لمن يفضّلن تغطية أشمل، واحتفظ بمخزون احتياطي في المقاسات الأكثر شيوعاً."
+    },
+    {
+      "q": "Can one supplier cover lab coats, administrative attire and campus security uniforms?",
+      "qAr": "هل يمكن لمورّد واحد تغطية معاطف المختبرات والزي الإداري وأزياء أمن الحرم؟",
+      "a": "It is usually worth requiring it. A single contract keeps size data, labelling, embroidery and replenishment consistent across colleges and facilities. Ask the supplier to demonstrate range with pre-production samples in each category, including uniforms built for long outdoor shifts in summer heat, and confirm quality documentation before award.",
+      "aAr": "غالباً يستحق الأمر أن يكون شرطاً. فالعقد الواحد يبقي بيانات المقاسات والبطاقات والتطريز وإعادة التزويد متسقة عبر الكليات والمرافق. اطلب من المورّد إثبات مداه بعينات ما قبل الإنتاج في كل فئة، بما فيها أزياء مصممة لنوبات خارجية طويلة في حر الصيف، وتأكد من وثائق الجودة قبل الترسية."
+    }
+  ],
+  "author": {
+    "name": "Ahmad Al-Rashidi",
+    "nameAr": "أحمد الرشيدي",
+    "title": "Procurement Solutions Director",
+    "titleAr": "مدير حلول المشتريات"
+  }
+};

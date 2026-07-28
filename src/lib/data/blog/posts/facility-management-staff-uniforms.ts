@@ -1,0 +1,98 @@
+import type { BlogPost } from '../index';
+
+/**
+ * Scheduled article — publishes 2026-10-20 (Tue).
+ * Written + adversarially verified (uneom-schedule batch 5/6).
+ * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
+ * Guardrail: لا تخترع متطلبات عقود إدارة مرافق أو معايير خدمة رقمية.
+ */
+export const facilityManagementStaffUniforms: BlogPost = {
+  "slug": "facility-management-staff-uniforms",
+  "title": "Facility Management Uniform Programs in Saudi Arabia: One Identity, Many Trades",
+  "titleAr": "زي موظفي إدارة المرافق في السعودية: هوية واحدة وتخصصات متعددة",
+  "excerpt": "How to build a facility management uniform system in Saudi Arabia that distinguishes cleaning, maintenance, landscaping and reception trades while holding one contractor identity through heat and turnover.",
+  "excerptAr": "كيف تبني نظام زي لإدارة المرافق في السعودية يميّز فرق النظافة والصيانة والحدائق والاستقبال، ويحافظ في الوقت نفسه على هوية موحّدة للمقاول أمام الحرارة ودوران العمالة.",
+  "category": "manufacturing-safety",
+  "publishedAt": "2026-10-20",
+  "hero": "blog/facility-management-staff-uniforms",
+  "silo": "security",
+  "readingMinutes": 6,
+  "lead": "Facility management contracts put cleaners, technicians, plumbers, electricians, gardeners and reception staff under one banner and one supervisor. The uniform has to do two jobs at once: tell an occupant which trade is standing in front of them, and tell everyone which contractor employs them. Here is how to build that system deliberately, from fabric to reorder.",
+  "leadAr": "تضع عقود إدارة المرافق عمال النظافة والفنيين والسبّاكين والكهربائيين وعمال الحدائق وموظفي الاستقبال تحت مظلة واحدة وإشراف واحد. وعلى الزي أن يؤدي مهمتين معاً: أن يخبر شاغل المبنى بأي تخصص يقف أمامه، وأن يخبر الجميع بهوية المقاول الذي يوظفه. وفيما يلي كيفية بناء هذا النظام بوعي، من القماش حتى إعادة الطلب.",
+  "sections": [
+    {
+      "heading": "One Contract, Many Trades",
+      "headingAr": "عقد واحد وتخصصات متعددة",
+      "body": "A facility management contract usually bundles work that once sat with separate vendors: cleaning teams, MEP technicians, plumbers and electricians, landscapers, pest control, helpdesk and reception. They share a payroll and a supervisor, but they do not share a working day. A cleaner moves through public corridors in front of tenants; a technician spends the shift in a plant room; a gardener works under full sun. If you dress them all identically, you make the contractor look tidy and make the building harder to read: an occupant cannot tell who to stop for a spill and who to call for a failed air conditioning unit. If you dress them as separate companies, you lose the single identity your client is paying for and you complicate stock, laundry and reordering. The workable answer is a system with two layers — a fixed layer that says which contractor this is, and a variable layer that says which trade this is — designed once at the start rather than patched together as the scope grows.",
+      "bodyAr": "يجمع عقد إدارة المرافق عادةً أعمالاً كانت موزّعة على موردين منفصلين: فرق النظافة، وفنيو الأنظمة الميكانيكية والكهربائية، والسبّاكون والكهربائيون، وعمال الحدائق، ومكافحة الحشرات، ومكتب الخدمة والاستقبال. هؤلاء يتشاركون كشف الرواتب والمشرف، لكنهم لا يتشاركون يوم العمل نفسه؛ فعامل النظافة يتنقل في الممرات العامة أمام المستأجرين، والفني يقضي وردية كاملة في غرفة المعدات، وعامل الحدائق يعمل تحت شمس مباشرة. وإذا ألبستهم زياً واحداً بلا تمييز، بدا المقاول منظّماً وصار المبنى أصعب في القراءة: لا يعرف الشاغل من يوقفه لتنظيف انسكاب ومن ينادي لعطل في وحدة التكييف. وإذا ألبستهم أزياء تبدو كأنها شركات مختلفة، فقدت الهوية الموحّدة التي يدفع العميل ثمنها، وعقّدت المخزون والغسيل وإعادة الطلب. والحل العملي نظام من طبقتين: طبقة ثابتة تقول من هو المقاول، وطبقة متغيّرة تقول ما هو التخصص، تُصمَّم مرة واحدة في البداية بدل أن تُرقَّع كلما اتسع نطاق العمل."
+    },
+    {
+      "heading": "Two Layers of Identity",
+      "headingAr": "طبقتان للهوية",
+      "body": "Build the fixed layer from the elements people recognise at a distance: one base body colour, a consistent logo position on the chest and back, and a shared silhouette family so the whole workforce reads as one team on camera and across a lobby. Build the variable layer from a small set of trade markers — a contrast yoke, a shoulder or side panel, a coloured collar, a distinct badge or cap — and assign one marker per discipline. Keep the marker on the torso, where it stays visible when a technician is bent over a valve or a cleaner is pushing a trolley; a sleeve stripe alone disappears in most working postures. Resist differentiating by text: a role name embroidered on a chest is legible only up close, and in a mixed-language workforce a job title printed in one language quietly excludes readers of the other. Colour and shape carry the message; wording confirms it. Cap the palette early, because every extra trade colour multiplies stock lines, reorder risk and shade-matching problems.",
+      "bodyAr": "ابنِ الطبقة الثابتة من العناصر التي يتعرّف عليها الناس من بعيد: لون أساسي واحد للجسم، وموضع ثابت للشعار على الصدر والظهر، وعائلة قصّات متقاربة تجعل القوة العاملة كلها تُقرأ كفريق واحد على الكاميرا وعبر البهو. وابنِ الطبقة المتغيّرة من مجموعة صغيرة من علامات التخصص: كتف بلون مغاير، أو لوح جانبي، أو ياقة ملوّنة، أو شارة أو قبعة مميزة، بحيث تُخصَّص علامة واحدة لكل تخصص. واحرص أن تكون العلامة على الجذع، حيث تبقى ظاهرة والفني منحنٍ فوق صمام أو عامل النظافة يدفع عربته؛ أما الشريط على الكم وحده فيختفي في معظم أوضاع العمل. وتجنّب التمييز بالنص وحده: فالمسمّى المطرّز على الصدر لا يُقرأ إلا عن قرب، وفي قوة عاملة متعددة اللغات يُقصي المسمّى المكتوب بلغة واحدة قرّاء اللغة الأخرى بهدوء. اللون والشكل يحملان الرسالة، والكلمة تؤكدها. وضع سقفاً مبكراً لعدد الألوان، لأن كل لون إضافي يضاعف خطوط المخزون ومخاطر إعادة الطلب ومشكلة مطابقة الدرجة اللونية."
+    },
+    {
+      "heading": "Fabric by Task, Not by Job Title",
+      "headingAr": "القماش حسب المهمة لا حسب المسمّى",
+      "body": "Trades that share a payroll do not share a hazard profile, and the fabric should follow the task. Cleaning teams launder constantly and meet detergents, degreasers and chlorine-based products, so specify with wash and chemical exposure in mind: bleach attacks cotton and can strip some dye classes, while solution-dyed and carefully selected polyester constructions hold colour through repeated harsh cycles, and a soil-release finish helps shed the oily marks that plain polyester otherwise clings to. MEP and plumbing crews need abrasion and tear resistance, reinforced stress points, closed pockets and a trim fit with nothing loose near rotating equipment. Where the site risk assessment identifies flame or electric arc exposure, ordinary poly-cotton workwear is the wrong answer — untreated synthetics can melt and cling to skin — and you need purpose-built flame-resistant fabric specified against the relevant standard and the client's safety requirements. Grounds crews work in direct sun against thorns and machinery, so favour tightly woven, tear-resistant constructions with full coverage. Front-of-house staff need crease recovery and shade stability, because their garment is the one tenants study.",
+      "bodyAr": "التخصصات التي تتشارك كشف الرواتب لا تتشارك خريطة المخاطر، والقماش يجب أن يتبع المهمة. ففرق النظافة تغسل ملابسها باستمرار وتلامس المنظفات ومزيلات الشحوم والمواد المعتمدة على الكلور، فحدّد المواصفة وفي ذهنك دورة الغسيل والتعرّض الكيميائي: فالمبيّضات تهاجم القطن وقد تُضعف بعض فئات الأصباغ، بينما تحافظ تراكيب البوليستر المختارة بعناية والمصبوغة في الكتلة على لونها عبر دورات قاسية متكررة، ويساعد تجهيز تحرير الأوساخ على التخلص من البقع الدهنية التي يتشبّث بها البوليستر عادةً. أما فرق الصيانة والسباكة فتحتاج مقاومة للاحتكاك والتمزق، وتقوية عند نقاط الإجهاد، وجيوباً مغلقة، وقَصّة محكمة بلا أطراف سائبة قرب المعدات الدوّارة. وحين يُظهر تقييم مخاطر الموقع تعرّضاً للهب أو للقوس الكهربائي، فإن ملابس العمل العادية من خلط القطن والبوليستر ليست الجواب — إذ يمكن للألياف الصناعية غير المعالجة أن تنصهر وتلتصق بالجلد — والمطلوب قماش مقاوم للهب مصنوع لهذا الغرض ومحدَّد وفق المعيار المعمول به ومتطلبات السلامة لدى العميل. وفرق الحدائق تعمل في شمس مباشرة وأمام أشواك ومكائن، فيُفضَّل نسيج محكم مقاوم للتمزق مع تغطية كاملة. وموظفو الاستقبال يحتاجون تعافياً من التجعّد وثباتاً في درجة اللون، لأن زيّهم هو الذي يتأمله المستأجرون."
+    },
+    {
+      "heading": "Heat, Sun and the Saudi Working Day",
+      "headingAr": "الحر والشمس ويوم العمل السعودي",
+      "body": "Outdoor facility work in the Kingdom happens in heat that punishes a careless specification, and summer restrictions on midday outdoor work push the heavy tasks into early morning and late afternoon, when supervisors still need staff identifiable at a distance. Long sleeves are usually the better answer outdoors, not the worse one: covered skin in a light, breathable woven fabric shields against direct sun and radiant load, provided the cut lets air move rather than cling. Fibre behaviour matters here — polyester moves moisture and dries quickly, cotton absorbs more and stays damp longer, and blends sit between the two — so choose deliberately for whether the wearer is soaked in a plant room or dusty in a car park. Teams crossing between chilled lobbies and rooftop equipment need a layer they can add and remove without leaving the uniform system. Modesty runs through all of it: cuts that are not close-fitting, coverage that respects local norms, hijab options in matching fabric with fastenings that cannot snag machinery, and cuffs that open easily for ablution.",
+      "bodyAr": "يجري العمل الميداني في المملكة تحت حرارة تعاقب المواصفة المتسرّعة، وقيود العمل تحت الشمس في أوقات الظهيرة الصيفية تدفع المهام الثقيلة إلى الصباح الباكر وآخر النهار، حيث يظل المشرف بحاجة إلى تمييز طاقمه من مسافة. والأكمام الطويلة هي الخيار الأفضل عادةً في الخارج لا الأسوأ: فالجلد المغطّى بقماش منسوج خفيف ومتنفّس يُحجَب عن الشمس المباشرة والحمل الإشعاعي، شرط أن تسمح القصّة بمرور الهواء بدل الالتصاق بالجسم. وسلوك الألياف مهم هنا: البوليستر ينقل الرطوبة ويجف سريعاً، والقطن يمتص أكثر ويبقى رطباً وقتاً أطول، والخلطات بينهما، فاختر بوعي بحسب ما إذا كان اللابس يتصبّب في غرفة معدات أو يعلوه الغبار في موقف سيارات. والفرق التي تتنقل بين بهو مكيّف ومعدات على السطح تحتاج طبقة يمكن إضافتها ونزعها دون الخروج من نظام الزي. ويسري الاحتشام في ذلك كله: قصّات غير ملتصقة بالجسم، وتغطية تحترم الأعراف المحلية، وخيارات حجاب من القماش نفسه بمثبتات لا تعلق بالمعدات، وأساور كمّ تُفتح بسهولة عند الوضوء."
+    },
+    {
+      "heading": "Sizing, Turnover and the Issue Desk",
+      "headingAr": "المقاسات ودوران العمالة ومكتب الصرف",
+      "body": "Facility management runs on headcount, and headcount churns. A programme that works on paper fails at the issue desk if sizing was guessed. Fit a physical size set across every garment type before bulk production, include the wide range a multinational workforce actually needs, and record each person's size against their file so replacements do not restart the conversation. Define a kit per role — what a cleaner receives, what a technician receives, what a receptionist receives — and write it down, because undefined kits drift into inconsistency within a single season. Decide the laundering route early: garments washed at home behave differently from garments processed industrially, and the route shapes both fabric choice and how many sets a person needs to stay presentable across a shift pattern. Set replacement triggers on condition rather than the calendar alone, and give supervisors a simple way to flag a worn garment. Finally, close the loop on returns; branded workwear that leaves with departing staff becomes an access and reputation problem for contractor and client alike.",
+      "bodyAr": "تقوم إدارة المرافق على أعداد كبيرة من الموظفين، وهذه الأعداد تتغيّر باستمرار. والبرنامج الناجح على الورق يفشل عند مكتب الصرف إذا كانت المقاسات تخميناً. جرّب مجموعة مقاسات فعلية لكل نوع من القطع قبل الإنتاج بالجملة، وأدرج المدى الواسع الذي تحتاجه قوة عاملة متعددة الجنسيات، وسجّل مقاس كل موظف في ملفه حتى لا يبدأ الاستبدال من الصفر في كل مرة. وعرّف طقم كل دور: ماذا يستلم عامل النظافة، وماذا يستلم الفني، وماذا يستلم موظف الاستقبال، ودوّن ذلك كتابةً، لأن الأطقم غير المعرَّفة تنحرف نحو التفاوت خلال موسم واحد. واحسم مسار الغسيل مبكراً: فالقطعة التي تُغسل في المنزل تسلك سلوكاً مختلفاً عن القطعة التي تُعالَج في مغسلة صناعية، ويحدّد هذا المسار اختيار القماش وعدد الأطقم التي يحتاجها الموظف ليبقى لائقاً عبر نمط ورديّاته. واربط الاستبدال بحالة القطعة لا بالتقويم وحده، وامنح المشرفين وسيلة بسيطة للإبلاغ عن قطعة بالية. وأخيراً أغلق دورة الإرجاع، فملابس العمل التي تحمل العلامة وتغادر مع الموظفين المنتهية خدماتهم تتحول إلى مشكلة دخول وسمعة للمقاول والعميل معاً."
+    },
+    {
+      "heading": "Specify Once, Reorder Forever",
+      "headingAr": "حدّد المواصفة مرة، وأعد الطلب دائماً",
+      "body": "Treat the uniform as a controlled specification rather than a purchase. Record fabric construction, the trade colour assignments, logo artwork with placement measurements, the size chart and a garment code for every line, then keep a sealed physical sample and a retained colour reference. That reference is what protects you at reorder, because shade drifts between dye lots, and a lobby holding two slightly different blues undoes the identity you paid to build. Run a wear trial across trades and across a full summer before committing to volume; a fabric that reads well in a showroom behaves differently after a season of plant rooms and car parks. Plan for the contract lifecycle too — mobilisation, headcount growth, rebadging, demobilisation — because facility management portfolios rarely stay still. Manufacturing inside the Kingdom shortens that loop and supports Vision 2030 local content ambitions; UNEOM has produced uniforms in Saudi Arabia since 2013 under ISO 9001:2015 quality management, with OEKO-TEX Standard 100 certification, which tests textiles for harmful substances against skin.",
+      "bodyAr": "تعامل مع الزي بوصفه مواصفة مضبوطة لا عملية شراء. سجّل تركيب القماش، وتوزيع ألوان التخصصات، وملف الشعار مع قياسات موضعه، وجدول المقاسات، ورمزاً لكل صنف، ثم احتفظ بعيّنة مادية مختومة ومرجع لوني محفوظ. هذا المرجع هو ما يحميك عند إعادة الطلب، لأن درجة اللون تنحرف بين دفعات الصباغة، وبهو يجمع درجتين مختلفتين قليلاً من الأزرق يهدم الهوية التي دفعت لبنائها. ونفّذ تجربة ارتداء عبر التخصصات وعلى امتداد صيف كامل قبل الالتزام بالكميات، فالقماش الذي يبدو جيداً في صالة العرض يسلك سلوكاً آخر بعد موسم في غرف المعدات ومواقف السيارات. وخطّط لدورة حياة العقد أيضاً: بدء التشغيل، ونمو أعداد الموظفين، وتغيير العلامة، والتسليم عند الانتهاء، لأن محافظ إدارة المرافق نادراً ما تبقى ثابتة. والتصنيع داخل المملكة يختصر هذه الدورة ويدعم توجّهات المحتوى المحلي في رؤية 2030؛ وتنتج يونيوم الأزياء في السعودية منذ 2013 ضمن نظام إدارة جودة ISO 9001:2015، وبشهادة OEKO-TEX Standard 100 التي تختبر المنسوجات من المواد الضارة الملامسة للجلد."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do we distinguish trades without losing one contractor identity?",
+      "qAr": "كيف نميّز التخصصات دون أن نفقد هوية المقاول الموحّدة؟",
+      "a": "Split the design into two layers. A fixed layer — base colour, silhouette and logo placement — identifies the contractor. A variable layer — a contrast yoke, panel colour, collar or cap — identifies the trade. Keep the trade marker on the torso so it stays visible in working postures, and keep the number of trade colours small to protect stock and reordering.",
+      "aAr": "قسّم التصميم إلى طبقتين: طبقة ثابتة تحدد المقاول عبر اللون الأساسي والقصّة وموضع الشعار، وطبقة متغيّرة تحدد التخصص عبر كتف بلون مغاير أو لوح جانبي أو ياقة أو قبعة. أبقِ علامة التخصص على الجذع لتظل ظاهرة في أوضاع العمل، وقلّل عدد ألوان التخصصات حمايةً للمخزون ولسهولة إعادة الطلب."
+    },
+    {
+      "q": "Should cleaning and maintenance teams wear the same fabric?",
+      "qAr": "هل يرتدي فريق النظافة وفريق الصيانة القماش نفسه؟",
+      "a": "Usually not. Cleaning garments face frequent laundering and contact with detergents and chlorine-based products, so colour retention and soil release matter most. Maintenance garments face abrasion, snagging and tools, so tear strength, reinforcement and closed pockets matter more. You can hold a common look across both while specifying different constructions underneath it.",
+      "aAr": "غالباً لا. فقطع النظافة تواجه غسيلاً متكرراً وملامسة منظفات ومواد تحتوي على الكلور، فيتقدّم ثبات اللون وتحرير الأوساخ على ما عداهما. أما قطع الصيانة فتواجه الاحتكاك والتعلّق بالأدوات، فتتقدّم مقاومة التمزق والتقوية والجيوب المغلقة. ويمكنك الحفاظ على مظهر مشترك بين الفريقين مع تحديد تركيبين مختلفين تحته."
+    },
+    {
+      "q": "Are long sleeves practical for outdoor FM teams in the Saudi summer?",
+      "qAr": "هل الأكمام الطويلة عملية لفرق العمل الخارجية في الصيف السعودي؟",
+      "a": "Generally yes. Covered skin in a light, breathable woven fabric shields against direct sun and radiant heat, provided the cut lets air move instead of clinging. The problem is a heavy or tight sleeve, not the long sleeve itself. Pair it with proper headwear, scheduled breaks and the working-hour rules that apply on your site.",
+      "aAr": "نعم في الغالب. فالجلد المغطّى بقماش منسوج خفيف ومتنفّس يقي من الشمس المباشرة والحمل الإشعاعي، شرط أن تسمح القصّة بمرور الهواء بدل الالتصاق بالجسم. المشكلة في الكم الثقيل أو الضيق لا في الكم الطويل نفسه. واقرن ذلك بغطاء رأس مناسب وفترات راحة مجدولة وبقواعد ساعات العمل السارية على موقعك."
+    },
+    {
+      "q": "How many uniform sets should each employee receive?",
+      "qAr": "كم طقماً يستلم كل موظف؟",
+      "a": "There is no universal number. Set it from your laundering route, shift pattern and how dirty the role gets: an industrially processed kit rotates differently from garments washed at home, and a technician in plant rooms soils faster than a receptionist. Define it per role in your own policy, then review it after the first season.",
+      "aAr": "لا يوجد رقم موحّد. حدّده انطلاقاً من مسار الغسيل ونمط الورديات ودرجة اتساخ الدور: فالطقم الذي يُعالَج صناعياً يدور بوتيرة تختلف عن الملابس التي تُغسل في المنزل، والفني في غرف المعدات يتسخ أسرع من موظف الاستقبال. عرّف العدد لكل دور في سياسة منشأتك، ثم راجعه بعد الموسم الأول."
+    },
+    {
+      "q": "What happens to uniforms when a facility management contract changes hands?",
+      "qAr": "ماذا يحدث للأزياء عند انتقال عقد إدارة المرافق إلى مقاول آخر؟",
+      "a": "Plan it before mobilisation. Keep a controlled specification with artwork, colour reference and sizing so rebadging becomes a change of branding rather than a redesign. Collect garments from departing staff, because branded workwear circulating outside the contract is an access and reputation risk. Local manufacturing shortens lead times when headcount moves quickly.",
+      "aAr": "خطّط لذلك قبل بدء التشغيل. احتفظ بمواصفة مضبوطة تتضمن ملف الشعار والمرجع اللوني وجدول المقاسات، حتى يصبح تغيير العلامة تعديلاً في الهوية لا إعادة تصميم. واجمع القطع من الموظفين المغادرين، لأن ملابس تحمل علامة المقاول وتدور خارج نطاق العقد تمثل خطر دخول وسمعة. والتصنيع المحلي يختصر مهل التوريد حين تتحرك الأعداد بسرعة."
+    }
+  ],
+  "author": {
+    "name": "Capt. Khalid Al-Otaibi",
+    "nameAr": "النقيب خالد العتيبي",
+    "title": "Security Programmes Lead",
+    "titleAr": "مدير برامج الأمن"
+  }
+};

@@ -119,6 +119,23 @@ import { ppeComplianceAuditDocumentation } from './posts/ppe-compliance-audit-do
 import { executiveUniformProgrammesSuits } from './posts/executive-uniform-programmes-suits';
 import { graduationGownsAcademicRegaliaSaudi } from './posts/graduation-gowns-academic-regalia-saudi';
 
+import { bankBranchUniformsTellersRms } from './posts/bank-branch-uniforms-tellers-rms';
+import { banquetEventsStaffUniformsRiyadh } from './posts/banquet-events-staff-uniforms-riyadh';
+import { saudiNationalDayCorporateUniforms } from './posts/saudi-national-day-corporate-uniforms';
+import { onboardingNewHiresUniformProgramme } from './posts/onboarding-new-hires-uniform-programme';
+import { frCoverallBuyersGuideOilGas } from './posts/fr-coverall-buyers-guide-oil-gas';
+import { chefWhitesWhyStillWhite } from './posts/chef-whites-why-still-white';
+import { internationalSchoolUniformProgrammesRiyadh } from './posts/international-school-uniform-programmes-riyadh';
+import { schoolUniformTendersBiddingSpec } from './posts/school-uniform-tenders-bidding-spec';
+import { howManyScrubSetsPerNurse } from './posts/how-many-scrub-sets-per-nurse';
+import { polyCottonVsPureCottonSaudi } from './posts/poly-cotton-vs-pure-cotton-saudi';
+import { teacherSchoolStaffUniformsSaudi } from './posts/teacher-school-staff-uniforms-saudi';
+import { universityLabCoatsFacultyAttire } from './posts/university-lab-coats-faculty-attire';
+import { veterinaryClinicUniformsSaudi } from './posts/veterinary-clinic-uniforms-saudi';
+import { radiologyDepartmentUniformConsiderations } from './posts/radiology-department-uniform-considerations';
+import { facilityManagementStaffUniforms } from './posts/facility-management-staff-uniforms';
+import { labCoatVsScrubJacket } from './posts/lab-coat-vs-scrub-jacket';
+
 const ALL_BLOG_POSTS: BlogPost[] = [
   medicalScrubsEvolutionSaudi,
   healthcareUniformsInfectionControl,
@@ -191,6 +208,22 @@ const ALL_BLOG_POSTS: BlogPost[] = [
   ppeComplianceAuditDocumentation,
   executiveUniformProgrammesSuits,
   graduationGownsAcademicRegaliaSaudi,
+  bankBranchUniformsTellersRms,
+  banquetEventsStaffUniformsRiyadh,
+  saudiNationalDayCorporateUniforms,
+  onboardingNewHiresUniformProgramme,
+  frCoverallBuyersGuideOilGas,
+  chefWhitesWhyStillWhite,
+  internationalSchoolUniformProgrammesRiyadh,
+  schoolUniformTendersBiddingSpec,
+  howManyScrubSetsPerNurse,
+  polyCottonVsPureCottonSaudi,
+  teacherSchoolStaffUniformsSaudi,
+  universityLabCoatsFacultyAttire,
+  veterinaryClinicUniformsSaudi,
+  radiologyDepartmentUniformConsiderations,
+  facilityManagementStaffUniforms,
+  labCoatVsScrubJacket,
 ];
 
 /**
