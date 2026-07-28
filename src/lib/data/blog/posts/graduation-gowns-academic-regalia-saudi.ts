@@ -13,7 +13,7 @@ export const graduationGownsAcademicRegaliaSaudi: BlogPost = {
   "excerptAr": "دليل مشتريات لأثواب التخرّج في المدارس والجامعات السعودية: الشراء مقابل الاستئجار، ومقاسات الأعداد الكبيرة، والألوان الأكاديمية، والقماش تحت حرارة القاعة، والتخزين بين السنوات.",
   "category": "corporate-education",
   "publishedAt": "2026-09-22",
-  "hero": "heroes/education-pillar-hero",
+  "hero": "blog/graduation-gowns-academic-regalia-saudi",
   "silo": "education",
   "readingMinutes": 6,
   "lead": "Graduation season runs on a fixed date that cannot move. Gowns, caps and hoods are ordered once, worn once, and photographed forever, which makes the decisions behind them — buy or rent, how to size hundreds of graduates, which fabric survives a hot hall — worth making deliberately rather than in the final fortnight.",

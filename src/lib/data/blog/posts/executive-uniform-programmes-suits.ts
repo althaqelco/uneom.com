@@ -13,7 +13,7 @@ export const executiveUniformProgrammesSuits: BlogPost = {
   "excerptAr": "كيف تبني برنامج زي تنفيذي في السعودية: قرارات القماش والتفصيل، والثوب والبدلة معاً، والتنسيق مع بقية المستويات دون طمس التدرّج الإداري.",
   "category": "corporate-education",
   "publishedAt": "2026-09-21",
-  "hero": "heroes/corporate-pillar-hero",
+  "hero": "blog/executive-uniform-programmes-suits",
   "silo": "corporate",
   "readingMinutes": 6,
   "lead": "Uniform programmes usually stop at the supervisor. Extending them to the executive tier raises different questions: how much individuality to allow, what cloth survives a Saudi summer, how the thobe and the suit sit together in one standard, and how leadership dress stays connected to the rest of the workforce without erasing rank. This guide orders those decisions.",
