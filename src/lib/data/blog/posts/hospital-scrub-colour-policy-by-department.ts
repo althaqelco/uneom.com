@@ -13,7 +13,7 @@ export const hospitalScrubColourPolicyByDepartment: BlogPost = {
   "excerptAr": "كيف تُصاغ سياسة ألوان السكرابس حسب القسم: اختيار اللون لكل دور، وما يصمد أمام الإضاءة السريرية والغسيل الساخن، وطريقة التطبيق دون فوضى.",
   "category": "healthcare",
   "publishedAt": "2026-08-11",
-  "hero": "heroes/healthcare-pillar-hero",
+  "hero": "blog/hospital-scrub-colour-policy-by-department",
   "silo": "healthcare",
   "readingMinutes": 6,
   "lead": "A hospital scrub colour policy by department assigns each clinical and support role a fixed colour so patients, families and staff can identify who is who at a glance. The workable approach is one colour per role, department shown by trim or embroidery, colours chosen for clinical lighting and hot-wash fastness, and issue tied to onboarding.",

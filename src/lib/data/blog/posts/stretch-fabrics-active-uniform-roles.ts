@@ -13,7 +13,7 @@ export const stretchFabricsActiveUniformRoles: BlogPost = {
   "excerptAr": "كيف يعمل التمدّد فعلياً في أقمشة الزي الموحّد: الألياف المرنة مقابل التمدّد الميكانيكي، ثنائي الاتجاه ورباعيه، استرداد الشكل، والأدوار التي يستحق فيها التمدّد تكلفته.",
   "category": "sustainability-trends",
   "publishedAt": "2026-08-13",
-  "hero": "heroes/manufacturing-pillar-hero",
+  "hero": "blog/stretch-fabrics-active-uniform-roles",
   "silo": "manufacturing",
   "readingMinutes": 6,
   "lead": "Stretch uniform fabric comfort comes from two very different sources: an elastic fibre such as elastane, or a knit and yarn structure that gives mechanically. Which one you specify decides how the garment recovers its shape, how it survives industrial laundry, and whether the added cost is justified for the role wearing it.",
