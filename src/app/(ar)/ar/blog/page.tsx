@@ -6,6 +6,8 @@ import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { JsonLd } from '@/lib/seo/JsonLd';
 import { collectionPageSchema } from '@/lib/seo/schemas';
+import { PostGrid } from '@/components/blog/PostGrid';
+import { ArchiveList } from '@/components/blog/ArchiveList';
 
 export const metadata: Metadata = {
   title: 'المقالات — رؤى من داخل صناعة الزي الموحّد السعودي',
@@ -20,48 +22,24 @@ export const metadata: Metadata = {
   }
 };
 
-function PostCard({ post }: { post: typeof BLOG_POSTS[number] }) {
-  const date = new Date(post.publishedAt).toLocaleDateString('ar-SA', { day: 'numeric', month: 'short', year: 'numeric' });
-  return (
-    <Link href={`/ar/blog/${post.slug}/`} className="group flex flex-col card-hover overflow-hidden">
-      <div className="relative aspect-[16/9] overflow-hidden bg-ink-100">
-        <picture>
-          <source type="image/avif" srcSet={`/images/${post.hero}.avif`} />
-          <source type="image/webp" srcSet={`/images/${post.hero}.webp`} />
-          <img
-            src={`/images/${post.hero}.avif`}
-            alt={post.titleAr}
-            className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-            loading="lazy" decoding="async" width={1920} height={1080}
-          />
-        </picture>
-      </div>
-      <div className="flex flex-1 flex-col p-7">
-        <div className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
-          {BLOG_CATEGORIES_BY_SLUG[post.category]?.nameAr ?? post.category}
-        </div>
-        <h3 className="mt-3 text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">
-          {post.titleAr}
-        </h3>
-        <p className="mt-3 text-sm leading-relaxed text-ink-500 line-clamp-3">
-          {post.excerptAr}
-        </p>
-        <div className="mt-auto flex items-center gap-3 pt-5 text-xs text-ink-400">
-          <time dateTime={post.publishedAt}>{date}</time>
-          <span aria-hidden>·</span>
-          <span>{post.readingMinutes} دقيقة قراءة</span>
-        </div>
-      </div>
-    </Link>
-  );
-}
-
 export default function ArBlogIndexPage() {
   const posts = [...BLOG_POSTS].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   const featured = posts[0];
-  const rest = posts.slice(1);
 
-  const arBlogSchema = collectionPageSchema({ path: '/ar/blog/', name: 'مقالات UNEOM', description: 'مقالات تحليلية عن صناعة الزي الموحّد السعودي', items: BLOG_POSTS.map(p => ({ name: p.titleAr || p.title, url: `/ar/blog/${p.slug}/`, description: p.excerptAr || p.excerpt, image: `/images/${p.hero}.avif` })) });
+  // Arabic strings only — the English bodies never enter the AR payload.
+  const cards = posts.slice(1).map(p => ({
+    slug: p.slug,
+    title: p.titleAr || p.title,
+    excerpt: p.excerptAr || p.excerpt,
+    hero: p.hero,
+    publishedAt: p.publishedAt,
+    readingMinutes: p.readingMinutes,
+    category: p.category.replace(/-/g, ' & '),
+  }));
+
+  const archive = posts.map(p => ({ slug: p.slug, title: p.titleAr || p.title, publishedAt: p.publishedAt }));
+
+  const arBlogSchema = collectionPageSchema({ path: '/ar/blog/', name: 'مقالات UNEOM', description: 'مقالات تحليلية عن صناعة الزي الموحّد السعودي', items: BLOG_POSTS.map(p => ({ name: p.titleAr || p.title, url: `/ar/blog/${p.slug}/` })) });
 
   return (
     <>
@@ -115,10 +93,10 @@ export default function ArBlogIndexPage() {
 
       {/* Grid */}
       <section className="container-page pb-24">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {rest.map(p => <PostCard key={p.slug} post={p} />)}
-        </div>
+        <PostGrid posts={cards} locale="ar" />
       </section>
+
+      <ArchiveList entries={archive} locale="ar" />
 
       <section className="container-page section">
         <CtaBlock dark heading="القراءة شيء. التحدّث مع العمليات شيء آخر." body="إذا أثارت مقالة ما سؤالاً حول مشتريات برنامجك، راسلنا. مؤلّف كل مقالة من UNEOM هو عضو في فريق العمليات." primary={{ label: 'تحدّث معنا', href: '/ar/contact/' }} secondary={{ label: 'طلب عرض سعر', href: '/ar/quote/' }} />

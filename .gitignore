@@ -59,3 +59,6 @@ next-env.d.ts
 .eslintcache
 info.md
 .netlify/
+
+# Local dev server config (machine-specific ports)
+.claude/launch.json

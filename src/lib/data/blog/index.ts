@@ -153,6 +153,23 @@ import { realEstatePropertyTeamUniforms } from './posts/real-estate-property-tea
 import { hotelUniformStandardsByStarRating } from './posts/hotel-uniform-standards-by-star-rating';
 import { luxuryRetailUniformsDressingBrand } from './posts/luxury-retail-uniforms-dressing-brand';
 
+import { exhibitionStaffUniformsSaudiEvents } from './posts/exhibition-staff-uniforms-saudi-events';
+import { cleaningJanitorialUniformProgrammesSaudi } from './posts/cleaning-janitorial-uniform-programmes-saudi';
+import { makeSchoolUniformsLastTheYear } from './posts/make-school-uniforms-last-the-year';
+import { conciergeUniformsFirstImpression } from './posts/concierge-uniforms-first-impression';
+import { heatStressSaudiIndustrialWorkwear } from './posts/heat-stress-saudi-industrial-workwear';
+import { constructionWorkwearSaudiMegaprojects } from './posts/construction-workwear-saudi-megaprojects';
+import { winterWorkwearSaudiIndustrialSites } from './posts/winter-workwear-saudi-industrial-sites';
+import { kindergartenUniformsSafeEasyWear } from './posts/kindergarten-uniforms-safe-easy-wear';
+import { newClinicOpeningUniformChecklistRiyadh } from './posts/new-clinic-opening-uniform-checklist-riyadh';
+import { hotelSpaTherapistUniformRequirements } from './posts/hotel-spa-therapist-uniform-requirements';
+import { corporateDressCodePolicyThatWorks } from './posts/corporate-dress-code-policy-that-works';
+import { aviationUniformFabricFlameResistance } from './posts/aviation-uniform-fabric-flame-resistance';
+import { uniformBrandGuidelinesPantonePlacement } from './posts/uniform-brand-guidelines-pantone-placement';
+import { hospitalUniformBudgetPlanning } from './posts/hospital-uniform-budget-planning';
+import { switchingUniformSuppliersMidContract } from './posts/switching-uniform-suppliers-mid-contract';
+import { groundHandlingCrewPpeSaudiAirports } from './posts/ground-handling-crew-ppe-saudi-airports';
+
 const ALL_BLOG_POSTS: BlogPost[] = [
   medicalScrubsEvolutionSaudi,
   healthcareUniformsInfectionControl,
@@ -257,6 +274,22 @@ const ALL_BLOG_POSTS: BlogPost[] = [
   realEstatePropertyTeamUniforms,
   hotelUniformStandardsByStarRating,
   luxuryRetailUniformsDressingBrand,
+  exhibitionStaffUniformsSaudiEvents,
+  cleaningJanitorialUniformProgrammesSaudi,
+  makeSchoolUniformsLastTheYear,
+  conciergeUniformsFirstImpression,
+  heatStressSaudiIndustrialWorkwear,
+  constructionWorkwearSaudiMegaprojects,
+  winterWorkwearSaudiIndustrialSites,
+  kindergartenUniformsSafeEasyWear,
+  newClinicOpeningUniformChecklistRiyadh,
+  hotelSpaTherapistUniformRequirements,
+  corporateDressCodePolicyThatWorks,
+  aviationUniformFabricFlameResistance,
+  uniformBrandGuidelinesPantonePlacement,
+  hospitalUniformBudgetPlanning,
+  switchingUniformSuppliersMidContract,
+  groundHandlingCrewPpeSaudiAirports,
 ];
 
 /**
