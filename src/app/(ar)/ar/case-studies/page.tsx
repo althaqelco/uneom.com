@@ -56,7 +56,7 @@ export default function ArCaseStudiesHubPage() {
                 </div>
               </div>
               <div className="flex flex-1 flex-col p-8">
-                <h3 className="text-2xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">{c.titleAr}</h3>
+                <h2 className="text-2xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">{c.titleAr}</h2>
                 <p className="mt-3 text-sm font-semibold text-ink-500">{c.clientTypeAr}</p>
                 <p className="mt-4 text-sm leading-relaxed text-ink-500 pretty">{c.summaryAr}</p>
                 <span className="mt-auto pt-5 text-sm font-semibold text-accent-700 inline-flex items-center gap-1">

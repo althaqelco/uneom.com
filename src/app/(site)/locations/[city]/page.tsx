@@ -148,7 +148,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               </div>
               {city.localStat && (
                 <div className="card p-8 lg:p-10">
-                  <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">Local benchmark</h3>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">Local benchmark</p>
                   <p className="stat-number mt-6 text-5xl font-extrabold text-navy-900">
                     {city.localStat.value}
                   </p>

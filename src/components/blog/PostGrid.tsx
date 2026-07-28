@@ -89,7 +89,7 @@ function Chevron({ flip }: { flip: boolean }) {
   );
 }
 
-function Card({ post, locale }: { post: SlimPost; locale: Locale }) {
+function Card({ post, locale, as: Heading = 'h3' }: { post: SlimPost; locale: Locale; as?: 'h2' | 'h3' }) {
   const t = T[locale];
   const base = locale === 'ar' ? '/ar/blog' : '/blog';
   const date = new Date(post.publishedAt).toLocaleDateString(t.locale, {
@@ -114,9 +114,9 @@ function Card({ post, locale }: { post: SlimPost; locale: Locale }) {
         <div className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
           {post.category}
         </div>
-        <h3 className="mt-3 text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">
+        <Heading className="mt-3 text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">
           {post.title}
-        </h3>
+        </Heading>
         <p className="mt-3 text-sm leading-relaxed text-ink-500 line-clamp-3">
           {post.excerpt}
         </p>
@@ -134,10 +134,13 @@ export function PostGrid({
   posts,
   locale,
   perPage = 12,
+  cardAs = 'h3',
 }: {
   posts: SlimPost[];
   locale: Locale;
   perPage?: number;
+  /** h2 on category pages, where cards are the only content under the h1. */
+  cardAs?: 'h2' | 'h3';
 }) {
   const t = T[locale];
   const [page, setPage] = useState(1);
@@ -166,7 +169,7 @@ export function PostGrid({
       <div ref={topRef} className="scroll-mt-28" />
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {slice.map(p => <Card key={p.slug} post={p} locale={locale} />)}
+        {slice.map(p => <Card key={p.slug} post={p} locale={locale} as={cardAs} />)}
       </div>
 
       <p className="sr-only" aria-live="polite">{t.current(page, total)}</p>

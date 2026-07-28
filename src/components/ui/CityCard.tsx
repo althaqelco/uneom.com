@@ -3,11 +3,13 @@ import type { SaudiCity } from '@/lib/data/saudi-cities';
 import { localizedHref, type Lang } from '@/lib/i18n/ui';
 
 interface Props {
+  /** Heading level for the card title. h2 on the /locations listing, where cards sit directly under the h1. */
+  as?: 'h2' | 'h3';
   city: SaudiCity;
   lang?: Lang;
 }
 
-export function CityCard({ city, lang = 'en' }: Props) {
+export function CityCard({ city, lang = 'en' , as: Heading = 'h3'}: Props) {
   const name = lang === 'ar' ? city.nameAr : city.nameEn;
   return (
     <Link
@@ -41,9 +43,9 @@ export function CityCard({ city, lang = 'en' }: Props) {
           <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-300">
             {city.region}
           </div>
-          <h3 className="mt-1 text-xl font-bold">
+          <Heading className="mt-1 text-xl font-bold">
             {name}
-          </h3>
+          </Heading>
         </div>
         <span className="opacity-70 transition-all group-hover:translate-x-1 group-hover:opacity-100" aria-hidden>
           {lang === 'ar' ? '←' : '→'}

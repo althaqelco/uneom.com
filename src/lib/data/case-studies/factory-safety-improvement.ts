@@ -7,6 +7,8 @@ export const factorySafetyImprovement: CaseStudy = {
   summary: 'A 450-worker petrochemical site in Al-Jubail executed a full PPE migration from degrading HRC1 synthetic FR to inherent FR cotton rated to HRC2 — passing HCIS audit on first review, extending coverall lifespan by 71%, and achieving zero garment-performance incidents over 18 months.',
   summaryAr: 'نفّذ موقع بتروكيماويات يضم 450 عاملاً في الجبيل انتقالاً كاملاً لمعدات الحماية من FR صناعي HRC1 المتدهور إلى قطن FR ذاتي مصنّف HRC2 — مجتازاً تدقيق HCIS من المراجعة الأولى، ومُمدداً عمر الأفرولات بنسبة 71%، ومحققاً صفر حوادث أداء للملابس على مدى 18 شهراً.',
   silo: 'manufacturing',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-11',
   city: 'al-jubail',
   clientType: 'Petrochemical processing site, Al-Jubail Industrial City — 450 frontline workers',
   clientTypeAr: 'موقع معالجة بتروكيماوية، مدينة الجبيل الصناعية — 450 عاملاً في الخطوط الأمامية',

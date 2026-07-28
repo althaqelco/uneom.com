@@ -6,6 +6,8 @@ export const nursingUniformGuide: Resource = {
   titleAr: 'دليل برنامج زي التمريض للمستشفيات السعودية',
   summary: 'Fit grades, fabric specs, modesty engineering, and the procurement framework UNEOM uses with hospital nursing leads.',
   summaryAr: 'تدرجات القياس، مواصفات الأقمشة، هندسة الحشمة، وإطار المشتريات الذي تستخدمه يونيوم مع قيادات التمريض في المستشفيات.',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-10',
   hero: 'resources/nursing-uniform-guide-hero',
   silo: 'healthcare',
   readingMinutes: 9,

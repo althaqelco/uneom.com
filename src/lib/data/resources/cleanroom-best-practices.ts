@@ -6,6 +6,8 @@ export const cleanroomBestPractices: Resource = {
   titleAr: 'أفضل ممارسات أزياء الغرف النظيفة لمواقع الأدوية والإلكترونيات السعودية',
   summary: 'ISO 14644 cleanroom classifications, garment selection, and the operational protocols UNEOM ships with cleanroom programmes.',
   summaryAr: 'تصنيفات غرف الأبحاث ISO 14644، اختيار الملابس، والبروتوكولات التشغيلية التي تقدمها يونيوم مع برامج الغرف النظيفة.',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-10',
   hero: 'resources/cleanroom-best-practices-hero',
   silo: 'manufacturing',
   readingMinutes: 8,

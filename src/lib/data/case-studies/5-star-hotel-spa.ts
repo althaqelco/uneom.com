@@ -7,6 +7,8 @@ export const fiveStarHotelSpa: CaseStudy = {
   summary: 'A prestigious five-star hotel spa in Riyadh required a 60-staff uniform programme engineered to survive humidity, essential oils, and 300+ annual wash cycles — while maintaining the property\'s luxury aesthetic identity across treatment, reception, and back-of-house zones.',
   summaryAr: 'احتاج سبا فندق خمس نجوم مرموق في الرياض إلى برنامج أزياء لـ 60 موظفاً مصمم لتحمّل الرطوبة والزيوت الأساسية وأكثر من 300 دورة غسيل سنوية — مع الحفاظ على الهوية الجمالية الفاخرة للمنشأة عبر مناطق العلاج والاستقبال والخدمات الخلفية.',
   silo: 'hospitality',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-11',
   city: 'riyadh',
   clientType: 'Five-star hotel spa, Riyadh — 60 staff across 3 operational zones',
   clientTypeAr: 'سبا فندق خمس نجوم، الرياض — 60 موظفاً عبر 3 مناطق تشغيلية',

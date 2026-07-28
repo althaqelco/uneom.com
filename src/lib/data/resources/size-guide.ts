@@ -6,6 +6,8 @@ export const sizeGuide: Resource = {
   titleAr: 'دليل هندسة القياسات السعودية',
   summary: 'Why imported size systems fail Saudi body grades — and how UNEOM\'s 14-grade fit system actually works.',
   summaryAr: 'لماذا تفشل أنظمة المقاسات المستوردة مع طبيعة الأجسام السعودية — وكيف يعمل نظام القياس ذو الـ 14 درجة من يونيوم فعلياً.',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-10',
   hero: 'resources/size-guide-hero',
   silo: 'corporate',
   readingMinutes: 9,

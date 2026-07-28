@@ -6,6 +6,8 @@ export const professionalSecurityStandards: Resource = {
   titleAr: 'معايير أزياء الأمن المهنية للمجمعات والشركات السعودية',
   summary: 'Identity without intimidation — the design language of Saudi corporate security and the spec that supports it.',
   summaryAr: 'هوية بدون ترهيب — لغة التصميم للأمن المؤسسي السعودي والمواصفات التي تدعمها.',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-10',
   hero: 'resources/professional-security-standards-hero',
   silo: 'security',
   readingMinutes: 7,

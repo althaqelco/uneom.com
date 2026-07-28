@@ -7,6 +7,8 @@ export const beautyChainStandardization: CaseStudy = {
   summary: 'A 24-store beauty retail group operating 6 distinct sub-brands unified its fragmented uniform procurement under a single UNEOM programme — maintaining brand-tier visual differentiation through a colour-coded system while reducing procurement overhead by 60%.',
   summaryAr: 'وحّدت مجموعة تجزئة تجميل بـ 24 متجراً تدير 6 علامات فرعية مختلفة مشتريات أزيائها المجزأة تحت برنامج يونيوم واحد — مع الحفاظ على التمايز البصري لكل علامة عبر نظام ألوان مرمّز وخفض أعباء المشتريات الإدارية بنسبة 60%.',
   silo: 'retail',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-11',
   city: 'riyadh',
   clientType: 'Beauty retail group — 6 sub-brands, 24 stores, 320 staff',
   clientTypeAr: 'مجموعة تجزئة تجميل — 6 علامات فرعية، 24 متجراً، 320 موظفاً',

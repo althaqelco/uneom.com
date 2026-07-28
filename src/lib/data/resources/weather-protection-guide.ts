@@ -6,6 +6,8 @@ export const weatherProtectionGuide: Resource = {
   titleAr: 'برامج أزياء الحماية من الطقس للطيران والتصنيع السعودي',
   summary: 'From tarmac heat to industrial site cold mornings — when standard programmes fail and what to spec instead.',
   summaryAr: 'من حرارة المدرج إلى برودة الصباح في المواقع الصناعية — متى تفشل البرامج القياسية وماذا يجب تحديده بدلاً منها.',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-10',
   hero: 'resources/weather-protection-hero',
   silo: 'aviation',
   readingMinutes: 8,

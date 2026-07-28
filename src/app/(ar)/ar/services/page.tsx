@@ -52,9 +52,9 @@ export default function ArServicesHubPage() {
                   </span>
                   <span className="text-ink-300 transition-transform group-hover:-translate-x-1 group-hover:text-accent-500" aria-hidden>←</span>
                 </div>
-                <h3 className="text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">
+                <h2 className="text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">
                   {service.nameAr}
-                </h3>
+                </h2>
                 <p className="text-sm leading-relaxed text-ink-500 pretty">
                   {service.summaryAr}
                 </p>

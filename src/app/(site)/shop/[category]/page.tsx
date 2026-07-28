@@ -78,7 +78,7 @@ export default async function ShopCategoryPage({ params }: { params: Promise<{ c
                 </picture>
               </div>
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="text-lg font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">{p.nameEn}</h3>
+                <h2 className="text-lg font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">{p.nameEn}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-ink-500 line-clamp-2 pretty">{p.summary}</p>
                 <div className="mt-auto pt-5 flex items-baseline justify-between">
                   <div>

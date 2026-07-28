@@ -50,7 +50,7 @@ export default function ArShopHubPage() {
               </div>
               <div className="relative z-10 p-6 text-white">
                 <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-300">التصنيف</div>
-                <h3 className="mt-2 text-xl font-bold balance">{cat.nameAr}</h3>
+                <h2 className="mt-2 text-xl font-bold balance">{cat.nameAr}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-white/80 line-clamp-2 pretty">{cat.summaryAr}</p>
               </div>
             </Link>

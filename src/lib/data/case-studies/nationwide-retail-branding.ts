@@ -7,6 +7,8 @@ export const nationwideRetailBranding: CaseStudy = {
   summary: 'A 40-store, 600-staff retail chain spanning 12 Saudi cities consolidated fragmented uniform procurement into a single UNEOM programme — achieving 48-hour joiner-kit delivery nationwide, 14-month mean garment lifespan, and 100% SLA compliance over 12 months.',
   summaryAr: 'وحّدت سلسلة تجزئة بـ 40 متجراً و600 موظف عبر 12 مدينة سعودية مشتريات أزياء مجزأة في برنامج يونيوم واحد — محققة تسليم أطقم الجدد خلال 48 ساعة على مستوى المملكة، ومتوسط عمر قطعة 14 شهراً، والتزام 100% باتفاقية الخدمة على مدى 12 شهراً.',
   silo: 'retail',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-11',
   city: 'riyadh',
   clientType: 'National retail chain — 40 stores, 12 cities, 600 staff across 3 role tiers',
   clientTypeAr: 'سلسلة تجزئة وطنية — 40 متجراً، 12 مدينة، 600 موظف عبر 3 مستويات وظيفية',

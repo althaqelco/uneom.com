@@ -7,6 +7,8 @@ export const luxurySalon: CaseStudy = {
   summary: 'A 120-staff luxury salon chain operating across 6 Saudi cities replaced three separate uniform suppliers with a single UNEOM programme — achieving 48-hour joiner-kit delivery, 32% brand consistency uplift, and zero supply gaps over 18 months.',
   summaryAr: 'استبدلت سلسلة صالونات فاخرة تضم 120 موظفاً عبر 6 مدن سعودية ثلاثة موردين منفصلين ببرنامج يونيوم واحد — محققة تسليم أطقم الموظفين الجدد خلال 48 ساعة، وزيادة 32% في تماسك العلامة، وصفر فجوات إمداد على مدى 18 شهراً.',
   silo: 'hospitality',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-11',
   city: 'riyadh',
   clientType: 'Premium salon chain — 6 cities, 120 staff, 4 role tiers',
   clientTypeAr: 'سلسلة صالونات فاخرة — 6 مدن، 120 موظفاً، 4 مستويات وظيفية',

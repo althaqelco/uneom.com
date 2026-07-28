@@ -6,9 +6,17 @@ interface Props {
   industry: Industry;
   variant?: 'compact' | 'full';
   lang?: Lang;
+  /**
+   * Heading level for the card title. Defaults to h3, which is correct when the
+   * grid sits under a section h2. The /industries listing has no such h2 — the
+   * cards are its primary content directly under the h1 — so that page passes
+   * "h2" to avoid an h1→h3 skip that makes the page harder to navigate by
+   * headings in a screen reader.
+   */
+  as?: 'h2' | 'h3';
 }
 
-export function IndustryCard({ industry, variant = 'full', lang = 'en' }: Props) {
+export function IndustryCard({ industry, variant = 'full', lang = 'en', as: Heading = 'h3' }: Props) {
   const name = lang === 'ar' ? industry.nameAr : industry.nameEn;
   const href = localizedHref(`/industries/${industry.slug}/`, lang);
 
@@ -18,9 +26,9 @@ export function IndustryCard({ industry, variant = 'full', lang = 'en' }: Props)
         href={href}
         className="group flex flex-col gap-3 rounded-2xl border border-ink-100 bg-white p-6 transition-all hover:border-accent-500/40 hover:shadow-elevation-lg hover:-translate-y-0.5"
       >
-        <h3 className="text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors">
+        <Heading className="text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors">
           {name}
-        </h3>
+        </Heading>
         <p className="text-sm leading-relaxed text-ink-500">
           {lang === 'ar' ? industry.taglineAr : industry.tagline}
         </p>
@@ -67,9 +75,9 @@ export function IndustryCard({ industry, variant = 'full', lang = 'en' }: Props)
         <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-accent-300">
           {lang === 'ar' ? 'القطاع' : 'Industry silo'}
         </span>
-        <h3 className="text-2xl font-bold leading-tight balance">
+        <Heading className="text-2xl font-bold leading-tight balance">
           {name}
-        </h3>
+        </Heading>
         <p className="text-sm leading-relaxed text-white/85 line-clamp-2 pretty">
           {lang === 'ar' ? industry.taglineAr : industry.tagline}
         </p>

@@ -6,6 +6,8 @@ export const sustainabilityGuide: Resource = {
   titleAr: 'دليل برنامج الأزياء المستدامة للشركات السعودية',
   summary: 'Practical paths to OEKO-TEX-certified, recycled-poly, and take-back-enabled programmes — within Vision 2030 frameworks.',
   summaryAr: 'مسارات عملية لبرامج معتمدة من OEKO-TEX، وبوليستر معاد تدويره، وبرامج استرجاع — ضمن أطر رؤية 2030.',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-10',
   hero: 'resources/sustainability-guide-hero',
   silo: 'corporate',
   readingMinutes: 10,

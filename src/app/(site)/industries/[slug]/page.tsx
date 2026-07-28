@@ -169,7 +169,7 @@ export default async function IndustryPillarPage({ params }: { params: Promise<{
             </div>
             {stats && (
               <div className="card p-8 lg:p-10">
-                <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">Programme economics</h3>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">Programme economics</p>
                 <dl className="mt-6 space-y-5">
                   <div>
                     <dt className="text-xs font-medium uppercase tracking-wider text-ink-400">Average per-unit</dt>

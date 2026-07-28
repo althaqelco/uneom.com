@@ -6,6 +6,8 @@ export const policyTemplates: Resource = {
   titleAr: 'نماذج سياسات الأزياء الموحدة السعودية لفرق الموارد البشرية',
   summary: 'Ready-to-adapt policy language for uniform programme rollout — joiner kits, replacement cycles, leaver returns, and disciplinary handling.',
   summaryAr: 'لغة سياسات جاهزة للتعديل لإطلاق برنامج الزي الموحد — أطقم الموظفين الجدد، دورات الاستبدال، إرجاعات المغادرين، والتعامل التأديبي.',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-10',
   hero: 'resources/policy-templates-hero',
   silo: 'corporate',
   readingMinutes: 6,

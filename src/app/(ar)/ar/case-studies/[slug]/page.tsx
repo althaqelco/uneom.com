@@ -37,7 +37,7 @@ export default async function ArCaseStudyPage({ params }: { params: Promise<{ sl
   if (!c) notFound();
   const industry = INDUSTRIES_BY_SLUG[c.silo];
 
-  const schema = caseStudySchema({ slug: c.slug, title: c.titleAr, summary: c.summaryAr, image: `/images/case-studies/${c.imageFolder}/after.avif`, industry: industry?.nameAr || c.silo, city: c.city, outcomes: c.outcomesAr, locale: 'ar' });
+  const schema = caseStudySchema({ slug: c.slug, title: c.titleAr, summary: c.summaryAr, image: `/images/case-studies/${c.imageFolder}/after.avif`, industry: industry?.nameAr || c.silo, city: c.city, outcomes: c.outcomesAr, datePublished: c.datePublished, dateModified: c.dateModified, locale: 'ar' });
 
   return (
     <>

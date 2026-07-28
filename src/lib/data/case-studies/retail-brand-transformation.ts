@@ -7,6 +7,8 @@ export const retailBrandTransformation: CaseStudy = {
   summary: 'A 14-store retail chain repositioned from mid-tier to premium pricing — using uniform redesign as the most visible signal of the brand shift. Within 6 months, average transaction value increased 28% and customer NPS shifted decisively toward premium descriptors.',
   summaryAr: 'أعادت سلسلة تجزئة ذات 14 متجراً تموضعها من تسعير متوسط إلى فاخر — مستخدمة إعادة تصميم الأزياء كأبرز إشارة للتحول. خلال 6 أشهر، ارتفع متوسط قيمة المعاملات 28% وتحول NPS بشكل حاسم نحو أوصاف "فاخرة".',
   silo: 'retail',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-11',
   city: 'jeddah',
   clientType: 'Retail chain, mid-to-premium repositioning — 14 stores, 180 staff',
   clientTypeAr: 'سلسلة تجزئة، إعادة تموضع من متوسطة إلى فاخرة — 14 متجراً، 180 موظفاً',

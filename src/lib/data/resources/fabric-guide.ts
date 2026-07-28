@@ -6,6 +6,8 @@ export const fabricGuide: Resource = {
   titleAr: 'الدليل السعودي للأقمشة في الأزياء المهنية',
   summary: 'A practitioner\'s walkthrough of the eight fabric families that make up 95% of UNEOM\'s catalogue — when to choose what, and why.',
   summaryAr: 'دليل عملي لعائلات الأقمشة الثماني التي تشكل 95% من كتالوج يونيوم — متى تختار ماذا، ولماذا.',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-10',
   hero: 'resources/fabric-guide-hero',
   silo: 'corporate',
   readingMinutes: 14,

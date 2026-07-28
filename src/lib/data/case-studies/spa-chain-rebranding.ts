@@ -7,6 +7,8 @@ export const spaChainRebranding: CaseStudy = {
   summary: 'An 8-location wellness spa chain in Saudi Arabia repositioned its brand identity by starting with uniforms — deploying 200 custom garments in a sage-green palette across all locations, recycling 2.4 tons of legacy uniforms, and driving a 38% increase in social media engagement.',
   summaryAr: 'أعادت سلسلة منتجعات صحية ذات 8 فروع في السعودية تموضع هوية علامتها ببدء التحول من الأزياء — نشر 200 قطعة مخصصة بلوحة أخضر مريمي عبر جميع المواقع، وإعادة تدوير 2.4 طن من الأزياء القديمة، وتحقيق زيادة 38% في التفاعل على منصات التواصل.',
   silo: 'hospitality',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-11',
   city: 'jeddah',
   clientType: 'Wellness spa chain, 8 locations across Western Province — 200 staff',
   clientTypeAr: 'سلسلة منتجعات صحية، 8 فروع عبر المنطقة الغربية — 200 موظف',

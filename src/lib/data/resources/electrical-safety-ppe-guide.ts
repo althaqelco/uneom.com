@@ -6,6 +6,8 @@ export const electricalSafetyPpeGuide: Resource = {
   titleAr: 'دليل معدات الحماية الشخصية للسلامة الكهربائية للمواقع الصناعية السعودية',
   summary: 'HRC1 vs HRC2, NFPA 70E in Saudi heat-soak, and the per-garment audit traceability HCIS auditors actually request.',
   summaryAr: 'HRC1 مقابل HRC2، معيار NFPA 70E في حرارة السعودية، وتتبع التدقيق لكل قطعة الذي يطلبه مدققو HCIS فعلياً.',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-10',
   hero: 'resources/electrical-safety-ppe-hero',
   silo: 'manufacturing',
   readingMinutes: 13,

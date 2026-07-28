@@ -47,7 +47,7 @@ export default function LocationsHubPage() {
       <section className="container-page pb-12">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {SAUDI_CITIES.filter(c => c.populationTier === 'metro').map(city => (
-            <CityCard key={city.slug} city={city} />
+            <CityCard key={city.slug} city={city} as="h2" />
           ))}
         </div>
       </section>

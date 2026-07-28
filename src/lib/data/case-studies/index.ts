@@ -20,6 +20,9 @@ export interface CaseStudy {
   durationAr: string;
   scope: string;
   scopeAr: string;
+  /** First-commit date of the case-study file. Real, not authored — used for Article schema. */
+  datePublished?: string;
+  dateModified?: string;
   outcomes: { metric: string; description: string }[];
   outcomesAr: { metric: string; description: string }[];
   story: { heading: string; body: string }[];

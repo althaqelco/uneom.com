@@ -78,7 +78,7 @@ export default async function ArShopCategoryPage({ params }: { params: Promise<{
                 </picture>
               </div>
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">{product.nameAr}</h3>
+                <h2 className="text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">{product.nameAr}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-ink-500 line-clamp-2">{product.summaryAr}</p>
                 <div className="mt-auto flex items-center justify-between pt-5">
                   <span className="stat-number text-xl font-bold text-navy-900">{product.priceFrom} <span className="text-sm font-medium text-ink-500">ريال</span></span>

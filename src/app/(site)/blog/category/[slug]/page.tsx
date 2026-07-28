@@ -60,7 +60,7 @@ export default async function BlogCategoryPage({ params }: { params: Promise<{ s
         {posts.length === 0 ? (
           <p className="text-base text-ink-500">No posts in this category yet.</p>
         ) : (
-          <PostGrid locale="en" posts={posts.map(p => ({
+          <PostGrid locale="en" cardAs="h2" posts={posts.map(p => ({
             slug: p.slug, title: p.title, excerpt: p.excerpt, hero: p.hero,
             publishedAt: p.publishedAt, readingMinutes: p.readingMinutes,
             category: p.category.replace(/-/g, ' & '),

@@ -40,7 +40,7 @@ export default function IndustriesHubPage() {
       <section className="container-page pb-24">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {INDUSTRIES.map(industry => (
-            <IndustryCard key={industry.slug} industry={industry} />
+            <IndustryCard key={industry.slug} industry={industry} as="h2" />
           ))}
         </div>
       </section>

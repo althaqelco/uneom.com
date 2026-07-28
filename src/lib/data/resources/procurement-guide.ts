@@ -6,6 +6,8 @@ export const procurementGuide: Resource = {
   titleAr: 'الدليل السعودي لمشتريات الأزياء الموحدة لفرق الموارد البشرية والعمليات',
   summary: 'A 12-step framework for running a uniform RFP — what to ask, what to demand, and what to refuse.',
   summaryAr: 'إطار عمل من 12 خطوة لإدارة طلب تقديم عروض (RFP) للأزياء — ما يجب أن تسأل عنه، وما تطلبه، وما ترفضه.',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-10',
   hero: 'resources/procurement-guide-hero',
   silo: 'corporate',
   readingMinutes: 12,

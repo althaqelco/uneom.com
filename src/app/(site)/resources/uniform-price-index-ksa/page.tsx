@@ -209,7 +209,7 @@ export default function UniformPriceIndexPage() {
             title="Cite us. Link us. Quote us."
           />
           <div className="card p-8 lg:p-10">
-            <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">Recommended citation</h3>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">Recommended citation</p>
             <pre className="mt-4 overflow-x-auto rounded-xl bg-ink-50 p-5 text-sm leading-relaxed text-navy-900">
 {`UNEOM (2026). Saudi Professional Uniform Price Index.
 Retrieved from https://uneom.com/resources/uniform-price-index-ksa/`}

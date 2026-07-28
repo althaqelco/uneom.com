@@ -6,6 +6,8 @@ export const healthcareUniformStandards: Resource = {
   titleAr: 'معايير امتثال أزياء الرعاية الصحية السعودية',
   summary: 'Direct citations from MoH, SFDA, and SASO — what every hospital procurement team needs in their compliance file.',
   summaryAr: 'اقتباسات مباشرة من وزارة الصحة، هيئة الغذاء والدواء، وساسو — ما يحتاجه كل فريق مشتريات مستشفى في ملف الامتثال.',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-10',
   hero: 'resources/healthcare-uniform-standards-hero',
   silo: 'healthcare',
   readingMinutes: 11,

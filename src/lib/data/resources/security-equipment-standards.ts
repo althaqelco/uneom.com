@@ -6,6 +6,8 @@ export const securityEquipmentStandards: Resource = {
   titleAr: 'معايير معدات وأزياء الأمن السعودية (متوافقة مع HCIS)',
   summary: 'The 2024 HCIS update for security uniforms — vest-mount specs, radio routing, and load-carriage standards.',
   summaryAr: 'تحديث HCIS لعام 2024 لأزياء الأمن — مواصفات حوامل الدروع، توجيه أجهزة الاتصال، ومعايير حمل المعدات.',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-10',
   hero: 'resources/security-equipment-standards-hero',
   silo: 'security',
   readingMinutes: 10,

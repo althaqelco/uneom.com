@@ -224,7 +224,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
                 <p className="text-base leading-relaxed text-ink-700 pretty">{p.useCase.en}</p>
               )}
               <div>
-                <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">Key features</h3>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">Key features</p>
                 <ul className="mt-5 space-y-3">
                   {p.features.map(f => (
                     <li key={f} className="flex items-start gap-3 text-base text-navy-900">
@@ -304,7 +304,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
               {p.pricingTiers.map(t => (
                 <article key={t.nameEn} className="card p-8 lg:p-10">
-                  <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">{t.nameEn}</h3>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">{t.nameEn}</p>
                   <p className="stat-number mt-6 text-3xl font-extrabold text-navy-900">
                     {t.priceFrom} <span className="text-base font-medium text-ink-500">SAR</span>
                   </p>
@@ -342,7 +342,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     <div>
-                      <h4 className="text-base font-bold text-navy-900">{step.step}</h4>
+                      <h3 className="text-base font-bold text-navy-900">{step.step}</h3>
                       <p className="mt-2 text-sm leading-relaxed text-ink-500 pretty">{step.description}</p>
                     </div>
                   </li>

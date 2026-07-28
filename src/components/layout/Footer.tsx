@@ -45,7 +45,7 @@ export function Footer({ lang = 'en' }: { lang?: Lang }) {
           </div>
 
           <nav aria-labelledby="footer-industries">
-            <h3 id="footer-industries" className="text-xs font-bold uppercase tracking-[0.18em] text-white/90">{ui.footer.industries}</h3>
+            <h2 id="footer-industries" className="text-xs font-bold uppercase tracking-[0.18em] text-white/90">{ui.footer.industries}</h2>
             <ul className="mt-5 space-y-2.5 text-sm">
               {INDUSTRIES.map(i => (
                 <li key={i.slug}>
@@ -58,7 +58,7 @@ export function Footer({ lang = 'en' }: { lang?: Lang }) {
           </nav>
 
           <nav aria-labelledby="footer-services">
-            <h3 id="footer-services" className="text-xs font-bold uppercase tracking-[0.18em] text-white/90">{ui.footer.services}</h3>
+            <h2 id="footer-services" className="text-xs font-bold uppercase tracking-[0.18em] text-white/90">{ui.footer.services}</h2>
             <ul className="mt-5 space-y-2.5 text-sm">
               {SERVICES.slice(0, 6).map(s => (
                 <li key={s.slug}>
@@ -71,7 +71,7 @@ export function Footer({ lang = 'en' }: { lang?: Lang }) {
           </nav>
 
           <nav aria-labelledby="footer-cities">
-            <h3 id="footer-cities" className="text-xs font-bold uppercase tracking-[0.18em] text-white/90">{ui.footer.majorCities}</h3>
+            <h2 id="footer-cities" className="text-xs font-bold uppercase tracking-[0.18em] text-white/90">{ui.footer.majorCities}</h2>
             <ul className="mt-5 space-y-2.5 text-sm">
               {SAUDI_CITIES.filter(c => c.populationTier === 'metro' || c.populationTier === 'major').slice(0, 8).map(c => (
                 <li key={c.slug}>
@@ -89,7 +89,7 @@ export function Footer({ lang = 'en' }: { lang?: Lang }) {
           </nav>
 
           <nav aria-labelledby="footer-company">
-            <h3 id="footer-company" className="text-xs font-bold uppercase tracking-[0.18em] text-white/90">{ui.footer.company}</h3>
+            <h2 id="footer-company" className="text-xs font-bold uppercase tracking-[0.18em] text-white/90">{ui.footer.company}</h2>
             <ul className="mt-5 space-y-2.5 text-sm">
               <li><Link href={localizedHref('/about/', lang)} className="text-navy-200/80 transition-colors hover:text-white">{isAr ? 'عن UNEOM' : 'About'}</Link></li>
               <li><Link href={localizedHref('/shop/', lang)} className="text-navy-200/80 transition-colors hover:text-white">{ui.nav.shop}</Link></li>

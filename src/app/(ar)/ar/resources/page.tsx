@@ -52,9 +52,9 @@ export default function ArResourcesHubPage() {
                 <div className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">
                   {siloAr(r.silo)} · {r.readingMinutes} دقيقة قراءة
                 </div>
-                <h3 className="text-lg font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">
+                <h2 className="text-lg font-bold text-navy-900 group-hover:text-accent-700 transition-colors balance">
                   {r.titleAr}
-                </h3>
+                </h2>
                 <p className="text-sm leading-relaxed text-ink-500 line-clamp-2 pretty">{r.summaryAr}</p>
                 <span className="mt-auto pt-1 text-sm font-semibold text-accent-700 inline-flex items-center gap-1">
                   اقرأ الدليل <span aria-hidden className="transition-transform group-hover:-translate-x-1">←</span>

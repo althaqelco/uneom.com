@@ -60,7 +60,7 @@ export default async function ArBlogCategoryPage({ params }: { params: Promise<{
         {posts.length === 0 ? (
           <p className="text-base text-ink-500">لا توجد مقالات في هذا التصنيف بعد.</p>
         ) : (
-          <PostGrid locale="ar" posts={posts.map(p => ({
+          <PostGrid locale="ar" cardAs="h2" posts={posts.map(p => ({
             slug: p.slug, title: p.titleAr || p.title, excerpt: p.excerptAr || p.excerpt,
             hero: p.hero, publishedAt: p.publishedAt, readingMinutes: p.readingMinutes,
             category: p.category.replace(/-/g, ' & '),

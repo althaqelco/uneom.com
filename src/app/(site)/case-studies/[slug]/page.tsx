@@ -37,7 +37,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   if (!c) notFound();
   const industry = INDUSTRIES_BY_SLUG[c.silo];
 
-  const schema = caseStudySchema({ slug: c.slug, title: c.title, summary: c.summary, image: `/images/case-studies/${c.imageFolder}/after.avif`, industry: industry?.nameEn || c.silo, city: c.city, outcomes: c.outcomes });
+  const schema = caseStudySchema({ slug: c.slug, title: c.title, summary: c.summary, image: `/images/case-studies/${c.imageFolder}/after.avif`, industry: industry?.nameEn || c.silo, city: c.city, outcomes: c.outcomes, datePublished: c.datePublished, dateModified: c.dateModified });
 
   return (
     <>

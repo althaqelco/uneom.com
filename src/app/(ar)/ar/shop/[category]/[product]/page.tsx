@@ -222,7 +222,7 @@ export default async function ArProductPage({ params }: { params: Promise<{ cate
                 <p className="text-base leading-relaxed text-ink-700 pretty">{p.useCase.ar}</p>
               )}
               <div>
-                <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">الميزات الرئيسية</h3>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">الميزات الرئيسية</p>
                 <ul className="mt-5 space-y-3">
                   {p.featuresAr.map(f => (
                     <li key={f} className="flex items-start gap-3 text-base text-navy-900">
@@ -302,7 +302,7 @@ export default async function ArProductPage({ params }: { params: Promise<{ cate
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
               {p.pricingTiers.map(t => (
                 <article key={t.nameAr} className="card p-8 lg:p-10">
-                  <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">{t.nameAr}</h3>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent-700">{t.nameAr}</p>
                   <p className="stat-number mt-6 text-3xl font-extrabold text-navy-900">
                     {t.priceFrom} <span className="text-base font-medium text-ink-500">ريال</span>
                   </p>
@@ -340,7 +340,7 @@ export default async function ArProductPage({ params }: { params: Promise<{ cate
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     <div>
-                      <h4 className="text-base font-bold text-navy-900">{step.step}</h4>
+                      <h3 className="text-base font-bold text-navy-900">{step.step}</h3>
                       <p className="mt-2 text-sm leading-relaxed text-ink-500 pretty">{step.description}</p>
                     </div>
                   </li>

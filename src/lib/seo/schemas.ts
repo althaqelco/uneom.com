@@ -480,6 +480,8 @@ export interface CaseStudySchemaOpts {
   city: string;
   outcomes: { metric: string; description: string }[];
   locale?: 'en' | 'ar';
+  datePublished?: string;
+  dateModified?: string;
 }
 
 export function caseStudySchema(opts: CaseStudySchemaOpts) {
@@ -497,6 +499,11 @@ export function caseStudySchema(opts: CaseStudySchemaOpts) {
     publisher: { '@id': ORG_ID },
     mainEntityOfPage: { '@id': pageId },
     isPartOf: { '@id': pageId },
+    // datePublished is required for Article rich results. Case studies carry no
+    // editorial date of their own, so the caller passes the file's first-commit
+    // date rather than a value invented at render time.
+    ...(opts.datePublished ? { datePublished: opts.datePublished } : {}),
+    ...(opts.dateModified || opts.datePublished ? { dateModified: opts.dateModified || opts.datePublished } : {}),
     articleSection: opts.industry,
     inLanguage: opts.locale === 'ar' ? 'ar-SA' : 'en',
     about: {

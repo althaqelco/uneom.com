@@ -7,6 +7,8 @@ export const hospitalAesthetic: CaseStudy = {
   summary: 'An 80-staff aesthetic medicine clinic in Jeddah transitioned from a fragmented, multi-supplier catalogue approach to a fully custom UNEOM medical line — achieving a 46% increase in patient brand confidence and 3× reduction in uniform complaints within six months.',
   summaryAr: 'انتقلت عيادة طب تجميلي تضم 80 موظفاً في جدة من نهج كتالوجي مجزأ لموردين متعددين إلى خط طبي مخصص بالكامل من يونيوم — محققة زيادة 46% في ثقة المرضى بالعلامة التجارية وانخفاض 3 أضعاف في شكاوى الأزياء خلال ستة أشهر.',
   silo: 'healthcare',
+  datePublished: '2026-05-10',
+  dateModified: '2026-05-11',
   city: 'jeddah',
   clientType: 'Aesthetic medicine clinic, Jeddah — 80 staff across 4 role categories',
   clientTypeAr: 'عيادة طب تجميلي، جدة — 80 موظفاً عبر 4 فئات وظيفية',
