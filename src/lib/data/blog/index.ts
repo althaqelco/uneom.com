@@ -136,6 +136,23 @@ import { radiologyDepartmentUniformConsiderations } from './posts/radiology-depa
 import { facilityManagementStaffUniforms } from './posts/facility-management-staff-uniforms';
 import { labCoatVsScrubJacket } from './posts/lab-coat-vs-scrub-jacket';
 
+import { antimicrobialScrubsClaimsExplained } from './posts/antimicrobial-scrubs-claims-explained';
+import { girlsSchoolUniformsModestyGraded } from './posts/girls-school-uniforms-modesty-graded';
+import { retailUniformRollout40Stores } from './posts/retail-uniform-rollout-40-stores';
+import { whyNursesUniformsFadeFast } from './posts/why-nurses-uniforms-fade-fast';
+import { womenSecurityOfficerUniformsSaudi } from './posts/women-security-officer-uniforms-saudi';
+import { hotelCleaningStaffUniformsVisibility } from './posts/hotel-cleaning-staff-uniforms-visibility';
+import { securityGuardUniformStandardsSaudi } from './posts/security-guard-uniform-standards-saudi';
+import { hijabFriendlyMedicalUniformsSaudi } from './posts/hijab-friendly-medical-uniforms-saudi';
+import { embroideryVsPrintingUniforms } from './posts/embroidery-vs-printing-uniforms';
+import { servicedApartmentsLongStayUniforms } from './posts/serviced-apartments-long-stay-uniforms';
+import { whyUniformsFadeInSaudiSun } from './posts/why-uniforms-fade-in-saudi-sun';
+import { coffeeShopApronsDenimCanvasTwill } from './posts/coffee-shop-aprons-denim-canvas-twill';
+import { hajjUmrahHospitalityStaffUniforms } from './posts/hajj-umrah-hospitality-staff-uniforms';
+import { realEstatePropertyTeamUniforms } from './posts/real-estate-property-team-uniforms';
+import { hotelUniformStandardsByStarRating } from './posts/hotel-uniform-standards-by-star-rating';
+import { luxuryRetailUniformsDressingBrand } from './posts/luxury-retail-uniforms-dressing-brand';
+
 const ALL_BLOG_POSTS: BlogPost[] = [
   medicalScrubsEvolutionSaudi,
   healthcareUniformsInfectionControl,
@@ -224,6 +241,22 @@ const ALL_BLOG_POSTS: BlogPost[] = [
   radiologyDepartmentUniformConsiderations,
   facilityManagementStaffUniforms,
   labCoatVsScrubJacket,
+  antimicrobialScrubsClaimsExplained,
+  girlsSchoolUniformsModestyGraded,
+  retailUniformRollout40Stores,
+  whyNursesUniformsFadeFast,
+  womenSecurityOfficerUniformsSaudi,
+  hotelCleaningStaffUniformsVisibility,
+  securityGuardUniformStandardsSaudi,
+  hijabFriendlyMedicalUniformsSaudi,
+  embroideryVsPrintingUniforms,
+  servicedApartmentsLongStayUniforms,
+  whyUniformsFadeInSaudiSun,
+  coffeeShopApronsDenimCanvasTwill,
+  hajjUmrahHospitalityStaffUniforms,
+  realEstatePropertyTeamUniforms,
+  hotelUniformStandardsByStarRating,
+  luxuryRetailUniformsDressingBrand,
 ];
 
 /**

@@ -1,0 +1,97 @@
+import type { BlogPost } from '../index';
+
+/**
+ * Scheduled article — publishes 2026-11-12 (Thu).
+ * Written + adversarially verified (uneom-schedule batch 7/8).
+ * Guardrail: موضوع ديني بالغ الحساسية: تناول الجانب التشغيلي والضيافي فقط باحترام عميق. ممنوع
+ */
+export const hajjUmrahHospitalityStaffUniforms: BlogPost = {
+  "slug": "hajj-umrah-hospitality-staff-uniforms",
+  "title": "Hajj Season Hotel Staff Uniform Planning for Makkah and Madinah Hospitality Teams",
+  "titleAr": "زي طاقم الفنادق في موسم الحج: تجهيز فرق الضيافة في مكة والمدينة",
+  "excerpt": "How Makkah and Madinah hotels plan, size, issue and replenish hospitality uniforms for a peak season defined by heat, crowding, fast onboarding and a fixed deadline.",
+  "excerptAr": "كيف تخطط فنادق مكة والمدينة لبرنامج أزياء الضيافة وتقيسه وتصرفه وتجدده في موسم تحكمه الحرارة والازدحام وسرعة التعيين وموعد نهائي لا يقبل التأجيل.",
+  "category": "hospitality",
+  "publishedAt": "2026-11-12",
+  "hero": "blog/hajj-umrah-hospitality-staff-uniforms",
+  "silo": "hospitality",
+  "readingMinutes": 6,
+  "lead": "Hajj and Umrah season compresses a year of hospitality pressure into a few weeks. Makkah and Madinah properties feel it first. Headcount rises fast, guests arrive from everywhere at once, and staff work long shifts in heat and crowds. The uniform programme that supports that has to be planned like an operation, not ordered like a product.",
+  "leadAr": "يضغط موسم الحج والعمرة ضغط عام كامل من أعباء الضيافة في أسابيع معدودة، وتشعر به منشآت مكة والمدينة قبل غيرها. ترتفع أعداد الطاقم سريعاً، ويتوافد الضيوف من كل مكان في وقت واحد، ويعمل الموظفون مناوبات ممتدة وسط الحرارة والزحام. وبرنامج الزي الذي يسند هذا كله يُخطَّط كعملية تشغيلية، لا يُطلب كمنتج.",
+  "sections": [
+    {
+      "heading": "Planning Against a Fixed Deadline",
+      "headingAr": "التخطيط أمام موعد لا يتغير",
+      "body": "A Hajj season hotel uniform programme is unlike any other apparel decision a hospitality operator makes, because the deadline is fixed and immovable. Occupancy in Makkah and Madinah properties climbs toward a defined window, headcount expands sharply with seasonal and contracted staff, and the uniform has to be on the floor before the first arrivals, not somewhere in a production queue. Because the season follows the lunar calendar, it moves earlier through the Gregorian year, which means the same property can face a mild-weather season one year and a punishing summer one a few years later; a garment specification written for one is not automatically right for the other. The practical consequence is that procurement has to work backwards from the opening date through issue, fitting, exchange, delivery, production and approval, and then add contingency at each step. Operators who treat the uniform as an early-year conversation rather than a last-quarter scramble get better fabric availability, better sizing outcomes and far fewer emergency substitutions that break the visual consistency of the team.",
+      "bodyAr": "برنامج زي الفنادق في موسم الحج يختلف عن أي قرار ملبسي آخر تتخذه منشأة ضيافة، لأن الموعد النهائي ثابت لا يقبل التأجيل. ترتفع نسب الإشغال في فنادق مكة والمدينة نحو نافذة زمنية محددة، ويتوسع عدد الطاقم توسعاً حاداً بالموظفين الموسميين والمتعاقدين، ويجب أن يكون الزي على أرض العمل قبل وصول أول الضيوف، لا في طابور الإنتاج. ولأن الموسم يسير على التقويم الهجري فإنه يتقدم في السنة الميلادية عاماً بعد عام، ما يعني أن المنشأة نفسها قد تواجه موسماً معتدل الطقس في سنة وموسماً شديد الحرارة بعد سنوات قليلة؛ والمواصفة المكتوبة لأحدهما ليست بالضرورة صالحة للآخر. والنتيجة العملية أن على المشتريات أن تحسب المسار عكسياً من تاريخ بدء الموسم مروراً بالصرف والقياس والاستبدال والتسليم والإنتاج والاعتماد، ثم تضيف هامش طوارئ عند كل خطوة. والمنشآت التي تعالج الزي مبكراً في السنة بدل أن تتركه للحظات الأخيرة تحصل على خيارات أوسع في الأقمشة، ونتائج مقاسات أفضل، وعدد أقل بكثير من البدائل الطارئة التي تكسر اتساق مظهر الفريق."
+    },
+    {
+      "heading": "Sizing and Issue at Volume",
+      "headingAr": "المقاسات والصرف بالجملة",
+      "body": "The hardest part of outfitting a seasonal hospitality intake is rarely the design; it is getting the right size onto the right person in the days between onboarding and the first shift. Large seasonal intakes arrive in waves, often close to the season, sometimes with limited advance data on body measurements, and frequently including staff transferred from sister properties or supplied through manpower contracts. A workable programme therefore separates the styles from the size logistics: agree the garment specification early, build a size curve from the property's own historical issue data, hold buffer stock in the middle sizes where demand concentrates, and pre-pack individual kits by name and role so distribution becomes a handover rather than a fitting session. A short, formal exchange window in the first week absorbs the errors that any volume sizing exercise produces. Recording every issue against the employee record also protects the closeout: at the end of the season the property knows what went out, what came back and what needs replacing before the next cycle.",
+      "bodyAr": "أصعب ما في تجهيز دفعة موسمية من طاقم الضيافة ليس التصميم في الغالب، بل إيصال المقاس الصحيح إلى الشخص الصحيح في الأيام الفاصلة بين التعيين وأول مناوبة. تصل الدفعات الموسمية على موجات، وغالباً قرب بداية الموسم، وأحياناً ببيانات محدودة عن مقاسات الأجسام، وكثيراً ما تضم موظفين منقولين من فروع شقيقة أو موردين عبر عقود تشغيل. لذلك يفصل البرنامج الناجح بين التصاميم ولوجستيات المقاسات: يُعتمد وصف الزي مبكراً، ثم يُبنى منحنى المقاسات من سجلات الصرف السابقة في المنشأة نفسها، ويُحتفظ بمخزون احتياطي في المقاسات الوسطى حيث يتركز الطلب، وتُجهَّز حقائب فردية باسم الموظف ودوره مسبقاً حتى يصبح التوزيع تسليماً لا جلسة قياس. ونافذة استبدال قصيرة ومنظمة في الأسبوع الأول تستوعب الأخطاء التي لا تخلو منها أي عملية قياس بالجملة. كما أن تسجيل كل صرف في ملف الموظف يحمي إغلاق الموسم: فعند نهايته تعرف المنشأة ما خرج وما عاد وما يحتاج إلى استبدال قبل الدورة القادمة."
+    },
+    {
+      "heading": "Heat, Crowds and Long Shifts",
+      "headingAr": "الحرارة والزحام والمناوبات الممتدة",
+      "body": "Hospitality work in the districts around the Two Holy Mosques is physically demanding in a way that a standard hotel specification does not always anticipate. Bell staff, doormen, transport coordinators and crowd-facing hosts move continuously between air-conditioned interiors and open forecourts, carry luggage, and work extended shifts across the hottest part of the day. Fabric should follow that exposure profile, not a single house standard. Lighter constructions with an open enough weave to move air, and finishes that carry moisture away from the skin so it can evaporate, matter more outdoors than they do at a reception desk. Pure cotton is comfortable and breathes well but holds moisture and dries slowly, which shows on a long shift; well-engineered blends generally recover appearance faster and hold a pressed look through repeated wear. Cut deserves equal attention: an articulated shoulder and a sleeve that allows a full overhead lift are the difference between a jacket that survives a luggage shift and one that fails at the seam. Colour should balance outdoor heat load against how visibly a garment shows dust and perspiration.",
+      "bodyAr": "العمل الفندقي في محيط الحرمين شاق بدنياً بصورة لا تراعيها دائماً المواصفة الفندقية القياسية. فحمّالو الأمتعة وموظفو الأبواب ومنسقو النقل والمضيفون في الساحات ينتقلون باستمرار بين الداخل المكيّف والساحات المفتوحة، ويحملون الحقائب، ويعملون مناوبات ممتدة تمر بأشد ساعات النهار حرارة. ولذلك ينبغي أن يتبع اختيار القماش هذا التعرض الفعلي لا معياراً واحداً موحداً للمنشأة كلها. فالتراكيب الأخف ذات النسيج المفتوح بما يكفي لمرور الهواء، والتجهيزات التي تنقل الرطوبة بعيداً عن الجلد لتتبخر، أهم في الخارج منها خلف مكتب الاستقبال. والقطن الخالص مريح وجيد التهوية لكنه يحتفظ بالرطوبة ويجف ببطء، وهو ما يظهر في مناوبة طويلة، بينما تستعيد الخلطات المهندَسة جيداً مظهرها أسرع في العادة وتحافظ على هيئتها المكوية عبر الاستعمال المتكرر. ويستحق القص العناية ذاتها: فالكتف المفصّل والكم الذي يسمح برفع اليد كاملاً هما الفارق بين سترة تصمد في مناوبة أمتعة وأخرى تنفتح عند الحياكة. أما اللون فيوازن بين حِمل الحرارة في الخارج ومدى ظهور الغبار والعرق عليه."
+    },
+    {
+      "heading": "Modesty and Composed Appearance",
+      "headingAr": "الاحتشام ووقار المظهر",
+      "body": "Properties serving guests in Makkah and Madinah host visitors who arrive in a state of focus and reverence, and the appearance of the service team should support that atmosphere rather than compete with it. In practice this is a design brief rather than a religious pronouncement: UNEOM does not issue guidance on matters of religious observance, and decisions about what is expected rest with the property, its guests and the relevant authorities. What a uniform supplier can do is make the modest option the well-made option. That means coverage that does not depend on the wearer adjusting the garment through a long shift, fabric with enough opacity that a light-coloured shirt stays dignified under lobby lighting, drape that skims rather than clings when a staff member bends or lifts, sleeve and hem lengths written into the specification rather than left to interpretation, and headscarf-compatible collars and necklines for the women who wear them. Styling should be quiet and confident: restrained colour, clean lines, minimal ornament, and a standard of finishing that reads as respect for both the guest and the wearer.",
+      "bodyAr": "تعمل المنشآت التي تخدم ضيوف مكة والمدينة في بيئة يصل إليها الضيوف بحالة من التركيز والخشوع، ويُفترض أن يسند مظهر فريق الخدمة هذا الجو لا أن ينافسه. وهذا عملياً وصف تصميمي لا حكم شرعي: فـUNEOM لا تصدر توجيهات في مسائل العبادة، وتبقى قرارات ما هو مطلوب عائدة إلى المنشأة وضيوفها والجهات المختصة. وما يستطيع مورّد الزي تقديمه هو أن يجعل الخيار المحتشم هو الخيار الأتقن صناعة. ويعني ذلك تغطية لا تعتمد على تعديل الموظف لثوبه طوال المناوبة، وقماشاً بعتامة كافية تُبقي القميص الفاتح وقوراً تحت إضاءة البهو، وانسدالاً ينساب ولا يلتصق حين ينحني الموظف أو يرفع حِملاً، وأطوال أكمام وأذيال مكتوبة في المواصفة لا متروكة للاجتهاد، وياقات وفتحات رقبة تتوافق مع غطاء الرأس لمن ترتديه من الموظفات. أما التنسيق فينبغي أن يكون هادئاً واثقاً: ألوان متحفظة، وخطوط نظيفة، وزخرفة في أدنى حدودها، ومستوى تشطيب يُقرأ احتراماً للضيف والموظف معاً."
+    },
+    {
+      "heading": "Identification and Language",
+      "headingAr": "التعريف واللغات والإرشاد",
+      "body": "During peak season a hotel lobby in Makkah can hold guests from dozens of countries, many travelling in large groups, many navigating an unfamiliar building after a long journey. The uniform is the fastest wayfinding tool the property owns. A colour or trim system that separates front desk, concierge, housekeeping, food service, transport and group coordination lets a guest identify the right person from across a crowded lobby without reading anything. Name badges carry the second layer: role in Arabic and English, and a clear indication of the languages the wearer speaks, using language codes or coloured markers a guest can recognise at a glance. Group-handling and airport meet-and-greet teams benefit from a distinct high-visibility element, because they work in the most congested spaces and need to be found rather than to find. Consistency matters as much as the system itself; when part of the seasonal team is in a substitute garment because the main order arrived short, the visual language stops working exactly when the property needs it most.",
+      "bodyAr": "في ذروة الموسم قد يضم بهو فندق في مكة ضيوفاً من عشرات الجنسيات، كثير منهم يسافر ضمن مجموعات كبيرة، وكثير منهم يتنقل في مبنى غير مألوف بعد رحلة طويلة. والزي هنا أسرع أداة إرشاد تملكها المنشأة. فنظام ألوان أو حواف يفصل بين الاستقبال والكونسيرج والتدبير الفندقي وخدمة الأغذية والنقل وتنسيق المجموعات يتيح للضيف أن يميّز الشخص المناسب من طرف البهو المزدحم دون أن يقرأ شيئاً. وتحمل بطاقات الأسماء الطبقة الثانية: الدور بالعربية والإنجليزية، وإشارة واضحة إلى اللغات التي يتحدثها حاملها عبر رموز لغوية أو علامات ملونة يتعرف عليها الضيف بنظرة واحدة. وتستفيد فرق استقبال المجموعات والاستقبال في المطار من عنصر مميز عالي الظهور، لأنها تعمل في أشد المساحات ازدحاماً وتحتاج أن يُعثر عليها لا أن تبحث هي. والاتساق لا يقل أهمية عن النظام نفسه؛ فحين يرتدي جزء من الفريق الموسمي بديلاً مؤقتاً لأن الطلبية الأساسية وصلت ناقصة، تتوقف هذه اللغة البصرية عن العمل في اللحظة التي تحتاجها المنشأة أكثر من أي وقت."
+    },
+    {
+      "heading": "Laundry, Replenishment and Closeout",
+      "headingAr": "الغسيل والتجديد وإغلاق الموسم",
+      "body": "Peak-season uniforms live a compressed life — worn hard, laundered often and turned around fast, sometimes within the same day — and the specification should reflect it. Colourfastness and dimensional stability through repeated industrial washing matter more than they do in a quieter property, because a team whose garments have faded at different rates looks unmanaged even when every individual is well presented. Each employee needs enough sets in rotation to cover the laundry cycle with margin for a spill or a delay, and the property needs buffer stock in common sizes so a replacement is a store-room transaction, not a purchase order. It is worth agreeing the reorder path with the supplier before the season, including how quickly mid-season top-ups can be produced and how long the fabric and colour will stay available, so next season's intake matches this season's team. At closeout, a structured collection, an honest condition grading and a clear record of what is reusable turn the programme into a repeatable asset rather than an annual rebuild. UNEOM has manufactured inside the Kingdom since 2013, which keeps that reorder loop short.",
+      "bodyAr": "أزياء الذروة تعيش عمراً مضغوطاً: استعمال شاق، وغسيل متكرر، ودورة تدوير سريعة قد تتم في اليوم نفسه، والمواصفة يجب أن تعكس ذلك. فثبات اللون واستقرار الأبعاد عبر الغسيل الصناعي المتكرر أهم هنا مما هو عليه في منشأة أهدأ، لأن فريقاً تباينت درجات بهتان أزيائه يبدو غير منضبط حتى لو كان كل فرد فيه حسن المظهر. ويحتاج كل موظف إلى عدد كافٍ من الأطقم في الدوران يغطي دورة الغسيل مع هامش لانسكاب أو تأخير، وتحتاج المنشأة إلى مخزون احتياطي في المقاسات الشائعة حتى يصبح الاستبدال عملية من المستودع لا أمر شراء جديداً. ومن المفيد الاتفاق مع المورّد على مسار إعادة الطلب قبل الموسم، بما يشمل سرعة إنتاج الكميات التكميلية في منتصفه، ومدة بقاء القماش واللون متاحين، حتى تتطابق دفعة الموسم القادم مع فريق هذا الموسم. وعند الإغلاق، فإن جمعاً منظماً وتقييماً صادقاً لحالة القطع وسجلاً واضحاً لما يصلح لإعادة الاستخدام يحوّل البرنامج إلى أصل متكرر بدل إعادة بنائه كل عام. وتصنّع UNEOM داخل المملكة منذ 2013، ما يبقي دورة إعادة الطلب قصيرة."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "When should a Makkah or Madinah hotel start planning its Hajj season uniform order?",
+      "qAr": "متى ينبغي أن يبدأ فندق في مكة أو المدينة تجهيز طلبية زي موسم الحج؟",
+      "a": "Work backwards from the first arrival date rather than forwards from today. Approval, production, delivery, sizing, issue and an exchange window each need time, and each can slip. Starting several months ahead protects fabric availability and colour matching with existing stock, and leaves room for mid-season top-ups without an emergency substitution that breaks the team's visual consistency.",
+      "aAr": "احسب المسار عكسياً من تاريخ وصول أول الضيوف لا طردياً من اليوم. فالاعتماد والإنتاج والتسليم والقياس والصرف ونافذة الاستبدال يحتاج كل منها وقتاً، وكل منها قابل للتأخر. والبدء قبل الموسم بعدة أشهر يحمي توافر القماش ومطابقة اللون مع المخزون القائم، ويترك مجالاً للكميات التكميلية دون بدائل طارئة تكسر اتساق مظهر الفريق."
+    },
+    {
+      "q": "How many uniform sets does each seasonal staff member need?",
+      "qAr": "كم طقماً يحتاج كل موظف موسمي؟",
+      "a": "Set it from the laundry cycle, not a fixed habit. If garments are collected and returned daily, fewer sets work; if turnaround takes longer or a role soils quickly, more are needed. Add a margin for spills and delays, and hold buffer stock in the common sizes so replacements come from the store room rather than a new order.",
+      "aAr": "حدّد العدد من دورة الغسيل لا من عادة ثابتة. فإذا كانت القطع تُجمع وتُعاد يومياً كفى عدد أقل، وإذا طال زمن التدوير أو كان الدور سريع الاتساخ لزم عدد أكبر. أضف هامشاً للانسكاب والتأخير، واحتفظ بمخزون احتياطي في المقاسات الشائعة ليأتي الاستبدال من المستودع لا عبر طلبية جديدة."
+    },
+    {
+      "q": "What fabric suits outdoor hospitality roles in peak summer heat?",
+      "qAr": "ما القماش المناسب للأدوار الخارجية في ذروة حرارة الصيف؟",
+      "a": "Prioritise airflow and moisture management over weight alone. Lighter constructions with an open enough weave move air; finishes that carry moisture away from the skin help it evaporate. Pure cotton breathes well but holds water and dries slowly on a long shift, while engineered blends usually recover appearance faster. Match the choice to actual exposure, indoors or outdoors.",
+      "aAr": "قدّم مرور الهواء وإدارة الرطوبة على الوزن وحده. فالتراكيب الأخف ذات النسيج المفتوح تمرر الهواء، والتجهيزات التي تنقل الرطوبة بعيداً عن الجلد تساعدها على التبخر. والقطن الخالص جيد التهوية لكنه يحتفظ بالماء ويجف ببطء في مناوبة طويلة، بينما تستعيد الخلطات المهندَسة مظهرها أسرع عادة. واربط الاختيار بالتعرض الفعلي داخلاً وخارجاً."
+    },
+    {
+      "q": "How should a uniform handle modesty for staff working near the Two Holy Mosques?",
+      "qAr": "كيف يعالج الزي جانب الاحتشام لدى العاملين في محيط الحرمين؟",
+      "a": "Treat it as a design specification, not a ruling. UNEOM does not advise on religious matters; the property sets its own standard. What the garment can deliver is reliable coverage that does not need adjusting mid-shift, sufficient opacity, drape that skims rather than clings, defined sleeve and hem lengths, and collars that work with a headscarf.",
+      "aAr": "تعامل معه كمواصفة تصميم لا كحكم شرعي. فـUNEOM لا تفتي في مسائل العبادة، والمنشأة هي من يضع معيارها. وما يقدمه الثوب هو تغطية ثابتة لا تحتاج تعديلاً أثناء المناوبة، وعتامة كافية، وانسدال ينساب ولا يلتصق، وأطوال أكمام وأذيال محددة، وياقات تتوافق مع غطاء الرأس لمن ترتديه."
+    },
+    {
+      "q": "How can uniforms help guests who do not share a common language?",
+      "qAr": "كيف يساعد الزي الضيوف الذين لا يشتركون في لغة واحدة؟",
+      "a": "Design the uniform to answer questions before they are asked. Distinct colours or trim per department let a guest find the right team from across a lobby. Badges should carry the role in Arabic and English plus a visible marker of the languages the wearer speaks, so a guest can choose whom to approach without a word.",
+      "aAr": "صمّم الزي ليجيب عن الأسئلة قبل طرحها. فالألوان أو الحواف المميزة لكل قسم تتيح للضيف أن يجد الفريق المناسب من طرف البهو. وينبغي أن تحمل البطاقة الدور بالعربية والإنجليزية مع علامة ظاهرة للغات التي يتحدثها حاملها، ليختار الضيف من يتوجه إليه دون كلمة واحدة."
+    }
+  ],
+  "author": {
+    "name": "Ahmed Al-Farsi",
+    "nameAr": "أحمد الفارسي",
+    "title": "Hospitality Programme Lead",
+    "titleAr": "مدير برامج الضيافة"
+  }
+};
