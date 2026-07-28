@@ -5,6 +5,7 @@ import { BLOG_POSTS, BLOG_POSTS_BY_SLUG, BLOG_CATEGORIES_BY_SLUG, postsBySilo, p
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { SiloLinks } from '@/components/ui/SiloLinks';
+import { RichText, stripLinks } from '@/components/blog/RichText';
 import { JsonLd } from '@/lib/seo/JsonLd';
 import { faqSchema, articleSchema } from '@/lib/seo/schemas';
 
@@ -67,7 +68,7 @@ export default async function ArBlogPostPage({ params }: { params: Promise<{ slu
     reviewerTitle: post.reviewer?.titleAr,
     reviewerAffiliation: post.reviewer?.affiliationAr,
     section: cat?.nameAr,
-    wordCount: post.sections.reduce((acc, s) => acc + s.bodyAr.split(/\s+/).length, post.leadAr.split(/\s+/).length),
+    wordCount: post.sections.reduce((acc, s) => acc + stripLinks(s.bodyAr).split(/\s+/).length, stripLinks(post.leadAr).split(/\s+/).length),
     locale: 'ar'
   });
 
@@ -122,7 +123,7 @@ export default async function ArBlogPostPage({ params }: { params: Promise<{ slu
 
         {/* Body */}
         <div className="container-prose section">
-          <p className="text-xl leading-relaxed text-navy-900 font-medium pretty">{post.leadAr}</p>
+          <p className="text-xl leading-relaxed text-navy-900 font-medium pretty"><RichText text={post.leadAr} /></p>
 
           {/* TOC */}
           <nav aria-label="المحتويات" className="mt-12 rounded-2xl bg-ink-50 p-6 ring-1 ring-ink-100">
@@ -149,7 +150,7 @@ export default async function ArBlogPostPage({ params }: { params: Promise<{ slu
           {post.sections.map((s, i) => (
             <section key={i} id={`section-${i}`} className="mt-12">
               <h2 className="text-display text-navy-900">{s.headingAr}</h2>
-              {s.bodyAr && <p className="mt-4 text-lg leading-relaxed text-ink-500 pretty">{s.bodyAr}</p>}
+              {s.bodyAr && <p className="mt-4 text-lg leading-relaxed text-ink-500 pretty"><RichText text={s.bodyAr} /></p>}
             </section>
           ))}
 

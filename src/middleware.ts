@@ -28,21 +28,21 @@ UNEOM is a Saudi-based uniform manufacturer and supplier operating across 24 cit
 - [Healthcare Uniforms](${base}/industries/healthcare/) — Medical scrubs, lab coats, surgical gowns
 - [Hospitality Uniforms](${base}/industries/hospitality/) — Hotel, restaurant, and resort attire
 - [Aviation Uniforms](${base}/industries/aviation/) — Airline crew and ground staff
-- [Industrial Workwear](${base}/industries/industrial/) — FR coveralls, hi-vis, safety gear
+- [Manufacturing Workwear](${base}/industries/manufacturing/) — FR coveralls, hi-vis, safety gear
 - [Education Uniforms](${base}/industries/education/) — School and university uniforms
 - [Corporate Workwear](${base}/industries/corporate/) — Business suits, office attire
-- [Food Service Uniforms](${base}/industries/food-service/) — Chef coats, kitchen wear
+- [Retail Uniforms](${base}/industries/retail/) — Store, mall, and showroom staff attire
 - [Security Uniforms](${base}/industries/security/) — Guard and enforcement attire
 
 ## Key Services
 
 - [Custom Design Programme](${base}/services/custom-design/)
-- [Fabric Sourcing & Testing](${base}/services/fabric-sourcing/)
-- [Measurement & Fitting](${base}/services/measurement-fitting/)
-- [Bulk Manufacturing](${base}/services/bulk-manufacturing/)
+- [Fabric Selection](${base}/services/fabric-selection/)
+- [Measurement Services](${base}/services/measurement-services/)
+- [Bulk Ordering](${base}/services/bulk-ordering/)
 - [Quality Assurance](${base}/services/quality-assurance/)
-- [Logistics & Distribution](${base}/services/logistics/)
-- [Post-Delivery Support](${base}/services/post-delivery/)
+- [Programme Management](${base}/services/program-management/)
+- [Sustainable Uniforms](${base}/services/sustainable-uniforms/)
 
 ## Quick Links
 
@@ -62,8 +62,11 @@ Riyadh · Jeddah · Dammam · Makkah · Madinah · Khobar · Tabuk · Abha · Kh
 - OEKO-TEX Standard 100
 - GOTS Certified
 - SASO Quality Mark
-- Maroof Verified
-- ZATCA E-Invoicing Compliant
+
+## Saudi Registrations
+
+- Maroof — Ministry of Commerce business verification
+- ZATCA — tax and customs registration, e-invoicing
 
 ---
 

@@ -40,12 +40,32 @@ jobs:
         id: due
         run: |
           TODAY=$(date -u +%F)
-          DUE=$(grep -rhoE "publishedAt: '[0-9]{4}-[0-9]{2}-[0-9]{2}'" src/lib/data/blog/posts/ \
-                | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' \
-                | awk -v t="$TODAY" '$0 == t' | wc -l | tr -d ' ')
+
+          # Post files carry publishedAt in two shapes, because they were authored
+          # by different means: hand-written posts use TypeScript literals
+          # (publishedAt: '2026-08-02') and generated ones are serialised JSON
+          # ("publishedAt": "2026-08-02"). An earlier version of this step matched
+          # only the first, so it silently reported nothing due for every
+          # generated post — the schedule would simply never have fired. Match the
+          # key and the date, and stay agnostic about the quoting between them.
+          ALL=$(grep -rhoE 'publishedAt"?:[[:space:]]*.?[0-9]{4}-[0-9]{2}-[0-9]{2}' src/lib/data/blog/posts/ \
+                | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}')
+
+          TOTAL=$(printf '%s\n' "$ALL" | grep -c . || true)
+          DUE=$(printf '%s\n' "$ALL" | awk -v t="$TODAY" '$0 == t' | wc -l | tr -d ' ')
+
           echo "today=$TODAY" >> "$GITHUB_OUTPUT"
           echo "count=$DUE"   >> "$GITHUB_OUTPUT"
-          echo "::notice::$DUE post(s) scheduled for $TODAY"
+          echo "::notice::$DUE post(s) scheduled for $TODAY (parsed $TOTAL dated posts)"
+
+          # Canary. Zero due is normal — most days nothing is scheduled. Zero
+          # dates parsed across the whole corpus is not: it means the file format
+          # moved and this step stopped seeing posts at all. Fail loudly rather
+          # than reporting "nothing due" every morning for six months.
+          if [ "$TOTAL" -eq 0 ]; then
+            echo "::error::Parsed 0 publishedAt dates from src/lib/data/blog/posts/ — the pattern no longer matches the file format. The schedule is not running."
+            exit 1
+          fi
 
       - name: Trigger rebuild
         if: steps.due.outputs.count != '0'

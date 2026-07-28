@@ -30,7 +30,13 @@ function build(): string {
   o.push('- **Headquarters**: Riyadh, Saudi Arabia');
   o.push(`- **Coverage**: ${SAUDI_CITIES.length} Saudi cities`);
   o.push(`- **Industries**: ${INDUSTRIES.map(i => i.nameEn).join(', ')}`);
-  o.push('- **Certifications**: ISO 9001:2015, OEKO-TEX Standard 100, SASO, Maroof, ZATCA');
+  // Certifications and registrations are listed separately on purpose. Maroof is
+  // a Ministry of Commerce business verification and ZATCA is a tax and customs
+  // registration — neither is a certification, and this file is written to be
+  // ingested as fact by AI engines. The four certifications are the ones the
+  // site asserts site-wide, with badges in the footer of every page.
+  o.push('- **Certifications**: ISO 9001:2015, OEKO-TEX Standard 100, GOTS, SASO Quality Mark');
+  o.push('- **Saudi registrations**: Maroof (Ministry of Commerce business verification), ZATCA (tax and customs, e-invoicing)');
   o.push('- **Languages**: English, Arabic (ar-SA)');
   o.push('- **Contact**: +966564612017 · info@uneom.com\n');
 

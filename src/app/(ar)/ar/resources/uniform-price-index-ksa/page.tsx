@@ -63,6 +63,7 @@ export default function ArUniformPriceIndexPage() {
 
       <section className="container-page section-tight">
         <SectionHeader
+          as="h1"
           eyebrow="مجموعة البيانات · CC-BY 4.0 · ربع سنوي"
           title={<>مؤشر أسعار الزي الموحّد المهني السعودي <span className="text-accent-700">2026</span>.</>}
           lead="بيانات سوق ربع سنوية عن تسعير الزي الموحّد B2B عبر 8 قطاعات و24 مدينة سعودية. أسعار حقيقية للوحدة من 500+ معاملة UNEOM. مُرخَّصة بموجب Creative Commons Attribution 4.0."

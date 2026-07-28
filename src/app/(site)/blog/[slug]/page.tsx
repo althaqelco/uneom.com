@@ -5,6 +5,7 @@ import { BLOG_POSTS, BLOG_POSTS_BY_SLUG, BLOG_CATEGORIES_BY_SLUG, postsBySilo, p
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { CtaBlock } from '@/components/ui/CtaBlock';
 import { SiloLinks } from '@/components/ui/SiloLinks';
+import { RichText, stripLinks } from '@/components/blog/RichText';
 import { JsonLd } from '@/lib/seo/JsonLd';
 import { faqSchema, articleSchema } from '@/lib/seo/schemas';
 
@@ -60,7 +61,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     reviewerTitle: post.reviewer?.title,
     reviewerAffiliation: post.reviewer?.affiliation,
     section: cat?.nameEn,
-    wordCount: post.sections.reduce((acc, s) => acc + s.body.split(/\s+/).length, post.lead.split(/\s+/).length),
+    wordCount: post.sections.reduce((acc, s) => acc + stripLinks(s.body).split(/\s+/).length, stripLinks(post.lead).split(/\s+/).length),
     locale: 'en'
   });
 
@@ -104,7 +105,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         {/* Body */}
         <div className="container-prose section">
           <p className="text-xl leading-relaxed text-navy-900 font-medium pretty">
-            {post.lead}
+            <RichText text={post.lead} />
           </p>
           <div className="mt-12 space-y-12">
             {post.sections.map((s, i) => (
@@ -112,7 +113,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <h2 className="text-display text-navy-900 balance">{s.heading}</h2>
                 {s.body && (
                 <p className="mt-5 text-lg leading-relaxed text-ink-500 pretty">
-                  {s.body}
+                  <RichText text={s.body} />
                 </p>
                 )}
               </section>
