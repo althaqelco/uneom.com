@@ -102,6 +102,23 @@ import { hotelUniformsGuestExperienceSaudi } from './posts/hotel-uniforms-guest-
 import { hiVisClassSelectionGuideSaudi } from './posts/hi-vis-class-selection-guide-saudi';
 import { weldingPpeSelectionGuideSaudi } from './posts/welding-ppe-selection-guide-saudi';
 
+import { seasonalRetailStaffingUniformSurges } from './posts/seasonal-retail-staffing-uniform-surges';
+import { pharmacyRetailChainUniformsSaudi } from './posts/pharmacy-retail-chain-uniforms-saudi';
+import { scrubsThatSurviveHospitalLaundry } from './posts/scrubs-that-survive-hospital-laundry';
+import { gsmFabricWeightExplained } from './posts/gsm-fabric-weight-explained';
+import { industrialLaundryPreservingFrPerformance } from './posts/industrial-laundry-preserving-fr-performance';
+import { corporateAbayaBrandedTailored } from './posts/corporate-abaya-branded-tailored';
+import { arcFlashRatingsExplainedProcurement } from './posts/arc-flash-ratings-explained-procurement';
+import { governmentMinistryStaffUniformsSaudi } from './posts/government-ministry-staff-uniforms-saudi';
+import { compoundGatedCommunitySecurityAttire } from './posts/compound-gated-community-security-attire';
+import { ppeReplacementBufferStockPolicy } from './posts/ppe-replacement-buffer-stock-policy';
+import { confinedSpaceTurnaroundWorkwear } from './posts/confined-space-turnaround-workwear';
+import { sustainableRecycledUniformFabrics } from './posts/sustainable-recycled-uniform-fabrics';
+import { patientGownProgrammesDignityLaundry } from './posts/patient-gown-programmes-dignity-laundry';
+import { ppeComplianceAuditDocumentation } from './posts/ppe-compliance-audit-documentation';
+import { executiveUniformProgrammesSuits } from './posts/executive-uniform-programmes-suits';
+import { graduationGownsAcademicRegaliaSaudi } from './posts/graduation-gowns-academic-regalia-saudi';
+
 const ALL_BLOG_POSTS: BlogPost[] = [
   medicalScrubsEvolutionSaudi,
   healthcareUniformsInfectionControl,
@@ -158,6 +175,22 @@ const ALL_BLOG_POSTS: BlogPost[] = [
   hotelUniformsGuestExperienceSaudi,
   hiVisClassSelectionGuideSaudi,
   weldingPpeSelectionGuideSaudi,
+  seasonalRetailStaffingUniformSurges,
+  pharmacyRetailChainUniformsSaudi,
+  scrubsThatSurviveHospitalLaundry,
+  gsmFabricWeightExplained,
+  industrialLaundryPreservingFrPerformance,
+  corporateAbayaBrandedTailored,
+  arcFlashRatingsExplainedProcurement,
+  governmentMinistryStaffUniformsSaudi,
+  compoundGatedCommunitySecurityAttire,
+  ppeReplacementBufferStockPolicy,
+  confinedSpaceTurnaroundWorkwear,
+  sustainableRecycledUniformFabrics,
+  patientGownProgrammesDignityLaundry,
+  ppeComplianceAuditDocumentation,
+  executiveUniformProgrammesSuits,
+  graduationGownsAcademicRegaliaSaudi,
 ];
 
 /**

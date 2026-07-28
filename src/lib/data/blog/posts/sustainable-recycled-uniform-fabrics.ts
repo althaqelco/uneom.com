@@ -1,0 +1,98 @@
+import type { BlogPost } from '../index';
+
+/**
+ * Scheduled article — publishes 2026-09-16 (Wed).
+ * Written + adversarially verified (uneom-schedule batch 3/4).
+ * Verifier flagged a wet-strength generalisation and two Arabic issues; all corrected.
+ * Guardrail: لا تخترع أرقام انبعاثات أو نسب إعادة تدوير أو شهادات لا تملكها UNEOM. اذكر OEKO-
+ */
+export const sustainableRecycledUniformFabrics: BlogPost = {
+  "slug": "sustainable-recycled-uniform-fabrics",
+  "title": "Sustainable Uniform Fabric in Saudi Arabia: Recycled Polyester, Cellulosics, and How to Verify Claims",
+  "titleAr": "الأقمشة المستدامة للزي الموحد في السعودية: البوليستر المعاد تدويره والألياف السليلوزية والتحقق من ادعاءات المورّدين",
+  "excerpt": "A procurement guide to sustainable uniform fabric in Saudi Arabia: what recycled polyester and cellulosics really deliver, why service life matters most, and how to verify supplier claims.",
+  "excerptAr": "دليل مشتريات للأقمشة المستدامة في السعودية: ما الذي يقدّمه البوليستر المعاد تدويره والألياف السليلوزية فعلياً، ولماذا يتقدّم العمر التشغيلي على الخامة، وكيف تتحقق من ادعاءات المورّد.",
+  "category": "sustainability-trends",
+  "publishedAt": "2026-09-16",
+  "hero": "blog/sustainable-recycled-uniform-fabrics",
+  "silo": "manufacturing",
+  "readingMinutes": 7,
+  "lead": "Sustainable uniform fabric is far easier to claim than to prove. Recycled polyester, lyocell, and organic cotton now appear in Saudi tender documents, often carrying numbers nobody can verify. This guide explains what these materials actually do, where the trade-offs sit against durability and heat, and how to test what a supplier tells you.",
+  "leadAr": "ادعاء الاستدامة أسهل بكثير من إثباتها. صار البوليستر المعاد تدويره والليوسيل والقطن العضوي يظهر في كراسات الشروط السعودية، مصحوباً غالباً بأرقام لا يستطيع أحد التحقق منها. يشرح هذا الدليل ما تفعله هذه الخامات فعلياً، وأين تقع المقايضات مقابل المتانة والحرارة، وكيف تختبر ما يقوله المورّد.",
+  "sections": [
+    {
+      "heading": "What sustainability really means",
+      "headingAr": "ما تعنيه الاستدامة فعلاً",
+      "body": "Sustainability in corporate uniforms is not a single property of a fabric; it is the sum of choices across fibre origin, manufacturing, use, and disposal. A buyer who narrows the question to \"is it recycled?\" will miss most of the impact. A uniform is a product with a long use phase: it is worn, washed, ironed, repaired, replaced. The energy and water consumed while the garment is in service, the number of replacements a programme buys over a contract cycle, and the fate of the garment at end of life all sit inside the sustainability picture alongside the fibre itself. Treat sustainability as a programme attribute rather than a fabric attribute, and the decisions change. You start asking how long a garment survives industrial laundering, whether the fit is accepted well enough that staff keep wearing it, whether damaged items can be repaired instead of discarded, and whether the supply chain is short enough to avoid repeated long-haul shipping. Those questions are answerable with evidence. \"Green fabric\" alone rarely is.",
+      "bodyAr": "الاستدامة في برامج الزي المؤسسي ليست خاصية واحدة في القماش، بل حصيلة قرارات تمتد من مصدر الليف إلى التصنيع والاستخدام والتخلص النهائي. ومن يختصر السؤال في «هل الخامة معاد تدويرها؟» يفوّت الجزء الأكبر من الأثر. الزي منتج ذو مرحلة استخدام طويلة: يُلبس ويُغسل ويُكوى ويُرمَّم ويُستبدل. فالطاقة والمياه المستهلكة أثناء الخدمة، وعدد مرات الاستبدال التي يشتريها البرنامج خلال دورة العقد، ومصير القطعة في نهاية عمرها، كلها داخل صورة الاستدامة إلى جانب الليف نفسه. تعامَل مع الاستدامة بوصفها خاصية برنامج لا خاصية قماش، وستتغير قراراتك: ستسأل كم تصمد القطعة أمام الغسيل الصناعي، وهل التفصيل مقبول لدى الموظفين بما يجعلهم يواصلون ارتداءه، وهل يمكن إصلاح التالف بدل استبداله، وهل سلسلة التوريد قصيرة بما يكفي لتجنّب الشحن الطويل المتكرر. هذه أسئلة تُجاب بالأدلة، أما عبارة «قماش أخضر» فنادراً ما تكون كذلك."
+    },
+    {
+      "heading": "Recycled polyester, honestly",
+      "headingAr": "البوليستر المعاد تدويره بوضوح",
+      "body": "Recycled polyester is the most common entry point into sustainable uniform fabric, and it is a genuine one, but it deserves an accurate description. Most recycled polyester in workwear is mechanically recycled from post-consumer PET bottles: the material is cleaned, chipped, melted, and extruded into new filament or staple fibre. Chemically recycled and textile-to-textile routes exist and are growing, but availability, cost, and lead time differ by mill. Performance is broadly comparable to virgin polyester, because it is the same polymer; where differences appear, they are usually in consistency — dye uptake, shade matching between lots, and fibre length in mechanically recycled staple. What recycled content does not change is equally important: it does not make the fabric more breathable, does not reduce microfibre shedding during washing, and does not make a polyester-cotton blend easier to recycle at end of life. It also says nothing about dyeing and finishing chemistry, which is where a large share of textile impact sits. Recycled content is a real improvement in feedstock, not a blanket environmental claim.",
+      "bodyAr": "البوليستر المعاد تدويره هو المدخل الأكثر شيوعاً إلى الأقمشة المستدامة، وهو مدخل حقيقي، لكنه يستحق وصفاً دقيقاً. معظم ما يُستخدم منه في ملابس العمل يأتي من إعادة تدوير ميكانيكية لعبوات PET بعد الاستهلاك: تُنظَّف وتُجرَّش وتُصهر ثم تُبثق ألياف جديدة. وهناك مسارات كيميائية وأخرى من نسيج إلى نسيج تتوسع تدريجياً، لكن التوافر والتكلفة ومدد التوريد تختلف بين المصانع. الأداء مقارب للبوليستر البكر لأنه البوليمر نفسه، وحين تظهر الفروق فهي غالباً في الاتساق: امتصاص الصبغة، ومطابقة الدرجة اللونية بين التشغيلات، وانتظام طول الشعيرة في الإعادة الميكانيكية. وما لا يغيّره المحتوى المعاد تدويره لا يقل أهمية: فهو لا يجعل القماش أكثر تنفساً، ولا يقلّل تسرّب الألياف الدقيقة أثناء الغسيل، ولا يجعل خلطة البوليستر والقطن أسهل في إعادة التدوير لاحقاً. كما أنه لا يقول شيئاً عن كيمياء الصباغة والتجهيز، وهي موضع جزء كبير من الأثر البيئي. إنه تحسين حقيقي في المادة الخام، لا شهادة بيئية شاملة."
+    },
+    {
+      "heading": "Cellulosics and comfort",
+      "headingAr": "الألياف السليلوزية والراحة",
+      "body": "Cellulosic fibres — cotton, viscose, modal, and lyocell — are the other half of the conversation, and they behave very differently from polyester in Saudi conditions. They absorb moisture rather than wicking it away, which many wearers experience as cooler and more comfortable in dry heat, though a saturated cotton shirt in humid coastal air can feel heavy and slow to dry. Lyocell is produced in a closed-loop solvent process in which the solvent is recovered and reused, which is its main environmental argument; conventional viscose is chemically more intensive, and wood pulp origin matters, so buyers can ask whether the pulp carries recognised forestry certification. The trade-offs are practical: cellulosics generally wrinkle more, shrink more, and abrade faster than polyester, and regenerated cellulosics such as viscose lose strength when wet, which matters under industrial laundering. That is why most uniform fabrics are blends. A blend buys comfort and durability together, at the cost of recyclability, because separating fibres at end of life is difficult. In a modest, layered uniform worn through a Saudi summer, that compromise is usually the right one.",
+      "bodyAr": "الألياف السليلوزية — القطن والفسكوز والمودال والليوسيل — هي النصف الآخر من النقاش، وسلوكها يختلف جوهرياً عن البوليستر في الظروف السعودية. فهي تمتص الرطوبة بدل طردها، وهو ما يشعر معه كثير من مرتديها ببرودة وراحة أكبر في الحرارة الجافة، غير أن قميصاً قطنياً مشبعاً في أجواء ساحلية رطبة يصبح ثقيلاً بطيء الجفاف. ويُنتج الليوسيل بعملية مذيب مغلقة الدورة يُستعاد فيها المذيب ويُعاد استخدامه، وهذه حجته البيئية الأساسية، بينما الفسكوز التقليدي أكثر كثافة كيميائية، ومصدر لبّ الخشب مهم، فبإمكان المشتري أن يسأل عن شهادة إدارة غابات معترف بها. أما المقايضات فعملية: السليلوزيات عموماً أكثر تجعّداً وانكماشاً، وأسرع تآكلاً من البوليستر، ويفقد الفسكوز تحديداً جزءاً من متانته وهو مبلل، وهو أمر مؤثر تحت الغسيل الصناعي. لهذا فإن معظم أقمشة الزي خلطات. الخلطة تشتري الراحة والمتانة معاً، وثمنها صعوبة إعادة التدوير لأن فصل الألياف في نهاية العمر معقد. وفي زيّ محتشم متعدد الطبقات يُرتدى طوال صيف سعودي، تكون هذه المقايضة عادة هي الخيار الصحيح."
+    },
+    {
+      "heading": "Durability as the real lever",
+      "headingAr": "المتانة هي الرافعة الحقيقية",
+      "body": "The most under-used sustainability lever in uniform procurement is service life. A garment that survives twice as many wash-and-wear cycles halves the number of replacements a programme buys, and every impact embedded in fibre production, dyeing, cutting, sewing, and shipping is halved with it. This is why a durable conventional fabric can outperform a fragile fabric with impressive recycled content: the green feedstock is spread across a shorter life. Durability in workwear is not one property. It includes abrasion resistance at cuffs, seats, and knees, seam strength and stitch density, colourfastness to repeated industrial washing and to strong sunlight, dimensional stability so the garment still fits after laundering, and closure hardware that outlasts the cloth. Garments also fail for non-technical reasons: poor fit, uncomfortable hand feel, and an unflattering cut push staff to stop wearing items long before the fabric is worn out. Ask suppliers for wash-test evidence and, better, run a wear trial in your own environment before committing to a full rollout.",
+      "bodyAr": "أقل روافع الاستدامة استخداماً في مشتريات الزي هي العمر التشغيلي. فالقطعة التي تصمد ضعف عدد دورات الغسيل والارتداء تخفض عدد الاستبدالات إلى النصف، ومعها ينخفض إلى النصف كل أثر مضمَّن في إنتاج الليف والصباغة والقص والخياطة والشحن. لهذا قد يتفوق قماش تقليدي متين على قماش بمحتوى معاد تدوير لافت لكنه هشّ، لأن الميزة البيئية تتوزع على عمر أقصر. والمتانة في ملابس العمل ليست خاصية واحدة: فهي تشمل مقاومة التآكل عند الأساور ومقعد البنطال والركب، ومتانة الحياكة وكثافة الغرز، وثبات اللون أمام الغسيل الصناعي المتكرر وأشعة الشمس القوية، والثبات الأبعادي حتى يبقى المقاس صحيحاً بعد الغسيل، ومستلزمات الإغلاق تعمّر أطول من القماش نفسه. وتفشل القطع أيضاً لأسباب غير فنية: سوء المقاس، وملمس غير مريح، وقَصّة غير محبَّبة تدفع الموظف إلى التوقف عن ارتدائها قبل أن يبلى النسيج. اطلب من المورّد أدلة اختبارات غسيل، والأفضل أن تشغّل تجربة ارتداء ميدانية في بيئتك قبل الاعتماد الكامل."
+    },
+    {
+      "heading": "The Saudi operating context",
+      "headingAr": "السياق التشغيلي السعودي",
+      "body": "Saudi conditions reshape the sustainability calculation. Summer heat across much of the Kingdom means fabrics must manage heat load, which favours lighter weights, more open constructions, and moisture management — and lighter fabrics are inherently less abrasion-resistant, so weight reduction carries a durability cost that has to be balanced deliberately. Modest cuts use more cloth per garment and often add a second layer, so breathability and drape matter more than the fibre label. Strong sunlight is hard on colour, and dark corporate shades fade visibly, which drives replacement even when the cloth is still sound. Water is a scarce resource here, so laundering frequency, wash temperature, and whether garments need ironing carry real weight; an easy-care finish that removes ironing from the routine can matter more than feedstock. Vision 2030 and rising ESG reporting expectations have turned sustainability into a documented procurement requirement rather than a marketing preference, and manufacturing inside the Kingdom, as UNEOM has done since 2013, shortens the supply chain and replenishment cycles, reducing freight and the over-ordering that ends as unused inventory.",
+      "bodyAr": "تعيد الظروف السعودية تشكيل حسبة الاستدامة. فحرارة الصيف في معظم مناطق المملكة تفرض أقمشة تدير الحمل الحراري، وهو ما يرجّح الأوزان الأخف والتراكيب الأكثر انفتاحاً وإدارة الرطوبة، غير أن خفة الوزن تعني بطبيعتها مقاومة أقل للتآكل، فلا بد من موازنة هذه المقايضة بوعي. والقَصّات المحتشمة تستهلك قماشاً أكثر وتضيف طبقة ثانية في أحيان كثيرة، ما يجعل التنفس والانسدال أهم من مسمّى الليف. والشمس القوية قاسية على اللون، والدرجات المؤسسية الداكنة تبهت بصرياً فتستدعي الاستبدال ولو كان القماش سليماً. والمياه مورد شحيح هنا، فتكرار الغسيل ودرجة حرارته والحاجة إلى الكي تحمل وزناً حقيقياً، وقد تفوق أهمية تجهيزات العناية السهلة أهمية المادة الخام نفسها. ومع رؤية 2030 وتصاعد متطلبات الإفصاح البيئي والاجتماعي والحوكمي، صارت الاستدامة شرطاً موثقاً في المشتريات لا تفضيلاً تسويقياً. والتصنيع داخل المملكة، كما تفعل UNEOM منذ 2013، يقصّر سلسلة التوريد ودورات التزويد، فيقلّل الشحن والتكديس الذي ينتهي مخزوناً غير مستخدم."
+    },
+    {
+      "heading": "Verifying supplier claims",
+      "headingAr": "التحقق من ادعاءات المورّد",
+      "body": "Claims are cheap; evidence is not. Start by asking what exactly is certified, by whom, and for which products. A certificate should be issued in the name of the company you are buying from, be current, and name the materials or articles in scope — a mill's certificate does not automatically cover the garment maker downstream. For recycled content, recognised chain-of-custody schemes such as the Global Recycled Standard and the Recycled Claim Standard operate through transaction certificates that follow each shipment; ask for the certificate covering your order, not a logo on a brochure. Understand the limits of each mark. OEKO-TEX Standard 100, which UNEOM holds, certifies that tested components have been screened for harmful substances: a chemical safety assurance, not a recycled-content or carbon claim. A quality management standard such as ISO 9001:2015, which UNEOM also operates under, governs process consistency, not environmental performance. Treat unverifiable percentages and unsourced statistics as warning signs, and ask instead for durability and colourfastness test reports — service life is the sustainability argument you can actually audit.",
+      "bodyAr": "الادعاء رخيص، والدليل ليس كذلك. ابدأ بسؤال: ما الذي جرى اعتماده تحديداً، ومن أي جهة مانحة، ولأي منتجات. يجب أن تكون الشهادة صادرة باسم الشركة التي تشتري منها، وسارية المفعول، ومحدِّدة للمواد أو الأصناف المشمولة بنطاقها؛ فشهادة المصنع النسيجي لا تغطي تلقائياً مصنّع الملابس في المرحلة التالية. وبالنسبة للمحتوى المعاد تدويره، تعمل أنظمة سلسلة الحيازة المعروفة مثل Global Recycled Standard وRecycled Claim Standard عبر شهادات معاملات ترافق كل شحنة، فاطلب الشهادة الخاصة بطلبك أنت لا شعاراً مطبوعاً على مطوية. وافهم حدود كل علامة: فشهادة OEKO-TEX Standard 100، وهي شهادة تحملها UNEOM، تؤكد فحص المكونات المختبَرة من المواد الضارة، أي أنها ضمان سلامة كيميائية لا ادعاء محتوى معاد تدويره أو أثر كربوني. وشهادة إدارة الجودة ISO 9001:2015 التي تعمل UNEOM بموجبها تحكم اتساق العمليات لا الأداء البيئي. عامِل النسب غير القابلة للتحقق والإحصاءات بلا مصدر بوصفها إشارات تحذير، واطلب بدلاً منها تقارير اختبار المتانة وثبات اللون. فالعمر التشغيلي هو حجة الاستدامة التي يمكنك تدقيقها فعلاً."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is recycled polyester as durable as virgin polyester for workwear?",
+      "qAr": "هل البوليستر المعاد تدويره بمتانة البوليستر البكر في ملابس العمل؟",
+      "a": "Broadly yes, because it is the same polymer, so strength and abrasion behaviour are comparable. Differences usually show up as consistency rather than performance: shade matching between production lots and fibre uniformity in mechanically recycled staple. Judge any specific fabric on its own test evidence and a wear trial in your sites, not on the feedstock label alone.",
+      "aAr": "نعم في العموم، لأنه البوليمر نفسه، فالمتانة وسلوك التآكل متقاربان. وتظهر الفروق عادةً في الاتساق لا في الأداء: مطابقة الدرجة اللونية بين تشغيلات الإنتاج، وانتظام الشعيرة في الإعادة الميكانيكية. احكم على كل قماش بعينه من خلال تقارير اختباره وتجربة ارتداء في مواقعك، لا من مسمّى المادة الخام وحده."
+    },
+    {
+      "q": "Does OEKO-TEX Standard 100 mean a fabric is sustainable?",
+      "qAr": "هل تعني شهادة OEKO-TEX Standard 100 أن القماش مستدام؟",
+      "a": "No. It confirms that tested components have been screened for harmful substances, which is a chemical safety assurance for the wearer. It does not certify recycled content, carbon footprint, water use, or labour conditions. It belongs in a responsible specification, but no supplier should present it as an environmental or recycled-content claim on its own.",
+      "aAr": "لا. فهي تؤكد فحص المكونات المختبَرة من المواد الضارة، أي أنها ضمان سلامة كيميائية للمرتدي. ولا تشهد بمحتوى معاد تدويره أو أثر كربوني أو استهلاك مياه أو ظروف عمل. مكانها ضمن مواصفة مسؤولة، لكن لا يصح أن يقدّمها مورّد بوصفها ادعاءً بيئياً قائماً بذاته."
+    },
+    {
+      "q": "Recycled fabric or longer-lasting fabric — which is the better choice?",
+      "qAr": "أيهما أفضل: قماش معاد تدويره أم قماش أطول عمراً؟",
+      "a": "Usually the longer-lasting one. Every replacement garment carries the full impact of fibre production, dyeing, making, and shipping, so extending service life cuts total consumption more reliably than switching feedstock. The ideal is both: recycled or responsibly sourced content in a construction that survives repeated industrial laundering and stays comfortable enough that staff keep wearing it.",
+      "aAr": "الأطول عمراً في الغالب. فكل قطعة بديلة تحمل الأثر الكامل لإنتاج الليف والصباغة والتصنيع والشحن، ولذلك يخفض إطالة العمر التشغيلي الاستهلاك الكلي بصورة أوثق من مجرد تغيير المادة الخام. والمثالي أن يجتمع الأمران: محتوى معاد تدويره أو مسؤول المصدر، في بنية تصمد أمام الغسيل الصناعي وتبقى مريحة بما يجعل الموظفين يواصلون ارتداءها."
+    },
+    {
+      "q": "Are natural fibres automatically the sustainable choice in Saudi heat?",
+      "qAr": "هل الألياف الطبيعية هي الخيار المستدام تلقائياً في حرارة السعودية؟",
+      "a": "Not automatically. Cotton is comfortable and absorbent but water-intensive to grow, and it wrinkles, shrinks, and abrades faster than polyester, which shortens service life. Lyocell adds a closed-loop production advantage yet shares those wear limitations. Most Saudi uniform programmes settle on blends, trading end-of-life recyclability for the comfort and durability the environment demands.",
+      "aAr": "ليس تلقائياً. فالقطن مريح وماص للرطوبة لكن زراعته كثيفة الاستهلاك للمياه، وهو أكثر تجعّداً وانكماشاً وأسرع تآكلاً من البوليستر، ما يقصّر العمر التشغيلي. ويضيف الليوسيل ميزة الإنتاج مغلق الدورة لكنه يشارك القطن حدوده في التحمّل والتآكل. ولهذا تستقر معظم البرامج السعودية على خلطات تقايض إعادة التدوير النهائية بالراحة والمتانة."
+    },
+    {
+      "q": "What should I ask a supplier before accepting a sustainability claim?",
+      "qAr": "ماذا أسأل المورّد قبل قبول أي ادعاء استدامة؟",
+      "a": "Ask which certificate covers which product, whether it is issued in the supplier's own name and still valid, and for chain-of-custody transaction documents tied to your specific order. Then ask for colourfastness and abrasion test reports, and request sample garments for a wear trial in your own sites before approving a full rollout.",
+      "aAr": "اسأل عن الشهادة التي تغطي كل منتج تحديداً، وهل صدرت باسم المورّد نفسه ولا تزال سارية، واطلب مستندات سلسلة حيازة مرتبطة بطلبك أنت. ثم اطلب تقارير اختبار ثبات اللون ومقاومة التآكل، واطلب عينات جاهزة لتجربة ارتداء في مواقعك قبل اعتماد التوريد الكامل."
+    }
+  ],
+  "author": {
+    "name": "Ahmad Al-Rashidi",
+    "nameAr": "أحمد الرشيدي",
+    "title": "Procurement Solutions Director",
+    "titleAr": "مدير حلول المشتريات"
+  }
+};
