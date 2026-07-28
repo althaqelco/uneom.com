@@ -170,6 +170,30 @@ import { hospitalUniformBudgetPlanning } from './posts/hospital-uniform-budget-p
 import { switchingUniformSuppliersMidContract } from './posts/switching-uniform-suppliers-mid-contract';
 import { groundHandlingCrewPpeSaudiAirports } from './posts/ground-handling-crew-ppe-saudi-airports';
 
+import { housekeepingUniformsThatLast } from './posts/housekeeping-uniforms-that-last';
+import { retailStaffUniformsSaudiMalls } from './posts/retail-staff-uniforms-saudi-malls';
+import { valetDoormanUniformsSaudiSummer } from './posts/valet-doorman-uniforms-saudi-summer';
+import { cabinCrewUniformStandardsSaudiAviation } from './posts/cabin-crew-uniform-standards-saudi-aviation';
+import { highVisibilityUniformsTrafficMarshals } from './posts/high-visibility-uniforms-traffic-marshals';
+import { physiotherapyRehabStaffUniformsSaudi } from './posts/physiotherapy-rehab-staff-uniforms-saudi';
+import { supermarketHypermarketStaffUniforms } from './posts/supermarket-hypermarket-staff-uniforms';
+import { showroomAutomotiveRetailUniforms } from './posts/showroom-automotive-retail-uniforms';
+import { fabricTestReportsWhatToAskFor } from './posts/fabric-test-reports-what-to-ask-for';
+import { eventCrowdSecurityUniformsSaudi } from './posts/event-crowd-security-uniforms-saudi';
+import { chemicalSplashProtectiveClothingTypes } from './posts/chemical-splash-protective-clothing-types';
+import { schoolPeKitSaudiHeat } from './posts/school-pe-kit-saudi-heat';
+import { coverallSizingLargeWorkforce } from './posts/coverall-sizing-large-workforce';
+import { hijabInAviationUniformProgrammes } from './posts/hijab-in-aviation-uniform-programmes';
+import { resortBeachClubStaffUniforms } from './posts/resort-beach-club-staff-uniforms';
+import { antiStaticWorkwearWhenYouNeedIt } from './posts/anti-static-workwear-when-you-need-it';
+import { moistureWickingFabricsGulfHeat } from './posts/moisture-wicking-fabrics-gulf-heat';
+import { cabinCrewGroomingAppearancePolicy } from './posts/cabin-crew-grooming-appearance-policy';
+import { airlineUniformTendersHowTheyAreWon } from './posts/airline-uniform-tenders-how-they-are-won';
+import { medicalScrubsSizingSaudiHospitals } from './posts/medical-scrubs-sizing-saudi-hospitals';
+import { airportRetailLoungeStaffUniforms } from './posts/airport-retail-lounge-staff-uniforms';
+import { homeVisitNursingUniformsSaudi } from './posts/home-visit-nursing-uniforms-saudi';
+import { ramadanIftarStaffUniformsPlanning } from './posts/ramadan-iftar-staff-uniforms-planning';
+
 const ALL_BLOG_POSTS: BlogPost[] = [
   medicalScrubsEvolutionSaudi,
   healthcareUniformsInfectionControl,
@@ -290,6 +314,29 @@ const ALL_BLOG_POSTS: BlogPost[] = [
   hospitalUniformBudgetPlanning,
   switchingUniformSuppliersMidContract,
   groundHandlingCrewPpeSaudiAirports,
+  housekeepingUniformsThatLast,
+  retailStaffUniformsSaudiMalls,
+  valetDoormanUniformsSaudiSummer,
+  cabinCrewUniformStandardsSaudiAviation,
+  highVisibilityUniformsTrafficMarshals,
+  physiotherapyRehabStaffUniformsSaudi,
+  supermarketHypermarketStaffUniforms,
+  showroomAutomotiveRetailUniforms,
+  fabricTestReportsWhatToAskFor,
+  eventCrowdSecurityUniformsSaudi,
+  chemicalSplashProtectiveClothingTypes,
+  schoolPeKitSaudiHeat,
+  coverallSizingLargeWorkforce,
+  hijabInAviationUniformProgrammes,
+  resortBeachClubStaffUniforms,
+  antiStaticWorkwearWhenYouNeedIt,
+  moistureWickingFabricsGulfHeat,
+  cabinCrewGroomingAppearancePolicy,
+  airlineUniformTendersHowTheyAreWon,
+  medicalScrubsSizingSaudiHospitals,
+  airportRetailLoungeStaffUniforms,
+  homeVisitNursingUniformsSaudi,
+  ramadanIftarStaffUniformsPlanning,
 ];
 
 /**
