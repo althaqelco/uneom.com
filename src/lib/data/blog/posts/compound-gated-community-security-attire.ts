@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-09 (Wed).
+ * Scheduled article — publishes 2026-09-07 (Wed).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: لا تخترع لوائح للأمن الخاص أو متطلبات ترخيص محددة.
  */
@@ -12,7 +12,7 @@ export const compoundGatedCommunitySecurityAttire: BlogPost = {
   "excerpt": "How to specify a compound security uniform in Saudi Arabia: heat at the gate, night-shift visibility, and clear distinctions between gate officers, patrols and supervisors.",
   "excerptAr": "كيف تُحدَّد مواصفات زي أمن المجمّعات السكنية في السعودية: حرارة البوابة، ووضوح المناوبات الليلية، والتمييز البصري بين حارس البوابة وأفراد الدوريات والمشرفين.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-09-09",
+  "publishedAt": "2026-09-07",
   "hero": "blog/compound-gated-community-security-attire",
   "silo": "security",
   "readingMinutes": 6,

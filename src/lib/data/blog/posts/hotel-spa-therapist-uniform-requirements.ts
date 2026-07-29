@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-06 (Sun).
+ * Scheduled article — publishes 2026-12-02 (Sun).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Guardrail: لا تدّعِ أي فائدة صحية أو علاجية. لا تُصدر أحكاماً شرعية؛ صِف اعتبارات الاحتشام والفصل بين
  */
@@ -12,7 +12,7 @@ export const hotelSpaTherapistUniformRequirements: BlogPost = {
   "excerpt": "Therapist uniforms are working garments dressed as serene ones — worn through full arm range, in a warm humid room, in daily contact with oil. This guide sets out what to specify: movement allowance built into the pattern, realistic expectations about oil staining, a laundering-led rotation, quiet fabric and hardware, and coverage that holds under motion.",
   "excerptAr": "زي المعالج ثوب عمل في هيئة ثوب هادئ: يُرتدى بحركة كاملة للذراعين، في غرفة دافئة رطبة، وعلى احتكاك يومي بالزيوت. هنا ما يجب أن تكتبه في المواصفة فعلاً: حرية الحركة في القَص، توقعات واقعية لبقع الزيت، دورة غيار محسوبة على الغسيل لا على عدد الموظفين، هدوء القماش والإكسسوارات، وتغطية ثابتة أثناء الحركة.",
   "category": "hospitality",
-  "publishedAt": "2026-12-06",
+  "publishedAt": "2026-12-02",
   "hero": "blog/hotel-spa-therapist-uniform-requirements",
   "silo": "hospitality",
   "readingMinutes": 7,

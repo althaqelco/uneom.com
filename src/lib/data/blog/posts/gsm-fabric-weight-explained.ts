@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-31 (Mon).
+ * Scheduled article — publishes 2026-08-27 (Mon).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: يمكن شرح المفهوم، لكن لا تخترع نطاقات GSM محددة كأنها معايير رسمية — صُغها كأمثل
  */
@@ -12,7 +12,7 @@ export const gsmFabricWeightExplained: BlogPost = {
   "excerpt": "A practical guide to GSM for uniform buyers: what fabric weight really tells you about durability, opacity, breathability and drape, and why heavier is not automatically better.",
   "excerptAr": "دليل عملي لمشتري الأزياء الموحدة: ماذا يخبرك وزن القماش فعلاً عن المتانة والتعتيم والتهوية والتدلّي، ولماذا لا يكون الأثقل أفضل بالضرورة في المناخ السعودي.",
   "category": "sustainability-trends",
-  "publishedAt": "2026-08-31",
+  "publishedAt": "2026-08-27",
   "hero": "blog/gsm-fabric-weight-explained",
   "silo": "manufacturing",
   "readingMinutes": 6,

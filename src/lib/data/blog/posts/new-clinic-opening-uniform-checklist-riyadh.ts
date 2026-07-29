@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-03 (Thu).
+ * Scheduled article — publishes 2026-12-01 (Thu).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Verifier returned 1 correction(s); all applied before commit.
  * Guardrail: لا تدّعِ أي أثر على العدوى أو نتائج المرضى. لا تخترع متطلبات من هيئة أو وزارة (لا أرقام لو
@@ -13,7 +13,7 @@ export const newClinicOpeningUniformChecklistRiyadh: BlogPost = {
   "excerpt": "A sequenced uniform plan for a clinic that has a fixed opening date but no workforce yet: role mapping, a colour map that works in a corridor, sizing without wear data, and the first-order quantities that quietly become dead stock. It also marks what to leave out of the first order on purpose.",
   "excerptAr": "خطة متسلسلة لتجهيز أزياء عيادة جديدة في الرياض حين يكون لديك تاريخ افتتاح ثابت ولا فريق بعد: توزيع الأدوار، خريطة ألوان تصمد في الممر، تحديد المقاسات بلا سجل استهلاك، وكميات الطلب الأول التي تتحول بهدوء إلى مخزون ميّت. وتحدد أيضاً ما الذي يُترك خارج الطلب الأول عن قصد.",
   "category": "healthcare",
-  "publishedAt": "2026-12-03",
+  "publishedAt": "2026-12-01",
   "hero": "blog/new-clinic-opening-uniform-checklist-riyadh",
   "silo": "healthcare",
   "readingMinutes": 9,

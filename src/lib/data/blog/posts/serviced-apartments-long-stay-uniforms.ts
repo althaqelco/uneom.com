@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-08 (Sun).
+ * Scheduled article — publishes 2026-11-04 (Sun).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: لا تخترع إحصاءات إشغال أو مدد إقامة.
  */
@@ -12,7 +12,7 @@ export const servicedApartmentsLongStayUniforms: BlogPost = {
   "excerpt": "How serviced apartment and long-stay properties dress lean, multi-tasking teams: role clarity through layers, residential formality at reception, and durable garments for extended stay housekeeping.",
   "excerptAr": "كيف تُلبس منشآت الشقق الفندقية والإقامة الطويلة فرقها الصغيرة متعددة المهام: تمييز الأدوار بالطبقات، ورسمية سكنية في الاستقبال، وأقمشة متينة لتدبير الإقامة الممتدة.",
   "category": "hospitality",
-  "publishedAt": "2026-11-08",
+  "publishedAt": "2026-11-04",
   "hero": "blog/serviced-apartments-long-stay-uniforms",
   "silo": "hospitality",
   "readingMinutes": 7,

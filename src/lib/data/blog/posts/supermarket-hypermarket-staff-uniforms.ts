@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-29 (Tue).
+ * Scheduled article — publishes 2026-12-27 (Tue).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 8 correction(s); all applied before commit.
  * Guardrail: لا تدّعِ امتثالاً لاشتراطات سلامة غذاء بعينها ولا تذكر أرقام لوائح الهيئة العامة للغذاء والدواء
@@ -13,7 +13,7 @@ export const supermarketHypermarketStaffUniforms: BlogPost = {
   "excerpt": "A practical guide to specifying supermarket and hypermarket uniforms in Saudi Arabia: role differentiation customers can read instantly, the chilled and frozen problem, what changes inside food preparation areas, and how to run sizing and stock across a large, constantly changing workforce. Written for buyers and operations managers, with the regulatory limits stated openly rather than glossed over.",
   "excerptAr": "دليل عملي لتحديد مواصفات أزياء السوبرماركت والهايبر ماركت في السعودية: تمييز الأدوار بحيث يقرأها العميل فوراً، ومعالجة أقسام التبريد والتجميد، وما الذي يتغيّر داخل مناطق تحضير الأغذية، وكيف تُدار المقاسات والمخزون على طاقم كبير متبدّل. مكتوب لمسؤولي المشتريات والتشغيل، وبحدود تنظيمية معلنة لا مخفية.",
   "category": "corporate-education",
-  "publishedAt": "2026-12-29",
+  "publishedAt": "2026-12-27",
   "hero": "blog/supermarket-hypermarket-staff-uniforms",
   "silo": "retail",
   "readingMinutes": 8,

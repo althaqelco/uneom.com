@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-28 (Mon).
+ * Scheduled article — publishes 2026-12-24 (Mon).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 4 correction(s); all applied before commit.
  * Guardrail: لا تدّعِ أي أثر على العدوى أو على نتائج المرضى أو على التعافي. لا تخترع متطلبات من وزارة الصحة 
@@ -13,7 +13,7 @@ export const physiotherapyRehabStaffUniformsSaudi: BlogPost = {
   "excerpt": "Physiotherapy and rehab staff spend much of the day below waist height, and a standard scrub set is not drafted for it. This guide covers the stretch, construction, pocket and modesty details worth specifying — and the claims to refuse from any supplier, including us.",
   "excerptAr": "أخصائيو العلاج الطبيعي وإعادة التأهيل يقضون جزءاً كبيراً من اليوم تحت مستوى الخصر، والزي الطبي القياسي غير مفصّل لهذا. هذا الدليل يحدد ما تطلبه في المرونة والبناء والجيوب والاحتشام، وما ترفضه من ادعاءات أي مورّد — بما فينا نحن.",
   "category": "healthcare",
-  "publishedAt": "2026-12-28",
+  "publishedAt": "2026-12-24",
   "hero": "blog/physiotherapy-rehab-staff-uniforms-saudi",
   "silo": "healthcare",
   "readingMinutes": 8,

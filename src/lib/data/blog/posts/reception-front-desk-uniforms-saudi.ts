@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-19 (Wed).
+ * Scheduled article — publishes 2026-08-17 (Wed).
  * Written + adversarially verified (uneom-schedule-batch-2 workflow).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تخترع دراسات عن الانطباع الأول أو أرقاماً عن سلوك الزوار.
@@ -13,7 +13,7 @@ export const receptionFrontDeskUniformsSaudi: BlogPost = {
   "excerpt": "How to specify reception and front-desk uniforms for Saudi offices: formality against air conditioning, modest options, seated-shift construction, visual distinction from visitors, and colour that survives reorders.",
   "excerptAr": "كيف تُحدَّد مواصفات أزياء الاستقبال في المكاتب السعودية: الرسمية مقابل التكييف، الخيارات المحتشمة، القَصّة المناسبة للجلوس الطويل، التمييز البصري عن الزوار، وثبات اللون عبر الطلبات المتكررة.",
   "category": "corporate-education",
-  "publishedAt": "2026-08-19",
+  "publishedAt": "2026-08-17",
   "hero": "blog/reception-front-desk-uniforms-saudi",
   "silo": "corporate",
   "readingMinutes": 5,

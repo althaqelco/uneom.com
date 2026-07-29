@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-11 (Sun).
+ * Scheduled article — publishes 2026-10-07 (Sun).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: احذر التعميم الخاطئ: القطن يزداد متانةً وهو مبلل. لا تخترع نسب خلط كمعايير رسمية
@@ -13,7 +13,7 @@ export const polyCottonVsPureCottonSaudi: BlogPost = {
   "excerpt": "An honest comparison of pure cotton and poly-cotton uniform fabrics: how each behaves in Saudi heat and humidity, and which roles each one genuinely suits.",
   "excerptAr": "مقارنة صادقة بين القطن الخالص وخلطات البوليستر والقطن في أزياء العمل: كيف يتصرف كل نسيج في حرارة المملكة ورطوبتها، وأي الأدوار يناسبها فعلاً.",
   "category": "sustainability-trends",
-  "publishedAt": "2026-10-11",
+  "publishedAt": "2026-10-07",
   "hero": "blog/poly-cotton-vs-pure-cotton-saudi",
   "silo": "manufacturing",
   "readingMinutes": 6,

@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-25 (Wed).
+ * Scheduled article — publishes 2026-11-23 (Wed).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Guardrail: لا تخترع أسماء فنادق أو سلاسل كعملاء ليونيوم. لا تخترع معايير تصنيف نجوم تفرض زياً بعينه.
  */
@@ -12,7 +12,7 @@ export const conciergeUniformsFirstImpression: BlogPost = {
   "excerpt": "The concierge uniform is the only one in a hotel a guest examines at conversational distance, for minutes at a time. This guide covers fit tolerance, the door-versus-desk climate split, fabric that survives a Riyadh summer under a portico, rank insignia, and how to stay formal without being forbidding.",
   "excerptAr": "زيّ الكونسيرج هو الزيّ الوحيد في الفندق الذي يقف أمامه الضيف على مسافة حديث ويتأمله دقائق. يغطي هذا الدليل هوامش الضبط والمقاس، والفارق المناخي بين الباب والمكتب، والأقمشة التي تصمد تحت مظلة المدخل في صيف الرياض، وشارات الرتبة، وكيف تبقى رسمياً دون أن تبدو متحفّظاً.",
   "category": "hospitality",
-  "publishedAt": "2026-11-25",
+  "publishedAt": "2026-11-23",
   "hero": "blog/concierge-uniforms-first-impression",
   "silo": "hospitality",
   "readingMinutes": 8,

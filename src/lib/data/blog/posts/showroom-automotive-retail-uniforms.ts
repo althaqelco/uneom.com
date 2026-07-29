@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-31 (Thu).
+ * Scheduled article — publishes 2026-12-29 (Thu).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 2 correction(s); all applied before commit.
  * Guardrail: لا تذكر أسماء علامات سيارات كعملاء ليونيوم ولا تدّعِ التزاماً بدليل هوية أي صانع سيارات. لا تخت
@@ -13,7 +13,7 @@ export const showroomAutomotiveRetailUniforms: BlogPost = {
   "excerpt": "A dealership shows the customer two worlds in a single visit: a tailored showroom floor and a workshop that meets oil and grease. This guide covers how to bridge them visually, how to dress the service advisor who crosses between them, what soil-release finishes and dark colours actually do, and how to work inside a manufacturer's brand guide.",
   "excerptAr": "تعرض الوكالة على عميلها عالمين في زيارة واحدة: صالة عرض بزيّ رسمي مُفصّل، وورشة تلامس ملابسها الزيوت والشحوم. يشرح هذا الدليل كيف تبني الجسر البصري بينهما، وكيف تُلبس مستشار الخدمة الذي يعبر بينهما، وما الذي تفعله فعلاً معالجات تحرير الاتساخ الدهني والألوان الداكنة، وكيف تعمل داخل دليل هوية الصانع.",
   "category": "corporate-education",
-  "publishedAt": "2026-12-31",
+  "publishedAt": "2026-12-29",
   "hero": "blog/showroom-automotive-retail-uniforms",
   "silo": "retail",
   "readingMinutes": 8,

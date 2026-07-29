@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-15 (Thu).
+ * Scheduled article — publishes 2026-10-13 (Thu).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تخترع متطلبات تنظيمية بيطرية أو اشتراطات ترخيص.
@@ -13,7 +13,7 @@ export const veterinaryClinicUniformsSaudi: BlogPost = {
   "excerpt": "Animal hair, scratches and constant laundering make veterinary uniforms their own category. A practical specification guide for Saudi clinics briefing a veterinary clinic uniform supplier.",
   "excerptAr": "الزي البيطري فئة قائمة بذاتها: شعر الحيوانات، والخدوش، والغسيل المتكرر. دليل عملي للمواصفات يساعد العيادات السعودية على تحديد ما تطلبه من مورّد أزياء العيادات البيطرية.",
   "category": "healthcare",
-  "publishedAt": "2026-10-15",
+  "publishedAt": "2026-10-13",
   "hero": "blog/veterinary-clinic-uniforms-saudi",
   "silo": "healthcare",
   "readingMinutes": 7,

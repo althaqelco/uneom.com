@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-28 (Wed).
+ * Scheduled article — publishes 2026-10-26 (Wed).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: موضوع ثقافي: صف الممارسة والتصميم باحترام. لا تخترع لوائح أو نسب توظيف أو متطلبا
  */
@@ -12,7 +12,7 @@ export const womenSecurityOfficerUniformsSaudi: BlogPost = {
   "excerpt": "How to specify a female security guard uniform in Saudi Arabia: women's pattern blocks, modest coverage that survives movement, secure hijab integration, duty-belt fit and visual authority.",
   "excerptAr": "دليل عملي لتحديد مواصفات زي الحارسة الأمنية في السعودية: قوالب نسائية مستقلة، تغطية محتشمة تثبت أثناء الحركة، حجاب آمن منسّق، ملاءمة حزام الخدمة، وسلطة بصرية متكافئة.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-10-28",
+  "publishedAt": "2026-10-26",
   "hero": "blog/women-security-officer-uniforms-saudi",
   "silo": "security",
   "readingMinutes": 7,

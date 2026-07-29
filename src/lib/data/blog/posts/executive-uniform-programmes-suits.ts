@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-21 (Mon).
+ * Scheduled article — publishes 2026-09-17 (Mon).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: لا تخترع أسعار بدلات أو معايير جودة رقمية (مثل أرقام Super للصوف) كأنها حقائق مؤ
  */
@@ -12,7 +12,7 @@ export const executiveUniformProgrammesSuits: BlogPost = {
   "excerpt": "How to build an executive uniform programme in Saudi Arabia: cloth and tailoring decisions, thobe and suit together, and coordination with other tiers without flattening hierarchy.",
   "excerptAr": "كيف تبني برنامج زي تنفيذي في السعودية: قرارات القماش والتفصيل، والثوب والبدلة معاً، والتنسيق مع بقية المستويات دون طمس التدرّج الإداري.",
   "category": "corporate-education",
-  "publishedAt": "2026-09-21",
+  "publishedAt": "2026-09-17",
   "hero": "blog/executive-uniform-programmes-suits",
   "silo": "corporate",
   "readingMinutes": 6,

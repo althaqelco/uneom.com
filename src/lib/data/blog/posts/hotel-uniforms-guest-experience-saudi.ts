@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-20 (Thu).
+ * Scheduled article — publishes 2026-08-18 (Thu).
  * Written + adversarially verified (uneom-schedule-batch-2 workflow).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: مصيدة اختلاق كبرى: ممنوع تماماً أي رقم أو نسبة أو دراسة أو ارتباط إحصائي يربط الزي بالتقيي
@@ -13,7 +13,7 @@ export const hotelUniformsGuestExperienceSaudi: BlogPost = {
   "excerpt": "A mechanism-level look at how hotel uniforms shape guest perception in Saudi properties: recognition, perceived care, cross-department consistency, staff comfort, and why the effect cannot be isolated.",
   "excerptAr": "نظرة على الآليات التي يؤثر بها زي الفندق في إدراك النزيل داخل المنشآت السعودية: التعرّف، وإشارات العناية، والاتساق بين الأقسام، وراحة الموظف، ولماذا يتعذّر عزل الأثر.",
   "category": "hospitality",
-  "publishedAt": "2026-08-20",
+  "publishedAt": "2026-08-18",
   "hero": "blog/hotel-uniforms-guest-experience-saudi",
   "silo": "hospitality",
   "readingMinutes": 6,

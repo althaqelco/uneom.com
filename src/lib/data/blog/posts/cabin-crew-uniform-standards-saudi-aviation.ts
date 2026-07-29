@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-23 (Wed).
+ * Scheduled article — publishes 2026-12-21 (Wed).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 3 correction(s); all applied before commit.
  * Guardrail: خطر عالٍ — قطاع منظّم. لا تخترع أرقام لوائح (GACA/FAA/EASA/IATA) ولا عتبات اختبار ولا أسماء اخت
@@ -13,7 +13,7 @@ export const cabinCrewUniformStandardsSaudiAviation: BlogPost = {
   "excerpt": "Inside an airline, the cabin crew uniform standard is a controlled document with a custodian and a signing chain — cabin safety, operations, brand, procurement and HR — not a design brief. This article breaks down what that document contains, how material and mobility decisions are made upstream, and why a manufacturer's job is to execute a specification rather than write one.",
   "excerptAr": "داخل شركة الطيران، مواصفة زي المقصورة وثيقة محكومة لها أمين وسلسلة توقيع تضم سلامة المقصورة والعمليات والعلامة والمشتريات والموارد البشرية — لا موجزاً تصميمياً. نشرح هنا ماذا تحتوي هذه الوثيقة، وكيف تُتخذ قرارات الخامة والحركة أعلى السلسلة، ولماذا تكون مهمة المصنّع تنفيذ المواصفة لا كتابتها.",
   "category": "aviation",
-  "publishedAt": "2026-12-23",
+  "publishedAt": "2026-12-21",
   "hero": "blog/cabin-crew-uniform-standards-saudi-aviation",
   "silo": "aviation",
   "readingMinutes": 8,

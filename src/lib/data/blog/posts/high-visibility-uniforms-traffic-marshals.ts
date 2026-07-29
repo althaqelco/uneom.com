@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-27 (Sun).
+ * Scheduled article — publishes 2026-12-23 (Sun).
  * Written + adversarially verified (uneom-schedule final batch).
  * Guardrail: خطر عالٍ — معدات وقاية. لا تخترع فئات أو عتبات أو مساحات مواد من EN ISO 20471، ولا مسافات رؤية 
  */
@@ -12,7 +12,7 @@ export const highVisibilityUniformsTrafficMarshals: BlogPost = {
   "excerpt": "A hi-vis vest does not stop a vehicle; it buys the driver time to recognise a person, and that is a different thing to specify for. This guide covers who owns the class decision, why daylight brightness says nothing about night performance, how site background and heat change the choice, and how laundering quietly ends a garment's useful life.",
   "excerptAr": "السترة عالية الوضوح لا توقف مركبة؛ ما تفعله أنها تمنح السائق وقتاً ليتعرّف على وجود إنسان أمامه، وهذا شيء مختلف تماماً عند كتابة المواصفة. يشرح المقال من يملك قرار الفئة، ولماذا لا يدلّ سطوع النهار على أداء الليل، وكيف تغيّر خلفية الموقع وحرارة الصيف الاختيار، وكيف ينهي الغسيل عمر الشريط العاكس بصمت.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-12-27",
+  "publishedAt": "2026-12-23",
   "hero": "blog/high-visibility-uniforms-traffic-marshals",
   "silo": "security",
   "readingMinutes": 7,

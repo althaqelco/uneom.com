@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-11 (Mon).
+ * Scheduled article — publishes 2027-01-07 (Mon).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 11 correction(s); all applied before commit.
  * Guardrail: لا تذكر مشاريع سياحية عملاقة بالاسم ولا تدّعِ أي علاقة توريد بها. لا تخترع بيانات أشعة فوق بنفس
@@ -13,7 +13,7 @@ export const resortBeachClubStaffUniforms: BlogPost = {
   "excerpt": "Coastal resorts hit a uniform with salt, sun, sand, chlorine and humidity at the same time, and colour and stretch usually fail long before the garment itself does. This is a practical specification guide: fastness evidence to demand, fabrics that dry, sand-shedding weaves, hems set against real footwear, and a coverage range that holds one identity.",
   "excerptAr": "المنتجعات الساحلية تضرب الزي بالملح والشمس والرمل والكلور والرطوبة في وقت واحد، فيسقط اللون وتفقد الأجزاء المطاطية قدرتها على الارتداد قبل أن تتلف القطعة نفسها. هذا دليل مواصفة عملي: أدلة ثبات اللون التي تطلبها، وأقمشة تجفّ، ونسج لا يحتجز الرمل، وحواشٍ مضبوطة على الحذاء الفعلي، ومجموعة تغطية تحفظ هوية بصرية واحدة.",
   "category": "hospitality",
-  "publishedAt": "2027-01-11",
+  "publishedAt": "2027-01-07",
   "hero": "blog/resort-beach-club-staff-uniforms",
   "silo": "hospitality",
   "readingMinutes": 8,

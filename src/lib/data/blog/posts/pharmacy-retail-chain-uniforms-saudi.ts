@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-27 (Thu).
+ * Scheduled article — publishes 2026-08-25 (Thu).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: لا تذكر أسماء سلاسل صيدليات سعودية بعينها ولا تصف أزياءها. لا تخترع متطلبات تنظي
  */
@@ -12,7 +12,7 @@ export const pharmacyRetailChainUniformsSaudi: BlogPost = {
   "excerpt": "How Saudi pharmacy chains build a uniform programme that separates pharmacist from retail staff, survives frequent washing, and keeps one brand shade consistent across every branch.",
   "excerptAr": "كيف تبني سلاسل الصيدليات السعودية برنامج أزياء يميّز الصيدلي عن موظف البيع، ويتحمّل الغسيل المتكرر، ويحافظ على درجة لون العلامة نفسها في كل فرع.",
   "category": "healthcare",
-  "publishedAt": "2026-08-27",
+  "publishedAt": "2026-08-25",
   "hero": "blog/pharmacy-retail-chain-uniforms-saudi",
   "silo": "healthcare",
   "readingMinutes": 6,

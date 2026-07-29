@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-06 (Wed).
+ * Scheduled article — publishes 2027-01-04 (Wed).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 3 correction(s); all applied before commit.
  * Guardrail: لا تدّعِ أن أي قماش يمنع الإجهاد الحراري أو الإصابة. تعامل مع خيارات الاحتشام للفتيات بوصف عملي
@@ -13,7 +13,7 @@ export const schoolPeKitSaudiHeat: BlogPost = {
   "excerpt": "A PE kit is bought once and then worn hard: outdoor periods in heat, air-conditioned halls, fast-growing pupils, and a wash cycle the school does not control. This guide covers fabric that dries between lessons, covered options that keep girls fully in the activity, sizing for growth, and how to close the gap between what a school specifies and what pupils actually wear.",
   "excerptAr": "الزي الرياضي يُشترى مرة واحدة ثم يُستهلك بقسوة: حصص خارجية في الحر، وصالات مكيّفة، وأجسام تنمو، وغسيل تتحكم فيه البيوت لا المدرسة. هذا الدليل يغطي القماش الذي يجفّ قبل الحصة التالية، وخيارات التغطية التي تُبقي الطالبات داخل النشاط، وضبط المقاسات مع النمو، والفجوة بين ما تكتبه المدرسة وما يُلبس فعلاً.",
   "category": "corporate-education",
-  "publishedAt": "2027-01-06",
+  "publishedAt": "2027-01-04",
   "hero": "blog/school-pe-kit-saudi-heat",
   "silo": "education",
   "readingMinutes": 8,

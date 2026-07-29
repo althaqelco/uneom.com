@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-12 (Mon).
+ * Scheduled article — publishes 2026-10-08 (Mon).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تخترع لوائح وزارة التعليم أو متطلبات زي للمعلمين.
@@ -13,7 +13,7 @@ export const teacherSchoolStaffUniformsSaudi: BlogPost = {
   "excerpt": "How Saudi schools can build a teacher and staff uniform program that reads as professional, stays comfortable through the day, and fits a real school budget.",
   "excerptAr": "كيف تبني المدارس السعودية برنامج زي للمعلمين وطاقم المدرسة يعكس الوقار المهني، ويظل مريحاً طوال اليوم الدراسي، ويتناسب مع ميزانية مدرسية واقعية.",
   "category": "corporate-education",
-  "publishedAt": "2026-10-12",
+  "publishedAt": "2026-10-08",
   "hero": "blog/teacher-school-staff-uniforms-saudi",
   "silo": "education",
   "readingMinutes": 7,

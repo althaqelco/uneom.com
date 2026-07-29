@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-03 (Thu).
+ * Scheduled article — publishes 2026-09-01 (Thu).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: صف الممارسة والتفصيل باحترام. لا تُصدر أحكاماً شرعية ولا تدّعِ متطلبات دينية أو 
  */
@@ -12,7 +12,7 @@ export const corporateAbayaBrandedTailored: BlogPost = {
   "excerpt": "How to specify a corporate abaya for work in Saudi offices: office-appropriate fabric, a cut that moves, restrained branding, and sizing and lengths that hold across branches.",
   "excerptAr": "كيف تُحدَّد مواصفة العباءة المؤسسية في بيئات العمل السعودية: قماش يناسب المكتب، وقصّة تسمح بالحركة، وتفاصيل علامة هادئة، ومقاسات وأطوال ثابتة عبر الفروع.",
   "category": "corporate-education",
-  "publishedAt": "2026-09-03",
+  "publishedAt": "2026-09-01",
   "hero": "blog/corporate-abaya-branded-tailored",
   "silo": "corporate",
   "readingMinutes": 6,

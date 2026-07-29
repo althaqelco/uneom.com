@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-23 (Mon).
+ * Scheduled article — publishes 2026-11-19 (Mon).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Verifier returned 5 correction(s); all applied before commit.
  * Guardrail: لا تربط الزي بأي ادعاء صحي أو بمنع انتقال العدوى. لا تخترع عدد دورات غسيل كرقم قياسي، ولا 
@@ -13,7 +13,7 @@ export const cleaningJanitorialUniformProgrammesSaudi: BlogPost = {
   "excerpt": "Facility management contractors do not buy uniforms once; they issue, replace and reissue them continuously across sites. This guide covers what to specify for soil release and chemical staining, how to hold stock for a workforce that keeps changing, and how to keep garments redeployable when a contract moves.",
   "excerptAr": "شركات إدارة المرافق لا تشتري الزي مرة واحدة؛ بل تصرفه وتستبدله وتعيد صرفه بلا توقف عبر المواقع. يشرح هذا الدليل ما يجب تثبيته في المواصفة بشأن تحرير الأوساخ والتبقّع بالمواد الكيميائية، وكيف يُدار المخزون مع دوران العمالة، وكيف تبقى القطعة قابلة لإعادة التوزيع عند انتقال العقد.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-11-23",
+  "publishedAt": "2026-11-19",
   "hero": "blog/cleaning-janitorial-uniform-programmes-saudi",
   "silo": "security",
   "readingMinutes": 8,

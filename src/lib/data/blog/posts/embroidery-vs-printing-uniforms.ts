@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-05 (Thu).
+ * Scheduled article — publishes 2026-11-03 (Thu).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: لا تخترع أسعاراً أو كميات دنيا رقمية أو عدد دورات غسيل كأرقام قياسية.
  */
@@ -12,7 +12,7 @@ export const embroideryVsPrintingUniforms: BlogPost = {
   "excerpt": "A practical comparison of embroidery and printing for uniform logos: wash durability, comfort in heat, fabric compatibility, artwork limits, and how Saudi programmes combine both methods.",
   "excerptAr": "مقارنة عملية بين التطريز والطباعة لشعار الزي الموحد: المتانة تحت الغسيل الصناعي، والراحة في الحر، وملاءمة الأقمشة، وحدود التصميم، وكيف تجمع البرامج السعودية بين الطريقتين.",
   "category": "sustainability-trends",
-  "publishedAt": "2026-11-05",
+  "publishedAt": "2026-11-03",
   "hero": "blog/embroidery-vs-printing-uniforms",
   "silo": "corporate",
   "readingMinutes": 6,

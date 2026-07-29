@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-05 (Wed).
+ * Scheduled article — publishes 2026-08-03 (Wed).
  * Written + adversarially fabrication-checked (uneom-schedule-batch-1 workflow).
  * Verdict: clean — 0 fabrications, Arabic verified faithful.
  */
@@ -12,7 +12,7 @@ export const securityUniformAccessoriesLoadCarriage: BlogPost = {
   "excerpt": "How duty belts, load bearing vests and pocket design shape security uniform specification — weight distribution, reinforced attachment points and heat management across a twelve-hour Saudi shift.",
   "excerptAr": "كيف تُصاغ مواصفة زي الأمن حول ما يحمله الضابط فعلاً: حزام الخدمة، سترة حمل المعدات، توزيع الوزن، تعزيز نقاط التثبيت، وإدارة الحرارة في مناوبة اثنتي عشرة ساعة.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-08-05",
+  "publishedAt": "2026-08-03",
   "hero": "blog/security-uniform-accessories-load-carriage",
   "silo": "security",
   "readingMinutes": 6,

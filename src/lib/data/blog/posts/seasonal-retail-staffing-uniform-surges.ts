@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-26 (Wed).
+ * Scheduled article — publishes 2026-08-24 (Wed).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: لا تخترع أرقام مبيعات موسمية أو نسب نمو أو أعداد موظفين.
  */
@@ -12,7 +12,7 @@ export const seasonalRetailStaffingUniformSurges: BlogPost = {
   "excerpt": "How Saudi retailers plan seasonal retail staff uniforms for Ramadan, Eid, National Day and back-to-school peaks: forecasting volumes, coarse sizing, reusable layers, kitting and off-season storage.",
   "excerptAr": "كيف تخطط منشآت التجزئة السعودية لأزياء الموظفين الموسميين في رمضان والعيد واليوم الوطني والعودة للمدارس: تقدير الأعداد، والمقاسات، والقطع القابلة لإعادة الاستخدام، والكسوة، والتخزين بين المواسم.",
   "category": "corporate-education",
-  "publishedAt": "2026-08-26",
+  "publishedAt": "2026-08-24",
   "hero": "blog/seasonal-retail-staffing-uniform-surges",
   "silo": "retail",
   "readingMinutes": 6,

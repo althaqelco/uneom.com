@@ -4,7 +4,7 @@ import { JsonLd } from '@/lib/seo/JsonLd';
 import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
-  title: 'ترخيص الصور والمحتوى — UNEOM',
+  title: 'ترخيص الصور والمحتوى',
   description: 'شروط ترخيص التصوير التحريري لـ UNEOM وصور المنتجات وأصول العلامة التجارية.',
   alternates: {
     canonical: 'https://uneom.com/ar/license/',

@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-22 (Tue).
+ * Scheduled article — publishes 2026-09-20 (Tue).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: لا تخترع أعراف ألوان أكاديمية سعودية محددة أو متطلبات جامعية بعينها؛ صِفها كأعرا
  */
@@ -12,7 +12,7 @@ export const graduationGownsAcademicRegaliaSaudi: BlogPost = {
   "excerpt": "A procurement guide to graduation gowns for Saudi schools and universities: buying versus renting, fast bulk sizing, academic colours, fabric that survives hall heat, and storage between years.",
   "excerptAr": "دليل مشتريات لأثواب التخرّج في المدارس والجامعات السعودية: الشراء مقابل الاستئجار، ومقاسات الأعداد الكبيرة، والألوان الأكاديمية، والقماش تحت حرارة القاعة، والتخزين بين السنوات.",
   "category": "corporate-education",
-  "publishedAt": "2026-09-22",
+  "publishedAt": "2026-09-20",
   "hero": "blog/graduation-gowns-academic-regalia-saudi",
   "silo": "education",
   "readingMinutes": 6,

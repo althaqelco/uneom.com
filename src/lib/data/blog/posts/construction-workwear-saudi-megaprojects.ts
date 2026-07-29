@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-30 (Mon).
+ * Scheduled article — publishes 2026-11-26 (Mon).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Verifier returned 5 correction(s); all applied before commit.
  * Guardrail: لا تدّعِ أبداً أن يونيوم مورد لأي مشروع عملاق مسمى أو أنها عملت مع نيوم أو القدية أو البحر
@@ -13,7 +13,7 @@ export const constructionWorkwearSaudiMegaprojects: BlogPost = {
   "excerpt": "Megaproject sites break normal uniform buying: headcount ramps, dozens of subcontractors purchase separately, colour drifts between dye lots, and camp laundry destroys anything over-personalised. This guide covers writing a standard subcontractors can meet, sizing a multinational workforce, keeping employers identifiable under one project identity, and planning replacement stock you will not write off at demobilisation.",
   "excerptAr": "المشاريع العملاقة تكسر منطق شراء الأزياء المعتاد: عمالة متغيرة، وعشرات مقاولي الباطن يشترون كلٌّ على حدة، ودرجة لونية تنجرف بين دفعات الصباغة، ومغسلة سكن تُفسد كل ثوب أُفرط في وسمه باسم صاحبه. يشرح هذا الدليل كيف تُكتب مواصفة قابلة للالتزام، وكيف تُدار المقاسات لعمالة متعددة الجنسيات، وكيف يبقى كل مقاول مميّزاً تحت هوية بصرية واحدة، وكيف يُخطَّط مخزون الاستبدال دون شطبه في نهاية المشروع.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-11-30",
+  "publishedAt": "2026-11-26",
   "hero": "blog/construction-workwear-saudi-megaprojects",
   "silo": "manufacturing",
   "readingMinutes": 8,

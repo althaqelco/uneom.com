@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-30 (Sun).
+ * Scheduled article — publishes 2026-08-26 (Sun).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: لا تخترع عدد دورات غسيل أو درجات حرارة محددة كأرقام معيارية؛ صُغ نوعياً.
  */
@@ -12,7 +12,7 @@ export const scrubsThatSurviveHospitalLaundry: BlogPost = {
   "excerpt": "Industrial laundering destroys scrubs faster than wear does. Here is how fibre, construction, seams and finishes decide survival, and when to retire a garment.",
   "excerptAr": "الغسيل المؤسسي يستهلك السكرابس أسرع من الاستخدام نفسه. إليك كيف تحدد الخامة والبنية والخياطة والمعالجات التي تصمد، ومتى تُسحب القطعة من الخدمة.",
   "category": "healthcare",
-  "publishedAt": "2026-08-30",
+  "publishedAt": "2026-08-26",
   "hero": "blog/scrubs-that-survive-hospital-laundry",
   "silo": "healthcare",
   "readingMinutes": 6,

@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-13 (Sun).
+ * Scheduled article — publishes 2026-09-09 (Sun).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: لا تخترع نسب مخزون احتياطي أو مدد تسليم كأرقام قياسية؛ صُغ المبدأ.
  */
@@ -12,7 +12,7 @@ export const ppeReplacementBufferStockPolicy: BlogPost = {
   "excerpt": "How to size a PPE buffer stock by your real size curve, define retirement criteria, run a same-shift swap, and document every replacement for audit.",
   "excerptAr": "كيف تحسب المخزون الاحتياطي لمعدات الوقاية وفق منحنى المقاسات الفعلي، وتضع معايير الإحالة للتقاعد، وتُنشئ مسار استبدال داخل الوردية، وتوثّق كل عملية استبدال لأغراض التدقيق.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-09-13",
+  "publishedAt": "2026-09-09",
   "hero": "blog/ppe-replacement-buffer-stock-policy",
   "silo": "manufacturing",
   "readingMinutes": 6,

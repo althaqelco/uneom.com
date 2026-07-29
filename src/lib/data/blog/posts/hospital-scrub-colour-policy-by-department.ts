@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-11 (Tue).
+ * Scheduled article — publishes 2026-08-09 (Tue).
  * Written + adversarially fabrication-checked (uneom-schedule-batch-1 workflow).
  * Verdict: clean — 0 fabrications, Arabic verified faithful.
  */
@@ -12,7 +12,7 @@ export const hospitalScrubColourPolicyByDepartment: BlogPost = {
   "excerpt": "How to write a hospital scrub colour policy by department: choosing colours per role, what holds up in clinical light and hot-wash laundry, and rolling it out cleanly.",
   "excerptAr": "كيف تُصاغ سياسة ألوان السكرابس حسب القسم: اختيار اللون لكل دور، وما يصمد أمام الإضاءة السريرية والغسيل الساخن، وطريقة التطبيق دون فوضى.",
   "category": "healthcare",
-  "publishedAt": "2026-08-11",
+  "publishedAt": "2026-08-09",
   "hero": "blog/hospital-scrub-colour-policy-by-department",
   "silo": "healthcare",
   "readingMinutes": 6,

@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-21 (Thu).
+ * Scheduled article — publishes 2027-01-19 (Thu).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 6 correction(s); all applied before commit.
  * Guardrail: لا تخترع جداول قياسات بالسنتيمترات كأنها معيار يونيوم، ولا نِسَب توزيع مقاسات، ولا أرقام أطوال.
@@ -13,7 +13,7 @@ export const medicalScrubsSizingSaudiHospitals: BlogPost = {
   "excerpt": "Scrubs sizing fails hospitals in a predictable way: a range inherited from a supplier catalogue, no maternity or length options, and a single unisex block asked to fit everyone. This guide covers building a size curve from your own workforce, the roles that need a block of their own, and running a fit session that produces data you can write into a purchase specification.",
   "excerptAr": "مقاسات الأزياء الطبية تفشل في المستشفيات بطريقة متوقعة: نطاق موروث من كتالوج المورّد، وغياب خيارات فترة الحمل والأطوال، وباترون موحّد واحد يُطلب منه أن يناسب الجميع. يشرح هذا الدليل كيف تبني منحنى مقاسات من كادرك أنت، وأي الأدوار تحتاج باتروناً مستقلاً، وكيف تُدار جلسة تجربة تُخرج بيانات تصلح لأن تُكتب داخل مواصفة الشراء.",
   "category": "healthcare",
-  "publishedAt": "2027-01-21",
+  "publishedAt": "2027-01-19",
   "hero": "blog/medical-scrubs-sizing-saudi-hospitals",
   "silo": "healthcare",
   "readingMinutes": 8,

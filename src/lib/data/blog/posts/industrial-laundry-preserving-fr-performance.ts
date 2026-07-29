@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-01 (Tue).
+ * Scheduled article — publishes 2026-08-30 (Tue).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: مصيدة معايير: لا تخترع درجات حرارة أو تركيزات أو عدد دورات؛ أحِل التفاصيل إلى تع
  */
@@ -12,7 +12,7 @@ export const industrialLaundryPreservingFrPerformance: BlogPost = {
   "excerpt": "FR coveralls rarely fail visibly. Learn how laundering choices, softeners, bleach and residual grease erode flame resistance, and how Saudi programs protect it.",
   "excerptAr": "نادراً ما يفشل الزي المقاوم للهب بشكل ظاهر. تعرّف كيف تُضعف خيارات الغسيل والمنعّمات والمبيّضات والشحوم المتبقية الحماية، وكيف تحفظها البرامج السعودية.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-09-01",
+  "publishedAt": "2026-08-30",
   "hero": "blog/industrial-laundry-preserving-fr-performance",
   "silo": "manufacturing",
   "readingMinutes": 8,

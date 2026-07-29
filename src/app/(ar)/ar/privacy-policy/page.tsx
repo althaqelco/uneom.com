@@ -4,7 +4,7 @@ import { JsonLd } from '@/lib/seo/JsonLd';
 import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
-  title: 'سياسة الخصوصية — UNEOM',
+  title: 'سياسة الخصوصية',
   description: 'كيف تجمع UNEOM البيانات الشخصية وتستخدمها وتحميها — متوافقة مع نظام حماية البيانات الشخصية السعودي.',
   alternates: {
     canonical: 'https://uneom.com/ar/privacy-policy/',

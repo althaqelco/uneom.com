@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-24 (Thu).
+ * Scheduled article — publishes 2026-09-22 (Thu).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تخترع أرقام حضور أو أعداد فعاليات أو إحصاءات موسم الرياض.
@@ -13,7 +13,7 @@ export const banquetEventsStaffUniformsRiyadh: BlogPost = {
   "excerpt": "How to specify, size, and deliver banquet and event staff uniforms for Riyadh Season programmes — fast turnarounds, agency crews, formal service kits, and post-event recovery.",
   "excerptAr": "كيف تُحدِّد وتقيس وتسلِّم أزياء طاقم الولائم والفعاليات لبرامج موسم الرياض: مهل قصيرة، وطواقم من الوكالات، وأطقم خدمة رسمية، واسترجاع ما بعد الفعالية.",
   "category": "hospitality",
-  "publishedAt": "2026-09-24",
+  "publishedAt": "2026-09-22",
   "hero": "blog/banquet-events-staff-uniforms-riyadh",
   "silo": "hospitality",
   "readingMinutes": 6,

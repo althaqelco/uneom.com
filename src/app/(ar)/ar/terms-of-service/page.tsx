@@ -4,7 +4,7 @@ import { JsonLd } from '@/lib/seo/JsonLd';
 import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
-  title: 'شروط الخدمة — UNEOM',
+  title: 'شروط الخدمة',
   description: 'الشروط التي تحكم استخدام uneom.com والتعامل مع برامج الزي الموحّد من UNEOM.',
   alternates: {
     canonical: 'https://uneom.com/ar/terms-of-service/',

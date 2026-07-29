@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-17 (Thu).
+ * Scheduled article — publishes 2026-12-15 (Thu).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 3 correction(s); all applied before commit.
  * Guardrail: العنوان في الخطة كان يذكر «300 غسلة» — ممنوع منعاً باتاً استخدام أي عدد غسلات في العنوان أو الم
@@ -13,7 +13,7 @@ export const housekeepingUniformsThatLast: BlogPost = {
   "excerpt": "Housekeeping uniforms fail in a small number of predictable places: seams under load, colour, elastic and pockets. This guide explains what industrial laundering actually does to a garment, and how to write a specification your mill, your laundry and your supplier can all be held to.",
   "excerptAr": "زي التدبير الفندقي يتلف في مواضع قليلة يمكن التنبؤ بها: الدرزات الحاملة للحمل، واللون، والمطاط، والجيوب. يشرح هذا الدليل ما يفعله الغسيل الصناعي بالقطعة فعلياً، وكيف تكتب مواصفة يمكن محاسبة مصنع النسيج والمغسلة والمورّد عليها.",
   "category": "hospitality",
-  "publishedAt": "2026-12-17",
+  "publishedAt": "2026-12-15",
   "hero": "blog/housekeeping-uniforms-that-last",
   "silo": "hospitality",
   "readingMinutes": 8,

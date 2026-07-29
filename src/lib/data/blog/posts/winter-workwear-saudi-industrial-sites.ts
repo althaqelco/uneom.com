@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-01 (Tue).
+ * Scheduled article — publishes 2026-11-29 (Tue).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Verifier returned 5 correction(s); all applied before commit.
  * Guardrail: لا تخترع درجات حرارة لمدن سعودية بعينها ولا أرقام ارتفاع أو سجلات مناخية. لا تدّعِ تصنيفات
@@ -13,7 +13,7 @@ export const winterWorkwearSaudiIndustrialSites: BlogPost = {
   "excerpt": "Saudi winter is a real operating condition on northern and central sites, on night shifts, and anywhere wind reaches an open yard — and a single heavy coat is the most common way to get it wrong. This is a practical guide to layering, to moisture under insulation, and to the mobility cost of bulk around machinery.",
   "excerptAr": "الشتاء في المواقع الشمالية والوسطى، وفي الورديات الليلية، وفي كل ساحة مكشوفة تصلها الرياح، حالة تشغيلية حقيقية — والمعطف الثقيل الواحد هو أشهر طريقة للتعامل معها بشكل خاطئ. هذا دليل عملي لمنطق الطبقات، وإدارة الرطوبة تحت العزل، وكلفة الحجم على الحركة قرب المعدات.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-12-01",
+  "publishedAt": "2026-11-29",
   "hero": "blog/winter-workwear-saudi-industrial-sites",
   "silo": "manufacturing",
   "readingMinutes": 8,

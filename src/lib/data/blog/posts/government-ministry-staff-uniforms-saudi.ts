@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-08 (Tue).
+ * Scheduled article — publishes 2026-09-06 (Tue).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: لا تخترع لوائح أو تعاميم حكومية أو أسماء جهات ومتطلباتها. تحدث عن الممارسات العا
  */
@@ -12,7 +12,7 @@ export const governmentMinistryStaffUniformsSaudi: BlogPost = {
   "excerpt": "How Saudi ministries and public entities build uniform programs that stay consistent across sites, satisfy procurement documentation, size thousands of staff, and renew on a planned cycle.",
   "excerptAr": "كيف تبني الجهات الحكومية السعودية برامج زي موحّدة عبر مواقعها، تستوفي متطلبات التوثيق في المشتريات، وتُقاس على آلاف الموظفين، وتُجدَّد وفق دورة مخطّطة.",
   "category": "corporate-education",
-  "publishedAt": "2026-09-08",
+  "publishedAt": "2026-09-06",
   "hero": "blog/government-ministry-staff-uniforms-saudi",
   "silo": "corporate",
   "readingMinutes": 6,

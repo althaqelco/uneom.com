@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-20 (Sun).
+ * Scheduled article — publishes 2026-09-16 (Sun).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: مصيدة معايير: لا تخترع أسماء نماذج تدقيق أو بنود لوائح أو جهات تنظيمية ومتطلباته
  */
@@ -12,7 +12,7 @@ export const ppeComplianceAuditDocumentation: BlogPost = {
   "excerpt": "What a PPE audit really examines: test certificates, batch traceability, per-worker issue records, retirement proof and care instructions — and how to build that file from day one.",
   "excerptAr": "ما يفحصه تدقيق معدات الوقاية فعلاً: شهادات الاختبار، وتتبّع الدفعات، وسجلات الصرف الفردية، وإثبات الإحالة للتقاعد، وتعليمات العناية — وكيف يُبنى هذا الملف من اليوم الأول.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-09-20",
+  "publishedAt": "2026-09-16",
   "hero": "blog/ppe-compliance-audit-documentation",
   "silo": "manufacturing",
   "readingMinutes": 6,

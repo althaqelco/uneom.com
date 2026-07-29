@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-07 (Mon).
+ * Scheduled article — publishes 2026-12-03 (Mon).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Verifier returned 5 correction(s); all applied before commit.
  * Guardrail: ليست استشارة قانونية. لا تذكر أرقام مواد نظام العمل السعودي ولا تدّعِ أن شيئاً مطلوب قانون
@@ -13,7 +13,7 @@ export const corporateDressCodePolicyThatWorks: BlogPost = {
   "excerpt": "Most dress codes fail because they list prohibitions instead of describing an outcome. This guide covers scope, role tiers, the split between a uniform and a dress code, issue and replacement mechanics, enforcement a supervisor can apply, and how to route accommodation requests.",
   "excerptAr": "معظم لوائح الزي تفشل لأنها تعدّد الممنوعات بدل أن تصف النتيجة المطلوبة. هذا الدليل يشرح كيف تحدد النطاق والفئات الوظيفية، وتفصل الزي الموحد عن قواعد اللباس، وتكتب آليات الصرف والاستبدال والمعالجة بصيغة يطبّقها المشرف في الميدان.",
   "category": "corporate-education",
-  "publishedAt": "2026-12-07",
+  "publishedAt": "2026-12-03",
   "hero": "blog/corporate-dress-code-policy-that-works",
   "silo": "corporate",
   "readingMinutes": 8,

@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-19 (Thu).
+ * Scheduled article — publishes 2026-11-17 (Thu).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Verifier returned 8 correction(s); all applied before commit.
  * Guardrail: لا تخترع مُهَلاً زمنية بالأيام كأرقام مضمونة، ولا حدوداً دنيا للكميات، ولا أسعاراً. لا تذك
@@ -13,7 +13,7 @@ export const exhibitionStaffUniformsSaudiEvents: BlogPost = {
   "excerpt": "An exhibition uniform is a one-off order with a date that cannot move, a headcount that keeps changing, and no real chance to fit anyone properly. This guide covers building a backward schedule, sizing a team you cannot measure, making the brand read across an aisle, keeping people comfortable through a long stand day, and deciding what happens to the stock afterwards.",
   "excerptAr": "زي المعرض طلبية لمرة واحدة بموعد لا يتأجل، وعدد موظفين يتغيّر حتى اللحظة الأخيرة، وبلا فرصة حقيقية لقياس أحد على راحته. يشرح هذا الدليل كيف تبني جدولاً عكسياً، وتضبط المقاسات دون قياس، وتجعل الهوية تُقرأ من عرض الممر، وتحافظ على راحة الفريق طوال اليوم، وتقرّر مصير المخزون قبل أن تطلبه.",
   "category": "corporate-education",
-  "publishedAt": "2026-11-19",
+  "publishedAt": "2026-11-17",
   "hero": "blog/exhibition-staff-uniforms-saudi-events",
   "silo": "corporate",
   "readingMinutes": 8,

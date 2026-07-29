@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-09 (Wed).
+ * Scheduled article — publishes 2026-12-07 (Wed).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Verifier returned 4 correction(s); all applied before commit.
  * Guardrail: خطر عالٍ — قطاع منظّم. لا تخترع أرقام لوائح (FAA/FAR/EASA/GACA/IATA) ولا عتبات اختبار (لا 
@@ -13,7 +13,7 @@ export const aviationUniformFabricFlameResistance: BlogPost = {
   "excerpt": "Cabin crew uniform fabric is not something a supplier can certify as flame resistant on your behalf — the requirement lives in the specification your airline approves. This guide explains inherent versus treated fabrics, why the melt behaviour of thermoplastics is the real concern, and who inside the airline actually owns the decision.",
   "excerptAr": "لا يستطيع أي مورّد أن يشهد نيابةً عنكم بأن قماش زي طاقم الضيافة «مقاوم للهب»؛ المتطلب يعيش داخل المواصفة المعتمدة لدى شركتكم. يشرح هذا الدليل الفرق بين الألياف المتأصّلة والأقمشة المعالَجة، ولماذا يكون انصهار اللدائن الحرارية مصدر القلق الحقيقي، ومن يملك القرار فعلاً داخل الشركة.",
   "category": "aviation",
-  "publishedAt": "2026-12-09",
+  "publishedAt": "2026-12-07",
   "hero": "blog/aviation-uniform-fabric-flame-resistance",
   "silo": "aviation",
   "readingMinutes": 8,

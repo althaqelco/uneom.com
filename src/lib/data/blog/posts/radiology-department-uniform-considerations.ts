@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-18 (Sun).
+ * Scheduled article — publishes 2026-10-14 (Sun).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: مصيدة سلامة: لا تخترع اشتراطات تتعلق بالرنين المغناطيسي أو الإشعاع أو حدود التعر
@@ -13,7 +13,7 @@ export const radiologyDepartmentUniformConsiderations: BlogPost = {
   "excerpt": "Practical guidance on radiology staff uniform requirements for Saudi imaging departments: colour differentiation, department rules on metal and fasteners, comfort under protective aprons, hygiene, and sizing.",
   "excerptAr": "إرشادات عملية لمتطلبات زي العاملين في قسم الأشعة داخل المنشآت السعودية: التمييز اللوني، وقواعد القسم بشأن المعادن والسحّابات، والراحة تحت المآزر الواقية، والنظافة، والمقاسات.",
   "category": "healthcare",
-  "publishedAt": "2026-10-18",
+  "publishedAt": "2026-10-14",
   "hero": "blog/radiology-department-uniform-considerations",
   "silo": "healthcare",
   "readingMinutes": 5,

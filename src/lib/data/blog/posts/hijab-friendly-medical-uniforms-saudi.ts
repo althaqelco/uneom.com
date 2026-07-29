@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-04 (Wed).
+ * Scheduled article — publishes 2026-11-02 (Wed).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: موضوع ديني/ثقافي: صف الممارسة والتصميم باحترام عميق ولا تُصدر أحكاماً شرعية. سيا
  */
@@ -12,7 +12,7 @@ export const hijabFriendlyMedicalUniformsSaudi: BlogPost = {
   "excerpt": "How to specify hijab-friendly scrubs in Saudi Arabia: tailored medical headcovers, breathable underscrub layers, sleeve rules set by your facility, coordinated colours and laundering that holds up.",
   "excerptAr": "كيف تُكتب مواصفة زي طبي متوافق مع الحجاب في السعودية: غطاء رأس طبي مفصَّل، طبقة داخلية متنفّسة، سياسة أكمام تحددها منشأتك، تنسيق لوني، وأداء أمام الغسيل المتكرر.",
   "category": "healthcare",
-  "publishedAt": "2026-11-04",
+  "publishedAt": "2026-11-02",
   "hero": "blog/hijab-friendly-medical-uniforms-saudi",
   "silo": "healthcare",
   "readingMinutes": 6,

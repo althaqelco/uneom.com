@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-13 (Tue).
+ * Scheduled article — publishes 2026-10-11 (Tue).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تخترع أعراف ألوان أكاديمية سعودية أو متطلبات جامعية بعينها.
@@ -13,7 +13,7 @@ export const universityLabCoatsFacultyAttire: BlogPost = {
   "excerpt": "How Saudi universities specify lab coats, faculty and campus staff attire across colleges, size thousands of wearers, set a departmental colour policy, and buy on the academic calendar.",
   "excerptAr": "كيف تحدّد الجامعات السعودية مواصفات معاطف المختبرات وأزياء الكوادر الأكاديمية والإدارية، وتضبط المقاسات لأعداد كبيرة، وتكتب سياسة ألوان الأقسام، وتشتري وفق التقويم الدراسي.",
   "category": "corporate-education",
-  "publishedAt": "2026-10-13",
+  "publishedAt": "2026-10-11",
   "hero": "blog/university-lab-coats-faculty-attire",
   "silo": "education",
   "readingMinutes": 6,

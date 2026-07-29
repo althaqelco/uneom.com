@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-23 (Sun).
+ * Scheduled article — publishes 2026-08-19 (Sun).
  * Written + adversarially verified (uneom-schedule-batch-2 workflow).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: مصيدة معايير: اذكر ANSI/ISEA 107 و ISO 20471 بالاسم فقط. ممنوع اختراع مساحات المواد أو عتب
@@ -13,7 +13,7 @@ export const hiVisClassSelectionGuideSaudi: BlogPost = {
   "excerpt": "How hi-vis class selection actually works on Saudi sites: what pushes a class higher, how fluorescent and retroreflective elements differ, and why heat and laundering change the answer.",
   "excerptAr": "كيف تُختار فئة الوضوح في المواقع السعودية: ما الذي يرفع الفئة، والفرق بين الخلفية الفلورية والشريط العاكس، ولماذا تغيّر الحرارة والغسيل الإجابة عملياً.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-08-23",
+  "publishedAt": "2026-08-19",
   "hero": "blog/hi-vis-class-selection-guide-saudi",
   "silo": "manufacturing",
   "readingMinutes": 6,

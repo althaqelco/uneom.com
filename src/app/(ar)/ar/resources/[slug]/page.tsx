@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const r = RESOURCES_BY_SLUG[slug];
   if (!r) return {};
   return {
-    title: `${r.titleAr} — UNEOM`,
+    title: `${r.titleAr}`,
     description: r.summaryAr,
     alternates: {
       canonical: `https://uneom.com/ar/resources/${slug}/`,

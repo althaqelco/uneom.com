@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-03 (Sun).
+ * Scheduled article — publishes 2026-12-30 (Sun).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 3 correction(s); all applied before commit.
  * Guardrail: لا تخترع أرقام معايير أو طرق اختبار برقمها ولا عتبات نجاح/رسوب ولا أسماء مختبرات. اشرح ما الذي 
@@ -13,7 +13,7 @@ export const fabricTestReportsWhatToAskFor: BlogPost = {
   "excerpt": "Fabric test reports are often filed without being read, and much of what makes them evidence is not in the results at all. This is a buyer's guide to what a report actually proves, how supplier testing differs from independent testing, and how to write a testing clause that still works when a delivery goes wrong.",
   "excerptAr": "كثيراً ما يُستلم تقرير اختبار القماش ويُحفظ في الملف دون أن يُقرأ، مع أن ما يمنحه قيمته الإثباتية لا يقع في خانة النتائج أصلاً. هذا دليل للمشتري عمّا يثبته التقرير فعلاً، والفرق بين اختبار المورّد واختبار مختبر مستقل، وكيف تُكتب بنود الاختبار في العقد بحيث تبقى نافذة عند أول خلاف.",
   "category": "sustainability-trends",
-  "publishedAt": "2027-01-03",
+  "publishedAt": "2026-12-30",
   "hero": "blog/fabric-test-reports-what-to-ask-for",
   "silo": "corporate",
   "readingMinutes": 8,

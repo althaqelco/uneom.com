@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-30 (Wed).
+ * Scheduled article — publishes 2026-09-28 (Wed).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: مصيدة معايير حرجة: اذكر NFPA 2112 وEN ISO 11612 كعائلات معايير بالاسم فقط. ممنوع
@@ -13,7 +13,7 @@ export const frCoverallBuyersGuideOilGas: BlogPost = {
   "excerpt": "A procurement-grade guide to specifying flame-resistant coveralls for Saudi oil and gas: inherent versus treated fabrics, certification evidence, summer heat strain, fit and replacement planning.",
   "excerptAr": "دليل مشتريات لتحديد مواصفات الأفرول المقاوم للهب في مواقع النفط والغاز السعودية: المقاومة الأصيلة مقابل المعالَجة، وأدلة الاعتماد، والإجهاد الحراري الصيفي، والمقاسات والاستبدال.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-09-30",
+  "publishedAt": "2026-09-28",
   "hero": "blog/fr-coverall-buyers-guide-oil-gas",
   "silo": "manufacturing",
   "readingMinutes": 6,

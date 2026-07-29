@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-01 (Sun).
+ * Scheduled article — publishes 2026-10-28 (Sun).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: مصيدة تنظيمية: اذكر HCIS بالاسم فقط إن لزم. ممنوع اختراع بنود لوائح الأمن الخاص 
  */
@@ -12,7 +12,7 @@ export const securityGuardUniformStandardsSaudi: BlogPost = {
   "excerpt": "How Saudi security companies specify guard uniforms that read as professional, stay distinct from official uniforms, endure summer heat and long shifts, and survive a client audit.",
   "excerptAr": "كيف تحدّد شركات الأمن السعودية مواصفات زي حراسة يبدو مهنياً، ويتمايز عن الأزياء الرسمية، ويتحمل حرارة الصيف والمناوبات الطويلة، ويجتاز تدقيق العميل.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-11-01",
+  "publishedAt": "2026-10-28",
   "hero": "blog/security-guard-uniform-standards-saudi",
   "silo": "security",
   "readingMinutes": 6,

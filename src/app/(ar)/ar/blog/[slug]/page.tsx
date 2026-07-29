@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = BLOG_POSTS_BY_SLUG[slug];
   if (!post) return {};
   return {
-    title: `${post.titleAr} — UNEOM`,
+    title: `${post.titleAr}`,
     description: post.excerptAr,
     authors: [{ name: post.author.nameAr }],
     alternates: { 

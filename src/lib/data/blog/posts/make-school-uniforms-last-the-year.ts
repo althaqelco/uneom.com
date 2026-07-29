@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-24 (Tue).
+ * Scheduled article — publishes 2026-11-22 (Tue).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Verifier returned 4 correction(s); all applied before commit.
  * Guardrail: لا تخترع أرقام متانة أو دورات غسيل أو نسب بقاء. لا تنصح بمواد تبييض أو معالجات كيميائية قد
@@ -13,7 +13,7 @@ export const makeSchoolUniformsLastTheYear: BlogPost = {
   "excerpt": "Most school uniforms are retired for how they look or how they fit, not because the cloth wore through. This guide separates what a school can fix in the specification from what only weekly care at home can control.",
   "excerptAr": "معظم القطع المدرسية تُستبدل بسبب مظهرها أو مقاسها، لا لأن قماشها تمزّق فعلاً. يفصل هذا الدليل بين ما تحسمه المواصفة عند الشراء وما لا يعالجه إلا الروتين الأسبوعي في البيت.",
   "category": "corporate-education",
-  "publishedAt": "2026-11-24",
+  "publishedAt": "2026-11-22",
   "hero": "blog/make-school-uniforms-last-the-year",
   "silo": "education",
   "readingMinutes": 8,

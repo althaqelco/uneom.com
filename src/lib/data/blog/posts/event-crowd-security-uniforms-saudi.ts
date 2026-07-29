@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-04 (Mon).
+ * Scheduled article — publishes 2026-12-31 (Mon).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 4 correction(s); all applied before commit.
  * Guardrail: لا تصف أي زي يشبه زي جهة حكومية أو أمنية رسمية، وحذّر صراحةً من الاقتراب من ذلك. لا تخترع أعداد
@@ -13,7 +13,7 @@ export const eventCrowdSecurityUniformsSaudi: BlogPost = {
   "excerpt": "An event crew has to be readable to a crowd, approachable at a family event, and comfortable under load for a full shift — and those three demands pull against each other. This guide covers role colour-coding, night identification, reissue control for temporary staff, and the appearance line a private crew must never cross.",
   "excerptAr": "فريق الفعالية مطلوب منه أن يكون واضحاً للحشد، سهل الاقتراب في مناسبة عائلية، وقادراً على تحمّل مناوبة طويلة تحت حمل — وهذه مطالب تتجاذب فيما بينها. يتناول الدليل ترميز الأدوار بالألوان، والتمييز ليلاً، وضبط إعادة إصدار الزي للفرق المؤقتة، والخط الذي يجب ألا يقترب منه أي زي خاص.",
   "category": "manufacturing-safety",
-  "publishedAt": "2027-01-04",
+  "publishedAt": "2026-12-31",
   "hero": "blog/event-crowd-security-uniforms-saudi",
   "silo": "security",
   "readingMinutes": 8,

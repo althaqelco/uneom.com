@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-04 (Tue).
+ * Scheduled article — publishes 2026-08-02 (Tue).
  * Written + adversarially fabrication-checked (uneom-schedule-batch-1 workflow).
  * Verdict: clean — 0 fabrications, Arabic verified faithful.
  */
@@ -12,7 +12,7 @@ export const backToSchoolUniformOrderingSaudi: BlogPost = {
   "excerpt": "A procurement timeline for Saudi schools: when to order school uniforms, why the summer queue punishes late orders, and how to build size buffer stock.",
   "excerptAr": "جدول زمني لمشتريات المدارس السعودية: متى يبدأ طلب الزي المدرسي، ولماذا يعاقب ازدحام الصيف الطلبات المتأخرة، وكيف تُبنى مخزونات المقاسات الاحتياطية.",
   "category": "corporate-education",
-  "publishedAt": "2026-08-04",
+  "publishedAt": "2026-08-02",
   "hero": "blog/back-to-school-uniform-ordering-saudi",
   "silo": "education",
   "readingMinutes": 6,

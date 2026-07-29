@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-06 (Thu).
+ * Scheduled article — publishes 2026-08-04 (Thu).
  * Written + adversarially fabrication-checked (uneom-schedule-batch-1 workflow).
  * Verdict: clean — 0 fabrications, Arabic verified faithful.
  */
@@ -12,7 +12,7 @@ export const insuranceFinanceSectorUniformStandards: BlogPost = {
   "excerpt": "How Saudi banks and insurers dress for trust: tiered formality from counter to advisor, modest options for women, breathable suiting, and one consistent look across branches.",
   "excerptAr": "كيف يلبس قطاع البنوك والتأمين في السعودية ليصنع الثقة: تدرّج في الرسمية من الاستقبال إلى الاستشاري، خيارات محتشمة للكوادر النسائية، أقمشة تتنفّس، ومظهر موحّد في كل فرع.",
   "category": "corporate-education",
-  "publishedAt": "2026-08-06",
+  "publishedAt": "2026-08-04",
   "hero": "blog/insurance-finance-sector-uniform-standards",
   "silo": "corporate",
   "readingMinutes": 7,

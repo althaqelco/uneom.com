@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-13 (Thu).
+ * Scheduled article — publishes 2026-08-11 (Thu).
  * Written + adversarially fabrication-checked (uneom-schedule-batch-1 workflow).
  * Verdict: clean — 0 fabrications, Arabic verified faithful.
  */
@@ -12,7 +12,7 @@ export const stretchFabricsActiveUniformRoles: BlogPost = {
   "excerpt": "How stretch uniform fabrics really work: elastane versus mechanical give, two-way versus four-way, recovery and sagging, and the roles where stretch is worth its added cost.",
   "excerptAr": "كيف يعمل التمدّد فعلياً في أقمشة الزي الموحّد: الألياف المرنة مقابل التمدّد الميكانيكي، ثنائي الاتجاه ورباعيه، استرداد الشكل، والأدوار التي يستحق فيها التمدّد تكلفته.",
   "category": "sustainability-trends",
-  "publishedAt": "2026-08-13",
+  "publishedAt": "2026-08-11",
   "hero": "blog/stretch-fabrics-active-uniform-roles",
   "silo": "manufacturing",
   "readingMinutes": 6,

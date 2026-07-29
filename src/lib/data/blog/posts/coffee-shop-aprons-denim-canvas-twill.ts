@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-11 (Wed).
+ * Scheduled article — publishes 2026-11-09 (Wed).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: لا تخترع أوزان أقمشة رقمية كمعايير أو أسعار.
  */
@@ -12,7 +12,7 @@ export const coffeeShopApronsDenimCanvasTwill: BlogPost = {
   "excerpt": "Denim, canvas or twill for your café team? A practical comparison of durability, weight, stain behaviour and strap design for Saudi coffee shops running long shifts.",
   "excerptAr": "دنيم أم كانفس أم تويل لفريق مقهاك؟ مقارنة عملية للمتانة والوزن وسلوك البقع وتصميم الأحزمة في مقاهي السعودية ذات المناوبات الطويلة.",
   "category": "hospitality",
-  "publishedAt": "2026-11-11",
+  "publishedAt": "2026-11-09",
   "hero": "blog/coffee-shop-aprons-denim-canvas-twill",
   "silo": "hospitality",
   "readingMinutes": 6,

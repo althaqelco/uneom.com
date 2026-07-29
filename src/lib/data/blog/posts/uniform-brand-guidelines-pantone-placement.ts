@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-10 (Thu).
+ * Scheduled article — publishes 2026-12-08 (Thu).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Verifier returned 5 correction(s); all applied before commit.
  * Guardrail: لا تخترع أكواد بانتون كأنها لعميل حقيقي، ولا قيم Delta-E كمعيار معتمد لدى يونيوم، ولا نسب 
@@ -13,7 +13,7 @@ export const uniformBrandGuidelinesPantonePlacement: BlogPost = {
   "excerpt": "A brand book written for ink on paper does not survive contact with dyed fabric. This is how colour approval, batch variation and logo placement are actually controlled on a uniform programme — and what belongs in the uniform annex.",
   "excerptAr": "دليل هوية مكتوب لحبر على ورق لا يصمد أمام قماش مصبوغ. هنا كيف تُضبط الموافقة على اللون، واختلاف تشغيلات الصباغة، وموضع الشعار في برنامج زي موحّد، وما الذي يجب أن يحتويه ملحق الزي في دليل الهوية.",
   "category": "corporate-education",
-  "publishedAt": "2026-12-10",
+  "publishedAt": "2026-12-08",
   "hero": "blog/uniform-brand-guidelines-pantone-placement",
   "silo": "corporate",
   "readingMinutes": 7,

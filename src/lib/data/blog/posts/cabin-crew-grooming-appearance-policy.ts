@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-17 (Sun).
+ * Scheduled article — publishes 2027-01-13 (Sun).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 13 correction(s); all applied before commit.
  * Guardrail: خطر عالٍ. لا تكتب قواعد مظهر تمييزية ولا تصف معايير جمالية للأجسام أو البشرة أو الوزن. تعامل مع
@@ -13,7 +13,7 @@ export const cabinCrewGroomingAppearancePolicy: BlogPost = {
   "excerpt": "A grooming policy holds up when every clause names what it protects — identification, equipment and evacuation, uniform integrity — instead of listing what crew may not do. This guide covers what genuinely belongs in the document, how to word it so two supervisors reach the same answer, and the approval trail that keeps it defensible.",
   "excerptAr": "سياسة المظهر تصمد حين يذكر كل بند ما الذي يحميه — التعرّف، والمعدات والإخلاء، وسلامة الزي — بدل أن تكون قائمة ممنوعات. يشرح المقال ما الذي ينتمي فعلاً إلى الوثيقة، وكيف تُصاغ ليصل مشرفان إلى الحكم نفسه، وما سجل الاعتماد الذي يجعلها قابلة للدفاع.",
   "category": "aviation",
-  "publishedAt": "2027-01-17",
+  "publishedAt": "2027-01-13",
   "hero": "blog/cabin-crew-grooming-appearance-policy",
   "silo": "aviation",
   "readingMinutes": 7,

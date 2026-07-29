@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-07 (Mon).
+ * Scheduled article — publishes 2026-09-03 (Mon).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: مصيدة معايير حرجة: اذكر ATPV وNFPA 70E كمفاهيم/عائلات معايير فقط. ممنوع تماماً ا
  */
@@ -12,7 +12,7 @@ export const arcFlashRatingsExplainedProcurement: BlogPost = {
   "excerpt": "What an arc rating measures, how ATPV and breakopen differ, why the required level comes from a site risk assessment, and which supplier documents to demand.",
   "excerptAr": "ما الذي يقيسه تصنيف القوس الكهربائي، والفرق بين ATPV والتمزق الحراري، ولماذا يُحدَّد المستوى المطلوب من تقييم مخاطر الموقع، وما المستندات التي يجب طلبها من المورّد.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-09-07",
+  "publishedAt": "2026-09-03",
   "hero": "blog/arc-flash-ratings-explained-procurement",
   "silo": "manufacturing",
   "readingMinutes": 6,

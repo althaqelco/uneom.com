@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-17 (Mon).
+ * Scheduled article — publishes 2026-08-13 (Mon).
  * Written + adversarially verified (uneom-schedule-batch-2 workflow).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: عُرف الشرائط شائع لكنه ليس قانوناً موحّداً — قل إنه يختلف بحسب الناقل. لا تخترع لوائح GACA
@@ -13,7 +13,7 @@ export const pilotUniformRankInsigniaSaudi: BlogPost = {
   "excerpt": "How pilot uniform rank stripes work, what epaulettes and wings signal, and how fabric, fit and care decisions shape a flight crew programme in Saudi Arabia.",
   "excerptAr": "كيف تعمل شرائط رتب زي الطيّار، وماذا تعني الأكتاف وشارة الأجنحة، وكيف تُحدَّد الأقمشة والمقاسات والعناية في برامج أطقم الطيران داخل السعودية.",
   "category": "aviation",
-  "publishedAt": "2026-08-17",
+  "publishedAt": "2026-08-13",
   "hero": "blog/pilot-uniform-rank-insignia-saudi",
   "silo": "aviation",
   "readingMinutes": 6,

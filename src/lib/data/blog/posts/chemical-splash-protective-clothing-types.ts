@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-05 (Tue).
+ * Scheduled article — publishes 2027-01-03 (Tue).
  * Written + adversarially verified (uneom-schedule final batch).
  * Guardrail: خطر عالٍ جداً — معدات وقاية كيميائية في سياق منظّم. لا تخترع أرقام معايير أوروبية ولا أرقام أنو
  */
@@ -12,7 +12,7 @@ export const chemicalSplashProtectiveClothingTypes: BlogPost = {
   "excerpt": "Chemical protective clothing is sorted by the form the hazard takes — vapour, pressurised jet, spray, splash or dry particle — not by how strong the garment is. Understanding that logic is what stops a buyer from over-specifying a sealed suit the job cannot actually be done in.",
   "excerptAr": "تُصنَّف الملابس الواقية من الكيماويات حسب الشكل الذي يصل به الخطر إلى العامل — بخار، أو نفث سائل مضغوط، أو رذاذ، أو رشقة، أو غبار جاف — لا حسب «قوة» الثوب. وفهم هذا المنطق هو ما يمنع المشتري من طلب بدلة محكمة لا يمكن إنجاز العمل داخلها.",
   "category": "manufacturing-safety",
-  "publishedAt": "2027-01-05",
+  "publishedAt": "2027-01-03",
   "hero": "blog/chemical-splash-protective-clothing-types",
   "silo": "manufacturing",
   "readingMinutes": 8,

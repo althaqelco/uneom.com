@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const p = PRODUCTS_BY_SLUG[product];
   if (!p) return {};
   return {
-    title: `${p.nameAr} — UNEOM`,
+    title: `${p.nameAr}`,
     description: p.summaryAr,
     alternates: {
       canonical: `https://uneom.com/ar/shop/${p.category}/${p.slug}/`,

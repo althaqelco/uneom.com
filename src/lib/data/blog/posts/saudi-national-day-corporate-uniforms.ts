@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-27 (Sun).
+ * Scheduled article — publishes 2026-09-23 (Sun).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: احترم الرموز الوطنية. لا تخترع لوائح لاستخدام العلم أو الشعار؛ أشر إلى ضرورة مرا
@@ -13,7 +13,7 @@ export const saudiNationalDayCorporateUniforms: BlogPost = {
   "excerpt": "How Saudi companies plan National Day uniforms: realistic lead times, consistent green, respectful use of national symbols, reusable pieces, sizing for large headcounts and branch-level distribution.",
   "excerptAr": "كيف تخطط الشركات السعودية لأزياء اليوم الوطني: مهل زمنية واقعية، وأخضر متّسق، وتعامل محترم مع الرموز الوطنية، وقطع قابلة لإعادة الاستخدام، ومقاسات للأعداد الكبيرة، وتوزيع يصل كل فرع.",
   "category": "corporate-education",
-  "publishedAt": "2026-09-27",
+  "publishedAt": "2026-09-23",
   "hero": "blog/saudi-national-day-corporate-uniforms",
   "silo": "corporate",
   "readingMinutes": 6,

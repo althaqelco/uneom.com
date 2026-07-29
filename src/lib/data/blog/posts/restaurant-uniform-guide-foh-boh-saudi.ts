@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-10 (Mon).
+ * Scheduled article — publishes 2026-08-06 (Mon).
  * Written + adversarially fabrication-checked (uneom-schedule-batch-1 workflow).
  * Verdict: clean — 0 fabrications, Arabic verified faithful.
  */
@@ -12,7 +12,7 @@ export const restaurantUniformGuideFohBohSaudi: BlogPost = {
   "excerpt": "How front of house and kitchen uniforms differ in Saudi restaurants: fabric behaviour, aprons, stain and laundry planning, modest options, and specifications that survive daily service.",
   "excerptAr": "كيف تختلف أزياء صالة الضيوف عن أزياء المطبخ في المطاعم السعودية: سلوك الأقمشة، المرايل، إدارة البقع والغسيل، والخيارات المحتشمة، ومواصفات تصمد أمام ضغط الخدمة اليومية.",
   "category": "hospitality",
-  "publishedAt": "2026-08-10",
+  "publishedAt": "2026-08-06",
   "hero": "blog/restaurant-uniform-guide-foh-boh-saudi",
   "silo": "hospitality",
   "readingMinutes": 6,

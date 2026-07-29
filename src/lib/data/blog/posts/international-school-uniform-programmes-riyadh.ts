@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-06 (Tue).
+ * Scheduled article — publishes 2026-10-04 (Tue).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تذكر أسماء مدارس بعينها ولا تخترع متطلبات مناهج أو اعتمادات.
@@ -13,7 +13,7 @@ export const internationalSchoolUniformProgrammesRiyadh: BlogPost = {
   "excerpt": "How international schools in Riyadh build uniform programmes that hold house colours, respect modesty, survive summer heat, and still work at a busy parent-pay uniform shop.",
   "excerptAr": "كيف تبني المدارس الدولية في الرياض برامج زي تحافظ على ألوان البيوت، وتراعي الاحتشام، وتصمد أمام حرارة الصيف، وتعمل في متجر يشتري منه الأهالي مباشرة.",
   "category": "corporate-education",
-  "publishedAt": "2026-10-06",
+  "publishedAt": "2026-10-04",
   "hero": "blog/international-school-uniform-programmes-riyadh",
   "silo": "education",
   "readingMinutes": 6,

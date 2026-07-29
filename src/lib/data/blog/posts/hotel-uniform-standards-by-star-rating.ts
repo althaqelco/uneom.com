@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-16 (Mon).
+ * Scheduled article — publishes 2026-11-12 (Mon).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: لا تخترع متطلبات تصنيف نجوم رسمية أو معايير هيئة السياحة أو أرقام ميزانية.
  */
@@ -12,7 +12,7 @@ export const hotelUniformStandardsByStarRating: BlogPost = {
   "excerpt": "How hotel uniform standards shift with star rating in Saudi Arabia: fabric quality, tailoring, kit depth and role differentiation, and how four-star properties balance ambition against budget.",
   "excerptAr": "كيف يتدرّج الزي الفندقي مع تصنيف النجوم في السعودية: جودة الأقمشة، ودقة التفصيل، وعدد القطع لكل موظف، وتمييز الأدوار، وكيف يوازن فندق الأربع نجوم بين الطموح والميزانية.",
   "category": "hospitality",
-  "publishedAt": "2026-11-16",
+  "publishedAt": "2026-11-12",
   "hero": "blog/hotel-uniform-standards-by-star-rating",
   "silo": "hospitality",
   "readingMinutes": 6,

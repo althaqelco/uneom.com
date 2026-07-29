@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-18 (Tue).
+ * Scheduled article — publishes 2026-08-16 (Tue).
  * Written + adversarially verified (uneom-schedule-batch-2 workflow).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تذكر أسماء شركات اتصالات سعودية بعينها ولا تصف أزياءها الفعلية.
@@ -13,7 +13,7 @@ export const telecomRetailStaffUniformsSaudi: BlogPost = {
   "excerpt": "How to specify a telecom store staff uniform for Saudi branch networks: role coding, wash-durable fabrics, brand colour control, standing-shift comfort, and consistency across dozens of stores.",
   "excerptAr": "كيف تُحدَّد مواصفات زي موظفي متاجر الاتصالات في السعودية: تمييز الأدوار، أقمشة تتحمل الغسيل، ضبط لون العلامة، راحة مناوبة الوقوف، واتساق المظهر عبر عشرات الفروع.",
   "category": "corporate-education",
-  "publishedAt": "2026-08-18",
+  "publishedAt": "2026-08-16",
   "hero": "blog/telecom-retail-staff-uniforms-saudi",
   "silo": "corporate",
   "readingMinutes": 6,

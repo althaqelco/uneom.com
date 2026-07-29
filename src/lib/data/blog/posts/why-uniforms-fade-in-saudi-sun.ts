@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-10 (Tue).
+ * Scheduled article — publishes 2026-11-08 (Tue).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: يمكن ذكر مفهوم مقاييس ثبات اللون عموماً، لكن ممنوع اختراع درجات رقمية أو نتائج ا
  */
@@ -12,7 +12,7 @@ export const whyUniformsFadeInSaudiSun: BlogPost = {
   "excerpt": "Ultraviolet light breaks dye molecules apart. Here is why outdoor uniforms lose colour in Saudi conditions, how light and wash fastness differ, and how to specify better.",
   "excerptAr": "الأشعة فوق البنفسجية تكسّر جزيء الصبغة. إليك سبب فقدان الأزياء الخارجية للونها في الظروف السعودية، والفرق بين ثبات اللون للضوء وللغسيل، وكيف تُكتب المواصفة.",
   "category": "sustainability-trends",
-  "publishedAt": "2026-11-10",
+  "publishedAt": "2026-11-08",
   "hero": "blog/why-uniforms-fade-in-saudi-sun",
   "silo": "manufacturing",
   "readingMinutes": 6,

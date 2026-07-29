@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-13 (Wed).
+ * Scheduled article — publishes 2027-01-11 (Wed).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 6 correction(s); all applied before commit.
  * Guardrail: لا تخترع أرقام معدلات تبخّر أو نفاذية هواء أو نسب امتصاص. لا تدّعِ أن قماشاً يمنع الإجهاد الحرا
@@ -13,7 +13,7 @@ export const moistureWickingFabricsGulfHeat: BlogPost = {
   "excerpt": "Wicking only pays off when the surrounding air can accept the moisture a fabric brings to the surface — which is exactly what coastal Gulf humidity denies. This guide explains the real mechanism, fibre by fibre and structure by structure, and shows how to separate an engineered fabric from a word printed on a label.",
   "excerptAr": "تصريف الرطوبة لا يفيد إلا إذا كان الهواء المحيط قادراً على استقبال ما يرفعه القماش إلى سطحه، وهذا تحديداً ما تحرمك منه رطوبة السواحل الخليجية. يشرح هذا الدليل الآلية كما هي: الليف، والخيط، والبنية، والمعالجات وعمرها في الغسيل، وكيف تفرّق بين قماش مهندس وكلمة مطبوعة على بطاقة.",
   "category": "sustainability-trends",
-  "publishedAt": "2027-01-13",
+  "publishedAt": "2027-01-11",
   "hero": "blog/moisture-wicking-fabrics-gulf-heat",
   "silo": "corporate",
   "readingMinutes": 7,

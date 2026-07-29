@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-02 (Sun).
+ * Scheduled article — publishes 2026-07-29 (Sun).
  * Written + adversarially fabrication-checked (uneom-schedule-batch-1 workflow).
  * Verdict: clean — 0 fabrications, Arabic verified faithful.
  */
@@ -12,7 +12,7 @@ export const schoolUniformProcurementTimelineSaudi: BlogPost = {
   "excerpt": "A month-by-month school uniform procurement timeline for Saudi schools: when to review the spec, gather sizes, approve samples, and take delivery before term one.",
   "excerptAr": "خطة شهرية لمشتريات الزي المدرسي في السعودية: متى تُراجَع المواصفة، ومتى تُجمع المقاسات، وتُعتمد العيّنات، ويصل التسليم قبل بداية العام الدراسي بوقت كافٍ.",
   "category": "corporate-education",
-  "publishedAt": "2026-08-02",
+  "publishedAt": "2026-07-29",
   "hero": "blog/school-uniform-procurement-timeline-saudi",
   "silo": "education",
   "readingMinutes": 6,

@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-27 (Tue).
+ * Scheduled article — publishes 2026-10-25 (Tue).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: يمكن ذكر مفهوم مقياس ثبات اللون كمفهوم عام، لكن ممنوع اختراع درجات أو أرقام اختب
  */
@@ -12,7 +12,7 @@ export const whyNursesUniformsFadeFast: BlogPost = {
   "excerpt": "Scrubs fade for four separate reasons: dye choice, wash chemistry, dryer heat and abrasion. Here is how to tell them apart and buy against each.",
   "excerptAr": "تبهت السكرابس لأربعة أسباب منفصلة: نوع الصبغة، وكيمياء الغسيل، وحرارة التجفيف، والاحتكاك. إليك كيف تميّز بينها وكيف تشتري في مواجهة كل سبب منها.",
   "category": "healthcare",
-  "publishedAt": "2026-10-27",
+  "publishedAt": "2026-10-25",
   "hero": "blog/why-nurses-uniforms-fade-fast",
   "silo": "healthcare",
   "readingMinutes": 6,

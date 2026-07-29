@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-01 (Thu).
+ * Scheduled article — publishes 2026-09-29 (Thu).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: القصة التاريخية شائعة الإسناد لكن لا تُقدّم تفاصيل شخصية أو تواريخ دقيقة كحقائق 
@@ -13,7 +13,7 @@ export const chefWhitesWhyStillWhite: BlogPost = {
   "excerpt": "White chef jackets began as a mark of order and hygiene. Here is what the colour still earns in a Saudi kitchen, and where it no longer holds.",
   "excerptAr": "بدأت السترة البيضاء علامةً على النظام والنظافة. وهنا ما يقدّمه اللون الأبيض فعلياً في المطابخ السعودية، وأين لم يعد الخيار الأنسب اليوم.",
   "category": "hospitality",
-  "publishedAt": "2026-10-01",
+  "publishedAt": "2026-09-29",
   "hero": "blog/chef-whites-why-still-white",
   "silo": "hospitality",
   "readingMinutes": 6,

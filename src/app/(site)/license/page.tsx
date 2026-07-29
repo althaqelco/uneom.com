@@ -3,7 +3,7 @@ import { JsonLd } from '@/lib/seo/JsonLd';
 import { webPageSchema } from '@/lib/seo/schemas';
 
 export const metadata: Metadata = {
-  title: 'Image & Content License — UNEOM',
+  title: 'Image & Content License',
   description: 'Licensing terms for UNEOM editorial photography, product images, and brand assets.',
   alternates: {
     canonical: 'https://uneom.com/license/',

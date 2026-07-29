@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-08 (Thu).
+ * Scheduled article — publishes 2026-10-06 (Thu).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تخترع أرقاماً قياسية لعدد الأطقم أو مدد الغسيل؛ اشرح كيف يُحسب العدد من متغير
@@ -13,7 +13,7 @@ export const howManyScrubSetsPerNurse: BlogPost = {
   "excerpt": "There is no universal scrub allocation. Learn how Saudi hospitals calculate sets per nurse from laundry turnaround, shift patterns, mid-shift changes, buffer stock, and issue model.",
   "excerptAr": "لا يوجد رقم موحّد لتخصيص السكرابز. تعرّف كيف تحسب المستشفيات السعودية عدد الأطقم لكل ممرض من دورة الغسيل ونمط المناوبات والتبديل أثناء الوردية والمخزون الاحتياطي ونموذج الصرف.",
   "category": "healthcare",
-  "publishedAt": "2026-10-08",
+  "publishedAt": "2026-10-06",
   "hero": "blog/how-many-scrub-sets-per-nurse",
   "silo": "healthcare",
   "readingMinutes": 6,

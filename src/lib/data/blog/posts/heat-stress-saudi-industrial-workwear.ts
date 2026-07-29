@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-29 (Sun).
+ * Scheduled article — publishes 2026-11-25 (Sun).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Guardrail: خطر عالٍ — موضوع صحي. لا تدّعِ أن أي قماش أو زي يمنع الإجهاد الحراري أو ضربة الشمس أو يقلل
  */
@@ -12,7 +12,7 @@ export const heatStressSaudiIndustrialWorkwear: BlogPost = {
   "excerpt": "How clothing actually interacts with heat load in a Saudi summer — evaporation, air permeability, fit and airflow, colour and radiant load — and where the fabric's contribution ends. Includes what to write into a specification, how to trial it, and which supplier claims should end the conversation.",
   "excerptAr": "كيف يتفاعل الزي فعلياً مع العبء الحراري في الصيف السعودي: التبخّر، ونفاذية الهواء، والقَصّة وحركة الهواء، واللون والحمل الإشعاعي — وأين ينتهي دور القماش تماماً. ومعها ما تكتبه في المواصفة، وكيف تجرّبه على الأرض، وأي ادعاء من المورّد يستوجب إنهاء النقاش لا كسبه.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-11-29",
+  "publishedAt": "2026-11-25",
   "hero": "blog/heat-stress-saudi-industrial-workwear",
   "silo": "manufacturing",
   "readingMinutes": 8,

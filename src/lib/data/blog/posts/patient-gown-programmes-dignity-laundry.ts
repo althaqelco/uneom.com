@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-17 (Thu).
+ * Scheduled article — publishes 2026-09-15 (Thu).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: لا تخترع تكاليف أو نسب فقد أو أرقام دورات غسيل.
  */
@@ -12,7 +12,7 @@ export const patientGownProgrammesDignityLaundry: BlogPost = {
   "excerpt": "How Saudi hospitals specify patient gowns that protect dignity and modesty, allow clinical access, fit every patient, and survive the laundry loop, reusable or disposable.",
   "excerptAr": "كيف تحدّد المستشفيات السعودية مواصفات ثوب المريض بما يصون الكرامة والاحتشام، ويتيح الوصول السريري، ويناسب كل المقاسات، ويحتمل دورة المغسلة، وقرار إعادة الاستخدام مقابل الاستخدام الواحد.",
   "category": "healthcare",
-  "publishedAt": "2026-09-17",
+  "publishedAt": "2026-09-15",
   "hero": "blog/patient-gown-programmes-dignity-laundry",
   "silo": "healthcare",
   "readingMinutes": 6,

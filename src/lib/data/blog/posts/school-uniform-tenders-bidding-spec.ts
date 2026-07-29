@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-07 (Wed).
+ * Scheduled article — publishes 2026-10-05 (Wed).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تخترع بنود أنظمة المنافسات والمشتريات الحكومية أو منصات بعينها ومتطلباتها؛ أح
@@ -13,7 +13,7 @@ export const schoolUniformTendersBiddingSpec: BlogPost = {
   "excerpt": "A practical guide to writing school uniform tender documents in Saudi Arabia: specifying fabric and fit, setting evaluation criteria, requesting samples, and tying delivery to the academic calendar.",
   "excerptAr": "دليل عملي لكتابة كراسة شروط مناقصة الزي المدرسي في السعودية: توصيف القماش والقصّة، ومعايير التقييم، والعيّنات المطلوبة، وربط جداول التسليم بالعام الدراسي.",
   "category": "corporate-education",
-  "publishedAt": "2026-10-07",
+  "publishedAt": "2026-10-05",
   "hero": "blog/school-uniform-tenders-bidding-spec",
   "silo": "education",
   "readingMinutes": 6,

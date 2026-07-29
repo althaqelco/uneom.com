@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-12 (Tue).
+ * Scheduled article — publishes 2027-01-10 (Tue).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 3 correction(s); all applied before commit.
  * Guardrail: خطر عالٍ — معدات وقاية في أجواء قابلة للاشتعال. لا تخترع أرقام معايير ولا قيم مقاومة سطحية بالأ
@@ -13,7 +13,7 @@ export const antiStaticWorkwearWhenYouNeedIt: BlogPost = {
   "excerpt": "Anti-static workwear addresses two unrelated problems — protecting sensitive electronics from a discharge, and avoiding an ignition source in a flammable atmosphere — and a garment bought for one may be irrelevant to the other. This guide explains what the fabric physically does, why it only performs as part of a grounded system, and how laundering, repair and layering quietly cancel it.",
   "excerptAr": "عبارة «مضاد للكهرباء الساكنة» تُستعمل لمشكلتين مختلفتين تماماً: حماية مكوّنات إلكترونية حساسة من التفريغ، ومنع وجود مصدر إشعال في جو قابل للاشتعال — وما يصلح لإحداهما قد لا يعني شيئاً للأخرى. المقال يشرح ما يفعله القماش فعلاً، ولماذا لا يعمل إلا ضمن منظومة تأريض كاملة، وكيف يُلغي الغسيل والترقيع والطبقات الخارجية أثره دون أن ينتبه أحد.",
   "category": "manufacturing-safety",
-  "publishedAt": "2027-01-12",
+  "publishedAt": "2027-01-10",
   "hero": "blog/anti-static-workwear-when-you-need-it",
   "silo": "manufacturing",
   "readingMinutes": 8,

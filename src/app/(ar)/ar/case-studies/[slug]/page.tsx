@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const c = CASE_STUDIES_BY_SLUG[slug];
   if (!c) return {};
   return {
-    title: `${c.titleAr} — UNEOM`,
+    title: `${c.titleAr}`,
     description: c.summaryAr,
     alternates: {
       canonical: `https://uneom.com/ar/case-studies/${slug}/`,

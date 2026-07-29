@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-10 (Sun).
+ * Scheduled article — publishes 2027-01-06 (Sun).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 5 correction(s); all applied before commit.
  * Guardrail: خطر عالٍ — موضوع ديني وثقافي. لا تُصدر أي حكم شرعي ولا ترجّح رأياً دينياً ولا تصف الحجاب كإلزام
@@ -13,7 +13,7 @@ export const hijabInAviationUniformProgrammes: BlogPost = {
   "excerpt": "How to specify a cabin crew hijab uniform as a design problem: fabric weight and drape that hold through a full duty, colour matched across two different cloths, and fastening that stays put without pins near the face. Plus the programme side — issue quantities, care labelling, colour continuity between batches, and who inside the airline signs off on what.",
   "excerptAr": "كيف تُكتب مواصفة غطاء الرأس لطاقم الضيافة كمسألة تصميم: وزن قماش وانسدال يصمدان طوال النوبة، ولون يُطابَق عبر قماشين مختلفين، وتثبيت يبقى في موضعه دون دبابيس قرب الوجه. ومعها الجانب الإداري: كميات الصرف، وبطاقة العناية، وثبات اللون بين التشغيلات، ومن يوقّع على ماذا داخل الشركة.",
   "category": "aviation",
-  "publishedAt": "2027-01-10",
+  "publishedAt": "2027-01-06",
   "hero": "blog/hijab-in-aviation-uniform-programmes",
   "silo": "aviation",
   "readingMinutes": 8,

@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-22 (Thu).
+ * Scheduled article — publishes 2026-10-20 (Thu).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: مصيدة ادعاءات صحية — الأخطر في البرنامج كله. ممنوع منعاً باتاً: أي ادعاء بتقليل 
  */
@@ -12,7 +12,7 @@ export const antimicrobialScrubsClaimsExplained: BlogPost = {
   "excerpt": "A sceptical procurement read on antimicrobial scrubs: what the finish really protects, how it survives laundering, which documents to demand, and why it never replaces hand hygiene.",
   "excerptAr": "قراءة شرائية متشككة في الملابس المضادة للميكروبات: ما الذي تحميه المعالجة فعلاً، وكيف تصمد أمام الغسيل، وأي مستندات تُطلب، ولماذا لا تغني أبداً عن نظافة اليدين.",
   "category": "healthcare",
-  "publishedAt": "2026-10-22",
+  "publishedAt": "2026-10-20",
   "hero": "blog/antimicrobial-scrubs-claims-explained",
   "silo": "healthcare",
   "readingMinutes": 6,

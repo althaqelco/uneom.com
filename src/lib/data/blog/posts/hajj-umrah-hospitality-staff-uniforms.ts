@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-12 (Thu).
+ * Scheduled article — publishes 2026-11-10 (Thu).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: موضوع ديني بالغ الحساسية: تناول الجانب التشغيلي والضيافي فقط باحترام عميق. ممنوع
  */
@@ -12,7 +12,7 @@ export const hajjUmrahHospitalityStaffUniforms: BlogPost = {
   "excerpt": "How Makkah and Madinah hotels plan, size, issue and replenish hospitality uniforms for a peak season defined by heat, crowding, fast onboarding and a fixed deadline.",
   "excerptAr": "كيف تخطط فنادق مكة والمدينة لبرنامج أزياء الضيافة وتقيسه وتصرفه وتجدده في موسم تحكمه الحرارة والازدحام وسرعة التعيين وموعد نهائي لا يقبل التأجيل.",
   "category": "hospitality",
-  "publishedAt": "2026-11-12",
+  "publishedAt": "2026-11-10",
   "hero": "blog/hajj-umrah-hospitality-staff-uniforms",
   "silo": "hospitality",
   "readingMinutes": 6,

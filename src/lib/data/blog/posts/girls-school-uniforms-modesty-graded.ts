@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-25 (Sun).
+ * Scheduled article — publishes 2026-10-21 (Sun).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: موضوع ثقافي حساس: صف ممارسات التصميم والتفصيل باحترام. ممنوع إصدار أحكام شرعية أ
  */
@@ -12,7 +12,7 @@ export const girlsSchoolUniformsModestyGraded: BlogPost = {
   "excerpt": "How girls' school uniform design in Saudi Arabia grades with age — cut, coverage, heat-ready fabric, opacity, layering and easy care — while school dress policies differ.",
   "excerptAr": "كيف يتدرّج تصميم الزي المدرسي للطالبات في السعودية مع المرحلة العمرية: القصّة والتغطية والخامة المناسبة للحرارة والتعتيم والطبقات وسهولة العناية، مع اختلاف سياسات المدارس.",
   "category": "corporate-education",
-  "publishedAt": "2026-10-25",
+  "publishedAt": "2026-10-21",
   "hero": "blog/girls-school-uniforms-modesty-graded",
   "silo": "education",
   "readingMinutes": 6,

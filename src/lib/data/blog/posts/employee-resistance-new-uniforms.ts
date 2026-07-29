@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-16 (Sun).
+ * Scheduled article — publishes 2026-08-12 (Sun).
  * Written + adversarially verified (uneom-schedule-batch-2 workflow).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تخترع نسب رضا أو نتائج استبيانات. تحدث عن الآليات والممارسات لا عن أرقام.
@@ -13,7 +13,7 @@ export const employeeResistanceNewUniforms: BlogPost = {
   "excerpt": "Uniform rollouts fail on comfort, fit, modesty and consultation — not stubbornness. A practical change-management approach for Saudi employers facing staff complaints about a new uniform.",
   "excerptAr": "برامج الزي الموحد تتعثّر بسبب الراحة والمقاسات والاحتشام وغياب التشاور، لا بسبب العناد. منهج عملي لإدارة التغيير أمام شكاوى الموظفين من الزي الجديد في المنشآت السعودية.",
   "category": "corporate-education",
-  "publishedAt": "2026-08-16",
+  "publishedAt": "2026-08-12",
   "hero": "blog/employee-resistance-new-uniforms",
   "silo": "corporate",
   "readingMinutes": 6,

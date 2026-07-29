@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const service = SERVICES_BY_SLUG[slug];
   if (!service) return {};
   return {
-    title: `${service.nameAr} — UNEOM`,
+    title: `${service.nameAr}`,
     description: service.summaryAr,
     alternates: {
       canonical: `https://uneom.com/ar/services/${slug}/`,
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       }
     },
     openGraph: {
-      title: `${service.nameAr} — UNEOM`,
+      title: `${service.nameAr}`,
       description: service.summaryAr,
       images: [{ url: `/images/${service.heroImage}.avif`, width: 1920, height: 1080 }]
     }

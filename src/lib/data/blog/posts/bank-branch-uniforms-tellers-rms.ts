@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-23 (Wed).
+ * Scheduled article — publishes 2026-09-21 (Wed).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تذكر أسماء بنوك سعودية بعينها ولا تصف أزياءها. لا تخترع لوائح لمؤسسة النقد أو
@@ -13,7 +13,7 @@ export const bankBranchUniformsTellersRms: BlogPost = {
   "excerpt": "How tellers, relationship managers, greeters and branch leadership should look different — and consistent — across a Saudi bank network, from seated comfort to modest design and colour control.",
   "excerptAr": "كيف يختلف مظهر الصرّاف ومدير العلاقات والمرشد والإدارة داخل الفرع البنكي، ويبقى متسقاً عبر الشبكة: راحة الجلوس الطويل، الخيارات المحتشمة، وضبط اللون.",
   "category": "corporate-education",
-  "publishedAt": "2026-09-23",
+  "publishedAt": "2026-09-21",
   "hero": "blog/bank-branch-uniforms-tellers-rms",
   "silo": "corporate",
   "readingMinutes": 6,

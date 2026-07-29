@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-21 (Wed).
+ * Scheduled article — publishes 2026-10-19 (Wed).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تخترع سياسات مكافحة عدوى محددة أو متطلبات اعتماد؛ أحِل إلى سياسة المنشأة.
@@ -13,7 +13,7 @@ export const labCoatVsScrubJacket: BlogPost = {
   "excerpt": "A breakdown of the lab coat versus scrub jacket difference: coverage, length, clinical versus laboratory use, warmth in cold departments, and which Saudi roles need which layer.",
   "excerptAr": "شرح عملي للفرق بين المعطف المخبري وجاكيت السكرابس: التغطية والطول، الاستخدام السريري مقابل المخبري، الدفء في الأقسام الباردة، وأي دور يحتاج أي طبقة.",
   "category": "healthcare",
-  "publishedAt": "2026-10-21",
+  "publishedAt": "2026-10-19",
   "hero": "blog/lab-coat-vs-scrub-jacket",
   "silo": "healthcare",
   "readingMinutes": 6,

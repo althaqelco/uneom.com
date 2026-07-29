@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-07 (Thu).
+ * Scheduled article — publishes 2027-01-05 (Thu).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 2 correction(s); all applied before commit.
  * Guardrail: العنوان في الخطة ذكر «500 عامل» — لا تستخدم رقم عمالة محدداً في العنوان أو كأنه حالة عميل حقيقي
@@ -13,7 +13,7 @@ export const coverallSizingLargeWorkforce: BlogPost = {
   "excerpt": "Ordering coveralls for a large workforce is an inventory and records exercise, not a tailoring one — and the size split you buy decides how much dead stock you carry. This guide covers measured versus self-declared sizes, building your own size curve instead of the supplier's default, fit across a mixed-nationality workforce, buffer and exchange policy, and the record that makes the second order cost less than the first.",
   "excerptAr": "شراء الأفرول لعمالة كبيرة مسألة مخزون وسجلات لا مسألة خياطة، وتوزيعة المقاسات التي تشتريها هي التي تقرّر حجم المخزون الراكد لديك. يشرح المقال القياس الفعلي مقابل المقاس الذي يذكره العامل، وبناء توزيعتك بدل الطقم القياسي للمورّد، والملاءمة في عمالة متعددة الجنسيات، وسياسة الاحتياطي والاستبدال، والسجل الذي يجعل الطلب الثاني أقل كلفة من الأول.",
   "category": "manufacturing-safety",
-  "publishedAt": "2027-01-07",
+  "publishedAt": "2027-01-05",
   "hero": "blog/coverall-sizing-large-workforce",
   "silo": "manufacturing",
   "readingMinutes": 8,

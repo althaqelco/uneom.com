@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-20 (Sun).
+ * Scheduled article — publishes 2026-12-16 (Sun).
  * Written + adversarially verified (uneom-schedule final batch).
  * Guardrail: لا تخترع أسماء مراكز تجارية أو علامات تجزئة كعملاء ليونيوم. لا تخترع معدلات دوران عمالة أو أرقا
  */
@@ -12,7 +12,7 @@ export const retailStaffUniformsSaudiMalls: BlogPost = {
   "excerpt": "A practical guide to specifying a mall retail uniform that reads from the walkway, moves with the job, and can be reissued when the team changes. Covers layering under mall air conditioning, size runs and buffer stock, modesty options inside the standard range, and fabrics that keep their color and shape.",
   "excerptAr": "دليل عملي لتحديد زي فرق المتاجر داخل المراكز التجارية السعودية: كيف يُقرأ الزي من ممر المركز، وكيف يتحمّل وردية طويلة تحت التكييف، وكيف يُدار صرفه وإعادة صرفه مع تغيّر الفريق. يغطي الطبقات، ومجموعات المقاسات والمخزون الاحتياطي، وخيارات الاحتشام داخل التشكيلة نفسها، والأقمشة التي تحافظ على لونها وقوامها.",
   "category": "corporate-education",
-  "publishedAt": "2026-12-20",
+  "publishedAt": "2026-12-16",
   "hero": "blog/retail-staff-uniforms-saudi-malls",
   "silo": "retail",
   "readingMinutes": 9,

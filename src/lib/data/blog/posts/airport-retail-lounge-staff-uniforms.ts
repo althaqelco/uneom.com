@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-24 (Sun).
+ * Scheduled article — publishes 2027-01-20 (Sun).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 4 correction(s); all applied before commit.
  * Guardrail: لا تذكر مطارات أو مشغّلي تجزئة بالاسم كعملاء. لا تخترع اشتراطات تصاريح أمنية أو لوائح مطارات. ل
@@ -13,7 +13,7 @@ export const airportRetailLoungeStaffUniforms: BlogPost = {
   "excerpt": "Airside hospitality uniforms have to carry an access credential, survive a round-the-clock roster, and still read as composed under hard terminal light. This guide covers badge integration, fabric behaviour in dry conditioned air, fit by role, and how to write a specification you can reorder against.",
   "excerptAr": "الزي داخل المطار يحمل بطاقة تعريف، ويعمل على مدار الساعة تحت إضاءة قوية، ويُقرأ من ضيف عابر خلال ثوانٍ. يشرح هذا الدليل دمج البطاقة في التصميم، وسلوك القماش في الهواء الجاف، والقصّة المناسبة لكل دور، وكيف تكتب مواصفة تستطيع إعادة الطلب عليها.",
   "category": "aviation",
-  "publishedAt": "2027-01-24",
+  "publishedAt": "2027-01-20",
   "hero": "blog/airport-retail-lounge-staff-uniforms",
   "silo": "aviation",
   "readingMinutes": 8,

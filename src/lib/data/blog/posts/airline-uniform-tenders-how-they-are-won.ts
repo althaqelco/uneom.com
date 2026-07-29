@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-19 (Tue).
+ * Scheduled article — publishes 2027-01-17 (Tue).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 5 correction(s); all applied before commit.
  * Guardrail: لا تخترع مراحل مناقصة نظامية ولا أوزان تقييم بالنسب المئوية ولا مدد عقود كأرقام معيارية. لا تذك
@@ -13,7 +13,7 @@ export const airlineUniformTendersHowTheyAreWon: BlogPost = {
   "excerpt": "A uniform tender that scores only unit price hands the decision to whoever assumed the least: the narrowest size range, no alterations, no reorder service, no plan for the years after launch. This is a buyer-side guide to what an airline uniform tender should actually evaluate — specification, samples, sizing, wear trials, supply continuity and transition — and why the cheapest submission frequently becomes the most expensive programme.",
   "excerptAr": "مناقصة لا تُقيّم إلا سعر الوحدة تُسلّم القرار لمن افترض الأقل: مدى مقاسات ضيّق، وبلا بدل تعديل، وبلا خدمة إعادة طلب، وبلا خطة للسنوات التالية للإطلاق. هذا دليل للمشتري داخل شركة الطيران: ما الذي يجب أن تُقيّمه المناقصة فعلاً — المواصفة، والعيّنات، والمقاسات، وتجارب الارتداء، واستمرارية التوريد، وخطة الانتقال — ولماذا كثيراً ما يتحوّل أرخص عرض إلى أغلى برنامج.",
   "category": "aviation",
-  "publishedAt": "2027-01-19",
+  "publishedAt": "2027-01-17",
   "hero": "blog/airline-uniform-tenders-how-they-are-won",
   "silo": "aviation",
   "readingMinutes": 7,

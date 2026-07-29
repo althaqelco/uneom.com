@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-21 (Mon).
+ * Scheduled article — publishes 2026-12-17 (Mon).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 6 correction(s); all applied before commit.
  * Guardrail: العنوان في الخطة ذكر «45 درجة» — ممنوع ذكر أي رقم درجة حرارة في العنوان أو المتن. لا تخترع بيان
@@ -13,7 +13,7 @@ export const valetDoormanUniformsSaudiSummer: BlogPost = {
   "excerpt": "How to keep a formal entrance uniform looking right through a Saudi summer without loading the wearer: fabric weight and weave openness, lining and interlining choices, hidden ventilation, colour under sun, and an issue plan that lets a garment dry. Written for hotel and facility buyers who have to write the specification, with a clear line on what a uniform can and cannot do about heat.",
   "excerptAr": "كيف تُبقي زي المدخل رسمياً في صيف المملكة دون أن يزيد الحمل على من يرتديه: وزن القماش وانفتاح النسيج، وخيارات البطانة والحشوات، والتهوية المخفية، واللون تحت الشمس، وخطة تسليم تتيح للقطعة أن تجفّ. مكتوب لمشتري الفنادق والمرافق الذين يكتبون المواصفة فعلاً، مع تحديد صريح لما لا يستطيع الزي فعله تجاه الحرارة.",
   "category": "hospitality",
-  "publishedAt": "2026-12-21",
+  "publishedAt": "2026-12-17",
   "hero": "blog/valet-doorman-uniforms-saudi-summer",
   "silo": "hospitality",
   "readingMinutes": 8,

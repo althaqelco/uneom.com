@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-26 (Tue).
+ * Scheduled article — publishes 2027-01-24 (Tue).
  * Written + adversarially verified (uneom-schedule final batch).
  * Verifier returned 5 correction(s); all applied before commit.
  * Guardrail: خطر عالٍ — موضوع ديني. صِف رمضان وصفاً تشغيلياً محترماً ولا تُصدر أي حكم شرعي ولا تصف العبادات 
@@ -13,7 +13,7 @@ export const ramadanIftarStaffUniformsPlanning: BlogPost = {
   "excerpt": "Ramadan shifts earlier through the Gregorian year and its start is confirmed close to the time, so uniform orders built on last year's dates tend to arrive late. This is a planning guide: scheduling backwards, sizing temporary staff you have not met, keeping the seasonal look light, and closing the season so next year's reorder is simple.",
   "excerptAr": "يتقدّم رمضان في التقويم الميلادي عاماً بعد عام، وبدايته تُعلن قبل وقتها بقليل، فتصل الأزياء متأخرة حين يُبنى الطلب على تواريخ العام الماضي. هذا دليل تخطيط: كيف تبني الجدول بالعكس، وتضبط مقاسات فرق لم تقابلها، وتُبقي الطبقة الموسمية خفيفة، وتغلق الموسم بحيث يصبح طلب العام القادم بسيطاً.",
   "category": "hospitality",
-  "publishedAt": "2027-01-26",
+  "publishedAt": "2027-01-24",
   "hero": "blog/ramadan-iftar-staff-uniforms-planning",
   "silo": "hospitality",
   "readingMinutes": 8,

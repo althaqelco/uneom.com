@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-13 (Sun).
+ * Scheduled article — publishes 2026-12-09 (Sun).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Guardrail: خطر عالٍ — أرقام مالية. لا تذكر أي مبلغ بالريال أو أي عملة، ولا سعر وحدة، ولا نسبة مئوية م
  */
@@ -12,7 +12,7 @@ export const hospitalUniformBudgetPlanning: BlogPost = {
   "excerpt": "Hospital uniform budgets fail on the lines nobody wrote down, not on the price per piece. This is the anatomy of the budget — wearer count, issue ratio, replacement cycle, laundering model, loss, buffer stock, and the hidden lines — plus how to calculate each one for your own facility and turn it into comparable quotations.",
   "excerptAr": "ميزانيات الزي الطبي لا تنهار عند سعر القطعة، بل عند البنود التي لم يكتبها أحد. هنا تشريح كامل للميزانية — عدد المرتدين، ومعدل الإصدار، ودورة الاستبدال، ونموذج الغسيل، والفاقد، والمخزون الاحتياطي، والبنود المخفية — وكيف تحسب كل بند في منشأتك وتحوّله إلى عروض أسعار قابلة للمقارنة.",
   "category": "healthcare",
-  "publishedAt": "2026-12-13",
+  "publishedAt": "2026-12-09",
   "hero": "blog/hospital-uniform-budget-planning",
   "silo": "healthcare",
   "readingMinutes": 7,

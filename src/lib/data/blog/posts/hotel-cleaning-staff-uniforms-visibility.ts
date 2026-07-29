@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-29 (Thu).
+ * Scheduled article — publishes 2026-10-27 (Thu).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: لا تخترع إحصاءات عن الدوران الوظيفي أو رضا الموظفين.
  */
@@ -12,7 +12,7 @@ export const hotelCleaningStaffUniformsVisibility: BlogPost = {
   "excerpt": "How to specify a hotel cleaning staff uniform that reads as professional rather than lesser: distinction without demotion, chemical durability, freedom of movement, heat, and pockets that work.",
   "excerptAr": "كيف تُحدَّد مواصفات زي طاقم النظافة في الفنادق ليعبّر عن تقدير لا تقليل: تمييز بلا انتقاص، ومتانة أمام المواد الكيميائية، وحرية حركة، وراحة في الحر، وجيوب عملية.",
   "category": "hospitality",
-  "publishedAt": "2026-10-29",
+  "publishedAt": "2026-10-27",
   "hero": "blog/hotel-cleaning-staff-uniforms-visibility",
   "silo": "hospitality",
   "readingMinutes": 6,

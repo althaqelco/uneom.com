@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-02 (Wed).
+ * Scheduled article — publishes 2026-11-30 (Wed).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Verifier returned 12 correction(s); all applied before commit.
  * Guardrail: خطر عالٍ — سلامة أطفال. لا تدّعِ أن أي قماش أو تصميم يمنع الإصابة أو الاختناق. اذكر ممارسا
@@ -13,7 +13,7 @@ export const kindergartenUniformsSafeEasyWear: BlogPost = {
   "excerpt": "A kindergarten uniform is specified by a director and worn by a four-year-old, and the two rarely want the same thing. This is how to settle fastenings, fabric, seams, laundry load and growth allowance without accepting safety claims no garment can support.",
   "excerptAr": "زيّ الروضة تكتب مواصفته الإدارة ويرتديه طفل في الرابعة، ونادراً ما يتفق الطرفان على ما يريدانه. هنا كيف تُحسم الإغلاقات والقماش والحياكة وحِمل الغسيل وبدل النمو، دون قبول ادّعاءات سلامة لا يستطيع أي ثوب أن يفي بها.",
   "category": "corporate-education",
-  "publishedAt": "2026-12-02",
+  "publishedAt": "2026-11-30",
   "hero": "blog/kindergarten-uniforms-safe-easy-wear",
   "silo": "education",
   "readingMinutes": 8,

@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2027-01-25 (Mon).
+ * Scheduled article — publishes 2027-01-21 (Mon).
  * Written + adversarially verified (uneom-schedule final batch).
  * Guardrail: لا تدّعِ أي أثر على العدوى أو نتائج المرضى. لا تخترع لوائح ترخيص أو اشتراطات هوية من وزارة الصح
  */
@@ -12,7 +12,7 @@ export const homeVisitNursingUniformsSaudi: BlogPost = {
   "excerpt": "A home-visit uniform has to do two jobs a hospital normally splits between a building and a badge: prove instantly who is at the door, and be appropriate once inside a family's home. This guide covers identification, modesty that survives kneeling and lifting, a car-based day, home laundering, and how to specify a programme that stays consistent across reorders.",
   "excerptAr": "زي الزيارات المنزلية مطالَب بمهمتين يوزّعهما المستشفى عادةً بين المبنى وبطاقة التعريف: إثبات من يقف على الباب في لحظة، ثم اللياقة داخل بيت الأسرة. يغطي هذا الدليل إثبات الهوية، والاحتشام الذي يصمد عند الركوع والرفع، ويوم عمل قوامه السيارة، والغسيل المنزلي، وكيف تكتب مواصفة تبقى ثابتة عبر الطلبيات.",
   "category": "healthcare",
-  "publishedAt": "2027-01-25",
+  "publishedAt": "2027-01-21",
   "hero": "blog/home-visit-nursing-uniforms-saudi",
   "silo": "healthcare",
   "readingMinutes": 8,

@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-17 (Tue).
+ * Scheduled article — publishes 2026-11-15 (Tue).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Verifier caught a lyocell/regenerated-cellulosic over-generalisation; corrected in both languages.
  * Guardrail: لا تذكر أسماء علامات فاخرة بعينها ولا تصف أزياءها. لا تخترع أسعاراً أو معايير جو
@@ -13,7 +13,7 @@ export const luxuryRetailUniformsDressingBrand: BlogPost = {
   "excerpt": "How Saudi luxury retailers specify staff uniforms that survive close inspection: cloth and construction, a disciplined palette, controlled accessories, elegant modest options, and appearance that holds all shift.",
   "excerptAr": "كيف تحدّد متاجر التجزئة الفاخرة في السعودية مواصفات زي موظفيها ليصمد أمام النظر عن قرب: القماش والتفصيل، لوحة لونية مقيّدة، إكسسوارات منضبطة، خيارات محتشمة أنيقة، ومظهر يثبت طوال المناوبة.",
   "category": "corporate-education",
-  "publishedAt": "2026-11-17",
+  "publishedAt": "2026-11-15",
   "hero": "blog/luxury-retail-uniforms-dressing-brand",
   "silo": "retail",
   "readingMinutes": 6,

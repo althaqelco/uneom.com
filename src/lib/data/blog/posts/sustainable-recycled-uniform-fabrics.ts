@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-16 (Wed).
+ * Scheduled article — publishes 2026-09-14 (Wed).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Verifier flagged a wet-strength generalisation and two Arabic issues; all corrected.
  * Guardrail: لا تخترع أرقام انبعاثات أو نسب إعادة تدوير أو شهادات لا تملكها UNEOM. اذكر OEKO-
@@ -13,7 +13,7 @@ export const sustainableRecycledUniformFabrics: BlogPost = {
   "excerpt": "A procurement guide to sustainable uniform fabric in Saudi Arabia: what recycled polyester and cellulosics really deliver, why service life matters most, and how to verify supplier claims.",
   "excerptAr": "دليل مشتريات للأقمشة المستدامة في السعودية: ما الذي يقدّمه البوليستر المعاد تدويره والألياف السليلوزية فعلياً، ولماذا يتقدّم العمر التشغيلي على الخامة، وكيف تتحقق من ادعاءات المورّد.",
   "category": "sustainability-trends",
-  "publishedAt": "2026-09-16",
+  "publishedAt": "2026-09-14",
   "hero": "blog/sustainable-recycled-uniform-fabrics",
   "silo": "manufacturing",
   "readingMinutes": 7,

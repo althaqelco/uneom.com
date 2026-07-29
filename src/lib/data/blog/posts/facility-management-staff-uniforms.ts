@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-20 (Tue).
+ * Scheduled article — publishes 2026-10-18 (Tue).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تخترع متطلبات عقود إدارة مرافق أو معايير خدمة رقمية.
@@ -13,7 +13,7 @@ export const facilityManagementStaffUniforms: BlogPost = {
   "excerpt": "How to build a facility management uniform system in Saudi Arabia that distinguishes cleaning, maintenance, landscaping and reception trades while holding one contractor identity through heat and turnover.",
   "excerptAr": "كيف تبني نظام زي لإدارة المرافق في السعودية يميّز فرق النظافة والصيانة والحدائق والاستقبال، ويحافظ في الوقت نفسه على هوية موحّدة للمقاول أمام الحرارة ودوران العمالة.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-10-20",
+  "publishedAt": "2026-10-18",
   "hero": "blog/facility-management-staff-uniforms",
   "silo": "security",
   "readingMinutes": 6,

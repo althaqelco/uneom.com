@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-11-15 (Sun).
+ * Scheduled article — publishes 2026-11-11 (Sun).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: لا تخترع أرقام سوق عقاري أو نسب عمولة أو إحصاءات.
  */
@@ -12,7 +12,7 @@ export const realEstatePropertyTeamUniforms: BlogPost = {
   "excerpt": "How to specify uniforms for real estate sales, property management, and maintenance teams in Saudi Arabia — clothing that survives the car, the dust, and the showroom.",
   "excerptAr": "كيف تحدد مواصفات أزياء فرق المبيعات وإدارة الأملاك والصيانة العقارية في السعودية: ملابس تصمد أمام السيارة والغبار والحرارة وتظل لائقة في المعرض أمام العميل.",
   "category": "corporate-education",
-  "publishedAt": "2026-11-15",
+  "publishedAt": "2026-11-11",
   "hero": "blog/real-estate-property-team-uniforms",
   "silo": "corporate",
   "readingMinutes": 6,

@@ -20,7 +20,7 @@ const PUBLISHED = '2026-04-01';
 const NEXT_UPDATE = '2026-07-01';
 
 export const metadata: Metadata = {
-  title: 'Saudi Professional Uniform Price Index 2026 — UNEOM',
+  title: 'Saudi Professional Uniform Price Index 2026',
   description:
     'Quarterly market data on Saudi B2B uniform pricing across 8 industries and 24 cities. Real per-unit prices, lead times, and warranty figures from 500+ UNEOM transactions. Free under CC-BY 4.0.',
   alternates: {

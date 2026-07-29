@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-14 (Mon).
+ * Scheduled article — publishes 2026-09-10 (Mon).
  * Written + adversarially verified (uneom-schedule batch 3/4).
  * Guardrail: مصيدة معايير: لا تخترع متطلبات دخول أماكن محصورة أو أرقام تصاريح؛ أحِل إلى إجراء
  */
@@ -12,7 +12,7 @@ export const confinedSpaceTurnaroundWorkwear: BlogPost = {
   "excerpt": "How Saudi plants equip a surging turnaround workforce fast: confined space garment design, contractor sizing, crew identification, heat management and post-shutdown recovery — planned as procurement, not emergency.",
   "excerptAr": "كيف تجهّز المنشآت السعودية قوى عاملة متضخمة في فترة الإيقاف بسرعة: تصميم ملابس الأماكن المحصورة، ومقاسات المقاولين، وتمييز الفرق، وإدارة الحرارة، والاسترجاع بعد انتهاء المشروع.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-09-14",
+  "publishedAt": "2026-09-10",
   "hero": "blog/confined-space-turnaround-workwear",
   "silo": "manufacturing",
   "readingMinutes": 6,

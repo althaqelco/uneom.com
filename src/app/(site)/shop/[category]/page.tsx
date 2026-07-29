@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const cat = PRODUCT_CATEGORIES_BY_SLUG[category];
   if (!cat) return {};
   return {
-    title: `${cat.nameEn} — UNEOM`,
+    title: `${cat.nameEn}`,
     description: cat.summary,
     alternates: {
       canonical: `https://uneom.com/shop/${category}/`,

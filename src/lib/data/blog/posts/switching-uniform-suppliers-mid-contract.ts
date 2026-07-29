@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-14 (Mon).
+ * Scheduled article — publishes 2026-12-10 (Mon).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Verifier returned 5 correction(s); all applied before commit.
  * Guardrail: ليست استشارة قانونية — لا تذكر مدد إشعار أو شروط إنهاء كأنها حقيقة نظامية، وانصح بمراجعة ا
@@ -13,7 +13,7 @@ export const switchingUniformSuppliersMidContract: BlogPost = {
   "excerpt": "Most uniform supplier changes fail in the handover, not in the decision. This is a practical transition plan: parallel running, phased cutover by department, the data to extract before access ends, and how to manage colour drift between an outgoing and an incoming supplier.",
   "excerptAr": "معظم عمليات تغيير مورّد الزي لا تفشل في القرار، بل في التسليم والاستلام. هذا دليل تشغيلي للانتقال: تشغيل متوازٍ للبرنامجين، انتقال مرحلي إدارةً إدارة، البيانات التي يجب استخراجها قبل إغلاق الحساب، وكيف تُدار فروق اللون بين مورّدَين.",
   "category": "healthcare",
-  "publishedAt": "2026-12-14",
+  "publishedAt": "2026-12-10",
   "hero": "blog/switching-uniform-suppliers-mid-contract",
   "silo": "healthcare",
   "readingMinutes": 8,

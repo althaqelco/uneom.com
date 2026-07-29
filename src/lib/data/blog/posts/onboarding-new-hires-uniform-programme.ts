@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-09-29 (Tue).
+ * Scheduled article — publishes 2026-09-27 (Tue).
  * Written + adversarially verified (uneom-schedule batch 5/6).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: لا تخترع نسب دوران وظيفي أو مدد تسليم قياسية.
@@ -13,7 +13,7 @@ export const onboardingNewHiresUniformProgramme: BlogPost = {
   "excerpt": "How to build a new employee uniform onboarding process that dresses starters on day one: pre-hire sizing, buffer stock, a signed handover pack, and HR system triggers.",
   "excerptAr": "كيف تبني عملية تهيئة للموظف الجديد تضمن تسليم الزي من اليوم الأول: أخذ المقاسات قبل المباشرة، ومخزون احتياطي، وحزمة تسليم موقّعة، وربط بنظام الموارد البشرية.",
   "category": "corporate-education",
-  "publishedAt": "2026-09-29",
+  "publishedAt": "2026-09-27",
   "hero": "blog/onboarding-new-hires-uniform-programme",
   "silo": "corporate",
   "readingMinutes": 6,

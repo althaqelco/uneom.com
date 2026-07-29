@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-10-26 (Mon).
+ * Scheduled article — publishes 2026-10-22 (Mon).
  * Written + adversarially verified (uneom-schedule batch 7/8).
  * Guardrail: لا تخترع أرقام تكلفة أو مدد شحن قياسية أو نسب نجاح.
  */
@@ -12,7 +12,7 @@ export const retailUniformRollout40Stores: BlogPost = {
   "excerpt": "A practical playbook for a multi store uniform rollout: branch-level sizing, phased waves, per-person kitting, freight and storage constraints, and a controlled route for retiring old garments.",
   "excerptAr": "دليل عملي لإطلاق زي موحّد عبر شبكة متاجر: جمع المقاسات لكل فرع، والموجات المرحلية، والتعبئة باسم كل موظف، وقيود الشحن والتخزين، ومسار منضبط للتخلص من الزي القديم.",
   "category": "corporate-education",
-  "publishedAt": "2026-10-26",
+  "publishedAt": "2026-10-22",
   "hero": "blog/retail-uniform-rollout-40-stores",
   "silo": "retail",
   "readingMinutes": 6,

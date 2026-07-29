@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-08-25 (Tue).
+ * Scheduled article — publishes 2026-08-23 (Tue).
  * Written + adversarially verified (uneom-schedule-batch-2 workflow).
  * Verdict: clean — 0 fabrications, guardrail respected, Arabic verified.
  * Guardrail: مصيدة معايير: اذكر EN ISO 11611 كعائلة معيار فقط. ممنوع اختراع فئات أو مستويات أو قيم اختب
@@ -13,7 +13,7 @@ export const weldingPpeSelectionGuideSaudi: BlogPost = {
   "excerpt": "A practical welding PPE selection guide for Saudi sites: arc and spatter hazards, why synthetics are excluded, leather versus treated and inherent fabrics, coverage details, and inspection.",
   "excerptAr": "دليل عملي لاختيار معدات وقاية اللحام في المواقع السعودية: مخاطر القوس والرذاذ، استبعاد الألياف القابلة للانصهار، الجلد مقابل القطن المعالج والألياف الأصيلة، التغطية والتفتيش.",
   "category": "manufacturing-safety",
-  "publishedAt": "2026-08-25",
+  "publishedAt": "2026-08-23",
   "hero": "blog/welding-ppe-selection-guide-saudi",
   "silo": "manufacturing",
   "readingMinutes": 6,

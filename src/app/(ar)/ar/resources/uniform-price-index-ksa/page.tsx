@@ -11,7 +11,7 @@ const PUBLISHED = '2026-04-01';
 const NEXT_UPDATE = '2026-07-01';
 
 export const metadata: Metadata = {
-  title: 'مؤشر أسعار الزي الموحّد المهني السعودي 2026 — UNEOM',
+  title: 'مؤشر أسعار الزي الموحّد المهني السعودي 2026',
   description: 'بيانات ربع سنوية عن تسعير الزي الموحّد B2B في المملكة العربية السعودية عبر 8 قطاعات و24 مدينة. أسعار حقيقية للوحدة، وأوقات تسليم وأرقام ضمان من 500+ معاملة UNEOM. مجاني بموجب CC-BY 4.0.',
   alternates: {
     canonical: 'https://uneom.com/ar/resources/uniform-price-index-ksa/',

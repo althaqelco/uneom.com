@@ -1,7 +1,7 @@
 import type { BlogPost } from '../index';
 
 /**
- * Scheduled article — publishes 2026-12-15 (Tue).
+ * Scheduled article — publishes 2026-12-13 (Tue).
  * Written + adversarially verified (uneom-schedule batch 9/10).
  * Guardrail: خطر عالٍ — معدات وقاية شخصية في قطاع منظّم. لا تخترع فئات أو عتبات من EN ISO 20471 ولا مسا
  */
@@ -12,7 +12,7 @@ export const groundHandlingCrewPpeSaudiAirports: BlogPost = {
   "excerpt": "Airside combines moving ground equipment, jet blast, night operations and Saudi summer heat inside one shift, and the uniform is asked to answer all of it at once. This guide covers who actually owns the high-visibility decision, how to handle the coverage-versus-heat trade-off, and the identification and FOD details that quietly shape the garment.",
   "excerptAr": "ساحة المطار تجمع حركة المعدات وعصف المحركات والعمل الليلي وحرارة الصيف في وردية واحدة، والزي مطالَب بالإجابة عن ذلك كله دفعة واحدة. يشرح المقال من يملك فعلاً قرار فئة الوضوح، وكيف تُدار المقايضة بين التغطية والحمل الحراري، وتفاصيل الهوية ومنع الأجسام الغريبة التي تصوغ القطعة بصمت.",
   "category": "aviation",
-  "publishedAt": "2026-12-15",
+  "publishedAt": "2026-12-13",
   "hero": "blog/ground-handling-crew-ppe-saudi-airports",
   "silo": "aviation",
   "readingMinutes": 8,
