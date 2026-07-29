@@ -78,7 +78,7 @@ export default function ArHomePage() {
           <div className="max-w-4xl text-white animate-fade-up">
             <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-accent-300">
               <span className="h-px w-10 bg-accent-400" aria-hidden />
-              المملكة العربية السعودية · منذ {COMPANY_STATS.yearsInMarket} سنة
+              المملكة العربية السعودية · تصنيع منذ 2013
             </span>
             <h1 className="mt-6 text-display-2xl text-white balance">
               الأزياء المهنية للمؤسسات السعودية

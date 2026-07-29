@@ -6,8 +6,17 @@
  * source of truth — change them here only.
  */
 
+/** Founding year — the one date every "years in market" figure derives from. */
+export const FOUNDED_YEAR = 2013;
+
 export const COMPANY_STATS = {
-  yearsInMarket: 12,
+  /**
+   * Derived, not stored. This was hardcoded to 12 and had already drifted a
+   * year out of date; a stored count is wrong on every anniversary. Evaluated
+   * at build time, and the site rebuilds whenever a scheduled post publishes,
+   * so it corrects itself.
+   */
+  yearsInMarket: new Date().getUTCFullYear() - FOUNDED_YEAR,
   activeClients: 500,        // 500+ B2B Saudi clients
   cities: 24,                // 24 Saudi cities served
   industries: 8,             // 8 silos

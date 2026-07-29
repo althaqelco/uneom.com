@@ -84,7 +84,7 @@ export default function HomePage() {
           <div className="max-w-4xl text-white animate-fade-up">
             <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-accent-300">
               <span className="h-px w-10 bg-accent-400" aria-hidden />
-              Saudi Arabia · Since {COMPANY_STATS.yearsInMarket} years ago
+              Saudi Arabia · Manufacturing since 2013
             </span>
             <h1 className="mt-6 text-display-2xl text-white balance">
               Professional uniforms for the
