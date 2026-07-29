@@ -21,11 +21,11 @@ export const industrialElectrostaticProtection: BlogPost = {
       { heading: 'Programme audit and replacement', headingAr: 'Programme audit and replacement', body: '', bodyAr: '' }
     ],
     faqs: [
-      { q: 'How is ESD measured?', qAr: 'How is ESD measured?', a: 'Via surface-resistivity in ohms/square. HCIS minimum: 10⁹ Ω/sq.', aAr: 'Via surface-resistivity in ohms/square. HCIS minimum: 10⁹ Ω/sq.' },
+      { q: 'How is ESD measured?', qAr: 'How is ESD measured?', a: 'Via surface resistivity in ohms per square, measured to the recognised ESD test method. Confirm the exact limit in the HCIS requirement that applies to your site — UNEOM specifies to the value your safety authority mandates.', aAr: 'Via surface resistivity in ohms per square, measured to the recognised ESD test method. Confirm the exact limit in the HCIS requirement that applies to your site — UNEOM specifies to the value your safety authority mandates.' },
       { q: 'Are ESD coveralls more expensive?', qAr: 'Are ESD coveralls more expensive?', a: 'Yes — 30-40% over standard FR coveralls.', aAr: 'Yes — 30-40% over standard FR coveralls.' },
       { q: 'How long does ESD performance last?', qAr: 'How long does ESD performance last?', a: 'Wash-validated to 80 cycles; UNEOM provides per-garment serial tracking.', aAr: 'Wash-validated to 80 cycles; UNEOM provides per-garment serial tracking.' },
       { q: 'Is ESD required at every petrochemical site?', qAr: 'Is ESD required at every petrochemical site?', a: 'In ATEX-zoned areas, yes. UNEOM specifies ESD into the relevant programme tier.', aAr: 'In ATEX-zoned areas, yes. UNEOM specifies ESD into the relevant programme tier.' },
-      { q: 'Can ESD and HRC2 be combined?', qAr: 'Can ESD and HRC2 be combined?', a: 'Yes — UNEOM produces ESD-HRC2 inherent FR cotton coveralls for tier-1 sites.', aAr: 'Yes — UNEOM produces ESD-HRC2 inherent FR cotton coveralls for tier-1 sites.' }
+      { q: 'Can ESD and HRC2 be combined?', qAr: 'Can ESD and HRC2 be combined?', a: 'Yes — UNEOM produces inherent FR cotton coveralls with combined ESD and arc-rated performance; we supply the arc rating in cal/cm² and the test certificate so your safety team can match it to the site hazard assessment.', aAr: 'Yes — UNEOM produces inherent FR cotton coveralls with combined ESD and arc-rated performance; we supply the arc rating in cal/cm² and the test certificate so your safety team can match it to the site hazard assessment.' }
     ],
     author: { name: 'Khalid Al-Otaibi', nameAr: 'خالد العتيبي', title: 'Industrial Safety Engineer', titleAr: 'مهندس سلامة صناعية' }
   };
