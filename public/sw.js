@@ -1,17 +1,37 @@
 /**
- * UNEOM Service Worker v2
- * Phase 6.1: Enhanced caching strategy
+ * UNEOM Service Worker v3
  *
- * - Navigation: Network-first with offline fallback
- * - Static assets (images, fonts, CSS, JS): Stale-While-Revalidate
- * - Precaches core pages for instant revisits
+ * The change from v2: navigations were network-first, so every click paid a
+ * full round-trip even when an identical copy was already on the device. On a
+ * mobile connection in the Kingdom that is the difference between a page that
+ * appears and a page that loads. Navigations are now stale-while-revalidate —
+ * served from cache in about a millisecond, with a background fetch that makes
+ * the next visit current.
+ *
+ * What that trades: a reader can see one-navigation-stale HTML. That is the
+ * same bargain the CDN already makes (s-maxage=3600, stale-while-revalidate
+ * =86400 in next.config.mjs), so the service worker is not loosening a policy,
+ * it is matching one. The revalidation is unconditional, so a page is stale at
+ * most once.
+ *
+ * Two paths deliberately stay network-first, because for them a stale answer is
+ * a wrong answer rather than an old one: the quote form, and anything under
+ * /api/. Sitemap and robots are never cached at all.
  */
 
-const CACHE_NAME = 'uneom-v2';
+const CACHE = 'uneom-v3';
+const OFFLINE = '/offline.html';
 
+/**
+ * Precached on install. Kept to entry points a first-time visitor is most
+ * likely to reach, plus the blog hub — 101 scheduled articles now make it the
+ * main organic entry, and v2 did not include it.
+ */
 const PRECACHE_URLS = [
   '/',
   '/ar/',
+  '/blog/',
+  '/ar/blog/',
   '/industries/healthcare/',
   '/industries/hospitality/',
   '/industries/corporate/',
@@ -19,77 +39,84 @@ const PRECACHE_URLS = [
   '/locations/riyadh/',
   '/locations/jeddah/',
   '/quote/',
-  '/offline.html'
+  OFFLINE,
 ];
 
-// Install: precache core shell
-self.addEventListener('install', (e) => {
+/** A stale answer here would be a wrong answer, not an old one. */
+const ALWAYS_FRESH = [/^\/api\//, /^\/quote\/?$/, /^\/ar\/quote\/?$/];
+
+/** Never worth a cache entry. */
+const NEVER_CACHE = [/^\/sitemap\.xml$/, /^\/robots\.txt$/, /^\/llms(-full)?\.txt$/];
+
+self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(PRECACHE_URLS))
-      .catch(() => {/* Silently skip if offline during install */})
+    caches.open(CACHE)
+      // addAll rejects the whole batch if any single URL fails, which would
+      // leave the worker with no precache at all. Fetch them independently.
+      .then(cache => Promise.allSettled(PRECACHE_URLS.map(u => cache.add(u))))
+      .catch(() => {}),
   );
   self.skipWaiting();
 });
 
-// Activate: purge old caches
-self.addEventListener('activate', (e) => {
+self.addEventListener('activate', e => {
   e.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(
-        keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k))
-      )
-    )
+    caches.keys()
+      .then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
+      .then(() => self.clients.claim()),
   );
-  self.clients.claim();
 });
 
-// Fetch: strategy depends on request type
-self.addEventListener('fetch', (e) => {
-  const url = new URL(e.request.url);
+/** Cache a response only if it is genuinely reusable. */
+function store(req, res) {
+  if (!res || !res.ok || res.type === 'opaque') return res;
+  const clone = res.clone();
+  caches.open(CACHE).then(cache => cache.put(req, clone)).catch(() => {});
+  return res;
+}
 
-  // Skip non-GET and cross-origin requests
-  if (e.request.method !== 'GET') return;
+self.addEventListener('fetch', e => {
+  const req = e.request;
+  if (req.method !== 'GET') return;
+
+  const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
+  if (NEVER_CACHE.some(re => re.test(url.pathname))) return;
 
-  // ── Navigation: network-first ──
-  if (e.request.mode === 'navigate') {
+  const fresh = ALWAYS_FRESH.some(re => re.test(url.pathname));
+
+  // ── Navigations ──
+  if (req.mode === 'navigate') {
+    if (fresh) {
+      e.respondWith(
+        fetch(req)
+          .then(res => store(req, res))
+          .catch(() => caches.match(req).then(c => c || caches.match(OFFLINE))),
+      );
+      return;
+    }
+
     e.respondWith(
-      fetch(e.request)
-        .then(res => {
-          // Cache successful HTML navigations for offline
-          if (res.ok) {
-            const clone = res.clone();
-            caches.open(CACHE_NAME).then(cache => cache.put(e.request, clone));
-          }
-          return res;
-        })
-        .catch(() =>
-          caches.match(e.request)
-            .then(cached => cached || caches.match('/offline.html'))
-        )
+      caches.match(req).then(cached => {
+        const network = fetch(req)
+          .then(res => store(req, res))
+          .catch(() => cached || caches.match(OFFLINE));
+        // Cached copy wins the race when there is one; the fetch still runs and
+        // refreshes the entry for next time.
+        return cached || network;
+      }),
     );
     return;
   }
 
   // ── Static assets: stale-while-revalidate ──
-  if (
-    /\.(avif|webp|png|jpg|jpeg|svg|ico|woff2?|css|js)$/.test(url.pathname) ||
-    url.pathname.startsWith('/_next/static/')
-  ) {
+  if (/\.(avif|webp|png|jpg|jpeg|svg|ico|woff2?|css|js|json|txt)$/.test(url.pathname) ||
+      url.pathname.startsWith('/_next/static/')) {
     e.respondWith(
-      caches.match(e.request).then(cached => {
-        const fetchPromise = fetch(e.request).then(res => {
-          if (res.ok) {
-            const clone = res.clone();
-            caches.open(CACHE_NAME).then(cache => cache.put(e.request, clone));
-          }
-          return res;
-        }).catch(() => cached);
-
-        return cached || fetchPromise;
-      })
+      caches.match(req).then(cached => {
+        const network = fetch(req).then(res => store(req, res)).catch(() => cached);
+        return cached || network;
+      }),
     );
-    return;
   }
 });

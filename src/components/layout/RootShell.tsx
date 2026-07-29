@@ -64,8 +64,21 @@ export function RootShell({
               `if('connection' in navigator){var c=navigator.connection;if(c.saveData||/2g|3g/.test(c.effectiveType))document.documentElement.classList.add('uneom-lite-mode')}`,
               // Battery saver — async (getBattery returns a promise)
               `if('getBattery' in navigator)navigator.getBattery().then(function(b){function ck(){b.level<.2&&!b.charging?document.documentElement.classList.add('uneom-power-saver'):document.documentElement.classList.remove('uneom-power-saver')}ck();b.addEventListener('levelchange',ck);b.addEventListener('chargingchange',ck)})`,
-              // Speculation Rules — prerender industry pages, prefetch shop/locations (EN + AR)
-              `if(HTMLScriptElement.prototype&&'speculationrules' in HTMLScriptElement.prototype){var s=document.createElement('script');s.type='speculationrules';s.textContent=JSON.stringify({prerender:[{source:'document',where:{and:[{href_matches:'/industries/*'},{not:{href_matches:'/industries/*/*'}}]},eagerness:'moderate'},{source:'document',where:{and:[{href_matches:'/ar/industries/*'},{not:{href_matches:'/ar/industries/*/*'}}]},eagerness:'moderate'}],prefetch:[{source:'document',where:{href_matches:'/shop/*'},eagerness:'conservative'},{source:'document',where:{href_matches:'/locations/*'},eagerness:'conservative'},{source:'document',where:{href_matches:'/ar/locations/*'},eagerness:'conservative'}]});document.body.appendChild(s)}`,
+              // Speculation Rules. Chrome prerenders a page on hover at
+              // 'moderate' eagerness and caps concurrent prerenders itself, so
+              // breadth here is cheap — an unhovered pattern costs nothing.
+              //
+              // 'moderate' (prerender on hover, effectively instant on click)
+              // covers the reading paths: industries, resources, services, and
+              // article pages. The blog carries 101 scheduled articles and is
+              // the main organic entry point, and had no coverage before.
+              // Category and listing URLs are excluded — a reader lands on
+              // those, they are not the hover target.
+              //
+              // 'conservative' (prefetch on pointerdown) covers the wider,
+              // lower-intent sets — shop, locations, case studies — where
+              // prerendering everything would fetch far more than gets read.
+              `if(HTMLScriptElement.prototype&&'speculationrules' in HTMLScriptElement.prototype){var R={prerender:[{source:'document',where:{and:[{href_matches:'/industries/*'},{not:{href_matches:'/industries/*/*'}}]},eagerness:'moderate'},{source:'document',where:{and:[{href_matches:'/ar/industries/*'},{not:{href_matches:'/ar/industries/*/*'}}]},eagerness:'moderate'},{source:'document',where:{and:[{href_matches:'/blog/*'},{not:{href_matches:'/blog/category/*'}}]},eagerness:'moderate'},{source:'document',where:{and:[{href_matches:'/ar/blog/*'},{not:{href_matches:'/ar/blog/category/*'}}]},eagerness:'moderate'},{source:'document',where:{href_matches:'/resources/*'},eagerness:'moderate'},{source:'document',where:{href_matches:'/ar/resources/*'},eagerness:'moderate'},{source:'document',where:{href_matches:'/services/*'},eagerness:'moderate'},{source:'document',where:{href_matches:'/ar/services/*'},eagerness:'moderate'}],prefetch:[{source:'document',where:{href_matches:'/shop/*'},eagerness:'conservative'},{source:'document',where:{href_matches:'/ar/shop/*'},eagerness:'conservative'},{source:'document',where:{href_matches:'/locations/*'},eagerness:'conservative'},{source:'document',where:{href_matches:'/ar/locations/*'},eagerness:'conservative'},{source:'document',where:{href_matches:'/case-studies/*'},eagerness:'conservative'},{source:'document',where:{href_matches:'/ar/case-studies/*'},eagerness:'conservative'}]};var s=document.createElement('script');s.type='speculationrules';s.textContent=JSON.stringify(R);document.body.appendChild(s)}`,
               // Service Worker — deferred to idle time (non-critical for first paint)
               `(window.requestIdleCallback||function(cb){setTimeout(cb,2000)})(function(){if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js',{scope:'/'})})`
             ].join(';')
