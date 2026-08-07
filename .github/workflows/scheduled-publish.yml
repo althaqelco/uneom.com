@@ -72,9 +72,54 @@ jobs:
         run: |
           git config user.name  "uneom-scheduler[bot]"
           git config user.email "scheduler@uneom.com"
-          git commit --allow-empty \
+
+          # Write a real file rather than pushing --allow-empty.
+          #
+          # Empty commits are a valid push and a new SHA, but between 2026-08-02
+          # and 08-06 this workflow pushed four of them, reported success each
+          # time, and production never rebuilt — it served a 2026-07-29 build for
+          # five days while four articles sat unpublished. A commit that changes
+          # no bytes is the most likely thing a diff-based deploy trigger ignores,
+          # so give it bytes. The log is also a plain audit trail of what shipped
+          # when, which the empty commits were not.
+          mkdir -p .github
+          printf '%s  released %s post(s)\n' \
+            "${{ steps.due.outputs.today }}" "${{ steps.due.outputs.count }}" \
+            >> .github/publish-log.txt
+
+          git add .github/publish-log.txt
+          git commit \
             -m "chore(publish): release ${{ steps.due.outputs.count }} scheduled post(s) for ${{ steps.due.outputs.today }}"
           git push origin main
+
+      - name: Confirm the post actually went live
+        if: steps.due.outputs.count != '0'
+        run: |
+          # The step above only proves a commit was pushed. What matters is
+          # whether the article is reachable, and for five days it was not while
+          # this workflow stayed green. Poll production and fail loudly if the
+          # deploy did not land — a red run is recoverable, a green lie is not.
+          SLUG=$(grep -rlE "publishedAt\"?:[[:space:]]*.?${{ steps.due.outputs.today }}" src/lib/data/blog/posts/ \
+                 | head -1 | xargs -r basename | sed 's/\.ts$//')
+          if [ -z "$SLUG" ]; then
+            echo "::warning::Could not resolve today's slug; skipping the live check."
+            exit 0
+          fi
+          URL="https://uneom.com/blog/$SLUG/"
+          echo "Waiting for $URL"
+
+          for i in $(seq 1 20); do            # 20 × 60s = up to 20 minutes
+            CODE=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "$URL" || echo 000)
+            if [ "$CODE" = "200" ]; then
+              echo "::notice::$SLUG is live after ~$((i)) minute(s)."
+              exit 0
+            fi
+            echo "  attempt $i: HTTP $CODE"
+            sleep 60
+          done
+
+          echo "::error::$URL still not serving 200 twenty minutes after the release commit. The schedule detected the post and pushed, but the deploy did not produce it — check the Firebase App Hosting rollout for this repository."
+          exit 1
 
       - name: Nothing due
         if: steps.due.outputs.count == '0'
